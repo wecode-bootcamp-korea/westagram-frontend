@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+nav {
+    height: 54px;
+    width: 975px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;    
+}
+
+nav .homepage {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.homepage header {
+    height: 30px;
+    border-left: 1.5px solid black;
+    margin-left: 20px;
+    padding-left: 20px;
+    font-family: 'Lobster', cursive;
+    font-size: 25px;
+}
+
+.searchBar {
+    position: relative;
+}
+
+.searchBar input {
+    width: 215px;
+    height: 28px;
+    background-color: #FAFAFA;
+    border: 1px solid #dddddd;
+    border-radius: 2px;
+}
+
+.searchBar span {
+    position: absolute;
+    left: 0;
+    width: 215px;
+    height: 28px;
+    background-color: #FAFAFA;
+    border: 1px solid #dddddd;
+    border-radius: 2px;
+    text-align: center;
+    padding: 5px 0;
+    font-size: 10px;
+    color: #c4c4c4;
+}
+
+.searchBar img {
+    z-index: 5;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    left: 80px;
+    margin: 8px 0;
+    filter: opacity(.5) drop-shadow(0 0 0 #c4c4c4);
+}
+
+nav img {
+    width: 22px;
+    height: 22px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+main {
+    border-top: 1px solid #c4c4c4;
+    display: flex;
+    justify-content: center;
+}
+.feeds {
+    border: 1px solid black;
+    padding-right: 20px;
+}
+
+.feeds article {
+    width: 650px;
+    border: 1px solid black;
+}
+
+.mainRight {
+    width: 293px;
+    border: 1px solid black;
+}
