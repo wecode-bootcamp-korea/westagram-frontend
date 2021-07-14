@@ -1,0 +1,163 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fafafa;
+}
+/*네비게이션 바 */
+nav{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border-bottom: 1px solid #dbdbdb;
+    background-color: white;
+}
+.navBar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 935px;
+    margin-top: 10px;
+    padding-bottom: 16px;
+}
+.navLeft{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.navLeft .navImgBox{
+    margin-left: 0;
+}
+.navSearchBox{
+    width: 218px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.navSearchImgBox{
+    width: 218px;
+    height: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: absolute;
+    /*z-index: -1;*/
+    border: 1px solid black;
+    background-color: #fafafa;
+    border: 1px solid rgba(var(--b6a,219,219,219),1);
+    border-radius: 3px;
+    font-size: 13px;
+    color: #8e8e8e;
+}
+.navSearchName{
+    display: flex;
+    position: absolute;
+    top:2px;
+    left: 100px;
+}
+.navSearchImg{
+    display: flex;
+    position: absolute;
+    top:8px;
+    left: 80px;
+}
+.fa-search{
+    font-size: 11px;
+    padding-right: 6px;
+}
+/* .inputIcon{
+    position: absolute;
+    left: 10px;
+    color: #8e8e8e;
+} */
+.navSearch{
+    width: 218px;
+    height: 25px;
+    padding: 3px 10px 3px 26px;
+    background-color: #fafafa;
+    border: 1px solid rgba(var(--b6a,219,219,219),1);
+    border-radius: 3px;
+    font-size: 13px;
+}
+.navRight{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    line-height: 1px;
+}
+.navRight .navImgBox{
+    margin-right: 0;
+    margin-left: 25px;
+}
+.navImgBox{
+    margin : 0px 15px;
+    line-height: 1px;
+}
+.navImg{
+    width: 22px;
+    height: 22px;
+    padding: 0 auto;
+}
+.logo{
+    font-size: 29px;
+    padding-left: 20px;
+    border-left: 1px solid black;
+}
+main{
+    display: flex;
+    flex-direction: row;
+    width: 935px;
+    margin-top: 30px;
+    border: 1px solid black;
+}
+.feeds{
+    width: 642px;
+    padding-right: 28px;   
+    border: 1px solid black;
+    height: 100vh;
+}
+.section1{
+    width: 614px;
+    height: auto;
+    background-color: white;
+    border: 1px solid black;
+}
+.writer{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
+    height: 60px;
+}
+.writerDot{
+    width: 16px;
+    height: 16px;
+}
+.content{
+    border: 1px solid black;
+}
+.comment{
+    border: 1px solid black;
+    height: 56px;
+}
+aside{
+    width: 293px;
+    border: 1px solid black;
+}
+
+
+
+
+
+
+.profileBox{
+    width: 32px;
+    height: 32px; 
+    border-radius: 70%;
+    overflow: hidden;
+}
+.profileImg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
