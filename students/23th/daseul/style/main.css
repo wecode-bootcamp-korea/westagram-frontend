@@ -1,0 +1,334 @@
+.wrap {
+    width: 100%;
+    height: 100vh;
+  }
+  
+  /* header css */
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 56px;
+    background-color: #fff;
+    border-bottom: 1px solid #dbdbdb;
+  }
+  
+  header .header-inner-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 935px;
+    height: 100%;
+    margin: 0 auto;
+  }
+  
+  header .logo {
+    font-family: "Lobster", cursive;
+    font-size: 31px;
+    cursor: pointer;
+  }
+  
+  header .search {
+    width: 215px;
+    height: 28px;
+  }
+  
+  header .search input {
+    width: 100%;
+    height: 100%;
+    padding-left: 20px;
+    border: 1px solid #dbdbdb;
+    background-color: #fafafa;
+  }
+  
+  header .util ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 120px;
+  }
+  
+  header .util li {
+    width: 27px;
+    height: 27px;
+    cursor: pointer;
+  }
+  
+  header .util li img {
+    width: 100%;
+  }
+  
+  /* main css */
+  main {
+    padding-top: 90px;
+    background-color: #fafafa;
+  }
+  
+  main section {
+    max-width: 935px;
+    height: auto;
+    min-height: 600px;
+    margin: 0 auto;
+  }
+  
+  /* .main-left css */
+  main section .main-left {
+    max-width: 614px;
+    height: auto;
+    min-height: 600px;
+    padding-bottom: 100px;
+  }
+  
+  main section .main-left article {
+    width: 100%;
+    height: auto;
+    min-height: 600px;
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+  }
+  
+  main article .feed-profile {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 60px;
+    padding: 0 20px;
+    border-bottom: 1px solid #dbdbdb;
+  }
+  
+  main .feed-profile .feed-profile-thumnail {
+    width: 32px;
+    height: 32px;
+    margin-right: 15px;
+    border: 1px solid #aaa;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  main .feed-profile .feed-profile-thumnail img {
+    width: 100%;
+  }
+  
+  main .feed-profile .feed-profile-id {
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  main .feed-profile .feed-profile-more {
+    width: 25px;
+    height: 25px;
+    margin-left: auto;
+    cursor: pointer;
+  }
+  
+  main .feed-profile .feed-profile-more img {
+    width: 100%;
+  }
+  
+  main .feed-image img {
+    width: 100%;
+  }
+  
+  main .comment {
+    height: auto;
+    min-height: 100px;
+  }
+  
+  main .comment .response-icons {
+    height: 40px;
+    padding: 0 20px;
+  }
+  
+  main .comment .response-icons ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+  
+  main .comment .response-icons ul li {
+    width: 25px;
+    height: 25px;
+    margin-right: 15px;
+    cursor: pointer;
+  }
+  
+  main .comment .response-icons ul li:last-child {
+    margin-left: auto;
+    margin-right: 0;
+  }
+  
+  main .comment .response-icons ul li img {
+    width: 100%;
+  }
+  
+  main .comment .comment-count {
+    height: 30px;
+    padding-left: 20px;
+    font-size: 14px;
+    line-height: 30px;
+  }
+
+  main .comment .comment-list-box {
+    padding-left: 20px;
+    padding-bottom: 20px;
+  }
+
+  main .comment .comment-list {
+    padding-top: 6px;
+    font-size: 13px;
+  }
+  
+  main .comment .comment-count span {
+    font-weight: bold;
+  }
+  
+  main .comment-write {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 56px;
+    padding: 0 20px;
+    border-top: 1px solid #dbdbdb;
+  }
+  
+  main .comment-write div {
+    width: 500px;
+    height: 100%;
+  }
+  
+  main .comment-write div input {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  
+  main .comment-write div input:focus {
+    outline: none;
+  }
+  
+  main .comment-write button {
+    font-size: 14px;
+    font-weight: bold;
+    color: #0095f6;
+    background-color:#fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* .main-right css */
+  main .main-right {
+    position:fixed;
+    top:100px;
+    left:50%;
+    width: 295px;
+    height: auto;
+    min-height: 100px;
+    margin-left:170px;
+  }
+  
+  main .main-right .my-profile {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 56px;
+  }
+  
+  main .main-right .my-profile .my-profile-thumnail {
+    width: 56px;
+    height: 56px;
+    margin-right: 20px;
+    border: 1px solid #dbdbdb;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+  main .main-right .my-profile .my-profile-thumnail img {
+    width: 100%;
+  }
+  
+  main .main-right .my-profile .my-profile-id div:first-of-type {
+    font-size: 14px;
+    font-weight: bold;
+    color: #262626;
+  }
+  
+  main .main-right .my-profile .my-profile-id div:last-of-type {
+    font-size: 13px;
+    color: #8c8c8c;
+  }
+  
+  main .main-right .recommend {
+    height: auto;
+    min-height: 100px;
+  }
+  
+  main .main-right .recommend .recommend-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 20px;
+    margin: 20px 0 10px 0;
+  }
+  
+  main .main-right .recommend .recommend-title p {
+    font-size: 14px;
+    font-weight: bold;
+    color: #8c8c8c;
+  }
+  
+  main .main-right .recommend .recommend-title div {
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  main .main-right .recommend .recommend-list-box {
+    height: auto;
+    min-height: 100px;
+  }
+  
+  main .recommend .recommend-list-box .recommend-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 48px;
+  }
+  
+  main .recommend-list .recommend-thumnail {
+    width: 32px;
+    height: 32px;
+    margin-right: 20px;
+    border: 1px solid #dbdbdb;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+  main .recommend-list .recommend-thumnail img {
+    width: 100%;
+  }
+  
+  main .recommend-list .recommend-id div:first-of-type {
+    font-size: 14px;
+    font-weight: bold;
+    color: #262626;
+    cursor: pointer;
+  }
+  
+  main .recommend-list .recommend-id div:last-of-type {
+    font-size: 13px;
+    color: #8c8c8c;
+    cursor: pointer;
+  }
+  
+  main .recommend-list .recommend-follow {
+    margin-left: auto;
+    font-size: 13px;
+    font-weight: bold;
+    color: #0095f6;
+    cursor:pointer;
+  }
+  
