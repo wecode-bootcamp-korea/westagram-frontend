@@ -5,20 +5,16 @@ function inputTextEvent() {
   const loginBtn = document.querySelector(`#loginBtn`);
 
   idInput.addEventListener(`keyup`, () => {
-    (idInput.value !== ``) ? (
-      loginBtn.style.backgroundColor = `var(--blue)`
-    ) : (
-      loginBtn.style.backgroundColor = `var(--light-blue)`
-    );
+    idInput.value !== ``
+      ? (loginBtn.style.backgroundColor = `var(--blue)`)
+      : (loginBtn.style.backgroundColor = `var(--light-blue)`);
   });
 
   pwInput.addEventListener(`keyup`, () => {
-    if (pwInput.value !== ``) {
-      const loginBtn = document.querySelector(`#loginBtn`);
-      loginBtn.style.backgroundColor = `var(--blue)`;
-    } else {
-      loginBtn.style.backgroundColor = `var(--light-blue)`;
-    }
+    const loginBtn = document.querySelector(`#loginBtn`);
+    pwInput.value !== ``
+      ? (loginBtn.style.backgroundColor = `var(--blue)`)
+      : (loginBtn.style.backgroundColor = `var(--light-blue)`);
   });
 }
 
