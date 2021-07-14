@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+html, body {
+    margin: 0;
+    display: block;
+    padding: 0;
+}
+.box {
+    position: absolute;
+    width: 262px;
+    height: 300px;
+    padding: 40px;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: white;
+    text-align: center;
+    border: 1px solid #e6e6e6;
+    border-radius: 1px;
+    margin: 0 0 10px;
+}
+.box h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+.box input[type = "text"], .box input[type = "password"] {
+    border: 0;
+    background: #fafafa;
+    display: block;
+    margin: 7px auto;
+    text-align: left;
+    border: 1px solid #efefef;
+    padding: 10px;
+    width: 100%;
+    outline: none;
+    color: #262626;
+    border-radius: 4px;
+    font-size: 11px;
+    box-sizing: border-box;
+    font-weight: 400;
+}
+.box input[type = "text"]:focus, .box input[type = password]:focus {
+    color: black;
+    border: 2px solid gray;
+}
+.box button {
+    border: 0;
+    background: rgba(var(--h5f,56,151,240),1);
+    opacity: 1;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    /* border: 2px solid rgba(var(--h5f,56,151,240),1); */
+    padding: 10px;
+    outline: none;
+    width: 100%;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 11px;
+    cursor: pointer;
+}
+.box a button {
+    color: white;
+}
+.box .link {
+    margin-top: 40px;
+}
+.box a {
+    font-size: 11px;
+    text-decoration: none;
+    color: black;
+
+}

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./common.css">
+</head>
+<body>
+        <div class="wrap">
+            <header class="header">
+                <div class="header_wrap">
+                    <div class="inner">
+                        <h1 class="logo">
+                            <span>로고</span>
+                            <img src="./instagram.png" alt="">
+                             westagram
+                        </h1>
+                        <div class="input_box">
+                            <input type="text" placeholder="검색" id="search">
+                        </div>
+                        <nav class="nav">
+                            <img src=" https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png" alt="">
+                            <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png " alt="">
+                            <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png" alt="">
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            <div class="main">
+                <div class="container">
+                    <div class="contents_left">
+                        <div class="inner">
+                            <ul class="feeds_list">
+                                <li class="feeds_list_li">
+                                    <div class="feed_profile">
+                                        <div class="profile">
+                                            <img src="./profile.png" alt="profile" class="profile_img">
+                                            <p class="profile_id">xx_ia.97</p>
+                                        </div>
+                                        <div class="profile_add link_list">
+                                            <button type="button" class="state_btn">
+                                                <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/more.png" alt="">
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="feed_box">
+                                        <img src="./feed.png" alt="feed_img">
+                                    </div>
+                                    <div class="feed_info">
+                                        <div class="feed_state">
+                                            <ul class="link_list">
+                                                <li>
+                                                    <button type="button" class="state_btn">
+                                                        <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png
+                                                        " alt="like_img">
+                                                    </button>
+                                                </li>
+                                                <li>
+                                                    <button type="button" class="state_btn">
+                                                        <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/comment.png" alt="comment_img">
+                                                    </button>
+                                                </li>
+                                                <li>
+                                                    <button type="button" class="state_btn">
+                                                        <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/share.png" alt="share_img">
+                                                    </button>
+                                                </li>   
+                                            </ul>
+                                            <div class="link_list">
+                                                <button type="button" class="state_btn">
+                                                    <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/bookmark.png" alt="bookmark_img">
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="feed_comments">
+                                            <div class="feed_likes comments_margin">
+                                                <div class="likes_user profile">
+                                                    <img src="./profile.png" alt="profile" class="profile_img">
+                                                </div>
+                                                <div class="comments_info">
+                                                    <p class="comments_tit">
+                                                        <span class="user_id">이현준</span>님 <span>외 <span class="likes_number">10명</span></span>이 좋아합니다.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="comment_list comments_margin">
+                                                <ul class="comments_info comment_list_ul">
+                                                    <li>
+                                                        <div class="comments_tit">
+                                                            <span class="user_id">xx_ia.97</span>
+                                                            <span class="comment_contents">감성짤</span>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                <div class="feed_time">
+                                                    <p class="time">4시30분</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <form class="comments_form">
+                                        <div class="input_box">
+                                            <input type="text" placeholder="댓글달기..." id="comment_input">
+                                        </div>
+                                        <div class="button_box">
+                                            <button type="button" class="btn" disabled="disabled">
+                                                <span class="">게시</span>
+                                            </button>
+                                        </div>
+                                    </form>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="contents_right">
+                        <aside class="aside">
+                            <div class="feed_profile aside_profile">
+                                <div class="profile">
+                                    <img src="./profile.png" alt="profile" class="profile_imgs">
+                                    <div class="profile_info">
+                                        <p class="profile_id">xx_ia.97</p>
+                                        <p class="profile_intro">자기소개</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="follow">
+                                <div class="follow_info follow_story">
+                                    <div class="follow_title">
+                                        <span class="text_tit">스토리</span>
+                                        <a href="#">
+                                            <span class="sub_tit">모두보기</span>
+                                        </a>
+                                    </div>
+                                    <div class="follow_list_wrap feed_profile">
+                                        <ul class="profile follow_list scroll">
+                                            <li>
+                                                <img src="./profile.png" alt="profile" class="profile_img">
+                                                <div class="profile_info">
+                                                    <p class="profile_id">xx_ia.97</p>
+                                                    <p class="profile_intro">1시간 전</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <img src="./profile.png" alt="profile" class="profile_img">
+                                                <div class="profile_info">
+                                                    <p class="profile_id">xx_ia.97</p>
+                                                    <p class="profile_intro">1시간 전</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <img src="./profile.png" alt="profile" class="profile_img">
+                                                <div class="profile_info">
+                                                    <p class="profile_id">xx_ia.97</p>
+                                                    <p class="profile_intro">1시간 전</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <img src="./profile.png" alt="profile" class="profile_img">
+                                                <div class="profile_info">
+                                                    <p class="profile_id">xx_ia.97</p>
+                                                    <p class="profile_intro">1시간 전</p>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="follow_info">
+                                    <div class="follow_title">
+                                        <span class="text_tit">회원님을 위한 추천</span>
+                                        <a href="#">
+                                            <span class="sub_tit">모두보기</span>
+                                        </a>
+                                    </div>
+                                    <div class="follow_list_wrap feed_profile">
+                                        <ul class="profile follow_list">
+                                            <li>
+                                                <img src="./profile.png" alt="profile" class="profile_img">
+                                                <div class="profile_info">
+                                                    <p class="profile_id">xx_ia.97</p>
+                                                    <p class="profile_intro">아아디 외 2명이 팔로우</p>
+                                                </div>
+                                                <div class="follow_btn">
+                                                    <button type="button" class="btn">
+                                                        <span>팔로우</span>
+                                                    </button>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <img src="./profile.png" alt="profile" class="profile_img">
+                                                <div class="profile_info">
+                                                    <p class="profile_id">xx_ia.97</p>
+                                                    <p class="profile_intro">ABCDEFGHIJK 외 2명이 팔로우</p>
+                                                </div>
+                                                <div class="follow_btn">
+                                                    <button type="button" class="btn">
+                                                        <span>팔로우</span>
+                                                    </button>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <img src="./profile.png" alt="profile" class="profile_img">
+                                                <div class="profile_info">
+                                                    <p class="profile_id">xx_ia.97</p>
+                                                    <p class="profile_intro">아아디 외 2명이 팔로우</p>
+                                                </div>
+                                                <div class="follow_btn">
+                                                    <button type="button" class="btn">
+                                                        <span>팔로우</span>
+                                                    </button>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>
