@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  width: 100%;
+}
+
+.login{
+  position: absolute;
+  display: flex;
+  flex: auto;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 680px;
+  height: 700px;
+  border: 25px solid #fafafa;
+  background-color: white;
+}
+
+.westagram{
+  flex-grow: 2;
+  font-family: 'Lobster', cursive;
+  font-size: 90px;
+  padding-top: 30px;
+  padding-bottom: 0;
+
+}
+
+.userLogin{
+  flex-grow: 3;
+  display: flex;
+  flex-direction: column;
+}
+
+.id, .password, .loginButton{
+  height: 70px;
+  width: 480px;
+  margin: 10px;
+  padding: 5px;
+}
+
+
+.id, .password {
+  border: 1px solid #efefef;
+  border-radius: 5px;
+  background-color: #fafafa;
+  padding-left: 10px;
+}
+
+
+.id {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  background-color: #fafafa;
+}
+
+.id::placeholder {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #9B9B9B;
+}
+
+
+.password {
+  margin-top: 5px;
+}
+
+
+.password::placeholder {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color: #9B9B9B;
+}
+
+.loginButton {
+  height: 50px;
+  font-size: 20px;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: bold;
+  color: white;
+  background-color: #C4E1FB;
+  border: none;
+  border-radius: 5px;
+
+}
+
+.helpPassword{
+  flex-grow: 2;
+  padding-top: 20px;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  color:  #003569;
+}
