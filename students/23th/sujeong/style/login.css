@@ -1,0 +1,71 @@
+body{
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+   
+}
+.container {
+    background-color: #fff;
+    border: 2px solid #dfdfdf;
+    width: 400px;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.logo{
+    font-family: 'Lobster', cursive;
+    font-size: 60px;
+    color:#222222;
+    padding: 50px;
+}
+
+input{
+    display: block;
+    width: 300px;
+    height: 50px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fafafa;
+    
+}
+
+input::placeholder{
+    padding-left: 10px;
+    
+}
+input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder { color:transparent; } 
+
+input:focus:-moz-placeholder, textarea:focus:-moz-placeholder { color:transparent; } 
+
+input:focus::-moz-placeholder, textarea:focus::-moz-placeholder {  color:transparent; } 
+
+input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder { color:transparent; }
+
+
+
+
+.btn_login{
+    width: 300px;
+    height: 40px;
+    background-color: rgba(0,149,246,.3);
+    border: 1px solid transparent;
+    border-radius: 8px;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+}
+
+.pw_forgot {
+    color: #00376b;
+    font-weight: 500;
+    font-size: 18px;
+    display: block;
+    margin-top: 110px;
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/common.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <title>Westagram</title>
+</head>
+<body>
+    <div class="container">
+        <nav class="nav_head">
+            <div class="nav_container">
+                <div class="navlogo">
+                    <h1 class="logo">Westagram</h1>
+                </div>
+                <div class="search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="검색" autocapitalize="none" class="searchbox">
+                </div>
+                <div class="navicon">
+                    <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png" alt="탐색" class="nav_icon">
+                    <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" alt="하트" class="nav_icon">
+                    <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png" alt="마이페이지" class="nav_icon">
+                </div>
+            </div>
+        </nav>
+        <main>
+            <div class="feed">
+                <article>
+                    <header>
+                        <div class="profile_article">
+                            <div class="main_id">
+                                <div class="profilebox">
+                                    <img src="https://pbs.twimg.com/profile_images/1388372006597324803/vOGAnpoN_400x400.jpg" alt="" class="profile">
+                                </div>
+                                <span class="profilename">
+                                    <a href="#">roses_are_rosie</a>
+                                </span>
+                            </div>
+                            <div class="profileicon">
+                                <img src="img/more.png" alt="" class="moreicon">
+                            </div>
+                        </div>
+                    </header>
+                    <div class="main_img_box">
+                        <img src="https://imgc.1300k.com/aaaaaib/goods/215024/71/215024713100.jpg?3" alt="" class="main_img">
+                    </div>
+                    <div class="feedicon">
+                        <div class="feediconleft">
+                            <img src="img/heart.png" alt="" class="lefticon">
+                            <img src="img/dm.png" alt="" class="lefticon">
+                            <img src="img/share.png" alt="" class="lefticon">
+                        </div>
+                        <div class="feediconright">
+                            <img src="img/mark.png" alt="">
+                        </div>
+                    </div>
+                    <div class="feedlike">
+                        <div class="likeimgbox">
+                            <img src="http://www.jjn.co.kr/news/photo/201905/773960_123602_629.jpg" alt="" class="likeimg">
+                        </div>  
+                        <span class="likeinfo">
+                            <a href="#"><span>k_rystalee</span>님 <span>외 10명</span>이 좋아합니다</a>    
+                        </span>
+                    </div>
+                    <div id="comments">
+                        <div class="comment_row">
+                            <div class="comment_content">
+                                <div class="commenticonleft">
+                                <a href="#">sujeong</a>
+                                <span>위코드 위스타그램 클린코딩!~~</span>
+                                </div>
+                                <img src="img/heart.png" alt="" class="commentheart">
+                            </div>
+                        </div>
+                        <div class="comment_row">
+                            <div class="comment_content">
+                                <div class="commenticonleft">
+                                <a href="#">sujeong</a>
+                                <span>위코드 위스타그램 클린코딩!~~</span>
+                                </div>
+                                <img src="img/heart.png" alt="" class="commentheart">
+                            </div>
+                        </div>
+                        <div class="timelog">
+                            <span>40분전</span>
+                        </div>
+                        <div class="comment">
+                            <input type="text" placeholder="댓글 달기..." class="commentbox"> 
+                            <button type="submit" onclick="submitComment()" class="commentsubmit">게시</button>
+                        </div>
+                    </div>
+
+                </article>
+            </div>
+            <div class="main_right">
+                <article>
+
+                </article>
+            </div>
+        </main>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
