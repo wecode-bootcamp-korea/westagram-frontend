@@ -1,0 +1,295 @@
+
+img {
+    width: 20px;
+    height: 20px;
+    
+}
+
+h2 {
+    font-family: 'Lobster', cursive;
+    font-size: 1.2rem;
+    margin-top: px;
+    margin-left: 15px;
+    border-left: 1px solid black;
+    padding-left: 10px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFF;
+    height: 55px;
+    border-bottom: 1px solid #BBBBBB;
+}
+
+article {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #FFF;
+    width: 400px;
+    margin: 0 auto 20px auto;
+    border: 1px solid #BBBBBB;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    
+}
+
+/* Start nav */
+
+.mainLogo {
+    position: relative;
+    top: 2px;
+}
+
+.navRight {
+    display: flex;
+    color: #434343;
+    margin-left: 25px;
+}
+
+.navSearch {
+    width: 30%;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    height: 25px;
+    border: 1px solid #BBBBBB;
+    background-color: #FAFAFA;
+}
+
+.navSearch::placeholder {
+    color: #BBBBBB;
+}
+
+.navLeft {
+    margin-right: 100px;
+}
+
+.profileImg {
+    margin-left: 10px;
+}
+
+/* End nav */
+
+.feeds {
+    margin-top: 25px
+}
+
+/* start article */
+
+.articleHeader {
+    width: 100%;
+    padding: 10px 9px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.articleHeader span {
+    font-size: .8rem;
+}
+
+.profile {
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    margin-right: 5px;
+}
+
+.articleHeader i:nth-child(1){
+    margin-right: 5px;
+}
+
+.articleHeader i:nth-child(3){
+    margin-left: auto;
+    
+}
+
+.articleImg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.articleInfoIcon {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 7px 10px;
+}
+
+.articleInfoIcon i{
+    padding-right: 10px; 
+    
+}
+
+.articleInfoIcon i:nth-child(4){
+    margin-left: auto; 
+    padding-right: 0;
+}
+
+.articleLikes {
+    font-size: .8rem;
+    padding-left: 10px;
+}
+
+.articleTimeGap {
+    font-size: .6rem;
+    padding-left: 10px;
+    color: #8E8E8E
+}
+
+.commentLine {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0 7px 15px;
+    width: 100%;
+}
+
+.commentContainer {
+    display: flex;
+    margin-bottom: 5px;
+    align-items: center;
+    width: 100%;
+}
+
+.commentContainer div {
+    width: 100%;
+}
+
+.commentLine span.comValue {
+    font-size: .7rem;
+    margin-left: 5px;
+    word-wrap: break-word;
+    border;
+}
+
+.articleComment {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+    border-top: 1px solid #EBEBEB;
+}
+
+.articleComment i {
+    padding-left: 10px;
+}
+
+.articleComment input {
+    width: 100%;
+    border: none;
+    margin-left: 7px;
+    height: 20px;
+}
+
+.articleComment button {
+    margin-left: auto;
+    border: none;
+    height: 30px;
+    padding: 5px 5px 5px 0;
+    text-align: center;
+    background-color: #FFFFFF;
+    color: #0095F6;
+}
+
+/* End article */
+/* start mainRight */
+
+.mainRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 30px;
+    margin-left: 25px;
+    min-width: 250px;
+}
+
+.mainRightHead {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.name {
+    font-weight: 600;
+    font-size: .8rem;
+}
+
+.nickName {
+    font-size: .5rem;
+    color: #8E8E8E
+}
+
+.mainRightStory {
+    border: 1px solid #BBBBBB;
+    border-radius: 3px;
+    background-color: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+.storyHeader {
+    display: flex;
+    justify-content:space-between;
+    
+}
+
+.storyHeader p {
+    font-size: .8rem;
+    padding: 5px 7px;
+    font-weight: 700;
+    color: #8E8E8E;
+}
+
+.storyHeader p:nth-child(2) {
+    font-weight: 700;
+    color: #434343;
+}
+
+.storyContents {
+    display: flex;
+    padding: 5px 0px 5px 10px;
+    max-height: 500px;
+    justify-content: flex-start;
+}
+
+.storyContainer {
+    max-height: 200px;
+    overflow: auto;
+    
+}
+.storyContainer::-webkit-scrollbar {
+    display: none;
+}
+
+.storyContents button {
+    margin-left: auto;
+    border: none;
+    background-color: #FFFFFF;
+    margin-right: 10px;
+    color: #0095F6;
+    font-weight: 700;
+}
+
+.timeGap {
+    font-size: .6rem;
+}
+
+.mainRightFooter p {
+    font-size: .7rem;
+    text-align: center;
+    color: #8E8E8E;
+}
+
+
+
+
+/* End mainRight */
+
+
