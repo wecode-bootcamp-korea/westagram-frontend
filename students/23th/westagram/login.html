@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" class="width-max height-max">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Westagram</title>
+    <link rel="stylesheet" href="style/common.css" />
+    <link rel="stylesheet" href="style/login.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="width-max height-max">
+    <section class="width-max height-max">
+      <main>
+        <nav class="header">
+          <div class="header-container">
+            <span>한국어</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+        </nav>
+        <article class="login">
+          <div class="login-container">
+            <div class="login-block">
+              <h1 class="login-flex logo">Westagram</h1>
+              <form class="login-block__form">
+                <div class="login-block__wrap">
+                  <div class="login-block__facebook">
+                    <button class="flex-box">
+                      <img
+                        src="./imgs/facebook.svg"
+                        alt="facebook Logo"
+                        class="login_facebook-logo"
+                      />Facebook으로 계속하기
+                    </button>
+                  </div>
+                  <div class="login-block__or flex-box">
+                    <div class="flex-box line-div"></div>
+                    <div class="flex-box login-block__or-text">
+                      <span>또는</span>
+                    </div>
+                    <div class="flex-box line-div"></div>
+                  </div>
+                  <div class="login-block__id">
+                    <label id="loginId" class="login-flexbox">
+                      <span class="hidden">
+                        전화번호, 사용자 이름 또는 이메일
+                      </span>
+                      <input
+                        id="loginIdInput"
+                        type="text"
+                        placeholder="전화번호, 사용자 이름 또는 이메일"
+                      />
+                    </label>
+                  </div>
+                  <div class="login-block__pw">
+                    <label id="loginPw" class="login-flexbox">
+                      <span class="hidden"> 비밀번호 </span>
+                      <input
+                        id="loginPwInput"
+                        type="password"
+                        placeholder="비밀번호"
+                      />
+                    </label>
+                  </div>
+                  <div class="login-block__new-pw flex-box">
+                    <a href="#">비밀번호를 잊으셨나요?</a>
+                  </div>
+                  <div class="login-block__btn flex-box">
+                    <button id="loginBtn">로그인</button>
+                  </div>
+                </div>
+                <div class="sign-up flex-box">
+                  <span>계정이 없으신가요? <a href="#">가입하기</a></span>
+                </div>
+              </form>
+            </div>
+          </div>
+        </article>
+        <div class="facebook-logo flex-box">
+          <span>from</span>
+          <span>FACEBOOK</span>
+        </div>
+      </main>
+      <footer class="footer width-max"></footer>
+    </section>
+    <script src="js/login.js"></script>
+  </body>
+</html>

@@ -1,0 +1,281 @@
+body,
+html,
+section {
+  display: flex;
+}
+
+.flex-box {
+  display: flex;
+}
+
+.width-max {
+  width: 100%;
+}
+
+.height-max {
+  height: 100%;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+section {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 16px;
+  font-size: 12px;
+}
+
+.header-container {
+  display: flex;
+  height: 18px;
+  color: var(--grey);
+}
+
+.header-container i {
+  margin-left: 5px;
+}
+
+.login {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-top: 32px;
+  padding-bottom: 32px;
+}
+
+.login-flexbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 12px;
+  padding-bottom: 60px;
+}
+
+.login-block {
+  width: 348px;
+  height: 444px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--grey);
+  padding: 10px 0;
+}
+
+.login-block .logo {
+  margin: 25px auto 12px auto;
+  width: 175;
+  text-align: center;
+  font-family: "Lobster", cursive;
+  font-size: 2.5rem;
+}
+
+.login-block__form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-block__wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 24px 0 0 0;
+}
+
+.login-block__facebook {
+  margin: 8px 40px;
+  position: relative;
+}
+
+.login-block__facebook img {
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+}
+
+.login-block__facebook button {
+  align-items: center;
+  justify-content: center;
+  width: 268px;
+  height: 32px;
+  padding: 5px 9px;
+  border: 1px solid var(--grey);
+  border-radius: 4px;
+  background-color: var(--blue);
+  color: white;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.login-block__or {
+  width: 268px;
+  height: 15px;
+  justify-content: center;
+  align-items: center;
+  margin: 14px 40px 22px 40px;
+}
+
+.login-block__or .line-div {
+  width: 104.75px;
+  height: 1px;
+  background-color: var(--grey);
+}
+
+.login-block__or-text {
+  margin: 0 18px;
+  font-size: 13px;
+}
+
+.login-block__id {
+  width: 268px;
+  height: 38px;
+  margin: 0 40px 8px 40px;
+  border: 1px solid var(--grey);
+  border-radius: 4px;
+  position: relative;
+  background-color: var(--light-grey);
+  color: var(--input-font-color);
+}
+
+.login-block__id lable {
+  position: relative;
+}
+
+.login-block__id span {
+  position: absolute;
+  left: 8px;
+  font-size: 12px;
+}
+
+.login-block__id input {
+  width: 258px;
+  height: 36px;
+  padding: 9px 0 7px 8px;
+  border: none;
+  background-color: var(--light-grey);
+  outline: none;
+}
+
+.login-block__pw {
+  width: 268px;
+  height: 38px;
+  margin: 0 40px 8px 40px;
+  border: 1px solid var(--grey);
+  border-radius: 4px;
+  position: relative;
+  background-color: var(--light-grey);
+  color: var(--input-font-color);
+}
+
+.login-block__pw lable {
+  position: relative;
+}
+
+.login-block__pw span {
+  position: absolute;
+  left: 8px;
+  font-size: 12px;
+}
+
+.login-block__pw input {
+  width: 258px;
+  height: 36px;
+  padding: 9px 0 7px 8px;
+  border: none;
+  background-color: var(--light-grey);
+  outline: none;
+}
+
+.login-block__new-pw {
+  width: 268px;
+  height: 35px;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0 40px;
+  padding: 12px 0;
+  font-size: 14px;
+}
+
+.login-block__new-pw a {
+  text-decoration: none;
+  color: var(--blue);
+}
+
+.login-block__btn {
+  width: 268px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+  margin: 8px 40px;
+}
+
+.login-block__btn button {
+  width: 268px;
+  height: 30px;
+  border: 1px solid var(--grey);
+  border-radius: 4px;
+  padding: 5px 9px;
+  background-color: var(--light-blue);
+  color: white;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.sign-up {
+  width: 348px;
+  justify-content: center;
+  margin: 10px 0 0 0;
+  font-size: 14px;
+}
+
+.sign-up a {
+  text-decoration: none;
+  color: var(--blue);
+  font-weight: 700;
+}
+
+.facebook-logo {
+  flex-direction: column;
+  margin-bottom: 28px;
+  justify-content: center;
+  align-items: center;
+}
+
+.facebook-logo {
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.facebook-logo span:first-child {
+  color: var(--grey);
+}
