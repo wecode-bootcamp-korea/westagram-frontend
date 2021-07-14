@@ -27,21 +27,50 @@ function loginBtnClick() {
   const loginBtn = document.querySelector(`#loginBtn`);
 
   loginBtn.addEventListener(`click`, () => {
-    console.log(idInput.value);
-    if (idInput.value === `` && pwInput.value === ``) {
-      alert(`ID, Password를 입력해주세요.`);
-    } else if (idInput.value === `` && pwInput.value !== ``) {
-      alert(`ID를 입력해주세요.`);
-    } else if (idInput.value !== `` && pwInput.value === ``) {
-      alert(`Password를 입력해주세요.`);
-    } else {
-      const url = `./main.html?`;
-      history.pushState(``, ``, url);
-      localStorage.setItem(`id`, `${idInput.value}`);
-    }
+    const url = `./main.html?`;
+    const id = idInput.value.split(`@`)[0];
+    history.pushState(``, ``, url);
+    localStorage.setItem(`id`, `${id}`);
   });
   // }
 }
+
+// function loginEnterPress() {
+//   const idInput = document.querySelector(`#loginIdInput`),
+//     pwInput = document.querySelector(`#loginPwInput`);
+//   idInput.addEventListener(`keyup`, (event) => {
+//     if (event.code === `Enter`) {
+//       if (idInput.value === `` && pwInput.value === ``) {
+//         alert(`ID, Password를 입력해주세요.`);
+//       } else if (idInput.value === `` && pwInput.value !== ``) {
+//         alert(`ID를 입력해주세요.`);
+//       } else if (idInput.value !== `` && pwInput.value === ``) {
+//         alert(`Password를 입력해주세요.`);
+//       } else {
+//         const url = `./main.html?`;
+//         const id = idInput.value.split(`@`)[0];
+//         history.pushState(``, ``, url);
+//         localStorage.setItem(`id`, `${id}`);
+//       }
+//     }
+//   });
+//   pwInput.addEventListener(`keyup`, (event) => {
+//     if (event.code === `Enter`) {
+//       if (idInput.value === `` && pwInput.value === ``) {
+//         alert(`ID, Password를 입력해주세요.`);
+//       } else if (idInput.value === `` && pwInput.value !== ``) {
+//         alert(`ID를 입력해주세요.`);
+//       } else if (idInput.value !== `` && pwInput.value === ``) {
+//         alert(`Password를 입력해주세요.`);
+//       } else {
+//         const url = `./main.html?`;
+//         const id = idInput.value.split(`@`)[0];
+//         history.pushState(``, ``, url);
+//         localStorage.setItem(`id`, `${id}`);
+//       }
+//     }
+//   });
+// }
 
 // function mainReload() {
 //   const url = `http://127.0.0.1:5500/login.html`;
@@ -53,6 +82,6 @@ function loginBtnClick() {
 
 (() => {
   // mainReload();
-  loginBtnClick();
   inputTextEvent();
+  loginBtnClick();
 })();

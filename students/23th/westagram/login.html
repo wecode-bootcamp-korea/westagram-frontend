@@ -31,7 +31,7 @@
           <div class="login-container">
             <div class="login-block">
               <h1 class="login-flex logo">Westagram</h1>
-              <form class="login-block__form">
+              <form class="login-block__form" action="./main.html">
                 <div class="login-block__wrap">
                   <div class="login-block__facebook">
                     <button class="flex-box">
@@ -56,7 +56,7 @@
                       </span>
                       <input
                         id="loginIdInput"
-                        type="text"
+                        type="email"
                         placeholder="전화번호, 사용자 이름 또는 이메일"
                       />
                     </label>
@@ -68,6 +68,7 @@
                         id="loginPwInput"
                         type="password"
                         placeholder="비밀번호"
+                        minlength="8"
                       />
                     </label>
                   </div>

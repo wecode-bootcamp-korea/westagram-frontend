@@ -34,25 +34,38 @@ function createComments(idString, textString) {
 
 function addComments() {
   const commentsInput = document.querySelector(`#commentsInput`),
-    commentsBtn = document.querySelector(`#addCommentsBtn`);
+    commentsBtn = document.querySelector(`#addCommentsBtn`),
+    commentsPlaceholder = document.querySelector(`#commentsPlaceholder`);
+
   let comments = ``;
   commentsInput.addEventListener(`keyup`, (event) => {
     comments = commentsInput.value;
+    comments === ``
+      ? (commentsPlaceholder.style.visibility = `visible`)
+      : (commentsPlaceholder.style.visibility = `hidden`);
     const newCommentsId = localStorage.getItem(`id`),
       newCommentsText = comments;
     if (event.code === `Enter`) {
       comments !== ``
-        ? createComments(newCommentsId, newCommentsText)
+        ? (createComments(newCommentsId, newCommentsText),
+          (commentsInput.value = ``))
         : alert(`댓글 내용을 입력해주세요`);
     }
   });
+
+  // commentsInput.addEventListener(`click`, () => {
+  //   comments === ``
+  //     ? (commentsPlaceholder.style.visibility = `visible`)
+  //     : (commentsPlaceholder.style.visibility = `hidden`);
+  // });
 
   commentsBtn.addEventListener(`click`, () => {
     const newCommentsId = localStorage.getItem(`id`),
       newCommentsText = comments;
 
     comments !== ``
-      ? createComments(newCommentsId, newCommentsText)
+      ? (createComments(newCommentsId, newCommentsText),
+        (commentsInput.value = ``))
       : alert(`댓글 내용을 입력해주세요`);
   });
 }
