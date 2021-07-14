@@ -1,0 +1,602 @@
+/* nav */
+#header {
+    border-bottom: 1px solid #ddd;
+}
+
+#header nav {
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#header nav .logoZone {
+    font-family: 'Lobster', cursive;
+    font-size: 20px;
+    line-height: 1.3em;
+    font-weight: 400;
+}
+
+#header nav .searchZone {
+    position: relative;
+}
+
+#header nav .searchZone .searchPop {
+    display: none;
+    width: 230px;
+    position: absolute;
+    top: calc(100% + 15px);
+    left: 50%;
+    margin-left: -115px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    z-index: 0;
+}
+
+#header nav .searchZone .searchPop:before {
+    content: '';
+    display: block;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    margin-left: -7px;
+    box-shadow: -3px -3px 8px #ddd;
+    transform: rotate(45deg);
+    z-index: -1;
+}
+
+#header nav .searchZone .searchPop ul li {
+    border-bottom: 1px solid #ddd;
+}
+
+#header nav .searchZone .searchPop ul li:last-child {
+    border-bottom:0;
+}
+
+#header nav .searchZone .searchPop ul li a {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+}
+
+#header nav .searchZone .searchPop ul li a .searchImg {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+#header nav .searchZone .searchPop ul li a .searchInfo {
+    width: calc(100% - 32px);
+    padding-left: 15px;
+}
+
+#header nav .searchZone .searchPop ul li a .searchInfo .userId {
+    color: #000;
+    font-size: 16px;
+    line-height: 1.3em;
+    letter-spacing: 0;
+}
+
+#header nav .searchZone .searchPop ul li a .searchInfo .userInfo {
+    color: #a9a9a9;
+    font-size: 12px;
+    line-height: 1.3em;
+    letter-spacing: 0;
+}
+
+#header nav .linkZone {
+    display: flex;
+    align-items: center;
+}
+
+#header nav .linkZone>a {
+    display: inline-block;
+    margin-right: 20px;
+    line-height: 0;
+}
+
+#header nav .linkZone>a.heartIcon {
+    position: relative;
+}
+
+#header nav .linkZone>a.heartIcon:before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -7px;
+    left: 50%;
+    margin-left: -2px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: red;
+}
+
+#header nav .linkZone>a img {
+    height: 22px;
+}
+
+#header nav .linkZone .mypageBox {
+    position: relative;
+    line-height: 0;
+    cursor: pointer;
+}
+
+#header nav .linkZone .mypageBox>img {
+    border-radius: 50%;
+    height: 22px;
+}
+
+#header nav .linkZone .mypageBox .mypagePop {
+    display: none;
+    width: 230px;
+    position: absolute;
+    top: calc(100% + 15px);
+    left: 50%;
+    margin-left: -115px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 2px 2px 8px #ddd;
+    z-index: 0;
+}
+
+#header nav .linkZone .mypageBox .mypagePop:before {
+    content: '';
+    display: block;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    margin-left: -7px;
+    box-shadow: -3px -3px 8px #ddd;
+    transform: rotate(45deg);
+    z-index: -1;
+}
+
+#header nav .linkZone .mypageBox .mypagePop ul li a {
+    display: block;
+    padding: 12px;
+}
+
+#header nav .linkZone .mypageBox .mypagePop ul li a:hover {
+    background: #f5f5f5;
+}
+
+#header nav .linkZone .mypageBox .mypagePop ul li a span {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    color: #000;
+    font-size: 16px;
+    line-height: 1.3em;
+}
+
+#header nav .linkZone .mypageBox .mypagePop ul li a span:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    background-size: 100% 100%;
+}
+
+#header nav .linkZone .mypageBox .mypagePop ul li a.icon1 span:before {
+    background-image: url("https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png");
+}
+
+#header nav .linkZone .mypageBox .mypagePop ul li a.icon2 span:before {
+    background-image: url("../images/feed_link_right1.png");
+}
+
+#header nav .linkZone .mypageBox .mypagePop ul li a.icon3 span:before {
+    background-image: url("../images/setting.png");
+}
+
+#header nav .linkZone .mypageBox .mypagePop .logout {
+    border-top: 1px solid #ddd;
+}
+
+#header nav .linkZone .mypageBox .mypagePop .logout a {
+    display: block;
+    padding: 15px;
+    color: #000;
+    font-size: 14px;
+    line-height: 1.3em;
+}
+
+/* 공통 최대 넓이 */
+#main {
+    padding-top: 30px;
+    background: #fafafa;
+    padding-bottom: 100px;
+}
+
+#main .contain {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 왼쪽 영역 */
+#main .feeds {
+    width: 615px;
+    background: #fff;
+}
+
+#main .feeds .feed .writer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    border: 1px solid #ddd;
+}
+
+#main .feeds .feed .writer .writerInfo {
+    display: flex;
+    align-items: center;
+}
+
+#main .feeds .feed .writer .writerInfo .writerImg {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+#main .feeds .feed .writer .writerInfo .writerId {
+    padding-left: 15px;
+    color: 14px;
+    line-height: 1.3em;
+}
+
+#main .feeds .feed .writer .writerOtherMenu a {
+    display: block;
+}
+
+#main .feeds .feed .imgs img {
+    width: 100%;
+}
+
+#main .feeds .feed .feedInfoWrap {
+    border: 1px solid #ddd;
+    border-top: 0;
+    padding: 15px;
+}
+
+#main .feeds .feed .feedLink {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#main .feeds .feed .feedLink a {
+    display: inline-block;
+}
+
+#main .feeds .feed .feedLink .feedLinkLeft a {
+    margin-right: 5px;
+}
+
+#main .feeds .feed .feedLink .feedLinkLeft a:last-child {
+    margin-right: 0;
+}
+
+#main .feeds .feed .likeCount {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+#main .feeds .feed .likeCount .likeImg {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+#main .feeds .feed .likeCount .likeInfo {
+    padding-left: 12px;
+    font-size: 15px;
+}
+
+#main .feeds .feed .likeCount .likeInfo a {
+    display: inline-block;
+    font-weight: 700;
+    color: #000;
+}
+
+#main .feeds .feed .feedDecs {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+#main .feeds .feed .feedDecs .feedWriter {
+    color: #000;
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+#main .feeds .feed .feedDecs .feedTxt a {
+    display: inline-block;
+    color: #A39F9F;
+    padding-left: 8px;
+}
+
+#main .feeds .feed .feedComment ul li {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+#main .feeds .feed .feedComment ul li a {
+    display: inline-block;
+    color: #000;
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+#main .feeds .feed .feedComment ul li button {
+    border: 0;
+    text-indent: -999em;
+    display: block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 50%;
+    margin-top: -10px;
+    background-color: transparent;
+    background-size: 100% 100%;
+}
+
+#main .feeds .feed .feedComment ul li button.heartBtn {
+    right: 30px;
+    background-image: url("../images/feed_link_left1.png");
+}
+
+#main .feeds .feed .feedComment ul li button.heartBtn.active {
+    background-image: url("../images/feed_link_left1_active.png");
+}
+
+#main .feeds .feed .feedComment ul li button.deleteBtn {
+    right: 0;
+    background-image: url("../images/close.png");
+}
+
+#main .feeds .feed .feedComment .feed-time {
+    color: #A39F9F;
+    font-size: 12px;
+}
+
+#main .feeds .feed .feedCommentInput {
+    padding: 0 15px;
+    border: 1px solid #ddd;
+    border-top: 0;
+}
+
+#main .feeds .feed .feedCommentInput form {
+    display: flex;
+    align-items: center;
+}
+
+#main .feeds .feed .feedCommentInput form .input {
+    border: 0;
+    padding-left: 0;
+    height: 45px;
+    width: calc(100% - 35px);
+}
+
+#main .feeds .feed .feedCommentInput form .commentBtn {
+    display: block;
+    color: #00376b;
+    font-weight: 700;
+    opacity: .3;
+    border: 0;
+}
+
+/* 오른쪽 영역 */
+#main .sideMenu {
+    width: 290px;
+}
+
+#main .sideMenu .myProfile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+#main .sideMenu .myProfile .myImg {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+#main .sideMenu .myProfile .myInfo {
+    padding-left: 15px;
+}
+
+#main .sideMenu .myProfile .myInfo .myId {
+    color: #000;
+    font-size: 14px;
+    line-height: 1.3em;
+}
+
+#main .sideMenu .myProfile .myInfo .myDesc {
+    color: #a9a9a9;
+    font-size: 12px;
+    line-height: 1.3em;
+}
+
+#main .sideMenu .storyBox {
+    height: 200px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    border: 1px solid #ddd;
+    background: #fff;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+
+#main .sideMenu .storyBox .tit {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+#main .sideMenu .storyBox .con ul li {
+    margin-bottom: 10px;
+}
+
+#main .sideMenu .storyBox .con ul li:last-child {
+    margin-bottom: 0;
+}
+
+#main .sideMenu .storyBox .con ul li a {
+    display: flex;
+    align-items: center;
+}
+
+#main .sideMenu .storyBox .con ul li .storyImg {
+    position: relative;
+    width: 45px;
+    height: 45px;
+    padding: 5px;
+}
+
+#main .sideMenu .storyBox .con ul li .storyImg:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    border: 2px solid red;
+}
+
+#main .sideMenu .storyBox .con ul li .storyImg .storyLine {
+    overflow: hidden;
+    border-radius: 100%;
+}
+
+#main .sideMenu .storyBox .con ul li .storyWriter {
+    padding-left: 12px;
+}
+
+#main .sideMenu .storyBox .con ul li .storyWriter .writer {
+    color: #000;
+    line-height: 1.3em;
+}
+
+#main .sideMenu .storyBox .con ul li .storyWriter .writerTime {
+    color: #A39F9F;
+    line-height: 1.3em;
+}
+
+#main .sideMenu .recommendationBox {
+    border: 1px solid #ddd;
+    background: #fff;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+#main .sideMenu .recommendationBox .tit {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+#main .sideMenu .recommendationBox .con ul li {
+    position: relative;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+#main .sideMenu .recommendationBox .con ul li:last-child {
+    margin-bottom: 0;
+}
+
+#main .sideMenu .recommendationBox .con ul li .recommedImg {
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 100%;
+}
+
+#main .sideMenu .recommendationBox .con ul li .recommedUser {
+    padding-left: 12px;
+    width: calc(100% - 40px);
+    padding-right: 50px;
+}
+
+#main .sideMenu .recommendationBox .con ul li .recommedUser .user {
+    color: #000;
+    line-height: 1.3em;
+}
+
+#main .sideMenu .recommendationBox .con ul li .recommedUser .userTxt {
+    font-size: 14px;
+    color: #A39F9F;
+    line-height: 1.3em;
+    overflow: hidden;
+    word-break: break-all;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+#main .sideMenu .recommendationBox .con ul li .userFollow {
+    display: block;
+    position: absolute;
+    top: 11px;
+    right: 0;
+    font-size: 13px;
+    color: #00376b;
+}
+
+#main footer {
+    color: #b1afaf;
+    font-size: 14px;
+    line-height: 1.5em;
+}
+
+#main footer .footLink a {
+    display: inline-block;
+    padding-right: 10px;
+    position: relative;
+}
+
+#main footer .footLink a:after {
+    content: '';
+    display: block;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: #b1afaf;
+    position: absolute;
+    top: 8px;
+    right: 3px;
+}
+
+#main footer .footLink a:last-child:after {
+    display: none;
+}
+
+#main footer .copyRight {
+    margin-top: 15px;
+}

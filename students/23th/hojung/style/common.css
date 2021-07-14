@@ -1,0 +1,65 @@
+@charset "utf-8";
+/* hj basic css */
+
+* {-webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box;}
+:after, :before {-webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box;}
+
+/* reset */
+html {overflow-y:scroll;}
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select,figure,figcaption{margin:0;padding:0}
+body,input,textarea,select,button,table{font-family:'Open Sans',sans-serif;font-size:15px;font-weight:500;line-height:1.7em;color:#505050;word-break:keep-all;-webkit-text-size-adjust:none;}
+img{border:0;vertical-align:top;max-width:100%;}
+ul,ol{list-style:none}
+fieldset{border:none}
+fieldset legend {position:absolute;visibility:hidden;overflow:hidden;width:0;height:0;margin:0;padding:0;font:0/0 Arial;}
+button{cursor:pointer}
+header,hgroup,article,nav,footer,figure,figcaption,canvas,section,time{display:block}
+hr {clear:both;display:none;}
+li img, dd img {vertical-align:top;}
+*html body img {margin:none; padding:none;} /*for IE 6*/
+* {max-height: 1000000px;}
+
+a{
+	color:inherit;
+	text-decoration:none;
+	-webkit-transition: all 0.2s ease-in-out;
+	   -moz-transition: all 0.2s ease-in-out;
+		-ms-transition: all 0.2s ease-in-out;
+		 -o-transition: all 0.2s ease-in-out;
+			transition: all 0.2s ease-in-out;
+}
+a:hover,
+a:active{
+	text-decoration:none;
+	-webkit-transition: all 0.2s ease-in-out;
+	   -moz-transition: all 0.2s ease-in-out;
+		-ms-transition: all 0.2s ease-in-out;
+		 -o-transition: all 0.2s ease-in-out;
+			transition: all 0.2s ease-in-out;
+}
+
+::-webkit-input-placeholder {color:#999;}
+:-moz-placeholder {color:#999;}
+::-moz-placeholder {color:#999;}
+:-ms-input-placeholder {color:#999;}
+:placeholder-shown {color:#999;}
+
+table caption {visibility:hidden; overflow:hidden; width:0; height:0; margin:0; padding:0; font:0/0 Arial;}
+input[type="radio"], input[type="checkbox"] {vertical-align:middle !important; margin:-2px 3px 0 0 !important; background:transparent;}
+input,select {vertical-align:middle; background:#fff;}
+input,textarea,button{-webkit-appearance:none; -webkit-border-radius:0}
+input[type='checkbox']{-webkit-appearance:checkbox} 
+input[type='radio']{-webkit-appearance:radio}
+
+/* user class */
+h1,h2,h3,h4,h5,h6,strong,th,.bold{font-weight:700;}
+.semibold {font-weight:500;}
+.clear{clear:both;}
+.clearfix {*zoom:1;}
+.clearfix:after {content:" "; display:block; clear:both;}
+.hide {position:absolute;visibility:hidden;overflow:hidden;width:0;height:0;margin:0;padding:0;font:0/0 Arial;}
+.pointer {cursor:pointer;}
+.input {height:35px; padding:5px 9px; font-size:14px; line-height:23px; border:1px solid #ddd; box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box;}
+.textarea {padding:5px 9px; font-size:14px; line-height:24px; border:1px solid #ddd; overflow:auto; box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box;}
+.select {height:35px; padding:5px 9px; font-size:14px; line-height:23px; border:1px solid #ddd; box-sizing: border-box; -webkit-box-sizing: border-box; -moz-box-sizing: border-box;}
+input[type=file].input {border:0;padding:0;}
