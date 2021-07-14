@@ -3,11 +3,10 @@ body{
     height: 100vh;
 }
 .container{
-    height: 100%;
     width: 100%;
     background-color: #fafafa;
 }
-
+/* nav */
 .nav_head {
     width: 100%;
     height: 80px;
@@ -31,7 +30,7 @@ body{
     
 }
 
-.searchbox {
+.search_box {
     width: 250px;
     height: 30px;
     text-align: center;
@@ -40,7 +39,7 @@ body{
     background-color: #fafafa;
 }
 
-.searchbox::placeholder{
+.search_box::placeholder{
     color: #ccc;
     font-weight: 500;
 }
@@ -67,11 +66,18 @@ body{
 main {
     width: 1000px;
     margin: 0 auto;
-    height: 100%;
     padding-top: 70px;
+    padding-bottom: 40px;
    
     
 }
+.main-right{
+    width: 350px;
+    display: inline-block;
+    position: fixed;
+    margin-left: 50px;
+}
+/* 피드 */
 .feed {
     width: 600px;
     display: inline-block;
@@ -100,7 +106,7 @@ main {
     align-items: center;
 
 }
-.profilebox{
+.profile_box{
     width: 34px;
     height: 34px;
     border-radius: 70%;
@@ -113,51 +119,51 @@ main {
     height: 100%;
 }
 
-.profilename{
+.profile_name{
     margin-left: 15px;
 }
 
-.profilename a{
+.profile_name a{
     color:#2c2c2c;
     font-weight: 600;
 }
-.profileicon{
+.profile_icon{
     display: flex;
     justify-self: end;
     margin-right: 15px;
 }
 .main_img_box{
     width: 598px;
-    height: 640px;
+    height: 600px;
 }
 .main_img{
     width: 100%;
     height: 100%;
 }
 
-.feedicon {
+.feed_icon {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin: 15px 0 15px 0px;
  
 }
-.lefticon{
+.left_icon{
    margin-left: 15px;
 }
 
-.feediconright{
+.feed_icon_right{
     display: flex;
     justify-content: end;
     margin-right: 15px;
 }
 
-.feedlike{
+.feed_like{
     display: flex;
     align-items: center;
 }
 
-.likeimgbox{
+.like_img_box{
     width: 24px;
     height: 24px;
     border-radius: 70%;
@@ -165,23 +171,31 @@ main {
     border: 1px solid #dfdfdf;
     margin-left: 15px;
 }
-.likeimg{
+.like_img{
     width: 100%;
     height: 100%
 }
-.likeinfo{
+.like_info{
     margin-left: 10px;
 }
 
-.likeinfo a{
+.like_info a{
     color: #2c2c2c;
 }
 
-.likeinfo a span{
+.like_info a span{
     font-weight: 800;
 }
 
+.time_log{
+    margin: 10px 0 20px 20px;
+}
 
+.time_log span{
+    font-size: 14px;
+    color: #808080;
+}
+/* 댓글 */
 .comment_row{
     margin: 10px 0 0 20px;
 }
@@ -191,55 +205,202 @@ main {
     justify-content: space-between;
 }
 
-.commenticonleft span{
+.comment_icon_left span{
     font-size: 14px;
 }
-.commenticonleft a{
+.comment_icon_left a{
     color: #2c2c2c;
     font-weight: 700;
     font-size: 18px;
 }
-.commentheart{
+.comment_heart{
     width: 15px;
     height: 15px;
     display: flex;
     justify-self: end;
     margin-right: 20px;
 }
-.timelog{
-    margin: 10px 0 20px 20px;
-}
-.timelog span{
-    font-size: 14px;
-    color: #808080;
-}
 
 .comment{
-    width: 593px;
+    width: 600px;
     display: flex;
+    border-top: 1px solid #dfdfdf;
 }
-.commentbox::placeholder{
+.comment_box::placeholder{
    color: #8e8e8e;
 }
-.commentbox{
+.comment_box{
     width: 100%;
     height: 50px;
     border-style: none;
+    margin-left: 20px;
 }
 
-.commentsubmit{
+.comment_submit{
     width: 50px;
     height: 50px;
-
+    border-style: none;
+    background-color: #fff;
+    margin-right: 10px;;
+    color: #0095f6;   
+}
+.comment_submit:disabled{
+    opacity: .4;
 }
 
+/* main right */
+.myprofile{
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.myprofile_right{
+    width: 60px;
+    height: 60px;
+    border-radius: 70%;
+    overflow: hidden;
+    border: 1px solid #dfdfdf;
+    margin-left: 15px;
+}
 
+.myprofile_img{
+    width: 100%;
+    height: 100%;
 
-
-
-
-
-.main_right {
-    width: 310px;
+}
+.myprofile_left{
     display: inline-block;
+    margin-left: 20px;
+}
+
+.myprofile span{
+    display: block;
+}
+
+.userid {
+    font-weight: 800;
+    font-size: 18px;
+}
+.subtitle{
+    font-size:18px;
+    margin-top:5px;
+    color:#8e8e8e;
+}
+
+/*story*/
+
+.story{
+    width: 350px;
+    height: 250px;
+    background-color: #fff;
+    border: 1px solid #dfdfdf;
+    overflow: scroll;
+    
+}
+.story_head{
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.story_left{
+    color: #808080;
+    font-weight: 700;
+}
+.story_right{
+    font-size: 18px;
+    font-weight: 700;
+}
+.story_img {
+    width: 40px;
+    height: 40px;
+    border-radius: 70%;
+    overflow: hidden;
+    border: 1px solid #dfdfdf;
+    margin-left: 15px;
+}
+
+.story_content{
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.storyid span{
+    display: block;
+    margin-left: 10px;
+}
+
+/*recommend*/
+
+.recommend{
+    width: 350px;
+    height: 230px;
+    background-color: #fff;
+    border: 1px solid #dfdfdf;
+    margin-top: 20px;
+    
+}
+.recommend_head{
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.recommend_left{
+    color: #808080;
+    font-weight: 700;
+}
+.recommend_right{
+    font-size: 18px;
+    font-weight: 700;
+}
+.recommend_img {
+    width: 40px;
+    height: 40px;
+    border-radius: 70%;
+    overflow: hidden;
+    border: 1px solid #dfdfdf;
+    margin-left: 15px;
+}
+
+.recommend_content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.recommendid span{
+    display: block;
+    margin-left: 10px;
+}
+
+.recommend_content_left{
+    display: flex;
+    align-items: center;
+}
+.recommend_follow{
+    display: flex;
+    justify-self: end;
+    margin-right: 20px;
+}
+.recommend_follow a{
+    color: #0095f6;
+    font-size: 14px;
+}
+/*information*/
+
+.information{
+    margin-top:20px;
+}
+
+.information span {
+    color: #aaa;
+    font-size: 18px;
+    line-height: 25px;
+}
+
+.infomark {
+    margin-top: 20px;
 }
