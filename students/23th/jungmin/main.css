@@ -1,0 +1,269 @@
+*{box-sizing: border-box;}
+.main{
+  background-color: #FAFAFA;
+    
+  }
+  .navigation{
+    max-width: 935px;
+    margin: 0 auto;
+   /* border: 1px solid red;*/
+    display: flex;
+  
+    height: 54px;
+
+    align-items: center;
+    justify-content: space-between;
+   
+  }
+  
+  .left{
+    height: 36px;
+    display: flex;
+    align-items: center;
+  }
+  .westaImg{
+
+    height: 100%;
+    padding-right: 12px;
+    border-right: 1px solid black;
+  }
+  
+  .westagram{
+    font-family: 'Lobster', cursive;
+    padding-left: 12px;
+    text-decoration: none;
+    color: black;
+    font-size: x-large;
+  }
+  
+  .searchBar{
+    width: 100%;
+    text-align: center;
+    background: rgba(var(--b3f,250,250,250),1);
+    border: solid 1px rgba(var(--b6a,219,219,219),1);
+    font-size: 16px;
+    padding: 3px 10px 3px 10px;
+    border-radius: 3px;
+  }
+  .searchText{
+    font-size: 16px;
+    color: rgba(var(--b6a,219,219,219),1);
+    position: absolute;
+    left: 48%;
+  }
+  .searchDiv{
+      padding: auto 150px;
+      position: relative;
+
+  }
+  .searchDiv i{
+    position: absolute;
+    left: 78px;
+    top: 8px;
+    font-size: 3px;
+    color: rgba(var(--b6a,219,219,219),1);
+  }
+  
+  .iconNav{
+    /* height: 100%; */
+    padding-right: 12px;
+  }
+  .left img{
+    height: 100%;
+    margin-left: 10px;
+  }
+
+  .navAll{
+width: 100%;
+height: 54px;
+background-color: white;
+margin-bottom: 30px;
+border-bottom: 1px solid rgba(var(--b6a,219,219,219),1);
+}
+
+.mainContent{
+    max-width: 935px;
+    margin: 0 auto;
+    /*border: 1px solid red;*/
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+}
+
+.feeds {
+    flex-direction: column;
+    border: 1px solid rgba(var(--b6a,219,219,219),1);
+    width:614px;
+    background-color: white;
+    display: flex;
+    margin-top: 14px;
+ 
+}
+.bottomBorder {
+  border-bottom: 1px solid rgba(var(--b6a,219,219,219),1);
+}
+.feedName{
+    height: 55px;
+    align-items: center;
+    display: flex;
+    padding: 12px 0px;
+    justify-content: space-between;
+    
+}
+
+.feedmessage{
+  height: 50px;
+  padding: 10px 0px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+.mainRight{
+    
+    width: 293px;
+    background-color: #FAFAFA;
+}
+.profil{
+    height: 32px;
+    padding: 0 16px;
+    border-radius: 100%;
+   display: block;
+}
+
+.heart{
+  height: 26px;
+  padding: 0 10px 0 16px;
+}
+
+.messagebox .heart{
+  height: 13px;
+  
+}
+.feedimg{
+    height: 612px;
+    width: 612px;
+}
+.circle div{
+  margin: auto 0;
+}
+.circle a{
+  font-weight: 600;
+}
+.textMessage{
+  height: 20px;
+}
+.circle{
+  display: flex;
+  align-items: center;
+}
+.messagebox{
+  display: flex;
+  justify-content: space-between;
+  padding-left: 16px;
+  font-size: 14px;
+}
+.moreicon{
+  margin-right: 10px;
+  font-size: small;
+  color: gray;
+}
+.messageButton button{
+  background: 0 0;
+  border: 0;
+  padding: 8px;
+}
+.circle i{
+  font-size: 24px;
+}
+.direct{
+  padding: 6px;
+}
+
+.mainRight{
+  display: flex;
+  flex-direction: column;
+  
+}
+.myprofil{
+padding-bottom: 3px;
+margin-bottom: 4px;
+height: 63px;
+width: 293px;
+display: flex;
+flex-direction: row;
+align-items: center;
+background-color: #FAFAFA;
+}
+
+.topmargin{
+  
+  padding-top: 2px;
+  
+}
+.commend span.username{
+  padding: 3px 88px 3px 8px;
+}
+.commendall{
+  margin-top :15px;
+}
+
+.info{
+  color: rgba(var(--edc,199,199,199),1);
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 13px;
+  width: 293px;
+  height: 36px;
+  margin-top: 15px;
+}
+
+.imgg{
+  padding:3px 8px;
+  border-radius: 100%;
+  height: 56px;
+
+}
+.name{
+  display: block;
+}
+.usernick{
+  font-size: 14px;
+  font-weight: 600;
+ 
+}
+.username{
+  color: rgba(var(--f52,142,142,142),1);
+  font-weight: 500;
+  font-size: 14px;
+}
+span.username{
+  padding: 3px 160px 3px 10px;
+}
+
+.storybar{
+  padding: 4px;
+}
+
+.story{
+  background-color: white;
+  border: 1.5px solid rgba(var(--b6a,219,219,219),1);
+}
+
+.storyprofil{
+ padding-top: 5px;
+height: 48px;
+width: 293px;
+display: flex;
+flex-direction: row;
+align-items: center;
+}
+
+.storyprofil .imgg{
+  padding: 3px 12px;
+  border-radius: 100%;
+  height: 40px;
+
+}
+.storyprofil .username{
+  font-size: 12px;
+}
