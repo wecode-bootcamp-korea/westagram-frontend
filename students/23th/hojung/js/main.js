@@ -1,4 +1,3 @@
-
 const mypageBox = document.querySelector("#header .mypageBox");
 const mypagePop = document.querySelector("#header .mypagePop");
 const searchZone = document.querySelector(".searchZone");
@@ -12,9 +11,9 @@ const commentList = document.querySelector(".feedComment ul");
 const commentButton = document.querySelector(".feedCommentInput .commentBtn");
 
 const idData = [
-    {id: "W0nhong__", imgUrl: "images/profile_img.jpeg", info: "W0nhong소개글", profileUrl: "login.html"},
-    {id: "hj._.__s2", imgUrl: "images/profile_img.jpeg", info: "hj._.__s2소개글", profileUrl: "#"},
-    {id: "kvwowv", imgUrl: "images/profile_img.jpeg", info: "kvwowv소개글", profileUrl: "#"},
+    {id: "W0nhong__", imgUrl: "images/profile_img.jpeg", info: "W0nhong소개글", profileUrl: "https://www.naver.com/"},
+    {id: "hj._.__s2", imgUrl: "images/profile_img.jpeg", info: "hj._.__s2소개글", profileUrl: "https://www.daum.net/"},
+    {id: "kvwowv", imgUrl: "images/profile_img.jpeg", info: "kvwowv소개글", profileUrl: "https://wecode.co.kr/?gclid=CjwKCAjwlrqHBhByEiwAnLmYUD8aCer8FbdtZ8BzOFlwHX8HI-HwDbdHb4PW6-YW1NDDsDwMYGlsZRoCurgQAvD_BwE"},
     {id: "kvvow22", imgUrl: "images/profile_img.jpeg", info: "kvvow22소개글", profileUrl: "#"},
     {id: "abcd_efg", imgUrl: "images/profile_img.jpeg", info: "abcd_efg소개글", profileUrl: "#"},
     {id: "abcd_efaaaa__", imgUrl: "images/profile_img.jpeg", info: "abcd_efaaaa__소개글", profileUrl: "#"},
@@ -34,6 +33,7 @@ const searchDataPaint = () => {
         const li = document.createElement("li");
         const a = document.createElement("a");
         a.href = el.profileUrl;
+        a.target= "_blank";
         const searchImg = document.createElement("div");
         searchImg.classList.add("searchImg");
         const img = document.createElement("img");
@@ -61,19 +61,13 @@ const openSearch = () => {
 }
 
 const searchFilter = (e) => {
-    let filter = searchInput.value.toUpperCase();
-    let li = searchUl.getElementsByTagName("li .userName");
-    console.log(li);
-    for (i = 0; i < li.length; i++) {
-        li = li[i].getElementsByTagName("li")[0];
-        //console.log(li);
-        txtValue = li.textContent || li.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            li[i].style.display = "";
-        } else {
-            li[i].style.display = "none";
-        }
-    }
+    const searchText = searchInput.value.toUpperCase(); 
+    const li = searchUl.getElementsByTagName("li");
+    Array.from(li).forEach((el) => {
+        const userName = el.getElementsByTagName("div")[1].getElementsByTagName("div")[0];
+        const txtValue = userName.innerText;
+        txtValue.toUpperCase().indexOf(searchText) > -1 ? el.style.display = "block" : el.style.display = "none";
+    });
 }
 
 const likeHeart = (e) => {
@@ -114,7 +108,7 @@ const handleCommentSubmit = (e) => {
 
 mypageBox.addEventListener("click", openMypage);
 document.addEventListener("click", closePop);
-searchForm.addEventListener("keypress", searchFilter);
+searchForm.addEventListener("keyup", searchFilter);
 window.addEventListener("load", searchDataPaint, {once:true})
 searchInput.addEventListener("click", openSearch);
 commentForm.addEventListener("submit", handleCommentSubmit);

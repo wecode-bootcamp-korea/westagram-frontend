@@ -24,6 +24,7 @@
 #header nav .searchZone .searchPop {
     display: none;
     width: 230px;
+    min-height: 50px;
     position: absolute;
     top: calc(100% + 15px);
     left: 50%;
@@ -575,13 +576,16 @@
     line-height: 1.5em;
 }
 
-#main footer .footLink a {
-    display: inline-block;
+#main footer .footLink li {
+    display:inline-block;
+}
+#main footer .footLink li a {
+    display: block;
     padding-right: 10px;
     position: relative;
 }
 
-#main footer .footLink a:after {
+#main footer .footLink li a:after {
     content: '';
     display: block;
     width: 3px;
@@ -593,7 +597,7 @@
     right: 3px;
 }
 
-#main footer .footLink a:last-child:after {
+#main footer .footLink li:last-child a:after {
     display: none;
 }
 
