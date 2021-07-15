@@ -21,9 +21,9 @@
     display: flex;
     align-items: center;
   }
-  .westaImg{
+  .left .westaImg{
 
-    height: 100%;
+    margin-left: 0;
     padding-right: 12px;
     border-right: 1px solid black;
   }
@@ -69,8 +69,8 @@
     padding-right: 12px;
   }
   .left img{
-    height: 100%;
-    margin-left: 10px;
+    height: 70%;
+    margin-left: 14px;
   }
 
   .navAll{
@@ -101,6 +101,7 @@ border-bottom: 1px solid rgba(var(--b6a,219,219,219),1);
 }
 .bottomBorder {
   border-bottom: 1px solid rgba(var(--b6a,219,219,219),1);
+  padding-bottom: 5px;
 }
 .feedName{
     height: 55px;
@@ -171,6 +172,7 @@ border-bottom: 1px solid rgba(var(--b6a,219,219,219),1);
   background: 0 0;
   border: 0;
   padding: 8px;
+;
 }
 .circle i{
   font-size: 24px;
@@ -266,4 +268,26 @@ align-items: center;
 }
 .storyprofil .username{
   font-size: 12px;
+}
+
+.textMessage{
+  width: 90%;
+  height: 55px;
+  border: 0;
+  outline: 0;
+  padding-left: 16px;
+}
+.postButton{
+  opacity: .5;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  color: #0095f6;
+  background-color: white;
+  width: 10%;
+}
+.message{
+
+  display: flex;
+  justify-content: space-between;
 }

@@ -1,23 +1,25 @@
+let password = document.getElementById('password');
+let id = document.getElementById('id');
+let button = document.querySelector("Button");
 
-let password1 = document.getElementById('password');
-let id1 = document.getElementById('id');
-
-function loginfuc(){
-  if (password1.value !== ""){
-    console.log("password1");
+button.addEventListener('click',function(){
+  alert("아이디와 비밀번호가 맞을까요 ? :)")
+  })
+  
+function test(){
+  let pwValue = password.value;
+  let idValue = id.value;
+  if(pwValue&&idValue){
+    button.disabled=false;
+    button.style.backgroundColor="#0095f6";
+    button.style.color="#fff";
   }
   else{
-    console.log("no");
+    button.disabled=true;
+    button.style.backgroundColor="rgba(var(--d69,0,149,246),.3)";
+    button.style.color="rgba(var(--eca,255,255,255),1)";
   }
 }
 
-document.getElementById("password").addEventListener("keyup",function(event){
-    console.log(password1);
-})
-
-
-
-
-document.getElementById("id").addEventListener("keyup",function(event){
-    console.log(id1);
-})
+password.addEventListener("keyup", test);
+id.addEventListener("keyup",test);
