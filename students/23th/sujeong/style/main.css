@@ -197,28 +197,27 @@ main {
 }
 /* 댓글 */
 .comment_row{
-    margin: 10px 0 0 20px;
-}
-.comment_content{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    margin: 10px 20px 0 20px;
 }
 
-.comment_icon_left span{
+
+ul.newcomment{
+    margin-top: 5px;
+}
+
+ul.newcomment li{
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
     font-size: 14px;
-}
-.comment_icon_left a{
     color: #2c2c2c;
-    font-weight: 700;
-    font-size: 18px;
 }
-.comment_heart{
+ul li span.userid{
+    margin-right: 10px;
+}
+img.comment_heart{
     width: 15px;
     height: 15px;
-    display: flex;
-    justify-self: end;
-    margin-right: 20px;
 }
 
 .comment{
@@ -243,8 +242,6 @@ main {
     background-color: #fff;
     margin-right: 10px;;
     color: #0095f6;   
-}
-.comment_submit:disabled{
     opacity: .4;
 }
 
