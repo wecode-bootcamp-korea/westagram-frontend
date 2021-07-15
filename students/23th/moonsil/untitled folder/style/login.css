@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 520px;
+  height: 600px;
+  background-color: #fafafa;
+  margin: 0 auto;
+}
+
+.wrappingAllPage {
+  position: relative;
+  width: 100%;
+  height: 90%;
+  margin: 50px 0 30px 0;
+  background-color: #ffff;
+  border: 1px solid #c4c1c1;
+}
+
+.mainContainer {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  padding-bottom: 50px;
+  text-align: center;
+}
+header {
+  margin: 40px auto;
+}
+
+header h1 {
+  padding-top: 30px;
+  font-family: 'Lobster', cursive;
+  font-size: 50px;
+  letter-spacing: 1px;
+}
+
+.loginForm {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 160px;
+  text-align: center;
+}
+
+.idBox,
+.pwBox {
+  height: 45px;
+  margin-bottom: 10px;
+  border: 1px solid #c4c1c1;
+  background-color: #fafafa;
+  color: #8e8e8e;
+  font-size: 16px;
+  overflow: hidden;
+}
+
+.loginButton {
+  margin-top: 5px;
+  border: 1px solid transparent;
+  background-color: #0095f6; /* after users put their account info at least one character, this button color will be changed */
+  color: white;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.idBox,
+.pwBox,
+.loginButton {
+  display: inline-block;
+  padding: 9px 7px 7px 8px;
+  width: 80%;
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+a.findingOutPassword {
+  color: #00376b;
+  text-decoration: none;
+}
