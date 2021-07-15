@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
+/* nav 구축*/
 nav {
     height: 54px;
     width: 975px;
@@ -72,22 +73,318 @@ nav img {
     cursor: pointer;
 }
 
+/*feed 부분 설정*/
 main {
-    border-top: 1px solid #c4c4c4;
+    border-top: 0.5px solid #c4c4c4;
     display: flex;
     justify-content: center;
+    padding-top: 24px;
 }
+
 .feeds {
-    border: 1px solid black;
-    padding-right: 20px;
+    border: 1px solid #c4c4c4;
+    border-radius: 2px;
+    margin-right: 20px;
+    width: 614px;
 }
 
-.feeds article {
-    width: 650px;
-    border: 1px solid black;
+.profileTop { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
+.feeds .profileName {
+    padding: 16px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.profileName img {
+    width: 32px;
+    height: 32px;
+    border-radius: 20px;
+    margin-right: 14px;
+    cursor: pointer;
+}
+
+.profileName span {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.addFunction img {
+    width: 15px;
+    margin-right: 20px;
+}
+
+article img {
+    width: 100%;    
+}
+
+/*좋아요*/
+.reactionBtn {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+.reactionBtn img {
+    width: 24px;
+    height: 24px;
+    margin: 8px;
+    cursor: pointer;
+}
+
+.likeName {
+    padding: 0 16px 10px 16px;
+    display: flex;
+    align-items: center;
+}
+
+.likeName img {
+    width: 32px;
+    height: 32px;
+    border-radius: 20px;
+    border:0.5px solid #c4c4c4;
+    margin-right: 14px;
+    cursor: pointer;
+}
+
+.likeName span {
+    font-size: 12px;
+}
+
+/*댓글*/
+.content {
+    margin-top: 3px;
+    padding: 0 0 0 16px;
+    align-items: center;
+}
+
+.Id {
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.Id:hover { 
+    text-decoration: underline;
+}
+
+.reId {
+    font-size: 14px;
+    color : #124172;
+    cursor: pointer;
+}
+
+.content span {
+    font-size: 12px;
+}
+
+.reply {
+    display: flex;
+    justify-content: space-between;
+}
+.reply img {
+    width: 13px;
+    height: 13px;
+    margin-right: 16px;
+    cursor: pointer;
+    filter: opacity(.5) drop-shadow(0 0 0 #c4c4c4);
+}
+
+/*댓글 달기*/
+.writeReply {
+    margin-top: 10px;
+    border-top: 0.5px solid #c4c4c4;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.writeReply input {
+    border: none;
+    padding-left: 16px;
+}
+
+.writeReply input:focus {
+    outline: none;
+}
+
+.writeReply button {
+    border: none;
+    background-color: white;
+    margin-right: 16px;
+    color: #1E9AF7;
+    font-weight: 500;
+    filter: opacity(.2);
+}
+
+/* 그 외 정보 */
 .mainRight {
-    width: 293px;
-    border: 1px solid black;
+}
+
+/* 내 정보 */
+.myStatus {
+    display: flex;
+    align-items: center;
+}
+
+.myStatus img {
+    width: 56px;
+    height: 56px;
+    border-radius: 35px;
+}
+
+.myInform {
+    display: flex;
+    flex-direction: column;
+    margin-left: 16px;
+}
+
+.myInform span:first-child {
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.myInform span:last-child {
+    font-size: 18px;
+    font-weight: 400;
+    color: #c4c4c4;
+}
+
+/* 친구 스토리 */
+.story {
+    width: 328px;
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.storyTitle {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.storyTitle span:first-child {
+    font-size: 15px;
+    color: #c4c4c4;
+}
+
+.storyTitle span:last-child {
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.friendStory {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.friendStory img {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #D22D84;
+    border-radius: 30px;
+    padding: 2px;
+    cursor: pointer;
+}
+
+.friendStory span:first-child {
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.friendStory span:last-child {
+    font-size: 14px;
+    font-weight: 400;
+    color: #c4c4c4;
+}
+
+.friendInform {
+    display: flex;
+    flex-direction: column;
+    margin-left: 16px;
+}
+
+/* 친구 추천 */
+.recommand {
+    width: 328px;
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    margin-top: 20px;
+    padding: 10px;
+}
+
+.customerTitle {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.customerTitle span:first-child {
+    font-size: 15px;
+    color: #c4c4c4;
+}
+
+.customerTitle span:last-child {
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.recommandList {
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;;
+}
+
+.recommandProfile {
+    display: flex;
+    align-items: center;
+}
+
+.recommandList img {
+    width: 35px;
+    height: 35px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.recommandList span:first-child {
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.recommandList span:last-child {
+    font-size: 14px;
+    font-weight: 400;
+    color: #c4c4c4;
+}
+
+.friendInform {
+    display: flex;
+    flex-direction: column;
+    margin-left: 16px;
+}
+
+.recommandList button {
+    border: none;
+    background-color: white;
+    color: #1E9AF7;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+/*기타*/
+.etcList li {
+    display: inline;
 }
