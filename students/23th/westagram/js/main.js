@@ -13,6 +13,16 @@ function screenInit() {
     : (recommendedBlock.style.visibility = `hidden`);
 }
 
+// 좋아요 icon 구현 보류
+// function createCommentsLikeOrDelete() {
+//   const commentsLikeOrDelete = document.createElement(`div`),
+//     commentsLike = document.createElement(`a`),
+//     commentsDeleteBtn = document.createElement(`button`),
+//     heartIcon = document.getElementsByClassName(`.fa-heart`);
+
+//   commentsLike.appendChild(heartIcon);
+// }
+
 // 댓글에 해당하는 div 생성 후 배치
 function createComments(idString, textString) {
   const photoComments = document.querySelector(`.photo__comments`);
@@ -96,6 +106,34 @@ function addComments() {
   });
 }
 
+// modal
+function navSearch() {
+  const searchBarLable = document.querySelector(`.header__search-bar`);
+
+  const searchBarText = searchBarLable.children[0],
+    searchBarInput = searchBarLable.children[1];
+
+  const searchModal = document.querySelector(`.search-modal`);
+
+  searchBarInput.addEventListener(`focusin`, () => {
+    searchBarText.style.left = `30px`;
+    searchBarText.style.transform = `translate(0, -50%);`;
+    searchModal.classList.add(`visible`);
+    searchModal.classList.remove(`hidden`);
+  });
+
+  searchBarInput.addEventListener(`keyup`, (event) => {
+    searchBarText.classList.add(`hidden`);
+  });
+
+  searchBarInput.addEventListener(`focusout`, () => {
+    searchBarText.style.left = `50%`;
+    searchBarText.style.transform = `translate(-50%, -50%);`;
+    searchModal.classList.remove(`visible`);
+    searchModal.classList.add(`hidden`);
+  });
+}
+
 // initialize
 (() => {
   screenInit();
@@ -105,4 +143,5 @@ function addComments() {
     location.reload();
   });
   addComments();
+  navSearch();
 })();

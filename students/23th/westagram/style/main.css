@@ -14,14 +14,27 @@ body {
   display: flex;
 }
 
+.visible {
+  visibility: visible;
+}
+
 .hidden {
   visibility: hidden;
 }
 
+#move-left {
+  left: 30px;
+  transform: translate(0, -50%);
+}
+
 .header {
+  position: fixed;
   display: flex;
   width: 100%;
   height: 54px;
+  top: 0px;
+  background-color: white;
+  z-index: 99;
 }
 
 .header-container {
@@ -57,6 +70,11 @@ body {
 
 .header__search-bar {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 215px;
+  background-color: var(--light-grey);
+  border: 1px solid var(--grey);
   color: var(--grey);
 }
 
@@ -74,10 +92,10 @@ body {
 }
 
 .header__search-bar input {
-  width: 215px;
+  width: 175px;
   height: 28px;
   background-color: var(--light-grey);
-  border: 1px solid var(--grey);
+  border: none;
   outline: none;
 }
 
@@ -205,6 +223,10 @@ main {
   width: 50%;
 }
 
+/* .photo__icons-left button:first-child i:hover {
+  color: red;
+} */
+
 .photo__icons-right {
   display: flex;
   justify-content: flex-end;
@@ -266,6 +288,10 @@ main {
 .comments__desc div:first-child {
   font-weight: 700;
   margin-right: 5px;
+}
+
+.comments__desc-like-delete {
+  display: flex;
 }
 
 .photo__date {
@@ -447,4 +473,77 @@ main {
   margin-top: 16px;
   color: var(--text-grey);
   font-size: 11px;
+}
+
+.search-modal {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 53px;
+  left: 50%;
+  padding: 12px 0 0 0;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.3);
+  transform: translate(-50%, 0);
+  z-index: 100;
+}
+
+.last-search__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 343px;
+  margin: 4px 16px 0 16px;
+}
+
+.last-search__list div:first-child {
+  font-size: 16px;
+}
+
+.last-search__list div:last-child {
+  font-size: 14px;
+  color: var(--blue);
+}
+
+.search__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 16px;
+}
+
+.search__list img {
+  width: 44px;
+  height: 44px;
+  margin: 10px;
+}
+
+.search__list-profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 247px;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.search__list-profile span:first-child {
+  font-weight: 600;
+}
+
+.search__list-profile span:last-child {
+  color: var(--text-grey);
+}
+
+.search__list-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  margin-left: 8px;
+  font-size: 20px;
+  color: var(--text-grey);
 }
