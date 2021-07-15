@@ -163,12 +163,42 @@ main {
     width: 100%;
 }
 
+.commentContainer div span button {
+    border: none;
+    background-color: #FFF;
+}
+
+.commentContainer div span button.active {
+    color: #0571ed;
+}
+
+.commentContainer div span button.active i {
+    animation: anim 0.5s ease-in-out;
+    -webkit-animation: anim 0.5s ease-in-out;
+}
+
 .commentLine span.comValue {
     font-size: .7rem;
     margin-left: 5px;
+    margin-top: 2px;
     word-wrap: break-word;
-    border;
 }
+
+.commentLine div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.commentLine div span:nth-child(3){
+    margin-right: 2px;    
+    margin-left: auto;
+}
+
+.commentLine div span i {
+    padding: 3px 5px;
+}
+
 
 .articleComment {
     display: flex;
@@ -287,9 +317,18 @@ main {
     color: #8E8E8E;
 }
 
-
-
-
 /* End mainRight */
 
+/* keyframes */
 
+@keyframes anim {
+    100% {
+      transform: rotate(-15deg) scale(1.3);
+      -webkit-transform: rotate(-15deg) scale(1.3);
+      -moz-transform: rotate(-15deg) scale(1.3);
+      -ms-transform: rotate(-15deg) scale(1.3);
+      -o-transform: rotate(-15deg) scale(1.3);
+      filter: blur(0.5px);
+      -webkit-filter: blur(0.5px);
+    }
+  }
