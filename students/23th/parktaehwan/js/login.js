@@ -6,13 +6,18 @@ const pwValue = document.getElementsByClassName("inputPw")[0];
 
 
 function btnOn(){
-    if(loginBtn.style.backgroundColor === "blue"){
-        loginBtn.setAttribute('disabled','disabled');
-        loginBtn.style.backgroundColor = "#c4e1fb";
-    }
+    // if(loginBtn.style.backgroundColor === "blue"){
+    //     loginBtn.setAttribute('disabled','disabled');
+    //     loginBtn.style.backgroundColor = "#c4e1fb";
+    // }
     if(idValue.value != "" && pwValue.value != ""){
         loginBtn.removeAttribute('disabled');
         loginBtn.style.backgroundColor = "blue";
+        loginBtn.style.cursor="pointer";
+    }else{
+        loginBtn.setAttribute('disabled','disabled');
+        loginBtn.style.backgroundColor = "#c4e1fb";
+        loginBtn.style.cursor="default";
     }
 }
 

@@ -30,10 +30,10 @@ nav{
     margin-left: 0;
 }
 .navSearchBox{
-    width: 218px;
     display: flex;
     align-items: center;
     position: relative;
+    width: 218px;
 }
 .navSearchImgBox{
     width: 218px;
@@ -104,60 +104,252 @@ nav{
     padding-left: 20px;
     border-left: 1px solid black;
 }
+/*본문*/
 main{
     display: flex;
     flex-direction: row;
     width: 935px;
-    margin-top: 30px;
-    border: 1px solid black;
+    height: 100%;
+    margin-top: 50px;
 }
 .feeds{
-    width: 642px;
-    padding-right: 28px;   
-    border: 1px solid black;
+    margin-right: 28px;   
+    border: 1px solid #dbdbdb;
     height: 100vh;
 }
 .section1{
+    display: flex;
+    flex-direction: column;
     width: 614px;
-    height: auto;
     background-color: white;
-    border: 1px solid black;
+    border: 1px solid #dbdbdb;
 }
 .writer{
     display: flex;
     flex-direction: row;
-    border: 1px solid black;
+    align-items: center;
+    justify-content: space-between;
     height: 60px;
+}
+.profileLeft{
+    display: flex;
+    flex-direction: row;
+    padding: 0 15px;
+}
+.profileImgBox{
+    width: 32px;
+    height: 32px; 
+    border-radius: 70%;
+    overflow: hidden;
+    margin-right: 15px;
+}
+.profileImg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.profileNameBox{
+    line-height: 1.7;
+    color: #262626;
+}
+.writerDotBox{
+    margin-right: 15px;
 }
 .writerDot{
     width: 16px;
     height: 16px;
 }
 .content{
-    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    width: 614px;
 }
-.comment{
-    border: 1px solid black;
-    height: 56px;
+.contentImgBox{
+    height: 614px;    
 }
-aside{
-    width: 293px;
-    border: 1px solid black;
+.contentImg{
+    width: 614px;
+    height: 614px;
 }
-
-
-
-
-
-
-.profileBox{
-    width: 32px;
-    height: 32px; 
+.likeBtnBar{
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.likeLeft{
+    margin-left:5px;
+}
+.likeRight{
+    margin-right: 15px;
+}
+.like{
+    font-size: 24px;
+    margin-left:10px;
+    color: gray;
+}
+.howManyLike{
+    height: 24px;    
+    display: flex;
+    flex-direction: row;
+    padding: 0 15px;
+}
+.howManyLikeBox{
+    width: 20px;
+    height: 20px; 
     border-radius: 70%;
     overflow: hidden;
 }
-.profileImg{
+.howManyLikeImg{
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+.howManyLikeText{
+    font-size: 13px;
+}
+.bold{
+    font-weight: bold;
+}
+.contentComment{
+    overflow:hidden;
+    height: auto;
+    padding: 0 15px;
+    font-size: 14px;
+}
+.commentPop{
+    color: #BCBCBC;
+    font-weight: bold;
+}
+.comment{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.commentHeartBox{
+    display: flex;
+    align-items: center;
+}
+.commentHeart{
+    font-size: 12px;
+}
+.time{
+    height: 19px;    
+    padding: 0 15px;
+}
+.writeTime{
+    font-size: 10px;
+    color: #BCBCBC;
+}
+.writeComment{
+    height: 56px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #dbdbdb;
+    padding: 0 15px;
+}
+.commentInputBox{
+    display: flex;
+    align-items: center;
+    width: 90%;
+}
+.commentInput{
+    border: 1px solid transparent;
+    outline: 0;
+    width: 90%;
+}
+.commentBtn{
+    border: 0;
+    color: #b3dffc;
+    background-color: white;
+}
+aside{
+    width: 293px;
+}
+.myProfile{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.myProfileLeft{
+    display: flex;
+    flex-direction: row;
+}
+.myProfileImgBox{
+    width: 46px;
+    height: 46px; 
+    border-radius: 70%;
+    overflow: hidden;
+}
+.myProfileNameBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 15px;
+    font-weight: bold;
+    margin-left: 15px;
+}
+.myProfileSub{
+    color: #BCBCBC;
+}
+.asideSection{
+    display: flex;
+    flex-direction: column;
+    padding: 13px;
+    border: 1px solid #dbdbdb;
+    background-color: white;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.asideSectionTitle{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+.asideSectionTitleName{
+    color:#BCBCBC;
+}
+.asideSectionProfile{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top:5px;
+}
+.follow{
+    justify-content: space-between;
+}
+.followBtn{
+    border: 0;
+    color: #0095F6;
+    background-color: white;
+}
+.asideSectionProfileLeft{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.asideSectionNameBox{
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+}
+.asideSectionDes{
+    color: #BCBCBC;
+}
+.intro{
+    font-size: 15px;
+    font-weight: bold;
+    color: #dbdbdb;
+}
+a{
+    text-decoration: none;
+    color: #262626;
+    font-weight: bold;
 }
