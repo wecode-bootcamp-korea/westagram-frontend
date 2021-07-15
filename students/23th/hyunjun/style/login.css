@@ -22,6 +22,7 @@ html, body {
     font-family: 'Lobster', cursive;
     font-size: 40px;
     margin-bottom: 50px;
+    cursor: default;
 }
 .box input[type = "text"], .box input[type = "password"] {
     border: 0;
@@ -43,14 +44,13 @@ html, body {
     color: black;
     border: 2px solid gray;
 }
-.box button {
+.box .btn {
     border: 0;
-    background: rgba(var(--h5f,56,151,240),1);
+    background: #bfdffd;
     opacity: 1;
     display: block;
     margin: 20px auto;
     text-align: center;
-    /* border: 2px solid rgba(var(--h5f,56,151,240),1); */
     padding: 10px;
     outline: none;
     width: 100%;
@@ -59,7 +59,7 @@ html, body {
     font-size: 11px;
     cursor: pointer;
 }
-.box a button {
+.box a .btn {
     color: white;
 }
 .box .link {

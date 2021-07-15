@@ -30,10 +30,6 @@ ul {
    align-items: center;
    font-size: 25px;
 }
-.header .inner .logo span {
-    display: inline-block;
-    text-indent: -9999px;
-}
 .header .inner .logo img {
     width: 20px;
     height: 20px;
@@ -113,7 +109,9 @@ ul {
 .feeds_list .feeds_list_li:last-child {
     margin: 0;
 }
-
+.contents_right .feed_profile {
+    padding: 10px 0;
+}
 
 .feed_profile .profile p {
     line-height: 1.4;
@@ -160,8 +158,6 @@ ul {
 .feed_comments .feed_likes {
     display: flex;
     align-items: center;
-}
-.feed_comments .comments_margin {
     margin-bottom: 10px;
 }
 .feed_comments .feed_likes .likes_user.profile .profile_img {
@@ -258,13 +254,13 @@ ul {
     color: #8b8b8b;
     margin-top: 0;
 }
-.follow_info.follow_story {
+.follow_info {
     padding-right: 0;
 }
-.follow_info.follow_story .follow_title span.sub_tit {
+.follow_info .follow_title span.sub_tit {
     padding-right: 13px;
 }
-.follow_info.follow_story .follow_title a {
+.follow_info .follow_title a {
     text-decoration: none;
     color: black;
 }
@@ -277,8 +273,13 @@ ul {
     height: 250px;
     right: 30px;
 }
-.follow_info.follow_story .profile_img {
+.follow_info .profile_img {
     border: 3px solid #fa5252;
+}
+.follow_info .follow_list_wrap .profile_imgz {
+    width: 45px;
+    border-radius: 70%;
+    margin-right: 10px;
 }
 .follow_btn .btn {
     outline: none;
