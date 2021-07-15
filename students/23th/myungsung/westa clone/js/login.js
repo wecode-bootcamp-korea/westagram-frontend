@@ -1,9 +1,9 @@
 const thisIsId = document.querySelector(".loginId");
-const thisIsPW = document.querySelector(".loginPassword");
+const thisIsPw = document.querySelector(".loginPassword");
 const thisIsBtn = document.querySelector(".loginBtn");
 
-thisIsPW.addEventListener('keyup', () => {
-    if (thisIsPW.value.length >= 4 && thisIsId.value.length >= 4) {
+thisIsPw.addEventListener('keyup', () => {
+    if (thisIsId.value.length >= 4 && thisIsPw.value.length >= 6) {
          thisIsBtn.classList.add("access");
     } else {
         thisIsBtn.classList.remove("access");
@@ -11,7 +11,7 @@ thisIsPW.addEventListener('keyup', () => {
 })
 
 thisIsId.addEventListener('keyup', () => {
-    if (thisIsId.value.length >= 4 && thisIsPW.value.length >= 4) {
+    if (thisIsId.value.length >= 4 && thisIsPw.value.length >= 6) {
          thisIsBtn.classList.add("access");
     } else {
         thisIsBtn.classList.remove("access");
