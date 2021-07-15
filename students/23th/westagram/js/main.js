@@ -34,24 +34,32 @@ function createComments(idString, textString) {
 
 // form submit 할 때, 댓글 localStorage에 저장
 function saveComments(commentsArr, idString, textString) {
-  let comment = { id: idString, text: textString };
+  const commentCount = document.querySelector(`#commentsCount`);
 
+  let comment = { id: idString, text: textString };
   commentsArr.push(comment);
 
+  commentCount.innerHTML = `${commentsArr.length}`;
   commentsArr = JSON.stringify(commentsArr);
   localStorage.setItem(`comment`, commentsArr);
+  location.reload();
 }
 
 // localStorage 내부에 존재하는 댓글 id, 내용 가져오기
 function loadComments() {
   let commentsArr = localStorage.getItem(`comment`);
 
+  const commentMoreDiv = document.querySelector(`.comments__more`);
+  commentCount = document.querySelector(`#commentsCount`);
+
   commentsArr = JSON.parse(commentsArr);
 
   if (commentsArr !== null) {
-    for (let i = 0; i < commentsArr.length; i++) {
-      createComments(commentsArr[i][`id`], commentsArr[i][`text`]);
-    }
+    commentMoreDiv.style.visibility = `visible`;
+    commentCount.innerHTML = `${commentsArr.length}`;
+    commentsArr.forEach((x) => {
+      createComments(x[`id`], x[`text`]);
+    });
   }
   return commentsArr;
 }
