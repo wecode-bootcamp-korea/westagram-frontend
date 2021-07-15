@@ -6,20 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>> Westagram</title>
-
     <!-- CSS -->
     <link rel="stylesheet" href="./css/main.css">
     <!-- Favicon -->
     <link rel="shortcut icon" href="./image/favicon.ico" type="image/x-icon">
-
     <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-
-    <!-- Awesome Icon -->
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 </head>
 
 <body>
@@ -27,39 +21,128 @@
         <div class="container">
             <nav>
                 <div class="leftContents">
-                    <img class="westagramIcon" src="./image/instagram.png" alt="home">
-                    <p class="verticalLine">|</p>
                     <p class="westagramTitle">Westagram</p>
                 </div>
                 <div class="inputContainer">
                     <input type="text" class="searchInput">
-                    <span style="color:#b2b4b7"><i class="fas fa-search">
-                        <p class="searchText" style="color:#b2b4b7">검색</p>
-                    </i></span>
+                    <img class="searchIcon" src="./image/search.png" style="color:#b2b4b7">
+                    <p class="searchText" style="color:#b2b4b7">검색</p>
                 </div>
                 <div class="rightContents">
-                    <img class="exploreIcon" src="./image/explore.png" alt="">
-                    <img class="heartIcon" src="./image/heart.png" alt="">
-                    <img class="profileIcon" src="./image/profile.png" alt="">
+                    <img class="homeIcon" src="./image/home.png" alt="home">
+                    <img class="sendIcon" src="./image/send.png" alt="send">
+                    <img class="exploreIcon" src="./image/explore.png" alt="explore">
+                    <img class="heartIcon" src="./image/heart.png" alt="heart">
+                    <img class="profileIcon" src="./image/user.png" alt="profile">
                 </div>
             </nav>
             <div class="main">
                 <div class="feeds">
                     <article>
-                        Feed
+                        <div class="feedHeader">
+                            <div class="feedProfile">
+                                <img class="feedProfileImage" src="./image/hoit_logo.jpg" alt="Profile Image">
+                                <div class="userId">
+                                    hoit_studio
+                                </div>
+                            </div>
+                            <div class="moreButton">
+                                <img class="moreButtonImage" src="./image/more.png" alt="more">
+                            </div>
+                        </div>
+                        <div class="feedImage">
+                            <img class="firstFeed" src="./image/styx.png" alt="feedimage">
+                        </div>
+                        <div class="feedContent">
+                            <div class="feedIcons">
+                                <div class="feedLeftIcons">
+                                    <img class="likeIcon" src="./image/heart.png" alt="like">
+                                    <img class="dmIcon" src="./image/speech-bubble.png" alt="dm">
+                                    <img class="shareIcon" src="./image/send.png" alt="share">
+                                </div>
+                                <img class="bookmarkIcon" src="./image/ribbon.png" alt="bookmark">
+                            </div>
+                            <div class="feedDescription">
+                                <p style="cursor: pointer; font-weight: bold; margin: 10px 0;">좋아요 2개</p>
+                                <span style="font-weight: bold;">hoit_studio</span> Styx : isonomiā official trailer 
+                                <p style="color:#114476; font-size: 15px;">#Styx #hoitstudio</p>
+                                <p style="color:gray">댓글 0개</p>
+                            </div>
+                        </div>
+                        <div class="feedReply">
+                            <div class="replyLeftContents">
+                                <img class="smileIcon" src="./image/smile.png" alt="smile">
+                                <input class="replyInput" type="text" placeholder="댓글달기...">
+                            </div>
+                            <button class="postButton">게시</button>
+                        </div>
                     </article>
                 </div>
                 <aside>
-                    aside
                     <div class="account">
-                        account profile
+                        <img class="accountUserIcon" src="./image/user.png" alt="profile image">
+                        <div class="accountUser">
+                            <div class="accountUserId" style="font-weight: bold;">
+                                hoit_studio
+                            </div>
+                            <p style="font-size: 15px;">hoit_studio</p>
+                        </div>
+                        <p style="color: #0996f6; font-size: 12px;">전환</p>
                     </div>
                     <div class="story">
-                        스토리
+                        <div class="storyTop">
+                            <p style="color:gray">스토리</p>
+                            <p style="font-weight: bold;">모두 보기</p>
+                        </div>
+
+                        <div class="storyContent">
+                            <img class="otherUserIcon" src="./image/user.png" alt="profile image">
+                            <p style="font-size: 15px;">hoit_studio</p>
+                        </div>
+                        <div class="storyContent">
+                            <img class="otherUserIcon" src="./image/user.png" alt="profile image">
+                            <p style="font-size: 15px;">hoit_studio</p>
+                        </div>
+                        <div class="storyContent">
+                            <img class="otherUserIcon" src="./image/user.png" alt="profile image">
+                            <p style="font-size: 15px;">hoit_studio</p>
+                        </div>
+                        <div class="storyContent">
+                            <img class="otherUserIcon" src="./image/user.png" alt="profile image">
+                            <p style="font-size: 15px;">hoit_studio</p>
+                        </div>
                     </div>
                     <div class="recommendUser">
-                        회원추천
+                        <div class="recommendUserTop">
+                            <p style="color:gray">회원님을 위한 추천</p>
+                            <p style="font-weight: bold;">모두 보기</p>
+                        </div>
+
+                        <div class="recommendUserContent">
+                            <img class="otherUserIcon" src="./image/user.png" alt="profile image">
+                            <p style="font-size: 15px;">hoit_studio</p>
+                            <p style="color: #0996f6; font-weight: bold;">팔로우</p>
+                        </div>
+                        <div class="recommendUserContent">
+                            <img class="otherUserIcon" src="./image/user.png" alt="profile image">
+                            <p style="font-size: 15px;">hoit_studio</p>
+                            <p style="color: #0996f6; font-weight: bold;">팔로우</p>
+                        </div>
+                        <div class="recommendUserContent">
+                            <img class="otherUserIcon" src="./image/user.png" alt="profile image">
+                            <p style="font-size: 15px;">hoit_studio</p>
+                            <p style="color: #0996f6; font-weight: bold;">팔로우</p>
+                        </div>
+                        <div class="recommendUserContent">
+                            <img class="otherUserIcon" src="./image/user.png" alt="profile image">
+                            <p style="font-size: 15px;">hoit_studio</p>
+                            <p style="color: #0996f6; font-weight: bold;">팔로우</p>
+                        </div>
                     </div>
+                    <footer>
+                        소개 ・ 도움말 ・ 홍보 센터 ・ API ・ 채용 정보 ・ 개인정보처리방침 ・ 약관 ・ 위치 ・ 인기 ・ 계정 ・ 해시태그 ・언어
+                        © 2021 INSTAGRAM FROM FACEBOOK
+                    </footer>
                 </aside>
             </div>
         </div>

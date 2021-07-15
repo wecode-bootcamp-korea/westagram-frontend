@@ -20,6 +20,7 @@ body {
     margin-top: 5px;
     margin-bottom: 5px;
 }
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -27,18 +28,15 @@ nav {
     padding: 20px;
     margin: 0 130px;
 }
+
 .leftContents {
     display: flex;
 }
 
-.westagramIcon{
-    width: 30px;
-    height: 30px;
-    margin: 0 15px;
-}
 .verticalLine{
-    maring: 0 15px
+    margin: 0 15px
 }
+
 .westagramTitle{
     margin: 0 15px;
     font-size: 25px;
@@ -58,26 +56,214 @@ nav {
     background-color: #fafafa;
 }
 
-.fa-search {
+.searchIcon {
     position: absolute;
     top:8px;
-    left:80px
+    left:100px;
+
+    width: 15px;
+    height: 15px;
 }
+
 .searchText {
     position: absolute;
-    left:30px;
-    bottom:0px;
+    top: 8px;
+    left:120px;
     width: 30px;
 }
 
-.exploreIcon, .heartIcon, .profileIcon{
-    width: 30px;
-    height: 30px;
+.homeIcon, .sendIcon, .exploreIcon, .heartIcon, .profileIcon{
+    width: 25px;
+    height: 25px;
 
     margin: 0 15px;
 }
 
+.homeIcon, .sendIcon, .exploreIcon, .heartIcon, .profileIcon:hover{
+    cursor: pointer;
+}
+
 .main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
     border-top: 2px solid #ebebeb;
     background-color: #fafafa;
+    padding-top: 20px;
+    
+}
+
+.feeds{
+    width: 45%;
+
+    background-color: white;
+    border: 2px solid #e9e9e9;
+    margin-right: 70px;
+}
+
+.feedHeader{
+    display: flex;
+    justify-content: space-between;
+
+    height: 60px;
+    padding: 15px 15px;
+    border-bottom: 1px solid lightgray;
+}
+
+.feedProfile {
+    position: relative;
+}
+
+.userId{
+    position: absolute;
+    top:7px;
+    left:50px;
+
+    font-weight: bold;
+}
+
+.feedProfileImage {
+    width: 35px;
+    height: 35px;
+    border-radius: 70%;
+}
+
+.moreButtonImage{
+    margin-top: 5px;
+
+    width: 13px;
+    height: 13px;
+    cursor: pointer;
+}
+
+.firstFeed{
+    width: 100%;
+    height: 50%;
+}
+
+.feedIcons{
+    display: flex;
+    justify-content: space-between;
+
+    padding: 0 5px;
+}
+
+.likeIcon, .dmIcon, .shareIcon, .bookmarkIcon {
+    width: 25px;
+    height: 25px;
+
+    cursor: pointer;
+}
+
+.likeIcon, .dmIcon, .shareIcon{
+    margin-left: 15px;
+}
+
+.feedDescription{
+    margin-left: 20px;
+    text-align: left;
+}
+
+.feedReply{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-top: 1px solid lightgray;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.smileIcon {
+    width: 25px;
+    height: 25px;
+}
+
+.replyInput {
+    width: 470px;
+    height: 30px;
+    border: 0;
+}
+
+.postButton {
+    color: #0996f6;
+    border: 0;
+    cursor: pointer;
+    background-color: white;
+}
+
+aside {
+    width: 25%;
+}
+
+.account{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.accountUserIcon {
+    width: 50px;
+    height: 50px;
+}
+
+.story {
+    border: 2px solid #e9e9e9;
+    border-radius: 3px;
+
+    margin-top: 20px;
+
+}
+
+.storyTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px;
+}
+
+.storyContent {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+    padding: 10px;
+}
+
+.otherUserIcon{
+    width: 30px;
+    height: 30px;
+}
+
+.recommendUser {
+    border: 2px solid #e9e9e9;
+    border-radius: 3px;
+
+    margin-top: 10px;
+}
+
+.recommendUserTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px;
+}
+
+.recommendUserContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+footer {
+    color: #dfdfdf;
+    font-size: 12px;
+
+    text-align: left;
 }

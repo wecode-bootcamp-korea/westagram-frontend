@@ -6,16 +6,18 @@ window.onload = () => {
   userId.focus();
 
   userId.addEventListener('keydown', (e) => {
-    inputCheck(userId.value);  
+    inputCheck();  
   })
   
   userId.addEventListener('keyup', (e) => {
+    inputCheck();
     if(e.code === 'Enter') {
       logIn();
     }
   })
   
   password.addEventListener('keyup', (e) => {
+    inputCheck();
     if(e.code === 'Enter') {
       logIn();
     }
@@ -54,10 +56,16 @@ function validation() {
 }
 
 function inputCheck() {
-  loginButton.disabled = userId ? false : true;
-  
-  if(!loginButton.disabled) {
+  userIdCheck = userId.value ? true : false;
+  passwordCheck = password.value ? true : false;
+
+  if(userIdCheck && passwordCheck) {
+    loginButton.disabled = false;
     loginButton.style.backgroundColor = '#3484e4';
+  }
+  if(!userIdCheck || !passwordCheck) {
+    loginButton.disabled = true;
+    loginButton.style.backgroundColor = '#c3e0fa;';
   }
 }
 
