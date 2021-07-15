@@ -8,19 +8,245 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
+  background-color: lightsteelblue;
 }
 
-img {
+/* img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+} */
+
+nav {
+  width: 100%;
+  height: 70px;
+  border-bottom: 1px solid grey;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.center {
+  width: 550px;
+  margin: auto;
+}
+
+.logoBox svg {
+  font-size: 30px;
+  padding-right: 15px;
+  border-right: 1px solid gray;
+}
+
+.logo {
+  font-size: 30px;
+  padding-left: 15px;
+}
+
+.searchBox svg {
+  position: relative;
+  left: 80px;
+}
+.searchBox input {
+  width: 180px;
+  height: 20px;
+}
+
+input::placeholder {
+  text-align: center;
+}
+
+.menuBox img {
+  width: 23px;
+  height: 23px;
+  margin-left: 15px;
+}
+.feeds {
+  background-color: white;
+  border: 1px solid lightgrey;
+  height: 880px;
+}
+
+main {
+  width: 1000px;
+  height: 1000px;
+  display: flex;
+  margin-top: 60px;
+}
+
+article {
+  background-color: thistle;
+  width: 600px;
+  height: 880px;
+  border: 1px solid black;
+}
+.writerBox {
+  background-color: seashell;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+.writerBox img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+}
+.writerBox span {
+  margin-right: 390px;
+}
+.mainPhoto {
+  width: 600px;
+  height: 600px;
+}
+.functionBox {
+  background-color: lightskyblue;
+  display: flex;
+}
+.functionBox svg {
+  font-size: 30px;
+  color: rgb(129, 127, 127);
+  margin-right: 10px;
+}
+.functionBox svg:nth-child(1) {
+  color: rgb(250, 84, 84);
+}
+.functionBox svg:nth-child(4) {
+  margin-left: 410px;
+}
+.numberOfLikesBox {
+  background-color: pink;
+  height: 90px;
+}
+.numberOfLikesBox img {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+.boldFont {
+  font-weight: bold;
+}
+.lightFontColor {
+  color: lightgrey;
+}
+.commentBox {
+  width: 600px;
+}
+.commentBox input {
+  width: 100%;
+  height: 30px;
+  border: 1px solid grey;
+}
+.commentBox input::placeholder {
+  text-align: start;
+}
+.commentBox input:focus {
+  outline: none;
+}
+
+.commentBox button {
+  position: relative;
+  left: 570px;
+  bottom: 25px;
+  border: none;
+  background-color: transparent;
+}
+/* mainRight */
+.storiesBox img,
+.recommendationBox img {
   border-radius: 50%;
   width: 40px;
   height: 40px;
 }
+.gradient {
+  border: 3px solid transparent;
+  background-image: linear-gradient(white, white),
+    linear-gradient(to top right, #f5c425ec, #f724c2cb);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  margin: 2px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+}
 
-nav {
-  background-color: darkolivegreen;
-  width: 1000px;
-  height: 70px;
+.mainRight {
+  background-color: cornflowerblue;
+  width: 350px;
+  height: 700px;
+  margin-left: 20px;
+}
+.profileBox {
+  height: 55px;
   display: flex;
-  justify-content: space-around;
   align-items: center;
+  position: relative;
+  bottom: 10px;
+}
+.profileImg {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+.storiesBox {
+  height: 230px;
+  border: 1px solid gray;
+}
+.storyProfileBox {
+  width: 300px;
+  margin: 10px auto;
+}
+.storyProfileBox li {
+  margin-bottom: 7px;
+}
+.storyProfile {
+  display: flex;
+  align-items: center;
+}
+.storiesMenu {
+  width: 310px;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  margin-top: 5px;
+}
+.storyProfile img {
+  position: relative;
+  top: 5px;
+  left: 5px;
+}
+.recommendationBox {
+  height: 180px;
+  border: 1px solid gray;
+  margin-top: 15px;
+}
+.recommendationMenu {
+  display: flex;
+  justify-content: space-between;
+  width: 310px;
+  margin: auto;
+  margin-top: 5px;
+}
+.recommendationList {
+  background-color: darkseagreen;
+  display: flex;
+  align-items: center;
+  width: 300px;
+  margin: 10px auto;
+}
+.recommendationList img {
+  margin-right: 15px;
+}
+.recommendationList div {
+  margin-right: 40px;
+}
+
+.infoBox {
+  background-color: tan;
+  height: 150px;
+  margin-top: 30px;
+}
+.infoBox p {
+  margin-bottom: 15px;
 }
