@@ -412,3 +412,38 @@ main {
   text-decoration: none;
   color: black;
 }
+
+.footer__desc {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  flex: 0 0 auto;
+  font-size: 11px;
+}
+.footer__desc-block {
+  display: flex;
+  margin: 0 1px 12px 1px;
+}
+.footer__desc-block a {
+  display: flex;
+  text-decoration: none;
+  color: var(--text-grey);
+}
+
+.footer__desc-block a::after {
+  content: "·";
+  margin: 0 2.75px;
+}
+
+.footer__desc li:last-child a::after {
+  content: "";
+}
+
+.from__facebook {
+  display: flex;
+  margin-top: 16px;
+  font-size: 11px;
+  color: var(--text-grey);
+}

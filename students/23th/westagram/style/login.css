@@ -279,3 +279,49 @@ main {
 .facebook-logo span:first-child {
   color: var(--grey);
 }
+
+footer {
+  display: flex;
+  padding: 0 16px;
+  background-color: var(--light-grey);
+}
+
+.footer-wrap {
+  width: 100%;
+  height: 78px;
+  display: flex;
+  align-items: center;
+}
+
+.footer__desc {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex: 0 0 auto;
+  font-size: 12px;
+}
+.footer__desc-block {
+  display: flex;
+  margin: 0 8px 12px 8px;
+}
+.footer__desc-block a {
+  display: flex;
+  text-decoration: none;
+  color: var(--text-grey);
+}
+
+@media screen and (max-width: 450px) {
+  .login-block {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    padding: 10px 0;
+  }
+}
