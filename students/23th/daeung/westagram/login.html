@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/common.css">
+    <link rel="stylesheet" href="style/login.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+</head>
+<body>
+    <article>
+        <div id="allBox">
+            <section id="loginBox">
+                <section id="logoBox">
+                    <div id="logo">westagram</div>
+                </section>
+                <section id="loginBox">
+                    <form id="formLogin" action="main.html">
+                        <div class="inputBox">
+                            <input class="input" id="id" placeholder="전화번호, 사용자 이름 또는 이메일" type="text">
+                        </div>
+                        <div class="inputBox">
+                            <input class="input" id="pw" placeholder="비밀번호" type="password">
+                        </div>
+                    </form>
+                   <div class="buttonBox">
+                        <button class="btnHover" onclick = "loginSubmit()"  id="loginButton">로그인</button>
+                   </div>
+                </section>
+    
+                <section>
+                    <div id="pwFinder">
+                        <a href="">비밀번호를 잊으셨나요?</a>
+                    </div>
+                </section>
+
+            </section>
+        </div>
+    </article>
+    
+    <script src="js/login.js"></script>
+</body>
+</html>

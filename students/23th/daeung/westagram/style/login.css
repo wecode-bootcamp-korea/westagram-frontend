@@ -1,0 +1,91 @@
+body, html {
+    height: 100%;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* article {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+} */
+#allBox  {
+    width: 350px;
+    height: 380px;
+    border: 1px solid #DBDBDB;
+    display: flex;
+    justify-content: center;
+}
+#logo   {
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    font-size: 50px;
+    padding-top: 10px;
+    padding-bottom: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.inputBox, .buttonBox   {
+    width: 270px;
+    display: flex;
+    
+}
+
+#loginBox   {
+    position: relative;
+}
+
+.inputBox:first-child   {
+    margin-bottom: 6px;
+}
+
+.input, #loginButton{
+    width: 100%;
+    
+}
+
+.input  {
+    padding: 10px 0;
+    font-size: 14px;
+    background-color: #FAFAFA;
+    border: 1px solid #DBDBDB;
+    border-radius: 5px;
+    padding-left: 10px;
+    outline: none;
+}
+.input::placeholder {
+    color: #999999;
+}
+
+#loginButton    {
+    padding: 8px 0;
+    margin-top: 12px;
+    border: none;
+    background-color: #C0DFFD;
+    color: white;
+    font-weight: bolder;
+    border-radius: 4px;
+}
+
+
+#pwFinder   {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+
+#pwFinder a {
+    display: block;
+    position: absolute;
+    bottom: 15px;
+    font-size: smaller;
+    text-decoration: none;
+}
+
+.btnHover:hover {
+    cursor: pointer;
+}
