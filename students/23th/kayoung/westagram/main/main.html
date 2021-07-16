@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/8c326a0160.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./common.css">
+    <title>Westagram main</title>
+</head>
+<body>   
+    <header class="headerMenuContainer">
+      <h1>Westagram logo</h1>
+      <div class="headerGroup">
+        <div class="headerContent">
+        <a href="#" class="logoIcon">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <span> | </span>
+        <a herf="./main.html">
+          <strong>Westagram</strong>
+        </a>
+       </div>  
+       <div class="inputGroup">   
+        <input type="text" placeholder="검색"/>
+        <i class="fas fa-search"></i>
+      </div>
+    </div>
+       <nav>
+        <div class="naviContainer">
+        <h1>Navigation</h1>
+        <ul class="naviGroup">
+          <li>
+            <a href="#">
+              <img src=" https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png" alt="Search icon" class="naviIcon">
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" alt="Likes me list icon" class="naviIcon"/>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src=" https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png" alt="My page icon" class="naviIcon"/>
+            </a>
+          </li>
+        </ul>
+      </div>  
+    </nav>
+  </header> 
+    <main>
+      <article>
+        <header class="feedProfileContainer">
+          <h1>Feed header</h1>
+          <div class="feedProfileContent">
+            <img alt = "Profile image" src="./assets/feed-profile.jpeg" class="profileImage"/>
+            <strong>canon_mj</strong>
+          </div> 
+          <a href="#">
+            <i class="fas fa-ellipsis-h"></i>
+          </a> 
+        
+        </header>
+        <section class="mainImage">
+          <h1>Feed image</h1>   
+          <img alt="Latest feed image" src="./assets/feed-image.jpg"/>
+        </section>
+
+        <section>
+          <h1>Feed button</h1>
+          <div class="feedButton">
+            <button type="button">
+              <i class="fas fa-heart"></i>
+            </button>
+            <button type="button">
+              <i class="far fa-comment"></i>
+            </button>  
+            <button type="button">  
+              <i class="far fa-paper-plane"></i>
+            </button>
+            <button type="button"> 
+              <i class="far fa-bookmark"></i>
+            </button>
+          </div>
+        </section>
+
+        <section>
+          <h1>Feed reply</h1>  
+          <div class="feedReplyGroup">
+            <div class="newReplyContainer">
+            <div class="likedFollower">
+            <img alt="latest replier profile" src="./assets/reply-profile.jpg" class="profileImage">
+            <p>
+              <strong>aineworld</strong>님 <strong>외 10명이 좋아합니다</strong>
+            </p>
+            </div>
+
+              <div class="replyData">
+              <strong>canon_mj</strong> 
+              <p>한가롭게 수영하며 커피 마시고 싶다...</p>
+              <span>더보기</span>
+              </div>  
+              
+              <div class="replyData">
+              <strong>neceosecius</strong> 
+              <p>거봐 좋았잖아~~~~~🙆🏻‍♀️ </</p>
+              <span>heart icon</span>
+            </div>
+            <span class="timeline"> 42분 전</span>
+          </div>
+    
+            <form class="replyForm" method="POST">
+              <input type="text" placeholder="댓글 달기" class="replyInput"/>
+              <button type="submit" class="replyButton" disabled>게시</button>
+            </form>
+          </div>
+        </section>  
+      </article>
+    </main>
+
+    <aside>
+      <header>
+        <h1>My profile</h1>
+        <img alt="My profile image" src="./assets/my-profile.png" class="myProfileImage"/>
+        <h2>wecode_bootcamp</h2>
+        <p>WeCode | 위코드</p>
+      </header>
+      <section>
+        <h1>Westagram story</h1>
+        <h2>스토리</h2>
+        <button type="button">
+          모두 보기
+        </button>
+        <div class="storyFeed">
+          <ul>
+            <li>
+            </li> class="profileImage"
+            <img alt="Uploaded story profile" src="./assets/story-image-1.jpg" class="profileImage"/>
+              <strong>_yum_s</strong>
+              <p>16분 전</p>
+            <li>
+              <img alt="Uploaded story profile" src="./assets/story-image-2.jpg" class="profileImage"/>
+              <strong>drink_eat_drink</strong>
+              <p>3시간 전</p>
+            </li>
+            <li>
+              <img alt="Uploaded story profile" src="./assets/story-image-3.jpg" class="profileImage"/>
+              <strong>hyukyc</strong>
+              <p>20시간 전</p>
+            </li>
+            <li>
+              <img alt="Uploaded story profile" src="./assets/story-image-4.jpg" class="profileImage"/>
+              <strong>jminkeek</strong>
+              <p>1일 전</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section>
+        <h1>Recommendation</h1>
+        <h2>회원님을 위한 추천</h2>
+        <button type="button">
+          모두 보기
+        </button>
+        <div class="recommendation">
+          <ul>
+            <li>
+              <img alt="Recommended accounts profile" src="./assets/rec-image-1.jpg" class="profileImage"/>
+              <strong>joaaaaaahye</strong>
+              <p>_legend_a님 외 2명이 팔로우 합니다</p>
+              <button type="button">팔로우</button>
+            </li>
+            <li>
+              <img alt="Recommended accounts profile" src="./assets/rec-image-2.jpg" class="profileImage"/>
+              <strong>rampart81</strong>
+              <p>ringo.in.seoul님 외 12명이 팔로우 합니다</p>
+              <button type="button">팔로우</button>
+            </li>
+            <li>
+              <img alt="Recommended accounts profile" src="./assets/rec-image-3.jpg" class="profileImage"/>
+              <strong>shawnjjoo</strong>
+              <p>jimmylee1220님 외 1명이 팔로우 합니다</p>
+              <button type="button">팔로우</button>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </aside>
+    <footer>
+      <ul class="footerList">
+        <li>
+          <a href="#" target="_blank">
+            Instagram 정보 ·
+          </a>
+        </li>
+        <li>
+          <a href="#" target="_blank">
+            지원 ·  
+          </a>
+        </li>
+        <li>
+          <a href="#" target="_blank">
+            홍보 센터 ·  
+          </a>
+        </li>
+        <li>
+          <a href="#" target="_blank">
+            API ·  
+          </a>
+        </li>
+        <li>
+          <a href="#" target="_blank">
+            채용 정보 · 
+          </a>
+        </li>
+        <li>
+          <a href="#" target="_blank">
+            개인정보처리방침 ·  
+          </a>
+        </li>
+        <li>
+          <a href="#" target="_blank">
+            약관 ·  
+          </a>
+        </li>
+        <li>
+          <a href="#" target="_blank">
+            디렉터리 ·  
+          </a>
+        </li>
+        <li>
+          <a href="#" target="_blank">
+            프로필 ·  
+          </a>
+        </li>
+        <li>
+          <a href="#" target="_blank">
+            해시태그 ·  
+          </a>
+        </li>
+        <li>
+          <a href="#" target="_blank">
+            언어 ·  
+          </a>
+        </li>
+      </ul>
+      <span>© 2019 INSTAGRAM</span>
+    </footer>
+    <script src="./main.js"></script>
+</body>
+</html>
