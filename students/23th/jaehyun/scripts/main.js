@@ -1,8 +1,8 @@
-searchInput = document.getElementsByClassName("searchInput")[0];
-searchIcon = document.getElementsByClassName('searchIcon')[0];
-searchText = document.getElementsByClassName('searchText')[0];
+const searchInput = document.getElementsByClassName("searchInput")[0];
+const searchIcon = document.getElementsByClassName('searchIcon')[0];
+const searchText = document.getElementsByClassName('searchText')[0];
 
-function home(){
+function home() {
     window.location.reload();
 }
 
@@ -11,6 +11,6 @@ function inputPostionMove() {
     searchText.style.left = '20px';
 }
 
-searchInput.addEventListener('keyup', e => {
+searchInput.addEventListener('input', e => {
     searchText.style.visibility = 'hidden';
 })

@@ -1,27 +1,12 @@
 const loginButton = document.getElementsByClassName('loginButton')[0];
 const userId = document.getElementById('userId');
 const password = document.getElementById('password');
+const formSelector = document.getElementsByClassName('account')[0];
 
 window.onload = () => {
   userId.focus();
-
-  userId.addEventListener('keydown', (e) => {
-    inputCheck();  
-  })
-  
-  userId.addEventListener('keyup', (e) => {
-    inputCheck();
-    if(e.code === 'Enter') {
-      logIn();
-    }
-  })
-  
-  password.addEventListener('keyup', (e) => {
-    inputCheck();
-    if(e.code === 'Enter') {
-      logIn();
-    }
-  })
+  loginButton.style.opacity = '10%';
+  loginButton.disabled = true;
 
   document.getElementsByClassName('passwordText')[0].addEventListener('mouseup', () => {
     alert("다음부터는 까먹지 마세요")
@@ -29,44 +14,25 @@ window.onload = () => {
   })
 }
 
-function logIn() {
-  let loginValidation = validation();
-  
-  if(loginValidation){
-    alert("로그인 되었습니다");
-    loginButton.disabled = true;
-    window.location.href='./main.html';
-  }
-}
-
 function validation() {
-  if(!userId.value.includes("@")){
-    alert("ID는 이메일 형식이여야 합니다!");
-    return false;
+  const inputUserid = userId.value;
+  const inputpassword = password.value;
+  if(inputUserid.length > 0 && inputpassword.length > 0) {
+    if(inputUserid.includes('@') && (inputpassword.length < 5) ) {
+        loginButton.disabled = false;
+        loginButton.style.opacity = '100%';
+     }
   }
-  if(password.value === '') {
-    alert("비밀번호를 입력해주세요!!");
-    return false;
-  }
-  if(password.value.length <= 4) {
-    alert("비밀번호는 5자리 이상입니다!");
-    return false;
-  } 
-  return true; 
-}
-
-function inputCheck() {
-  userIdCheck = userId.value ? true : false;
-  passwordCheck = password.value ? true : false;
-
-  if(userIdCheck && passwordCheck) {
-    loginButton.disabled = false;
-    loginButton.style.backgroundColor = '#3484e4';
-  }
-  if(!userIdCheck || !passwordCheck) {
-    loginButton.disabled = true;
-    loginButton.style.backgroundColor = '#c3e0fa;';
+  else{
+      loginButton.style.opacity = '10%';
+      loginButton.disabled = true;
   }
 }
 
-loginButton.addEventListener('click', logIn);
+function signIn() {
+  alert('환영합니다!');
+  window.location.href= './main.html';
+}
+
+formSelector.addEventListener('input', validation);
+loginButton.addEventListener('click', signIn);
