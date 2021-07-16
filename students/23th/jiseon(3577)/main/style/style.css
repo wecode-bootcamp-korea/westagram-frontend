@@ -1,0 +1,325 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Open Sans", sans-serif;
+}
+:root {
+  --my-color-1: #f8f8f8f6;
+  --my-color-2: #aaabac;
+  --my-color-3: #444444;
+  --my-color-4: #6d99e6;
+  --my-color-5: white;
+}
+
+/* 폰트공통class */
+.boldFont {
+  font-weight: bold;
+  margin-right: 2px;
+}
+.lightFontColor {
+  color: var(--my-color-2);
+}
+.blueFont {
+  color: var(--my-color-4);
+}
+span,
+p {
+  font-size: 12px;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--my-color-1);
+}
+
+nav {
+  background-color: var(--my-color-5);
+  width: 100%;
+  height: 70px;
+  border-bottom: 1px solid var(--my-color-2);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.center {
+  width: 550px;
+  margin: auto;
+}
+.logoBox {
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+
+.logoBox svg {
+  color: var(--my-color-3);
+  font-size: 30px;
+  line-height: 70px;
+  padding-right: 15px;
+  border-right: 1px solid var(--my-color-3);
+}
+
+.logo {
+  color: var(--my-color-3);
+  line-height: 70px;
+  font-size: 30px;
+  padding-left: 15px;
+  font-family: "Lobster";
+}
+
+.searchBox svg {
+  color: var(--my-color-2);
+  position: relative;
+  left: 80px;
+  font-size: 10px;
+}
+.searchBox > input {
+  background-color: var(--my-color-1);
+  border: 1px solid var(--my-color-2);
+  border-radius: 2px;
+  width: 180px;
+  height: 20px;
+}
+
+.searchBox input::placeholder {
+  color: var(--my-color-2);
+  text-align: center;
+}
+.searchBox input:focus {
+  outline: none;
+}
+
+.menuBox img {
+  width: 23px;
+  height: 23px;
+  margin-left: 15px;
+}
+.feeds {
+  background-color: white;
+  border: 1px solid var(--my-color-2);
+  height: 880px;
+}
+
+main {
+  width: 900px;
+  height: 1000px;
+  display: flex;
+  margin-top: 60px;
+}
+
+article {
+  width: 600px;
+  height: 880px;
+}
+.writerBox {
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+.writerProfile {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
+}
+.writerBox span {
+  margin-right: 420px;
+}
+.dot {
+  width: 20px;
+  height: 20px;
+  margin-right: 0px;
+}
+.mainPhoto {
+  width: 600px;
+  height: 600px;
+}
+.functionBox {
+  display: flex;
+  margin-top: 5px;
+}
+.functionBox svg {
+  font-size: 20px;
+  color: var(--my-color-2);
+  margin-right: 13px;
+}
+.functionBox svg:nth-child(1) {
+  color: rgb(250, 84, 84);
+}
+.functionBox svg:nth-child(4) {
+  margin-left: 435px;
+}
+.numberOfLikesBox {
+  height: 90px;
+  margin-top: 10px;
+}
+.numberOfLikesBox img {
+  border-radius: 50%;
+  border: 0.5px solid var(--my-color-2);
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+.numberOfLikes {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.heart {
+  position: relative;
+  left: 540px;
+  bottom: 20px;
+  color: var(--my-color-2);
+  font-size: 9px;
+}
+.commentViewBox {
+  height: 130px;
+}
+
+.commentBox {
+  display: flex;
+  width: 600px;
+  height: 25px;
+  border-top: 1px solid var(--my-color-2);
+  margin: 75px 0 15px 0;
+}
+.commentBox input {
+  width: 500px;
+  height: 20px;
+  border: none;
+  margin-left: 10px;
+}
+.commentBox input::placeholder {
+  color: var(--my-color-2);
+  text-align: start;
+}
+.commentBox input:focus {
+  outline: none;
+}
+
+.commentBox button {
+  color: var(--my-color-4);
+  position: relative;
+  left: 50px;
+  bottom: 2px;
+  border: none;
+  background-color: transparent;
+}
+/* mainRight */
+.storiesBox img,
+.recommendationBox img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+.gradient {
+  border: 3px solid transparent;
+  background-image: linear-gradient(white, white),
+    linear-gradient(to top right, #f5c425ec, #f724c2cb);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  margin: 2px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+}
+
+.mainRight {
+  width: 280px;
+  height: 700px;
+  margin-left: 20px;
+}
+.profileBox {
+  height: 55px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  bottom: 10px;
+}
+.profileImg {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+.storiesBox {
+  background-color: var(--my-color-5);
+  height: 230px;
+  border: 1px solid var(--my-color-2);
+  border-radius: 2px;
+}
+.storyProfileBox {
+  width: 240px;
+  margin: 10px auto;
+}
+.storyProfileBox li {
+  margin-bottom: 7px;
+}
+.storyProfile {
+  display: flex;
+  align-items: center;
+}
+.storiesMenu {
+  width: 250px;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  margin-top: 5px;
+}
+.storyProfile img {
+  position: relative;
+  top: 5px;
+  left: 5px;
+}
+.recommendationBox {
+  background-color: var(--my-color-5);
+  height: 180px;
+  border: 1px solid var(--my-color-2);
+  border-radius: 2px;
+  margin-top: 15px;
+}
+.recommendationMenu {
+  display: flex;
+  justify-content: space-between;
+  width: 250px;
+  margin: auto;
+  margin-top: 5px;
+}
+.recommendationList {
+  display: flex;
+  align-items: center;
+  width: 230px;
+  margin: 10px auto;
+}
+.recommendationList img {
+  margin-right: 15px;
+}
+.recommendationList div {
+  margin-right: 40px;
+}
+
+.infoBox {
+  height: 150px;
+  margin-top: 30px;
+}
+.infoBox p {
+  color: var(--my-color-2);
+  margin-bottom: 15px;
+}
+.infoBox span {
+  color: var(--my-color-2);
+}
+.commentStyle {
+  font-family: "Open Sans";
+  font-size: 12px;
+  /* margin: "5px 0px 5px 10px"; */
+  width: 300px;
+}
+.commentFlex {
+  display: flex;
+}
