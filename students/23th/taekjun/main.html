@@ -10,125 +10,117 @@
   <title>Main</title>
 </head>
 <body>
-  <header class="headerFlexBox">
-    <div class="mainpageHeader">
-      <h1 class="main logo">Westagram</h1>
+  <div class="headerFlexBox">
+    <header class="mainPageHeader">
+      <h1 class="mainLogo">Westagram</h1>
       <div class="searchBox">
-        <input type="text" placeholder="검색" onclick="this.placeholder=''" onblur="this.placeholder='검색'">  
-        <img src="./img/search.png" alt="">
+        <input class="search" type="text" placeholder="검색" onclick="this.placeholder=''" onblur="this.placeholder='검색'">  
+        <img class="searchIcon" src="./img/search.png" alt="searchIcon">
       </div>
-      <ul>
+      <ul class="nav">
         <li>
-          <img src="./img/explore.png" alt="">
+          <img src="./img/explore.png" alt="exploreIcon">
         </li>
         <li>
-          <img src="./img/heart.png" alt="">
+          <img src="./img/heart.png" alt="heartIcon">
         </li>
         <li>
-          <img class="profileImg" src="./img/profile.png" alt="">
+          <img class="userProfileImg" src="./img/profile.png" alt="profileIcon">
         </li>
       </ul>
-    </div>
-  </header>
+    </header>
+  </div>
 
-  <main class="mainpage">  
+  <main class="mainPage">  
     <div class="mainContentsFlexBox">
-      <section class="mainContents">
-        <article class="followingUserList">
-          <ul>
-            <li></li>
-            <div class="followingUser">
-              <img class="profileImg" src="./img/user1.jpeg" alt="">
-              <p>user1_doheyon</p>
-            </div>
-            <li></li>
-            <div class="followingUser">  
-              <img class="profileImg" src="./img/user2.jpeg" alt="">
-              <p>user2_yeonuk</p>
-            </div>
-          </ul>
-        </article>
+      <section class="followingUserListBox">
+        <ul class="followingUserList">
+          <li class="followingUser">
+            <img class="userProfileImg" src="./img/user1.jpeg" alt="userProfileImage">
+            <p class="username">user1_doheyon</p>
+          </li>
+          <li class="followingUser">
+            <img class="userProfileImg" src="./img/user2.jpeg" alt="userProfileImage">
+            <p class="username">user2_yeonuk</p>
+          </li>
+        </ul>
         
-        <article class="userUploadContents">
-          <header class="contentsHeader">
+        <article class="feedLayoutBox">
+          <header class="feedHeader">
             <div class="userInfo">
-              <img class="profileImg" src="./img/user1.jpeg" alt="">
-              <p>user1_dohyeon</p>
+              <img class="userProfileImg" src="./img/user1.jpeg" alt="userProfileImage">
+              <p class="username">user1_dohyeon</p>
             </div>
-            <div class="optionPopup">
-              <button>
-                <svg height="16" role="img" viewBox="0 0 48 48" width="16">
-                  <circle clip-rule="evenodd" cx="8" cy="24" fill-rule="evenodd" r="4.5"></circle>
-                  <circle clip-rule="evenodd" cx="24" cy="24" fill-rule="evenodd" r="4.5"></circle>
-                  <circle clip-rule="evenodd" cx="40" cy="24" fill-rule="evenodd" r="4.5"></circle>
-                </svg>
-              </button>
-            </div>
+            <button class="optionPopup">
+              <svg height="16" role="img" viewBox="0 0 48 48" width="16">
+                <circle clip-rule="evenodd" cx="8" cy="24" fill-rule="evenodd" r="4.5"></circle>
+                <circle clip-rule="evenodd" cx="24" cy="24" fill-rule="evenodd" r="4.5"></circle>
+                <circle clip-rule="evenodd" cx="40" cy="24" fill-rule="evenodd" r="4.5"></circle>
+              </svg>
+            </button>
           </header>
 
-          <div class="imgContainer">
-            <img src="./img/test.jpg" alt="업로드한 사진">
+          <div class="feedImgBox">
+            <img class="feedImg" src="./img/test.jpg" alt="userUploadImage">
           </div>
 
-          <section class="userInteractionArea">
-            <article class="heartCommentDmImg">
+          <main class="userInteractionArea">
+            <section class="heartCommentShareImg">
               <ul>
                 <li></li>
-                <img src="./img/heart.png" alt="">
+                <img src="./img/heart.png" alt="heartIcon">
                 <li></li>
-                <img src="./img/comment.png" alt="">
+                <img src="./img/comment.png" alt="commentIcon">
                 <li></li>
-                <img src="./img/dm.png" alt="">
+                <img src="./img/share.png" alt="shareIcon">
               </ul>
-              <img class="bookmarkImg" src="./img/bookmark.png" alt="">
-            </article>
-            <article class="howManyHeart">
+              <img class="bookmarkImg" src="./img/bookmark.png" alt="bookmarkIcon">
+            </section>
+            <section class="howManyHeart">
               <span>wecode</span>님 외 <span>40명</span>이 좋아합니다.
-            </article>
-            <article class="commentArea">
-              <section class="whoseComment">
+            </section>
+            <section class="commentUploaded">
+              <article class="whoseComment">
                 <p class="name">yeonuk</p>
                 <p class="commentContext">안녕하세요</p>
-                <img class ="commentHeartImg" src="./img/heart.png" alt="">
+                <img class ="commentHeartImg" src="./img/heart.png" alt="heartIcon">
                 <p class="commentDelete">ⅹ</p>
-              </section>
-              <section class="whoseComment">
+              </article>
+              <article class="whoseComment">
                 <p class="name">areum</p>
                 <p class="commentContext">귀여워요</p>
-                <img class ="commentHeartImg" src="./img/heart.png" alt="">
+                <img class ="commentHeartImg" src="./img/heart.png" alt="heartIcon">
                 <p class="commentDelete">ⅹ</p>
-              </section>
-              <section class="whoseComment">
+              </article>
+              <article class="whoseComment">
                 <p class="name">yeoleum</p>
                 <p class="commentContext">저도 강아지키워요</p>
-                <img class ="commentHeartImg" src="./img/heart.png" alt="">
+                <img class ="commentHeartImg" src="./img/heart.png" alt="heartIcon">
                 <p class="commentDelete">ⅹ</p>
-              </section>
-            </article>
-            <article class="whenWriteArea">
-              11시간 전
-            </article>
-            <article class="leaveComment">
+              </article>
+            </section>
+            <p class="whenLastCommentUpload">11시간 전</p>
+            <section class="leaveComment">
               <div class="commentBox">
                 <button class="openImogeBox">
-                  <img src="./img/imoge.png" alt="">
+                  <img src="./img/imoge.png" alt="imogeIcon">
                 </button>
                 <input class="inputComment" name="inputComment" placeholder="댓글 달기..." onkeydown="enterkey();">
                 <button class="send">
-                  <p>게시</p>
+                  <p class="send">게시</p>
                 </button>
               </div>  
-            </article>
-          </section>
+            </section>
+          </main>
         </article>
       </section>  
 
-      <section class="sidebarBox">
-        <aside class="sidebar">
+      <aside class="sidebarBox">
+        <div class="sidebar">
           <section class="sidebarAboutUser">
-            <article class="sidebarMyShortProfile">
+            <article class="myProfile">
               <div class="userContainer">
-                <img class="profileImg" src="./img/myprofile.jpeg" alt="">
+                <img class="userProfileImg" src="./img/myprofile.jpeg" alt="myProfileImage">
                 <div class="userInfo">
                   <h6>taekj_s</h6>
                   <p class="whoIsFollowing">.</p>
@@ -141,82 +133,80 @@
               <span class="recommend">회원님을 위한 추천</span>
               <span class="allSee">모두 보기</span>
             </article>
-    
-            <article class="sidebarRecommendUserList">
-              <ul>
-                <li class="user">
-                  <div class="userContainer">
-                    <img class="profileImg" src="./img/user1.jpeg" alt="">
-                    <div class="userInfo">
-                      <h6>areum</h6>
-                      <p class="whoIsFollowing">회원님을 팔로우합니다</p>
-                    </div>
+            
+            <ul class="sidebarRecommendUserList">
+              <li class="user">
+                <div class="userContainer">
+                  <img class="userProfileImg" src="./img/user1.jpeg" alt="userProfileImage">
+                  <div class="userInfo">
+                    <h6>areum</h6>
+                    <p class="whoIsFollowing">회원님을 팔로우합니다</p>
                   </div>
-                  <a href="#">팔로우</a>
-                </li>
-                <li class="user">
-                  <div class="userContainer">
-                    <img class="profileImg" src="./img/user5.jpeg" alt="">
-                    <div class="userInfo">
-                      <h6>dohyeon</h6>
-                      <p class="whoIsFollowing">회원님을 팔로우합니다</p>
-                    </div>
+                </div>
+                <a href="#">팔로우</a>
+              </li>
+              <li class="user">
+                <div class="userContainer">
+                  <img class="userProfileImg" src="./img/user5.jpeg" alt="userProfileImage">
+                  <div class="userInfo">
+                    <h6>dohyeon</h6>
+                    <p class="whoIsFollowing">회원님을 팔로우합니다</p>
                   </div>
-                  <a href="#">팔로우</a>
-                </li>
-                <li class="user">
-                  <div class="userContainer">
-                    <img class="profileImg" src="./img/user2.jpeg" alt="">
-                    <div class="userInfo">
-                      <h6>yeonuk</h6>
-                      <p class="whoIsFollowing">회원님을 팔로우합니다</p>
-                    </div>
+                </div>
+                <a href="#">팔로우</a>
+              </li>
+              <li class="user">
+                <div class="userContainer">
+                  <img class="userProfileImg" src="./img/user2.jpeg" alt="userProfileImage">
+                  <div class="userInfo">
+                    <h6>yeonuk</h6>
+                    <p class="whoIsFollowing">회원님을 팔로우합니다</p>
                   </div>
-                  <a href="#">팔로우</a>
-                </li>
-                <li class="user">
-                  <div class="userContainer">
-                    <img class="profileImg" src="./img/user3.jpeg" alt="">
-                    <div class="userInfo">
-                      <h6>yeonwoo</h6>
-                      <p class="whoIsFollowing">회원님을 팔로우합니다</p>
-                    </div>
+                </div>
+                <a href="#">팔로우</a>
+              </li>
+              <li class="user">
+                <div class="userContainer">
+                  <img class="userProfileImg" src="./img/user3.jpeg" alt="userProfileImage">
+                  <div class="userInfo">
+                    <h6>yeonwoo</h6>
+                    <p class="whoIsFollowing">회원님을 팔로우합니다</p>
                   </div>
-                  <a href="#">팔로우</a>
-                </li>
-                <li class="user">
-                  <div class="userContainer">
-                    <img class="profileImg" src="./img/user4.jpeg" alt="">
-                    <div class="userInfo">
-                      <h6>yeoleum</h6>
-                      <p class="whoIsFollowing">회원님을 팔로우합니다</p>
-                    </div>
+                </div>
+                <a href="#">팔로우</a>
+              </li>
+              <li class="user">
+                <div class="userContainer">
+                  <img class="userProfileImg" src="./img/user4.jpeg" alt="userProfileImage">
+                  <div class="userInfo">
+                    <h6>yeoleum</h6>
+                    <p class="whoIsFollowing">회원님을 팔로우합니다</p>
                   </div>
-                  <a href="#">팔로우</a>
-                </li>
-              </ul>
-            </article>
+                </div>
+                <a href="#">팔로우</a>
+              </li>
+            </ul>
           </section>
     
-          <section class="sidebarAboutCompany">
-            <a href="">소개</a>
-            <a href="">도움말</a>
-            <a href="">홍보 센터</a>
-            <a href="">API</a>
-            <a href="">채용 정보</a>
-            <a href="">개인정보처리방침</a>
-            <a href="">약관</a>
-            <a href="">위치</a>
-            <a href="">인기 계정</a>
-            <a href="">해시태그</a>
-            <a href="">언어</a>
-          </section>
-    
+          <ul class="sidebarAboutCompany">
+            <li><a href="">소개</a></li>
+            <li><a href="">도움말</a></li>
+            <li><a href="">홍보 센터</a></li>
+            <li><a href="">API</a></li>
+            <li><a href="">채용 정보</a></li>
+            <li><a href="">개인정보처리방침</a></li>
+            <li><a href="">약관</a></li>
+            <li><a href="">위치</a></li>
+            <li><a href="">인기 계정</a></li>
+            <li><a href="">해시태그</a></li>
+            <li><a href="">언어</a></li>
+          </ul>
+
           <section class="sidebarAboutCopyright">
             ⓒ 2021 WESTAGRAM FROM WECODE
           </section>
-        </aside>
-      </section>
+        </div>
+      </aside>
     </div>
   </main>
 </body>
