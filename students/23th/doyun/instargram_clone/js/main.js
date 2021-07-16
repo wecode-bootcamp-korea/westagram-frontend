@@ -1,9 +1,17 @@
+//variables
+
 const commentInput = document.getElementsByClassName('comment')[0];
 const commentBtn = document.getElementsByClassName('fa-check')[0];
 const likeButton = document.getElementsByClassName('commentLine')[0];
+const searchBar = document.getElementsByClassName('navSearch')[0];
 
-likeButton.addEventListener('click', (e) => {
-   console.log(e.target);
+//array
+const nameData = ["billie", "dua_lipa", "wustar"]
+
+//functions
+
+const likeAndDelete = (e) => {
+  console.log(e.target);
    const item = e.target;
    //delete
    if (item.classList[0]==='fas'){
@@ -14,7 +22,7 @@ likeButton.addEventListener('click', (e) => {
    if (item.classList[0]==='fa') {
      item.parentElement.classList.toggle('active');
    }
- })
+}
 
 const makeComment = () => {
     
@@ -57,4 +65,22 @@ const makeComment = () => {
   commentInput.value = ''; 
 }
 
-commentBtn.addEventListener('click', makeComment)
+const idFilter = (e) => {
+  const keyValue = e.target.value;
+  console.log(keyValue)
+  const result = nameData.filter(n => {
+    if (n.slice(0, keyValue.length)===keyValue && keyValue) {
+      document.getElementsByClassName(n)[0].className = `storyContents ${n} on`
+      document.getElementsByClassName('searchContainer')[0].className = `searchContainer on`
+    } else if(!keyValue) {
+      document.getElementsByClassName(n)[0].className = `storyContents ${n}`
+      document.getElementsByClassName('searchContainer')[0].className = `searchContainer`
+    }
+  })
+}
+
+//addEventListner
+
+commentBtn.addEventListener('click', makeComment);
+likeButton.addEventListener('click', likeAndDelete);
+searchBar.addEventListener('keyup', idFilter);
