@@ -10,28 +10,152 @@
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 </head>
 <body>
-
     <nav class="navMain">
-        <div class="navLogo">
-            <h1>Instagram</h1>
-        </div>
-        <div class="navSearch">
-            <input type="search" placeholder="검색">
-        </div>
-        <div class="navIcons">
-
-        </div>
+            <div class="navLogo">
+                <h1>Instagram</h1>
+            </div>
+            <div class="navSearch">
+                <input type="search" placeholder="검색">
+            </div>
+            <div class="navIcons">
+                <img src="images/house.png"></a>
+                <img src="images/send.png"></a>
+                <img src="images/explore.png"></a>
+                <img src="images/heart.png"></a>       
+                <img src="images/profile.png"></a>       
+            </div>
     </nav>
 
-    <main>
+    <main class="mainContainer">
         <div class="feeds">
-            <article>
+            <article class="feedsArticle">
+                <div class="articleHeader">
+                    <img class="articleHeaderProfileJungwoo" src="images/caleb-ekeroth-wSBQFWF77lI-unsplash (1).jpg">
+                    <p id="navIdProfile" class="navId">todayhouse</p>
+                    <img class="dot" src="images/more.png">
+                </div>
+                <div class="articlePic">
+                    <img src="https://source.unsplash.com/user/erondu/1600x900">
+                </div>
+                <div class="articleComment" id="comment">
+                    <div class="commentIcons">
+                        <img class="iconHeart" src="images/red_heart.png">
+                        <img class="iconChat" src="images/chat.png">
+                        <img class="iconSend" src="images/send.png">
+                        <img class="iconBookMark" src="images/bookmark.png">
+                    </div>
+                    <div class="commentLike">
+                        <p>좋아요 1,065개</p>
+                    </div>
+                    <div id="commentBlock">
+                        <div id="commentContents">
+                            <p class="commentContentsId"></p>
+                            <p class="commentContentsSpan"></p>
+                        </div>
+                        <button type="button" id="commentMore">더 보기</button>
+                    </div>
+                    
+                    <div class="commentHour">
+                        <p>5시간 전</p>
+                    </div>
+                    <div class="commentInput">
+                        <img src="images/smile.png">
+                        <input type = "text" id="commentText" placeholder = "댓글 달기...">
+                        <button type="submit" id="commentBtn">게시</button>
+                    </div>
+                </div>
 
             </article>
         </div>
         <div class="main-right">
+            <div class="rightProfile">
+                <img class="profileJungwoo" src="images/caleb-ekeroth-wSBQFWF77lI-unsplash (1).jpg">
+                <div class="rightProfileClass">
+                    <p class="navId">todayhouse</p>
+                    <p id="navName">박정우</p>
+              </div>
+                <p class="rightRecommendTextBlue">전환</p>
+            </div>
+            <div class="rightRecommend">
+                <div class="rightRecommendTitle">
+                    <h6>회원님을 위한 추천</h6>
+                    <p class="rightRecommendTextBlue">모두 보기</p>
+                </div>
+                <div class="rightRecommendPeople">
+                    <div class="rightRecommendPerson">
 
+                        <div class="rightProfile">
+                            <img class="rightProfileImg" src="images/ photo-124941274df.jpeg">
+                            <div class="rightProfileClass">
+                                <p class="navId">todayhouss</p>
+                                <p class="rightprofilenavName">박슬혜</p>
+                          </div>
+                            <p class="rightRecommendTextBlue">프로필</p>
+                        </div>
+
+                        <div class="rightProfile">
+                            <img class="rightProfileImg" src="images/photo-1593642532871-8b12e02d091c (1).jpeg">
+                            <div class="rightProfileClass">
+                                <p class="navId">t0dayhouse</p>
+                                <p class="rightprofilenavName">이프로필</p>
+                          </div>
+                            <p class="rightRecommendTextBlue">프로필</p>
+                        </div>
+
+                        <div class="rightProfile">
+                            <img class="rightProfileImg" src="images/photo-1622495891958-14d71e85a007.jpeg">
+                            <div class="rightProfileClass">
+                                <p class="navId">fodayhouse</p>
+                                <p class="rightprofilenavName">리오넬 메시</p>
+                          </div>
+                            <p class="rightRecommendTextBlue">프로필</p>
+                        </div>
+                        <div class="rightProfile">
+                            <img class="rightProfileImg" src="images/photo-1626318291075-17d488564b0b.jpeg">
+                            <div class="rightProfileClass">
+                                <p class="navId">todayhorse</p>
+                                <p class="rightprofilenavName">김이름</p>
+                          </div>
+                            <p class="rightRecommendTextBlue">프로필</p>
+                        </div>
+                        <div class="rightProfile">
+                            <img class="rightProfileImg" src="images/photo-1626322730283-fd66ddea926c.jpeg">
+                            <div class="rightProfileClass">
+                                <p class="navId">todayhousi</p>
+                                <p class="rightprofilenavName">홍길동</p>
+                          </div>
+                            <p class="rightRecommendTextBlue">프로필</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <footer class="footerContainer">
+                <div class="footerBox">
+                    <div class="footerBoxTop">
+                        <ul>
+                            <li>소개</li>
+                            <li>도움말</li>
+                            <li>홍보 센터</li>
+                            <li>API</li>
+                            <li>채용 정보</li>
+                            <li>개인정보처리방침</li>
+                            <li>약관</li>
+                            <li>위치</li>
+                            <li>인기 계정</li>
+                            <li>해시 태그</li>
+                            <li>언어</li>
+                        </ul>
+                    </div>
+                    <div class="footerBoxBtm">
+                        <ul>
+                            <li>© 2021 INSTAGRAM FROM FACEBOOK</li>
+                        </ul>
+                    </div>
+                </div>
+            </footer>
         </div>
     </main>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
 </body>
 </html>
