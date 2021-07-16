@@ -7,10 +7,9 @@ const searchPop = document.querySelector(".searchZone .searchPop");
 const searchUl = document.querySelector(".searchZone .searchPop ul");
 const commentForm = document.querySelector(".feedCommentInput form");
 const commentInput = document.querySelector(".feedCommentInput .input");
-const commentList = document.querySelector(".feedComment ul");
-const commentButton = document.querySelector(".feedCommentInput .commentBtn");
+const commentButton = document.querySelector(".feed .commentBtn");
 
-const idData = [
+const idOfWestagram = [
     {id: "W0nhong__", imgUrl: "images/profile_img.jpeg", info: "W0nhong소개글", profileUrl: "https://www.naver.com/"},
     {id: "hj._.__s2", imgUrl: "images/profile_img.jpeg", info: "hj._.__s2소개글", profileUrl: "https://www.daum.net/"},
     {id: "kvwowv", imgUrl: "images/profile_img.jpeg", info: "kvwowv소개글", profileUrl: "https://wecode.co.kr/?gclid=CjwKCAjwlrqHBhByEiwAnLmYUD8aCer8FbdtZ8BzOFlwHX8HI-HwDbdHb4PW6-YW1NDDsDwMYGlsZRoCurgQAvD_BwE"},
@@ -29,7 +28,7 @@ const closePop = (e) => {
 }
 
 const searchDataPaint = () => {
-    idData.forEach((el)=>{
+    idOfWestagram.forEach((el)=>{
         const li = document.createElement("li");
         const a = document.createElement("a");
         a.href = el.profileUrl;
@@ -82,8 +81,8 @@ const deleteComment = (e) => {
     li.remove();
 }
 
-const handleCommentSubmit = (e) => {
-    e.preventDefault();
+const commentSubmit = () => {
+    const commentList = document.querySelector(".feedComment ul");
     const commentText = commentInput.value;
     commentInput.value = "";
     const li = document.createElement("li");
@@ -106,10 +105,16 @@ const handleCommentSubmit = (e) => {
     deleteButton.addEventListener("click", deleteComment);
 }
 
+const handleCommentSubmit = (e) => {
+    e.preventDefault();
+    commentInput.value === "" ? alert("댓글을 입력해주세요!") : commentSubmit();
+}
+
 mypageBox.addEventListener("click", openMypage);
 document.addEventListener("click", closePop);
 searchForm.addEventListener("keyup", searchFilter);
-window.addEventListener("load", searchDataPaint, {once:true})
+window.addEventListener("load", searchDataPaint);
 searchInput.addEventListener("click", openSearch);
 commentForm.addEventListener("submit", handleCommentSubmit);
+commentForm.addEventListener("keyup", function activeCommentButton () {commentInput.value !== "" ? commentButton.style.opacity = "1" : commentButton.style.opacity = "0.3"});
 

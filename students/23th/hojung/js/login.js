@@ -1,6 +1,6 @@
 const form = document.querySelector("#login form");
-const id = document.querySelector("#login form .id-input");
-const pwd = document.querySelector("#login form .pwd-input");
+const id = document.querySelector("#login form .idInput");
+const pwd = document.querySelector("#login form .pwdInput");
 const button = document.querySelector("#login button");
 
 form.addEventListener("keyup", function activeButton(){
