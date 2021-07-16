@@ -4,7 +4,6 @@
   box-sizing: border-box;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  border: 1px solid lightgrey;
   margin: 0;
   padding: 0;
 }
@@ -14,21 +13,23 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  background-color: #fafafa;
 }
 
 nav {
   width: 100%;
-  height: 60px;
+  /* height: 60px; */
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
   border: 1px solid lightgrey;
+  background-color: white;
 }
 
 #logo-container {
   width: 120px;
-  height: 100%;
+  margin: 10px 0;
   display: flex;
   display: flex;
   flex-direction: row;
@@ -37,6 +38,7 @@ nav {
 }
 
 .logo-a {
+  margin-top: 5px;
   width: 25px;
   height: 25px;
   text-decoration: none;
@@ -44,7 +46,7 @@ nav {
 
 .fa-instagram {
   font-size: 20px;
-  color:black;
+  color: black;
 }
 
 #line {
@@ -54,7 +56,7 @@ nav {
   border-right: 1px solid black;
 }
 
-.instagram-a{
+.instagram-a {
   width: 70px;
   height: 30px;
 }
@@ -64,14 +66,14 @@ nav {
   height: 100%;
 }
 
-#input-container{
+#input-container {
   width: 170px;
   height: 25px;
-  border: 1px solid lightgrey;
+  border: 1px solid #fafafa;
   border-radius: 3px;
 }
 
-#input{
+#input {
   width: 100%;
   height: 100%;
   padding-left: 5px;
@@ -79,7 +81,7 @@ nav {
 }
 
 #input::-webkit-input-placeholder {
-  background-image: url(http://www.clker.com/cliparts/w/r/Q/0/x/D/search-icon-light-grey-hi.png) ;
+  background-image: url(http://www.clker.com/cliparts/w/r/Q/0/x/D/search-icon-light-grey-hi.png);
   background-size: 6%;
   background-position: 55px center;
   background-repeat: no-repeat;
@@ -88,7 +90,7 @@ nav {
   color: lightgrey;
 }
 
-#icon-container{
+#icon-container {
   width: 100px;
   height: 100%;
   display: flex;
@@ -98,8 +100,8 @@ nav {
 }
 
 .nav-icon {
-  width: 20px;
-  height: 20px;  
+  width: 18px;
+  height: 18px;
 }
 
 main {
@@ -113,6 +115,7 @@ main {
 #feeds-container {
   width: 450px;
   height: 100%;
+  border: 1px solid lightgrey;
 }
 
 #aside {
@@ -137,7 +140,7 @@ main {
   justify-content: space-between;
 }
 
-#profile-container{
+#profile-container {
   width: 100px;
   height: 20px;
   margin-left: 6px;
@@ -149,10 +152,11 @@ main {
 }
 
 .circle-icon {
-  width: 20px;
-  height: 20px;
-  border: .1px solid lightgrey;
+  width: 25px;
+  height: 25px;
+  border: 0.1px solid lightgrey;
   border-radius: 50px;
+  object-fit: cover;
 }
 
 .owner-name {
@@ -170,8 +174,8 @@ main {
 }
 
 #picture-container {
-  width: 100%;
   height: 446px;
+  width: 100.25%;
 }
 
 #picture {
@@ -180,9 +184,11 @@ main {
   object-fit: cover;
 }
 
-#contents-container{
-  height: 100%;
-  width: 100%;
+#contents-container {
+  /* height: 100%; */
+  /* width: 100%; */
+  background-color: white;
+  padding: 0 5px;
 }
 
 #contents-icons {
@@ -192,20 +198,17 @@ main {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  margin-top: 3px;
+  padding: 0 5px;
 }
 
 #left-icons {
   height: 100%;
   width: 75px;
-  margin-left: 5px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-}
-
-#right-icons {
-  margin-right: 5px;
 }
 
 #likes {
@@ -213,7 +216,8 @@ main {
   flex-direction: row;
   align-items: center;
   justify-content: left;
-  height: 30px;
+  /* height: 28px; */
+  /* padding-bottom: 8px; */
 }
 
 #likes-icon {
@@ -225,9 +229,14 @@ main {
   margin-left: 5px;
 }
 
+.small-icon {
+  height: 17px;
+  width: 17px;
+}
+
 #reply {
-  width: 100%;
-  height: 60px;
+  /* width: 100%; */
+  /* height: 40px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -238,20 +247,172 @@ main {
   height: 20px;
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: left;
+  align-items: center;
 }
 
 #more-button {
   font-size: 3px;
+  color: grey;
 }
 
-#reply-friends {
-  width: 100%;
-  height: 20px;
+.reply-friends {
+  position: relative;
+  bottom: 3px;
+  /* width: 100%; */
+  /* height: 20px; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
-#minutes-before {
-  width: 100%;
+.reply-left {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+}
+
+#white-heart {
+  width: 10px;
+  height: 10px;
+  margin-right: 5px;
+}
+
+.minutes-before {
   height: 20px;
+  margin-left: 5px;
+  color: grey;
+  font-size: 3px;
+}
+
+#reply-container {
+  height: 30px;
+  border-top: 1px solid lightgrey;
+  background-color: white;
+}
+
+.input-reply {
+  margin-left: 7px;
+  width: 91%;
+  height: 95%;
+  font-size: 10px;
+  border: 0;
+}
+
+input:focus {
+  outline: none;
+}
+
+.upload-a {
+  font-size: 10px;
+  font-weight: bold;
+  color: rgb(144, 223, 247);
+  text-decoration: none;
+  border: none;
+  background-color: white;
+}
+
+.top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 35px;
+  margin-bottom: 10px;
+}
+
+.top-icon {
+  height: 35px;
+  width: 35px;
+}
+
+.top-names {
+  font-size: 3px;
+  margin: 5px 38px 0px 0px;
+  font-weight: bold;
+}
+
+.top-names-light {
+  color: grey;
+}
+
+.story {
+  background-color: white;
+  height: 153px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  border: 1px solid grey;
+  overflow: hidden;
+}
+
+.story-top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 10px;
+  font-weight: bold;
+  padding: 10px 10px 0 10px;
+}
+
+.story-top-left {
+  color: grey;
+}
+
+.story-bot {
+  /* display: block; */
+  padding: 0 5px;
+  height: 100%;
+}
+
+.story-feed {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+}
+
+.story-feed-right {
+  margin-left: 5px;
+  margin-top: 3px;
+}
+
+.story-topname {
+  font-size: 3px;
+  font-weight: bold;
+}
+
+.story-botname {
+  padding-left: 1px;
+  color: grey;
+  font-size: 3px;
+}
+
+.recommend {
+  margin-top: 10px;
+  height: 130px;
+}
+
+.follow {
+  position: relative;
+  left: 28px;
+  color: rgb(94, 164, 255);
+}
+
+.rec-bot {
+  padding-bottom: 5px;
+}
+
+.info {
+  margin-top: 15px;
+  color: grey;
+  font-size: 3px;
+}
+
+.corp {
+  margin-top: 15px;
 }

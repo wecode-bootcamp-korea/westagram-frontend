@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="style/main.css">
 	<script src="https://kit.fontawesome.com/c571eee643.js" crossorigin="anonymous"></script>
 	<title>Westagram</title>
 </head>
@@ -17,16 +17,16 @@
 			<div id="line"></div>
 			<a class="instagram-a" href="wwww.instagram.com"><img id="instagram"
 					src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/2560px-Instagram_logo.svg.png"
-					alt=""></a>
+					alt="인스타그램"></a>
 		</div>
 		<div id="input-container">
 			<input id=input type="text" placeholder="검색">
 		</div>
 		<div id="icon-container">
-			<img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png" alt=""
+			<img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png" alt="검색"
 				class="nav-icon">
-			<img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" alt="" class="nav-icon">
-			<img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png" alt=""
+			<img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" alt="좋아요" class="nav-icon">
+			<img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png" alt="프로필"
 				class="nav-icon">
 		</div>
 	</nav>
@@ -38,142 +38,145 @@
 						href="https://www.pngitem.com/pimgs/m/126-1265370_laughing-20-png-man-laughing-png-transparent-png.png">
 						<img class="main-icon circle-icon"
 							src="https://www.pngitem.com/pimgs/m/126-1265370_laughing-20-png-man-laughing-png-transparent-png.png"
-							alt="">
+							alt="사용자 프로필">
 						<div class="owner-name">after_wecode</div>
 					</a>
 					<div id="more">...</div>
 				</div>
 				<div id="picture-container">
 					<img id="picture" src="https://i.pinimg.com/originals/19/17/bd/1917bd45991aee156422306dfc857eae.jpg"
-						alt="">
+						alt="피드사진">
 				</div>
 				<div id="contents-container">
 					<div id="contents-icons">
 						<div id="left-icons">
-							<img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png" alt=""
+							<img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png" alt="네비게이션"
 								class="nav-icon">
-							<img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" alt=""
+							<img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" alt="하트"
 								class="nav-icon">
-							<img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png" alt=""
+							<img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png" alt="프로필"
 								class="nav-icon">
 						</div>
 						<div id="right-icons">
-							<img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png" alt=""
+							<img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png" alt="프로필"
 								class="nav-icon">
 						</div>
 					</div>
 					<div id="likes">
-						<img id="likes-icon" class="circle-icon"
+						<img id="likes-icon" class="small-icon circle-icon"
 							src="https://d39q62vfiogcbt.cloudfront.net/wp-content/uploads/2020/02/logo-the-laughing-cow-1.png"
-							alt="">
+							alt="웃는사람">
 						<div class="contents-reply"><strong>plontnd_njineal</strong>님 <strong>외 10명</strong>이 좋아합니다.
 						</div>
 					</div>
 					<div id="reply">
 						<div class="reply-owner">
 							<a class="owner-name owner-left" href="www.instagram.com">after_wecode</a>
-							<div class="contents-reply">wecode 다니고 나의 성공시대 시작됐다~</div>
+							<p class="contents-reply">wecode 다니고 나의 성공시대 시작됐다~</p>
 							<div id="more-button">...더보기</div>
 						</div>
-						<div id="reply-friends">
-							<div id="reply-friends-name"></div>
-							<div id="friends-words"></div>
-							<img src="" alt="" id="white-heart">
+						<div class="reply-friends">
+							<div class="reply-left">
+								<a href="www.instagram.com" class="owner-name owner-left">before_wecode</a>
+								<p class="contents-reply">혹시... 너무 늦어버린건 아닐까..?</p>
+							</div>
+							<img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" alt="투명하트"
+								id="white-heart">
 						</div>
-						<div id="minutes-before"></div>
 					</div>
+					<div class="minutes-before">365일 전</div>
 				</div>
 				<div id="reply-container">
-					<input type="text" class="input-reply">
-					<a href="" id="upload-a"></a>
+					<input type="text" class="input-reply" placeholder="댓글 달기...">
+					<button href="www.instagram.com" class="upload-a">게시</button>
 				</div>
 			</article>
 		</div>
-		<div id="aside">
+		<aside id="aside">
 			<div class="top">
-				<div class="circle-icon"></div>
+				<img alt="사용자_프로필" src="https://www.logodesign.net/logo/abstract-cuboid-building-4519ld.png" class="top-icon circle-icon"></img>
 				<div class="top-names">
-					<div class="top-names-bold"></div>
-					<div class="top-names-light"></div>
+					<div class="top-names-bold">wecode-bootcamp</div>
+					<div class="top-names-light">WeCode | 위코드</div>
 				</div>
 			</div>
 			<div class="story">
 				<div class="story-top">
-					<div class="story-top-left"></div>
-					<div class="story-top-right"></div>
+					<div class="story-top-left">스토리</div>
+					<a class="story-top-right" href"www.instagram.com"">모두 보기</a>
 				</div>
 				<div class="story-bot">
-					<div class="story-feed active">
-						<div class="circle-icon"></div>
+					<div class="story-feed">
+						<img src="https://scontent-nrt1-1.cdninstagram.com/v/t51.29350-15/217216442_263682815519809_1774299742227779712_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=8ae9d6&_nc_ohc=U2PcA58xSNcAX_NORLh&_nc_ht=scontent-nrt1-1.cdninstagram.com&oh=674aad17e6c5e28e53f1ed600582c7aa&oe=60F4E321" class="circle-icon active"></img>
 						<div class="story-feed-right">
-							<div class="story-topname"></div>
-							<div class="story-botname"></div>
+							<div class="story-topname">javascript_supercyan</div>
+							<div class="story-botname">16분 전</div>
 						</div>
 					</div>
-					<div class="story-feed active">
-						<div class="circle-icon"></div>
+					<div class="story-feed">
+						<img src="https://scontent-nrt1-1.cdninstagram.com/v/t51.29350-15/214101552_334863188122638_1096427404430741075_n.jpg?_nc_cat=106&ccb=1-3&_nc_sid=8ae9d6&_nc_ohc=Jvl_bnpNl5oAX9jJNo8&_nc_ht=scontent-nrt1-1.cdninstagram.com&oh=53cb1f3d19be297162288119fffea991&oe=60F4A986" class="circle-icon active"></img>
 						<div class="story-feed-right">
-							<div class="story-topname"></div>
-							<div class="story-botname"></div>
+							<div class="story-topname">wecode_wang</div>
+							<div class="story-botname">3시간 전</div>
 						</div>
 					</div>
-					<div class="story-feed active">
-						<div class="circle-icon"></div>
+					<div class="story-feed">
+						<img src="https://scontent-nrt1-1.cdninstagram.com/v/t51.29350-15/212661857_122001083426086_1431938869170241842_n.jpg?_nc_cat=100&ccb=1-3&_nc_sid=8ae9d6&_nc_ohc=WB-X1VV0a4oAX-EZi7P&_nc_ht=scontent-nrt1-1.cdninstagram.com&oh=9ca5bc3154cd1c84edf8ee7be1faff0e&oe=60F3A6BD" class="circle-icon active"></img>
 						<div class="story-feed-right">
-							<div class="story-topname"></div>
-							<div class="story-botname"></div>
+							<div class="story-topname">border-radius</div>
+							<div class="story-botname">5시간 전</div>
 						</div>
 					</div>
-					<div class="story-feed active">
-						<div class="circle-icon"></div>
+					<div class="story-feed">
+						<img src="https://scontent-nrt1-1.cdninstagram.com/v/t51.29350-15/210580896_536537070800912_1375493539578747372_n.jpg?_nc_cat=111&ccb=1-3&_nc_sid=8ae9d6&_nc_ohc=WuU8Z29QBvcAX-LXuq5&_nc_ht=scontent-nrt1-1.cdninstagram.com&oh=ff4b6d7a36f16c0c6fde50a8d174d363&oe=60F4D2F4" class="circle-icon active"></img>
 						<div class="story-feed-right">
-							<div class="story-topname"></div>
-							<div class="story-botname"></div>
+							<div class="story-topname">css_master</div>
+							<div class="story-botname">6시간 전</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="recommend">
-				<div class="rec-top">
-					<div class="rec-left"></div>
-					<div class="rec-right"></div>
+			<div class="story recommend">
+				<div class="story-top rec-top">
+					<div class="story-top-left rec-left">회원님을 위한 추천</div>
+					<div class="story-top-right rec-right">모두 보기</div>
 				</div>
-				<div class="rec-bot">
-					<div class="rec-new">
-						<div class="circle-icon"></div>
-						<div class="rec-new-mid">
-							<div class="rec-name"></div>
-							<div class="rec-desc"></div>
+				<div class="story-bot rec-bot">
+					<div class="story-feed rec-new">
+						<img src="https://scontent-nrt1-1.cdninstagram.com/v/t51.29350-15/209800677_155841686609964_1742428295234635530_n.jpg?_nc_cat=106&ccb=1-3&_nc_sid=8ae9d6&_nc_ohc=awggUK6UB-4AX96FyfA&_nc_ht=scontent-nrt1-1.cdninstagram.com&oh=5e4a0001e2103422f1214654be878f53&oe=60F56620" class="circle-icon"></img>
+						<div class="story-feed-right rec-new-mid">
+							<div class="story-topname">::hover</div>
+							<div class="story-botname">wec님 외 2명이...</div>
 						</div>
-						<div class="rec-new-right"></div>
+						<div class="upload-a follow">팔로우</div>
 					</div>
-					<div class="rec-new">
-						<div class="circle-icon"></div>
-						<div class="rec-new-mid">
-							<div class="rec-name"></div>
-							<div class="rec-desc"></div>
+					<div class="story-feed rec-new">
+						<img src="https://scontent-nrt1-1.cdninstagram.com/v/t51.29350-15/209986932_545360129933364_7208870147454009972_n.jpg?_nc_cat=106&ccb=1-3&_nc_sid=8ae9d6&_nc_ohc=lO74jRqBlo0AX_mQeWO&_nc_ht=scontent-nrt1-1.cdninstagram.com&edm=ANo9K5cEAAAA&oh=95c1782ac5238c7880bf8e509e73c116&oe=60F4D10E" class="circle-icon"></img>
+						<div class="story-feed-right rec-new-mid">
+							<div class="story-topname">::placeholder</div>
+							<div class="story-botname">wec님 외 2명이...</div>
 						</div>
-						<div class="rec-new-right"></div>
+						<div class="upload-a follow">팔로우</div>
 					</div>
-					<div class="rec-new">
-						<div class="circle-icon"></div>
-						<div class="rec-new-mid">
-							<div class="rec-name"></div>
-							<div class="rec-desc"></div>
+					<div class="story-feed rec-bot">
+						<img src="https://scontent-nrt1-1.cdninstagram.com/v/t51.29350-15/210534454_346582243501911_5295117676199162527_n.jpg?_nc_cat=108&ccb=1-3&_nc_sid=8ae9d6&_nc_ohc=qUosZJCVlvYAX8EHfyo&_nc_ht=scontent-nrt1-1.cdninstagram.com&oh=eebc05e26cda677a22c1100904327f8f&oe=60F4DEE8" class="circle-icon"></img>
+						<div class="story-feed-right rec-new-mid">
+							<div class="story-topname">stop_now</div>
+							<div class="story-botname">wec님 외 2명이...</div>
 						</div>
-						<div class="rec-new-right"></div>
+						<div class="upload-a follow">팔로우</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="info">
-			<div class="info-words"></div>
-			<div class="info-words"></div>
-			<div class="info-words"></div>
-			<div class="corp"></div>
-		</div>
-		</div>
+			<footer class="info">
+				<p class="info-words">Instagram 정보•지원•홍보 센터•API</p>
+				<p class="info-words">채용 정보•개인정보처리방관•약관 •</p>
+				<p class="info-words">디렉터리•프로필•해시태그•언어</p>
+				<p class="corp">© 2019 INSTAGRAM</p>
+			</footer>
+		</aside>
 	</main>
+	<script src="js/main.js"></script>
 </body>
 
 </html>

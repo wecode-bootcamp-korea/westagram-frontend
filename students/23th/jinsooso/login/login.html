@@ -1,84 +1,132 @@
+<!-- @format -->
+
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Westagram</title>
-    <link rel="stylesheet" href="login.css">
-
-<body>
+    <link rel="stylesheet" href="style/login.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <section id="section-container">
-        <main id="login-container">
-            <img src="https://www.instagram.com/static/images/homepage/home-phones.png/43cc71bb1b43.png" alt=""
-                id="image-main">
-            <section id="section-main">
-                <div class="top">
-                    <h1 id="logo">westagram</h1>
-                    <input type="text" placeholder="전화번호, 사용자 이름 또는 이메일">
-                    <input type="text" placeholder="비밀번호">
-                    <div class="button-container"><button id="button-login">로그인</button></div>
-                    <div id="or-container">
-                        <div class="dash"></div>
-                        <div id="or">또는</div>
-                        <div class="dash"></div>
-                    </div>
-                    <div class="facebook-password button-container">
-                        <button id="button-facebook">
-                            <span id="facebook-logo"></span>
-                            <span id="facebook-span">Facebook으로 로그인</span>
-                        </button>
-                    </div>
-                    <div class="facebook-password button-container">
-                        <button id="button-password">비밀번호를 잊으셨나요?</button>
-                    </div>
-                </div>
-                <div class="mid">
-                    <div class="mid-container button-container ">
-                        <p class="midbot-word">계정이 없으신가요?</p>
-                        <button id="button-sign">가입하기</button>
-                    </div>
-                </div>
-                <div class="bot">
-                    <div class="midbot-word button-container">앱을 다운로드하세요</div>
-                    <div class="download-container">
-                        <a href="">
-                            <img src="https://www.instagram.com/static/images/appstore-install-badges/badge_android_korean-ko.png/f155b664a93b.png"
-                                alt="" class="img-download">
-                        </a>
-                        <a href="">
-                            <img src="https://www.instagram.com/static/images/appstore-install-badges/badge_ios_korean-ko.png/4a5c9d62d51b.png"
-                                alt="" class="img-download">
-                        </a>
-                    </div>
-                </div>
-            </section>
-        </main>
-        <footer>
-            <div class="button-list">
-                <div class="button-info"><a href="https://www.instagram.com/">블로그</a></div>
-                <div class="button-info"><a href="https://www.instagram.com/">채용정보</a></div>
-                <div class="button-info"><a href="https://www.instagram.com/">소개</a></div>
-                <div class="button-info"><a href="https://www.instagram.com/">도움말</a></div>
-                <div class="button-info"><a href="https://www.instagram.com/">API</a></div>
-                <div class="button-info"><a href="https://www.instagram.com/">개인정보처리방침</a></div>
-                <div class="button-info"><a href="https://www.instagram.com/">약관</a></div>
-                <div class="button-info"><a href="https://www.instagram.com/">인기 계정</a></div>
-                <div class="button-info"><a href="https://www.instagram.com/">해시태그</a></div>
-                <div class="button-info"><a href="https://www.instagram.com/">위치</a></div>
+      <main id="login-container">
+        <img
+          src="https://www.instagram.com/static/images/homepage/home-phones.png/43cc71bb1b43.png"
+          alt="메인 휴대폰 이미지"
+          id="image-main"
+        />
+        <section id="section-main">
+          <div class="top">
+            <h1 id="logo">westagram</h1>
+            <input
+              class="input-all"
+              id="id"
+              type="text"
+              placeholder="전화번호, 사용자 이름 또는 이메일"
+            />
+            <input
+              class="input-all"
+              id="password"
+              type="text"
+              placeholder="비밀번호"
+            />
+            <div class="button-container">
+              <button id="button-login">로그인</button>
             </div>
-            <div class="info">
-                <select>
-                    <option value="ko">한국어</option>
-                    <option value="af">Afrikaans</option>
-                    <option value="en-gb">English (UK)</option>
-                    <option value="ja">日本語</option>
-                </select>
-                <span id="span-footer">© 2021 Instagram from Facebook</span>
+            <div id="or-container">
+              <div class="dash"></div>
+              <div id="or">또는</div>
+              <div class="dash"></div>
             </div>
-        </footer>
+            <div class="facebook-password button-container">
+              <button id="button-facebook">
+                <span id="facebook-logo"></span>
+                <span id="facebook-span">Facebook으로 로그인</span>
+              </button>
+            </div>
+            <div class="facebook-password button-container">
+              <button id="button-password">비밀번호를 잊으셨나요?</button>
+            </div>
+          </div>
+          <div class="mid">
+            <div class="mid-container button-container">
+              <p class="midbot-word">계정이 없으신가요?</p>
+              <button id="button-sign">가입하기</button>
+            </div>
+          </div>
+          <div class="bot">
+            <div class="midbot-word button-container">앱을 다운로드하세요</div>
+            <div class="download-container">
+              <a href="www.androidappstore.com">
+                <img
+                  src="https://www.instagram.com/static/images/appstore-install-badges/badge_android_korean-ko.png/f155b664a93b.png"
+                  alt="앱스토어 다운로드"
+                  class="img-download"
+                />
+              </a>
+              <a href="www.appstore.com">
+                <img
+                  src="https://www.instagram.com/static/images/appstore-install-badges/badge_ios_korean-ko.png/4a5c9d62d51b.png"
+                  alt="구글스토어 다운로드"
+                  class="img-download"
+                />
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <div class="button-list">
+          <div class="button-info">
+            <a href="https://www.instagram.com/">블로그</a>
+          </div>
+          <div class="button-info">
+            <a href="https://www.instagram.com/">채용정보</a>
+          </div>
+          <div class="button-info">
+            <a href="https://www.instagram.com/">소개</a>
+          </div>
+          <div class="button-info">
+            <a href="https://www.instagram.com/">도움말</a>
+          </div>
+          <div class="button-info">
+            <a href="https://www.instagram.com/">API</a>
+          </div>
+          <div class="button-info">
+            <a href="https://www.instagram.com/">개인정보처리방침</a>
+          </div>
+          <div class="button-info">
+            <a href="https://www.instagram.com/">약관</a>
+          </div>
+          <div class="button-info">
+            <a href="https://www.instagram.com/">인기 계정</a>
+          </div>
+          <div class="button-info">
+            <a href="https://www.instagram.com/">해시태그</a>
+          </div>
+          <div class="button-info">
+            <a href="https://www.instagram.com/">위치</a>
+          </div>
+        </div>
+        <div class="info">
+          <select>
+            <option value="ko">한국어</option>
+            <option value="af">Afrikaans</option>
+            <option value="en-gb">English (UK)</option>
+            <option value="ja">日本語</option>
+          </select>
+          <span id="span-footer">© 2021 Instagram from Facebook</span>
+        </div>
+      </footer>
     </section>
-</body>
-
+    <script src="js/login.js"></script>
+  </body>
 </html>
