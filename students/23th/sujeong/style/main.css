@@ -1,42 +1,36 @@
-body{
-    width: 100vw;
-    height: 100vh;
-}
 .container{
-    width: 100%;
     background-color: #fafafa;
 }
 /* nav */
 .nav_head {
-    width: 100%;
-    height: 80px;
-    border-bottom: 1px solid #dfdfdf;
     display: flex;
     justify-content: center;
+    height: 80px;
+    border-bottom: 1px solid #dfdfdf;
     background-color: #fff;
 }
+
 .nav_container{
-    width: 1000px;
-    background-color: #fff;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
+    width: 1000px;
+    background-color: #fff;
 }
+
 .logo {
+    color:#222222; 
     font-family: 'Lobster', cursive;
-    font-size: 30px;
-    color:#222222;
-    
+    font-size: 30px; 
 }
 
 .search_box {
     width: 250px;
     height: 30px;
-    text-align: center;
     border: 1px solid #dfdfdf;
     border-radius: 5px;
     background-color: #fafafa;
+    text-align: center;
 }
 
 .search_box::placeholder{
@@ -45,9 +39,9 @@ body{
 }
 
 .navicon{
-    width:150px ;
     display: flex;
     justify-content: space-between;
+    width:150px ;
 }
 
 .nav_icon {
@@ -55,39 +49,34 @@ body{
     height: 30px;
 }
 
-
-
 .fa-search{
-    color:#ccc;
     position: absolute;
     margin: 10px 0 0 90px;
+    color:#ccc;
 }
 
 main {
     width: 1000px;
     margin: 0 auto;
     padding-top: 70px;
-    padding-bottom: 40px;
-   
-    
+    padding-bottom: 40px;    
 }
+
 .main-right{
-    width: 350px;
     display: inline-block;
     position: fixed;
+    width: 350px;
     margin-left: 50px;
 }
 /* 피드 */
 .feed {
+    display: inline-block; 
     width: 600px;
-    display: inline-block;
-
-    
 }
+
 .feed  article{
     background-color: #fff;
-    border: 1px solid #dfdfdf;
-    
+    border: 1px solid #dfdfdf; 
 }
 
 .feed article header {
@@ -99,22 +88,23 @@ main {
     align-items: center;
     justify-content: space-between;
     padding-top: 10px;
-
 }
+
 .main_id{
     display: flex;
     align-items: center;
-
 }
-.profile_box{
+
+.profile_img_box{
     width: 34px;
     height: 34px;
-    border-radius: 70%;
-    overflow: hidden;
-    border: 1px solid #dfdfdf;
     margin-left: 15px;
+    border-radius: 70%;
+    border: 1px solid #dfdfdf;
+    overflow: hidden;
 }
-.profile{
+
+.profile_img{
     width: 100%;
     height: 100%;
 }
@@ -127,15 +117,18 @@ main {
     color:#2c2c2c;
     font-weight: 600;
 }
+
 .profile_icon{
     display: flex;
     justify-self: end;
     margin-right: 15px;
 }
+
 .main_img_box{
     width: 598px;
     height: 600px;
 }
+
 .main_img{
     width: 100%;
     height: 100%;
@@ -146,8 +139,8 @@ main {
     align-items: center;
     justify-content: space-between;
     margin: 15px 0 15px 0px;
- 
 }
+
 .left_icon{
    margin-left: 15px;
 }
@@ -166,15 +159,17 @@ main {
 .like_img_box{
     width: 24px;
     height: 24px;
-    border-radius: 70%;
-    overflow: hidden;
-    border: 1px solid #dfdfdf;
     margin-left: 15px;
+    border-radius: 70%;
+    border: 1px solid #dfdfdf;
+    overflow: hidden;
 }
+
 .like_img{
     width: 100%;
     height: 100%
 }
+
 .like_info{
     margin-left: 10px;
 }
@@ -200,47 +195,53 @@ main {
     margin: 10px 20px 0 20px;
 }
 
-
-ul.newcomment{
+ul.new_comment{
     margin-top: 5px;
 }
 
-ul.newcomment li{
-    height: 20px;
+.new_comment_list{
     display: flex;
     justify-content: space-between;
-    font-size: 14px;
+    height: 20px;
     color: #2c2c2c;
+    font-size: 14px;
 }
-ul li span.userid{
+
+.commenet_user_id{
     margin-right: 10px;
+    color: #2c2c2c;
+    font-size: 18px;
+    font-weight: 700;
 }
+
 img.comment_heart{
     width: 15px;
     height: 15px;
 }
 
-.comment{
-    width: 600px;
+.comment_container{
     display: flex;
+    width: 600px;
     border-top: 1px solid #dfdfdf;
 }
+
 .comment_box::placeholder{
    color: #8e8e8e;
 }
+
 .comment_box{
     width: 100%;
     height: 50px;
-    border-style: none;
     margin-left: 20px;
+    border-style: none;
 }
 
 .comment_submit{
     width: 50px;
     height: 50px;
+    margin-right: 10px;;
     border-style: none;
     background-color: #fff;
-    margin-right: 10px;;
     color: #0095f6;   
     opacity: .4;
 }
@@ -251,20 +252,21 @@ img.comment_heart{
     align-items: center;
     margin-bottom: 20px;
 }
+
 .myprofile_right{
     width: 60px;
     height: 60px;
-    border-radius: 70%;
-    overflow: hidden;
-    border: 1px solid #dfdfdf;
     margin-left: 15px;
+    border-radius: 70%;
+    border: 1px solid #dfdfdf;
+    overflow: hidden;
 }
 
-.myprofile_img{
+.profile_img{
     width: 100%;
     height: 100%;
-
 }
+
 .myprofile_left{
     display: inline-block;
     margin-left: 20px;
@@ -274,14 +276,15 @@ img.comment_heart{
     display: block;
 }
 
-.userid {
+.user_id {
     font-weight: 800;
     font-size: 18px;
 }
-.subtitle{
-    font-size:18px;
+
+.sub_title{
     margin-top:5px;
     color:#8e8e8e;
+    font-size:18px;
 }
 
 /*story*/
@@ -292,29 +295,31 @@ img.comment_heart{
     background-color: #fff;
     border: 1px solid #dfdfdf;
     overflow: scroll;
-    
 }
+
 .story_head{
-    margin: 20px;
     display: flex;
     justify-content: space-between;
+    margin: 20px;
 }
 
 .story_left{
     color: #808080;
     font-weight: 700;
 }
+
 .story_right{
     font-size: 18px;
     font-weight: 700;
 }
+
 .story_img {
     width: 40px;
     height: 40px;
-    border-radius: 70%;
-    overflow: hidden;
-    border: 1px solid #dfdfdf;
     margin-left: 15px;
+    border-radius: 70%;
+    border: 1px solid #dfdfdf;
+    overflow: hidden;
 }
 
 .story_content{
@@ -323,7 +328,7 @@ img.comment_heart{
     margin-bottom: 15px;
 }
 
-.storyid span{
+.story_id span{
     display: block;
     margin-left: 10px;
 }
@@ -333,32 +338,34 @@ img.comment_heart{
 .recommend{
     width: 350px;
     height: 230px;
+    margin-top: 20px; 
     background-color: #fff;
     border: 1px solid #dfdfdf;
-    margin-top: 20px;
-    
 }
+
 .recommend_head{
-    margin: 20px;
     display: flex;
     justify-content: space-between;
+    margin: 20px;
 }
 
 .recommend_left{
     color: #808080;
     font-weight: 700;
 }
+
 .recommend_right{
     font-size: 18px;
     font-weight: 700;
 }
+
 .recommend_img {
     width: 40px;
     height: 40px;
-    border-radius: 70%;
-    overflow: hidden;
-    border: 1px solid #dfdfdf;
     margin-left: 15px;
+    border-radius: 70%;
+    border: 1px solid #dfdfdf;
+    overflow: hidden;
 }
 
 .recommend_content{
@@ -368,7 +375,7 @@ img.comment_heart{
     margin-bottom: 15px;
 }
 
-.recommendid span{
+.recommend_id span{
     display: block;
     margin-left: 10px;
 }
@@ -377,11 +384,13 @@ img.comment_heart{
     display: flex;
     align-items: center;
 }
+
 .recommend_follow{
     display: flex;
     justify-self: end;
     margin-right: 20px;
 }
+
 .recommend_follow a{
     color: #0095f6;
     font-size: 14px;
