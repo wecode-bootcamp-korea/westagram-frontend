@@ -1,0 +1,417 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fafafa;
+}
+
+/*네비게이션 바 */
+
+nav{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border-bottom: 1px solid #dbdbdb;
+    background-color: white;
+}
+
+.navBar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 935px;
+    margin-top: 10px;
+    padding-bottom: 16px;
+}
+
+.navLeft{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navLeft .navImgBox{
+    margin-left: 0;
+}
+
+.navSearchBox{
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 218px;
+}
+
+.navSearchImgBox{
+    width: 218px;
+    height: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    position: absolute;
+    /*z-index: -1;*/
+    border: 1px solid black;
+    background-color: #fafafa;
+    border: 1px solid rgba(var(--b6a,219,219,219),1);
+    border-radius: 3px;
+    font-size: 13px;
+    color: #8e8e8e;
+}
+
+.navSearchName{
+    display: flex;
+    position: absolute;
+    top:2px;
+    left: 100px;
+}
+
+.navSearchImg{
+    display: flex;
+    position: absolute;
+    top:8px;
+    left: 80px;
+}
+
+.fa-search{
+    font-size: 11px;
+    padding-right: 6px;
+}
+
+/* .inputIcon{
+    position: absolute;
+    left: 10px;
+    color: #8e8e8e;
+} */
+.navSearch{
+    width: 218px;
+    height: 25px;
+    padding: 3px 10px 3px 26px;
+    background-color: #fafafa;
+    border: 1px solid rgba(var(--b6a,219,219,219),1);
+    border-radius: 3px;
+    font-size: 13px;
+}
+
+.navRight{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navRight .navImgBox{
+    margin-right: 0;
+    margin-left: 25px;
+}
+
+.navImgBox{
+    margin : 0px 15px;
+    line-height: 1px;
+}
+
+.navImg{
+    width: 22px;
+    height: 22px;
+}
+
+.logo{
+    padding-left: 20px;
+    border-left: 1px solid black;
+    font-size: 29px;
+}
+
+/*본문*/
+
+main{
+    display: flex;
+    flex-direction: row;
+    width: 935px;
+    margin-top: 50px;
+}
+
+.feeds{
+    height: 100vh;
+    margin-right: 28px;   
+}
+
+.section1{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: 1px solid #dbdbdb;
+}
+
+.writer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 0;
+}
+
+.profileLeft{
+    display: flex;
+    flex-direction: row;
+    padding: 0 15px;
+}
+
+.profileImgBox{
+    width: 32px;
+    height: 32px; 
+    border-radius: 70%;
+    margin-right: 15px;
+    overflow: hidden;
+}
+
+.profileImg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profileNameBox{
+    color: #262626;
+    line-height: 1.7;
+}
+
+.writerDotBox{
+    margin-right: 15px;
+}
+
+.writerDot{
+    width: 16px;
+    height: 16px;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    width: 614px;
+}
+
+.contentImg{
+    width: 614px;
+    height: 614px;
+}
+
+.likeBtnBar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 8px 0;
+}
+
+.likeLeft{
+    margin-left:5px;
+}
+
+.likeRight{
+    margin-right: 15px;
+}
+
+.like{
+    margin-left:10px;
+    color: gray;
+    font-size: 24px;
+}
+
+.howManyLike{
+    display: flex;
+    flex-direction: row;
+    padding: 0 15px;
+    margin: 2px 0;
+}
+
+.howManyLikeBox{
+    width: 20px;
+    height: 20px; 
+    border-radius: 70%;
+    margin-right: 5px;
+    overflow: hidden;
+}
+
+.howManyLikeImg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.howManyLikeText{
+    font-size: 13px;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.contentComment{
+    padding: 0 15px;
+    font-size: 14px;
+    overflow:hidden;
+}
+
+.commentPop{
+    color: #BCBCBC;
+    font-weight: bold;
+    margin: 2px 0;
+}
+
+.comment{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 3px 0;
+}
+
+.commentLeft{
+    word-break:break-all;
+}
+
+.commentHeartBox{
+    display: flex;
+    align-items: flex-end;
+}
+
+.commentHeart{
+    font-size: 12px;
+}
+
+.time{
+    padding: 0 15px;
+    margin: 5px 0 11px 0;
+}
+
+.writeTime{
+    color: #BCBCBC;
+    font-size: 10px;
+}
+
+.writeComment{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-top: 1px solid #dbdbdb;
+}
+
+.commentInputBox{
+    display: flex;
+    align-items: center;
+    width: 90%;
+}
+
+.commentInput{
+    width: 100%;
+    border: 1px solid transparent;
+    outline: 0;
+}
+
+.commentBtn{
+    border: 0;
+    color: #b3dffc;
+    background-color: white;
+}
+
+aside{
+    width: 293px;
+}
+
+.myProfile{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.myProfileLeft{
+    display: flex;
+    flex-direction: row;
+}
+
+.myProfileImgBox{
+    width: 46px;
+    height: 46px; 
+    border-radius: 70%;
+    overflow: hidden;
+}
+
+.myProfileNameBox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 15px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.myProfileSub{
+    color: #BCBCBC;
+}
+
+.asideSection{
+    display: flex;
+    flex-direction: column;
+    padding: 13px;
+    border: 1px solid #dbdbdb;
+    background-color: white;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.asideSectionTitle{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.asideSectionTitleName{
+    color:#BCBCBC;
+}
+
+.asideSectionProfile{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top:5px;
+}
+
+.follow{
+    justify-content: space-between;
+}
+
+.followBtn{
+    border: 0;
+    color: #0095F6;
+    background-color: white;
+}
+
+.asideSectionProfileLeft{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.asideSectionNameBox{
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+}
+
+.asideSectionDes{
+    color: #BCBCBC;
+}
+
+.intro{
+    color: #dbdbdb;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+a{
+    text-decoration: none;
+    color: #262626;
+    font-weight: bold;
+}
