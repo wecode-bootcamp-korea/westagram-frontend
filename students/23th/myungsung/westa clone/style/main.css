@@ -178,15 +178,16 @@ article img {
     cursor: pointer;
 }
 
-.content span {
+.content .reText {
     font-size: 12px;
+    margin-left: 8px;
 }
 
 .reply {
     display: flex;
     justify-content: space-between;
 }
-.reply img {
+.reHeart {
     width: 13px;
     height: 13px;
     margin-right: 16px;
@@ -213,7 +214,7 @@ article img {
     outline: none;
 }
 
-.writeReply button {
+.replySubmit {
     border: none;
     background-color: white;
     margin-right: 16px;
@@ -222,8 +223,9 @@ article img {
     filter: opacity(.2);
 }
 
-/* 그 외 정보 */
-.mainRight {
+.buttonChange {
+    filter: opacity(1);
+    cursor: pointer;
 }
 
 /* 내 정보 */
@@ -382,7 +384,8 @@ article img {
     color: #1E9AF7;
     font-weight: 500;
     font-size: 15px;
-}
+    cursor: pointer;
+}   
 
 /*기타*/
 .etcList {
