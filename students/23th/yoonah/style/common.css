@@ -5,6 +5,17 @@ body {
     margin: 0;
 }
 
+.main {
+    width: 2000px;
+    max-width: 100vw;
+    height: 2000px;
+    display: flex;
+    justify-content: center;
+    background-color: #FAFAFA;
+    position: relative;
+}
+    
+
 .main-nav {
     width: 2000px;
     max-width: 100vw;
@@ -14,16 +25,14 @@ body {
     justify-content: space-around;
     align-items: center;
     border-bottom: 2px solid lightgray;
-    
-    
-    
+   
 }
-
 
 .nav-pagename img {
     width: 20px;
     height: 20px;
     vertical-align: middle;
+
 
 }
 
@@ -35,7 +44,6 @@ body {
     margin-left: 10px;
 }
 
-
 .main-nav input {
     width: 200px;
     height: 20px;
@@ -43,10 +51,9 @@ body {
     text-align: center;
     border: 2px solid lightgrey;
     border-radius: 5px;
+    background-color: #FAFAFA;
     color: lightgrey;
 }
-
-
 
 .menu-list ul {
     display: flex;
@@ -67,42 +74,37 @@ body {
 }
 
 
-.main {
-    width: 2000px;
-    max-width: 100vw;
-    height: 2000px;
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
-}
-
 .feeds {
-    width: 50%;
-    height: 50%;
-    background-color: pink;
-    margin-right: 20px;
-
+    width: 45%;
+    border: 2px solid lightgrey;
+    background-color: white;
+    position: absolute;
+    left: 15%;
+    margin-top: 50px;
 }
 
 .feeds p {
     margin: 0;
 }
 
+.feeds-top {
+    margin: 20px 0;
+}
+
 article {
     width: 100%;
     /* height: 80%; */
-    margin-top: 30px;
-    background-color: yellow;
-
 }
 
 article .profileImage {
-    width: 25px;
-    height: 25px;
-    float: left;
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    margin-left: 15px;
+    margin-right: 10px;
 }
 
-article .mainImage {
+article img {
     width: 100%;
     /* height: 80%; */
 }
@@ -110,20 +112,19 @@ article .mainImage {
 .feedsIcon {
     display: flex;
     justify-content: space-between;
-    
+    margin-top: 5px;   
 }
 
 .feedsIcon ul {
     display: flex;
     margin: 0;
     padding-left: 10px;
-    
+   
 }
 
 .feedsIcon li {
     list-style: none;
-    margin-right: 20px;
-
+    margin-right: 10px;
 }
 
 .feedsIcon img {
@@ -132,16 +133,51 @@ article .mainImage {
     margin-right: 10px;
 }
 
+.main-text {
+    padding: 10px;
+    border-bottom: 2px solid lightgrey;
+}
+
 .main-text img {
     width: 15px;
     height: 15px;
 }
 
-.main-right {
-    width: 30%;
-    height: 30%;
-    background-color: blue;
+.main-text div {
+    margin-bottom: 10px;
+}
 
+.feeds-id {
+    font-weight: bold;
+}
+
+.feeds-repl {
+    font-weight: normal;
+}
+
+.repl {
+    margin: 15px 0px 15px 10px;
+}
+.repl input{
+    width: 90%;
+    border: none;
+    color: black;
+    
+}
+
+.repl button {
+    border: none;
+    background-color: white;
+    color: skyblue;
+}
+
+.main-right {
+    width: 20%;
+    position: fixed;
+    left: 63%;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
 }
    
 .main-right img {
@@ -149,7 +185,104 @@ article .mainImage {
     height: 40px;
 }
 
-.story-image {
-    width: 30px;
-    height: 30px;
+
+.main-right-top {
+    margin-bottom: 10px;
+    
+}
+
+.main-right-top img {
+    vertical-align: middle;
+    margin-right: 10px;
+    width: 45px;
+    height: 45px;
+}
+
+.main-id-info {
+    color: grey;
+    margin: 0;
+    margin-left: 45px;
+    position: absolute;
+    top: 20px;
+    left: 10px;
+}
+
+.story {
+    border: 2px solid lightgrey;
+    margin-top: 10px;
+    background-color: white;
+}
+
+.story-top {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px;
+}
+
+.story-fr {
+    margin: 15px;
+    position: relative;
+}
+
+.story-fr img{
+    vertical-align: middle;
+    margin-right: 15px;
+    width: 35px;
+    height: 35px;
+}
+
+.site-id {
+    font-weight: bold;
+    position: absolute;
+    top: 2px;
+
+}
+
+.site-id-info {
+    color: grey;
+    margin: 0;
+    margin-left: 45px;
+    position: absolute;
+    top: 20px;
+    left: 5px;
+
+}
+
+.follow {
+    margin-top: 15px;
+    border: 2px solid lightgrey;
+    background-color: white;
+}
+
+.menu-id {
+    color: grey;
+    margin: 0;
+}
+
+.menu-id-info {
+    font-weight: bold;
+}
+
+.follow-btn {
+    float: right;
+    position: absolute;
+    top: 10px;
+    right: 0;
+    background-color: white;
+    border: none;
+    padding: 0;
+    color: blue;
+    font-size: 15px;
+    
+}
+
+#winid {
+    font-weight: bold;
+    margin-bottom: 0;
+
+}
+
+#winid span {
+    font-weight: normal;
+    margin-left: 5px;
 }

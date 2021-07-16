@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/common.css">
-    <script src="js/login.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <script defer src="js/main.js"></script>
     <title>mainpage</title>
 </head>
 <body>
@@ -33,10 +33,11 @@
     <div class="main">
         <div class="feeds">
             <article>
-                <img class="profileImage" src="img/mark.png">
-                <p>wecode-bootcamp</p>
-                <p>wecode-위코드</p>
-                <img class="mainImage" src="img/liberty.jpg">
+                    <div class="feeds-top">
+                        <img class="profileImage" src="img/mark.png">
+                        <span class="feeds-id" id="myId">wecode-bootcamp</span>
+                    </div>
+                <img src="img/liberty.jpg">
                 <div class="feedsIcon">
                     <ul>
                         <li><img src="img/redheart.png" alt=""></li>
@@ -46,40 +47,92 @@
                     <img src="img/tag.png">
                 </div>
                 <div class="main-text">
-                    <img src="img/mark.png">
-                    <span>ainworld님 외 4명이 좋아합니다.</span>
-                    <p>canon_mj 위워크에서 진행한 베이킹 클래스 ...</p>
-                    <p>neceosecius 거봐 좋았잖아~~~</p>
-                    <p>42분 전</p>
-                    <input type="text" placeholder="댓글 달기....">
-                    <button>게시</button>                   
+                    <div>
+                        <img src="img/mark.png">
+                        <span class="feeds-id">ainworld</span><span class="feeds-repl">님 외 4명이 좋아합니다.</span>
+                    </div>
+                    <div>
+                        <p class="feeds-id">canon_mj
+                            <span class="feeds-repl">위워크에서 진행한 베이킹 클래스</span>
+                        </p>            
+                        <p class="feeds-id">neceosecius
+                            <span class="feeds-repl">거봐 좋았잖아~~~</span>
+                        </p>
+                        <div id="newcomment">    
+                            <!-- <span class="feeds-id" id="testinputid"></span>
+                            <span class="feeds-repl" id="testinput"></span> -->
+                        </div>
 
-                </div>                     
+                    </div>
+                    
+                </div>       
+                <div class="repl"> 
+                    <input id = "typingtext" type="text" placeholder="댓글 달기....">
+                    <button id="button">게시</button>    
+                </div>              
             </article>
 
         </div>
         <div class="main-right">
-            <img src="img/mark.png">
-            <p>wecode_bootcamp</p>
-            <p>wecode | 위코드</p>
+            <div class="main-right-top">
+                <img src="img/mark.png">
+                <span class="site-id">wecode_bootcamp</span>
+                <p class="main-id-info">Wecode | 위코드</p>
+            </div>
+
             <div class="story">
-                <p>스토리</p><span>모두보기</span>
+                <div class="story-top">
+                    <span class="menu-id">스토리</span>
+                    <span class="menu-id-info">모두보기</span>
+                </div>
                 <div class="story-fr">
                     <img src="img/mark.png">
+                    <span class="site-id">_yms_s</span>
+                    <p class="site-id-info">16분 전</p>
+                </div>
+                <div class="story-fr">
+                    <img src="img/mark.png">
+                    <span class="site-id">_yms_s</span>
+                    <p class="site-id-info">16분 전</p>
+                </div>
+                <div class="story-fr">
+                    <img src="img/mark.png">
+                    <span class="site-id">_yms_s</span>
+                    <p class="site-id-info">16분 전</p>
                 </div>
             </div>
+
             <div class="follow">
+                <div class="story-top">
+                    <span class="menu-id">회원님을 위한 추천</span>
+                    <span class="menu-id-info">모두 보기</span>
+                </div>
+                <div class="story-fr">
+                    <img src="img/mark.png">
+                    <span class="site-id">ioaaaaaahye</span>
+                    <p class="site-id-info">_legend>a님 외 2명이 ...</p>
+                    <button class="follow-btn">팔로우</button>
+                </div>
+                <div class="story-fr">
+                    <img src="img/mark.png">
+                    <span class="site-id">ioaaaaaahye</span>
+                    <p class="site-id-info">_legend>a님 외 2명이 ...</p>
+                    <button class="follow-btn">팔로우</button>
+                </div>
+                <div class="story-fr">
+                    <img src="img/mark.png">
+                    <span class="site-id">ioaaaaaahye</span>
+                    <p class="site-id-info">_legend>a님 외 2명이 ...</p>
+                    <button class="follow-btn">팔로우</button>
+                </div>
 
             </div>
-
-
-
 
         </div>
         
 
     </div>
 
-    
 </body>
+
 </html>
