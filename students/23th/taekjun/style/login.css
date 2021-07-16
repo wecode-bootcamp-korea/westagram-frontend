@@ -1,0 +1,70 @@
+/* 지워야 되는 코드 */
+.loginContainer {
+  border: 1px solid rgb(211, 211, 211);
+  border-radius: 2px;
+}
+
+.flexBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  margin: 32px 0px 0px;
+  /* padding: 200px; */
+}
+
+.loginContainer,
+.userInfoContainer,
+.loginBtnContainer {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loginContainer {
+  margin: 12px 0px 10px;
+  padding: 30px 0px 20px;
+}
+
+.userInfoContainer {
+  margin: 30px 0px 0px;
+}
+
+.logo {
+  font-size: 2.5rem;
+}
+
+.loginId,
+.loginPassword {
+  width: 268px;
+  margin: 6px 40px;
+  padding: 9px 0px 7px 8px;
+  border: 1px solid rgb(211, 211, 211);
+  border-radius: 2px;
+  background-color: #fafafa;
+  font-size: 0.8rem;
+}
+
+.loginBtnContainer .loginButton {
+  width: 268px;
+  height: 29px;
+  margin: 8px 40px;
+  padding: 5px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  background-color: #458eff;
+  opacity: 0.3;
+  font-size: 0.8rem;
+}
+
+.loginButton:hover {
+  cursor: pointer;
+}
+
+.findPassword {
+  margin: 12px 0px 0px;
+  padding-top: 50px;
+  color: rgba(56, 80, 133, 1);
+  font-size: 0.7rem;
+}
