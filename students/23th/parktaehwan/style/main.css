@@ -5,7 +5,9 @@ body{
     align-items: center;
     background-color: #fafafa;
 }
+
 /*네비게이션 바 */
+
 nav{
     display: flex;
     justify-content: center;
@@ -13,6 +15,7 @@ nav{
     border-bottom: 1px solid #dbdbdb;
     background-color: white;
 }
+
 .navBar{
     display: flex;
     flex-direction: row;
@@ -21,20 +24,24 @@ nav{
     margin-top: 10px;
     padding-bottom: 16px;
 }
+
 .navLeft{
     display: flex;
     flex-direction: row;
     align-items: center;
 }
+
 .navLeft .navImgBox{
     margin-left: 0;
 }
+
 .navSearchBox{
     display: flex;
     align-items: center;
     position: relative;
     width: 218px;
 }
+
 .navSearchImgBox{
     width: 218px;
     height: 25px;
@@ -50,22 +57,26 @@ nav{
     font-size: 13px;
     color: #8e8e8e;
 }
+
 .navSearchName{
     display: flex;
     position: absolute;
     top:2px;
     left: 100px;
 }
+
 .navSearchImg{
     display: flex;
     position: absolute;
     top:8px;
     left: 80px;
 }
+
 .fa-search{
     font-size: 11px;
     padding-right: 6px;
 }
+
 /* .inputIcon{
     position: absolute;
     left: 10px;
@@ -80,195 +91,232 @@ nav{
     border-radius: 3px;
     font-size: 13px;
 }
+
 .navRight{
     display: flex;
     flex-direction: row;
     align-items: center;
-    line-height: 1px;
 }
+
 .navRight .navImgBox{
     margin-right: 0;
     margin-left: 25px;
 }
+
 .navImgBox{
     margin : 0px 15px;
     line-height: 1px;
 }
+
 .navImg{
     width: 22px;
     height: 22px;
-    padding: 0 auto;
 }
+
 .logo{
-    font-size: 29px;
     padding-left: 20px;
     border-left: 1px solid black;
+    font-size: 29px;
 }
+
 /*본문*/
+
 main{
     display: flex;
     flex-direction: row;
     width: 935px;
-    height: 100%;
     margin-top: 50px;
 }
+
 .feeds{
-    margin-right: 28px;   
-    border: 1px solid #dbdbdb;
     height: 100vh;
+    margin-right: 28px;   
 }
+
 .section1{
     display: flex;
     flex-direction: column;
-    width: 614px;
     background-color: white;
     border: 1px solid #dbdbdb;
 }
+
 .writer{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    height: 60px;
+    padding: 14px 0;
 }
+
 .profileLeft{
     display: flex;
     flex-direction: row;
     padding: 0 15px;
 }
+
 .profileImgBox{
     width: 32px;
     height: 32px; 
     border-radius: 70%;
-    overflow: hidden;
     margin-right: 15px;
+    overflow: hidden;
 }
+
 .profileImg{
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
+
 .profileNameBox{
-    line-height: 1.7;
     color: #262626;
+    line-height: 1.7;
 }
+
 .writerDotBox{
     margin-right: 15px;
 }
+
 .writerDot{
     width: 16px;
     height: 16px;
 }
+
 .content{
     display: flex;
     flex-direction: column;
     width: 614px;
 }
-.contentImgBox{
-    height: 614px;    
-}
+
 .contentImg{
     width: 614px;
     height: 614px;
 }
+
 .likeBtnBar{
-    height: 40px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    margin: 8px 0;
 }
+
 .likeLeft{
     margin-left:5px;
 }
+
 .likeRight{
     margin-right: 15px;
 }
+
 .like{
-    font-size: 24px;
     margin-left:10px;
     color: gray;
+    font-size: 24px;
 }
+
 .howManyLike{
-    height: 24px;    
     display: flex;
     flex-direction: row;
     padding: 0 15px;
+    margin: 2px 0;
 }
+
 .howManyLikeBox{
     width: 20px;
     height: 20px; 
     border-radius: 70%;
+    margin-right: 5px;
     overflow: hidden;
 }
+
 .howManyLikeImg{
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
+
 .howManyLikeText{
     font-size: 13px;
 }
+
 .bold{
     font-weight: bold;
 }
+
 .contentComment{
-    overflow:hidden;
-    height: auto;
     padding: 0 15px;
     font-size: 14px;
+    overflow:hidden;
 }
+
 .commentPop{
     color: #BCBCBC;
     font-weight: bold;
+    margin: 2px 0;
 }
+
 .comment{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin: 3px 0;
 }
+
+.commentLeft{
+    word-break:break-all;
+}
+
 .commentHeartBox{
     display: flex;
-    align-items: center;
+    align-items: flex-end;
 }
+
 .commentHeart{
     font-size: 12px;
 }
+
 .time{
-    height: 19px;    
     padding: 0 15px;
+    margin: 5px 0 11px 0;
 }
+
 .writeTime{
-    font-size: 10px;
     color: #BCBCBC;
+    font-size: 10px;
 }
+
 .writeComment{
-    height: 56px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid #dbdbdb;
-    padding: 0 15px;
+    padding: 15px;
+    border-top: 1px solid #dbdbdb;
 }
+
 .commentInputBox{
     display: flex;
     align-items: center;
     width: 90%;
 }
+
 .commentInput{
+    width: 100%;
     border: 1px solid transparent;
     outline: 0;
-    width: 90%;
 }
+
 .commentBtn{
     border: 0;
     color: #b3dffc;
     background-color: white;
 }
+
 aside{
     width: 293px;
 }
+
 .myProfile{
     display: flex;
     flex-direction: row;
@@ -280,23 +328,27 @@ aside{
     display: flex;
     flex-direction: row;
 }
+
 .myProfileImgBox{
     width: 46px;
     height: 46px; 
     border-radius: 70%;
     overflow: hidden;
 }
+
 .myProfileNameBox{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-left: 15px;
     font-size: 15px;
     font-weight: bold;
-    margin-left: 15px;
 }
+
 .myProfileSub{
     color: #BCBCBC;
 }
+
 .asideSection{
     display: flex;
     flex-direction: column;
@@ -306,48 +358,58 @@ aside{
     font-weight: bold;
     margin-bottom: 15px;
 }
+
 .asideSectionTitle{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    font-size: 14px;
     margin-bottom: 5px;
+    font-size: 14px;
 }
+
 .asideSectionTitleName{
     color:#BCBCBC;
 }
+
 .asideSectionProfile{
     display: flex;
     flex-direction: row;
     align-items: center;
     padding-top:5px;
 }
+
 .follow{
     justify-content: space-between;
 }
+
 .followBtn{
     border: 0;
     color: #0095F6;
     background-color: white;
 }
+
 .asideSectionProfileLeft{
     display: flex;
     flex-direction: row;
     align-items: center;
 }
+
 .asideSectionNameBox{
     display: flex;
     flex-direction: column;
     font-size: 14px;
 }
+
 .asideSectionDes{
     color: #BCBCBC;
 }
+
 .intro{
+    color: #dbdbdb;
     font-size: 15px;
     font-weight: bold;
-    color: #dbdbdb;
 }
+
 a{
     text-decoration: none;
     color: #262626;

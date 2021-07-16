@@ -46,4 +46,4 @@ commentValue.addEventListener('keypress', function(e){
     if (e.code === 'Enter' || e.code === 'NumpadEnter') {
         postComment();
     }
-  });
+});
