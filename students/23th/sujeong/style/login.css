@@ -5,12 +5,11 @@
     align-items: center;
     margin: 200px auto;
     width: 400px;
-    height: 500px;
     background-color: #fff;
     border: 2px solid #dfdfdf;
 }
 
-.logo{
+.container h1{
     color:#222222;
     padding: 50px;
     font-family: 'Lobster', cursive;
@@ -27,15 +26,9 @@ input{
     background-color: #fafafa;
 }
 
-input::placeholder{padding-left: 10px;}
-
-input:focus::-webkit-input-placeholder, textarea:focus::-webkit-input-placeholder { color:transparent; } 
-
-input:focus:-moz-placeholder, textarea:focus:-moz-placeholder { color:transparent; } 
-
-input:focus::-moz-placeholder, textarea:focus::-moz-placeholder {  color:transparent; } 
-
-input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder { color:transparent; }
+input::placeholder{
+    padding-left: 10px;
+}
 
 .btn_login{
     width: 300px;
@@ -51,7 +44,8 @@ input:focus:-ms-input-placeholder, textarea:focus:-ms-input-placeholder { color:
 
 .pw_forgot {
     display: block;
-    margin-top: 110px;
+    margin-top: 70px;
+    padding-bottom: 60px;
     color: #00376b;
     font-weight: 500;
     font-size: 18px;
