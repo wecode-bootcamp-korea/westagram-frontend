@@ -24,6 +24,7 @@ function screenInit() {
 // }
 
 // 댓글에 해당하는 div 생성 후 배치
+
 function createComments(idString, textString) {
   const photoComments = document.querySelector(`.photo__comments`);
   const commentsIdText = [idString, textString];
@@ -39,6 +40,28 @@ function createComments(idString, textString) {
     commentsDesc.appendChild(commentsWrap);
     commentsDesc.className = `comments__desc`;
   });
+
+  const commentsLikeOrDelete = document.createElement(`div`),
+    commentsLikeBtn = document.createElement(`button`),
+    commentsLike = document.createElement(`i`),
+    commentsDelete = document.createElement(`button`);
+
+  commentsLikeOrDelete.classList.add(`comments__desc-button-block`);
+  commentsLike.classList.add(`far`);
+  commentsLike.classList.add(`fa-heart`);
+
+  commentsLikeBtn.id = `commentsLikeButton` + photoComments.childElementCount;
+  commentsDelete.id = `commentsDeleteButton` + photoComments.childElementCount;
+
+  commentsDelete.innerHTML = `삭제`;
+
+  commentsLikeBtn.appendChild(commentsLike);
+  commentsLikeOrDelete.appendChild(commentsLikeBtn);
+  commentsLikeOrDelete.appendChild(commentsDelete);
+  commentsDesc.appendChild(commentsLikeOrDelete);
+
+  commentsDesc.id = `comments` + photoComments.childElementCount;
+
   photoComments.appendChild(commentsDesc);
 }
 
@@ -74,6 +97,67 @@ function loadComments() {
   return commentsArr;
 }
 
+function likeComments() {
+  const photoComments = document.querySelector(`.photo__comments`);
+  let commentsCount = photoComments.childElementCount;
+
+  let commentsInfo = [];
+  console.log(commentsCount);
+
+  for (let i = 1; i <= commentsCount - 1; i++) {
+    let comments = {
+      id: i,
+      commentsLikeBtn: document.querySelector(`#commentsLikeButton${i}`),
+    };
+    commentsInfo.push(comments);
+  }
+
+  if (commentsInfo !== null || commentsInfo !== undefined) {
+    commentsInfo.forEach((elem) => {
+      let commentsLikeBtn = elem[`commentsLikeBtn`];
+      let redOrBlack = `black`;
+
+      if (commentsLikeBtn !== null || commentsLikeBtn !== undefined) {
+        commentsLikeBtn.addEventListener(`click`, () => {
+          if (redOrBlack === `black`) {
+            redOrBlack = `red`;
+          } else {
+            redOrBlack = `black`;
+          }
+          switch (redOrBlack) {
+            case `black`:
+              commentsLikeBtn.style.color = `black`;
+              break;
+
+            case `red`:
+              commentsLikeBtn.style.color = `red`;
+              break;
+          }
+        });
+      }
+    });
+  }
+}
+
+function deleteComments() {
+  const photoComments = document.querySelector(`.photo__comments`);
+  let commentsCount = photoComments.childElementCount;
+
+  let commentInfo = {};
+
+  for (let i = 1; i < commentsCount; i++) {
+    let comment = {
+      id: i,
+      commentDiv: document.querySelector(`comments${i}`),
+    };
+
+    commentInfo.id = i;
+    commentInfo.comments = comment;
+  }
+
+  console.log(commentInfo);
+}
+
 // 댓글 DOM event, saveComments, 이전 댓글정보 유무 확인
 function addComments() {
   const commentsInput = document.querySelector(`#commentsInput`),
@@ -104,6 +188,9 @@ function addComments() {
       : alert(`댓글 내용을 입력해주세요.`);
     saveComments(commentsArr, newCommentsId, newCommentsText);
   });
+
+  deleteComments();
+  likeComments();
 }
 
 // modal
@@ -142,6 +229,6 @@ function navSearch() {
     screenInit();
     location.reload();
   });
-  addComments();
   navSearch();
+  addComments();
 })();

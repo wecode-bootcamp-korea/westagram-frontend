@@ -27,6 +27,14 @@ body {
   transform: translate(0, -50%);
 }
 
+.black {
+  color: black;
+}
+
+.red {
+  color: red;
+}
+
 .header {
   position: fixed;
   display: flex;
@@ -112,7 +120,7 @@ main {
 
 .feed-container {
   padding: 30px 0 0 0;
-  margin: 0 28px 0 0;
+  margin: 55px 28px 0 0;
 }
 
 .story-wrap {
@@ -268,6 +276,7 @@ main {
 
 .comments__more,
 .comments__desc {
+  position: relative;
   display: flex;
   flex-direction: row;
   height: 18px;
@@ -290,8 +299,27 @@ main {
   margin-right: 5px;
 }
 
-.comments__desc-like-delete {
+.comments__desc-button-block {
+  position: absolute;
   display: flex;
+  top: 1px;
+  right: 10px;
+}
+
+.comments__desc-button-block button {
+  margin-left: 10px;
+  padding: 0;
+  background-color: white;
+  border: none;
+  outline: none;
+}
+
+.comments__desc-button-block button:first-child {
+  color: black;
+}
+
+.comments__desc-button-block button:last-child {
+  color: var(--blue);
 }
 
 .photo__date {
