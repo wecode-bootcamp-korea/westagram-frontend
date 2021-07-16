@@ -23,16 +23,15 @@ ul{
 }
 
 
-
 /*mainpage*/
 .mainpage {
   display: flex;
   align-items: center;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
   border-bottom: 1px solid #dbdbdb;
   background-color: white;
-  justify-content: center;
-  width: 100%;
-  position: fixed;
 }
 
 .mainpageWidth {
@@ -83,20 +82,19 @@ ul{
 .main {
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: center;
-  background-color: rgba(var(--b3f,250,250,250),1);
   padding-top: 60px;
+  background-color: rgba(var(--b3f,250,250,250),1);
 
 }
 
 
 /*feed > article*/
 .article {
-  background-color: white;
-  border: 1px solid #dbdbdb;
   width: 614px;
   margin-right: 28px;
+  background-color: white;
+  border: 1px solid #dbdbdb;
 }
 
 .account {
@@ -108,13 +106,13 @@ ul{
 
 .account img {
   width: 40px;
-  border-radius: 30px;
   margin-left: 10px;
+  border-radius: 30px;
 }
 
 .account p {
-  font-size: 15px;
   margin-right: 430px;
+  font-size: 15px;
 }
 
 
@@ -146,16 +144,16 @@ ul{
 
 .fa-comment, .fa-share-square {
   padding-top: 1px;
-  font-size: 25px;
   padding-left: 15px;
   color: #464646;
+  font-size: 25px;
 }
 
 .fa-bookmark {
   padding: 10px;
-  font-size: 25px;
   padding-right: 15px;
   color: #464646;
+  font-size: 25px;
 }
 
 .desContainer {
@@ -170,13 +168,13 @@ ul{
 
 .desContainer >.description {
   padding-bottom: 10px;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .desContainer >.time {
   padding-bottom: 10px;
-  font-size: 10px;
   color: grey;
+  font-size: 10px;
 }
 
 .replyContainer {
@@ -188,16 +186,16 @@ ul{
 }
 
 .replyContainer > .fa-grin {
-  font-size: 25px;
-  color: grey;
   padding-left: 10px;
+  color: grey;
+  font-size: 25px;
 }
 
 .replyContainer > .reply {
   border: none;
   padding-right: 300px;
-  font-size: 15px;
   color: grey;
+  font-size: 15px;
 }
 
 .reply:focus {
@@ -214,8 +212,8 @@ ul{
 }
 
 .replybutton:hover {
-  cursor: pointer;
   color: blue;
+  cursor: pointer;
 }
 
 
@@ -253,17 +251,16 @@ ul{
 }
 
 .accounts> .accountBtn {
-  font-size: 12px;
-  font-weight: bold;
   padding-right: 10px;
   color: #0095f6;
+  font-size: 12px;
+  font-weight: bold;
 }
 
 /*storyContainer*/
 .storyContainer {
   display: flex;
   flex-direction: column;
-
 }
 
 .storyContainer> ul {
@@ -275,9 +272,9 @@ ul{
 }
 
 .stories1 {
+  color: grey;
   font-size: 14px;
   font-weight: bold;
-  color: grey;
 }
 
 .stories2 {
@@ -289,13 +286,10 @@ ul{
   display: flex;
   flex-direction: column;
   flex-grow: 3;
-  align-items: flex-starts;
-  
 }
 
 .storyBtn1, .storyBtn2, .storyBtn3, .storyBtn4 {
   display: flex;
-  flex: 1 1  auto;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -307,14 +301,15 @@ ul{
 }
 
 .id {
-  margin-right: 70px;
+  flex-grow: 1;
+  padding-left: 10px;
 }
 
 .follow {
-  font-size: 12px;
-  font-weight: bold;
   padding-right: 10px;
   color: #0095f6;
+  font-size: 12px;
+  font-weight: bold;
   text-align: center;
 }
 
@@ -323,7 +318,6 @@ ul{
 .recommendationContainer {
   display: flex;
   flex-direction: column;
-  flex: 0 0 auto;
   align-items: flex-starts;
 }
 
@@ -335,13 +329,13 @@ ul{
   padding: 5px 10px;
 }
 
-.foryou1 {
+.foryouLabel1 {
+  color: grey;
   font-size: 14px;
   font-weight: bold;
-  color: grey;
 }
 
-.foryou2 {
+.foryouLabel2 {
   font-size: 12px;
   font-weight: bold;
 }
@@ -355,7 +349,7 @@ ul{
 }
 
 
-.reco1, .reco2, .reco3{
+.recommendation1, .recommendation2, .recommendation3{
   display: flex;
   flex: auto;
   width: 100%;

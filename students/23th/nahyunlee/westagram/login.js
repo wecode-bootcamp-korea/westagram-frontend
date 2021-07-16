@@ -12,9 +12,27 @@ userPassword.addEventListener('keyup', function () {
     if (userPasswordValue !== "") {
       loginButton.style.backgroundColor = "blue";
     }
-  } else {
   }
 });
+
+//Id, Password Validation
+userId.addEventListener('keyup', function (e) {
+  if (e.code === 'Enter' || e.key === 'Tab') {
+    //1. id value 값을 변수에 넣는다. 
+    const userIdValue = userId.value;
+    //2. @가 들어가 있는지 확인하는 메서드를 변수에 넣는다.
+    const indexOfUserID = userIdValue.indexOf('@');
+    //3. @가 들어있지 않다면(indexOf에 값이 없으면 -1이 나옴), 경고창을 만든다. 
+    if (indexOfUserID === -1) {
+      alert('@를 입력해주세요.')
+    }
+    //}
+  }
+})
+
+
+
+
 
 
 //로그인 성공 시, 페이지 이동
@@ -32,3 +50,4 @@ loginButton.addEventListener('click', function () {
   document.querySelector('.id').value = '';
   location.href = "main.html";
 });
+

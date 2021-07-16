@@ -16,8 +16,6 @@ reply.addEventListener('keydown', function (e) {
       //부모 노드에 자식노드 추가 
       document.querySelector('.desContainer').appendChild(commentBox);
       document.querySelector('.reply').value = '';
-    } else {
-
     }
   }
 
@@ -34,8 +32,6 @@ replyButton.addEventListener('click', function () {
     commentBox.innerText = newReply;
     document.querySelector('.desContainer').appendChild(commentBox);
     document.querySelector('.reply').value = '';
-
-  } else {
 
   }
   document.querySelector('.reply').value = "";

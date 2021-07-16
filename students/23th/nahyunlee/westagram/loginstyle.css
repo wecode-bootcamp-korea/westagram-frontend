@@ -31,11 +31,10 @@ body {
 
 .westagram{
   flex-grow: 2;
-  font-family: 'Lobster', cursive;
-  font-size: 90px;
   padding-top: 30px;
   padding-bottom: 0;
-
+  font-family: 'Lobster', cursive;
+  font-size: 90px;
 }
 
 .userLogin{
@@ -53,10 +52,10 @@ body {
 
 
 .id, .password {
+  padding-left: 10px;
   border: 1px solid #efefef;
   border-radius: 5px;
   background-color: #fafafa;
-  padding-left: 10px;
 }
 
 
@@ -67,10 +66,10 @@ body {
 }
 
 .id::placeholder {
+  color: #9B9B9B;
   font-family: 'Noto Sans KR', sans-serif;
   font-size: 20px;
   font-weight: bold;
-  color: #9B9B9B;
 }
 
 
@@ -80,29 +79,33 @@ body {
 
 
 .password::placeholder {
+  color: #9B9B9B;
+
   font-family: 'Noto Sans KR', sans-serif;
   font-size: 20px;
   font-weight: bold;
-  color: #9B9B9B;
 }
 
 .loginButton {
   height: 50px;
+  border: none;
+  border-radius: 5px;
+  background-color: #C4E1FB;
+  color: white;
   font-size: 20px;
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: bold;
-  color: white;
-  background-color: #C4E1FB;
-  border: none;
-  border-radius: 5px;
+}
 
+.loginButton:hover {
+  cursor: pointer;
 }
 
 .helpPassword{
   flex-grow: 2;
   padding-top: 20px;
+  color:  #003569;
   font-family: 'Noto Sans KR', sans-serif;
   font-size: 20px;
   font-weight: bold;
-  color:  #003569;
 }
