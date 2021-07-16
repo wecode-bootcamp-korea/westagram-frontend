@@ -3,24 +3,44 @@
   padding: 0;
   text-decoration: none;
   list-style: none;
+  font-family: "Open Sans", sans-serif;
 }
+:root {
+  --my-color-1: #f8f8f8f6;
+  --my-color-2: #aaabac;
+  --my-color-3: #444444;
+  --my-color-4: #6d99e6;
+  --my-color-5: white;
+}
+
+/* 폰트공통class */
+.boldFont {
+  font-weight: bold;
+  margin-right: 2px;
+}
+.lightFontColor {
+  color: var(--my-color-2);
+}
+.blueFont {
+  color: var(--my-color-4);
+}
+span,
+p {
+  font-size: 12px;
+}
+
 body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: lightsteelblue;
+  background-color: var(--my-color-1);
 }
 
-/* img {
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-} */
-
 nav {
+  background-color: var(--my-color-5);
   width: 100%;
   height: 70px;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid var(--my-color-2);
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -29,29 +49,48 @@ nav {
   width: 550px;
   margin: auto;
 }
+.logoBox {
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
 
 .logoBox svg {
+  color: var(--my-color-3);
   font-size: 30px;
+  line-height: 70px;
   padding-right: 15px;
-  border-right: 1px solid gray;
+  border-right: 1px solid var(--my-color-3);
 }
 
 .logo {
+  color: var(--my-color-3);
+  line-height: 70px;
   font-size: 30px;
   padding-left: 15px;
+  font-family: "Lobster";
 }
 
 .searchBox svg {
+  color: var(--my-color-2);
   position: relative;
   left: 80px;
+  font-size: 10px;
 }
-.searchBox input {
+.searchBox > input {
+  background-color: var(--my-color-1);
+  border: 1px solid var(--my-color-2);
+  border-radius: 2px;
   width: 180px;
   height: 20px;
 }
 
-input::placeholder {
+.searchBox input::placeholder {
+  color: var(--my-color-2);
   text-align: center;
+}
+.searchBox input:focus {
+  outline: none;
 }
 
 .menuBox img {
@@ -61,82 +100,101 @@ input::placeholder {
 }
 .feeds {
   background-color: white;
-  border: 1px solid lightgrey;
+  border: 1px solid var(--my-color-2);
   height: 880px;
 }
 
 main {
-  width: 1000px;
+  width: 900px;
   height: 1000px;
   display: flex;
   margin-top: 60px;
 }
 
 article {
-  background-color: thistle;
   width: 600px;
   height: 880px;
-  border: 1px solid black;
 }
 .writerBox {
-  background-color: seashell;
   height: 50px;
   display: flex;
   align-items: center;
 }
-.writerBox img {
+.writerProfile {
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   margin-right: 15px;
 }
 .writerBox span {
-  margin-right: 390px;
+  margin-right: 420px;
+}
+.dot {
+  width: 20px;
+  height: 20px;
+  margin-right: 0px;
 }
 .mainPhoto {
   width: 600px;
   height: 600px;
 }
 .functionBox {
-  background-color: lightskyblue;
   display: flex;
+  margin-top: 5px;
 }
 .functionBox svg {
-  font-size: 30px;
-  color: rgb(129, 127, 127);
-  margin-right: 10px;
+  font-size: 20px;
+  color: var(--my-color-2);
+  margin-right: 13px;
 }
 .functionBox svg:nth-child(1) {
   color: rgb(250, 84, 84);
 }
 .functionBox svg:nth-child(4) {
-  margin-left: 410px;
+  margin-left: 435px;
 }
 .numberOfLikesBox {
-  background-color: pink;
   height: 90px;
+  margin-top: 10px;
 }
 .numberOfLikesBox img {
   border-radius: 50%;
+  border: 0.5px solid var(--my-color-2);
   width: 20px;
   height: 20px;
   margin-right: 10px;
 }
-.boldFont {
-  font-weight: bold;
+.numberOfLikes {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
 }
-.lightFontColor {
-  color: lightgrey;
+.heart {
+  position: relative;
+  left: 540px;
+  bottom: 20px;
+  color: var(--my-color-2);
+  font-size: 9px;
 }
+.commentViewBox {
+  height: 130px;
+}
+
 .commentBox {
+  display: flex;
   width: 600px;
+  height: 25px;
+  border-top: 1px solid var(--my-color-2);
+  margin: 75px 0 15px 0;
 }
 .commentBox input {
-  width: 100%;
-  height: 30px;
-  border: 1px solid grey;
+  width: 500px;
+  height: 20px;
+  border: none;
+  margin-left: 10px;
 }
 .commentBox input::placeholder {
+  color: var(--my-color-2);
   text-align: start;
 }
 .commentBox input:focus {
@@ -144,9 +202,10 @@ article {
 }
 
 .commentBox button {
+  color: var(--my-color-4);
   position: relative;
-  left: 570px;
-  bottom: 25px;
+  left: 50px;
+  bottom: 2px;
   border: none;
   background-color: transparent;
 }
@@ -171,8 +230,7 @@ article {
 }
 
 .mainRight {
-  background-color: cornflowerblue;
-  width: 350px;
+  width: 280px;
   height: 700px;
   margin-left: 20px;
 }
@@ -190,11 +248,13 @@ article {
   margin-right: 10px;
 }
 .storiesBox {
+  background-color: var(--my-color-5);
   height: 230px;
-  border: 1px solid gray;
+  border: 1px solid var(--my-color-2);
+  border-radius: 2px;
 }
 .storyProfileBox {
-  width: 300px;
+  width: 240px;
   margin: 10px auto;
 }
 .storyProfileBox li {
@@ -205,7 +265,7 @@ article {
   align-items: center;
 }
 .storiesMenu {
-  width: 310px;
+  width: 250px;
   display: flex;
   justify-content: space-between;
   margin: auto;
@@ -217,22 +277,23 @@ article {
   left: 5px;
 }
 .recommendationBox {
+  background-color: var(--my-color-5);
   height: 180px;
-  border: 1px solid gray;
+  border: 1px solid var(--my-color-2);
+  border-radius: 2px;
   margin-top: 15px;
 }
 .recommendationMenu {
   display: flex;
   justify-content: space-between;
-  width: 310px;
+  width: 250px;
   margin: auto;
   margin-top: 5px;
 }
 .recommendationList {
-  background-color: darkseagreen;
   display: flex;
   align-items: center;
-  width: 300px;
+  width: 230px;
   margin: 10px auto;
 }
 .recommendationList img {
@@ -243,10 +304,22 @@ article {
 }
 
 .infoBox {
-  background-color: tan;
   height: 150px;
   margin-top: 30px;
 }
 .infoBox p {
+  color: var(--my-color-2);
   margin-bottom: 15px;
+}
+.infoBox span {
+  color: var(--my-color-2);
+}
+.commentStyle {
+  font-family: "Open Sans";
+  font-size: 12px;
+  /* margin: "5px 0px 5px 10px"; */
+  width: 300px;
+}
+.commentFlex {
+  display: flex;
 }

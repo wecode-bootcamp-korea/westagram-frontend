@@ -5,33 +5,36 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>westagram-main</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style/style.css" type="text/css" />
   <script defer src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" integrity="sha384-haqrlim99xjfMxRP6EWtafs0sB1WKcMdynwZleuUSwJR0mDeRYbhtY+KPMr+JL6f" crossorigin="anonymous"></script>
 </head>
 <body>
   <nav>
     <div class="logoBox">
-      <i class="fab fa-instagram"></i>
-      <span class="logo">westagram</span>
-    </div>
-    <div class="searchBox">
-      <i class="fas fa-search"></i>
-      <input type="text" placeholder="검색">
-    </div>
-    <div class="menuBox">
-      <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png" alt="탐색">
-      <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" alt="하트">
-      <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png
-      " alt="개인페이지">
-    </div>
+        <i class="fab fa-instagram"></i>
+        <h1 class="logo">westagram</h1>
+      </div>
+      <div class="searchBox">
+        <i class="fas fa-search"></i>
+        <input type="text" placeholder="검색">
+      </div>
+      <div class="menuBox">
+        <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png" alt="탐색">
+        <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" alt="하트">
+        <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png
+        " alt="개인페이지">
+      </div>
   </nav>
   <main>
     <div class="feeds">
       <article>
         <div class="writerBox center">
-          <img src="https://cdn.fanzeel.com/images/201906/5d0b3ea72915b.jpg" alt="우디 사진">
-          <span>wooooo_dy</span>
-          <span>...</span>
+          <img class="writerProfile" src="https://cdn.fanzeel.com/images/201906/5d0b3ea72915b.jpg" alt="우디 사진">
+          <span class="boldFont">wooooo_dy</span>
+          <img class="dot" src="img/dot.PNG" alt="말줄임표사진"/>
         </div>
         <img class="mainPhoto"src="https://i.pinimg.com/474x/4f/8e/91/4f8e91563c85567bcd7fb773d13632c4.jpg" alt="토이스토리 사진">
       
@@ -42,16 +45,26 @@
           <i class="far fa-bookmark"></i>
         </div>
         <div class="numberOfLikesBox center">
-          <img src="https://m.figurepresso.com/web/product/big/201906/ce6c15012ad4a18b8283afcf3e3f16bc.jpg" alt="포키사진">
-          <span><span class="boldFont">포키</span>님 <span class="boldFont">외 4명</span>이 좋아합니다</span>
-          <p><span class="boldFont">wooooo_dy</span> 글~~~~~~~~~~~~~~~~~~~~~~</p>
-          <p><span class="boldFont">wooooo_dy</span> 글~~~~~~~~~~~~~~~~~~~~~~~~~~... <span class="lightFontColor">더 보기</span></p>
-          <span class="lightFontColor">42분 전</span>
+          <div class="numberOfLikes">
+            <img src="https://m.figurepresso.com/web/product/big/201906/ce6c15012ad4a18b8283afcf3e3f16bc.jpg" alt="포키사진">
+            <p class="boldFont">FOR_KY님 외 4명이 좋아합니다</p>
+          </div>
+          <div class="commentViewBox">
+            <div class="commentFlex">
+              <span class="boldFont">wooooo_dy</span> 
+              <li class="commentStyle">댓글1</li>
+            </div>
+            <div class="commentFlex">
+              <span class="boldFont">wooooo_dy</span> 
+              <li class="commentStyle">댓글2</li>
+            </div>
+          </div>
         </div>
         <div class="commentBox"> 
-          <input class="lightFontColor" type="text" placeholder="  댓글 달기..."/>
-          <button>게시</button>
+          <input class="lightFontColor comment" type="text" placeholder=" 댓글 달기..."/>
+          <button class="commentBtn">게시</button>
         </div>
+        
         
       </article>
     </div>
@@ -59,14 +72,14 @@
       <div class="profileBox">
         <img class="profileImg"src="https://openimage.interpark.com/goods_image_big/4/0/0/7/6806514007_l.jpg" alt="알린사진">
         <div>
-          <span>little_green_alien</span>
-          <p>1little_green_alien</p>
+          <span class="boldFont">little_green_alien</span>
+          <p class="lightFontColor">WeCode | 위코드</p>
         </div>
       </div>
       <div class="storiesBox">
         <div class="storiesMenu">
-          <span>스토리</span>
-          <span>모두 보기</span>
+          <span class="lightFontColor">스토리</span>
+          <span class="boldFont">모두 보기</span>
         </div>
         <!-- <div class="storyProfileBox"> -->
             <ul class="storyProfileBox">
@@ -75,8 +88,8 @@
                   <img src="https://openimage.interpark.com/goods_image_big/4/0/0/7/6806514007_l.jpg" alt="알린사진">
                 </div>
                 <div>
-                  <span>아이디</span>
-                  <p>14분 전</p>
+                  <span class="boldFont">아이디</span>
+                  <p class="lightFontColor">14분 전</p>
                 </div>
               </li>
               <li class="storyProfile">
@@ -84,8 +97,8 @@
                   <img src="https://openimage.interpark.com/goods_image_big/4/0/0/7/6806514007_l.jpg" alt="알린사진">
                 </div>
                 <div>
-                  <span>아이디</span>
-                  <p>14분 전</p>
+                  <span class="boldFont">아이디</span>
+                  <p class="lightFontColor">14분 전</p>
                 </div>
               </li>
               <li class="storyProfile">
@@ -93,42 +106,42 @@
                   <img src="https://openimage.interpark.com/goods_image_big/4/0/0/7/6806514007_l.jpg" alt="알린사진">
                 </div>
                 <div>
-                  <span>아이디</span>
-                  <p>14분 전</p>
+                  <span class="boldFont">아이디</span>
+                  <p class="lightFontColor">14분 전</p>
                 </div>
               </li>
             </ul>
-          <!-- </div> -->
+          
       </div><!--storiesBox-->
       <div class="recommendationBox">
         <div class="recommendationMenu">
-          <span>회원님을 위한 추천</span>
-          <span>모두 보기</span>
+          <span class="lightFontColor">회원님을 위한 추천</span>
+          <span class="boldFont">모두 보기</span>
         </div>
         <ul> 
           <li class="recommendationList">
             <img src="https://openimage.interpark.com/goods_image_big/4/0/0/7/6806514007_l.jpg" alt="알린사진">
             <div>
-              <span>아이디</span>
-              <p>아이디님 외 2명이 ...</p>
+              <span class="boldFont">아이디</span>
+              <p class="lightFontColor">아이디님 외 2명이 ...</p>
             </div>
-            <span><a hrdf="#">팔로우</a></span>
+            <span class="blueFont"><a hrdf="#">팔로우</a></span>
           </li> 
           <li class="recommendationList">
             <img src="https://openimage.interpark.com/goods_image_big/4/0/0/7/6806514007_l.jpg" alt="알린사진">
             <div>
-              <span>아이디</span>
-              <p>아이디님 외 2명이 ...</p>
+              <span class="boldFont">아이디</span>
+              <p class="lightFontColor">아이디님 외 2명이 ...</p>
             </div>
-            <span><a hrdf="#">팔로우</a></span>
+            <span class="blueFont"><a hrdf="#">팔로우</a></span>
           </li>
           <li class="recommendationList">
             <img src="https://openimage.interpark.com/goods_image_big/4/0/0/7/6806514007_l.jpg" alt="알린사진">
             <div>
-              <span>아이디</span>
-              <p>아이디님 외 2명이 ...</p>
+              <span class="boldFont">아이디</span>
+              <p class="lightFontColor">아이디님 외 2명이 ...</p>
             </div>
-            <span><a hrdf="#">팔로우</a></span>
+            <span class="blueFont"><a hrdf="#">팔로우</a></span>
           </li>
         </ul><!--recommendationBox-->
       <div class="infoBox">
@@ -141,6 +154,6 @@
 
     </div><!--mainRight-->
   </main>
-  
+  <script src="js/main.js"></script>
 </body>
 </html>
