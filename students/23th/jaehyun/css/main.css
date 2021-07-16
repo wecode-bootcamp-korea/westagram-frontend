@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,35 +9,29 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding-top: 60px;
+    background-color: #fafafa;
 }
 
-.container{
-    /* position: fixed;
+.fixedTop {
+    position: fixed;
     top: 0;
     left: 0;
-    right: 0; */
-
-    margin-top: 5px;
-    margin-bottom: 5px;
+    right: 0;
+    background-color: white;
+    border-bottom: 2px solid #ebebeb;
 }
 
 nav {
     display: flex;
     justify-content: space-between;
-    
-    padding: 20px;
-    margin: 0 130px;
+    padding: 15px;
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
 }
 
-.leftContents {
-    display: flex;
-}
-
-.verticalLine{
-    margin: 0 15px
-}
-
-.westagramTitle{
+.westagramTitle {
     margin: 0 15px;
     font-size: 25px;
     font-family: 'Lobster', cursive;
@@ -58,54 +52,51 @@ nav {
 
 .searchIcon {
     position: absolute;
-    top:8px;
-    left:100px;
+    top: 10px;
+    left: 90px;
 
-    width: 15px;
-    height: 15px;
+    width: 10px;
+    height: 10px;
 }
 
 .searchText {
     position: absolute;
-    top: 8px;
-    left:120px;
+    top: 7px;
+    left: 100px;
     width: 30px;
+    font-size: 14px;
 }
 
-.homeIcon, .sendIcon, .exploreIcon, .heartIcon, .profileIcon{
+.homeIcon, .sendIcon, .exploreIcon, .heartIcon, .profileIcon {
     width: 25px;
     height: 25px;
-
     margin: 0 15px;
 }
 
-.homeIcon, .sendIcon, .exploreIcon, .heartIcon, .profileIcon:hover{
+.homeIcon, .sendIcon, .exploreIcon, .heartIcon, .profileIcon:hover {
     cursor: pointer;
 }
 
-.main{
+section {
     display: flex;
     justify-content: center;
-    align-items: center;
-    text-align: center;
-    
-    border-top: 2px solid #ebebeb;
-    background-color: #fafafa;
     padding-top: 20px;
-    
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
 }
 
-.feeds{
-    width: 45%;
-
+article {
     background-color: white;
     border: 2px solid #e9e9e9;
-    margin-right: 70px;
+    border-radius: 3px;
+    margin-right: 30px;
 }
 
-.feedHeader{
+.feedHeader {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     height: 60px;
     padding: 15px 15px;
@@ -113,15 +104,9 @@ nav {
 }
 
 .feedProfile {
-    position: relative;
-}
-
-.userId{
-    position: absolute;
-    top:7px;
-    left:50px;
-
-    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .feedProfileImage {
@@ -130,47 +115,48 @@ nav {
     border-radius: 70%;
 }
 
-.moreButtonImage{
-    margin-top: 5px;
+.userId {
+    margin-left: 10px;
+    font-weight: bold;
+}
 
+.moreButtonImage {
     width: 13px;
     height: 13px;
     cursor: pointer;
 }
 
-.firstFeed{
-    width: 100%;
-    height: 50%;
+.firstFeed {
+    width: 300px;
+    height: 500px;
 }
 
-.feedIcons{
+.feedIcons {
     display: flex;
     justify-content: space-between;
-
-    padding: 0 5px;
+    align-items: center;
+    padding:0 10px;
 }
 
 .likeIcon, .dmIcon, .shareIcon, .bookmarkIcon {
     width: 25px;
     height: 25px;
-
     cursor: pointer;
 }
 
-.likeIcon, .dmIcon, .shareIcon{
+.likeIcon, .dmIcon, .shareIcon {
     margin-left: 15px;
 }
 
-.feedDescription{
+.feedDescription {
     margin-left: 20px;
     text-align: left;
 }
 
-.feedReply{
+.feedReply {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     border-top: 1px solid lightgray;
     padding: 10px;
     margin-top: 20px;
@@ -179,6 +165,7 @@ nav {
 .smileIcon {
     width: 25px;
     height: 25px;
+    margin-right: 10px;
 }
 
 .replyInput {
@@ -195,34 +182,37 @@ nav {
 }
 
 aside {
-    width: 25%;
+    width: calc(100% - 700px);
 }
 
-.account{
+.account {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
 
+.accountUser {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .accountUserIcon {
     width: 50px;
     height: 50px;
+    margin-right: 20px;
 }
 
 .story {
     border: 2px solid #e9e9e9;
     border-radius: 3px;
-
     margin-top: 20px;
-
 }
 
 .storyTop {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     padding: 20px;
 }
 
@@ -230,19 +220,21 @@ aside {
     display: flex;
     justify-content: left;
     align-items: center;
-
     padding: 10px;
 }
-
+.otherUserId {
+    margin-left: 10px;
+    font-size: 15px;
+}
 .otherUserIcon{
     width: 30px;
     height: 30px;
+    border-radius: 70%;
 }
 
 .recommendUser {
     border: 2px solid #e9e9e9;
     border-radius: 3px;
-
     margin-top: 10px;
 }
 
@@ -250,7 +242,6 @@ aside {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     padding: 20px;
 }
 
@@ -258,13 +249,17 @@ aside {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
     padding: 10px;
+}
+.recommendUserLeftContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 footer {
     color: #dfdfdf;
     font-size: 12px;
-
     text-align: left;
+    margin-top: 20px;
 }
