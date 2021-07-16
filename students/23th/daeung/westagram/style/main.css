@@ -9,9 +9,14 @@ body {
     width: 100%;
 }
 #topBar {
+    position: fixed;
     display: flex;
     justify-content: center;
     width: 100%;
+    overflow: hidden;
+    background-color: white;
+    z-index: 999;
+    border-bottom: 1px solid #DBDBDB;
 }
 #navBox {
     display: flex;
@@ -39,17 +44,23 @@ body {
     margin-right: 15px;
     vertical-align: middle;
 }
+#logoImg:hover  {
+    cursor: pointer;
+}
 .logoImgBox 
 {
     padding-top: 2px;
     padding-bottom: 2px;
-    /* border-right: 1px solid black; */
+    border-right: 1px solid black;
 }
 .logoText   {
     font-size: x-large;
     font-family: 'Lobster', cursive;
     padding-left: 15px;
     /* border-left: 1px solid black; */
+}
+.logoText   {
+    cursor: pointer;
 }
 #rightNav   {
     display: flex;
@@ -86,6 +97,7 @@ body {
     background-color: #FAFAFA;
     border: 1px solid #DBDBDB;
     border-radius: 3px;
+    outline: none;
 }
 .search::placeholder    {
     text-align: center;
@@ -97,6 +109,10 @@ body {
     width: auto; height: auto;
 }
 
+#rightNav img:hover   {
+    cursor: pointer;
+}
+
 #contents   {
     display: flex;
     justify-content: center;
@@ -104,35 +120,51 @@ body {
     background-color: #FAFAFA;
     border-top: 1px solid #DBDBDB;
     margin-left: 0 auto;
+    /* margin-top: 54px; */
 }
 .main   {
-    margin-top: 25px;
+    margin-top: 90px;
     display: flex;
     width: 935px;
     height: 100%;
     /* border: 1px solid purple; */
 }
+
 .feed   {
     margin: 10px;
     margin-left: 0;
     
     width: 600px;
-    height: 1000px;
+    height: 100%;
     border: 1px solid #DBDBDB;
+    border-radius: 3px;
 }
 .mainRight  {
     margin: 10px 0px 10px 10px;
     width: 330px;
-    height: 600px;
-    border: 1px solid green;
+    height: 625px;
+    font-size: smaller;
+    /* border: 1px solid green; */
 }
 .feedNav    {
     position: relative;
     /* border: 1px solid black; */
-    height: 52px;
+    height: 60px;
     display: flex;
     align-items: center;
-    padding: 10px;
+    padding: 16px;
+    font-weight: bold;
+}
+a{
+    text-decoration-line: none;
+    text-decoration: none;
+    color: black;
+}
+a:visited   {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration-line: underline;
 }
 .feedProfileImg {
     width: 32px;
@@ -142,7 +174,7 @@ body {
 }
 .feedOption {
     position: absolute;
-    right: 10px;
+    right: 18px;
     height: 100%;
     display: flex;
     align-items: center;
@@ -161,7 +193,7 @@ body {
 .feedReaction   {
     width: 100%;
     height: 40px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 .feedReactionBox    {
     padding-left: 10px;
@@ -191,8 +223,11 @@ body {
     align-items: center;
     width: 100%;
     height: 20px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     padding-left: 13px;
+}
+.writerId   {
+    font-weight: bold;
 }
 .feedLikeCountBox > div:first-child{
     width: 16px;
@@ -219,24 +254,39 @@ body {
     padding-left: 13px;
     font-size: smaller;
 }
+.feedInfoId {
+    font-weight: bold;
+}
 .feedInfoContents   {
     margin-left: 5px;
     margin-right: 2px;
 }
-.feedInfoMore button  {
+.moreButton  {
     height: 20px;
     margin-left: 5px;
     border: none;
-    background-color: white;
+    background-color: #FAFAFA;
     color: #A1A1A1;
+}
+.moreButton:hover   {
+    cursor: pointer;
+}
+.colorPink  {
+    color: #ED4956;
 }
 .feedReplyBox   {
     width: 100%;
-    height: 65px;
+    height: 100%;
     /* border: 1px solid black; */
     margin-top: 5px;
     padding-left: 13px;
     font-size: smaller;
+}
+.deleteReply    {
+    display: flex;
+    justify-content: space-around;
+    width: 50px;
+
 }
 .feedReplyPart1{
 
@@ -245,11 +295,16 @@ body {
     justify-content: space-between;
     height: 20px;
     margin-right: 10px;
+    margin-bottom: 5px;
+    
 }
 
-.feedReplyPart1:first-child {
-    margin-bottom: 5px;
+.feedReplyContents  {
+    word-break:break-all;
 }
+/* .feedReplyPart1:first-child {
+    margin-bottom: 5px;
+} */
 .feedReplyId    {
     font-weight: bold;
     margin-right: 5px;
@@ -257,7 +312,7 @@ body {
 .feedReplyInfoPart  {
     display: flex;
     align-items: center;
-    height: 20px;
+    height: 25px;
     /* border: 1px solid black; */
 }
 .feedReplyInfo  {
@@ -266,7 +321,201 @@ body {
 .feedWriteReply {
     display: flex;
     align-items: center;
+    height: 68px;
+    border-top: 1px solid #DBDBDB;
+}
+.writerId   {
+    margin-right: 0px;
+}
+.likeCount  {
+    font-weight: bold;
+}
+.feedWriteEmoji {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.fa-smile   {
+    color: #262626;
+}
+i:hover{
+    cursor: pointer;
+}
+.feedWriteInput {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
     height: 50px;
-    border: 1px solid black;
+}
+.replyBox   {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.replyButton    {
+    width: 40px;
+    margin-right: 15px;
+    border: none;
+    background-color: #FAFAFA;
+    color: #C0E0FD;
+    font-size:  larger;
+}
+textarea    {
+    width: 460px;
+    height: auto;
+    vertical-align: middle;
+    margin-right: 10px;
+    padding: 0;
+    border: none;
+    background-color: #FAFAFA;
+    resize: none;
+    overflow: hidden;
+    outline: none;
+    font: inherit;
+    /* border: 1px solid black; */
+    
+}
+textarea::placeholder   {
+    font-size: larger;
+}
+.wecodeGray {
+    color: #9E9E9E;
+}
+
+.asideTop   {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    /* border: 1px solid black; */
+}
+.userStory   {
+    position: relative;
+    height: 225px;
+    border: 1px solid #DBDBDB;
+    overflow: hidden;
+    background-color: white;
+}
+.recommendFriends   {
+    height: 194px;
+    margin-top: 16px;
+    border: 1px solid #DBDBDB;
+    background-color: white;
+}
+.asideFooter   {
+    position: relative;
+    height: 110px;
+    /* border: 1px solid black; */
+}
+.asideTopImg    {
+    width: 56px;
+    margin-left: 5px;
+    margin-right: 15px;
+    border-radius: 28px;
+}
+.asideTopHeaderLeft {
+    margin-right: 3px;
+}
+.asideTopHeaderRight    {
+    margin-left: 5px;
+}
+.userStoryTitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 30px;
+    width: 100%;
+    /* border: 1px solid black; */
+    padding: 0 10px;
+    position: absolute;
+}
+
+.userStoryTitle div:first-child span   {
+    color: #9E9E9E;
+}
+.stroyAlignMiddle   {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+.stroyFlex  {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    margin-bottom: 16px;
+}
+.asideStoryImg  {
+    width: 40px;
+    margin-left: 20px;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+.recommendBoxGap    {
+    height: 40px;
+}
+.recommendFlex  {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    margin-bottom: 16px;
+}
+.asiderecommendImg  {
+    width: 40px;
+    margin-left: 20px;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+.storyBoxGap    {
+    height: 40px;
+}
+.userStoryContents  {
+    position: absolute;
+    top: 35px;
+}
+.recommendFriendsTitle  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+    /* border: 1px solid black; */
+    padding: 0 10px;
+    margin-bottom: 5px;
+}
+.wecode_bootcamp    {
+    font-weight: bolder;
+}
+.recommendFriendsTitle  div:first-child span{
+    color: #9E9E9E;
+}
+.recommendFollowButton    {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    border: none;
+    color: #67AFF3;
+    font-weight: bold;
+}
+.footerList {
+    list-style: none;
+}
+.footerList li{
+    float: left;
+    margin: 0 2px;
+}
+.footerListBox  {
+    margin-top: 10px;
+    width: 260px;
+    /* font-size: smaller; */
+}
+.footerBox  {
+    position: absolute;
+    bottom: 0px;
+    clear: both;
+    letter-spacing: 2px;
+    /* font-size: smaller; */
 }
