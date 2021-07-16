@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="/westagram-frontend/students/23th/jihunkim/styles/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="img/main.ico">
+  <meta charset="UTF-8">
+  <title>Westagram</title>
+</head>
+<body>
+  <div class="main-container">
+    <nav>
+      <div class="nav-left"><h1 class="main-logo">Westagram</h1></div>
+      <input type="search" class="main-search" placeholder="검색">
+      <div class="nav-right">
+        <img src="img/home.png" alt="Home">
+        <img src="img/message.png" alt="DM">
+        <img src="img/explore.png" alt="Search">
+        <img src="img/heart.png" alt="Heart">
+        <img class="my-page" src="img/user-img.jpeg" alt="My-Page" style="border-radius: 70%;">
+      </div>
+    </nav>
+    <!-- <main>
+      <div class="main-container">
+        <div class="header">
+          <img src="img/user-img.jpeg" alt="user-img">
+        </div>
+        <div class="user-id">
+          <h1>wecode_founder</h1>
+        </div>
+        <div class="kebob-menu">
+          <img src="img/keb.png" alt="kebob-icon-menu">
+        </div>
+      </div>
+    </main> -->
+      <!-- main -->
+      <main>
+        <div class="feeds">
+          <article>
+            <header>
+              <div class="profile-of-article">
+                <img class="img-profile pic" src="img/user-img.jpeg" alt="wecode-founder님의 프로필 사진">
+                <span class="userID main-id point-span" style="font-weight: bold;">wecode-founder</span>
+              </div>
+              <img class="icon-react icon-more" src="img/keb.png" alt="more">
+            </header>
+            <div class="main-image">
+              <img src="img/user-img.jpeg" alt="wecode-founder님의 피드 사진" class="mainPic">
+            </div>
+            <div class="icons-react">
+              <div class="icons-left">
+                <img class="icon-react" src="img/heart_.png" alt="하트">
+                <img class="icon-react" src="img/comment.png" alt="말풍선">
+                <img class="icon-react" src="img/message.png" alt="DM">  
+              </div>
+              <img class="icon-react" src="img/bookmark_.png" alt="북마크">
+            </div>
+            <div class="reaction">
+              <div class="liked-people">
+                <img class="pic" src="img/user-img.jpeg" alt="wecode-founder님의 프로필 사진" style="border-radius: 70%;">
+                <p><span class="point-span">wecode-founder</span>님 <span class="point-span">외 873,261,598,695명</span>이 좋아합니다</p>
+              </div>
+              <div class="description">
+                <span class="point-span userID">wecode-founder</span><span style="margin: 5px;">지구당 선릉 맛집 인정 안인정???</span>
+              </div>
+              <div class="comment-section">
+                <ul class="comments">
+                  <li>
+                    <span class="point-span userID">godjinsu1004</span><span>1호점도 그렇지만 2호점은 정말 양도 많이 주고 서비스도 정말 최고에요...인정!!!</span>
+                    <img class="comment-heart" src="img/heart_s.png" alt="하트">
+                  </li>
+                </ul>
+                <div class="time-log">
+                  <span>32분 전</span>
+                </div>
+              </div>
+            </div>
+            <div class="hl"></div>
+            <div class="comment">
+              <input id="input-comment" class="input-comment" type="text" placeholder="댓글 달기..." >
+              <button type="submit" class="submit-comment" disabled>게시</button>
+            </div>
+          </article>
+        </div>
+        <div class="main-right">
+          <div class="myProfile">
+            <img class="pic" src="img/user-img.jpeg" alt="wecode-founder 프로필 사진" style="border-radius: 70px;">
+            <div>
+              <span class="userID point-span">wecode-founder</span>
+              <span class="sub-span">EUNWOO-SONG</span>  
+            </div>
+          </div>
+          <div class="section-story">
+            <div class="menu-title">
+              <span class="sub-title">스토리</span>
+              <span class="find-more">모두 보기</span>
+            </div>
+            <ul class="story-list">
+              <li>
+                <div class="gradient-wrap">
+                  <img class="img-profile story" src="img/user-img.jpeg" alt="wecode_bootcamp님의 프로필 사진">
+                </div>
+                <div class="profile-text">
+                  <span class="userID point-span">wecode-founder</span>
+                  <span class="sub-span">4분 전</span>  
+                </div>
+              </li>
+              <li>
+                <div class="gradient-wrap">
+                  <img class="img-profile story" src="img/user-img.jpeg" alt="wecode_bootcamp님의 프로필 사진">
+                </div>
+                <div class="profile-text">
+                  <span class="userID point-span">wecode-founder</span>
+                  <span class="sub-span">18분 전</span>  
+                </div>
+              </li>
+              <li>
+                <div class="gradient-wrap">
+                  <img class="img-profile story" src="img/user-img.jpeg" alt="wecode-founder님의 프로필 사진">
+                </div>
+                <div class="profile-text">
+                  <span class="userID point-span">wecode-founder</span>
+                  <span class="sub-span">31분 전</span>  
+                </div>
+              </li>
+              <li>
+                <div class="gradient-wrap">
+                  <img class="img-profile story" src="img/user-img.jpeg" alt="wecode-founder님의 프로필 사진">
+                </div>
+                <div class="profile-text">
+                  <span class="userID point-span">wecode-founder</span>
+                  <span class="sub-span">56분 전</span>  
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="section-recommend">
+            <div class="menu-title">
+              <span class="sub-title">회원님을 위한 추천</span>
+              <span class="find-more">모두 보기</span>
+            </div>
+            <ul class="recommend-list">
+              <li>
+                <div class="recommend-friend-profile">
+                  <img class="img-profile" src="https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-19/s150x150/43717002_309303893241352_1320047538316771328_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_ohc=HyJWh_k8XfIAX9iJeDQ&edm=AGBWlhEBAAAA&ccb=7-4&oh=5c476c6759be00440c71ef827d494619&oe=60F7DE95&_nc_sid=57d425" alt="lupercalia88님의 프로필 사진">
+                  <div class="profile-text">
+                    <span class="userID point-span">lupercalia88</span>
+                    <span class="sub-span">lupitaongo님 외 9명이 팔로우합니다</span>
+                  </div>
+                </div>
+                <span class="btn-follow">팔로우</span>
+              </li>
+              <li>
+                <div class="recommend-friend-profile">
+                  <img class="img-profile" src="https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-19/s150x150/12345817_1731670323735453_100218076_a.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_ohc=HlCSRLk3ujoAX-aBM0j&tn=Z1sNiWIT2vqcV9eM&edm=AEF8tYYBAAAA&ccb=7-4&oh=745d5c5f303bc51ca7ce03f45776922a&oe=60F5E805&_nc_sid=a9513d" alt="
+                  isacc_jihyun_choi님의 프로필 사진">
+                  <div class="profile-text">
+                    <span class="userID point-span">
+                      isacc_jihyun_choi</span>
+                    <span class="sub-span">isacc_jihyun_choi님이 팔로우합니다</span>  
+                  </div>
+                </div>
+                <span class="btn-follow">팔로우</span>
+              </li>
+              <li>
+                <div class="recommend-friend-profile">
+                  <img class="img-profile" src="https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-19/s150x150/199741052_153001060212678_6397086401385407773_n.jpg?_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_ohc=PetZsmGPRZEAX9ceSza&edm=AEF8tYYBAAAA&ccb=7-4&oh=1cb38a053c9400afdee9ef7f3d5f2df9&oe=60F7069C&_nc_sid=a9513d" alt="teddysphotos님의 프로필 사진">
+                  <div class="profile-text">
+                    <span class="userID point-span">teddysphotos</span>
+                    <span class="sub-span">diego.costa님 외 32명이 팔로우합...</span>  
+                  </div>
+                </div>
+                <span class="btn-follow">팔로우</span>
+              </li>
+            </ul>
+          </div>
+          <footer>
+            <p class="westa-script">
+              Westagram 정보 ∙ 지원 ∙ 소개 ∙ 도움말 ∙ 홍보 센터 ∙ API ∙ 채용 정보 ∙ 맛집 ∙개인정보처리방침 ∙ 약관 ∙ <br>위치 ∙ 인기계정 ∙ 해시태그  ∙ 사랑 ∙ 정열 ∙ 지구당
+              <br><br><br>
+              © 2021 WESTAGRAM FROM FAKEBOOK
+            </p>
+          </footer>
+        </div>
+      </main>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+</html>
