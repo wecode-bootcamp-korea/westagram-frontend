@@ -1,48 +1,68 @@
-const thisIsComment = document.querySelector('.comment_box');
 const thisIsButton = document.getElementsByClassName('comment_submit')[0];
-const thisIsNew = document.getElementsByClassName('new_comment')[0];
+const thisIsInput = document.getElementsByClassName('comment_box')[0];
+const thisIsUl = document.getElementsByClassName('new_comment')[0];
 
-function buttonOn(e){
-   let a = thisIsComment.value
-    if(a){
+function buttonOn(){
+    const inputValue = thisIsInput.value;
+    if(inputValue.length > 0){
         thisIsButton.disabled = false;
         thisIsButton.style.opacity = 1;
-    } else {
+        thisIsButton.style.cursor = 'pointer';
+    }else{
         thisIsButton.disabled = true;
         thisIsButton.style.opacity = .4;
+        thisIsButton.style.cursor = 'default';
     }
-  
-    if (thisIsButton.disabled==false && e.code == 'Enter') {
-        enterPost();
-    }
- };
-
-function enterPost(){
-    if(thisIsComment.value){
-        const newUser = document.createElement('span');
-        newUser.className = "commenet_user_id";
-        newUser.innerText = "k_rystalee";
-      
-        const newComment = document.createElement('span');
-        newComment.className = "comment_text";
-        newComment.appendChild(newUser);
-        newComment.innerHTML +=thisIsComment.value;
-       
-        const newImg = document.createElement('img');
-        newImg.className = "comment_heart";
-        newImg.setAttribute('src','img/heart.png');
-        
-        const newList = document.createElement('li')
-        newList.className = "new_comment_list";
-        newList.appendChild(newComment);
-        newList.appendChild(newImg);
-        thisIsNew.appendChild(newList);
-        thisIsComment.value = "";
-        
-        thisIsButton.disabled = true;
-        thisIsButton.style.opacity = .4;
-    }  
 };
 
-thisIsComment.addEventListener('keyup',buttonOn)
-thisIsButton.addEventListener('click', enterPost) 
+function addPost(){
+    if(thisIsInput.value){
+        const thisIsUser = document.createElement('span')
+        thisIsUser.className = 'commenet_user_id';
+        thisIsUser.innerText = 'k_rystalee';
+
+        const thisIsText = document.createElement('span')
+        thisIsText.className = 'comment_text';
+        thisIsText.appendChild(thisIsUser);
+        thisIsText.innerHTML += thisIsInput.value;
+        
+        const thisIsImg = document.createElement('img')
+        thisIsImg.className = 'comment_heart';
+        thisIsImg.setAttribute('src','img/heart.png');
+
+        const thisIsDelete = document.createElement('span')
+        thisIsDelete.className = 'delete';
+        thisIsDelete.innerText = 'X';
+        thisIsDelete.style.cursor = 'pointer';
+
+        thisIsDelete.addEventListener('click',function(){
+            thisIsList.remove();
+        });
+
+        const thisIsIcon = document.createElement('span')
+        thisIsIcon.className = 'new_comment_icon';
+        thisIsIcon.appendChild(thisIsImg);
+        thisIsIcon.appendChild(thisIsDelete);
+
+        const thisIsList = document.createElement('li')
+        thisIsList.className = 'new_comment_list';
+        thisIsList.appendChild(thisIsText);
+        thisIsList.appendChild(thisIsIcon);
+
+        thisIsUl.appendChild(thisIsList);
+
+        thisIsInput.value = "";
+    }
+
+};
+
+function enterOn(e) {
+    if (e.code === 'Enter') {
+        addPost();
+    }
+  };
+
+thisIsButton.addEventListener('click', addPost);
+thisIsInput.addEventListener('keyup', buttonOn);
+thisIsInput.addEventListener('keydown', enterOn);
+
