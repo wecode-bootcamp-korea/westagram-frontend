@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Westagram main_page</title>
     <link rel="stylesheet" href="stylemain.css">
-    <script src="main.js"></script>
+    
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
     </style>
@@ -53,8 +53,13 @@
             </div>    
             <div class="commentWrap">
                 <span>좋아요 869개</span><br>
-                <span>canon_mj 위워크에서 진행한 베이킹 클레스... 더 보기</span><br>
-                <span>거봐 좋았잔아~~~~👶</span><br>
+                <ul id="commentLists">
+                    <li>
+                        <span class="name">canon_mj</span>
+                        <span>위워크에서 진행한 베이킹 클레스... 더 보기</span>
+                    </li>
+                    
+                </ul>
             <div class="comment">
                 <span>42분 전</span>
                 <img src="heart2.png" alt="" width="12" height="12">
@@ -62,8 +67,8 @@
             </div> 
         
             <div class="input">
-                <input type="text" placeholder="댓글달기">
-                <button>게시</button>
+                <input type="text" id='inputText' placeholder="댓글달기">
+                <button id='inputButton'>게시</button>
                 
             </div>
         </article>
@@ -92,5 +97,6 @@
         </aside>
 
     </div>
+    <script src="main.js"></script>    
 </body>
 </html>
