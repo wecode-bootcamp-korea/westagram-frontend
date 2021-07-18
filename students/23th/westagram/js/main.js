@@ -1,8 +1,8 @@
+`use strict`;
 // viewport 해상도 -> style 바꿈
-function screenInit() {
-  const feedContainer = document.querySelector(`.feed-container`),
-    recommendedBlock = document.querySelector(`.recommended-block`);
-  let viewportWidth = window.innerWidth;
+function screenInit(feedContainer, recommendedBlock, viewportWidth) {
+  let mainContainerWidth = 0;
+
   viewportWidth > 999
     ? ((mainContainerWidth =
         feedContainer.clientWidth + recommendedBlock.clientWidth),
@@ -13,56 +13,76 @@ function screenInit() {
     : (recommendedBlock.style.visibility = `hidden`);
 }
 
-// 좋아요 icon 구현 보류
-// function createCommentsLikeOrDelete() {
-//   const commentsLikeOrDelete = document.createElement(`div`),
-//     commentsLike = document.createElement(`a`),
-//     commentsDeleteBtn = document.createElement(`button`),
-//     heartIcon = document.getElementsByClassName(`.fa-heart`);
+// 댓글 생성
+function buttonColorChange(likeButton) {
+  return () => {
+    if (likeButton.classList.contains(`black`)) {
+      likeButton.classList.add(`red`);
+      likeButton.classList.remove(`black`);
+    } else {
+      likeButton.classList.add(`black`);
+      likeButton.classList.remove(`red`);
+    }
+  };
+}
 
-//   commentsLike.appendChild(heartIcon);
-// }
+function commentslikeButtonEvent() {
+  const commentsLikeButton = document.getElementsByClassName(
+    `comments__like-button`
+  );
+  console.log(commentsLikeButton);
 
-// 댓글에 해당하는 div 생성 후 배치
+  for (let item of commentsLikeButton) {
+    console.log(item);
+    const blackToRed = buttonColorChange(item);
+    item.addEventListener(`click`, blackToRed);
+  }
+
+  // const blackToRed = buttonColorChange(commentsLikeButton);
+  // console.log(commentsLikeButton);
+
+  // commentsLikeButton.addEventListener(`click`, blackToRed);
+}
+
+function handleDeleteButtonClick() {
+  const commentsDeleteButton = document.querySelector(
+    `.comments__delete-button`
+  );
+
+  let comments = JSON.parse(localStorage.getItem(`comment`));
+  comments.splice(commentsDeleteButton.id - 1, 1);
+
+  comments = JSON.stringify(comments);
+  localStorage.setItem(`comment`, comments);
+
+  location.reload();
+}
+
+function commentsDeleteButtonEvent() {
+  const commentsDeleteButton = document.querySelector(
+    `.comments__delete-button`
+  );
+
+  commentsDeleteButton.addEventListener(`click`, handleDeleteButtonClick);
+}
 
 function createComments(idString, textString) {
-  const photoComments = document.querySelector(`.photo__comments`);
-  const commentsIdText = [idString, textString];
+  const photoComments = document.querySelector(`.photo__comments`),
+    commentsDesc = document.createElement(`div`);
 
-  const commentsDesc = document.createElement(`div`);
+  let commentsCount = photoComments.childElementCount;
 
-  commentsIdText.forEach((x) => {
-    let commentsWrap = document.createElement(`div`),
-      commentsAnchor = document.createElement(`a`);
-
-    commentsAnchor.innerHTML = `${x}`;
-    commentsWrap.appendChild(commentsAnchor);
-    commentsDesc.appendChild(commentsWrap);
-    commentsDesc.className = `comments__desc`;
-  });
-
-  const commentsLikeOrDelete = document.createElement(`div`),
-    commentsLikeBtn = document.createElement(`button`),
-    commentsLike = document.createElement(`i`),
-    commentsDelete = document.createElement(`button`);
-
-  commentsLikeOrDelete.classList.add(`comments__desc-button-block`);
-  commentsLike.classList.add(`far`);
-  commentsLike.classList.add(`fa-heart`);
-
-  commentsLikeBtn.id = `commentsLikeButton` + photoComments.childElementCount;
-  commentsDelete.id = `commentsDeleteButton` + photoComments.childElementCount;
-
-  commentsDelete.innerHTML = `삭제`;
-
-  commentsLikeBtn.appendChild(commentsLike);
-  commentsLikeOrDelete.appendChild(commentsLikeBtn);
-  commentsLikeOrDelete.appendChild(commentsDelete);
-  commentsDesc.appendChild(commentsLikeOrDelete);
-
-  commentsDesc.id = `comments` + photoComments.childElementCount;
-
-  photoComments.appendChild(commentsDesc);
+  if (commentsDesc !== null) {
+    commentsDesc.innerHTML = `<div class = "comments__desc">
+          <div><a href="">${idString}</a></div>
+          <div><a href="">${textString}</a></div>
+          <div class = "comments__desc-button-block">
+            <button id = "likeButton${commentsCount}" class = "comments__like-button"><i class = "far fa-heart"></i></button>
+            <button id = "deleteButton${commentsCount}" class = "comments__delete-button">삭제</button>
+        </div>`;
+    photoComments.appendChild(commentsDesc);
+  }
+  commentsDeleteButtonEvent();
 }
 
 // form submit 할 때, 댓글 localStorage에 저장
@@ -94,84 +114,37 @@ function loadComments() {
       createComments(x[`id`], x[`text`]);
     });
   }
+
   return commentsArr;
 }
 
-function likeComments() {
-  const photoComments = document.querySelector(`.photo__comments`);
-  let commentsCount = photoComments.childElementCount;
-
-  let commentsInfo = [];
-  console.log(commentsCount);
-
-  for (let i = 1; i <= commentsCount - 1; i++) {
-    let comments = {
-      id: i,
-      commentsLikeBtn: document.querySelector(`#commentsLikeButton${i}`),
-    };
-    commentsInfo.push(comments);
-  }
-
-  if (commentsInfo !== null || commentsInfo !== undefined) {
-    commentsInfo.forEach((elem) => {
-      let commentsLikeBtn = elem[`commentsLikeBtn`];
-      let redOrBlack = `black`;
-
-      if (commentsLikeBtn !== null || commentsLikeBtn !== undefined) {
-        commentsLikeBtn.addEventListener(`click`, () => {
-          if (redOrBlack === `black`) {
-            redOrBlack = `red`;
-          } else {
-            redOrBlack = `black`;
-          }
-          switch (redOrBlack) {
-            case `black`:
-              commentsLikeBtn.style.color = `black`;
-              break;
-
-            case `red`:
-              commentsLikeBtn.style.color = `red`;
-              break;
-          }
-        });
-      }
-    });
-  }
-}
-
-function deleteComments() {
-  const photoComments = document.querySelector(`.photo__comments`);
-  let commentsCount = photoComments.childElementCount;
-
-  let commentInfo = {};
-
-  for (let i = 1; i < commentsCount; i++) {
-    let comment = {
-      id: i,
-      commentDiv: document.querySelector(`comments${i}`),
-    };
-
-    commentInfo.id = i;
-    commentInfo.comments = comment;
-  }
-
-  console.log(commentInfo);
-}
-
-// 댓글 DOM event, saveComments, 이전 댓글정보 유무 확인
-function addComments() {
+function handleCommentsInputEvent() {
   const commentsInput = document.querySelector(`#commentsInput`),
-    commentsPlaceholder = document.querySelector(`#commentsPlaceholder`),
-    commentsForm = document.querySelector(`.comments-form`);
-
+    commentsPlaceholder = document.querySelector(`#commentsPlaceholder`);
   let comments = ``;
+  comments = commentsInput.value;
+  comments === ``
+    ? (commentsPlaceholder.style.visibility = `visible`)
+    : (commentsPlaceholder.style.visibility = `hidden`);
+}
 
-  commentsInput.addEventListener(`keyup`, () => {
-    comments = commentsInput.value;
-    comments === ``
-      ? (commentsPlaceholder.style.visibility = `visible`)
-      : (commentsPlaceholder.style.visibility = `hidden`);
-  });
+function commentsInputEvent() {
+  const commentsInput = document.querySelector(`#commentsInput`);
+
+  commentsInput.addEventListener(`keyup`, handleCommentsInputEvent);
+}
+
+function handleCommentsFormEvent() {
+  const commentsInput = document.querySelector(`#commentsInput`);
+  let comments = commentsInput.value;
+
+  const newCommentsId = localStorage.getItem(`id`),
+    newCommentsText = comments;
+
+  comments !== ``
+    ? (createComments(newCommentsId, newCommentsText),
+      (commentsInput.value = ``))
+    : alert(`댓글 내용을 입력해주세요.`);
 
   let commentsArr = [];
 
@@ -179,56 +152,82 @@ function addComments() {
     ? (commentsArr = JSON.parse(localStorage.getItem(`comment`)))
     : (commentsArr = []);
 
-  commentsForm.addEventListener(`submit`, () => {
-    const newCommentsId = localStorage.getItem(`id`),
-      newCommentsText = comments;
-    comments !== ``
-      ? (createComments(newCommentsId, newCommentsText),
-        (commentsInput.value = ``))
-      : alert(`댓글 내용을 입력해주세요.`);
-    saveComments(commentsArr, newCommentsId, newCommentsText);
-  });
-
-  deleteComments();
-  likeComments();
+  saveComments(commentsArr, newCommentsId, newCommentsText);
 }
 
-// modal
-function navSearch() {
+function addCommentsFormEvent() {
+  const commentsForm = document.querySelector(`.comments-form`);
+  commentsForm.addEventListener(`submit`, handleCommentsFormEvent);
+}
+
+function addComments() {
+  commentslikeButtonEvent();
+  commentsInputEvent();
+  addCommentsFormEvent();
+}
+
+function searchFocusIn() {
   const searchBarLable = document.querySelector(`.header__search-bar`);
-
-  const searchBarText = searchBarLable.children[0],
-    searchBarInput = searchBarLable.children[1];
-
+  const searchBarText = searchBarLable.children[0];
   const searchModal = document.querySelector(`.search-modal`);
 
-  searchBarInput.addEventListener(`focusin`, () => {
-    searchBarText.style.left = `30px`;
-    searchBarText.style.transform = `translate(0, -50%);`;
-    searchModal.classList.add(`visible`);
-    searchModal.classList.remove(`hidden`);
-  });
+  searchBarText.style.left = `30px`;
+  searchBarText.style.transform = `translate(0, -50%);`;
+  searchModal.classList.add(`visible`);
+  searchModal.classList.remove(`hidden`);
+}
 
-  searchBarInput.addEventListener(`keyup`, (event) => {
-    searchBarText.classList.add(`hidden`);
-  });
-
-  searchBarInput.addEventListener(`focusout`, () => {
+function searchFocusOut() {
+  const searchBarLable = document.querySelector(`.header__search-bar`);
+  const searchBarText = searchBarLable.children[0];
+  const searchModal = document.querySelector(`.search-modal`);
+  {
     searchBarText.style.left = `50%`;
     searchBarText.style.transform = `translate(-50%, -50%);`;
     searchModal.classList.remove(`visible`);
     searchModal.classList.add(`hidden`);
-  });
+  }
+}
+
+function searchTextHide() {
+  const searchBarLable = document.querySelector(`.header__search-bar`);
+  const searchBarText = searchBarLable.children[0];
+  const searchBarInput = searchBarLable.children[1];
+
+  searchBarInput.value !== ``
+    ? searchBarText.classList.add(`hidden`)
+    : searchBarText.classList.remove(`hidden`);
+}
+
+// modal
+function navSearch(searchBarInput) {
+  searchBarInput.addEventListener(`focusin`, searchFocusIn);
+
+  searchBarInput.addEventListener(`keyup`, searchTextHide);
+
+  searchBarInput.addEventListener(`focusout`, searchFocusOut);
 }
 
 // initialize
 (() => {
-  screenInit();
+  const feedContainer = document.querySelector(`.feed-container`),
+    recommendedBlock = document.querySelector(`.recommended-block`);
+  let viewportWidth = window.innerWidth;
+
+  screenInit(feedContainer, recommendedBlock, viewportWidth);
+
   loadComments();
+
   window.addEventListener(`resize`, () => {
-    screenInit();
+    screenInit(feedContainer, recommendedBlock, viewportWidth);
     location.reload();
   });
-  navSearch();
+
+  const searchBarLable = document.querySelector(`.header__search-bar`);
+  const searchBarText = searchBarLable.children[0],
+    searchBarInput = searchBarLable.children[1];
+
+  navSearch(searchBarText, searchBarInput);
+
   addComments();
 })();
