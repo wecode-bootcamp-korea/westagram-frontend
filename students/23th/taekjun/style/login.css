@@ -1,19 +1,23 @@
-/* 지워야 되는 코드 */
-.loginContainer {
-  border: 1px solid rgb(211, 211, 211);
-  border-radius: 2px;
-}
-
 .flexBox {
   display: flex;
   flex-direction: row;
   justify-content: center;
   width: 100%;
   margin: 32px 0px 0px;
-  /* padding: 200px; */
 }
 
-.loginContainer,
+.flexBox .loginContainer {
+  margin: 12px 0px 10px;
+  padding: 30px 0px 20px;
+  border: 1px solid rgb(211, 211, 211);
+  border-radius: 2px;
+}
+
+.flexBox .loginContainer .userInfoContainer {
+  margin: 30px 0px 0px;
+}
+
+.flexBox .loginContainer,
 .userInfoContainer,
 .loginBtnContainer {
   display: inline-flex;
@@ -21,20 +25,11 @@
   align-items: center;
 }
 
-.loginContainer {
-  margin: 12px 0px 10px;
-  padding: 30px 0px 20px;
-}
-
-.userInfoContainer {
-  margin: 30px 0px 0px;
-}
-
-.logo {
+.flexBox .loginContainer .logo {
   font-size: 2.5rem;
 }
 
-.loginId,
+.flexBox .loginContainer .userInfoContainer .loginBtnContainer .loginId,
 .loginPassword {
   width: 268px;
   margin: 6px 40px;
@@ -45,7 +40,7 @@
   font-size: 0.8rem;
 }
 
-.loginBtnContainer .loginButton {
+.flexBox .loginContainer .userInfoContainer .loginBtnContainer .loginButton {
   width: 268px;
   height: 29px;
   margin: 8px 40px;
@@ -58,11 +53,15 @@
   font-size: 0.8rem;
 }
 
-.loginButton:hover {
+.flexBox
+  .loginContainer
+  .userInfoContainer
+  .loginBtnContainer
+  .loginButton:hover {
   cursor: pointer;
 }
 
-.findPassword {
+.flexBox .loginContainer .userInfoContainer .findPassword {
   margin: 12px 0px 0px;
   padding-top: 50px;
   color: rgba(56, 80, 133, 1);
