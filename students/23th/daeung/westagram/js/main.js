@@ -83,6 +83,7 @@ function ReplySubmit() {
 }
 
 function deleteReply()  {
+
   const replyArr = document.querySelectorAll(`.feedReplyPart1`);
   console.log(replyArr);
   const deleteBtn = document.querySelectorAll(`.deleteButton`);
@@ -98,6 +99,9 @@ function deleteReply()  {
       replyBox.removeChild(replyArr[idx]);
     })
   }
+
+  //다른방법
+  
   
 }
 

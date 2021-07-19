@@ -73,12 +73,7 @@ function loginSubmit()    {
             return true;
         }
         else
-            return false;
+            return false; 
     }
-
-    
-
-    
-        
 }
 buttonColor();
