@@ -9,20 +9,26 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/favicon.png">
+    <link rel="instagram-icon" href="img/favicon.png">
 </head>
 
 <body>
     <section class="container">
         <h1><span style="font-family: 'Lobster', cursive;">Westagram</span></h1>
         <div class="infoWrapper">
-            <div class="inputWrap"><input type="text" placeholder="전화번호, 사용자 이름 또는 이메일"></div>
-            <div class="inputWrap"><input type="text" placeholder="비밀번호"></div>
+            <div class="inputWrap">
+                <input id="email" type="text" placeholder="전화번호, 사용자 이름 또는 이메일">
+            </div>
+            <div class="inputWrap">
+                <input id="password" type="text" placeholder="비밀번호">
+            </div>
         </div>
         <div class="buttonWrapper">
-            <button class="button">로그인</button>
+            <button class="button" disabled>로그인</button>
         </div>
         <div class="forget">비밀번호를 잊으셨나요?</div>
     </section>
-    <script src="main.js"></script>
+    <script src="login.js"></script>
 </body>
 </html>

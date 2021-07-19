@@ -16,7 +16,6 @@
 
 <body>
     <header>
-        <!-- <div class="navWrapper"> -->
             <ul class="nav">
                 <div class="navLeft">
                     <li><i class="fab fa-instagram"></i></li>
@@ -33,13 +32,54 @@
                     <i class="far fa-user"></i>
                 </div>
             </ul>
-        <!-- </div> -->
     </header>
 
     <main>
         <div class="feeds"></div>
-        <article class="article">나는아티클</article>
-        <div class="main-right">나는오른쪽</div>
+        <article class="article">
+            <div class="writerIdWrap">
+                <img class="profilepic" src="profilepic.png">
+                <span class="userID">iamhoony</span>
+                <i class="fas fa-ellipsis-h"></i>
+            </div>
+
+            <img class="bigPic" src="profilepic.png">
+
+            <div class="underbigPic">
+                <i class="fas fa-heart"></i>
+                <i class="far fa-comment"></i>
+                <i class="fas fa-external-link-alt"></i>
+                <i class="far fa-bookmark"></i>
+            </div>
+
+            <div class="likesInfo">
+                <img class="profilepicSecond" src="greenpic.jpeg">
+                <span class="likes"><a style='font-weight: bolder;'>hoonydream</a>님 외 <a style='font-weight: bolder;'>114,422명</a>이 좋아합니다.</span>
+            </div>
+
+            <div class="contents">
+                <p><a style='font-weight: bolder;'>iamhoony</a> 위워크에서 진행한 증멍사진 촬영... <a style='font-weight: bolder;'>더 보기</a> </p>
+                <P><a style='font-weight: bolder;'>hoonydream</a> 거봐 좋았잖아~~~</P>
+                <p style="font-weight: bolder; color: gray;">10분 전</p>
+            </div>
+            
+            <div class="commentWrapper">
+            <input type="text" class="comment" placeholder="댓글 달기..." style="font-weight: bolder; color: gray;">
+            <button class="replyButton">게시</button>
+            </div>
+
+        </article>
+            
+        <div class="main-right">
+            <div class="rightTop">
+                <img class="profilepicThird" src="flowerpic.jpeg">
+                <div class="userInfo">
+                    <span style='font-weight: bolder;'>iamhoony</span>
+                    <span>literally amazing dog</span>
+                </div>
+            </div>
+        </div>
     </main>
+    <script src="main.js"></script>
 </body>
 </html>
