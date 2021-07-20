@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Westagram</title>
+    <link href="main.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/74012dce67.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="img/favicon.png">
+    <link rel="instagram-icon" href="img/favicon.png">
+</head>
+
+<body>
+    <header>
+            <ul class="nav">
+                <div class="navLeft">
+                    <li><i class="fab fa-instagram"></i></li>
+                    <span style="font-family: 'Lobster', cursive;">Westagram</span>
+                </div>
+                <div class="navCenter">
+                    <i class="fas fa-search"></i>
+                    <input type="search" placeholder="검색">
+                </div>
+                    
+                <div class="navRight">
+                    <i class="far fa-compass"></i>
+                    <i class="far fa-heart"></i>
+                    <i class="far fa-user"></i>
+                </div>
+            </ul>
+    </header>
+
+    <main>
+        <div class="feeds"></div>
+        <article class="article">
+            <div class="writerIdWrap">
+                <img class="profilepic" src="flowerpic.jpeg">
+                <span class="userID">iamhoony</span>
+                <i class="fas fa-ellipsis-h"></i>
+            </div>
+
+            <img class="bigPic" src="profilepic.png">
+
+            <div class="underbigPic">
+                <i class="fas fa-heart"></i>
+                <i class="far fa-comment"></i>
+                <i class="fas fa-external-link-alt"></i>
+                <i class="far fa-bookmark"></i>
+            </div>
+
+            <div class="likesInfo">
+                <img class="profilepicSecond" src="greenpic.jpeg">
+                <span class="likes"><a style='font-weight: bolder;'>hoonydream</a>님 외 <a style='font-weight: bolder;'>114,422명</a>이 좋아합니다.</span>
+            </div>
+
+            <div class="contents">
+                <p><a style='font-weight: bolder;'>iamhoony</a> 위워크에서 진행한 증멍사진 촬영... <a style='font-weight: bolder;'>더 보기</a> </p>
+                <P><a style='font-weight: bolder;'>hoonydream</a> 거봐 좋았잖아~~~</P>
+                <p style="font-weight: bolder; color: gray;">10분 전</p>
+            </div>
+            
+            <div class="commentWrapper">
+            <input type="text" class="commentInput" placeholder="댓글 달기..." style="font-weight: bolder; color: gray;">
+            <button class="replyButton" style="cursor: pointer;">게시</button>
+            </div>
+
+        </article>
+         
+        <!-- main-right -->
+        <div class="main-right">
+            <div class="rightTop">
+                <img class="profilepicThird" src="flowerpic.jpeg">
+                <div class="userInfo">
+                    <span style='font-weight: bolder;'>iamhoony</span>
+                    <span>literally amazing doggo</span>
+                </div>
+            </div>
+
+            <!-- 스토리 목록 -->
+            <div class="story">
+                <div class="storyTop">
+                    <span style='font-weight: bolder; color: gray;'>스토리</span>
+                    <span style='font-weight: bolder;'>모두 보기</span>
+                </div>
+                <div class="storyList">
+                    <img class="storyUserPic" src="KakaoTalk_Photo_2021-06-10-13-10-54.jpeg">
+                    <div class="storyUserInfo">
+                        <span style='font-weight: bolder;'>hoonythesheltie</span>
+                        <br/>
+                        <span>9분 전</span>
+                    </div>
+                </div>
+                <div class="storyList">
+                    <img class="storyUserPic" src="KakaoTalk_Photo_2021-06-10-01-00-46-1.jpeg">
+                    <div class="storyUserInfo">
+                        <span style='font-weight: bolder;'>hoonythecocker</span>
+                        <br/>
+                        <span>6분 전</span>
+                    </div>
+                </div>
+                <div class="storyList">
+                    <img class="storyUserPic" src="greenpic.jpeg">
+                    <div class="storyUserInfo">
+                        <span style='font-weight: bolder;'>hoonythesweetie</span>
+                        <br/>
+                        <span>0분 전</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 회원님을 위한 추천 -->
+            <div class="recommendation">
+                <div class="recoTop">
+                    <span style='font-weight: bolder; color: gray;'>회원님을 위한 추천</span>
+                    <span style='font-weight: bolder;'>모두 보기</span>
+                </div>
+                <div class="threeStoryList">
+                <div class="storyList">
+                    <img class="profilepic" src="KakaoTalk_Photo_2021-06-10-01-00-46-3.jpeg">
+                    <div class="storyUserInfo">
+                        <span style='font-weight: bolder;'>hoonythesheltie</span>
+                        <br/>
+                        <span>wideplate3님 외 3명이...</span>
+                    </div>
+                    <span class="follow">팔로우</span>
+                </div>
+                <div class="storyList">
+                    <img class="profilepic" src="KakaoTalk_Photo_2021-06-10-01-00-46-5.png">
+                    <div class="storyUserInfo">
+                        <span style='font-weight: bolder;'>wideplate3</span>
+                        <br/>
+                        <span>hoonyzzang님 외 2명이...</span>
+                    </div>
+                    <span class="follow">팔로우</span>
+                </div>
+                <div class="storyList">
+                    <img class="profilepic" src="KakaoTalk_Photo_2021-06-10-01-00-46-4.jpeg">
+                    <div class="storyUserInfo">
+                        <span style='font-weight: bolder;'>hoonyzzang</span>
+                        <br/>
+                        <span>babohoony 외 6명이...</span>
+                    </div>
+                    <span class="follow">팔로우</span>
+                </div>
+            </div>
+                
+            </div>
+            <p class="rightBottom" style="color: gray; font-weight: bolder; font-size: smaller;">Instagram 정보 ∙ 지원 ∙ 홍보 센터 ∙ API ∙<br>채용 정보 ∙ 개인정보처리방침 ∙ 약관 ∙<br>디렉터리 ∙ 프로필 ∙ 해시태그 ∙ 언어<br>© 2021 Instagram
+            </p>
+        </div>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>

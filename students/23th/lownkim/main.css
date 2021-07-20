@@ -1,0 +1,297 @@
+* {
+    list-style: none;
+    text-decoration: none;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: black;
+    font-weight: 300;
+}
+
+html {
+    border: 1px solid #dbdbdb;}
+
+ul {
+    list-style: none;
+}
+
+.nav {
+    position: relative;
+    display: flex;
+    margin: 20px auto;
+    align-items: center;
+    background-color: #ffffff;
+    width: 900px;
+    height: 30px;
+    justify-content: space-between;
+}
+
+.navLeft {
+    display: flex;
+} 
+
+.fa-instagram {
+    border-right: 1px solid gray;
+    padding-right: 10px;
+    margin-right: 10px;
+}
+
+.navCenter {
+    position: relative;
+}
+
+.navRight {
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+}
+
+.fa-search {
+    color: gray;
+    position: absolute;
+    left: 68px;
+    margin: 7px auto;
+    font-size: 8px;
+    margin-top: 10px;
+}
+
+.fa-ellipsis-h {
+    margin-right: 10px;
+}
+
+input {
+    background-color: #f1f1f1;
+    border: 1px solid #dbdbdb;
+    text-align: center;
+    width: 200px;
+    height: 30px;
+}
+
+main {
+    position: relative;
+    margin: 0 150px;
+}
+
+.feeds {
+    position: absolute;
+    right: 500px;
+    width: 450px;
+    height: 800px;
+}
+
+article {
+    border: 1px solid #dbdbdb;
+    position: absolute;
+    right: 500px;
+    margin-top: 30px;
+    width: 450px;
+    height: 730px;
+}
+
+.main-right {
+    margin-top: 30px;
+    position: absolute;
+    right: 190px;
+    width: 290px;
+    height: 550px;
+    display: inline-block;
+
+
+}
+
+.profilepic {
+    width: 35px;
+    border-radius: 30px;
+    margin-left: 4px;
+}
+
+.writerIdWrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 3;
+    margin: 7px;
+}
+
+.userID {
+    font-weight: bolder;
+    flex-grow: 1;
+    margin-left: 10px;
+    font-size: 16px;
+}
+
+.bigPic {
+    width: 448px;
+}
+
+.underbigPic {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 4;
+    margin: 7px;
+}
+
+.fa-bookmark {
+    margin-right: 10px;
+}
+
+.fa-external-link-alt {
+    flex-grow: 1;
+}
+
+.fa-comment{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.underbigPic .fas, .far {
+    color: gray;
+}
+
+.underbigPic .fa-heart {
+    margin-left: 5px;
+    color: #f34f4f;
+}
+
+.profilepicSecond {
+    width: 20px;
+    border-radius: 30px;
+}
+
+.likesInfo {
+    margin: 10px;
+    
+}
+
+.contents {
+    margin-left: 12px;
+    margin-bottom: 10px;
+}
+
+p {
+    line-height: 1.3;
+}
+
+.comments {
+    padding-top: 10px;
+    border-top: 1px solid #dbdbdb;
+    margin-left: 12px;
+    /* border-bottom: 1px solid #dbdbdb;  */ 왜안될까 ㅋ
+}
+
+.profilepicThird {
+    width: 56px;
+    border-radius: 30px;
+}
+
+.rightTop {  
+    display: flex;
+    align-items: center;
+    margin: 7px;
+    height: 50px;
+    
+}
+
+.rightTop div span {
+    display: block;
+}
+
+.userInfo {
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+.commentInput {
+    border: none;
+    background-color: white;
+    text-align: left;
+    margin-left: 11px;
+    outline: none;
+    flex-grow: 1;
+}
+
+.replyButton {
+    border: none;
+    background-color: #ffffff;
+    color: #c0dffd;
+    margin-right: 20px;
+    font-weight: bolder;
+    poin
+        
+}
+
+.commentWrapper {
+    padding-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #dbdbdb;
+}
+
+.story {
+    width: 290px;
+    height: 220px;
+    border: 1px solid #dbdbdb;
+    margin-top: 15px;
+}
+
+.storyTop {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 15px;
+}
+
+.recommendation {
+    width: 290px;
+    height: 190px;
+    border: 1px solid #dbdbdb;
+    margin-top: 13px;
+}
+
+.recoTop {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 15px;
+}
+
+.rightBottom {
+    display: flex;
+    justify-content: left;
+    width: 290px;
+    padding: 10px;
+}
+
+.storyUserPic {
+    border: 2px solid rgb(255, 144, 144);
+    width: 35px;
+    height: 35px;
+    border-radius: 30px;
+}
+
+.storyList {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 15px;
+}
+
+.storyUserInfo {
+    flex-grow: 1;
+    margin-left: 10px;
+}
+
+.follow {
+    font-weight: bolder;
+    color: #0095F6;
+    margin-top: 7px;
+}
+
+.threeStoryList {
+    margin-top: 12px;
+}
+
+.storyList {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 15px;
+}
