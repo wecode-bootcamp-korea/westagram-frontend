@@ -61,7 +61,6 @@ window.addEventListener("resize", () => {
 // aside 큰 화면 로드 시에 위치 조정
 window.addEventListener("load", () => {
   if(window.innerWidth > 1500){
-    console.log(window.innerWidth);
     aside.style.right = `${500}px`;
   }
 })

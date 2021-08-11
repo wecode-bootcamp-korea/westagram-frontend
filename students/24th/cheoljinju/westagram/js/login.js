@@ -6,12 +6,8 @@ const loginBtn = document.querySelector(".login-form__submit");
 loginForm.addEventListener("keyup", () => {
   const idInput = loginForm.querySelector(".login-form__id").value;
   const pwInput = loginForm.querySelector(".login-form__pw").value;
-  idInput && pwInput
+  idInput.indexOf("@") !== -1 && pwInput.length >= 5
     ? loginBtn.classList.add("active")
     : loginBtn.classList.remove("active");
-  if (idInput && pwInput) {
-    loginBtn.disabled = false;
-  } else {
-    loginBtn.disabled = true;
-  }
+  loginBtn.disabled = idInput.indexOf("@") !== -1 && pwInput.length >= 5 ? loginBtn.disabled = false : loginBtn.disabled = true; 
 });
