@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+body {
+    margin: 0;
+    background-color:#FAFAFA;
+}
+
+
+nav {
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+}
+
+.logo {
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-text {
+    width: 150px;
+    border-left: black solid 2px;
+    font-family: 'Lobster', cursive;
+    font-size: 23px;
+    margin-left: 10px;
+    padding-left: 10px;
+}
+
+.logo-image{
+    width:23px;
+    height: 23px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('logo.png');
+}
+
+.search {
+    width: 180px;
+    position: relative;
+}
+
+.search input {
+    text-align: center;
+    font-size: 13px;
+    width: 100%;
+    color: gray;
+    background-color:#FAFAFA;
+    border: lightgray solid 1px;
+    padding: 3px 0;
+}
+
+.search i {
+    position: absolute;
+    font-size: 10px;
+    top: 8px;
+    left: 35%;
+    color: gray;
+}
+
+.icons {
+    width: 180px;
+    display: flex;
+    justify-content:space-around;
+}
+
+.icons div {
+    width:23px;
+    height: 23px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.icons-safari {
+    background-image: url('safari.png');
+    }
+    
+.icons-heart {
+    background-image: url('heart.png');
+    }
+
+.icons-person {
+    background-image: url('person.png');
+    }
+
+main {
+    display: flex;
+    justify-content: space-around;
+}
+
+.feeds {
+    width: 750px;
+    height: 900px;
+    margin-left: 100px;
+}
+
+.profile {
+    width: 600px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: -150px;
+}
+
+article {
+    width: 750px;
+    height: 900px;
+    position: absolute;
+    margin-top: 40px;
+    background-color: white;
+    border: lightgray solid 1px;
+    display: flex;
+    flex-direction: column;
+}
+
+article div,article input {
+    position: absolute;
+    width: 100%;
+}
+
+.feeds-profile {
+    height: 50px;
+}
+
+.feeds-pic {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('cat.jpg');
+    width: 750px;
+    height: 750px;
+    top: 50px;  
+}
+
+.feeds-icon {
+    height: 40px;
+    background-color: indianred;
+    top: 800px;
+}
+
+.feeds-text {
+    height: 80px;
+    background-color: darkkhaki;
+    top: 840px;
+}
+
+.feeds-comment {
+    height: 30px;
+    background-color: darksalmon;
+    bottom: 0;
+}
+
+
+.myProfile{
+width: 300px;
+height: 50px;
+background-color: white;
+margin-top: 40px;
+border: lightgray solid 1px;
+}
+
+.story{
+    width: 300px;
+    height: 200px;
+    background-color: white;    
+    border: lightgray solid 1px;
+}
+.recommend{
+    width: 300px;
+    height: 150px;
+    background-color: white;
+    border: lightgray solid 1px;
+}
+
+.info{
+    width: 300px;
+    height: 80px;
+    margin-bottom: 50px; 
+}
+
+.info p {
+    font-size: 13px;
+    line-height: 1.2;
+    color:gray;
+    font-weight: bold;
+}
