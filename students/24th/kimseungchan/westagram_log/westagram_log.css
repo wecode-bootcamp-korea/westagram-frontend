@@ -1,0 +1,248 @@
+*{
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+article{
+    display: flex;
+    width: 935px;
+    height: 650px;
+    justify-content: space-between;
+    margin-top: 45px;
+}
+
+.login_img{
+    width: 454px;
+    height: 618px;
+    background-image: url(https://www.instagram.com/static/images/homepage/home-phones@2x.png/9364675fb26a.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-right: -20px;
+    position: relative;
+}
+
+.random_img{
+    position: absolute;
+    left: 152px;
+    top: 99px;
+}
+
+.random_img>img{
+    width: 240px;
+    height: 430px;
+}
+
+#img1{
+    display: block;
+}
+
+#img2{
+    display: none;
+}
+
+#img3{
+    display: none;
+}
+
+#img4{
+    display: none;
+}
+
+#img5{
+    display: none;
+}
+
+.login_main{
+    width: 350px;
+    height: 606px;
+}
+
+#all_layout{
+    width: 350px;
+    height: 490px;
+    border: 1px solid gainsboro;
+}
+
+.info{
+    width: 1440px;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+#title{
+    width: 175px;
+    height: 80px;
+    font-size: 43px;
+    margin: 22px 22px 22px 76px;
+    font-weight: 100;
+    font-family: 'Lobster', cursive;
+}
+
+#login_input{
+    width: 348px;
+    height: 290px;
+}
+
+#login_input{
+    display: flex;
+    flex-direction: column;
+}
+
+#customer_id{
+    border: 2px solid rgb(241, 241, 241);
+    border-radius: 3px;
+    position: relative;
+}
+
+#customer_id>label>input{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    background-color: rgb(240, 240, 240);
+}
+
+#customer_id>label>span{
+    width: 200px;
+    height: 30px;
+    position: absolute;
+    font-size: 12px;
+    color: rgb(149, 149, 149);
+    left: 5px;
+    top: 10px;
+    transition: 0.1s;
+}
+
+#customer_pw{
+    border: 1px solid rgb(241, 241, 241);
+    border-radius: 3px;
+    position: relative;
+}
+
+
+#customer_pw>label>input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background-color: rgb(240, 240, 240);
+}
+
+#customer_pw>label>span{
+        width: 200px;
+        height: 30px;
+        position: absolute;
+        font-size: 12px;
+        color: rgb(149, 149, 149);
+        left: 5px;
+        top: 10px;
+        transition: 0.1s;
+}
+
+#pw_look{
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    font-size: 13px;
+    cursor: pointer;
+    display: none;
+}
+
+#login_button{
+    height: 30px;
+}
+
+#login_button>input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: rgb(191, 223, 252);
+    border-radius: 3px;
+    color: rgb(244,244,244);
+    cursor: pointer;
+}
+
+#login_or{
+    width: 268px;
+    height: 38px;
+    display: flex;
+}
+
+#login_facebook{
+    width: 268px;
+    height: 38px;
+    text-align: center;
+    margin: 10px 0px 0px 37px;
+}
+
+#login_facebook>i{
+    font-size: 15px;
+}
+
+#login_facebook>a{
+    font-size: 15px;
+    color: #385185;
+    text-decoration: none;
+    font-weight: 900;
+}
+
+.login_box_layout{
+    width: 268px;
+    height: 38px;
+    margin-top: 16px;
+}
+
+#or_line{
+    background-color: gainsboro;
+    width: 100px;
+    height: 1px;
+    margin-top: 8px;
+}
+
+#or_text{
+    color: #8e8e8e;
+    font-size: 13px;
+
+}
+
+#pw_forgot>a{
+    font-size: 12px;
+    color: rgb(46, 89, 130);
+    text-align: center;
+    text-decoration: none;
+}
+
+#no_id{
+    width: 350px;
+    height: 63px;
+    border: 1px solid gainsboro;
+    margin-top: 30px;
+    text-align: center;
+}
+
+#no_id>span{
+    display: inline-block;
+    margin-top: 22px;
+    color: black;
+    font-size: 14px;
+}
+
+#no_id>a{
+    font-size: 14px;
+    color: rgb(0, 151, 244);
+    text-decoration: none;
+}
+
+.info>ul>li{
+    display: inline-block;
+    font-size: 14px;
+    margin: 12px 20px 0 0;
+}
+
+.info>ul>li>a{
+    text-decoration: none;
+    color: #828282;
+}
