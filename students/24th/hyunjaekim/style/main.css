@@ -1,0 +1,536 @@
+/****************** Modules ******************/
+/* title */
+.title {
+    font-size: 25px;
+}
+
+/* userID */
+.userID {
+    font-size: 14px;
+    color: #262626;
+    font-weight: 700;
+}
+
+/* comment */
+.comment {
+    font-size: 14px;
+    color: rgb(38, 38, 38);
+}
+
+/* moreLink */
+.moreLink {
+    font-size: 14px;
+    line-height: 18px;
+    color: rgb(142, 142, 142);
+}
+
+/* hashtag */
+.hashtag {
+    color: #01376a;
+}
+
+/* pastDay */
+.pastDay {
+    font-size: 10px;
+    letter-spacing: 0.2px;
+    line-height: 18px;
+    color: rgb(142, 142, 142);
+}
+
+/* suggestHeader */
+.suggestHeader {
+    font-size: 14px;
+    font-weight: 700;
+    color: rgb(142, 142, 142);
+}
+
+/* profileDesc */
+.profileDesc {
+    font-size: 12px;
+    line-height: 14px;
+    color: rgb(142, 142, 142);
+}
+
+/* serviceLinks */
+.serviceLinks {
+    font-size: 11px;
+    line-height: 13px;
+    color: rgb(199, 199, 199);
+}
+
+/* searchBar module */
+.searchForm {
+    position: relative;
+    width: 215px;
+    height: 28px;
+    border-radius: 3px;
+}
+
+.searchInput {
+    width: 100%;
+    height: 100%;
+}
+
+.searchPlaceholder {
+    position: absolute;
+    top: 6px;
+    left: 80px;
+}
+
+.fa-search {
+    font-size: 14px;
+    color: #A5A7AA;
+}
+
+.placeHolderText {
+    font-size: 14px;
+    line-height: 18px; 
+    color: #A5A7AA;
+}
+
+/* icons */
+.icon {
+    display: block;
+    width: 22px;
+    height: 22px;
+    background-color: #fff;
+    background-size: cover;
+}
+
+.small_icon {
+    width: 12px;
+    height: 12px;
+}
+
+.homeBtn {
+    background-image: url("../assets/icons/house-black-silhouette-without-door.png");
+}
+
+.dmBtn {
+    background-image: url("../assets/icons/send.png");
+}
+
+.recommendBtn {
+    background-image: url("../assets/icons/compass.png");
+}
+
+.statusBtn {
+    background-image: url("../assets/icons/heart.png");
+    cursor: pointer;
+}
+
+.heartBtn {
+    background-image: url("../assets/icons/heart.png");
+    cursor: pointer;
+}
+
+.comment {
+    background-image: url("../assets/icons/commentary.png");
+}
+
+.sendDM {
+    background-image: url("../assets/icons/send.png");
+}
+
+.bookmark {
+    background-image: url("../assets/icons/bookmark.png");
+    cursor: pointer;
+}
+
+.details {
+    background-image: url("../assets/icons/more.png");
+}
+
+.emoji {
+    background-image: url("../assets/icons/smile.png");
+    cursor: pointer;
+}
+
+.showNext {
+    background-image: url("../assets/icons/next.png");
+    border-radius: 50%;
+    border: 2px solid #fff;
+    background-size: contain;
+    background-repeat: no-repeat;
+    box-shadow: 0px 0px 22px 6px rgba(0,0,0,0.39);
+    cursor: pointer;
+    opacity: 0.8 !important;
+}
+
+.tagged {
+    background-image: url("../assets/icons/profile-user.png");
+}
+
+/* buttons */
+.Btn {
+    background-color: transparent;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 700;
+    color: #0095f6;
+    cursor: pointer;
+}
+
+.inactive.Btn {
+    color: #DFF2FE;
+    cursor: default;
+}
+
+
+/* header profile */
+.profileBtn {
+    border-radius: 50%;
+    background-image: url("../assets/images/myprofile.jpeg");
+    background-size: contain;
+}
+
+/* story image */
+.storyWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.storyBorder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-image: linear-gradient(to bottom right, #F58529 20%, #C42D91);
+    margin-bottom: 8px;
+}
+
+.storyImg {
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+/* story image medium size */
+.storyBorder.medium {
+    width: 36px;
+    height: 36px;
+    margin: 0;
+}
+
+.storyImg.medium {
+    width: 32px;
+    height: 32px;
+}
+
+.storyID {
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    color: #262626;
+}
+
+/*************** components ****************/
+.content-box {
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+}
+
+/* nav */
+nav.content-box {
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.navHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 935px;
+    height: 54px;
+    margin: 0 auto;
+}
+
+.icons .icon {
+    margin-left: 22px;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* story feed */
+.storyFeed {
+    position: relative;
+    width: 600px;
+}
+.stories {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 16px 10px;
+    overflow: hidden;
+}
+
+.story {
+    margin: 0 5px;
+}
+
+.storyFeed .showNext {
+    position: absolute;
+    top: 40%;
+    left: 560px;
+}
+
+/* contents */
+/* content header */
+.contentHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+}
+
+.writerInfo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.writerInfo .storyBorder {
+    margin-right: 14px;
+}
+
+/* main contents */
+.mainContents {
+    position: relative;
+    height: 725px;
+}
+
+.contentImg {
+    width: 100%;
+    height: 100%;
+}
+
+.mainContents .tagged {
+    position: absolute;
+    bottom:0;
+    left: 0;
+    margin: 10px 10px 10px 16px;
+    background-color: transparent;
+}
+
+.mainContents .showNext {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin: 10px;
+}
+
+/* reaction tool */
+.reactionTool {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 4px;
+}
+
+.giveReaction {
+    display: flex;
+    justify-content: space-between;
+}
+
+.giveReaction .icon {
+    margin-right: 16px;
+}
+
+/* likes */
+.likes {
+    margin-bottom: 8px;
+}
+
+/* writter comment */
+.writterComment {
+    margin-bottom: 4px;
+}
+
+/* user comment */
+.userComments .moreLink {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.reply {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4px;
+}
+
+.pastDay {
+    margin-bottom: 4px;
+}
+
+/* comment container */
+.commentForm {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 55px;
+    padding: 0 16px;
+}
+
+.commentForm .icon {
+    padding-right: 16px;
+    margin-right: 16px;
+}
+
+.commentInput {
+    width: 100%;
+    border: none;
+    background-color: transparent;
+}
+
+.commentInput::placeholder {
+    font-size: 14px;
+    line-height: 18px;
+    color: rgb(142, 142, 142);
+}
+
+/* side bar */
+/* profile */
+.profileChange {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.myProfile {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 18px 0 22px 0;
+}
+
+.myProfile .storyImg {
+    margin-right: 12px;
+}
+
+/* suggests */
+.suggestTitle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.suggestTitle .userID {
+    margin-right: 6px;
+}
+
+.suggestedProfiles {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.suggestedProfile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8px 0;
+}
+
+.otherProfile {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.otherProfile .storyBorder {
+    margin-right: 12px;
+}
+
+.suggestProfileDetails {
+    display: flex;
+    flex-direction: column;
+}
+
+.suggestedProfile .userID {
+    margin-bottom: 4px;
+}
+
+
+/* service details */
+.serviceDetails {
+    display: flex;
+    flex-direction: column;
+}
+
+.serviceLinks {
+    margin-bottom: 15px;
+}
+
+.serviceLink li {
+    float: left;
+}
+.serviceLink li::after {
+    content: "\00B7";
+    margin: 0 0.25em;
+}
+
+.serviceLink li:last-child::after {
+    content: none;
+}
+
+
+/************** layouts ****************/
+/* nav */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: #fff;
+    border-bottom: 1px solid #dbdbdb;
+
+}
+
+/* contianer */
+.containerCenter {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 84px;
+}
+
+.mainArea {
+    margin-right: 30px;
+}
+
+.storyFeed {
+    margin-bottom: 25px;
+}
+
+/* contents - layout */
+.contents {
+    width: 600px;
+    margin-bottom: 30px;
+}
+
+.detailWrapper {
+    padding: 8px 16px;
+    border-bottom: none;
+}
+
+/* sideBar */
+.sideBar {
+    width: 293px;
+}
+
+.suggestions {
+    margin-bottom: 20px;
+}
+
