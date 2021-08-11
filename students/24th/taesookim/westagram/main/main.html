@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Westagram</title>
+
+    <link rel="stylesheet" href="./style/common.css" />
+    <link rel="stylesheet" href="./style/main.css" />
+    <link rel="icon" type="image/png" href="../images/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Sans+KR&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/9c41976a5e.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/main.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="westa-container">
+          <img
+            class="westa-logo"
+            src="../images/instagram.png"
+            alt="westagram"
+          />
+          <span class="westa-title">Westagram</span>
+        </div>
+        <div class="search-container">
+          <input class="search-bar" type="text" />
+          <div class="search-content">
+            <span class="search">검색</span>
+            <i class="fas fa-search"></i>
+          </div>
+        </div>
+        <div class="mypage-container">
+          <img
+            src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png"
+            alt="explore"
+          />
+          <img
+            src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"
+            alt="heart"
+          />
+          <img
+            src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png"
+            alt="profile"
+          />
+        </div>
+      </nav>
+    </header>
+    <main class="main">
+      <section class="feeds">
+        <article class="feeds-each">
+          <div class="feeds-profile">
+            <img
+              src="../images/234168515_573631970447880_3009224788720227781_n.jpeg"
+              alt="tanggu"
+            />
+            <span>ttsone_ss</span>
+            <i class="fas fa-ellipsis-h"></i>
+          </div>
+          <img
+            src="../images/233935242_398935994904297_1411222868081609075_n.jpeg"
+            alt="photo"
+          />
+          <div class="reaction">
+            <i class="fas fa-heart"></i>
+            <i class="far fa-comment"></i>
+            <i class="far fa-paper-plane"></i>
+            <i class="far fa-bookmark"></i>
+          </div>
+          <div class="like">
+            <img class="imgg" src="../images/81681164.jpg" alt="orosy" />
+            <p class="many-likes">
+              <span>orosy.ts</span>님 <span>외 328명</span>이 좋아합니다
+            </p>
+          </div>
+          <div class="feed-description">
+            <span class="username">ttsone_ss</span>이 쿠키들의 정체는
+            무엇일까요?...
+            <span class="more">더 보기</span>
+          </div>
+          <div class="feed-comment">
+            <ul class="comments">
+              <li>
+                <p><span>orosy.ts</span>저는 아직 받으려면 멀었네요😂</p>
+                <i class="far fa-heart"></i>
+                <i class="far fa-trash-alt"></i>
+              </li>
+            </ul>
+          </div>
+          <p class="post-time">42분 전</p>
+          <div class="write-comments">
+            <form class="comment-form" action="/dog">
+              <input
+                class="comment-post"
+                type="text"
+                placeholder="댓글 달기..."
+              />
+              <button class="btn-post">게시</button>
+            </form>
+          </div>
+        </article>
+      </section>
+      <aside class="main-right">
+        <div class="my-profile">
+          <img
+            src="../images/234168515_573631970447880_3009224788720227781_n.jpeg"
+            alt="tanggu"
+          />
+          <div class="my-description">
+            <p class="profile-name">ttsone_ss</p>
+            <p class="profile-description">태연 TAEYEON</p>
+          </div>
+        </div>
+        <div class="stories">
+          <div class="story-title">
+            <span>스토리</span>
+            <span>모두 보기</span>
+          </div>
+          <ul class="story-update">
+            <li>
+              <img
+                src="../images/234168515_573631970447880_3009224788720227781_n.jpeg"
+                alt="tanggu"
+              />
+              <div class="story-namebox">
+                <p class="story-username">ttsone_ss</p>
+                <p class="story-time">16분 전</p>
+              </div>
+            </li>
+            <li>
+              <img
+                src="../images/234168515_573631970447880_3009224788720227781_n.jpeg"
+                alt="tanggu"
+              />
+              <div class="story-namebox">
+                <p class="story-username">ttsone_ss</p>
+                <p class="story-time">1시간 전</p>
+              </div>
+            </li>
+            <li>
+              <img
+                src="../images/234168515_573631970447880_3009224788720227781_n.jpeg"
+                alt="tanggu"
+              />
+              <div class="story-namebox">
+                <p class="story-username">ttsone_ss</p>
+                <p class="story-time">3시간 전</p>
+              </div>
+            </li>
+            <li>
+              <img
+                src="../images/234168515_573631970447880_3009224788720227781_n.jpeg"
+                alt="tanggu"
+              />
+              <div class="story-namebox">
+                <p class="story-username">ttsone_ss</p>
+                <p class="story-time">20시간 전</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="recomms">
+          <div class="recomm-title">
+            <span>회원님을 위한 추천</span>
+            <span>모두 보기</span>
+          </div>
+          <ul class="recomm-list">
+            <li>
+              <img src="../images/81681164.jpg" alt="tanggu" />
+              <div class="recomm-namebox">
+                <p class="recomm-username">orosy.ts</p>
+                <p class="recomm-others">wecode_bootcamp님 외 ...</p>
+              </div>
+              <p class="recomm-follow">팔로우</p>
+            </li>
+            <li>
+              <img src="../images/81681164.jpg" alt="tanggu" />
+              <div class="recomm-namebox">
+                <p class="recomm-username">orosy.ts</p>
+                <p class="recomm-others">회원님을 추천</p>
+              </div>
+              <p class="recomm-follow">팔로우</p>
+            </li>
+            <li>
+              <img src="../images/81681164.jpg" alt="tanggu" />
+              <div class="recomm-namebox">
+                <p class="recomm-username">orosy.ts</p>
+                <p class="recomm-others">wecode_bootcamp님 외 ...</p>
+              </div>
+              <p class="recomm-follow">팔로우</p>
+            </li>
+          </ul>
+        </div>
+        <div class="westa-info">
+          <p>
+            Instagram 정보∙지원∙홍보 센터∙API∙채용
+            정보∙개인정보처리방침∙약관∙디렉터리∙프로필∙해시태그∙언어
+          </p>
+        </div>
+        <div class="westa-year">
+          <p>© 2021 WESTAGRAM</p>
+        </div>
+      </aside>
+    </main>
+  </body>
+</html>

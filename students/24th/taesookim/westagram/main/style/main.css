@@ -1,0 +1,415 @@
+/* Navbar */
+.navbar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 355px 0 355px;
+  height: 60px;
+  background-color: #ffffff;
+  border: 1px solid #dbdbdb;
+}
+
+.navbar .westa-logo {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  top: 3px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.navbar .westa-title {
+  font-family: "Lobster";
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.navbar .westa-title::before {
+  content: "";
+  padding-left: 15px;
+  border-left: 1px solid #000000;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 210px;
+}
+
+.search-container .search-bar {
+  display: block;
+  width: 100%;
+  height: 28px;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  background-color: #fafafa;
+  text-indent: 5px;
+}
+
+.search-container .search-bar:focus {
+  outline: none;
+}
+
+.search-container .search-bar .search-content {
+  position: relative;
+}
+
+.search-container span {
+  position: absolute;
+  top: 8px;
+  left: 98px;
+  color: #a4a7aa;
+  font-size: 14px;
+  font-weight: 300;
+  pointer-events: none;
+}
+
+.search-container i {
+  position: absolute;
+  top: 9px;
+  left: 85px;
+  color: #a4a7aa;
+  font-size: 10px;
+  pointer-events: none;
+}
+
+.mypage-container img {
+  width: 24px;
+  height: 24px;
+  margin: 0 14px 0 14px;
+  cursor: pointer;
+}
+
+/* main */
+.main {
+  display: flex;
+  justify-content: center;
+}
+
+.main .feeds {
+  position: relative;
+  width: 640px;
+  margin-top: 50px;
+  background-color: #ffffff;
+  overflow: hidden;
+}
+
+.main .feeds .feeds-each {
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+}
+
+.main .feeds .feeds-each .feeds-profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+.main .feeds .feeds-each .feeds-profile img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid #dbdbdb;
+  cursor: pointer;
+}
+
+.main .feeds .feeds-each .feeds-profile span {
+  position: absolute;
+  font-size: 14px;
+  font-weight: 700;
+  left: 60px;
+  cursor: pointer;
+}
+
+.main .feeds .feeds-each .feeds-profile i {
+  cursor: pointer;
+}
+
+.main .feeds .feeds-each .reaction {
+  position: relative;
+}
+
+.main .feeds .feeds-each .reaction i {
+  font-size: 26px;
+  margin: 5px 0 5px 10px;
+  color: #262626;
+  cursor: pointer;
+}
+
+.main .feeds .feeds-each .reaction i:last-child {
+  position: absolute;
+  right: 15px;
+}
+
+.main .feeds .feeds-each .like {
+  display: flex;
+  margin-left: 10px;
+  align-items: center;
+}
+
+.main .feeds .feeds-each .like img {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #dbdbdb;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.main .feeds .feeds-each .like .many-likes {
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.main .feeds .feeds-each .like .many-likes span {
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.main .feeds .feeds-each .feed-description {
+  margin: 10px 0 4px 10px;
+  font-size: 14px;
+}
+
+.main .feeds .feeds-each .feed-description .username {
+  font-weight: 700;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.main .feeds .feeds-each .feed-description .more {
+  color: #8e8e8e;
+  cursor: pointer;
+}
+
+.main .feeds .feeds-each .feed-comment {
+  margin: 0 0 6px 10px;
+  font-size: 14px;
+}
+
+.main .feeds .feeds-each .feed-comment ul li {
+  display: flex;
+  margin-bottom: 4px;
+}
+
+.main .feeds .feeds-each .feed-comment ul i {
+  position: absolute;
+  right: 40px;
+  font-size: 12px;
+  color: #8e8e8e;
+  cursor: pointer;
+}
+
+.main .feeds .feeds-each .feed-comment ul i:last-child {
+  position: absolute;
+  right: 20px;
+  font-size: 12px;
+  color: #8e8e8e;
+  cursor: pointer;
+}
+
+.main .feeds .feeds-each .feed-comment ul li span {
+  font-weight: 700;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.main .feeds .feeds-each .post-time {
+  margin: 0 0 4px 10px;
+  font-size: 14px;
+  color: #8e8e8e;
+}
+
+.write-comments {
+  display: flex;
+  border-top: 1px solid #dbdbdb;
+}
+
+.write-comments .comment-post {
+  width: 590px;
+  padding: 15px 0 15px 0px;
+  border: none;
+  background: none;
+  text-indent: 10px;
+}
+
+.write-comments .comment-post:focus {
+  outline: none;
+}
+
+.write-comments .comment-post::placeholder {
+  color: #8e8e8e;
+  font-family: "Noto Sans KR", "Open Sans", sans-serif;
+}
+
+.write-comments .btn-post {
+  padding: 0;
+  border: none;
+  background: none;
+  color: #b2dffc;
+  cursor: pointer;
+}
+
+/* main-right */
+.main-right {
+  position: relative;
+  width: 300px;
+  margin: 50px 0 0 30px;
+}
+
+.main-right .my-profile {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.main-right .my-profile img {
+  width: 60px;
+  height: 60px;
+  margin-right: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.main-right .my-profile .my-description {
+  margin: auto 0;
+  font-size: 14px;
+}
+
+.main-right .my-profile .my-description .profile-name {
+  margin-bottom: 3px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.main-right .my-profile .my-description .profile-description {
+  color: #8e8e8e;
+}
+
+.main-right .stories {
+  background-color: #ffffff;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  padding: 15px;
+}
+
+.main-right .stories .story-title {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.main-right .stories .story-title span:first-child {
+  color: #8e8e8e;
+}
+
+.main-right .stories .story-title span:last-child {
+  cursor: pointer;
+}
+
+.main-right .stories .story-update li {
+  display: flex;
+  margin-top: 10px;
+}
+
+.main-right .stories .story-update img {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.main-right .stories .story-update .story-namebox {
+  font-size: 14px;
+  margin: auto 0;
+}
+
+.main-right .stories .story-update .story-username {
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.main-right .stories .story-update .story-time {
+  color: #8e8e8e;
+}
+
+.main-right .recomms {
+  background-color: #ffffff;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  margin-top: 10px;
+  padding: 15px;
+}
+
+.main-right .recomms .recomm-title {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.main-right .recomms .recomm-title span:first-child {
+  color: #8e8e8e;
+}
+
+.main-right .recomms .recomm-title span:last-child {
+  cursor: pointer;
+}
+
+.main-right .recomms .recomm-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.main-right .recomms .recomm-list .recomm-namebox {
+  width: 160px;
+}
+
+.main-right .recomms .recomm-list img {
+  width: 48px;
+  height: 48px;
+  margin-right: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.main-right .recomms .recomm-list .recomm-namebox {
+  margin: auto 0;
+  font-size: 14px;
+}
+
+.main-right .recomms .recomm-list .recomm-username {
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.main-right .recomms .recomm-list .recomm-others {
+  color: #8e8e8e;
+}
+
+.main-right .recomms .recomm-list .recomm-follow {
+  font-size: 14px;
+  color: #0095f6;
+  cursor: pointer;
+}
+
+.main-right .westa-info {
+  margin: 10px 0 10px 0;
+}
+
+.main-right .westa-info p {
+  font-size: 12px;
+  line-height: 18px;
+  color: #c7c7c7;
+  cursor: pointer;
+}
+
+.main-right .westa-year p {
+  font-size: 12px;
+  line-height: 18px;
+  color: #c7c7c7;
+  cursor: pointer;
+}
