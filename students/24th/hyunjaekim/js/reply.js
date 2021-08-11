@@ -27,7 +27,9 @@ function createItem(text) {
 
 function init() {
     postBtn.addEventListener("click", () => {
-        
+        if(currentValue > 0) {
+            onAdd();
+        }
     });
     commentInput.addEventListener("keydown", (e) => {
         if(e.key === "Enter") {
