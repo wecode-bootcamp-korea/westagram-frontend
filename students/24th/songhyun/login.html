@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>westagram</title>
+  <link rel="icon" href="img/icon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/common.css">
+  <link rel="stylesheet" href="styles/login.css">
+  <script defer src="./js/login.js"></script>
+</head>
+
+
+<body>
+  <main>
+    <h1 class="westagram-logo">westagram</h1>
+    <form class="login-form">
+      <div>
+        <label class="a11y-hidden" for="id">전화번호, 사용자 이름 또는 이메일</label>
+        <input type="text" class="user-name" id="id" placeholder="전화번호, 사용자 이름 또는 이메일">
+      </div>
+      <div>
+        <label class="a11y-hidden" for="pw"> 비밀번호</label>
+        <input type="password" id="pw" class="user-pw" placeholder="비밀번호" autocomplete="off">
+      </div>
+      <button type="submit" class="login-btn">로그인</button>
+    </form>
+    <div class="reset-password">
+      <a href="#">비밀번호를 잊으셨나요?</a>
+    </div>
+  </main>
+</body>
+
+</html>
