@@ -47,7 +47,6 @@ h1 {
   font-size: 12px;
 }
 
-/* input 태그에 한 글자씩 쓰면 버튼 활성화(색상 변화) */
 .login-form input + .login-btn {
   background-color: #60bdfc;
 }
@@ -56,15 +55,12 @@ h1 {
   margin-bottom: 6px;
 }
 
-/* 로그인버튼 비활성(초기상태)
--> 각각 한 글자씩 작성하면 활성 */
 .login-btn {
   width: 300px;
   height: 32px;
   margin-bottom: 100px;
   border: none;
   border-radius: 5px;
-  /* background-color: #B2DFFC; */
   background-color: #1e90ff;
   color: #FFFFFF;
   font-size: 14px;
@@ -73,9 +69,7 @@ h1 {
   cursor: not-allowed;
 }
 
-/* class명들 사이에 띄어쓰기 유무 차이 확인하기 */
 .login-btn.active {
-  /* background-color: #1e90ff; */
   opacity: 1;
   cursor: pointer;
 }
