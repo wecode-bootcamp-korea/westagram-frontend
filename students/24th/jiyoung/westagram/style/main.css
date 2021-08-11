@@ -1,0 +1,317 @@
+:root {
+  --secondary-color: #8E8E8E;
+  --accent-color: #2a93fc;
+  --border-color: #EDEDED;
+  --border-color2: #CECDCE;
+  --background-color: #FAFAFA;
+  --background-color2: #EAEAEA;
+  --content-background-color: #FFFFFF;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/* 레이아웃 */
+html,
+body {
+  /* height: 100vh; */
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  font-family: 'Hahmlet', serif;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: -0.3px;
+}
+
+header {
+  position: fixed;
+  top:0;
+  width: 100vw;
+  background-color: var(--background-color);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  padding: 30px 50px;
+  background-color: var(--background-color);
+}
+
+aside {
+  width: 250px;
+}
+
+
+
+/* 공통 적용 속성 */
+.writer-id,
+.user-id,
+.likers,
+.view-all,
+.follow-btn {
+  font-weight: 600;
+}
+
+aside .my-profile,
+aside .follower-stories,
+aside .following-rec,
+westagram-link {
+  margin-bottom: 10px;
+}
+
+.feed-writer-header,
+.feed-btns,
+.feed-likers,
+.new-comment {
+  padding: 10px;
+}
+
+.icon {
+  width: 25px;
+  height: 25px;
+  opacity: 0.8;
+}
+
+.profile-img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+/* btn 공통 요소로?(border, bg-color 등) */
+
+/* nav */
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid var(--border-color);
+  background-color: var(--content-background-color);
+}
+
+.logos {
+  display: flex;
+  align-items: center;
+}
+
+h1 {
+  margin-left: 10px;
+  font-family: 'Lobster', cursive;
+  font-size: 25px;
+}
+
+article {
+  margin: 0 20px 20px 0;
+  border: 1px solid var(--border-color);
+  background-color: var(--content-background-color);
+}
+
+nav input {
+  width: 230px;
+  height: 30px;
+  padding-left: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 3px;
+  background-color: var(--background-color);
+  color: var(--secondary-color);
+  font-size: 12px;
+  text-align: center;
+  outline: none;
+}
+
+.nav-icons .icon {
+  margin-right: 15px;
+}
+
+/* article */
+.feed-writer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* padding을 공통요소로?????? */
+
+}
+
+.feed-writer {
+  display: flex;
+  align-items: center;
+}
+
+.profile {
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+}
+
+.feed-img {
+  opacity: 1;
+  width: 450px;
+  height: 500px;
+}
+
+.feed-writer-header img:last-child {
+  width: 13px;
+  height: 13px;
+}
+
+.feed-btns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.feed-handle-btns .icon {
+  margin-right: 10px;
+}
+
+.feed-likers {
+  padding-top: 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.first-liker {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.comments-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comments-block .like-icon {
+  width: 15px;
+  height: 15px;
+  color: var(--secondary-color);
+}
+
+.comments .upload-time {
+  color: var(--secondary-color);
+}
+
+.new-comment input {
+  width: 370px;
+  margin-right: 7px;
+  border: none;
+  outline: none;
+}
+
+.new-comment .upload-btn {
+  color: var(--accent-color);
+  opacity: 0.5;
+}
+
+.new-comment .upload-btn:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+/* aside */
+.my-profile {
+  display: flex;
+  align-items: center;
+}
+
+.my-profile img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.follower-stories {
+  border: 1px solid var(--border-color);
+  background-color: var(--content-background-color);
+}
+
+.following-rec {
+  border: 1px solid var(--border-color);
+  background-color: var(--content-background-color);
+}
+
+.user-nickname {
+  color: var(--secondary-color);
+}
+
+.story-header,
+.following-rec-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.story-list,
+.following-list {
+  display: flex;
+  flex-direction: column;
+  padding: 0 8px;
+}
+
+.story,
+.following {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+/* .story:last-child {
+  margin-bottom: 0;
+} */
+
+/* .story img,
+.following img {
+  margin-right: 8px;
+} */
+
+.follower-info,
+.following-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.following-info .rec-users {
+  display: inline-block;
+  width: 110px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.view-all {
+  text-decoration: none;
+}
+
+.follow-btn {
+  width: 60px;
+  height: 30px;
+  margin-left: 10px;
+  border: none;
+  color: var(--accent-color);
+  background-color: #FFFFFF;
+  /* btn 위치가 이상합니다 */
+}
+
+
+.westagram-link ul {
+  margin-bottom: 10px;
+  padding-left: 0;
+  list-style: none;
+}
+
+.westagram-link li {
+  display: inline-block;
+}
+
+.westagram-link ul a {
+  margin-right: 2px;
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+.westagram-info .copyright {
+  color: var(--secondary-color);
+}

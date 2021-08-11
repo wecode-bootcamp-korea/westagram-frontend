@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html, body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  border: 1px solid #EDEDED;
+}
+
+h1 {
+  margin-bottom: 40px;
+  font-family: 'Lobster', cursive;
+  font-size: 45px;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.login-form {
+  text-align: center;
+}
+
+.login-form input {
+  width: 300px;
+  height: 40px;
+  padding-left: 10px;
+  margin-bottom: 13px;
+  border: 1px solid #EDEDED;
+  border-radius: 3px;
+  background-color: #FAFAFA;
+  color: #8E8E8E;
+  font-size: 12px;
+}
+
+/* input 태그에 한 글자씩 쓰면 버튼 활성화(색상 변화) */
+.login-form input + .login-btn {
+  background-color: #60bdfc;
+}
+
+.login-form input:first-child {
+  margin-bottom: 6px;
+}
+
+/* 로그인버튼 비활성(초기상태)
+-> 각각 한 글자씩 작성하면 활성 */
+.login-btn {
+  width: 300px;
+  height: 32px;
+  margin-bottom: 100px;
+  border: none;
+  border-radius: 5px;
+  /* background-color: #B2DFFC; */
+  background-color: #1e90ff;
+  color: #FFFFFF;
+  font-size: 14px;
+  font-weight: 700;
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* class명들 사이에 띄어쓰기 유무 차이 확인하기 */
+.login-btn.active {
+  /* background-color: #1e90ff; */
+  opacity: 1;
+  cursor: pointer;
+}
+
+.find-pw {
+  font-size: 12px;
+  font-weight: 700;
+  color: #00376B;
+  text-decoration: none;
+}
