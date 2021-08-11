@@ -1,0 +1,297 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+}
+.pa{
+    width: 200px;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    background-color: blue;
+    display: none;
+}
+.nav{
+    display: flex;
+    justify-content: space-around;
+    font-size: 35px;
+    text-align: center;
+    height: 55px ;
+    position: fixed;
+    top: 0;
+    background-color: white;
+    width: 100%;
+    border-bottom: rgb(219, 219, 219) 1px solid;
+    padding: 0 115px;
+}
+.nav_logo i {
+    margin-right: 20px;
+}
+.nav_text{
+    font-family: 'Lobster', cursive;
+}
+
+.icons img{
+    width: 30px;
+    height: 30px;
+    margin-left: 10px;
+    margin: 12px;
+}
+
+.search {
+    width: 200px;
+}
+.nav .search input{
+    height: 25px;
+    width: 100%;
+    background-color: #FAFAFA;
+    border: rgb(219, 219, 219)  1px solid;
+    border-radius: 3px;
+    text-indent: 80px;
+}
+
+input:focus{
+    outline: none;
+}
+
+.main{
+    background-color:#FAFAFA;
+    height: 100%;
+    padding: 100px 230px;
+    display: flex;
+    flex-direction: row;
+}
+
+.feeds{
+    height: 100%;
+    width: 615px;
+    margin-right: 40px;
+    border: 1px rgb(219, 219, 219) solid;
+    background-color: white;
+}
+
+.article{
+    background-color: white;
+    width: 100%;
+    height: 1100px;
+    display: flex;
+    flex-direction: column;
+    }
+
+.profile_box{
+    width: 100%;
+    display: flex;
+    height: 60px;
+    justify-content: space-between;
+}
+.profile_box i{
+    margin: 20px;
+    font-size: 20px;
+}
+.profile_photo{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin: 13px;
+}
+.profile{
+    display: flex;
+    text-align: center;
+}
+.profile_name{
+    font-size: 20px;
+    margin: auto 0;
+}
+
+.feed{
+    width: 100%;
+    height: 100%;
+}
+
+.main_photo{
+    width: 100%;
+    height: 100%;
+}
+
+.goodandtext{
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    height: 250px;
+    border-bottom: 1px rgb(219, 219, 219) solid;
+    padding: 15px;
+    width: 100%;
+}
+
+.imt{
+    display: flex;
+    justify-content: space-between;
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.imt i{
+    padding-right: 10px;
+}
+
+.imt i:hover{
+    cursor: pointer;
+}
+
+.goods{
+    margin-bottom: 10px;
+}
+
+.time{
+    color: gray;
+    font-size: 12px;
+}
+.contexts{
+    width: 100%;
+    height: 50px;
+    overflow: scroll;
+    margin-bottom: 5px;
+}
+.contexts::-webkit-scrollbar {
+    display: none;
+}
+
+.text_input{
+    width: 615px;
+    height: 65px;
+    padding: 0 25px;
+    display: flex;
+    justify-content: space-between;
+}
+.text_enter{
+    color: #C1E0FD;
+    margin: auto 0;
+}
+.text_enter:hover{
+    cursor: pointer
+}
+.comant{
+    width: 520px;
+    background-color: white;
+    margin: auto 0;
+    color: gray ;
+    border: white;
+    height: 20px;
+}
+
+.comant:focus{
+    outline: none;
+}
+.main_right{
+    display: flex;
+    flex-direction: column;
+    width: 325px;
+    position: fixed;
+    top: 100px;
+}
+
+.my_profile{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    width: 325px;
+}
+
+.my_photo img{
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+}
+
+.my_info{
+    padding: 10px;
+}
+.my_name2{
+    color: gray;
+}
+.story{
+    display: flex;
+    flex-direction: column;
+    border: rgb(219, 219, 219) 1px solid;
+    padding: 20px;
+    background-color: white;
+    margin-bottom: 20px;
+    overflow: scroll;
+    width: 100%;
+    height: 250px;
+}
+.story::-webkit-scrollbar {
+    display: none;
+}
+
+.story_text{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    color: gray;
+}
+
+.story_peeds{
+    display: flex;
+    flex-direction: column;
+}
+.story_photo img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;    
+    margin-right: 10px;
+}
+
+.story_peed{
+    display: flex;
+    flex-direction:row;
+    margin-bottom: 5px;
+}
+
+.recommend{
+    display: flex;
+    flex-direction: column;
+    border: rgb(219, 219, 219) 1px solid;
+    padding: 20px;
+    background-color: white;
+    overflow: scroll;
+    width: 100%;
+    height: 150px;
+}
+.recommend::-webkit-scrollbar {
+    display: none;
+}
+.recommend_photo img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;    
+    margin-right: 10px;
+    }
+
+.recommend_peeds{
+    display: flex;
+    flex-direction: column;
+    }
+
+.recommend_peed{
+    display: flex;
+    flex-direction:row;
+    margin-bottom: 5px;
+    }
+.recommend_info{
+    display: flex;
+    justify-content: space-between;
+    }
+.follow{
+    margin-left: 109px;
+    color: #0095F6;
+}
+.follow:hover{
+    cursor: pointer;
+}
+.footer{
+    color: gray;
+    margin-top: 15px;
+    width: 100%;
+    font-size: 12px;    
+}
