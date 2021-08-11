@@ -29,6 +29,7 @@ const addComment = () => {
   input.value = "";
 };
 
+// 댓글 기능 구현
 commentBtn.addEventListener("click", addComment);
 input.addEventListener("keypress", (event) => {
   if (event.key === "Enter") {
@@ -38,14 +39,29 @@ input.addEventListener("keypress", (event) => {
   }
 });
 
+// 게시 버튼 활성화 기능
 input.addEventListener("keyup", (event) => {
   input.value
     ? commentBtn.classList.add("active")
     : commentBtn.classList.remove("active");
 });
 
+// 페이지 축소 시에 aside 레이아웃 위치 조정
 window.addEventListener("resize", () => {
   let resizing = clientSize - window.innerWidth;
-  aside.style.right = `${500 - resizing / 2.2}px`;
+  if(clientSize > 1500){
+    aside.style.right = `${500 - resizing/ 2}px`;
+  }
+  if(clientSize < 1500){
+    aside.style.right = `${280 - resizing/ 1.1}px`
+  }
   console.log(resizing);
 });
+
+// aside 큰 화면 로드 시에 위치 조정
+window.addEventListener("load", () => {
+  if(window.innerWidth > 1500){
+    console.log(window.innerWidth);
+    aside.style.right = `${500}px`;
+  }
+})
