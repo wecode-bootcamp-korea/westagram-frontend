@@ -1,8 +1,7 @@
 const searchInput = document.querySelector(".search-bar");
 const commentInput = document.querySelector(".comment-post");
 const commentForm = document.querySelector(".comment-form");
-const deleteBtn = document.querySelector(".far.fa-trash-alt");
-const lis = document.querySelectorAll(".comments li");
+const commentList = document.querySelector(".comments");
 
 searchInput.addEventListener("input", () => {
   const search = document.querySelector(".search");
@@ -41,4 +40,7 @@ const addComment = () => {
   commentList.append(liTag);
 };
 
-const likeComment = () => {};
+commentList.addEventListener("click", (e) => {
+  const comment = document.querySelector(".comments li");
+  e.target.className === "far fa-trash-alt" && comment.remove();
+});
