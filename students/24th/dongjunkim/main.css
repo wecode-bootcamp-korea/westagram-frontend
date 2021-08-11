@@ -1,0 +1,303 @@
+
+
+article .header{
+    height: 60px;
+    display: flex;
+    flex-direction: row;    
+    justify-content: center;
+    align-items: center;
+    margin:  10px 20px;
+}
+
+article .header .post-container .story{
+    margin: 0;
+}
+
+.post-container{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: space-between;
+    height: 20px;
+
+}
+
+#add-comment{
+    cursor: pointer;
+}
+
+.comment-input-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.comment-input-container input{
+    border: 0;
+}
+
+.comment-input-container input:focus{
+    outline:none;
+}
+
+.follow-container{
+    width:110px;
+    text-align:right;
+}
+
+.follow-container span{
+    margin-left: auto;
+}
+
+.corporation-info{
+    width:400px;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.lowest-container > span:nth-child(1){
+    margin-bottom:20px;
+}
+.lowest-container{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px 20px 20px;
+    border-bottom: 1px solid #E6E6E6;    
+}
+.lower-container{
+    width:100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding: 15px;
+}
+
+.bookmark-container{
+    width:40px;    
+    height: 40px;    
+}
+
+.likes-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 35px;
+    width:140px;
+}
+
+img{
+    max-width:100%;
+    max-height:100%;    
+}
+
+.profile img{
+    border-radius:100%;  
+}
+
+
+
+.color-light-blue{
+    color: #58A8F3;
+}
+.color-light-gray{
+    color: #999999;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+.profile-info{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.story{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    align-items: center;    
+}
+
+
+.mine{
+    margin-left: 15px;
+}
+
+.header{
+    display: flex;
+
+    height: 50px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: space-between;
+}
+
+.my-profile{
+    width: 70px;
+    height: 70px;
+    border-radius: 100%;    
+}
+
+.my-profile img{
+    border-radius:100%;  
+}
+
+.profile{
+    width: 50px;
+    height: 50px;
+
+    border-radius: 100%;
+    background-color: #67e088;
+}
+
+.stories{
+    width: 400px;
+    height: 300px;
+    padding: 20px;
+    margin-bottom: 30px;
+
+    background-color: white;
+    border: 1px solid #E6E6E6;
+
+    overflow: hidden;
+
+}
+
+.recommendation{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.recommendations{
+    display: flex;
+    flex-direction: column;
+
+    width: 400px;
+    height: 300px;
+    padding: 20px;    
+    background-color: white;
+    border: 1px solid #E6E6E6;
+
+    margin-bottom: 30px;
+}
+
+.main-right{
+    height: 750px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+
+.container{
+    display:flex;
+    width:1300px;
+    flex-direction: row;
+    justify-content:space-around;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top:30px;
+}
+
+.feeds{
+    width: 800px;
+}
+
+.feeds article{
+    display:flex;
+    flex-direction: column;    
+    width:800px;
+
+
+    border : 1px solid #E6E6E6;
+    background-color: #FFFFFF;
+}
+
+body{
+    background-color: #FAFAFA;
+    margin: 0;
+}
+nav .logo {
+    font-family: 'Lobster', cursive;
+    font-size: 25px;
+    padding:  0 15px;
+    margin: 0 15px;
+    border-left: 1px solid rgb(136, 136, 136);
+}
+
+.nav-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+}
+nav{
+    position: sticky;
+    top: 0;
+    padding: 30px 0;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    border-bottom: 1px solid #E8E8E8;
+
+    background-color: white;
+}
+
+
+.nav-item{
+    position:relative;    
+    display: flex;    
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    width: 480px;
+}
+.nav-item img{
+    width: 40px;
+    margin-left: 30px;
+}
+
+.search{
+    height:40px;
+    background-color: #FAFAFA;
+    border: 2px solid #d3d3d3;
+}
+
+.search::-webkit-input-placeholder{
+    background-image: url(https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-256.png) ;
+    background-size: contain;
+    background-position:  100px center;
+    background-repeat: no-repeat;
+    text-align: center;
+    text-indent: 0;
+    font-size: 18px;
+    font-weight: 500;
+    color: #A3A3A3;    
+  }
+
+
+.camera-logo{
+    width: 50px;
+}
+.search{
+    width: 300px;
+}
