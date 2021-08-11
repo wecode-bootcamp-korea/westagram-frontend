@@ -1,0 +1,163 @@
+@import "common.css";
+
+body {
+    width: 100%;
+    height: 150vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 상단 navbar  */
+
+nav {
+    height: 5%;
+    width: 90%;
+    border-bottom: 2px solid #DBDBDB;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.mainLogo {
+    width: 18%;
+    display: flex;
+    display: flex;
+    font-size: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    padding-right: 15px;
+    border-right: 2px solid black;
+}
+
+.logoText {
+    font-family: 'Lobster', cursive;
+}
+
+.searchBar {
+    width: 25%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #DBDBDB;
+    background-color: #FAFAFA;
+    color: #DBDBDB;
+    font-size: 13px;
+}
+
+.mainMenu {
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    left: 50px;
+}
+.mainMenu img{
+    width: 23px;
+    height: 23px;
+}
+
+.heart{    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.heart div{
+    margin-top: 38px;
+}
+
+.redDot {
+    width: 5px;
+    height: 5px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+}
+
+/* 메인화면 */
+
+main {
+    width: 90%;
+    height: 95%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.feeds {
+    width: 50%;
+    height: 63%;
+    position: relative;
+    left: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.firstFeed {
+    border: 2px solid #DBDBDB;
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;   
+}
+
+.firstFeed div{
+    width: 100%;
+}
+
+.feedUploader {
+    height: 10%;
+    display: flex;
+    align-items: center;
+}
+
+.feedUploader img{
+    height: 60%;
+    border-radius: 50%;
+    margin-left: 3%
+}
+
+.uploaderId {
+    margin-left: 3%;
+    font-weight: 600;
+}
+
+.fa-ellipsis-h {
+    margin-right: 3%;
+}
+
+.feedPic {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.feedPic img{
+    width: 100%;
+    height: 100%;
+}
+
+.feedFunction {
+    height: 15%;
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+}
+
+.main-right{
+    border: 2px solid red;
+    width: 35%;
+    height: 40%;
+    position: relative;
+    right: -5px;
+    top: 4.8%;
+}
+
+
