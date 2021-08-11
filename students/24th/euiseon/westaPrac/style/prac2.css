@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+.wrap .container .inner .header .logo { /*뤱을 지나 컨테이너 지나 이너 지나 헤더를 지나 로고만 사이즈와 폰트 변경 */
+    font-family: 'Lobster', cursive;
+    font-size: 75px;
+
+}
+
+.wrap { /* 전체박스의 크기를 가장 크게 만든다? */
+    height: 100vh;
+}
+
+.wrap .container { /*모든 요소들을 가운데로 정렬합니다 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background: #f1f3f5;
+}
+
+.wrap .container .inner {   /*이건 로그인 박스 입니다*/
+    width: 400px;
+    height: 450px;
+    padding: 10px 40px;
+    box-sizing: border-box;
+    background: #fff;
+    border: 1px solid #dbdbdb;
+}
+
+.wrap .container .inner .header { /* Westagram로고를 가운데로 보냅니다 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.wrap .container .inner .form {
+    margin-bottom: 30px;
+}
+
+.form .input_box {
+    width: 100%;
+    height: 45px;
+    margin-bottom: 13px;
+}
+
+.form .input_box input {
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+    background: #fafafa;
+    border: 1px solid #dbdbdb;
+    border-radius: 4px;
+    font-size: 15px;
+}
+
+.form .button_box {
+    display: flex;
+    width: 100%;
+    height: 40px;
+}
+
+.form .button_box .btn {
+    width: 100%;
+    height: 100%;
+    background-color: #bfdffd;
+    border: 1px solid #bfdffd;
+    border-radius: 4px;
+}
+
+.form .button_box .btn span {
+    font-size: 18px;
+    line-height: 1.4;
+    font-weight: bold;
+    color: #fff;
+}
+
+.wrap .container .inner .password_forget {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.password_forget .page_move span {
+    font-size: 15px;
+    color: #003768;
+}
