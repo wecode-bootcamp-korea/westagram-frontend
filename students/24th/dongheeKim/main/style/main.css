@@ -8,30 +8,32 @@ body {
     background-color:#FAFAFA;
 }
 
+/*--- nav ---*/
+
 nav {
-    background-color: white;
     display: flex;
+    height: 60px;
     justify-content: space-around;
     align-items: center;
-    height: 60px;
-    border-bottom: lightgray solid 1px;
     padding: 0 60px 0 80px;
+    background-color: white;
+    border-bottom: lightgray solid 1px;
 }
 
 .nav-logo {
-    width: 180px;
     display: flex;
+    width: 180px;
     align-items: center;
     justify-content: space-between;
 }
 
 .nav-logo_text {
     width: 150px;
+    margin-left: 10px;
+    padding-left: 10px;
     border-left: black solid 2px;
     font-family: 'Lobster', cursive;
     font-size: 23px;
-    margin-left: 10px;
-    padding-left: 10px;
 }
 
 .nav-logo_image{
@@ -43,31 +45,31 @@ nav {
 }
 
 .nav-search {
-    width: 200px;
     position: relative;
+    width: 200px;
 }
 
 .nav-search input {
-    text-align: center;
-    font-size: 14px;
     width: 100%;
+    padding: 3px 0;
     color: #dbdbdb;
     background-color:#FAFAFA;
     border: #dbdbdb solid 1px;
-    padding: 3px 0;
+    text-align: center;
+    font-size: 14px;
 }
 
 .nav-search i {
     position: absolute;
-    font-size: 10px;
     top: 9px;
     left: 35%;
     color: #8e8e8e;
+    font-size: 10px;
 }
 
 .nav-icons {
-    width: 180px;
     display: flex;
+    width: 180px;
     justify-content:space-around;
 }
 
@@ -81,18 +83,24 @@ nav {
 .nav-icons_safari {
     background-image: url('safari.png');
     }    
+
 .nav-icons_heart {
     background-image: url('heart.png');
     }
+
 .nav-icons_person {
     background-image: url('person.png');
     }
+
+/*--- main ---*/
 
 main {
     display: flex;
     justify-content:center;
     align-items: flex-start;
 }
+
+/*--- feeds ---*/
 
 .feeds {
     width: 650px;
@@ -121,19 +129,14 @@ main {
 .feeds-text_like {
     margin-bottom: 10px;
 }
-.profile {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-}
 
 article {
+    display: flex;
     width: 650px;
+    flex-direction: column;
     margin-top: 40px;
     background-color: white;
     border: lightgray solid 1px;
-    display: flex;
-    flex-direction: column;
 }
 
 .feeds-profile {
@@ -143,17 +146,16 @@ article {
     padding: 0 10px;
 }
 
-
 .feeds-profile_account {
-    padding: 10px 0;
     display: flex;
+    padding: 10px 0;
     align-items: center;
 }
 
 .feeds-profile_account_pic{
+    margin-right: 15px;
     background-image: url('profile.jpg');
     background-size: cover;
-    margin-right: 15px;
 }
 
 .feeds-profile_dot{
@@ -161,13 +163,12 @@ article {
 }
 
 .feeds-pic {
+    width: 650px;
+    height: 650px;
     background-size: cover;
     background-repeat: no-repeat;
     background-image: url('cat.jpg');
-    width: 650px;
-    height: 650px;
 }
-
 
 .feeds-text_minutes{
     margin: 5px 0 10px 20px;
@@ -182,40 +183,53 @@ article {
 
 .feeds-comment_box {
     width: 550px;
-    font-size: 14px;
     margin-left: 5px;
     padding-left: 15px;
     padding-bottom: 15px;
     border: 0;
     outline: 0;
+    font-size: 14px;
 }
 
 .feeds-comment_btn {
     width: 60px;
+    margin-left: 20px;
+    color: lightskyblue;
+    background-color: white;
+    border: 0;
     text-align: center;
     font-size: 18px;
     font-weight: 600;
-    background-color: white;
-    margin-left: 20px;
-    color: lightskyblue;
-    border: 0;
     cursor: pointer;
 }
 
-li {
-    list-style:none;
-    padding-right: 20px;
+/*--- profile ---*/
+
+.profile {
     display: flex;
-    justify-content: space-between;
-    text-align: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.profilename {
+    display: flex;
+    flex-direction: column;
+}
+
+li {
+    display: flex;
     margin-top: 5px;
+    padding-right: 20px;
+    justify-content: space-between;
+    list-style:none;
+    text-align: center;
 }
 
 .myProfile{
-width: 400px;
-margin-top: 40px;
-display: flex;
-align-items: center;
+    display: flex;
+    width: 400px;
+    margin-top: 40px;
+    align-items: center;
 }
 
 .myProfile-pic {
@@ -227,12 +241,14 @@ background-size: cover;
 background-image: url(tweety.jpg);
 }
 
+/*--- story ---*/
+
 .story{
     width: 400px;
-    background-color: white;    
-    border: lightgray solid 1px;
     margin-bottom: 15px;
     margin-top: 15px;
+    background-color: white;    
+    border: lightgray solid 1px;
 }
 
 .profile_header {
@@ -245,17 +261,20 @@ background-image: url(tweety.jpg);
     display: flex;
     margin-left: 15px;
 }
+
 .story_pic1 {
 background-image: url('wecode.jpg');
 }
 
 .story_pic2 {
 background-image: url('yk.jpg');
-    }
+}
 
 .story_pic3 {
 background-image: url('sk.jpg');
-        }
+}
+
+/*--- recommend ---*/
 
 .recommend{
     width: 400px;
@@ -265,9 +284,9 @@ background-image: url('sk.jpg');
 
 .recommend-wrap {
     display: flex;
+    margin: 0 15px 15px 15px;
     justify-content: space-between;
     align-items: center;
-    margin: 0 15px 15px 15px;
 }
 
 .recommend-account {
@@ -275,7 +294,7 @@ background-image: url('sk.jpg');
 }
 
 .recommend-pic1{
-background-image: url('byemypie.jpg');
+    background-image: url('byemypie.jpg');
 }
 
 .recommend-pic2{
@@ -286,6 +305,7 @@ background-image: url('byemypie.jpg');
     background-image: url('wsh.jpg');
     }
 
+/*--- info ---*/
 
 .info{
     width: 300px;

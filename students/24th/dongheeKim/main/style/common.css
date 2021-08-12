@@ -1,19 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
-.font-smallgray {
+/*font*/
+.font-gray{
+    color:#8e8e8e;
+    font-size: 14px;
+}
+
+.font-graysmall {
     color:rgba(var(--edc,199,199,199),1);
     font-size: 11px;
     font-weight: 600;
     line-height: 13px;
 }
 
-.font-gray{
-    color:rgba(var(--edc,199,199,199),1); 
-    font-size: 14px;
-}
-
 .font-graybold{
-    color:rgba(var(--edc,199,199,199),1); 
+    color:#8e8e8e;
     font-size: 14px;
     font-weight: 600;
 }
@@ -22,19 +23,6 @@
 color: rgba(var(--d69,0,149,246),1);
 font-weight: 600;
 cursor: Pointer;
-}
-
-.miniIcon {
-    width: 25px;
-    margin-right: 15px;
-}
-
-.profile_pic {
-    width: 33px;
-    height: 33px;
-    border-radius: 50%;
-    margin-right: 10px;
-    background-size: cover;
 }
 
 .bold {
@@ -50,10 +38,26 @@ cursor: Pointer;
     cursor: Pointer; 
 }
 
+/*icon*/
+.miniIcon {
+    width: 25px;
+    margin-right: 15px;
+}
+
 .comment-heart {
     align-items: center;
 }
 
+/*pic*/
+.profile_pic {
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background-size: cover;
+}
+
+/*component*/
 .story-account {
     display: flex;
     align-items: center;

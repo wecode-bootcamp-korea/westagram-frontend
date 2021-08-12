@@ -1,5 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-
+* {
+    box-sizing: border-box;
+}
 
 .logo {
     font-family: 'Lobster', cursive;
@@ -7,19 +8,18 @@
 }
 
 .mainBox {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
     width: 300px;
     height: 320px;
-    position: fixed;
     top: 50%;
     left: 50%;
     margin-top: -160px;
     margin-left: -150px;
     border: lightgray 1px solid;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: space-around;
-
 }
 
 .loginBox {
@@ -31,22 +31,21 @@
     margin-top: -30px;
 }
 
-
 .loginBtn {
+    padding: 5px 0;    
+    border-radius: 3px;
+    margin-top: 5px;
     background-color: rgba(var(--d69,0,149,246),.3);;
     color: white; 
     border: 0;
     font-size: 11px;
     font-weight: bolder;
-    padding: 5px 0;    
-    border-radius: 3px;
-    margin-top: 5px;
 }
 
 a{
+    margin-bottom: -20px;
+    color: darkblue;
     font-size: 12px;
     text-decoration: none;
-    color: darkblue;
     font-weight: bolder;
-    margin-bottom: -20px;
 }
