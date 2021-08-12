@@ -15,6 +15,13 @@ writeComment.addEventListener("keydown", (event) => {
     }
 });
 
+writeComment.addEventListener("keyup", () => {
+    if (writeComment.value.length >= 1) {
+        postingButton.style.color ="#3797F0"
+        postingButton.style.cursor ="pointer"
+    }
+});
+
 function addComment() {
     if(writeComment.value.length >= 1) {
         const makeTag = document.createElement("div");
@@ -22,6 +29,7 @@ function addComment() {
         makeTag.innerHTML=`<span class="boldFont">bbangho</span> ${writeComment.value} <img class="commentHeart" src="./img/garbage.png"> <img class="commentHeart" src="./img/heart.png">`
         }
     writeComment.value = ""
+    postingButton.style.color ="#D4E9FD"
 }
 
 comment.addEventListener("click", (event) => {

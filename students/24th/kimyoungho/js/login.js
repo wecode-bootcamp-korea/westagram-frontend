@@ -24,8 +24,8 @@ function loginCheck() {
       alert("아이디는 5자~15자 이내로 입력해주세요");
       id.focus();
    } else if (password.value.length <= 4 && password.value.length >= 15) {
-         alert("비밀번호는 5자~15자 이내로 입력해주세요");
-         password.focus();
+      alert("비밀번호는 5자~15자 이내로 입력해주세요");
+      password.focus();
    }
 }
 
