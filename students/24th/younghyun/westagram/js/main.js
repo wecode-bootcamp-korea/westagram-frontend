@@ -5,7 +5,7 @@ const commentForm =document.querySelector('.comment');
 const commentValue = document.querySelector('.typing-comment');
 const comments = document.querySelector('.typing-comment');
 let heartBtn = document.querySelector('.feeds-comment');
-
+const searchEngine = document.querySelector('.search-engine');
 
 commentForm.addEventListener("keyup",()=>{
     let comments = document.querySelector('.typing-comment').value;
@@ -81,25 +81,25 @@ function uploadComment(){
 const userArray = [
     {id: "young93",
     nickname: "김영현",
-    picture: "https://#"},
+    picture: "img/jenny.jpeg"},
     {id: "wecode_bootcamp",
     nickname: ">wecode | 위코드",
-    picture: "https://#"},
+    picture: "img/jenny.jpeg"},
     {id: "younghyun",
     nickname: "young hyun kim",
-    picture: "https://#"},
+    picture: "img/jenny.jpeg"},
     {id: "younghyunkim",
     nickname: "영현kim입니다",
-    picture: "https://#"},
+    picture: "img/jenny.jpeg"},
     {id: "yongju0506",
     nickname: "용주용주",
-    picture: "https://#"},
+    picture: "img/jenny.jpeg"},
     {id: "yumi_sepo",
     nickname: " ",
-    picture: "https://#"},
+    picture: "img/jenny.jpeg"},
     {id: "wecoder_24",
     nickname: "위코더24기",
-    picture: "https://#"},
+    picture: "img/jenny.jpeg"},
     {id: "withme",
     nickname: "나와함께",
     picture: "https://#"},
@@ -114,6 +114,57 @@ const userArray = [
     picture: "https://#"},
     ];
 
+// input에 글자가 입력되면 박스가 켜짐
+// 철자가 하나가 나오면 for문으로 id인덱스 값에 맞는 filter
+
+window.addEventListener('load', addProfile);
+
+const searchBar = document.querySelector('.search-bar');
+
+//console.log(searchBar);
 
 
+searchBar.addEventListener('keyup',()=> {
+    let searchValue = searchBar.value;
+    let result = [];
+
+    console.log(userArray[0].id.slice(0,1));
+
+    for(let i=0; i<userArray.length; i++){
+        console.log(userArray.length);
+        if (userArray[i].id.slice(0,searchValue.length).includes(searchValue)){
+            result.push(userArray[i]);
+            addProfile(result);
+
+            console.log(result);
+        } };
+    // userArray.filter(element=> {
+    //     if (element.id.includes(searchValue)){
+    //         return element;
+    //         console.log(element);
+    //     }
+    // } );
+    //console.log(result);
+})
+
+function addProfile(result){
+    result.forEach(userInfo => {
+        let searchContents = document.createElement('div');
+        searchContents.className = "search-contents";
+
+        searchContents.innerHTML = `
+        <div class="gradient">
+                            <img src="${userInfo.picture}" alt="스토리 프로필 사진">
+                        </div>
+                        <div>
+                            <p class="user-id">${userInfo.id}</p>
+                            <p class="user-name">${userInfo.nickname}</p>
+                        </div>`;
+        
+        searchEngine.appendChild(searchContents); 
+    });
+
+};
+
+// console.log(userArray[0].id);
 

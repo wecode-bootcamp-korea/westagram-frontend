@@ -1,12 +1,14 @@
 body {
-    background-color: #fafafa;;
+    background-color: #fafafa;
 }
 
 .margin-value {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    position: relative;
     margin: 100px 240px;
+    z-index: 2;
 }
 
 nav {
@@ -20,6 +22,7 @@ nav {
     height: 67px;
     background-color: #fff;
     border-bottom: 1px solid #dbdbdb;
+    z-index: 4;
 }
 
 nav .search>input {
@@ -50,6 +53,89 @@ nav .search>input:focus {
     padding-left: 22px;
     color: #262626;
     text-align: left;
+}
+/* 
+.search {
+    position: relative;
+} */
+
+.search-all {
+    position: absolute;
+    top: 65px;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: #fff;
+    box-shadow: 0 0 5px 1px rgba(var(--jb7,0,0,0),.0975);
+    border: 1px solid #fff;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+.search-engine {
+    position: relative;
+    width :340px;
+    height: 380px;
+    background-color: #fff;
+    z-index: 9;
+    overflow: auto;
+}
+
+.search-squre {
+    position: absolute;
+    top: -7px;
+    left: 185px;
+    width: 16px;
+    height: 16px;
+    transform: rotate(45deg);
+    box-shadow: 0 0 5px 1px rgba(var(--jb7,0,0,0),.0975);
+    background-color: #fff;
+    z-index: 8;
+}
+
+.search-contents {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.search-contents:first-child{
+    padding-top: 10px;
+}
+.search-contents:not(:first-child){
+    margin-top: 10px;
+}
+
+.search-contents .gradient {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 100%;
+    background: radial-gradient(circle at bottom left, #F58529 20%, #C42D91);
+}
+
+.search-contents img{
+    width: 46px;
+    height: 46px;
+    border: 2px solid #fff;
+    border-radius: 100%;
+}
+
+.search-contents p {
+    margin-left: 9px;
+}
+
+.search-contents .user-id {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.search-contents .user-name {
+    font-size: 14px;
+    color: #8e8e8e;
+    margin-top: 3px;
 }
 
 
@@ -255,6 +341,7 @@ nav .search>input:focus {
     right: 240px;
     width: 280px;
     height: 500px;
+    z-index: 1;
 }
 
 .main-right .story {
