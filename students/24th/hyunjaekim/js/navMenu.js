@@ -1,5 +1,5 @@
 // 4. 창 닫을 때 서서히 메뉴바 fadeout되도록 class animation주기 (class만들어줘야)
-const profileBtn = document.querySelector(".profileImg");
+const profileBtn = document.querySelector(".profileWrapper");
 const navMenu = document.querySelector(".navMenu");
 const homeBtn = document.querySelector(".homeBtn");
 

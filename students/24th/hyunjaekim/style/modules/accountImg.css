@@ -1,43 +1,53 @@
-/* story image */
-.storyWrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.storyBorder {
+/* nav */
+.profileWrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 70px;
-  height: 70px;
+  width: 28px;
+  height: 28px;
   border-radius: 50%;
-  background-image: linear-gradient(to bottom right, #f58529 20%, #c42d91);
-  margin-bottom: 8px;
+  margin-left: 22px;
+  cursor: pointer;
 }
 
-.storyImg {
-  width: 66px;
-  height: 66px;
+.profileImg {
+  width: 26px;
+  height: 26px;
   border-radius: 50%;
   border: 2px solid #fff;
 }
 
-/* story image medium size */
-.storyBorder.medium {
+/*? 이렇게 클래스로 따로 주는게 더 좋은가 */
+.focus {
+  background-color: #000;
+}
+
+/* profile image medium size */
+
+/* profile image large size */
+.profileWrapper.large {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-image: linear-gradient(to bottom right, #f58529 20%, #c42d91);
+  margin: 0;
+  margin-bottom: 8px;
+}
+
+.profileImg.large {
+  width: 66px;
+  height: 66px;
+}
+
+/* profile image medium size */
+.profileWrapper.medium {
   width: 36px;
   height: 36px;
+  background-image: linear-gradient(to bottom right, #f58529 20%, #c42d91);
   margin: 0;
 }
 
-.storyImg.medium {
+.profileImg.medium {
   width: 32px;
   height: 32px;
-}
-
-.storyID {
-  font-size: 12px;
-  line-height: 14px;
-  text-align: center;
-  color: #262626;
 }
