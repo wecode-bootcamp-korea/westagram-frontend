@@ -3,18 +3,18 @@ body {
 }
 
 .margin-value {
-    margin: 100px 240px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    margin: 100px 240px;
 }
 
 nav {
     display: flex;
+    position: fixed;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
     top: 0; left: 0;
     width: 100vw;
     height: 67px;
@@ -23,46 +23,48 @@ nav {
 }
 
 nav .search>input {
-    /* background-image: url(https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-256.png); */
+
+    /*
+    돋보기 구현 전
     background-color: #fafafa;
     background-position: 73px 4px; 
     background-size: 15px;
     background-repeat: no-repeat;
+    */
+
     width: 200px;
     height: 22px;
-    margin: 0;
     border: 1.7px solid #dbdbdb;
     border-radius: 2px;
+    text-align: center;
     font-size: 14px;
     font-weight: lighter;
-    /* opacity: 0.8; */
-    text-align: center;
 }
 
 nav .search>input:focus {
+    /* 
+    돋보기 구현 전
     background-image: none;
-    text-align: left;
-    text-indent: 0;
+    */
     width: 180px;
     padding-left: 22px;
     color: #262626;
-    /* font-weight: bold; */
+    text-align: left;
 }
 
 
 .instagram-logo {
     display: flex;
     justify-content: flex-start;
-    font-size: 22px;
     margin-left: 240px;
-
+    font-size: 22px;
 }
 
 .instagram-icon {
-    font-family: Lobster;
     border-left: 2px solid #262626;
     padding-left: 12px;
     margin-left: 13px;
+    font-family: Lobster;
 }
 
 .icons {
@@ -75,12 +77,11 @@ nav .search>input:focus {
     margin-left: 15px;
 }
 
-.feeds {
-    background-color: #fff;
+.feeds-setting {
     width: 655px;
-    /* height: 400px; */
     border: 1px solid #dbdbdb;
     margin-right: 30px;
+    background-color: #fff;
     border-radius: 3px;
 }
 
@@ -94,8 +95,8 @@ nav .search>input:focus {
 
 .title-profile >img {
     width: 35px;
+    border: 1px solid #dbdbdb;
     border-radius: 50%;
-    border: 1px solid #dbdbdb
 }
 
 .title-profile .dot{
@@ -146,7 +147,6 @@ nav .search>input:focus {
 
 .feeds-comment {
     margin-top: 3px;
-    /* display: none; */
 }
 
 .feeds-commentimage {
@@ -169,7 +169,7 @@ nav .search>input:focus {
 }
 
 .commentDiv {
-    width: 570px;
+    width: 575px;
     margin-top: 3px;
     display: inline-block;
 }
@@ -179,37 +179,37 @@ nav .search>input:focus {
 }
 
 .time {
-    font-size: 12px;
+    font-size: 12.5px;
     color: #8e8e8e;
 }
 
 .comment {
-    width: 100%;
-    height: 50px;
-    margin-top: 5px;
-    border-top : 1px solid #dbdbdb;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    height: 50px;
+    margin-top: 5px;
+    border-top : 1px solid #dbdbdb;
 }
 
 .comment .typing-comment{
+    width: 300px;
     margin-left: 10px;
     font-size: 14px;
-    width: 300px;
 }
 
 .comment button {
     margin-right: 10px;
-    font-size: 14px;
     color : #BFE0FD;
+    font-size: 14px;
 }
 
 .comment button.active {
     color: #0095f6;
-    cursor: pointer;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .feeds-icons {
@@ -250,31 +250,28 @@ nav .search>input:focus {
     display: flex;
     flex-direction: column;
     position: fixed;
-    /* height: 100vh; */
     margin-bottom: 30px;
-    right: 240px;
     top: 100px;
+    right: 240px;
     width: 280px;
     height: 500px;
 }
 
 .main-right .story {
-    position: relative;
-    background-color: white;
-    border: 1px solid #dbdbdb;
     height: 300px;
-    overflow: scroll;
     margin-bottom: 10px;
+    border: 1px solid #dbdbdb;
     border-radius: 2px;
+    background-color: white;
+    overflow: auto;
 }
 
 .main-right .recommend {
-    position: relative;
     background-color: white;
-    border: 1px solid #dbdbdb;
     height: 200px;
-    overflow: auto;
+    border: 1px solid #dbdbdb;
     border-radius: 2px;
+    overflow: auto;
 }
 
 .main-right .information {
@@ -316,12 +313,11 @@ nav .search>input:focus {
 }
 
 .story-title{
-    position: fixed;
-    width: 278px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    position: fixed;
+    width: 278px;
     padding: 10px 15px;
     font-size: 14px;
     font-weight: bold;
@@ -338,26 +334,23 @@ nav .search>input:focus {
 .story-down {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     margin-top: 40px;
     margin-bottom: 15px;
-    bottom: 40px;
 }
 
 .story-contents {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
     margin: 0 13px 5px;
 }
 
 .story-contents .gradient {
-    width: 40px;
-    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 40px;
+    height: 40px;
     border-radius: 100%;
     background: radial-gradient(circle at bottom left, #F58529 20%, #C42D91);
 }
@@ -368,7 +361,6 @@ nav .search>input:focus {
     border: 2px solid #fff;
     border-radius: 100%;
 }
-
 
 .story-contents p {
     margin-left: 7px;
@@ -386,11 +378,11 @@ nav .search>input:focus {
 }
 
 .recommend-title{
-    position: fixed;
-    width: 278px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    position: fixed;
+    width: 278px;
     padding: 10px 15px;
     font-size: 14px;
     font-weight: bold;
@@ -400,7 +392,6 @@ nav .search>input:focus {
 }
 
 .recommend-title span:first-child {
-    font-weight: medium;
     font-size: 14px;
     color: #8e8e8e;
 }
@@ -408,7 +399,6 @@ nav .search>input:focus {
 .recommend-down {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     margin-top: 40px;
     margin-bottom: 15px;
     bottom: 40px;
@@ -436,32 +426,15 @@ nav .search>input:focus {
 }
 
 .recommend-contents .user-name {
+    margin-top: 3px;
     font-size: 13px;
     color: #8e8e8e;
-    margin-top: 3px;
 }
 
 .recommend-contents::after{
     content: "팔로우";
     margin-left: 33px;
-    font-size: 13px;
     color: #0095F6;
+    font-size: 13px;
     font-weight: bold;
 }
-
-
-
-
-
-
-
-
-
-
-/* 
-input::placeholder{
-    content: '\f002';
-    display: inline-block;
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-}    */
