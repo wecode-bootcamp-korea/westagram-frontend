@@ -1,73 +1,85 @@
+/* 기본 셋팅 */
 * {
   margin: 0px;
   padding: 0px;
 }
-
 body {
-  box-sizing: border-box;
   margin: 0px auto;
   background-color: #fafafa;
+  box-sizing: border-box;
 }
 
+/* nav 관련 css */
 nav {
+  position: fixed;
+  top: 0px;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 60px;
   width: 100vw;
-  border-bottom: 2px solid #e6e6e6;
+  height: 60px;
   padding: 0px auto;
   background-color: #ffffff;
-  position: fixed;
-  top: 0px;
+  border-bottom: 2px solid #e6e6e6;
 }
-
 .nav {
-  width: 900px;
   display: flex;
   justify-content: space-between;
+  width: 900px;
 }
-
 .navLogo {
   display: flex;
-  font-size: 20px;
   align-items: center;
+  font-size: 20px;
 }
-
 .navLogo div {
   padding: 2px 15px;
 }
-
 .navLogoCamera {
   border-right: 1px solid black;
 }
-
 .navLink {
   display: flex;
   list-style: none;
 }
-
 .navLink li {
-  font-size: 22px;
   margin: 0px 10px;
+  font-size: 22px;
 }
 
+/* 메인페이지 */
 main {
   display: flex;
   justify-content: center;
   margin-top: 60px;
 }
 
-article {
+/* 메인페이지_article */
+.article {
   width: 600px;
   margin-top: 60px;
   margin-right: 300px;
 }
-
-.article {
+article {
   margin-bottom: 30px;
-  border: 1px solid #e6e6e6;
   background-color: #ffffff;
+  border: 1px solid #e6e6e6;
+}
+
+.articleStory {
+  display: flex;
+  margin-left: 10px;
+  overflow: hidden;
+}
+
+.articleStory li {
+  margin: 10px;
+  list-style: none;
+}
+
+.articleStory li img {
+  width: 54px;
+  border-radius: 36px;
 }
 
 .articleProfile {
@@ -75,57 +87,46 @@ article {
   align-items: center;
   margin: 10px;
 }
-
 .articleUserImage {
   margin: 0px 15px;
 }
-
 #articleUserImage {
   width: 30px;
   border-radius: 20px;
 }
-
 .articleViewMore {
-  margin-left: auto;
   margin-right: 15px;
+  margin-left: auto;
 }
-
 .articleImage {
   width: 600px;
 }
-
 .articleMenuBar {
   display: flex;
   justify-content: space-between;
 }
-
 .articleMenuList {
   display: flex;
   margin: 5px;
   font-size: 25px;
   list-style: none;
 }
-
 .articleMenuList li {
   margin: 0px 10px;
 }
-
 .likeBar {
   display: flex;
   align-items: center;
   margin: 0px 15px;
 }
-
 #userLikebarImage {
   width: 20px;
   border-radius: 15px;
   margin-right: 5px;
 }
-
 .descriptionBar {
   margin: 5px 15px;
 }
-
 .commentBar {
   padding: 30px 0px;
   border-top: 1px solid #e6e6e6;
@@ -133,81 +134,77 @@ article {
   display: flex;
   justify-content: space-between;
 }
-
 .commentBarContent {
   border: none;
   font-size: 15px;
   outline: none;
 }
-
 .commentBarPostbtn {
   border: none;
   color: #2196f3;
   background-color: #ffffff;
 }
 
+/* 메인페이지_사이드바 */
 .sideBar {
   width: 300px;
   margin: 60px 20px 0px -280px;
   position: fixed;
   top: 60px;
 }
-
 .sideBarUser {
   display: flex;
   align-items: center;
 }
-
 #sideBarUserImage {
   width: 45px;
   border-radius: 30px;
   margin-right: 15px;
 }
-
 .sideBarRecommen {
   margin-top: 15px;
 }
-
 .sideBarRecommenTop {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 10px;
 }
-
 .sideBarRecommenTopGr {
   font-size: 15px;
   color: #8e8e8e;
 }
-
 .sideBarRecommenTopVm a {
   font-size: 13px;
   text-decoration: none;
   color: black;
 }
-
 .sideBarRecommenMain {
   display: flex;
   justify-content: space-between;
   margin-right: 10px;
 }
-
 #sideBarRecommenUserImage {
   width: 30px;
   border-radius: 20px;
   margin: 2px 10px 2px 15px;
 }
-
 .sideBarRecommenUserProfile {
   width: 190px;
 }
-
 .sideBarRecommenUserfollow {
   color: #2196f3;
 }
-
 .footerLink a {
   text-decoration: none;
   font-size: 12px;
   color: #d0d0d0;
+}
+
+.commentId {
+  margin-right: 10px;
+  font-weight: 700;
+}
+.commentContent {
+  font-size: 15px;
 }
