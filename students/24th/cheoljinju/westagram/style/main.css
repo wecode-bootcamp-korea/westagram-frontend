@@ -2,6 +2,7 @@
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 1;
   width: 100%;
   border-bottom: 1px solid #dbdbdb;
   background-color: #fff;
@@ -70,10 +71,12 @@
 }
 
 .main__feeds {
-  max-width: 1400px;
+  width: 600px;
 }
 
 .main__container {
+  position:relative;
+  display:flex;
   margin: 0 auto;
   padding: 90px 260px;
 }
@@ -219,9 +222,8 @@
 }
 
 .aside {
-  position: fixed;
-  top: 90px;
-  right: 280px;
+  position: sticky;
+  top:100px;
   width: 300px;
 }
 
