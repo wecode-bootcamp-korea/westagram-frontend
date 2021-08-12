@@ -1,0 +1,312 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.body-container {
+  width: 950px;
+  position: relative;
+}
+
+.nav {
+  width: 100%;
+  height: 50px;
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  top: 10px;
+}
+
+.logo, .search-bar, .icon-container {
+  width: 240px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+
+/* 상단 우측 아이콘, 로고 */
+
+.logo {
+  justify-content: space-between;
+}
+
+.fa-instagram, .fa-instagram + span {
+  font-size: large;
+}
+
+.logo > h1 {
+  font-family: 'Lobster', cursive;
+  font-weight: lighter;
+  font-size: 2em;
+}
+
+/* 상단 가운데 검색창 */
+.search-bar {
+  padding: 0 auto;
+  font-size: 20px;
+  position: relative;
+}
+
+.search-bar > i {
+  position: absolute;
+  z-index: 1;
+  left: 30px;
+}
+
+.search-bar > input {
+  position: absolute;
+  padding: 0 30px;
+  border: 1px solid #DFDFDF;
+  background-color: #FAFAFA;
+  outline: none;
+  width: 90%;
+  height: 80%;
+  font-size: large;
+}
+
+
+/* 상단 우측 아이콘 */
+.icon-container {
+  justify-content: space-between;
+  padding: 0 40px;
+}
+
+.icon-container > img {
+  background: transparent;
+  width: 27px;
+}
+
+/* main 요소 */
+
+.main {
+  width: 950px;
+  background-color: #FAFAFA;
+  display: inline-flex;
+  justify-content: space-between;
+  padding-top: 90px;
+}
+
+.feeds {
+  width: 600px;
+  height: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.article {
+  width: 580px;
+  height: 800px;
+  border: 1px solid #EFEFEF;
+}
+
+/* 피드 상단*/
+
+.title {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px 0 20px;
+}
+
+.title-left {
+  width: 150px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+
+.feeds-profile {
+  width: 40px;
+  height: 40px;
+  border: none;
+}
+
+.feeds-profile img,
+.mine-profile img {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+}
+
+.title-right {
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 피드 이미지 */
+
+.feeds-image {
+  width: 550px;
+  height: 500px;
+  margin: 10px auto;
+}
+
+.feeds-image img {
+  width: 100%;
+  height: 100%;
+}
+
+/* 사진아래 아이콘 */
+.image-bottom {
+  width: 550px;
+  height: 30px;
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.feeds-icon {
+  width: 150px;
+  height: 100%;
+  margin-left: 20px;
+}
+
+.feeds-icon > img , .bookmark > img{
+  background: transparent;
+  width: 30px;
+}
+
+.bookmark {
+  width: 50px;
+  height: 100%;
+  position: relative;
+
+}
+
+.bookmark > img {
+  position: absolute;
+  transform: translateX(20px);
+}
+
+/* 댓글영역 */
+
+.comment-title {
+  width: 550px;
+  height: 30px;
+  margin: 0 auto;
+  display: inline-flex;
+  align-items: center;
+}
+
+.mine-profile {
+  display: inline-block;
+}
+
+.mine-profile > img {
+  width: 25px;
+  height: 25px;
+  border: none;
+  border-radius: 50%;
+  margin: 5px 10px 0 15px;
+}
+
+.comment-tit {
+  display: inline-block;
+}
+.user-id, .bold, .like-number {
+  font-weight: bold;
+}
+
+.art-comment {
+  width: 550px;
+  margin: 10px auto;
+}
+
+/* 댓글 텍스트상자 */
+.comment-plus {
+  width: 100%;
+  height: 30px;
+  margin: auto;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #EFEFEF;
+}
+
+.comment-plus input {
+  width: 500px;
+  height: 25px;
+  border: none;
+  outline: none;
+  margin-left: 20px;
+}
+
+.comment-btn {
+  border: none;
+  outline: none;
+  background-color: white;
+  color: #C8E3FC;
+  margin-right: 20px;
+}
+
+/* 오른쪽 친구목록 */
+.main-right {
+  width: 350px;
+  padding-top: 50px;
+}
+
+.feeds-profile,
+.right-article {
+  width: 100%;
+  height: 50px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.feeds-profile > div,
+.right-article > div {
+  margin: 10px;
+}
+
+.story, .suggest {
+  width: 100%;
+  height: 250px;
+  margin: 20px 0;
+}
+
+.story-title, .suggest-title {
+  width: 100%;
+  height: 50px;
+  background-color: teal;
+}
+
+/* .story-main, .suggest-main {
+  width: 100%;
+  height: 200px;
+  background-color: tomato;
+} */
+
+.right-article {
+  margin-top: 10px;
+  background-color: wheat;
+}
+
+.footer {
+  margin: 20px 0;
+}
+
+.color-light {
+  color: #999999;
+}
