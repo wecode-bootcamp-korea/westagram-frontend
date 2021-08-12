@@ -28,7 +28,8 @@ html, body {
   top: 10px;
 }
 
-.logo, .search-bar, .icon-container {
+.logo, .search-bar,
+.icon-container {
   width: 240px;
   height: 100%;
   display: flex;
@@ -43,7 +44,8 @@ html, body {
   justify-content: space-between;
 }
 
-.fa-instagram, .fa-instagram + span {
+.fa-instagram,
+.fa-instagram + span {
   font-size: large;
 }
 
@@ -183,7 +185,8 @@ html, body {
   margin-left: 20px;
 }
 
-.feeds-icon > img , .bookmark > img{
+.feeds-icon > img,
+.bookmark > img{
   background: transparent;
   width: 30px;
 }
@@ -214,6 +217,7 @@ html, body {
   display: inline-block;
 }
 
+/* feed 이미지 하단 */
 .mine-profile > img {
   width: 25px;
   height: 25px;
@@ -267,8 +271,7 @@ html, body {
   padding-top: 50px;
 }
 
-.feeds-profile,
-.right-article {
+.feeds-profile {
   width: 100%;
   height: 50px;
   display: inline-flex;
@@ -281,26 +284,42 @@ html, body {
 }
 
 .story, .suggest {
-  width: 100%;
-  height: 250px;
   margin: 20px 0;
+  padding: 10px;
+  border: 1px solid #EFEFEF;
+  background-color: white;
 }
 
-.story-title, .suggest-title {
-  width: 100%;
-  height: 50px;
-  background-color: teal;
+.story-title,
+.suggest-title {
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  padding: 0 10px;
 }
 
-/* .story-main, .suggest-main {
-  width: 100%;
-  height: 200px;
-  background-color: tomato;
-} */
+.story-title > span,
+.suggest-title > span {
+  font-size: large;
+} 
+
+.suggest-nth {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 20px;
+}
+
+.suggest-nth > p {
+  color: #3A98F0;
+  font-weight: bold;
+}
 
 .right-article {
   margin-top: 10px;
-  background-color: wheat;
+  height: 50px;
+  display: inline-flex;
+  align-items: center;
 }
 
 .footer {
