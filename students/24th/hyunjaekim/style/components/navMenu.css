@@ -1,0 +1,97 @@
+/* menu icon */
+.menuIcon {
+  width: 16px;
+  height: 16px;
+  background-size: cover;
+}
+
+.menuProfile {
+  background-image: url("/students/24th/hyunjaekim/assets/icons/user.svg");
+}
+
+.menuSetting {
+  background-image: url("/students/24th/hyunjaekim/assets/icons/settings.svg");
+}
+
+.menuSwitch {
+  background-image: url("/students/24th/hyunjaekim/assets/icons/swap.svg");
+}
+
+.menuLogOut {
+  background-image: url();
+}
+
+/* menu fonts */
+.menuText {
+  font-size: 14px;
+  color: rgb(38, 38, 38);
+  line-height: 18px;
+  text-transform: capitalize;
+}
+
+.navMenu {
+  position: absolute;
+  top: 50px;
+  right: -15px;
+  transition: all 1000ms ease-out;
+}
+
+.menuList {
+  width: 230px;
+  background-color: #fff;
+  border-radius: 6px;
+  z-index: 1;
+}
+
+.menuSquare {
+  position: absolute;
+  top: -5px;
+  right: 22px;
+  width: 12px;
+  height: 12px;
+  transform: rotate(45deg);
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.098) 0px 0px 5px 1px;
+  z-index: -1;
+}
+
+.menuShadow {
+  position: absolute;
+  top: 0;
+  width: 230px;
+  height: 171px;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.098) 0px 0px 5px 1px;
+  z-index: -1;
+}
+
+.menuName {
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.menuName:last-child {
+  border-top: 1px solid rgb(219, 219, 219);
+}
+
+.menuDetail {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.menuIcon {
+  margin-right: 12px;
+}
+
+/* nav menu hover */
+.menuName:hover {
+  background-color: #fafafa;
+}
+
+.menuName:first-child:hover {
+  border-radius: 6px 6px 0 0;
+}
+
+.menuName:last-child:hover {
+  border-radius: 0 0 6px 6px;
+}
