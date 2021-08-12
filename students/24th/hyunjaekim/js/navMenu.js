@@ -18,10 +18,13 @@ function hideMenu() {
 }
 
 
-window.addEventListener("click", (e) => {
-    e.target.className === "profileBtn"
-        ? toggleMenu()
-        :  hideMenu();
+profileBtn.addEventListener("click", (e)  => {
+    toggleMenu();
+    e.stopPropagation();
 });
 
-
+window.addEventListener("click", (e) => {
+    if(!navMenu.contains(e.target)) {
+        hideMenu();
+    }
+});
