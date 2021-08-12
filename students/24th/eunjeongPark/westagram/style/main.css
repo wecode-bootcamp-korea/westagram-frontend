@@ -20,12 +20,14 @@ html, body {
 
 .nav {
   width: 100%;
-  height: 50px;
+  height: 80px;
   background-color: white;
   display: flex;
   justify-content: space-around;
   position: absolute;
-  top: 10px;
+  padding: 20px;
+  border: 1px solid #EFEFEF;
+
 }
 
 .logo, .search-bar,
@@ -75,8 +77,7 @@ html, body {
   background-color: #FAFAFA;
   outline: none;
   width: 90%;
-  height: 80%;
-  font-size: large;
+  height: 70%;
 }
 
 
@@ -98,7 +99,7 @@ html, body {
   background-color: #FAFAFA;
   display: inline-flex;
   justify-content: space-between;
-  padding-top: 90px;
+  padding-top: 60px;
 }
 
 .feeds {
@@ -112,6 +113,7 @@ html, body {
 .article {
   width: 580px;
   height: 800px;
+  background-color: white;
   border: 1px solid #EFEFEF;
 }
 
@@ -241,28 +243,31 @@ html, body {
 /* 댓글 텍스트상자 */
 .comment-plus {
   width: 100%;
-  height: 30px;
+  height: 35px;
   margin: auto;
   align-items: center;
   display: flex;
   justify-content: space-between;
-  border-top: 1px solid #EFEFEF;
+  background-color: white;
+  border: 1px solid # DFDFDF;
+
 }
 
 .comment-plus input {
   width: 500px;
-  height: 25px;
+  height: 100%;
   border: none;
   outline: none;
   margin-left: 20px;
 }
 
 .comment-btn {
+  height: 100%;
   border: none;
   outline: none;
-  background-color: white;
   color: #C8E3FC;
   margin-right: 20px;
+  background-color: white;
 }
 
 /* 오른쪽 친구목록 */
