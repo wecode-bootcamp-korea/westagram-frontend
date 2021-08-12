@@ -177,7 +177,7 @@ function addProfile(result){
 };
 
 // 기존 검색어 목록 확인 후에 리셋 해주는 함수
-function resetInput() {
+function resetList() {
   if(searchLists.lastChild){ // 기존 요소 리셋하기
     while (searchLists.lastChild) {
     searchLists.removeChild(searchLists.lastChild);
@@ -190,7 +190,7 @@ function resetInput() {
 searchInput.addEventListener('keyup',()=> {
   let inputValue = searchInput.value;
   let result = [];
-  resetInput()
+  resetList()
   if(inputValue !== ""){
       userData.forEach((element) => {
         let same = element.id.indexOf(inputValue);
@@ -209,7 +209,7 @@ searchInput.addEventListener('keyup',()=> {
 searchInput.addEventListener("focus", ()=>{
   let inputValue = searchInput.value;
   if(inputValue === ""){
-    resetInput();
+    resetList();
     addProfile(previewData)
   }
   searchWrapper.style.display = "block";
