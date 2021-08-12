@@ -6,11 +6,6 @@
   --content-background-color: #FFFFFF;
 }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-}
-
 /* 레이아웃 */
 html,
 body {
@@ -166,37 +161,54 @@ nav input {
   margin-bottom: 5px;
 }
 
-.comments-block {
+.comments-container {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.comment {
+  display: flex;
   align-items: center;
 }
 
-.comments-block .like-icon {
-  width: 15px;
-  height: 15px;
+.comment .user-id {
+  margin-right: 3px;
+}
+
+.comment .like-icon {
+  position:absolute;
+  right: 0;
+  width: 13px;
+  height: 13px;
   color: var(--secondary-color);
 }
 
-.comments .upload-time {
+.upload-time {
   color: var(--secondary-color);
 }
 
 .new-comment input {
   width: 370px;
-  margin-right: 7px;
+  margin-right: 18px;
   border: none;
   outline: none;
 }
 
-.new-comment .upload-btn {
+.menu-btn,
+.upload-btn {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.upload-btn {
   color: var(--accent-color);
   opacity: 0.5;
 }
 
-.new-comment .upload-btn:hover {
+.upload-btn:hover {
   opacity: 1;
-  cursor: pointer;
 }
 
 /* aside */
@@ -258,10 +270,6 @@ nav input {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-}
-
-.view-all {
-  text-decoration: none;
 }
 
 .follow-btn {
