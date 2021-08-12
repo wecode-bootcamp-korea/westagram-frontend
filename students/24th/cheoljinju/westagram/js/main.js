@@ -7,6 +7,9 @@ const clientSize = window.innerWidth;
 const feeds = document.querySelector(".main__feeds");
 const feed = document.querySelector(".main__feed");
 const profileMenu = document.querySelector(".menu-wrapper");
+const searchWrapper = document.querySelector(".search-wrapper")
+const searchLists = document.querySelector(".search-list");
+const searchInput = document.querySelector(".nav__search");
 let isActive = false;
 
 // 코멘트 생성하는 함수
@@ -107,6 +110,110 @@ window.addEventListener("click", (event) => {
   }
 })
 
+// 검색 자동완성 기능 
 
+// 임의의 데이터베이스
+const userData = [
+  {id: "jini03",
+  nickname: "주철진",
+  picture: "img/food.jpeg"},
+  {id: "wecode_bootcamp",
+  nickname: ">wecode | 위코드",
+  picture: "img/wecode.jpeg"},
+  {id: "jquery",
+  nickname: "java script",
+  picture: "img/wecode.jpeg"},
+  {id: "wecode_24th",
+  nickname: "위코드 24기",
+  picture: "img/food.jpeg"},
+  {id: "ojk123",
+  nickname: "종택님",
+  picture: "img/wecode.jpeg"},
+  {id: "k-star",
+  nickname: "korean",
+  picture: "img/food.jpeg"},
+  {id: "wecoder_23th",
+  nickname: "위코더 23기",
+  picture: "img/food.jpeg"},
+  {id: "wework",
+  nickname: "위워크",
+  picture: "img/wecode.jpeg"},
+  {id: "comunity",
+  nickname: "커뮤니티",
+  picture: "img/wecode.jpeg"},
+  {id: "yang1414",
+  nickname: "jang",
+  picture: "img/wecode.jpeg"},
+  {id: "jinjin",
+  nickname: "진진",
+  picture: "img/wecode.jpeg"},
+  ];
 
+// 예전 검색어 프리뷰 데이터
+const previewData = [{id: "jini03",
+nickname: "주철진",
+picture: "img/food.jpeg"},
+{id: "wecode_bootcamp",
+nickname: ">wecode | 위코드",
+picture: "img/wecode.jpeg"}];
 
+// 데이터 받아와서 검색 목록 만들어주는 함수
+function addProfile(result){
+  result.forEach(userInfo => {
+    let searchList = document.createElement('li');
+    searchList.className = "search-item";
+    searchList.innerHTML = `
+      <a href="#" class="border">
+        <img src="${userInfo.picture}" />
+      </a>
+      <div>
+        <span>
+          <a href="#">${userInfo.id}</a>
+        </span>
+        <span>${userInfo.nickname}</span>
+        </div>`;
+    searchLists.appendChild(searchList);
+  });
+};
+
+// 기존 검색어 목록 확인 후에 리셋 해주는 함수
+function resetInput() {
+  if(searchLists.lastChild){ // 기존 요소 리셋하기
+    while (searchLists.lastChild) {
+    searchLists.removeChild(searchLists.lastChild);
+  }
+};
+}
+
+// 검색창 입력 관련 기능 구현
+searchInput.addEventListener('keyup',()=> {
+  let inputValue = searchInput.value;
+  let result = [];
+  resetInput()
+  if(inputValue !== ""){
+      for(let i = 0; i < userData.length; i ++) {
+          let same = userData[i].id.indexOf(inputValue);
+          if(same === 0) {
+              result.push(userData[i]);
+          }
+      }
+      addProfile(result);
+  }
+  if(inputValue === ""){
+    addProfile(previewData);
+  }
+});
+
+// 검색어창 포커스 관련 기능 구현
+searchInput.addEventListener("focus", ()=>{
+  let inputValue = searchInput.value;
+  if(inputValue === ""){
+    resetInput();
+    addProfile(previewData)
+  }
+  searchWrapper.style.display = "block";
+})
+
+searchInput.addEventListener("focusout", () => {
+  searchWrapper.style.display = "none";
+})

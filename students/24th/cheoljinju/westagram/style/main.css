@@ -98,12 +98,6 @@
   font-family: "Lobster", cursive;
 }
 
-.nav__search::before {
-  content: "\f002";
-  font-family: "Font Awesome 5 Free";
-  font-weight: 900;
-}
-
 .nav__search {
   width: 215px;
   height: 28px;
@@ -112,6 +106,74 @@
   border-radius: 4px;
   text-align: center;
 }
+
+.search__form {
+  position:relative;
+}
+
+.search-wrapper{
+  display:none;
+  position:absolute;
+  right:0;
+  left:0;
+}
+
+.shadow-box.search{
+  top:40px;
+  right:10px;
+  width:370px;
+  height:360px;
+  transform:translateX(25%);
+}
+
+.search-list{
+  position:absolute;
+  top:40px;
+  right:10px;
+  width:370px;
+  height:360px;
+  border-radius:6px;
+  background-color: #fff;
+  transform:translateX(25%);
+  overflow:auto;
+  z-index:4;
+}
+
+.rotate.search{
+  top:30px;
+  right:95px;
+}
+
+.search-item{
+  display:flex;
+  align-items:center;
+  padding:20px;
+  transition:background-color 100ms ease-in;
+}
+
+.search-item:hover{
+  background-color:#dbdbdb3d;
+}
+
+.search-list img{
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+.search-item span{
+  display:block;
+}
+
+.search-item span:first-child{
+  font-weight:bold;
+}
+
+.search-item span:last-child{
+  color:#8e8e8e;
+}
+
 
 .nav__menu {
   margin: auto 0;
