@@ -3,12 +3,22 @@ const commentInput = document.querySelector(".comment-post");
 const commentForm = document.querySelector(".comment-form");
 const commentList = document.querySelector(".comments");
 
-searchInput.addEventListener("input", () => {
+searchInput.addEventListener("focus", () => {
   const search = document.querySelector(".search");
   const searchIcon = document.querySelector(".fas.fa-search");
-  searchInput.value
-    ? ((searchIcon.style.display = "none"), (search.style.display = "none"))
-    : ((searchIcon.style.display = "block"), (search.style.display = "block"));
+  const searchDelete = document.querySelector(".fas.fa-times-circle");
+  search.classList.add("focus");
+  searchIcon.classList.add("focus");
+  searchDelete.classList.add("focus");
+});
+
+searchInput.addEventListener("blur", () => {
+  const search = document.querySelector(".search");
+  const searchIcon = document.querySelector(".fas.fa-search");
+  const searchDelete = document.querySelector(".fas.fa-times-circle");
+  search.classList.remove("focus");
+  searchIcon.classList.remove("focus");
+  searchDelete.classList.remove("focus");
 });
 
 commentInput.addEventListener("input", () => {

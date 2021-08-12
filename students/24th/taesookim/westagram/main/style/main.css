@@ -45,18 +45,18 @@
   border: 1px solid #dbdbdb;
   border-radius: 3px;
   background-color: #fafafa;
-  text-indent: 5px;
+  text-indent: 25px;
 }
 
 .search-container .search-bar:focus {
   outline: none;
 }
 
-.search-container .search-bar .search-content {
+.search-container .search-content .search-bar .search-content {
   position: relative;
 }
 
-.search-container span {
+.search-container .search-content .search {
   position: absolute;
   top: 8px;
   left: 98px;
@@ -66,12 +66,39 @@
   pointer-events: none;
 }
 
-.search-container i {
+.search-container .search-content .search.focus {
+  display: none;
+}
+
+.search-container .search-content .fas.fa-search {
   position: absolute;
   top: 9px;
   left: 85px;
   color: #a4a7aa;
   font-size: 10px;
+  pointer-events: none;
+}
+
+.search-container .search-content .fas.fa-search.focus {
+  position: absolute;
+  top: 9px;
+  left: 12px;
+  color: #a4a7aa;
+  font-size: 10px;
+  pointer-events: none;
+}
+
+.search-container .search-content .fas.fa-times-circle {
+  display: none;
+}
+
+.search-container .search-content .fas.fa-times-circle.focus {
+  display: block;
+  position: absolute;
+  top: 7px;
+  right: 10px;
+  color: #a4a7aa;
+  font-size: 14px;
   pointer-events: none;
 }
 

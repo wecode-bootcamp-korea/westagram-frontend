@@ -5,7 +5,7 @@ loginForm.addEventListener("keyup", () => {
   const passwordVal = document.querySelector(".password").value;
   if (usernameVal.indexOf("@") >= 0 && passwordVal.length >= 5) {
     loginBtn.style.backgroundColor = "#0095F6";
-  } else if (!usernameVal || !passwordVal) {
+  } else if (!usernameVal || passwordVal.length < 5) {
     loginBtn.style.backgroundColor = "#b2dffc";
   }
 });
