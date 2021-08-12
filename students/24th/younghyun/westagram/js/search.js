@@ -1,98 +1,59 @@
-const commentBtn = document.querySelector('.comment-button');
-const commentForm =document.querySelector('.comment'); 
-const commentValue = document.querySelector('.typing-comment');
-const comments = document.querySelector('.typing-comment');
-let heartBtn = document.querySelector('.feeds-comment');
 const searchEngine = document.querySelector('.search-engine');
 const isParent = document.querySelector('.parent');
-console.log(isParent);
-commentForm.addEventListener("keyup",()=>{
-    let comments = document.querySelector('.typing-comment').value;
-    if(comments.length !== 0){
-        commentBtn.classList.add('active')
-    }else{
-        commentBtn.classList.remove('active');
-    }
+const searchMenu = document.querySelector('.search-all');
+const searchBar = document.querySelector('.search-bar');
+
+// const searchBtn = document.querySelector('.search-bar');
+
+// 검색창 클릭 이벤트 등록
+
+function toggleMenu(){
+    searchMenu.classList.remove('disappear');
+}
+
+function hideMenu(){
+    searchMenu.classList.add('disappear');
+}
+
+searchBar.addEventListener('click',() => {
+    toggleMenu();
+});
+
+searchBar.addEventListener("click", (e)  => {
+    toggleMenu();
+    e.stopPropagation();
 });
 
 
-
-commentValue.addEventListener("keypress",(e) => {
-    if(e.keyCode === 13){
-        if(comments.value.length !== 0){
-        uploadComment();
-        }
+window.addEventListener("click", (e) => {
+    if(!searchMenu.contains(e.target)) {
+        hideMenu();
     }
-});
+}); 
 
-commentBtn.addEventListener("click",()=>{
-    if(comments.value.length !== 0){
-        uploadComment();
-    }
-});
-
-function uploadComment(){
-    let feedComments = document.querySelector('.feeds-comment');
-    let allComment = document.createElement('div');
-    let commentDiv = document.createElement('div');
-    let makeUserSpan = document.createElement('span');
-    let makeCommentSpan = document.createElement('span');
-    let makeTrash = document.createElement('button');
-    let makeHeart = document.createElement('button');
-
-    
-    feedComments.appendChild(allComment);
-    allComment.appendChild(commentDiv);
-    commentDiv.appendChild(makeUserSpan);
-    commentDiv.appendChild(makeCommentSpan);
-    allComment.appendChild(makeTrash);
-    allComment.appendChild(makeHeart);
-
-    commentDiv.className ="commentDiv";
-    makeUserSpan.className ="comment-id";
-    makeCommentSpan.className ="comment-writing";
-    makeUserSpan.innerText = "0hyun0hyun";
-    makeCommentSpan.innerText = comments.value;
-    makeTrash.innerHTML = '<i class="far fa-times-circle"></i>';
-    makeHeart.innerHTML = '<i class="far fa-heart"></i>';
-    // console.log(commentDiv);
-    comments.value = "";
-    // console.log(heartSvg);
-
-   
-
-    makeHeart.addEventListener("click", (event)=> {
-        if(event.target.className == "far fa-heart"){
-            event.target.className = "fas fa-heart";
-        } else if(event.target.className == "fas fa-heart"){
-            event.target.className = "far fa-heart";            
-        }
-
-    });
-
-    makeTrash.addEventListener("click", (event) => {
-        console.log(event.target.parentNode.parentNode);
-        event.target.parentNode.parentNode.remove();
-    });
-};
+// window.addEventListener('click',(e) => {
+//     if(!searchMenu.contains(e.currentTarget)){
+//         hideMenu();
+//     }
+// });
 
 // 계정 데이터 배열
 const userArray = [
     {id: "young93",
-    nickname: "김영현",
-    picture: "img/jenny.jpeg"},
+    nickname: "김영현💪",
+    picture: "img/111.jpeg"},
     {id: "wecode_bootcamp",
     nickname: ">wecode | 위코드",
-    picture: "img/jenny.jpeg"},
+    picture: "img/124.png"},
     {id: "younghyun",
     nickname: "young hyun kim",
-    picture: "img/jenny.jpeg"},
+    picture: "img/mach.jpeg"},
     {id: "younghyunkim",
     nickname: "영현kim입니다",
-    picture: "img/jenny.jpeg"},
+    picture: "img/paris.jpeg"},
     {id: "yongju0506",
     nickname: "용주용주",
-    picture: "img/jenny.jpeg"},
+    picture: "img/jung.jpeg"},
     {id: "yumi_sepo",
     nickname: " ",
     picture: "img/jenny.jpeg"},
@@ -101,20 +62,25 @@ const userArray = [
     picture: "img/jenny.jpeg"},
     {id: "withme",
     nickname: "나와함께",
-    picture: "https://#"},
+    picture: "img/local.jpeg"},
     {id: "wy___ynd",
     nickname: "전용준",
-    picture: "https://#"},
+    picture: "img/go.jpeg"},
     {id: "yanggeng88",
     nickname: "junyong",
-    picture: "https://#"},
+    picture: "img/woziin.jpeg"},
+    {id: "ying_ying0809",
+    nickname: "닝닝",
+    picture: "img/111.jpeg"},
+    {id: "yadlsfo_eng",
+    nickname: "일대백일대박",
+    picture: "img/eyesmag.jpeg"},
     {id: "wnn_99",
     nickname: "우승💪",
-    picture: "https://#"},
+    picture: "img/124.png"},
     ];
 
 
-const searchBar = document.querySelector('.search-bar');
 
 searchBar.addEventListener('keyup',()=> {
     let searchValue = searchBar.value;
@@ -128,6 +94,7 @@ searchBar.addEventListener('keyup',()=> {
      }
     };
     
+    // searchValue값이 빈 문자열이 아닐때 실행
     if(searchValue !== ""){
         for(let i = 0; i < userArray.length; i ++) {
             let same = userArray[i].id.indexOf(searchValue);
@@ -155,6 +122,5 @@ function addProfile(result){
                         isParent.appendChild(searchContents);
 
     });
-
 };
 
