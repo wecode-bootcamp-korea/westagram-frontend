@@ -1,12 +1,11 @@
-
-// const typingComment = document.querySelector('.typing-comment');
 const commentBtn = document.querySelector('.comment-button');
 const commentForm =document.querySelector('.comment'); 
 const commentValue = document.querySelector('.typing-comment');
 const comments = document.querySelector('.typing-comment');
 let heartBtn = document.querySelector('.feeds-comment');
 const searchEngine = document.querySelector('.search-engine');
-
+const isParent = document.querySelector('.parent');
+console.log(isParent);
 commentForm.addEventListener("keyup",()=>{
     let comments = document.querySelector('.typing-comment').value;
     if(comments.length !== 0){
@@ -114,55 +113,30 @@ const userArray = [
     picture: "https://#"},
     ];
 
-// input에 글자가 입력되면 박스가 켜짐
-// 철자가 하나가 나오면 for문으로 id인덱스 값에 맞는 filter
-
-window.addEventListener('load', addProfile);
 
 const searchBar = document.querySelector('.search-bar');
-//console.log(searchBar);
-
-
-// function resultMaker() {
-//     let searchValue = searchBar.value
-//     // const showResult = userArray.map(x => {
-//     //     for(let i = 0; i < searchValue.length; i ++) {
-//     //         if(x.id[i] === searchValue[i]) {
-//     //             return x;
-//     //         };
-//     //     };
-//     // });
-//     // console.log(showResult); 
-// }
 
 searchBar.addEventListener('keyup',()=> {
     let searchValue = searchBar.value;
     let result = [];
-    for(let i = 0; i < userArray.length; i ++) {
-        let same = userArray[i].id.indexOf(searchValue);
-        if(same === 0) {
-            result.push(userArray[i].id);
+    let searchContents = document.createElement('div');
+    searchContents.className = "search-contents";
+    // 리셋하기
+    if(isParent.lastChild){
+        while (isParent.lastChild) {
+        isParent.removeChild(isParent.lastChild);
+     }
+    };
+    
+    if(searchValue !== ""){
+        for(let i = 0; i < userArray.length; i ++) {
+            let same = userArray[i].id.indexOf(searchValue);
+            if(same === 0) {
+                result.push(userArray[i]);
+            }
         }
+        addProfile(result);
     }
-    console.log(result);
-    //resultMaker();
-    // console.log(userArray[0].id.slice(0,1));
-
-    // for(let i=0; i<userArray.length; i++){
-    //     console.log(userArray.length);
-    //     if (userArray[i].id.slice(0,searchValue.length).includes(searchValue)){
-    //         result.push(userArray[i]);
-    //         addProfile(result);
-
-    //         console.log(result);
-    //     } };
-    // userArray.filter(element=> {
-    //     if (element.id.includes(searchValue)){
-    //         return element;
-    //         console.log(element);
-    //     }
-    // } );
-    //console.log(result);
 })
 
 function addProfile(result){
@@ -178,11 +152,9 @@ function addProfile(result){
                             <p class="user-id">${userInfo.id}</p>
                             <p class="user-name">${userInfo.nickname}</p>
                         </div>`;
-        
-        searchEngine.appendChild(searchContents); 
+                        isParent.appendChild(searchContents);
+
     });
 
 };
-
-// console.log(userArray[0].id);
 
