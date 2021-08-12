@@ -44,7 +44,7 @@ commentList.addEventListener("click", (e) => {
   const comment = document.querySelector(".comments li");
   e.target.className === "far fa-trash-alt" && comment.remove();
 
-  if (e.target.className === "far fa-heart") {
-    e.target.className = "fa fa-heart";
-  }
+  e.target.className === "far fa-heart"
+    ? (e.target.className = "fa fa-heart")
+    : (e.target.className = "far fa-heart");
 });
