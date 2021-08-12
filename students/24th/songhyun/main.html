@@ -16,23 +16,22 @@
   <div class="wrapper">
     <!-- nav -->
     <nav>
-      <!-- nav logo -->
+      <!-- westagram title -->
       <a href="#" id="logo">
         <i class="westgram icon"></i>
         <h1>westagram</h1>
       </a>
-      <!-- //nav logo -->
-      <!-- nav > search-form -->
+      <!-- // westagram title -->
+      <!-- search-form -->
       <form class="search-form">
         <div>
           <i class="search-icon icon"></i>
           <label for="searchInput" class="a11y-hidden">검색</label>
-          <input type="text" class="search-input" id="searchInput" placeholder="검색">
+          <input type="text" class="search-form__input" id="searchInput" placeholder="검색">
         </div>
       </form>
-      <!--//nav > search-form -->
-      <ul class="icon-menus">
-        <!-- nav > icon menus -->
+      <!-- right icons -->
+      <ul class="right-icons">
         <li>
           <a href="#">
             <span class="ir_pm">explore</span>
@@ -51,18 +50,18 @@
             <i class="profile-icon icon"></i>
           </a>
         </li>
-        <!-- nav > icon menus -->
+        <!--// right icons -->
       </ul>
     </nav>
-    <!--//nav  -->
+    <!-- // nav -->
     <main>
       <!-- feeds -->
       <div class="feeds">
         <article class="user-feeds">
-          <ul class="user-profile">
+          <ul class="user-feeds__profile">
             <li>
-              <a class="profile-img" href="#">
-                <span class="user-name">wecode_bootcamp</span>
+              <a href="#" class="user-feeds__profile--me">
+                <span class="user-feeds__profile--name">wecode_bootcamp</span>
               </a>
             </li>
             <li>
@@ -72,15 +71,15 @@
               </a>
             </li>
           </ul>
-          <!-- feeds img-->
-          <div class="feeds-img">
+          <!-- feeds contentImg-->
+          <div class="feeds-contentImg">
             <figure>
               <img src="./img/feed.jpg" alt="피드사진">
             </figure>
           </div>
-          <!-- //feeds img -->
-          <!-- feed icons -->
-          <ul class="feed-icons">
+          <!-- //feeds contentImg -->
+          <!-- feeds icons -->
+          <ul class="feeds-icons">
             <li>
               <i class="heart-icon icon"></i>
               <span class="ir_pm">좋아요</span>
@@ -98,102 +97,137 @@
               <span class="ir_pm">북마크</span>
             </li>
           </ul>
-          <!-- //feed icons -->
-          <div class="people-total--like">
-            <i class="people-icon icon"></i>
-            <p>
-              <b>vi2920va</b>님<b>외10명</b>이 좋아합니다
-            </p>
-          </div>
-
+          <!-- // feeds icons -->
+          <ul class="feeds-comment">
+            <li>
+              <i class="friend-icon icon"></i>
+              <p>
+                <b>vi2920va</b>님<b>외10명</b>이 좋아합니다
+              </p>
+            </li>
+            <li>
+              <p>
+                <strong>wecode_bootcamp</strong>
+                <em>위코드에서 위스타그램</em>
+                <span>더 보기</span>
+              </p>
+            </li>
+          </ul>
+          <form class="add-comment">
+            <div>
+              <label for="addInput" class="a11y-hidden">댓글 추가</label>
+              <input type="text" id="addInput" placeholder="댓글달기...">
+            </div>
+          </form>
         </article>
       </div>
       <!-- // feeds -->
       <!-- main-right -->
       <div class="main-right">
-        <!-- side my profile -->
-        <div class="right-profile">
+        <!-- me profile -->
+        <ul>
+          <li>
+            <i class="profile-img icon"></i>
+            <strong>wecode_bootcamp</strong>
+            <em>wecode | 위코드</em>
+          </li>
+        </ul>
+        <!-- // me profile -->
 
-        </div>
-        <!-- //side my profile -->
-        <!-- story -->
-        <div class="story">
-          <h2>스토리</h2>
-
-          <ul>
-            <li>
+        <!-- friends story -->
+        <ul class="story">
+          <li>
+            <strong>스토리</strong>
+            <a href="#">
+              <em>모두 보기</em>
+            </a>
+          </li>
+          <li>
+            <a href="#">
               <figure>
-
-                <img src="" alt="">
+                <img src="./img/people.jpg" alt="user vi2920va">
                 <figcaption>
                   <strong>_yum_s</strong>
                   <span>16분전</span>
                 </figcaption>
               </figure>
-            </li>
-            <li>
+            </a>
+          </li>
+          <li>
+            <a>
               <figure>
+                <img src="./img/people.jpg" alt="user vi2920va">
+                <figcaption>
+                  <strong>_yum_s</strong>
+                  <span>16분전</span>
+                </figcaption>
+              </figure>
+            </a>
+          </li>
+          <li>
+            <a>
+              <figure>
+                <img src="./img/people.jpg" alt="user vi2920va">
+                <figcaption>
+                  <strong>_yum_s</strong>
+                  <span>16분전</span>
+                </figcaption>
+              </figure>
+            </a>
+          </li>
+        </ul>
+        <!--//friends story -->
 
-                <img src="" alt="">
-                <figcaption>
-                  <strong>drink_eat_drink</strong>
-                  <span>3시간 전</span>
-                </figcaption>
-              </figure>
-            </li>
-            <li>
+        <!-- friend for you -->
+        <ul>
+          <li>
+            <strong>회원님을 위한 추천</strong>
+            <a href="#">
+              <em>모두 보기</em>
+            </a>
+          </li>
+          <li>
+            <a href="#">
               <figure>
-
-                <img src="" alt="">
+                <img src="./img/musinsa.jpg" alt="musinsa standard">
                 <figcaption>
-                  <strong>hynkyc</strong>
-                  <span>20시간전</span>
+                  <strong>musina_standard</strong>
+                  <em>_ieqnd_a님 외2명이</em>
+                  <span>팔로우</span>
                 </figcaption>
               </figure>
-            </li>
-          </ul>
-        </div>
-        <!-- //story -->
-        <!-- good(추천) -->
-        <div class="">
-          <h2>회원님을 위한 추천</h2>
-          <ul>
-            <li>
+            </a>
+          </li>
+          <li>
+            <a href="#">
               <figure>
-                <img src="" alt="">
+                <img src="./img/yoona.jpg" alt="yoona">
                 <figcaption>
-                  <strong>ioaaaahye</strong>
-                  <span>_ieqnd_a님 외2명이</span>
-                  <em>팔로우</em>
+                  <strong>yoona_09</strong>
+                  <em>_ieqnd_a님 외2명이</em>
+                  <span>팔로우</span>
                 </figcaption>
               </figure>
-            </li>
-            <li>
+            </a>
+          </li>
+          <li>
+            <a href="#">
               <figure>
-                <img src="" alt="">
+                <img src="./img/starbuckskorea.jpg" alt="starbucks korea">
                 <figcaption>
-                  <strong>rampart81</strong>
-                  <span>rinquo.in.seoul님 외12</span>
-                  <em>팔로우</em>
+                  <strong>starbucks_korea</strong>
+                  <em>_ieqnd_a님 외2명이</em>
+                  <span>팔로우</span>
                 </figcaption>
               </figure>
-            </li>
-            <li>
-              <figure>
-                <img src="" alt="">
-                <figcaption>
-                  <strong>shawnjjoo</strong>
-                  <span>jimmmlee1220외</span>
-                  <em>팔로우</em>
-                </figcaption>
-              </figure>
-            </li>
-          </ul>
-        </div>
+            </a>
+          </li>
+        </ul>
+        <!--//friend for you-->
       </div>
       <!-- //main-right -->
     </main>
-
+    <!-- // wrapper -->
   </div>
 </body>
 
