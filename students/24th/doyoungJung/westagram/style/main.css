@@ -1,163 +1,364 @@
 @import "common.css";
 
 body {
-    width: 100%;
-    height: 150vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  height: 150vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
 }
-
 /* 상단 navbar  */
 
 nav {
-    height: 5%;
-    width: 90%;
-    border-bottom: 2px solid #DBDBDB;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+  height: 60px;
+  width: 100%;
+  border-bottom: 2px solid #dbdbdb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  background-color: white;
+  z-index: 10;
 }
 
 .mainLogo {
-    width: 18%;
-    display: flex;
-    display: flex;
-    font-size: 25px;
-    display: flex;
-    justify-content: space-between;
+  width: 180px;
+  display: flex;
+  display: flex;
+  font-size: 25px;
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+  right: 120px;
 }
 
 .logo {
-    padding-right: 15px;
-    border-right: 2px solid black;
+  padding-right: 15px;
+  border-right: 2px solid black;
 }
 
 .logoText {
-    font-family: 'Lobster', cursive;
+  padding-left: 15px;
+  font-family: "Lobster", cursive;
 }
 
 .searchBar {
-    width: 25%;
-    height: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid #DBDBDB;
-    background-color: #FAFAFA;
-    color: #DBDBDB;
-    font-size: 13px;
+  width: 250px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #dbdbdb;
+  background-color: #fafafa;
+  color: #dbdbdb;
+  font-size: 13px;
 }
 
 .mainMenu {
-    width: 15%;
-    display: flex;
-    justify-content: space-between;
-    position: relative;
-    left: 50px;
-}
-.mainMenu img{
-    width: 23px;
-    height: 23px;
+  width: 130px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  left: 120px;
 }
 
-.heart{    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.mainMenu img {
+  width: 23px;
+  height: 23px;
 }
 
-.heart div{
-    margin-top: 38px;
+.heart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.heart div {
+  margin-top: 38px;
 }
 
 .redDot {
-    width: 5px;
-    height: 5px;
-    background-color: red;
-    border-radius: 50%;
-    position: absolute;
+  width: 5px;
+  height: 5px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
 }
 
 /* 메인화면 */
 
 main {
-    width: 90%;
-    height: 95%;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.feeds {
-    width: 50%;
-    height: 63%;
-    position: relative;
-    left: 30px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 800px;
+  margin-top: 90px;
+  display: flex;
+  justify-content: space-around;
 }
 
 .firstFeed {
-    border: 2px solid #DBDBDB;
-    width: 100%;
-    height: 90%;
-    display: flex;
-    flex-direction: column;   
+  border: 2px solid #dbdbdb;
+  width: 450px;
+  display: flex;
+  flex-direction: column;
 }
 
-.firstFeed div{
-    width: 100%;
+.firstFeed div {
+  width: 100%;
 }
 
 .feedUploader {
-    height: 10%;
-    display: flex;
-    align-items: center;
+  height: 60px;
+  display: flex;
+  align-items: center;
 }
 
-.feedUploader img{
-    height: 60%;
-    border-radius: 50%;
-    margin-left: 3%
+.feedUploader img {
+  height: 35px;
+  border-radius: 50%;
+  margin-left: 12px;
 }
 
 .uploaderId {
-    margin-left: 3%;
-    font-weight: 600;
+  margin-left: 15px;
+  font-weight: 600;
 }
 
 .fa-ellipsis-h {
-    margin-right: 3%;
+  margin-right: 12px;
 }
 
 .feedPic {
-    display: flex;
-    justify-content: center;
-    align-items: center;    
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.feedPic img{
-    width: 100%;
-    height: 100%;
+.feedPic img {
+  width: 100%;
+  height: 100%;
 }
 
 .feedFunction {
-    height: 15%;
-    display: flex;
-    align-items: center;
-    font-size: 25px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  color: #6a6a6a;
 }
 
-.main-right{
-    border: 2px solid red;
-    width: 35%;
-    height: 40%;
-    position: relative;
-    right: -5px;
-    top: 4.8%;
+.leftFeedFunction i:first-child {
+  color: red;
+  margin-left: 7px;
 }
 
+.leftFeedFunction i {
+  padding-left: 8px;
+}
 
+.fa-bookmark {
+  padding-right: 15px;
+}
+
+.feedCommunication {
+  height: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.feedCommunication img {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  margin: 0 8px 1px 15px;
+}
+
+.likeComment span {
+  font-weight: 800;
+}
+
+.feedReply {
+  display: flex;
+  flex-direction: column;
+  padding-left: 15px;
+  margin-top: 10px;
+}
+
+.myFeedReply {
+  margin-bottom: 5px;
+}
+
+.friendsReply {
+  display: flex;
+  margin-bottom: 5px;
+}
+
+.friendsReply span:first-child {
+  font-weight: 700;
+  margin-right: 8px;
+}
+
+.myFeedReply span:first-child {
+  font-weight: 700;
+}
+
+.myFeedReply span:last-child,
+.grayReply {
+  color: #9b9b9b;
+  position: relative;
+  left: 15px;
+}
+
+.addReply {
+  border-top: 2px solid #ececec;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 6px;
+  height: 35px;
+}
+
+input {
+  border: none;
+  font-size: 16px;
+}
+
+input::placeholder {
+  color: #bdbdbd;
+}
+
+.addReply input:first-child {
+  width: 80%;
+  padding-left: 10px;
+}
+
+.addReply input:last-child {
+  width: 20%;
+  background-color: white;
+  text-align: right;
+  color: rgba(3, 102, 214, 0.3);
+  font-weight: 700;
+  padding-right: 10px;
+}
+
+/* 우측 메뉴 */
+
+.main-right {
+  width: 300px;
+}
+
+.loginUser {
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.loginUser img {
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+}
+
+.loginUser div {
+  margin-left: 15px;
+  font-weight: 700;
+}
+
+.subFeedList {
+  width: 100%;
+  height: 220px;
+  border: 2px solid #dbdbdb;
+  margin-top: 10px;
+  overflow: scroll;
+}
+
+.asideMenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 30px;
+  margin-left: 15px;
+  padding-top: 10px;
+}
+
+.asideMenu span:first-child {
+  color: #bdbdbd;
+  font-weight: 700;
+}
+
+.asideMenu span:last-child {
+  font-size: 17px;
+  font-weight: 700;
+  position: relative;
+  right: 15px;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+  padding-top: 8px;
+}
+
+.subFeedListPic {
+  width: 45px;
+  height: 45px;
+  border: 2px solid #e25991;
+  border-radius: 50%;
+}
+
+li > div {
+  display: flex;
+  flex-direction: column;
+  margin-left: 8px;
+}
+
+li div span:first-child {
+  font-weight: 700;
+}
+
+li div span:last-child {
+  color: #bdbdbd;
+}
+
+.recommendListPic {
+  width: 45px;
+  height: 45px;
+  border: 0.2px solid black;
+  border-radius: 50%;
+}
+
+li div p:first-child {
+  font-weight: 700;
+}
+
+li div p:last-child {
+  color: #bdbdbd;
+  font-weight: 700;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 160px;
+}
+
+li > span {
+  color: #57a6f2;
+  font-weight: 700;
+  font-size: 17px;
+  margin-left: 11px;
+}
+
+.policy {
+  width: 100%;
+  margin-top: 10px;
+  color: #bdbdbd;
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.policy div:first-child {
+  line-height: 130%;
+}
+
+.policy div:last-child {
+  margin-top: 20px;
+}
