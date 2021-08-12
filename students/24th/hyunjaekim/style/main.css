@@ -134,7 +134,6 @@
 
 .bookmark {
     background-image: url("../assets/icons/bookmark.png");
-    cursor: pointer;
 }
 
 .details {
@@ -179,9 +178,25 @@
 
 /* header profile */
 .profileBtn {
+    width: 26px;
+    height: 26px;
     border-radius: 50%;
-    background-image: url("../assets/images/myprofile.jpeg");
-    background-size: contain;
+    border: 2px solid #fff;
+}
+
+/*? 이렇게 클래스로 따로 주는게 더 좋은가 */
+.focus {
+    background-color: #000;
+}
+
+.profileImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    margin-left: 22px;
 }
 
 /* story image */
@@ -228,6 +243,39 @@
     color: #262626;
 }
 
+/* navMenu modules */
+/* menu icon */
+.menuIcon {
+    width: 16px;
+    height: 16px;
+    background-size: cover;
+}
+
+.menuProfile {
+    background-image: url("../assets/icons/user.svg");
+}
+
+.menuSetting {
+    background-image: url("../assets/icons/settings.svg");
+}
+
+.menuSwitch {
+    background-image: url("../assets/icons/swap.svg");
+}
+
+.menuLogOut {
+    background-image: url();
+}
+
+/* menu fonts */
+.menuText {
+    font-size: 14px;
+    color: rgb(38, 38, 38);
+    line-height: 18px;
+    text-transform: capitalize;
+}
+
+
 /*************** components ****************/
 .content-box {
     background-color: #fff;
@@ -241,6 +289,7 @@ nav.content-box {
 
 .navHeader {
     display: flex;
+    position: relative;
     justify-content: space-between;
     align-items: center;
     width: 935px;
@@ -256,6 +305,73 @@ nav.content-box {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* nav menu */
+.menuList {
+    width: 230px;
+    background-color: #fff;
+    border-radius: 6px;
+    z-index: 3;
+}
+
+.navMenu {
+    position: absolute;
+    top: 50px;
+    right: -15px;
+}
+
+.menuSquare {
+    position: absolute;
+    top: -5px;
+    right: 22px;
+    width: 12px;
+    height: 12px;
+    transform: rotate(45deg);
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.098) 0px 0px 5px 1px;
+    z-index: -1;
+}
+
+.menuShadow {
+    position: absolute;
+    top: 0;
+    width: 230px;
+    height: 171px;
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.098) 0px 0px 5px 1px;
+    z-index: -1;
+}
+
+.menuName {
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.menuName:last-child {
+    border-top: 1px solid rgb(219, 219, 219);
+}
+
+.menuDetail {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.menuIcon {
+    margin-right: 12px;
+}
+
+/* nav menu hover */
+.menuName:hover {
+    background-color: #FAFAFA;
+}
+
+.menuName:first-child:hover {
+    border-radius: 6px 6px 0 0;
+}
+
+.menuName:last-child:hover {
+    border-radius: 0 0 6px 6px;
 }
 
 /* story feed */
@@ -491,10 +607,9 @@ nav {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 100;
     background-color: #fff;
     border-bottom: 1px solid #dbdbdb;
-
+    z-index: 1;
 }
 
 /* contianer */
