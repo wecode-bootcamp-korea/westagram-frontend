@@ -15,20 +15,39 @@
     <nav class="content-box">
         <div class="navHeader">
             <h1 class="title">Westagram</h1>
-            <form class="searchForm">
-                <input type="text" class="searchInput" placeholder="">
-                <div class="searchPlaceholder">
-                    <span class="searchIcon"><i class="fas fa-search"></i></span>
-                    <span class="placeHolderText">Search</span>
+            <div class="searchBox">
+                <form class="searchForm">
+                    <input type="text" class="searchInput" placeholder="Search">
+                    <div class="searchPlaceholder">
+                        <span class="searchIcon"><i class="fas fa-search"></i></span>
+                        <span class="placeHolderText">Search</span>
+                    </div>
+                </form>
+                <div class="searchResultContainer">
+                    <div class="searchWrapper">
+                        <div class="searchComponent">
+                            <!-- <div class="searchResultBox">
+                                <div class="profileWrapper medium">
+                                    <img src="./assets/images/wecode.png" alt="스토리 프로필 사진" class="profileImg medium" />
+                                </div>
+                                <div class="searchDetail">
+                                    <strong class="userID">jenny0305</strong>
+                                    <p class="profileDesc">hi im jenny💙</p>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="searchResultBoxShadow"></div>
+                    <div class="search-squre"></div>
                 </div>
-            </form>
+            </div>
             <div class="icons">
                 <a href="./main.html" class="icon homeBtn"></a>
                 <a href="#" class="icon dmBtn"></a>
                 <a href="#" class="icon recommendBtn"></a>
                 <button type="button" class="icon statusBtn"></button>
                 <div class="navProfile">
-                <div class="profileWrapper">
+                <div class="profileWrapper" id="navProfile">
                     <img src="./assets/images/myprofile.jpeg" alt="profile_image" class="profileImg" /> 
                 </div>
             </div>
@@ -300,5 +319,6 @@
     <script src="./js/reply.js"></script>
     <script src="./js/activeBtn.js"></script>
     <script src="./js/navMenu.js"></script>
+    <script src="./js/searchBar.js"></script>
 </body>
 </html>   
