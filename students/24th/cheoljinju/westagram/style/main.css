@@ -8,7 +8,67 @@
   background-color: #fff;
 }
 
+.menu-wrapper{
+  display:none;
+  position:absolute;
+  top:0px;
+  right:0px;
+}
+
+.profile-menu{
+  position:absolute;
+  top:50px;
+  right:240px;
+  border-radius:6px;
+  background-color: #fff;
+  z-index:4;
+}
+
+.profile-menu li{
+  width: 230px;
+  padding: 8px 16px;
+  font-size:14px;
+  transition:background-color 100ms ease-in;
+}
+
+.profile-menu li:hover{
+  background-color:#dbdbdb3d;
+}
+
+.profile-menu li:nth-child(3){
+  border-bottom:1px solid #dbdbdb;
+}
+
+.profile-menu i {
+  margin-right:8px;
+}
+
+.shadow-box{
+  position:absolute;
+  top:50px;
+  right:240px;
+  width: 230px;
+  height:132px;
+  border-radius:6px;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  z-index: 2;
+}
+
+.rotate{
+  position:absolute;
+  right:260px;
+  top:45px;
+  width:20px;
+  height:20px;
+  background-color:#fff;
+  transform:rotate(45deg);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  z-index:3;
+}
+
 .nav-wrapper {
+  position:relative;
   display: flex;
   justify-content: space-between;
   align-items: center;

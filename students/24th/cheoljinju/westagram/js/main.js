@@ -6,6 +6,8 @@ const aside = document.querySelector(".aside");
 const clientSize = window.innerWidth;
 const feeds = document.querySelector(".main__feeds");
 const feed = document.querySelector(".main__feed");
+const profileMenu = document.querySelector(".menu-wrapper");
+let isActive = false;
 
 // 코멘트 생성하는 함수
 const createComment = (inputValue) => {
@@ -76,6 +78,33 @@ feeds.addEventListener("click", (event) => {
   }
   onHeartClick(event);
   onDelete(event);
+})
+
+// 프로필 메뉴 토글 기능 구현
+function activeToggle(){
+  profileMenu.style.display = "block";
+  isActive = true;
+}
+
+function hideToggle(){
+  profileMenu.style.display = "none";
+  isActive = false;
+}
+
+window.addEventListener("click", (event) => {
+  if(event.target.className === "menu__item profile" && !isActive){
+    activeToggle();
+    return;
+  };
+  if(event.target.className === "menu__item profile" && isActive){
+    hideToggle();
+    return;
+
+  }
+  if(!profileMenu.contains(event.target) && isActive){
+    hideToggle();
+    return;
+  }
 })
 
 
