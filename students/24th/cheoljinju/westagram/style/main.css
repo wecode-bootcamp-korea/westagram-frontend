@@ -95,6 +95,11 @@
   text-decoration: underline;
 }
 
+.feed__comment {
+  position:relative;
+  height: 26px;
+}
+
 .feed__comment span:first-child {
   font-weight: bold;
   cursor: pointer;
@@ -102,6 +107,22 @@
 
 .feed__comment span:first-child:hover {
   text-decoration: underline;
+}
+
+.feed__comment button{
+  position: absolute;
+}
+
+.comment__delete{
+  right: 25px;
+}
+
+.comment__heart{
+  right: 0;
+}
+
+.fas.fa-heart{
+  color: red;
 }
 
 .feed__header {
