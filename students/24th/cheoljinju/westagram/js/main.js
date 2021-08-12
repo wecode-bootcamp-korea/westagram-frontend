@@ -138,7 +138,7 @@ const userData = [
   {id: "wework",
   nickname: "위워크",
   picture: "img/wecode.jpeg"},
-  {id: "comunity",
+  {id: "community",
   nickname: "커뮤니티",
   picture: "img/wecode.jpeg"},
   {id: "yang1414",
@@ -186,17 +186,18 @@ function resetInput() {
 }
 
 // 검색창 입력 관련 기능 구현
+
 searchInput.addEventListener('keyup',()=> {
   let inputValue = searchInput.value;
   let result = [];
   resetInput()
   if(inputValue !== ""){
-      for(let i = 0; i < userData.length; i ++) {
-          let same = userData[i].id.indexOf(inputValue);
+      userData.forEach((element) => {
+        let same = element.id.indexOf(inputValue);
           if(same === 0) {
-              result.push(userData[i]);
+              result.push(element);
           }
-      }
+      })
       addProfile(result);
   }
   if(inputValue === ""){
