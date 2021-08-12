@@ -72,15 +72,9 @@ window.addEventListener("load", () => {
 // 좋아요 버튼 on/off 함수
 function onHeartClick(event){
   if(event.target.className === "far fa-heart"){
-    event.target.classList.remove("far");
-    event.target.classList.remove("fa-heart");
-    event.target.classList.add("fas");
-    event.target.classList.add("fa-heart");
+    event.target.className = "fas fa-heart";
   } else if(event.target.className === "fas fa-heart"){
-    event.target.classList.remove("fas");
-    event.target.classList.remove("fa-heart");
-    event.target.classList.add("far");
-    event.target.classList.add("fa-heart");
+    event.target.className = "far fa-heart";
   }
 }
 
