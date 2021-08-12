@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>westagram-frontend</title>
+    <link rel="stylesheet" href="./style/main.css">
+</head>
+<body>
+    <nav>
+        <div>
+            <a href="#"><img class="logo" alt="인스타그램 로고" src="img/icon.png"></a>
+            <span class="instagram">Westagram</span>
+        </div>
+        <div class="search-box">
+            <input class="search" type="text" placeholder="검색">
+            <img alt="돋보기" src="img/magnifying-glass.png">
+        </div>
+        <div class="rightIcons">
+            <img class="right-logo" alt="나침반" src="img/explore.png">
+            <img class="right-logo" alt="하트" src="img/heart.png">
+            <img class="right-logo" alt="프로필" src="img/profile.png">
+        </div>
+    </nav>
+    
+    <main>
+        <div class="feeds">
+            <article>
+                <div class="feedTop">
+                    <div class="feedUser">
+                        <img class="smallUserPicture" alt="프로필사진" src="img/hanRiver.jpeg">
+                        <div class="feedId boldFont">bbangho</div>
+                    </div>
+                    <img class="feedMore" alt="더보기" src="./img/more.png">
+                </div>
+                <img class="feedPicture" alt="피드사진" src="./img/hanRiver.jpeg">
+                <div class="feedBottom">
+                    <div class="feedIcons">
+                        <div class="FeedBottomLeftIcon">
+                            <img alt="빨간색하트" src="./img/redHeart.png">
+                            <img alt="메세지" src="./img/speech-bubble.png">
+                            <img alt="업로드" src="./img/upload.png">
+                        </div>
+                        <img alt="저장" src="./img/ribbon.png">
+                    </div>
+
+                    <div class="like">
+                        <img alt="좋아요 사진" src="./img/hanRiver.jpeg">
+                        <span class="boldFont">manja</span>님 
+                        <span class="boldFont">외 7명</span>이 좋아합니다
+                    </div>
+                    <div class="comment">
+                        <div>
+                            <span class="boldFont">bbangho</span> 한강 다녀감~✌️
+                        </div>
+                        <div>
+                            <span class="boldFont">manja</span> 한강 갱~ 🔫 🔫
+                            <img class="commentHeart" alt="댓글 삭제" src="./img/garbage.png">
+                            <img class="commentHeart" alt="댓글 하트" src="./img/heart.png">
+                            <div>42분 전</div>
+                        </div>
+                    </div>   
+                </div>
+
+                <form class="addComment">
+                    <input class="writeComment" type="text" placeholder="댓글 달기...">
+                    <input class="postingButton" type="button" value="게시">
+                </form>    
+
+            </article>
+
+            <div class="mainRight">
+
+                <div class="rightTop">
+                    <img class="wecodeLogo" src="./img/wecode.png">
+                    <div>
+                        <div class="boldFont">wecode_bootcamp</div>
+                        <div class="lightFont">WeCode | 위코드</div>
+                    </div>
+                </div>
+
+                <div class="rightMiddle">
+                    <div class="seeAllStory">
+                        <div class="lightFont">스토리</div>
+                        <div class="boldFont">모두 보기</div>
+                    </div>
+                    <div class="seeStory">
+                        <div class="story">
+                            <img src="./img/wecode.png">
+                            <div>
+                                <div class="boldFont">wecoder1</div>
+                                <div class="lightFont">16분 전</div>
+                            </div>
+                        </div>
+                        <div class="story">
+                            <img src="./img/wecode.png">
+                            <div>
+                                <div class="boldFont">wecoder2</div>
+                                <div class="lightFont">52분 전</div>
+                            </div>
+                        </div>
+                        <div class="story">
+                            <img src="./img/wecode.png">
+                            <div>
+                                <div class="boldFont">wecoder3</div>
+                                <div class="lightFont">5분 전</div>
+                            </div>
+                        </div>
+                        <div class="story">
+                            <img src="./img/wecode.png">
+                            <div>
+                                <div class="boldFont">wecoder4</div>
+                                <div class="lightFont">26분 전</div>
+                            </div>
+                        </div>
+                        <div class="story">
+                            <img src="./img/wecode.png">
+                            <div>
+                                <div class="boldFont">wecoder5</div>
+                                <div class="lightFont">53분 전</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                <div class="rightMiddle">
+                    <div class="friendsRecommendContainer">
+                        <div class="lightFont">회원님을 위한 추천</div>
+                        <div class="boldFont">모두 보기</div>
+                    </div>
+                    <div class="friendsRecommendList">
+                        <div class="friendsRecommend">
+                            <img class="no" src="./img/wecode.png">
+                            <div>
+                                <div class="boldFont">홍길동</div>
+                                <div class="lightFont">블라블라님 외 2명이 ...</div>
+                            </div>
+                            <div class="followFont boldFont">팔로우</div>
+                        </div>
+                        <div class="friendsRecommend">
+                            <img src="./img/wecode.png">
+                            <div>
+                                <div class="boldFont">아무개</div>
+                                <div class="lightFont">시끌시끌님 외 2명이 ...</div>
+                            </div>
+                            <div class="followFont boldFont">팔로우</div>
+                        </div>
+                        <div class="friendsRecommend">
+                            <img src="./img/wecode.png">
+                            <div>
+                                <div class="boldFont">어쩌구</div>
+                                <div class="lightFont">얄라얄라님 외 2명이 ...</div>
+                            </div>
+                            <div class="followFont boldFont">팔로우</div>
+                        </div>
+                        <div class="friendsRecommend">
+                            <img src="./img/wecode.png">
+                            <div>
+                                <div class="boldFont">저쩌구</div>
+                                <div class="lightFont">욜로욜로님 외 2명이 ...</div>
+                            </div>
+                            <div class="followFont boldFont">팔로우</div>
+                        </div>
+                        <div class="friendsRecommend">
+                            <img src="./img/wecode.png">
+                            <div>
+                                <div class="boldFont">쏼라쏼라</div>
+                                <div class="lightFont">블라블라님 외 2명이 ...</div>
+                            </div>
+                            <div class="followFont boldFont">팔로우</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lightFont">
+                    Westagram 정보 . 지원 . 홍보 센터 . API . 채용정보 . 개인정보처리방침 . 약관 . 디렉터리 . 프로필 . 해시태그 . 언어
+                </div>
+                <footer class="lightFont boldFont">
+                    &copy; 2021 WESTAGRAM
+                </footer>
+            </div>
+        </div>
+    </main>
+    <script src="js/main.js"></script>
+</body>
+</html>

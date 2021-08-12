@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+@media screen and (max-width: 1200px) {
+    .mainRight { display: none;}
+  }
+
+body {
+    width: 100%;
+    min-width: 1200px;
+    margin: 0;
+    padding: 0;
+    border-collapse : collapse;
+}
+
+article {
+    width: 800px;
+    background-color: white;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0px 140px;
+    height: 60px;
+}
+
+.logo, .right-logo{
+    width: 30px;
+    height: 30px;
+}
+
+.rightIcons {
+    margin-left: 80px;
+}
+
+.right-logo {
+    margin-right: 30px;
+}
+
+.logo {
+    border-right: 1px solid black;
+    padding-right: 15px; 
+}
+
+.instagram {
+    font-family: 'Lobster', cursive;
+    font-size: 33px;
+    font-weight: 1;
+    margin-left: 15px;
+}
+
+.search, .writeComment {
+    outline: none;
+}
+
+.search-box > input {
+    text-align: center;
+    border: 1px solid #DBDBDB;
+    width: 200px;
+    height: 20px;
+}
+
+.search-box {
+    position: relative;
+}
+
+.search-box > img {
+    position: absolute;
+    left: 75px;
+    top: 7px;
+    width: 11px;
+    height: 11px;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    padding: 30px 0px;
+    background-color: #FAFAFA;
+}
+
+.feeds {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    margin: 0px 280px;
+}
+
+.mainRight {
+    width: 330px;
+    margin-left: 10px;
+}
+
+.feedTop {
+    width: 780px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10px;
+    border: 1px solid #e6e6e6;
+}
+
+.feedUser {
+    display: flex;
+    align-items: center;
+}
+
+.feedPicture {
+    width: 100%;
+    height: 800px;
+    border: 1px solid #E6E6E6;
+}
+
+.feedId{
+    margin-left: 10px;
+}
+
+.feedMore {
+    width: 15px;
+    height: 15px;
+}
+
+.smallUserPicture {
+    width: 40px;
+    height: 40px;
+    border:1px solid #E6E6E6;
+    border-radius: 50px;
+}
+
+.feedIcons > img, .feedIcons > div > img {
+    width: 27px;
+    height: 27px;
+}
+
+.feedBottom {
+    padding: 10px 10px;
+    border-left:1px  solid #EFEFEF;
+    border-right:1px  solid #EFEFEF;
+    border-bottom:1px  solid #EFEFEF;
+}
+
+.feedIcons {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin: 0px;
+}
+
+.FeedBottomLeftIcon > img {
+    padding-right: 10px;
+}
+
+.like > img {
+    width: 15px;
+    height: 15px;
+    border: 1px solid #E6E6E6;
+    border-radius: 7px;
+    margin-right: 5px;
+}
+
+.like {
+    display: flex;
+    align-items: center;
+}
+
+.comment > div > div {
+    color: #A4A4A4;
+}
+
+.commentHeart {
+    margin-left: 5px;
+    width: 15px;
+    height: 15px;
+    display: inline;
+    float: right;
+}
+
+.boldFont {
+    font-weight: bolder;
+}
+
+.addComment {
+    position: relative;
+    width: 786px;
+}
+
+.writeComment {
+    border: 1px solid #EFEFEF;
+    width: 100%;
+    padding-left: 10px;
+    height: 40px;
+}
+
+.postingButton{
+    color: #CDE6FC;
+    background-color: white;
+    position: absolute;
+    top: 14px;
+    right: 10px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+
+.postingButton:hover {
+    color: #367fbe;
+}
+
+.rightTop {
+    width: 300px;
+    display: flex;
+    align-items: center;
+}
+
+.wecodeLogo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    margin-right: 20px;
+}
+
+.lightFont {
+    color: #9E9E9E;
+}
+
+.rightMiddle {
+    background: white;
+    margin: 20px 0px;
+    padding: 12px;
+    border: 3px solid #E6E6E6;
+    border-radius: 7px;
+    height: 200px;
+    overflow: scroll;
+}
+
+.seeAllStory, .friendsRecommendContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.story, .friendsRecommend {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+.story > img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    border:2px solid #D93081;
+    margin-right: 10px;
+}
+
+.friendsRecommend > img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    margin-right: 10px;
+}
+
+footer {
+    margin-top: 20px;
+}
+
+.followFont {
+    color: #3797F0;
+}
