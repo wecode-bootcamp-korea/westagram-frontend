@@ -6,7 +6,6 @@
 
 /* login */
 .logWrap{
-    font-family: 'Lobster', cursive;
     width: 350px;
     height: 400px;
     display: flex;
@@ -20,13 +19,14 @@
     width:200px;
     height: 80px;
     font-size: 40px;
+    font-family: 'Lobster', cursive;
 }
 .input{
     width: 260px;
     height: 40px;
     margin-bottom: 10px;
 }
-input{
+.id,.password{
     width: 100%;
     height: 100%;
     border: 1px solid rgb(237, 237,237);
@@ -36,6 +36,7 @@ input{
     padding-left: 10px;
     outline: none;
 }
+
 .btn_wrap{
     width: 260px;
     height: 35px;
@@ -57,7 +58,70 @@ input{
 footer{
     height: 120px;
 }
-span{
+.forgot{
     margin-top: 90px;
     display: inline-block;
 }
+
+
+
+/* main */
+.minawrap{
+    background-color: rgb(250, 250, 250);
+}
+
+/* nqvbar */
+.topnav{
+    border-top: 1px solid black;
+    border-bottom: 1px solid rgb(214,214,214);
+    height: 54px;
+    margin-top: 3px;
+    display: flex;
+}
+
+.westa{
+    font-family: 'Lobster', cursive;
+    margin-top: 13px;
+}
+
+.searchbox{
+    border: 1.5px solid rgb(214,214,214);
+    border-radius: 3px;
+    margin-top: 13px;
+    width: 180px;
+    height: 28px;
+    position: relative;
+}
+.fa-search{
+    font-size: 13px;
+    position: absolute;
+    top: 6px;
+    left: 35%;
+    color: rgb(175,175,175);
+}
+
+.input{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    text-align: center;
+    background-color: rgb(250, 250, 250);
+    
+}
+
+.navleft{
+    margin-top: 14px;
+}
+
+.navtopleft>ul>li{
+    display: inline-block;
+    margin-left: 7px;
+}
+
+.navleft{
+    width: 20px;
+    height: 20px;
+}
+
+/* main */
