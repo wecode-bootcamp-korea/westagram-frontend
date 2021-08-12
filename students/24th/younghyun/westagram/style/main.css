@@ -22,8 +22,8 @@ nav {
     border-bottom: 1px solid #dbdbdb;
 }
 
-nav label>input {
-    background-image: url(https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-256.png);
+nav .search>input {
+    /* background-image: url(https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-256.png); */
     background-color: #fafafa;
     background-position: 73px 4px; 
     background-size: 15px;
@@ -39,7 +39,7 @@ nav label>input {
     text-align: center;
 }
 
-nav label>input:focus {
+nav .search>input:focus {
     background-image: none;
     text-align: left;
     text-indent: 0;
@@ -49,17 +49,6 @@ nav label>input:focus {
     /* font-weight: bold; */
 }
 
-/* 검색 옆 엑스표
-input:focus::after {
-    content: "11111";
-    display: block;
-    width: 10px;
-    height: 10px;
-    float: right;
-    color: #262626;
-    margin: 0 5px 0 0; 
-}
-*/
 
 .instagram-logo {
     display: flex;
@@ -170,8 +159,23 @@ input:focus::after {
     font-size: 14.5px;
 }
 
-.feeds-comment span .comment-id{
+.comment-writing {
+    margin-left: 5px;
+    width: 200px;
+}
+
+.comment-id{
     font-weight: bold;
+}
+
+.commentDiv {
+    width: 570px;
+    margin-top: 3px;
+    display: inline-block;
+}
+
+.fas{
+    color: #ED4956;
 }
 
 .time {
