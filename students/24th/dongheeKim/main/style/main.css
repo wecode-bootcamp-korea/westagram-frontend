@@ -1,0 +1,295 @@
+* {
+    box-sizing: border-box;
+    font: inherit;
+}
+
+body {
+    margin: 0;
+    background-color:#FAFAFA;
+}
+
+nav {
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+    border-bottom: lightgray solid 1px;
+    padding: 0 60px 0 80px;
+}
+
+.nav-logo {
+    width: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-logo_text {
+    width: 150px;
+    border-left: black solid 2px;
+    font-family: 'Lobster', cursive;
+    font-size: 23px;
+    margin-left: 10px;
+    padding-left: 10px;
+}
+
+.nav-logo_image{
+    width:23px;
+    height: 23px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url('logo.png');
+}
+
+.nav-search {
+    width: 200px;
+    position: relative;
+}
+
+.nav-search input {
+    text-align: center;
+    font-size: 14px;
+    width: 100%;
+    color: #dbdbdb;
+    background-color:#FAFAFA;
+    border: #dbdbdb solid 1px;
+    padding: 3px 0;
+}
+
+.nav-search i {
+    position: absolute;
+    font-size: 10px;
+    top: 9px;
+    left: 35%;
+    color: #8e8e8e;
+}
+
+.nav-icons {
+    width: 180px;
+    display: flex;
+    justify-content:space-around;
+}
+
+.nav-icons div {
+    width:23px;
+    height: 23px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.nav-icons_safari {
+    background-image: url('safari.png');
+    }    
+.nav-icons_heart {
+    background-image: url('heart.png');
+    }
+.nav-icons_person {
+    background-image: url('person.png');
+    }
+
+main {
+    display: flex;
+    justify-content:center;
+    align-items: flex-start;
+}
+
+.feeds {
+    width: 650px;
+    margin-right: 30px;
+}
+
+.feeds-status {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 20px 0 20px;
+}
+
+.feeds-status-icons {
+    display: flex;
+    height: 100%;
+    justify-content:flex-start;
+    align-items: center;
+}
+
+.feeds-text {
+    margin-left: 20px;
+    margin-top: 5px;
+}
+
+.feeds-text_like {
+    margin-bottom: 10px;
+}
+.profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+article {
+    width: 650px;
+    margin-top: 40px;
+    background-color: white;
+    border: lightgray solid 1px;
+    display: flex;
+    flex-direction: column;
+}
+
+.feeds-profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+
+.feeds-profile_account {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+}
+
+.feeds-profile_account_pic{
+    background-image: url('profile.jpg');
+    background-size: cover;
+    margin-right: 15px;
+}
+
+.feeds-profile_dot{
+    align-items: center;
+}
+
+.feeds-pic {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('cat.jpg');
+    width: 650px;
+    height: 650px;
+}
+
+
+.feeds-text_minutes{
+    margin: 5px 0 10px 20px;
+}
+
+.feeds-comment {
+    bottom: 0;
+    align-items: center;
+    padding-top: 10px;
+    border-top: lightgray solid 1px;
+}
+
+.feeds-comment_box {
+    width: 550px;
+    font-size: 14px;
+    margin-left: 5px;
+    padding-left: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    outline: 0;
+}
+
+.feeds-comment_btn {
+    width: 60px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: white;
+    margin-left: 20px;
+    color: lightskyblue;
+    border: 0;
+    cursor: pointer;
+}
+
+li {
+    list-style:none;
+    padding-right: 20px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.myProfile{
+width: 400px;
+margin-top: 40px;
+display: flex;
+align-items: center;
+}
+
+.myProfile-pic {
+width: 53px;
+height: 53px;
+margin-right: 20px;
+border-radius: 50%;
+background-size: cover;
+background-image: url(tweety.jpg);
+}
+
+.story{
+    width: 400px;
+    background-color: white;    
+    border: lightgray solid 1px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.profile_header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px 8px 15px;
+}
+
+.story-account {
+    display: flex;
+    margin-left: 15px;
+}
+.story_pic1 {
+background-image: url('wecode.jpg');
+}
+
+.story_pic2 {
+background-image: url('yk.jpg');
+    }
+
+.story_pic3 {
+background-image: url('sk.jpg');
+        }
+
+.recommend{
+    width: 400px;
+    background-color: white;
+    border: lightgray solid 1px;
+}
+
+.recommend-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 15px 15px 15px;
+}
+
+.recommend-account {
+    display: flex;
+}
+
+.recommend-pic1{
+background-image: url('byemypie.jpg');
+}
+
+.recommend-pic2{
+    background-image: url('verte.jpg');
+    }
+
+.recommend-pic3{
+    background-image: url('wsh.jpg');
+    }
+
+
+.info{
+    width: 300px;
+    height: 80px;
+    margin-bottom: 50px; 
+}
+
