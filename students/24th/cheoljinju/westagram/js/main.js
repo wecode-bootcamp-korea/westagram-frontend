@@ -51,23 +51,6 @@ input.addEventListener("keyup", (event) => {
     : commentBtn.classList.remove("active");
 });
 
-// 페이지 축소 시에 aside 레이아웃 위치 조정
-// window.addEventListener("resize", () => {
-//   let resizing = clientSize - window.innerWidth;
-//   if(clientSize > 1500){
-//     aside.style.right = `${500 - resizing/ 2}px`;
-//   }
-//   if(clientSize < 1500){
-//     aside.style.right = `${280 - resizing/ 1.1}px`
-//   }
-// });
-
-// aside 큰 화면 로드 시에 위치 조정
-// window.addEventListener("load", () => {
-//   if(window.innerWidth > 1500){
-//     aside.style.right = `${500}px`;
-//   }
-// })
 
 // 좋아요 버튼 on/off 함수
 function onHeartClick(event){
