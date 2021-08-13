@@ -31,11 +31,6 @@ window.addEventListener("click", (e) => {
     }
 }); 
 
-// window.addEventListener('click',(e) => {
-//     if(!searchMenu.contains(e.currentTarget)){
-//         hideMenu();
-//     }
-// });
 
 // 계정 데이터 배열
 const userArray = [
