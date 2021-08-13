@@ -19,6 +19,6 @@ const inputEmail = document.querySelector('#inputEmail');
 const inputPw = document.querySelector('#inputPw');
 for (let i = 0; i < inputBox.length; i++) {
   inputBox[i].addEventListener('input', () => {
-    return ((inputEmail.value && inputPw.value) ? loginBtn.style.backgroundColor = '#2196f3' : loginBtn.style.backgroundColor = '#c4e1fb');
+    return ((inputEmail.value.includes('@') && inputPw.value.length >=5) ? loginBtn.style.backgroundColor = '#2196f3' : loginBtn.style.backgroundColor = '#c4e1fb');
   })
 };
