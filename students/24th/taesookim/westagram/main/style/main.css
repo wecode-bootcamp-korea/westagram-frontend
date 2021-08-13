@@ -150,14 +150,73 @@
   cursor: pointer;
 }
 
-.search-container .suggestions-container li .suggest-description {
-  color: #8e8e8e;
-}
-
 .mypage-container img {
   width: 24px;
   margin: 0 14px 0 14px;
   cursor: pointer;
+}
+
+.mypage-container .profile-container {
+  display: none;
+}
+
+.mypage-container .profile-container.visible {
+  display: block;
+  position: absolute;
+  top: 57px;
+  right: 340px;
+  background-color: #ffffff;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 7px;
+  z-index: 1;
+}
+
+.mypage-container .profile-cap {
+  display: none;
+}
+
+.mypage-container .profile-cap.visible {
+  display: block;
+  position: absolute;
+  top: 52px;
+  right: 373px;
+  width: 14px;
+  height: 14px;
+  transform: rotate(45deg);
+  background-color: #ffffff;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
+}
+
+.mypage-container .profile-container li {
+  display: flex;
+  align-items: center;
+  width: 200px;
+  padding: 10px;
+}
+
+.mypage-container .profile-container li:hover {
+  background-color: #fafafa;
+}
+
+.mypage-container .profile-container li:last-child {
+  border-top: 1px solid #dbdbdb;
+}
+
+.mypage-container .profile-container li i {
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.mypage-container .profile-container li span {
+  display: block;
+  position: absolute;
+  left: 40px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.mypage-container .profile-container li p {
+  font-size: 14px;
 }
 
 /* main */

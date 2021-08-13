@@ -5,6 +5,7 @@ const commentForm = document.querySelector(".comment-form");
 const commentList = document.querySelector(".comments");
 const resultContainer = document.querySelector(".suggestions-container");
 const filteredList = document.querySelector(".suggestions-list");
+const body = document.querySelector("body");
 
 // 검색창 포커싱에 따른 레이아웃 변화 기능
 searchInput.addEventListener("focus", () => {
@@ -138,5 +139,20 @@ searchContent.addEventListener("click", (e) => {
     search.classList.remove("focus");
     searchIcon.classList.remove("focus");
     searchDelete.classList.remove("focus");
+  }
+});
+
+// nav 프로필 사진 클릭 시 메뉴 박스 생성
+body.addEventListener("click", (e) => {
+  e.stopPropagation();
+  console.log(e.target.parentNode.className);
+  const profileCap = document.querySelector(".profile-cap");
+  const profileContainer = document.querySelector(".profile-container");
+  if (e.target.className === "profile-img") {
+    profileCap.classList.add("visible");
+    profileContainer.classList.add("visible");
+  } else if (e.target.parentNode.className !== "profile-list") {
+    profileCap.classList.remove("visible");
+    profileContainer.classList.remove("visible");
   }
 });
