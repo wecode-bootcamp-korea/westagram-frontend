@@ -8,4 +8,16 @@ function onHeartClick(event) {
   }
 }
 
-detailWrapper.addEventListener("click", onHeartClick);
+function onListClick(e) {
+  if (e.target.className === "reply") {
+    let tobeRemoved = e.target;
+    tobeRemoved.remove();
+  }
+}
+
+function handleClick(e) {
+  onHeartClick(e);
+  onListClick(e);
+}
+
+detailWrapper.addEventListener("click", handleClick);
