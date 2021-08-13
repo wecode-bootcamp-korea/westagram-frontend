@@ -21,11 +21,13 @@ const addComment = (e) => {
 
 const addCommentItem = (value) => {
   const id = Math.floor(Math.random() * 999);
+
   comments.push({
     id,
     name: 'vi2920va',
     content: value,
   });
+
   commentCreateItem(id);
 };
 
@@ -43,8 +45,10 @@ const commentCreateItem = (id) => {
   strong.textContent = item.name;
   em.textContent = item.content;
   span.textContent = '더 보기';
+
   li.appendChild(strong);
   li.insertBefore(em, strong.nextSibling);
   li.insertBefore(span, em.nextSibling);
+
   commentList.appendChild(li);
 };

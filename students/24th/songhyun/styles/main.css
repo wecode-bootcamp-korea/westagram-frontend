@@ -1,8 +1,11 @@
 nav {
+  position: sticky;
+  top:0;
   display: flex;
   justify-content: space-around;
   padding: 20px 0;
   border-bottom: 1px solid #e0e0e0;
+  background: #fff;
 }
 
 #logo {
@@ -53,15 +56,15 @@ i.icon {
 .search-icon.icon {
   width: 15px;
   height: 15px;
-  line-height: 15px;
   margin: 6px 0 5px 91px;
+  line-height: 15px;
   background: url(../img/search.png) center/cover;
 }
 
 nav ul.right-icons {
-  width: 150px;
   display: flex;
   justify-content: space-between;
+  width: 150px;
 }
 
 .explore-icon {
@@ -103,8 +106,9 @@ div.feeds {
   display: block;
   width: 32px;
   height: 32px;
-  margin-left: 10px;
+  margin-left: 10px;  
   border-radius: 50%;
+  line-height: 38px;
   background: url(../img/profile_img.jpg) center/cover;
 }
 
@@ -154,23 +158,30 @@ div.feeds {
   display: flex;
 }
 
-.feeds-comment li:first-child {
-  margin: 5px 0 -5px 4px;
+.feeds-comment li strong {
+  margin-right: 5px;
+}
+
+.feeds-comment li strong + em {
+  width: 130px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .feeds-comment li:first-child {
-  margin-left: 8px;
+    margin: 5px 0 -5px 4px;
   line-height: 22px;
   font-size: 12px;
 }
 
 .feeds-comment li:nth-child(2) {
-  margin: 5px 15px 3px 18px;
+  margin: 7px -2px 5px 15px;
   font-size: 12px;
 }
 
 .feeds-comment--new {
-  margin: -2px 18px 0 18px;
+  margin: -2px 18px 0 16px;
   font-size: 12px;
 }
 
@@ -188,8 +199,8 @@ div.feeds {
 
 .friend-icon {
   margin-left: 10px;
-  border-radius: 50%;
   border: 1px solid gray;
+  border-radius: 50%;
   background: url(../img/people.jpg) center/cover;
 }
 
@@ -257,7 +268,7 @@ form.add-comment div button {
   display: flex;
   justify-content: space-between;
   line-height: 35px;
-  margin: 5px 10px;
+  margin: 5px 10px -5px 10px;
 }
 
 .main-right__story__title h2,
