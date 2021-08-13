@@ -144,8 +144,6 @@ searchContent.addEventListener("click", (e) => {
 
 // nav 프로필 사진 클릭 시 메뉴 박스 생성
 body.addEventListener("click", (e) => {
-  e.stopPropagation();
-  console.log(e.target.parentNode.className);
   const profileCap = document.querySelector(".profile-cap");
   const profileContainer = document.querySelector(".profile-container");
   if (e.target.className === "profile-img") {

@@ -1,3 +1,16 @@
+/* Global */
+:root {
+  /* Color */
+  --color-white: #ffffff;
+  --color-light-white: #fafafa;
+  --color-dark-white: #dbdbdb;
+  --color-light-gray: #a4a7aa;
+  --color-dark-gray: #262626;
+  --color-black: #000000;
+  --color-light-blue: #b2dffc;
+  --color-blue: #0095f6;
+}
+
 /* Navbar */
 .navbar {
   position: relative;
@@ -5,8 +18,8 @@
   justify-content: space-between;
   align-items: center;
   padding: 15px 355px 15px 355px;
-  background-color: #ffffff;
-  border-bottom: 1px solid #dbdbdb;
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-dark-white);
 }
 
 .navbar .westa-logo img {
@@ -25,7 +38,7 @@
 .navbar .westa-title h1::before {
   content: "";
   padding-left: 15px;
-  border-left: 1px solid #000000;
+  border-left: 1px solid var(--color-black);
 }
 
 .search-container {
@@ -39,9 +52,9 @@
   display: block;
   width: 100%;
   padding: 5px;
-  border: 1px solid #dbdbdb;
+  border: 1px solid var(--color-dark-white);
   border-radius: 3px;
-  background-color: #fafafa;
+  background-color: var(--color-white);
   text-indent: 22px;
 }
 
@@ -57,7 +70,7 @@
   position: absolute;
   top: 8px;
   left: 98px;
-  color: #a4a7aa;
+  color: var(--color-light-gray);
   font-size: 14px;
   font-weight: 300;
   pointer-events: none;
@@ -71,7 +84,7 @@
   position: absolute;
   top: 9px;
   left: 85px;
-  color: #a4a7aa;
+  color: var(--color-light-gray);
   font-size: 10px;
   pointer-events: none;
 }
@@ -80,7 +93,7 @@
   position: absolute;
   top: 9px;
   left: 12px;
-  color: #a4a7aa;
+  color: var(--color-light-gray);
   font-size: 10px;
   pointer-events: none;
 }
@@ -94,7 +107,7 @@
   position: absolute;
   top: 7px;
   right: 10px;
-  color: #a4a7aa;
+  color: var(--color-light-gray);
   font-size: 14px;
   cursor: pointer;
 }
@@ -103,7 +116,7 @@
   position: absolute;
   top: 40px;
   left: -65px;
-  background-color: #ffffff;
+  background-color: var(--color-white);
   box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
   border-radius: 3px;
   z-index: 1;
@@ -115,9 +128,8 @@
   top: 34px;
   left: 100px;
   width: 14px;
-  height: 14px;
   transform: rotate(45deg);
-  background-color: #ffffff;
+  background-color: var(--color-white);
   box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
 }
 
@@ -130,7 +142,7 @@
 }
 
 .search-container .suggestions-container li:hover {
-  background-color: #fafafa;
+  background-color: var(--color-light-white);
 }
 
 .search-container .suggestions-container li img {
@@ -165,7 +177,7 @@
   position: absolute;
   top: 57px;
   right: 340px;
-  background-color: #ffffff;
+  background-color: var(--color-white);
   box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
   border-radius: 7px;
   z-index: 1;
@@ -183,7 +195,7 @@
   width: 14px;
   height: 14px;
   transform: rotate(45deg);
-  background-color: #ffffff;
+  background-color: var(--color-white);
   box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
 }
 
@@ -195,11 +207,11 @@
 }
 
 .mypage-container .profile-container li:hover {
-  background-color: #fafafa;
+  background-color: var(--color-light-white);
 }
 
 .mypage-container .profile-container li:last-child {
-  border-top: 1px solid #dbdbdb;
+  border-top: 1px solid var(--color-dark-white);
 }
 
 .mypage-container .profile-container li i {
@@ -229,12 +241,12 @@
   position: relative;
   width: 640px;
   margin-top: 50px;
-  background-color: #ffffff;
+  background-color: var(--color-white);
   overflow: hidden;
 }
 
 .main .feeds .feeds-each {
-  border: 1px solid #dbdbdb;
+  border: 1px solid var(--color-dark-white);
   border-radius: 3px;
 }
 
@@ -248,7 +260,7 @@
 .main .feeds .feeds-each .feeds-profile img {
   width: 32px;
   border-radius: 50%;
-  border: 1px solid #dbdbdb;
+  border: 1px solid var(--color-dark-white);
   cursor: pointer;
 }
 
@@ -271,7 +283,7 @@
 .main .feeds .feeds-each .reaction i {
   font-size: 26px;
   margin: 5px 0 5px 10px;
-  color: #262626;
+  color: var(--color-dark-gray);
   cursor: pointer;
 }
 
@@ -288,7 +300,7 @@
 
 .main .feeds .feeds-each .like img {
   width: 32px;
-  border: 1px solid #dbdbdb;
+  border: 1px solid var(--color-dark-white);
   border-radius: 50%;
   cursor: pointer;
 }
@@ -315,7 +327,7 @@
 }
 
 .main .feeds .feeds-each .feed-description .more {
-  color: #8e8e8e;
+  color: var(--color-light-gray);
   cursor: pointer;
 }
 
@@ -333,7 +345,7 @@
   position: absolute;
   right: 40px;
   font-size: 12px;
-  color: #8e8e8e;
+  color: var(--color-light-gray);
   cursor: pointer;
 }
 
@@ -341,7 +353,7 @@
   position: absolute;
   right: 20px;
   font-size: 12px;
-  color: #8e8e8e;
+  color: var(--color-light-gray);
   cursor: pointer;
 }
 
@@ -354,12 +366,12 @@
 .main .feeds .feeds-each .post-time {
   margin: 0 0 4px 10px;
   font-size: 14px;
-  color: #8e8e8e;
+  color: var(--color-light-gray);
 }
 
 .write-comments {
   display: flex;
-  border-top: 1px solid #dbdbdb;
+  border-top: 1px solid var(--color-dark-white);
 }
 
 .write-comments .comment-post {
@@ -375,7 +387,7 @@
 }
 
 .write-comments .comment-post::placeholder {
-  color: #8e8e8e;
+  color: var(--color-light-gray);
   font-family: "Noto Sans KR", "Open Sans", sans-serif;
 }
 
@@ -383,7 +395,7 @@
   padding: 0;
   border: none;
   background: none;
-  color: #b2dffc;
+  color: var(--color-light-blue);
   cursor: pointer;
 }
 
@@ -418,12 +430,12 @@
 }
 
 .main-right .my-profile .my-description .profile-description {
-  color: #8e8e8e;
+  color: var(--color-light-gray);
 }
 
 .main-right .stories {
-  background-color: #ffffff;
-  border: 1px solid #dbdbdb;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-dark-white);
   border-radius: 3px;
   padding: 15px;
 }
@@ -435,7 +447,7 @@
 }
 
 .main-right .stories .story-title span:first-child {
-  color: #8e8e8e;
+  color: var(--color-light-gray);
 }
 
 .main-right .stories .story-title span:last-child {
@@ -465,12 +477,12 @@
 }
 
 .main-right .stories .story-update .story-time {
-  color: #8e8e8e;
+  color: var(--color-light-gray);
 }
 
 .main-right .recomms {
-  background-color: #ffffff;
-  border: 1px solid #dbdbdb;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-dark-white);
   border-radius: 3px;
   margin-top: 10px;
   padding: 15px;
@@ -483,7 +495,7 @@
 }
 
 .main-right .recomms .recomm-title span:first-child {
-  color: #8e8e8e;
+  color: var(--color-light-gray);
 }
 
 .main-right .recomms .recomm-title span:last-child {
@@ -516,12 +528,12 @@
 }
 
 .main-right .recomms .recomm-list .recomm-others {
-  color: #8e8e8e;
+  color: var(--color-light-gray);
 }
 
 .main-right .recomms .recomm-list .recomm-follow {
   font-size: 14px;
-  color: #0095f6;
+  color: var(--color-blue);
   cursor: pointer;
 }
 
@@ -532,13 +544,13 @@
 .main-right .westa-info p {
   font-size: 12px;
   line-height: 18px;
-  color: #c7c7c7;
+  color: var(--color-dark-white);
   cursor: pointer;
 }
 
 .main-right .westa-year p {
   font-size: 12px;
   line-height: 18px;
-  color: #c7c7c7;
+  color: var(--color-dark-white);
   cursor: pointer;
 }
