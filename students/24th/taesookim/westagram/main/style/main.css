@@ -6,7 +6,7 @@
   align-items: center;
   padding: 15px 355px 15px 355px;
   background-color: #ffffff;
-  border: 1px solid #dbdbdb;
+  border-bottom: 1px solid #dbdbdb;
 }
 
 .navbar .westa-logo img {
@@ -96,7 +96,62 @@
   right: 10px;
   color: #a4a7aa;
   font-size: 14px;
-  pointer-events: none;
+  cursor: pointer;
+}
+
+.search-container .suggestions-container {
+  position: absolute;
+  top: 40px;
+  left: -65px;
+  background-color: #ffffff;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  z-index: 1;
+}
+
+.search-container .suggestions-cap {
+  display: none;
+  position: absolute;
+  top: 34px;
+  left: 100px;
+  width: 14px;
+  height: 14px;
+  transform: rotate(45deg);
+  background-color: #ffffff;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
+}
+
+.search-container .suggestions-container li {
+  display: flex;
+  align-items: center;
+  width: 335px;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.search-container .suggestions-container li:hover {
+  background-color: #fafafa;
+}
+
+.search-container .suggestions-container li img {
+  width: 48px;
+  margin-right: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.search-container .suggestions-container li .suggest-container {
+  margin: auto 0;
+  font-size: 14px;
+}
+
+.search-container .suggestions-container li .suggest-username {
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.search-container .suggestions-container li .suggest-description {
+  color: #8e8e8e;
 }
 
 .mypage-container img {
@@ -383,10 +438,6 @@
   margin-top: 10px;
 }
 
-.main-right .recomms .recomm-list .recomm-namebox {
-  width: 160px;
-}
-
 .main-right .recomms .recomm-list img {
   width: 48px;
   margin-right: 10px;
@@ -395,6 +446,7 @@
 }
 
 .main-right .recomms .recomm-list .recomm-namebox {
+  width: 160px;
   margin: auto 0;
   font-size: 14px;
 }
