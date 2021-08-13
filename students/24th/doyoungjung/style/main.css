@@ -188,13 +188,23 @@ main {
 }
 
 .friendsReply {
-  display: flex;
   margin-bottom: 5px;
+  position: relative;
 }
 
 .friendsReply span:first-child {
   font-weight: 700;
-  margin-right: 8px;
+}
+
+.friendsReply:hover .trashCan{
+  color: #9b9b9b;
+}
+
+.trashCan {
+  font-size: 15px;
+  color: white; 
+  position: absolute;
+  right: 20px;
 }
 
 .myFeedReply span:first-child {
@@ -292,7 +302,7 @@ input::placeholder {
   right: 15px;
 }
 
-li {
+.storyAndRecommendList li {
   display: flex;
   align-items: center;
   margin-left: 15px;
@@ -306,17 +316,17 @@ li {
   border-radius: 50%;
 }
 
-li > div {
+.storyAndRecommendList li > div {
   display: flex;
   flex-direction: column;
   margin-left: 8px;
 }
 
-li div span:first-child {
+.storyAndRecommendList li div span:first-child {
   font-weight: 700;
 }
 
-li div span:last-child {
+.storyAndRecommendList li div span:last-child {
   color: #bdbdbd;
 }
 
@@ -327,11 +337,11 @@ li div span:last-child {
   border-radius: 50%;
 }
 
-li div p:first-child {
+.storyAndRecommendList li div p:first-child {
   font-weight: 700;
 }
 
-li div p:last-child {
+.storyAndRecommendList li div p:last-child {
   color: #bdbdbd;
   font-weight: 700;
   overflow: hidden;
@@ -340,7 +350,7 @@ li div p:last-child {
   width: 160px;
 }
 
-li > span {
+.storyAndRecommendList li > span {
   color: #57a6f2;
   font-weight: 700;
   font-size: 17px;
