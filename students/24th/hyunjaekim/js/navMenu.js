@@ -17,7 +17,6 @@ function hideMenu() {
 
 function init() {
   profileWrapper.addEventListener("click", (e) => {
-    console.log(e);
     toggleMenu();
     e.stopPropagation();
   });

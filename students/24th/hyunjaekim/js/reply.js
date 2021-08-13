@@ -1,13 +1,13 @@
 "use strict";
 let replies = document.querySelector(".replies"); // ul
 let postBtn = document.querySelector(".commentPost"); // submit btn
-let currentValue = commentInput.value; //  입력 값
 
 const commentInput = document.querySelector(".commentInput"); //  input
 
 function onAdd() {
+  const currentValue = commentInput.value;
   createItem(currentValue);
-  currentValue = "";
+  commentInput.value = "";
 }
 
 function createItem(text) {
@@ -25,13 +25,16 @@ function createItem(text) {
 
 function init() {
   postBtn.addEventListener("click", () => {
-    if (currentValue > 0) {
+    let commentValue = commentInput.value;
+    if (commentValue.length > 0) {
       onAdd();
     }
   });
+
   commentInput.addEventListener("keydown", (e) => {
+    let commentValue = commentInput.value;
     if (e.key === "Enter") {
-      if (currentValue > 0) {
+      if (commentValue.length > 0) {
         onAdd();
       }
     }

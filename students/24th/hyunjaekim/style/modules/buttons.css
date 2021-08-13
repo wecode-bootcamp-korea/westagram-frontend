@@ -24,7 +24,7 @@
   display: block;
   width: 22px;
   height: 22px;
-  background-color: #fff;
+  background-color: transparent;
   background-size: cover;
 }
 
@@ -51,13 +51,20 @@
 }
 
 .statusBtn {
-  background-image: url("/students/24th/hyunjaekim/assets/icons/heart.png");
   cursor: pointer;
 }
 
 .heartBtn {
-  background-image: url("/students/24th/hyunjaekim/assets/icons/heart.png");
+  font-size: 22px;
   cursor: pointer;
+}
+
+.heartBtn.small_icon {
+  font-size: 12px;
+}
+
+.fas.fa-heart {
+  color: red;
 }
 
 .comment {
