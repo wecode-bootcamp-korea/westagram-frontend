@@ -1,4 +1,5 @@
 const searchInput = document.querySelector(".search-bar");
+const searchContent = document.querySelector(".search-content");
 const commentInput = document.querySelector(".comment-post");
 const commentForm = document.querySelector(".comment-form");
 const commentList = document.querySelector(".comments");
@@ -126,3 +127,16 @@ const showFilteredAccount = (account) => {
   </div>`;
   filteredList.append(filteredOne);
 };
+
+// 검색창 삭제 버튼 기능 구현
+searchContent.addEventListener("click", (e) => {
+  const search = document.querySelector(".search");
+  const searchIcon = document.querySelector(".fas.fa-search");
+  const searchDelete = document.querySelector(".fas.fa-times-circle");
+  if (e.target.className === "fas fa-times-circle focus") {
+    searchInput.value = "";
+    search.classList.remove("focus");
+    searchIcon.classList.remove("focus");
+    searchDelete.classList.remove("focus");
+  }
+});
