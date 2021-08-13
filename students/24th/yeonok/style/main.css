@@ -19,7 +19,7 @@ body {
 
 main {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   border: 1px solid rgb(220, 219, 219);
 }
 
@@ -35,6 +35,16 @@ article {
   margin: 5px auto;
   width: 100%;
   border: 1px solid rgb(220, 219, 219);
+}
+
+.stories {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stories img {
+  width: 80px;
+  
 }
 
 .main-right {
@@ -56,7 +66,7 @@ nav {
 }
 
 #brand-name {
-  font-family: 'Lobster Two', cursive;
+  font-family: "Lobster Two", cursive;
   font-size: 40px;
 }
 
@@ -124,7 +134,7 @@ header {
   display: flex;
   align-items: center;
   font-size: 22px;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 article {
@@ -138,7 +148,7 @@ article {
 }
 
 .social-activity {
-  font-family: 'Gothic A1', sans-serif;
+  font-family: "Gothic A1", sans-serif;
   padding: 10px 20px 10px 20px;
   position: relative;
 }
@@ -152,7 +162,8 @@ article {
   display: inline-block;
 }
 
-.activity-icons i, .act-icons-left i {
+.activity-icons i,
+.act-icons-left i {
   font-size: 30px;
 }
 
@@ -160,10 +171,10 @@ article {
   margin-right: 8px;
 }
 
-.liked-num p{
+.liked-num p {
   font-size: 20px;
   margin: 15px 0 12px 0;
-  font-family: 'Gothic A1', sans-serif;
+  font-family: "Gothic A1", sans-serif;
   font-weight: 700;
 }
 
@@ -183,7 +194,7 @@ article {
 #my-id {
   font-size: 20px;
   margin-right: 10px;
-  font-family: 'Gothic A1', sans-serif;
+  font-family: "Gothic A1", sans-serif;
   font-weight: 700;
 }
 
@@ -201,6 +212,28 @@ article {
   color: rgb(142, 142, 142);
 }
 
-.add-comments {
+.my-profile {
+  width: 80px;
+  border-radius: 100%;
+  margin-right: 10px;
+}
 
+.header {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 40px;
+}
+
+.header span {
+  font-size: 30px;
+  font-family: "Gothic A1", sans-serif;
+  font-weight: 300;
+  margin: 40px 0;
+}
+
+.recommend-header {
+  font-size: 17px;
+  font-family: "Gothic A1", sans-serif;
+  font-weight: 300;
 }
