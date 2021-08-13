@@ -33,7 +33,6 @@ html, body {
 .logo, .search-bar,
 .icon-container {
   width: 240px;
-  height: 100%;
   display: flex;
   align-items: center;
   padding: 0 20px;
@@ -104,7 +103,7 @@ html, body {
 
 .feeds {
   width: 600px;
-  height: 900px;
+  padding-top: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -112,7 +111,6 @@ html, body {
 
 .article {
   width: 580px;
-  height: 800px;
   background-color: white;
   border: 1px solid #EFEFEF;
 }
@@ -129,7 +127,6 @@ html, body {
 
 .title-left {
   width: 150px;
-  height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -183,27 +180,15 @@ html, body {
 
 .feeds-icon {
   width: 150px;
-  height: 100%;
   margin-left: 20px;
 }
 
 .feeds-icon > img,
-.bookmark > img{
+.bookmark > img {
   background: transparent;
   width: 30px;
 }
 
-.bookmark {
-  width: 50px;
-  height: 100%;
-  position: relative;
-
-}
-
-.bookmark > img {
-  position: absolute;
-  transform: translateX(20px);
-}
 
 /* 댓글영역 */
 
@@ -264,14 +249,12 @@ html, body {
 
 .comment-plus input {
   width: 500px;
-  height: 100%;
-  border: none;
+/  border: none;
   outline: none;
   margin-left: 20px;
 }
 
 .comment-btn {
-  height: 100%;
   border: none;
   outline: none;
   color: #C8E3FC;
