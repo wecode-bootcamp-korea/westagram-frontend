@@ -187,23 +187,27 @@ function resetList() {
 
 // 검색창 입력 관련 기능 구현
 
-searchInput.addEventListener('keyup',()=> {
-  let inputValue = searchInput.value;
-  let result = [];
-  resetList()
+searchInput.addEventListener('keyup',(event)=> {
+  let inputValue = event.target.value;
+  resetList() // 검색결과 리셋
   if(inputValue !== ""){
-      userData.forEach((element) => {
-        let same = element.id.indexOf(inputValue);
-          if(same === 0) {
-              result.push(element);
-          }
-      })
+      let result = userData.filter((data) => {
+        return returnSearchResult(data, inputValue);
+      });
       addProfile(result);
   }
   if(inputValue === ""){
     addProfile(previewData);
   }
 });
+
+// 검색 결과 배열 반환 함수
+function returnSearchResult (data, input) {
+  let same = data.id.indexOf(input);
+  if(same === 0){
+    return true;
+  };
+}
 
 // 검색어창 포커스 관련 기능 구현
 searchInput.addEventListener("focus", ()=>{
