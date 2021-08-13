@@ -1,10 +1,10 @@
 * {
-  box-sizing: border-box;
   margin: 0;
+  box-sizing: border-box;
 }
 
 ul {
-  padding: 0;
+  padding-left: 0;
   list-style: none;
 }
 
@@ -12,7 +12,11 @@ a {
   text-decoration: none;
 }
 
+a,
+button {
+  cursor: pointer;
+}
+
 img {
-  /* inline 요소인 img 하단에 존재하는 여백 제거 */
   vertical-align: top;
 }

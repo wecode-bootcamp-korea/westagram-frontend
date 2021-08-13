@@ -4,9 +4,9 @@ let loginBtn = document.querySelector(".login button");
 
 function activateLoginBtn() {
   loginBtn.classList.add('active');
-  if ((userAccount.value) == '' || (userPw.value) == '') {
-    loginBtn.classList.remove('active');
-  }
+  return ((userAccount.value) == '' || (userPw.value) == '') 
+    ? loginBtn.classList.remove('active') 
+    : 1;
 }
 
 userAccount.addEventListener('input', activateLoginBtn);

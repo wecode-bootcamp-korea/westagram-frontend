@@ -6,7 +6,7 @@
   --content-background-color: #FFFFFF;
 }
 
-/* 레이아웃 */
+/* layout */
 html,
 body {
   font-family: 'Hahmlet', serif;
@@ -34,7 +34,7 @@ aside {
   width: 250px;
 }
 
-/* 공통 적용 속성 */
+/* common property */
 .writer-id,
 .user-id,
 .likers,
@@ -75,8 +75,8 @@ nav {
   justify-content: space-around;
   align-items: center;
   padding: 15px;
-  border-bottom: 1px solid var(--border-color);
   background-color: var(--content-background-color);
+  border-bottom: 1px solid var(--border-color);
 }
 
 .logos {
@@ -92,18 +92,18 @@ h1 {
 
 article {
   margin: 0 20px 20px 0;
-  border: 1px solid var(--border-color);
   background-color: var(--content-background-color);
+  border: 1px solid var(--border-color);
 }
 
 nav input {
   width: 230px;
   height: 30px;
   padding-left: 10px;
+  color: var(--secondary-color);
+  background-color: var(--background-color);
   border: 1px solid var(--border-color);
   border-radius: 3px;
-  background-color: var(--background-color);
-  color: var(--secondary-color);
   font-size: 12px;
   text-align: center;
   outline: none;
@@ -116,8 +116,8 @@ nav input {
 /* article */
 .feed-writer-header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 
 .feed-writer {
@@ -131,9 +131,9 @@ nav input {
 }
 
 .feed-img {
-  opacity: 1;
   width: 450px;
   height: 500px;
+  opacity: 1;
 }
 
 .feed-writer-header img:last-child {
@@ -162,9 +162,9 @@ nav input {
 }
 
 .comments-container {
+  position: relative;
   display: flex;
   align-items: center;
-  position: relative;
 }
 
 .comment {
@@ -197,9 +197,8 @@ nav input {
 
 .menu-btn,
 .upload-btn {
-  border: none;
   background-color: transparent;
-  cursor: pointer;
+  border: none;
 }
 
 .upload-btn {
@@ -223,14 +222,10 @@ nav input {
   margin-right: 10px;
 }
 
-.follower-stories {
-  border: 1px solid var(--border-color);
-  background-color: var(--content-background-color);
-}
-
+.follower-stories,
 .following-rec {
-  border: 1px solid var(--border-color);
   background-color: var(--content-background-color);
+  border: 1px solid var(--border-color);
 }
 
 .user-nickname {
@@ -267,8 +262,8 @@ nav input {
 .following-info .rec-users {
   display: inline-block;
   width: 110px;
-  overflow: hidden;
   white-space: nowrap;
+  overflow: hidden;
   text-overflow: ellipsis;
 }
 
@@ -276,25 +271,22 @@ nav input {
   width: 60px;
   height: 30px;
   margin-left: 10px;
-  border: none;
   color: var(--accent-color);
   background-color: #FFFFFF;
+  border: none;
 }
 
 .westagram-link ul {
   margin-bottom: 10px;
-  padding-left: 0;
-  list-style: none;
 }
 
 .westagram-link li {
   display: inline-block;
 }
 
-.westagram-link ul a {
+.westagram-link li a {
   margin-right: 2px;
   color: var(--secondary-color);
-  text-decoration: none;
 }
 
 .westagram-info .copyright {
