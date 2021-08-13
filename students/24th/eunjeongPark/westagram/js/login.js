@@ -18,8 +18,18 @@ function loginBtn() {
 }
 
 function loginSuccess() {
-  alert('로그인 성공!');
+    alert('로그인 성공!');
+    inputId.value = null;
+    inputPassword.value = null;
+    button.disabled = true;
+    button.style.cursor = "default";
+    button.style.backgroundColor = "#C4E1FB";
+}
+
+function newPage() {
+    window.location.herf = "https://www.naver.com"
 }
 
 inputId.addEventListener('keyup', loginBtn);
 inputPassword.addEventListener('keyup', loginBtn);
+button.addEventListener('click', loginSuccess);
