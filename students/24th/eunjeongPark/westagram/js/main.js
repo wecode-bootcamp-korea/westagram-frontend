@@ -19,16 +19,10 @@ function sumbitBtn() {
   }
 }
 
-
-
- function submitComment() {
-    alert('버튼은 눌림')
-    const newComment = commentInput.value.trim(); //  댓글 양 끝 공백제거
-
-     // 시간 계산 함수
- function timeForToday(vaue) {
+// 시간 계산 함수
+function timeForToday() {
   const today = new Date();
-  const timeValue = new Date(value);
+  const timeValue = new Date();
 
   const betweenTime = Math.floor((today.getTime() - timeValue.getTime()) / 1000 / 60);
   if (betweenTime < 1) return '방금전';
@@ -49,6 +43,11 @@ function sumbitBtn() {
   return `${Math.floor(betweenTimeDay / 365)}년전`;
 }
 
+let time = timeForToday();
+
+
+ function addComment() {
+    const newComment = commentInput.value.trim(); //  댓글 양 끝 공백제거
 
     if (newComment.length > 0) {
       const commentContainer = document.querySelector('.art-comment');
@@ -60,7 +59,7 @@ function sumbitBtn() {
       commentNth.className = "comment-nth"
       userId.className = "user-id"
       commentText.className = "comment-text"
-      commentTime.className = "comment-time"
+      commentTime.className = "color-light"
 
       commentContainer.appendChild(commentNth);
       commentContainer.appendChild(userId);
@@ -69,10 +68,14 @@ function sumbitBtn() {
 
       commentText.innerText = newComment;
       userId.innerText = 'chunSig ';
+      commentTime.innerText = time;
+
+      // 버튼 초기화
+      commentInput.value = null;
+      button.disabled = true;
+      button.style.cursor = "default";
+      button.style.color = "#C8E3FC";
    }
  }
-
-
-
  commentInput.addEventListener('keyup', sumbitBtn);
- button.addEventListener('click', submitComment);
+ button.addEventListener('click', addComment);
