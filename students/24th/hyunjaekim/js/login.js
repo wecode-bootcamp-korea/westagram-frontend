@@ -1,18 +1,18 @@
 const loginContainer = document.querySelector(".loginContainer");
-const userID = document.querySelector(".userID");
-const userPW = document.querySelector(".userPW");
+
 const loginBtn = document.querySelector(".loginBtn");
 
 function validateEmail() {
+  const userID = document.querySelector(".userID");
+  const userPW = document.querySelector(".userPW");
+
   const idArray = userID.value.split(""); // 받아온 id를 array화
-  for (let i = 0; i < idArray.length; i++) {
-    if (idArray[i] === "@") {
-      activeLoginBtn();
-    }
+  if (idArray.indexOf("@") >= 0) {
+    activeLoginBtn(userID, userPW);
   }
 }
 
-function activeLoginBtn() {
+function activeLoginBtn(userID, userPW) {
   userID.value.length > 4 && userPW.value.length > 4 ? loginBtn.classList.add("active") : loginBtn.classList.remove("active");
 }
 
