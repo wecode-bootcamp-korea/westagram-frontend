@@ -1,35 +1,33 @@
 @import "common.css";
 
 body {
-  height: 150vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 150vh;
   background-color: #ffffff;
 }
 /* 상단 navbar  */
 
-nav {
-  height: 60px;
-  width: 100%;
-  border-bottom: 2px solid #dbdbdb;
+nav {  
   display: flex;
   align-items: center;
   justify-content: center;
   position: fixed;
+  height: 60px;
+  width: 100%;
+  border-bottom: 2px solid #dbdbdb;
   background-color: white;
   z-index: 10;
 }
 
 .mainLogo {
-  width: 180px;
-  display: flex;
-  display: flex;
-  font-size: 25px;
   display: flex;
   justify-content: space-around;
   position: relative;
   right: 120px;
+  width: 180px;
+  font-size: 25px;
 }
 
 .logo {
@@ -43,23 +41,23 @@ nav {
 }
 
 .searchBar {
-  width: 250px;
-  height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 250px;
+  height: 30px;
   border: 2px solid #dbdbdb;
   background-color: #fafafa;
   color: #dbdbdb;
   font-size: 13px;
 }
 
-.mainMenu {
-  width: 130px;
+.mainMenu {  
   display: flex;
   justify-content: space-between;
   position: relative;
   left: 120px;
+  width: 130px;
 }
 
 .mainMenu img {
@@ -79,27 +77,27 @@ nav {
 }
 
 .redDot {
+  position: absolute;
   width: 5px;
   height: 5px;
   background-color: red;
   border-radius: 50%;
-  position: absolute;
 }
 
 /* 메인화면 */
 
 main {
-  width: 800px;
-  margin-top: 90px;
   display: flex;
   justify-content: space-around;
+  width: 800px;
+  margin-top: 90px;
 }
 
 .firstFeed {
-  border: 2px solid #dbdbdb;
-  width: 450px;
   display: flex;
   flex-direction: column;
+  width: 450px;
+  border: 2px solid #dbdbdb;
 }
 
 .firstFeed div {
@@ -107,15 +105,15 @@ main {
 }
 
 .feedUploader {
-  height: 60px;
   display: flex;
   align-items: center;
+  height: 60px;
 }
 
 .feedUploader img {
+  margin-left: 12px;
   height: 35px;
   border-radius: 50%;
-  margin-left: 12px;
 }
 
 .uploaderId {
@@ -139,16 +137,16 @@ main {
 }
 
 .feedFunction {
-  height: 50px;
   display: flex;
   align-items: center;
-  font-size: 25px;
+  height: 50px;
   color: #6a6a6a;
+  font-size: 25px;
 }
 
 .leftFeedFunction i:first-child {
-  color: red;
   margin-left: 7px;
+  color: red;
 }
 
 .leftFeedFunction i {
@@ -160,16 +158,16 @@ main {
 }
 
 .feedCommunication {
-  height: 20px;
   display: flex;
   align-items: center;
+  height: 20px;
 }
 
 .feedCommunication img {
+  margin: 0 8px 1px 15px;
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  margin: 0 8px 1px 15px;
 }
 
 .likeComment span {
@@ -188,11 +186,12 @@ main {
 }
 
 .friendsReply {
-  margin-bottom: 5px;
   position: relative;
+  margin-bottom: 5px;
 }
 
 .friendsReply span:first-child {
+  padding-right: 10px;
   font-weight: 700;
 }
 
@@ -201,10 +200,10 @@ main {
 }
 
 .trashCan {
-  font-size: 15px;
-  color: white; 
   position: absolute;
   right: 20px;
+  color: white; 
+  font-size: 15px;
 }
 
 .myFeedReply span:first-child {
@@ -213,18 +212,18 @@ main {
 
 .myFeedReply span:last-child,
 .grayReply {
-  color: #9b9b9b;
   position: relative;
   left: 15px;
+  color: #9b9b9b;
 }
 
 .addReply {
-  border-top: 2px solid #ececec;
   display: flex;
   justify-content: center;
   align-items: center;
   padding-top: 6px;
   height: 35px;
+  border-top: 2px solid #ececec;
 }
 
 input {
@@ -243,23 +242,23 @@ input::placeholder {
 
 .addReply input:last-child {
   width: 20%;
+  padding-right: 10px;
   background-color: white;
+  font-weight: 700;
   text-align: right;
   color: rgba(3, 102, 214, 0.3);
-  font-weight: 700;
-  padding-right: 10px;
 }
 
 /* 우측 메뉴 */
 
-.main-right {
+aside {
   width: 300px;
 }
 
 .loginUser {
-  height: 60px;
   display: flex;
   align-items: center;
+  height: 60px;
 }
 
 .loginUser img {
@@ -276,12 +275,12 @@ input::placeholder {
 .subFeedList {
   width: 100%;
   height: 220px;
+  overflow: scroll;
   border: 2px solid #dbdbdb;
   margin-top: 10px;
-  overflow: scroll;
 }
 
-.asideMenu {
+.moreInformation {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -290,19 +289,20 @@ input::placeholder {
   padding-top: 10px;
 }
 
-.asideMenu span:first-child {
+.moreInformation span:first-child {
   color: #bdbdbd;
   font-weight: 700;
 }
 
-.asideMenu span:last-child {
-  font-size: 17px;
-  font-weight: 700;
+.moreInformation span:last-child {
   position: relative;
   right: 15px;
+  font-size: 17px;
+  font-weight: 700;
 }
 
-.storyAndRecommendList li {
+.storyList li,
+.recommendList li {
   display: flex;
   align-items: center;
   margin-left: 15px;
@@ -316,17 +316,18 @@ input::placeholder {
   border-radius: 50%;
 }
 
-.storyAndRecommendList li > div {
+.storyList li > div,
+.recommendList li > div {
   display: flex;
   flex-direction: column;
   margin-left: 8px;
 }
 
-.storyAndRecommendList li div span:first-child {
+.storyList li div span:first-child {
   font-weight: 700;
 }
 
-.storyAndRecommendList li div span:last-child {
+.storyList li div span:last-child {
   color: #bdbdbd;
 }
 
@@ -337,24 +338,24 @@ input::placeholder {
   border-radius: 50%;
 }
 
-.storyAndRecommendList li div p:first-child {
+.recommendList li div p:first-child {
   font-weight: 700;
 }
 
-.storyAndRecommendList li div p:last-child {
-  color: #bdbdbd;
-  font-weight: 700;
+.recommendList li div p:last-child {
+  width: 160px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  width: 160px;
+  color: #bdbdbd;
+  font-weight: 700;
 }
 
-.storyAndRecommendList li > span {
+.recommendList li span {
+  margin-left: 11px;
   color: #57a6f2;
   font-weight: 700;
   font-size: 17px;
-  margin-left: 11px;
 }
 
 .policy {

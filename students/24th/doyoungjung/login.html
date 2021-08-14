@@ -9,15 +9,17 @@
     <link rel = "stylesheet" href = "style/login.css"/>
 </head>
 <body>
+    <main>
     <div class="loginPage">
-        <div class="logo">Westagram</div>
-        <form class="loginForm">
-            <input class="loginId loginInformation" type="text" placeholder="전화번호, 사용자 이름 또는 이메일"></input>
-            <input class="loginPassword loginInformation" type="password" placeholder="비밀번호"></input>
-            <button class="loginBtn">로그인</button> 
+        <h1 class="logo">Westagram</h1>
+        <form class="loginSpace">
+            <input class="loginId loginInformation" type="text" placeholder="전화번호, 사용자 이름 또는 이메일"/>
+            <input class="loginPassword loginInformation" type="password" placeholder="비밀번호"/>
+            <button type="button" class="loginBtn" disabled=disabled>로그인</button> 
         </form>
-        <div class="findPassword">비밀번호를 잊으셨나요?</div>
+        <a href="#" class="findPassword">비밀번호를 잊으셨나요?</a>
     </div>
+    </main>
 </body>
     <script type="text/javascript" src="js/login.js"></script> 
 </html>

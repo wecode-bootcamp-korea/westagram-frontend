@@ -9,7 +9,8 @@ function countValue(event) {
   let passwordValue = inputPassword.value;
   (idValue.length > 0 && passwordValue.length >= 5 && idValue.indexOf("@") !== -1) ?
     (loginButton.style.opacity = "1",
-      loginButton.style.cursor = "pointer") :
+      loginButton.style.cursor = "pointer",
+      loginButton.disabled = "false") :
     loginButton.style.opacity = "0.2"
 }
 
