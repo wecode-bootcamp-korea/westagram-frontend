@@ -40,11 +40,25 @@ article {
 .stories {
   display: flex;
   justify-content: space-between;
+  padding: 5px 23px 5px 23px;
 }
 
 .stories img {
-  width: 80px;
-  
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  margin: 5px 5px;
+}
+
+.stories span {
+  font-family: "Gothic A1", sans-serif;
+  font-size: 13px;
+}
+
+.stories div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .main-right {
@@ -116,11 +130,7 @@ li {
   float: left;
 }
 
-.stories {
-  padding: 5px 5px 5px 5px;
-}
-
-header {
+.newspeed-h {
   padding: 10px 10px 10px 10px;
 }
 
@@ -203,13 +213,52 @@ article {
   font-weight: 300;
 }
 
-.upload-time {
-  position: absolute;
-  bottom: 0;
+.comments-area {
+  height: 120px;
+}
+
+.comments-area span {
+  margin: 8px auto;
+  font-family: "Gothic A1", sans-serif;
+  font-size: 17px;
+}
+
+.comments-id {
+  font-weight: 700;
 }
 
 #sec {
+  position: absolute;
+  bottom: 0;
   color: rgb(142, 142, 142);
+  font-size: 11px;
+}
+
+.add-comments {
+  width: 100%;
+  border-top: 1px solid rgb(220, 219, 219);
+  padding: 25px 20px;
+  display: flex;
+  align-items: center;
+}
+
+.add-comments span {
+  margin-right: 15px;
+  font-size: 30px;
+}
+
+.add-comments input {
+  width: 100%;
+  height: 30px;
+  border: none;
+}
+
+.add-comments button {
+  font-size: 22px;
+  color: rgb(81, 155, 240);
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 .my-profile {
@@ -222,7 +271,7 @@ article {
   display: flex;
   justify-content: left;
   align-items: center;
-  width: 40px;
+  padding: 10px 20px 10px 10px;
 }
 
 .header span {
@@ -233,7 +282,35 @@ article {
 }
 
 .recommend-header {
-  font-size: 17px;
+  font-size: 15px;
   font-family: "Gothic A1", sans-serif;
-  font-weight: 300;
+  font-weight: 700;
+  color: rgb(143, 142, 142);
+  margin: 20px auto;
+}
+
+.follow-others div {
+  display: flex;
+  align-items: center;
+  margin: 15px auto;
+}
+
+.follow-others div span {
+  font-size: 15px;
+  font-family: "Gothic A1", sans-serif;
+  font-weight: 700;
+  margin: auto 10px;
+}
+
+.follow-others div img {
+  width: 50px;
+  border-radius: 100%;
+}
+
+.follow-others div button {
+  color: rgb(81, 155, 240);
+  font-family: "Gothic A1", sans-serif;
+  font-weight: 700;
+  border: none;
+  background-color: transparent;
 }
