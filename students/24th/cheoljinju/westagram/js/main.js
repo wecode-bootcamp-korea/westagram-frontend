@@ -168,10 +168,11 @@ function resetList() {
 searchInput.addEventListener("keyup", (event) => {
   let inputValue = event.target.value;
   resetList(); // 검색결과 리셋
+  console.log(searchInput.value);
   if (inputValue !== "") {
-    let result = userData.filter((data) => {
-      return returnSearchResult(data, inputValue);
-    });
+    let result = userData.filter((data) =>
+      returnSearchResult(data, inputValue)
+    );
     addProfile(result);
   }
   if (inputValue === "") {
