@@ -215,10 +215,17 @@ article {
 
 .comments-area {
   height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.comments-area li {
+  display: block;
 }
 
 .comments-area span {
-  margin: 8px auto;
+  margin: 8px 10px 8px 0;
   font-family: "Gothic A1", sans-serif;
   font-size: 17px;
 }
