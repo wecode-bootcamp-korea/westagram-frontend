@@ -45,32 +45,46 @@
           <div class="feed-info">
             <div class="feed-btns">
               <div class="feed-handle-btns">
-                <img alt="like" src="./images/like.png" class="icon" />
-                <img alt="comment" src="./images/chat.png" class="icon" />
-                <img alt="export" src="./images/export.png" class="icon" />
+                <button type="button" class="feed-btn">
+                  <img alt="like" src="./images/like.png" class="icon" />
+                </button>
+                <button type="button" class="feed-btn">
+                  <img alt="comment" src="./images/chat.png" class="icon" />
+                </button>
+                <button type="button" class="feed-btn">
+                  <img alt="export" src="./images/export.png" class="icon" />
+                </button>
               </div>
-              <img alt="bookmark" src="./images/bookmark-white.png" class="icon" />
-            </div>
-            <div class="feed-likers">
-              <div class="first-liker">
-                <img alt="add-liker" src="./images/liker.jpg" class="profile profile-img" />
-                <p><span lang="en" class="user-id">cutiebbojjak</span>님 <span class="likers">외 100명</span>이 좋아합니다</p>
+              <button type="button" class="feed-btn">
+                <img alt="bookmark" src="./images/bookmark-white.png" class="icon" />
+              </button>
+              </div>
+            <div class="feed-container">
+              <div class="feed-likers">
+                <div class="first-liker">
+                  <a href="#">
+                    <img alt="add-liker" src="./images/liker.jpg" class="profile profile-img" />
+                  </a>
+                  <p><span lang="en" class="user-id">cutiebbojjak</span>님 <span class="likers">외 100명</span>이 좋아합니다</p>
+                </div>
+                <div class="writer-comment">
+                  <span class="user-id">kitty_bunny_pony</span>
+                  <span>여기가 핫플이라매! 웅성웅성... </span>
+                  <span>더 보기</span>
+                </div>
               </div>
               <div class="comments-container">
                 <div class="comments">
                   <div class="comment">
-                    <span class="commenter user-id">thatsme</span>
-                    <span>여기가 핫플이라매! 웅성웅성... </span>
-                    <span>더 보기</span>
-                  </div>
-                  <div class="comment">
                     <span class="commenter user-id">crushbOgOpa</span>
                     <span>언제 제대하는거야.. 그날만을 기다려😪</span>
-                    <img alt="like-btn" src="./images/heart.png" class="like-icon" />
+                    <button type="button" class="delete-btn">
+                      <img alt="delete-btn" src="./images/cancel.png" class="delete-icon" />
+                    </button>
                   </div>
                 </div>
+                <p class="upload-time">11분 전</p>
               </div>
-              <p class="upload-time">11분 전</p>
             </div>
           </div>
           <div class="new-comment">
@@ -81,7 +95,9 @@
       </section>
       <aside>
         <div class="my-profile">
-          <img alt="profile" src="./images/my-profile.jpg" class="profile"/>
+          <a href="#">
+            <img alt="profile" src="./images/my-profile.jpg" class="profile"/>
+          </a>
           <div class="user-name">
             <div class="profile-info user-id">
               dangDaeng2
@@ -100,14 +116,18 @@
           </div>
           <div class="story-list">
             <div class="story">
-              <img alt="follower" src="./images/profile2.jpg" class="profile profile-img" />
+              <a href="#">
+                <img alt="follower" src="./images/profile2.jpg" class="profile profile-img" />
+              </a>
               <div class="follower-info">
                 <span class="user-id">mungmung</span>
                 <span>23분 전</span>
               </div>
             </div>
             <div class="story">
-              <img alt="follower" src="./images/profile3.jpg" class="profile profile-img" />
+              <a href="#">
+                <img alt="follower" src="./images/profile3.jpg" class="profile profile-img" />
+              </a>
               <div class="follower-info">
                 <span class="user-id">heyUrman</span>
                 <span>1시간 전</span>
@@ -124,7 +144,9 @@
           </div>
           <div class="following-list">
             <div class="following">
-              <img alt="following" src="./images/profile4.jpg" class="profile profile-img" />
+              <a href="#">
+                <img alt="following" src="./images/profile4.jpg" class="profile profile-img" />
+              </a>
               <div class="following-info">
                 <span class="user-id">Uyahooops</span>
                 <span class="rec-users">youngBi님 외 5명이 추천합니다</span>
@@ -132,7 +154,9 @@
               <button class="follow-btn">팔로우</button>
             </div>
             <div class="following">
-              <img alt="following" src="./images/profile5.jpg" class="profile profile-img" />
+              <a href="#">
+                <img alt="following" src="./images/profile5.jpg" class="profile profile-img" />
+              </a>  
               <div class="following-info">
                 <span class="user-id">yOungK_bbi</span>
                 <span class="rec-users">himDleda님 외 37명이 추천합니다</span>

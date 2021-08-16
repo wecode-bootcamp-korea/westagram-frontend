@@ -20,6 +20,7 @@ header {
   top:0;
   width: 100vw;
   background-color: var(--background-color);
+  z-index: 1;
 }
 
 main {
@@ -28,10 +29,18 @@ main {
   margin-top: 60px;
   padding: 30px 50px;
   background-color: var(--background-color);
+  scroll-snap-type: y mandatory;
+}
+
+article {
+  scroll-snap-align: center;
 }
 
 aside {
+  position: sticky;
+  top: 90px;
   width: 250px;
+  height: 420px;
 }
 
 /* common property */
@@ -53,13 +62,14 @@ westagram-link {
 .feed-writer-header,
 .feed-btns,
 .feed-likers,
+.comments-container,
 .new-comment {
   padding: 10px;
 }
 
 .icon {
-  width: 25px;
-  height: 25px;
+  width: 23px;
+  height: 23px;
   opacity: 0.8;
 }
 
@@ -150,37 +160,48 @@ nav input {
   margin-right: 10px;
 }
 
-.feed-likers {
+.feed-container {
+  display: flex;
+  flex-direction: column;
   padding-top: 0;
   border-bottom: 1px solid var(--border-color);
+}
+
+.feed-likers {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0;
 }
 
 .first-liker {
   display: flex;
   align-items: center;
-  margin-bottom: 5px;
-}
+  margin-bottom: 8px;
+} 
 
 .comments-container {
-  position: relative;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  padding-top: 0;
 }
 
 .comment {
+  position: relative;
   display: flex;
-  align-items: center;
 }
 
 .comment .user-id {
   margin-right: 3px;
 }
 
-.comment .like-icon {
+.comment .delete-btn {
   position:absolute;
   right: 0;
-  width: 13px;
-  height: 13px;
+}
+
+.comment .delete-icon {
+  width: 10px;
+  height: 10px;
   color: var(--secondary-color);
 }
 
@@ -190,15 +211,18 @@ nav input {
 
 .new-comment input {
   width: 370px;
-  margin-right: 18px;
+  margin-right: 20px;
   border: none;
   outline: none;
 }
 
 .menu-btn,
+.feed-btn,
+.delete-btn,
 .upload-btn {
   background-color: transparent;
   border: none;
+  padding: 0;
 }
 
 .upload-btn {

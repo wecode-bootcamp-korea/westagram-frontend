@@ -1,32 +1,41 @@
 let comments = document.querySelector('.comments');
-let comment = document.querySelector('.new-comment input');
+let commentInput = document.querySelector('.new-comment input');
 const uploadBtn = document.querySelector('.upload-btn');
+const deleteBtn = document.querySelector('.delete-btn');
 
 function uploadComment() {
   const newCommentWrap = document.createElement('div');
   const newCommentId = document.createElement('span');
   const newComment = document.createElement('span');
-  const newCommentLike = document.createElement('span');
+  const newCommentDel = document.createElement('span');
   newCommentWrap.className = "comment";
   newCommentId.className = "commenter user-id";
-  newComment.innerHTML = comment.value;
+  newComment.innerHTML = commentInput.value;
   newCommentId.innerHTML = "imInSSa";
-  newCommentLike.innerHTML = '<img src="./images/heart.png" alt="like-btn" class="like-icon" />';
+  newCommentDel.innerHTML = `<button type="button" class="delete-btn">
+                              <img alt="delete-btn" src="./images/cancel.png" class="delete-icon" />
+                            </button>`;
   newCommentWrap.appendChild(newCommentId);
   newCommentWrap.appendChild(newComment);
-  newCommentWrap.appendChild(newCommentLike);
+  newCommentWrap.appendChild(newCommentDel);
   comments.appendChild(newCommentWrap);
-  comment.value = '';
+  commentInput.value = '';
 };
 
-comment.addEventListener('keydown', function(key) {
-  if (comment.value && key.keyCode == 13) {
+commentInput.addEventListener('keydown', function(key) {
+  if (commentInput.value && key.keyCode == 13) {
     uploadComment();
   }
 });
 
 uploadBtn.addEventListener('click', function(e) {
-  if (comment.value && e.target.innerHTML == '게시') {
+  if (commentInput.value && e.target.innerHTML == '게시') {
     uploadComment();
   }
-}); 
+});
+
+deleteBtn.addEventListener('click', function(e) {
+  console.log(e.currentTarget); // btn
+  const delComment = e.currentTarget.parentNode; // comment
+  delComment.remove();
+});
