@@ -49,9 +49,8 @@ function moreReply2() {
     newSpan2.innerHTML = inputText;
     newSpan3.classList.add('trashCan');
     newI.setAttribute("class", "fas fa-trash-alt");
-
     replySpace.appendChild(newLi);
-    newLi.appendChild(newSpan1);
+    newLi.appendChild(newSpan1);₩
     newLi.appendChild(newSpan2);
     newLi.appendChild(newSpan3);
     newSpan3.appendChild(newI);
