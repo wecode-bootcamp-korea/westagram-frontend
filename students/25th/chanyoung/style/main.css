@@ -1,0 +1,250 @@
+:root {
+  --border: 1px solid rgba(0, 0, 0, 0.2);
+  --background-color--gray: #fafafa;
+}
+i {
+  opacity: 0.7;
+}
+i:hover:not(.fa-camera),
+.menu img:hover {
+  cursor: pointer;
+}
+/* 유저 관련 */
+.username {
+  font-weight: bold;
+}
+.user-img {
+  border-radius: 50%;
+}
+body {
+  padding-top: 55px;
+  background-color: var(--background-color--gray);
+}
+/* header */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 55px;
+  border: var(--border);
+  background-color: white;
+  z-index: 1;
+}
+.header__ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+.header__title {
+  font-size: 20px;
+}
+.header__search {
+  position: relative;
+  border: var(--border);
+}
+.header__search .fa-search {
+  position: absolute;
+  top: 4px;
+  left: 45px;
+  font-size: 5px;
+}
+.header__search input {
+  border: none;
+  background-color: transparent;
+}
+.header__search input::placeholder {
+  font-size: 12px;
+  text-align: center;
+  background-color: var(--background-color--gray);
+  opacity: 0.6;
+}
+.header__search__find-container {
+  position: absolute;
+  width: 100%;
+  height: 40px;
+  top: 19px;
+  background-color: var(--background-color--gray);
+  border: var(--border);
+  border-top: none;
+}
+.menu {
+  display: flex;
+  justify-content: space-between;
+  opacity: 0.7;
+  width: 95px;
+}
+.menu img {
+  width: 20px;
+  transition: all 1s ease-out 0.01s;
+}
+.menu img:hover {
+  transform: scale(1.5, 1.5);
+}
+/* main */
+main {
+  display: flex;
+  justify-content: center;
+  padding-top: 45px;
+}
+.feeds {
+  width: 445px;
+  height: auto;
+  margin-right: 30px;
+  border: var(--border);
+}
+.feeds-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  border-bottom: var(--border);
+}
+.feeds-header__user {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+}
+.feeds-header__user .user-img {
+  width: 20px;
+  margin-right: 15px;
+}
+.feeds-img {
+  width: 100%;
+  height: 420px;
+}
+.feeds-main {
+  padding: 10px;
+}
+.feeds-main__icons {
+  display: flex;
+  justify-content: space-between;
+}
+.feeds-main__icons--left i:not(:last-child) {
+  padding-right: 10px;
+}
+.fedds-main__icons .fa-heart {
+}
+.fas.fa-backspace {
+}
+.feeds-main__like {
+  padding: 10px 0;
+  font-size: 12px;
+}
+.feeds-main__like img {
+  width: 10px;
+}
+.feeds-main__like__count {
+  font-weight: bold;
+}
+.feeds-main__comments {
+  position: relative;
+  font-size: 12px;
+  margin-bottom: 3px;
+}
+.feeds-main__comments__content {
+  display: flex;
+  justify-content: space-between;
+}
+.feeds-main__comments__heart {
+  opacity: 0.5;
+}
+.feeds-main__comment-time {
+  padding-bottom: 5px;
+  border-bottom: var(--border);
+  font-size: 12px;
+  opacity: 0.5;
+}
+.feeds-form {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+.feeds-form__input {
+  border: none;
+  width: 90%;
+  background-color: var(--background-color--gray);
+}
+.feeds-form__submit {
+  border: none;
+  background-color: var(--background-color--gray);
+  color: #d3e8fd;
+}
+.side {
+  width: 220px;
+  border: none;
+}
+.side-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.side-header img {
+  width: 50px;
+  height: 45px;
+  margin-left: 10px;
+  margin-right: 15px;
+}
+.side-header__title,
+.side-stories-user__text,
+.side-recommends-user__text {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+}
+.side-header__title--sub,
+.side-stories-user__time,
+.side-recommends-user__time {
+  font-size: 12px;
+  opacity: 0.4;
+}
+.side-stories,
+.side-recommends {
+  height: 200px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.side-stories-header,
+.side-recommends-header {
+  display: flex;
+  justify-content: space-between;
+}
+.side-stories-header--title,
+.side-recommends-header--title {
+  opacity: 0.4;
+  font-size: 12px;
+}
+.side-stories-header--all,
+.side-recommends-header--all {
+  font-weight: bold;
+  font-size: 12px;
+}
+.side-stories-user,
+.side-recommends-user {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+}
+.side-stories-user img,
+.side-recommends-user img {
+  width: 40px;
+  height: 35px;
+  margin-right: 15px;
+  padding: 1px;
+  border: 2px solid red;
+}
+.side-recommends {
+  height: 150px;
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  opacity: 0.3;
+}
+footer p {
+  margin-bottom: 10px;
+}

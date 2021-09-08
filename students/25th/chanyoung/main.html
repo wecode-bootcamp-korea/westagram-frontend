@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/common.css" />
+    <link rel="stylesheet" href="style/main.css" />
+    <title>westagram</title>
+  </head>
+  <body>
+    <header>
+      <ul class="header__ul">
+        <li class="header__title">
+          <i class="fas fa-camera"></i>
+          | <a href="#">Westagram</a>
+        </li>
+        <li class="header__search">
+          <i class="fas fa-search"></i>
+          <input type="text" placeholder="검색" />
+          <div class="header__search__find-container"></div>
+        </li>
+        <nav>
+          <ul class="menu">
+            <li>
+              <img
+                src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png"
+                alt="search"
+              />
+            </li>
+            <li>
+              <img
+                src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"
+                alt="heart"
+              />
+            </li>
+            <li>
+              <img
+                src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png"
+                alt="mypage"
+              />
+            </li>
+          </ul>
+        </nav>
+      </ul>
+    </header>
+    <main>
+      <section class="feeds">
+        <div class="feeds-header">
+          <div class="feeds-header__user">
+            <img class="user-img" src="images/duna2.jpg" alt="" />
+            <span class="username">DUNA</span>
+          </div>
+          <i class="fas fa-ellipsis-h"></i>
+        </div>
+        <img class="feeds-img" src="images/duna1.jpg" alt="" />
+        <div class="feeds-main">
+          <div class="feeds-main__icons">
+            <div class="feeds-main__icons--left">
+              <i class="fas fa-heart"></i>
+              <i class="far fa-comment"></i>
+              <i class="fas fa-upload"></i>
+            </div>
+            <i class="far fa-bookmark"></i>
+          </div>
+          <div class="feeds-main__like">
+            <img class="user-img" src="images/cat1.jpg" alt="" />
+            <span class="username">aineworld</span>님 외
+            <span class="feeds-main__like__count">10</span>명이 좋아합니다
+          </div>
+          <div class="feeds-main__comments">
+            <ul>
+              <li class="feeds-main__comments__content">
+                <div class="comment-wrapper">
+                  <span class="username">cannon_mj</span>
+                  위워크에서 진행한 베이킹 클래스
+                  <i class="fas fa-backspace feeds-main__comments__delete"></i>
+                </div>
+                <i class="fas fa-heart feeds-main__comments__heart"></i>
+              </li>
+              <li class="feeds-main__comments__content">
+                <div class="comment-wrapper">
+                  <span class="username">neceosecius</span>
+                  거봐 좋았자나~~~~~😄
+                  <i class="fas fa-backspace feeds-main__comments__delete"></i>
+                </div>
+                <i class="fas fa-heart feeds-main__comments__heart"></i>
+              </li>
+            </ul>
+          </div>
+          <div class="feeds-main__comment-time">42분전</div>
+          <form class="feeds-form">
+            <input
+              class="feeds-form__input"
+              type="text"
+              placeholder="댓글 달기..."
+            />
+            <input class="feeds-form__submit" type="submit" value="게시" />
+          </form>
+        </div>
+      </section>
+      <section class="side">
+        <div class="side-header">
+          <img class="user-img" src="images/cat2.jpg" alt="" />
+          <div class="side-header__title">
+            <span class="username">wecode_bootcamp</span>
+            <span class="side-header__title--sub">WeCode | 위코드</span>
+          </div>
+        </div>
+        <div class="side-stories">
+          <div class="side-stories-header">
+            <span class="side-stories-header--title">스토리</span>
+            <span class="side-stories-header--all">모두 보기</span>
+          </div>
+          <div class="side-stories-user">
+            <img class="user-img" src="images/cat3.jpg" alt="" />
+            <div class="side-stories-user__text">
+              <span class="username">_yum_s</span>
+              <span class="side-stories-user__time">16분 전</span>
+            </div>
+          </div>
+          <div class="side-stories-user">
+            <img class="user-img" src="images/cat1.jpg" alt="" />
+            <div class="side-stories-user__text">
+              <span class="username">drink_eat_drink</span>
+              <span class="side-stories-user__time">3시간 전</span>
+            </div>
+          </div>
+          <div class="side-stories-user">
+            <img class="user-img" src="images/dog1.jpg" alt="" />
+            <div class="side-stories-user__text">
+              <span class="username">hyukyc</span>
+              <span class="side-stories-user__time">20시간 전</span>
+            </div>
+          </div>
+          <div class="side-stories-user">
+            <img class="user-img" src="images/dog2.jpg" alt="" />
+            <div class="side-stories-user__text">
+              <span class="username">_yum_s</span>
+              <span class="side-stories-user__time">16분 전</span>
+            </div>
+          </div>
+        </div>
+        <div class="side-recommends">
+          <div class="side-recommends-header">
+            <span class="side-recommends-header--title">스토리</span>
+            <span class="side-recommends-header--all">모두 보기</span>
+          </div>
+          <div class="side-recommends-user">
+            <img class="user-img" src="images/cat3.jpg" alt="" />
+            <div class="side-recommends-user__text">
+              <span class="username">_yum_s</span>
+              <span class="side-recommends-user__time">16분 전</span>
+            </div>
+          </div>
+          <div class="side-recommends-user">
+            <img class="user-img" src="images/cat1.jpg" alt="" />
+            <div class="side-recommends-user__text">
+              <span class="username">drink_eat_drink</span>
+              <span class="side-recommends-user__time">3시간 전</span>
+            </div>
+          </div>
+          <div class="side-recommends-user">
+            <img class="user-img" src="images/dog1.jpg" alt="" />
+            <div class="side-recommends-user__text">
+              <span class="username">hyukyc</span>
+              <span class="side-recommends-user__time">20시간 전</span>
+            </div>
+          </div>
+          <div class="side-recommends-user">
+            <img class="user-img" src="images/dog2.jpg" alt="" />
+            <div class="side-recommends-user__text">
+              <span class="username">_yum_s</span>
+              <span class="side-recommends-user__time">16분 전</span>
+            </div>
+          </div>
+        </div>
+        <footer>
+          <p>
+            westargram
+            정보﹒지원﹒홍보﹒센터﹒API﹒채용﹒정보﹒개인정보관리방침﹒약관﹒디렉터리﹒프로필﹒해시태그﹒언어
+          </p>
+          <span>@ 2019 WESTARGRAM</span>
+        </footer>
+      </section>
+    </main>
+    <script
+      src="https://kit.fontawesome.com/06f8efddbf.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="JS/main.js"></script>
+  </body>
+</html>
