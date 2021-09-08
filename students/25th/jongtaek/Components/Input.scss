@@ -1,0 +1,26 @@
+.Input {
+  margin: 8px 0;
+  padding: 11px 0;
+  height: 44px;
+  border-radius: 6px;
+  background-color: rgb(245, 245, 245);
+
+  .inputWrapper {
+    display: flex;
+    padding: 0 12px;
+
+    input {
+      width: 100%;
+      background: transparent;
+      line-height: 21px;
+      font-size: 16px;
+      font-weight: 400;
+      border: 0;
+      caret-color: rgb(255, 47, 110);
+
+      &::placeholder {
+        color: rgb(118, 118, 118);
+      }
+    }
+  }
+}
