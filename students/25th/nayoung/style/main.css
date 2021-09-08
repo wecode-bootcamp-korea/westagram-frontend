@@ -1,0 +1,443 @@
+nav {
+	position: fixed;
+	width: 100%;
+	height: 54px;
+	background-color: white;
+	border-bottom: 1px solid #e6e6e6;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 10;
+}
+
+.navbar {
+	max-width: 975px;
+	width: 100%;
+	display: flex;
+	padding: 0 20px;
+}
+
+.navbar-left {
+	display: flex;
+	flex: 1 0 0%;
+}
+
+.navbar-left span {
+	margin-left: 0;
+}
+
+#logo-image {
+	margin-left: 0 !important;
+	margin-right: 22px;
+}
+
+#logo-title {
+	font-family: 'Lobster', cursive;
+	padding: 0 22px;
+	border-left: 1px solid black;
+	font-size: 24px;
+	display: inline;
+}
+
+.navbar-center {
+	position: relative;
+	align-self: center;
+	width: 215px;
+}
+
+#search-bar {
+	border: 1px solid #e6e6e6;
+	border-radius: 3px;
+	background-color: #fafafa;
+	padding: 5px 7px;
+    width: 100%;
+}
+
+#search-bar:focus {
+	outline: none;
+}
+
+.search-text {
+	position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 4px;
+    display: flex;
+}
+
+.search-text span {
+	color: #8E8E8E !important;
+	display: flex;
+	align-items: center;
+}
+
+.search-text span i {
+	color: #8E8E8E !important;
+	font-size: 10px;
+	margin-right: 6px;
+}
+
+.navbar-right {
+	display: flex;
+	align-items: center;
+	flex: 1 9999 0%;
+	justify-content: flex-end;
+}
+
+.navbar-icon {
+	margin-left: 22px;
+}
+
+.navbar-icon a {
+	display: flex;
+	align-items: center;
+}
+
+.navbar-icon a i {
+	font-size: 22px;
+}
+
+#go-mypage img {
+	width: 22px;
+	height: 22px;
+	border-radius: 50%;
+}
+
+#go-mypage-wrap {
+	position: absolute;
+	box-shadow: 0 0 5px 1px rgba(0, 0, 0, .0975);
+	width: 190px;
+	top: 53px;
+	margin-right: -28px;
+	border-radius: 6px;
+	display: none;
+}
+
+#go-mypage-peak {
+	width: 14px;
+	height: 14px;
+	transform: rotate(45deg);
+	position: absolute;
+	top: -7px;
+	left: 143px;
+	background-color: white;
+	box-shadow: 0 0 5px 1px rgba(0, 0, 0, .0975);
+}
+
+#go-mypage-list {
+	position: relative;
+	background-color: white;
+	width: 100%;
+	border-radius: 6px;
+}
+
+.go-mypage-item {
+	width: 100%;
+	height: 37px;
+	padding: 8px 16px;
+	display: flex;
+	align-items: center;
+}
+
+.go-mypage-item:last-child {
+	border-top: 1px solid #e6e6e6;
+	height: 40px;
+}
+
+.go-mypage-item:hover {
+	cursor: pointer;
+	background-color: #fafafa;
+}
+
+.go-mypage-item:first-child:hover {
+	border-radius: 6px 6px 0 0;
+}
+
+.go-mypage-item:last-child:hover {
+	border-radius: 0 0 6px 6px;
+}
+
+.go-mypage-item i {
+	font-size: 16px;
+	margin-right: 12px;
+	width: 20px;
+	text-align: center;
+}
+
+.go-mypage-open {
+	display: block !important;
+}
+
+main {
+	max-width: 935px;
+	width: 100%;
+	margin: 0 auto;
+	height: 100px;
+	padding-top: 84px;
+}
+
+.feeds {
+	max-width: 614px;
+	width: 100%;
+	float: left;
+	margin-right: 24px;
+}
+
+article {
+	width: 100%;
+	border-radius: 3px;
+	border: 1px solid #e6e6e6;
+	background-color: white;
+	margin-bottom: 24px;
+}
+
+header {
+	height: 60px;
+	padding: 16px;
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+.feed-profile, .recommend-profile {
+	width: 32px;
+	height: 32px;
+}
+
+.feed-from, .me-from, .recommend-from {
+	margin-left: 14px;
+    display: flex;
+    flex-direction: column;
+}
+
+.feed-id, .me-id, .recommend-id {
+	font-weight: bold;
+}
+
+.feed-id:hover, .recommend-id:hover {
+	text-decoration: underline;
+}
+
+.feed-location {
+	font-size: 12px;
+}
+
+.feed-option {
+	position: absolute;
+	right: 16px;
+}
+
+.feeds img {
+	width: 100%;
+}
+
+.feed-reaction {
+	padding: 10px 16px;
+}
+
+.feed-buttons {
+	margin-bottom: 8px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.feed-button-icon {
+	margin-right: 16px;
+}
+
+.feed-button-bookmark {
+	margin-right: 0;
+}
+
+.feed-button-icon i {
+	font-size: 24px;
+}
+
+.feed-like {
+	margin-bottom: 8px;
+}
+
+.feed-like a {
+	font-weight: bold;
+}
+
+.feed-comment-line {
+	margin-bottom: 4px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.feed-date {
+	font-size: 10px;
+	color: #8E8E8E;
+}
+
+.feed-textbox {
+	padding: 0 16px;
+	display: flex;
+	align-items: center;
+	border-top: 1px solid #e6e6e6;
+	min-height: 56px;
+}
+
+.feed-textbox textarea {
+	height: 18px;
+	max-height: 80px;
+    display: flex;
+    flex-grow: 1;
+    border: none;
+    resize: none;
+    line-height: 18px;
+    overflow-y: auto;
+}
+
+.feed-textbox textarea::placeholder {
+	color: #8E8E8E;
+}
+
+.feed-textbox textarea:focus {
+	outline: none;
+}
+
+.feed-text-submit {
+	font-weight: bold;
+	color: #c4e1fb;
+	cursor: default;
+}
+
+.main-right {
+	position: fixed;
+	height: 100vh;
+	width: 100%;
+	max-width: 293px;
+	right: calc((100% - 935px) / 2);
+}
+
+.me {
+	margin-top: 18px;
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+
+.me-profile {
+	width: 56px;
+	height: 56px;
+}
+
+.me-from {
+	margin-left: 16px;
+}
+
+.me-name {
+	color: #8E8E8E;
+}
+
+.me-change, .recommend-follow {
+	font-weight: bold;
+	color: #0095F6;
+	position: absolute;
+	right: 0;
+	font-size: 12px;
+}
+
+.recommend {
+	margin: 24px 0;
+}
+
+.recommend-header {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 8px;
+}
+
+.recommend-header span {
+	color: #8E8E8E;
+	font-weight: bold;
+}
+
+.show-all {
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.recommend-line {
+	display: flex;
+	align-items: center;
+	padding: 8px;
+}
+
+.recommend-status {
+	font-size: 12px;
+	color: #8E8E8E;
+}
+
+footer ul {
+	list-style: none;
+	margin-bottom: 16px;
+}
+
+footer li {
+	display: inline-block;
+	margin-right: -4px;
+}
+
+footer li::after {
+	content: "·";
+	margin: 0 .25em 0 .25em;
+}
+
+footer li:last-child::after {
+	content: none;
+}
+
+footer li a, footer span, footer li::after {
+	font-size: 11px;
+	color: #C7C7C7;
+}
+
+footer span {
+	text-transform: uppercase;
+}
+
+@media all and (max-width: 934px) {
+	.main-right {
+		display: none;
+	}
+
+	.feeds {
+		float: none;
+		margin: 0 auto;
+	}
+}
+
+@media all and (max-width: 614px) {
+	main {
+		padding-top: 53px;
+	}
+}
+
+@media all and (max-width: 500px) {
+	#logo-image {
+		display: none;
+	}
+
+	#logo-title {
+		border-left: none;
+		padding: 0;
+	}
+
+	.navbar-center {
+		display: none;
+	}
+}
+
+.heart-click {
+	animation: heartClick 0.5s 1 forwards;
+	color: rgb(237, 73, 86);
+}
+
+@keyframes heartClick {
+	50% {transform: scale(1.2);}
+	100% {transform: scale(1.0);}
+}

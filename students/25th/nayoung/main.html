@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>main</title>
+	<link rel="stylesheet" type="text/css" href="style/common.css">
+	<link rel="stylesheet" type="text/css" href="style/main.css">
+	<script type="text/javascript" src="js/main.js"></script>
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+<body>
+	<nav>
+		<div class="navbar">
+			<div class="navbar-left">
+				<span class="navbar-icon">
+					<a href="">
+						<i id="logo-image" class="fab fa-instagram"></i>
+						<h2 id="logo-title">Westagram</h2>
+					</a>
+				</span>
+			</div>
+			<div class="navbar-center">
+				<input id="search-bar" type="text">
+				<div class="search-text">
+					<span><i class="fas fa-search"></i></span>
+					<span>검색</span>
+				</div>
+			</div>
+			<div class="navbar-right">
+				<span class="navbar-icon"><a href=""><i class="far fa-compass"></i></a></span>
+				<span class="navbar-icon"><a href=""><i class="far fa-heart"></i></a></span>
+				<button class="navbar-icon" id="go-mypage"><img src="망붕배경.jpg"></button>
+				<div id="go-mypage-wrap">
+					<div id="go-mypage-peak"></div>
+					<div id="go-mypage-list">
+						<a href="" class="go-mypage-item">
+							<i class="far fa-user-circle"></i>프로필
+						</a href="">
+						<a href="" class="go-mypage-item">
+							<i class="far fa-bookmark"></i>저장됨
+						</a href="">
+						<a href="" class="go-mypage-item">
+							<i class="fas fa-cog"></i>설정
+						</a href="">
+						<div class="go-mypage-item">
+							<i class="fas fa-sync-alt"></i>계정 전환
+						</div>
+						<div class="go-mypage-item">
+							로그아웃
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<main>
+		<div class="feeds">
+			<article>
+				<header>
+					<a class="feed-profile" href=""><img class="profile-image" src="망붕배경.jpg"></a>
+					<div class="feed-from">
+						<span><a class="feed-id" href="">nylee9621</a></span>
+						<span><a class="feed-location" href="">WeCode - 위코드</a></span>
+					</div>
+					<button class="feed-option"><i class="fas fa-ellipsis-h"></i></button>
+				</header>
+				<img src="세븐틴.jpg">
+				<div class="feed-reaction">
+					<div class="feed-buttons">
+						<div>
+							<button class="feed-button-icon feed-button-heart"><i class="far fa-heart"></i></button>
+							<button class="feed-button-icon"><i class="far fa-comment"></i></button>
+							<button class="feed-button-icon"><i class="far fa-paper-plane"></i></button>
+						</div>
+						<div>
+							<button class="feed-button-icon feed-button-bookmark">
+								<i class="far fa-bookmark"></i>
+							</button>
+						</div>
+					</div>
+					<div class="feed-like"><a href="">좋아요 <span class="feed-like-num">7</span>개</a></div>
+					<div class="feed-comments">
+						<div class="feed-comment-line">
+							<div><a class="feed-id" href="">nylee9621</a> <span>내용 블라블라</span></div>
+							<div><button class="feed-comment-heart"><i class="far fa-heart"></i></button></div>
+						</div>
+						<div class="feed-comment-line">
+							<div><a class="feed-id" href="">nylee9621</a> <span>내용 블라블라</span></div>
+							<div><button class="feed-comment-heart"><i class="far fa-heart"></i></button></div>
+						</div>
+						<div class="feed-comment-line">
+							<div><a class="feed-id" href="">nylee9621</a> <span>내용 블라블라</span></div>
+							<div><button class="feed-comment-heart"><i class="far fa-heart"></i></button></div>
+						</div>
+					</div>
+					<a class="feed-date" href="">6월 30일</a>
+				</div>
+				<div class="feed-textbox">
+					<button class="feed-button-icon"><i class="far fa-smile"></i></button>
+					<textarea class="feed-text" placeholder="댓글 달기..."></textarea>
+					<button class="feed-text-submit" disabled="true">게시</button>
+				</div>
+			</article>
+			<article>
+				<header>
+					<a class="feed-profile" href=""><img class="profile-image" src="망붕배경.jpg"></a>
+					<div class="feed-from">
+						<span><a class="feed-id" href="">nylee9621</a></span>
+						<span><a class="feed-location" href="">WeCode - 위코드</a></span>
+					</div>
+					<button class="feed-option"><i class="fas fa-ellipsis-h"></i></button>
+				</header>
+				<img src="세븐틴.jpg">
+				<div class="feed-reaction">
+					<div class="feed-buttons">
+						<div>
+							<button class="feed-button-icon feed-button-heart"><i class="far fa-heart"></i></button>
+							<button class="feed-button-icon"><i class="far fa-comment"></i></button>
+							<button class="feed-button-icon"><i class="far fa-paper-plane"></i></button>
+						</div>
+						<div>
+							<button class="feed-button-icon feed-button-bookmark">
+								<i class="far fa-bookmark"></i>
+							</button>
+						</div>
+					</div>
+					<div class="feed-like"><a href="">좋아요 <span class="feed-like-num">40</span>개</a></div>
+					<div class="feed-comments">
+						<div class="feed-comment-line">
+							<div><a class="feed-id" href="">nylee9621</a> <span>내용 블라블라</span></div>
+							<div><button class="feed-comment-heart"><i class="far fa-heart"></i></button></div>
+						</div>
+						<div class="feed-comment-line">
+							<div><a class="feed-id" href="">nylee9621</a> <span>내용 블라블라</span></div>
+							<div><button class="feed-comment-heart"><i class="far fa-heart"></i></button></div>
+						</div>
+						<div class="feed-comment-line">
+							<div><a class="feed-id" href="">nylee9621</a> <span>내용 블라블라</span></div>
+							<div><button class="feed-comment-heart"><i class="far fa-heart"></i></button></div>
+						</div>
+					</div>
+					<a class="feed-date" href="">6월 30일</a>
+				</div>
+				<div class="feed-textbox">
+					<button class="feed-button-icon"><i class="far fa-smile"></i></button>
+					<textarea class="feed-text" placeholder="댓글 달기..."></textarea>
+					<button class="feed-text-submit" disabled="true">게시</button>
+				</div>
+			</article>
+		</div>
+		<div class="main-right">
+			<div class="me">
+				<a class="me-profile" href=""><img class="profile-image" src="망붕배경.jpg"></a>
+				<div class="me-from">
+					<span><a class="me-id" href="">nylee9621</a></span>
+					<span class="me-name">이나영</span>
+				</div>
+				<button class="me-change">전환</button>
+			</div>
+			<div class="recommend">
+				<div class="recommend-header">
+					<span>회원님을 위한 추천</span>
+					<button class="show-all">모두 보기</button>
+				</div>
+				<div class="recommend-line">
+					<a class="recommend-profile" href=""><img class="profile-image" src="망붕배경.jpg"></a>
+					<div class="recommend-from">
+						<span><a class="recommend-id" href="">nylee9621</a></span>
+						<span class="recommend-status">회원님을 팔로우합니다</span>
+					</div>
+					<button class="recommend-follow">팔로우</button>
+				</div>
+				<div class="recommend-line">
+					<a class="recommend-profile" href=""><img class="profile-image" src="망붕배경.jpg"></a>
+					<div class="recommend-from">
+						<span><a class="recommend-id" href="">nylee9621</a></span>
+						<span class="recommend-status">회원님을 팔로우합니다</span>
+					</div>
+					<button class="recommend-follow">팔로우</button>
+				</div>
+				<div class="recommend-line">
+					<a class="recommend-profile" href=""><img class="profile-image" src="망붕배경.jpg"></a>
+					<div class="recommend-from">
+						<span><a class="recommend-id" href="">nylee9621</a></span>
+						<span class="recommend-status">회원님을 팔로우합니다</span>
+					</div>
+					<button class="recommend-follow">팔로우</button>
+				</div>
+				<div class="recommend-line">
+					<a class="recommend-profile" href=""><img class="profile-image" src="망붕배경.jpg"></a>
+					<div class="recommend-from">
+						<span><a class="recommend-id" href="">nylee9621</a></span>
+						<span class="recommend-status">회원님을 팔로우합니다</span>
+					</div>
+					<button class="recommend-follow">팔로우</button>
+				</div>
+				<div class="recommend-line">
+					<a class="recommend-profile" href=""><img class="profile-image" src="망붕배경.jpg"></a>
+					<div class="recommend-from">
+						<span><a class="recommend-id" href="">nylee9621</a></span>
+						<span class="recommend-status">회원님을 팔로우합니다</span>
+					</div>
+					<button class="recommend-follow">팔로우</button>
+				</div>
+			</div>
+			<footer>
+				<ul>
+					<li><a href="">소개</a></li>
+					<li><a href="">도움말</a></li>
+					<li><a href="">홍보 센터</a></li>
+					<li><a href="">API</a></li>
+					<li><a href="">채용 정보</a></li>
+					<li><a href="">개인정보처리방침</a></li>
+					<li><a href="">약관</a></li>
+					<li><a href="">위치</a></li>
+					<li><a href="">인기 계정</a></li>
+					<li><a href="">해시태그</a></li>
+					<li><a href="">언어</a></li>
+				</ul>
+				<span>© 2021 Westagram from Wecode</span>
+			</footer>
+		</div>
+	</main>
+</body>
+</html>
