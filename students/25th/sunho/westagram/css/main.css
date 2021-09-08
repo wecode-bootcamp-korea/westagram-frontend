@@ -1,0 +1,239 @@
+header {
+    width: 100%; height: 54px;
+    background: #fff;
+    border-bottom: 1px solid #c7c7c7;
+    position: fixed;
+    z-index: 10;
+}
+.wrap {
+    width: 90%; 
+    height: 100%;
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+}
+.wrap div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid black; */
+}
+.wrap .logo {  
+    flex-grow: 2;  
+    justify-content: flex-start;
+}
+.wrap .logo a {  font-size: 24px;  }
+.wrap .search { 
+    flex-grow: 1;
+    width: 500px; 
+}
+.wrap .search input {
+    width: 100%; height: 30px;
+    padding: 7px;
+    border-radius: 3px;
+    border: 1px solid #c7c7c7;
+    cursor: text;
+    font-size: 14px;
+    font-weight: 300;
+    position: relative;
+    background: #fafafa;
+}
+.search span {
+    position: absolute;
+    color: #c7c7c7;
+}
+.wrap .user {  
+    flex-grow: 2;  
+    display: flex;
+    justify-content: flex-end;
+}
+.wrap .user a {
+    margin-left: 10px;
+    text-align: center;
+}
+.wrap .user a img {  width: 50%;  }
+
+
+
+
+
+main {
+    width: 100vw; height: 100vh;
+    background: #fafafa;
+}
+section {
+    width: 90%; 
+    /* height: 100vh; */
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+}
+
+.contents {
+    width: 100%; 
+    /* height: 80%; */
+    position: relative;
+    
+    top: 54px; left: 0;
+    margin-top: 40px;
+    
+    background: #fafafa;
+    display: flex;
+    justify-content: space-between;
+}
+.card{
+    width: 600px; 
+    /* height: 100%; */
+    background: #fff;
+    border: 1px solid #c7c7c7;
+}
+
+.card .profile {
+    width: 100%;
+    /* height: 80px; */
+    display: flex;
+}
+    .card .profile div {
+        width: 60px;
+        margin: 10px;
+        cursor: pointer;
+    } 
+    .card .profile div:first-child{  margin-left: 20px;  }
+    .profile-img {   
+        border-radius: 50%;
+        overflow: hidden;
+    }
+    .name { 
+        /* margin-left: 20px; */
+        font-weight: bold; 
+        line-height: 50px;
+        text-align: center;  
+        border: 1px solid black;
+    }
+
+.card .card-img {
+    width: 100%;
+    max-width: 1000px;
+    overflow: hidden;
+}
+    
+.click-line {
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+.click-inner {
+    width:50%;
+    display: flex;
+    
+}
+    .click-inner div {
+        width: 9%;
+        margin: 10px;
+        cursor: pointer;
+    }
+    /* .click-inner div img {  width: 100%;  } */
+    /* .click-inner div:nth-child(1) {  margin-left: 20px;  } */
+    .click-inner div:nth-child(2) {  width: 8%; margin-left: 15px;  }
+    /* .click-inner div:nth-child(3) {  margin-left: 11px;  } */
+
+.click-line .save { width:50%; }
+.click-line .save img{
+    width: 5%;
+    position: absolute;
+    top: 0; right: 0;
+    margin: 10px 20px;
+    cursor: pointer;
+}
+
+.comment-view {
+    width: 100%; 
+    /* padding: 10px; */
+}
+    .comment-view p{
+        width: 100%;
+        padding: 10px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .comment-view span {
+        padding: 10px;
+        font-size: 14px;
+        color: #8e8e8e;;
+    }
+.comment {
+    width: 100%;
+    padding-top: 10px ;
+}
+    .comment input {
+        width: 100%;
+        height: 56px;
+        padding-left: 10px;
+        font-size: 16px;
+        text-overflow: ellipsis;
+        border: 1px solid #8e8e8e;
+    }
+
+
+
+
+
+
+
+
+
+/* ---------------------------- */
+.contents aside {
+    width: 350px;
+    height: 100%;
+    /* background: #fff;    */
+}
+/* ---------------------------- */
+
+
+
+
+aside {
+    border: 1px solid #c7c7c7;
+}
+
+aside .toMyPage {
+    width: 100%;
+    border: 1px solid black;
+}
+
+.toMyPage .profile {
+    width: 100%;
+    display: flex;
+}
+    .toMyPage .profile div {
+        width: 60px;
+        cursor: pointer;
+    } 
+    .toMyPage .profile div:first-child{  margin-left: 20px;  }
+    .profile-img {  
+        height: 100%;
+        border-radius: 50%;
+        margin: 10px;
+        overflow: hidden;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1000px){
+
+    .wrap .search {   display: none;  }
+    .contents .card{  width: 700px; margin: auto; }
+    .contents aside {  display: none;  }
+
+}
