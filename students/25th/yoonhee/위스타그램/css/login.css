@@ -1,0 +1,79 @@
+/* @import "reset.css"; */
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 65vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  background-color: rgba(216, 194, 164, 0.001);
+  width: 300px;
+  height: 350px;
+  border: 1px solid rgba(216, 194, 164, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-size: 40px;
+  font-weight: lighter;
+  font-family: "Lobster", cursive;
+}
+
+.log-in {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  width: 230px;
+  height: 35px;
+  margin: 3px 0;
+  border-radius: 5px;
+  border: 1px solid rgba(216, 208, 198, 0.3);
+  padding: 3px 10px;
+  background-color: rgba(253, 227, 193, 0.1);
+}
+
+.btn:disabled {
+  width: 230px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: rgba(85, 169, 247, 0.477);
+  border: none;
+  font-weight: bold;
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 80px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.btn {
+  width: 230px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: rgba(85, 169, 247, 0.877);
+  border: none;
+  font-weight: bold;
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 80px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
