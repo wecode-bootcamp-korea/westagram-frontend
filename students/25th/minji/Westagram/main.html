@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+    <link rel="stylesheet" href="style/common.css">
+    <title>Westagram</title>
+</head>
+<body>
+    <nav>
+        <div class="nav_column">
+            <i id="ic_logo" class="fab fa-instagram fa-1x"></i>
+            <a class="main_logo">Westagram</a>
+        </div>
+        <div class="nav_column">
+            <input class="search" type="text" placeholder="&#61442;&nbsp;&nbsp;검색">
+            <div class="search_result">
+                <div class="search_result_arrow"></div>
+                <div class="search_result_column">
+                    <ul class="filterUL">
+                        <li>나미야 잡화점의 기적(양장본)</li>
+                        <li>창문 넘어 도망친 노인</li>
+                        <li>코끼리의 무덤은 없다</li>
+                        <li>꾸뻬씨의 행복여행(양장본)</li>
+                        <li>앵무새 죽이기</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="nav_column">
+            <a><img src="icon/explore.png"></a>
+            <a><img src="icon/heart.png"></a>
+            <a class="btn_profile" style="position: relative">
+                <img src="icon/profile.png">
+                <div class="menu_box">
+                    <div class="menu_box_arrow"></div>
+                    <div class="menu_box_column">
+                        <i class="far fa-user-circle"></i>
+                        프로필
+                    </div>
+                    <div class="menu_box_column">
+                        <i class="far fa-bookmark"></i>
+                        저장됨
+                    </div>
+                    <div class="menu_box_column">
+                        <i class="fas fa-cog"></i>
+                        설정
+                    </div>
+                    <div class="menu_box_column">
+                        로그아웃
+                    </div>
+                </div>
+            </a>
+        </div>
+    </nav>
+
+    <div class="main_container">
+        <div class="articles_area">
+            <div class="article">
+                <div class="article_header">
+                    <div class="header_user">
+                        <img class="profile_s" src="./img/me.jpg">
+                        <span class="user_name">_minji.jeong</span>
+                    </div>
+                    <i class="fas fa-ellipsis-h"></i>
+                </div>
+                <div class="article_media">
+                    <img src="img/pasta.jpg">
+                </div>
+                <div class="article_menu">
+                    <div class="menu_column">
+                        <i class="far fa-heart"></i>
+                        <i class="far fa-comment"></i>
+                        <i class="far fa-share-square"></i>
+                    </div>
+                    <i class="far fa-bookmark"></i>
+                </div>
+                <div class="article_subscript">
+                    <img class="profile_sm" src="./img/mount.jpg">
+                    <h5><span class="user_id">kyeong_hoooonie</span>님&nbsp;<span class="like_count">외 10명</span>이 좋아합니다</h5>
+                </div>
+                <div class="article_text">
+                    <span class="user_id">_minji.jeong</span>내돈내산 파스타 JMT~<span class="show_more">더 보기</span>
+                </div>
+                <div class="article_comments">
+                    <div class="comments_row">
+                        <p><span class="user_id">acid_rain</span>가게 어딘지 알려주세요! 🙏</p>
+                        <div class="comments_menu">
+                            <i class="comment_like far fa-heart" onclick="toggleLike(this)"></i>
+                            <i class="comment_delete far fa-trash-alt" onclick="deleteComment(this)"></i>
+                        </div>
+                    </div>
+                    <div class="comments_row">
+                        <p><span class="user_id">fairy_yoon</span>다음엔 나도 데리고가요~</p>
+                        <div class="comments_menu">
+                            <i class="comment_like far fa-heart" onclick="toggleLike(this)"></i>
+                            <i class="comment_delete far fa-trash-alt" onclick="deleteComment(this)"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="time_ago">
+                    <span class="pass_time">42</span>분 전
+                </div>
+                <div class="add_comment">
+                    <textarea cols="30" rows="1" placeholder="댓글 달기..."></textarea>
+                    <button class="btn_upload" type="button">게시</button>
+                </div>
+            </div>
+        </div>
+        <div class="side_area">
+            <div class="show_account">
+                <img class="profile_m" src="img/me.jpg">
+                <div>
+                    <h5 class="my_id user_id">_minji.jeong</h5>
+                    <h5 class="user_description">정민지</h5>
+                </div>
+            </div>
+            <div class="new_stories">
+                <div class="stories_header">
+                    <h5>스토리</h5>
+                    <a class="show_all">모두 보기</a>
+                </div>
+                <div class="stories_row">
+                    <div class="show_account">
+                        <img class="profile_s" src="img/chris.jpg">
+                        <div>
+                            <h5 class="user_id">yang_chris</h5>
+                            <h5 class="time_ago">10분 전</h5>
+                        </div>
+                    </div>
+                    <div class="show_account">
+                        <img class="profile_s" src="img/acid.png">
+                        <div>
+                            <h5 class="user_id">acid_rain</h5>
+                            <h5 class="time_ago">16분 전</h5>
+                        </div>
+                    </div>
+                    <div class="show_account">
+                        <img class="profile_s" src="img/sun.jpg">
+                        <div>
+                            <h5 class="user_id">before_sunrise</h5>
+                            <h5 class="time_ago">33분 전</h5>
+                        </div>
+                    </div>
+                    <div class="show_account">
+                        <img class="profile_s" src="img/lazer.png">
+                        <div>
+                            <h5 class="user_id">kyeong_hoooonie</h5>
+                            <h5 class="time_ago">1시간 전</h5>
+                        </div>
+                    </div>
+                    <div class="show_account">
+                        <img class="profile_s" src="img/fairy.jpg">
+                        <div>
+                            <h5 class="user_id">fairy_yooon</h5>
+                            <h5 class="time_ago">5시간 전</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="recommend_friends">
+                <div class="recommend_header">
+                    <h5>회원님을 위한 추천</h5>
+                    <a class="show_all">모두 보기</a>
+                </div>
+                <div class="recommend_contents">
+                    <div class="recommend_row">
+                        <img class="profile_s" src="img/blue.jpg">
+                        <div>
+                            <h5 class="user_id">haedal</h5>
+                            <h5 class="friends_info">jimmie님 외 2명이 친구입니다.</h5>
+                        </div>
+                        <a class="btn_follow">팔로우</a>
+                    </div>
+                    <div class="recommend_row">
+                        <img class="profile_s" src="img/ocean.jpg">
+                        <div>
+                            <h5 class="user_id">sooooya</h5>
+                            <h5 class="friends_info">chris_yang님과 친구입니다.</h5>
+                        </div>
+                        <a class="btn_follow">팔로우</a>
+                    </div>
+                    <div class="recommend_row">
+                        <img class="profile_s" src="img/puppy.png">
+                        <div>
+                            <h5 class="user_id">star_coffee</h5>
+                            <h5 class="friends_info">before_sunrise님 외 1명이 친구입니다.</h5>
+                        </div>
+                        <a class="btn_follow">팔로우</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="program_info">
+                <ul>
+                    <li class="program_info_list"><a href="#">Instagram 정보</a></li>
+                    <li class="program_info_list"><a href="#">지원</a></li>
+                    <li class="program_info_list"><a href="#">홍보 센터</a></li>
+                    <li class="program_info_list"><a href="#">API</a></li>
+                    <li class="program_info_list"><a href="#">채용 정보</a></li>
+                    <li class="program_info_list"><a href="#">개인정보처리방침</a></li>
+                    <li class="program_info_list"><a href="#">약관</a></li>
+                    <li class="program_info_list"><a href="#">디렉터리</a></li>
+                    <li class="program_info_list"><a href="#">프로필</a></li>
+                    <li class="program_info_list"><a href="#">해시태그</a></li>
+                    <li class="program_info_list"><a href="#">언어</a></li>
+                </ul>
+                <span>&#169; 2019 INSTAGRAM</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
