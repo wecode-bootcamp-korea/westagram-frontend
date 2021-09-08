@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/common.css">
+    <link rel="stylesheet" href="style/font.css">
+    <link rel="stylesheet" href="style/main.css">
+    <script src="https://kit.fontawesome.com/bfbede8a22.js" crossorigin="anonymous"></script>
+    <title>Tomstagram</title>
+</head>
+
+<body>
+    <header>
+        <div class="nav_con">
+            <div class="logo_cons">
+                <img src="image/main/instagram.png" alt="logo_img">
+                <span class="logo_line"></span>
+                <h1 class="logo">Tomstagram <i class="fas fa-dog"></i></h1>
+            </div>
+
+            <form>
+                <input type="text" placeholder="검색">
+                <i class="fas fa-search"></i>
+            </form>
+
+            <nav>
+                <div class="nav_icons">
+                    <img src="image/main/explore.png" alt="explore_img" class="nav_icons_bell">
+                    <img src="image/main/heart.png" alt="heart_img">
+                    <img src="image/main/profile.png" alt="profile_img">
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section>
+        <article>
+            <div class="feeds">
+                <div class="feeds_users">
+                    <div class="feeds_users_info">
+                        <img src="image/main/feed_user.jpeg" alt="feed_user_img">
+                        <div class="feeds_users_info_txt">
+                            <p class="feeds_users_id">jetom_loopy</p>
+                            <p>Shinhyeri</p>
+                        </div>
+                    </div>
+                    <i class="fas fa-ellipsis-h"></i>
+                </div>
+
+                <div class="feeds_main_img">
+                    <img src="image/main/feed_main_img.png" alt="">
+                </div>
+
+                <div class="feeds_info">
+                    <div class="feeds_icons">
+                        <i class="fas fa-heart icon_padding"></i>
+                        <i class="far fa-comment icon_padding"></i>
+                        <i class="far fa-share-square icon_padding"></i>
+
+                        <i class="far fa-bookmark"></i>
+                    </div>
+                    <div class="feeds_comment_box">
+                        <div class="like_uesrs">
+                            <img src="image/main/feed_comment_samll_img.jpeg" alt="feeds_commnet_small_img">
+                            <p><span class="feeds_comment_uesrs_id">Jetom</span>님 <span class="feeds_comment_uesrs_id">외
+                                    999명</span>이 좋아합니다.</p>
+                        </div>
+                        <div class="feeds_comment_uesrs">
+                            <p> <a href="#" class="feeds_comment_uesrs_id"><span>Jetom_love</span></a>제톰이 너무 귀엽지않나여?!!!
+                                제톰이 ㅠㅠ!!
+                                <span>더 보기</span>
+                            </p>
+                            <p><a href="#" class="feeds_comment_uesrs_id"><span>loopy_:3</span></a> <span> 5살 / 비숑 /
+                                    남자애기입니다!</span> <span></span>
+                            </p>
+                            <p class="feeds_comment_tiem">1분전</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="comment_input">
+                    <form>
+                        <input type="text" placeholder="댓글 달기...">
+                        <button type="submit">게시</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- feeds_right -->
+            <div class="feeds_right">
+                <div class="feeds_right_top_info">
+                    <img src="image/main/feed_user.jpeg" alt="feed_comment_small_img" class="feed_comment_small_img">
+                    <div class="small_info">
+                        <p class="feeds_right_user_info">jetom_loopy</p>
+                        <p>Shinhyeri</p>
+                    </div>
+                </div>
+                <div class="feeds_right_story_container">
+                    <div class="feeds_right_story_box">
+                        <div class="feeds_right_box_txt">
+                            <p>스토리</p>
+                            <p><a href="#">모두보기</a></p>
+                        </div>
+                        <div class="story_users">
+                            <div class="story_users_info">
+                                <img src="image/main/story_users_info_img.png" alt="story_users_info_img">
+                                <div class="story_users_info_txt">
+                                    <p>Shinhyeri</p>
+                                    <p><span>16분전</span></p>
+                                </div>
+                            </div>
+                            <div class="story_users_info">
+                                <img src="image/main/story_users_info_img2.png" alt="story_users_info_img">
+                                <div class="story_users_info_txt">
+                                    <p>SoonE</p>
+                                    <p><span>30분전</span></p>
+                                </div>
+                            </div>
+                            <div class="story_users_info">
+                                <img src="image/main/story_users_info_img3.png" alt="story_users_info_img">
+                                <div class="story_users_info_txt">
+                                    <p>BaBa</p>
+                                    <p><span>45분전</span></p>
+                                </div>
+                            </div>
+                            <div class="story_users_info">
+                                <img src="image/main/story_users_info_img4.png" alt="story_users_info_img">
+                                <div class="story_users_info_txt">
+                                    <p>Hacho</p>
+                                    <p><span>1시간전</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feeds_right_recommend_container">
+                    <div class="feeds_right_recommend_box">
+                        <div class="feeds_right_box_txt">
+                            <p>회원님을 위한 추천</p>
+                            <p><a href="#">모두보기</a></p>
+                        </div>
+                        <div class="feeds_right_recommend_users">
+                            <div class="recommend_users_info">
+                                <img src="image/main/story_users_info_img2.png" alt="story_users_info_img">
+                                <div class="recommend_users_info_txt">
+                                    <p>SoonE</p>
+                                    <p class="recommend_txt">JaeSoon님 외 5명이 알고있습니다.</p>
+                                </div>
+                                <div class="users_follow">
+                                    <a href="#" class="follow_link">팔로우</a>
+                                </div>
+                            </div>
+                            <div class="recommend_users_info">
+                                <img src="image/main/story_users_info_img4.png" alt="story_users_info_img">
+                                <div class="recommend_users_info_txt">
+                                    <p>Hacho</p>
+                                    <p class="recommend_txt">subin님 외 8명이 알고있습니다.</p>
+                                </div>
+                                <div class="uers_follow">
+                                    <a href="#" class="follow_link">팔로우</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </section>
+    <footer>
+    </footer>
+</body>
+
+</html>
