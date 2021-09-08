@@ -1,0 +1,414 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #fafafa;
+}
+
+html,
+body {
+  height: 150%;
+}
+
+body {
+  position: relative;
+  background-color: #fafafa;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 54px;
+  background-color: skyblue;
+}
+
+.topMenu {
+  display: flex;
+  padding: 0 20px 0 20px;
+  justify-content: space-between;
+  width: 975px;
+  background-color: #ffffff;
+}
+
+.leftLogo {
+  display: flex;
+  margin: auto 0;
+}
+
+.leftLogo img {
+  background-color: #ffffff;
+}
+
+#insta {
+  width: 103px;
+  height: 29px;
+}
+
+.search {
+  display: flex;
+  margin: auto 0;
+  border: 0.5px solid #dbdbdb;
+}
+
+input {
+  width: 150px;
+  height: 30px;
+  padding: 3px 10px 3px 26px;
+  border: 0px solid transparent;
+  outline: none;
+}
+
+.searchInput {
+  display: flex;
+  justify-content: center;
+}
+
+.innerSearch {
+  display: flex;
+  position: relative;
+}
+
+.rightMenu {
+  display: flex;
+  width: 123px;
+  margin: auto 0;
+  justify-content: space-between;
+  background-color: #ffffff;
+}
+
+.rightMenu img {
+  background-color: #ffffff;
+}
+
+.like {
+  width: 22px;
+  height: 22px;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  margin: 0 252px 0 252px;
+}
+
+.feeds {
+  display: flex;
+  width: 614px;
+  /* height: 100%; */
+  height: 800px;
+  margin-right: 28px;
+  margin-top: 30px;
+}
+
+.firstFeed {
+  position: relative;
+  width: 100%;
+  height: 917px;
+  background-color: #ffffff;
+  border: 1px solid rgb(102, 102, 102);
+  border-radius: 3px;
+}
+
+/* .secondFeed {
+  position: relative;
+  width: 100%;
+  height: 917px;
+  margin-top: 50px;
+  background-color: #ffffff;
+  border: 1px solid rgb(102, 102, 102);
+  border-radius: 3px;
+} */
+
+.feedHead {
+  display: flex;
+  width: 100%;
+  height: 60px;
+  margin: 0 16px;
+  background-color: #fafafa;
+}
+
+#feed_pic {
+  border-radius: 50%;
+  margin: auto 0;
+}
+
+.user1 {
+  margin: auto 0 auto 16px;
+  font-weight: 700;
+  background-color: #ffffff;
+}
+
+.threeDot {
+  display: flex;
+  position: absolute;
+  height: 60px;
+  right: 0;
+  top: 0;
+  background-color: tomato;
+}
+
+.pics {
+  width: 100%;
+  background-color: #ffffff;
+}
+
+#firstPic {
+  position: relative;
+  object-fit: cover;
+  width: 614px;
+  height: 614px;
+}
+
+.comment {
+  height: 241px;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+.heart {
+  height: 40px;
+  width: 100%;
+  padding-left: 8px;
+  padding-right: 16px;
+  margin-top: 4px;
+  background-color: #ffffff;
+}
+
+.icon_pack {
+  width: 100%;
+  height: 40px;
+  text-align: left;
+  background-color: #ffffff;
+}
+
+i.far {
+  font-size: 24px;
+  position: relative;
+  display: inline-block;
+  background-color: transparent;
+  /* justify-content: space-between; */
+}
+
+#bookmark {
+  position: absolute;
+  right: 16px;
+}
+
+button {
+  display: inline;
+  width: 40px;
+  height: 40px;
+  border-width: 0px;
+  background-color: transparent;
+}
+
+.manyLike {
+  height: 18px;
+  width: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-bottom: 8px;
+  margin-top: 5px;
+  background-color: #ffffff;
+}
+
+.manyLike div {
+  height: 17.5px;
+  text-align: left;
+  font-weight: 600;
+  background-color: #ffffff;
+}
+
+.comments {
+  width: 100%;
+  height: 100px;
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: #ffffff;
+}
+
+.comments p {
+  display: flex;
+  line-height: 135%;
+  background-color: #ffffff;
+}
+
+.re_id {
+  margin: auto 5px auto 0;
+  font-weight: 600;
+  text-decoration: none;
+  color: black;
+  background-color: #ffffff;
+}
+
+.re_p {
+  margin: auto 5px;
+}
+
+.re_heart {
+  position: absolute;
+  height: 19px;
+  width: 19px;
+  right: 30px;
+  justify-content: flex-end;
+}
+
+.re_heart i {
+  margin: auto 5px;
+  font-size: 12px;
+}
+
+.re_heart i:hover {
+  margin: auto 5px;
+  font-size: 12px;
+  color: red;
+}
+
+.other_re {
+  margin-top: 5px;
+  background-color: #ffffff;
+}
+
+.howLong {
+  width: 100%;
+  height: 19px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-top: 10px;
+  margin-bottom: 4px;
+  background-color: #ffffff;
+}
+
+.howLong div {
+  height: 12.5px;
+  text-align: left;
+  color: #c3c3c3;
+  font-size: 10px;
+  font-weight: 600;
+  background-color: #ffffff;
+}
+
+.write {
+  width: 100%;
+  height: 56px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-top: 4px;
+  background-color: darkolivegreen;
+  border-top: 1px solid rgb(102, 102, 102);
+}
+
+.write button {
+}
+
+/* .addcomment {
+  position: absolute;
+  display: flex;
+  width: 400px;
+} */
+
+article {
+  background-color: transparent;
+}
+
+.main-right {
+  position: relative;
+  width: 293px;
+  /* height: 100%; */
+  height: 500px;
+  margin-top: 30px;
+}
+
+.my_id {
+  display: flex;
+  justify-content: flex-start;
+  height: 66px;
+  width: 100%;
+}
+
+.pic_name {
+  margin: auto 12px;
+}
+
+.pic_id {
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.pic_desc {
+  font-size: 16px;
+}
+
+.friends_pic {
+  margin: 0;
+  padding: 0;
+}
+
+.friends_name {
+  display: block;
+  margin: auto 16px;
+}
+
+.friends_id {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.friendsdesc {
+  font-size: 14px;
+}
+
+.id_pic {
+  margin: 5px;
+  border-radius: 50%;
+}
+
+.friends_list {
+  height: 290px;
+  width: 100%;
+}
+
+.friends_text {
+  height: 19px;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.friends_text p {
+  text-align: left;
+  color: rgb(158, 158, 158);
+  font-weight: 700;
+}
+
+.friends_desc {
+  height: 256px;
+  width: 100%;
+  margin-top: 5px;
+}
+
+.people {
+  display: flex;
+  height: 50px;
+}
+
+/* .friends_desc div {
+  margin: 8px 16px;
+} */
+
+.friends_pic {
+  border-radius: 50%;
+  margin: 8px 16px;
+}
+
+.desc {
+  height: 102px;
+  width: 100%;
+}
+
+#etc,
+#instaface {
+  margin-top: 15px;
+  font-size: 13px;
+  color: rgb(158, 158, 158);
+}

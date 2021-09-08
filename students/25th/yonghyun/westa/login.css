@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: #fafafa;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  position: relative;
+}
+
+/* top left transform 안쓸때 
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+.mainBox {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  width: 350px;
+  height: 380px;
+  top: 50%;
+  left: 50%;
+  /* transform: translate(-50%, -50%); */
+  transform: translateX(-50%) translateY(-50%);
+  background-color: #ffffff;
+}
+
+.logo {
+  position: absolute;
+  margin: 22px auto 12px;
+}
+
+h1 {
+  font-size: 52px;
+  font-family: "Grand Hotel", cursive;
+  background-color: #ffffff;
+}
+
+.idPw {
+  position: absolute;
+  width: 260px;
+  height: 150px;
+  margin-top: 130px;
+  background-color: #ffffff;
+}
+
+.inputList {
+  background-color: #ffffff;
+}
+
+.inputBox {
+  margin-top: 8px;
+  width: 100%;
+  height: 40px;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  background-color: #fafafa;
+}
+
+.loginBox {
+  display: flex;
+  justify-content: center;
+}
+
+input {
+  position: relative;
+  /* display: flex; */
+  width: 80%;
+  height: 40px;
+  padding: 0 8px 1px 8px;
+  border-width: 0;
+  border-color: transparent;
+  border-radius: 3px;
+  background-color: transparent;
+  color: #999999;
+}
+
+input:focus {
+  outline: none;
+}
+
+.loginBox {
+  background-color: #ffffff;
+}
+
+.loginBtn {
+  margin-top: 15px;
+  height: 35px;
+  width: 100%;
+  border-radius: 3px;
+  background-color: #0095f6;
+  border: 1px solid transparent;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.loginBtn:disabled {
+  background-color: #c0dffd;
+}
+
+.findPw {
+  position: absolute;
+  display: flex;
+  bottom: 25px;
+}
+
+a {
+  background-color: #ffffff;
+  text-decoration: none;
+  color: #3c618a;
+  font-size: 13px;
+  font-weight: 700;
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <title>Westagram</title>
+</head>
+<body>
+    <nav class="menu">
+        <div class="topMenu">
+            <div class="leftLogo">
+                <img id="insta" src="https://www.instagram.com/static/images/web/mobile_nav_type_logo-2x.png/1b47f9d0e595.png" alt="">
+            </div>
+            <div class="search">
+                <input type="text" placeholder="">
+                <div class="searchInput">
+                    <div class="innerSearch">
+                        <span><i class="fas fa-search"></i></span>
+                        <span>검색</span>
+                    </div>
+                </div>
+            </div>
+            <div class="rightMenu">
+                <img class="like" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png" alt="">
+                <img class="like" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" alt="">
+                <img class="like" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png" alt="">
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="main">
+            <div class="feeds">
+                <div>
+                    <article class="firstFeed">
+                        <header class="feedHead">
+                            누가올린거냐
+                            <div class="user1">4.21ee</div>
+                            <div></div>
+                        </header>
+                        <div class="threeDot">
+                            점세개 자세히보기
+                        </div>
+                        <div class="pics">
+                            <img id="firstPic" src="images/felipe-giacometti-rscA_s5o8dk-unsplash.jpg"  alt="">
+                        </div>
+                        <div class="comment">
+                            <section class="heart">
+                                <div class="icon_pack">
+                                    <button><i class="far fa-heart"></i></button>
+                                    <button><i class="far fa-comment"></i></button>
+                                    <button><i class="far fa-paper-plane"></i></button>
+                                    <button id="bookmark"><i class="far fa-bookmark" ></i></button>
+                                </div>
+                            </section>
+                            <section class="manyLike">
+                                <div>좋아요 192개</div>
+                            </section>
+                            <div class="comments">
+                                댓글
+                            </div> 
+                            <div class="howLong">
+                                <div>25분전</div>
+                            </div>
+                            <section class="write">
+                                <!-- <button>
+                                    <i class="far fa-smile"></i>
+                                </button>
+                                <textarea aria-label="댓글 달기..." placeholder="댓글 달기..." autocomplete="off"> -->
+                            </section>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <div class="main-right">
+                <div class="my_id">
+                    <canvas id="id_pic" width="66px" height="66px">
+                        <img src="/westa/images/profile.jpeg" width="56px" height="56px" alt="">
+                    </canvas>
+                </div>
+                <div class="friends_list">
+                    <div class="friends_text">
+                        <p>회원님을 위한 추천</p>
+                    </div>
+                    <div class="friends_desc">
+                        친구리스트
+                    </div>
+                </div>
+                <div class="desc">
+                    <nav>
+                        어쩌구저쩌구
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+</body>
+</html>
