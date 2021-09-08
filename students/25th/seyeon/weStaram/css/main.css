@@ -1,0 +1,316 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+/* --메인페이지 헤더 */
+.mainHearder {
+    position: fixed;
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 7%;
+    border-bottom: 1px solid #ebebeb;
+    background-color: white;
+}
+
+.mainLogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    display: inline;
+    padding-right: 10px;
+}
+
+.h1 {
+    font-family: 'Lobster', cursive;
+    font-weight: bold;
+    font-size: 20px;
+    padding-left: 10px;
+    border-left: 1px solid black;
+}
+
+.mainHearder input {
+    width: 70%;
+    text-align: center;
+    margin: 20px;
+    padding:3px;
+    padding-left: 20px;
+    border: 1px solid #ebebeb;
+    background-color: #fafafa;
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#searchimg {
+    width: 5%;
+    height: 5%;
+
+}
+
+.mainHearder img {
+    width: 20px;
+    height: 20px;
+}
+
+.mainHearder a {
+    padding: 5px;
+}
+/* --메인페이지 헤더-- */
+
+/* --메인-- */
+main {
+    width: 100%;
+    display: flex;
+    padding:40px;
+    padding-top:120px;
+    background-color: #fafafa;
+    justify-content: center;
+}
+
+/* --피드-- */
+.feeds {
+    border: 1px solid #ebebeb;
+}
+
+.feedsHeader {
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    border-bottom: 1px solid #ebebeb;
+    height:40px;
+}
+
+.feediginfo {
+    padding-top:2px;
+}
+
+.feedsHeader_img {
+    display: flex;
+    align-items: center;
+    padding: 5px
+}
+
+.feediginfo span {
+    padding-right: 250px;
+    padding-bottom: 20px;
+}
+
+.feedidimg {
+    width: 30px;
+    height: 30px;
+    border-radius: 80%;
+    padding: 2px;
+}
+
+.feedsimg {
+    width: 400px;
+    text-align: center;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.feedsicons {
+    display: flex;
+    padding: 12px;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.feedsicons button {
+    background-color: #fafafa;
+    border:none;
+}
+.feedscomment {
+    padding: 10px;
+    font-size: 12px;
+}
+
+.message {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+.textdiffer {
+    text-decoration: none;
+    font-weight: normal;
+    color: #a7a7a7;
+}
+
+.feedslike {
+    padding-bottom: 20px;
+}
+
+.firstmessage {
+    padding-bottom: 5px;
+}
+
+.secondmessage {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5px;
+}
+
+.inputcomment {
+    border-top: 1px solid #ebebeb;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.input {
+    width: 80%;
+    height: 40px;
+    padding: 10px;
+    border: none;
+    background-color: #fafafa;
+}
+
+.uplodbutton {
+    width: 50px;
+    height: 40px;
+    border:none;
+    color: #d9ebfc;
+    background-color: #fafafa;
+    text-align: right;
+}
+
+.uplodbutton:hover {
+    color: #80bcf5;
+}
+/* --피드-- */
+
+/* --사이드메인-- */
+.main-right {
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   padding-left: 30px;
+   width: 250px;
+}
+
+.user {
+    display: flex;
+    width: 150px;
+    padding-bottom: 5px;
+    padding-top:2px;
+}
+
+.userInfo, .user a {
+    padding-top: 8px;
+    text-decoration: none;
+    font-size: 13px;
+    justify-content: center;
+    color: black;
+}
+
+.userInfo2 {
+    width:120px;
+}
+
+.user span {
+    font-size: 12px;
+    color: #a7a7a7;
+}
+
+.sideprofileimge {
+    width: 50px;
+    height: 30px;
+    border-radius: 80%;
+    margin-right: 10px;
+}
+
+.showall {
+    font-weight: bold;
+    color:black;
+}
+
+/* -- 메인 사이드 스토리 --*/
+.main-right_story {
+    width: 220px;
+    height: 180px;
+    padding:10px;
+    font-size: 12px;
+    border: 1px solid #ebebeb;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+
+.main-right_storylist {
+    padding:3px;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-right_storyHead {
+    display: flex;
+    justify-content: space-between;
+    color: #a7a7a7;
+    font-weight: bold;
+    padding: 3px;
+}
+
+.storyuser, .storyuser a {
+    display: flex;
+    width: 150px;
+}
+
+.storyuser a {
+    padding-bottom: 5px;
+    padding-top:2px;
+    text-decoration: none;
+    color: black;
+}
+
+.storyuser span {
+    font-size: 12px;
+    color: #a7a7a7;
+}
+
+
+.sideprofileimge2 {
+    width: 40px;
+    height: 30px;
+    border-radius: 80%;
+    border: 1px solid #d14a9c;
+    padding:1px;
+    margin-right: 10px;
+}
+
+/* --추천-- */
+.recommend {
+    border: 1px solid #ebebeb;
+    margin-bottom: 10px;
+    padding:10px;
+    width: 220px;
+    height: 160px;
+    font-size: 12px;
+}
+
+.main-right_recommend {
+    display: flex;
+    justify-content: space-between;
+    color: #a7a7a7;
+    font-weight: bold;
+    padding: 3px;
+}
+
+.followbutton {
+    display: flex;
+    color: blue;
+}
+
+.main-right_recommedlist {
+    
+}
