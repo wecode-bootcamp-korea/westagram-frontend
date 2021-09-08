@@ -1,0 +1,16 @@
+html, body{width:100%;height:100%;}
+body{display:flex;justify-content:center;align-items:center;background:#fafafa;}
+
+.container{display:flex;flex-direction:column;width:60%;max-width:400px;min-width:300px;padding:3em 2em;background:#fff;border:1px solid #e8e8e8;text-align:center;}
+h1{font-family:'Lobster', cursive;margin-bottom:40px;font-size:3.5em;text-align:center;}
+
+.login_wrap{}
+.login_wrap form{display:flex;flex-direction:column;}
+.login_wrap input{font-size:1em;color:#000;width:100%;height:45px;padding:0 20px;margin-bottom:10px;background:#fafafa;border-radius:5px;border:1px solid #f1f1f1;}
+/*.login_wrap input:placeholder{color:#a1a1a1;}*/
+.login_wrap input:focus {outline:none;border:1px solid #d6d6d6;}
+.login_wrap input[type=text]{}
+.login_wrap input[type=password]{}
+.login_wrap button{font-size:1.2em;line-height:1;color:#fff;width:100%;height:40px;margin:23px 0;text-align:center;background:#c4e1fb;border-radius:5px;}
+.login_wrap button.active{background:#52adff;}
+.lost_pw{margin-top:70px;color:#3c5588;}

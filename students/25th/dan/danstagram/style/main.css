@@ -1,0 +1,160 @@
+.wrap{width:935px;margin:0 auto;}
+.round_img{border-radius:50%;}
+.txt_id{font-weight:bold;}
+
+
+header{position:fixed;width:100%;height:60px;background:#fff;border:1px solid #e8e8e8;}
+
+header .wrap{display:flex;justify-content:flex-start;align-items:center;height:100%;}
+/*
+header .logo{display:flex;flex:2;height:30px;}
+
+header .logo .icon{flex:3;width:20px;height:20px;background:url('../images/logo.png') center center / contain no-repeat;font-size:0;}
+header .logo h1{flex:7;}
+*/
+header a.logo{height:20px;background:url('../images/logo.png') 0 center / contain no-repeat;font-size:0;}
+header .logo h1{font-family:'Lobster', cursive;height:100%;margin-left:35px;padding-left:15px;font-size:25px;line-height:15px;font-weight:100;border-left:1px solid #262626;}
+
+
+header .search{flex:6.5;text-align:center;}
+header .search input[type=text]{width:300px;height:25px;padding:0 5px;background: #fafafa;border:1px solid #e8e8e8;}
+
+header .btns{display:flex;flex:1.5;}
+header .btns button{flex:1;font-size:0;width:25px;height:25px;}
+header .btns button.research{background:url('https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png') center center / contain no-repeat;}
+header .btns button.like{background:url('https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png') center center / contain no-repeat;}
+header .btns button.mypage{background:url('https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png') center center / contain no-repeat;}
+
+
+main.wrap{display:flex;flex-direction:row-reverse;padding:80px 0 100px;}
+
+
+aside{flex:3.5;height:100%;}
+
+/*WIDGET*/
+.widget{background:#fff;border:1px solid #e8e8e8;border-radius:5px;padding:20px 20px 0;margin-bottom:15px;}
+.widget_ttl{margin-bottom:5px;}
+.widget_ttl span{color: #999;}
+.widget_ttl a{float:right;}
+
+/*my profile*/
+.my_profile{display:flex;align-items:center;margin-bottom:10px;}
+.my_profile a.profile_img{flex:2;}
+.my_profile a.profile_img img{width:55px;height:55px;}
+
+.my_profile .user_id{flex:8;padding-left:10px;}
+.my_profile .user_id a{}
+.my_profile .user_id p{color: #999;}
+
+/*story*/
+.stories{}
+
+.list_story{height:200px;overflow-y:scroll;}
+
+.story{display:flex;align-items:center;margin:10px 0;}
+.story a.follower_img{flex:2;}
+.story a.follower_img img{width:45px;height:45px;}
+.story .user_id{flex:8;}
+.story .user_id a{}
+.story .user_id p{color: #999;}
+
+
+/*recommend*/
+.recommends{padding-bottom:5px;}
+
+.list_recommend{}
+
+.recommend{display:flex;align-items:center;margin:10px 0;}
+.recommend a.recommend_img{flex:2;}
+.recommend a.recommend_img img{width:45px;height:45px;}
+.recommend .user_id{flex:6;}
+.recommend .user_id a{}
+.recommend .user_id p{color: #999;}
+.recommend button{flex:2;font-size:0.8em;font-weight:bold;color:#0095f6;}
+
+.menu{}
+.menu ul{overflow:hidden;}
+.menu ul li{position:relative;float:left;line-height:1.5;padding-right:12px;}
+.menu ul li:before{
+    content: "";
+    position:absolute;
+    top:50%;
+    margin-top:-1px;
+    right:7px;
+    width:2px;
+    height:2px;
+    background: #b9b9b9;
+}
+.menu ul li a{font-size:0.8em;color: #999;}
+.copyright{font-size:0.8em;color: #999;padding-top:20px;}
+
+
+
+div.feeds{flex:6.5;}
+
+
+
+
+
+
+/*FEEDS*/
+.feeds{}
+
+article.new_feed{margin-right:15px;background:#fff;border:1px solid #e8e8e8}
+
+.up_user_info{display:flex;align-items:center;padding:10px 20px;}
+.up_user_info .up_user_img{flex:1;}
+.up_user_info .up_user_img img{width:45px;height:45px;}
+.up_user_info .up_user_id{flex:8;}
+.up_user_info button{flex:1;}
+
+
+.feed_imgs{}
+.feed_imgs img{width:100%;}
+
+.interactions{display:flex;align-items:center;height:50px;padding:0 10px}
+.interactions button{flex:3;font-size:0;margin:0 10px;}
+.interactions button.bookmark{flex:1;font-size:0;}
+button .far{font-size:20px;}
+.interactions .my_emotion{flex:2;display:flex;}
+.interactions .pagnation{flex:25;}
+
+
+.like_user img{width:25px;height:25px;}
+
+.feed_imgs p{display:flex;align-items:center;padding:10px 20px;}
+.feed_imgs p .like_user{display:flex;align-items:center;}
+p .txt_id{margin-left:10px;}
+
+.feed_txt{padding:0 20px;}
+.feed_txt .more{cursor:pointer;color:#999;}
+
+.comments{padding:10px 20px;}
+.already_comment{padding-bottom:10px;border-bottom:1px solid #e8e8e8;}
+.post_comment{display:flex;align-content:center;padding:20px 0 10px;}
+.post_comment input[type=text]{flex:9;border:none;height:16px;}
+.post_comment button{flex:1;color:#0095f6;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
