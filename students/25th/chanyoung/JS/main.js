@@ -8,6 +8,8 @@ const feedHeartBtn = document.querySelector(
   ".feeds-main__icons--left .fa-heart"
 );
 const commentTime = document.querySelector(".feeds-main__comment-time");
+const menuProfile = document.querySelector(".menu-profile");
+const menuProfileBox = document.querySelector(".menu-profile-box");
 let commentHearts = document.querySelectorAll(".feeds-main__comments__heart");
 let commentDeleteBtn = document.querySelectorAll(
   ".feeds-main__comments__delete"
@@ -63,7 +65,6 @@ const addComment = (e) => {
     newComment.querySelector(".feeds-main__comments__delete").onclick =
       deleteComment;
 
-    // 리스너 추가
     // input 값 초기화!
     e.target[0].value = null;
   }
@@ -131,10 +132,6 @@ const matchUsername = (text) => {
 
           //유저 컨테이너가 담길 공간에 붙여
           searchUserContainer.appendChild(userContainer);
-
-          // 찾은 유저 컨테이너 만드는 init
-
-          // 찾은 유저를 배열에 담아 관리
         }
       }
     } else {
@@ -166,7 +163,17 @@ const matchUsername = (text) => {
     searchUsers.length = 0;
   }
 };
+// 프로필 메뉴 박스 생성
+const createMenuProfileBox = (e) => {
+  e.target.nextElementSibling.style.display = "flex";
+};
+const deleteMenuProfileBox = (e) => {
+  e.target.style.display = "none";
+};
 
 searchInput.addEventListener("input", searchText);
+menuProfile.addEventListener("click", createMenuProfileBox);
+menuProfileBox.addEventListener("mouseleave", deleteMenuProfileBox);
+
 addHeartBtnListener();
 addDeleteBtnListener();
