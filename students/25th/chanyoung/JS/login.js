@@ -7,12 +7,9 @@ let isId = false,
 
 const getInput = (e) => {
   // 아이디 & 비번 값 체크
-  if (e.target.className === 'login__id') {
-    isId = e.target.value ? true : false;
-  }
-  if (e.target.className === 'login__password') {
-    isPassword = e.target.value ? true : false;
-  }
+  if (e.target.className === 'login__id') isId = e.target.value ? true : false;
+  if (e.target.className === 'login__password') isPassword = e.target.value ? true : false;
+
   // 활성화 & 배경 컬러 변경
   if (isId && isPassword) {
     btn.disabled = false;
