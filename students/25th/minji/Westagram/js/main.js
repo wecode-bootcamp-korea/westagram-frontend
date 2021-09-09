@@ -1,4 +1,4 @@
-// Add Comment
+// ===댓글 추가 기능===
 const btn_upload = document.querySelector(".btn_upload");
 const btn_delete = document.querySelector(".comment_delete");
 const textarea = document.querySelector("textarea");
@@ -6,22 +6,23 @@ const article_comments = document.querySelector(".article_comments");
 const comments_row = document.querySelector(".comments_row");
 const my_id = document.querySelector(".my_id").innerText;
 
-// textarea에 value가 입력되었을 때, 댓글 Element를 추가하는 함수
+// value 입력되었을 때, 댓글 Element를 추가하는 함수
 const uploadComment = () => {
   if (textarea.value) {
-    let newSpan = document.createElement("span");
+    const newSpan = document.createElement("span");
+    const newP = document.createElement("p");
+    const newText = document.createTextNode(textarea.value);
+    const newId = document.createTextNode(my_id);
+    const newHeart = document.createElement("i");
+    const newTrash = document.createElement("i");
+    const newDiv = document.createElement("div");
+    const newCommentDiv = document.createElement("div");
     newSpan.classList.add("user_id");
-    let newP = document.createElement("p");
-    let newText = document.createTextNode(textarea.value);
-    let newId = document.createTextNode(my_id);
-    let newHeart = document.createElement("i");
-    let newTrash = document.createElement("i");
-    let newDiv = document.createElement("div");
-    let newCommentDiv = document.createElement("div");
     newCommentDiv.classList.add("comments_menu");
     newDiv.classList.add("comments_row");
     newHeart.classList.add("comment_like", "far", "fa-heart");
     newTrash.classList.add("comment_delete", "far", "fa-trash-alt");
+
     newHeart.onclick = () => toggleLike(newHeart);
     newTrash.onclick = () => deleteComment(newTrash);
 
@@ -33,11 +34,12 @@ const uploadComment = () => {
     newDiv.appendChild(newP);
     newDiv.appendChild(newCommentDiv);
     article_comments.appendChild(newDiv);
+
     textarea.value = "";
   }
 };
 
-//
+// Enter 눌렀을 때 댓글 추가
 textarea.addEventListener("keyup", (e) => {
   if (e.code === "Enter") {
     uploadComment();
@@ -50,14 +52,15 @@ textarea.addEventListener("keyup", (e) => {
   }
 });
 
+// 버튼 눌렀을 때 댓글 추가
 btn_upload.addEventListener("click", uploadComment);
 
-//Delete Comment
+// ===댓글 삭제 기능===
 const deleteComment = (el) => {
   el.parentNode.parentNode.remove();
 };
 
-// Toggle Heart
+// ===좋아요 Toggle 기능===
 const comment_like = document.querySelector(".comment_like");
 let isLiked = false;
 
@@ -74,7 +77,7 @@ const toggleLike = (el) => {
   }
 };
 
-// Modal Box
+// ===Nav Profile 메뉴 박스 생성 기능===
 const btn_profile = document.querySelector(".btn_profile");
 const menu_box = document.querySelector(".menu_box");
 let isHidden = true;
@@ -88,7 +91,7 @@ btn_profile.addEventListener("click", () => {
   }
 });
 
-/*Search Filter*/
+// ===아이디 검색 기능===
 const searchbox = document.querySelector(".search");
 const search_list = document.querySelector("ul");
 const search_result_box = document.querySelector(".search_result_box");
@@ -135,10 +138,10 @@ searchbox.addEventListener("keyup", () => {
   let result = user_list.filter((user) => user.id.includes(searchbox.value));
 
   while (search_list.hasChildNodes()) {
-    console.log(search_list.firstChild);
     search_list.removeChild(search_list.firstChild);
   }
 
+  // filter된 data 넣어서 element 생성
   result.forEach((element) => {
     let newLi = document.createElement("li");
     let newProfile = document.createElement("img");
@@ -159,8 +162,7 @@ searchbox.addEventListener("keyup", () => {
     search_list.appendChild(newLi);
   });
 
-  /*Search Filter X button*/
-
+  // 아이디 검색시 x버튼 생성
   searchbox.value
     ? ((btn_init.style.display = "block"),
       (search_result_box.style.display = "block"))

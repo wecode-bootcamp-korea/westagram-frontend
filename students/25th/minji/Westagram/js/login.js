@@ -1,20 +1,17 @@
-const user_id = document.getElementById("user_id");
-const user_pw = document.getElementById("user_pw");
-const btn_login = document.getElementById("btn_login");
+const login_id = document.querySelector(".login_id");
+const login_pw = document.querySelector(".login_pw");
+const btn_login = document.querySelector(".btn_login");
 
-let activateButton = () => {
-  // if (user_id.value && user_pw.value) {
-  //   btn_login.style.opacity = 1;
-  // } else {
-  //   btn_login.style.opacity = 0.4;
-  // }
-
-  if (user_id.value.includes("@") && user_pw.value.length >= 5) {
+// 유효성검사 통과시 버튼 활성화하고 메인으로 이동
+const activateButton = () => {
+  if (login_id.value.includes("@") && login_pw.value.length >= 5) {
+    btn_login.disabled = false;
     btn_login.style.opacity = 1;
   } else {
+    btn_login.disabled = true;
     btn_login.style.opacity = 0.4;
   }
 };
 
-user_id.addEventListener("keyup", activateButton);
-user_pw.addEventListener("keyup", activateButton);
+login_id.addEventListener("keyup", activateButton);
+login_pw.addEventListener("keyup", activateButton);
