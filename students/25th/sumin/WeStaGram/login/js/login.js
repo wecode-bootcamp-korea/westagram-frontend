@@ -1,19 +1,24 @@
 
-const inputId = document.getElementsByClassName("inputId");
-const inputPw = document.getElementsByClassName("inputPw");
-const button = document.getElementsByTagName("button");
+const inputId = document.getElementsByClassName("input_id")[0];
+const inputPw = document.getElementsByClassName("input_pw")[0];
+const button = document.querySelector(".login_Button");
 
-function changeColor(){
-    if(inpuId.value > 1 && inputPw.value > 1){
-        button.style.backgroundColor = "blue"; 
-    }else if(inpuId.value < 1 && inputPw.value < 1){
-        button.style.backgroundColor = "#c0dffc"; 
+function login(){
+    
+    let idLength = inputId.value;
+    let pwLength = inputPw.value;
+
+    if(idLength.indexOf('@') !== -1 && pwLength.length >=6){
+        console.log(idLength.length)
+        button.disabled = false;
+        button.classList.add('btn-authorized')
+    }else{
+        console.log(idLength.length)
+        button.disabled = true;
+        button.classList.remove('btn-authorized')
     }
 }
 
-//toDoInput.Value = ""; //엔터를 치면 값이 새로고침됨
-inputId.addEventListener("keyup",changeColor );
-inputPw.addEventListener("keyup",changeColor );
 
 
 
