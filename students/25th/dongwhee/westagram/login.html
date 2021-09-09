@@ -1,50 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="common.css" type="text/css">
-    <link rel="stylesheet" href="login.css" type="text/css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="common.css" type="text/css" />
+    <link rel="stylesheet" href="login.css" type="text/css" />
     <script src="login.js"></script>
     <title>Westagram Login</title>
+  </head>
+  <body>
+    <div class="layoutWrapper">
+      <!--// 전체 페이지 감싸는 보더 적용된 디브 !-->
+      <div class="loginLayout">
+        <h1 class="logoName">Westagram</h1>
+        <div class="loginValueWrapper">
+          <div>
+            <input
+              type="text"
+              alt=""
+              name="userid"
+              class="loginId"
+              placeholder="  전화번호, 사용자 이름 또는 이메일"
+            />
 
-    <!-- 
-    1) 인스타 로고는 폰트 활용하여 westagram 으로 작성
-    2) input 태그 사용
-        tag는 input
-        type은 text 또는 password
-        placeholder는 속성을 사용하여 "전화번호, 사용자 이름 또는 이메일" 등의 값을 넣어주시면 됩니다.
-    3) button 태그를 사용해주세요.
-    4) 이제 CSS 스타일을 작성해서 로그인 화면을 완료해주세요!
-    5) 구현사항 : id, pw 에 각각 한 글자 이상 써야 버튼이 활성화 되도록 해주세요. 원래 연한 파란색이었다가 -> 활성화 되면 파란색으로! -->
-    
-    
-    
-    
+            <input
+              type="password"
+              alt=""
+              name="userpw"
+              class="loginPw"
+              placeholder="  비밀번호"
+            />
+          </div>
 
+          <div class="loginBottom">
+            <button class="loginButton" type="button">로그인</button>
 
-</head>
-<body>
-    <div class="layoutWrapper">    <!--// 전체 페이지 감싸는 보더 적용된 디브 !-->
-        <div class="loginLayout">
-            <h1 class="logoName">Westagram</h1>
-            <div class="loginValueWrapper">
-                
-                <div>
-                <input type="text" alt="" name="userid" class="loginId" placeholder="  전화번호, 사용자 이름 또는 이메일">
-                                
-                <input type="password" alt="" name="userpw"  class="loginPw" placeholder="  비밀번호">
-                </div>
-
-                <div class="loginBottom">
-                <button class="loginButton" type="button">로그인</button>
-                
-                <div class="forgetPw">비밀번호를 잊으셨나요?</div>    
-                </div>
-
-            </div>    
-        </div>    
+            <div class="forgetPw">비밀번호를 잊으셨나요?</div>
+          </div>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>

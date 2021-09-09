@@ -8,6 +8,12 @@
     <link rel="stylesheet" href="main.css" type="text/css" />
     <script src="main.js"></script>
     <title>Westagram Main</title>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
     <nav class="navigator">
@@ -44,23 +50,157 @@
     </nav>
 
     <main class="layoutWrapper">
-      배경
-      <div class="feeds">
-        feeds
-        <article class="article">
-          article
-          <div class="userId">userId</div>
-          <img class="postPhoto" />
-          <section class="buttonsSection">
-            좋아요 버튼 섹션 안에 span으로 버튼 삽입
-          </section>
-          <section class="likes">
-            likes
-            <div></div>
-          </section>
-        </article>
+      <!-- 배경 -->
+      <div class="mainAll">
+        <div class="feedWrapper">
+          <div class="userId">
+            <div class="userPhoto"></div>
+            <div class="userName">saymaname456</div>
+          </div>
+          <div class="feedPhoto"></div>
+          <div class="bottomWrapper">
+            <section class="buttonsSection">
+              <i id="heart" class="far fa-heart"></i>
+              <i class="far fa-comment"></i>
+              <i class="far fa-paper-plane"></i>
+              <span id="saved">
+                <i class="far fa-bookmark"></i>
+              </span>
+            </section>
+
+            <section class="likesCount">
+              <div class="likesPersonOne"></div>
+              <div class="likesPersonTwo"></div>
+              <div class="likesHowMany">
+                eduardhatesinsta님 외 3,110,979명이 좋아합니다
+              </div>
+            </section>
+            <section class="aboutFeed">
+              <div class="feedCreator">saymaname456</div>
+              <div class="feedExplain">Satisfying View 😍</div>
+            </section>
+            <section class="comment">
+              <div class="commentAll">댓글 653개 모두 보기</div>
+              <div class="feedCreator">leediana</div>
+              <div class="feedExplain">
+                <span>@lkfjdsiof</span>
+                wow.. pull up!!
+              </div>
+            </section>
+            <section class="uploadTime">59분 전</section>
+            <div class="commentField">
+              <button class="commentImoticon">
+                <i class="far fa-smile-wink"></i>
+              </button>
+              <input type="text" id="comments" placeholder="댓글 달기..." />
+              <button type="submit" class="submitButton">게시</button>
+            </div>
+          </div>
+        </div>
+        <div class="mainRight">
+          <div class="myProfile">
+            <div class="myPhoto"></div>
+            <div class="profileWrapper">
+              <div class="myName">dongwheekeem</div>
+              <div class="myDesc">www.wowfantastic.com</div>
+            </div>
+          </div>
+          <div class="recommendSection">
+            <p class="topWrapper">
+              <span class="recommend">회원님을 위한 추천</span>
+              <span class="viewAll">모두 보기</span>
+            </p>
+            <div class="profile">
+              <div class="profilePhoto one"></div>
+              <div class="profileWrap">
+                <div class="myName">apple</div>
+                <div class="myDesc">litandls님 외 896명이 팔로우합니다</div>
+                <div class="follow">팔로우</div>
+              </div>
+            </div>
+
+            <div class="profile">
+              <div class="profilePhoto two"></div>
+              <div class="profileWrap">
+                <div class="myName">lvmh</div>
+                <div class="myDesc">aodlqid님 외 346명이 팔로우합니다</div>
+                <div class="follow">팔로우</div>
+              </div>
+            </div>
+
+            <div class="profile">
+              <div class="profilePhoto three"></div>
+              <div class="profileWrap">
+                <div class="myName">toss.im</div>
+                <div class="myDesc">gkfiwl님 외 108명이 팔로우합니다</div>
+                <div class="follow">팔로우</div>
+              </div>
+            </div>
+
+            <div class="profile">
+              <div class="profilePhoto four"></div>
+              <div class="profileWrap">
+                <div class="myName">kakao</div>
+                <div class="myDesc">vkffkg55님 외 247명이 팔로우합니다</div>
+                <div class="follow">팔로우</div>
+              </div>
+            </div>
+
+            <div class="profile">
+              <div class="profilePhoto five"></div>
+              <div class="profileWrap">
+                <div class="myName">mdn</div>
+                <div class="myDesc">islka님 외 1,357명이 팔로우합니다</div>
+                <div class="follow">팔로우</div>
+              </div>
+            </div>
+
+            <div class="explainSite">
+              <ul>
+                <li class="explain">
+                  <a href="http://instagram.com" target="_blank">도움말</a>
+                </li>
+                <li class="explain">
+                  <a href="http://instagram.com" target="_blank">소개</a>
+                </li>
+                <li class="explain">
+                  <a href="http://instagram.com" target="_blank">홍보</a>
+                </li>
+                <li class="explain">
+                  <a href="http://instagram.com" target="_blank">센터</a>
+                </li>
+                <li class="explain">
+                  <a href="http://instagram.com" target="_blank">API</a>
+                </li>
+                <li class="explain">
+                  <a href="http://instagram.com" target="_blank">채용 정보</a>
+                </li>
+                <li class="explain">
+                  <a href="http://instagram.com" target="_blank"
+                    >개인정보처리방침</a
+                  >
+                </li>
+                <li class="explain">
+                  <a href="http://instagram.com" target="_blank">약관</a>
+                </li>
+                <li class="explain">
+                  <a href="http://instagram.com" target="_blank">위치</a>
+                </li>
+                <li class="explain">
+                  <a href="http://instagram.com" target="_blank">인기 계정</a>
+                </li>
+                <li class="explain">
+                  <a href="http://instagram.com" target="_blank">해시태그</a>
+                </li>
+                <li class="explain">
+                  <a href="http://instagram.com" target="_blank">언어</a>
+                </li>
+              </ul>
+              <span>© 2021 WESTAGRAM FROM WECODE</span>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="main-right">main-right</div>
     </main>
   </body>
 </html>
