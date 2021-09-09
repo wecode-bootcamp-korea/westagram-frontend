@@ -1,28 +1,85 @@
-
-.container{
-    /* padding : 200px 50px; */
-    margin: auto;
-    width: 90%; height: 700px;
-    border : 1px solid gray;
+body{
     position: relative;
 }
 
-.headtitle {
+.container{
     position: absolute;
-    width: 100%; height: 100px;
-    border: 1px solid black;
-    font-family : 'Lobster', cursive;
-    font-size: 60px;
-    text-align: center;
-    line-height: 100px;
+    display: flex;
+    justify-content: center;
+    padding: 30px 0;
+    width: 400px;
+    height: 450px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border: 1px solid rgb(199, 199, 199)
+    /* width: 500px;
+    height: 600px; */
+    
+
+    /* 여기서 플렉스로 justify, align은 아이템에 적용되나 */
 }
-/* text-align은 글자만 해당되는게 아니라 다른 인라인 속성에 다 적용*/
+
+.headtitle {
+  position: absolute;
+  display:flex ;
+  margin: 20px;
+  font-size: 50px;
+  font-family: 'Amiri', serif;
+  font-family: 'Lobster', cursive;
+  /* border: 1px solid red; */
+}
+
 .textline{
     position: absolute;
-    width: 100%; height: 400px;
-    border: 1px solid black;
-    text-align: center;
-    top: 100px;
-    line-height: 10px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+    margin-top: 110px;
+    height: 50%;
+    width: 70%;
+    font-size: 20px;
+/* text-align은 글자만 해당되는게 아니라 다른 인라인 속성에 다 적용*/
+}
 
+.input-wrap{
+    display: flex;
+    justify-content: space-around;
+    align-content: space-between;
+    flex-direction: column;
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+    font-size: 20px;
+} 
+
+#userId, #password {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 3px;
+    border: 1px solid rgb(199, 199, 199); 
+}
+
+button{
+    
+    justify-content: center;
+    padding: 10px 111px;
+    margin-top: 35px;
+    border-radius: 3px;
+    background-color:#c4e1fb ;
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+a {
+    display: flex;
+    padding-top: 95%;
+    text-decoration: none;
 }
