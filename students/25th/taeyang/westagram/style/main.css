@@ -4,6 +4,7 @@ body {
 
 /* 메뉴 */
 .navigator {
+  position: fixed;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -28,7 +29,7 @@ body {
 
 .logo-text {
   padding: 0;
-  margin-left: 25px;
+  margin-left: 20px;
   color: black;
   font-family: 'Lobster', cursive;
   text-decoration: none;
@@ -63,7 +64,7 @@ body {
 /* 메인 */
 .container {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   padding-top: 30px ;
   height: 80%;
   background-color: rgb(250, 250, 250);
@@ -71,13 +72,24 @@ body {
 
 /* 피드 */
 .feeds {
-  position: relative;
   width: 614px;
-  margin-right: 22px;
+  margin-top: 65px;
+  margin-right: 320px;
+}
+
+.feeds-content {
   background-color: white;
   border: 1px solid rgb(219, 219, 219);
   border-radius: 3px;
+  margin-bottom: 24px;
 }
+
+.feeds-content2 {
+  margin-top: 24px;
+  background-color: white;
+  border: 1px solid rgb(219, 219, 219);
+  border-radius: 3px;
+} 
 
 .title {
   display: flex;
@@ -103,13 +115,19 @@ body {
   border-radius: 100%;
 }
 
+.my-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 .my-info>a,p {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 0px;
   margin-left:10px ;
-  margin-bottom:10px;
+  /* margin-bottom:10px; */
   color: black;
 }
 
@@ -201,13 +219,6 @@ body {
   flex-direction: column;
 }
 
-/* .comment-second button {
-  width: 12px;
-  height: 12px;
-  background-color: white;
-  border: 0;
-} */
-
 .comment-time {
   margin-top: 10px;
 }
@@ -217,15 +228,14 @@ body {
   font-size: 10px;
 }
 .comment-box {
-margin-top: 55px;
+  position: relative;
 }
 
 .comment-text {
-  position:absolute;
   bottom: 0;
   width: 100%;
   height: 46px;
-  margin: 20px 0px 0px;
+  margin-top: 10px;
   padding: 0px 16px;
   border: 1px solid rgb(219, 219, 219);
 }
@@ -246,7 +256,11 @@ margin-top: 55px;
 
 /* 피드 옆 사이드 */
 .side {
+  position: fixed;
+  /* right: 16%; */
   width: 293px;
+  margin-top: 65px;
+  margin-left: 650px;
 }
 
 .side-user {
@@ -358,4 +372,3 @@ border-radius: 50px;
   color: #c7c7c7;
   font-size: 12px;
 }
-
