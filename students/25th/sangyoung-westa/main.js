@@ -1,8 +1,5 @@
-let inputArray= document.querySelectorAll("input");
+let inputArray= document.querySelectorAll("button");
 
-inputArray.addEventListener("keyup", function(e){
-    if(e.key === 'Enter'){
-        
-    }
-
+inputArray.addEventListener("click", function(e){
+    
 });
