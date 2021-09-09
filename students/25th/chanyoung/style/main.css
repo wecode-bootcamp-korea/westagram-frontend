@@ -59,14 +59,26 @@ header {
   background-color: var(--background-color--gray);
   opacity: 0.6;
 }
-.header__search__find-container {
+.header__search__user-container {
   position: absolute;
   width: 100%;
-  height: 40px;
-  top: 19px;
-  background-color: var(--background-color--gray);
+  height: auto;
+  top: 17px;
   border: var(--border);
   border-top: none;
+  background-color: var(--background-color--gray);
+}
+.header__search__user-container__user {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 5px;
+  font-size: 12px;
+  font-family: none;
+}
+.header__search__user-container__user img {
+  margin-right: 10px;
+  width: 22px;
 }
 .menu {
   display: flex;
@@ -85,7 +97,7 @@ header {
 main {
   display: flex;
   justify-content: center;
-  padding-top: 45px;
+  padding-top: 25px;
 }
 .feeds {
   width: 445px;
