@@ -4,30 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main2.css">
     <title>wecode</title>
 </head>
 <body>
     <main>
+        <nav>
+            <div class="nav-left">
+                <div class="icon main-logo"></div>
+                <div class="westagram"></div>
+            </div>
+            <div class="nav-center">
+                <input class="search-bar"></input>
+            </div>
+            <div class="nav-right">
+                <div class="icon nav-icon"></div>
+                <div class="icon heart-icon"></div>
+                <div class="icon nav-icon"></div>
+            </div>
+        </nav>
         <div class="feeds">
             <article class="feed">
                 <div class="feed__head">
                     <div class="user">
                         <img class="user__img">
-                        <div class="user__id"></div>
+                        <div class="user-id"></div>
                     </div>
-                    <div class="etc-icon"></div>
+                    <div class="icon etc-icon"></div>
                 </div>
                 <div class="feed__main">
                     <img class="feed__img">
                 </div>
                 <div class="feed__icons">
                     <div class="feed__icons-left">
-                        <div class="heart-icon"></div>
-                        <div class="talk-icon"></div>
-                        <div class="load-icon"></div>
+                        <div class="icon heart-icon--red"></div>
+                        <div class="icon talk-icon"></div>
+                        <div class="icon load-icon"></div>
                     </div>
                     <div class="feed__icons-right">
-                        <div class="mark-icons"></div>
+                        <div class="icon mark-icons"></div>
                     </div>
                 </div>
                 <div class="feed__likes">
@@ -40,6 +55,7 @@
                 <div class="feed__content">
                     <div class="user__id"></div>
                     <div class="text"></div>
+                    <div class="text__time--gray"></div>
                 </div>
                 <div class="feed__comment-box">
                     <div class="comment">
@@ -51,6 +67,16 @@
                     <div class="feed__comment-list"></div>
                 </div>
             </article>
+        </div>
+        <div class="main-right">
+            <div class="main-right__user">
+                <div class="right__user">
+                    <img class="user__img--big">
+                    <div class="user__id"></div>
+                    <div class="text--gray"></div>
+                </div>
+                
+            </div>
         </div>
     </main>
 </body>
