@@ -1,145 +1,120 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-    <title>Westagram</title>
-</head>
-<body>
-    <nav class="menu">
-        <div class="topMenu">
-            <div class="leftLogo">
-                <img id="insta" src="https://www.instagram.com/static/images/web/mobile_nav_type_logo-2x.png/1b47f9d0e595.png" alt="">
-            </div>
-            <div class="search">
-                
-                <div class="searchInput">
-                    <input class="sp" type="search" placeholder="검색" onfocus="this.placeholder=''" onblur="this.placeholder='검색'">
-                    <!-- <div class="innerSearch">
-                        <span><i class="fas fa-search"></i></span>
-                        <span>검색</span>
-                    </div> -->
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="main.css"/>
+        <link rel="stylesheet" href="common.css"/>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"/>
+        <title>Westagram</title>
+    </head>
+    <body>
+        <nav class="menu">
+            <div class="topMenu">
+                <div class="leftLogo">
+                    <img id="insta" alt="instaLogo" src="https://www.instagram.com/static/images/web/mobile_nav_type_logo-2x.png/1b47f9d0e595.png"/>
+                </div>
+                <div class="search">
+                    <div class="searchInput">
+                        <input class="searchBox" type="search" placeholder="검색" onfocus="this.placeholder=''" onblur="this.placeholder='검색'"/>
+                    </div>
+                </div>
+                <div class="rightMenu">
+                    <img class="like" alt="compassIcon" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png"/>
+                    <img class="like" alt="heartIcon" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"/>
+                    <img class="like" alt="peopleIcon" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png"/>
+                    <img class='like' alt="profileImageIcon" src="/students/25th/yonghyun/westa/images/profile.jpeg" width="32px" height="32px" />
                 </div>
             </div>
-            <div class="rightMenu">
-                <img class="like" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png" alt="">
-                <img class="like" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" alt="">
-                <img class="like" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png" alt="">
-                <img class='like' src="/westa/images/profile.jpeg" width="32px" height="32px" alt="">
-            </div>
-        </div>
-    </nav>
-    <main>
-        <div class="main">
-            <div class="feeds">
-                <div>
-                    <article class="firstFeed">
-                        <header class="feedHead">
-                            <img id='feed_pic' src="/westa/images/profile.jpeg" width="32px" height="32px" alt="">
-                            <div class="user1">4.21ee</div>
-                            <div></div>
-                        </header>
-                        <div class="threeDot">
-                            <button>
-                                <i class="fas fa-ellipsis-h"></i>
-                            </button>
-                        </div>
-                        <div class="pics">
-                            <img id="firstPic" src="images/wecode.jpg"  alt="">
-                        </div>
-                        <div class="comment">
-                            <section class="heart">
-                                <div class="icon_pack">
-                                    <button><i class="far fa-heart"></i><i id="redheart"class="fas fa-heart"></i></button>
-                                    <button><i class="far fa-comment"></i></button>
-                                    <button><i class="far fa-paper-plane"></i></button>
-                                    <button id="bookmark"><i class="far fa-bookmark" ></i></button>
+        </nav>
+        <main>
+            <div class="main">
+                <div class="feeds">
+                    <div>
+                        <article class="firstFeed">
+                            <header class="feedHead">
+                                <img id='feed_pic' alt="feedProfileIcon" src="/students/25th/yonghyun/westa/images/profile.jpeg" width="32px" height="32px"/>
+                                <div class="user1">
+                                    4.21ee
                                 </div>
-                            </section>
-                            <section class="manyLike">
-                                <div>좋아요 485,222개</div>
-                            </section>
-                            <div class="comments">
-                                <div  class="asd" id="other_re">
-                                    <p><a href="" class="re_id">wecode_bootcamp</a><span class="re_p">두번째 댓글 나와라</span><span class="deletespan"><button class="deleteBtn">
-                                        <i class="fas fa-ellipsis-h"></i>
-                                    </button></span><span><button class="re_heart"><i class="far fa-heart"></i></button></span></p>
-                                    <p><a href="" class="re_id">wecode</a><span class="re_p">세번째 댓글 나오고</span><span class="deletespan"><button class="deleteBtn">
-                                        <i class="fas fa-ellipsis-h"></i>
-                                    </button></span><span><button class="re_heart"><i class="far fa-heart"></i></button></span></p>
-                                    <p><a href="" class="re_id">westagram</a><span class="re_p">네번째 댓글이다</span><span class="deletespan"><button class="deleteBtn">
-                                        <i class="fas fa-ellipsis-h"></i>
-                                    </button></span><span><button class="re_heart"><i class="far fa-heart"></i></button></span></p>
-                                    <p><a href="" class="re_id">asdfg</a><span class="re_p">줄젇ㄹ아링나ㅜ링나</span><span class="deletespan"><button class="deleteBtn">
-                                        <i class="fas fa-ellipsis-h"></i>
-                                    </button></span><span><button class="re_heart"><i class="far fa-heart"></i></button></span></p>
-                                    <p id="addR"></p>
-                                </div>
-                                <p class="asd"><a href="" class="re_id">4.21ee</a><span class="re_p"> WESTAGRAM 만들기 첫번째 피드 내용부분입니다.</span></p>
-                            </div> 
-                            <div class="howLong">
-                                <div>25분전</div>
-                            </div>
-                            <section class="write">
+                            </header>
+                            <div class="threeDot">
                                 <button>
-                                    <i class="far fa-smile"></i>
+                                    <i class="fas fa-ellipsis-h"></i>
                                 </button>
-                                <input id ="writeComment" type="text" placeholder="댓글 달기..." onkeypress="if(window.event.keyCode==13) addMessage();">
-                                <button id="writeBtn" onclick="addMessage()">게시</button>
-                                <!-- <textarea class="addcomment" aria-label="댓글 달기..." placeholder="댓글 달기..." autocomplete="off"> -->
+                            </div>
+                            <div class="pics">
+                                <img id="firstPic" alt="mainPic" src="/students/25th/yonghyun/westa/images/wecode.jpg"/>
+                            </div>
+                            <div class="comment">
+                                <section class="heart">
+                                    <div class="icon_pack">
+                                        <button><i class="far fa-heart"></i><i id="redheart"class="fas fa-heart"></i></button>
+                                        <button><i class="far fa-comment"></i></button>
+                                        <button><i class="far fa-paper-plane"></i></button>
+                                        <button id="bookmark"><i class="far fa-bookmark" ></i></button>
+                                    </div>
+                                </section>
+                                <section class="manyLike">
+                                    <div>좋아요 485,222개</div>
+                                </section>
+                                <div class="comments_head">
+                                    <p class="commentFeed"><a href="" class="re_id">4.21ee</a><span class="re_p"> WESTAGRAM 만들기 첫번째 피드 내용부분입니다.</span></p>
+                                </div> 
+                                <div class="comments">
+                                    <div class="commentFeed" id="other_re">
+                                        <p><a href="" class="re_id">wecode_bootcamp</a>
+                                            <span class="re_p">두번째 댓글 나와라</span><span class="deletespan">
+                                                <button class="deleteBtn"><i class="fas fa-ellipsis-h"></i></button>
+                                            </span>
+                                            <span>
+                                                <button class="re_heart"><i class="far fa-heart"></i></button>
+                                            </span>
+                                        </p>                                        
+                                        <p><a href="" class="re_id">wecode</a>
+                                            <span class="re_p">세번째 댓글 나오고</span><span class="deletespan">
+                                                <button class="deleteBtn"><i class="fas fa-ellipsis-h"></i></button>
+                                            </span>
+                                            <span>
+                                                <button class="re_heart"><i class="far fa-heart"></i></button>
+                                            </span>
+                                        </p>
+                                        <p><a href="" class="re_id">westagram</a>
+                                            <span class="re_p">네번째 댓글이다</span><span class="deletespan">
+                                                <button class="deleteBtn"><i class="fas fa-ellipsis-h"></i></button>
+                                            </span>
+                                            <span>
+                                                <button class="re_heart"><i class="far fa-heart"></i></button>
+                                            </span>
+                                        </p>
+                                        <p><a href="" class="re_id">asdfg</a>
+                                            <span class="re_p">줄젇ㄹ아링나ㅜ링나</span><span class="deletespan">
+                                                <button class="deleteBtn"><i class="fas fa-ellipsis-h"></i></button>
+                                            </span>
+                                            <span>
+                                                <button class="re_heart"><i class="far fa-heart"></i></button>
+                                            </span>
+                                        </p>
+                                        <p id="addR"></p>
+                                    </div>
+                                </div>
+                                <div class="howLong">
+                                    <div>25분전</div>
+                                </div>
+                                <section class="write">
+                                    <button>
+                                        <i class="far fa-smile"></i>
+                                    </button>
+                                    <input id ="writeComment" type="text" placeholder="댓글 달기..." onkeypress="if(window.event.keyCode==13) addMessage();"/>
+                                    <button id="writeBtn" onclick="addMessage()">게시</button>
                             </section>
                         </div>
                     </article>
-                    <!-- <article class="secondFeed">
-                        <header class="feedHead">
-                            <img id='feed_pic' src="/westa/images/profile.jpeg" width="32px" height="32px" alt="">
-                            <div class="user1">4.21ee</div>
-                            <div></div>
-                        </header>
-                        <div class="threeDot">
-                            점세개 자세히보기
-                        </div>
-                        <div class="pics">
-                            <img id="firstPic" src="images/felipe-giacometti-rscA_s5o8dk-unsplash.jpg"  alt="">
-                        </div>
-                        <div class="comment">
-                            <section class="heart">
-                                <div class="icon_pack">
-                                    <button><i class="far fa-heart"></i></button>
-                                    <button><i class="far fa-comment"></i></button>
-                                    <button><i class="far fa-paper-plane"></i></button>
-                                    <button id="bookmark"><i class="far fa-bookmark" ></i></button>
-                                </div>
-                            </section>
-                            <section class="manyLike">
-                                <div>좋아요 192개</div>
-                            </section>
-                            <div class="comments">
-                                <p><a href="" class="re_id">4.21ee</a><span class="re_p">첫번째 댓글 나와라</span></p>
-                                <div class="other_re">
-                                    <p><a href="" class="re_id">wecode_bootcamp</a><span class="re_p">두번째 댓글 나와라</span><span><button class="re_heart"><i class="far fa-heart"></i></button></span></p>
-                                    <p><a href="" class="re_id">wecode</a><span class="re_p">세번째 댓글 나오고</span><span><button class="re_heart"><i class="far fa-heart"></i></button></span></p>
-                                    <p><a href="" class="re_id">westagram</a><span class="re_p">네번째 댓글이다</span><span><button class="re_heart"><i class="far fa-heart"></i></button></span></p>
-                                    <p><a href="" class="re_id">asdfg</a><span class="re_p">줄젇ㄹ아링나ㅜ링나</span><span><button class="re_heart"><i class="far fa-heart"></i></button></span></p>
-                                </div>
-                            </div> 
-                            <div class="howLong">
-                                <div>25분전</div>
-                            </div>
-                            <section class="write">
-                                <button>
-                                    <i class="far fa-smile"></i>
-                                </button>
-                            </section>
-                        </div>
-                    </article> -->
                 </div>
             </div>
             <div class="main-right">
                 <div class="my_id">
-                    <img class='id_pic' src="/westa/images/profile.jpeg" width="56px" height="56px" alt="">
+                    <img class='id_pic' src="/students/25th/yonghyun/westa/images/profile.jpeg" width="56px" height="56px" alt=""/>
                     <div class="pic_name">
                         <div class="pic_id">4.21ee</div>
                         <div class="pic_desc">YONGHYUN</div>
@@ -151,35 +126,35 @@
                     </div>
                     <div class="friends_desc">
                         <div class="people">
-                            <img class='friends_pic' src="/westa/images/profile.jpeg" width="32px" height="32px" alt="">
+                            <img class='friends_pic' alt="recommend1" src="/students/25th/yonghyun/westa/images/profile.jpeg" width="32px" height="32px"/>
                             <div class="friends_name">
                                 <div class="friends_id">wecode</div>
                                 <div class="friendsdesc">회원님을 위한 추천</div>
                             </div>
                         </div>
                         <div class="people">
-                            <img class='friends_pic' src="/westa/images/profile.jpeg" width="32px" height="32px" alt="">
+                            <img class='friends_pic' alt="recommend2" src="/students/25th/yonghyun/westa/images/profile.jpeg" width="32px" height="32px"/>
                             <div class="friends_name">
                                 <div class="friends_id">dydgus0421</div>
                                 <div class="friendsdesc">Instagram 신규가입</div>
                             </div>
                         </div>
                         <div class="people">
-                            <img class='friends_pic' src="/westa/images/profile.jpeg" width="32px" height="32px" alt="">
+                            <img class='friends_pic' alt="recommend3" src="/students/25th/yonghyun/westa/images/profile.jpeg" width="32px" height="32px"/>
                             <div class="friends_name">
                                 <div class="friends_id">wecode_bootcamp</div>
                                 <div class="friendsdesc">회원님을 위한 추천</div>
                             </div>
                         </div>
                         <div class="people">
-                            <img class='friends_pic' src="/westa/images/profile.jpeg" width="32px" height="32px" alt="">
+                            <img class='friends_pic' alt="recommend4" src="/students/25th/yonghyun/westa/images/profile.jpeg" width="32px" height="32px"/>
                             <div class="friends_name">
                                 <div class="friends_id">asfsdk</div>
                                 <div class="friendsdesc">회원님을 위한 추천</div>
                             </div>
                         </div>
                         <div class="people">
-                            <img class='friends_pic' src="/westa/images/profile.jpeg" width="32px" height="32px" alt="">
+                            <img class='friends_pic' alt="recommend5" src="/students/25th/yonghyun/westa/images/profile.jpeg" width="32px" height="32px"/>
                             <div class="friends_name">
                                 <div class="friends_id">kyh0421</div>
                                 <div class="friendsdesc">회원님을 위한 추천</div>

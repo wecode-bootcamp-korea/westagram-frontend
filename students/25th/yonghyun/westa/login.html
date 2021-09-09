@@ -1,37 +1,36 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="login.css">
-    <title>Westagram</title>
-</head>
-<body>
-    <div class="mainBox">
-        <div class="logo">
-            <h1>Westagram</h1>
-        </div>
-        <div class="loginBox">
-            <form action="" class="idPw">
-                <div class="inputList">
-                    <div class="inputBox">
-                        <input class="iId" type="text" placeholder="전화번호, 사용자 이름 또는 이메일">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="common.css">
+        <link rel="stylesheet" href="login.css">
+        <title>Westagram</title>
+    </head>
+    <body>
+        <div class="mainBox">
+            <div class="logo">
+                <h1>Westagram</h1>
+            </div>
+            <div class="loginBox">
+                <form action="" class="idPw">
+                    <div class="inputList">
+                        <div class="inputBox">
+                            <input class="iId" type="text" placeholder="전화번호, 사용자 이름 또는 이메일">
+                        </div>
+                        <div class="inputBox">
+                            <input class="iPw" type="password" placeholder="비밀번호">
+                        </div>
+                        <div class="loginBox">
+                            <button class="loginBtn" disabled>로그인</button>
+                        </div>
                     </div>
-                    <div class="inputBox">
-                        <input class="iPw" type="password" placeholder="비밀번호">
-                    </div>
-                    <div class="loginBox">
-                        <button class="loginBtn" disabled>로그인</button>
-                    </div>
-                </div>
-            </form>
+                </form>
+            </div>
+            <div class="findPw">
+                <a href="#">비밀번호를 잊으셨나요?</a>
+            </div>
         </div>
-        <div class="findPw">
-            <a href="#">비밀번호를 잊으셨나요?</a>
-        </div>
-        
-    </div>
-
-    <script src="./login.js"></script>
-</body>
+        <script src="./login.js"></script>
+    </body>
 </html>

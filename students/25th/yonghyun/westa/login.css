@@ -1,13 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap");
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  background-color: #fafafa;
-}
-
 html,
 body {
   height: 100%;
@@ -17,24 +10,16 @@ body {
   position: relative;
 }
 
-/* top left transform 안쓸때 
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-
 .mainBox {
-  position: absolute;
   display: flex;
+  position: absolute;
   justify-content: center;
-  padding: 10px 0;
-  width: 350px;
-  height: 380px;
   top: 50%;
   left: 50%;
-  /* transform: translate(-50%, -50%); */
-  transform: translateX(-50%) translateY(-50%);
+  width: 350px;
+  height: 380px;
+  padding: 10px 0;
+  transform: translate(-50%, -50%);
   background-color: #ffffff;
 }
 
@@ -62,9 +47,9 @@ h1 {
 }
 
 .inputBox {
-  margin-top: 8px;
   width: 100%;
   height: 40px;
+  margin-top: 8px;
   border: 1px solid #dbdbdb;
   border-radius: 3px;
   background-color: #fafafa;
@@ -73,38 +58,33 @@ h1 {
 .loginBox {
   display: flex;
   justify-content: center;
+  background-color: #ffffff;
 }
 
 input {
   position: relative;
-  /* display: flex; */
   width: 80%;
   height: 40px;
   padding: 0 8px 1px 8px;
-  border-width: 0;
   border-color: transparent;
   border-radius: 3px;
-  background-color: transparent;
   color: #999999;
+  background-color: transparent;
 }
 
 input:focus {
   outline: none;
 }
 
-.loginBox {
-  background-color: #ffffff;
-}
-
 .loginBtn {
-  margin-top: 15px;
-  height: 35px;
   width: 100%;
-  border-radius: 3px;
-  background-color: #0095f6;
+  height: 35px;
+  margin-top: 15px;
   border: 1px solid transparent;
-  font-size: 14px;
+  border-radius: 3px;
   color: #ffffff;
+  background-color: #0095f6;
+  font-size: 14px;
 }
 
 .loginBtn:disabled {
@@ -112,15 +92,15 @@ input:focus {
 }
 
 .findPw {
-  position: absolute;
   display: flex;
+  position: absolute;
   bottom: 25px;
 }
 
 a {
   background-color: #ffffff;
-  text-decoration: none;
   color: #3c618a;
+  text-decoration: none;
   font-size: 13px;
   font-weight: 700;
 }

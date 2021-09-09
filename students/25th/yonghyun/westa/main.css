@@ -1,16 +1,6 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  background-color: #fafafa;
-}
-
 html,
 body {
   height: 150%;
-}
-
-body {
   position: relative;
   background-color: #fafafa;
 }
@@ -26,9 +16,9 @@ body {
 
 .topMenu {
   display: flex;
+  width: 975px;
   padding: 0 20px 0 20px;
   justify-content: space-between;
-  width: 975px;
   background-color: #ffffff;
 }
 
@@ -63,10 +53,9 @@ input {
 .searchInput {
   display: flex;
   width: 215px;
-  /* justify-content: center; */
 }
 
-.sp::placeholder {
+.searchBox::placeholder {
   text-align: center;
 }
 
@@ -109,7 +98,6 @@ input {
 .feeds {
   display: flex;
   width: 614px;
-  /* height: 100%; */
   height: 800px;
   margin-right: 28px;
   margin-top: 30px;
@@ -119,20 +107,10 @@ input {
   position: relative;
   width: 100%;
   height: 946px;
-  background-color: #ffffff;
   border: 1px solid #dbdbdb;
   border-radius: 3px;
-}
-
-/* .secondFeed {
-  position: relative;
-  width: 100%;
-  height: 917px;
-  margin-top: 50px;
   background-color: #ffffff;
-  border: 1px solid rgb(102, 102, 102);
-  border-radius: 3px;
-} */
+}
 
 .feedHead {
   display: flex;
@@ -143,22 +121,23 @@ input {
 }
 
 #feed_pic {
-  border-radius: 50%;
   margin: auto 0;
+  border-radius: 50%;
 }
 
 .user1 {
   margin: auto 0 auto 16px;
-  font-weight: 700;
   background-color: #ffffff;
+  font-weight: 700;
 }
 
 .threeDot {
   display: flex;
   position: absolute;
   height: 60px;
-  right: 2px;
   top: 0;
+  right: 2px;
+  background-color: #ffffff;
 }
 
 .threeDot button {
@@ -167,6 +146,7 @@ input {
 
 .threeDot button i {
   font-size: 15px;
+  background-color: #ffffff;
 }
 
 .pics {
@@ -176,32 +156,32 @@ input {
 
 #firstPic {
   position: relative;
-  object-fit: cover;
   width: 614px;
   height: 614px;
+  object-fit: cover;
 }
 
 .comment {
-  height: 241px;
   width: 100%;
+  height: 241px;
   background-color: #ffffff;
 }
 
 .heart {
-  height: 40px;
   width: 100%;
+  height: 40px;
+  margin-top: 4px;
   padding-left: 8px;
   padding-right: 16px;
-  margin-top: 4px;
   background-color: #ffffff;
 }
 
 #redheart {
-  font-size: 26px;
   position: relative;
   top: -25px;
   background-color: transparent;
   color: #ed4956;
+  font-size: 26px;
 }
 
 #redheart:hover {
@@ -211,16 +191,15 @@ input {
 .icon_pack {
   width: 100%;
   height: 40px;
-  text-align: left;
   background-color: #ffffff;
+  text-align: left;
 }
 
 i.far {
-  font-size: 24px;
-  position: relative;
   display: inline-block;
+  position: relative;
   background-color: transparent;
-  /* justify-content: space-between; */
+  font-size: 24px;
 }
 
 #bookmark {
@@ -237,33 +216,41 @@ button {
 }
 
 .manyLike {
-  height: 18px;
   width: 100%;
-  padding-left: 16px;
-  padding-right: 16px;
+  height: 18px;
   margin-bottom: 8px;
   margin-top: 5px;
+  padding-left: 16px;
+  padding-right: 16px;
   background-color: #ffffff;
 }
 
 .manyLike div {
   height: 17.5px;
-  text-align: left;
-  font-weight: 600;
   background-color: #ffffff;
+  font-weight: 600;
+  text-align: left;
 }
 
 .comments {
   transform: rotate(0.5turn);
   width: 100%;
-  height: 110px;
+  height: 87px;
   padding-left: 16px;
   padding-right: 16px;
   background-color: #ffffff;
   overflow: scroll;
 }
 
-.asd {
+.comments_head {
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: #ffffff;
+  transform: rotate(0.5turn);
+}
+
+.commentFeed {
+  background-color: #ffffff;
   transform: rotate(-0.5turn);
 }
 
@@ -275,10 +262,10 @@ button {
 
 .re_id {
   margin: 0 5px auto 0;
-  font-weight: 600;
-  text-decoration: none;
   color: black;
   background-color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
 }
 
 .re_p {
@@ -290,8 +277,8 @@ button {
 
 .re_heart {
   position: absolute;
-  height: 19px;
   width: 19px;
+  height: 19px;
   right: 10px;
   justify-content: flex-end;
 }
@@ -303,15 +290,15 @@ button {
 
 .re_heart i:hover {
   margin: auto 5px;
-  font-size: 12px;
   color: red;
+  font-size: 12px;
 }
 
 .deleteBtn {
   position: absolute;
-  right: 0;
   width: 550px;
   height: 21px;
+  right: 0;
   color: transparent;
 }
 
@@ -327,24 +314,6 @@ button {
   cursor: pointer;
 }
 
-/* .deleteBtn {
-  position: absolute;
-  height: 19px;
-  width: 19px;
-  right: 50px;
-  justify-content: flex-end;
-  background-color: transparent;
-} */
-
-/* .deleteBtn i {
-  color: #ffffff;
-  background-color: #ffffff;
-}
-
-.deleteBtn i:hover {
-  color: gray;
-} */
-
 .other_re {
   margin-top: 5px;
   background-color: #ffffff;
@@ -353,28 +322,28 @@ button {
 .howLong {
   width: 100%;
   height: 19px;
-  padding-left: 16px;
-  padding-right: 16px;
   margin-top: 17px;
   margin-bottom: 4px;
+  padding-left: 16px;
+  padding-right: 16px;
   background-color: #ffffff;
 }
 
 .howLong div {
   height: 12.5px;
-  text-align: left;
   color: #c3c3c3;
+  background-color: #ffffff;
+  text-align: left;
   font-size: 10px;
   font-weight: 600;
-  background-color: #ffffff;
 }
 
 .write {
   display: flex;
   width: 100%;
   height: 40px;
-  padding-right: 16px;
   margin-top: 4px;
+  padding-right: 16px;
   border-top: 1px solid #dbdbdb;
   background-color: #ffffff;
 }
@@ -385,29 +354,23 @@ button {
 
 #writeComment {
   width: 100%;
-  padding-left: 0;
   margin: auto 0 auto 4px;
+  padding-left: 0;
   background-color: #ffffff;
 }
 
 #writeBtn {
   display: flex;
   position: relative;
+  margin: auto 0 auto 5px;
   justify-content: flex-end;
   align-items: center;
-  margin: auto 0 auto 5px;
   color: #0095f6;
 }
 
 #writeBtn:hover {
   cursor: grab;
 }
-
-/* .addcomment {
-  position: absolute;
-  display: flex;
-  width: 400px;
-} */
 
 article {
   background-color: transparent;
@@ -416,7 +379,6 @@ article {
 .main-right {
   position: relative;
   width: 293px;
-  /* height: 100%; */
   height: 500px;
   margin-top: 30px;
 }
@@ -424,8 +386,8 @@ article {
 .my_id {
   display: flex;
   justify-content: flex-start;
-  height: 66px;
   width: 100%;
+  height: 66px;
 }
 
 .pic_name {
@@ -438,13 +400,8 @@ article {
 }
 
 .pic_desc {
-  font-size: 16px;
   color: rgb(158, 158, 158);
-}
-
-.friends_pic {
-  margin: 0;
-  padding: 0;
+  font-size: 16px;
 }
 
 .friends_name {
@@ -458,8 +415,8 @@ article {
 }
 
 .friendsdesc {
-  font-size: 14px;
   color: rgb(158, 158, 158);
+  font-size: 14px;
 }
 
 .id_pic {
@@ -468,25 +425,25 @@ article {
 }
 
 .friends_list {
-  height: 290px;
   width: 100%;
+  height: 290px;
 }
 
 .friends_text {
-  height: 19px;
   width: 100%;
+  height: 19px;
   margin-top: 10px;
 }
 
 .friends_text p {
-  text-align: left;
   color: rgb(158, 158, 158);
   font-weight: 700;
+  text-align: left;
 }
 
 .friends_desc {
-  height: 256px;
   width: 100%;
+  height: 256px;
   margin-top: 5px;
 }
 
@@ -495,23 +452,20 @@ article {
   height: 50px;
 }
 
-/* .friends_desc div {
-  margin: 8px 16px;
-} */
-
 .friends_pic {
+  margin: 8px 10px;
+  padding: 0;
   border-radius: 50%;
-  margin: 8px 16px;
 }
 
 .desc {
-  height: 102px;
   width: 100%;
+  height: 102px;
 }
 
 #etc,
 #instaface {
   margin-top: 15px;
-  font-size: 13px;
   color: rgb(158, 158, 158);
+  font-size: 13px;
 }
