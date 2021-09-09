@@ -25,11 +25,13 @@
         </div>
 
         <div class ="main">
-            <div class="feeds">
-                
-                <div class ="feeddiv"> 
-                    <img src = "lettucedog.jpg" height =60px class ="roundpics"> <span class = "idname">lettuce_the_dog</span> 
-                </div>
+            <div class="feeds"> 
+                <table>
+                    <tr>
+                        <td><img src = "lettucedog.jpg" height =60px class ="roundpics"></td> 
+                        <td>lettuce_the_dog</td>
+                    </tr>
+                </table>
                 <div class="article">
                     <img src = "scbaby1.jpg" class ="myBaby">
                 </div>
@@ -39,7 +41,7 @@
                         <i class="fas fa-upload"></i>
                         <i class="far fa-bookmark"></i>
                     <p>듣보잡 외 10명이 좋아합니다.</p><br>
-                    <p>어쩌구 저쩌구~~~~~~~~~~~~~~~~~~~~~~</p>
+                    <p id ="eventhandle">어쩌구 저쩌구~~~~~~~~~~~~~~~~~~~~~~</p>
                     <div class ="replybar">
                         <input class ="reply" type="text" placeholder="댓글달기.... &emsp14;&emsp14;&emsp14;&emsp14;
                         &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
@@ -51,24 +53,58 @@
             
             <div class="main-right">
                 <div class ="right-top">
-                    <img src = "lettucedog.jpg" height =60px class ="roundpics">
-                    <span class ="feedspan"> lettuce_the_dog</span>
+                    <table>
+                        <tr>
+                            <td><img src = "lettucedog.jpg" height =60px class ="roundpics"></td> 
+                            <td>lettuce_the_dog</td>
+                        </tr>
+                    </table>
                 </div>
                 <div class = "right-middle">
-                    <p><span class ="gray-text">스토리</span> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 모두보기</p>
-                    <div>
-                        <img src ="dogprof1.jpg" class ="roundpics"><span class ="proftext">asdjfla</span><br>
-                        <img src ="dogprof2.jpg" class ="roundpics"><span class ="proftext">asdjfla</span><br>
-                        <img src ="dogprof3.jpg" class ="roundpics"><span class ="proftext">asdjfla</span><br>
-                    </div>        
+                    <table>
+                        <tr>
+                            <td class ="gray-text">스토리</td>
+                            <td>&emsp;&emsp;&emsp;</td>
+                            <td>&emsp;&emsp;&emsp;</td>
+                            <td></td>
+                            <td class ="bold-text">모두보기</td>
+                        </tr>
+                        <tr>
+                            <td><img src ="dogprof1.jpg" class ="roundpics"></td>
+                            <td class ="id-text">big_dog</td>
+                        </tr>
+                        <tr>
+                            <td><img src ="dogprof2.jpg" class ="roundpics"></td>
+                            <td class ="id-text">husky_dusky</td>
+                        </tr>
+                        <tr>
+                            <td><img src ="dogprof3.jpg" class ="roundpics"></td>
+                            <td class ="id-text">little_sh!t</td>
+                        </tr>
+                    </table>        
                 </div>
                 <div class ="right-bottom">
-                    <p><span class ="gray-text">회원님을 위한 추천</span>&emsp;&emsp;&emsp;&emsp;  모두보기</p>
-                    <img src ="dogprof4.jpg" class ="roundpics"><span>asdjfla</span><br>
-                    <img src ="dogprof5.jpg" class ="roundpics"><span>asdjfla</span><br>
-                    <img src ="dogprof6.jpg" class ="roundpics"><span>asdjfla</span><br>
+                    <table>
+                        <tr>
+                            <td class ="gray-text">회원님을 위한 추천</td>
+                            <td></td>
+                            <td class ="bold-text">모두보기</td>
+                        </tr>
+                        <tr>
+                            <td><img src ="dogprof4.jpg" class ="roundpics"></td>
+                            <td class ="id-text">green_dog</td>
+                        </tr>
+                        <tr>
+                            <td><img src ="dogprof5.jpg" class ="roundpics"></td>
+                            <td class ="id-text">bigger_dog</td>
+                        </tr>
+                        <tr>
+                            <td><img src ="dogprof6.jpg" class ="roundpics"></td>
+                            <td class ="id-text">husky_blacky</td>
+                        </tr>
+                    </table>  
                 </div>
-                <div class ="right-text">
+                <div class ="right-text gray-text">
                     Instagram 정보 지원 홍보 센터 API<br>
                     채용정보 개인정보처리방침 약관
                     디렉터리 프로필 해시태그 언어<br><br>
