@@ -2,48 +2,167 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>Catstagram</title>
         <script src = "./js/main.js"></script>
-        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="width=device-width" />
         <link rel="stylesheet" type="text/css" href="./style/Normalize.css">
         <link rel="stylesheet" type="text/css" href="./style/common.css">
         <link rel="stylesheet" type="text/css" href="./style/main.css">
         <!-- 파비콘 ico -->
         <link rel="shortcut icon" href="./img/westa.ico" />
-        <!-- i 발자국 아이콘 스크립트 -->
+        <!-- 아이콘 스크립트 -->
         <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
     <body>
         <header>
-            <nav>
-                <div class="leftBar">
-                    <span class="catstaLogo">
-                      <i class="fas fa-paw"></i>
-                    </span>
-                    <a href="./main.html" class="catstaText">
-                        <h1 class="catstaLogo2">catstagram</h1>
-                    </a>
-                </div>
-                <div class="centerBar">
-                    <input type="text" placeholder="검색" class="searchBar">
-                    <span class="searchIcon">
-                        <i class="fas fa-search"></i>
-                    </span>
-                </div>
-                <div class="rightBar">
-                    <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png">
-                    <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png">
-                    <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png">
-                </div>
-            </nav>
+                <nav>
+                    <div class="leftBar">
+                        <span class="catstaLogo">
+                          <i class="fas fa-paw"></i>
+                        </span>
+                        <a href="./main.html" class="catstaText">
+                            <h1 class="catstaLogo2">catstagram</h1>
+                        </a>
+                    </div>
+                    <div class="centerBar">
+                        <input type="text" placeholder="검색" class="searchBar" />
+                        <span class="searchIcon">
+                            <i class="fas fa-search"></i>
+                        </span>
+                    </div>
+                    <div class="rightBar">
+                        <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png" />
+                        <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" />
+                        <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png" />
+                    </div>
+                </nav>
         </header>
         <section>
-                <article class="feedsFull">
-                    <header class="feedHeader">
-                        <img class="catProfile" src="./img/buzzi.jpg">
-                        buzzi_nyang
-                    </header>
+                <article class="wrapper">
+                    <div class="feedHeader">
+                        <div class="headerLeft">
+                            <img class="catProfilePhoto2" src="./img/buzzi.jpg" alt="my cutie cat" />
+                            <div class="myName">
+                                buzzi_nyang
+                            </div>
+                        </div>
+                        <div class="headerRight">
+                            <img src="./img/more.png" />
+                        </div>
+                    </div>
+                    <div class="feedImage">
+                        <img class="myCat" src="./img/cat.jpg" alt="cat's photo" />
+                    </div>
+                    <div class="imageBottom">
+                        <div class="bottomLeft">
+                            <img src="./img/heart.png" />
+                            <img src="./img/comment.png" />
+                            <img src="./img/upload.png" />
+                       </div>
+                       <div class="bottomRight">
+                           <img class="save" src="./img/save.png" alt="content save" />
+                     </div>
+                    </div>
+                    <div class="whosLike">
+                        <div class="likePhoto">
+                            <img class="catProfilePhoto4" src="./img/buzzi.jpg" art="my cutie cat" />
+                        </div>
+                        <div class="likeWho">
+                        <b>buzzi_nyang</b>님 <b>외 2명이</b> 좋아합니다.
+                        </div>
+                    </div>
+                    <div class="feedContent">
+                        <b>buzzi_nyang</b> 박버찌 기다려.. 집사가 곧 냥줍 하러 간다..
+                    </div>
+                    <div class="commentList">
+                        <span><b>rrpec9</b>  아주 사나운 맹수네요.. 미니 호랭이..</span>
+                        <span><b>buzzi_nyang</b>  우리 버찌 너무 예쁘죠! 애교냥이에요~</span>
+                    </div>
+                    <div class="time">
+                        50분 전
+                    </div>
+                    <div class="commentInput">
+                        <input class="input" type="text" placeholder="댓글 달기..." />
+                        <button id="textUpload">게시</button>
+                    </div>
                 </article>
 
             <div class="mainRight">
-                gggdsadsadasd
+                <div class="myProfile">
+                    <div><img class="catProfilePhoto3" src="./img/buzzi.jpg" alt="my cutie cat"></div>
+                    <div class="myName">buzzi_nyang</div>
+                </div>
+                <div class="sideMenu">
+                    <div class="sideTop">
+                        <div class="sideLeft">
+                          스토리
+                        </div>
+                        <div class="sideRight">
+                            모두 보기
+                        </div>
+                    </div>
+                    <div class="sideBottom">
+                        <div class="user1">
+                            <img src="./img/user1.jpg" alt="my friend's dog">
+                            <div class="userID">
+                                <a href="#" class="whatID"><b>mydog_syuli</b></a>
+                                <p class="beforeUpload">16분 전</p>
+                            </div>
+                        </div>
+                        <div class="user2">
+                            <img src="./img/user2.jpg" alt="corona 2nd complete">
+                            <div class="userID">
+                                <a href="#" class="whatID"><b>v_ddabong_v</b></a>
+                                <p class="beforeUpload">1시간 전</p>
+                            </div>
+                        </div>
+                        <div class="user3">
+                            <img src="./img/user3.jpg" alt="3d cat car">
+                            <div class="userID">
+                                <a href="#" class="whatID"><b>iwascar</b></a>
+                                <p class="beforeUpload">20시간 전</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sideMenu">
+                    <div class="sideTop">
+                        <div class="sideLeft">
+                            회원님을 위한 추천
+                        </div>
+                        <div class="sideRight">
+                            모두 보기
+                        </div>
+                    </div>
+                    <div class="sideBottom">
+                        <div class="user1">
+                            <img src="./img/cat1.jpg" alt="blue cat">
+                            <div class="userID">
+                                <a href="#" class="whatID"><b>bluecat</b></a>
+                                <p class="beforeUpload">16분 전</p>
+                            </div>
+                        </div>
+                        <div class="user2">
+                            <img src="./img/user4.jpg" alt="3d cat">
+                            <div class="userID">
+                                <a href="#" class="whatID"><b>cat_choding</b></a>
+                                <p class="beforeUpload">1시간 전</p>
+                            </div>
+                        </div>
+                        <div class="user3">
+                            <img src="./img/cat3.jpg" alt="white cat">
+                            <div class="userID">
+                                <a href="#" class="whatID"><b>nyangX2_punch</b></a>
+                                <p class="beforeUpload">20시간 전</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer class="fooTer">
+                    <p>
+                        Instagram 정보 · 지원 · 홍보 센터 · API · 채용 정보 · 개인정보처리방침 · 약관 · 디렉터리 · 프로필 · 해시태그 ·언어
+                    </p>
+                    <p>
+                        © 2021 CATSTAGRAM
+                    </p>
+                </footer>
             </div>
         </section>
     </body>

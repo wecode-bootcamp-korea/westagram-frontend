@@ -1,18 +1,22 @@
+/* 리팩토링 시, 미디어쿼리로 특정 화면 사이즈에서 사이드바 display:none 과 section 요소를 flex로 센터 해주기 */
+
 header {
+    display: flex;
+    justify-content: center;
     position: fixed;
     top: 0;
     width: 100%;
+    background-color: white;
+    border-bottom: 1px solid #dbdbdb;
+    z-index: 9999;
 }
 
 nav {
-    width:100%;
-    height: 55px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: white;
-    padding: 0 100px;
-    border-bottom: 1px solid #dbdbdb;
+    width: 920px;
+    height: 55px;
 }
 
 .catstaLogo {
@@ -22,14 +26,14 @@ nav {
 .catstaText {
     padding-left: 12px;
     border-left: 1px solid black;
-    text-decoration: none;
     color:black;
+    text-decoration: none;
 }
 
 .searchBar {
     width: 215px;
     height: 28px;
-    padding: 5px 0;
+    padding: 5px 15px;
     border: 1px solid #dbdbdb;
     border-radius: 3px;
     background-color:  #fafafa;
@@ -37,6 +41,10 @@ nav {
 
 .searchBar::placeholder {
     text-align: center;
+}
+
+.searchBar:focus {
+    outline: none;
 }
 
 .rightBar { 
@@ -56,41 +64,242 @@ section {
     width:100%;
 }
 
-/* div mainLeft 영역을 삭제했음 - 뒤로 뜨는것같아서
-.mainLeft {
+.wrapper {
+    position: relative;
+    width: 600px;
+    max-width: 600px;
     margin-top: 90px;
     margin-right: 20px;
-    width: 60%;
-    max-width: 600px;
-    background-color: red;
-} */
-
-.feedsFull {
-    margin-top: 90px;
-    margin-right: 20px;
-    width: 60%;
-    height: 1068px;
-    max-width: 600px;
     border: 1px solid #dbdbdb;
+    border-radius: 3px;
     background-color: white;
 }
 
 .feedHeader {
-    top: 90px;
-    width: 100%;
-    height: 43px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    width: 600px;
+    height: 60px;
+    padding: 20px;
 }
 
-.catProfile {
+.myName {
+    display: inline;
+    font-size: 12pt;
+    font-weight: bold;
+    margin-top: 2px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.headerRight img {
+    width: 20px;
+    cursor: pointer;
+}
+
+.headerLeft {
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+}
+
+.catProfilePhoto1 {
+    text-align: center;
+}
+
+.catProfilePhoto2 {
     width: 32px;
     border-radius: 100px;
 }
 
+.catProfilePhoto3 {
+    width: 55px;
+    border-radius: 100px;
+}
+
+.catProfilePhoto4 {
+    width: 25px;
+    border-radius: 100px;
+}
+
+.feedImage {
+    margin-top: 60px;
+}
+
+.myCat {
+    width: 100%;
+    height: 790px;
+}
+
+.imageBottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    height: 40px;
+}
+
+.bottomLeft, .bottomRight  {
+    position: relative;
+    top:5px;
+    margin-top: 5px;
+}
+
+.bottomLeft img {
+    width: 25px;
+    float: left;
+    margin-right: 15px;
+}
+
+.bottomLeft img:nth-child(3) {
+    width: 20px;
+}
+
+.bottomRight img {
+    width: 25px;
+    float: right;
+}
+
+.whosLike {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 20px;
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.likeWho {
+    margin-left: 6px;
+}
+
+.feedContent {
+    width: 100%;
+    margin-top: 13px;
+    padding-left: 20px;
+}
+
+.commentList {
+    width: 100%;
+    height: 44px;
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.commentList span {
+    width: 100%;
+    display: block;
+}
+
+.time {
+    width: 100%;
+    height: 20px;
+    font-size: 10pt;
+    margin-top: 5px;
+    margin-bottom: 8px;
+    padding-left: 20px;
+    color: #8e8e8e;
+}
+
+.commentInput {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 55px;
+    padding-left: 20px;
+    border-top: 1px solid #dbdbdb;
+}
+
+.input {
+    width: 90%;
+    border: 0px solid transparent;
+}
+
+.input:focus {
+    outline: none;
+}
+
+#textUpload {
+    padding: 15px;
+    border: 0px solid transparent;
+    font-size: 11pt;
+    font-weight: bold;
+    color: #0095f6;
+    background-color: transparent;
+    cursor: pointer;
+}
 
 .mainRight {
     margin-top: 90px;
     width: 30%;
-    height: 660px;
     max-width: 300px;
-    background-color: skyblue;
+}
+
+.myProfile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.sideMenu {
+    width: 100%;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    padding : 15px 20px;
+    margin-top: 20px;
+    background-color: white;
+}
+
+.sideTop {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.sideRight {
+    cursor: pointer;
+}
+
+.sideLeft {
+    color: gray;
+}
+
+.sideBottom p {
+    display: block;
+}
+
+.sideBottom img {
+    position: relative;
+    top: 7px;
+    width: 40px;
+    border-radius: 100px;
+}
+
+.userID {
+    display: inline-block;
+    margin-left: 2spx;
+}
+
+.userID p {
+    margin: 7px;
+}
+
+.whatID {
+    margin-left: 7px;
+    text-decoration: none;
+    color:black;
+    cursor: pointer;
+}
+
+.beforeUpload {
+    color: gray;
+}
+
+.fooTer {
+    width: 100%;
+    color: #dbdbdb;
+    border-radius: 3px;
+    font-weight: bold;
 }
