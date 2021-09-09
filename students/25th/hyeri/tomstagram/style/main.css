@@ -1,3 +1,5 @@
+@import "commen.css";
+
 body {
     width:100vw;
     height: 100vh;
@@ -180,11 +182,13 @@ article > .main_container{
 
 /* feeds_comment_box > feeds_comment_uesrs */
 .feeds_comment_uesrs > p{
-    width: 80%;
     margin-top:0.6rem;
     overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+}
+
+.feeds_comment_uesrs > p > .comment_see_more {
+    color:#979797;
+    font-size:0.9rem;
 }
 
 .feeds_comment_uesrs > p > .feeds_comment_uesrs_id {

@@ -3,12 +3,12 @@
     const loginPasswordInput = document.querySelector(".password");
     const loginBtn = document.querySelector(".login_btn");
 
-    loginPasswordInput.addEventListener('keyup', (e)=>{
+    loginPasswordInput.addEventListener('keydown', () => {
         const loginIdInputValue = loginIdInput.value;
         const loginPasswordInputValue = loginPasswordInput.value;
-        loginBtn.disabled = false;
+
+        loginIdInputValue && loginPasswordInputValue ? loginBtn.disabled = true : loginBtn.disabled = false;
         loginBtn.style.backgroundColor = "#0095f6";
-        console.log(loginIdInputValue, loginPasswordInputValue);
     })
 
 })();
