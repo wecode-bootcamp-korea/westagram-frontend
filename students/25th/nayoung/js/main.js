@@ -1,14 +1,22 @@
 window.onload = function(){
+	//피드용
 	const feedText = document.getElementsByClassName("feed-text");
 	const feedSubmitBtn = document.getElementsByClassName("feed-text-submit");
 	const feedComments = document.getElementsByClassName("feed-comments");
 	const feedHeartBtn = document.getElementsByClassName("feed-button-heart");
 	const feedBookmarkBtn = document.getElementsByClassName("feed-button-bookmark");
-	const feedLike = document.getElementsByClassName("feed-like");
 	const feedLikeNum = document.getElementsByClassName("feed-like-num");
-	const feedCommentHeart = document.getElementsByClassName("feed-comment-heart");
-	
+
+	//검색용
+	const closeSearchListBtn = document.getElementById("close-search-wrap");
+	const searchText = document.getElementById("search-text");
+	const searchWrap = document.getElementById("search-wrap");
+	const searchList = document.getElementById("search-list");
+	const searchBar = document.getElementById("search-bar");
+
+	//유동변수
 	let userText = "";
+	let searching = "";
 
 	//search 실험용 객체
 	const searchObj = [
@@ -134,38 +142,53 @@ window.onload = function(){
 		if(tar.parentNode.classList.contains("feed-comment-delete")) {
 			tar.parentNode.parentNode.parentNode.remove();
 		}
-	});
 
-	//nav go-mypage 토글
-	document.getElementById("go-mypage").addEventListener("click", () => {
-		document.getElementById("go-mypage-wrap").classList.toggle("go-mypage-open");
-	});
+		//검색창 열고닫기
+		if(tar == searchBar || tar == searchList) {
+			searchWrap.style.display = "block";
+			closeSearchListBtn.style.display = "block";
+			searchText.style.display = "none";
+		} else {
+			searchWrap.style.display = "none";
+			closeSearchListBtn.style.display = "none";
+			searchText.style.display = "flex";
+			searchBar.value = "";
+		}
 
+		if(tar == closeSearchListBtn) {
+			searchWrap.style.display = "none";
+			closeSearchListBtn.style.display = "none";
+			searchText.style.display = "flex";
+			searchBar.value = "";
+		}
+
+		//마이페이지 박스 열고닫기
+		if(tar == document.getElementById("go-mypage").firstChild || tar == document.getElementById("go-mypage-list")) {
+			document.getElementById("go-mypage-wrap").classList.toggle("go-mypage-open");
+		} else {
+			document.getElementById("go-mypage-wrap").classList.remove("go-mypage-open");
+		}
+	});
 
 	//검색창 구현
-	const searchWrap = document.getElementById("search-wrap");
-	const searchList = document.getElementById("search-list");
-	const searchBar = document.getElementById("search-bar");
-	let searching = "";
-
 	function matchingSearchItem(searching) {
 		let newSearchArr = new Array();
 
-		for(let i = 0; i < searchObj.length; i++) {
-			for(prop in searchObj[i]) {
-				if((searchObj[i][prop].indexOf(searching) !== -1)) {
+		searchObj.forEach(el => {
+			for(prop in el) {
+				if((el[prop].indexOf(searching) !== -1)) {
 					let tf = 0;
-					for(let j = 0; j < newSearchArr.length; j++) {
-						if(newSearchArr[j] == searchObj[i]) {
+					newSearchArr.forEach(newEl => {
+						if(newEl == el) {
 							tf = 1;
 						}
-					}	
+					});
 					if(!tf) {
-						newSearchArr.push(searchObj[i]);
+						newSearchArr.push(el);
 					}
 				}
 			}
-		}
+		});
 
 		for(let i = 0; i < newSearchArr.length; i++) {
 			let newSearchItem = document.createElement("a");
@@ -188,22 +211,5 @@ window.onload = function(){
 			matchingSearchItem(searching);
 		}
 	});
-
-	//검색창 리스트 제어
-	const closeSearchListBtn = document.getElementById("close-search-wrap");
-	const searchText = document.getElementById("search-text");
 	
-	closeSearchListBtn.addEventListener("click", () => {
-		searchWrap.style.display = "none";
-		closeSearchListBtn.style.display = "none";
-		searchText.style.display = "flex";
-		searchBar.value = "";
-	})
-
-	searchBar.addEventListener("click", () => {
-		let focusEle = document.activeElement;
-		searchWrap.style.display = "block";
-		closeSearchListBtn.style.display = "block";
-		searchText.style.display = "none";
-	});
 }

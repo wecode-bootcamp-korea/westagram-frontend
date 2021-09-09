@@ -16,7 +16,6 @@ window.onload = function(){
 	}
 
 	function canPw(userPw) {
-		console.log(regPw.test(userPw));
 		return regPw.test(userPw);
 	}
 
