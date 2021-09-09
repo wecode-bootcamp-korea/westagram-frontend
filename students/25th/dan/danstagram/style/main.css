@@ -1,39 +1,52 @@
+/**************************
+MAIN PAGE - COMMON
+**************************/
 .wrap{width:935px;margin:0 auto;}
 .round_img{border-radius:50%;}
 .txt_id{font-weight:bold;}
 
-
+/**************************
+HEADER
+**************************/
 header{position:fixed;width:100%;height:60px;background:#fff;border:1px solid #e8e8e8;}
-
 header .wrap{display:flex;justify-content:flex-start;align-items:center;height:100%;}
-/*
-header .logo{display:flex;flex:2;height:30px;}
-
-header .logo .icon{flex:3;width:20px;height:20px;background:url('../images/logo.png') center center / contain no-repeat;font-size:0;}
-header .logo h1{flex:7;}
-*/
 header a.logo{height:20px;background:url('../images/logo.png') 0 center / contain no-repeat;font-size:0;}
 header .logo h1{font-family:'Lobster', cursive;height:100%;margin-left:35px;padding-left:15px;font-size:25px;line-height:15px;font-weight:100;border-left:1px solid #262626;}
 
-
-header .search{flex:6.5;text-align:center;}
-header .search input[type=text]{width:300px;height:25px;padding:0 5px;background: #fafafa;border:1px solid #e8e8e8;}
-
+header .search{display:flex;flex:3.5;padding:0 5px;margin:0 15%;background: #fafafa;border:1px solid #e8e8e8;text-align:center;}
+header .search input[type=text]{position:relative;flex:9;height:25px;background:none;border:none;}
+header .search button{flex:1;color: #999;}
 header .btns{display:flex;flex:1.5;}
-header .btns button{flex:1;font-size:0;width:25px;height:25px;}
+header .btns button{position:relative;flex:2.5;font-size:0;width:25px;height:25px;}
+header .btns button:before{
+    content:"";
+    position:absolute;
+    bottom:-7px;
+    left:50%;
+    margin-left:-1.5px;
+    width:4px;
+    height:4px;
+    border-radius:4px;
+    background: #ff4d4d;
+}
 header .btns button.research{background:url('https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png') center center / contain no-repeat;}
 header .btns button.like{background:url('https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png') center center / contain no-repeat;}
 header .btns button.mypage{background:url('https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png') center center / contain no-repeat;}
+header .btns button.mypage:before{display:none;}
 
-
+/**************************
+MAIN LAYOUT
+**************************/
 main.wrap{display:flex;flex-direction:row-reverse;padding:80px 0 100px;}
 
-
+/**************************
+ASIDE
+**************************/
 aside{flex:3.5;height:100%;}
 
-/*WIDGET*/
+/*WIDGET COMMON*/
 .widget{background:#fff;border:1px solid #e8e8e8;border-radius:5px;padding:20px 20px 0;margin-bottom:15px;}
-.widget_ttl{margin-bottom:5px;}
+.widget_ttl{margin-bottom:5px;font-size:0.9em}
 .widget_ttl span{color: #999;}
 .widget_ttl a{float:right;}
 
@@ -41,16 +54,12 @@ aside{flex:3.5;height:100%;}
 .my_profile{display:flex;align-items:center;margin-bottom:10px;}
 .my_profile a.profile_img{flex:2;}
 .my_profile a.profile_img img{width:55px;height:55px;}
-
 .my_profile .user_id{flex:8;padding-left:10px;}
-.my_profile .user_id a{}
 .my_profile .user_id p{color: #999;}
 
 /*story*/
-.stories{}
-
 .list_story{height:200px;overflow-y:scroll;}
-
+.list_story::-webkit-scrollbar{width:0;}
 .story{display:flex;align-items:center;margin:10px 0;}
 .story a.follower_img{flex:2;}
 .story a.follower_img img{width:45px;height:45px;}
@@ -58,12 +67,8 @@ aside{flex:3.5;height:100%;}
 .story .user_id a{}
 .story .user_id p{color: #999;}
 
-
 /*recommend*/
 .recommends{padding-bottom:5px;}
-
-.list_recommend{}
-
 .recommend{display:flex;align-items:center;margin:10px 0;}
 .recommend a.recommend_img{flex:2;}
 .recommend a.recommend_img img{width:45px;height:45px;}
@@ -72,7 +77,7 @@ aside{flex:3.5;height:100%;}
 .recommend .user_id p{color: #999;}
 .recommend button{flex:2;font-size:0.8em;font-weight:bold;color:#0095f6;}
 
-.menu{}
+/*menu*/
 .menu ul{overflow:hidden;}
 .menu ul li{position:relative;float:left;line-height:1.5;padding-right:12px;}
 .menu ul li:before{
@@ -88,51 +93,50 @@ aside{flex:3.5;height:100%;}
 .menu ul li a{font-size:0.8em;color: #999;}
 .copyright{font-size:0.8em;color: #999;padding-top:20px;}
 
-
-
+/**************************
+FEED BOARD
+**************************/
 div.feeds{flex:6.5;}
 
-
-
-
-
-
-/*FEEDS*/
-.feeds{}
-
+/*FEED COMPONENT*/
 article.new_feed{margin-right:15px;background:#fff;border:1px solid #e8e8e8}
 
+/*top*/
 .up_user_info{display:flex;align-items:center;padding:10px 20px;}
 .up_user_info .up_user_img{flex:1;}
 .up_user_info .up_user_img img{width:45px;height:45px;}
 .up_user_info .up_user_id{flex:8;}
-.up_user_info button{flex:1;}
+.up_user_info button{flex:1;font-size:0;text-align:right;}
+.up_user_info button .fas{flex:1;font-size:12px;}
 
-
-.feed_imgs{}
+/*content*/
 .feed_imgs img{width:100%;}
-
+.feed_imgs video{width:100%;}
 .interactions{display:flex;align-items:center;height:50px;padding:0 10px}
 .interactions button{flex:3;font-size:0;margin:0 10px;}
 .interactions button.bookmark{flex:1;font-size:0;}
-button .far{font-size:20px;}
+.interactions button .far{font-size:20px;color:#676767;}
 .interactions .my_emotion{flex:2;display:flex;}
 .interactions .pagnation{flex:25;}
-
-
 .like_user img{width:25px;height:25px;}
-
 .feed_imgs p{display:flex;align-items:center;padding:10px 20px;}
 .feed_imgs p .like_user{display:flex;align-items:center;}
-p .txt_id{margin-left:10px;}
+.feed_imgs p .txt_id{margin-left:10px;}
 
+/*feed_txt*/
 .feed_txt{padding:0 20px;}
 .feed_txt .more{cursor:pointer;color:#999;}
 
+/*comments*/
 .comments{padding:10px 20px;}
-.already_comment{padding-bottom:10px;border-bottom:1px solid #e8e8e8;}
-.post_comment{display:flex;align-content:center;padding:20px 0 10px;}
+.already_comment{padding-bottom:10px;}
+.already_comment .txt_comment{margin-bottom:5px;}
+.already_comment .txt_comment a{padding-right: 10px;}
+.already_comment .txt_comment span{width:100%;}
+.post_comment{display:flex;align-content:center;padding:20px 0 10px;border-top:1px solid #e8e8e8;}
 .post_comment input[type=text]{flex:9;border:none;height:16px;}
+.post_comment textarea{flex:9;border:none;height:30px;border:none;resize:none;}
+.post_comment textarea::-webkit-scrollbar{width:0;}
 .post_comment button{flex:1;color:#0095f6;}
 
 
