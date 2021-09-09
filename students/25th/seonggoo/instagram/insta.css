@@ -37,7 +37,7 @@ body{
   display : flex;
 }
 
-input[type="text"] {
+input {
   font-size: 15px;
   border: solid rgb(191, 191, 191) 1px;
   border-radius: 5px;
@@ -50,24 +50,25 @@ input[type="text"] {
   transform: translate(-50%);
 }
 
-.login {
+ .login { 
+   /* 왜 로그인 버튼 포인터가 한줄 다 차지하지? block이라서? */
   color: white;
+  display: inline;
   background-color: #C4E1FB;
   border-radius: 5px;
   font-weight: bold;
   font-size: 25px;
   border: 0;
   cursor: pointer;
-
   position : relative;
   width : 350px;
   padding: 5px;
-  margin-top: 20px;
+  margin-top: 15px;
   left : 50%;
   transform: translate(-50%);
 }
 
-.pw {
+.pwFind {
   /* border : 1px solid black; */
   color : blue;
   font-weight: 700;
