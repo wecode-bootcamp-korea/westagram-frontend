@@ -20,7 +20,8 @@ body {
   justify-content: center;
   width: 100%;
   height: 54px;
-  background-color: skyblue;
+  background-color: #ffffff;
+  border-bottom: 0.5px solid #dbdbdb;
 }
 
 .topMenu {
@@ -52,7 +53,7 @@ body {
 }
 
 input {
-  width: 150px;
+  width: 200px;
   height: 30px;
   padding: 3px 10px 3px 26px;
   border: 0px solid transparent;
@@ -61,17 +62,29 @@ input {
 
 .searchInput {
   display: flex;
-  justify-content: center;
+  width: 215px;
+  /* justify-content: center; */
+}
+
+.sp::placeholder {
+  text-align: center;
 }
 
 .innerSearch {
   display: flex;
-  position: relative;
+  position: absolute;
+  margin-left: 60px;
+  margin-top: 7px;
+}
+
+.innerSearch span {
+  margin-left: 10px;
+  color: #dbdbdb;
 }
 
 .rightMenu {
   display: flex;
-  width: 123px;
+  width: 140px;
   margin: auto 0;
   justify-content: space-between;
   background-color: #ffffff;
@@ -84,6 +97,7 @@ input {
 .like {
   width: 22px;
   height: 22px;
+  border-radius: 50%;
 }
 
 .main {
@@ -104,9 +118,9 @@ input {
 .firstFeed {
   position: relative;
   width: 100%;
-  height: 917px;
+  height: 946px;
   background-color: #ffffff;
-  border: 1px solid rgb(102, 102, 102);
+  border: 1px solid #dbdbdb;
   border-radius: 3px;
 }
 
@@ -122,10 +136,10 @@ input {
 
 .feedHead {
   display: flex;
-  width: 100%;
+  width: 90%;
   height: 60px;
   margin: 0 16px;
-  background-color: #fafafa;
+  background-color: #ffffff;
 }
 
 #feed_pic {
@@ -143,9 +157,16 @@ input {
   display: flex;
   position: absolute;
   height: 60px;
-  right: 0;
+  right: 2px;
   top: 0;
-  background-color: tomato;
+}
+
+.threeDot button {
+  margin: auto 10px;
+}
+
+.threeDot button i {
+  font-size: 15px;
 }
 
 .pics {
@@ -173,6 +194,18 @@ input {
   padding-right: 16px;
   margin-top: 4px;
   background-color: #ffffff;
+}
+
+#redheart {
+  font-size: 26px;
+  position: relative;
+  top: -25px;
+  background-color: transparent;
+  color: #ed4956;
+}
+
+#redheart:hover {
+  color: red;
 }
 
 .icon_pack {
@@ -221,11 +254,17 @@ button {
 }
 
 .comments {
+  transform: rotate(0.5turn);
   width: 100%;
-  height: 100px;
+  height: 110px;
   padding-left: 16px;
   padding-right: 16px;
   background-color: #ffffff;
+  overflow: scroll;
+}
+
+.asd {
+  transform: rotate(-0.5turn);
 }
 
 .comments p {
@@ -235,7 +274,7 @@ button {
 }
 
 .re_id {
-  margin: auto 5px auto 0;
+  margin: 0 5px auto 0;
   font-weight: 600;
   text-decoration: none;
   color: black;
@@ -243,14 +282,17 @@ button {
 }
 
 .re_p {
+  width: 410px;
   margin: auto 5px;
+  background-color: #ffffff;
+  word-break: break-all;
 }
 
 .re_heart {
   position: absolute;
   height: 19px;
   width: 19px;
-  right: 30px;
+  right: 10px;
   justify-content: flex-end;
 }
 
@@ -265,6 +307,44 @@ button {
   color: red;
 }
 
+.deleteBtn {
+  position: absolute;
+  right: 0;
+  width: 550px;
+  height: 21px;
+  color: transparent;
+}
+
+.deleteBtn:hover {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.deleteBtn i {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 40px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+/* .deleteBtn {
+  position: absolute;
+  height: 19px;
+  width: 19px;
+  right: 50px;
+  justify-content: flex-end;
+  background-color: transparent;
+} */
+
+/* .deleteBtn i {
+  color: #ffffff;
+  background-color: #ffffff;
+}
+
+.deleteBtn i:hover {
+  color: gray;
+} */
+
 .other_re {
   margin-top: 5px;
   background-color: #ffffff;
@@ -275,7 +355,7 @@ button {
   height: 19px;
   padding-left: 16px;
   padding-right: 16px;
-  margin-top: 10px;
+  margin-top: 17px;
   margin-bottom: 4px;
   background-color: #ffffff;
 }
@@ -290,16 +370,37 @@ button {
 }
 
 .write {
+  display: flex;
   width: 100%;
-  height: 56px;
-  padding-left: 16px;
+  height: 40px;
   padding-right: 16px;
   margin-top: 4px;
-  background-color: darkolivegreen;
-  border-top: 1px solid rgb(102, 102, 102);
+  border-top: 1px solid #dbdbdb;
+  background-color: #ffffff;
 }
 
 .write button {
+  margin: auto 5px;
+}
+
+#writeComment {
+  width: 100%;
+  padding-left: 0;
+  margin: auto 0 auto 4px;
+  background-color: #ffffff;
+}
+
+#writeBtn {
+  display: flex;
+  position: relative;
+  justify-content: flex-end;
+  align-items: center;
+  margin: auto 0 auto 5px;
+  color: #0095f6;
+}
+
+#writeBtn:hover {
+  cursor: grab;
 }
 
 /* .addcomment {
@@ -338,6 +439,7 @@ article {
 
 .pic_desc {
   font-size: 16px;
+  color: rgb(158, 158, 158);
 }
 
 .friends_pic {
@@ -357,6 +459,7 @@ article {
 
 .friendsdesc {
   font-size: 14px;
+  color: rgb(158, 158, 158);
 }
 
 .id_pic {

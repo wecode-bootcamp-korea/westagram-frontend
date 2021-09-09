@@ -14,18 +14,20 @@
                 <img id="insta" src="https://www.instagram.com/static/images/web/mobile_nav_type_logo-2x.png/1b47f9d0e595.png" alt="">
             </div>
             <div class="search">
-                <input type="text" placeholder="">
+                
                 <div class="searchInput">
-                    <div class="innerSearch">
+                    <input class="sp" type="search" placeholder="검색" onfocus="this.placeholder=''" onblur="this.placeholder='검색'">
+                    <!-- <div class="innerSearch">
                         <span><i class="fas fa-search"></i></span>
                         <span>검색</span>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <div class="rightMenu">
                 <img class="like" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png" alt="">
                 <img class="like" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" alt="">
                 <img class="like" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png" alt="">
+                <img class='like' src="/westa/images/profile.jpeg" width="32px" height="32px" alt="">
             </div>
         </div>
     </nav>
@@ -40,31 +42,42 @@
                             <div></div>
                         </header>
                         <div class="threeDot">
-                            점세개 자세히보기
+                            <button>
+                                <i class="fas fa-ellipsis-h"></i>
+                            </button>
                         </div>
                         <div class="pics">
-                            <img id="firstPic" src="images/felipe-giacometti-rscA_s5o8dk-unsplash.jpg"  alt="">
+                            <img id="firstPic" src="images/wecode.jpg"  alt="">
                         </div>
                         <div class="comment">
                             <section class="heart">
                                 <div class="icon_pack">
-                                    <button><i class="far fa-heart"></i></button>
+                                    <button><i class="far fa-heart"></i><i id="redheart"class="fas fa-heart"></i></button>
                                     <button><i class="far fa-comment"></i></button>
                                     <button><i class="far fa-paper-plane"></i></button>
                                     <button id="bookmark"><i class="far fa-bookmark" ></i></button>
                                 </div>
                             </section>
                             <section class="manyLike">
-                                <div>좋아요 192개</div>
+                                <div>좋아요 485,222개</div>
                             </section>
                             <div class="comments">
-                                <p><a href="" class="re_id">4.21ee</a><span class="re_p">첫번째 댓글 나와라</span></p>
-                                <div class="other_re">
-                                    <p><a href="" class="re_id">wecode_bootcamp</a><span class="re_p">두번째 댓글 나와라</span><span><button class="re_heart"><i class="far fa-heart"></i></button></span></p>
-                                    <p><a href="" class="re_id">wecode</a><span class="re_p">세번째 댓글 나오고</span><span><button class="re_heart"><i class="far fa-heart"></i></button></span></p>
-                                    <p><a href="" class="re_id">westagram</a><span class="re_p">네번째 댓글이다</span><span><button class="re_heart"><i class="far fa-heart"></i></button></span></p>
-                                    <p><a href="" class="re_id">asdfg</a><span class="re_p">줄젇ㄹ아링나ㅜ링나</span><span><button class="re_heart"><i class="far fa-heart"></i></button></span></p>
+                                <div  class="asd" id="other_re">
+                                    <p><a href="" class="re_id">wecode_bootcamp</a><span class="re_p">두번째 댓글 나와라</span><span class="deletespan"><button class="deleteBtn">
+                                        <i class="fas fa-ellipsis-h"></i>
+                                    </button></span><span><button class="re_heart"><i class="far fa-heart"></i></button></span></p>
+                                    <p><a href="" class="re_id">wecode</a><span class="re_p">세번째 댓글 나오고</span><span class="deletespan"><button class="deleteBtn">
+                                        <i class="fas fa-ellipsis-h"></i>
+                                    </button></span><span><button class="re_heart"><i class="far fa-heart"></i></button></span></p>
+                                    <p><a href="" class="re_id">westagram</a><span class="re_p">네번째 댓글이다</span><span class="deletespan"><button class="deleteBtn">
+                                        <i class="fas fa-ellipsis-h"></i>
+                                    </button></span><span><button class="re_heart"><i class="far fa-heart"></i></button></span></p>
+                                    <p><a href="" class="re_id">asdfg</a><span class="re_p">줄젇ㄹ아링나ㅜ링나</span><span class="deletespan"><button class="deleteBtn">
+                                        <i class="fas fa-ellipsis-h"></i>
+                                    </button></span><span><button class="re_heart"><i class="far fa-heart"></i></button></span></p>
+                                    <p id="addR"></p>
                                 </div>
+                                <p class="asd"><a href="" class="re_id">4.21ee</a><span class="re_p"> WESTAGRAM 만들기 첫번째 피드 내용부분입니다.</span></p>
                             </div> 
                             <div class="howLong">
                                 <div>25분전</div>
@@ -73,6 +86,8 @@
                                 <button>
                                     <i class="far fa-smile"></i>
                                 </button>
+                                <input id ="writeComment" type="text" placeholder="댓글 달기..." onkeypress="if(window.event.keyCode==13) addMessage();">
+                                <button id="writeBtn" onclick="addMessage()">게시</button>
                                 <!-- <textarea class="addcomment" aria-label="댓글 달기..." placeholder="댓글 달기..." autocomplete="off"> -->
                             </section>
                         </div>
@@ -182,6 +197,6 @@
             </div>
         </div>
     </main>
-    
+    <script src="./main.js"></script>
 </body>
 </html>
