@@ -7,10 +7,7 @@
     const loginIdInputValue = loginIdInput.value;
 
     const loginInfo = loginPasswordInputValue && loginIdInputValue;
-
-    // loginBtn.disabled = true : 
-    // 
-    
+  
     loginPasswordInput.addEventListener('keyup', ()=> {
         (loginInfo === true) ? loginBtn.disabled = true : loginBtn.disabled = false;
         loginBtn.style.backgroundColor = "#0095f6";
