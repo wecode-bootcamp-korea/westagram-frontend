@@ -1,15 +1,14 @@
-html,body {
-  height: auto;
-}
 body {
   margin: 0 auto;
-
 }
 
+/* 메뉴 */
 .navigator {
-  border-bottom: 1px solid rgb(219, 219, 219);
-  background-color: white;
+  display: flex;
+  justify-content: center;
   width: 100%;
+  background-color: white;
+  border-bottom: 1px solid rgb(219, 219, 219);
 }
 
 .nav-interface {
@@ -19,7 +18,7 @@ body {
   width: 975px;
   height: 54px;
   margin: 0px 200px;
-  padding: 0px 20px;
+  padding: 0;
 }
 
 .nav-left {
@@ -27,10 +26,33 @@ body {
   align-items: center;
 }
 
+.logo-text {
+  padding: 0;
+  margin-left: 25px;
+  color: black;
+  font-family: 'Lobster', cursive;
+  text-decoration: none;
+  font-size: 25px;
+  font-weight:bold;
+}
+
+.serch {
+  width: 215px;
+  height: 28px;
+  padding: 7px;
+  background-color: rgb(250, 250, 250);
+  border: 1px solid rgb(219, 219, 219);
+  border-radius: 3px;
+}
+
+.serch::placeholder {
+  padding: 85px;
+}
+
 .nav-right {
-  width: 150px;
   display: flex;
   justify-content: space-around;
+  width: 150px;
 }
 
 .nav-right>a>img {
@@ -38,31 +60,7 @@ body {
   height: 22px;
 }
 
-.logo-text {
-  font-family: 'Lobster', cursive;
-  text-decoration: none;
-  color: black;
-  font-size: 25px;
-  font-weight:bold;
-  padding-left: 10px;
-  height: auto;
-  margin-left: 30px;
-}
-
-.serch {
-  width: 215px;
-  height: 28px;
-  padding: 7px;
-  border: 1px solid rgb(219, 219, 219);
-  border-radius: 3px;
-  background-color: rgb(250, 250, 250);
-  margin: 0 auto;
-}
-
-.serch::placeholder {
-  padding: 85px;
-}
-
+/* 메인 */
 .container {
   display: flex;
   justify-content: center;
@@ -71,34 +69,41 @@ body {
   background-color: rgb(250, 250, 250);
 }
 
+/* 피드 */
 .feeds {
-  border: 1px solid rgb(219, 219, 219);
-  width: 614px;
-  height: auto;
-  margin-right: 22px;
-  border-radius: 3px;
   position: relative;
+  width: 614px;
+  margin-right: 22px;
   background-color: white;
+  border: 1px solid rgb(219, 219, 219);
+  border-radius: 3px;
 }
 
 .title {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0px 20px;
-  
+  margin: 0px 20px; 
 }
-.user {
-  display: flex;
-  align-items: center;
-  height: 60px; 
-}
+
 .title>a>img {
   width: 16px;
   height: 16px;
 }
 
-.user-info>a,p {
+.my-box {
+  display: flex;
+  align-items: center;
+  height: 60px; 
+}
+
+.my-box>a>img {
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+}
+
+.my-info>a,p {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -108,21 +113,15 @@ body {
   color: black;
 }
 
-.user>a>img {
-  border-radius: 100%;
-  width: 32px;
-  height: 32px;
-}
-
-.user-info>a {
-  font-size: 14px;
+.my-info>a {
   height: 5px;
+  font-size: 14px;
   font-weight: bold;
 }
 
-.user-info>p {
-  font-size: 12px;
+.my-info>p {
   height: 0;
+  font-size: 12px;
 }
 
 .icon-box {
@@ -137,10 +136,10 @@ body {
 }
 
 
-.icon-left>a>img {
+.icon-left img {
   margin: 0px 5px;
 }
-.icon-right>a>img {
+.icon-right img {
   margin: 0px 5px;
 }
 
@@ -148,14 +147,8 @@ body {
   display: flex;
   align-items: center;
   margin:0px 20px;
-  font-size: 14px;
   margin-bottom: 10px;
-}
-
-.user-poto {
-  width: 24px;
-  border-radius: 100px;
-  margin-right: 7px;
+  font-size: 14px;
 }
 
 .like-box>a {
@@ -164,6 +157,13 @@ body {
   font-weight: bold;
 }
 
+.user-poto {
+  width: 24px;
+  margin-right: 7px;
+  border-radius: 100px;
+}
+
+/* 댓글 창 (댓글 이벤트 구현 구관) */
 .comment {
   display: flex;
   flex-direction: column;
@@ -183,13 +183,7 @@ body {
 .comment-second {
   display: flex;
   justify-content: space-between;
-}
-
-.comment-second>a>img {
-  position: relative;
-  width: 12px;
-  height: 12px;
-  
+  margin-top: 5px;
 }
 
 .yous>a {
@@ -197,26 +191,43 @@ body {
   font-weight: bold;
 }
 
+.comment-second img {
+  width: 12px;
+  height: 12px;
+}
+
+.empty-comment {
+  display: flex;
+  flex-direction: column;
+}
+
+/* .comment-second button {
+  width: 12px;
+  height: 12px;
+  background-color: white;
+  border: 0;
+} */
+
 .comment-time {
   margin-top: 10px;
 }
 
-.comment-time>a {  
+.comment-time>a { 
+  color: #8e8e8e; 
   font-size: 10px;
-  color: #8e8e8e;
 }
 .comment-box {
 margin-top: 55px;
 }
 
 .comment-text {
-  margin: 20px 0px 0px;
-  width: 100%;
-  height: 46px;
-  padding: 0px 16px;
-  border: 1px solid rgb(219, 219, 219);
   position:absolute;
   bottom: 0;
+  width: 100%;
+  height: 46px;
+  margin: 20px 0px 0px;
+  padding: 0px 16px;
+  border: 1px solid rgb(219, 219, 219);
 }
 .comment-text:focus {
   outline: none;
@@ -226,39 +237,28 @@ margin-top: 55px;
   position: absolute;
   bottom: 14px;
   right: 16px;
-  background-color: white;
-  border: 0px;
   padding: 0;
   color: #b9dffc;
+  background-color: white;
+  border: 0px;
   font-weight: bold;
 }
 
+/* 피드 옆 사이드 */
 .side {
   width: 293px;
-  
-}
-
-.side-user>a>img {
-width: 56px;
-height: 56px;
-border-radius: 50px;
-}
-
-.side-story>a>img {
-  width: 32px;
-  height: 32px;
-  border-radius: 50px;
-  }
-.side-story {
-  display: flex;
-  align-items: center;
-  margin: 5px 15px 8px;
 }
 
 .side-user {
   display: flex;
   align-items: center;
   margin-bottom: 13px;
+}
+
+.side-user>a>img {
+width: 56px;
+height: 56px;
+border-radius: 50px;
 }
 
 .side-my {
@@ -279,53 +279,63 @@ border-radius: 50px;
 }
 
 .story-box {
-  height: auto;
   display: flex;
   flex-direction: column;
-  border: 1px solid rgb(219, 219, 219);
-  font-size: 14px;
-  background-color: white;
   height: 190px;
+  border: 1px solid rgb(219, 219, 219);
+  background-color: white;
+  font-size: 14px;
   overflow:hidden  ;
 }
 
 .story-text {
-display: flex;
-justify-content: space-between;
-margin: 12px 15px 7px;
-}
-
+  display: flex;
+  justify-content: space-between;
+  margin: 12px 15px 7px;
+  }
+  
 .story-text>span {
   color: #8e8e8e;
-}
-
+  }
+  
 .story-text>button {
-  background-color: white;
   border: 0;
+  background-color: white;
   font-weight: 600;
 }
 
-.friend-box {
-  height: auto;
+.side-story {
   display: flex;
-  flex-direction: column;
-  border: 1px solid rgb(219, 219, 219);
-  font-size: 14px;
-  background-color: white;
-  height: 190px;
-  margin-top: 13px;
-  
+  align-items: center;
+  margin: 5px 15px 8px;
 }
+
+.side-story>a>img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50px;
+  }
 
 .side-story>button {
   position: relative;
-  left: 13px;
+  left: 24px;
+  color: #0095f6;
   background-color: white;
   border: 0;
   font-size: 13px;
   font-weight: 500;
-  color: #0095f6;
 }
+
+.friend-box {
+  display: flex;
+  flex-direction: column;
+  height: 190px;
+  margin-top: 13px;
+  border: 1px solid rgb(219, 219, 219);
+  background-color: white;
+  font-size: 14px;
+}
+
 .footer {
   margin-top: 13px;
 }
@@ -348,3 +358,4 @@ margin: 12px 15px 7px;
   color: #c7c7c7;
   font-size: 12px;
 }
+

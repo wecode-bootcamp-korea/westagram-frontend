@@ -8,12 +8,20 @@ function login() {
   const password = passwordIn.value
   if (id && password) {
     button.classList.remove("button-off")
-  } else {
+    button.disabled = false;
+    } else {
     button.classList.add("button-off")
+    button.disabled = true;
   }
 }
 
+  function enter(e) {
+    if(e.keyCode == 13) {
+      button.click();
+    }
+  }
 
-passwordIn.addEventListener('keyup',login)
-idIn.addEventListener('keyup',login)
-
+passwordIn.addEventListener('keyup',login);
+idIn.addEventListener('keyup',login);
+passwordIn.addEventListener('keypress',enter);
+idIn.addEventListener('keypress',enter);
