@@ -1,6 +1,10 @@
 *{
   box-sizing: border-box;
 }
+
+
+
+
 .left{
   width:10%;
 }
@@ -11,6 +15,9 @@
   display: flex;
   justify-content: space-around;
   border-bottom: 1px solid black;
+}
+.profile{
+  margin-right: 30px;
 }
 .logo{
   display: flex;
@@ -40,10 +47,10 @@ input[type="text"]{
 .profile{
   display: flex;
 }
+
 .main {
-  width: 100%;
   display : flex;
-  
+  width: 100%;
 }
 .feeds{
   height : 100%;
@@ -51,14 +58,15 @@ input[type="text"]{
   border-right: 1px solid black;
 }
 
-.feedsProfile{
-  width: 10%;
-  height: 10%;
-}
+
 
 .naming .feedsProfile{
   border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  
 }
+
 
 .articlePicture{
   width: 100%;
@@ -67,10 +75,19 @@ input[type="text"]{
 
 article{
   padding-top : 10px;
+  margin-right : 3px;
 }
 
 .naming{
   display: flex;
+  align-items: center;
+  position: relative;
+}
+.follow{
+  position: absolute;
+  right: 15px;
+  color: blue;
+  cursor: pointer;
 }
 
 .naming2lines{
@@ -80,6 +97,65 @@ article{
 .naming2lines .second{
   font-size: 12px;
 }
+.friend {
+  font-weight: bold;
+  /* color: red; */
+}
+.friendLine{
+  display: flex;
+  align-items: center;
+}
+.friendSentence{
+  padding-left: 8px;
+}
+.friendImg{
+  width: 20px;
+  height: 20px;
+  border-radius : 50%;
+}
+.lines2{
+  overflow: hidden;
+  /* text-overflow: ellipsis; */
+  display: -webkit-box;
+  -webkit-line-clamp: 2; 
+  -webkit-box-orient: vertical;
+  padding-top: 5px;
+}
+.lines2lines{
+  font-weight: bold;
+  font-size: 18px;
+  padding-right : 10px;
+}
+
+.timeLimit{
+  font-size: 5px;
+  font-weight: 700;
+  color: lightgray;
+}
+
+input[type="text"]{
+  /* padding-right: 83px; */
+  width : 100%;
+}
+.story{
+  border : 1px solid lightgray;
+  margin-top : 5px;
+}
+.storyAll{
+  display: flex;
+  position: relative;
+}
+.storyLetter{
+  padding-top: 5px;
+  padding-left: 5px;
+  color : lightgray;
+  font-weight: bold;
+}
+.all{
+  position: absolute;
+  right : 15px;
+  padding-top: 5px;  
+}
 
 .main-right{
   padding: 10px 0 0 10px;
@@ -88,17 +164,15 @@ article{
   width: 30%;
 }
 .rightProfile{
-  width : 100%;
-}
-.rightProfile{
-  width: 10%;
-  height: 10%;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
 }
 .right{
   display: flex;
-
+  align-items: center;
 }
+
 .articleLogo{
   display: flex;
   position : relative;

@@ -31,16 +31,15 @@
   <!-- nav 줄 끝 -->
 
 
-<!-- main 시작 -->
-  <div class="main">
+
+  <div class="main"><!-- main 시작 -->
 
     <main class="left"></main>
 
     <div class="feeds">
-        <article>
-          <!-- article-첫번째줄 -->
+        <article> <!-- article 시작 -->  
           <div class="naming">
-            <img class="feedsProfile" src="coffee2.jpg" alt="">
+            <img class="feedsProfile" src="coffee2.jpg" alt="내 사진">
             <div class="naming2lines">
               <div class="first">Wecode_bootcamp</div>
               <div class="second">WeCode - 위코드</div>
@@ -57,31 +56,130 @@
             <div class="save"><i class="fas fa-bookmark"></i></div><!--저장-->
           </div>
 
-          <div></div><!-- 친구1 외 5명이 좋아합니다.-->
+          <div class="friendLine"><!-- 친구1 외 5명이 좋아합니다.-->
+            <img class="friendImg" alt="좋아요 누른사람" src="coffee1.jpg"><!--친구사진-->
+            <span class="friendSentence">
+              <span class="friend">Hongil</span>님 <span class="friend">외 4명</span>이 좋아합니다.</span><!--홍알님 외 4명이 좋아합니다-->
+            </span>
+          </div>
 
-          <div></div><!--아이디(찐하게) 글내용-->
+          <div id="lines2" class="lines2"> <span class="lines2lines">Wecode_bootcamp</span>커피커피커피커피커피커피커피커피커피커피커피커피커피커피커피커피커피커피커피커피커피커피커피커피커피커피커피커피커피커피커피커피커피커피커피커피커피커피커피커피커피커피커피커피커피커커피커피커피커피커피커피커피커피커피커피커피커피커피커피커피커피커피커피커피커피커피커피커피커피커피커피커
+          </div><!--아이디(찐하게) 글내용-->
+          <button class="more">더보기</button><!--처음엔 보이다가 더보기 버튼 클릭시 버튼 안보이게
+          1. display : none
+          2. overflow: default-->
 
-          <div></div><!--몇분전-->
+          <div class="timeLimit">30분 전</div><!--몇분전-->
 
-          <div></div><!-- 댓글달기-->
+          <div class="comment"><!-- 댓글달기-->
+            <input type="text" placeholder="댓글 달기..."/>
+          </div>
 
-        </article>
-              <!-- article 끝 -->
+        </article> <!-- article 끝 -->
     </div>
 
+
+<!--main-right 시작-->
     <div class="main-right">
-      <div class="right">
+      <div class="right"><!--이름-->
         <img class="rightProfile" src="coffee2.jpg" alt="">
         <div class="right2lines">
           <div class="rightFirst">Wecode_bootcamp</div>
           <div class="rightSecond">WeCode - 위코드</div>
         </div>
       </div>
-      <div></div>
-      <div></div>
+
+      <!-- 
+      <div class="naming">
+        <img class="feedsProfile" src="coffee2.jpg" alt="내 사진">
+        <div class="naming2lines">
+          <div class="first">Wecode_bootcamp</div>
+          <div class="second">WeCode - 위코드</div>
+        </div>
+      </div>
+      -->
+
+
+      <div class="story"><!--스토리-->
+        <div class="storyAll">
+          <div class="storyLetter">스토리</div>
+          <div class="all">모두 보기</div>
+        </div>
+        
+        <div class="naming">
+          <img class="feedsProfile" src="coffee1.jpg" alt="friend1"/><!--사진1-->
+          <div class="naming2lines">
+            <div class="first">AAAAAAAAAA</div><!--아이디-->
+            <div class="second">aaaaaaaaaa</div><!--몇분전-->
+          </div>
+        </div>
+        <div class="naming">
+          <img class="feedsProfile" src="coffee1.jpg" alt="friend1"/><!--사진1-->
+          <div class="naming2lines">
+            <div class="first">BBBBBBBBBB</div><!--아이디-->
+            <div class="second">bbbbbbbbbb</div><!--몇분전-->
+          </div>
+        </div>
+        <div class="naming">
+          <img class="feedsProfile" src="coffee1.jpg" alt="friend1"/><!--사진1-->
+          <div class="naming2lines">
+            <div class="first">CCCCCCCCCC</div><!--아이디-->
+            <div class="second">cccccccccc</div><!--몇분전-->
+          </div>
+        </div>
+        <div class="naming">
+          <img class="feedsProfile" src="coffee1.jpg" alt="friend1"/><!--사진1-->
+          <div class="naming2lines">
+            <div class="first">DDDDDDDDDD</div><!--아이디-->
+            <div class="second">dddddddddd</div><!--몇분전-->
+          </div>
+        </div>
+      </div>
+
+      <div class="story"><!--스토리-->
+        <div class="storyAll">
+          <div class="storyLetter">회원님을 위한 추천</div>
+          <div class="all">모두 보기</div>
+        </div>
+        
+        <div class="naming">
+          <img class="feedsProfile" src="coffee1.jpg" alt="friend1"/><!--사진1-->
+          <div class="naming2lines">
+            <div class="first">EEEEEEEEEE</div><!--아이디-->
+            <div class="second">eeeeeeeeee</div><!--몇분전-->
+          </div>
+          <div id="follow" class="follow">팔로우</div>
+        </div>
+        <div class="naming">
+          <img class="feedsProfile" src="coffee1.jpg" alt="friend1"/><!--사진1-->
+          <div class="naming2lines">
+            <div class="first">FFFFFFFFFF</div><!--아이디-->
+            <div class="second">ffffffffff</div><!--몇분전-->
+          </div>
+          <div id="follow" class="follow">팔로우</div>
+        </div>
+        <div class="naming">
+          <img class="feedsProfile" src="coffee1.jpg" alt="friend1"/><!--사진1-->
+          <div class="naming2lines">
+            <div class="first">GGGGGGGGGG</div><!--아이디-->
+            <div class="second">gggggggggg</div><!--몇분전-->
+          </div>
+          <div id="follow" class="follow">팔로우</div>
+        </div>
+        <div class="naming">
+          <img class="feedsProfile" src="coffee1.jpg" alt="friend1"/><!--사진1-->
+          <div class="naming2lines">
+            <div class="first">HHHHHHHHHHH</div><!--아이디-->
+            <div class="second">hhhhhhhhhhh</div><!--몇분전-->
+          </div>
+          <div id="follow" class="follow">팔로우</div>
+        </div>
+      </div>
     </div>
 
   </div>
 <!-- main 끝 -->
+
+<script src="main.js"></script>
 </body>
 </html>
