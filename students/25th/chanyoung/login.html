@@ -13,21 +13,8 @@
       <header>westagram</header>
       <main>
         <form class="login">
-          <input
-            class="login__id"
-            type="text"
-            placeholder="전화번호, 사용자 이름 또는 이메일"
-            required
-            pattern="\d{2,3}-\d{3,4}-\d{4}|(.*)@.*(\.com|\.net)"
-          />
-          <input
-            class="login__password"
-            type="password"
-            placeholder="비밀번호"
-            required
-            pattern="(?=.*\d)(?=.*[a-zA-Z])(?=.*[!@#$%^&*()_+=/.,<>?])([a-zA-Z\d!@#$%^&*()_+=/.,<>?]){8,16}"
-            ;
-          />
+          <input class="login__id" type="text" placeholder="전화번호, 사용자 이름 또는 이메일" required pattern="\d{2,3}-\d{3,4}-\d{4}|(.*)@.*(\.com|\.net)" />
+          <input class="login__password" type="password" placeholder="비밀번호" required pattern="(?=.*\d)(?=.*[a-zA-Z])(?=.*[!@#$%^&*()_+=/.,<>?])([a-zA-Z\d!@#$%^&*()_+=/.,<>?]){8,16}" ; />
           <button class="login__button" disabled="disabled">로그인</button>
         </form>
         <section class="find-password">비밀번호를 잊으셨나요?</section>

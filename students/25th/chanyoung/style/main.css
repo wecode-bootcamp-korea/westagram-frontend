@@ -2,25 +2,33 @@
   --border: 1px solid rgba(0, 0, 0, 0.2);
   --background-color--gray: #fafafa;
 }
+
 i {
   opacity: 0.7;
 }
+
 i:hover:not(.fa-camera):not(.fa-search),
 .menu img:hover {
   cursor: pointer;
 }
-/* 유저 관련 */
+
+input:focus {
+  outline: none;
+}
+
 .username {
   font-weight: bold;
 }
+
 .user-img {
   border-radius: 50%;
 }
+
 body {
   padding-top: 55px;
   background-color: var(--background-color--gray);
 }
-/* header */
+
 header {
   position: fixed;
   top: 0;
@@ -30,44 +38,52 @@ header {
   background-color: white;
   z-index: 1;
 }
+
 .header__ul {
   display: flex;
   justify-content: space-around;
   align-items: center;
   height: 100%;
 }
+
 .header__title {
   font-size: 20px;
 }
+
 .header__search {
   position: relative;
   border: var(--border);
 }
+
 .header__search .fa-search {
   position: absolute;
   top: 4px;
   left: 45px;
   font-size: 5px;
 }
+
 .header__search input {
   border: none;
   background-color: transparent;
 }
+
 .header__search input::placeholder {
-  font-size: 12px;
   text-align: center;
   background-color: var(--background-color--gray);
   opacity: 0.6;
+  font-size: 12px;
 }
+
 .header__search__user-container {
   position: absolute;
+  top: 17px;
   width: 100%;
   height: auto;
-  top: 17px;
   border: var(--border);
   border-top: none;
   background-color: var(--background-color--gray);
 }
+
 .header__search__user-container__user {
   display: flex;
   justify-content: flex-start;
@@ -76,26 +92,32 @@ header {
   font-size: 12px;
   font-family: none;
 }
+
 .header__search__user-container__user img {
-  margin-right: 10px;
   width: 22px;
+  margin-right: 10px;
 }
+
 .menu {
   display: flex;
   justify-content: space-between;
-  opacity: 0.7;
   width: 95px;
+  opacity: 0.7;
 }
+
 .menu img {
   width: 20px;
   transition: all 1s ease-out 0.01s;
 }
+
 .menu img:hover {
   transform: scale(1.5, 1.5);
 }
+
 .menu-profile {
   position: relative;
 }
+
 .menu-profile-box {
   display: none;
   position: absolute;
@@ -104,27 +126,30 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  background-color: var(--background-color--gray);
-  border: var(--border);
   width: auto;
   height: auto;
   padding: 10px;
+  border: var(--border);
+  background-color: var(--background-color--gray);
 }
+
 .menu-profile-box > *:not(:last-child) {
   margin-bottom: 10px;
 }
-/* main */
+
 main {
   display: flex;
   justify-content: center;
   padding-top: 25px;
 }
+
 .feeds {
   width: 445px;
   height: auto;
   margin-right: 30px;
   border: var(--border);
 }
+
 .feeds-header {
   display: flex;
   justify-content: space-between;
@@ -132,91 +157,107 @@ main {
   padding: 12px;
   border-bottom: var(--border);
 }
+
 .feeds-header__user {
   display: flex;
   align-items: center;
   font-size: 12px;
 }
+
 .feeds-header__user .user-img {
   width: 20px;
   margin-right: 15px;
 }
+
 .feeds-img {
   width: 100%;
   height: 420px;
 }
+
 .feeds-main {
   padding: 10px;
 }
+
 .feeds-main__icons {
   display: flex;
   justify-content: space-between;
 }
+
 .feeds-main__icons--left i:not(:last-child) {
   padding-right: 10px;
 }
-.fedds-main__icons .fa-heart {
-}
-.fas.fa-backspace {
-}
+
 .feeds-main__like {
   padding: 10px 0;
   font-size: 12px;
 }
+
 .feeds-main__like img {
   width: 10px;
 }
+
 .feeds-main__like__count {
   font-weight: bold;
 }
+
 .feeds-main__comments {
   position: relative;
-  font-size: 12px;
   margin-bottom: 3px;
+  font-size: 12px;
 }
+
 .feeds-main__comments__content {
   display: flex;
   justify-content: space-between;
 }
+
 .feeds-main__comments__heart {
   opacity: 0.5;
 }
+
 .feeds-main__comment-time {
   padding-bottom: 5px;
   border-bottom: var(--border);
-  font-size: 12px;
   opacity: 0.5;
+  font-size: 12px;
 }
+
 .feeds-form {
   display: flex;
   justify-content: space-between;
   padding-top: 10px;
 }
+
 .feeds-form__input {
   border: none;
   width: 90%;
   background-color: var(--background-color--gray);
 }
+
 .feeds-form__submit {
   border: none;
   background-color: var(--background-color--gray);
   color: #d3e8fd;
 }
+
 .side {
   width: 220px;
   border: none;
 }
+
 .side-header {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
 }
+
 .side-header img {
   width: 50px;
   height: 45px;
   margin-left: 10px;
   margin-right: 15px;
 }
+
 .side-header__title,
 .side-stories-user__text,
 .side-recommends-user__text {
@@ -224,12 +265,14 @@ main {
   flex-direction: column;
   font-size: 12px;
 }
+
 .side-header__title--sub,
 .side-stories-user__time,
 .side-recommends-user__time {
   font-size: 12px;
   opacity: 0.4;
 }
+
 .side-stories,
 .side-recommends {
   height: 200px;
@@ -239,27 +282,32 @@ main {
   border-radius: 4px;
   overflow: hidden;
 }
+
 .side-stories-header,
 .side-recommends-header {
   display: flex;
   justify-content: space-between;
 }
+
 .side-stories-header--title,
 .side-recommends-header--title {
   opacity: 0.4;
   font-size: 12px;
 }
+
 .side-stories-header--all,
 .side-recommends-header--all {
-  font-weight: bold;
   font-size: 12px;
+  font-weight: bold;
 }
+
 .side-stories-user,
 .side-recommends-user {
   display: flex;
   align-items: center;
   margin: 10px;
 }
+
 .side-stories-user img,
 .side-recommends-user img {
   width: 40px;
@@ -268,15 +316,18 @@ main {
   padding: 1px;
   border: 2px solid red;
 }
+
 .side-recommends {
   height: 150px;
 }
+
 footer {
   display: flex;
   flex-direction: column;
-  font-size: 14px;
   opacity: 0.3;
+  font-size: 14px;
 }
+
 footer p {
   margin-bottom: 10px;
 }
