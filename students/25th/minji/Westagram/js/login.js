@@ -2,7 +2,7 @@ const user_id = document.getElementById("user_id");
 const user_pw = document.getElementById("user_pw");
 const btn_login = document.getElementById("btn_login");
 
-let activateButton = (e) => {
+let activateButton = () => {
   // if (user_id.value && user_pw.value) {
   //   btn_login.style.opacity = 1;
   // } else {
