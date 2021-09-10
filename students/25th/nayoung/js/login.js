@@ -1,7 +1,8 @@
 window.onload = function(){
-	const loginId = document.getElementById("login-id");
-	const loginPw = document.getElementById("login-password");
-	const loginBtn = document.getElementById("login-button");
+	const loginInput = document.querySelectorAll(".login-form > input");
+	const loginId = document.querySelector(".login-id");
+	const loginPw = document.querySelector(".login-password");
+	const loginBtn = document.querySelector(".login-button");
 
 	let userId = "";
 	let userPw = "";
@@ -11,37 +12,33 @@ window.onload = function(){
 	const regPnum = /^01([0|1|6|7|8|9]?)-?([0-9]{3,4})-?([0-9]{4})$/;
 	const regPw = /^(?=.*\d)(?=.*[a-zA-Z])[0-9a-zA-Z]{8,16}$/;
 
-	function canId(userId) {
+	function idValidation(userId) {
 		return regId.test(userId) || regEmail.test(userId) || regPnum.test(userId);
 	}
 
-	function canPw(userPw) {
+	function pwValidation(userPw) {
 		return regPw.test(userPw);
 	}
 
-	function checkInput(userId, userPw) {
-		if(canId(userId) && canPw(userPw)) {
+	function checkInputData(userId, userPw) {
+		if(idValidation(userId) && pwValidation(userPw)) {
 			loginBtn.disabled = false;
-			loginBtn.style.background = "#0095f6";
-			loginBtn.style.cursor = "pointer";
+			loginBtn.classList.add("login-button-active");
 		} else {
 			loginBtn.disabled = true;
-			loginBtn.style.background = "#c4e1fb";
-			loginBtn.style.cursor = "default";
+			loginBtn.classList.remove("login-button-active");
 		}
 	}
 
-	loginId.addEventListener("keyup", () => {
-		userId = loginId.value;
-		checkInput(userId, userPw);
-	});
-	loginPw.addEventListener("keyup", () => {
-		userPw = loginPw.value;
-		checkInput(userId, userPw);
-	});
-	loginPw.addEventListener("keyup", (e) => {
-		if(e.keyCode == 13) {
-			loginBtn.click();
-		}
+	loginInput.forEach((el) => {
+		el.addEventListener("keyup", (e) => {
+			if(e.keyCode == 13) {
+				loginBtn.click();
+			} else {
+				userId = loginId.value;
+				userPw = loginPw.value;
+				checkInputData(userId, userPw);
+			}
+		});
 	});
 }
