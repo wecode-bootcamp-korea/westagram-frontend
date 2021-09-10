@@ -3,14 +3,22 @@
     const loginPasswordInput = document.querySelector(".password");
     const loginBtn = document.querySelector(".login_btn");
 
-    const loginPasswordInputValue = loginPasswordInput.value;
-    const loginIdInputValue = loginIdInput.value;
+    loginPasswordInput.addEventListener('keydown', () => {
+        const loginIdInputValue = loginIdInput.value;
+        const loginPasswordInputValue = loginPasswordInput.value;
 
-    const loginInfo = loginPasswordInputValue && loginIdInputValue;
-  
-    loginPasswordInput.addEventListener('keyup', ()=> {
-        (loginInfo === true) ? loginBtn.disabled = true : loginBtn.disabled = false;
-        loginBtn.style.backgroundColor = "#0095f6";
+        if (loginIdInputValue.length && loginPasswordInputValue.length) {
+            //
+            loginBtn.disabled = false
+        } else {
+            //
+            loginBtn.disabled = true
+        }
+
+        // const test = loginBtn.attr('disabled');
+        // test = false;
+
+        // (loginPasswordInputValue == null && loginIdInputValue == null) ? loginBtn.style.backgroundColor = "#ddd" : test;
     })
-
+    console.logZ
 })();
