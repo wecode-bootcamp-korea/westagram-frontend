@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <!--META-->
-    <meta charset="UTF-8">
-    <mata http-equiv="X-UA-Compatible" content="IE=edge"/>
-   <!--TITLE-->
-   <title>Danstagram | Login</title>
-   <!--FAVICON-->
-   <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"/>
-   <!--CSS-->
-   <link rel="stylesheet" href="./style/common.css"/>
-    <link rel="stylesheet" href="./style/login.css"/>
-</head>
+    <head>
+        <!--META-->
+        <meta charset="UTF-8">
+        <mata http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <!--TITLE-->
+        <title>Danstagram | Login</title>
+        <!--FAVICON-->
+        <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"/>
+        <!--CSS-->
+        <link rel="stylesheet" href="./style/common.css"/>
+        <link rel="stylesheet" href="./style/login.css"/>
+    </head>
     
-<body>
-    <main class="container">
-        <h1>Danstagram</h1>
+    <body>
+        <main class="container">
+            <h1>Danstagram</h1>
+            
+            <!--LOGIN FORM-->
+            <form class="login_wrap">
+                <input id="userId" type="text"  placeholder="전화번호, 사용자 이름 또는 이메일">
+                <input id="userPw" type="password" placeholder="비밀번호"/>
+                <button id="btnLogin" type="button">로그인</button>
+            </form>
+            <!--//LOGIN FORM-->
+            
+            <a href="#n" class="lost_pw">비밀번호를 잊으셨나요?</a>
+        </main>
         
-        <!--LOGIN FORM-->
-        <form class="login_wrap">
-            <input id="user_id" type="text"  placeholder="전화번호, 사용자 이름 또는 이메일">
-            <input id="user_pw" type="password" placeholder="비밀번호"/>
-            <button id="btn_login" type="button">로그인</button>
-        </form>
-        <!--//LOGIN FORM-->
-        
-        <a href="#n" class="lost_pw">비밀번호를 잊으셨나요?</a>
-    </main>
-    
-    <script type="text/javascript" src="./js/login.js"></script>
-</body>
+        <script type="text/javascript" src="./js/login.js"></script>
+    </body>
 </html>

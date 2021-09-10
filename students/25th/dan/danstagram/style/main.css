@@ -85,6 +85,9 @@ header .logo h1{
     font-size: 0;
     width: 25px;
     height: 25px;
+    background-position:  center center;
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 .gnb ul li:before{
@@ -100,15 +103,15 @@ header .logo h1{
 }
 
 .gnb ul li.research{
-    background: url('https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png') center center / contain no-repeat;
+    background-image: url('https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png');
 }
 
 .gnb ul li.like{
-    background: url('https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png') center center / contain no-repeat;
+    background-image: url('https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png');
 }
 
 .gnb ul li.mypage{
-    background: url('https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png') center center / contain no-repeat;
+    background-image: url('https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png');
 }
 
 .gnb ul li.mypage:before{
@@ -254,20 +257,31 @@ aside{
 }
 
 /*menu*/
-.menu ul{overflow:hidden;}
-.menu ul li{position:relative;float:left;line-height:1.5;padding-right:12px;}
+.menu ul li{
+    position: relative;
+    display: inline-block;
+    line-height: 1.5;
+    padding-right: 12px;
+}
 .menu ul li:before{
     content: "";
-    position:absolute;
-    top:50%;
-    margin-top:-1px;
-    right:7px;
-    width:2px;
-    height:2px;
+    position: absolute;
+    top: 50%;
+    right: 7px;
+    width: 2px;
+    height: 2px;
+    margin-top: -1px;
     background: #b9b9b9;
 }
-.menu ul li a{font-size:0.8em;color: #999;}
-.copyright{font-size:0.8em;color: #999;padding-top:20px;}
+.menu ul li a{
+    color: #999;
+    font-size: 0.8em;
+}
+.copyright{
+    color: #999;
+    font-size: 0.8em;
+    padding-top: 20px;
+}
 
 /**************************
 FEED BOARD
@@ -320,7 +334,7 @@ div.feed_board{
 .feed_imgs video{
     width: 100%;
 }
-
+ 
 .interactions{
     display: flex;
     align-items: center;

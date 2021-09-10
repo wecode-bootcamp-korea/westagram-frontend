@@ -1,6 +1,6 @@
-const isId = document.getElementById('user_id');
-const isPw = document.getElementById('user_pw');
-const letsLogin = document.getElementById('btn_login');
+const isId = document.getElementById('userId');
+const isPw = document.getElementById('userPw');
+const letsLogin = document.getElementById('btnLogin');
 
 isId.addEventListener('keyup',activeBtn)
 isPw.addEventListener('keyup',activeBtn)

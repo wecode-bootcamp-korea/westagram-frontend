@@ -1,17 +1,16 @@
-const getComment = document.getElementById('list_comment');
-const getNewComment = document.getElementById('new_comment');
-const postComment = document.getElementById('btn_post');
+const listComment = document.getElementById('listComment');
+const getNewComment = document.getElementById('newComment');
+const postComment = document.getElementById('btnPost');
 
 postComment.addEventListener('click', addComment);
 getNewComment.addEventListener("keyup", (e)=>{
   if (e.keyCode === 13 && ! e.shiftKey) {
-     //event.preventDefault();
+     e.preventDefault();
      addComment()
   }
 });
 
 function addComment(){
-  const listComment = document.getElementById('list_comment')
 
   // 새 코멘트 공간만들어서 코멘트 리스트에 추가
   const newCommentTxt = document.createElement('p');
@@ -29,7 +28,7 @@ function addComment(){
   newCommentTxt.lastChild.innerText = getNewCommentTxt;
 
   // 코멘트 리스트에 추가
-  getComment.appendChild(newCommentTxt)
+  listComment.appendChild(newCommentTxt)
   console.log(getNewComment)
 
   // 코멘트 리스트에 추가되면 input비움

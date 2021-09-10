@@ -1,236 +1,236 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <!--META-->
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"  />
-    <!--TITLE-->
-    <title>Danstagram | My feeds</title>
-    <!--FAVICON-->
-    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"/>
-    <!--CSS-->
-    <link rel="stylesheet" href="./style/common.css"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
-    <link rel="stylesheet" href="./style/main.css"/>  
-</head>
+    <head>
+        <!--META-->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"  />
+        <!--TITLE-->
+        <title>Danstagram | My feeds</title>
+        <!--FAVICON-->
+        <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon"/>
+        <!--CSS-->
+        <link rel="stylesheet" href="./style/common.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
+        <link rel="stylesheet" href="./style/main.css"/>  
+    </head>
     
-<body>
-    <!--HEADER-->
-    <header>
-        <div class="wrap">
-                <a href="#n" class="logo"><h1>Danstagram</h1></a>
-            <div class="search">
-                <input type="text" placeholder="검색"/>
-                <button><i class="fas fa-search"></i></button>
+    <body>
+        <!--HEADER-->
+        <header>
+            <div class="wrap">
+                    <a href="#n" class="logo"><h1>Danstagram</h1></a>
+                <div class="search">
+                    <input type="text" placeholder="검색"/>
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <nav class="gnb">
+                    <ul>
+                        <li class="research"><a href="#">탐색</a></li>
+                        <li class="like"><a href="#">좋아요</a></li>
+                        <li class="mypage"><a href="#">my profile</a></li>
+                    </ul>
+                </nav>
             </div>
-            <nav class="gnb">
-                <ul>
-                    <li class="research"><a href="#">탐색</a></li>
-                    <li class="like"><a href="#">좋아요</a></li>
-                    <li class="mypage"><a href="#">my profile</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <!--//HEADER-->
+        </header>
+        <!--//HEADER-->
 
-    <main class="container wrap">
+        <main class="container wrap">
 
-        <aside>
-            <!--my profile-->
-            <div class="my_profile">
-                <a href="#n" class="profile_img">
-                    <img class="round_img" src="./images/dan.jpg" alt="User profile image"/>
-                </a>
-                <span class="my_id">
-                    <a href="#n" class="txt_id">My ID</a>
-                    <p>My Nickname</p>
-                </span>
-            </div>
-
-            <!--WIDGET - story-->
-            <article class="widget stories">
-                <div class="widget_ttl">
-                    <span>스토리</span>
-                    <a href="#n">모두 보기</a>
-                </div>
-
-                <section class="list_story">
-                    <div class="story">
-                        <a href="#n" class="follower_img">
-                            <img class="round_img" src="./images/cat_01.png" alt="follower profile image"/>
-                        </a>
-                        <span class="user_id">
-                            <a href="#n" class="txt_id">Fallowing ID</a>
-                            <p>3h ago</p>
-                        <span>
-                    </div>
-
-                    <div class="story">
-                        <a href="#n" class="follower_img">
-                            <img class="round_img" src="./images/cat_02.png" alt="follower profile image"/>
-                        </a>
-                        <span class="user_id">
-                            <a href="#n" class="txt_id">Fallowing ID</a>
-                            <p>3h ago</p>
-                        <span>
-                    </div>
-
-                    <div class="story">
-                        <a href="#n" class="follower_img">
-                            <img class="round_img" src="./images/cat_03.png" alt="follower profile image"/>
-                        </a>
-                        <span class="user_id">
-                            <a href="#n" class="txt_id">Fallowing ID</a>
-                            <p>3h ago</p>
-                        <span>
-                    </div>
-
-                    <div class="story">
-                        <a href="#n" class="follower_img">
-                            <img class="round_img" src="./images/cat_04.png" alt="follower profile image"/>
-                        </a>
-                        <span class="user_id">
-                            <a href="#n" class="txt_id">Fallowing ID</a>
-                            <p>3h ago</p>
-                        <span>
-                    </div>
-                </section>
-            </article>
-            <!--//WIDGET - story-->
-            
-            <!--WIDGET - recommend-->
-            <article class="widget recommends">
-            <div class="widget_ttl">
-                <span>회원님을 위한 추천</span>
-                <a href="#n">모두 보기</a>
-            </div>
-
-            <section class="list_recommend">
-                <div class="recommend">
-                    <a href="#n" class="recommend_img">
-                        <img class="round_img" src="./images/dog_01.png" alt="follower profile image"/>
+            <aside>
+                <!--my profile-->
+                <div class="my_profile">
+                    <a href="#n" class="profile_img">
+                        <img alt="User profile image" class="round_img" src="./images/dan.jpg"/>
                     </a>
-                    <span class="user_id">
-                        <a href="#n" class="txt_id">recommender ID</a>
-                        <p>follwor list</p>
+                    <span class="my_id">
+                        <a href="#n" class="txt_id">My ID</a>
+                        <p>My Nickname</p>
                     </span>
-                    <button type="button">팔로우</button>
                 </div>
 
-                <div class="recommend">
-                    <a href="#n" class="recommend_img">
-                        <img class="round_img" src="./images/dog_02.png" alt="follower profile image"/>
-                    </a>
-                    <span class="user_id">
-                        <a href="#n" class="txt_id">recommender ID</a>
-                        <p>follwor list</p>
-                    </span>
-                    <button type="button">팔로우</button>
-                </div>
+                <!--WIDGET - story-->
+                <article class="widget stories">
+                    <div class="widget_ttl">
+                        <span>스토리</span>
+                        <a href="#n">모두 보기</a>
+                    </div>
 
-                <div class="recommend">
-                    <a href="#n" class="recommend_img">
-                        <img class="round_img" src="./images/dog_03.png" alt="follower profile image"/>
-                    </a>
-                    <span class="user_id">
-                        <a href="#n" class="txt_id">recommender ID</a>
-                        <p>follwor list</p>
-                    </span>
-                    <button type="button">팔로우</button>
-                </div>
-    
-            </section>
-        </article>
-        <!--//WIDGET - recommend-->
-            
-        <!--menu-->
-        <nav class="menu">
-            <ul>
-                <li><a href="#n">westagram 정보</a></li>
-                <li><a href="#n">지원</a></li>
-                <li><a href="#n">홍보센터</a></li>
-                <li><a href="#n">API</a></li>
-                <li><a href="#n">채용 정보</a></li>
-                <li><a href="#n">개인정보처리방침</a></li>
-                <li><a href="#n">약관</a></li>
-                <li><a href="#n">디렉터리</a></li>
-                <li><a href="#n">프로필</a></li>
-                <li><a href="#n">해시태그</a></li>
-                <li><a href="#n">언어</a></li>
-            </ul>
-        </nav>
-        <p class="copyright">©. 2021 WESTAGRAM</p>
-    </aside>
-        
-
-
-        <!--FEED BOARD-->
-        <div class="feed_board">
-            
-            <!--FEED COMPONENT-->
-            <article class="feed">
-                <!--top-->
-                <div class="new_poster">
-                    <a href="#n" class="poster_img">
-                        <img class="round_img" src="./images/fallowing.png" alt="follower profile image"/>
-                    </a>
-                    <a href="#n" class="poster_id txt_id">Following ID</a>
-                    <button><i class="fas fa-ellipsis-h"></i>옵션 더보기</button>
-                </div>
-
-                <!--content-->
-                <section class="feed_imgs">
-                    <img src="./images/cute_01.png" alt="파리 배경"/>
-
-                    <div class="interactions">
-                        <div class="my_emotion">
-                            <button type="button"><i class="far fa-heart"></i>like</button></span>
-                            <button type="button"><i class="far fa-comment"></i>write_comment</button></span>
-                            <button type="button"><i class="far fa-paper-plane"></i>send_DM</button></span>
+                    <section class="list_story">
+                        <div class="story">
+                            <a href="#n" class="follower_img">
+                                <img alt="follower profile image" class="round_img" src="./images/cat_01.png" />
+                            </a>
+                            <span class="user_id">
+                                <a href="#n" class="txt_id">Fallowing ID</a>
+                                <p>3h ago</p>
+                            <span>
                         </div>
-                        <div class="pagnation"></div>
-                        <button type="button" class="bookmark"><i class="far fa-bookmark"></i>bookmark</button>
+
+                        <div class="story">
+                            <a href="#n" class="follower_img">
+                                <img alt="follower profile image" class="round_img" src="./images/cat_02.png" />
+                            </a>
+                            <span class="user_id">
+                                <a href="#n" class="txt_id">Fallowing ID</a>
+                                <p>3h ago</p>
+                            <span>
+                        </div>
+
+                        <div class="story">
+                            <a href="#n" class="follower_img">
+                                <img alt="follower profile image" class="round_img" src="./images/cat_03.png" />
+                            </a>
+                            <span class="user_id">
+                                <a href="#n" class="txt_id">Fallowing ID</a>
+                                <p>3h ago</p>
+                            <span>
+                        </div>
+
+                        <div class="story">
+                            <a href="#n" class="follower_img">
+                                <img alt="follower profile image" class="round_img" src="./images/cat_04.png" />
+                            </a>
+                            <span class="user_id">
+                                <a href="#n" class="txt_id">Fallowing ID</a>
+                                <p>3h ago</p>
+                            <span>
+                        </div>
+                    </section>
+                </article>
+                <!--//WIDGET - story-->
+                
+                <!--WIDGET - recommend-->
+                <article class="widget recommends">
+                    <div class="widget_ttl">
+                        <span>회원님을 위한 추천</span>
+                        <a href="#n">모두 보기</a>
                     </div>
-                    <p>
-                        <a href="#n" class="like_user">
-                            <img class="round_img" src="./images/cat_01.png" alt="follower profile image"/>
-                            <span class="txt_id">강당당</span>
+
+                    <section class="list_recommend">
+                        <div class="recommend">
+                            <a href="#n" class="recommend_img">
+                                <img alt="follower profile image" class="round_img" src="./images/dog_01.png" />
+                            </a>
+                            <span class="user_id">
+                                <a href="#n" class="txt_id">recommender ID</a>
+                                <p>follwor list</p>
+                            </span>
+                            <button type="button">팔로우</button>
+                        </div>
+
+                        <div class="recommend">
+                            <a href="#n" class="recommend_img">
+                                <img alt="follower profile image" class="round_img" src="./images/dog_02.png" alt="follower profile image"/>
+                            </a>
+                            <span class="user_id">
+                                <a href="#n" class="txt_id">recommender ID</a>
+                                <p>follwor list</p>
+                            </span>
+                            <button type="button">팔로우</button>
+                        </div>
+
+                        <div class="recommend">
+                            <a href="#n" class="recommend_img">
+                                <img alt="follower profile image" class="round_img" src="./images/dog_03.png" alt="follower profile image"/>
+                            </a>
+                            <span class="user_id">
+                                <a href="#n" class="txt_id">recommender ID</a>
+                                <p>follwor list</p>
+                            </span>
+                            <button type="button">팔로우</button>
+                        </div>
+            
+                    </section>
+                </article>
+                <!--//WIDGET - recommend-->
+                
+                <!--menu-->
+                <nav class="menu">
+                    <ul>
+                        <li><a href="#n">westagram 정보</a></li>
+                        <li><a href="#n">지원</a></li>
+                        <li><a href="#n">홍보센터</a></li>
+                        <li><a href="#n">API</a></li>
+                        <li><a href="#n">채용 정보</a></li>
+                        <li><a href="#n">개인정보처리방침</a></li>
+                        <li><a href="#n">약관</a></li>
+                        <li><a href="#n">디렉터리</a></li>
+                        <li><a href="#n">프로필</a></li>
+                        <li><a href="#n">해시태그</a></li>
+                        <li><a href="#n">언어</a></li>
+                    </ul>
+                </nav>
+                <p class="copyright">©. 2021 WESTAGRAM</p>
+            </aside>
+            
+
+
+            <!--FEED BOARD-->
+            <div class="feed_board">
+                
+                <!--FEED COMPONENT-->
+                <article class="feed">
+                    <!--top-->
+                    <div class="new_poster">
+                        <a href="#n" class="poster_img">
+                            <img alt="follower profile image" class="round_img" src="./images/fallowing.png" />
                         </a>
-                        님
-                        <a href="#n" class="like_num txt_id">외 10명</a>
-                        이 좋아합니다
-                    </p>
-                   
-                </section>
-                
-                <!--feed text-->
-                <section class="feed_txt">   
-                    <a href="#n" class="txt_id">User ID</a>
-                    <span>건방진 고양이. 나의 찍찍 펀치를 받아라. <br/> 건방진 고양이. 나의 찍찍 펀치를 받아라.  건방진 고양이. 나의 찍찍 펀치를 받아라.  건방진 고양이. 나의 찍찍 펀치를 받아라.  건방진 고양이. 나의 찍찍 펀치를 받아라.</span>
-                    <a href="#n" class="more">더보기</a>
-                </section>
-                
-
-                <!--comment-->
-                <section class="comments">
-                    <div id="list_comment" class="list_comment">
-                        <p class="txt_comment">
-                            <a href="#n" class="txt_id">follow ID</a>
-                            <span>나는 냥냥 </span>
-                        </p>
+                        <a href="#n" class="poster_id txt_id">Following ID</a>
+                        <button><i class="fas fa-ellipsis-h"></i>옵션 더보기</button>
                     </div>
-                    <form id="post" class="post_comment">
-                        <textarea id="new_comment" type="" placeholder="댓글 달기..."></textarea>
-                        <button id="btn_post" type="submit">게시</button>
-                    </form> 
-                </section>
-                
-            </article>
-        </div>
-        <!--//FEEDS-->
-    </main>
 
-<script type="text/javascript" src="./js/main.js"></script>
-</body>
+                    <!--content-->
+                    <section class="feed_imgs">
+                        <img alt="파리 배경" src="./images/cute_01.png" />
+
+                        <div class="interactions">
+                            <div class="my_emotion">
+                                <button type="button"><i class="far fa-heart"></i>like</button></span>
+                                <button type="button"><i class="far fa-comment"></i>write_comment</button></span>
+                                <button type="button"><i class="far fa-paper-plane"></i>send_DM</button></span>
+                            </div>
+                            <div class="pagnation"></div>
+                            <button type="button" class="bookmark"><i class="far fa-bookmark"></i>bookmark</button>
+                        </div>
+                        <p>
+                            <a href="#n" class="like_user">
+                                <img alt="like user image" class="round_img" src="./images/cat_01.png" />
+                                <span class="txt_id">강당당</span>
+                            </a>
+                            님
+                            <a href="#n" class="like_num txt_id">외 10명</a>
+                            이 좋아합니다
+                        </p>
+                    
+                    </section>
+                    
+                    <!--feed text-->
+                    <section class="feed_txt">   
+                        <a href="#n" class="txt_id">User ID</a>
+                        <span>건방진 고양이. 나의 찍찍 펀치를 받아라. <br/> 건방진 고양이. 나의 찍찍 펀치를 받아라.  건방진 고양이. 나의 찍찍 펀치를 받아라.  건방진 고양이. 나의 찍찍 펀치를 받아라.  건방진 고양이. 나의 찍찍 펀치를 받아라.</span>
+                        <a href="#n" class="more">더보기</a>
+                    </section>
+                    
+
+                    <!--comment-->
+                    <section class="comments">
+                        <div id="listComment" class="list_comment">
+                            <p class="txt_comment">
+                                <a href="#n" class="txt_id">follow ID</a>
+                                <span>나는 냥냥 </span>
+                            </p>
+                        </div>
+                        <form id="post" class="post_comment">
+                            <textarea id="newComment" type="" placeholder="댓글 달기..."></textarea>
+                            <button id="btnPost" type="submit">게시</button>
+                        </form> 
+                    </section>
+                    
+                </article>
+            </div>
+            <!--//FEEDS-->
+        </main>
+
+        <script type="text/javascript" src="./js/main.js"></script>
+    </body>
 </html>
