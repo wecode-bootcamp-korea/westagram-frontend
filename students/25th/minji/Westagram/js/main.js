@@ -181,3 +181,11 @@ searchbox.addEventListener("keyup", () => {
   createFilteredElement(result, search_list);
   showRefreshBtn(searchbox);
 });
+
+// refreshBtn 클릭시 input value와 list를 초기화하는 함수
+const refreshInput = () => {
+  searchbox.value = "";
+  deletePreviousResult(search_list);
+};
+
+btn_init.addEventListener("click", refreshInput);
