@@ -29,7 +29,7 @@ function submit() {
   mainText.classList.add("main-icon-like-text-write-subtext");
   mainIcon.classList.add("smallHeart_img");
 
-  mainIcon.setAttribute("src", "/students/25th/sangcheol/Westargram/img/heart.png");
+  mainIcon.setAttribute("src", "../img/heart.png");
 
   userName.innerText = "Sangcheol"
   mainText.innerText = commentInput.value;
