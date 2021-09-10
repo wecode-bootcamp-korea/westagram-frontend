@@ -1,5 +1,3 @@
-@import "commen.css";
-
 body {
     width:100vw;
     height: 100vh;
@@ -7,23 +5,23 @@ body {
 }
 
 header {
-    width:100%;
-    height: 54px;
     display: flex;
     position: fixed;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: 54px;
     background: white;
     border-bottom:1px solid #dbdbdb;
     z-index: 9999;
 }
 
 header > .nav_con {
-    width: 80%;
-    display:flex;
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    margin:0 auto;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .nav_con > .logo_cons {
@@ -32,19 +30,19 @@ header > .nav_con {
 
 .nav_con > .logo_cons > .logo {
     font-family: 'Lobster';
-    font-size:1.2rem;
+    font-size: 1.2rem;
 }
 
  .logo_cons > .logo_line {
     width:1px;
     height: 1.5rem;
-    border:1px solid #383838;
     margin:0 1rem;
+    border:1px solid #383838;
 }
 
 .nav_con > form {
-    width:20%;
     position: relative;
+    width: 20%;
 }
 
 .nav_con > form > input {
@@ -59,9 +57,9 @@ header > .nav_con {
 
 .nav_con > form > .fa-search {
     position: absolute;
-    top:27%;
-    left:38%;
-    font-size:0.7rem;
+    top: 27%;
+    left: 38%;
+    font-size: 0.7rem;
     color:#a8aaad;
 }
 
@@ -71,15 +69,15 @@ nav > .nav_icons {
 
 nav > .nav_icons > img {
     max-width: 12%;
-    margin:0 0.5rem;
+    margin: 0 0.5rem;
 }
 
 /* section */
 
 section {
     display: flex;
-    width:100%;
-    padding:7rem 0;
+    width: 100%;
+    padding: 7rem 0;
     background:#fafafa;
 }
 
@@ -100,14 +98,14 @@ article > .main_container{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width:100%;
-    padding:1rem;
+    width: 100%;
+    padding: 1rem;
 }
 
 .feeds_users > .feeds_users_info {
-    width:50%;
     display: flex;
-    align-items:center;
+    align-items: center;
+    width: 50%;
 }
 
 .feeds_users > .feeds_users_info > img {
@@ -117,14 +115,14 @@ article > .main_container{
 }
 
 .feeds_users_info > .feeds_users_info_txt {
-    margin-left:1rem;
-    font-size:0.9rem;
+    margin-left: 1rem;
+    font-size: 0.9rem;
 }
 
 .feeds_users_info_txt > .feeds_users_id {
+    margin-bottom: 0.6rem;
     font-weight: bold;
     color: #262626;
-    margin-bottom:0.6rem;
 }
 
 /* feeds_main_img */
@@ -140,14 +138,14 @@ article > .main_container{
 
 /* feeds_info */
 .feeds_info {
-    width:95%;
+    width: 95%;
     margin: 0 auto;
 }
 
 .feeds_info > .feeds_icons {
     display: flex;
     align-items: center;
-    padding:0.8rem 0;
+    padding: 0.8rem 0;
     font-size:1.5rem;
 }
 
@@ -170,13 +168,13 @@ article > .main_container{
 }
 
 .feeds_comment_box > .like_uesrs > img {
-    max-width:5%;
-    margin-right:0.5rem;
+    max-width: 5%;
+    margin-right: 0.5rem;
     border-radius: 50%;
 }
 
 .feeds_comment_box > .like_uesrs {
-    display:flex;
+    display: flex;
     align-items: center;
 }
 
@@ -186,31 +184,31 @@ article > .main_container{
 }
 
 .feeds_comment_uesrs > p{
-    margin-top:0.6rem;
+    margin-top: 0.6rem;
     overflow: hidden;
 }
 
 .feeds_comment_uesrs > p > .comment_see_more {
     color:#979797;
-    font-size:0.9rem;
+    font-size: 0.9rem;
 }
 
 .feeds_comment_uesrs > p > .feeds_comment_uesrs_id,
 .feeds_comment_like_btn_box > p > .feeds_comment_uesrs_id {
-    margin-right:0.5rem;
+    margin-right: 0.5rem;
     font-weight: bold;
     color: #262626;
 }
 
 .feeds_comment_box > .feeds_comment_tiem {
-    font-size:0.7rem;
+    margin: 0.5rem 0;
+    font-size: 0.7rem;
     color:#979797;
-    margin:0.5rem 0;
 }
 
 /* feeds_comment_like_btn_box */
 .feeds_comment_like_btn_box {
-    display:flex;
+    display: flex;
     justify-content: space-between;
 }
 
@@ -222,18 +220,18 @@ article > .main_container{
 /* comment_input  */
 
 .comment_input {
-    width:100%;
+    width: 100%;
 }
 
 .comment_input form {
-    width:100%;
     display: flex;
+    width: 100%;
 }
 
 .comment_input form input, button{
     width: 100%;
-    padding:0.8rem 0;
-    border:1px solid #efefef;
+    padding: 0.8rem 0;
+    border: 1px solid #efefef;
     border-left: transparent;
     border-right: transparent;
     border-bottom: transparent;
@@ -241,20 +239,20 @@ article > .main_container{
 }
 
 .comment_input form input {
-    width:90%;
-    color:#8f8f8f;
+    width: 90%;
     padding-left:1rem;
+    color:#8f8f8f;
 }
 
 .comment_input form button {
-    width:10%;
+    width: 10%;
     color: #b8dffc;
 }
 
 /* feeds */
 .sub_container {
-    margin-left:2rem;
     max-width: 293px;
+    margin-left: 2rem;
 }
 
 .feeds_profile{
@@ -265,7 +263,7 @@ article > .main_container{
 .feeds_profile > .feed_comment_small_img {
     max-width: 20%;
     border-radius: 50%;
-    border:1px solid #e6e6e6;
+    border: 1px solid #e6e6e6;
 }
 
 .feeds_profile > .small_info{
@@ -277,36 +275,36 @@ article > .main_container{
 }
 
 .small_info > .feeds_user_info {
+    margin-bottom: 0.3rem;
     font-weight: bold;
-    margin-bottom:0.3rem;
 }
 
 /* feeds_story_container */
 .feeds_story_container, 
 .feeds_recommend_container {
     width: 100%;
-    padding:1rem 0;
+    padding: 1rem 0;
     border: 1px solid #e6e6e6;
     background: white;
 }
 
 .feeds_story_container {
-    margin-bottom:1rem;
+    margin-bottom: 1rem;
 }
 
 /* feeds_story_box */
 
 .feeds_story_box, 
 .feeds_recommend_box {
-    width:90%;
-    margin:0 auto;
+    width: 90%;
+    margin: 0 auto;
 }
 
 .feeds_box_txt{
     display: flex;
     justify-content: space-between;
-    margin-bottom:1rem;
-    font-size:0.8rem;
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
     color:#a7a7a7;
     font-weight: 600;
 }
@@ -317,7 +315,7 @@ article > .main_container{
 
 .story_users_info{
     display: flex;
-    margin:0.6rem 0;
+    margin: 0.6rem 0;
 }
 
 .story_users_info > img, .feeds_recommend_users > .recommend_users_info > img {
@@ -326,7 +324,7 @@ article > .main_container{
 }
 
 .story_users_info > .story_users_info_txt {
-    margin-left:1rem;
+    margin-left: 1rem;
     color:#9e9e9e;
 }
 
@@ -337,42 +335,42 @@ article > .main_container{
 }
 
 .story_users_info > .story_users_info_txt > p > span {
-    margin-top:0.2rem;
-    font-size:0.9rem;
+    margin-top: 0.2rem;
+    font-size: 0.9rem;
 }
 
 /* feeds_recommend_box */
 .recommend_users_info {
-    display:flex;
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    margin:1rem 0;
+    margin: 1rem 0;
 }
 
 .recommend_users_info_txt > .recommend_txt{
     width: 80%;
+    margin-top: 0.2rem;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    margin-top:0.2rem;
     font-size:0.9rem;
     color: #9e9e9e;
 }
 
 .recommend_users_info_txt {
-    margin-left: 0.5rem;
     width: 64%;
+    margin-left: 0.5rem;
 }
 
 .follow_link {
     color:#40a9f7;
     font-weight: bold;
-    font-size:0.8rem;
+    font-size: 0.8rem;
 }
 
 /* address */
 address{
-    margin-top:1rem;
+    margin-top: 1rem;
 }
 
 address > ul {
@@ -382,16 +380,16 @@ address > ul {
 }
 
 address > ul {
-    margin-bottom:1.5rem;
+    margin-bottom: 1.5rem;
 }
 
 address > ul > li > a,
 .company_info > p{
-    font-size:0.9rem;
+    font-size: 0.9rem;
     color:#c7c7c7;
 }
 
 address > ul > li:not(li:first-child) > a::before {
     content: '\00B7';
-    margin: 0 .25em 0 .25em;
+    margin: 0.25em;
 }
