@@ -16,10 +16,17 @@ main {
   justify-content: space-evenly;
 }
 
-/* .box {
+ul > li {
+  margin: 10px 0;
+}
+
+.box {
   background-color: white;
   border: 1px solid var(--color-boxborder);
-} */
+}
+.box-padding {
+  padding: 10px;
+}
 
 .text {
   font-size: 12px;
@@ -69,7 +76,7 @@ main {
 
 .user__img--brder-red {
   border: 1px solid red;
-  border-spacing: 2px;
+  border-spacing: 3px;
 }
 
 .user__img--small {
@@ -86,6 +93,15 @@ main {
 .user__id {
   font-size: 14px;
   font-weight: bolder;
+}
+
+.user-text2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  margin-top: 15px;
 }
 
 /*--------nav--------*/
@@ -226,6 +242,10 @@ main {
   padding: 5px 14px;
 }
 
+.feed__comment-list > li {
+  font-size: 13px;
+}
+
 /*-------------main-right------------*/
 /*-------------main-right------------*/
 /*-------------main-right------------*/
@@ -236,24 +256,22 @@ main {
   /* position: fixed; */
 }
 
-.main-right__box01 {
-  width: 100%;
-  background-color: white;
-  border: 1px solid var(--color-boxborder);
-}
-
 .main-right__header {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  border-bottom: 1px solid var(--color-boxborder);
+  margin-bottom: 15px;
 }
 
-.main-right__user {
-  margin-bottom: 20px;
-}
-
-.user-text2 {
+.user-and-botton {
+  width: 70%;
   display: flex;
-  flex-direction: column;
+}
+
+.nnn {
+  width: 30%;
+}
+
+.main-right__story > .box {
+  margin-top: 15px;
 }
