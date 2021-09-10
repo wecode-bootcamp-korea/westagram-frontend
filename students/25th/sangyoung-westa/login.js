@@ -9,10 +9,13 @@ inputArray.forEach(function(e) {
         // 아이디 입력창의 value 를 저장하는 변수
         if(idBar.length >=1 && pwBar.length >= 1){
         //각 입력창에 뭐라도 하나 이상 입력될시 아래 코드가 수행됨
+            document.getElementById("asd").disabled = false;
+            //버튼 활성화
             let title = document.getElementsByTagName('button')[0];
             // 기존 로그인창의 태그를 title 이라는 변수에 저장
             title.className = 'button-change';
             //미리 css 에 입력해둔 button-change 라는 class 명을 상단 태그에 지정해줌.
+            
          }
          return;
 
