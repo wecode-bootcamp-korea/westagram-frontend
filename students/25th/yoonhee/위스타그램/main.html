@@ -5,104 +5,101 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-    <title>Westagram</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <title>wecode</title>
 </head>
 <body>
-
-    <nav>
+    <nav class="nav">
         <div class="nav-left">
-            <i class="fas fa-camera fa-2x"></i>
-            <h2>Westagram</h2>
+            <div class="icon main-logo">
+                <i class="fas fa-camera-retro fa-lg"></i>
+            </div>
+            <div class="nav__border">
+            </div>
+            <div class="westagram">westagram</div>
         </div>
-        <input value="검색">
+        <div class="nav-center">
+            <input class="search-bar" value="검색"></input>
+        </div>
         <div class="nav-right">
-            <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png">
-            <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png">
-            <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png">
+            <div class="icon nav-icon">
+                <i class="far fa-compass fa-lg"></i>
+            </div>
+            <div class="icon heart-icon">
+                <i class="far fa-heart fa-lg"></i>
+            </div>
+            <div class="icon nav-icon">
+                <i class="fas fa-user fa-lg"></i>
+            </div>
         </div>
     </nav>
     <main>
         <div class="feeds">
-            <article>
-                <div class="ArticleContentBox">
-                    <div class="article_header">
-                        <div class="WriterInfo">
-                            <div class="Writer">
-                                <!--프로필이미지-->
-                                <img src="star.jpeg">
-                                <!--작성자닉네임-->
-                                <div class="Writernick">yooon0w0</div>
-                            </div>
-                            <div>
-                                <!--... 아이콘-->
-                                <i class="fas fa-ellipsis-h"></i>
-                            </div>
+            <article class="feed">
+                <div class="feed__head">
+                    <div class="user">
+                        <img class="user__img" src="picture/star.jpeg">
+                        <div class="user__id">yoooon0w0</div>
+                    </div>
+                    <div class="icon etc-icon">
+                        <i class="fas fa-ellipsis-h "></i>
+                    </div>
+                </div>
+                <img class="feed__img" src="picture/imgg.jpg">
+                <div class="feed__icons">
+                    <div class="feed__icons__left">
+                        <div class="icon heart-icon--red">
+                            <i class="far fa-heart fa-lg"></i>
+                        </div>
+                        <div class="icon talk-icon">
+                            <i class="far fa-comment fa-lg fa-flip-horizontal"></i>
+                        </div>
+                        <div class="icon load-icon">
+                            <i class="fas fa-download fa-lg"></i>
                         </div>
                     </div>
-                    <div class="article_container">
-                        <!--피드 사진-->
-                        <div class="article_viewer">
-                            <img src="chch.jpg">
-                        </div>
-                        <!--하트,코멘트,다운로드,북마크 아이콘-->
-                        <div class="ReplyBox">
-                            <div class="box_left">
-                                <i class="fas fa-heart fa-lg"></i>
-                                <i class="far fa-comment-alt fa-lg fa-flip-horizontal"></i>
-                                <i class="far fa-caret-square-down fa-lg"></i>
-                            </div>
-                            <div class="box_right">
-                                <i class="far fa-bookmark fa-lg"></i>
-                            </div>
-                        </div>
-                        <!--좋아요 누른사람정보-->
-                        <div class="comment_info">
-                                <!--좋아요 누른사람 이미지-->
-                                <img>
-                                <!--좋아요 ~님외 10명이 좋아합니다-->
-                                <div>wwwecdoe외 10명이 좋아합니다.</div>
-                        </div>
-                        <!--작성자정보&작성자가 쓴 본문글-->
-                        <div>wecode1 퓌워크에서 진행한 베이킹....</div>
-                        <!--최상위 댓글 노출-->
-                        <div>wecode ㄴㅇㄴㅇ~~!!</div>
-                        <!--댓글 몇분전 작성 정보-->
-                        <div>20분 전</div>
-                        <!--댓글입력창&댓글들 -->
-                        <div class="CommentBox">
-                            <!--댓글입력-->
-                            <div>
-                                <!--댓글입력창-->
-                                <input class="commentpush" type="text" placeholder="댓글달기...">
-                                <!--댓글 입력 버튼 '게시'-->
-                                <input class="commentbtn" type="button" value="게시">
-                            </div>
-                            <!--댓글들-->
-                            <div>
-                                <ul></ul>
-                            </div>
-                        </div>
+                    <div class="feed__icons__right">
+                        <i class="icon far fa-bookmark fa-lg"></i>
+                    </div>
+                </div>
+                <div class="feed__likes">
+                    <div class="user">
+                        <img class="user__img user__img--small" src="star.jpeg">
+                        <div class="user__id">yoon0w0</div>
+                    </div>
+                    <div class="text">님 외 <b>10명</b>이 좋아합니다</div>
+                </div>
+                <div class="feed__text">
+                    <span class="user__id">yooon0w0</span>
+                    <span class="text">한국어한국어한국어한국어한국어한국어한국어한국어한국어한국어한국어한국어한국어한국어한국어한국어한국어한국어한국어한국어한국어한국어한국어한국어한국어한국어한국어한국어한국어한국어한국어한국어한국어한국어한국어한국어한국어</span>
+                    <div class="text text--gray">5분 전</div>
+                </div>
+                    <div class="feed__comment-box">
+                        <input class="comment__input"  placeholder="댓글 달기...">
+                        <button class="btn btn--hover comment__btn">게시</button>
+                    </div>
+                <div class="feed__comment">
+                    <div class="feed__comment-list">
+                        <div class="text comment-text">한국어한국어한국어한국어한국어</div>
+                        <div class="text comment-text">한국어한국어한국어한국어한국어</div>
+                        <div class="text comment-text">한국어한국어한국어한국어한국어</div>
+                        <div class="text comment-text">한국어한국어한국어한국어한국어</div>
+                        <div class="text comment-text">한국어한국어한국어한국어한국어</div>
+
                     </div>
                 </div>
             </article>
         </div>
         <div class="main-right">
-            <div class="main-right__head">
-                <img class="main-right__head__img">
-                <div class="main-right__head--boldtext"></div>
-                <div class="main-right__head--text"></div>                
-            </div>
-            <div class="main-right__arms__top">
-
-            </div>
-            <div class="main-right__arms__bottom">
-                <div></div>
-                <div></div>
-            </div>
-            <div class="main-right__foot">
-                <div></div>
+            <div class="main-right__user">
+                <div class="right__user">
+                    <img class="user__img--big">
+                    <div class="user__id"></div>
+                    <div class="text--gray"></div>
+                </div>
+                
             </div>
         </div>
     </main>
