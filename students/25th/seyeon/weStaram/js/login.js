@@ -19,9 +19,27 @@ function keyupFuction () {
       thisIsButton.style.backgroundColor = "#c4e1fb";
     }
   }
-  
+
 thisIsId.addEventListener('keyup',keyupFuction)
 thisIsPw.addEventListener('keyup',keyupFuction)
+
+
+// function keyupFuction () {
+//     const inputId = thisIsId.value;
+//     const inputPw = thisIsPw.value;
+
+//     if (inputId.length > 0 && inputPw.length > 0) {
+//       thisIsButton.disabled = true;
+//       thisIsButton.style.backgroundColor = "#0000ff";
+//     }
+//     else {
+//       thisIsButton.disabled = false;
+//       thisIsButton.style.backgroundColor = "#c4e1fb";
+//     }
+//   }
+  
+// thisIsId.addEventListener('keyup',keyupFuction)
+// thisIsPw.addEventListener('keyup',keyupFuction)
 
 
 // thisIsPw.addEventListener('keyup', function() {

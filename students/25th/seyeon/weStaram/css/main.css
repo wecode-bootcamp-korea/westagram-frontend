@@ -165,6 +165,7 @@ main {
 
 /* 피드 댓글 추가 시간 */
 .moreComment, .commentTime {
+    padding-top: 4px;
     text-decoration: none;
     font-weight: normal;
     color: #a7a7a7;
@@ -177,11 +178,12 @@ main {
 .secondMessage {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 5px;
 }
 
 /* 댓글창 */
 .inputComment {
+    display: flex;
+    justify-content: space-evenly;
     border-top: 1px solid #ebebeb;
     border-bottom: 1px solid #ebebeb;
 }
@@ -194,17 +196,21 @@ main {
     background-color: #fafafa;
 }
 
-.uplodButton {
+.uploadButton {
     border: none;
     width: 50px;
     height: 40px;
-    text-align: right;
+    text-align: center;
     color: #d9ebfc;
     background-color: #fafafa;
 }
 
-.uplodButton:hover {
+.uploadButton:hover {
     color: #80bcf5;
+}
+
+.addedMessage p {
+    padding-bottom: 2px;
 }
 
 /* --사이드-- */
@@ -254,7 +260,7 @@ main {
 }
 
 .showAll {
-    font-weight: bold;
+    font-weight: bolder;
     color: black;
 }
 
@@ -295,6 +301,11 @@ main {
 
 .otherStory span {
     color: #a7a7a7;
+}
+
+#storyAll {
+    color: black;
+    font-weight: bold;
 }
 
 .sideprofileimge2 {
