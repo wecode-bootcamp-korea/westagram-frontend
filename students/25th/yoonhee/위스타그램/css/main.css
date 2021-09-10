@@ -13,8 +13,14 @@ body {
 
 main {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
+
+/* .box {
+  background-color: white;
+  border: 1px solid var(--color-boxborder);
+} */
+
 .text {
   font-size: 12px;
 }
@@ -50,14 +56,31 @@ main {
 .user {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .user__img {
   width: 30px;
   height: 30px;
+  margin-right: 7px;
   border-radius: 50%;
   border: 1px solid var(--color-textgray);
+}
+
+.user__img--brder-red {
+  border: 1px solid red;
+  border-spacing: 2px;
+}
+
+.user__img--small {
+  width: 20px;
+  height: 18px;
+  margin-right: 5px;
+}
+
+.user__img--big {
+  width: 40px;
+  height: 40px;
 }
 
 .user__id {
@@ -73,7 +96,8 @@ main {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 8vh;
+  padding: 20px 0;
+  /* margin-bottom: 5vh; */
   border-bottom: 1px solid var(--color-boxborder);
   background-color: white;
 }
@@ -158,12 +182,6 @@ main {
   width: 18%;
 }
 
-.user__img--small {
-  width: 20px;
-  height: 18px;
-  margin-right: 5px;
-}
-
 .feed__likes {
   display: flex;
   align-items: center;
@@ -206,4 +224,36 @@ main {
   width: 95%;
   margin: 10px 0;
   padding: 5px 14px;
+}
+
+/*-------------main-right------------*/
+/*-------------main-right------------*/
+/*-------------main-right------------*/
+
+.main-right {
+  width: 25%;
+  margin-top: 65px;
+  /* position: fixed; */
+}
+
+.main-right__box01 {
+  width: 100%;
+  background-color: white;
+  border: 1px solid var(--color-boxborder);
+}
+
+.main-right__header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--color-boxborder);
+}
+
+.main-right__user {
+  margin-bottom: 20px;
+}
+
+.user-text2 {
+  display: flex;
+  flex-direction: column;
 }
