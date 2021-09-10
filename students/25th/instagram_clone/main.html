@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/CSS/reset.css">
+    <link rel="stylesheet" href="/CSS/common.css">
+    <link rel="stylesheet" href="/CSS/main/nav.css">
+    <link rel="stylesheet" href="/CSS/main/feed.css">
+    <link rel="stylesheet" href="/CSS/main/aside.css">
+    <title>Acidgram</title>
+    <script src="https://kit.fontawesome.com/b034e99c54.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+        <div class="subNav">
+            <a href="" class="navLogo">Westagram</a>
+            <div>
+                <input type="text" class="search" placeholder="Search" onkeyup="updateList(); searchListToggle()">
+                <ul class='searchList visNone'>
+                    <!-- create new li from searching engine -->
+                </ul>
+            </div>
+            <div class="navBtns"> 
+                <a href=""><i class="fas fa-home"></i></a>
+                <a href=""><i class="far fa-paper-plane"></i></a>
+                <a href=""><i class="far fa-compass"></i></a>
+                <a href=""><i class="far fa-heart"></i></a>
+                <img src="https://ca.slack-edge.com/TH0U6FBTN-U02808S0GCF-31acdd48834c-512" class="profileBtn" onclick="profileMenuToggle()">
+                <ul class="profileMenu visNone">
+                    <li><i class="far fa-user-circle"></i><span>프로필</span></li>
+                    <li><i class="far fa-bookmark"></i><span>저장됨</span></li>
+                    <li><i class="fas fa-user-cog"></i><span>설정</span></li>
+                    <li><span>로그아웃</span></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="feed">
+        <!-- First Article -->
+        <article>
+            <section class="writerArea">
+                <div class="account">
+                    <img src="https://ca.slack-edge.com/TH0U6FBTN-U02808S0GCF-31acdd48834c-512">
+                    <div class="name">Acidity</div>
+                    <div class="address"></div>
+                </div>
+                <i class="fas fa-ellipsis-h"></i>
+            </section>
+
+            <img alt="moon_pic" src="/img/moon.jpg" class="mainPhoto">
+
+            <section class= "feedBtns">
+                <div class="btnLeft">
+                    <i class="far fa-heart"></i>
+                    <i class="far fa-comment"></i>
+                    <i class="far fa-paper-plane"></i>
+                </div>
+                <i class="far fa-bookmark"></i>
+            </section>
+
+            <span class="likeCount">좋아요 12개</span>
+
+            <div class="postArea">
+                <a href="" class="name">Acidity</a>
+                <span class="content">Moon in the cloud 🌕</span>
+                <button class="moreSee">More See</button>
+            </div>
+            <div class="commentList">
+                <!-- for addComment -->
+            </div>
+
+            <span class="time">1 hours</span>
+
+            <div class="commentArea">
+                <input id="commentText" placeholder="댓글 달기..." onkeydown="commentEnter(event)" ></input>
+                <button id="commentBtn" onclick="addComment()">게시</button>
+            </div>
+        </article>
+    </main>
+
+    <aside>
+        <section class="account">
+            <img src="https://ca.slack-edge.com/TH0U6FBTN-U02808S0GCF-31acdd48834c-512">
+            <div class="textLine">
+                <div class="name">Acidity</div>
+                <div class="explain">Hello, I'm Acid</div>
+            </div>
+        </section>
+
+        <section class="asideBox">
+            <div class = 'storyHeader'>
+                <h3>Story</h3>
+                <span class="seeAll">See All</span>
+            </div>
+            <div class="storyList">
+                <div class="account">
+                    <img src="https://ca.slack-edge.com/TH0U6FBTN-U0288815M5L-83cffa237ed7-512">
+                    <div class="textLine">
+                        <div class="name">fairy_yoon</div>
+                        <div class="time">16분 전</div>
+                    </div>
+                </div>
+                <div class="account">
+                    <img src="https://ca.slack-edge.com/TH0U6FBTN-U028F6M33TM-0b35e2ac4357-512">
+                    <div class="textLine">
+                        <div class="name">mj_bro</div>
+                        <div class="time">40분 전</div>
+                    </div>
+                </div>
+                <div class="account">
+                    <img src="https://ca.slack-edge.com/TH0U6FBTN-U028TKWDUGZ-127382dc96e8-512" >
+                    <div class="textLine">
+                        <div class="name">before_sun</div>
+                        <div class="time">1시간 전</div>
+                    </div>
+                </div>
+                <div class="account">
+                    <img src="https://ca.slack-edge.com/TH0U6FBTN-U028F6LHV2P-2b70ab7b7419-512" >
+                    <div class="textLine">
+                        <div class="name">zzoozzoo_boy</div>
+                        <div class="time">2시간 전</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="asideBox">
+            <div class = 'followHeader'>
+                <h3>Suggested for You</h3>
+                <span class="seeAll">See All</span>
+            </div>
+            <div class="followList">
+                <div class="account">
+                    <div class="accountLeft">
+                        <img src="https://ca.slack-edge.com/TH0U6FBTN-U028F0LER42-390940eb15a3-512">
+                        <div class="textLine">
+                            <div class="name">sergeant_yang</div>
+                            <div class="root">zzoozzoo_boy님 외 2명이 팔로우 하고 있습니다.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="isFollow">Follow</div>
+            </div>
+        </section>
+    </aside>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>

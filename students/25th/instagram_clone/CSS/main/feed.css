@@ -1,0 +1,142 @@
+/* main.feed */
+
+main {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    margin-top: 80px;
+    gap: 30px;
+}
+
+/* article */
+
+article {
+    width: 600px;
+    background-color: white;
+    border: 1px solid rgb(219, 219, 219);
+    border-radius: 4px;
+}
+
+.writerArea {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+
+/* main img */
+
+.mainPhoto {
+    width: 100%;
+    max-height: 750px;
+    object-fit: cover;
+}
+
+/* User interface : buttons, comment, etc... */
+
+.feedBtns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 16px;
+    font-size: x-large;
+}
+
+.btnLeft i {
+    padding: 0px 2px;
+}
+
+.likeCount {
+    display: block;
+    margin: 0 0 8px;
+    padding: 8px 16px;
+    color: black;
+    font-weight: bold;
+    font-size: small;
+}
+
+/* post */
+
+.postArea {
+    display: flex;
+    justify-content: center;
+}
+
+.content {
+    margin-left: 6px;
+}
+
+/* for addComment */
+
+.postArea, .commentList {
+    display: flex;       
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 16px;
+    font-size: small;
+}
+
+.commentList {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 8px;
+}
+
+.comment {
+    display: flex;
+    justify-content: space-between;
+    align-content: center; 
+    width: 100%;
+}
+
+button.moreSee {        
+    color: gray;
+}
+
+span.time {
+    display: inline-block;
+    padding: 8px 16px;
+    padding-bottom: 12px;
+    font-size: x-small;
+    color: rgb(194, 194, 194);
+}
+
+.commentArea {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    margin: 13px 0;
+    padding: 0 16px;  
+}
+
+#commentText {
+    width: 90%;
+    resize: none;
+    border: 0;
+    outline: none;
+}
+
+#commentBtn {
+    border: 0;
+    background-color: transparent;
+    color: skyblue;
+}
+
+.fa-trash-alt, .likeBtn {
+    font-size: 20px;
+    color: rgb(66, 66, 66);
+    margin-left: 3px;
+}
+
+.fa-trash-alt:hover, .likeBtn:hover {
+    color: gray;
+}
+
+/* like toggle */
+
+.onLike {
+    color: rgb(129, 0, 0);
+    transition: 1s;
+}

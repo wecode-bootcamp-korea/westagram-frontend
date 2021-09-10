@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login_practice 🔐</title>
+    <link rel="stylesheet" href="/CSS/login.css">
+    <link rel="stylesheet" href="/CSS/reset.css">
+    <script src="https://kit.fontawesome.com/b034e99c54.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <img class="instaIcon" src="img\iphone.jpg" alt="iphone">
+    <div class="main">
+        <h1 class="logo">Acidgram</h1>
+        <div class="container">
+            <input type="text" placeholder="ID" id="id" class="account" onkeyup="isFull(); loginByEnter(event)" />
+            <input type="password" placeholder="Password" id="password" class="account" onkeyup="isFull(); loginByEnter(event)" />
+            <button id="login" class="account" disabled = 'disabled' onclick="isRight()">Log In</button>
+            <div id = 'separate'>
+                <span class="line"> </span>
+                <span class="or">또는</span>
+                <span class="line"> </span>
+            </div>
+            <div class="fbLogin">
+                <i class="fab fa-facebook-square"></i>
+                <a href="">Log In with Facebook</a>
+            </div>
+            <a href="" class="isForgot">Forgot password?</a>
+        </div>
+    </div>   
+    <script src="./js/login.js"></script>
+</body>
+</html>

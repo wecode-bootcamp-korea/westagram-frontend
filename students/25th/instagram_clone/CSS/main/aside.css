@@ -1,0 +1,95 @@
+/* aside */
+
+aside {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 367px;
+    margin-top: 70px;
+}
+
+/* aside : account */
+
+.account, .searchList li {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    height: 56px;
+}
+
+
+
+.textLine {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    font-weight: bolder;
+    font-size: 12px;
+}
+
+
+/* aside : story */
+
+.asideBox {
+    height: 250px;
+    padding: 0 20px;
+    background-color: white;
+    border: 1px solid rgb(219, 219, 219);
+    overflow: hidden;
+}
+
+.storyHeader, .followHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0px;
+}
+
+h3 {
+    color: gray;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.seeAll {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.time, .root, .explain {
+    width: 200px;
+    color: gray;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* aside : follow */
+
+.accountLeft {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+
+.followList {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.isFollow {
+    color: rgb(0, 149, 246);
+    font-weight: bold;
+}
+
+
+/* 반응형 */
+
+@media screen and (max-width : 1000px) {
+    aside {
+        display: none;
+    }
+}

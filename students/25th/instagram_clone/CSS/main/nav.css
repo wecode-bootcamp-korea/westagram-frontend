@@ -1,0 +1,111 @@
+/* body */
+
+body {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    height: 1500px;
+    background-color: rgb(245, 245, 245);
+}
+
+/* nav */
+
+nav {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0px;
+    width: 100%;
+    padding: 10px;
+    background-color: white;
+    border-bottom: 1px solid lightgray;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.subNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 997px;
+}
+
+/* nav search */
+
+nav .search {
+    width: 200px;
+    padding: 5px;
+    background-color: rgb(236, 236, 236);
+    border: 1px solid lightgray;
+    border-radius: 4px;
+}
+
+nav .search::-webkit-input-placeholder {
+    text-align: center;
+    color: rgb(194, 194, 194);
+}
+
+/* nav Btns */
+
+nav .navBtns{
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+}
+
+nav .navBtns i {
+    color: black;
+}
+
+nav img { 
+    width: 28px;
+    height: 28px;           
+}
+
+/* for auto-complete */
+
+.searchList {
+    position: absolute;
+    top: 45px;
+    width: 210px;
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    
+}
+
+.searchList li {
+    border: 1px solid lightgray;
+    padding: 6px 12px;
+    display: flex;
+    align-items: center;
+}
+
+/* for profile menu : toggle */
+
+.profileMenu {
+    position: absolute;
+    top: 45px;
+    background-color: white;
+    border: 1px solid lightgray;
+    width: 200px;
+    border-radius: 3px;
+}
+
+.profileMenu i {
+    width: 30px
+}
+
+.profileMenu li {
+    display: flex;
+    justify-content: flex-start;
+    width: 160px;
+    font-size: 14px;
+    padding: 13px 20px;
+}
+
+.profileMenu li:nth-child(4) {
+    border-top: 1px solid lightgray;
+    margin-top: 5px;
+}
