@@ -6,11 +6,12 @@
     <title>westagram</title>
     <link href="main.css" rel="stylesheet" type="text/css" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
-
     </head>
+
     <body>
         <section>
         <div class = "nav-bar">
+        <!--네비게이션 바 용 div-->
             <span class ="nav-left">
                 <img class = "westa-logo" alt ="westagram logo" src = "westa4.png" height="150" width="100" />
             </span>
@@ -25,100 +26,118 @@
         </div>
 
         <div class ="main">
+        <!--페이지 content 전체를 감싸는 main div-->
             <div class="feeds"> 
+            <!--피드가 위치하는 feeds div-->
                 <table>
                     <tr>
                         <td><img class ="round-pics" alt ="profile pic" src = "lettucedog.jpg" height =60px /></td> 
-                        <td class ="bold-text">lettuce_the_dog</td>
+                        <td><strong>lettuce_the_dog</strong></td>
                         <td><i class="fas fa-ellipsis-h"></i></td>
                     </tr>
                 </table>
 
                 <div class="article">
+                <!--article 중 메인 이미지가 들어가는 div, descendant of main div-->
                     <img class ="my-baby" alt ="picture of sangchu" src = "scbaby1.jpg" />
                 </div>
 
                 <div class ="feed-bottom">
+                 <!--메인 이미지 아래 아이콘 및 텍스트 및 댓글창이 들어가는 div, descendant of main div -->   
                         <i class="fas fa-heart"></i>
                         <i class="far fa-comment"></i>
                         <i class="fas fa-upload"></i>
                         <i class="far fa-bookmark"></i>
 
                     <div class ="display-section">
-                        <p><strong>듣보잡</strong> 외 <strong>10명</strong>이 좋아합니다.</p>
-                        <p class ="eventhandle">어쩌구 저쩌구~~~~~~~~~~~~~~~~~~~~~~</p>
-                        <p class ="gray-text">42분전</p>
-                    </div>
+                    <!--텍스트 정보와 입력된 댓글이 들어갈 display-section div, descendant of feed-bottom div-->   
+                        <table>
+                            <tr>
+                                <td><img class ="small-round-pics" alt = "small profile pic" src ="bestdog.jpg"/></td>
+                                <td>&nbsp;<strong>best_doggo</strong> 외 <strong>10명</strong>이 좋아합니다.</td>
+                            </tr>
+                        </table>
+                        <p><strong>sangchu_daddy</strong>&nbsp; Go fetch me a stick bro</p>
+                        <p class ="gray-text" style ="padding-bottom:10px">42분전</p>
 
+                        <div id ="comment-insert">
+                        <!--input 창 입력된 댓글 들어갈 슬롯-->
+                        </div>
+                    </div>
+                   
                     <div class ="comment-bar">
-                        <input class ="comment-input" type="text" placeholder="댓글달기.... ">
-                         <button class ="display-button">게시</button>
+                    <!--댓글 인풋 바를 감싸주는 comment-bar div, descendant of feed-bottom div -->
+                        <input id ="event-handler" class ="comment-input" type="text" placeholder="댓글달기.... " />
+                         <button id ="button-id" class ="display-button">게시</button>
                     </div>
                 </div>
 
             </div>
             
             <div class="main-right">
+            <!--우측에 위치한 사이드바 전채를 감싸는 main-right div, descendant of main div-->
                 <div class ="right-top">
+                <!--3가지 섹션으로 나뉘어져 있는 우측 사이드바중 제일 윗부분, descendant of main-right div-->
                     <table>
                         <tr>
                             <td><img class ="round-pics" alt ="profile pic" src = "lettucedog.jpg" height =60px /></td> 
-                            <td class ="bold-text">lettuce_the_dog</td>
+                            <td><strong>lettuce_the_dog</strong></td>
                         </tr>
                     </table>
                 </div>
                 <div class = "right-middle">
+                <!--3가지 섹션으로 나뉘어져 있는 우측 사이드바중 가운데 부분, descendant of main-right div-->    
                     <table>
                         <tr>
                             <td class ="gray-text">스토리</td>
                             <td>&emsp;&emsp;&emsp;</td>
                             <td>&emsp;&emsp;&emsp;</td>
                             <td>&emsp;&emsp;&emsp;&emsp;</td>
-                            <td class ="bold-text">모두보기</td>
+                            <td><strong>모두보기</strong></td>
                         </tr>
                         <tr>
                             <td><img class ="round-pics" alt = "dog profile1" src ="dogprof1.jpg" /></td>
-                            <td class ="id-text bold-text">big_sh!t<br><span class ="gray-text">16분전</span></td>
+                            <td><strong>big_sh!t</strong><br><span class ="gray-text">16분전</span></td>
                         </tr>
                         <tr>
                             <td><img class ="round-pics" alt = "dog profile2" src ="dogprof2.jpg" /></td>
-                            <td class ="id-text bold-text">husky_dusky<br><span class ="gray-text">2시간전</span></td>
+                            <td><strong>husky_dusky</strong><br><span class ="gray-text">2시간전</span></td>
                         </tr>
                         <tr>
                             <td><img class ="round-pics" alt = "dog profile2" src ="dogprof3.jpg" /></td>
-                            <td class ="id-text bold-text">little_sh!t<br><span class ="gray-text">6시간전</span></td>
+                            <td><strong>little_sh!t</strong><br><span class ="gray-text">6시간전</span></td>
                         </tr>
                     </table>        
                 </div>
                 <div class ="right-bottom">
+                <!--3가지 섹션으로 나뉘어져 있는 우측 사이드바중 하단 부분, descendant of main-right div-->         
                     <table>
                         <tr>
                             <td class ="gray-text">회원님을 위한 추천</td>
                             <td>&emsp;&emsp;&emsp;</td>
                             <td>&emsp;&emsp;&emsp;</td>
                             <td>&emsp;&emsp;&emsp;</td>
-                            <td class ="bold-text">모두보기</td>
+                            <td><strong>모두보기</strong></td>
                         </tr>
                     </table>
                     <table>
                         <tr>
                             <td><img class ="round-pics" alt = "dog profile4" src ="dogprof4.jpg" /></td>
-                            <td class ="id-text bold-text">green_doggo<br><span class ="gray-text">husky_dusky님 외 1명이..</span><span class ="blue-text">팔로우</span></td>
+                            <td><strong>green_doggo</strong><br><span class ="gray-text">husky_dusky님 외 1명이..</span><span class ="blue-text">팔로우</span></td>
                         </tr>
                         <tr>
                             <td><img class ="round-pics" alt = "dog profile5" src ="dogprof5.jpg" /></td>
-                            <td class ="id-text bold-text">bigger_doggo<br><span class ="gray-text">little_sh!t님 외 2명이..</span><span class ="blue-text">팔로우</span></td>
+                            <td><strong>bigger_doggo</strong><br><span class ="gray-text">little_sh!t님 외 2명이..</span><span class ="blue-text">팔로우</span></td>
                         </tr>
                         <tr>
                             <td><img class ="round-pics" alt = "dog profile6" src ="dogprof6.jpg" /></td>
-                            <td class ="id-text bold-text">husky_blacky<br><span class ="gray-text">big_dog님 외 4명이..</span><span class ="blue-text">팔로우</span></td>
+                            <td><strong>husky_blacky</strong><br><span class ="gray-text">big_dog님 외 4명이..</span><span class ="blue-text">팔로우</span></td>
                         </tr>
                     </table>  
                 </div>
                 <div class ="right-text gray-text">
-                    Instagram 정보•지원•홍보 센터•API•
-                    채용정보•개인정보처리방침•약관•
-                    디렉터리•프로필•해시태그•언어<br>
+                <!--우측 사이드바 하단의 텍스트 정보를 위한 div -->     
+                    Instagram 정보•지원•홍보 센터•API•채용정보•개인정보처리방침•약관•디렉터리•프로필•해시태그•언어<br>
                     © 2019 INSTAGRAM
                 </div>
             </div>

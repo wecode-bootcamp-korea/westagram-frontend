@@ -9,22 +9,28 @@
   </head>
   <body>
     <div class = "big-box">
+    <!--로그인 창의 해당 content 전체를 감싸는 big-box div-->
         <section>
         <div class ="westa">
+        <!--로고가 들어갈 westa div, descendant of big-box div-->
             <img alt ="westagram logo" src="westa1.png" />
         </div>
 
         <div class ="login-bar">
+        <!--로그인 을 위한 두개의 인풋바를 login-bar div, descendant of big-box div-->
             <div class="input-wrap">
+            <!--전화번호, 사용자 이름 또는 이메일이 입력될 인풋바 하나를 감싸는 wrapper div, descendant of login-bar-->
                 <input type="text" placeholder="전화번호, 사용자 이름 또는 이메일"/>
             </div>
 
             <div class="input-wrap">
+            <!--비밀번호가 입력될 인풋바 하나를 감싸는 wrapper div, descendant of login-bar-->
                 <input type = "password" placeholder ="비밀번호"/>
             </div>
         </div>
 
         <div class="button-div">
+        <!--로그인 버튼바가 들어갈 div, descendant of big-box div-->
             <button>로그인 </button>
             </div>
             <p><a>비밀번호를 잊어버리셨나요?</a></p>
