@@ -134,15 +134,16 @@ const user_list = [
   },
 ];
 
-searchbox.addEventListener("keyup", () => {
-  let result = user_list.filter((user) => user.id.includes(searchbox.value));
-
-  while (search_list.hasChildNodes()) {
-    search_list.removeChild(search_list.firstChild);
+// ul이 그 전의 결과값이 담긴 childNode를 가지고 있으면 삭제하는 함수
+const deletePreviousResult = (listBox) => {
+  while (listBox.hasChildNodes()) {
+    listBox.removeChild(listBox.firstChild);
   }
+};
 
-  // filter된 data 넣어서 element 생성
-  result.forEach((element) => {
+// filter된 data로 새로운 list element 생성하는 함수
+const createFilteredElement = (filteredArray, listBox) => {
+  filteredArray.forEach((element) => {
     let newLi = document.createElement("li");
     let newProfile = document.createElement("img");
     let newRow = document.createElement("div");
@@ -159,13 +160,24 @@ searchbox.addEventListener("keyup", () => {
     newRow.appendChild(newDes);
     newLi.appendChild(newProfile);
     newLi.appendChild(newRow);
-    search_list.appendChild(newLi);
+    listBox.appendChild(newLi);
   });
+};
 
-  // 아이디 검색시 x버튼 생성
-  searchbox.value
+// searchBox에 값이 있을 때, refreshBtn을 보여주는 함수
+const showRefreshBtn = (inputElement) => {
+  inputElement.value
     ? ((btn_init.style.display = "block"),
       (search_result_box.style.display = "block"))
     : ((btn_init.style.display = "none"),
       (search_result_box.style.display = "none"));
+};
+
+// searchBox에 내용을 입력했을 때 실행
+searchbox.addEventListener("keyup", () => {
+  const result = user_list.filter((user) => user.id.includes(searchbox.value));
+
+  deletePreviousResult(search_list);
+  createFilteredElement(result, search_list);
+  showRefreshBtn(searchbox);
 });
