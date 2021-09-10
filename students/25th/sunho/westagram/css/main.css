@@ -1,116 +1,117 @@
 header {
-    width: 100%; height: 54px;
-    background: #fff;
-    border-bottom: 1px solid #c7c7c7;
+    width: 100%; 
+    height: 54px;
     position: fixed;
     z-index: 10;
+    background: #fff;
+    border-bottom: 1px solid #c7c7c7;
 }
+
 .wrap {
+    display: flex;
     width: 90%; 
     height: 100%;
     max-width: 1000px;
     margin: auto;
-    display: flex;
 }
+
 .wrap div {
-    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* border: 1px solid black; */
+    width: 100%;
 }
-.wrap .logo {  
+
+.logo {  
     flex-grow: 2;  
     justify-content: flex-start;
 }
-.wrap .logo a {  font-size: 24px;  }
-.wrap .search { 
+.logo a {  font-size: 24px;  }
+
+.search { 
     flex-grow: 1;
     width: 500px; 
 }
-.wrap .search input {
-    width: 100%; height: 30px;
+
+.search input {
+    position: relative;
+    width: 100%; 
+    height: 30px;
     padding: 7px;
-    border-radius: 3px;
-    border: 1px solid #c7c7c7;
-    cursor: text;
     font-size: 14px;
     font-weight: 300;
-    position: relative;
+    cursor: text;
+    border: 1px solid #c7c7c7;
+    border-radius: 3px;
     background: #fafafa;
 }
+
 .search span {
     position: absolute;
     color: #c7c7c7;
 }
-.wrap .user {  
+
+.user {  
     flex-grow: 2;  
     display: flex;
     justify-content: flex-end;
 }
-.wrap .user a {
+
+.user a {
     margin-left: 10px;
     text-align: center;
 }
-.wrap .user a img {  width: 50%;  }
 
-
-
-
+.user a img {  width: 50%;  }
 
 main {
-    width: 100vw; height: 100vh;
+    width: 100vw;
+    height: 100vh;
     background: #fafafa;
 }
+
 section {
-    width: 90%; 
-    /* height: 100vh; */
-    max-width: 1000px;
-    margin: auto;
     display: flex;
+    justify-content: space-between; 
+    width: 90%; 
+    max-width: 1000px;
+    margin: 40px auto;
+    position: relative;
+    top: 54px; left: 0;
 }
 
 .contents {
-    width: 100%; 
-    /* height: 80%; */
-    position: relative;
-    
-    top: 54px; left: 0;
-    margin-top: 40px;
-    
-    background: #fafafa;
     display: flex;
     justify-content: space-between;
+    height: 750px;
+    background: #fafafa;
 }
+
 .card{
     width: 600px; 
-    /* height: 100%; */
     background: #fff;
     border: 1px solid #c7c7c7;
 }
 
-.card .profile {
+.profile {
     width: 100%;
-    /* height: 80px; */
     display: flex;
 }
-    .card .profile div {
-        width: 60px;
-        margin: 10px;
-        cursor: pointer;
-    } 
-    .card .profile div:first-child{  margin-left: 20px;  }
-    .profile-img {   
-        border-radius: 50%;
-        overflow: hidden;
-    }
-    .name { 
-        /* margin-left: 20px; */
-        font-weight: bold; 
-        line-height: 50px;
-        text-align: center;  
-        border: 1px solid black;
-    }
+
+.profile div:first-child{  margin-left: 20px;  }
+
+.profile-img {   
+    width: 60px;    
+    margin: 10px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.name { 
+    font-weight: bold; 
+    line-height: 80px;
+    text-align: center;
+}
 
 .card .card-img {
     width: 100%;
@@ -119,121 +120,158 @@ section {
 }
     
 .click-line {
-    width: 100%;
     display: flex;
     position: relative;
+    width: 100%;
 }
+
 .click-inner {
     width:50%;
     display: flex;
     
 }
-    .click-inner div {
-        width: 9%;
-        margin: 10px;
-        cursor: pointer;
-    }
-    /* .click-inner div img {  width: 100%;  } */
-    /* .click-inner div:nth-child(1) {  margin-left: 20px;  } */
-    .click-inner div:nth-child(2) {  width: 8%; margin-left: 15px;  }
-    /* .click-inner div:nth-child(3) {  margin-left: 11px;  } */
-
-.click-line .save { width:50%; }
-.click-line .save img{
-    width: 5%;
-    position: absolute;
-    top: 0; right: 0;
-    margin: 10px 20px;
+.click-inner div {
+    width: 9%;
+    margin: 10px;
     cursor: pointer;
 }
 
-.comment-view {
-    width: 100%; 
-    /* padding: 10px; */
+.click-inner div:nth-child(2) {  width: 8%; margin-left: 15px;  }
+
+.click-line .save { width:50%; }
+
+.click-line .save img{
+    position: absolute;
+    top: 0; 
+    right: 0;
+    margin: 10px 20px;
+    width: 5%;
+    cursor: pointer;
 }
-    .comment-view p{
-        width: 100%;
-        padding: 10px;
-        font-weight: bold;
-        cursor: pointer;
-    }
-    .comment-view span {
-        padding: 10px;
-        font-size: 14px;
-        color: #8e8e8e;;
-    }
+
+.comment-view {  width: 100%;  }
+
+.comment-view p {
+    width: 100%;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.comment-view span {
+    padding: 10px;
+    font-size: 14px;
+    color: #8e8e8e;;
+}
+
 .comment {
     width: 100%;
     padding-top: 10px ;
 }
-    .comment input {
-        width: 100%;
-        height: 56px;
-        padding-left: 10px;
-        font-size: 16px;
-        text-overflow: ellipsis;
-        border: 1px solid #8e8e8e;
-    }
-
-
-
-
-
-
-
-
-
-/* ---------------------------- */
-.contents aside {
-    width: 350px;
-    height: 100%;
-    /* background: #fff;    */
+.comment input {
+    width: 100%;
+    height: 56px;
+    padding-left: 10px;
+    font-size: 16px;
+    text-overflow: ellipsis;
+    border: 1px solid #8e8e8e;
 }
+
 /* ---------------------------- */
-
-
-
 
 aside {
-    border: 1px solid #c7c7c7;
+    width: 350px;
+    height: 100%;
 }
 
-aside .toMyPage {
-    width: 100%;
-    border: 1px solid black;
-}
+.toMyPage {  width: 100%;}
 
-.toMyPage .profile {
+.my-home {
     width: 100%;
+    height: 100px;
     display: flex;
 }
-    .toMyPage .profile div {
-        width: 60px;
-        cursor: pointer;
-    } 
-    .toMyPage .profile div:first-child{  margin-left: 20px;  }
-    .profile-img {  
-        height: 100%;
-        border-radius: 50%;
-        margin: 10px;
-        overflow: hidden;
-    }
+
+.myhome-img {
+    width: 80px; height: 80px;
+    border-radius: 50%;
+    margin: 10px;
+    overflow: hidden;
+}
+
+.story {
+    width: 100%;
+    height: 300px;
+    background: #fff;
+    border: 1px solid #c7c7c7;
+    overflow: hidden;
+}
+.story-txt {
+    width: 100%; 
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+.story-txt p {  padding: 15px;  }
+
+.story-txt:first-child {  color: #c5c5c5;  }
+
+.people {
+    display: flex;
+    width: 100%;
+    padding-left: 10px;
+}
+
+.people-img {
+    width: 60px; 
+    height: 60px;
+    border-radius: 50%;
+    margin: 8px;
+    overflow: hidden;
+}
+
+.people-name {
+    width: 20%;
+    text-align: left;
+}
+
+.people-name p {
+    padding: 2px;
+}
+.people-name p:first-child{
+    margin-top: 20px;
+}
+
+.recommend {
+    width: 100%; 
+    height: 300px;
+    border: 1px solid #c5c5c5;
+    overflow: hidden;
+    margin-top: 20px;
+    background: #fff;
+}
+.recommend-txt {
+    width: 100%; 
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.recommend-txt p {  padding: 15px;  }
+
+.recommend-txt :first-child {  color: #c5c5c5;  }
 
 
+blockquote {
+    margin-top: 20px;
+    color: #c5c5c5;
+}
 
 
-
-
-
-
-
-
-
-
-@media screen and (max-width: 1000px){
-
+@media screen and (max-width: 700px){   
     .wrap .search {   display: none;  }
-    .contents .card{  width: 700px; margin: auto; }
-    .contents aside {  display: none;  }
-
+}
+@media screen and (max-width: 1040px){   
+    .card{  width: 70%; margin: auto; min-width: 700px; }
+    aside {  display: none;  }
 }

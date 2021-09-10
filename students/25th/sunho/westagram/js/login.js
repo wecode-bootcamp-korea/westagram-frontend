@@ -1,19 +1,11 @@
+const id = document.getElementById("userId");
+const pw = document.getElementById("password")
+const btn = document.getElementsByTagName("button")[0];
+const inputTag = document.getElementsByTagName("input")[0];
 
-const id = document.getElementById('userId');
-const pw = document.getElementById('password');
-const btn = document.getElementById('btn');
+id.addEventListener('keyup',checkPassword);
+password.addEventListener('keyup',checkPassword);
 
-const btnColor = btn.querySelector('button').children;
-console.log(btn)
-
-document.addEventListener('click', function(){
-    if( (id.value !== '') && (pw.value !== '') ) {
-
-        btnColor.style.backgroundColor = '#0094f6';
-    } else {
-        btnColor.style.backgroundColor = '#0094f656';
-    }
-})
-
-
-
+function checkPassword() {
+    id.value.indexOf('@') >= 0 && password.value.length >= 5 ? btn.disabled= false : btn.disabled=true;
+}
