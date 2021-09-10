@@ -1,45 +1,138 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WEstagram</title>
-  <link rel="stylesheet" href="style/common.css">
-  <link rel="stylesheet" href="style/main.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/6584921572.js" crossorigin="anonymous"></script>
-</head>
-<body>
-  <!-- nav field, flex 이용하여 배치, 가운데 배치하면 될 것 같고, fixed 속성 적용.-->
-  <div class="headerContainer">
-    <div class="navContainer">
-
-      <div class="header1">
-        <i class="fab fa-instagram"></i>
-        <span class="instagram_logo">WEstargram</span>
-      </div>
-
-      <div class="header2">
-        <input type="text" placeholder = "검색" class="searchField">
-        <i class="fas fa-search"></i>
-      </div>
-
-      <div class="header3">
-        <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png" class="headerIcon">
-        <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" class="headerIcon">
-        <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png" class="headerIcon">
-      </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WEstagram</title>
+    <link rel="stylesheet" href="style/common.css" />
+    <link rel="stylesheet" href="style/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/6584921572.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="headerContainer">
+      <nav class="navContainer">
+        <div class="header1">
+          <i class="fab fa-instagram"></i>
+          <span class="instagram_logo">WEstargram</span>
+        </div>
+        <div class="header2">
+          <input type="text" class="searchField" placeholder="검색" />
+          <i class="fas fa-search"></i>
+        </div>
+        <div class="header3">
+          <img alt="explore img" class="headerIcon" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png" />
+          <img alt="heart img" class="headerIcon" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" />
+          <img alt="profile img" class="headerIcon" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png" />
+        </div>
+      </nav>
     </div>
-  </div>
+    <div class="bodyContainer">
+      <article class="article">
+        <div class="articleBox">
+          <div class="articleHeaderBox">
+            <img alt ="personalPictureInFeed" src="imgs/IMG_1113.JPG">
+            <div class="articleHeaderInside">
+              <div class="accountName">seungkyun_y</div>
+              <i class="fas fa-ellipsis-h"></i>
+            </div>
+          </div>
+          <img alt="Main Images" class="articleImage" src="imgs/IMG_2304.PNG" />
+          <div class="iconsContainer">
+            <div class="iconsLeft">
+              <button><i class="far fa-heart"></i></button>
+              <button><i class="far fa-comment"></i></button>
+              <button><i class="far fa-paper-plane"></i></button>
+            </div>
+            <div class="iconsRight">
+              <button><i class="far fa-bookmark"></i></button>
+            </div>
+          </div>
+          <section class="likePersonContainer">
+            <div class="likeBySomeone">
+              <img alt="someone's personal Image" class="likePersonPic" src="imgs/IMG_1113.JPG" />
+              <div class="likePersonText"><a src="##">사람이름</a>님&nbsp;<a>외 <span>00명</span></a>이 좋아합니다</div>
+            </div>
+          </section>
+
+          <div class="commentContainer">
+            <div class="picText">
+              <div><a>seungkyun_y</a><span>본문 내용 가나다라마f차카타파하asdfsadssdfdfdfssdfdafsdadfsdfsdfadsfasdfasdf </span></div>
+              <div class="commentLines">
+                <div>
+                  <a>아이디12345</a><span>어쩌구저쩌구sadfsafsdafasdfasdfasdfasdfasdfasdfdsafsdadsfasdsdfadf </span>
+                </div>
+                <img alt="heart img" class="commentHeart" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" />
+              </div>
+            </div>
+          </div>
+
+          <div class="days">
+            <time datetime="20:00"></time>
+            <time class="" datetime="2021-09-10T13:55:10" title="2021년 9월 10일">1일 전</time>
+          </div>
+
+          <div class="makeComment">
+            <div class="makeCommentContainer">
+              <button><i class="far fa-smile"></i></button>
+              <textarea class="commentField" placeholder="댓글 달기..." rows="1"></textarea>
+              <button>게시</button>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <aside>
+        <div class="sideBarContainer">
+          <div class="aboutMeInSide">
+            <img alt ="personalPictureInFeed" class="myImageInSide" src="imgs/IMG_1113.JPG" />
+            <div class="aboutMeNames">
+              <div><a>seungkyun_y</a></div>
+              <div><a>SEUNGKYUN HONG</a></div>
+            </div>
+            <button>전환</button>
+          </div>
+
+          <div class="recommendForYouContainer">
+            <div class="recommendForYouHeader">
+              <div>회원님을 위한 추천</div>
+              <div>모두 보기</div>
+            </div>
+
+            <div class="recommendForYouMain">
+              <img alt ="" class="recommendForYouPic" src="" />
+              <div class="recommendForYouID">
+                <div><a>seungkyun_y</a></div>
+                <div>status</div>
+              </div>
+              <button>팔로우</button>
+            </div>
+          </div>
 
 
-  <div class="bodyContainer">
-    <p><strong>make continer for main article</strong></p>
-  </div>
+          <footer>
+            <ul>
+              <il>소개</il>
+              <il>도움말</il>
+              <il>홍보  센터</il>
+              <il>API</il>
+              <il>채용 정보</il>
+              <il>개인정보처리방침</il>
+              <il>약관</il>
+              <il>위치</il>
+              <il>인기 계정</il>
+              <il>해시태그</il>
+              <il>언어</il>
+            </ul>
 
+            <p>© 2021 INSTAGRAM FROM FACEBOOK</p>
+          </footer>
+        </div>
+      </aside>
+    </div>
 
-</body>
+  </body>
 </html>

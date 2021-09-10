@@ -27,6 +27,7 @@ body {
   border-right: 1px solid black;
   padding-right: 10px;
 }
+
 .instagram_logo {
   display: inline-block;
   width: 103px;
@@ -36,6 +37,7 @@ body {
   font-size : 22px;
 }
 
+/* 필드 안에 돋보기 추가 */
 .searchField {
   width: 215px;
   height: 28px;
@@ -46,10 +48,12 @@ body {
   color: #8E8E8E;
   font-size: 14px;
 }
+
 .searchField:focus {
   outline: none;
   border-color: #A8A8A8;
 }
+
 .fa-search {
   font-size: 13px;
   color: #A5A7AA;
@@ -64,10 +68,244 @@ body {
   margin-left: 24px;
 }
 
+/* 컨테이너 크기 확인 목적으로 배경속성 적용. 완성 시 배경색 제거 */
 .bodyContainer {
-  background-color: grey;
-  width : 935px;
-  height: 100%;
   margin: 0 auto;
+  padding-top: 50px;
 }
 
+.article {
+  width: 614px;
+  margin-right: 28px;
+}
+
+/* 이미지 부분 테두리 벗어나서 다시 triming, 추후에 다시 확인해보자. */
+.articleBox {
+  background-color: white;
+  border: 1px solid #DBDBDB;
+  margin: 0 -1px;
+
+}
+
+.articleHeaderBox {
+  display: flex;
+  align-items: center;
+  width: 614px;
+  height: 60px;
+  padding: 16px;
+  border-bottom: 1px solid #DBDBDB;
+}
+
+.articleHeaderBox img {
+  width:32px;
+  height:32px;
+  border-radius: 50%;
+}
+
+.articleHeaderInside {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 536px;
+  height: 26px;
+}
+
+
+.accountName {
+  margin-left: 14px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.fa-ellipsis-h {
+  color: black;
+  font-size: 15px;
+}
+
+.articleImage {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.iconsContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 614px;
+  margin-top: 4px;
+  padding: 0 16px;
+}
+
+.iconsContainer button {
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  background-color: white;
+  border: none;
+}
+
+.iconsContainer button:hover {
+  cursor: pointer;
+}
+
+.fa-heart, .fa-comment, .fa-paper-plane, .fa-bookmark { 
+  font-size: 24px;
+}
+
+.likePersonContainer {
+  padding: 0 16px;
+  margin-bottom: 8px;
+}
+
+.likeBySomeone {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.likePersonPic {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  
+}
+
+.likePersonText {
+  display: flex;
+  align-items: center;
+  height: 20px;
+  font-size: 14px;
+}
+
+.likePersonText a{
+  font-weight: 600;
+}
+
+.likePersonText a:first-of-type {
+  padding-left: 5px;
+}
+
+.likePersonPic:hover, .likePersonText a:hover {
+  cursor: pointer;
+}
+
+.likePersonText a:first-of-type:hover {
+  text-decoration: underline;
+}
+
+.commentContainer {
+  padding: 0 16px;
+  font-size: 14px;
+  word-wrap: break-word;
+  word-break: break-all;
+  margin-bottom: 5px;
+}
+
+.picText div {
+  margin-bottom: 2px;
+}
+
+.commentLines > div {
+  margin-bottom: 2px;
+}
+
+.commentContainer a {
+  font-weight: 600;
+}
+
+.commentContainer span {
+  margin-left: 5px;
+}
+
+.commentLines {
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+}
+
+.commentHeart {
+  width: 12px;
+  height: 12px;
+}
+
+.days {
+  padding-left: 16px;
+  margin-bottom: 4px;
+  font-size: 10px;
+  color: rgb(142, 142, 142)
+}
+
+.makeCommentContainer button {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border: none;
+}
+
+.makeCommentContainer button:first-child {
+  font-size: 24px;
+  text-align: left;
+}
+
+.makeCommentContainer button:last-child {
+  font-size: 14px;
+  color: #0095F6;
+  padding-left:2px;
+}
+.makeCommentContainer {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 56px;
+  margin-top: 4px;
+  padding: 0 16px;
+  border-top: 1px solid #DBDBDB;
+}
+.commentField {
+  width: 100%;
+  border: none;
+  font-size: 14px;
+  resize: none;
+}
+
+.commentField:focus {
+  outline: none;
+}
+
+.myImageInSide {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+}
+
+.aboutMeInSide {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 293px;
+  height: 56px;
+}
+
+.aboutMeNames {
+  width: 100%;
+  margin-left: 12px;
+  font-size: 14px;
+}
+
+.aboutMeNames div:first-child {
+  font-weight: 600;
+}
+
+.aboutMeNames div:last-child {
+  color: #8E8E8E;
+}
+
+.aboutMeInSide button {
+  width: 30px;
+  height: 14px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #0095F6;
+  text-align: right;
+  border: none;
+  background-color: white;
+}
