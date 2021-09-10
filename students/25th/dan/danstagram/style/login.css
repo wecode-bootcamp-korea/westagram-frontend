@@ -1,16 +1,72 @@
 /**************************
 LOGIN PAGE - LAYOUT
 **************************/
-html, body{width:100%;height:100%;}
-body{display:flex;justify-content:center;align-items:center;background:#fafafa;}
+html, body{
+    width: 100%;
+    height: 100%;
+}
 
-.container{display:flex;flex-direction:column;width:100%%;padding:3em 2em;background:#fff;border:1px solid #e8e8e8;text-align:center;}
-h1{font-family:'Lobster', cursive;margin-bottom:40px;font-size:3.5em;text-align:center;}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fafafa;
+}
 
-/*login*/
-.login_wrap form{display:flex;flex-direction:column;}
-.login_wrap input{font-size:1em;color:#000;width:100%;height:45px;padding:0 20px;margin-bottom:10px;background:#fafafa;border-radius:5px;border:1px solid #f1f1f1;}
-.login_wrap input:focus {outline:none;border:1px solid #d6d6d6;}
-.login_wrap button{font-size:1.2em;line-height:1;color:#fff;width:100%;height:40px;margin:23px 0;text-align:center;background:#c4e1fb;border-radius:5px;transition:all 0.3s;}
-.login_wrap button.active{background:#52adff;}
-.lost_pw{margin-top:70px;color:#3c5588;}
+.container{
+    display: flex;
+    flex-direction: column;
+    padding: 3em 2em;
+    background: #fff;
+    border: 1px solid #e8e8e8;
+    text-align: center;
+}
+
+h1{
+    margin-bottom: 40px;
+    font-size: 3.5em;
+}
+
+/**************************
+LOGIN FORM
+**************************/
+form.login_wrap{
+    display: flex;
+    flex-direction: column;
+}
+
+.login_wrap input{
+    height: 45px;
+    padding: 0 20px;
+    margin-bottom: 10px;
+    color: #000;
+    background: #fafafa;
+    border-radius: 5px;
+    border: 1px solid #f1f1f1;
+    font-size: 1em;
+}
+
+.login_wrap input:focus{
+    border:1px solid #d6d6d6;
+}
+
+.login_wrap button{
+    height: 40px;
+    margin: 23px 0;
+    color: #fff;
+    background: #c4e1fb;
+    border-radius: 5px;
+    font-size: 1.2em;
+    line-height: 1;
+    text-align: center;
+    transition: all 0.3s;
+}
+
+.login_wrap button.active{
+    background: #52adff;
+}
+
+.lost_pw{
+    margin-top: 70px;
+    color: #3c5588;
+}
