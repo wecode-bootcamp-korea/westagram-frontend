@@ -1,28 +1,32 @@
-const comment = document.querySelector("#comment");
+const comment = document.querySelector("#comment"); //form
 const input = document.querySelector("#comment input");
-const commentList = document.getElementsByClassName('commentList')[0];
-const btn = document.getElementsByClassName("commentBtn")[0];
+const commentList = document.querySelector('.commentList');
+const btn = document.querySelector(".commentBtn");
+const listItem = document.querySelector("li");
 
 
-function addComment() {
-    const li = document.createElement("li")
-    const span = document.createElement("span")
-    // 만들고
+function addComment(event) {
+
+    event.preventDefault();
+    const li = document.createElement("li");
+    const span = document.createElement("span");
+    const commentUserId = document.createElement("span");
+
+    commentUserId.innerText = "Heyho92";
+    commentUserId.classList.add('commentUser');
+
     span.innerText = input.value;
-    // 클래스만들고 
-    li.appendChild(span);
-    // 구조화 
+
     commentList.appendChild(li);
-    // 넣는거
-    console.log('a')
+    li.appendChild(commentUserId);
+    li.appendChild(span);
+    // 만들고 클래스만들고 구조화 
+
+    input.value = "";
+
 }
 
+btn.addEventListener("click", addComment);
+input.addEventListener("");
 
 
-// function Comment(event) {
-//     const newTodo = input.value;
-//     addComment(newTodo);
-// }
-
-
-btn.addEventListener("click", addComment());
