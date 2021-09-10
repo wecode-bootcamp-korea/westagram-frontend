@@ -10,180 +10,208 @@
     <link href="/css/reset.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+
+    <!-- 메뉴바 -->
     <nav class="mainHearder">
-        <div class ="mainLogo">
-        <div class="logo">
-            <a href="" class="logoimg"><img src="/instagram.png"></a>
+        <div class ="mainLogoContainer">
+            <div class="logo">
+                <a href="" class="logoimg"><img alt="instagramLogo" src="/img/instagram.png"/></a>
+            </div>
+            <a class="h1">Westagram</a>
         </div>
-        <a class="h1">Westagram</a>
-        </div>
+
+        <!-- 메뉴바 검색창 -->
         <div class="search">
             <input type="search" placeholder="검색">
-            <img id="searchimg"  src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png">
+            <img id="searchimg" alt="searchimage" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png"/>
         </div>
-        <div class ="manubar">
-            <a href=""><img src="/explore.png"></a>
-            <a href=""><img src="/heart.png"></a>
-            <a href=""><img src="/profile.png"></a>
+
+        <!-- 메뉴바 왼쪽 user 아이콘들 -->
+        <div class="manuIcons">
+            <a href=""><img alt="explore" src="/img/explore.png"/></a>
+            <a href=""><img alt="like" src="/img/heart.png"/></a>
+            <a href=""><img alt="profile" src="/img/profile.png"/></a>
         </div>
     </nav>
     <main>
-        <div class="feeds">
-            <article>
-                <header class="feedsHeader">
-                    <div class="feedsHeader_img">
-                        <img class="feedidimg" src="/feedidimg.jpeg">
+
+        <!-- 메인피드 -->
+        <section class="feed">
+
+                <!-- 피드헤드 -->
+                <header class="feedHeader">
+
+                    <!-- 피드헤드 아이디 이미지 -->
+                    <div class="feedHeaderIdImg">
+                        <img alt="feedHeaderIdImg" src="/img/feedidimg.jpeg"/>
                     </div>
-                    <div class="feediginfo">
+
+                    <!-- 피드헤드 아이디 & 정보 더보기 -->
+                    <div class="feedidinfo">
                         <span>Emily_sy</span>
-                        <img src="/more.png" width="15px">
+                        <button><img alt="moreOption" src="/img/more.png"/></button>
                     </div>
                 </header>
-                <div class="feedsimg">
-                    <img width="100%" src="/main.jpeg">
-                </div>
-                <div class="feedsicons">
+
+                <!--  피드 메인이미지 -->
+                <section class="feedMainimg">
+                    <img src="/img/main.jpeg"/>
+                </section>
+
+                <!-- 피드 좋아요아이콘들 -->
+                <section class="feedIcons">
                     <div>
-                        <button><img src="/heart.png" width="23px"></button>
-                        <button><img src="/comment.png" width="20px"></button>
-                        <button><img src="/upload.png" width="17px"></button>
+                        <button><img alt="likeCheck" src="/img/heart.png" width="23px"/></button>
+                        <button><img alt="comment" src="/img/comment.png" width="20px"/></button>
+                        <button><img alt="upload" src="/img/upload.png" width="17px"/></button>
                     </div>
-                <div>
-                    <button><img src="/save.png" width="20px"></button>
-                </div>
-                </div>
-                <div class="feedscomment">
-                    <div class="feedslike">
-                        <p><img><a class="message" href="">nature</a>님 <a class="message">외 900명</a>이 좋아합니다</p>
+                    <div>
+                        <button><img alt="save" src="/img/save.png" width="20px"/></button>
                     </div>
-                    <div class="feedsmessage">
-                        <div class="firstmessage">
-                        <span><a class="message" href="">myroom</a> 진정한 힐링은 집에서..</span>
-                        <span><a class= "textdiffer" href=""> 더보기 </a> </span>
+                </section>
+
+                <!-- 피드 좋아요 갯수 -->
+                <section class="feedComment">
+                    <div class="likeCheck">
+                        <p><a class="message" href="">nature</a>님 <a class="message">외 900명</a>이 좋아합니다</p>
+                    </div>
+
+                    <!-- 피드 댓글칸 -->
+                    <div class="feedMessage">
+                        <div class="firstMessage">
+                            <span><a class="message" href="">myroom</a> 진정한 힐링은 집에서..</span>
+                            <span><a class= "moreComment" href=""> 더보기 </a> </span>
                         </div>
-                        <div class="secondmessage">
-                        <span><a class="message" href="">hahaha</a>#자연인</span>
-                        <img src="/heart.png" width="12px">
+                        <div class="secondMessage">
+                            <span><a class="message" href="">hahaha</a>#자연인</span>
+                            <img alt="checkingHeart" src="/img/heart.png" width="12px">
                         </div>
+
+                        <!-- 댓글추가 될 공간 -->
                         <div>
-                            <p>input값</p>
-                            <p>dkskdfkdk</p>
                         </div>
                     </div>
-                    <div class="textdiffer">
+                    <div class="commentTime">
                         <span>42분전</span>
                     </div>
-                </div>
-                    <section class="inputcomment">
-                        <input class="input" type="text" placeholder="댓글 달기...">
-                        <input class="uplodbutton" type="button" value="게시">
-                    </section>
-            </article>
-        </div>
-        <div class="main-right">
-            <div class="user">
-                <img class="sideprofileimge" src="/profile1.jpeg">
+                </section>
+
+                <!-- 댓글창 -->
+                <section class="inputComment">
+                    <input class="input" type="text" placeholder="댓글 달기..."/>
+                    <input class="uplodButton" type="button" value="게시"/>
+                </section>
+        </section>
+
+        <!-- 오른쪽 사이드 메뉴 -->
+        <section class="main-right">
+
+            <!-- 사이드 유저 -->
+            <article class="sideUser">
+                <img class="sideprofileimg" alt="sideprofileimage" src="/img/profile1.jpeg"/>
                 <div class="userInfo">
                     <a class="sideId" href="">wecode_bootcamp</a>
                     <span>WeCode | 위코드</span>
                 </div>
-            </div>
-            <div class="main-right_story">
-                <div class="main-right_storyHead">
+            </article>
+
+            <!-- 사이드 다른사람 스토리 -->
+            <article class="otherStory">
+                <section class="otherStoryHead">
                     <span>스토리</span>
-                    <span class="showall">모두 보기</span>
-                </div>
-                <div class="main-right_storylist">
-                    <div class="storyuser">
-                        <img class="sideprofileimge2" src="/profile2.jpeg">
+                    <span class="showAll">모두 보기</span>
+                </section>
+                <section class="otherStoryList">
+                    <section class="storyuser">
+                        <img class="sideprofileimge2" alt="otherUserImg" src="/img/profile2.jpeg"/>
                         <div class="userInfo">
                             <p><a class="sideId" href="">NotGood</a></p>
                             <span>26분 전</span>
                         </div>
-                    </div>
-                    <div class="storyuser">
-                        <img class="sideprofileimge2" src="/profile3.jpeg">
+                    </section>
+                    <section class="storyuser">
+                        <img class="sideprofileimge2" alt="otherUserImg" src="/img/profile3.jpeg"/>
                         <div class="userInfo">
                             <p><a class="sideId" href="">hothothot</a></p>
                             <span>15초 전</span>
                         </div>
-                    </div>
-                    <div class="storyuser">
-                        <img class="sideprofileimge2" src="/profile4.jpeg">
+                    </section>
+                    <section class="storyuser">
+                        <img class="sideprofileimge2" alt="otherUserImg" src="/img/profile4.jpeg"/>
                         <div class="userInfo">
                             <p><a class="sideId" href="">개그맨신동엽</a></p>
                             <span>2시간 전</span>
                         </div>
-                    </div>
-                    <div class="storyuser">
-                        <img class="sideprofileimge2" src="/profile4.jpeg">
+                    </section>
+                    <section class="storyuser">
+                        <img class="sideprofileimge2" alt="otherUserImg" src="/img/profile4.jpeg"/>
                         <div class="userInfo">
                             <p><a class="sideId" href="">같은이미지다</a></p>
                             <span>1분 전</span>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="recommend">
-                <div class="main-right_recommend">
+                    </section>
+                </section>
+            </article>
+
+            <!-- 사이드 추천 인스타 -->
+            <article class="recommend">
+                <section class="sideRecommend">
                     <span>회원님을 위한 추천</span>
-                    <span class="showall">모두 보기</span>
-                </div>
-                <div class="main-right_recommedlist">
-                    <div class="recommenduser">
-                        <img class="sideprofileimge2" src="/profile2.jpeg">
-                        <div class="userInfo userInfo2">
-                            <p><a class="sideId" href="">NotGood</a></p>
-                            <span>26분 전</span>
+                    <span class="showAll">모두 보기</span>
+                </section>
+                <section class="sideRecommendList">
+                    <section class="recommendUser">
+                        <img class="sideprofileimge2" alt="sideprofileimg" src="/img/profile2.jpeg"/>
+                        <div class="userInfo2">
+                            <p><a class="sideId" href="">sleepy</a></p>
+                            <span>언제자니님 외 3명이 좋아합니다</span>
                         </div>
-                        <div class="followbutton">
-                            <span>팔로우</span>
+                        <div class="followButton">
+                            <a href="">팔로우</a>
                         </div>
-                    </div>
-                    <div class="recommenduser">
-                        <img class="sideprofileimge2" src="/profile3.jpeg">
-                        <div class="userInfo userInfo2">
+                    </section>
+                    <section class="recommendUser">
+                        <img class="sideprofileimge2" alt="sideprofileimg" src="/img/profile3.jpeg"/>
+                        <div class="userInfo2">
                             <p><a class="sideId" href="">hothothot</a></p>
-                            <span>15초 전</span>
+                            <span>여름은더워님 외 2명이 좋아합니다</span>
                         </div>
-                        <div class="followbutton">
-                            <span>팔로우</span>
+                        <div class="followButton">
+                            <a href="">팔로우</a>
                         </div>
-                    </div>
-                    <div class="recommenduser">
-                        <img class="sideprofileimge2" src="/profile4.jpeg">
-                        <div class="userInfo userInfo2">
+                    </section>
+                    <section class="recommendUser">
+                        <img class="sideprofileimge2" alt="sideprofileimg" src="/img/profile4.jpeg"/>
+                        <div class="userInfo2">
                             <p><a class="sideId" href="">개그맨신동엽</a></p>
-                            <span>2시간 전</span>
+                            <span>개그동아리회장님 외 22명이 좋아합니다</span>
                         </div>
-                        <div class="followbutton">
-                            <span>팔로우</span>
+                        <div class="followButton">
+                            <a href="">팔로우</a>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer">
-                <div>
-                    <ul>
-                        <li>인스타그램</li>
-                        <li>정보</li>
-                        <li>지원</li>
-                        <li>홍보센터</li>
-                        <li>API</li>
-                        <li>채용 정보</li>
-                        <li>개인정보처리방침</li>
-                        <li>약관</li>
-                        <li>디렉터리</li>
-                        <li>프로필</li>
-                        <li>해시태그</li>
-                        <li>언어</li>
+                    </section>
+                </section>
+            </article>
+            
+            <!-- 사이드 footer -->
+            <article class="footer">
+                    <ul class="footerlist">
+                        <li><a href="">Instaram 정보</a></li>
+                        <li><a href="">지원</a></li>
+                        <li><a href="">홍보 센터</a></li>
+                        <li><a href="">API</a></li>
+                        <li><a href="">채용 정보</a></li>
+                        <li><a href="">개인정보처리방침</a></li>
+                        <li><a href="">약관</a></li>
+                        <li><a href="">디렉터리</a></li>
+                        <li><a href="">프로필</a></li>
+                        <li><a href="">해시태그</a></li>
+                        <li><a href="">언어</a></li>
                     </ul>
-                </div>
-                <div>
-                    <p> 2019 INSTAGRAM</p>
-                </div>
-            </div>
-        </div>
+                    <p>© 2019 INSTAGRAM</p>
+            </article>
+        </section>
     </main>
+    <script src="/js/login.js"></script>
 </body>
 </html>
