@@ -1,0 +1,346 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgba(142, 142, 142, 1);
+}
+
+a {
+  text-decoration: none !important;
+}
+a:hover {
+  text-decoration: none !important;
+}
+
+.main-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  align-items: center;
+  width: 372px;
+  height: 561px;
+  max-width: 100%;
+  background-color: white;
+  padding: 10px 0px;
+  margin: 60px 0 10px;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0px;
+  margin-bottom: 10px;
+  background-color: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(219, 219, 219, 1);
+  border-radius: 3px;
+  align-items: center;
+}
+
+h1 {
+  margin: 22px auto 12px;
+  height: 51px;
+  width: auto;
+  display: block;
+  font-family: "Style Script", cursive;
+  font-size: 50px;
+  text-align: center;
+  color: black;
+  font-weight: 800;
+}
+
+.main-function {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  width: 360px;
+  height: 263px;
+}
+
+#login-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form-box {
+  margin-top: 24px;
+  flex: 0 0 auto;
+  justify-content: flex-start;
+}
+
+.id-box {
+  color: rgba(142, 142, 142, 1);
+  position: relative;
+  margin: 0 40px 6px;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  padding: 0px;
+}
+.inner-id-box {
+  position: relative;
+  align-items: center;
+  border: 1px solid rgba(219, 219, 219, 1);
+  border-radius: 3px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.input {
+  position: relative;
+  display: flex;
+  height: 36px;
+  flex: 1 0 0;
+  padding: 0px;
+  margin: 0px;
+  min-width: 0px;
+}
+
+label {
+  cursor: default;
+}
+
+.input-guide {
+  position: absolute;
+  font-size: 12px;
+  height: 36px;
+  left: 8px;
+  right: 0px;
+  line-height: 36px;
+  pointer-events: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+input::placeholder {
+  font-size: 12px;
+}
+
+.id {
+  font-size: 16px;
+  background: rgba(250, 250, 250, 1);
+  border: 0px;
+  flex: 1 0 auto;
+  margin: 0px;
+  outline: 0px;
+  overflow: hidden;
+  padding: 9px 0 7px 8px;
+  text-overflow: ellipsis;
+  line-height: 18px;
+}
+
+.blank {
+  align-items: center;
+  flex: 0 0 auto;
+  height: 100%;
+  padding-right: 8px;
+  vertical-align: middle;
+  color: rgba(142, 142, 142, 1);
+}
+
+.login-box {
+  position: relative;
+  padding: 0px;
+  margin: 8px 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login {
+  background-color: rgba(0, 149, 246, 0.5);
+  cursor: not-allowed;
+  position: relative;
+  border: 1px solid;
+  border-radius: 4px;
+  pointer-events: none;
+  color: rgba(255, 255, 255, 1);
+  padding: 5px 9px;
+  text-align: center;
+  text-transform: inherit;
+  text-overflow: ellipsis;
+  width: auto;
+}
+
+.submit-suceed {
+  background-color: rgba(0, 149, 246, 1);
+  cursor: pointer;
+}
+
+.submit-failed {
+  background-color: rgba(0, 149, 246, 0.5);
+  cursor: not-allowed;
+}
+
+.login-text {
+  position: relative;
+  border: 0 solid;
+  text-align: center;
+}
+
+.else {
+  position: relative;
+  margin: 10px 40px 18px;
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: stretch;
+  border: 0 solid;
+  padding: 0px;
+}
+
+.line {
+  position: relative;
+  flex-grow: 1;
+  flex-shrink: 1;
+  height: 1px;
+  background-color: rgba(219, 219, 219, 1);
+  top: 0.45em;
+  border: 0 solid;
+  margin: 0px;
+  padding: 0px;
+}
+
+.text-else {
+  position: relative;
+  display: flex;
+  color: rgba(142, 142, 142, 1);
+  flex-grow: 0;
+  flex-shrink: 0;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 15px;
+  margin-left: 18px;
+  margin-right: 18px;
+  padding: 0;
+  text-transform: uppercase;
+  border: 0 solid;
+}
+
+.fb-login {
+  position: relative;
+  border: 0;
+  background-color: white;
+  display: inline;
+  padding: 0;
+  text-align: center;
+  margin: 0;
+}
+
+.fb-login-icon {
+  background-image: url(https://wonkooklee.github.io/westabucks/resources/img/logo.jpg);
+  background-size: cover;
+  position: relative;
+  display: inline-block;
+  margin-right: 8px;
+  top: 3px;
+  height: 16px;
+  width: 16px;
+  color: rgba(0, 149, 246, 1);
+}
+
+.fb-login-text {
+  color: #385185;
+  margin: 0px;
+  border: 0px;
+  padding: 0px;
+  text-align: center;
+}
+
+.forgot-pw {
+  color: rgba(0, 55, 107, 1);
+  font-size: 12px;
+  line-height: 14px;
+  margin-top: 12px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.sign-in {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(219, 219, 219, 1);
+  border-radius: 1px;
+  margin: 0 0 10px;
+  padding: 10px 0;
+}
+
+.sign-in-box {
+  position: relative;
+  display: block;
+  color: rgba(142, 142, 142, 1);
+  font-size: 14px;
+  line-height: 18px;
+  margin: -3px 0 -4px;
+  border: 0 solid;
+}
+
+.ask-have-account {
+  color: rgba(38, 38, 38, 1);
+  font-size: 14px;
+  margin: 15px;
+  text-align: center;
+}
+
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.sign-in-hypertext {
+  display: inline !important;
+  margin: 0;
+  color: rgba(0, 149, 246, 1);
+  font-weight: 600;
+}
+.download-app {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  align-items: stretch;
+}
+
+.download-app-text {
+  color: rgba(38, 38, 38, 1);
+  margin: 10px 20px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.download-link-box {
+  display: flex;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+  flex-direction: row;
+  justify-content: center;
+  margin: 10px 0;
+  align-items: stretch;
+  border: 0 solid;
+}
+
+.apple-download-link {
+  margin-right: 8px;
+}
+
+.download-img {
+  height: 40px;
+  cursor: pointer;
+}
