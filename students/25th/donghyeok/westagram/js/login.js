@@ -1,15 +1,25 @@
-const thisIsId = doucument.querySelector('#userId');
-const thisIsPassword = doucument.querySelector('#password');
-const thisIsButton = doucument.querySelector('button');
-const thisIsLost = doucument.querySelector('a');
+const thisIsId = document.querySelector('#userId');
+const thisIsPassword = document.querySelector('#password');
+const thisIsButton = document.querySelector('button');
+const thisIsLost = document.querySelector('a');
 
-thisIsPassword.addEventListener('keydown', function(){
-    const inputId = thisIsId.value;
-    const inputPassword = thisIsPassword.value;
+function keyfunction(){
+    inputId=thisIsId.value;
+    inputPw=thisIsPassword.value;
 
-    if(inputId.length >= 1 && inputPassword.length >=1){
-        thisIsButton.style.backgroundColor='#0095f6'
+    if(inputId.length >=1 && inputPw.length>=1){
+        thisIsButton.disabled = true;
+        thisIsButton.style.backgroundColor = '#0000ff';
     }else{
-        thisIsButton.style.backgroundColor='#c4e1fb'
+        thisIsButton.disabled = false;
+        thisIsButton.style.backgroundColor = '#c4e1fb';
     }
-})
+}
+
+thisIsId.addEventListener('keyup',keyfunction)
+thisIsPassword.addEventListener('keyup',keyfunction)
+
+thisIsLost.addEventListener('click',lostPw)
+function lostPw(){
+    window.location.href='https://www.instagram.com/accounts/login/'
+}
