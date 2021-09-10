@@ -1,0 +1,70 @@
+nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    position: fixed;
+    top:0;
+    width: 100%;
+    border-bottom: 3px solid rgba(235, 229, 229, 0.548);
+    height: 70px;
+    padding: 10px 0;
+    z-index:9999;
+}
+
+.instaIcon {
+    width: 27px;
+}
+
+nav span{
+    font-size: 28px;
+    margin-left: 9px;
+    font-family: 'Lobster', cursive;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-left{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav-center {
+    display: flex;
+}
+
+.nav-center input {
+    width: 200px;
+    height: 25px;
+    margin: auto auto;
+    border-radius: 3px;
+    border: 2px solid rgb(230, 227, 227);
+    background-color: rgba(235, 229, 229, 0.301);
+}
+
+.nav-center input::placeholder {
+    text-align: center;
+    color: rgba(0, 0, 0, 0.26);
+    font-weight: 500;
+}
+
+.nav-center input:focus{
+    outline: none;
+    
+}
+
+.nav-right {
+    display: flex;
+    width: 150px;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-right img {
+    width: 27px;
+}
