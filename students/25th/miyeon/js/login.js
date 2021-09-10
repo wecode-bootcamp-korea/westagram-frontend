@@ -12,8 +12,16 @@ idInput.addEventListener('keyup', function(event) {
     if (`${event.key}` == 'Backspace') {
         if (idInput.value.length == 0 && pwInput.value.length == 0) {
         loginBtn.style.backgroundColor = "#b9def7";
+        }
     }
-}
+        if (idInput.value.length > 0 && pwInput.value.length == 0) {
+            loginBtn.style.backgroundColor = "#b9def7";
+        }
+
+        if (idInput.value.length == 0 && pwInput.value.length > 0) {
+            loginBtn.style.backgroundColor = "#b9def7";
+        }
+    
 })
 
 function btnClick() {
