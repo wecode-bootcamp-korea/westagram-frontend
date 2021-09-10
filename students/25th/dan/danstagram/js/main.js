@@ -3,10 +3,10 @@ const getNewComment = document.getElementById('new_comment');
 const postComment = document.getElementById('btn_post');
 
 postComment.addEventListener('click', addComment);
-getNewComment.addEventListener("keyup", function(event) {
-  if (event.keyCode === 13) {
-     event.preventDefault();
-    addComment()
+getNewComment.addEventListener("keyup", (e)=>{
+  if (e.keyCode === 13 && ! e.shiftKey) {
+     //event.preventDefault();
+     addComment()
   }
 });
 
