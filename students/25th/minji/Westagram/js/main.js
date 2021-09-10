@@ -1,96 +1,3 @@
-// ===댓글 추가 기능===
-const btn_upload = document.querySelector(".btn_upload");
-const btn_delete = document.querySelector(".comment_delete");
-const textarea = document.querySelector("textarea");
-const article_comments = document.querySelector(".article_comments");
-const comments_row = document.querySelector(".comments_row");
-const my_id = document.querySelector(".my_id").innerText;
-
-// value 입력되었을 때, 댓글 Element를 추가하는 함수
-const uploadComment = () => {
-  if (textarea.value) {
-    const newSpan = document.createElement("span");
-    const newP = document.createElement("p");
-    const newText = document.createTextNode(textarea.value);
-    const newId = document.createTextNode(my_id);
-    const newHeart = document.createElement("i");
-    const newTrash = document.createElement("i");
-    const newDiv = document.createElement("div");
-    const newCommentDiv = document.createElement("div");
-    newSpan.classList.add("user_id");
-    newCommentDiv.classList.add("comments_menu");
-    newDiv.classList.add("comments_row");
-    newHeart.classList.add("comment_like", "far", "fa-heart");
-    newTrash.classList.add("comment_delete", "far", "fa-trash-alt");
-
-    newHeart.onclick = () => toggleLike(newHeart);
-    newTrash.onclick = () => deleteComment(newTrash);
-
-    newSpan.appendChild(newId);
-    newP.appendChild(newSpan);
-    newP.appendChild(newText);
-    newCommentDiv.appendChild(newHeart);
-    newCommentDiv.appendChild(newTrash);
-    newDiv.appendChild(newP);
-    newDiv.appendChild(newCommentDiv);
-    article_comments.appendChild(newDiv);
-
-    textarea.value = "";
-  }
-};
-
-// Enter 눌렀을 때 댓글 추가
-textarea.addEventListener("keyup", (e) => {
-  if (e.code === "Enter") {
-    uploadComment();
-  }
-
-  if (textarea.value) {
-    btn_upload.style.opacity = 1;
-  } else {
-    btn_upload.style.opacity = 0.4;
-  }
-});
-
-// 버튼 눌렀을 때 댓글 추가
-btn_upload.addEventListener("click", uploadComment);
-
-// ===댓글 삭제 기능===
-const deleteComment = (el) => {
-  el.parentNode.parentNode.remove();
-};
-
-// ===좋아요 Toggle 기능===
-const comment_like = document.querySelector(".comment_like");
-let isLiked = false;
-
-const toggleLike = (el) => {
-  isLiked = !isLiked;
-  if (isLiked === true) {
-    el.classList.remove("far");
-    el.classList.add("fas");
-    el.style.color = "#ED4956";
-  } else {
-    el.classList.remove("fas");
-    el.classList.add("far");
-    el.style.color = "rgba(0, 0, 0, 0.1)";
-  }
-};
-
-// ===Nav Profile 메뉴 박스 생성 기능===
-const btn_profile = document.querySelector(".btn_profile");
-const menu_box = document.querySelector(".menu_box");
-let isHidden = true;
-
-btn_profile.addEventListener("click", () => {
-  isHidden = !isHidden;
-  if (isHidden === false) {
-    menu_box.style.display = "block";
-  } else {
-    menu_box.style.display = "none";
-  }
-});
-
 // ===아이디 검색 기능===
 const searchbox = document.querySelector(".search");
 const search_list = document.querySelector("ul");
@@ -142,25 +49,19 @@ const deletePreviousResult = (listBox) => {
 };
 
 // filter된 data로 새로운 list element 생성하는 함수
-const createFilteredElement = (filteredArray, listBox) => {
+const createFilteredElement = (filteredArray) => {
   filteredArray.forEach((element) => {
-    let newLi = document.createElement("li");
-    let newProfile = document.createElement("img");
-    let newRow = document.createElement("div");
-    let newId = document.createElement("h5");
-    let newDes = document.createElement("h5");
-    newDes.classList.add("user_description");
-    newProfile.classList.add("profile_s");
-    newId.classList.add("user_id");
-    newProfile.src = element.image;
-    newId.innerText = element.id;
-    newDes.innerText = element.description;
+    const newFilteredList = `
+      <img class="profile_s" src="${element.image}"/>
+      <div>
+          <h5 class="user_id">${element.id}</h5>
+          <h5 class="user_description">${element.description}</h5>
+      </div>
+    `;
 
-    newRow.appendChild(newId);
-    newRow.appendChild(newDes);
-    newLi.appendChild(newProfile);
-    newLi.appendChild(newRow);
-    listBox.appendChild(newLi);
+    const newList = document.createElement("li");
+    newList.innerHTML = newFilteredList;
+    search_list.appendChild(newList);
   });
 };
 
@@ -189,3 +90,81 @@ const refreshInput = () => {
 };
 
 btn_init.addEventListener("click", refreshInput);
+
+// ===Nav Profile 클릭 시 메뉴 박스 생성 기능===
+const btn_profile = document.querySelector(".btn_profile");
+const menu_box = document.querySelector(".menu_box");
+let isHidden = true;
+
+btn_profile.addEventListener("click", () => {
+  isHidden = !isHidden;
+  if (isHidden === false) {
+    menu_box.style.display = "block";
+  } else {
+    menu_box.style.display = "none";
+  }
+});
+
+// ===댓글 추가 기능===
+const btn_upload = document.querySelector(".btn_upload");
+const textarea = document.querySelector("textarea");
+const article_comments = document.querySelector(".article_comments");
+const my_id = document.querySelector(".my_id").innerText;
+
+// value 입력되었을 때, 댓글 Element를 추가하는 함수
+const uploadComment = () => {
+  if (textarea.value) {
+    const new_comments = `
+        <p><span class="user_id">${my_id}</span>${textarea.value}</p>
+        <div class="comments_menu">
+            <i class="comment_like far fa-heart" onclick="toggleLike(this)"></i>
+            <i class="comment_delete far fa-trash-alt" onclick="deleteComment(this)"></i>
+        </div>
+    `;
+
+    const new_comments_row = document.createElement("div");
+    new_comments_row.classList.add("comments_row");
+    new_comments_row.innerHTML = new_comments;
+    article_comments.appendChild(new_comments_row);
+
+    textarea.value = "";
+  }
+};
+
+// Enter 눌렀을 때 댓글 추가
+textarea.addEventListener("keyup", (e) => {
+  if (e.code === "Enter") {
+    uploadComment();
+  }
+
+  if (textarea.value) {
+    btn_upload.style.opacity = 1;
+  } else {
+    btn_upload.style.opacity = 0.4;
+  }
+});
+
+// 버튼 눌렀을 때 댓글 추가
+btn_upload.addEventListener("click", uploadComment);
+
+// ===댓글 삭제 기능===
+const deleteComment = (el) => {
+  el.parentNode.parentNode.remove();
+};
+
+// ===좋아요 Toggle 기능===
+const comment_like = document.querySelector(".comment_like");
+let isLiked = false;
+
+const toggleLike = (el) => {
+  isLiked = !isLiked;
+  if (isLiked === true) {
+    el.classList.remove("far");
+    el.classList.add("fas");
+    el.style.color = "#ED4956";
+  } else {
+    el.classList.remove("fas");
+    el.classList.add("far");
+    el.style.color = "rgba(0, 0, 0, 0.1)";
+  }
+};
