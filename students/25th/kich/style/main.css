@@ -49,10 +49,84 @@ article {
 
 aside {
   width: 100%;
-  height: 944px;
+  height: 779px;
+  top: 88px;
   background: #fff;
   border: 1px solid rgba(219, 219, 219, 1);
   border-radius: 3px;
+}
+
+.aside-header {
+  height: auto;
+  margin-bottom: 10px;
+  margin-top: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.aside-header-profile {
+  width: 100%;
+  margin-right: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.aside-header-profile-profile {
+  display: flex;
+}
+
+.aside-header-profile-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aside-header-profile-img-a {
+  width: 56px;
+  height: 56px;
+  display: block;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.aside-header-profile-img-a-img {
+  width: 100%;
+  height: 100%;
+}
+
+.aside-header-profile-text {
+  padding-left: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.aside-header-profile-text-name {
+}
+
+.change-btn {
+  font-size: 12px;
+  font-weight: 600;
+  color: #0095f6;
+  background-color: #fafafa;
+}
+
+.aside-main {
+  margin-left: -16px;
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  background-color: #f48fb1;
+}
+
+.aside-buttom {
+  padding-bottom: 38px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: bisque;
 }
 
 a {
@@ -159,13 +233,16 @@ a {
 }
 
 .story-box {
-  width: 614px;
-  height: 84px;
   padding: 16px 0px;
   margin-bottom: 24px;
   border: 1px solid rgba(219, 219, 219, 1);
   border-radius: 3px;
   background: #fff;
+}
+
+.story-space {
+  height: 84px;
+  border: 1px #a5d6a7;
 }
 
 .feed-box {
@@ -301,6 +378,11 @@ icono-disqus {
 }
 
 .article-text2 {
+  padding: 0 16px;
+  margin-bottom: 8px;
+}
+
+.article-text3 {
   padding: 0 16px;
   margin-bottom: 8px;
 }

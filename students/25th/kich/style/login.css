@@ -1,5 +1,10 @@
 body {
   display: flex;
+  justify-content: center;
+}
+
+submit-suceedbody {
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -155,7 +160,6 @@ input::placeholder {
 
 .login {
   background-color: rgba(0, 149, 246, 0.5);
-  cursor: not-allowed;
   position: relative;
   border: 1px solid;
   border-radius: 4px;
@@ -166,16 +170,12 @@ input::placeholder {
   text-transform: inherit;
   text-overflow: ellipsis;
   width: auto;
+  cursor: default;
 }
 
 .submit-suceed {
   background-color: rgba(0, 149, 246, 1);
   cursor: pointer;
-}
-
-.submit-failed {
-  background-color: rgba(0, 149, 246, 0.5);
-  cursor: not-allowed;
 }
 
 .login-text {
