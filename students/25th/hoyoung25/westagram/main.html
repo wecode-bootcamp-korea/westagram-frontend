@@ -9,51 +9,93 @@
   <script src="https://kit.fontawesome.com/69b42b61d8.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <nav class>
-    <div class="logo">
+  <nav>
+    <div class="nav-left">
       <i class="fab fa-instagram"></i>
       <div class="logo-name">Westagram</div>
     </div>
     
-    <div class="search">
-      <input type="text" placeholder="검색">
-      <i class="fas fa-binoculars"></i>
+    <div class="nav-center">
+      <input type="text" placeholder="검색" />
     </div>
 
-    <div class="icon">
+    <div class="nav-right">
       <a href=""><img src="explore.png" alt=""></a>
       <a href=""><img src="heart.png" alt=""></a>
       <a href=""><img src="profile.png" alt=""></a>
     </div>
   </nav>
 
+  
 
   <main>
     <div class="feeds">
       <article>
-        <div class="user-info">
-          <a href=""><img src="zoomprofile.Png" alt=""></a>
-          <div class="icon-name">youthangno_wecode</div>
-          <a href="">...</a>
+        <header>
+          <div class="user-info">
+            <a href=""><img alt="myface" src="zoomprofile.Png"></a>
+            <span class="icon-name">youthangno_wecode</span>
+          </div>
+            <a href=""><i class="fas fa-ellipsis-h"></i></a>
+        </header>
 
+        <img class="car" alt="car" src="car.jpg" width="100%" />
+        
+        <div class="feeding">
+          <div class="like-icon">
+            <div>
+              <button><i class="far fa-heart"></i></button>
+              <button><i class="far fa-comment"></i></button>
+              <button><i class="fas fa-share-alt"></i></button>
+            </div>
+            <div>
+              <button><i class="far fa-flag"></i></button>
+            </div>
+          </div>
+          <div class="friend-info">
+            <a href=""><img src="photo__.jpg" alt="dog"/></a>
+            <span class="icon-ment">tthorri__님 외 44명이 좋아합니다</span>
+          </div>
         </div>
-        <div class="feedimg">
-          <img src="car.jpg" alt="">
+        
+        <div class="friends-reply">
+          <p class="canon_mj">
+            <span>tttiii___</span>
+            <span>넌 가끔 기름을 흘리니..?</span>
+          </p>
+            <button><i class="far fa-heart"></i></button>
         </div>
-        <div class="like-icon">
-          <a href=""><img src="heart.png" alt=""></a>
-          <a href=""><i class="far fa-comment"></i></a>
-          <a href=""><i class="fas fa-share-alt"></i></a>
-          <a href=""></a><i class="far fa-flag"></i></a>
+      </article>
+
+      <article>
+        <div class="repl">
+          <input type="text" placeholder="   댓글달기...">
+          <button class='upload-button'>게시</button>
         </div>
       </article>
     </div>
-    <div class="main-right"></div>
 
+    <div class="main-right">
+      <div class="right-header">
+        <a href=""><img alt="flex" src="flex.png"/></a>
+          <div class="header-user">
+            <span>flex_bootcamp</span>
+            <span><a href="">&nbsp&nbsp&nbsp플렉스_bootcamp</a></span>
+          </div>
+      </div>
+      <div class="right-center">
+        <div class="center-story">
+          <span>스토리</span>
+          <span><a href="">모두보기</a></span>
+        </div>
+        <div class="story-picture">
+          <img alt="user-picture" src="picture01.jpg">
+          <img alt="user-picture" src="picture02.jpg">
+          <img alt="user-picture" src="picture03.jpg">
+        </div>
 
-    <div class="main-right"></div>
+      </div>
+    </div>
   </main>
-
-
 </body>
 </html>

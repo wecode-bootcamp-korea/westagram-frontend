@@ -1,92 +1,196 @@
 body{
-  box-sizing: border-box;
   margin:0 auto;
+  padding:0;
+  box-sizing: border-box;
+  background-color: white;
 }
 
 nav{
   display: flex;
+  align-items: center;
   justify-content: space-evenly;
-  margin-top: 30px;  
+  background-color: white;
+  margin-top: 30px;
 }
 
-.logo{
-  font-family: lobster;
-  font-size: 20px;
+.nav-left{
   display: flex;
   align-items: center;
+  font-family: lobster;
+  font-size: 28px;
+  font-weight: 500;
 }
 
-.logo>i{
-  margin-right: 20px;
+.nav-left .logo-name{
+  margin-left: 10px;
 }
 
-.search{
-  border: 1px solid black;
+.nav-center{
+  border: 1px solid rgb(230, 230, 230);
 }
 
-.search input{
-  border:0 solid black;
+.nav-center input{
+  border:0px;
 }
 
-.search>.fa-binoculars{
-  /* position: absolute;
-  left:680px; */
-}
-
-.icon a{
+.nav-right a{
   margin:12px;
 }
 
-.icon img{
+.nav-right img{
   width:20px;
 }
 
 main{
-  margin-left:300px;
-  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .feeds{
-  display: flex;
+  width:550px;
+  margin-top:50px;
 }
 
 article{
-  width:450px;
-  margin-top:50px;
-  border : 1px solid black;
+  border :  1px solid rgb(230, 230, 230);
+}
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top:10px;
+}
+
+.car{
+  margin-top: 15px;
 }
 
 .user-info{
   display: flex;
-  flex-grow: 5;
   align-items: center;
-  justify-content: space-around;
-  margin-top:15px;
 }
 
 .user-info img{
+  margin-left:10px;
+  margin-right:10px;
   width:25px;
   height:25px;
   border-radius: 20px;
 }
 
-.feedimg>img{
-  margin-top:10px;
-  width:100%;
+.fa-ellipsis-h{
+  margin-right: 15px;
 }
 
 .like-icon{
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
-.like-icon a{
+.like-icon button{
+  margin-left: 8px;
+  border:none; 
+  background-color:white;
+  text-decoration: none;
+  font-size: 23px;
+}
+
+.friend-info{
+  display: flex;
+  align-items: center;
+  margin-top: 3px;
+  margin-left: 15px;
+}
+
+.friend-info img{
+  width:20px;
+  height: 20px;
+  border-radius: 60px;
+}
+
+.friend-info span{
+  margin-left: 8px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.repl{
+  display: flex;
+  justify-content: space-between;
+}
+
+.repl>input{
+  width: 99%;
+  height: 40px;
+  border:0px;
+}
+
+.upload-button{
+  width:50px;
+  border:0;
+  color:  #B9DFFC;
+  background-color: white;
+}
+
+.friends-reply{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.canon_mj{
+  margin-left: 15px;
+  font-size: 13px;
+}
+
+.main-right{
+  margin-left: 50px;
+  margin-top:60px;
+}
+
+.right-header{
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.right-header img{
+  width:35px;
+  border-radius: 30px;
+}
+
+.header-user{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header-user span{
+  font-size: 10px;
+  margin-left: 10px;
+}
+
+.header-user a{
+  text-decoration: none;
+}
+
+.right-center{
+  display: flex;
+  flex-direction: column;
+  border:1px solid black;
+}
+
+.center-story{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.story-picture > img{
   width:30px;
-
-  flex:1;
+  height: 30px;
+  border-radius: 30px;
 }
 
-.like-icon a:nth-child(4){
-  text-align: right;
-  flex:7;
-}
