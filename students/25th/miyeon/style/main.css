@@ -30,6 +30,16 @@ nav {
     text-decoration: none;
 }
 
+.centerBar {
+    position: relative;
+}
+
+.searchIcon {
+    position: absolute;
+    left: 75px;
+    padding-top: 7px;
+}
+
 .searchBar {
     width: 215px;
     height: 28px;
@@ -96,6 +106,7 @@ section {
 }
 
 .headerRight img {
+    position: relative;
     width: 20px;
     cursor: pointer;
 }
@@ -183,7 +194,6 @@ section {
 
 .commentList {
     width: 100%;
-
     margin-top: 10px;
     padding-left: 20px;
     list-style: none;
@@ -225,7 +235,7 @@ section {
 #textUpload {
     padding: 15px;
     border: 0px solid transparent;
-    font-size: 11pt;
+    font-size: 9pt;
     font-weight: bold;
     color: #b9def7;
     background-color: transparent;
@@ -304,4 +314,18 @@ section {
     color: #dbdbdb;
     border-radius: 3px;
     font-weight: bold;
+}
+
+.fas {
+    z-index: 9999;
+}
+
+@media all and (max-width:890px) {
+    .mainRight {
+        display: none;
+    }
+
+    section {
+        justify-content: center;
+    }
 }
