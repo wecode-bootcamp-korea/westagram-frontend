@@ -10,8 +10,7 @@ function cheakInput(){
     let idIn = id.value;
     let psIn = ps.value;
 
-    if((idIn.length && psIn.length) >= 1) btn.disabled = false ;
-
+    (idIn.length && psIn.length) >= 1 ? btn.disabled = false : true ;
 }
 
 
