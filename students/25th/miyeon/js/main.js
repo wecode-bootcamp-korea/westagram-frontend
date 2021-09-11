@@ -4,15 +4,9 @@ const uploadClick = document.querySelector('#textUpload');
 
 inputEl.addEventListener('keyup', btnColorChange)
 uploadClick.addEventListener('click', btnClick);
-document.addEventListener('keyup', function(e) {
+document.addEventListener('keyup', (e) => {
     if (e.key === 'Enter') {
-        const createEl = document.createElement("li");
-        createEl.innerHTML = `<b>buzzi_nyang</b>&nbsp; ` + inputEl.value;
-        commentList.appendChild(createEl);
-        inputEl.value = null;
-    } else if (!inputEl.value) {
-        const notActive = `{$uploadClick}`.attr('disabled');
-        notActive = false;
+        btnClick();
     }
 }); // 엔터 치면 댓글 업로드하는 함수
 
@@ -20,20 +14,21 @@ document.addEventListener('keyup', function(e) {
 function btnColorChange() {
     if (inputEl.value) {
         uploadClick.style.color = "#0095f6";
-    } else if (!inputEl.value) {
+    } else if (inputEl.value == "") { // null !== "" 공백이 있으면 버튼 비활성화
         uploadClick.style.color = "#b9def7";
     }
 }
 
 // 댓글 입력 버튼을 클릭했을 때 댓글 업로드 함수
 function btnClick() {
-    if (inputEl.value) {
-        const createEl = document.createElement("li");
-        createEl.innerHTML = `<b>buzzi_nyang</b>&nbsp; ` + inputEl.value;
-        commentList.appendChild(createEl);
-        inputEl.value = null;
-    } else if (!inputEl.value) {
+    if (inputEl.value == "") { // null !== "" 공백이 있으면 버튼 비활성화
         const notActive = `{$uploadClick}`.attr('disabled');
         notActive = false;
+    } else {
+    const createEl = document.createElement("li");
+    createEl.innerHTML = `<b>buzzi_nyang</b>&nbsp; ` + inputEl.value;
+    commentList.appendChild(createEl);
+    inputEl.value = null;
+    btnColorChange();
     }
 }
