@@ -74,9 +74,9 @@ const searchText = (e) => {
   const text = e.path[0].value;
   const searchIcon = e.path[1].childNodes[1];
 
-  if (text) {
+  if (text)
     if (searchIcon.style.visibility !== 'hidden') searchIcon.style.visibility = 'hidden';
-  } else searchIcon.style.visibility = 'visible';
+    else searchIcon.style.visibility = 'visible';
 
   matchUsername(text);
 };
@@ -100,22 +100,15 @@ const matchUsername = (text) => {
     } else {
       let searchUserIdx = 0;
       for (searchUser of searchUsers) {
-        if (
-          // 유저들의 이름 일치 여부 체크
-          searchUser.user.name.slice(0, text.length).toUpperCase() !== text.slice(0, text.length).toUpperCase()
-        ) {
-          searchUser.userContainer.style.display = 'none';
-        } else {
-          searchUser.userContainer.style.display = 'flex';
-        }
+        // 유저들의 이름 일치 여부 체크
+        if (searchUser.user.name.slice(0, text.length).toUpperCase() !== text.slice(0, text.length).toUpperCase()) searchUser.userContainer.style.display = 'none';
+        else searchUser.userContainer.style.display = 'flex';
         searchUserIdx++;
       }
     }
   } else {
     // 찾은 유저들 삭제 및 배열 비우기
-    searchUsers.forEach((e) => {
-      searchUserContainer.removeChild(e.userContainer);
-    });
+    searchUsers.forEach((e) => searchUserContainer.removeChild(e.userContainer));
     searchUsers.length = 0;
   }
 };
@@ -133,6 +126,5 @@ menuProfile.addEventListener('click', createMenuProfileBox);
 menuProfileBox.addEventListener('mouseleave', deleteMenuProfileBox);
 const addHeartBtnListener = () => commentHearts.forEach((e) => e.addEventListener('click', changeHeartColor));
 const addDeleteBtnListener = () => commentDeleteBtn.forEach((e) => e.addEventListener('click', deleteComment));
-
 addHeartBtnListener();
 addDeleteBtnListener();

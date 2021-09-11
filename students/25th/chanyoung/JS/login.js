@@ -1,12 +1,14 @@
 const id = document.querySelector('.login__id');
 const password = document.querySelector('.login__password');
 const btn = document.querySelector('.login__button');
+const login = document.querySelector('.login');
 
 let isId = false,
   isPassword = false;
 
 const getInput = (e) => {
   // 아이디 & 비번 값 체크
+
   if (e.target.className === 'login__id') isId = e.target.value ? true : false;
   if (e.target.className === 'login__password') isPassword = e.target.value ? true : false;
 
@@ -19,5 +21,5 @@ const getInput = (e) => {
     btn.style.backgroundColor = '#c4e1fb';
   }
 };
-id.addEventListener('input', getInput);
-password.addEventListener('input', getInput);
+
+login.addEventListener('input', getInput);
