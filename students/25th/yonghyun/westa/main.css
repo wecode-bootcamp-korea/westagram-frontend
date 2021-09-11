@@ -171,16 +171,20 @@ input {
   background-color: #ffffff;
 }
 
+#emptyheart {
+  color: black;
+}
+
 #redheart {
   position: relative;
   top: -25px;
   background-color: transparent;
-  color: #ed4956;
+  color: transparent;
   font-size: 26px;
 }
 
 #redheart:hover {
-  color: red;
+  cursor: grab;
 }
 
 .icon_pack {
@@ -231,7 +235,7 @@ button {
   padding-left: 16px;
   padding-right: 16px;
   background-color: #ffffff;
-  overflow: scroll;
+  overflow: hidden;
 }
 
 .comments_head {
@@ -267,12 +271,16 @@ button {
   word-break: break-all;
 }
 
+.erase:hover {
+  color: red;
+  cursor: grab;
+}
+
 .re_heart {
   position: absolute;
   width: 19px;
   height: 19px;
   right: 10px;
-  justify-content: flex-end;
 }
 
 .re_heart i {
@@ -362,7 +370,7 @@ button {
 }
 
 #writeBtn:hover {
-  cursor: grab;
+  cursor: pointer;
 }
 
 article {
@@ -396,6 +404,15 @@ article {
   font-size: 16px;
 }
 
+.changeProfile {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  margin: 13px 0 13px 20px;
+  color: #0095f6;
+  cursor: pointer;
+}
+
 .friends_name {
   display: block;
   margin: auto 16px;
@@ -411,9 +428,27 @@ article {
   font-size: 14px;
 }
 
+.follow {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  margin: 5px 0 5px 20px;
+  color: #0095f6;
+  cursor: pointer;
+}
+
 .id_pic {
-  margin: 5px;
+  margin: 2.5px;
   border-radius: 50%;
+}
+
+.story {
+  display: flex;
+  width: 66px;
+  height: 66px;
+  border: 2px solid #d32b80;
+  border-radius: 50%;
+  background-color: transparent;
 }
 
 .friends_list {
@@ -456,4 +491,44 @@ article {
   margin-top: 15px;
   color: rgb(158, 158, 158);
   font-size: 13px;
+}
+
+.arrow_box {
+  display: none;
+  position: absolute;
+  width: 200px;
+  padding: 8px;
+  top: 40px;
+  right: -10px;
+  z-index: 1;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  background: #333;
+  color: #fff;
+  font-size: 14px;
+}
+
+.arrow_box:after {
+  position: absolute;
+  bottom: 100%;
+  right: 5%;
+  width: 0;
+  height: 0;
+  margin-left: -10px;
+  border: solid transparent;
+  border-color: rgba(51, 51, 51, 0);
+  border-bottom-color: #333;
+  border-width: 10px;
+  pointer-events: none;
+  content: " ";
+}
+
+.rightMenu div {
+  position: relative;
+  display: inline-block;
+}
+
+#more:hover + p.arrow_box {
+  display: block;
 }

@@ -7,3 +7,26 @@ function addMessage() {
     makeP.innerHTML = `${firstP}${message}${lastP}`;
     document.getElementById('other_re').appendChild(makeP);
 }
+
+function heartChange() {
+    const heartClick = document.querySelector('.likeBtn');
+    const emptyH = document.querySelector('#emptyheart');
+    const redH = document.querySelector('#redheart');
+    
+    // if(emptyH.style.color = 'transparent'){
+        // emptyH.style.color = 'black';
+        // redH.style.color = 'transparent';
+    // }else if(emptyH.style.color = 'red'){
+        emptyH.style.color = 'transparent';
+        redH.style.color = 'red';
+    // }
+}
+
+// const clickE = document.querySelector('.erase');
+// const asd = document.getElementsByClassName('re_p');
+
+// function removeP() {
+//     asd.remove();
+// }
+
+// clickE.addEventListener('click', removeP);

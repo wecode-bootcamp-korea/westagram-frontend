@@ -1,6 +1,8 @@
 const instaId = document.querySelector('.iId')
 const instaPw = document.querySelector('.iPw')
 const loginBtnn = document.querySelector('.loginBtn')
+const loginForm = document.querySelector('.idPw')
+
 
 function canLogin () {
     const user_id = instaId.value;
@@ -10,4 +12,4 @@ function canLogin () {
 
 instaId.addEventListener('keyup', canLogin)
 instaPw.addEventListener('keyup', canLogin)
-
+// idPw.addEventListener('keyup',canLogin)

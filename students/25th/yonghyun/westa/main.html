@@ -23,7 +23,19 @@
                     <img class="like" alt="compassIcon" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png"/>
                     <img class="like" alt="heartIcon" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"/>
                     <img class="like" alt="peopleIcon" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png"/>
-                    <img class='like' alt="profileImageIcon" src="/students/25th/yonghyun/westa/images/profile.jpeg" width="32px" height="32px" />
+                    <div class="moreP">
+                        <img class='like' id="more"alt="profileImageIcon" src="/students/25th/yonghyun/westa/images/profile.jpeg" width="32px" height="32px" />
+                        <p class="arrow_box">
+                            <!-- <div>
+                                <div>프로필</div>
+                                <div>저장됨</div>
+                                <div>설정</div>
+                                <div>계정 전환</div>
+                                <div>로그아웃</div>
+                            </div> -->
+                            asd
+                        </p>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -49,7 +61,7 @@
                             <div class="comment">
                                 <section class="heart">
                                     <div class="icon_pack">
-                                        <button><i class="far fa-heart"></i><i id="redheart"class="fas fa-heart"></i></button>
+                                        <button class="likeBtn" onclick="heartChange()"><i id="emptyheart" class="far fa-heart"></i><i id="redheart"class="fas fa-heart"></i></button>
                                         <button><i class="far fa-comment"></i></button>
                                         <button><i class="far fa-paper-plane"></i></button>
                                         <button id="bookmark"><i class="far fa-bookmark" ></i></button>
@@ -88,8 +100,8 @@
                                             </span>
                                         </p>
                                         <p><a href="" class="re_id">asdfg</a>
-                                            <span class="re_p">줄젇ㄹ아링나ㅜ링나</span><span class="deletespan">
-                                                <button class="deleteBtn"><i class="fas fa-ellipsis-h"></i></button>
+                                            <span class="re_p">줄젇ㄹ아링나ㅜ링나</span><span class="erase">
+                                                x
                                             </span>
                                             <span>
                                                 <button class="re_heart"><i class="far fa-heart"></i></button>
@@ -114,11 +126,14 @@
             </div>
             <div class="main-right">
                 <div class="my_id">
-                    <img class='id_pic' src="/students/25th/yonghyun/westa/images/profile.jpeg" width="56px" height="56px" alt=""/>
+                    <div class="story">
+                    <img class='id_pic' src="/students/25th/yonghyun/westa/images/profile.jpeg" width="57px" height="57px" alt=""/>
+                    </div>
                     <div class="pic_name">
                         <div class="pic_id">4.21ee</div>
                         <div class="pic_desc">YONGHYUN</div>
                     </div>
+                    <button class="changeProfile">전환</button>
                 </div>
                 <div class="friends_list">
                     <div class="friends_text">
@@ -131,6 +146,7 @@
                                 <div class="friends_id">1st_id</div>
                                 <div class="friendsdesc">회원님을 위한 추천</div>
                             </div>
+                            <button class="follow">팔로우</button>
                         </div>
                         <div class="people">
                             <img class='friends_pic' alt="recommend2" src="/students/25th/yonghyun/westa/images/profile.jpeg" width="32px" height="32px"/>
@@ -138,6 +154,7 @@
                                 <div class="friends_id">dydgus0421</div>
                                 <div class="friendsdesc">Instagram 신규가입</div>
                             </div>
+                            <button class="follow">팔로우</button>
                         </div>
                         <div class="people">
                             <img class='friends_pic' alt="recommend3" src="/students/25th/yonghyun/westa/images/profile.jpeg" width="32px" height="32px"/>
@@ -145,6 +162,7 @@
                                 <div class="friends_id">second_id</div>
                                 <div class="friendsdesc">회원님을 위한 추천</div>
                             </div>
+                            <button class="follow">팔로우</button>
                         </div>
                         <div class="people">
                             <img class='friends_pic' alt="recommend4" src="/students/25th/yonghyun/westa/images/profile.jpeg" width="32px" height="32px"/>
@@ -152,6 +170,7 @@
                                 <div class="friends_id">asfsdk</div>
                                 <div class="friendsdesc">회원님을 위한 추천</div>
                             </div>
+                            <button class="follow">팔로우</button>
                         </div>
                         <div class="people">
                             <img class='friends_pic' alt="recommend5" src="/students/25th/yonghyun/westa/images/profile.jpeg" width="32px" height="32px"/>
@@ -159,6 +178,7 @@
                                 <div class="friends_id">kyh0421</div>
                                 <div class="friendsdesc">회원님을 위한 추천</div>
                             </div>
+                            <button class="follow">팔로우</button>
                         </div>
                     </div>
                 </div>
