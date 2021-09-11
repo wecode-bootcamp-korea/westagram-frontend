@@ -22,7 +22,7 @@
             commentBox.setAttribute('class', commentBoxClassName);
             commentContainerInUesrsId.setAttribute('class', commentUesrsId)
 
-            commentContainerInUesrsId.innerHTML = "Jetom";
+            commentContainerInUesrsId.innerHTML = "🐑";
             commentContainerInComment.innerHTML = commentInputValue;
 
             feedsComment.after(commentBox);
