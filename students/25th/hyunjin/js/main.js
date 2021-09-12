@@ -9,59 +9,51 @@ function onAdd() {
     commentInput.focus();
     return;
   }
-  const id = document.querySelector(".owner-id").innerText;
+  const userId = document.querySelector(".owner-id").innerText;
   //2. 새로운 아이템 만듬(+삭제)
-  const commentRow = createComment(id, text);
-  commentRow.scrollIntoView({ block: "center" });
   //3. comment안에 새로만든 아이템을 추가한다.
+
+  const commentRow = createComment(userId, text);
+  commentRow.scrollIntoView({ block: "center" });
   comments.appendChild(commentRow);
+
   //4. 인풋을 초기화한다.
-  commentInput.value = "";
+  commentInput.value = " ";
   commentInput.focus();
 }
 
 commentBtn.addEventListener("click", onAdd);
-
-function createComment(id, text) {
+let id = 0;
+function createComment(userId, text) {
   const commentWrapper = document.createElement("div");
   commentWrapper.setAttribute("class", "contents");
+  commentWrapper.setAttribute("data-id", id);
+  commentWrapper.innerHTML = `
+        <div class="commentLeft">
+             <span class="owner-id"><b>${userId}</b></span>
+             <span class="owner-content">${text}</span>
+        </div>
 
-  const commentLeft = document.createElement("div");
-  commentLeft.setAttribute("class", "commentLeft");
-
-  const ownerId = document.createElement("span");
-  ownerId.setAttribute("class", "owner-id");
-  ownerId.innerHTML = `<b>${id}</b>`;
-
-  const commentContent = document.createElement("span");
-  commentContent.setAttribute("class", "owner-content");
-  commentContent.innerText = text;
-
-  commentLeft.appendChild(ownerId);
-  commentLeft.appendChild(commentContent);
-
-  const deleteBtn = document.createElement("button");
-  deleteBtn.setAttribute("class", "delete-btn");
-  deleteBtn.innerHTML = '<i class="fas fa-trash-alt"></i>';
-  deleteBtn.style.justifyContent = "right";
-
-  const commentRight = document.createElement("div");
-  commentRight.setAttribute("class", "commentRight");
-  commentRight.appendChild(deleteBtn);
-
-  deleteBtn.addEventListener("click", () => {
-    comments.removeChild(commentWrapper);
-  });
-
-  commentWrapper.appendChild(commentLeft);
-  commentWrapper.appendChild(commentRight);
-  commentWrapper.appendChild(deleteBtn);
-
+        <div class="commnetRight" >
+             <button class="delete-btn">
+                <i class="fas fa-trash-alt" data-id=${id}></i>
+            </button>
+        </div>
+        `;
+  id++;
   return commentWrapper;
 }
 
 commentInput.addEventListener("keypress", (event) => {
   if (event.key === "Enter") {
     onAdd();
+  }
+});
+
+comments.addEventListener("click", (event) => {
+  const id = event.target.dataset.id;
+  if (id) {
+    const toBeDeleted = document.querySelector(`.contents[data-id="${id}"]`);
+    toBeDeleted.remove();
   }
 });
