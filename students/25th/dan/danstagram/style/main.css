@@ -20,14 +20,12 @@ HEADER
 header{
     position: fixed;
     width: 100%;
-    /* height: 60px; */
     background: #fff;
     border-bottom: 1px solid #e8e8e8;
 }
 
 header .wrap{
     display: flex;
-    /* justify-content: flex-start; */
     align-items: center;
     height: 100%;
     padding: 15px 0;
@@ -243,12 +241,15 @@ aside{
     width: 45px;
     height: 45px;
 }
+
 .recommend .user_id{
     flex: 6;
 }
+
 .recommend .user_id p{
     color:  #999;
 }
+
 .recommend button{
     flex: 2;
     color: #0095f6;
@@ -263,6 +264,7 @@ aside{
     line-height: 1.5;
     padding-right: 12px;
 }
+
 .menu ul li:before{
     content: "";
     position: absolute;
@@ -273,10 +275,12 @@ aside{
     margin-top: -1px;
     background: #b9b9b9;
 }
+
 .menu ul li a{
     color: #999;
     font-size: 0.8em;
 }
+
 .copyright{
     color: #999;
     font-size: 0.8em;
@@ -408,15 +412,29 @@ div.feed_board{
 }
 
 .txt_comment{
+    display:flex;
     margin-bottom: 5px;
 }
 
-.txt_comment a{
+.txt_comment > span{
+    flex:9.8;
+}
+
+.txt_comment > span .txt_id{
     margin-right: 10px;
 }
 
-.txt_comment span{
+.txt_comment > span span{
     width: 100%;
+}
+
+.txt_comment button{
+    flex: 0.2;
+    color: #ddd;
+}
+
+.txt_comment button:hover{
+    color: #777;
 }
 
 .post_comment{
@@ -441,27 +459,3 @@ div.feed_board{
     flex: 1;
     color: #0095f6;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,36 +1,51 @@
-const listComment = document.getElementById('listComment');
-const getNewComment = document.getElementById('newComment');
-const postComment = document.getElementById('btnPost');
+"use strict";
 
-postComment.addEventListener('click', addComment);
-getNewComment.addEventListener("keyup", (e)=>{
-  if (e.keyCode === 13 && ! e.shiftKey) {
-     e.preventDefault();
-     addComment()
+const postComment = document.getElementById('post');
+const inputComment = document.getElementById('newComment');
+const btnComment = document.getElementById('btnPost');
+
+// 새 코멘트 값 체크
+function checkComment(){
+  if(inputComment.value.length > 0){
+    addComment(inputComment.value)
   }
-});
-
-function addComment(){
-
-  // 새 코멘트 공간만들어서 코멘트 리스트에 추가
-  const newCommentTxt = document.createElement('p');
-  newCommentTxt.classList.add('txt_comment');
-
-  //input에 적힌 값 할당
-  const getNewCommentTxt = getNewComment.value;
-
-  // 코멘트 안에 출력될 ID 공간
-  newCommentTxt.innerHTML = '<a href="#n" class="txt_id">follow ID</a>';
-
-  // 코멘트 안에 출력될 내용
-  let span = document.createElement("span")
-  newCommentTxt.append(span)
-  newCommentTxt.lastChild.innerText = getNewCommentTxt;
-
-  // 코멘트 리스트에 추가
-  listComment.appendChild(newCommentTxt)
-  console.log(getNewComment)
-
-  // 코멘트 리스트에 추가되면 input비움
-  getNewComment.value = ''
 }
+
+// 새 코멘트 추가
+function addComment(value){
+  
+  const listComments = document.getElementById('listComment');
+  const newCommentLine = document.createElement('p');
+  const newComment = `
+  <p class="txt_comment">
+      <span>
+          <a href="#n" class="txt_id">follow ID</a>
+          <span>${value}</span>
+      </span>
+      <button id="delete" type="button">X</button>
+  </p>
+  `;
+
+  newCommentLine.innerHTML = newComment;
+  listComments.appendChild(newCommentLine);
+  
+  // 코멘트 추가 후, 작성칸 비움 
+  inputComment.value = '';
+}
+
+const init = () => {
+    // 게시 버튼 클릭 시
+    postComment.addEventListener('submit', (e)=>{
+      e.preventDefault();
+      checkComment();
+    });
+    // enter키 클릭 시
+    inputComment.addEventListener('keyup', (e)=>{
+      if (e.keyCode === 13 && ! e.shiftKey) {
+        e.preventDefault();
+        checkComment();
+      }
+    });
+};
+
+init();

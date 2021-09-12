@@ -2,8 +2,9 @@
 <html lang="ko">
     <head>
         <!--META-->
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge"  />
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <!--TITLE-->
         <title>Danstagram | My feeds</title>
         <!--FAVICON-->
@@ -34,6 +35,7 @@
         </header>
         <!--//HEADER-->
 
+        <!---MAIN--->
         <main class="container wrap">
 
             <aside>
@@ -65,7 +67,6 @@
                                 <p>3h ago</p>
                             <span>
                         </div>
-
                         <div class="story">
                             <a href="#n" class="follower_img">
                                 <img alt="follower profile image" class="round_img" src="./images/cat_02.png" />
@@ -75,7 +76,6 @@
                                 <p>3h ago</p>
                             <span>
                         </div>
-
                         <div class="story">
                             <a href="#n" class="follower_img">
                                 <img alt="follower profile image" class="round_img" src="./images/cat_03.png" />
@@ -85,7 +85,6 @@
                                 <p>3h ago</p>
                             <span>
                         </div>
-
                         <div class="story">
                             <a href="#n" class="follower_img">
                                 <img alt="follower profile image" class="round_img" src="./images/cat_04.png" />
@@ -117,7 +116,6 @@
                             </span>
                             <button type="button">팔로우</button>
                         </div>
-
                         <div class="recommend">
                             <a href="#n" class="recommend_img">
                                 <img alt="follower profile image" class="round_img" src="./images/dog_02.png" alt="follower profile image"/>
@@ -128,7 +126,6 @@
                             </span>
                             <button type="button">팔로우</button>
                         </div>
-
                         <div class="recommend">
                             <a href="#n" class="recommend_img">
                                 <img alt="follower profile image" class="round_img" src="./images/dog_03.png" alt="follower profile image"/>
@@ -138,8 +135,7 @@
                                 <p>follwor list</p>
                             </span>
                             <button type="button">팔로우</button>
-                        </div>
-            
+                        </div>            
                     </section>
                 </article>
                 <!--//WIDGET - recommend-->
@@ -163,8 +159,6 @@
                 <p class="copyright">©. 2021 WESTAGRAM</p>
             </aside>
             
-
-
             <!--FEED BOARD-->
             <div class="feed_board">
                 
@@ -181,8 +175,7 @@
 
                     <!--content-->
                     <section class="feed_imgs">
-                        <img alt="파리 배경" src="./images/cute_01.png" />
-
+                        <img alt="햄스터 사진" src="./images/cute_01.png" />
                         <div class="interactions">
                             <div class="my_emotion">
                                 <button type="button"><i class="far fa-heart"></i>like</button></span>
@@ -200,8 +193,7 @@
                             님
                             <a href="#n" class="like_num txt_id">외 10명</a>
                             이 좋아합니다
-                        </p>
-                    
+                        </p>    
                     </section>
                     
                     <!--feed text-->
@@ -213,23 +205,27 @@
                     
 
                     <!--comment-->
-                    <section class="comments">
+                    <div class="comments">
                         <div id="listComment" class="list_comment">
                             <p class="txt_comment">
-                                <a href="#n" class="txt_id">follow ID</a>
-                                <span>나는 냥냥 </span>
+                                <span>
+                                    <a href="#n" class="txt_id">follow ID</a>
+                                    <span>나는 냥냥</span>
+                                </span>
+                                <button id="delete" type="button">X</button>
                             </p>
                         </div>
                         <form id="post" class="post_comment">
                             <textarea id="newComment" type="" placeholder="댓글 달기..."></textarea>
                             <button id="btnPost" type="submit">게시</button>
                         </form> 
-                    </section>
+                    </div>
                     
                 </article>
             </div>
-            <!--//FEEDS-->
+            <!--//FEED BOARD-->
         </main>
+        <!---//MAIN--->
 
         <script type="text/javascript" src="./js/main.js"></script>
     </body>
