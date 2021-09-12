@@ -2,6 +2,8 @@ const button = document.getElementById('login-button');
 const idIn = document.getElementById('id-email');
 const passwordIn = document.getElementById('password');
 const validity = document.getElementsByClassName("validity")[0]
+const container = document.getElementsByClassName("container")[0]
+
 
 // id에 @ password 5자이상 유효성 검사 및 버튼활성화
 function login() {
@@ -26,7 +28,7 @@ function enter(e) {
 
 
 
-passwordIn.addEventListener('keyup',login);
-idIn.addEventListener('keyup',login);
-passwordIn.addEventListener('keypress',enter);
-idIn.addEventListener('keypress',enter);
+container.addEventListener('keyup',login);
+// idIn.addEventListener('keyup',login);
+container.addEventListener('keypress',enter);
+// idIn.addEventListener('keypress',enter);
