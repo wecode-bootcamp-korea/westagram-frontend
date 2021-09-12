@@ -2,48 +2,56 @@
   box-sizing: border-box;
 }
 
-
-
-
 .left{
   width:10%;
 }
+
 .far{
   padding: 2px;
 }
+
 .firstLine{
   display: flex;
+  align-items: center;
   justify-content: space-around;
   border-bottom: 1px solid black;
 }
+
 .profile{
   margin-right: 30px;
 }
+
 .logo{
   display: flex;
-
 }
+
 .letter{
   font-family: 'Amiri', serif;
   font-family: 'Lobster', cursive;
 }
+
 .innerLogo{
   margin: 3px;
 }
+
 .search{
   display: flex;
+  align-items: center;
   border:1px solid grey;
   padding-left:30px;
   height: 100%;
+  margin-bottom: 2px;
 }
 
 .search input{
   border:0;
   margin-left:3px;
 }
+
 input[type="text"]{
   margin-right: 5px;
 }
+
 .profile{
   display: flex;
 }
@@ -58,15 +66,20 @@ input[type="text"]{
   border-right: 1px solid black;
 }
 
-
-
 .naming .feedsProfile{
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  
 }
 
+.fa-ellipsis-h{
+  color : black;
+  font-weight: 600;
+  /* padding-left : 90px; */
+  position: absolute;
+  right: 15px;
+  top : 15px;
+}
 
 .articlePicture{
   width: 100%;
@@ -83,10 +96,20 @@ article{
   align-items: center;
   position: relative;
 }
+
 .follow{
+ 
   position: absolute;
   right: 15px;
   color: blue;
+  cursor: pointer;
+}
+
+.unfollow{
+  /* 글짜 팔로우 -> 팔로우 취소로 변경 */
+  position: absolute;
+  right: 15px;
+  color: red;
   cursor: pointer;
 }
 
@@ -97,6 +120,7 @@ article{
 .naming2lines .second{
   font-size: 12px;
 }
+
 .friend {
   font-weight: bold;
   /* color: red; */
@@ -105,14 +129,17 @@ article{
   display: flex;
   align-items: center;
 }
+
 .friendSentence{
   padding-left: 8px;
 }
+
 .friendImg{
   width: 20px;
   height: 20px;
   border-radius : 50%;
 }
+
 .lines2{
   overflow: hidden;
   /* text-overflow: ellipsis; */
@@ -121,6 +148,7 @@ article{
   -webkit-box-orient: vertical;
   padding-top: 5px;
 }
+
 .lines2lines{
   font-weight: bold;
   font-size: 18px;
@@ -133,41 +161,77 @@ article{
   color: lightgray;
 }
 
-input[type="text"]{
-  /* padding-right: 83px; */
-  width : 100%;
+
+.commentBoxShow{
+  display: block;
 }
+
+.list-group-item{
+  padding: 5px;
+}
+
+input[type="text"]{
+  width : 100%;
+  border: none;
+  padding: 8px;
+}
+
+.commentLine{
+  border: 1px solid lightgray;
+  display: flex;
+  align-items: center;
+  justify-content:space-around;
+}
+
+.commentLine .button{
+  width: 50px;
+  height: 30px;
+  border: none;
+  background-color: white;
+  color: blue;
+  font-weight: bold;
+  cursor: pointer;
+}
+/* 여기부터 main-right */
 .story{
   border : 1px solid lightgray;
   margin-top : 5px;
 }
+
 .storyAll{
   display: flex;
   position: relative;
 }
+
 .storyLetter{
   padding-top: 5px;
   padding-left: 5px;
   color : lightgray;
   font-weight: bold;
+  font-size: 10px;
 }
+
 .all{
   position: absolute;
   right : 15px;
   padding-top: 5px;  
+  font-size: 10px;
 }
 
 .main-right{
   padding: 10px 0 0 10px;
 }
+
 .main-right{
   width: 30%;
 }
+
 .rightProfile{
   width: 30px;
   height: 30px;
   border-radius: 50%;
 }
+
 .right{
   display: flex;
   align-items: center;
@@ -177,24 +241,30 @@ input[type="text"]{
   display: flex;
   position : relative;
 }
+
 .articleLogo3{
   display: flex; 
 }
+
 .logo1{
   padding: 3px;
 }
+
 .logo1 .fa-heart{
   color : red;
  
 }
+
 .save {
   padding-left: 300px;
   position: absolute;
   right : 8px;
 }
+
 .rightSecond{
   font-size: 8px;
 }
+
 .right2lines{
   padding-left : 7px;
 }

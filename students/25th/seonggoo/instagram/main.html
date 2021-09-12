@@ -10,6 +10,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@1,700&family=Lobster&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
 </head>
 <body>
   <!-- nav 줄 (로고, 검색창, 마이프로필) -->
@@ -44,6 +46,8 @@
               <div class="first">Wecode_bootcamp</div>
               <div class="second">WeCode - 위코드</div>
             </div>
+            <i class="far fa-ellipsis-h"></i>
+            
           </div>
 
           <img class="articlePicture" src="coffee1.jpg" alt="error">
@@ -71,9 +75,30 @@
 
           <div class="timeLimit">30분 전</div><!--몇분전-->
 
-          <div class="comment"><!-- 댓글달기-->
-            <input type="text" placeholder="댓글 달기..."/>
+          <!-- <div class="comment">
+
+            <div class="commentBox"></div>
+            <div class="commentLine">
+              <input type="text" class="form-control" placeholder="댓글 달기..." id=input/>
+              <button class="button" type="button" id="button">게시</button> 
+            </div>
+            
+          </div> -->
+          <ul class="list-group" style="width: 100%;" id="list">
+            <!-- 여기에 댓글들 입력할거임 -->
+            <!-- 여기에 댓글들 입력할거임 -->
+            <!-- 여기에 댓글들 입력할거임 -->
+            <!-- 여기에 댓글들 입력할거임 -->
+            <!-- 여기에 댓글들 입력할거임 -->
+          </ul>
+          <div class="input-group mb-3" style="width: 100%;">
+            <input type="text" class="form-control" style="border: 1px solid black;" id="input">
+            <button 
+            class="btn btn-outline-secondary" type="button" id="button" style="opacity: 0.3" disabled="true">게시
+            </button>
           </div>
+        
+          
 
         </article> <!-- article 끝 -->
     </div>
@@ -148,32 +173,36 @@
             <div class="first">EEEEEEEEEE</div><!--아이디-->
             <div class="second">eeeeeeeeee</div><!--몇분전-->
           </div>
-          <div id="follow" class="follow">팔로우</div>
+          <div id="follow" class="follow" id="myDIV" >팔로우</div>
         </div>
+
         <div class="naming">
           <img class="feedsProfile" src="coffee1.jpg" alt="friend1"/><!--사진1-->
           <div class="naming2lines">
             <div class="first">FFFFFFFFFF</div><!--아이디-->
             <div class="second">ffffffffff</div><!--몇분전-->
           </div>
-          <div id="follow" class="follow">팔로우</div>
+          <div id="follow" class="follow" id="myDIV" >팔로우</div>
         </div>
+
         <div class="naming">
           <img class="feedsProfile" src="coffee1.jpg" alt="friend1"/><!--사진1-->
           <div class="naming2lines">
             <div class="first">GGGGGGGGGG</div><!--아이디-->
             <div class="second">gggggggggg</div><!--몇분전-->
           </div>
-          <div id="follow" class="follow">팔로우</div>
+          <div id="follow" class="follow" id="myDIV" >팔로우</div>
         </div>
+
         <div class="naming">
           <img class="feedsProfile" src="coffee1.jpg" alt="friend1"/><!--사진1-->
           <div class="naming2lines">
             <div class="first">HHHHHHHHHHH</div><!--아이디-->
             <div class="second">hhhhhhhhhhh</div><!--몇분전-->
           </div>
-          <div id="follow" class="follow">팔로우</div>
+          <div id="follow" class="follow" id="myDIV" >팔로우</div>
         </div>
+        
       </div>
     </div>
 
