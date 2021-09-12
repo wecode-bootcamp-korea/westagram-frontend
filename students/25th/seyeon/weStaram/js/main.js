@@ -1,6 +1,5 @@
 const input = document.getElementsByClassName("input")[0];
 const uploadButton = document.getElementsByClassName("uploadButton")[0];
-const inputComment = document.getElementsByClassName("input")[0]; // ""
 
 // 댓글창 가져오기
 // 게시 버튼 가져오기
@@ -20,11 +19,11 @@ function addElement(e) {
     const space = document.getElementsByClassName("feedMessage")[0];
 
     if (e.key === "Enter") {
-        p.innerHTML = inputComment.value;
+        p.innerHTML = input.value;
         
         box.appendChild(p);
         space.appendChild(box);
-        inputComment.value = "";
+        input.value = "";
     }
 }
 
@@ -36,10 +35,10 @@ function clickEvent() {
     box.className = 'addedMessage';
     const p = document.createElement('p');
     const space = document.getElementsByClassName("feedMessage")[0];
-    p.innerHTML = inputComment.value;
+    p.innerHTML = input.value;
     box.appendChild(p);
     space.appendChild(box);
-    inputComment.value = "";
+    input.value = "";
 }
 
 uploadButton.addEventListener('click',clickEvent);
