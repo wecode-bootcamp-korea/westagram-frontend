@@ -3,15 +3,6 @@ const idInput = document.getElementById('idInput');
 const pwInput = document.getElementById('pwInput');
 const loginBtn = document.getElementsByClassName('loginGo')[0];
 
-idInput.addEventListener('keyup', inputKeyboardEvent);
-pwInput.addEventListener('keyup', inputKeyboardEvent);
-loginBtn.addEventListener('click', loginBtnClick);
-document.addEventListener('keyup', (e) => {
-    if (`${e.key}` == 'Enter') {
-        loginBtnClick();
-    }
-}) // enter 입력시 loginBtnClick() 호출
-
 // 로그인 버튼 클릭 이벤트 & 유효성 검사 이벤트
 function loginBtnClick() {
     if (idInput.value === "buzzi_nyang" && pwInput.value === "1234") {
@@ -35,7 +26,7 @@ function inputKeyboardEvent() {
     if (idInput.value.length == 0 && pwInput.value.length > 0) {
         loginBtn.style.backgroundColor = "#b9def7";
     }
-    // id값은 있지만, pw값이 없음녀 버튼 비활성화
+    // id값은 있지만, pw값이 없으면 버튼 비활성화
     if (idInput.value.length > 0 && pwInput.value.length == 0) {
         loginBtn.style.backgroundColor = "#b9def7";
     }
@@ -46,3 +37,12 @@ function inputKeyboardEvent() {
 function phoneNumberCheck() {
     alert("잘 떠올려 보세요! 계정 주인만 가입할 수 있습니다!");
 }
+
+idInput.addEventListener('keyup', inputKeyboardEvent);
+pwInput.addEventListener('keyup', inputKeyboardEvent);
+loginBtn.addEventListener('click', loginBtnClick);
+document.addEventListener('keyup', (e) => {
+    if (`${e.key}` == 'Enter') {
+        loginBtnClick();
+    }
+}) // enter 입력시 loginBtnClick() 호출
