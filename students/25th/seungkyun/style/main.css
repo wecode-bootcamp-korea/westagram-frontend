@@ -1,10 +1,10 @@
 body {
   padding-top: 54px;
-  height: 100vh;
   background-color: #FAFAFA;
 }
 
-.headerContainer {
+/* nav  */
+.navPostionSet {
   position: fixed;
   left:0;
   right:0;
@@ -14,7 +14,7 @@ body {
 }
 .navContainer {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   width: 975px;
   height: 54px;
@@ -23,30 +23,37 @@ body {
 }
 
 .fa-instagram {
-  font-size: 23px;
-  border-right: 1px solid black;
   padding-right: 10px;
+  border-right: 1px solid black;
+  font-size: 23px;
 }
 
-.instagram_logo {
+.westagramLogo {
   display: inline-block;
   width: 103px;
   height: 29px;
   padding-left: 10px;
+  color: black;
   font-family: 'Lobster', cursive;
   font-size : 22px;
+  text-decoration: none;
+  cursor: pointer;
 }
 
-/* 필드 안에 돋보기 추가 */
+.navCenter {
+  position: relative;
+}
+
 .searchField {
   width: 215px;
   height: 28px;
   padding: 7px;
-  border: 1px solid #DBDBDB;
   background-color: #FAFAFA;
-  text-align: center;
+  border: 1px solid #DBDBDB;
   color: #8E8E8E;
+  opacity: 0.5;
   font-size: 14px;
+  text-align: center;
 }
 
 .searchField:focus {
@@ -55,39 +62,38 @@ body {
 }
 
 .fa-search {
-  font-size: 13px;
-  color: #A5A7AA;
+  position: absolute;
+  top: 8.5px;
+  left: 37%;
+  color: #8E8E8E;
+  opacity: 0.5;
+  font-size: 12px;
 }
 
-.headerIcon {
+.navIcons {
   width: 22px;
   height: 22px;
-}
-
-.headerIcon {
   margin-left: 24px;
 }
 
-/* 컨테이너 크기 확인 목적으로 배경속성 적용. 완성 시 배경색 제거 */
+/* Section - article */
 .bodyContainer {
+  display: flex;
+  justify-content: center;
+  width: 935px;
   margin: 0 auto;
   padding-top: 50px;
 }
 
-.article {
+.feeds {
   width: 614px;
   margin-right: 28px;
-}
-
-/* 이미지 부분 테두리 벗어나서 다시 triming, 추후에 다시 확인해보자. */
-.articleBox {
+  margin-bottom: 24px;
   background-color: white;
   border: 1px solid #DBDBDB;
-  margin: 0 -1px;
-
 }
 
-.articleHeaderBox {
+.feedHeader {
   display: flex;
   align-items: center;
   width: 614px;
@@ -96,13 +102,13 @@ body {
   border-bottom: 1px solid #DBDBDB;
 }
 
-.articleHeaderBox img {
+.feedHeader img {
   width:32px;
   height:32px;
   border-radius: 50%;
 }
 
-.articleHeaderInside {
+.feedHeaderInside {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -110,11 +116,20 @@ body {
   height: 26px;
 }
 
-
 .accountName {
   margin-left: 14px;
   font-weight: bold;
   font-size: 14px;
+  text-decoration: none;
+  color: black;
+}
+
+.feedHeaderInside button {
+  width: 16px;
+  height: 16px;
+  background-color: white;
+  border: none;
+  cursor: pointer;
 }
 
 .fa-ellipsis-h {
@@ -122,7 +137,7 @@ body {
   font-size: 15px;
 }
 
-.articleImage {
+.feedImage {
   width: 100%;
   margin: 0;
   padding: 0;
@@ -132,7 +147,7 @@ body {
   display: flex;
   justify-content: space-between;
   width: 614px;
-  margin-top: 4px;
+  margin: -4px 0 4px 0;
   padding: 0 16px;
 }
 
@@ -142,9 +157,6 @@ body {
   padding: 8px;
   background-color: white;
   border: none;
-}
-
-.iconsContainer button:hover {
   cursor: pointer;
 }
 
@@ -154,7 +166,7 @@ body {
 
 .likePersonContainer {
   padding: 0 16px;
-  margin-bottom: 8px;
+  margin-bottom: 2px;
 }
 
 .likeBySomeone {
@@ -166,7 +178,6 @@ body {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  
 }
 
 .likePersonText {
@@ -197,11 +208,10 @@ body {
   font-size: 14px;
   word-wrap: break-word;
   word-break: break-all;
-  margin-bottom: 5px;
 }
 
-.picText div {
-  margin-bottom: 2px;
+.picText div:first-child {
+  margin-bottom: 4px;
 }
 
 .commentLines > div {
@@ -209,7 +219,13 @@ body {
 }
 
 .commentContainer a {
+  color: black;
+  text-decoration: none;
   font-weight: 600;
+}
+
+.commentContainer a:hover {
+  text-decoration: underline;
 }
 
 .commentContainer span {
@@ -228,8 +244,8 @@ body {
 }
 
 .days {
+  display: inline-block;
   padding-left: 16px;
-  margin-bottom: 4px;
   font-size: 10px;
   color: rgb(142, 142, 142)
 }
@@ -251,6 +267,7 @@ body {
   color: #0095F6;
   padding-left:2px;
 }
+
 .makeCommentContainer {
   display: flex;
   justify-content: flex-start;
@@ -260,8 +277,12 @@ body {
   padding: 0 16px;
   border-top: 1px solid #DBDBDB;
 }
+
 .commentField {
-  width: 100%;
+  width: 90%;
+  height: 18px;
+  margin: auto 0;
+  background-color: white;
   border: none;
   font-size: 14px;
   resize: none;
@@ -269,6 +290,10 @@ body {
 
 .commentField:focus {
   outline: none;
+}
+
+.makeCommentContainer button {
+  opacity: 0.5;
 }
 
 .myImageInSide {
@@ -307,5 +332,91 @@ body {
   color: #0095F6;
   text-align: right;
   border: none;
-  background-color: white;
+  background-color: #FAFAFA;
+}
+
+.personalRecommendContainer {
+  margin-bottom: 16px;
+}
+
+.personalRecommendHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 18px;
+  font-size: 14px;
+}
+
+.personalRecommendHeader span {
+  font-size: 14px;
+  color: #8E8E8E;
+  font-weight: 600;
+}
+
+.personalRecommendHeader a {
+  font-size: 12px;
+  font-weight: 600;
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.personalRecommendMain {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 8px 0;
+}
+
+.recommendPicbox {
+  display: flex;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  text-align: left;
+}
+
+.recommendForYouPic {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.personalRecommendID {
+  width: 100%;
+  margin-left: 12px;
+}
+
+.personalRecommendID div:first-child {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.personalRecommendID div:last-child {
+  font-size: 12px;
+  color: #8E8E8E;
+}
+
+.personalRecommendMain button {
+  width: 32px;
+  border : none;
+  background-color: #FAFAFA;
+  font-size: 12px;
+  font-weight: 600;
+  color: #0095F6;
+  text-align: right;
+}
+
+footer {
+  font-size: 11px;
+  color: #C7C7C7;
+}
+
+footer p:first-child {
+  margin-bottom: 16px;
+}
+
+footer p:first-child a {
+  text-decoration: none;
+  color: #C7C7C7;
+  cursor: pointer;
 }
