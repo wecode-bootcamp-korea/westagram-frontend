@@ -12,12 +12,14 @@ document.addEventListener('keyup', (e) => {
     }
 }) // enter 입력시 loginBtnClick() 호출
 
-// 로그인 버튼 클릭 이벤트
+// 로그인 버튼 클릭 이벤트 & 유효성 검사 이벤트
 function loginBtnClick() {
     if (idInput.value === "buzzi_nyang" && pwInput.value === "1234") {
         location.replace("./main.html");
     } else if(idInput.value.length == 0 && pwInput.value.length == 0) {
         alert("id와 pw 번호를 입력해 주세요.");
+    } else if (idInput.value.length <= 5 && pwInput.value.length <=5) {
+        alert("id와 pw 길이가 짧습니다. 다시 한 번 확인해 주세요.");
     } else {
         alert("캣스타그램 계정 주인만 로그인 할 수 있습니다.");
     }
