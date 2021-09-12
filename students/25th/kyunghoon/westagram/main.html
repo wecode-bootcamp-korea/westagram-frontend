@@ -2,9 +2,9 @@
 <html>
 <head>
 <meta charset="utf-8">
-<link href="./style/reset.css" rel="stylesheet" tyep="text/css">
-<link href="./style/common.css" rel="stylesheet" type="text/css" />
-<link href="./style/main.css" rel="stylesheet" type="text/css" />
+<link href="style/reset.css" rel="stylesheet" tyep="text/css">
+<link href="style/common.css" rel="stylesheet" type="text/css" />
+<link href="style/main.css" rel="stylesheet" type="text/css" />
 <link href="https://www.flaticon.com/authors/freepik" title="Freepik">
 <link href="https://image.flaticon.com/icons/png/512/1384/1384063.png" rel="shortcut icon" type="image/x-icon">
 <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
@@ -63,21 +63,24 @@
   </div>
   </div>
   <div class = "friendsSentence">
-    <span>hm_son70</span> 
-    <p>거봐 좋았잖아 ~~~😎</p>
-  </div>
+    <ul class = comments>
+      <li>
+        <span><span class = "user-id">hm_son70</span> 거봐 좋았잖아 ~~~😎</span>
+      </li>
+    </ul>
   <div class= "time"> 
     <p>42분전</p>
   </div>
+</div>
   <div class = "feedCommentContainer">
-  <input class = "feedComment" type = "text" placeholder="댓글 달기...">
-  <button>게시</button>
+  <input id = "feedComment" type = "text" placeholder="댓글 달기...">
+  <button class = "submitbtn" type ="submit" disabled>게시</button>
 </div>
   </div>
 </article>
 <aside>
  <div class = "asideHead">
-  <img src = "/img/hi1.png" width = "56px" height = "56px">
+  <img src = "img/hi1.png" width = "56px" height = "56px">
  <div class = "asideHeadText">
   <p>hoonstagram</p>
   <p>hoonstagram | 훈스타그램</p>
@@ -90,28 +93,28 @@
  </div>
  <div class = "asideBodyImgId">
  <div class = "asidehi">
- <img src = "/img/hi3.jpg" width = "32px" height = "32px">
+ <img src = "img/hi3.jpg" width = "32px" height = "32px">
  <div class = "asidehi2">
  <span>messi_messi100</span>
  <p>16분전</p>
 </div>
 </div>
 <div class = "asidehi">
- <img src = "/img/hi4.jpg" width = "32px" height = "32px">
+ <img src = "img/hi4.jpg" width = "32px" height = "32px">
  <div class = "asidehi2">
  <span>hm_son70</span>
  <p>45분전</p>
  </div>
 </div>
 <div class = "asidehi">
- <img src = "/img/hi5.jpg" width = "32px" height = "32px">
+ <img src = "img/hi5.jpg" width = "32px" height = "32px">
  <div class = "asidehi2">
  <span>stephncurry300</span>
  <p>1시간 전</p>
  </div>
 </div>
 <div class = "asidehi">
- <img src = "/img/hi6.jpg" width = "32px" height = "32px">
+ <img src = "img/hi6.jpg" width = "32px" height = "32px">
  <div class = "asidehi2">
  <span>MLB_Korea_Official1</span>
  <p>3시간 전</p>
@@ -125,21 +128,21 @@
   <p>모두 보기</p>
 </div>
   <div class = "asideTailsRecommend1">
-   <img src = "/img/hi6.jpg" width = "32px" height = "32px">
+   <img src = "img/hi7.jpg" width = "32px" height = "32px">
    <div class = "asideTailsRecommend2">
    <span>King_James</span>
    <p>전 세계인이 팔로우 하고있습니다.</p>
   </div> 
   </div>
    <div class = "asideTailsRecommend1">
-    <img src = "/img/hi7.jpg" width = "32px" height = "32px">
+    <img src = "img/hi8.jpg" width = "32px" height = "32px">
   <div class = "asideTailsRecommend2">
     <span>Trash_C.Ronaldo</span>
     <p>대한민국이 언팔로우 하고있습니다.</p>
   </div>
   </div>
    <div class = "asideTailsRecommend1">
-    <img src = "/img/hi7.jpg" width = "32px" height = "32px">
+    <img src = "img/hi9.jpg" width = "32px" height = "32px">
     <div class = "asideTailsRecommend2">
     <span>I LOVE SPORTS</span>
     <p>스포츠인들이 팔로우 하고있습니다.</p>
@@ -150,5 +153,6 @@
  </div>
 </aside>
 </div>
+<script src = js/main.js></script>
 </body>
 </html>

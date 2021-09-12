@@ -2,9 +2,9 @@
 <html>
 <head>
 <meta charset="utf-8">
-<link href="./style/reset.css" rel="stylesheet" tyep="text/css">
-<link href="./style/common.css" rel="stylesheet" type="text/css" />
-<link href="./style/login.css" rel="stylesheet" type="text/css" />
+<link href="style/reset.css" rel="stylesheet" tyep="text/css">
+<link href="style/common.css" rel="stylesheet" type="text/css" />
+<link href="style/login.css" rel="stylesheet" type="text/css" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
@@ -16,13 +16,14 @@
 <div class = "container">
   <h1 class = "headline">Westagram</h1>
 <div class = "userInformation">
-  <input class = "loginId" type = "text" placeholder = "전화번호, 사용자이름 또는 이메일">
-  <input class = "loginPassword" type = "password" placeholder = "비밀번호"> 
+  <input id = "Id" type = "text" placeholder = "전화번호, 사용자이름 또는 이메일">
+  <input id = "Pw" type = "password" placeholder = "비밀번호"> 
 </div>
-<button class = "loginButton">로그인</button>
+<button class = "Button">로그인</button> 
 <div class = "forgetPassword">
   <a href = "">비밀번호를 잊으셨나요?</a>
 </div>
 </div>  
+<script src="js/login.js"></script>
 </body>
 </html>
