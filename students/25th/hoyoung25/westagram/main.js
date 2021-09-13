@@ -14,7 +14,7 @@ function addCommnet(){
 
   li.innerHTML=`thangno ${liList}`;
   newUl.appendChild(li);
-  repl.value=null;
+  repl.value = null;
 };
 
 
