@@ -9,7 +9,7 @@ nav{
     justify-content: space-around;
     /* margin: 20px 0; */
     height: 80px;
-    border: 1px solid red;
+    background-color: #ffffff;
 }
 
 .nav-left{
@@ -28,20 +28,21 @@ h2{
     position: relative;
     display: flex;
     align-items: center;
-    border: 1px solid blue;
 }
 
 #search{
-    position: relative;
     padding: 5px 20px ;
     text-align: center;
     
 }
 
-.fas fa-search{
+span.search{
     position: absolute;
-    margin: 20px;
-    border:  1px solid blue;
+    
+    margin-left: 113px;
+    margin-top: 2px;
+    opacity: 40%;
+    
 }
 
 .nav-right {
@@ -55,9 +56,11 @@ h2{
 #explore {
     height : 25px;
 }
+
 #heart {
     height: 25px;
 }
+
 #profile {
     height: 25px;
 }
@@ -66,26 +69,148 @@ main {
     display: flex;
     justify-content: center;
     height: 100%;
-    border: 1px solid orange;
-    background-color: yellow;
+    background-color: #fafafa
 }
+
 .feed{
     height: 90%;
-    width: 40%;
-    /* margin-left: 180px; ; */
-    background-color: greenyellow;
-    z-index: 2;
-    
+    width: 40%;  
 }
+
 article{
     height: 80%;
     margin: 50px 10px 30px 10px;
-    background-color: rebeccapurple;
-    
+    border: 1px solid grey;    
 }
-.mainright{
+
+.article_top{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.headerLeft{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#profile{
+    width: 33px;
+    height: 30px;
+}
+
+.my_id{
+    margin: 10px;
+}
+
+#more {
+    /* display: flex;
+    justify-content: flex-end; */
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+image{
+    position: absolute;
+}
+
+.article_bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
+.article_bottom_like{
+    display: flex;
+}
+
+.main_right{
+    position: relative;
+    display: flex;
+    flex-direction: column;
     height: 60%;
     width: 25%;
     margin-left: 30px;
-    background-color: dodgerblue;
+    margin-top: 55px;
+}
+.article_bottom_commentlike{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 260px;
+}
+.main_right_top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 180px;
+    margin-bottom: 20px;
+}
+
+.main_right_profile{
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+
+.main_right_profile_name{
+    font-weight: 600;
+}
+
+.main_right_center{
+    padding: 10px;
+    height: 200px;
+    border: 1px solid gray;
+}
+
+.main_right_center_top{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.main_right_center_profile{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100px;
+}
+
+.main_right_center_profile1{
+    display: flex;
+    align-items: center;
+}
+
+.main_right_center_profile2{
+    display: flex;
+    align-items: center;
+}
+
+.main_right_center_profile3{
+    display: flex;
+    align-items: center;
+}
+
+.main_right_center_profile_id{
+    margin-left: 10px;
+}
+
+.main_right_bottom{
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid gray;
+}
+
+.main_right_bottom_top{
+    margin: 10px 0;
+}
+
+.main_right_bottom_top{
+    display: flex;
+    justify-content: space-between;
 }

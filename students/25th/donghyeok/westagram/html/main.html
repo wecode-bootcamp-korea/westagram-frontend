@@ -7,7 +7,8 @@
         <link href="/westagram-frontend/students/25th/donghyeok/westagram/style/main.css" rel="stylesheet" type="text/css" />
         <link href="/westagram-frontend/students/25th/donghyeok/westagram/style/common.css" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
-        
+        <!-- <link href="../style/main.css" rel="stylesheet" type="text/css" /> -->
+
     </head>
     <body>
         <nav>
@@ -18,34 +19,107 @@
               <i alt= "instagram icon" class= "fab fa-instagram fa-2x"></i>
               <h2>westagram</h2>
             </div>
-
-            <div class= "nav-center">
-              <input type= "text" id= "search" placeholder= "검색">
-              <span>
-              <i alt= "search" class= "fas fa-search"></i>
-              </span>
-            </div>
-
+              <div class= "nav-center">
+                <input type= "text" id= "search" placeholder= "검색">
+                <span class="search">
+                <i alt= "search" class= "fas fa-search"></i>
+                </span>
+              </div>
             <div class= "nav-right">
-            <img alt= "explore icon" id="explore" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png">
-            <img alt= "heart icon" id="heart" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png">
-            <img alt= "profile icon" id="profile" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png">
+              <img alt= "explore icon" id="explore" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png">
+              <img alt= "heart icon" id="heart" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png">
+              <img alt= "profile icon" id="profile" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png">
             </div>
-
-          <!-- </div>   -->
         </nav>
-
        <main>
             <div class="feed">
-                <!-- 피드전체 -->
                 <article>
-                    <!-- 피드 하나의 내용 -->
-
+                  <div class = "article_top">
+                    <div class="headerLeft">
+                      <img alt="profile icon" id = "profile" src="/westagram-frontend/students/25th/donghyeok/westagram/img/profile.png">
+                      <span class = "my_id"> wecode.bootcamp </span>
+                      </div>
+                      <div class="headerRight">
+                          <img alt= "more icon" id= "more" src="/westagram-frontend/students/25th/donghyeok/westagram/img/more.png">
+                      </div>
+                  </div>
+                   <img alt="mainimg" width="100%" src="/westagram-frontend/students/25th/donghyeok/westagram/img/shayna-douglas-h5Bnss19KSo-unsplash.jpg">
+                   <div class = "article_bottom">
+                      <span class="article_bottom_left">
+                        <img alt= "heart icon" id="heart" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png">
+                        <img alt= "comment icon" id= "more" src="/westagram-frontend/students/25th/donghyeok/westagram/img/comment.png">
+                        <img alt= "upload icon" id= "more" src="/westagram-frontend/students/25th/donghyeok/westagram/img/upload.png">
+                      </span>
+                      <span class="article_bottom_right">
+                        <img alt= "more icon" id= "more" src="/westagram-frontend/students/25th/donghyeok/westagram/img/save.png">
+                      </span>
+                  
+                    </div>
+                    <span class="article_bottom_commentlike">
+                      <img alt="profile icon" id = "profile" src="/westagram-frontend/students/25th/donghyeok/westagram/img/profile.png">
+                      <span>ainworld님 외 10명이 좋아합니다.</span>
+                    <!-- <div class="comment"> -->
+                      <!-- 여기에 댓글 입력하는 곳 -->
+                    </span>    
+                   </div>
+                   
+                 </div>
                 </article>
             </div>
-            <div class = mainright>
+            <div class = "main_right">
+                <div class ="main_right_top">
+                  <img alt="profile icon" id = "profile" src="/westagram-frontend/students/25th/donghyeok/westagram/img/profile.png">
+                <div class ="main_right_profile">
+                  <span class ="main_right_profile_name">wecode_bootcamp</span>
+                  <span class ="main_right_profile_place">Wecode | 위코드</span>
+                </div>  
+                </div>
+                <div class = "main_right_center">
+                  <div class = "main_right_center_top">
+                    <span>스토리</span>
+                    <span>모두 보기</span>
+                  </div>
+                  <div class = "main_right_center_profile">
+                    <div class = "main_right_center_profile1">
+                      <img alt="profile icon" id = "profile" src="/westagram-frontend/students/25th/donghyeok/westagram/img/profile.png">
+                      <span class = "main_right_center_profile_id">_yum_s</span>
+                    </div> 
+                    <div class = "main_right_center_profile2">
+                      <img alt="profile icon" id = "profile" src="/westagram-frontend/students/25th/donghyeok/westagram/img/profile.png">
+                      <span class = "main_right_center_profile_id">drink_eat</span>
+                    </div> 
+                    <div class = "main_right_center_profile3">
+                      <img alt="profile icon" id = "profile" src="/westagram-frontend/students/25th/donghyeok/westagram/img/profile.png">
+                      <span class = "main_right_center_profile_id">hyukyc</span>
+                    </div>  
+                  </div> 
+                </div>
+                  <div class ="main_right_bottom">
+                    <div class = "main_right_bottom_top">
+                      <span>회원님을 위한 추천</span>
+                      <span>모두 보기</span>
+                    </div>
+                  <div class = "main_right_center_profile">
+                    <div class = "main_right_center_profile1">
+                      <img alt="profile icon" id = "profile" src="/westagram-frontend/students/25th/donghyeok/westagram/img/profile.png">
+                      <span class = "main_right_center_profile_id">_yum_s</span>
+                    </div> 
+                    <div class = "main_right_center_profile2">
+                      <img alt="profile icon" id = "profile" src="/westagram-frontend/students/25th/donghyeok/westagram/img/profile.png">
+                      <span class = "main_right_center_profile_id">drink_eat</span>
+                    </div> 
+                    <div class = "main_right_center_profile3">
+                      <img alt="profile icon" id = "profile" src="/westagram-frontend/students/25th/donghyeok/westagram/img/profile.png">
+                      <span class = "main_right_center_profile_id">hyukyc</span>
+                    </div>  
+                  </div> 
+                </div> 
+                
+                
+                
+                </div>
                 <!-- 우측 스토리나 추천 -->
-            </div class = mainright>
+            </div>
         </main>
     </body>
 </html> 
