@@ -4,8 +4,8 @@
         <title>westagram_main</title>
         <meta charset="utf-8">
         <!-- 여기에 css 링크자리 -->
-        <link href="/students/25th/donghyeok/westagram/style/common.css" rel="stylesheet" type="text/css" />
-        <link href="/students/25th/donghyeok/westagram/style/main.css" rel="stylesheet" type="text/css" />
+        <link href="/westagram-frontend/students/25th/donghyeok/westagram/style/main.css" rel="stylesheet" type="text/css" />
+        <link href="/westagram-frontend/students/25th/donghyeok/westagram/style/common.css" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
         
     </head>
@@ -20,24 +20,27 @@
             </div>
 
             <div class= "nav-center">
-              <input type= "text" placeholder= "검색">
+              <input type= "text" id= "search" placeholder= "검색">
+              <span>
               <i alt= "search" class= "fas fa-search"></i>
+              </span>
             </div>
 
             <div class= "nav-right">
-            <img alt= "explore icon" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png">
-            <img alt= "heart icon" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png">
-            <img alt= "profile icon"src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png">
+            <img alt= "explore icon" id="explore" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png">
+            <img alt= "heart icon" id="heart" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png">
+            <img alt= "profile icon" id="profile" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png">
             </div>
 
           <!-- </div>   -->
         </nav>
 
-        <!-- <main>
+       <main>
             <div class="feed">
                 <!-- 피드전체 -->
                 <article>
                     <!-- 피드 하나의 내용 -->
+
                 </article>
             </div>
             <div class = mainright>

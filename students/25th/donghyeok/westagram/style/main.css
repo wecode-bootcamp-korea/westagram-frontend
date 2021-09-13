@@ -7,6 +7,8 @@ nav{
     display: flex;
     justify-content: center;
     justify-content: space-around;
+    /* margin: 20px 0; */
+    height: 80px;
     border: 1px solid red;
 }
 
@@ -17,6 +19,8 @@ nav{
 }
 
 h2{
+    font-family: 'Amiri', serif;
+    font-family: 'Lobster', cursive;
     margin-left :5px;
 }
 
@@ -24,17 +28,64 @@ h2{
     position: relative;
     display: flex;
     align-items: center;
+    border: 1px solid blue;
+}
+
+#search{
+    position: relative;
+    padding: 5px 20px ;
+    text-align: center;
     
 }
 
-input.text{
-    padding: 5px 20px ;
-}
-
 .fas fa-search{
-    padding: 10px;
+    position: absolute;
+    margin: 20px;
+    border:  1px solid blue;
 }
 
 .nav-right {
-    image;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* padding: 0 60px; */
+    width: 150px;
+} 
+
+#explore {
+    height : 25px;
+}
+#heart {
+    height: 25px;
+}
+#profile {
+    height: 25px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    border: 1px solid orange;
+    background-color: yellow;
+}
+.feed{
+    height: 90%;
+    width: 40%;
+    /* margin-left: 180px; ; */
+    background-color: greenyellow;
+    z-index: 2;
+    
+}
+article{
+    height: 80%;
+    margin: 50px 10px 30px 10px;
+    background-color: rebeccapurple;
+    
+}
+.mainright{
+    height: 60%;
+    width: 25%;
+    margin-left: 30px;
+    background-color: dodgerblue;
 }
