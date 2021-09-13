@@ -1,4 +1,4 @@
-.container {  
+main {  
     width: 100vw;
     height: 100vh;
     background: #fafafa;    
@@ -23,13 +23,13 @@
     font-family: 'Lobster', cursive;
 }
 
-.inner .login,
-.inner .btn {
+.loginForm,
+.loginBtn {
     width: 70%;
     margin:0 auto;
 }
 
-.login input {
+.loginForm input {
     width: 100%;  
     height: 56px;
     margin-top: 10px;
@@ -41,9 +41,9 @@
     border-radius: 4px;
 }
 
-.login input:first-child {  margin-top: 40px; }
+.loginForm input:first-child {  margin-top: 40px; }
 
-.btn button {
+.loginBtn button {
     width: 100%;
     height: 50px;
     margin-top: 10px;
@@ -58,16 +58,16 @@
     transition: all 0.3s ease-out;
 }
 
-.btn button:disabled { 
+.loginBtn button:disabled { 
     background-color: #0094f656;
 }
 
-.inner .login input,
-.wrap .pw-serch a {
+.loginForm input,
+.pwFind {
     font-size: 14px;
 }
 
-.wrap .pw-serch a{
+.pwFind {
     width: 100%;
     position: absolute;
     left: 0;

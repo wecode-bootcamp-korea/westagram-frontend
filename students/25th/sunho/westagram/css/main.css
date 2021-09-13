@@ -1,4 +1,4 @@
-header {
+nav {
     width: 100%; 
     height: 54px;
     position: fixed;
@@ -16,8 +16,9 @@ header {
 }
 
 .wrap div {
+    /* border: 1px solid black; */
     display: flex;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     width: 100%;
 }
@@ -30,24 +31,29 @@ header {
 
 .search { 
     flex-grow: 1;
+    position: relative;
     width: 500px; 
 }
 
 .search input {
-    position: relative;
     width: 100%; 
-    height: 30px;
-    padding: 7px;
-    font-size: 14px;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 16px;
     font-weight: 300;
-    cursor: text;
     border: 1px solid #c7c7c7;
     border-radius: 3px;
     background: #fafafa;
 }
 
 .search span {
+    display: inline-block;
     position: absolute;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-overflow: ellipsis;
+    white-space: nowrap;
     color: #c7c7c7;
 }
 
@@ -64,56 +70,90 @@ header {
 
 .user a img {  width: 50%;  }
 
+/* --------------------------------------- */
+/* main */
+/* --------------------------------------- */
+
 main {
-    width: 100vw;
-    height: 100vh;
+    display: flex;
+    justify-content: center;
     background: #fafafa;
 }
 
 section {
-    display: flex;
-    justify-content: space-between; 
-    width: 90%; 
-    max-width: 1000px;
-    margin: 40px auto;
     position: relative;
-    top: 54px; left: 0;
+    top: 54px;
+    left: 0;
+    max-width: 1000px;
+    padding-right: 30px;
 }
 
 .contents {
-    display: flex;
-    justify-content: space-between;
-    height: 750px;
     background: #fafafa;
 }
 
-.card{
+.feed { 
     width: 600px; 
+    margin-top: 30px;
     background: #fff;
+    border-radius: 5px;
     border: 1px solid #c7c7c7;
 }
 
 .profile {
-    width: 100%;
     display: flex;
+    position: relative;
+    width: 100%;
 }
 
-.profile div:first-child{  margin-left: 20px;  }
-
-.profile-img {   
-    width: 60px;    
+.profile div:first-child{  
+    margin-left: 20px;  
+}
+/* ----------------------------- */
+/* profile-img border gradient */
+/* ----------------------------- */
+.profileImg {   
+    position: relative;
+    width: 70px;
+    height: 70px;
     margin: 10px;
+    border: 3px solid transparent;
     border-radius: 50%;
+    background-image: linear-gradient(#fff, #fff), 
+    linear-gradient(to right, red 0%,  orange 100%);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
     overflow: hidden;
+    cursor: pointer;   
 }
+
+.profileImg img {
+    position: absolute;
+    width: 90%;
+    border-radius: 50%;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+/* ----------------------------- */
 
 .name { 
     font-weight: bold; 
     line-height: 80px;
     text-align: center;
+    cursor: pointer;
 }
 
-.card .card-img {
+.more {
+    position: absolute;
+    top: 0; 
+    right: 0;
+    margin-right: 20px;
+    line-height: 80px;
+    cursor: pointer;
+}
+
+.feed .feed-img {
     width: 100%;
     max-width: 1000px;
     overflow: hidden;
@@ -128,7 +168,6 @@ section {
 .click-inner {
     width:50%;
     display: flex;
-    
 }
 .click-inner div {
     width: 9%;
@@ -136,85 +175,167 @@ section {
     cursor: pointer;
 }
 
-.click-inner div:nth-child(2) {  width: 8%; margin-left: 15px;  }
+.click-inner div:nth-child(2) {  
+    width: 8%; 
+    margin-left: 15px;  
+}
 
-.click-line .save { width:50%; }
+.save {  width:50%;}
 
-.click-line .save img{
+.save img{
     position: absolute;
     top: 0; 
     right: 0;
-    margin: 10px 20px;
-    width: 5%;
+    margin: 10px 10px;
+    width: 4.2%;
     cursor: pointer;
 }
 
-.comment-view {  width: 100%;  }
-
-.comment-view p {
-    width: 100%;
-    padding: 10px;
-    font-weight: bold;
-    cursor: pointer;
+.comment-view {   
+    padding: 10px 10px;
 }
 
-.comment-view span {
-    padding: 10px;
+.likeText {
+    padding-bottom: 5px;
+}
+
+.comment li {
+    padding-top: 5px;
+}
+
+.date {
+    padding-top: 20px;
     font-size: 14px;
-    color: #8e8e8e;;
+    color: #8e8e8e;
+    cursor: pointer;
 }
 
-.comment {
-    width: 100%;
-    padding-top: 10px ;
+
+.write {
+    border-top: 1px solid #8e8e8e44;
+    margin-top: 10px;
 }
-.comment input {
-    width: 100%;
+
+.writeInner {
+    display: flex;
+    width: 99%;
+    margin: 0 auto;
+}
+
+.emoticon {
+    flex-grow: 1;
+    text-align: center;
+    line-height: 50px;
+    font-size: 35px;
+    border: none;
+    cursor: pointer;
+}
+
+.post {
+    flex-grow: 20;
     height: 56px;
     padding-left: 10px;
     font-size: 16px;
     text-overflow: ellipsis;
-    border: 1px solid #8e8e8e;
+    resize: none;
 }
 
+.submit {
+    flex-grow: 1;
+    text-align: center;
+    line-height: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #0095F6;
+    cursor: pointer;
+}
+
+.submit:disabled {
+    color: #0094f656;
+}
+
+/* ---------------------------- */
+/* aside */
 /* ---------------------------- */
 
 aside {
     width: 350px;
-    height: 100%;
+    /*sticky 주기위해 height 설정 필수*/
+    height: 10px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 84px; 
+    left: 0;   
 }
 
-.toMyPage {  width: 100%;}
-
-.my-home {
-    width: 100%;
-    height: 100px;
-    display: flex;
+.myHome {
+    display: flex; 
+    position: relative;
 }
 
-.myhome-img {
-    width: 80px; height: 80px;
-    border-radius: 50%;
+.myHomeImg {
+    position: relative;
+    width: 70px;
+    height: 70px;
     margin: 10px;
+    border: 3px solid transparent;
+    border-radius: 50%;
+    background-image: linear-gradient(#fff, #fff), 
+    linear-gradient(to right, red 0%,  orange 100%);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
     overflow: hidden;
+    cursor: pointer;  
+}
+
+.myHomeImg img {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    width: 90%;
+    border-radius: 50%;
+}
+
+.myName p:first-child{
+    margin-top: 25px;
+    font-weight: bold;
+}
+
+.myName p:last-child{
+    color: #8e8e8e;
+}
+
+.myHome a {
+    position: absolute;
+    top: 35px;
+    right: 0;
+    margin-right: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #0095F6;
 }
 
 .story {
-    width: 100%;
-    height: 300px;
-    background: #fff;
-    border: 1px solid #c7c7c7;
+    height: 250px;
+    border-radius: 5px;
     overflow: hidden;
+    overflow: scroll;
+    overflow-x: hidden;
 }
+
 .story-txt {
-    width: 100%; 
-    height: 50px;
     display: flex;
     justify-content: space-between;
+    height: 50px;
 }
-.story-txt p {  padding: 15px;  }
 
-.story-txt:first-child {  color: #c5c5c5;  }
+.story-txt p, 
+.recommend-txt p {  
+    padding: 15px;  
+    cursor: pointer;
+}
+
+.story-txt :first-child {  color: #c5c5c5;  }
 
 .people {
     display: flex;
@@ -223,8 +344,8 @@ aside {
 }
 
 .people-img {
-    width: 60px; 
-    height: 60px;
+    width: 50px; 
+    height: 50px;
     border-radius: 50%;
     margin: 8px;
     overflow: hidden;
@@ -238,40 +359,74 @@ aside {
 .people-name p {
     padding: 2px;
 }
+
 .people-name p:first-child{
-    margin-top: 20px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.people-name p:last-child{
+    color: #8e8e8e;
 }
 
 .recommend {
-    width: 100%; 
-    height: 300px;
-    border: 1px solid #c5c5c5;
-    overflow: hidden;
+    height: 250px;
     margin-top: 20px;
-    background: #fff;
+    border-radius: 5px;
+    overflow: hidden;
 }
+
 .recommend-txt {
-    width: 100%; 
-    height: 50px;
     display: flex;
     justify-content: space-between;
+    height: 50px;
 }
 
-.recommend-txt p {  padding: 15px;  }
+.recommend-txt p {  
+    padding: 15px;  
+    cursor: pointer;
+}
 
-.recommend-txt :first-child {  color: #c5c5c5;  }
-
+.recommend-txt :nth-child(1) {  color: #c5c5c5;  }
 
 blockquote {
-    margin-top: 20px;
+    margin-top: 25px;
     color: #c5c5c5;
 }
+blockquote ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+blockquote ul li {
+    padding: 3px;
+    margin-left: 5px;
+}
 
+blockquote ul li:after{
+    content: '\00B7';
+    margin-left: 5px;
+}
+
+blockquote ul li:last-child::after {  content: '';  }
+
+blockquote p {
+    text-align: left;
+    margin: 25px 10px;
+}
+
+/* ---------------------------- */
+/* media query */
+/* ---------------------------- */
 
 @media screen and (max-width: 700px){   
     .wrap .search {   display: none;  }
 }
-@media screen and (max-width: 1040px){   
-    .card{  width: 70%; margin: auto; min-width: 700px; }
+@media screen and (max-width: 1200px){   
+    .feed{  
+        /* width: 70%; */
+        margin: 30px auto; 
+        min-width: 650px;
+}
+
     aside {  display: none;  }
 }
