@@ -1,15 +1,8 @@
-body{
-  box-sizing: border-box;
-  margin:0 auto;
-  padding:0;
-  background-color: white;
-}
-
 nav{
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  background-color: white;
+  background-color: rgb(250,250,250);
   margin-top: 30px;
 }
 
@@ -21,8 +14,8 @@ nav{
   font-weight: 500;
 }
 
-.nav-left .logo-name{
-  margin-left: 10px;
+.fa-instagram{
+  margin-right:20px;
 }
 
 .nav-center{
@@ -43,7 +36,7 @@ nav{
 
 main{
   display: flex;
-  justify-content: center;
+  justify-content:center;
 }
 
 .feeds{
@@ -157,14 +150,13 @@ header{
 }
 
 .main-right{
-  margin-left: 50px;
-  margin-top:60px;
+  margin-left: 30px;
+  margin-top: 60px;
 }
 
 .right-header{
   display: flex;
   align-items: center;
-  border: 1px solid black;
 }
 
 .right-header img{
@@ -179,7 +171,7 @@ header{
 }
 
 .header-user span{
-  font-size: 10px;
+  font-size: 13px;
   margin-left: 10px;
 }
 
@@ -190,37 +182,37 @@ header{
 .right-center{
   display: flex;
   flex-direction: column;
+  margin-top: 25px;
   width:300px;
-  border:1px solid black;
+  border:1px solid rgb(230, 230, 230);
 }
 
 .center-story{
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.center-story{
-
+  justify-content:space-between;
+  margin-top: 8px;
+  margin-left: 14px;
+  margin-right: 14px;
+  font-size: 14px;
 }
 
 .story-picture01{
   display: flex;
   align-items: center;
   margin-top:10px;
-  margin-left:10px;
+  margin-left:15px;
   margin-bottom:10px;
 }
 
 .story-picture02{
   display: flex;
-  margin-left:10px;
+  margin-left:15px;
   margin-bottom:10px;
 }
 
 .story-picture03{
   display: flex;
-  margin-left:10px;
+  margin-left:15px;
   margin-bottom:10px;
 }
 
@@ -240,4 +232,8 @@ header{
   width:30px;
   height: 30px;
   border-radius: 30px;
+}
+
+.story-picture span{
+  margin-left: 14px;
 }
