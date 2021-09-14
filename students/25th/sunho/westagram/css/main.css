@@ -16,9 +16,7 @@ nav {
 }
 
 .wrap div {
-    /* border: 1px solid black; */
     display: flex;
-    /* justify-content: center; */
     align-items: center;
     width: 100%;
 }
@@ -44,17 +42,6 @@ nav {
     border: 1px solid #c7c7c7;
     border-radius: 3px;
     background: #fafafa;
-}
-
-.search span {
-    display: inline-block;
-    position: absolute;
-    top: 50%; 
-    left: 50%;
-    transform: translate(-50%,-50%);
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    color: #c7c7c7;
 }
 
 .user {  
@@ -169,15 +156,16 @@ section {
     width:50%;
     display: flex;
 }
+
 .click-inner div {
     width: 9%;
-    margin: 10px;
+    margin: 5px;
     cursor: pointer;
 }
 
 .click-inner div:nth-child(2) {  
     width: 8%; 
-    margin-left: 15px;  
+    margin-left: 6px;  
 }
 
 .save {  width:50%;}
@@ -195,6 +183,41 @@ section {
     padding: 10px 10px;
 }
 
+.comments {
+    position: relative;
+    top: 0; right: 0;
+}
+
+.comments li span{
+    position: absolute;
+    right: 5px;
+}
+
+.commentLikes img {
+    position: absolute;
+    top: 3px;
+    right: 15px;
+    width: 15px;
+    cursor: pointer;
+    transition: all .2s ease;
+}
+
+.commentLikes img:hover {
+    transform: scale(1.2);
+    /* color: red; */
+}
+
+.deleted {
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.deleted:hover {
+    transform: scale(1.2);
+    font-weight: bold;
+}
+
 .likeText {
     padding-bottom: 5px;
 }
@@ -202,6 +225,7 @@ section {
 .comment li {
     padding-top: 5px;
 }
+
 
 .date {
     padding-top: 20px;
@@ -260,7 +284,6 @@ section {
 
 aside {
     width: 350px;
-    /*sticky 주기위해 height 설정 필수*/
     height: 10px;
     position: -webkit-sticky;
     position: sticky;

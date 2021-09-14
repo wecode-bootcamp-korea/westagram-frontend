@@ -1,7 +1,7 @@
 "use strict"
 
-const commentInput = document.getElementsByClassName('post')[0];
-const submit = document.getElementsByClassName('submit')[0];
+const [commentInput] = document.getElementsByClassName('post');
+const [submit] = document.getElementsByClassName('submit');
 
 commentInput.addEventListener('keyup',submitBtn);
 
@@ -11,19 +11,52 @@ function submitBtn(){
 /* ---------------------------------------- */
 /* 댓글 생성 */
 /* ---------------------------------------- */
-
 function enterComment() {
-    const comment = document.getElementsByClassName('comment')[0];
+    const [comments] = document.getElementsByClassName('comments')
     const newComment = document.createElement('li');
-    newComment.innerHTML = `<b>dltjsgho</b>`+ commentInput.value;
+    const comment = `
+    <b>dltjsgho</b> 
+    ${commentInput.value} 
+    <span class="commentLikes"></span>
+    <span class="deleted">x</span>
+    `; 
 
-    comment.appendChild(newComment);
-    commentInput.value= null;
+    newComment.innerHTML = comment
+    comments.appendChild(newComment);
+    commentInput.value= '';
+
+/* ---------------------------------------- */
+/* heart생성 */
+/* ---------------------------------------- */
+    const overSizeHeart = newComment.querySelector('.commentLikes');
+    const heartIcon = document.createElement("img");
+
+    overSizeHeart.appendChild(heartIcon)
+    heartIcon.setAttribute("src", "../img/heart.png");
+    
+/* ---------------------------------------- */
+/* 댓글 삭제 */
+/* ---------------------------------------- */
+    const deleteTxt = newComment.querySelector('.deleted');
+
+    deleteTxt.addEventListener('click', () => {
+        newComment.remove();
+    })
+
 }
 
 commentInput.addEventListener('keyup',function(e){
-    if(e.code === 'Enter') {
+    if(e.code === 'Enter' && commentInput.value.length > 0) {
         enterComment();
     }
+    submitBtn();
 })
+submit.addEventListener('click',()=>{
+    if(commentInput.value.length > 0) {
+        enterComment();
+    }
+    submitBtn()
+})
+
+
 
