@@ -2,16 +2,8 @@
   box-sizing: border-box;
 }
 
-ul{
-  list-style: none;
-}
-
 .left{
   width:10%;
-}
-
-.delete{
-  display:flex;
 }
 
 .far{
@@ -54,6 +46,10 @@ ul{
 .search input{
   border:0;
   margin-left:3px;
+}
+
+input[type="text"]{
+  margin-right: 5px;
 }
 
 .profile{
@@ -188,7 +184,7 @@ input[type="text"]{
 }
 
 .commentLine .button{
-  width: 530px;
+  width: 50px;
   height: 30px;
   border: none;
   background-color: white;
@@ -196,11 +192,6 @@ input[type="text"]{
   font-weight: bold;
   cursor: pointer;
 }
-
-#formSubmit #button{
-  width: 61px;
-}
-
 /* 여기부터 main-right */
 .story{
   border : 1px solid lightgray;
