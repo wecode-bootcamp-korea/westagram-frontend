@@ -1,55 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="main.css"/>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
     
     <title>wesragramMain</title>
     <!-- 구글폰트 -->
-    <link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <header>
         <nav>   <!--부모 -->
-            <div class="logoBox">
-                <i class="fab fa-instagram"></i>
-                <span class="logo_title">Instagram</span>
-            </div>
 
-            <div class="search">
-                <input class="searchInput" type="text" placeholder="검색">
-                <i class="fas fa-search searchxx"></i>
-            </div>
+                <div class="logoBox">
+                    <span class="logo_title">Instagram</span>
+                </div>
+
+                <div class="search">
+                    <input class="searchInput" type="text" placeholder="검색">
+                    <i class="fas fa-search searchxx"></i>
+                </div>
             
-            <div class="topIcon">
-                <a href=""><i class="far fa-compass icon"></i></a>
-                <a href=""><i class="far fa-heart icon"></i></a>
-                <a href=""><i class="far fa-user icon" ></i></a>
-            </div>
+                <div class="topIcon">
+                    <a href=""><i class="far fa-compass icon"></i></a>
+                    <a href=""><i class="far fa-heart icon"></i></a>
+                    <a href=""><i class="far fa-user icon" ></i></a>
+                    <a href=""><img class="myPage" art="myPage" src="img/오구.png" /></a>
+                </div>
+            
         </nav>
     </header>
     
     <section>
         <div class="feeds">
             <div class="article">
+
                 <div class="feeds_top">
-                    <img alt="profileImg1" class="id_img1" src="img/오구.png"/>
-                    <span class="leftId">wecode_bootcamp</span>
+                    <div class="feedtopIdBox">
+                    <img class="id_img1" src="img/오구.png"/>
+                    <span class="leftId">aaa__aaa</span>
                 </div>
+                    <i class="fas fa-ellipsis-h threeDot"></i>
+                </div>
+
+                <img alt="feedImg" class="feedImg" src="img/feedImg.png"/>
+            
+                <div class="bottomIconBox">
+                    <div class="bottmLeftBox">
+                        <i class="fas fa-heart redHeart"></i>
+                        <img alt="chat" class="chat" src="img/chat.png"/>
+                        <img alt="sendDm" class="sendDm" src="img/sendDm.png"/>
+                    </div>
+                    <div class="bottomRightBox">
+                        <i class="far fa-bookmark"></i>
+                    </div>
+                </div>
+
+                <div class="likeBox">
+                    <img class="likeImg" alt="liskeImg" src="img/likeBox.png">
+                    <span class="likeId">
+                        <b>bhanss</b>님 <b>외 534명</b>이 좋아합니다</span>
+                </div>
+
             </div>
+
+            <div class="contentClass">
+                <div class="contentBox">
+                    <span class="content"><b>aaa__aaa</b> 오늘도 여전히 노을은 예쁘네:) 모두들...</span>
+                    <span class="thebogy"> 더 보기</span>
+                </div>
+
+                <div class="commentMore">댓글 <span class="commentCount">130</span>개 모두 보기</div>
+                <!-- 댓글 달리는곳 -->
+                <div class="chatBox">
+                    <div class="commendId" >i_ddgg
+                        <span class="commend">헐 예뻐!</span>
+                    </div>    
+                    <div class="binheartBox">
+                        <img alt="binheart" class="binheart" src="img/heart.png" onclick="binheart()"/>
+                    </div>   
+                </div>    
+                    <div class="test">  <!-- 댓글 -->
+                        
+                    </div>       
+
+                <div class="contentTime">방금</div>
+            </div>
+            <!-- 댓글달기 input -->
+            <div class="chatClass">
+                    <input class="chat chat2" type="text" placeholder="댓글달기..."></input>
+                    <button class="pushBotton" type="submit" onclick="commentSubmit()"><b>게시</b></button>
+            </div>
+            <!-- ----- -->
         </div>
+
         <div class="mainRight">
             <div class="rightTopId">
-                <img alt="profileImg2" class="idImg2" src="img/오구.png"/>
-                <div class="sapnBox">
-                    <span class="rigntSpan1"><b>wecode_bootcamp</b></span><br/>
-                    <span class="rigntSpan2">wecode | 위코드</span>
+                <img class="idImg2" src="img/오구.png"/>
+                <div class="spanBox">
+                    <span class="rigntSpan1"><b>aaa__aaa</b></span><br>
+                    <span class="rigntSpan2">su_min</span>
                 </div>
             </div>
+            <div class="storyBoxFirst">
+                <div class="storyText">
+                    <div class="story">스토리</div>
+                    <div class="modubogy">모두 보기</div>
+                </div>
+                
+                <div class="storyIdBox">
+                    <img class="storyImg" alt="storyImgFirst" src="img/용현.png"/>
+                    <div class="storyIdClass">
+                        <div class="storyId"><b>hy_un</b></div>
+                        <div class="storyTime">방금</div>
+                    </div>
+                </div>    
+
+                <div class="storyIdBox">
+                    <img class="storyImg" alt="storyImgFirst" src="img/다빈.png"/>
+                    <div class="storyIdClass">
+                        <div class="storyId"><b>bbb_in</b></div>
+                        <div class="storyTime">15분전</div>
+                    </div>
+                </div>  
+
+                <div class="storyIdBox">
+                    <img class="storyImg" alt="storyImgFirst" src="img/정아.png"/>
+                    <div class="storyIdClass">
+                        <div class="storyId"><b>jjj_aaaa</b></div>
+                        <div class="storyTime">26분전</div>
+                    </div>
+                </div>  
+
+                <div class="storyIdBox">
+                    <img class="storyImg" alt="storyImgFirst" src="img/본욱.png"/>
+                    <div class="storyIdClass">
+                        <div class="storyId"><b>u_kkkkkk</b></div>
+                        <div class="storyTime">30분전</div>
+                    </div>
+                </div>  
+            </div>
+            <div class="storyBoxSecond">
+                <div class="chuchunBox">
+                        <div class="chuchun">회원님을 위한 추천</div>
+                        <div class="modubogySecond">모두 보기</div>
+                </div>
+
+                <div class="chuchunIdBox">
+                    <img class="chuchunImgWheee" alt="storyImgFirst" src="img/동휘.png"/>
+                    <div class="chuchunIdClass">
+                        <div class="chuchunId"><b>wh_eee</b></div>
+                        <div class="chuchunTime">Instagram 신규 가입</div>
+                    </div>
+                    <button class="fallow">팔로우</button>
+                </div>  
+
+                <div class="chuchunIdBox">
+                    <img class="chuchunImgRrrro_k" alt="storyImgFirst" src="img/영록.png"/>
+                    <div class="chuchunIdClass">
+                        <div class="chuchunId"><b>rrrro_k</b></div>
+                        <div class="chuchunTime">Instagram 신규 가입</div>
+                    </div>
+                    <button class="fallow">팔로우</button>
+                </div>  
+
+                <div class="chuchunIdBox">
+                    <img class="chuchunImg" alt="storyImgFirst" src="img/수민.png"/>
+                    <div class="chuchunIdClass">
+                        <div class="chuchunId"><b>mi_nnnnn</b></div>
+                        <div class="chuchunTime">회원님을 팔로우합니다</div>
+                    </div>
+                    <button class="fallow">팔로우</button>
+                </div> 
+            </div>
+
+            <footer>
+            <p class="bottomText">
+                소개·도움말·홍보 센터·API·채용 정보·개인정보처리방침·<br>
+                약관·위치·인기 계정·해시태그·언어<br>
+                <br>
+                © 2021 INSTAGRAM FROM FACEBOOK
+            </p>
+            </footer>
 
         </div>
     </section>

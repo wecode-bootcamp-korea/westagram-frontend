@@ -12,120 +12,342 @@ header{
     margin-bottom: 30px;
 }
 
-nav{
+nav {
     display: flex;
-    justify-content: space-between;
-    height: 54px;
-    padding-right: 30px;
-    border: 1px solid gray;
-}
-
-.fab.fa-instagram {
-    margin-top: 16px;
-    padding-right: 15px;
-    padding-left: 50px;
-    border-right: 1px solid black;
-    font-size: 22px;
-}
-
-.logo_title {
-    text-align: center;
-    padding-left: 10px;
-    font-weight: lighter;
-    font-family:'Lobster', cursive;
-    font-size: 23px;
-}
-
-.search{
-    display: flex;
-    position: relative;
     align-items: center;
-    height: 50px;
-}
+    justify-content: space-between;
+    padding: 3px 220px 3px 220px;
+    border-bottom: 1px solid lightgray;
+    }
 
-input::placeholder{
-    text-align: center;
-    color: #c1c1c4;
-}
-
-.searchInput{
-   padding: 3px 0px;
-}
-
-.search .searchxx{
-    position:absolute;
-    font-size: 13px;
-    color: #c1c1c4;
-    top: 20px;
-    left:40px;
+.myPage{
+    width:40px;
 }
 
 .topIcon{
     display: flex;
-    margin-right: 15px;
-    margin-top: 13px;
+    align-items: center;
 }
 
 .fa-heart{
-    padding: 0 10px;
+    padding: 0 16px;
 }
 
 .icon{
     color: black;
-    font-size: 20px;
+    font-size: 21px;
+}
+
+.myPage{
+    width: 35px;
+    margin-left: 6px;
+    margin-top: 3px;
+    border-radius: 50%;
+} 
+
+.logo_title {
+    text-align: center;
+    font-weight: lighter;
+    padding-left: 10px;
+    font-size: 23px;
+    font-family:'Lobster', cursive;
+}
+
+.search {
+    display: flex;
+    position: relative;
+    border:none;
+}
+
+
+
+
+.searchInput{
+    width: 230px;
+    height: 27px;
+    padding: 3px 0px;
+    background-color: rgb(250 250 250);
+    border: 1px solid lightgray;
+    border-radius: 3px;
+
+}
+
+.searchInput::placeholder{
+    text-align: center;
+    color: #c1c1c4;
+}
+.searchxx{
+    position: absolute;
+    top:7px;
+    left: 85px;
+    color: #c1c1c4;
+    font-size: 13px;
+
+
 }
 /* -----section-------- */
+/* -------left Box------ */
 section{
     display: flex;
-    justify-content: space-between;
-    border: 1px solid gray;
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .feeds{
-    border: 1px solid gray;
+    width: 500px;
+    border: 1px solid lightgray;
 }
 
-.article{
-    border: 1px solid gray;
+.feedtopIdBox{
+    display: flex;
+    align-items: center;
 }
-
 .feeds_top{
-    
-    border: 1px solid gray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 50px;
 }
 
 .id_img1{
     width: 40px;
-    border: 1px solid gray;
     border-radius: 50%;
+    margin-right: 10px;
 }
 
 .leftId{
-    text-align: center;
-    border: 1px solid gray;
+    font-size: 15px;
+    font-weight: bold;
 }
 
+.feedImg{
+    width: 500px;
+    height: 500px;
+}
+
+.bottomIconBox{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 8px; 
+}
+
+.redHeart{
+    font-size: 27px;
+    padding-left: 1px;
+    padding-right: 10px;
+    color: red;
+}
+
+.chat{
+    width: 25px;
+}
+
+.sendDm{
+    padding-left: 10px;
+    width: 35px;
+}
+
+.fa-bookmark{
+    font-size: 25px;  
+}
+
+.likeBox{
+    display: flex;
+    padding: 4px 0 4px 10px;
+}
+.likeImg{
+    width: 25px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.likeId{
+    padding-top: 4px;
+}
+
+.contentClass{
+    padding-left: 10px;
+}
+
+.contentBox{
+    display: flex;
+    padding: 4px 0;
+}
+
+.thebogy{
+    color: gray;
+    font-size: 15px;
+}
+
+.commentMore{
+    padding: 4px 0;
+    font-size: 14px;
+    color: gray;
+}
+
+.chatBox{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 8px; 
+}
+
+.commendId{
+    display: flex;  
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.commend{
+    padding-left: 4px;
+    font-weight: lighter;
+    font-size: 15px;
+}
+
+.test{
+    display: flex;
+    flex-direction: column;
+}
+
+.binheart{
+    width: 10px;
+}
+
+.contentTime{
+    padding: 4px 0;
+    color: gray;
+    font-size: 11px;
+}
+
+.chatClass{
+    display: flex;
+    padding: 10px;
+    height: 50px;
+    border-top: 1px solid lightgray;
+}
+
+.chat2 {
+    width: 100%;
+    color: lightgray;
+    font-size: 15px;
+    border: none;
+}
+
+.chat::placeholder{
+    text-align: left;
+}
+
+.pushBotton {
+    height: 100%;
+    width: 65px;
+    color: rgb(78, 153, 214);
+    background-color: white;
+    border: none;
+}
+
+/* ------right Box ------ */
+
 .mainRight{
-    border: 1px solid gray;
+    /* margin-right: 210px; */
+    width: 400px;
+    padding: 5px 10px;
 }
 
 .rightTopId{
     display: flex;
-    border: 1px solid gray;
+    width: 400px;
+    padding: 0 0 10px 15px;
 }
 
 .idImg2{
     width: 50px;
-    border: 1px solid gray;
+    margin-top: -5px;
     border-radius: 50%;
+}
+
+.spanBox{
+   padding-left: 15px;
+   padding-top: 5px;
 }
 
 .rigntSpan1{
     text-align: center;
-    border: 1px solid gray;
 }
 
 .rigntSpan2{
     text-align: center;
-    border: 1px solid gray;
+    color: gray;
+}
+
+.storyBoxFirst, .storyBoxSecond{
+    margin-bottom: 15px;
+    border: 2px solid lightgray;
+}
+
+.storyText, .chuchunBox{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+}
+
+.story, .chuchun{
+    font-size: 18px;
+    color: gray;
+}
+
+.modubogy, .modubogySecond{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.storyIdBox, .chuchunIdBox{
+    display: flex;
+    padding: 5px 15px;
+}
+
+.chuchunIdBox:last-child{
+    display: flex;
+    padding: 5px 15px 10px 15px;
+}
+.storyImg, .chuchunImg{
+    width: 55px;
+    padding: 2px;
+    border-radius: 50%;
+    border: 3px solid rgb(247, 53, 150);
+}
+
+.storyIdClass, .chuchunIdClass{
+    padding-left: 15px;
+    padding-top: 6px;
+}
+.storyId, .chuchunId{
+    font-size: 17px;
+}
+
+.storyTime, .chuchunTime{
+    padding-top: 4px;
+    color: gray;
+}
+
+.chuchunImgWheee, .chuchunImgRrrro_k{
+    width: 55px;
+    border-radius: 50%;
+}
+
+.fallow{
+    background-color: white;
+    color: rgb(78, 153, 214);
+    font-weight: bold;
+    font-size: 15px;
+    border: 0 solid white;
+    margin-left: auto;
+}
+
+.bottomText{
+    color: lightgray;
+    font-size: 12px;
+    padding-top: 12px;
+    padding-left: 10px;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
 }

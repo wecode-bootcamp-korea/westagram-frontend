@@ -4,10 +4,10 @@ const inputPw = document.getElementsByClassName("input_pw")[0];
 const button = document.querySelector(".login_Button");
 
 function login(){
-    
+
     let idLength = inputId.value;
     let pwLength = inputPw.value;
-
+    //id에 @가 포함되어야 함
     if(idLength.indexOf('@') !== -1 && pwLength.length >=6){
         console.log(idLength.length)
         button.disabled = false;
