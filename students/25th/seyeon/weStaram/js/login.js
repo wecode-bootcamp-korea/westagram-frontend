@@ -2,26 +2,45 @@
 // 변수, const, 고정값
 // DOM method >>> getElementsByClassName, getElementById 
 
-const thisIsButton = document.getElementsByClassName('button')[0];
-const thisIsId = document.getElementById('id');
-const thisIsPw = document.getElementById('pw');
+const thisIsButton = document.querySelector('.button');
+const thisIsId = document.querySelector('#id');
+const thisIsPw = document.querySelector('#pw');
 
 function activeButton() {
-  const inputId = thisIsId.value;
-  const inputPw = thisIsPw.value;
+  // const inputNeed = thisIsId.value.includes('@');
+  const inputId = thisIsId.value.includes('@') && thisIsId.value.length > 0;
+  const inputPw = thisIsPw.value.length >= 5;
+  const conditions = inputId && inputPw;
 
-  return inputId.length > 0 && inputPw.length > 0 ? (
-    thisIsButton.disabled = true,
-    thisIsButton.style.backgroundColor = "#0000ff") : (
-    thisIsButton.disabled = false,
-    thisIsButton.style.backgroundColor = "#c4e1fb"
+  const activeBtn = () => {
+    thisIsButton.disabled = true;
+    thisIsButton.style.backgroundColor = "#0000ff";
+  }
+  const inActiveBtn = () => {
+    thisIsButton.disabled = false;
+    thisIsButton.style.backgroundColor = "#c4e1fb";
+  }
+  
+  return conditions ? (
+    activeBtn() ) : (
+      inActiveBtn()
     )
 }
 
 thisIsId.addEventListener('keyup', activeButton)
-
 thisIsPw.addEventListener('keyup', activeButton)
 
+// function clickBtn() {
+  // const inputId = thisIsId.value.includes('@') && thisIsId.value.length > 0;
+  // const inputPw = thisIsPw.value.length >= 5;
+  // const conditions = inputId && inputPw;
+
+//   thisIsButton.disabled ? (
+//     location.href = "../html/main.html" ) : (
+//       alert('아이디와 비밀번호를 확인해 주세요.')
+//     )  
+// }
+// thisIsButton.addEventListener('click', clickBtn)
 
 // function keyupFuction () {
 //     const inputId = thisIsId.value;
