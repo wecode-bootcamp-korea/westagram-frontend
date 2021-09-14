@@ -13,11 +13,11 @@ function activeButton() {
   const conditions = inputId && inputPw;
 
   const activeBtn = () => {
-    thisIsButton.disabled = true;
+    thisIsButton.disabled = false;
     thisIsButton.style.backgroundColor = "#0000ff";
   }
   const inActiveBtn = () => {
-    thisIsButton.disabled = false;
+    thisIsButton.disabled = true;
     thisIsButton.style.backgroundColor = "#c4e1fb";
   }
   
@@ -29,18 +29,6 @@ function activeButton() {
 
 thisIsId.addEventListener('keyup', activeButton)
 thisIsPw.addEventListener('keyup', activeButton)
-
-// function clickBtn() {
-  // const inputId = thisIsId.value.includes('@') && thisIsId.value.length > 0;
-  // const inputPw = thisIsPw.value.length >= 5;
-  // const conditions = inputId && inputPw;
-
-//   thisIsButton.disabled ? (
-//     location.href = "../html/main.html" ) : (
-//       alert('아이디와 비밀번호를 확인해 주세요.')
-//     )  
-// }
-// thisIsButton.addEventListener('click', clickBtn)
 
 // function keyupFuction () {
 //     const inputId = thisIsId.value;
