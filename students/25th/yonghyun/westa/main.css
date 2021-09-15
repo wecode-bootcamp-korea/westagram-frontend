@@ -73,12 +73,13 @@ input {
 .rightMenu {
   display: flex;
   width: 140px;
-  margin: auto 0;
+  margin: 0;
   justify-content: space-between;
   background-color: #ffffff;
 }
 
 .rightMenu img {
+  margin: auto 10px;
   background-color: #ffffff;
 }
 
@@ -86,6 +87,49 @@ input {
   width: 22px;
   height: 22px;
   border-radius: 50%;
+}
+
+.profileList {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  top: 50px;
+  right: 230px;
+  display: flex;
+  width: 230px;
+  height: 200px;
+  border: 1px solid black;
+  border-radius: 7px;
+}
+
+.profileList ul {
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  padding-left: 15px;
+  justify-content: space-around;
+}
+
+.profileList ul {
+  list-style: none;
+}
+
+.profileList ul li {
+  margin: 10px 5px auto 0;
+  display: flex;
+  width: 100%;
+}
+
+.profileList ul li p {
+  width: 26px;
+  height: 26px;
+  margin: auto 10px auto 0;
+}
+
+.profileList ul li i {
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
 }
 
 .main {
@@ -250,9 +294,19 @@ button {
   transform: rotate(-0.5turn);
 }
 
+.feedComment {
+  list-style: none;
+  background-color: #ffffff;
+}
+
+.feedComment li {
+  background-color: #ffffff;
+  line-height: 135%;
+}
+
 .comments p {
   display: flex;
-  line-height: 135%;
+  line-height: 140%;
   background-color: #ffffff;
 }
 
@@ -294,6 +348,16 @@ button {
   font-size: 12px;
 }
 
+#addR {
+  background-color: #ffffff;
+  list-style: none;
+}
+
+#addR li {
+  background-color: #ffffff;
+  margin-top: 3px;
+}
+
 .deleteBtn {
   position: absolute;
   width: 550px;
@@ -312,6 +376,11 @@ button {
   padding-right: 40px;
   background-color: transparent;
   cursor: pointer;
+}
+
+.delete {
+  position: absolute;
+  right: 40px;
 }
 
 .deleteBtn i:hover {
@@ -491,44 +560,4 @@ article {
   margin-top: 15px;
   color: rgb(158, 158, 158);
   font-size: 13px;
-}
-
-.arrow_box {
-  display: none;
-  position: absolute;
-  width: 200px;
-  padding: 8px;
-  top: 40px;
-  right: -10px;
-  z-index: 1;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  border-radius: 8px;
-  background: #333;
-  color: #fff;
-  font-size: 14px;
-}
-
-.arrow_box:after {
-  position: absolute;
-  bottom: 100%;
-  right: 5%;
-  width: 0;
-  height: 0;
-  margin-left: -10px;
-  border: solid transparent;
-  border-color: rgba(51, 51, 51, 0);
-  border-bottom-color: #333;
-  border-width: 10px;
-  pointer-events: none;
-  content: " ";
-}
-
-.rightMenu div {
-  position: relative;
-  display: inline-block;
-}
-
-#more:hover + p.arrow_box {
-  display: block;
 }

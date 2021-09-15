@@ -23,18 +23,17 @@
                     <img class="like" alt="compassIcon" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png"/>
                     <img class="like" alt="heartIcon" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"/>
                     <img class="like" alt="peopleIcon" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png"/>
-                    <div class="moreP">
-                        <img class='like' id="more"alt="profileImageIcon" src="/students/25th/yonghyun/westa/images/profile.jpeg" width="32px" height="32px" />
-                        <p class="arrow_box">
-                            <!-- <div>
-                                <div>프로필</div>
-                                <div>저장됨</div>
-                                <div>설정</div>
-                                <div>계정 전환</div>
-                                <div>로그아웃</div>
-                            </div> -->
-                            asd
-                        </p>
+                    <img class='like' id="more"alt="profileImageIcon" src="/students/25th/yonghyun/westa/images/profile.jpeg" width="32px" height="32px" />
+                    <div class="like">
+                        <div class="profileList">
+                            <ul>
+                                <li><p><i class="fas fa-user-alt"></i></p>프로필</li>
+                                <li><p><i class="far fa-bookmark"></i></p>저장됨</li>
+                                <li><p><i class="fas fa-cog"></i></p>설정</li>
+                                <li><p><i class="fas fa-undo"></i></p>계정 전환</li>
+                                <li>로그아웃</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -56,7 +55,7 @@
                                 </button>
                             </div>
                             <div class="pics">
-                                <img id="firstPic" alt="mainPic" src="/students/25th/yonghyun/westa/images/wecode.jpg"/>
+                                <img id="firstPic" alt="mainPic" src="/students/25th/yonghyun/westa/images/sky.jpeg"/>
                             </div>
                             <div class="comment">
                                 <section class="heart">
@@ -71,43 +70,49 @@
                                     <div>좋아요 485,222개</div>
                                 </section>
                                 <div class="comments_head">
-                                    <p class="commentFeed"><a href="" class="re_id">4.21ee</a><span class="re_p"> INSTAGRAM 만들기 첫번째 피드 내용부분입니다.</span></p>
+                                    <p class="commentFeed"><a href="" class="re_id">4.21ee</a><span class="re_p"> #영록이 맥북삼 </span></p>
                                 </div> 
                                 <div class="comments">
                                     <div class="commentFeed" id="other_re">
-                                        <p><a href="" class="re_id">instagram</a>
-                                            <span class="re_p">두번째 댓글 나와라</span><span class="deletespan">
-                                                <button class="deleteBtn"><i class="fas fa-ellipsis-h"></i></button>
-                                            </span>
-                                            <span>
-                                                <button class="re_heart"><i class="far fa-heart"></i></button>
-                                            </span>
-                                        </p>                                        
-                                        <p><a href="" class="re_id">dkssudgktpdy</a>
-                                            <span class="re_p">세번째 댓글 나오고</span><span class="deletespan">
-                                                <button class="deleteBtn"><i class="fas fa-ellipsis-h"></i></button>
-                                            </span>
-                                            <span>
-                                                <button class="re_heart"><i class="far fa-heart"></i></button>
-                                            </span>
-                                        </p>
-                                        <p><a href="" class="re_id">instagram</a>
-                                            <span class="re_p">네번째 댓글이다</span><span class="deletespan">
-                                                <button class="deleteBtn"><i class="fas fa-ellipsis-h"></i></button>
-                                            </span>
-                                            <span>
-                                                <button class="re_heart"><i class="far fa-heart"></i></button>
-                                            </span>
-                                        </p>
-                                        <p><a href="" class="re_id">asdfg</a>
-                                            <span class="re_p">줄젇ㄹ아링나ㅜ링나</span><span class="erase">
-                                                x
-                                            </span>
-                                            <span>
-                                                <button class="re_heart"><i class="far fa-heart"></i></button>
-                                            </span>
-                                        </p>
-                                        <p id="addR"></p>
+                                        <ul class="feedComment">
+                                        
+                                            <li>
+                                                <a href="" class="re_id">instagram</a>
+                                                <span class="re_p">두번째 댓글 나와라</span>
+                                                <span><span class="delete">x</span>
+                                                    <button class="re_heart"><i class="far fa-heart"></i></button>
+                                                </span>
+                                            </li>
+
+                                              
+                                            <li>
+                                                <a href="" class="re_id">dkssudgktpdy</a>
+                                                <span class="re_p">세번째 댓글 나오고</span>
+                                                <span><span class="delete">x</span>
+                                                    <button class="re_heart"><i class="far fa-heart"></i></button>
+                                                </span>
+                                            </li>
+                                   
+                                        <div class ='deleteLine'>
+                                            <li>
+                                                <a href="" class="re_id">instagram</a>
+                                                <span class="re_p">네번째 댓글이다</span>
+                                                <span><span class="delete">x</span>
+                                                    <button class="re_heart"><i class="far fa-heart"></i></button>
+                                                </span>
+                                            </li>
+                                        </div>
+                                        <div class ='deleteLine'>
+                                            <li>
+                                                <a href="" class="re_id">asdfg</a>
+                                                <span class="re_p">줄젇ㄹ아링나ㅜ링나</span>
+                                                <span><span class="delete">x</span>
+                                                    <button class="re_heart"><i class="far fa-heart"></i></button>
+                                                </span>
+                                            </li>
+                                        </div>
+                                        <ul id="addR"></ul>
+                                    </ul>
                                     </div>
                                 </div>
                                 <div class="howLong">
@@ -117,8 +122,8 @@
                                     <button>
                                         <i class="far fa-smile"></i>
                                     </button>
-                                    <input id ="writeComment" type="text" placeholder="댓글 달기..." onkeypress="if(window.event.keyCode==13) addMessage();"/>
-                                    <button id="writeBtn" onclick="addMessage()">게시</button>
+                                    <input id ="writeComment" type="text" placeholder="댓글 달기..." />
+                                    <button id="writeBtn">게시</button>
                             </section>
                         </div>
                     </article>
