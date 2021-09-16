@@ -40,7 +40,7 @@ const init = () => {
       checkComment();
     });
     // enter키 클릭 시
-    inputComment.addEventListener('keyup', (e)=>{
+    inputComment.addEventListener('keypress', (e)=>{
       if (e.keyCode === 13 && ! e.shiftKey) {
         e.preventDefault();
         checkComment();
