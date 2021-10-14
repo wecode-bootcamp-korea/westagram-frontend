@@ -1,0 +1,163 @@
+.loginMainSection {
+  display: flex;
+  justify-content: flex-start;
+  height: 100%;
+  padding-right: 100px;
+
+  .loginMainArticle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 30%;
+
+    a {
+      text-transform: none;
+      font-weight: 600;
+      color: #313131;
+    }
+    .loginForm {
+      display: flex;
+      flex-direction: column;
+
+      .loginInput {
+        &::placeholder {
+          font-size: 18px;
+        }
+        font-size: 20px;
+        width: 100%;
+        padding: 10px 5px;
+        border: none;
+        border-bottom: 1px solid black;
+        outline: none;
+        &:focus {
+          border-bottom: 3px solid #e01751;
+        }
+      }
+      .loginInputTrue {
+        &::placeholder {
+          font-size: 18px;
+        }
+        font-size: 20px;
+        width: 100%;
+        padding: 10px 5px;
+        border: none;
+        border-bottom: 1px solid black;
+        outline: none;
+
+        &:focus {
+          border-bottom: 3px solid #0158a3;
+        }
+      }
+      .loginFormPassword {
+        position: relative;
+        .passwordEye {
+          position: absolute;
+          top: 12.5px;
+          right: 10px;
+        }
+      }
+
+      .passwordEyeFalse {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+      }
+
+      .loginWarnTextTrue {
+        margin: 15px 0px 10px 0px;
+        font-size: 13px;
+        font-weight: 600;
+        color: #e53470;
+      }
+      .loginWarnText {
+        display: none;
+      }
+    }
+
+    .loginLinkTextBox {
+      display: flex;
+      align-items: center;
+      margin: 15px 0px 50px 0px;
+    }
+
+    .loginLinkSubtext {
+      text-decoration: none;
+    }
+    .loginComment {
+      margin-bottom: 40px;
+      font-weight: bold;
+    }
+    .loginBtn {
+      width: 100%;
+      padding: 22px 0px;
+      margin: 40px 0px 70px 0px;
+      background-color: #264f93;
+      color: #fff;
+      font-weight: bold;
+      border: none;
+      border-radius: 50px;
+    }
+    .loginBtnForSignup {
+      background-color: #f5f5f5;
+      color: #000;
+      font-weight: bold;
+      width: 100%;
+      padding: 22px 0px;
+      margin: 40px 0px 70px 0px;
+      border: none;
+      border-radius: 50px;
+      &:active {
+        color: #dfdfdf;
+      }
+    }
+  }
+  .loginArticle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #2b58a3;
+    max-width: 100%;
+    max-height: 100%;
+    padding: 45px 90px 45px 300px;
+    margin-right: 85px;
+    position: relative;
+
+    .leftArrow {
+      position: absolute;
+      top: 45px;
+      left: 45px;
+      font-size: 20px;
+      color: #fff;
+    }
+    .logo {
+      width: 90px;
+      height: 40px;
+    }
+    .LoginTextPageTitle {
+      font-size: 35px;
+      font-weight: bold;
+      color: #f7d913;
+      margin-bottom: 25px;
+    }
+    .LoginTextPageText {
+      font-weight: 400;
+      color: #fff;
+
+      .LoginTextPageSubText {
+        margin: 8px 0px 15px 0px;
+      }
+    }
+
+    .LoginTextPageFooter {
+      color: #fff;
+      font-size: 13px;
+      .LoginTextPageFooterMainText {
+        margin-bottom: 10px;
+      }
+      .LoginTextPageFooterLink {
+        color: #fff;
+      }
+    }
+  }
+}
