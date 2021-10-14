@@ -1,0 +1,179 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(250, 250, 250);
+  padding-top: 80px;
+}
+
+nav {
+  width: 100%;
+  height: 54px;
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-bottom: 1px solid rgb(219, 219, 219);
+  background-color: white;
+}
+
+.navLogo {
+  display: flex;
+  align-items: center;
+}
+
+.fab {
+  font-size: 30px;
+  margin-right: 10px;
+}
+.contour {
+  height: 30px;
+  width: 1px;
+  margin-right: 10px;
+  background-color: black;
+}
+
+a {
+  font-family: "Lobster", cursive;
+  font-size: 30px;
+  text-decoration: none;
+  color: black;
+}
+
+.navInput {
+  width: 200px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  border: 1px solid rgb(219, 219, 219);
+  border-radius: 2px;
+  font-size: 15px;
+  background-color: rgb(250, 250, 250);
+  font-family: Helvetica, "FontAwesome", sans-serif;
+}
+
+.navInput::-webkit-input-placeholder {
+  text-align: center;
+  /* background-image: url("inputsearch.png"); */
+  /* background-size: contain; */
+  /* background-position: 1px center; */
+  /* background-repeat: no-repeat; */
+}
+
+.navIcons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navIcon {
+  width: 30px;
+  height: 30px;
+  margin-right: 20px;
+}
+
+.main {
+  width: 1000px;
+  height: 1000px;
+  margin: auto;
+  background-color: aqua;
+}
+
+.feeds {
+  width: 550px;
+  height: 800px;
+  border: 1px solid rgb(219, 219, 219);
+  background-color: white;
+}
+
+.profile {
+  height: 80px;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profileInfo {
+  display: flex;
+  align-items: center;
+}
+
+.profileImage {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.articleImage {
+  width: 100%;
+  height: 300px;
+}
+
+.IconBox {
+  padding: 10px 20px 10px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.far {
+  font-size: 30px;
+}
+
+.fa-heart,
+.fa-comment,
+.fa-paper-plane {
+  margin-right: 10px;
+}
+
+.likeNumber {
+  padding: 10px 20px 10px 20px;
+}
+
+#likeNumbers {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+ul {
+  height: 200px;
+  padding: 10px 20px 10px 20px;
+  list-style-type: none;
+  background-color: wheat;
+}
+
+.comment {
+  margin-bottom: 10px;
+}
+
+.commentBox {
+  padding: 10px 20px 10px 20px;
+  border: 1px solid rgb(219, 219, 219);
+  display: flex;
+  align-items: center;
+}
+
+.fa-smile {
+  font-size: 25px;
+  flex: 1;
+}
+
+.commentInputBox {
+  border: none;
+  font-size: 16px;
+  flex: 15;
+}
+
+.upload {
+  text-align: center;
+  color: blue;
+  opacity: 0.3;
+  flex: 1;
+}
