@@ -22,10 +22,3 @@ function checkInput () {
     )
 }
 
-/*if(IdLength>0 && passwordLength>0){
-        button.style.opacity = 1;
-        button.style.cursor = 'pointer';
-    } else {
-        button.style.opacity = 0.5;
-        button.style.cursor = 'default';
-    }*/

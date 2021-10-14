@@ -39,7 +39,7 @@ nav {
   background-color: black;
 }
 
-a {
+.logoTitle {
   font-family: "Lobster", cursive;
   font-size: 30px;
   text-decoration: none;
@@ -86,7 +86,7 @@ a {
 
 .feeds {
   width: 550px;
-  height: 723px;
+  height: 720px;
   border: 1px solid rgb(219, 219, 219);
   background-color: white;
 }
@@ -123,14 +123,14 @@ a {
   justify-content: space-between;
 }
 
-.far {
-  font-size: 30px;
-}
-
-.fa-heart,
-.fa-comment,
-.fa-paper-plane {
+.far,
+.fa-heart {
+  font-size: 25px;
+  cursor: pointer;
   margin-right: 10px;
+}
+.fa-heart {
+  color: red;
 }
 
 .likeNumber {
@@ -144,7 +144,7 @@ a {
 
 ul {
   height: 200px;
-  padding: 10px 20px 10px 20px;
+  padding: 10px 17px 10px 17px;
   list-style-type: none;
 }
 
@@ -156,7 +156,6 @@ ul {
 .commentBox {
   padding: 10px 20px 10px 20px;
   border-top: 1px solid rgb(219, 219, 219);
-  border-bottom: 1px solid rgb(219, 219, 219);
   display: flex;
   align-items: center;
 }
@@ -177,6 +176,7 @@ ul {
   color: blue;
   opacity: 0.3;
   flex: 1;
+  cursor: default;
 }
 
 .mainRight {
@@ -221,7 +221,7 @@ ul {
 }
 
 .storyLists {
-  overflow: scroll;
+  overflow: auto;
   list-style-type: none;
 }
 
@@ -253,4 +253,11 @@ li > img {
 .recommendPharse {
   color: rgb(219, 219, 219);
   font-size: 12px;
+}
+
+.follow {
+  text-decoration: none;
+  font-size: 12px;
+  color: rgb(0, 149, 246);
+  margin-left: 9px;
 }
