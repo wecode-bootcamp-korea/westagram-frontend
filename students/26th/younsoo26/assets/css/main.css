@@ -1,0 +1,320 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(240, 240, 240);
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+#logo{
+    font-family: 'Lobster', cursive;
+}
+
+main#login-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+section.main-container {
+    width: 500px;
+    height: 620px;
+    background-color: white;
+    text-align: center;
+    border: lightgrey solid 1px;
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2em;
+}
+
+.logo-box{
+    font-size: 5em;
+    margin-top: .5em;
+}
+
+.form-box{
+    margin-top: -6em;
+}
+
+.login-button{
+    color: white;
+    opacity: .2;
+    background: blue;
+}
+
+.login-activate{
+    cursor: pointer;
+    opacity: 1;
+}
+.login-activate:hover{
+    background-color: darkblue;
+}
+.login-info-box #username,
+.login-info-box #password {
+    width: 100%;
+    height: 60px;
+    font-size: 1.2em;
+    padding-left: 10px;
+    overflow: scroll;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.login-info-box #submit {
+    width: 100%;
+    height: 50px;
+    margin-top: 25px;
+    font-size: 1.2em;
+}
+
+/* 메인페이지 */
+header{
+    width: 100vw;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    background-color: white;
+    border-bottom: 1px solid lightgray;
+    font-size: 1.6em;
+
+    display: flex;
+    align-items: center;
+}
+nav {
+    width: 800px;
+    margin: 0 auto;
+    padding: 10px 0px;
+}
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    width: 800px;
+    padding: 0;
+    margin: 0;
+}
+nav ul li {
+    flex: 1;
+    /* background-color: darkcyan; */
+    margin: 0;
+    padding: 0;
+}
+.nav-logo{
+    margin-top: -2px;
+}
+.nav-logo img{
+    margin-bottom: -4px;
+    width: 22px;
+}
+i+i::before{
+    content: "";
+    padding-left: 8px;
+}
+
+.nav-logo{
+    text-align: left;
+}
+#logo{
+    display: inline-block;
+}
+.nav-search-bar{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-search-bar div{
+    text-align: center;
+    width: 200px;
+    height: 36px;
+    font-size: .6em;
+    background-color: rgb(250, 250, 250);
+    border: solid rgb(240, 240, 240) 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 5px;
+}
+
+.nav-icons{
+    text-align: right;
+}
+
+main#main-page{
+    width: 800px;
+    margin: 120px auto 40px auto;
+}
+
+article{
+    width: 500px;
+    height: 200vh;
+    display: block;
+    padding-right: 20px;
+}
+
+aside{
+    height: 70vh;
+    width: 300px;
+    position: fixed;
+    top: 120px;
+    left: 50%;
+    margin-left: 100px;
+}
+
+/* PROFILE!! Default!*/
+.profile-username{
+    display: flex;
+    align-items: center;
+}
+.profile{
+    margin-right: 5px;
+    border-radius: 50%;
+    width: 40px;
+}
+/* PROFILE!! END */
+
+/* post css */
+
+.post{
+    width: 100%;
+    margin: 100px auto;
+    /* position: relative; */
+    line-height: 1.45em;
+}
+.post div{
+    width: 100%;
+}
+.post-top{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px 16px 20px;
+}
+.post-top i{
+    margin-right: 10px;
+}
+
+.post{
+    background-color: white;
+    border: 1px lightgray solid;
+}
+
+.post-pic-frame{
+    width: 480px;
+    height: 480px;
+    overflow: hidden;
+}
+.post-pic-frame img{
+    width: 100%;
+    margin-top: -100px;
+}
+.post-icons{
+    padding: 16px 20px 16px 20px;
+}
+.post-icons i{
+    font-size: 22px;
+}
+.post-icons .fa-bookmark{
+    float: right;
+    
+}
+.post-icons .profile-username{
+    margin-top: 2px;
+}
+.post-icons .profile-username .profile{
+    width: 22px;
+}
+
+.post-who-like{
+    height: 20px;
+    background-color:palegoldenrod;
+}
+
+.post-description{
+    padding: 0px 20px 0px 20px;
+}
+.post-comments{
+    padding: 0px 20px 0px 20px;
+    height: 20px;
+}
+.post-comments .fa-heart{
+    float: right;
+}
+.post-date{
+    padding: 0px 20px 0px 20px;
+}
+.post-writing-comments{
+    padding: 20px 20px 20px 20px;
+    border-top: 1px lightgray solid;
+}
+.post-writing-comments .submit-comment {
+    float: right;
+    color: blue;
+    background-color: rgba(0,0,0,0);
+    border-width: 0;
+
+    cursor: pointer;
+}
+/* post END */
+
+/* aside part start*/
+aside section{
+    overflow: hidden;
+    width: 100%;
+}
+aside section.my-profile{
+    display: flex;
+    align-items: center;
+}
+aside section.my-profile .profile{
+    width: 60px;
+}
+aside section.my-profile .sub-my-username{
+    color: gray;
+}
+aside section.story{
+    margin-top: 10px;
+    height: 180px;
+    background-color: white;
+    font-size: .9em;
+}
+.story-bar{
+    padding: 20px 20px 4px 20px;
+}
+.story-see-all{
+    float: right;
+}
+.story-list{
+    overflow: scroll;
+    height: 120px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.story-list li{
+    display: flex;
+    align-items: center;
+}
+aside section.recommend{
+    margin-top: 10px;
+    height: 180px;
+    background-color: lightgreen;
+}
+aside section.info{
+    margin-top: 10px;
+    height: 180px;
+}
+
+/* aside part END */

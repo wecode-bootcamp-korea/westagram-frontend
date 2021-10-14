@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <style>
+        * {
+  box-sizing: border-box;
+}
+
+.login-container {
+  width: 200px;
+  margin: 20px auto;
+}
+
+.login-container input {
+  width: 100%;
+  height: 30px;
+  margin-bottom: 5px;
+  padding-left: 10px;
+}
+
+.login-btn {
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  font-size: 14px;
+  background-color: #659672;
+  color: white;
+}
+
+.login-btn:hover {
+  cursor: pointer;
+  opacity: 0.85;
+}
+    </style>
+  </head>
+  <body>
+    <div class="login-container">
+      <input type="password" id="password" placeholder="비밀번호" />
+      <input type="password" id="re-password" placeholder="비밀번호 확인" />
+      <button class="login-btn">로그인</button>
+      <p class="alert"></p>
+      <p>key code: <span id="code"></span></p>
+    </div>
+    
+    <script>
+        const thisIsPw = document.getElementById('password');
+        const thisIsButton = document.getElementsByClassName('login-btn')[0];
+        const thisAlert = document.getElementsByClassName('alert')[0]; 
+
+        //
+        const inputIdPw = document.getElementById('re-password');
+
+
+        inputIdPw.addEventListener('keyup', function() {
+        if (thisIsPw.value === inputIdPw.value) {
+            thisAlert.innerHTML = "";
+        } else {
+            thisAlert.innerHTML = "비밀번호가 맞지 않습니다!";
+        };
+        });
+    </script>
+  </body>
+</html>
