@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>westagram</title>
+    
+    <!-- 외부 스타일시트 연결 -->
+    <link rel="icon" type="image/png" href="imgs/favicon.png" />
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="login.css">
+    <style type="text/css"></style>
+    
+    <!-- 외부 스크립트 연결 -->
+    <script src="login.js" defer></script>
+    
+    <!-- 폰트어썸 -->
+    <script src="https://kit.fontawesome.com/684e97b7f2.js" crossorigin="anonymous"></script>
+
+</head>
+
+<!-- body start -->
+<body>
+    <!-- 감싸진 큰 section -->
+    <section class="container-wrap">
+        <!-- westagram 글자 -->
+            <h2 class="login-title">WESTAGRAM</h2>
+        <!-- input,button감싸고 있는 form -->
+        <form class="input-container">
+        <!-- input을 감싸고 있는 div -->
+        <div class="input-wrap">
+            <input id="id" type="text" placeholder="전화번호,사용자이름 또는 이메일">
+            <input id="password" type="password" placeholder="비밀번호">
+        </div>
+        <!-- 로그인 버튼 -->
+        <button class="btn" type="submit">
+            로그인
+        </button>
+        </form>
+        <!-- 마지막 비밀번호를 잊으셨나요 div -->
+        <div class="last">
+            <p><a href="#">비밀번호를 잊으셨나요?</a></p>
+        </div>     
+    </section>
+</body>
+</html>
