@@ -1,0 +1,258 @@
+@charset "utf-8";
+
+body {
+    background-color: #fafafa;
+}
+
+header {
+    width: 100%;
+    height: 100px;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+
+header nav {
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav .logo {
+    /* background: yellow; */
+    width: 250px;
+    line-height: 100px;
+}
+
+nav .logo .logoImg {
+    display: block;
+    margin-top: 34px;
+    margin-left: 10px;
+    float: left;
+}
+
+nav .logo .logoImg img {
+    display: block;
+    width: 32px;
+}
+
+nav .logo .logoTxt {
+    font-size: 2.125rem;
+    float: right;
+    position: relative;
+}
+
+nav .logo .logoTxt a {
+    display: block;
+}
+
+.logoTxt:before {
+    content: "";
+    display: block;
+    width: 3px;
+    height: 36px;
+    background-color: #000;
+    position: absolute;
+    top: 33px;
+    left: -19px;
+}
+
+nav .search-box {
+    /* outline:3px solid lime; */
+    line-height: 100px;
+}
+
+nav .search-box input {
+    padding: 4px 18px;
+    background: #fafafa;
+    border: 1.5px solid rgb(171, 173, 176);
+    border-radius: 3px;
+}
+
+.search-box input::placeholder {
+    color: rgb(171, 173, 176);
+    text-align: center;
+    background: url(../img/ico_search.png) no-repeat 35% center/12px 12px;
+}
+
+.icon-wrap {
+    width: 15%;
+}
+
+.icon-wrap a {
+    display: block;
+    float: left;
+    width: 33.33%;
+    height: 100px;
+    position: relative;
+}
+
+.icon-wrap a img {
+    display: block;
+    width: 32px;
+    margin: 34px auto;
+    line-height: 100px;
+}
+
+.icon-wrap a:nth-child(2):after {
+    content: "";
+    display: block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: rgb(237, 73, 86);
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* main */
+main {
+    width: 100%;
+}
+
+#feed {
+    width: 50%;
+    margin-top: 100px;
+    background-color: #fff;
+    border: 1.5px solid rgb(171, 173, 176);
+
+    position: relative;
+    top: 80px;
+    left: 20%;
+}
+
+#feed .inner-top {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+
+}
+
+.inner-top .profile {
+    width: 30%;
+}
+
+.inner-top .profile a {
+    display: block;
+    width: 100%;
+}
+
+.inner-top .profile a img {
+    width: 60px;
+    height: 60px;
+    margin-top: 10px;
+    margin-left: 20px;
+    border-radius: 50%;
+    /* outline: 3px solid red; */
+}
+
+.inner-top .profile a p {
+    float: right;
+    line-height: 80px;
+    font-weight: bold;
+    /* outline: 3px solid red; */
+}
+
+.inner-top .more {
+    width: 5%;
+    margin-top: 28px;
+}
+.inner-top .more img {
+    width: 24px;
+}
+#feed .inner-feed  {
+    width: 100%;
+}
+#feed .inner-feed img {
+    width: 100%;
+}
+#feed .inner-bottom {
+    background-color: #fff;
+    padding: 10px;
+}
+#feed .inner-bottom .inner-menu {
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.inner-menu img {
+    width: 28px;
+}
+.inner-menu .leftImg a {
+    display: inline-block;
+}
+.leftImg a~a {
+    margin-left: 20px;
+}
+.whoLikes {
+    padding: 10px;
+    font-weight: bold;
+}
+.whoLikes img {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+.inner-text {
+    width: 100%;
+    outline: 3px solid red;
+}
+.inner-text .top-wrap {
+    width: 70%;
+    display: flex;
+}
+.inner-text .userId {
+    width: 140px;
+    border: 0;
+}
+.inner-text .top-wrap .msg {
+    width: 65%;
+}
+.inner-text .moreTxt {
+    width: 15%;
+    text-align: center;
+    color: rgb(171, 173, 176);
+}
+.inner-text .bottom-wrap {
+    width: 100%;
+    display: flex;
+}
+.bottom-wrap .msg {
+    width: 80%;
+}
+.inner-text .bottom-wrap .heartTag {
+    width: 5%;
+    text-align: center;
+}
+.inner-text .time {
+    color: rgb(171, 173, 176);
+}
+.inner-text:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: rgb(171, 173, 176);
+    position: absolute;
+    bottom: 62px;
+    left: 0;
+}
+
+
+.chatFrm {
+    margin-top: 20px;
+    padding: 10px;
+}
+.chatFrm .chatBox {
+    width: 95%;
+    border: 0;
+}
