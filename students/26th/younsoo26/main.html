@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Lobster+Two&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
     
     <title>웨스타그램</title>
@@ -15,7 +16,7 @@
         <nav>
             <ul>
                 <li class="nav-logo">
-                    <img src="assets/img/instagram.svg" alt="logo">
+                    <a href="index.html"><img src="assets/img/instagram.svg" alt="logo"></a>
                     <span id="logo">| westagram</span>
                 </li>
                 <li class="nav-search-bar">
@@ -34,7 +35,8 @@
             <div class="post post1">
                 <div class="post-top">
                     <div class="profile-username">
-                        <img id="profile" class="profile" src="assets/img/profile.png" alt="tl's profile images"><span class="username">cooper_kao</span>
+                        <img id="profile" class="profile" src="assets/img/profile.png" alt="tl's profile images">
+                        <span class="username">cooper_kao</span>
                     </div>
                     <i class="fas fa-ellipsis-h"></i>
                 </div>
@@ -47,7 +49,8 @@
                     <i class="far fa-share-square"></i>
                     <i class="far fa-bookmark"></i>
                     <div id="profile-username" class="profile-username">
-                        <img id="profile" class="profile" src="assets/img/profile2.png" alt="eyeball doggy"><span class="username">doggypuppy</span>
+                        <img id="profile" class="profile" src="assets/img/profile2.png" alt="eyeball doggy">
+                        <span class="username">doggypuppy</span>
                         <span>님 외 1명이 좋아합니다.</span>
                     </div>        
                 </div>
@@ -68,63 +71,88 @@
             <section class="my-profile">
                 <img id="profile" class="profile" src="assets/img/profile3.png" alt="My pic">
                 <div class="my-username">
-                    mincraft_bangbang <br>
+                    <span class="username">mincraft_bangbang</span><br>
                     <span class='sub-my-username'>Mincraft | 마크 자바버전</span>
                 </div>
             </section>
             <section class="story">
-                <div class="story-bar">스토리 <span class="story-see-all">모두보기</span></div>
+                <div class="story-bar"><span class="section-name">스토리</span> <span class="see-all">모두보기</span></div>
                 <ul class="story-list">
                     <li>
-                        <img id="profile" class="profile" src="assets/img/profile3.png" alt="My pic">
+                        <div class="story-img-activate"></div>
+                        <img id="profile" class="profile" src="assets/img/profile4.png" alt="My pic">
                         <div class="my-username">
-                            _yum_s <br>
-                            <span class='sub-my-username'>16분 전</span>
+                            <span class="userID">_yum_s</span> <br>
+                            <span class='story-time-log'>16분 전</span>
                         </div>
                     </li>
                     <li>
-                        <img id="profile" class="profile" src="assets/img/profile3.png" alt="My pic">
+                        <div class="story-img-activate"></div>
+                        <img id="profile" class="profile" src="assets/img/profile8.png" alt="My pic">
                         <div class="my-username">
-                            drink_n_drink_ <br>
-                            <span class='sub-my-username'>3시간 전</span>
+                            <span class="userID">drink_n_drink_</span> <br>
+                            <span class='story-time-log'>3시간 전</span>
                         </div>
                     </li>
                     <li>
-                        <img id="profile" class="profile" src="assets/img/profile3.png" alt="My pic">
+                        <div class="story-img-activate"></div>
+                        <img id="profile" class="profile" src="assets/img/profile6.png" alt="My pic">
                         <div class="my-username">
-                            butter_oiler <br>
-                            <span class='sub-my-username'>20시간 전</span>
+                            <span class="userID">butter_oiler</span> <br>
+                            <span class='story-time-log'>20시간 전</span>
                         </div>
                     </li>
                     <li>
-                        <img id="profile" class="profile" src="assets/img/profile3.png" alt="My pic">
+                        <div class="story-img-activate"></div>
+                        <img id="profile" class="profile" src="assets/img/profile7.png" alt="My pic">
                         <div class="my-username">
-                            maybe-good <br>
-                            <span class='sub-my-username'>4일 전</span>
+                            <span class="userID">maybe-good</span> <br>
+                            <span class="story-time-log">4일 전</span>
                         </div>
                     </li>
                 </ul>
             </section>
             <section class="recommend">
-                <div>회원님을 위한 추천 모두보기</div>
-                <ul>
+                <div class="recommend-bar">
+                    <span class="section-name">회원님을 위한 추천</span> <span class="see-all">모두보기</span>
+                </div>
+                <ul class="recommend-list">
                     <li>
-                        ioooooahwow<br>_rupi_na님 외2명이...
-                        <div>팔로우</div>
+                        <div class="profile-userID-username">
+                            <img id="profile" class="profile" src="assets/img/profile9.jpg" alt="My pic">
+                            <div class="my-username">
+                                <span class="userID">ioooooahwow</span> <br>
+                                <span class="userID-subline">_rupi_na님 외2명이...</span>
+                            </div>
+                        </div>
+                        <span class="follow-bttn">팔로우</span>
                     </li>
                     <li>
-                        lovenpound_sun<br>bingo_misoya님 외 12...
-                        <div>팔로우</div>
+                        <div class="profile-userID-username">
+                            <img id="profile" class="profile" src="assets/img/profile10.jpg" alt="My pic">
+                            <div class="my-username">
+                                <span class="userID">lovenpound_sun</span> <br>
+                                <span class="userID-subline">bingo_misoya님 외 12...</span>
+                            </div>
+                        </div>
+                        <span class="follow-bttn">팔로우</span>
                     </li>
                     <li>
-                        cooper_kao<br>jimmy_tommson님 외 2...
-                        <div>팔로우</div>
+                        <div class="profile-userID-username">
+                            <img id="profile" class="profile" src="assets/img/profile11.jpg" alt="My pic">
+                            <div class="my-username">
+                                <span class="userID">cooper_kao</span> <br>
+                                <span class="userID-subline">jimmy_tommson님 외 2...</span>
+                            </div>
+                        </div>
+                        <span class="follow-bttn">팔로우</span>
                     </li>
                 </ul>
             </section>
             <section class="info">
                 Westagram 정보 · 지원 · 홍보 센터 · API · 채용 정보 · 개인정보처리방침 · 약관 · 디렉터리 · 프로필 · 해시태그 · 언어
-                © 2019 INSTAGRAM
+                <br>
+                © 2019 WESTAGRAM
             </section>
         </aside>
         

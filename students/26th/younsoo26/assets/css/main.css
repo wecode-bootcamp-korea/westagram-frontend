@@ -1,25 +1,30 @@
 *{
     box-sizing: border-box;
+    font-family: 'Noto Sans KR', sans-serif;
 }
 body{
     background-color: rgb(240, 240, 240);
     margin: 0;
     padding: 0;
+    font-size: 13px;
 }
+
 a{
     text-decoration: none;
     color: black;
 }
+
 #logo{
     font-family: 'Lobster', cursive;
 }
-
+/* login page */
 main#login-page {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
 }
+
 section.main-container {
     width: 500px;
     height: 620px;
@@ -35,7 +40,7 @@ section.main-container {
 }
 
 .logo-box{
-    font-size: 5em;
+    font-size: 6em;
     margin-top: .5em;
 }
 
@@ -53,14 +58,16 @@ section.main-container {
     cursor: pointer;
     opacity: 1;
 }
+
 .login-activate:hover{
     background-color: darkblue;
 }
+
 .login-info-box #username,
 .login-info-box #password {
     width: 100%;
     height: 60px;
-    font-size: 1.2em;
+    font-size: 1.3em;
     padding-left: 10px;
     overflow: scroll;
     margin-top: 4px;
@@ -71,12 +78,15 @@ section.main-container {
     width: 100%;
     height: 50px;
     margin-top: 25px;
-    font-size: 1.2em;
+    font-size: 1.3em;
+    border-radius: 2px;
+    border-width: 0;
 }
 
 /* 메인페이지 */
+/* navigation START */
 header{
-    width: 100vw;
+    width: 100%;
     height: 80px;
     position: fixed;
     top: 0;
@@ -84,16 +94,18 @@ header{
 
     background-color: white;
     border-bottom: 1px solid lightgray;
-    font-size: 1.6em;
+    font-size: 2em;
 
     display: flex;
     align-items: center;
+    justify-content: center;
 }
+
 nav {
     width: 800px;
-    margin: 0 auto;
     padding: 10px 0px;
 }
+
 nav ul{
     display: flex;
     justify-content: space-between;
@@ -105,7 +117,6 @@ nav ul{
 }
 nav ul li {
     flex: 1;
-    /* background-color: darkcyan; */
     margin: 0;
     padding: 0;
 }
@@ -151,6 +162,8 @@ i+i::before{
     text-align: right;
 }
 
+/* navigation END */
+
 main#main-page{
     width: 800px;
     margin: 120px auto 40px auto;
@@ -182,10 +195,12 @@ aside{
     border-radius: 50%;
     width: 40px;
 }
+.username{
+    font-weight: 700;
+}
 /* PROFILE!! END */
 
 /* post css */
-
 .post{
     width: 100%;
     margin: 100px auto;
@@ -231,7 +246,7 @@ aside{
     
 }
 .post-icons .profile-username{
-    margin-top: 2px;
+    margin-top: 6px;
 }
 .post-icons .profile-username .profile{
     width: 22px;
@@ -253,7 +268,7 @@ aside{
     float: right;
 }
 .post-date{
-    padding: 0px 20px 0px 20px;
+    padding: 0px 20px 16px 20px;
 }
 .post-writing-comments{
     padding: 20px 20px 20px 20px;
@@ -284,37 +299,102 @@ aside section.my-profile .profile{
 aside section.my-profile .sub-my-username{
     color: gray;
 }
-aside section.story{
+aside section.story,
+aside section.recommend{
     margin-top: 10px;
-    height: 180px;
+    height: 194px;
     background-color: white;
-    font-size: .9em;
+    font-size: 1em;
+    border: 1px lightgray solid;
+    border-radius: 1px;
 }
+
+/* aside stories */
+.recommend-bar,
 .story-bar{
-    padding: 20px 20px 4px 20px;
+    padding: 12px 14px 6px 14px;
 }
-.story-see-all{
+.section-name{
+    color: gray;
+}
+.see-all{
+    font-weight: 700;
     float: right;
+}
+.story-list,
+.recommend-list{
+    height: 150px;
+    margin: 0;
+    padding: 0 16px 0px 16px;
+    list-style-type: none;
 }
 .story-list{
     overflow: scroll;
-    height: 120px;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
 }
 .story-list li{
+    position: relative;
     display: flex;
     align-items: center;
+    margin: 10px 0;
 }
-aside section.recommend{
-    margin-top: 10px;
-    height: 180px;
-    background-color: lightgreen;
+.story-list li .profile{
+    width: 32px;
+    height: 32px;
+    margin: 4px;
+}
+.story-img-activate{
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    border: 2px red solid;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.story-list li .my-username{
+    margin-left: 4px;
+}
+.my-username .userID{
+    font-weight: 800;
+}
+.story-list li:nth-child(1){
+    margin: 0;
+}
+.story-list li:nth-last-child(1){
+    margin: 0;
+}
+
+/* recommend friends */
+.recommend-list{
+    overflow: hidden;
 }
 aside section.info{
     margin-top: 10px;
     height: 180px;
 }
-
+.recommend-list li .profile{
+    width: 40px;
+    height: 40px;
+}
+.recommend-list li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+.recommend-list li:nth-child(1){
+    margin: 0;
+}
+.recommend-list li:nth-last-child(1){
+    margin: 0;
+}
+.follow-bttn{
+    float: right;
+    color: blue;
+}
+.profile-userID-username{
+    display: flex;
+    align-items: center;
+}
+/* recommend friends END */
 /* aside part END */
