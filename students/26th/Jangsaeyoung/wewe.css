@@ -1,0 +1,62 @@
+body{
+    display: flex;  /* 전체화면에서 자유롭게 움직이게 해줄게 */
+    justify-content: center; /* 그 줄에서 가운데로 가*/
+    height: 100vh; /* 전체 화면의 100을 다 써!*/
+    align-items: center; /* 반대축으로 움직여서 가운데로 가! */
+}
+
+.main{
+    display: flex;  /* main 박스야 너 내부가 자유롭게 움직이게 해줄게*/
+    flex-direction: column;  /* 세로로 정렬해줄게*/
+    align-items: center;
+    border-style: solid;
+    border-width: 2px;
+    border-color: lightgray;
+    border-radius: 4px;
+    width: 400px;
+    height: 500px;
+}
+
+.logo{
+    padding: 40px;
+    font-size: 60px;
+    font-family: 'Lobster', cursive;
+    font-family: 'Lobster Two', cursive;
+    font-weight: 10px;
+}
+
+.user{
+    padding: 20px;
+}
+
+input{
+  width: 300px;
+  height: 30px;
+  background-color: #FAFAFA;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 2px;
+  border-color: #e2e2e2;
+}
+
+#num{   /* 너만 간격을 줄게 그러새 아이디로 너 하나만 줄게*/
+    margin-bottom: 10px; 
+}
+
+.btn{
+    width: 310px;
+    height: 30px;
+    background-color: #C0DFFD;
+    color: white;
+    border-width: 2px;
+    border-style: none;
+    border-radius: 2px;
+    border-color: rgb(212, 208, 208); /* 스포이드로 색깔 따왔어*/
+}
+
+a{
+    margin: 0px;
+    margin-top: 150px;
+    list-style: none; /* 이거 적용 안된거 같은데*/
+    font-size: 15px;
+}
