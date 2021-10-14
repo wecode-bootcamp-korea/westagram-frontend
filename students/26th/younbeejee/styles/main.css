@@ -1,0 +1,112 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+/* Nav */
+
+.navbar{
+    display:flex;   
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    padding: 30px;
+    height: 54px;
+    width: 100%;
+    border-bottom: 1px solid #ebebeb;
+    position: fixed;
+    top:0;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.navbar .navbar__logo{
+    font-size: 25px;
+    font-family: 'Lobster', cursive;
+    font-weight: 400;
+}   
+
+
+
+.navbar .navbar__search i{
+    position: absolute;
+    left: 49%;
+    top: 40%;
+    color: #e0e0e0 ;
+    font-size: 13px;
+}
+
+.navbar .navbar__search input{
+    background-color: #FAFAFA;
+    border: 2px solid #e0e0e0 ;
+    width: 215px;
+    height: 28px;
+    border-radius: 4px;
+}
+
+
+.navbar .navbar__icons img{
+    width: 25px;
+    height: 25px;
+    margin: 10px;
+}
+
+/* MAIN */
+
+main .total-main{
+
+}
+
+
+.main .feeds .container{
+    margin-top: 150px;
+    margin-left: 50px;   
+    border: 1px solid black;
+    width: 614px;
+    height: 830px;
+}
+
+.main .feeds .container .line{
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 15px;
+}
+
+/* .main .feeds .container .line:2nd-child(2){
+
+} */
+
+
+.main .feeds .container .line img{
+    width: 40px;
+    height: 40px;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.main .feeds .container .heart{
+    font-size: 30px;
+    color: gray;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.main .feeds .container .heart .fa-heart{
+    color: red;
+    margin-left: 10px;
+}
+
+.main .feeds .container .heart .fa-bookmark{
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+
+
+
