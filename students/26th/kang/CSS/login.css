@@ -1,0 +1,70 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 본문 css 작업 시작 */
+
+.insta-border {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  width: 500px;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.insta-title {
+  font-family: 'Lobster', cursive;
+  font-weight: lighter;
+}
+
+/* input창, button 작업 시작 */
+
+.guest {
+  display: flex;
+  flex-direction: column;
+}
+.guest input {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  width: 300px;
+  height: 42px;
+  background: #fafafa;
+}
+.idBox {
+  margin-top: 40px;
+  margin-bottom: 5px;
+}
+.pwBox {
+  margin-bottom: 20px;
+}
+.login-btn {
+  background: #7acaff;
+  /* background: #0095f6; */
+  border: none;
+  border-radius: 3px;
+  width: 300px;
+  height: 35px;
+  color: white;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+/* 비번잊었나요 작업 시작 */
+
+.forgot-pw {
+  text-decoration: none;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 5px;
+  font-size: 13px;
+  font-weight: bold;
+  color: #003783;
+}

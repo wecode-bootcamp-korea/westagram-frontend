@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="CSS/style.css" />
+
+    <title>Westagram Main</title>
+  </head>
+  <body>
+    <div class="total">
+      <nav class="nav-bar">
+        <div class="nav-bar__left">
+          <img alt="인스타로고" class="feed-img insta-logo" src="src/instagram.png" />
+          <div class="westa__thin-line"></div>
+          <h2 class="westagram">Westagram</h2>
+        </div>
+
+        <div class="nav-bar__mid">
+          <p class="nav-bar__mid-search">검색</p>
+        </div>
+
+        <div class="nav-bar__right">
+          <img alt="컴퍼스" class="feed-img compass" src="src/compass.png" />
+          <img alt="검은하트" class="feed-img heart-bck" src="src/heart.png" />
+          <img alt="사람" class="feed-img people" src="src/user.png" />
+        </div>
+      </nav>
+
+      <div class="main-layout">
+        <main class="insta-main">
+          <section class="feed-top">
+            <div class="feed-top__left">
+              <div class="feed-profile__picture"></div>
+              <p class="feed-profile__id">kanxion</p>
+            </div>
+            <img alt="menu" class="feed-img feed-top__menu" src="src/menu.png" />
+          </section>
+
+          <img alt="피드사진" class="my-picture" src="src/my-picture.jpg" />
+
+          <section class="feed-mid">
+            <div class="feed-mid__left">
+              <img alt="red-heart" class="feed-img heart-red" src="src/heart-red.png" />
+              <img alt="chat" class="feed-img chat" src="src/chat.png" />
+              <img alt="upload" class="feed-img upload" src="src/upload.png" />
+            </div>
+            <img alt="bookmark" class="feed-img feed-mid__right" src="src/save-instagram.png" />
+          </section>
+
+          <section class="feed-third">
+            <img alt="travis scott" class="another-profile__picture scott" src="src/tavis-scott.jpg" />
+            <p>travis scott님 외 199,200명이 좋아합니다</p>
+          </section>
+
+          <section class="feed-text">
+            <div class="feed-text__top">
+              <p class="user-id">kanxion</p>
+              <p class="user-id__textarea">관악산 28분 컷 파티 구함</p>
+            </div>
+
+            <div class="feed-text__bottom">
+              <div class="feed-text__bottom-ripple">
+                <p class="user-id2">we-workout</p>
+                <p class="user-id2__textarea">다음 목표는 풀코스 SUB4🥇</p>
+              </div>
+              <img alt="댓글 검은하트" class="feed-img heart-bck repl-heart" src="src/heart.png" />
+            </div>
+            <p class="feed-text__bottom-time">42분 전</p>
+          </section>
+
+          <section class="rippleBox">
+            <input type="text" maxlength="30" placeholder="댓글 달기..." class="comment" />
+            <button class="posting-btn" id="posting-btn">게시</button>
+          </section>
+        </main>
+
+        <aside>
+          <section class="aside-top">
+            <img alt="위코드로고" class="wecode-logo" src="src/wecode-logo.png" />
+            <div class="wecode-name">
+              <p>wecode_bootcamp</p>
+              <p>WeCode | 위코드</p>
+            </div>
+          </section>
+
+          <section class="insta-story">
+            <div class="story-top">
+              <p class="story-id">스토리</p>
+              <p class="story-info">모두 보기</p>
+            </div>
+
+            <div class="story-main-first">
+              <div class="story-main__pic1"></div>
+              <div class="story-main__part1">
+                <p>egunmotchamji</p>
+                <p>1분 전</p>
+              </div>
+            </div>
+          </section>
+        </aside>
+      </div>
+    </div>
+    <script src="JS/main.js"></script>
+  </body>
+</html>

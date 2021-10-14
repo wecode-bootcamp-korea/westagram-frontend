@@ -1,0 +1,209 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+.feed-img {
+  width: 21px;
+}
+.main-layout {
+  font-size: 13px;
+  display: flex;
+  justify-content: center;
+}
+.total {
+  font-weight: 700;
+}
+/* nav-bar 작업 시작 */
+
+.westagram {
+  font-family: 'Lobster', cursive;
+  font-weight: lighter;
+  font-size: 26px;
+}
+.westa__thin-line {
+  width: 2px;
+  height: 20px;
+  background: black;
+}
+.nav-bar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 40px;
+  padding: 15px 0;
+  border-bottom: 1px solid lightgray;
+}
+.nav-bar__left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 170px;
+}
+.nav-bar__mid {
+  border: 1px solid lightgray;
+  width: 200px;
+  padding: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.3);
+}
+.nav-bar__right {
+  width: 120px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 인스타 메인파트 (top) 시작*/
+
+.insta-main {
+  border-top: 1px solid rgba(54, 54, 54, 0.1);
+  border-left: 1px solid rgba(54, 54, 54, 0.1);
+  border-bottom: 1px solid rgba(54, 54, 54, 0.1);
+  border-right: 1px solid rgba(54, 54, 54, 0.1);
+  border-radius: 3px;
+  width: 441px;
+  margin-right: 30px;
+}
+.feed-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+}
+.feed-top__left {
+  display: flex;
+  align-items: center;
+}
+.feed-profile__picture {
+  background: blue;
+  width: 26px;
+  height: 26px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+.feed-top__menu {
+  width: 14px;
+  height: 14px;
+}
+.my-picture {
+  width: 440px;
+}
+
+/* 인스타 메인파트 (mid) 시작 */
+
+.feed-mid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 12px;
+}
+.feed-mid__left {
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* fiid-third(아이콘 있는 부분) 시작*/
+
+.feed-third {
+  padding: 5px 12px;
+  display: flex;
+  align-items: center;
+}
+.scott {
+  border: 1px solid lightgray;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
+}
+
+/* feed-text(내가 쓴 글) 시작 */
+
+.feed-text {
+  padding: 5px 12px;
+  display: flex;
+  flex-direction: column;
+}
+.feed-text__top {
+  display: flex;
+  align-items: center;
+}
+.feed-text__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.user-id,
+.user-id2 {
+  margin-right: 5px;
+}
+.repl-heart {
+  width: 11px;
+  height: 11px;
+}
+.feed-text__bottom-ripple {
+  display: flex;
+}
+.feed-text__bottom-time {
+  color: rgba(0, 0, 0, 0.3);
+}
+.rippleBox {
+  display: flex;
+  justify-content: space-between;
+  padding: 7px 12px;
+  font-size: 12px;
+  color: lightgray;
+  border-top: 1px solid rgba(99, 99, 99, 0.1);
+}
+.comment {
+  border: none;
+}
+.rippleBox p:nth-child(2) {
+  color: #4eb7fd;
+}
+.posting-btn {
+  color: #0095f6;
+  border: none;
+  background: none;
+}
+
+/* wecode aside 시작 */
+.aside-top {
+  display: flex;
+}
+.story-id {
+  font-weight: bolder;
+  color: rgb(170, 170, 170);
+}
+
+.wecode-logo {
+  width: 40px;
+  border-radius: 50%;
+  margin-right: 14px;
+}
+.wecode-name p:first-child {
+  font-size: 15px;
+  font-weight: bolder;
+}
+
+/* 인스타 스토리 부분 시작 */
+
+.insta-story {
+  border: 1px solid lightgray;
+  border-radius: 3px;
+  padding: 8px;
+}
+.story-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.story-main__pic {
+  background: tomato;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+}
