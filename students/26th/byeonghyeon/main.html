@@ -3,9 +3,145 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Westagram</title>
+    <title>Westagram-main</title>
+
+    <meta name="author" content="CHOI">
+    <meta name="description" content="Westagram Project">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="icon" href="./img/instagram.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/3090fba733.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css" integrity="sha512-IJEbgDEF7OeKJRa0MY2PApnyJHRIsgzCveek4ec8VWQ+7KG3ZSKVNYa5xP/Gh0hVP0Mwb+gBsk+GwR3JQGhQNg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style/common.css">
+    <link rel="stylesheet" href="./style/main.css">
 </head>
 <body>
-    
+    <section class="body-container">
+        <nav class="main-nav">
+                <div class="main-nav-left">
+                    <img src="./img/instagram.png" alt="icon" class="nav-logo">
+                    <div class="vl"></div>
+                    <div class="logo logo-main">Westagram</div>
+                </div>
+                <div class="main-nav-center">
+                    <input type="text" class="main-input" placeholder="검색">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="main-nav-right">
+                    <button><img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png" alt="explore" class="nav-btn"></button>
+                    <button><img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" alt="heart" class="nav-btn"></button>
+                    <button><img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png" alt="profile" class="nav-btn"></button>
+                </div>
+        </nav>
+        <div class="main-container">
+            <div class="feeds">
+                <article class="feed">
+                    <div class="profile-container">
+                        <div class="profile-left">
+                            <figure class="profile-item-photo" style="background-image: url(./img/IMG_1402.JPG);"></figure>
+                            <span class="profile-name feed-profile-name">choi_95</span>
+                        </div>
+                        <div class="profile-right"><i class="fas fa-ellipsis-h"></i></div>
+                    </div>
+                    <div class="feed-img"></div>
+                    <div class="feed-func-container">
+                        <div class="feed-func-left">
+                            <button class="feed-func-btn"><i class="far fa-heart"></i></button>
+                            <button class="feed-func-btn"><i class="far fa-comment"></i></button>
+                            <button class="feed-func-btn"><i class="far fa-paper-plane"></i></button>
+                        </div>
+                        <div class="feed-func-right"><button class="feed-func-btn"><i class="far fa-bookmark"></i></button></div>
+                    </div> 
+                    <div class="feed-bottom-container">
+                        <div class="like-container">
+                            <figure class="like-item" style="background-image: url(./img/IMG_1402.JPG);"></figure>
+                            <p><span style="font-weight: bold;">choi_95</span>님 <span style="font-weight: bold;">외 48명</span>이 좋아합니다</p>
+            
+                        </div>
+                        <div class="comment-container">
+                            <ul class="comment-list">
+                                <li class="comment-item">
+                                    <div class="comment">
+                                        <a href="#" class="feed-bottom-account">orange_97</a>
+                                        <span class="comment-content">좋은 사진이네요</span>
+                                    </div>
+                                    <div><button><img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" alt="heart" class="comment-heart"></button></div>
+                                </li>
+                                <li class="comment-item">
+                                    <div class="comment">
+                                        <a href="#" class="feed-bottom-account">apple_90</a>
+                                        <span class="comment-content">사진이 별로네요</span>
+                                    </div>
+                                    <div><button><img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" alt="heart" class="comment-heart"></button></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="feed-bottom-date"><span></span></div>
+                    </div>
+                    <div class="comment-input-container">
+                        <input type="text" placeholder="댓글 달기..." >
+                        <button class="post-comment-btn">게시</button>
+                    </div>
+                </article>
+            </div>
+            <div class="main-right">
+                <header class="main-right-header">
+                    <figure class="header-item-photo" style="background-image: url(./img/IMG_1405.JPG);"></figure>
+                    <div class="header-item-account">
+                        <p>wecode_bootcamp</p>
+                        <p>Wecode | 위코드</p>
+                    </div>
+                </header>
+                <div class="story-container">
+                    <div class="front story-front-container">
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="story-list">
+                        <li class="story-container">
+                            <div class="story">
+                                <div class="story-circle"></div>
+                                <figure class="story-profile" style="background-image: url(./img/IMG_1402.JPG);"></figure>
+                            </div> 
+                            <div class="story-account-name">
+                                <p></p>
+                                <p></p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="recommend-container">
+                    <div class="front recommend-front-container">
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="recommend-list">
+                        <li class="recommend-container">
+                            <div class="recommend">
+                                <figure class="recommend-profile"></figure>
+                            </div>
+                            <div class="recommend-account-name">
+                                <p></p>
+                                <p></p>
+                            </div>
+                            <button class="follow-btn"><span class="follow">팔로우</span></button>
+                        </li>
+                    </ul>
+                </div>
+                <footer class="main-right-footer">
+                    <p></p>
+                    <p></p>
+                </footer>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
