@@ -110,20 +110,15 @@ nav .search-box input {
     transform: translateX(-50%);
 }
 
-/* main */
-main {
-    width: 100%;
-}
-
-#feed {
-    width: 50%;
-    margin-top: 100px;
+/* main-feed */
+main#feed {
+    width: 45%;
+    margin: 100px 0;
     background-color: #fff;
     border: 1.5px solid rgb(171, 173, 176);
-
     position: relative;
-    top: 80px;
-    left: 20%;
+    top: 30px;
+    left: 12%;
 }
 
 #feed .inner-top {
@@ -132,7 +127,6 @@ main {
     display: flex;
     justify-content: space-between;
     background-color: #fff;
-
 }
 
 .inner-top .profile {
@@ -164,78 +158,98 @@ main {
     width: 5%;
     margin-top: 28px;
 }
+
 .inner-top .more img {
     width: 24px;
 }
-#feed .inner-feed  {
+
+#feed .inner-feed {
     width: 100%;
 }
+
 #feed .inner-feed img {
     width: 100%;
 }
+
 #feed .inner-bottom {
     background-color: #fff;
     padding: 10px;
 }
+
 #feed .inner-bottom .inner-menu {
     width: 100%;
     margin-bottom: 20px;
     display: flex;
     justify-content: space-between;
 }
+
 .inner-menu img {
     width: 28px;
 }
-.inner-menu .leftImg a {
+
+.inner-menu .left-img a {
     display: inline-block;
 }
-.leftImg a~a {
+
+.left-img a~a {
     margin-left: 20px;
 }
+
 .whoLikes {
     padding: 10px;
     font-weight: bold;
 }
+
 .whoLikes img {
     display: inline-block;
     width: 20px;
     height: 20px;
     border-radius: 50%;
 }
+
 .inner-text {
     width: 100%;
-    outline: 3px solid red;
+    /* outline: 3px solid red; */
 }
+
 .inner-text .top-wrap {
     width: 70%;
     display: flex;
 }
+
 .inner-text .userId {
     width: 140px;
     border: 0;
 }
+
 .inner-text .top-wrap .msg {
     width: 65%;
 }
+
 .inner-text .moreTxt {
     width: 15%;
     text-align: center;
     color: rgb(171, 173, 176);
 }
+
 .inner-text .bottom-wrap {
     width: 100%;
     display: flex;
 }
+
 .bottom-wrap .msg {
     width: 80%;
 }
+
 .inner-text .bottom-wrap .heartTag {
     width: 5%;
     text-align: center;
 }
+
 .inner-text .time {
     color: rgb(171, 173, 176);
 }
+
 .inner-text:after {
     content: "";
     display: block;
@@ -247,12 +261,235 @@ main {
     left: 0;
 }
 
-
+/* 댓글창 */
 .chatFrm {
     margin-top: 20px;
     padding: 10px;
 }
+
 .chatFrm .chatBox {
-    width: 95%;
+    width: 90%;
     border: 0;
+    /* outline: 3px solid red; */
+}
+
+.chatFrm .chatBox::placeholder {
+    color: rgb(171, 173, 176);
+}
+
+.chatFrm .uploadBtn {
+    width: 9%;
+    border: 0;
+    background: none;
+    color: #0095f6;
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+aside {
+    width: 24%;
+    /* background-color: yellow; */
+    position: fixed;
+    top: 130px;
+    right: 15.5%;
+}
+
+aside img {
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+aside .user_profile {
+    height: 80px;
+    /* outline: 2px solid red; */
+}
+
+.user_profile img {
+    float: left;
+    width: 60px;
+    margin-right: 20px;
+}
+
+.user_profile p {
+    margin-top: 16px;
+    display: block;
+    float: left;
+    color: rgb(171, 173, 176);
+    /* outline: 3px solid red; */
+}
+
+.user_profile .title {
+    color: #000;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* story */
+.story {
+    height: 240px;
+    overflow: hidden;
+    line-height: 40px;
+    padding: 0 10px;
+    background-color: #fff;
+    border: 1px solid rgb(171, 173, 176);
+    border-radius: 3px;
+}
+
+h4 {
+    color: rgb(171, 173, 176);
+    float: left;
+}
+
+.all {
+    float: right;
+    font-weight: bold;
+}
+
+.story-title {
+    padding: 0 10px;
+}
+
+.story-box {
+    display: flex;
+    position: relative;
+}
+
+.story-box a.go-story {
+    width: 25%;
+    height: 68px;
+    text-align: center;
+    /* background: greenyellow; */
+    margin-bottom: 1px;
+}
+
+.story-box a.go-story:before {
+    content: "";
+    display: block;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    background-image: linear-gradient(#fff, #f1f1f1), linear-gradient(#fdf497, #fdf497, #fd5949, #d6249f, #285AEB);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    position: absolute;
+    top: 6px;
+    left: 2.5px;
+}
+
+.story-box a.go-story:before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+}
+
+.story-box a.go-story img {
+    display: block;
+    width: 55px;
+    height: 55px;
+    position: relative;
+    top: 10px;
+    left: 8px;
+    z-index: 1;
+}
+
+.story-box .user-name {
+    padding-top: 5px;
+}
+
+.time-stamp {
+    display: block;
+    width: 75%;
+    color: rgb(171, 173, 176);
+    position: absolute;
+    left: 25%;
+    bottom: 5%;
+}
+
+/* recom-box */
+.recom {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #fff;
+    border: 1px solid rgb(171, 173, 176);
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+.recom-title {
+    margin-bottom: 5px;
+}
+
+.recom-box {
+    display: flex;
+    position: relative;
+    margin-bottom: 5px;
+    /* outline: 3px solid red; */
+}
+
+.recom-box a.pro-img {
+    width: 20%;
+    text-align: center;
+}
+
+.recom a.pro-img img {
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    top: 5px;
+    left: 0px;
+}
+
+.recom a.user-name {
+    display: block;
+    padding-top: 12px;
+    /* outline: 3px solid; */
+}
+
+.recom .follow {
+    display: block;
+    width: 100px;
+    text-align: right;
+    line-height: 50px;
+    color: #0095f6;
+    font-weight: bold;
+    /* outline: 3px solid red; */
+}
+
+.recom:after {
+    clear: both;
+}
+
+.recom .follower {
+    width: 230px;
+    color: rgb(171, 173, 176);
+    font-size: 0.875rem;
+    margin-top: -5px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.foot-box {
+    width: 300px;
+    color: rgb(171, 173, 176);
+    /* position: relative;
+    top: 20px;
+    left: 0; */
+}
+
+.foot-box .foot-nav a {
+    font-size: 0.875rem;
+    color: rgb(171, 173, 176);
+}
+
+.foot-box .copy {
+    margin-top: 10px;
+    font-size: 0.875rem;
 }
