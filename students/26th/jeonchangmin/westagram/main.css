@@ -78,15 +78,15 @@ a {
 }
 
 .main {
-  width: 1000px;
+  width: 100%;
   height: 1000px;
-  margin: auto;
-  background-color: aqua;
+  display: flex;
+  justify-content: center;
 }
 
 .feeds {
   width: 550px;
-  height: 800px;
+  height: 723px;
   border: 1px solid rgb(219, 219, 219);
   background-color: white;
 }
@@ -146,7 +146,6 @@ ul {
   height: 200px;
   padding: 10px 20px 10px 20px;
   list-style-type: none;
-  background-color: wheat;
 }
 
 .comment {
@@ -155,7 +154,8 @@ ul {
 
 .commentBox {
   padding: 10px 20px 10px 20px;
-  border: 1px solid rgb(219, 219, 219);
+  border-top: 1px solid rgb(219, 219, 219);
+  border-bottom: 1px solid rgb(219, 219, 219);
   display: flex;
   align-items: center;
 }
@@ -176,4 +176,80 @@ ul {
   color: blue;
   opacity: 0.3;
   flex: 1;
+}
+
+.mainRight {
+  width: 300px;
+  padding-top: 20px;
+  padding-left: 30px;
+}
+
+.rightProfile {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.RightMyProfile {
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.KoreanName {
+  color: rgb(219, 219, 219);
+}
+
+.story,
+.recommend {
+  padding: 15px 10px 0 10px;
+  margin-bottom: 20px;
+  background-color: white;
+}
+
+.storyBar,
+.recommendBar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.KoreanStory,
+.KoreanRecommend {
+  color: rgb(142, 142, 142);
+}
+
+.storyLists {
+  overflow: scroll;
+  list-style-type: none;
+}
+
+.storyList,
+.recommendList {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+li > img {
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.listName,
+.recommendName {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.listTime {
+  color: rgb(219, 219, 219);
+  font-size: 10px;
+}
+
+.recommendPharse {
+  color: rgb(219, 219, 219);
+  font-size: 12px;
 }
