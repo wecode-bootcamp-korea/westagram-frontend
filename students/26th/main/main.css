@@ -1,0 +1,328 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(250,250,250);
+}
+
+/* 여기부터 nav 부분 */
+
+nav {
+    height: 55px;
+    width: 100%;
+    padding: 10px, 35px, 5px, 35px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+    background-color: white;
+    border-bottom: 1px solid rgb(241,240,240);
+}
+
+.logoImg {
+    height: 20px;
+    padding-right: 15px;
+    border-right: 2px solid black;
+}
+
+.logoText {
+    font-family: 'Lobster', cursive;
+    font-size: 25px;
+    margin-left: 10px;
+}
+
+#searchBar {
+    position: relative;
+}
+
+#searchBar i {
+    position: absolute;
+    left: 82px;
+    padding-top: 8px;
+    font-size: 12px;
+    color: rgb(186,187,189);
+}
+
+#searchBar input {
+    width:220px;
+    height: 28px;
+    border: 1px solid rgb(219,219,219);
+    border-radius: 3px;
+    background-color: rgb(250,250,250);
+}
+
+#searchBar input::placeholder {
+    text-align: center;
+    color: rgb(165,165,165);
+}
+
+#icon img {
+    width: 25px;
+    margin: 0 7px;
+}
+
+/* 여기부터 main 부분 */
+
+main {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 90px;
+    margin: 0 20px 40px 20px;
+}
+
+/* main 중 feed 노출 부분 */
+
+#feed {
+    width: 630px;
+}
+
+article {
+    width: 600px;
+    height: 880px;
+    border: 1px solid rgb(219,219,219);
+    border-radius: 3px;
+    background-color: white;
+}
+
+.feedHeader {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 10px;
+    border-bottom: 1px solid rgb(219,219,219);
+}
+
+.feedHeader img {
+    width: 40px;
+    height: 40px;
+    border: 1px solid lightgrey;
+    border-radius: 50%;
+}
+
+.feedUser {
+    width: 500px;
+    margin-left: 10px;
+    display: inline-block;
+}
+
+.userName {
+    display: block;
+    font-weight: bold;
+}
+
+.description {
+    display: block;
+    font-size: 11px;
+    font-weight: normal;
+    color: grey;
+}
+
+.feedUser i {
+    position: absolute;
+}
+
+.mainImg {
+    width: 100%;
+}
+
+.feedIcon {
+    height: 35px;
+    display: flex;
+    align-items: center;
+}
+
+.feedIcon i {
+    font-size: 25px;
+    padding-left: 15px;
+}
+
+.feedIcon .fa-bookmark {
+    padding-left: 440px;   
+}
+
+.feedBody {
+    padding: 8px 15px;
+}
+
+.numberOfLikes {
+    display: flex;
+    align-items: center;
+}
+
+.numberOfLikes img {
+    width: 20px;
+    height: 20px;
+    border: 1px solid lightgrey;
+    border-radius: 50%;
+}
+
+.numberOfLikes span {
+    padding-left: 8px;
+}
+
+.feedText {
+    margin-top: 10px;
+    line-height: 30px;
+}
+
+.feedText a {
+    text-decoration: none;
+}
+
+.comment {
+    position: relative;
+}
+
+.comment img {
+    width: 15px;
+    position: absolute;
+    right: 7px;
+}
+
+.feedUploadTime {
+    margin: 10px 0;
+    color: rgb(148,148,148);
+    font-size: 12px;
+}
+
+.commentUpload {
+    border-top: 1px solid rgb(219,219,219);
+    position: relative;
+}
+
+.commentUpload input{
+    width: 598px;
+    padding: 15px 10px;
+    border: none;
+}
+
+.commentUpload button {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    color: rgb(198,223,250);
+    border: none;
+    background-color: white;
+}
+
+.commentUpload input:focus {
+    outline: none;
+}
+
+/* main 중 main-right 노출 부분 */
+
+#main_right {
+    width: 300px;
+}
+
+.userInfo {
+    display: flex;
+    align-items: center;
+}
+
+.userInfo img {
+    width: 50px;
+    height: 50px;
+    border: 1px solid lightgrey;
+    border-radius: 50%;
+}
+
+.userDetail {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.userInfo .userName {
+    display: block;
+    font-weight: bold;
+}
+
+.userInfo .description {
+    display: block;
+    font-size: 12px;
+    color: grey;
+}
+
+.story, .recommend {
+    width: 293px;
+    margin-top: 15px;
+    padding: 12px;
+    border: 1px solid rgb(219,219,219);
+    border-radius: 3px;
+    background-color: white;
+}
+
+.storyTitle, .recommendTitle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.storyTitle .titleName, .recommendTitle .titleName {
+    color: rgb(144,144,144);
+}
+
+.storyTitle .seeAll, .recommendTitle .seeAll {
+    font-weight: bold;
+}
+
+.story img {
+    width: 35px;
+    height: 35px;
+    padding: 2px;
+    border: 2px solid rgb(200,61,126);
+    border-radius: 50%;
+}
+
+.recommend img {
+    width: 35px;
+    height: 35px;
+    border: 2px solid lightgrey;
+    border-radius: 50%;
+}
+
+.story .userInfo, .recommend .userInfo {
+    margin-top: 10px;
+    position: relative;
+}
+
+.recommend button {
+    position: absolute;
+    right: 0;
+    border: none;
+    background-color: white;
+    color: rgb(68,148,239);
+    font-weight: bold;
+}
+
+.instaInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+ul {
+    list-style: none;
+    margin-top: 15px;
+    color: lightgrey;
+    font-size: 12px;
+}
+
+li {
+    float: left;
+    margin: 0 1px;
+}
+
+.copyright {
+    margin-top: 10px;
+    color: lightgrey;
+    font-size: 14px;
+}
