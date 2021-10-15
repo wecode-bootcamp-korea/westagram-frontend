@@ -3,7 +3,7 @@ const ul = document.querySelector('.comments');
 const posting = document.querySelector('.upload');
 
 input.addEventListener('keyup', e => {
-    let textLength = input.value.length;
+    const textLength = input.value.length;
     if(e.keyCode === 13) {
         addComment();
         return;
@@ -18,7 +18,7 @@ input.addEventListener('keyup', e => {
 });
 
 posting.addEventListener('click', () => {
-    let textLength = input.value.length;
+    const textLength = input.value.length;
     if(textLength > 0) {
         addComment();
     }
@@ -27,7 +27,7 @@ posting.addEventListener('click', () => {
 function addComment() {
     posting.style.opacity = 0.3;
     posting.style.cursor = 'default';
-    let text = input.value;
+    const text = input.value;
     const li = document.createElement('li');
     li.innerHTML = text;
     li.className = 'comment';

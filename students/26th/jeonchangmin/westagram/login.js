@@ -3,17 +3,17 @@ const inputPassword = document.querySelector('.loginPassword');
 const button = document.querySelector('button');
 const inputs = document.querySelectorAll('input');
 
-// loginId.addEventListener('keyup', checkInput);
-// loginPassword.addEventListener('keyup', checkInput);
 inputs.forEach((inputTag) => {
     inputTag.addEventListener('keyup', checkInput);
 });
 
 function checkInput () {
-    let IdLength = inputId.value.length;
-    let passwordLength = inputPassword.value.length;
+    const IdValue = inputId.value;
+    const IdValueCheck = IdValue.indexOf('@');
+    const IdLength = inputId.value.length;
+    const passwordLength = inputPassword.value.length;
 
-    IdLength>0 && passwordLength>0 ? (
+    IdValueCheck !==- 1 && IdLength>0 && passwordLength>4 ? (
         button.style.opacity = 1,
         button.style.cursor = 'pointer'
     ) : (
