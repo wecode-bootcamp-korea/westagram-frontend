@@ -1,37 +1,58 @@
-const loginBttn = document.getElementById('submit');
-const thisIsUser = document.getElementById('username');
-const thisIsPassword = document.getElementById('password');
+// comments
+const commentTextID = document.getElementById("write-comment-text");
+const commentSubmit = document.getElementById("write-comment-submit");
+const commentBox = document.getElementById("post-comments-box#1");
 
-let inputUserID;
-let inputPasswords;
+let inputComment;
 
+const commentAddHTML = () => {
+    const newDiv = document.createElement("div");
+    const newUsernameSpan = document.createElement("span");
+    const newCommentSpan = document.createElement("span");
+    const newHeartIcon = document.createElement("i");
+    
+    newDiv.className="post-comments";
+    newUsernameSpan.className="username";
+    newUsernameSpan.innerHTML="mincraft_bangbang&nbsp;";
+    newDiv.appendChild(newUsernameSpan);
 
-const userIDChecker = e => {
-    inputUserID = e.target.value;
-    activateSubmit();
+    newCommentSpan.className="comment-text";
+    newCommentSpan.innerHTML = inputComment;
+
+    newDiv.appendChild(newCommentSpan);
+
+    newHeartIcon.className="far";
+    newHeartIcon.classList.add("fa-heart");
+    newDiv.appendChild(newHeartIcon);
+    commentBox.appendChild(newDiv);
 }
 
-const passwordChecker = e => {
-    inputPasswords = e.target.value;
-    activateSubmit();
+const commentAddTheWritesAndReset = e => {
+    commentAddHTML();
+    //!!
+    commentResetInputVl()
 }
 
-const activateSubmit = () => {
-    inputUserID&&inputPasswords ? loginBttn.classList.add("login-activate") : loginBttn.classList.remove("login-activate");
+const commentResetInputVl = e => {
+    commentTextID.value = "";
+    inputComment = commentTextID.value;
 }
 
-thisIsUser.oninput = userIDChecker;
-thisIsPassword.oninput = passwordChecker;
+const commentPressEnter = e => {
+    if (e.key === 13 || e.which === 13){
+        e.preventDefault();
+        commentAddTheWritesAndReset();
+        commentSubmit.classList.remove("activate-comment-submit")
+        return false;
+    }
+}
 
-// const activateBttn = () => {
-//     if(thisIsPassword.value && thisIsUser.value){
-//         loginBttn.classList.add("login-activate");
-//     }else{
-//         loginBttn.classList.remove("login-activate");
-//     }
-// }
+const commentChecker = e => {
+    inputComment = e.target.value;
+    // console.log(inputComment);
+    inputComment ? commentSubmit.classList.add("activate-comment-submit") : commentSubmit.classList.remove("activate-comment-submit");
+}
 
-// thisIsUser.onkeyup = activateBttn;
-// thisIsPassword.onkeyup = activateBttn;
-
-// console.log(thisIsPassword)
+commentTextID.oninput = commentChecker;
+commentSubmit.onmouseup = commentAddTheWritesAndReset;
+commentTextID.addEventListener("keypress", commentPressEnter);

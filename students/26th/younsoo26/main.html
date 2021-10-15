@@ -8,10 +8,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Lobster+Two&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
     
     <title>웨스타그램</title>
 </head>
 <body>
+    <!-- nav -->
     <header>
         <nav>
             <ul>
@@ -30,8 +32,10 @@
             </ul>
         </nav>
     </header>
+    <!-- main -->
     <main id="main-page">
         <article>
+            <!-- POST TEST #1-->
             <div class="post post1">
                 <div class="post-top">
                     <div class="profile-username">
@@ -58,15 +62,61 @@
                 <div class="post-description">
                     <span class="username">cooper_kao</span> 위워크에서 진행한 베이킹 클래스...<span class="more-post">더보기</span>
                 </div>
-                <div class="post-comments">
-                    <span class="username">jacqueline_lou</span> 거봐 좋았잖아~~~~:)
-                    <i class="far fa-heart"></i>
+                <div id="post-comments-box#1">
+                    <div class="post-comments">
+                        <span class="username">jacqueline_lou</span><span class="comment-text"> 거봐 좋았잖아~~~~:)</span>
+                        <i class="far fa-heart"></i>
+                    </div>
                 </div>
+                
                 <div class="post-date">21분 전</div>
-                <div class="post-writing-comments">댓글 달기...<input class="submit-comment" type="submit" value="게시" /></div> 
+                <form action="get" class="post-writing-comments">
+                    <input id="write-comment-text" name="write-comment" class="write-comment" type="text" placeholder="댓글 달기..." />
+                    <span id="write-comment-submit" class="submit-comment">게시</span>
+                </form> 
             </div>
-            
+            <!-- POST TEST #2-->
+            <div class="post post2">
+                <div class="post-top">
+                    <div class="profile-username">
+                        <img id="profile" class="profile" src="assets/img/profile.png" alt="tl's profile images">
+                        <span class="username">cooper_kao</span>
+                    </div>
+                    <i class="fas fa-ellipsis-h"></i>
+                </div>
+                <div class="post-pic-frame">
+                    <img src="assets/img/main-pic.jpg" alt="doggy with red scarf">
+                </div>
+                <div class="post-icons">
+                    <i class="fas fa-heart"></i>
+                    <i class="far fa-comment"></i>
+                    <i class="far fa-share-square"></i>
+                    <i class="far fa-bookmark"></i>
+                    <div id="profile-username" class="profile-username">
+                        <img id="profile" class="profile" src="assets/img/profile2.png" alt="eyeball doggy">
+                        <span class="username">doggypuppy</span>
+                        <span>님 외 1명이 좋아합니다.</span>
+                    </div>        
+                </div>
+                
+                <div class="post-description">
+                    <span class="username">cooper_kao</span> 위워크에서 진행한 베이킹 클래스...<span class="more-post">더보기</span>
+                </div>
+                <div id="post-comments-box#2">
+                    <div class="post-comments">
+                        <span class="username">jacqueline_lou</span><span class="comment-text"> 거봐 좋았잖아~~~~:)</span>
+                        <i class="far fa-heart"></i>
+                    </div>
+                </div>
+                
+                <div class="post-date">21분 전</div>
+                <form action="get" class="post-writing-comments">
+                    <input disabled="true" id="write-comment-text" name="write-comment" class="write-comment" type="text" placeholder="댓글 달기..." />
+                    <span id="write-comment-submit" class="submit-comment">게시</span>
+                </form> 
+            </div>
         </article>
+        <!-- side -->
         <aside>
             <section class="my-profile">
                 <img id="profile" class="profile" src="assets/img/profile3.png" alt="My pic">
@@ -155,7 +205,7 @@
                 © 2019 WESTAGRAM
             </section>
         </aside>
-        
     </main>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
