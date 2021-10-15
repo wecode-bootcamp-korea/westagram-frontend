@@ -122,15 +122,15 @@ nav {
   display: flex;
   justify-content: space-between;
 }
+.IconBox .fa-heart {
+  color: red;
+}
 
 .far,
 .fa-heart {
   font-size: 25px;
   cursor: pointer;
   margin-right: 10px;
-}
-.fa-heart {
-  color: red;
 }
 
 .likeNumber {
@@ -148,9 +148,32 @@ ul {
   list-style-type: none;
 }
 
+.comments {
+  overflow: auto;
+}
+
 .comment {
-  margin-bottom: 7px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 12px;
   font-size: 12px;
+}
+
+.commentFirst {
+  display: flex;
+  justify-content: space-between;
+}
+
+.commentFirst > .fa-heart {
+  font-size: 12px;
+}
+
+.deleteButton {
+  width: 50px;
+  border: 1px solid black;
+  font-size: 14px;
+  background-color: thistle;
+  cursor: pointer;
 }
 
 .commentBox {
