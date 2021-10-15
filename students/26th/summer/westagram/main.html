@@ -1,93 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/common.css" />
+    <link rel="stylesheet" href="style/main.css" />
+    <title>Westagram</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/style/common.css">
-  <link rel="stylesheet" href="/style/main.css">
-  <title>Westagram</title>
-</head>
-
-<body>
-  <nav class='nav'>
-    <div class='navContainer'>
-      <div class='logo'>
-        <img src='img/instagram.png' alt='logoImg' class='logoImg'>
-        <span class='logoText'>instagram</span>
-      </div>
-      <div class='search'>
-        <input type='text' class='search' placeholder='검색'>
-        <img src='img/search.png' alt='searchImg' class='searchImg'>
-      </div>
-      <div class="iconWrap">
-        <div class='explore'>
-          <a href='#' class='explore'></a>
-          <img src='img/explore.png' alt='exploreImg' class='explore'>
+  <body>
+    <nav class="nav">
+      <div class="navContainer">
+        <div class="logo">
+          <div class="spriteImg logoImg"></div>
+          <span class="logoText">instagram</span>
         </div>
-        <div class='likes'>
-          <a href="#" class='likes'></a>
-          <img src='img/heart.png' alt='likesImg' class='likes'>
+        <div class="search">
+          <input type="text" class="search" placeholder="검색" />
+          <div class="spriteImg searchImg"></div>
         </div>
-        <div class='profile'>
-          <a href='#' class='profile'></a>
-          <img src='img/profile.png' alt='profileImg' class='profile'>
-        </div>
-      </div>
-    </div>
-  </nav>
-  <section class='section'>
-    <feed class='feed'>
-      <article class='article'>
-        <div class="top">
-          <div class="topProfile">
-            <img src="img/_.jpeg" alt="profileImg" class="profileImg">
-            <span class="name">summer</span>
+        <div class="iconWrap">
+          <div class="explore">
+            <a href="#" class="explore"></a>
+            <div class="spriteImg exploreImg"></div>
           </div>
-          <button class="seemore">
-            <img src="img/free-icon-more-options-17764.png" alt="more" class="seemore">
-          </button>
+          <div class="likes">
+            <button class="likes">
+              <div class="spriteImg likeImg"></div>
+            </button>
+          </div>
+          <div class="profile">
+            <a href="#" class="profile"></a>
+            <div class="spriteImg personImg"></div>
+          </div>
         </div>
-        <div class="photos">
+      </div>
+    </nav>
+    <section class="section">
+      <feed class="feed">
+        <article class="article">
+          <div class="top">
+            <div class="topProfile">
+              <img
+                src="img/Toy Story Cotton Fabric by the Yard - Toy Story Collection II Toys Face Toss Blue - Camelot 85410405-2.jpeg"
+                alt="profileImg"
+                class="profileImg"
+              />
+              <span class="name">summer</span>
+            </div>
+            <button class="seemore">
+              <img
+                src="img/free-icon-more-options-17764.png"
+                alt="more"
+                class="seemore"
+              />
+            </button>
+          </div>
+          <div class="photos">
+            <img
+              src="img/Toy Story Cotton Fabric by the Yard - Toy Story Collection II Toys Face Toss Blue - Camelot 85410405-2.jpeg"
+              alt="feedPhoto"
+              class="feedPhoto"
+            />
+          </div>
+          <div class="icons">
+            <div class="icon">
+              <button class="spriteImg heartImg"></button>
+              <button class="spriteImg commentImg"></button>
+              <button class="spriteImg shareImg"></button>
+            </div>
+            <button class="spriteImg bookmarkImg"></button>
+          </div>
+          <div class="info">
+            <div class="like">winter님 외 2명이 좋아합니다.</div>
+            <div class="contents">
+              <span class="content"
+                >summer wecode 26기와 함께하는 코딩교육...
+              </span>
+              <button class="readmore">더 보기</button>
+            </div>
+            <div class="commentsWrap">
+              <ul class="comments"></ul>
+            </div>
+          </div>
+          <div class="commentWrap">
+            <input
+              type="text"
+              class="writeComment"
+              placeholder="댓글 달기..."
+            />
+            <button class="post">게시</button>
+          </div>
+        </article>
+      </feed>
+      <mainRight class="mainRight">
+        <div class="profileRight">
           <img
             src="img/Toy Story Cotton Fabric by the Yard - Toy Story Collection II Toys Face Toss Blue - Camelot 85410405-2.jpeg"
-            alt="feedPhoto" class="feedPhoto">
+            alt="myImg"
+            class="myImg"
+          /><button class="myId">
+            summer
+            <div class="myInfo">wecode 26기 김여름</div></button
+          ><button class="switch"></button>
         </div>
-        <div class="icons">
-          <button class="heart">
-            <img src="img/1075ddfe0f68.png" alt="" class="heartImg">
-          </button>
-          <button class="comment">
-            <img src="img/1075ddfe0f68.png" alt="" class="commentImg">
-          </button>
-          <button class="share">
-            <img src="img/1075ddfe0f68.png" alt="" class="share">
-          </button>
-          <button class="bookmark">
-            <img src="img/1075ddfe0f68.png" alt="" class="bookmark">
-          </button>
+        <div class="suggestion">
+          <span class="topofBox">스토리</span>
+          <button class="storyAll">모두 보기</button>
+          <ur class="stories">
+            <li class="personStory">
+              <img
+                src="img/Toy Story Cotton Fabric by the Yard - Toy Story Collection II Toys Face Toss Blue - Camelot 85410405-2.jpeg"
+                alt="personStoryImg"
+                class="personStoryImg"
+              />
+              winter
+            </li>
+            <li class="personStory">
+              <img
+                src="img/Toy Story Cotton Fabric by the Yard - Toy Story Collection II Toys Face Toss Blue - Camelot 85410405-2.jpeg"
+                alt="personStoryImg"
+                class="personStoryImg"
+              />
+              winter
+            </li>
+            <li class="personStory">
+              <img
+                src="img/Toy Story Cotton Fabric by the Yard - Toy Story Collection II Toys Face Toss Blue - Camelot 85410405-2.jpeg"
+                alt="personStoryImg"
+                class="personStoryImg"
+              />
+              winter
+            </li>
+            <li class="personStory">
+              <img
+                src="img/Toy Story Cotton Fabric by the Yard - Toy Story Collection II Toys Face Toss Blue - Camelot 85410405-2.jpeg"
+                alt="personStoryImg"
+                class="personStoryImg"
+              />
+              winter
+            </li>
+            <li class="personStory">
+              <img
+                src="img/Toy Story Cotton Fabric by the Yard - Toy Story Collection II Toys Face Toss Blue - Camelot 85410405-2.jpeg"
+                alt="personStoryImg"
+                class="personStoryImg"
+              />
+              winter
+            </li>
+            <li class="personStory">
+              <img
+                src="img/Toy Story Cotton Fabric by the Yard - Toy Story Collection II Toys Face Toss Blue - Camelot 85410405-2.jpeg"
+                alt="personStoryImg"
+                class="personStoryImg"
+              />
+              winter
+            </li>
+          </ur>
         </div>
-        <div class="liks">summer 님 외 2명이 좋아합니다.</div>
-        <div class="contents">
-          <button class="readmore"></button>
+        <div class="push">
+          <span class="topofBox">회원님을 위한 추천</span>
+          <button class="pushAll">모두 보기</button>
+          <ur class="pushWrap">
+            <li class="personStory">
+              <img
+                src="img/Toy Story Cotton Fabric by the Yard - Toy Story Collection II Toys Face Toss Blue - Camelot 85410405-2.jpeg"
+                alt="personStoryImg"
+                class="personStoryImg"
+              />
+              winter
+            </li>
+            <li class="personStory">
+              <img
+                src="img/Toy Story Cotton Fabric by the Yard - Toy Story Collection II Toys Face Toss Blue - Camelot 85410405-2.jpeg"
+                alt="personStoryImg"
+                class="personStoryImg"
+              />
+              winter
+            </li>
+            <li class="personStory">
+              <img
+                src="img/Toy Story Cotton Fabric by the Yard - Toy Story Collection II Toys Face Toss Blue - Camelot 85410405-2.jpeg"
+                alt="personStoryImg"
+                class="personStoryImg"
+              />
+              winter
+            </li>
+            <li class="personStory">
+              <img
+                src="img/Toy Story Cotton Fabric by the Yard - Toy Story Collection II Toys Face Toss Blue - Camelot 85410405-2.jpeg"
+                alt="personStoryImg"
+                class="personStoryImg"
+              />
+              winter
+            </li>
+          </ur>
         </div>
-        <div class="comments">
-          <button class="getmore"></button>
-        </div>
-        <div class="commentWrap">
-          <input type="text" class="whitecomment">
-          <button class="post">게시</button>
-        </div>
-
-      </article>
-    </feed>
-    <mainRight class="mainRight">
-      <div class="story"></div>
-      <div class="recom"></div>
-    </mainRight>
-  </section>
-  <script type="text/javascript" src="/js/main.js"></script>
-</body>
-
+      </mainRight>
+    </section>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
 </html>

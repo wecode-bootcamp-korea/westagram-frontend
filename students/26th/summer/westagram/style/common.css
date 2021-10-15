@@ -2,15 +2,16 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  border-radius: 4px;
+  border-radius: 3px;
   background-color: #fafafa;
 }
 
 body {
   background-color: #fafafa;
-
 }
-.section, .main {
+
+.section,
+.main {
   display: flex;
   justify-content: center;
 }
@@ -26,6 +27,27 @@ body {
   src: url("../fonts/Lobster-Regular.ttf") format("truetype");
 }
 
-.logo, #westagram {
+.logo,
+#westagram {
   font-family: "westagram";
+}
+
+button {
+  border: none;
+}
+
+.spriteImg {
+  background-image: url("../img/1075ddfe0f68.png");
+  display: inline-block;
+  zoom: 0.5;
+  width: 47px;
+  height: 47px;
+}
+
+img {
+  width: 25px;
+}
+
+li {
+  list-style: none;
 }
