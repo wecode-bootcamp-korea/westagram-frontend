@@ -3,6 +3,7 @@ const comments = document.querySelector('.comment-list');
 const input = document.querySelector('.comment-input');
 const isTime = document.querySelector('.feed-bottom-date');
 const commentBtn = document.querySelector('.post-comment-btn');
+const mainInput = document.querySelector('.main-input');
 
 const users = ['apple_90', 'orange_97', 'grape_30', 'melon_30', 'mango_78'];
 let id = 0;
@@ -58,6 +59,12 @@ inputContainer.addEventListener('click', (event) => {
     let target = event.target.nodeName;
     onAdd(target);
 });
+
+mainInput.addEventListener('keyup', (event) => {
+    let icon = document.querySelector('.fa-search');
+    let text = event.target.value;
+    text === '' ? icon.style.setProperty('visibility', 'visible') : icon.style.setProperty('visibility', 'hidden');
+})
 
 inputContainer.addEventListener('keyup', (event) => {
     let target = event.target.nodeName;
