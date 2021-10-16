@@ -28,7 +28,7 @@ body {
 }
 
 .logo {
-  text-align: center;
+  text-align: center; /* text-align 은 block 요소에 사용해야 함   */
   font-family: "Lobster", cursive;
   font-size: 3rem;
   margin: 20px 0px 50px;
@@ -63,7 +63,12 @@ input {
   font-weight: bold;
 }
 
+#loginBtn:hover {
+  cursor: pointer;
+}
+
 #loginBtn:disabled {
+  cursor: default;
   background-color: #c0dffd;
 }
 

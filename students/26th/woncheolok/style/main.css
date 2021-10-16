@@ -24,7 +24,7 @@ a:visited {
   color: black;
 }
 
-.nav_bar {
+.navContainer {
   width: 100%;
   height: 60px;
   margin: 0px;
@@ -49,14 +49,17 @@ a:visited {
 .instaIcon {
   width: var(--icon-width-height);
   height: var(--icon-width-height);
-  margin: 0px 20px 0px;
+}
+
+.centerLine {
+  height: 30px;
+  border-right: 2px solid black;
+  margin: 0px 18px 0px 20px;
 }
 
 .instagram {
-  padding-left: 20px;
   font-size: 1.5rem;
   font-family: "Lobster", cursive;
-  border-left: 2px solid black;
 }
 
 .navCenterSearch {
@@ -95,9 +98,7 @@ a:visited {
 
 main {
   width: 100%;
-  height: 2000px;
   display: flex;
-  justify-content: center;
   position: absolute;
   z-index: 0;
   top: 60px;
@@ -106,17 +107,18 @@ main {
 
 .feeds {
   width: 500px;
-  height: 100%;
+  height: auto;
   margin-top: 50px;
   border: 1px solid gray;
+  position: absolute;
+  left: 15%;
 }
 
 article {
   width: 100%;
-  height: 80%;
+  height: auto;
   display: flex;
   flex-direction: column;
-  border: 1px solid gray;
 }
 
 .headerBox {
@@ -156,6 +158,7 @@ article {
   margin: 5px 0px 5px;
   position: relative;
   display: flex;
+  align-items: center;
   justify-content: left;
 }
 
@@ -183,8 +186,9 @@ article {
 }
 
 .howManyLikes {
-  margin-left: 10px;
-  font-size: 0.8rem;
+  width: 400px;
+  display: flex;
+  margin: 0px 0px 0px 10px;
   font-weight: light;
 }
 
@@ -193,17 +197,18 @@ article {
 }
 
 .imgDescription {
-  margin: 0px 10px 10px 10px;
+  margin: 0px 10px 0px 10px;
   text-align: justify;
 }
 
-.reply-container {
-  display: flex;
+#replies {
+  margin: 5px 0px 5px 10px;
+  padding: 0px;
+  list-style: none;
 }
 
-.replies {
-  margin: 0 0 5px 10px;
-  text-align: justify;
+.eachReply {
+  position: relative;
 }
 
 .inline {
@@ -211,38 +216,60 @@ article {
   margin-right: 8px;
 }
 
-.replyLike {
-  margin: 0px 10px;
-  font-size: 1rem;
-  display: flex;
-  align-items: center;
+.deleteReply {
+  position: absolute;
+  right: 15px;
 }
 
-.replyLikeIcon {
-  color: black;
-}
-
-.replyLikeIcon:hover {
+.deleteReply:hover {
   cursor: pointer;
 }
 
 .pushedMinutesAgo {
-  margin-left: 10px;
+  margin: 0px 0px 5px 10px;
   color: gray;
+  font-size: 0.8rem;
 }
 
-.replyInput-container {
+#replyInputContainer {
+  height: 50px;
+  padding: 0px 15px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border: 1px solid lightgray;
+  background-color: white;
+}
+
+#replyInput {
+  width: 80%;
+  height: 80%;
+  border: none;
+}
+
+#replySubmit {
+  border: none;
+  background-color: white;
+  color: #0095f6;
+}
+
+#replySubmit:hover {
+  cursor: pointer;
+}
+
+#replySubmit:disabled {
+  color: #c0dffd;
+  cursor: default;
 }
 
 .main-right {
   width: 300px;
-  height: 400px;
+  height: auto;
   margin: 50px 0px 0px 20px;
   display: flex;
   flex-direction: column;
+  position: fixed;
+  right: 15%;
 }
 
 .myAccount {
@@ -252,7 +279,7 @@ article {
   align-items: center;
 }
 
-.stories-container {
+.storiesContainer {
   margin-bottom: 10px;
   border: 0.5px solid lightgray;
   display: flex;
@@ -260,7 +287,8 @@ article {
   background-color: white;
 }
 
-.stories-header {
+.storiesHeader {
+  height: 40px;
   padding: 0px 15px;
   display: flex;
   justify-content: space-between;
@@ -277,12 +305,12 @@ article {
 
 .otherUsers {
   height: 50px;
-  margin: 5px 0px 0px 20px;
+  margin: 0px 0px 5px 20px;
   display: flex;
   align-items: center;
 }
 
-.nameTime-container {
+.nameTimeContainer {
   margin-left: 10px;
   display: flex;
   flex-direction: column;
@@ -299,14 +327,15 @@ article {
   font-size: 0.7rem;
 }
 
-.recommendation-container {
+.recommendationContainer {
   border: 0.5px solid lightgray;
   display: flex;
   flex-direction: column;
   background-color: white;
 }
 
-.recommendation-header {
+.recommendationHeader {
+  height: 40px;
   padding: 0px 15px;
   display: flex;
   justify-content: space-between;
