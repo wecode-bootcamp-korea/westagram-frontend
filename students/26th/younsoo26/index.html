@@ -7,26 +7,20 @@
     <link rel="stylesheet" href="assets/css/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Lobster+Two&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
-    <title>웨스타그램</title>
+    <title>westagram</title>
 </head>
 <body>
     <main id="login-page">
         <section class="main-container">
-            <div class="boxes logo-box">
+            <div class="logo-box">
                 <span id="logo">westagram</span>
             </div>
-            <div class="boxes form-box">
-                <form class="login-info-box" action="get">
-                    <label for="username"></label>
-                    <input id="username" class="info-input" name="username" type="text" placeholder="전화번호, 사용자명, 혹은 이메일"/>
-                    <br>
-                    <label for="password"></label>
-                    <input id="password" name="password" type="password" placeholder="비밀번호"/>
-                    <br>
-                    <input id="submit" class="login-button" type="submit" value='로그인'/>
-                </form>
-            </div>
-            <div class="boxes finding-password">
+            <form class="login-info-box" action="get">
+                <input id="username" class="info-input" name="username" type="text" placeholder="전화번호, 사용자명, 혹은 이메일"/>
+                <input id="password" name="password" type="password" placeholder="비밀번호"/>
+                <input id="submit" class="login-button" type="submit" value='로그인' disabled />
+            </form>
+            <div class="finding-password">
                 <a href="main.html">비밀번호를 잊으셨나요?</a>
             </div>
         </section>
