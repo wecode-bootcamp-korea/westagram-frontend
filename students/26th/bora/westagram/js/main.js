@@ -20,19 +20,24 @@ input.addEventListener("input",writeChat);
 const addChat = e => {
     e.preventDefault();
 
-    const newCommentId = document.createElement('p');
-    newCommentId.classList.add('userId');
-    newCommentId.innerHTML = `bori9412`;
-    
-    const newCommentTxt = document.createElement('p');
-    newCommentTxt.classList.add('msg');
-    newCommentTxt.innerHTML = input.value;
-    
-    document.querySelector('.new').appendChild(newCommentId);
-    document.querySelector('.new').appendChild(newCommentTxt);
+    const $newBox = document.createElement('div');
+    $newBox.classList.add('new');
 
-    //삭제버튼 추가하기
+    const $newCommentId = document.createElement('p');
+    $newCommentId.classList.add('userId');
+    $newCommentId.innerHTML = `bori9412`;
+    
+    const $newCommentTxt = document.createElement('p');
+    $newCommentTxt.classList.add('msg');
+    $newCommentTxt.innerHTML = input.value;
+ 
+    $newBox.appendChild($newCommentId);
+    $newBox.appendChild($newCommentTxt);
 
+    document.querySelector('.inner-text').appendChild($newBox);  
 }
 
+
 btn.addEventListener("click", addChat);
+
+
