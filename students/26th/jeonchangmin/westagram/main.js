@@ -75,8 +75,7 @@ function createLi(div, button) {
 function deleteComment(li) {
   const button = li.querySelector('button');
   button.addEventListener('click', () => {
-    const comment = button.closest('.comment');
-    comment.remove();
+    li.remove();
   });
 }
 
