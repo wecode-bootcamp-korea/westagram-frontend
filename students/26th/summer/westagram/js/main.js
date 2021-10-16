@@ -1,38 +1,56 @@
-// 댓글 input 창에 엔터치거나 "게시" 누르면 댓글 추가되도록 createElement로 요소 생성해서, input에 입력한 값이 추가 되어야합니다.
+"use strick";
 
 const inputComment = document.getElementsByClassName("writeComment")[0];
 const comments = document.getElementsByClassName("comments")[0];
 const postBtn = document.getElementsByClassName("post")[0];
-let comment = "";
+const heartBtn = document.querySelector(".heartImg");
+heartBtn.addEventListener("click", (e) => onClickHeart(e));
 let commentList = "";
+let heartImg = "";
 
 onInputComment = (e) => {
-  comment = e.target.value;
-  console.log(e);
-  // if (e.code == "Enter") {
-  //   postComment();
-  // }
+  if (inputComment.value.length == 0) {
+    return;
+  }
+  postBtn.style.opacity = "1";
+  if (e.code == "Enter") {
+    postComment();
+  }
 };
 
 onClickPost = () => {
-  if (!comment) {
+  if (inputComment.value.length == 0) {
     return;
   }
   postComment();
-  if (window.event.code === "Enter") {
-    postComment();
-    return;
-  }
 };
 
 const postComment = () => {
   commentList = document.createElement("li");
   commentList.classList.add("comment");
-  commentList.textContent = comment;
+  commentList.innerHTML = `<span>winter</span> <span>${inputComment.value}</span>`;
+
+  heartImg = document.createElement("button");
+  heartImg.classList.add("spriteImg", "heartImg");
+  heartImg.addEventListener("click", (e) => {
+    onClickHeart(e);
+  });
+
+  removeComment = document.createElement("button");
+  removeComment.classList.add("spriteImg", "removeComment");
+  removeComment.addEventListener("click", (e) => e.target.parentNode.remove());
+
   comments.appendChild(commentList);
+  commentList.appendChild(heartImg);
+  commentList.appendChild(removeComment);
+
   inputComment.value = "";
+  postBtn.style.opacity = "0.4";
+};
+
+const onClickHeart = (e) => {
+  e.target.style.backgroundPosition = "-1040px -52px";
 };
 
 inputComment.addEventListener("keyup", onInputComment);
 postBtn.addEventListener("click", onClickPost);
-// postBtn.addEventListener("keydown", onKeyDown);

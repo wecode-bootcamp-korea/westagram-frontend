@@ -151,12 +151,15 @@
 .heartImg {
   background-position: -1040px -101px;
 }
+
 .commentImg {
   background-position: -52px -946px;
 }
+
 .shareImg {
   background-position: -250px -945px;
 }
+
 .bookmarkImg {
   position: absolute;
   top: 17px;
@@ -175,6 +178,10 @@
   border-top: 1px solid var(--color-box-border);
 }
 
+.removeComment {
+  margin-left: 20px;
+}
+
 .writeComment {
   width: 90%;
   border: none;
@@ -184,10 +191,26 @@
 .comment {
   font-size: 15px;
   padding: 2px 0;
+  position: relative;
+}
+
+li .heartImg {
+  position: absolute;
+  right: 60px;
+  margin-right: 20px;
+  zoom: 0.2;
+}
+
+li .removeComment {
+  position: absolute;
+  right: 0;
+  zoom: 0.2;
+  background-position: -1096px -155px;
 }
 
 .post {
   color: var(--color-activation);
+  opacity: 0.4;
 }
 
 /* mainRight */
