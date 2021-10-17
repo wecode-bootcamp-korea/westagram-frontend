@@ -1,45 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset = "UTF-8">
+    <meta charset = "UTF-8"/>
     <title>Westagram</title>
-    <link href="main.css" rel="stylesheet">
-    <script defer src="main.js"></script>
+    <link href="main.css" rel="stylesheet"/>
     <script src="https://kit.fontawesome.com/b5d94dac67.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet"/>
 </head>
 
 <body>
     <nav>
-        <div id="logo">
-            <img class="logoImg" src="img/insta_logo.png" alt="insta logo">
-            <span class="logoText">Westagram</span>
+        <div class="navLogo">
+            <img alt="Westagram logo image" src="img/insta_logo.png"/>
+            <h1>Westagram</h1>
         </div>
-        <div id="searchBar">
-            <input type="text" placeholder="검색">
+        <form class="navSearchForm">
+            <input type="text" placeholder="검색"/>
             <i class="fas fa-search"></i>
-        </div>
-        <div id="icon">
-            <img src="img/explore.png" alt="explore icon">
-            <img src="img/heart.png" alt="heart icon">
-            <img src="img/profile.png" alt="profile icon">
+        </form>
+        <div class="navIcon">
+            <img alt="explore icon" src="img/explore.png"/>
+            <img alt="heart icon" src="img/heart.png"/>
+            <img alt="profile icon" src="img/profile.png"/>
         </div>
     </nav>
 
     <main>
-        <div id="feed">
+        <section class="feed">
             <article>
                 <div class="feedHeader">
-                    <img src="https://images.unsplash.com/photo-1634161906242-43a1d5beef68?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=464&q=80" alt="user profile image">
-                    <div class="feedUser">
-                        <span class="userName">eliz_j_<span>
-                        <span class="description">WeCode - 위코드</span>
+                    <div class="userInfo">
+                        <img alt="user profile image" src="https://images.unsplash.com/photo-1634161906242-43a1d5beef68?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=464&q=80"/>
+                        <div class="userInfoDetail">
+                            <span class="userName">eliz_j_<span>
+                            <span class="description">WeCode - 위코드</span>
+                        </div>
                     </div>
                     <i class="fas fa-ellipsis-h"></i>
                 </div>
-                <img class="mainImg" src="img/Cat.JPG" alt="main image">
+                <img class="feedImg" alt="feed image" src="img/Cat.JPG"/>
                 <div class="feedIcon">
                     <i class="far fa-heart"></i>
                     <i class="far fa-comment"></i>
@@ -48,95 +49,99 @@
                 </div>
                 <div class="feedBody">
                     <div class="numberOfLikes">
-                        <img src="https://images.unsplash.com/photo-1634161906242-43a1d5beef68?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=464&q=80" alt="user profile image">
+                        <img alt="user profile image" src="https://images.unsplash.com/photo-1634161906242-43a1d5beef68?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=464&q=80"/>
                         <span><b>yeonjeong</b>님 외 <b>10명</b>이 좋아합니다</span>
                     </div>
                     <div class="feedText">
-                        <span><strong>eliz_j_</strong></span>
+                        <span><b>eliz_j_</b></span>
                         <span>나만 고양이 없어ㅠㅠ&nbsp&nbsp<a href="">더 보기</a></span>
                     </div>
-                    <div class="comment">
-                        <span><strong>yeonjeong</strong></span>
-                        <span>나도 고양이 없어ㅠㅠ</span>
-                        <img src="img/heart.png" alt="heart icon">
-                    </div>
-                    <div class="feedUploadTime">
-                        <span>1시간 전</span>
-                    </div>
+                    <ul class="feedComment">
+                        <li>
+                            <span><b>yeonjeong</b></span>
+                            <span>나도 고양이 없어ㅠㅠ</span>
+                            <button class="deleteBtn">x</button>
+                        </li>
+                    </ul>
+                    <span class="feedUploadTime">1시간 전</span>
                 </div>
-                <div class="commentUpload">
-                    <input type="text" placeholder="댓글 달기...">
-                    <button type="button">게시</button>
-                </div>
+                <form class="feedCommentInput" onsubmit="return false;">
+                    <input id="commentInput" type="text" placeholder="댓글 달기..."/>
+                    <button id="uploadBtn" type="button">게시</button>
+                </form>
             </article>
-        </div>
+        </section>
 
-        <div id="main_right">
-            <div class="userInfo">
-                <img src="https://images.unsplash.com/photo-1634161906242-43a1d5beef68?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=464&q=80" alt="user profile image">
-                <div class=userDetail>
+        <section class="main_right">
+            <section class="userInfo">
+                <img alt="user profile image" src="https://images.unsplash.com/photo-1634161906242-43a1d5beef68?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=464&q=80"/>
+                <div class="userInfoDetail">
                     <span class="userName">eliz_j_</span>
                     <span class="description">WeCode - 위코드</span>
                 </div>
-            </div>
-            <div class="story">
+            </section>
+            <section class="story">
                 <div class="storyTitle">
-                    <span class="titleName">스토리</span>
-                    <span class="seeAll"> 모두 보기</span>
+                    <h4>스토리</h4>
+                    <span> 모두 보기</span>
                 </div>
-                <div class="userInfo">
-                    <img src="https://images.unsplash.com/photo-1597024065285-6f47cd40f5d0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80" alt="user profile image">
-                    <div class="userDetail">
-                        <span class="userName">yumyum</span>
-                        <span class="description">20분 전</span>
-                    </div>
-                </div>
-                <div class="userInfo">
-                    <img src="https://images.unsplash.com/photo-1597024065285-6f47cd40f5d0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80" alt="user profile image">
-                    <div class="userDetail">
-                        <span class="userName">lalala</span>
-                        <span class="description">1시간 전</span>
-                    </div>
-                </div>
-                <div class="userInfo">
-                    <img src="https://images.unsplash.com/photo-1597024065285-6f47cd40f5d0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80" alt="user profile image">
-                    <div class="userDetail">
-                        <span class="userName">pwwwwwww</span>
-                        <span class="description">15시간 전</span>
-                    </div>
-                </div>
-            </div>
-            <div class="recommend">
+                <ul>
+                    <li class="userInfo">
+                        <img alt="user profile image" src="https://images.unsplash.com/photo-1597024065285-6f47cd40f5d0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80"/>
+                        <div class="userInfoDetail">
+                            <span class="userName">yumyum</span>
+                            <span class="description">20분 전</span>
+                        </div>
+                    </li>
+                    <li class="userInfo">
+                        <img alt="user profile image" src="https://images.unsplash.com/photo-1597024065285-6f47cd40f5d0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80"/>
+                        <div class="userInfoDetail">
+                            <span class="userName">lalala</span>
+                            <span class="description">1시간 전</span>
+                        </div>
+                    </li>
+                    <li class="userInfo">
+                        <img alt="user profile image" src="https://images.unsplash.com/photo-1597024065285-6f47cd40f5d0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80"/>
+                        <div class="userInfoDetail">
+                            <span class="userName">pwwwwwww</span>
+                            <span class="description">15시간 전</span>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <section class="recommend">
                 <div class="recommendTitle">
-                    <span class="titleName">회원님을 위한 추천</span>
-                    <span class="seeAll">모두 보기</span>
+                    <h4>회원님을 위한 추천</h4>
+                    <span>모두 보기</span>
                 </div>
-                <div class="userInfo">
-                    <img src="https://images.unsplash.com/photo-1597024065285-6f47cd40f5d0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80" alt="user profile image">
-                    <div class="userDetail">
-                        <span class="userName">yumyum</span>
-                        <span class="description">yoyoyoyo님 외</span>
-                    </div>
-                    <button type="button">팔로우</button>
-                </div>
-                <div class="userInfo">
-                    <img src="https://images.unsplash.com/photo-1597024065285-6f47cd40f5d0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80" alt="user profile image">
-                    <div class="userDetail">
-                        <span class="userName">lalala</span>
-                        <span class="description">sumsum님 외</span>
-                    </div>
-                    <button type="button">팔로우</button>
-                </div>
-                <div class="userInfo">
-                    <img src="https://images.unsplash.com/photo-1597024065285-6f47cd40f5d0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80" alt="user profile image">
-                    <div class="userDetail">
-                        <span class="userName">pwwwwwww</span>
-                        <span class="description">newnew님 외</span>
-                    </div>
-                    <button type="button">팔로우</button>
-                </div>
-            </div>
-            <div class="instaInfo">
+                <ul>
+                    <li class="userInfo">
+                        <img alt="user profile image" src="https://images.unsplash.com/photo-1597024065285-6f47cd40f5d0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80"/>
+                        <div class="userInfoDetail">
+                            <span class="userName">yumyum</span>
+                            <span class="description">yoyoyoyo님 외</span>
+                        </div>
+                        <button type="button">팔로우</button>
+                    </li>
+                    <li class="userInfo">
+                        <img alt="user profile image" src="https://images.unsplash.com/photo-1597024065285-6f47cd40f5d0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80"/>
+                        <div class="userInfoDetail">
+                            <span class="userName">lalala</span>
+                            <span class="description">sumsum님 외</span>
+                        </div>
+                        <button type="button">팔로우</button>
+                    </li>
+                    <li class="userInfo">
+                        <img alt="user profile image" src="https://images.unsplash.com/photo-1597024065285-6f47cd40f5d0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=435&q=80"/>
+                        <div class="userInfoDetail">
+                            <span class="userName">pwwwwwww</span>
+                            <span class="description">newnew님 외</span>
+                        </div>
+                        <button type="button">팔로우</button>
+                    </li>
+                </ul>
+            </section>
+            <section class="westaInfo">
                 <ul>
                     <li>Westagram 정보</li>
                     <li>&middot;</li>
@@ -160,11 +165,10 @@
                     <li>&middot;</li>
                     <li>언어</li>
                 </ul>
-                <div class="copyright">
-                    <span>&copy; 2019 WESTAGRAM</span>
-                </div>
-            </div>
-        </div>
+                <span class="copyright">&copy; 2019 WESTAGRAM</span>
+            </section>
+        </section>
     </main>
+    <script defer src="main.js"></script>
 </body>
 </html>

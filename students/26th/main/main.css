@@ -8,60 +8,100 @@ body {
     background-color: rgb(250,250,250);
 }
 
+li {
+    color: black;
+    font-size: 15px;
+}
+
+ ul {
+     list-style: none;
+ }
+
+/* user information 공통 적용 부분 */
+
+.userInfo {
+    display: flex;
+    align-items: center;
+}
+
+.userInfo img {
+    width: 40px;
+    height: 40px;
+    border: 1px solid lightgrey;
+    border-radius: 50%;
+}
+
+.userInfoDetail {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.userName {
+    display: block;
+    font-weight: bold;
+}
+
+.description {
+    display: block;
+    color: grey;
+    font-size: 11px;
+}
+
 /* 여기부터 nav 부분 */
 
 nav {
-    height: 55px;
-    width: 100%;
-    padding: 10px, 35px, 5px, 35px;
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
     align-items: center;
     position: fixed;
-    z-index: 1000;
+    height: 55px;
+    width: 100%;
+    padding: 10px, 35px, 5px, 35px;
     background-color: white;
     border-bottom: 1px solid rgb(241,240,240);
+    z-index: 1000;
 }
 
-.logoImg {
+.navLogo img {
     height: 20px;
     padding-right: 15px;
     border-right: 2px solid black;
 }
 
-.logoText {
+.navLogo h1 {
+    display: inline;
+    margin-left: 10px;
     font-family: 'Lobster', cursive;
     font-size: 25px;
-    margin-left: 10px;
 }
 
-#searchBar {
+.navSearchForm {
     position: relative;
 }
 
-#searchBar i {
+.navSearchForm i {
     position: absolute;
     left: 82px;
     padding-top: 8px;
-    font-size: 12px;
     color: rgb(186,187,189);
+    font-size: 12px;
 }
 
-#searchBar input {
+.navSearchForm input {
     width:220px;
     height: 28px;
     border: 1px solid rgb(219,219,219);
     border-radius: 3px;
     background-color: rgb(250,250,250);
+    outline: none;
 }
 
-#searchBar input::placeholder {
-    text-align: center;
+.navSearchForm input::placeholder {
     color: rgb(165,165,165);
+    text-align: center;
 }
 
-#icon img {
+.navIcon img {
     width: 25px;
     margin: 0 7px;
 }
@@ -69,23 +109,16 @@ nav {
 /* 여기부터 main 부분 */
 
 main {
-    height: 100%;
     display: flex;
-    flex-direction: row;
     justify-content: center;
+    height: 100%;
     padding-top: 90px;
-    margin: 0 20px 40px 20px;
+    margin: 0 50px 40px 50px;
 }
 
 /* main 중 feed 노출 부분 */
 
-#feed {
-    width: 630px;
-}
-
 article {
-    width: 600px;
-    height: 880px;
     border: 1px solid rgb(219,219,219);
     border-radius: 3px;
     background-color: white;
@@ -99,48 +132,24 @@ article {
     border-bottom: 1px solid rgb(219,219,219);
 }
 
-.feedHeader img {
-    width: 40px;
-    height: 40px;
-    border: 1px solid lightgrey;
-    border-radius: 50%;
-}
-
-.feedUser {
-    width: 500px;
-    margin-left: 10px;
-    display: inline-block;
-}
-
-.userName {
-    display: block;
-    font-weight: bold;
-}
-
-.description {
-    display: block;
-    font-size: 11px;
-    font-weight: normal;
-    color: grey;
-}
-
-.feedUser i {
+.feedHeader i {
     position: absolute;
+    right: 15px;
 }
 
-.mainImg {
-    width: 100%;
+.feedImg {
+    width: 600px;
 }
 
 .feedIcon {
-    height: 35px;
     display: flex;
     align-items: center;
+    padding: 5px 0;
 }
 
 .feedIcon i {
-    font-size: 25px;
     padding-left: 15px;
+    font-size: 25px;
 }
 
 .feedIcon .fa-bookmark {
@@ -148,7 +157,9 @@ article {
 }
 
 .feedBody {
-    padding: 8px 15px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px 15px;
 }
 
 .numberOfLikes {
@@ -176,82 +187,54 @@ article {
     text-decoration: none;
 }
 
-.comment {
+.feedComment {
     position: relative;
 }
 
-.comment img {
-    width: 15px;
+.feedComment .deleteBtn {
     position: absolute;
-    right: 7px;
+    right: 12px;
+    color: grey;
+    background-color: white;
+    border: none;
 }
 
 .feedUploadTime {
-    margin: 10px 0;
+    margin-top: 10px;
     color: rgb(148,148,148);
     font-size: 12px;
 }
 
-.commentUpload {
-    border-top: 1px solid rgb(219,219,219);
+.feedCommentInput {
     position: relative;
+    border-top: 1px solid rgb(219,219,219);
 }
 
-.commentUpload input{
-    width: 598px;
+.feedCommentInput input{
+    width: 550px;
     padding: 15px 10px;
     border: none;
-}
-
-.commentUpload button {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    color: rgb(198,223,250);
-    border: none;
-    background-color: white;
-}
-
-.commentUpload input:focus {
     outline: none;
+}
+
+.feedCommentInput button {
+    position: absolute;
+    right: 0px;
+    width: 50px;
+    height: 100%;
+    color: rgb(198,223,250);
+    background-color: white;
+    border: none;
 }
 
 /* main 중 main-right 노출 부분 */
 
-#main_right {
+.main_right {
     width: 300px;
-}
-
-.userInfo {
-    display: flex;
-    align-items: center;
-}
-
-.userInfo img {
-    width: 50px;
-    height: 50px;
-    border: 1px solid lightgrey;
-    border-radius: 50%;
-}
-
-.userDetail {
-    display: inline-block;
-    margin-left: 10px;
-}
-
-.userInfo .userName {
-    display: block;
-    font-weight: bold;
-}
-
-.userInfo .description {
-    display: block;
-    font-size: 12px;
-    color: grey;
+    margin-left: 30px;
 }
 
 .story, .recommend {
-    width: 293px;
     margin-top: 15px;
     padding: 12px;
     border: 1px solid rgb(219,219,219);
@@ -261,37 +244,40 @@ article {
 
 .storyTitle, .recommendTitle {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
+    margin-bottom: 5px;
     font-size: 14px;
-    margin-bottom: 10px;
 }
 
-.storyTitle .titleName, .recommendTitle .titleName {
+.storyTitle h4, .recommendTitle h4 {
     color: rgb(144,144,144);
 }
 
-.storyTitle .seeAll, .recommendTitle .seeAll {
+.storyTitle span, .recommendTitle span {
     font-weight: bold;
 }
 
-.story img {
-    width: 35px;
-    height: 35px;
+.story ul, .recommend ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.story li, .recommend li {
+    margin-top: 8px;
+}
+
+.story .userInfo img {
     padding: 2px;
     border: 2px solid rgb(200,61,126);
     border-radius: 50%;
 }
 
-.recommend img {
-    width: 35px;
-    height: 35px;
+.recommend .userInfo img {
     border: 2px solid lightgrey;
     border-radius: 50%;
 }
 
-.story .userInfo, .recommend .userInfo {
-    margin-top: 10px;
+.recommend .userInfo {
     position: relative;
 }
 
@@ -299,26 +285,25 @@ article {
     position: absolute;
     right: 0;
     border: none;
-    background-color: white;
     color: rgb(68,148,239);
+    background-color: white;
     font-weight: bold;
 }
 
-.instaInfo {
+.westaInfo {
     display: flex;
     flex-direction: column;
 }
 
-ul {
-    list-style: none;
+.westaInfo ul {
     margin-top: 15px;
-    color: lightgrey;
-    font-size: 12px;
 }
 
-li {
+.westaInfo li {
     float: left;
     margin: 0 1px;
+    color: lightgrey;
+    font-size: 12px;
 }
 
 .copyright {
