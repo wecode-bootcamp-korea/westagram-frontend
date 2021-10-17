@@ -13,7 +13,7 @@ function checkInput() {
 function registerComment(value){
     const commentLists = document.getElementById("commentLists");
     const newCommentList = document.createElement("li");
-    const newComment = `<span class="name">we-dohdkjfd</span><span>${value}</span><span class="delete">X</span>`
+    const newComment = `<span class="name">jihoo</span><span>${value}</span><span class="delete">X</span>`
     
     newCommentList.innerHTML = newComment;
     deleteComment(newCommentList);
@@ -27,11 +27,19 @@ function deleteComment(newCommentList) {
     deleteBtn.addEventListener("click", () => newCommentList.remove());
 }
 
-const init = () => {
-    submit.addEventListener("click", checkInput);
-};
 
-init();
+commentInput.addEventListener('keydown', () => {
+    if (window.event.code === 'Enter') {
+        checkInput();
+    }else {
+        submit.addEventListener("click", checkInput);
+    }
+});
+
+// const init = () => {
+//     submit.addEventListener("click", checkInput);
+// };
+// init();
 
 const inputId = document.querySelector("#name");
 const button = document.querySelector('.upload');
@@ -48,8 +56,8 @@ function commentBtn() {
         button.style.cursor = 'default';
     }
 }
-
 inputId.addEventListener('keyup', commentBtn);
+
 // const postBtn = document.querySelector(".upload")[0];
 // const postInput = document.querySelector("#name")[0];
 // postInput.addEventListener("input", function() {
