@@ -43,9 +43,14 @@ function postOff() {
 function createSpan(text) {
   const span = document.createElement('span');
   span.innerHTML = text;
+  const heartIcon = createIcon();
+  createDiv(span, heartIcon);
+}
+
+function createIcon() {
   const heartIcon = document.createElement('i');
   heartIcon.className = 'far fa-heart commentHeart';
-  createDiv(span, heartIcon);
+  return heartIcon;
 }
 
 function createDiv(span, heartIcon) {
@@ -53,12 +58,16 @@ function createDiv(span, heartIcon) {
   div.className = 'commentFirst';
   div.appendChild(span);
   div.appendChild(heartIcon);
-  const button = document.createElement('button');
-  button.className = 'deleteButton'
-  button.innerHTML = '삭제';
+  const button = createButton();
   createLi(div, button);
 }
 
+function createButton() {
+  const button = document.createElement('button');
+  button.className = 'deleteButton'
+  button.innerHTML = '삭제';
+  return button;
+}
 
 function createLi(div, button) {
   const li = document.createElement('li');
