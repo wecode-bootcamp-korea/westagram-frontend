@@ -1,27 +1,32 @@
+"use strict"
+
 const thisIsEmail = document.getElementById('login-email');
 const thisIsPw = document.getElementById('login-pw');
 const thisIsBtn = document.getElementById('login-btn');
 
-thisIsEmail.addEventListener('keyup', function(){
-    if(thisIsEmail.value !== " " && thisIsPw.value.length >= 5){
-        document.getElementById('login-btn').style.background = '#0096f6'
-    console.log()
-    }else{
-        document.getElementById('login-btn').style.background = '#c4e1fb'
-    console.log()
+function loginBtn() {
+    let idValue = thisIsEmail.value;
+    let pwValue = thisIsPw.value;
+
+    if (idValue.length > 0 && pwValue.length > 0) {
+        thisIsBtn.disabled = false;
+        thisIsBtn.style.cursor = "pointer";
+        thisIsBtn.style.backgroundColor = "#0096f6";
+    } else {
+        thisIsBtn.disabled = true;
+        thisIsBtn.style.cursor = "default";
+        thisIsBtn.style.backgroundColor = "#c4e1fb";
     }
-    
-});
+};
 
-thisIsPw.addEventListener('keyup', function(){
-    if(thisIsEmail.value !== " " && thisIsPw.value.length >= 5){
-        document.getElementById('login-btn').style.background = '#0096f6'
-    console.log()
-    }else{
-        document.getElementById('login-btn').style.background = '#c4e1fb'
-    console.log()
-    }
-    
-});
+function success() {
+    alert("환영합니다");
+};
 
+const init = () => {
+    thisIsEmail.addEventListener('keyup', loginBtn);
+    thisIsPw.addEventListener('keyup', loginBtn);
+    thisIsBtn.addEventListener("click", success);
+};
 
+init();
