@@ -8,46 +8,92 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
   <title>main.html</title>
 </head>
 <body>
-  <nav>
+  <nav id="nav__outer">
     <div class="nav__logo">
       <img src="img/instagram-logo.png" alt="Instagram logo" class="nav__logo__img">
-      
+      <p class="nav__logo__font">Westagram</p>
     </div>
-    <div class="nav__search">
-      <input type="text" placeholder="Search">
-    </div>
+    <form class="nav__search">
+      <i class="fas fa-search"></i>
+      <input type="text" placeholder="Search" class="searchbar">
+    </form>
     <div class="nav__status">
-      <a href="#" class="status__explore">
-        <img src="" alt="Explore Feed">
+      <a href="#" class="status__a">
+        <img src="img/explore.png" alt="Explore Feed" class="explore__icon">
       </a>
-      <a href="#" class="status__activity">
-        <img src="" alt="Activity Feed">
+      <a href="#" class="status__a">
+        <img src="img/heart.png" alt="Activity Feed" class="activity__icon">
       </a>
-      <a href="#" class="status__myaccount">
-        <img src="" alt="My account's icon">
+      <a href="#" class="status__a">
+        <img src="img/profile.png" alt="My account's icon" class="myaccount__icon">
       </a>
     </div>
   </nav>
   <main>
-    <div class="feeds">
-      <article>
-        <div class="main__top">
-          <div class="main__top__left">
-            <img src="" alt="account's profile photo">
+    <div class="main__feeds">
+      <article class="article__post">
+        <div class="article__top">
+          <div class="article__top__account">
+            <img src="img/clouds.jpg" alt="account's profile photo" class="profile__pic">
+            <p class="profile__name">irreplaceavle</p>
           </div>
-          <div class="main__top__right">
-            <img src="" alt="ellipsis dot">
+          <div class="article__top__option">
+            <i class="fas fa-ellipsis-h"></i>
           </div>
         </div>
-        <div class="main__photo"></div>
-        <div class="main__icons"></div>
-        <div class="main__likes"></div>
-        <div class="main__comments"></div>
-        <div class="main__time"></div>
-        <div class="main__addcomments"></div>
+        <div class="article__photo">
+          <img src="img/still-life.jpg" alt="irreplaceavle's feed photo">
+        </div>
+        <div class="article__bottom">
+          <div class="article__icons">
+            <div class="article__status__icons">
+                <img src="img/red-heart.png" alt="red heart icon" class="article__like">
+                <img src="img/chat.png" alt="chat icon" class="article__chat chat">
+                <img src="img/upload.png" alt="share icon" class="article__share">
+            </div>
+            <div class="article__status__bookmark">
+                <img src="img/bookmark.png" alt="bookmark icon" class="article__bookmark">
+            </div>
+          </div>
+          <div class="article__wholikes">
+            <img src="img/unsplash.jpg" alt="Unsplash's profile photo" class="following__profile__pic">
+            <p class="following__wholikes">Liked by <strong>unsplash</strong> and <strong>23 others</strong></p>
+          </div>
+          <div class="article__text">
+            <div class="text__post">
+              <p class="post__uploader__name">irreplaceavle</p>
+              <p class="text__post__inner">4:26pm on the Whiteladies Rd...
+                <span>
+                  <button class="post__viewmore">more
+                  </button>
+                </span>
+              </p>
+            </div>
+            <ul class="text__commentlists">
+              <li class="comment__info">
+                <span class="comment__author">irreplaceavle</span>
+                <span class="comment__content">at Bosco Pizzeria !</span>
+                <button class="comment__delete__btn">x</button>
+              </li>
+            </ul>
+          </div>
+          <div class="article__time">
+            <p class="article__posttime">51 MINUTES AGO</p>
+          </div>
+          <div class="article__addcomments">
+            <form action="#" class="addcomments__wrapper">
+              <button class="comment__emojis">
+                <img src="img/smile.png" alt="smile emoji" class="smile__emoji">
+              </button>
+              <input type="text" placeholder="Add a comment..." class="comment__input">
+              <button class="comment__post__btn" disabled>Post</button>
+            </form>
+          </div>
+        </div>
       </article>
     </div>
     <div class="sidebar">
@@ -56,6 +102,7 @@
       <div class="sidebar__recommendation"></div>
       <div class="sidebar__instainfo"></div>
     </div>
+    <script type="text/javascript" src="js/main.js"></script>
   </main>
 </body>
 </html>

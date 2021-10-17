@@ -11,25 +11,24 @@
   <title>login.html</title>
 </head>
 <body>
-  <div class="outerBox">
+  <main class="login__outer">
     <div class="boxWrapper"></div>
       <header>
-        <p class="login-logo">Westagram</p>
+        <p class="login__logo">Westagram</p>
       </header> 
-
       <section>
-        <div class="login__container">
-          <input type="text" id="userId" placeholder="Phone number, username, or email">
-          <input type="text" id="userPw" placeholder="Password">
-          <button id="login__btn">Log in</button>
-        </div>
+        <form class="login__form">
+          <input type="text" id="login__id" placeholder="Phone number, username, or email">
+          <input type="password" id="login__pw" placeholder="Password">
+          <button disabled id="login__btn">Log In</button>
+        </form>
       </section>
-
       <section>
         <div class="password__reset">
           <a href="#">Forgot password?</a>
         </div>
       </section>
-  </div>
+      <script type="text/javascript" src="js/login.js"></script>
+  </main>
 </body>
 </html>

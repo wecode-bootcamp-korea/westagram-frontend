@@ -11,7 +11,11 @@ body {
   background-color: #fafafa;
 }
 
-.outerBox {
+body {
+  height: 100%;
+}
+
+.login__outer {
   width: 350px;
   height: 400px;
   margin: 130px auto;
@@ -19,50 +23,22 @@ body {
   background-color: white;
 }
 
-.login__container {
+.login__logo {
   width: 300px;
-  margin: 20px auto;
-  display: flex;
-  flex-direction: column;
-}
-
-#userId {
-  width: 260px;
-  height: 35px;
-  padding: 9px;
-  margin: 5px auto;
-}
-
-#userPw {
-  width: 260px;
-  height: 35px;
-  padding: 9px;
-  margin: 5px auto;
-}
-
-#login__btn {
-  width: 260px;
-  height: 35px;
-  padding: 9px;
-  margin: 5px auto;
-  border-color: #0195f7;
-  box-shadow: 0px;
-  background-color: #0195f7;
-}
-
-.password__reset {
-  width: 300px;
-  margin: 20px auto;
-}
-
-.login-logo {
-  width: 300px;
-  margin: 20px auto;
-  font-size: 40px;
-  font-family: "Lobster", cursive;
+  margin: 40px auto 25px auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 45px;
+  font-family: "Lobster", cursive;
+  color: #313131;
+}
+
+.login__form {
+  width: 300px;
+  margin: 40px auto 80px auto;
+  display: flex;
+  flex-direction: column;
 }
 
 #input {
@@ -70,8 +46,68 @@ body {
   height: 100%;
 }
 
+#login__id {
+  width: 260px;
+  height: 35px;
+  padding: 9px;
+  margin: 2px auto;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+  background-color: #fafafa;
+}
+
+#login__pw {
+  width: 260px;
+  height: 35px;
+  padding: 9px;
+  margin: 2px auto 5px auto;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+  background-color: #fafafa;
+}
+
+#login__id:focus,
+#login__pw:focus {
+  border-radius: 3px;
+  outline: none;
+}
+
+#login__id::placeholder,
+#login__pw::placeholder {
+  font-size: 13px;
+  color: rgb(170, 170, 170);
+}
+
+#login__btn {
+  width: 260px;
+  height: 30px;
+  padding: 9px;
+  margin: 10px auto;
+  border: 0;
+  background-color: #0195f7;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+#login__btn:disabled {
+  background-color: #b2dffc;
+  cursor: default;
+}
+
 .password__reset {
+  width: 350px;
+  height: 20px;
+  margin: 20px auto;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
+  text-align: center;
+}
+
+a {
+  color: #262626;
+  font-size: 12px;
+  text-decoration: none;
 }
