@@ -20,7 +20,7 @@ function addComment(value) {
     const commentLists = document.getElementById('comment-wrapper');
     const newCommentList = document.createElement('li');
 
-    newCommentList.innerHTML = `<a href="#" class="name">eenooyos</a><span> ${value}</span><span class="delete"> x </span>`;
+    newCommentList.innerHTML = `<span class="name">eenooyos</span><span> ${value}</span><span class="delete"> x </span>`;
     deleteComment(newCommentList);
     commentLists.appendChild(newCommentList);
 
@@ -33,13 +33,10 @@ function deleteComment(newCommentList) {
 }
 
 
-const init = () => {
-    commentSubmit.addEventListener('click', checkInput);
     commentInput.addEventListener('keydown', () => {
         if (window.event.code === 'Enter') {
             checkInput();
+        }else{
+            commentSubmit.addEventListener('click', checkInput);
         }
     });
-}
-
-init();
