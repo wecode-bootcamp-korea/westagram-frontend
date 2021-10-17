@@ -1,0 +1,338 @@
+*{
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  /*box-sizing: border-box;*/
+  /*what does box-sizing: border-box; doing "check"*/
+}
+
+@font-face {
+  font-family: instagramFont;
+  src:  url("./westagram.ttf") format("opentype");
+}
+.wrapper {
+  margin: 10px 10px 10px 10px;
+  height: 100%;
+
+}
+
+.wrapper .nav {
+  padding-top: 20px;
+  padding-bottom: 10px;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border-bottom: solid 1px #dbdbdb;
+
+  position: fixed;
+  z-index: 99999;
+  /*포지션 여러개 썼을때 우선순위 설정 인덱스값이 클수록 우선순위*/
+  width: 100%;
+}
+
+.wrapper .nav .logo {
+  font-family: instagramFont;
+  font-size: 2rem;
+  padding-right : 100px;
+}
+
+.search-box {
+  margin-top: 5px;
+  width: 215px;
+  height: 28px;
+}
+
+.wrapper .nav .icons {
+  margin-left: 100px;
+}
+
+.wrapper .main {
+  position: relative;
+  /*포지션을 쓰면 위치 조정 top left right bottom*/
+  top: 70px;
+  left: 8px;
+  width: 100%;
+  height: 100%;
+ 
+}
+
+.wrapper .main .feeds {
+  position: relative;
+  
+  top: 40px;
+  right: 5px;
+  left: 61px;
+  width: 60%;
+
+  background-color: yellow;
+  
+}
+.wrapper .main .feeds .article {
+  position: absolute;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  border: solid 1px #dbdbdb; 
+  height: 954px;
+  width: 614px;
+
+}
+.wrapper .main .feeds .article .identi {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+
+}
+
+.wrapper .main .feeds .article .identi .selfi {
+  padding: 15px 20px 20px 20px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+
+}
+.wrapper .main .feeds .article .identi .name {
+  padding-top: 23px;
+  padding-right: 410px;
+
+}
+
+.wrapper .main .feeds .article .identi .fa {
+  padding-top: 20px;
+  padding-right: 20px;
+}
+
+
+.wrapper .main .feeds .article .pic {
+  position: relative;
+  padding: 3px 3px 3px 0px;
+
+
+}
+
+.wrapper .main .feeds .article .pic img {
+  width: 614px;
+  height: 614px;
+  padding: 5px 0px 2px 0px;
+}
+
+.wrapper .main .feeds .article .show-box{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+
+  padding: 5px 0px 20px 0px;
+  height: 170px;
+}
+
+.show-box .reaction-icons .fa-comment-o {
+  font-size: 30px;
+
+  padding-left: 10px;
+  padding-right: 5px;
+}
+
+.show-box .reaction-icons .fa-heart-o {
+  font-size: 30px;
+
+  padding-left: 10px;
+}
+
+.show-box .reaction-icons .fa-send-o {
+  font-size: 30px;
+
+  padding-left: 10px;
+}
+
+.show-box .reaction-icons .fa-bookmark-o {
+  font-size: 30px;
+  padding-left: 450px;
+}
+
+.wrapper .main .feeds .article .comment {
+  position: relative;
+
+  margin-top: 75px;
+  /*padding: 3px 0px 3px 0px;*/
+/*top값을 줘야하는 이유 relative이기 때문에 자동으로 배열돼야하는데 그렇지 않음
+그랫서 show-box에 height값을 따로줌*/
+  /*height: 30px;height: 20%;*/
+
+}
+
+.wrapper .main .feeds .article #post {
+  /*width: 100%;*/
+  height: 25px;
+  border: solid 1px #D3D3D3;
+  border-radius: 5px;
+  /*background-color: #ff000;*/
+  background-color: #B2DFFC;
+  font-size: 15px;
+  cursor: pointer;
+  /*padding-left: 15px;*/
+}
+
+.wrapper .main .feeds .article .show-box .like-counts {
+  margin-top: 10px;
+  padding-top: 20px;
+}
+
+.check-comments{
+
+}
+
+.wrapper .main .feeds .article .comment i {
+  font-size: 30px;
+
+}
+.wrapper .main .feeds .article .comment input {
+  width: 530px;
+  height: 20px;
+
+}
+.wrapper .main .feeds .article .comment span {
+  margin-left: 5px;
+
+}
+.wrapper .main-right {
+  position: fixed;
+  top: 11.9%;
+  right: 4%; 
+  width: 28%;
+  height: 98%;
+  
+
+  display: flex;
+  flex-direction: column;
+
+}
+
+.wrapper .main .main-right .top{
+  position: relative;
+  padding-bottom: 3px;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.wrapper .main .main-right .top .selfi {
+  padding: 15px 20px 20px 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;  
+}
+
+.wrapper .main .main-right .top .main-right-name {
+  position: relative;
+  padding-top: 25px;
+}
+
+.wrapper .main .main-right .top .main-right-name #eng-name {
+
+}
+
+.wrapper .main .main-right .top .main-right-name #kr-name {
+  opacity: 0.3;
+}
+
+.wrapper .main .main-right a {
+  margin-left: 40px;
+  margin-top: 20px;
+}
+
+.wrapper .main .main-right .middle{
+  height: 30%;
+  padding-bottom: 100px;
+ 
+}
+
+.wrapper .main .main-right .middle .middle-words {
+  padding-bottom: 25px;
+}
+
+.wrapper .main .main-right .middle .middle-words #recommendation {
+  margin-left: 23px;
+}
+
+.wrapper .main .main-right .middle .middle-words #view-all {
+  margin-left: 70px;
+}
+
+.wrapper .main .main-right .middle .recommendation-people {
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper .main .main-right .middle .recommendation-people #recommendation-section1 #recommendation-people-selfi{
+  padding: 5px 5px 5px 5px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-top: 13px;
+}
+
+.wrapper .main .main-right .middle .recommendation-people #recommendation-section1 span {
+  position: relative;
+  right: 5px;
+  top: -18px;
+
+}
+
+.wrapper .main .main-right .middle .recommendation-people #recommendation-section1 a {
+  position: absolute;
+  right: 3px;
+  font-size: 14px;
+  
+
+}
+.wrapper .main .main-right .footer {
+
+  margin-left: 10px;
+
+}
+
+.wrapper .main .main-right .footer .footer-nav{
+  margin-left: 5px;
+
+}
+
+.wrapper .main .main-right .footer .footer-nav .footer-top {
+
+}
+
+.wrapper .main .main-right .footer a {
+  opacity: 0.3;
+  margin: 0px 0px 0px 5px;
+}
+
+.wrapper .main .main-right .footer span {
+  opacity: 0.3;
+  margin-left: 5px;
+}
+
+#compass {
+  width: 30px;
+  height: 30px;
+ 
+}
+
+#heart {
+  width: 30px;
+  height: 30px;
+}
+
+#my-page {
+  width: 30px;
+  height: 30px;
+
+}
+
+#space {
+  padding-top: 400px;
+}
+
