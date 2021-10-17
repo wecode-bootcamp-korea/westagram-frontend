@@ -28,4 +28,5 @@ const init = () => {
     thisIsPw.addEventListener('keyup', loginBtn);
     thisIsBtn.addEventListener("click", success);
 };
+
 init();
