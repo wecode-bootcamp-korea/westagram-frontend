@@ -52,6 +52,4 @@ replyInput.addEventListener('keypress', () => {
   }
 });
 
-// 3. x 표시를 누르면 댓글이 삭제된다
-
 

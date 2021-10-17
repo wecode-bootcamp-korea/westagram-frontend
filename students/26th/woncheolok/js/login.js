@@ -12,4 +12,3 @@ loginForm.addEventListener('input', () => {
     loginBtn.disabled = true;
   }
 })
-
