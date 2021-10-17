@@ -1,21 +1,23 @@
 body{
     margin: 0;
     padding: 0;
+    /* height: 6000px; */
+    background-color: #f2f2f2;
 }
 
 /* Nav */
 
 .navbar{
     display:flex;   
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    margin-top: 10px;
-    padding: 30px;
-    height: 54px;
+    margin-top: 0px;
+    height: 60px;
     width: 100%;
     border-bottom: 1px solid #ebebeb;
     position: fixed;
-    top:0;
+    z-index: 1;
+    background-color: white;
 }
 
 a{
@@ -27,11 +29,11 @@ a{
     font-size: 25px;
     font-family: 'Lobster', cursive;
     font-weight: 400;
+    margin-right : 200px;
 }   
 
 
-
-.navbar .navbar__search i{
+.navbar .navbar__search .fa-search{
     position: absolute;
     left: 49%;
     top: 40%;
@@ -42,11 +44,14 @@ a{
 .navbar .navbar__search input{
     background-color: #FAFAFA;
     border: 2px solid #e0e0e0 ;
-    width: 215px;
+    width: 300px;
     height: 28px;
     border-radius: 4px;
 }
 
+.navbar .navbar__icons{
+    margin-left : 200px;
+}
 
 .navbar .navbar__icons img{
     width: 25px;
@@ -56,17 +61,17 @@ a{
 
 /* MAIN */
 
-main .total-main{
-
+.main{
+    display: flex;
+    justify-content: center;
 }
-
 
 .main .feeds .container{
     margin-top: 150px;
-    margin-left: 50px;   
-    border: 1px solid black;
+    border: 1px solid lightgray;
     width: 614px;
-    height: 830px;
+    /* height: 1000px; */
+    background-color: white;
 }
 
 .main .feeds .container .line{
@@ -74,28 +79,34 @@ main .total-main{
     justify-content: center;
     justify-content: space-between;
     align-items: center;
-    padding: 5px 15px;
+    padding-right : 15px;
 }
 
-/* .main .feeds .container .line:2nd-child(2){
-
-} */
-
-
 .main .feeds .container .line img{
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
     margin: 10px;
     border-radius: 50%;
+    position: relative;
+}
+
+.main .feeds .container .line .text1{
+    position: absolute;
+    margin-left: 70px; 
+    margin-top: -50px;  
+}
+
+.main .feeds .container .photo img{
+    width: 100%; 
 }
 
 .main .feeds .container .heart{
     font-size: 30px;
-    color: gray;
+    color: lightslategray;
+    font-weight: 200;
     display: flex;
     justify-content: space-between;
 }
-
 
 .main .feeds .container .heart .fa-heart{
     color: red;
@@ -107,6 +118,338 @@ main .total-main{
     margin-top: 10px;
 }
 
+.main .feeds .container .heart_line{
+    display: flex;
+    align-items: center;
+}
+
+.main .feeds .container .heart_line img{
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    border-radius: 50%;
+    border: 1px solid #3f3f3f;
+}
+
+.main .feeds .container .many_lines{
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.main .feeds .container .many_lines ul{
+    margin-top: 10px;
+    margin-left: -35px;
+    list-style:none;
+}
 
 
+hr {
+    border: 1px solid lightgray;
+    margin-top: 130px;
+  }
+
+  .main .feeds .container .comment span{
+       margin-left: 455px;
+       margin-top: 5px;
+       color:lightskyblue;
+       font-size: 14px;
+       font-weight: 700;
+  }
+
+.main .feeds .container .comment input{
+      width: 100%;
+      height: 50px;
+      border: 1px solid white;
+      font-size: 15px;
+      font-weight: 700;
+      position: relative;
+  }
+
+.comment{
+    display: flex;
+  }
+
+ .comment button.itemAdd {
+     margin-right: 10px;
+     margin-bottom: 10px;
+     font-size: 10px;
+     writing-mode: horizontal-tb;
+ } 
+
+ 
+  /* MAIN-RIGHT */
+
+  .main-right{
+    margin-top: 150px;
+    margin-left: 50px;   
+    border: 1px solid transparent;
+    width: 320px;
+    height: 600px;
+  }
+
+  .main-right .id{
+    height: 50px;
+    position: relative;
+  }  
+
+  .main-right .id span{
+    position: absolute;
+    top: 10px;
+    left: 80px;
+  }
+
+  .main-right .id div{
+    position: absolute;
+    top: 32px;
+    left: 80px;
+  }
+  
+  .main-right img{
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    position: relative;
+  }
+
+.story{
+    border: 1px solid lightgray;
+    width: 320px;
+    height: 250px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+    background-color: white;
+}
+
+.story .seeall{
+    display: flex;
+    justify-content: space-between;
+}
+
+.story .seeall .title{
+    margin-left: 10px;
+    margin-top: 10px;
+    color: #3f3f3f;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.story .seeall .title2{
+    margin-right: 10px;
+    margin-top: 10px;
+    color: black;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.story .story_photo img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+    margin-left: 10px;
+  }
+
+.story .story_photo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top : 5px;
+    position: relative;
+}
+
+.story .story_photo img{
+    border-radius: 50%;
+    margin-top : 1px;
+    border: 3px solid transparent; 
+    margin-bottom: 10px;
+    background-image: linear-gradient(#e66465, #ff7f00), linear-gradient(#e66465,  #ff7f00,#fe019a, #ff00ff,#d070fb); 
+    background-origin: border-box; 
+    background-clip: content-box, border-box;
+    overflow: hidden;
+}
+
+.story .story_photo span{
+    position: absolute;
+    font-size: 16px;
+    font-weight: 400;
+    left: 70px;
+}
+
+.story .story_photo div{
+    position: absolute;
+    font-size: 14px;
+    font-weight: 200;
+    left: 70px;
+}
+
+.story .story_photo span.english_id1{
+    position: absolute;
+    top: 8px;
+}
+
+.story .story_photo div.time1{
+    position: absolute;
+    top: 28px;
+}
+
+.story .story_photo span.english_id2{
+    position: absolute;
+    top: 65px;
+}
+
+.story .story_photo div.time2{
+    position: absolute;
+    top: 85px;
+}
+
+.story .story_photo span.english_id3{
+    position: absolute;
+    top: 128px;
+}
+
+.story .story_photo div.time3{
+    position: absolute;
+    top: 148px;
+}
+
+.story .story_photo span.english_id4{
+    position: absolute;
+    top: 195px;
+}
+
+/* RECOMMAND */
+
+.recommend{ 
+    border: 1px solid lightgray;
+    width: 320px;
+    height: 200px;
+    position: relative;
+    background-color: white;
+}
+
+.recommend .recommend_foryou{
+    display: flex;
+    justify-content: space-between;
+}
+
+.recommend .recommend_foryou .title3{
+    margin-left: 10px;
+    margin-top: 11px;
+    color: #3f3f3f;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.recommend .recommend_foryou .title4{
+    margin-right: 10px;
+    margin-top: 11px;
+    color: black;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.recommend .recommend_photo img{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-left: 20px;
+    margin-top : 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+
+.recommend .id_recommend{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    margin-left: 70px;
+    font-size: 13px;
+}
+
+.recommend .id_recommend .recommend_id1{
+    position: absolute;
+    margin-top : -140px;
+}
+
+.recommend .id_recommend .recommend_id2{
+    position: absolute;
+    margin-top : -90px;
+}
+
+.recommend .id_recommend .recommend_id3{
+    position: absolute;
+    margin-top : -35px;
+}
+
+.recommend .id_likes{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    margin-left: 70px;
+    font-size: 10px;
+}
+
+.recommend .id_likes .recommend_time1{
+    position: absolute;
+    margin-top : -122px;
+}
+
+.recommend .id_likes .recommend_time2{
+    position: absolute;
+    margin-top : -72px;
+}
+
+.recommend .id_likes .recommend_time3{
+    position: absolute;
+    margin-top : -20px;
+}
+
+.recommend .follow{
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-between; 
+    margin-left: 210px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #1DA1F6;
+    margin-top : -100px;
+}
+
+.recommend .follow .follow1{
+    margin-top : -30px;
+}
+
+.recommend .follow .follow2{
+    margin-top : 28px;
+}
+
+.recommend .follow .follow3{
+    margin-top : 30px;
+}
+
+/* Footer */
+
+.back-tag{
+    margin-top: 10px;
+    border: 1px solid transparent;
+    text-align: start;
+}
+
+.back-tag span{
+    color: lightgray;
+    font-size: 13px;
+}
+
+.back-tag a{
+    color: lightgray;
+    font-weight: 900;
+}
+
+.back-tag p{
+    color: lightgray;
+    font-size: 14px;
+}
 

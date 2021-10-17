@@ -12,7 +12,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-
+   
+    
     <link rel="stylesheet" href="./styles/common.css">
     <link rel="stylesheet" href="./styles/login.css">
     <link rel="stylesheet" href="./styles/main.css">
@@ -22,22 +23,21 @@
 </head>
 <body>
     <nav class="navbar">
-        <div class="navbar__logo">
-            <i class="fab fa-instagram"></i>
-            <a href="javascript:void(0)">| westagram</a>
-        </div>
+            <div class="navbar__logo">
+                <i class="fab fa-instagram"></i>
+                <a href="javascript:void(0)">| westagram</a>
+            </div>
 
-        <div class="navbar__search">
-            <input type="text">
-            <i class="fas fa-search">검색</i>
-        </div>
+            <div class="navbar__search">
+                <input type="text">
+                <i class="fas fa-search">검색</i>
+            </div>
 
-        <div class="navbar__icons">
-            <img src="./img/explore.png" alt="검색">
-            <img src="./img/heart.png" alt="하트">
-            <img src="./img/profile.png" alt="프로필">
-        </div>
-
+            <div class="navbar__icons">
+                <img src="./img/explore.png" alt="검색">
+                <img src="./img/heart.png" alt="하트">
+                <img src="./img/profile.png" alt="프로필">
+            </div>
     </nav>
 
     <div class="main">
@@ -47,40 +47,131 @@
             <article class="container">
 
                 <div class="line">
-                    <img src="./img/me1.png" alt="내사진">
-                    <div class="text">jyb8509</div>
+                   <span>
+                        <img src="./img/me1.png" alt="내사진">
+                        <div class="text1"><b>jyb0924</b></div>
+                    </span>
                     <i class="fas fa-ellipsis-h"></i>
                 </div>
+                
                 <div class="photo">
                     <img src="./img/pasta.png" alt="음식사진">
                 </div>
 
                 <div class="heart">
                     <div class="heart-box">
-                    <i class="fas fa-heart"></i>
-                    <i class="far fa-comment"></i>
-                    <i class="fas fa-arrow-circle-up"></i>
-                </div>
+                        <i class="fas fa-heart"></i>
+                        <i class="far fa-comment"></i>
+                        <i class="fas fa-arrow-circle-up"></i>
+                    </div>
                     <i class="far fa-bookmark"></i>
                 </div>
 
                 <div class="heart_line">
-
+                    <img src="./img/cereal.png" alt="내사진">
+                    <div class="text2"><b>33dung</b>님 <b>외 100명</b>이 좋아합니다</div>
                 </div>
 
                 <div class="many_lines">
+                    <ul class="items">
+                        <li class="item">
+                            <span class="itemText"><b>jyb0924</b>&nbsp;&nbsp;wecode에서 진행한 베이킹 클래스...<span style="color:lightslategray"><b>더보기</b></span> </span>
+                        </li>
+                    </ul>
 
                 </div>
 
-                <div class="commnet">
+                <hr>
 
+                <div class="comment">
+                    <input class="input" type="text" placeholder="댓글 달기...">
+                    <button class="itemAdd"><a href="javascript:void(0)">게시</a></button>
+                   
                 </div>
 
             </article>
         </div>
 
+<!-- MAIN RIGHT -->
         <div class="main-right">
+            <div class="id">
+                <img src="./img/me1.png" alt="나">
+                <span class="english_id"><b>jyb0924</b></span>
+                <div class="korean_id">연비</div>
+            </div>
 
+            <div class="story">
+                <div class="seeall">
+                    <span class="title">스토리</span>
+                    <span class="title2"><b>모두 보기</b></span>
+                </div>
+                <div class="story_photo">
+                    <img src="./img/img_1.png" alt="이미지1">
+                        <span class="english_id1"><b>mamamia</b></span>
+                        <div class="time1">16분 전</div>
+                    <img src="./img/img_2.jpg" alt="이미지2">      
+                        <span class="english_id2"><b>papamia</b></span>
+                        <div class="time2">3시간 전</div>   
+                    <img src="./img/img_3.png" alt="이미지3">   
+                        <span class="english_id3"><b>lalala</b></span>
+                        <div class="time3">20시간 전</div>                    
+                    <img src="./img/img_4.jpg" alt="이미지4">    
+                        <span class="english_id4"><b>hahaha</b></span>        
+
+                </div>
+            </div>
+
+<!-- RECIMMEND -->
+
+            <div class="recommend">
+                <div class="recommend_foryou">
+                    <span class="title3">회원님을 위한 추천</span>
+                    <span class="title4"><b>모두 보기</b></span>
+                </div>
+
+                <div class="recommend_photo">
+                    <img src="./img/img_4.jpg" alt="이미지4">
+                    <img src="./img/img_1.png" alt="이미지1">
+                    <img src="./img/img_3.png" alt="이미지3">
+                    
+                </div>
+
+                <div class="id_recommend">
+                    <span class="recommend_id1"><b>joana</b></span>
+                    <span class="recommend_id2"><b>palrekc</b></span>
+                    <span class="recommend_id3"><b>shakira</b></span>
+                </div>
+
+                <div class="id_likes">
+                    <div class="recommend_time1">best_1님 외 1명이 ...</div>   
+                    <div class="recommend_time2">ahlekd님 외 12...</div>   
+                    <div class="recommend_time3">akrarjimmin님 외 1...</div>  
+                </div>
+                    
+                <div class="follow">
+                    <span class="follow1">팔로우</span>
+                    <span class="follow2"></span>팔로우</span>
+                    <span class="follow3">팔로우</span>
+                </div>
+                      
+            </div>
+
+    <!-- FOOTER -->
+            <div class="back-tag">
+                    <span><a href="javascript:void(0)">Instagram 정보 ㆍ</a></span>
+                    <span><a href="javascript:void(0)">지원 ㆍ</a></span>
+                    <span><a href="javascript:void(0)">홍보 센터 ㆍ</a></span>
+                    <span><a href="javascript:void(0)">API ㆍ</a></span>
+                    <span><a href="javascript:void(0)">채용 정보 ㆍ</a></span>
+                    <span><a href="javascript:void(0)">개인정보처리방침 ㆍ</a></span>
+                    <span><a href="javascript:void(0)">약관 ㆍ</a></span>
+                    <span><a href="javascript:void(0)">디렉터리 ㆍ</a></span>
+                    <span><a href="javascript:void(0)">프로필 ㆍ</a></span>
+                    <span><a href="javascript:void(0)">해시태그 ㆍ</a></span>
+                    <span><a href="javascript:void(0)">언어</a></span>
+            
+                     <p><b>&copy;2021 INSTAGRAM</b></p>
+            </div>
         </div>
     </div>
 </body>
