@@ -11,14 +11,20 @@
 
   <body>
     <nav class="nav">
-      <div class="navContainer">
+      <container class="navContainer">
         <div class="logo">
           <div class="spriteImg logoImg"></div>
           <span class="logoText">instagram</span>
         </div>
         <div class="search">
-          <input type="text" class="search" placeholder="검색" />
-          <div class="spriteImg searchImg"></div>
+          <input type="search" class="search searchInput" />
+          <label for="search">
+            <span class="searchLabel">검색</span>
+            <span class="spriteImg searchImg"></span>
+          </label>
+          <container class="searchContainer">
+            <ul class="userList"></ul>
+          </container>
         </div>
         <div class="iconWrap">
           <div class="explore">
@@ -35,7 +41,7 @@
             <div class="spriteImg personImg"></div>
           </div>
         </div>
-      </div>
+      </container>
     </nav>
     <section class="section">
       <feed class="feed">
@@ -49,7 +55,7 @@
               />
               <span class="name">summer</span>
             </div>
-            <button class="seemore">
+            <button>
               <img
                 src="img/free-icon-more-options-17764.png"
                 alt="more"
@@ -98,7 +104,7 @@
         <div class="profileRight">
           <img
             src="img/Toy Story Cotton Fabric by the Yard - Toy Story Collection II Toys Face Toss Blue - Camelot 85410405-2.jpeg"
-            alt="myImg"
+            alt="myProfileImg"
             class="myImg"
           /><button class="myId">
             summer

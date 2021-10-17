@@ -22,29 +22,29 @@
 .navContainer {
   display: flex;
   justify-content: space-between;
-  max-width: 900px;
-  height: 50px;
   align-items: center;
-  margin: auto;
+  max-width: 900px;
   height: 70px;
+  margin: auto;
 }
 
 .logo {
   display: flex;
   align-items: center;
+  width: 150px;
   padding: 10px 0;
 }
 
 .logoImg {
-  margin-right: 10px;
   background-position: -467px -601px;
+  margin-right: 10px;
 }
 
 .logoText {
-  font-size: 24px;
+  padding-left: 10px;
   border-left: 1px solid black;
   border-radius: 0px;
-  padding-left: 10px;
+  font-size: 24px;
 }
 
 .iconWrap {
@@ -77,32 +77,52 @@
   outline: none;
 }
 
-.searchImg {
+.search .searchImg {
   position: absolute;
-  right: 10px;
-  top: 10px;
+  right: 56%;
+  top: 29px;
   background-position: -350px -994px;
-  zoom: 0.4;
+  zoom: 0.27;
+  opacity: 50%;
 }
 
+.searchLabel {
+  position: absolute;
+  right: 44%;
+  top: 7px;
+  font-size: 13px;
+  opacity: 60%;
+}
+
+.searchConainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border: 1px solid var(--color-border);
+}
+
+.hide {
+  /* 사용자가 아무것도 입력하지 않았을 때 검색창을 숨기는 용도*/
+  display: none !important;
+}
 /* main */
 
 .section {
   display: flex;
   justify-content: space-around;
-  width: 900px;
+  max-width: 900px;
   margin: auto;
 }
+
 .feed {
-  width: 600px;
-  border: 1px solid var(--color-box-border);
   margin: 50px 0;
+  border: 1px solid var(--color-box-border);
 }
 
-.article,
+/* .article,
 .top {
   width: 100%;
-}
+} */
 
 .top {
   display: flex;
@@ -121,8 +141,8 @@
 }
 
 .profileImg {
-  border-radius: 50%;
   margin-right: 10px;
+  border-radius: 50%;
 }
 
 .seemore {
@@ -132,13 +152,14 @@
 }
 
 .photos img {
-  width: 100%;
+  width: 600px;
   margin: 0;
 }
+
 .icons {
   display: flex;
-  width: 100%;
   position: relative;
+  width: 100%;
 }
 
 .icon {
@@ -162,9 +183,9 @@
 
 .bookmarkImg {
   position: absolute;
+  background-position: -302px -994px;
   top: 17px;
   right: 22px;
-  background-position: -302px -994px;
 }
 
 .info {
@@ -178,10 +199,6 @@
   border-top: 1px solid var(--color-box-border);
 }
 
-.removeComment {
-  margin-left: 20px;
-}
-
 .writeComment {
   width: 90%;
   border: none;
@@ -189,23 +206,26 @@
 }
 
 .comment {
-  font-size: 15px;
-  padding: 2px 0;
   position: relative;
+  padding: 2px 0;
+  font-size: 15px;
 }
 
 li .heartImg {
   position: absolute;
   right: 60px;
-  margin-right: 20px;
+  margin: 20px;
   zoom: 0.2;
+  outline: none;
 }
 
 li .removeComment {
   position: absolute;
-  right: 0;
-  zoom: 0.2;
   background-position: -1096px -155px;
+  right: 0;
+  margin: 20px 5px;
+  zoom: 0.2;
+  outline: none;
 }
 
 .post {
@@ -216,12 +236,12 @@ li .removeComment {
 /* mainRight */
 
 .mainRight {
-  margin: 50px 0;
-  width: 220px;
+  margin: 50px 0 auto 30px;
 }
 
 .profileRight {
   display: flex;
+  width: 220px;
 }
 
 .myImg {
@@ -243,12 +263,12 @@ li .removeComment {
 }
 
 .suggestion {
-  border: 1px solid var(--color-border);
   margin-top: 10px;
+  border: 1px solid var(--color-border);
 }
 .push {
-  border: 1px solid var(--color-border);
   margin-top: 10px;
+  border: 1px solid var(--color-border);
 }
 
 .topofBox {
@@ -260,12 +280,12 @@ li .removeComment {
 }
 
 .personStory {
-  width: 100%;
   display: flex;
   align-items: center;
+  width: 100%;
 }
 
 .personStoryImg {
-  border-radius: 50%;
   margin: 2px 7px;
+  border-radius: 50%;
 }

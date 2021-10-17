@@ -10,20 +10,27 @@
   --color-unactivation: #a8a8a8;
 }
 
+/* 
+1. Layout Properties (position, float, clear, display)
+2. Box Model Properties (width, height, margin, padding)
+3. Visual Properties (color, background, border, box-shadow)
+4. Typography Properties (font-size, font-family, text-align, text-transform)
+5. Misc Properties (cursor, overflow, z-index) */
+
 .main {
   margin-top: 40px;
 }
 
 .container {
-  border: 1px solid var(--color-box-border);
   width: 380px;
   height: 400px;
+  border: 1px solid var(--color-box-border);
 }
 
 #westagram {
-  font-size: 50px;
-  color: var(--color-logo);
   margin: 46px;
+  color: var(--color-logo);
+  font-size: 50px;
 }
 
 .inputWrap {
@@ -49,11 +56,11 @@ input {
   margin-top: 5px;
   border: 1px solid var(--color-activation);
   background-color: var(--color-activation);
-  opacity: 0.4;
   color: var(--color-font-inbox);
+  opacity: 0.4;
 }
 
 #forgotPw {
-  text-decoration: none;
   font-size: 12px;
+  text-decoration: none;
 }
