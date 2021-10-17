@@ -1,18 +1,23 @@
-* {
-  margin: 0;
-  box-sizing: border-box;
+html,
+body,
+.total {
+  height: 100%;
 }
+
 .feed-img {
   width: 21px;
 }
+
 .main-layout {
   font-size: 13px;
   display: flex;
   justify-content: center;
 }
+
 .total {
   font-weight: 700;
 }
+
 /* nav-bar 작업 시작 */
 
 .westagram {
@@ -20,11 +25,13 @@
   font-weight: lighter;
   font-size: 26px;
 }
-.westa__thin-line {
+
+.thinLine {
   width: 2px;
   height: 20px;
   background: black;
 }
+
 .nav-bar {
   display: flex;
   justify-content: space-around;
@@ -33,12 +40,14 @@
   padding: 15px 0;
   border-bottom: 1px solid lightgray;
 }
+
 .nav-bar__left {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 170px;
 }
+
 .nav-bar__mid {
   border: 1px solid lightgray;
   width: 200px;
@@ -49,6 +58,7 @@
   color: rgba(0, 0, 0, 0.3);
   text-align: center;
 }
+
 .nav-bar__right {
   width: 120px;
   display: flex;
@@ -66,16 +76,19 @@
   width: 441px;
   margin-right: 30px;
 }
+
 .feed-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 12px;
 }
+
 .feed-top__left {
   display: flex;
   align-items: center;
 }
+
 .feed-profile__picture {
   background: blue;
   width: 26px;
@@ -83,10 +96,12 @@
   margin-right: 10px;
   border-radius: 50%;
 }
+
 .feed-top__menu {
   width: 14px;
   height: 14px;
 }
+
 .my-picture {
   width: 440px;
 }
@@ -99,6 +114,7 @@
   align-items: center;
   padding: 5px 12px;
 }
+
 .feed-mid__left {
   width: 100px;
   display: flex;
@@ -112,6 +128,7 @@
   display: flex;
   align-items: center;
 }
+
 .scott {
   border-radius: 50%;
   width: 24px;
@@ -126,36 +143,45 @@
   display: flex;
   flex-direction: column;
 }
+
 .feed-text__top {
   display: flex;
   align-items: center;
 }
+
 .feed-text__bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .user-id,
 .user-id2 {
   margin-right: 5px;
 }
+
 .repl-heart {
   width: 11px;
   height: 11px;
 }
-.feed-text__bottom-ripple {
+
+.feed-text-ripple {
   display: flex;
   flex-direction: column;
 }
-.feed-text__first-ripple {
+
+.feed-first-ripple {
   display: flex;
 }
+
 .area {
   list-style: none;
 }
+
 .feed-text__bottom-time {
   color: rgba(0, 0, 0, 0.3);
 }
+
 .rippleBox {
   display: flex;
   justify-content: space-between;
@@ -164,12 +190,15 @@
   color: lightgray;
   border-top: 1px solid rgba(99, 99, 99, 0.1);
 }
+
 .comment {
   border: none;
 }
+
 .rippleBox p:nth-child(2) {
   color: #4eb7fd;
 }
+
 .posting-btn {
   color: #0095f6;
   border: none;
@@ -181,6 +210,7 @@
   display: flex;
   margin-bottom: 10px;
 }
+
 .story-id {
   font-weight: bolder;
   color: rgb(170, 170, 170);
@@ -191,6 +221,7 @@
   border-radius: 50%;
   margin-right: 14px;
 }
+
 .wecode-name p:nth-child(2) {
   font-size: 12px;
   font-weight: bolder;
@@ -208,12 +239,14 @@
   overflow: hidden;
   margin-bottom: 12px;
 }
+
 .story-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 5px;
 }
+
 .story-main {
   display: flex;
   align-items: center;
@@ -223,10 +256,12 @@
 .story-main p:first-child {
   color: black;
 }
+
 .story-main p:nth-child(2) {
   color: rgba(0, 0, 0, 0.3);
   font-size: 12px;
 }
+
 .story-main__pic {
   background: tomato;
   width: 28px;
@@ -246,15 +281,18 @@
   overflow: hidden;
   margin-bottom: 12px;
 }
+
 .recommend-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 5px;
 }
+
 .recommend-user {
   color: rgba(0, 0, 0, 0.3);
 }
+
 .recommend-main {
   display: flex;
   align-items: center;
@@ -265,10 +303,12 @@
 .recommend-main p:first-child {
   color: black;
 }
+
 .recommend-main p:nth-child(2) {
   color: rgba(0, 0, 0, 0.3);
   font-size: 12px;
 }
+
 .recommend-main__pic {
   background: tomato;
   width: 28px;
@@ -276,6 +316,7 @@
   border-radius: 50%;
   margin-right: 10px;
 }
+
 .follow-btn {
   border: none;
   background: none;
@@ -284,6 +325,7 @@
 }
 
 /* 인스타 copyright 부분 시작 */
+
 .copyright {
   color: rgba(0, 0, 0, 0.3);
   font-size: 11px;

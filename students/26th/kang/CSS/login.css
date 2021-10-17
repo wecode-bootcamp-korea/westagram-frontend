@@ -1,9 +1,10 @@
-* {
-  margin: 0;
-  box-sizing: border-box;
+html,
+body,
+.login {
+  height: 100%;
 }
+
 body {
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,16 +12,18 @@ body {
 
 /* 본문 css 작업 시작 */
 
-.insta-border {
+.login-container {
   border: 1px solid rgba(0, 0, 0, 0.2);
   width: 500px;
-  height: 550px;
+  /* height: 550px; */
+  padding: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
 }
+
 .insta-title {
   font-family: 'Lobster', cursive;
   font-weight: lighter;
@@ -28,25 +31,29 @@ body {
 
 /* input창, button 작업 시작 */
 
-.guest {
+.user {
   display: flex;
   flex-direction: column;
 }
-.guest input {
+
+.user input {
   border: 1px solid rgba(0, 0, 0, 0.1);
   width: 300px;
   height: 42px;
   background: #fafafa;
 }
+
 .idBox {
   margin-top: 40px;
   margin-bottom: 5px;
 }
+
 .pwBox {
   margin-bottom: 20px;
 }
+
 .login-btn {
-  background: #7acaff;
+  background: #0098fd;
   /* background: #0095f6; */
   border: none;
   border-radius: 3px;

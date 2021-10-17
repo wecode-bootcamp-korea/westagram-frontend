@@ -10,21 +10,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet" />
 
     <link rel="stylesheet" href="CSS/login.css" />
+    <link rel="stylesheet" href="CSS/common.css" />
 
     <title>Login Page</title>
   </head>
   <body>
-    <main class="insta-border">
+    <main class="login-container">
       <h1 class="insta-title">Westagram</h1>
-
-      <div class="guest" id="guest">
+      <form class="user" id="user">
         <input required class="idBox" id="idBox" type="text" placeholder="전화번호, 사용자 이름 또는 이메일" />
         <input required class="pwBox" id="pwBox" type="password" placeholder="비밀번호" />
         <button class="login-btn" id="login-btn" disabled>로그인</button>
-      </div>
+      </form>
 
       <a href="_blank" class="forgot-pw">비밀번호를 잊으셨나요?</a>
     </main>
+
     <script src="JS/login.js"></script>
   </body>
 </html>
