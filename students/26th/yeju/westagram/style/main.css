@@ -1,0 +1,374 @@
+.main-nav{
+    position:fixed;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    background-color: #ffffff;    
+    border-bottom: 1px solid #DBDBDB;
+}
+
+.nav-content{
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    width: 975px;
+}
+
+.nav-content-left{
+    display: flex;
+    align-items:center;
+}
+
+.nav-content-left img{
+    height:23px;
+    margin: 0 15px 0 0 ;
+}
+
+.nav-logo{
+    padding: 0 0 0 15px ;
+    color:#262626;
+    border-left: 1px solid #262626;
+    font-size: 25px;
+    font-family: 'Lobster', cursive;
+    font-weight: thin;
+}
+
+.search{
+    position:relative;
+    width:210px;
+    height:28px;
+    padding: 0 25px 0 25px; 
+    background-color: #FAFAFA;
+    border: 1px solid #DBDBDB;
+    border-radius: 3px;
+}
+
+.search:focus {
+    outline: transparent;
+}
+
+.search-value{
+    /* position:absolute일때 중앙정렬하는 방법 */
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.search-value span{
+    color:#B5B5B5;
+    font-size:15px;
+}
+
+.search-value img{
+    /* png 색상 변경 사이트 https://codepen.io/sosuke/pen/Pjoqqp */
+    filter: invert(82%) sepia(9%) saturate(12%) hue-rotate(10deg) brightness(89%) contrast(86%);
+    width:11px;
+}
+
+    
+
+
+.nav-content-right img{
+    height:23px;
+    margin:0 0 0 25px;
+}
+
+.main{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FAFAFA;
+}
+
+.section{
+    display: flex;
+    width: 975px;
+    margin-top:130px;
+}
+
+/* Feeds */
+.feeds{
+    width: 65.4%;
+    /* width: 67%; */
+    background-color: #FFFFFF;
+    border: 1px solid #DBDBDB;
+    border-radius: 3px;
+}
+
+.feeds-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 13px;
+}
+
+.feeds-profile{
+    display: flex;
+    align-items: center;
+}
+
+.gradient{
+    position:relative;
+    width: 50px;
+    height: 50px; 
+    border-radius: 70%;
+    background: #f09433; 
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+}
+
+.circleWhite{
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    background-color: white;
+    transform: translate(50%, 50%);
+    border-radius: 70%;
+}
+
+.feeds-profile-img {
+    width: 33px;
+    height: 33px; 
+    margin-right: 10px;
+    border-radius: 70%;
+    overflow: hidden;
+}
+
+.feeds-profile-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.feeds-img{
+    height:642px;
+    overflow: hidden;
+}
+
+.feeds-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.feeds-bottom{
+    padding: 12px 12px 0px 12px;
+
+}
+
+.feeds-icon{
+    display:flex;
+    justify-content: space-between;
+    color:#414141;
+}
+
+.feeds-icon i{
+    margin-right:10px;
+    font-size:28px;
+}
+
+.feedDscMore{
+    margin-left: 5px;
+    color:#8E8E8E;
+}
+
+.feedComment p{
+    margin:0;
+}
+
+.feedTime{
+    color:#8E8E8E;
+}
+
+.comment{
+    position:relative;
+}
+
+.inputComment{
+    width: 100%;
+    height:50px;    
+    padding:0 60px 0 20px;
+    border:none;
+    border-top: 1px solid #DBDBDB;
+    outline: transparent;
+}
+
+.btnComment{
+    position:absolute; 
+    top: 20px;
+    right:5px;
+    color:#B8E2FD;
+    background-color: transparent;
+    border:none;
+    font-size: 14px;    
+    font-weight: bold;
+}
+
+/* Right - 계정 */
+.main-right{
+    display:flex;
+    flex-direction: column;
+    width: 33%;
+    padding-left:30px;
+}
+
+.profile{
+    display:flex;
+    flex-direction: row;
+    height:70px;
+}
+
+.profile-img {
+    width: 56px;
+    height: 56px; 
+    background-color: salmon;
+    border-radius: 70%;
+    overflow: hidden;
+}
+
+.profile-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-dsc{
+    padding: 13px 0 0 15px;
+}
+
+.profile-dsc a{
+    font-weight: bold;
+}
+
+.profile-dsc p{
+    margin-top:0px;
+    color:#8E8E8E; 
+}
+
+/* Right - 스토리 */
+.story{
+    display:flex;
+    flex-direction: column;
+    height:230px;
+    padding: 15px;
+    background-color: #FFFFFF;
+    border: 1px solid #DBDBDB;
+    border-radius: 5px;
+}
+
+.story-title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom:10px;
+    font-size:15px;
+}
+
+.story-title span{
+    color:#8E8E8E;
+}
+
+.story-title a{
+    font-weight: bold;
+}
+
+.story-profile-box{
+    height:500px;
+    overflow-y: scroll;
+}
+
+.story-profile-box::-webkit-scrollbar{
+    display:none;
+}
+
+.story-profile{
+    display: flex;
+    flex-direction: row;
+}
+
+.story-profile-img {
+    width: 40px;
+    height: 40px; 
+    background-color: salmon;
+    border-radius: 70%;
+    overflow: hidden;
+}
+.story-profile-img img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+
+.story-profile-dsc{
+    padding: 3px 0 0 15px;
+}
+
+.story-profile-dsc a{
+    font-weight: bold;
+}
+
+.story-profile-dsc p{
+    margin-top:0px;
+    color:#8E8E8E; 
+}
+
+.reccom{
+    display:flex;
+    flex-direction: column;
+    height:200px;
+    padding: 15px;
+    margin-top:15px;
+    background-color: #FFFFFF;
+    border: 1px solid #DBDBDB;
+    border-radius: 5px;
+}
+
+.reccom-content{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    height:50px;
+    padding:10px 0 0 0;
+}
+
+.reccom-profile-img {
+    width: 35px;
+    height: 35px; 
+    margin-bottom: 10px;
+    background-color: violet;
+    border-radius: 70%;
+    overflow: hidden;
+}
+
+.reccom-profile-img img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+
+.reccom-follow{
+    margin: 0 0 15px 0;
+    color:#0095F6;
+    background-color:transparent;
+    border: none;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.reccom-profile{
+    display: flex;
+    align-items: center;
+}
+
+.footer{
+    color:#C7C7C7;
+    font-size: 15px;
+}
+
+

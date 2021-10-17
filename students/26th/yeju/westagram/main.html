@@ -1,0 +1,197 @@
+<html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YestagraM</title>
+
+    <link rel="stylesheet" type="text/css" href="./style/main.css">
+    <link rel="stylesheet" type="text/css" href="./style/common.css">
+    
+
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <nav class="main-nav">
+        <div class="nav-content">
+            <div class="nav-content-left">
+                <img alt="Instagram Logo" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/logo.png">
+                <p class="nav-logo">instagram</p>
+            </div>
+            <div class="nav-content-center">
+                <input class="search" type="text">
+                <div class="search-value">
+                    <img  alt="search" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png">   
+                    <span>검색</span>
+                </div>
+            </div>            
+            <div class="nav-content-right">
+                <img alt="icon" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png">
+                <img alt="icon" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png">
+                <img alt="icon" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png">
+            </div>
+        </div>
+
+    </nav>
+    <main class="main"> 
+        <section class="section">
+            <div class="feeds">
+                <div class="feeds-title">
+                    <div class="feeds-profile">
+                        <div class="feeds-profile-img">
+                            <img alt="feed profile" src="https://images.unsplash.com/photo-1515041219749-89347f83291a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1074&q=80">
+                        </div>
+                        <div class="feeds-dsc"><strong>iammingki
+                        </strong></div>
+                    </div>
+                    <div class="title-more"><i class="fa fa-ellipsis-h" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="feeds-img">
+                    <img alt="feed img" src="https://images.unsplash.com/photo-1579783483458-83d02161294e?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1397&q=80">
+                </div>
+                <div class="feeds-bottom">
+                    <div class="feeds-icon">
+                        <div class="feeds-icon3">
+                            <i class="fa fa-heart-o"></i>
+                            <i class="fa fa-comment-o"></i>
+                            <i class="fa fa-sign-out"></i>
+                        </div>
+                        <div class="feeds-icon-save">
+                            <i class="fa fa-paper-plane-o"></i>
+                        </div>
+                    </div>
+                    <div class="feedLikes">
+                        <p class="feedLtext"><strong>aineworld</strong>님 외 <strong>10명</strong>이 좋아합니다</p>
+                        <div class="feedDsc">
+                            <span><strong>iammingki</strong></span>
+                            <span>위워크에서 진행한 베이킹 클래스...</span>
+                            <span class="feedDscMore">더 보기</span>
+                        </div>  
+                        <div id="CMT_WRITE" class="feedComment">
+                        </div>
+                        <p class="feedTime">42분 전</p>
+                    </div>
+                </div>
+                <div class="comment">
+                    <input  id="feedComment" class = "inputComment" type="text" name="id" placeholder="댓글 달기...">
+                    <button id="feedButton"class ="btnComment" type="button" disabled>게시</button>
+                </div>
+
+            </div>
+                
+
+            <div class="main-right">
+                <div class="profile">
+                    <div class="profile-img"><img alt="profile img" src="https://images.unsplash.com/photo-1579807351146-e6dd49462635?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80"></div>
+                    <div class="profile-dsc">
+                        <a href="">yestagram</a>
+                        <p>yeju | 예주</p>
+                    </div>
+                    <!-- <div class="gradient"><div class="circleWhite"></div></div> -->
+                </div>
+
+                <div class="story">
+                    <div class="story-title">
+                        <span>스토리</span>
+                        <a href="">모두 보기</a>
+                    </div>
+                    <div class="story-profile-box">
+                        <div class="story-profile">
+                            <div class="story-profile-img"><img alt="profile img" src="https://images.unsplash.com/photo-1536164261511-3a17e671d380?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=682&q=80">
+                            </div>
+                            <div class="story-profile-dsc">
+                                <a href="">jouyandeh</a>
+                                <p>16분 전</p>
+                            </div>
+                        </div>
+                        <div class="story-profile">
+                            <div class="story-profile-img"><img alt="profile img" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=687&q=80">
+                            </div>
+                            <div class="story-profile-dsc">
+                                <a href="">michaeldam</a>
+                                <p>58분 전</p>
+                            </div>
+                        </div>
+                        <div class="story-profile">
+                            <div class="story-profile-img"><img alt="profile img" src="https://images.unsplash.com/photo-1618641986557-1ecd230959aa?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=687&q=80">
+                            </div>
+                            <div class="story-profile-dsc">
+                                <a href="">hoooooyeony</a>
+                                <p>1시간 전</p>
+                            </div>
+                        </div>
+                        <div class="story-profile">
+                            <div class="story-profile-img"><img alt="profile img" src="https://images.unsplash.com/photo-1499996860823-5214fcc65f8f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=766&q=80">
+                            </div>
+                            <div class="story-profile-dsc">
+                                <a href="">lucatero</a>
+                                <p>2시간 전</p>
+                            </div>
+                        </div>
+                        <div class="story-profile">
+                            <div class="story-profile-img"><img alt="profile img" src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=764&q=80">
+                            </div>
+                            <div class="story-profile-dsc">
+                                <a href="">inegeart</a>
+                                <p>4시간 전</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                </div>
+
+                <div class="reccom">
+                    <div class="story-title">
+                        <span>회원님을 위한 추천</span>
+                        <a href="">모두 보기</a>
+                    </div>
+                    <div class="reccom-content">
+                        <div class="reccom-profile">
+                            <div class="reccom-profile-img"><img alt="profile img" src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=710&q=80">
+                            </div>
+                            <div class="story-profile-dsc">
+                                <a href="">muniknunes</a>
+                                <p>jouyandeh님 외 2명이..</p>
+                            </div>
+                        </div>
+                        <button class="reccom-follow"> 팔로우 </button>
+                    </div>
+                    <div class="reccom-content">
+                        <div class="reccom-profile">
+                            <div class="reccom-profile-img"><img alt="profile img" src="https://images.unsplash.com/photo-1476718406336-bb5a9690ee2a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=687&q=80">
+                            </div>
+                            <div class="story-profile-dsc">
+                                <a href="">camilamorrone</a>
+                                <p>_joaaaahye님 외 2명이..</p>
+                            </div>
+                        </div>
+                        <button class="reccom-follow"> 팔로우 </button>
+                    </div>
+                    <div class="reccom-content">
+                        <div class="reccom-profile">
+                            <div class="reccom-profile-img"><img alt="profile img" src="https://images.unsplash.com/photo-1634141406667-1a7d17e73576?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=764&q=80">
+                            </div>
+                            <div class="story-profile-dsc">
+                                <a href="">indiancricketteam</a>
+                                <p>hoooooyeony님 외 2..</p>
+                            </div>
+                        </div>
+                        <button class="reccom-follow"> 팔로우 </button>
+                    </div>
+                </div>
+
+                <div class="footer">
+                    <p>Instagram 정보 · 지원 · 홍보  센터 · API ·<br>채용 정보 · 개인정보처리방침 · 약관 ·<br>디렉터리 · 프로필 · 해시태그 · 언어 </p>
+                    <p>© 2021 INSTAGRAM</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="./js/main.js" defer=""></script>
+</body>
+</html>
