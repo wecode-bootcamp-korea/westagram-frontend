@@ -12,8 +12,14 @@ const loginBtn = document.querySelector('.login-btn');
             // if(elem.value !== '') isValue = true;
             // else isValue = false;
         })
-        if(isValue) loginBtn.classList.add('active');
-        else loginBtn.classList.remove('active');
+        if(isValue) {
+            loginBtn.classList.add('active');
+            loginBtn.disabled = false;
+        }
+        else {
+            loginBtn.classList.remove('active');
+            loginBtn.disabled = 'disabled'
+        }
     })    
 })();
 

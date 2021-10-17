@@ -7,17 +7,24 @@ const mainInput = document.querySelector('.main-input');
 
 const users = ['apple_90', 'orange_97', 'grape_30', 'melon_30', 'mango_78'];
 let id = 0;
+let check = [];
 
 function onAdd(target) {
     if(target !== 'BUTTON' && target !== 'INPUT') return;
-    if(id === 2) onUpload();
+    // if(id === 2) onUpload();
+    console.log(check.length);
+    
 
     const text = input.value;
 
     if(text !== '') {
         const item = createItem(text);
+        check.push(item);
         comments.append(item);
-
+        if(check.length === 3) {
+            let targetElem = check.shift();
+            comments.removeChild(targetElem);
+        }
     } else return;
 
     input.value = '';
@@ -41,19 +48,19 @@ function createItem(text) {
     `
 
     id++;
-
+    
     return itemRow;
 }
 
-function onUpload() {
-    let items = Array.from(comments.children);
-    items.forEach(elem => {
-        if(elem.dataset.id === '0') comments.removeChild(elem);
-        else elem.setAttribute('data-id', 0);
-    })
+// function onUpload() {
+//     let items = Array.from(comments.children);
+//     items.forEach(elem => {
+//         if(elem.dataset.id === '0') comments.removeChild(elem);
+//         else elem.setAttribute('data-id', 0);
+//     })
 
-    id--;
-}
+//     id--;
+// }
 
 inputContainer.addEventListener('click', (event) => {
     let target = event.target.nodeName;
@@ -73,6 +80,7 @@ inputContainer.addEventListener('keyup', (event) => {
     if(checkText !== '') commentBtn.classList.add('active');
     else commentBtn.classList.remove('active');
     
+
     const keycode = event.keyCode;
     if(keycode === 13) onAdd(target);
 })
