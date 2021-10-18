@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="wemain.css".css">
+    <script src="https://kit.fontawesome.com/8f941869ba.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Lobster+Two&display=swap" rel="stylesheet">
+    <!-- <script defer src="/wemain.js"></script> -->
+</head>
+<body>
+    <nav class="header">
+        <!-- 좌측 로고 -->
+       <div class="logo">
+           <div class ="logo_icon">
+            <i class="fab fa-instagram"></i>
+           </div>
+           <div class="logo_name">westagram</div>
+       </div>
+       <!-- 가운데 검색바 / 인풋 속성으로 돋보기, 검색 글씨 넣기 -->
+       <div class="serchbar">
+           <input type="text" name="검색"  placeholder="검색" style="text-align:center"</i>
+           <i class="fas fa-search"></i>
+       </div>
+      <!-- 우측아이콘 / list로 만들어야 하나?-->
+      <div class="icon">
+          <div class="icon_nav">
+              <!-- <img src="/weimeg/navicon.png" alt=""> -->
+              <!-- <a href="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png"></a> -->
+              <i class="far fa-compass"></i>         
+          </div>
+          <div class="icon_heart">
+            <i class="far fa-heart"></i>
+          </div>
+          <div class="icon_mypage">
+            <i class="far fa-user"></i>
+          </div>
+
+    <div class="new">
+        <div class="new_mark"></div> <!--빨간 표시를 이렇게 주나?-->
+    </div>
+          
+      </div>
+    </nav>
+
+
+    <nav class="main">
+     <div class="feeds">
+       <div class="main_user">
+         <img src="/weimeg/user1.png" alt="메인유저사진">
+            <div class="user_name">yes_cres</div>
+            <div class="user_set"><i class="fas fa-ellipsis-h"></i></div>
+        </div>
+        <div class="article">
+            <div class="art_photo">
+              <img src="/weimeg/mainphoto.JPG" alt="뛰는 사진" width="700px" height="700px">
+            </div>  
+            <li class="comments_icon">
+                <ul class="comments_heart"><i class="fas fa-heart"></i></ul>
+                <ul class="comments_message"><i class="far fa-comment"></i></ul>
+                <ul class="commemts_share"><i class="far fa-share-square"></i></ul>
+                <ul class="comments_mark"><i class="far fa-bookmark"></i></ul>
+            </li>
+
+ <!-- article text data -->
+ <div class="reaction">
+    <div class="liked-people">
+      <img class="pic" src="/weimeg/people4.png" alt="GGang GGang님의 프로필 사진">
+      <p><span class="point-span">GGang GGang</span>님 <span class="point-span">외 10,435명</span>이 좋아합니다</p>
+    </div>
+    <div class="description">
+      <p><span class="point-span userID">Sae_0</span> 화장실은 식당에서 나오기 전에 제발 가라고...</p>
+    </div>
+    <div class="comment-section">
+      <ul class="comments">
+        <li>
+          <span><span class="point-span userID">LoveMoreMoreKim</span> ㅋㅋㅋ 얘네는 대체 뭐하고 노는거야?</span>
+          <img class="comment-heart" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" alt="하트">
+        </li>
+        <!-- input 값 여기에 추가 -->
+      </ul>
+      <div class="time-log">
+        <span>1시간 전</span>
+      </div>
+    </div>
+  </div>
+  <div class="hl"></div>
+  <div class="comment">
+    <input id="commentInput" class="input-comment" type="text" placeholder="댓글 달기..." >
+    <button type="submit" class="submit-comment" >게시</button>
+  </div>
+</article>
+
+
+            
+        </div>
+           </div>
+           <div class="main-right">
+            <div class="right_header">
+                 <div class="my_info"> <!-- 로그인 사용자 정보 -->
+                     <div class="my_image">
+                         <img src="/weimeg/user1.png" alt="">
+                     </div>
+                     <div class="my_text">
+                        <div class="my_name">yes_cres</div>
+                        <div class="my_intro">현금이 다발이랑 함께 해요!</div>
+                     </div>
+                       </div>
+             </div>
+            <div class="story_info">
+                     <div class="story_header">
+                         <div class="story_text">스토리</div>
+                         <a href=""><div class="story_set">모두 보기</div></a>
+                    </div>
+                    <div class="story_list">
+                        <li class="user1">
+                            <img src="/weimeg/people4.png" alt="양세찬">
+                            <div class="user1_text">
+                                <div class="user1_name">GGang GGang</div>
+                                <div class="user1_intro">1분전</div>
+                             </div>
+                        </li>
+                        <li class="user2">
+                            <img src="/weimeg/people3.png" alt="조정석">
+                            <div class="user2_text">
+                                <div class="user2_name">Doctor_ jeo</div>
+                                <div class="user2_intro">5분전</div>
+                             </div>
+                        </li>
+                        <li class="user3">
+                            <img src="/weimeg/people2.png" alt="김선호">
+                            <div class="user3_text">
+                                <div class="user3_name">cha_nam</div>
+                                <div class="user3_intro">3시간전</div>
+                             </div>
+                        </li>
+                        <li class="user4">
+                            <img src="/weimeg/people1.png" alt="아이유">
+                            <div class="user4_text">
+                                <div class="user4_name">EU_2U</div>
+                                <div class="user4_intro">2일전</div>
+                             </div>
+                        </li>
+                    </div>
+                    <div class="recom_info">
+                       <div class="recom_header">
+                          <div class="recom_text">회원님을 위한 추천</div>
+                          <a href=""><div class="recom_set">모두 보기</div></a>
+                        </div>
+                     <div class="recom_list">
+                        <li class="user5">
+                            <img src="/weimeg/people5.png" alt="피카츄">
+                            <div class="user5_text">
+                                <div class="user5_name">ggap_Chu</div>
+                                <div class="user5_intro">회원님을 팔로합니다.</div>
+                            </div>
+                                <a href=""><div class="user5_flow">팔로우</div></a>
+                        </li>
+                        <li class="user6">
+                            <img src="/weimeg/people6.png" alt="뽀로로">
+                            <div class="user6_text">
+                                <div class="user6_name">p_roro5</div>
+                                <div class="user6_intro">회원님을 팔로합니다.</div>
+                            </div>
+                                <a href=""><div class="user6_flow">팔로우</div></a>
+                        </li>
+                        <li class="user7">
+                            <img src="/weimeg/people7.png" alt="루피">
+                            <div class="user7_text">
+                                <div class="user7_name">devil_P</div>
+                                <div class="user7_intro">회원님을 팔로합니다.</div>
+                            </div>
+                                <a href=""><div class="user7_flow">팔로우</div></a>
+                        </li>
+                    </div>
+                    <div class="insta_info">
+                     Instagram 정보 · 지원 · 홍보 센터 · API ·<br>
+                     채용 정보 · 개인정보처리방침 · 약관 · <br>
+                     디렉터리 · 프로필 · 해시태그 · 언어<br>
+                     <br>
+                     Ⓒ 2019 INSTAGRAM
+                    </div>
+                </div>
+        </div>
+    </nav>
+    <scrip type="text/javascript" src="wemain.js"></scrip>
+</body>
+</html>
