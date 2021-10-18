@@ -13,7 +13,7 @@ function checkInput() {
 function registerComment(value){
     const commentLists = document.getElementById("commentLists");
     const newCommentList = document.createElement("li");
-    const newComment = `<span class="name">jihoo</span><span>${value}</span><span class="delete">X</span>`
+    const newComment = `<span class="name">jiwon</span><span>${value}</span><span class="delete">X</span>`
     
     newCommentList.innerHTML = newComment;
     deleteComment(newCommentList);
@@ -28,7 +28,7 @@ function deleteComment(newCommentList) {
 }
 
 
-commentInput.addEventListener('keydown', () => {
+commentInput.addEventListener('keyup', () => {
     if (window.event.code === 'Enter') {
         checkInput();
     }else {
@@ -54,16 +54,7 @@ function commentBtn() {
     } else {
         button.disabled = true;
         button.style.cursor = 'default';
+        button.style.color = 'skyblue  ';
     }
 }
 inputId.addEventListener('keyup', commentBtn);
-
-// const postBtn = document.querySelector(".upload")[0];
-// const postInput = document.querySelector("#name")[0];
-// postInput.addEventListener("input", function() {
-//   const commentPost = postInput.value;
-//   commentPost.length > 0 ?
-//   postBtn.disabled = false :
-//   postBtn.disabled = true;
-// });
-
