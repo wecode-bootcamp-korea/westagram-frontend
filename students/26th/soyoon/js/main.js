@@ -6,25 +6,32 @@ const commentSubmit = document.getElementById("submit");
 function checkInput() {
     const newComment = commentInput.value;
 
-    if (!commentInput.value.length) {
-        alert("댓글을 입력하세요!");
-    } else {
+    if (newComment.length > 0) {
         addComment(newComment);
+    } else if(window.event.code === 'Enter'){
+        if(newComment.length > 0){
+            addComment(newComment);
+        }else{
+            alert("댓글을 입력하세요!");
+        }
+    }else {
+        alert("댓글을 입력하세요!");
     }
 
     event.preventDefault();
 }
 
-
 function addComment(value) {
     const commentLists = document.getElementById('comment-wrapper');
     const newCommentList = document.createElement('li');
+    const defaltComment = `<span class="name">eenooyos</span><span> ${value}</span><span class="delete"> x </span>`;
 
-    newCommentList.innerHTML = `<span class="name">eenooyos</span><span> ${value}</span><span class="delete"> x </span>`;
-    deleteComment(newCommentList);
+    newCommentList.innerHTML = defaltComment;
     commentLists.appendChild(newCommentList);
-
     commentInput.value = "";
+
+    deleteComment(newCommentList);
+
 }
 
 function deleteComment(newCommentList) {
@@ -32,11 +39,9 @@ function deleteComment(newCommentList) {
     deleteBtn.addEventListener('click', () => newCommentList.remove());
 }
 
+const init = () => {
+    commentSubmit.addEventListener('click', checkInput);
+    heart.addEventListener('click', changeHeart)
+}
 
-    commentInput.addEventListener('keydown', () => {
-        if (window.event.code === 'Enter') {
-            checkInput();
-        }else{
-            commentSubmit.addEventListener('click', checkInput);
-        }
-    });
+init();
