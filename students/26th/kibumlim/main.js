@@ -5,7 +5,7 @@ const submit = document.getElementById("button");
 
 function checkInput() {
     if (!commentInput.value.length) {
-        alert("댓글을 입력하세요 제발로~ ㅎㅎ");
+        alert("댓글을 입력하세요 ㅎㅎ");
     } else {
         registerComment(commentInput.value);
     }
@@ -25,7 +25,7 @@ function registerComment(value) {
 
 function deleteComment(newCommnetList) {
     const deleteBtn = newCommnetList.querySelector(".delete");
-    deleteBtn.addEventListener("click", () => newCommentList.remove());
+    deleteBtn.addEventListener("click", () => newCommnetList.remove());
 }
 
 const init = function() {

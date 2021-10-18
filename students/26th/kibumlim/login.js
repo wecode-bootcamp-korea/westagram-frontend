@@ -1,49 +1,65 @@
-const input1 = document.querySelector(".input1"); 
-const input2 = document.querySelector(".input2");
-const button = document.querySelector(".button1");
-const loginForm = document.getElementById('loginForm');
+"use strict";
 
-//button.disabled = true;
+const inputs = document.getElementsByClassName("loginForm")[0];
+const loginBtn = document.getElementById("loginButton");
 
+function handleInput() {
+    const idValue = document.getElementById("id").value;
+    const pwValue = document.getElementById("pw").value;
 
+    const isValidId = checkId(idValue);
+    const isValidPw = checkPw(pwValue);
 
-loginForm.addEventListener('input',function(){
-const inp1 = input1.value;
-const inp2 = input2.value;
-
-if(inp1 && inp2){
-    document.getElementsByClassName("button1")[0].style.backgroundColor="blue"
-}
-})
-
-
-/*input.addEventListener("keyup", inputId)
-function inputId () {
-    if (input.value) {
-        button.disabled = true;
-        button.style.opacity = 1;
+    if (isValidId && isValidPw) {
+        handleBtn(true);
     } else {
-        button.disabled = false;
-        button.style.opacity = .5;
+        handleBtn(false);
     }
 }
 
-const inputt = document.querySelector(".input2"); 
-const buttonn = document.querySelector(".button1");
-button.disabled = true;
+function checkId(value) {
+    if (value.length > 0)
+ {
+     return true;
+ } else {
+     return false;
+ }
+} 
 
-inputt.addEventListener("keyup", inputPassword)
-function inputPassword () {
-    if (inputt.value) {
-        button.disabled = true;
-        button.style.opacity = 1;
+function checkPw(value) {
+    if (value.length > 0)
+    {
+        return true;
     } else {
-        button.disabled = false;
-        button.style.opacity = .5;
+        return false;
     }
-}*/
+}
+
+function handleBtn(btnValid) {
+    if (btnValid) {
+        loginBtn.disabled = false;
+        loginBtn.style.opacity = 1;
+        loginBtn.style.cursor = "pointer"
+
+        if (window.event.code === "Enter") {
+            success();
+        }
+ } else {
+     loginBtn.disabled = true;
+     loginBtn.style.opacity = 0.5;
+     loginBtn.style.cursor = "default";
+ }
+}
+
+function success() {
+    alert("환영합니다!");
+};
+
+const init = () => {
+    inputs.addEventListener("input", handleInput);
+    inputs.addEventListener("keyup", handleInput);
+    loginBtn.addEventListener("click", success);
+};
 
 
-// if (input === 0 && inputt === 0) {
-//     return inputId() 
-// }
+init();

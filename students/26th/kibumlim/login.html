@@ -7,17 +7,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet" />
     <script defer src="login.js"></script>
   </head>
-  <section>
-    <div class="container_login">
-    <h1 class="logo">Westagram</h1>
-    <form action="" id="loginForm">
-    <input class="input1" type="text" placeholder="전화번호, 사용자 이름 또는 이메일">
-    <input class="input2" type="password" placeholder="비밀번호">
-  </form>
-    <button class="button1" style="color: white;">로그인</button>
-    <span class="forget">비밀번호를 잊으셨나요?</span>
-    </div>
-  </section>
-
- 
+  <body>
+    <main class="loginContainer">
+        <div class="loginInner">
+          <h1>Westagram</h1>
+          <form class="loginForm">
+            <input id="id" type="text" placeholder="전화번호, 사용자 이름 또는 이메일">
+            <input id="pw" type="password" placeholder="비밀번호">
+            <button id="loginButton" style="color: white;" disabled>로그인</button>
+          </form>
+        <span>비밀번호를 잊으셨나요?</span>
+        </div>
+    </main>
+  </body>
 </html>

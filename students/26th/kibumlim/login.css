@@ -1,20 +1,25 @@
-section {
-    padding-left: 350px;
-  }
+html,
+body,
+.loginContainer {
+    height: 100%;
+}
+
   
-  .container_login {
+  .loginContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+  .loginInner {
     border: solid 3px;
     border-color: #EDEDED;
     padding: 10px 10px 10px 10px;
     width: 500px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
-  }
-  
-  .button1 {
+    text-align: center;
+}
+
+  #loginButton {
     width: 410px;
     height: 40px;
     margin-bottom: 100px;
@@ -23,23 +28,16 @@ section {
     border-radius: 7px;
     font-size: 20px;
     font-weight: bold;
-  }
+}
   
-  img {
-    width : 200px;
-    height : 50px;
-  
-  }
-  
-  
-  .logo {
+  h1 {
     font-family: 'Lobster', cursive;
     font-size: 70px;
     font-weight: lighter;
     
-  }
+}
   
-  .input1 {
+  #id {
     border-style: none;
     border-style: solid;
     margin-top: 20px;
@@ -53,9 +51,9 @@ section {
     background-color: #FAFAFE;
     font-weight: bold;
     
-  }
+}
   
-  .input2 {
+  #pw {
     border-style: none;
     border-style: solid;
     margin-top: 10px;
@@ -68,27 +66,14 @@ section {
     background-color: #FAFAFA;
     border-color: #EFEFEF;
     font-weight: bold;
-  }
-  
-  .forget {
-    margin-bottom: 30px;
-  }
+}
   
   span {
     font-size: 20px;
     font-weight: bold;
-  }
+}
   
   #loginForm {
     margin-left: 40px;
-  }
+}
   
-  .ban {
-    transform:rotate(90deg);
-    -moz-transform: scaleX(-1); 
-      -o-transform: scaleX(-1); 
-  -webkit-transform: scaleX(-1); 
-         transform: scaleX(-1);   
-        filter: FlipH;
-   -ms-filter: "FlipH";
-  }
