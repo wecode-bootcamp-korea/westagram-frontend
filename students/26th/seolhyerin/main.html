@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Westagram main</title>
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="stylesheet" href="style/common.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+        </style>
+          <link
+         rel="stylesheet"
+         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+       />
+</head>
+<body>
+     <header>
+        <div class="headerLogo">
+            <img class="logoImg" src="instagram.png">
+            <div class="logoName">instagram</div>
+        </div>
+        <div class="textForm">
+            <input class="text" type="text" placeholder="검색">
+            <img class="lensImg" src="zoom-lens.png">
+        </div>
+        <nav>
+            <img class="explore" src="explore.png">
+            <img class="heart" src="heart.png">
+            <img class="profile" src="profile.png">
+        </nav>
+    </header>
+
+    <main class="main_container">
+        <div class="main_feeds">
+            <section class="picture_container">    <!-- 프로필사진, 아이디, 위치 -->
+                 <img class="profile_picture" alt="profile_picture" src="mainprofile.jpg">
+                 <div class="westa_id">tosil_conton
+                     <span id="westa_address">부개동 우리집</span>
+                 </div>
+            </section>
+            <div class="main_image">
+               <img class="feeds_img" src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2F20150523_288%2Frlaauddhr92_1432308714967oqUXs_JPEG%2Ftumblr_noq43mcOXe1urgqndo1_1280.jpg&type=sc960_832"> 
+            </div>
+            <div class="main_icons"> 
+                <!-- 좋아요, 댓글, 전달, 북마크 -->
+            <div class="icons_left">
+                <img class="main_icon" src="heart2.png">
+                <img class="main_icon" src="chat.png">
+                <img class="main_icon" src="direct-instagram.png">
+            </div>
+            <div class="icons_right">
+                <img class="bookMark" src="bookmark.png">
+            </div>
+            </div>
+            <div class="main_comment">
+                <div class="likes_container">
+                <img class="likes_profile" src="orange.jpeg">
+                <span class="likes_people"><b>shurc.onu</b>님 외 <b>5명</b>이 좋아합니다</span>
+                </div>
+
+                <div class="post_container">
+                    <b>tosil_coton</b> 톰하디 사랑해
+                    <div class="post_time">56분전</div>
+                    <ul id="commentLists"></ul>
+               </div>
+               <div class="comment_container">
+                   <input type="text" id="comment_input" placeholder="댓글 달기..." >
+                   <button type="submit" id="comment_submit" disabled>게시</button>
+               </div>
+            </div>
+            
+        </div>
+
+    </main>
+    <script type="text/javascript" src="js/main.js"></script> 
+</body>
+</html>
