@@ -2,15 +2,281 @@
   box-sizing: border-box;
 }
 
-i {
+/* div {
+  border: solid black 1px;
+} */
+
+.nav {
+  top: 0;
+  background-color: white;
+  position: fixed;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  left: 8.3px;
+  right: 8.5px;
+  z-index: 1;
+}
+.left {
+  display: flex;
+  align-items: center;
+}
+.right {
+  margin-top: 10px;
+}
+.search2 {
+  margin-top: 24px;
+  border: solid 1px rgb(220, 220, 200);
+
+  background-color: rgb(250, 250, 250);
+  color: rgb(199, 199, 199);
+  border-radius: 1px;
+}
+.person,
+.heart,
+.compass {
+  margin: 12px;
+
+  width: 20px;
+  height: 20px;
+}
+.fab.fa-instagram {
+  margin-top: 18px;
   border-right: solid black 2px;
   padding-right: 10px;
+  font-size: 25px;
 }
 
-span {
+.west {
+  margin-top: 15px;
+  margin-left: 10px;
+  font-size: 20px;
   font-family: "Lobster", cursive;
 }
 
 input {
   text-align: center;
+}
+
+.main {
+  background-color: rgb(250, 250, 250);
+  margin-top: 65px;
+  position: relative;
+  padding-right: 10px;
+  padding-top: 5px;
+  height: 2000px;
+  border-top: solid 1px rgb(222, 222, 222);
+}
+
+form {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.feeds {
+  width: 400px;
+  margin-left: 3%;
+  /* height: 700px; */
+  border: rgb(220, 220, 220) solid 1px;
+  border-radius: 3px;
+  background-color: white;
+  margin-top: 40px;
+}
+.main-right {
+  margin-top: 30px;
+  width: 230px;
+  margin-right: 0px;
+  margin-left: 10px;
+  height: 60px;
+}
+
+.main-right2 {
+  overflow: hidden;
+  width: 230px;
+  margin-right: 0px;
+  margin-left: 10px;
+  height: 200px;
+  border-radius: 3px;
+  border: rgb(220, 220, 220) solid 1px;
+  background-color: white;
+}
+.main-right3 {
+  overflow: hidden;
+  width: 230px;
+  margin-top: 10px;
+  margin-right: 0px;
+  margin-left: 10px;
+  height: 180px;
+  border-radius: 3px;
+  border: rgb(220, 220, 220) solid 1px;
+  background-color: white;
+}
+.article {
+  position: relative;
+  margin: 10px -1px 0px -1px;
+  height: 498px;
+  border: rgb(220, 220, 220) solid 1px;
+}
+
+.bottomIcons {
+  display: flex;
+}
+
+.fas.fa-heart {
+  color: #d14246;
+  font-size: 20px;
+}
+
+.fas.fa-upload,
+.far.fa-comment,
+.far.fa-bookmark {
+  color: rgb(140, 140, 140);
+  font-size: 20px;
+}
+
+.bottomIcons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bottomLeft i {
+  margin: 3px;
+}
+
+.bottomLeft {
+  margin-left: 8px;
+}
+.bottomRight {
+  margin-right: 13px;
+  margin-top: 4px;
+}
+.comment {
+  margin-top: 40px;
+}
+.cat2 {
+  margin-top: 15px;
+  margin-left: 15px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.qtcat {
+}
+
+.prof {
+  display: flex;
+}
+
+.qtcat {
+  margin-top: 20px;
+  margin-left: 11px;
+}
+.dots {
+  position: absolute;
+  margin-left: 365px;
+  font-size: 25px;
+  top: 27px;
+}
+
+.cat3 {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+.rightTop {
+  display: flex;
+}
+
+.rightTop2 {
+  display: flex;
+  margin-left: 15px;
+}
+.expl {
+  font-size: 12px;
+  margin-left: 13px;
+  margin-top: -2px;
+}
+
+.exUp {
+  margin-bottom: 0px;
+}
+
+.exDw {
+  margin-top: 0px;
+  color: rgb(164, 164, 164);
+}
+.ex2 {
+  display: flex;
+  justify-content: space-between;
+}
+.ex2 p {
+  margin: 10px;
+}
+
+.story {
+  color: rgb(140, 140, 140);
+  font-size: 13px;
+}
+.all1 {
+  font-size: 14px;
+}
+
+.follow {
+  position: absolute;
+  margin-left: 170px;
+  margin-top: -14px;
+  font-size: 13px;
+  font-weight: bolder;
+  color: rgb(89, 153, 234);
+  width: 100px;
+}
+.follow p {
+  padding: 11px;
+}
+
+.cat4 {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.comment {
+  display: block;
+  margin: 40px 0px 0px 10px;
+}
+
+.bord {
+  font-weight: bolder;
+}
+.comment1 {
+  margin-top: -10px;
+  font-size: 12px;
+  display: block;
+  margin: -22px 0px 0px 23px;
+}
+.comment2 {
+}
+.commentIn {
+  border: none;
+  text-align: left;
+  padding-left: 10px;
+  width: 340px;
+  outline: none;
+}
+.commentButton {
+  border: none;
+  background-color: white;
+  color: rgb(158, 208, 236);
+  margin-right: 6px;
+}
+.commentBox {
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  margin-top: 10px;
+  border-top: solid 1px rgb(222, 222, 222);
+}
+.commentOut {
+  margin: 3px 0px 3px 10px;
+  font-size: 12px;
 }
