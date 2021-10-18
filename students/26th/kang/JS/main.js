@@ -33,7 +33,6 @@ function redHeart() {
   if ((heart.style.background = 'none')) {
     heart.style.background = 'tomato';
   }
-  return (heart.style.background = 'none');
 }
 
 heart.addEventListener('click', redHeart);
