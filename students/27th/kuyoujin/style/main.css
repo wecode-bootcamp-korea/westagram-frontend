@@ -1,0 +1,174 @@
+header {
+    width: 100%;
+    position: fixed;
+    height: 80px;
+    background-color: #fff;
+    border-bottom: 1px solid #dbdbdb;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+}
+
+
+.logoBar {
+    display: flex;
+    align-items: center;
+}
+
+.logoBar img{
+    width: 30px;
+    margin: 0 10px;
+}
+
+.logoBar .logoName a{
+    text-decoration-line: none;
+    align-items: center;
+    font-size: 30px;
+    border-left: 1px solid #000;
+    width:300px;
+    padding: 0 10px; 
+    font-family: 'Lobster', cursive;
+    color: #000;
+}
+
+.searchBar {
+    padding: 0 250px;
+    position: relative;
+} 
+.searchBar input{
+    font-size: 15px;
+    padding: 5px 20px;
+    outline: none;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    background-color: #fafafa;
+    
+}
+.beforeSearch {   
+    position: absolute;
+    left: 46%;
+    top:7px;
+    color: #dbdbdb;
+}
+.searchBar input::placeholder {
+    color: #dbdbdb;
+
+}
+.beforeSearch:focus {
+    opacity: 0;
+}
+
+
+.searchBar .fas {
+    color: #dbdbdb;
+}
+
+.naviBar a img{
+    width: 30px;
+    margin: 0 10px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+article {
+    width: 600px;
+    height: 700px;
+    margin: 100px auto;
+}
+
+.profileBox {
+    height: 60px;
+    display: flex;
+    border: 1px solid #dbdbdb;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    background-color: #fff;
+}
+.profileBox img {
+    width:40px;
+    border-radius: 40px;
+    margin: 5px 10px;
+}
+
+.profileBox .myId {
+    font-size: 20px;
+    margin-right: 400px;
+}
+
+.profileBox .fas {
+    margin-right: 15px;
+}
+
+
+.imageBox {
+    width: 100%;
+    height: 600px;
+    border: 1px solid #dbdbdb;
+}
+
+.imageBox img {
+    width: 100%;
+}
+
+.estimateBox {
+    width: 100%;
+    height: 50px;
+    font-size: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.commentBox {
+    width: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+.commentBox a {
+    text-decoration: none;
+}
+.likeBtn::after {
+    font-family: "FontAwesome"; content: "\f004";
+    color: #000;
+}
+.likeBtn:hover::after {
+    font-family: "FontAwesome"; content: "\f004";
+    color: #8e8e8e;
+
+}
+.commentBtn::after {
+    font-family: "FontAwesome"; content: "\f075";
+    color: #000;
+}
+.commentBtn:hover::after {
+    font-family: "FontAwesome"; content: "\f075";
+    color: #8e8e8e;
+}
+.shareBtn::after {
+    font-family: "FontAwesome"; content: "\f1e0";
+    color: #000;
+}
+.shareBtn:hover::after {
+    font-family: "FontAwesome"; content: "\f1e0";
+    color: #8e8e8e;
+}
+.bookmarkBtn::after {
+    margin-right: 10px;
+    font-family: "FontAwesome"; content: "\f02e";
+    color: #000;
+}
+.bookmarkBtn:hover::after {
+    margin-right: 10px;
+    font-family: "FontAwesome"; content: "\f02e";
+    color: #8e8e8e;
+}
