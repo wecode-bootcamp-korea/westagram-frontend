@@ -4,7 +4,7 @@ body {
 
 /* layout */
 .inner-container {
-  width: 975px;
+  max-width: 975px;
   margin: 0 auto;
 }
 
@@ -101,6 +101,7 @@ body {
 /* Feed Header*/
 .feeds {
   flex: 6;
+  width: 614px;
   margin-right: 24px;
 }
 
@@ -216,7 +217,13 @@ body {
   border-top: 1px solid rgb(235, 235, 235);
 }
 
+.comment__input {
+  flex: 9;
+}
+
 .comment__add-btn {
+  flex: 1;
+  text-align: right;
   color: var(--color-opacity-blue);
 }
 
@@ -227,6 +234,7 @@ body {
 /* Main-right */
 .main-right {
   flex: 4;
+  width: 293px;
   display: flex;
   flex-direction: column;
 }
