@@ -1,0 +1,398 @@
+body {
+    background: #FAFAFA;
+    position: relative;
+    margin-top: 54px;;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+/* aside {
+    position: fixed;
+} */
+
+main {
+    padding: 0 100px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 100px;
+    height: 54px;
+    background: white;
+    border-bottom: 1px solid #d1d1d1;
+}
+
+nav .logo {
+    font-size: 24px;
+    font-family: 'Lobster', cursive;
+}
+
+nav .searchBox {
+    width: 216px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+}
+
+nav .searchBox input {
+    border: 1px solid #d1d1d1;
+    background: #fafafa;
+    height: 20px;
+    outline: none;
+    border-radius: 2px;
+    padding: 0 10px;
+}
+
+nav .searchBox .searchIn {
+    position: relative;
+    left: -90px;
+    width: 40px;
+    pointer-events: none;
+    color: #d1d1d1;
+}
+
+nav .searchBox .fa-search, span {
+    font-size: 10px;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 16px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li i {
+    font-size: 16px;
+}
+
+nav ul li .navImg{
+    width: 20px;
+    height: 20px;
+    
+}
+
+nav ul li .navImg img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+}
+
+nav ul li .far{
+    color: #262626;
+}
+
+.feedContainer {
+    width: 600px;
+}
+
+.storyBox {
+    height: 90px;
+    background: white;
+    margin: 40px 0;
+    display: flex;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #d1d1d1;
+    overflow: hidden;
+}
+
+.storyBox .userMeta {
+    margin-right: 14px;   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.userImgBackground {
+    width: 60px;
+    height: 60px;
+    border: 2px solid pink;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+.userName {
+    font-size: 10px;
+}
+
+.storyBox .userImg {
+ width: 56px;
+ height: 56px;
+ border-radius: 50px;
+ background: aqua;
+}
+
+.feedBox {
+    height: 840px;
+    background: white;
+    border: 1px solid #d1d1d1;
+}
+
+.feedTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 600px;
+    height: 70px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.feedUserPorfile {
+    display: flex;    
+    align-items: center;
+}
+
+.feedUserPorfileLeft {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.feedUserPorfileLeft img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+}
+
+.feedUserPorfile span {
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.feedMoreButton {
+    border-style: none;
+    background: none;
+    font-size: 20px;
+}
+
+.feedImg {
+    height: 600px;
+    width: 600px;
+}
+
+.feedImg img {
+    height: 100%;
+    width: 100%;
+}
+
+.feedBottom {
+    margin: 0 20px;
+}
+
+.feedIcon {
+    display: flex;
+    justify-content: space-between;
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+.feedIconLeft i {
+    margin-right: 10px;
+}
+
+.feedUser {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.feedUser span {
+    color: black;
+}
+
+.feedUserImg {
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+}
+
+.feedUserImg img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+}
+
+.feedUserName {
+    font-weight: 500;
+    width: 558px;
+    font-size: 14px;
+}
+
+.feedUserName span {
+    font-size: 14px;
+}
+
+.feedComment {
+    display: flex;
+    justify-content: space-between;
+}
+
+.feedCommentLeft {
+    display: flex;
+    flex-direction: column;
+}
+
+.feedCommentLeft span, button {
+    margin-bottom: 4px;
+}
+
+.feedCommentLeft .moreComment {
+    color: rgb(122, 122, 122);
+}
+
+.feedTime {
+    color: rgb(122, 122, 122);
+    font-size: 8px;
+}
+
+.reCommnet {
+    width: 600px;
+    display: flex;
+}
+
+.recommnetInput {
+    width: 90%;
+    height: 50px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    border: 1px solid  #d1d1d1;
+    border-right: none;
+    border-top: none;
+    outline: none;
+}
+
+.recommnetBt{
+    width: 10%;
+    height: 50px;
+    border: 1px solid  #d1d1d1;
+    border-left: none;
+    border-top: none;
+    background: white;
+    color: #0095f6;
+}
+
+.sec{
+    display: flex;
+    justify-content: space-between;
+}
+
+.recommendContainer {
+    padding: 20px;
+    width: 300px;
+}
+
+.moreBt {
+    border-style: none;
+    background: none;
+}
+
+.myProfile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 0;
+    width: 100%;
+}
+
+.myProfile .myProfileLeft {
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+}
+
+.myProfileLeft span p:nth-child(2) {
+    color: rgb(122, 122, 122);
+}
+
+.myProfile img {
+    width: 50px;
+    height: 50px;
+    background: violet;
+    border-radius: 50px;
+    margin-right: 10px;
+    
+}
+
+.myProfile .myProfileLeftName {
+    font-weight: 700;
+    
+}
+
+.recommend {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.recommend  span {
+    font-size: 14px;
+    color: rgb(122, 122, 122);
+}
+
+.moreBt {
+    font-size: 12px;
+}
+
+.recommendPeople {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.recommendPeopleMeta {
+    display: flex;
+}
+
+.recommendPeopleImg {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    border-radius: 50px;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.recommendPeople img {
+    width: 100%;
+    height: 100%;
+}
+
+.PeopleName {
+    font-weight: 500;
+}
+
+.PeopleFllow {
+    font-size: 10px;
+    color: rgb(122, 122, 122);
+}
+
+.fllowBt {
+    width: 50px;
+    color: #0095f6;
+    border-style: none;
+    background: none;
+    font-size: 10px;
+    text-align: end;
+}
