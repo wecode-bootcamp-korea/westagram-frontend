@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS 파일 위치 -->
+    <link rel="stylesheet" href="css/style.common.css" />
+    <link rel="stylesheet" href="css/style.login.css" />
+
+    <!-- 폰트 설정 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- JS 파일 위치 -->
+    <script defer src="./login.js"></script>
+
+    <title>westagram</title>
+  </head>
+
+  <!-- 바디 -->
+  <body>
+    <!-- 전체 묶는 div -->
+    <div class="container">
+      <!-- 로고 섹션 -->
+      <section class="logoSection">
+        <h1 class="westagramLogo">westagram</h1>
+      </section>
+      <!-- 아이디 패스워드 로그인 섹션 -->
+      <section class="loginForm">
+        <!--동적으로 만들기 위해 form -->
+        <!-- 묶을 때는 fieldset legen까지 필요 -->
+        <form name="loginInAction" action="login.js" method="post">
+          <!-- id -->
+          <label for="id">
+            <input
+              type="text"
+              name="myId"
+              id="id"
+              placeholder="전화번호, 사용자 이름 또는 이메일"
+            />
+          </label>
+          <!-- pw -->
+          <label for="password">
+            <input
+              type="password"
+              name="myPassword"
+              id="Password"
+              placeholder="비밀번호"
+            />
+          </label>
+          <!-- 버튼 태그로 로그인 -->
+          <button type="submit" name="logIn" id="logIn">로그인</0button>
+        </form>
+      </section>
+
+      <!-- 비밀번호 찾기 섹션-->
+      <section class="forgetIdSection">
+        <span class="forgetId">
+          <a href="#">비밀번호를 잊으셨나요?</a>
+        </span>
+      </section>
+    </div>
+  </body>
+</html>
