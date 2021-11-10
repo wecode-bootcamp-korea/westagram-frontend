@@ -4,12 +4,18 @@ header {
     height: 80px;
     background-color: #fff;
     border-bottom: 1px solid #dbdbdb;
-}
-nav {
+    top:0;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
     margin: 20px auto;
+    position: fixed;
 }
 
 
@@ -35,7 +41,7 @@ nav {
 }
 
 .searchBar {
-    padding: 0 250px;
+    padding: 0 auto;
     position: relative;
 } 
 .searchBar input{
@@ -73,23 +79,23 @@ nav {
 
 main {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+
 }
 
 article {
-    width: 600px;
-    height: 700px;
-    margin: 100px auto;
+    width: 40%;
+    margin: 120px 0 150px 220px;
+    border: 1px solid #dbdbdb;
 }
 
 .profileBox {
     height: 60px;
     display: flex;
-    border: 1px solid #dbdbdb;
+    border-bottom: 1px solid #dbdbdb;
     justify-content: space-between;
     align-items: center;
-    margin: 0 auto;
     background-color: #fff;
 }
 .profileBox img {
@@ -107,11 +113,8 @@ article {
     margin-right: 15px;
 }
 
-
 .imageBox {
     width: 100%;
-    height: 600px;
-    border: 1px solid #dbdbdb;
 }
 
 .imageBox img {
@@ -140,6 +143,7 @@ article {
 .likeBtn::after {
     font-family: "FontAwesome"; content: "\f004";
     color: #000;
+    font-weightL
 }
 .likeBtn:hover::after {
     font-family: "FontAwesome"; content: "\f004";
@@ -155,11 +159,11 @@ article {
     color: #8e8e8e;
 }
 .shareBtn::after {
-    font-family: "FontAwesome"; content: "\f1e0";
+    font-family: "FontAwesome"; content: "\f1d8";
     color: #000;
 }
 .shareBtn:hover::after {
-    font-family: "FontAwesome"; content: "\f1e0";
+    font-family: "FontAwesome"; content: "\f1d8";
     color: #8e8e8e;
 }
 .bookmarkBtn::after {
@@ -171,4 +175,129 @@ article {
     margin-right: 10px;
     font-family: "FontAwesome"; content: "\f02e";
     color: #8e8e8e;
+}
+
+.addComment input {
+    width: 100%;
+    height: 40px;
+    border: none;
+    padding: 5px 10px;
+    outline: none;
+}
+
+.main-right {
+    position: fixed;
+    right: 270px;
+    top: 120px
+}
+.sideContainer {
+    width: 300px;
+    margin-left: 30px;
+}
+
+.showMyId {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+.showMyId img {
+    width: 60px;
+    border-radius: 60px;
+}
+.showMyId div {
+    margin-left: 10px;
+}
+.showMyId h1 {font-size: 20px; font-weight: 400;}
+.showMyId h2 {
+    font-size: 15px;
+    color: #999;
+    font-weight: 300;
+}
+
+.storyContainer {
+    margin-top: 20px;
+    width: 380px;
+    height: 250px;
+    border: 1px solid #e6e6e6;
+    background-color: #fff;
+}
+.storyBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    margin: 20px;
+}
+.storyName {
+    font-size: 15px;
+    color: #7c7c7c;
+}
+.storyBar a {
+    font-size: 15px;
+    color: #000;
+    text-decoration: none;
+}
+
+.stroyAccount{width:100%;}
+.stroyAccount ul {list-style: none;}
+.stroyAccount ul li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 20px;
+}
+.stroyAccount ul li img {
+    width: 60px;
+    border-radius: 60px;
+    margin-right:10px;
+}
+#ubloadTime {color:#7c7c7c;}
+
+.addFriendContainer {
+    margin-top: 20px;
+    width: 380px;
+    height: 250px;
+    border: 1px solid #e6e6e6;
+    background-color: #fff;
+}
+.addFriendBar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    margin: 20px;
+}
+.addFriendName {
+    font-size: 15px;
+    color: #7c7c7c;
+}
+.addFriendBar a {
+    font-size: 15px;
+    color: #000;
+    text-decoration: none;
+}
+
+.addFriendAccountccount{width:100%;}
+
+.addFriendAccount ul {list-style: none;}
+.addFriendAccount ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+}
+
+.addFriendAccount ul li img {
+    width: 60px;
+    border-radius: 60px;
+    margin-right: 10px;
+}
+#howManyAddFriend {color:#7c7c7c; width: 60% }
+#addFollow {
+    width: 70%;
+    font-size: 15px;
+    color: #4193ef;
+    text-align: right;
+    text-decoration: none;
 }
