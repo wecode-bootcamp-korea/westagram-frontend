@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Westargram 김성현 login</title>
+    <link rel="stylesheet" href="./style/common.css" />
+    <link rel="stylesheet" href="./style/login.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="loginWrapper">
+      <h1 class="logo">Westagram</h1>
+      <div class="contant">
+        <form class="inputWapper">
+          <label>
+            <input
+              class="input"
+              id="id"
+              type="text"
+              placeholder="전화번호, 사용자 이름 또는 이메일"
+            />
+          </label>
+          <label>
+            <input
+              class="input"
+              id="password"
+              type="password"
+              placeholder="비밀번호"
+            />
+          </label>
+        </form>
+        <button class="loginBtn loginBtn--disable">로그인</button>
+      </div>
+      <button class="forgotPassword">비밀번호를 잊으셨나요?</button>
+    </div>
+    <script src="./js/login.js"></script>
+  </body>
+</html>
