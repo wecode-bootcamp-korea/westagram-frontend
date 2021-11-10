@@ -1,0 +1,140 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--color-light-gray);
+}
+
+/* Container */
+.login-container {
+  width: 350px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Login Form */
+.login__form {
+  width: 100%;
+  margin: 10px auto;
+  padding: 30px 35px;
+  border: 1px solid var(--color-gray);
+  background-color: var(--color-white);
+}
+
+#westagramLogo {
+  font-size: 51px;
+  margin: 22px auto 12px;
+}
+
+#userLogin {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 48px;
+}
+
+.login__input {
+  width: 100%;
+  font-size: var(--font-micro);
+  padding: 12px 0px 10px 11px;
+  margin: 0 40px 6px;
+  border: 1px solid var(--color-gray);
+  border-radius: var(--size-border-radius);
+  background-color: var(--color-light-gray);
+}
+
+.login__input:focus {
+  border: 1px solid var(--color-dark-gray);
+}
+
+#loginSubmitBtn {
+  width: 100%;
+  font-size: var(--font-small);
+  font-weight: var(--weight-bold);
+  color: var(--color-white);
+  padding: 7px 9px;
+  margin-top: 8px;
+  border-radius: var(--size-border-radius);
+  background-color: var(--color-opacity-blue);
+}
+
+#loginSubmitBtn:disabled {
+  cursor: default;
+}
+
+/* Line OR */
+.line-or {
+  position: relative;
+  display: block;
+  width: 100%;
+  color: var(--color-dark-gray);
+  padding: 15px 0;
+}
+
+.txt-or {
+  display: inline-block;
+  font-size: var(--font-small);
+}
+
+.line-or::after,
+.line-or::before {
+  content: "";
+  display: inline-block;
+  width: calc(50% - 20px);
+  height: 1px;
+  margin: 8px 0;
+  vertical-align: top;
+  background-color: var(--color-gray);
+}
+
+/* Other Login Info*/
+.login__moveToFacebook {
+  display: block;
+  font-size: var(--font-small);
+  font-weight: var(--weight-semi-bold);
+  color: var(--color-indigo);
+  margin-top: 16px;
+}
+
+.login__moveToFacebook img {
+  width: 16px;
+  height: 16px;
+  vertical-align: top;
+  margin-right: 4px;
+}
+
+#login__moveToFindPw {
+  display: block;
+  font-size: var(--font-micro);
+  font-weight: var(--weight-regular);
+  color: var(--color-indigo);
+  margin-top: 18px;
+}
+
+/* Login Join */
+.login__join {
+  width: 100%;
+  font-size: var(--font-small);
+  padding: 20px 35px;
+  border: 1px solid var(--color-gray);
+  background-color: var(--color-white);
+}
+
+.login__join p {
+  font-size: inherit;
+}
+
+.join__moveTojoin {
+  font-weight: var(--weight-semi-bold);
+  color: var(--color-blue);
+}
