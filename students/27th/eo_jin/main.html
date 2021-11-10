@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style/common.css">
+  <link rel="stylesheet" href="style/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/c491e52303.js" crossorigin="anonymous"></script>
+  <title>Westagram Main</title>
+</head>
+<body>
+  <nav>
+    <div class="navWrapper">
+      <div class="logoAndName">
+        <img class="logo" src="instagram.png" alt="instagramLogo" />
+        <span class="name">Westagram</span>
+      </div>
+      <input type="text" placeholder="검색">
+      <ul class="icons">
+        <li class="navigate"><img src="explore.png" alt="explore"></li>
+        <li class="likeIssue"><img src="heart.png" alt="heart"></li>
+        <li class="myInfo"><img src="profile.png" alt="profile"></li>
+      </ul>
+    </div>
+  </nav>
+  <main>
+    <div class="feeds">
+      <article>
+        <div class="feedProfile">
+          <div class="feedProfileImageAndID">
+            <img class="feedProfileImage" src="profile_of_ej__oh.JPG"/>
+            <div class="feedProfileId">ej__oh</div>
+          </div>
+          <i class="fas fa-ellipsis-h"></i>
+        </div>
+        <div class="feedImage">
+          <img src="mangorookie.jpeg" alt="mangoAndRookie">
+        </div>
+        <div class="response">
+          <div class="feedIcons">
+            <div class="feedIconsLeft">
+              <img src="heart.png" alt="heart">
+              <img src="reply.png" alt="reply">
+              <img src="dmbutton.png" alt="dmbutton">
+            </div>
+            <img src="save.png" alt="save">
+          </div>
+          <div class="feedLike">
+            <img class="feedLikeProfileImage" src="profile_of_ej__oh.JPG"/>
+            <div class="feedLiketext">@@@님 외 1500명이 좋아합니다</div>
+          </div>
+          <div class="feedText">
+            <span class="feedTextProfile">
+            </span>
+            <span class="feedDescription"></span>
+            <span class="dotDotDot"></span>
+            <span class="showMore"></span>
+          </div>
+          <div class="hoursAgo">42분 전</div>
+          </div>
+        </div>
+        <div class="replyAndBtn">
+          <input type="text" class="reply" placeholder="댓글 달기..."/>
+          <button class="replyBtn">게시</button>
+        </div>
+      </article>
+    </div>
+    <div class="marin-right"></div>
+  </main>
+  <script src="js/main.js"></script>
+</body>
+</html>

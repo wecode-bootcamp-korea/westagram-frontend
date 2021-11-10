@@ -1,0 +1,94 @@
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.loginWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.login {
+  width: 360px;
+  height: 400px;
+  border: 1px solid #e6e6e6;
+  margin-top: 30px;
+}
+
+.login .logoWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.login .logoWrapper .logo {
+  font-family: "Lobster", cursive;
+  color: #262626;
+  width: 175px;
+  font-size: 38px;
+  margin: 22px 86.5px 12px;
+}
+
+.input {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.input * {
+  width: 258px;
+  height: 36px;
+  margin: 9px 8px 7px 8px;
+}
+
+.input input {
+  background-color: #fafafa;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+
+.input input:focus {
+  outline: none;
+  border: 1px solid darkgray;
+}
+
+.input input::placeholder {
+  font-size: 12px;
+}
+
+.input input::-ms-value {
+  font-size: 12px;
+  text-indent: 5px;
+}
+
+.loginBtn {
+  width: 258px;
+  height: 36px;
+  margin: 8px 40px;
+  background-color: #c4e1fb;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  color: white;
+  font-size: 18px;
+}
+
+.loginBtn.active {
+  background-color: #0095f6;
+}
+
+.loginBtn.active:hover {
+  cursor: pointer;
+}
+
+.forgotPwd {
+  display: flex;
+  justify-content: center;
+  margin-top: 90px;
+}
+
+.forgotPwd a {
+  text-decoration: none;
+  color: #345e87;
+}
