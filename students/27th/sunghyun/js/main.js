@@ -22,7 +22,6 @@ function makeComment() {
   commentInput.value = '';
 }
 commentInput.addEventListener('keyup', (e) => {
-  // 클라스가 있는지 확인해줘야하나?
   if (!commentInput.value) {
     addCommentBtn.classList.add('mainBtn--disable');
     addCommentBtn.disabled = true;

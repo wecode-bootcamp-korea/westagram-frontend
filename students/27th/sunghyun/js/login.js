@@ -6,9 +6,11 @@ id.addEventListener('keyup', checkloginForm);
 password.addEventListener('keyup', checkloginForm);
 
 function checkloginForm() {
-  if (!!id.value && !!password.value) {
-    loginBtn.classList.remove('loginBtn--disable');
-    return;
-  }
-  loginBtn.classList.add('loginBtn--disable');
+  const allchecked = !!id.value && !!password.value;
+
+  allchecked
+    ? loginBtn.classList.remove('loginBtn--disable')
+    : loginBtn.classList.add('loginBtn--disable');
+
+  loginBtn.disabled = !allchecked;
 }
