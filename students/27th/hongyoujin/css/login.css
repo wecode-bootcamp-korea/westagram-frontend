@@ -1,0 +1,224 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(250, 250, 250, 0.5);
+}
+section {
+  margin: 32px 0 auto 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+aside {
+  width: 454px;
+  height: 618px;
+  margin: 0 -15px 0 -35px;
+}
+.phone {
+  /* width: 454px; */
+  background-image: url("../imgs/instagram_phone_mockup.png");
+  background-size: 100%;
+  position: relative;
+}
+.phone_screen > img {
+  width: 242px;
+  height: 430px;
+  position: relative;
+  top: 98px;
+  left: 150px;
+}
+main {
+  width: 348px;
+  height: 618px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+.login {
+  border: 0.2px solid rgb(210, 210, 210, 0.7);
+  background-color: white;
+  width: 100%;
+  height: 382px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-top: 32px;
+  /* padding:10px; */
+}
+.logo {
+  font-family: "Lobster", cursive;
+  font-size: 40px;
+  margin: 20px 0 16px 0;
+}
+.login_form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+input {
+  width: 252px;
+  height: 34px;
+  margin: 3px 0;
+  padding-left: 10px;
+  border: 0.2px solid rgb(210, 210, 210, 0.7);
+  border-radius: 3px;
+  background-color: rgba(245, 245, 245, 0.4);
+  /* font-size: 14px; */
+}
+input:focus {
+  outline: 0.4px solid rgb(210, 210, 210, 0.8);
+}
+input::placeholder {
+  font-size: 0.9em;
+}
+.login_button {
+  width: 266px;
+  height: 30px;
+  border: none;
+  border-radius: 3px;
+  background-color: rgba(0, 147, 245, 0.3);
+  color: white;
+  font-weight: bold;
+  margin: 12px 0;
+  /* cursor: pointer; */
+}
+.or_option {
+  position: relative;
+}
+.line {
+  width: 276px;
+  height: 1px;
+  background-color: lavender;
+}
+.or_option > p {
+  position: absolute;
+  top: -5px;
+  left: 38%;
+  z-index: 99;
+  background-color: white;
+  padding: 0 20px;
+  font-size: 12px;
+}
+.option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.login_facebook_button {
+  border: none;
+  background-color: white;
+  margin: 18px 0;
+  width: 100%;
+  cursor: pointer;
+}
+.fa-facebook-square {
+  color: #385185;
+}
+
+.facebook_text {
+  color: #385185;
+  font-weight: bold;
+  font-size: 14px;
+}
+.forget_option {
+  font-size: 12px;
+  color: #2d5288;
+  margin-bottom: 2px;
+}
+.join {
+  border: 0.2px solid rgb(210, 210, 210, 0.7);
+  background-color: white;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+.join > p {
+  font-size: 14px;
+}
+.join_text {
+  color: #0095f6;
+  font-weight: bold;
+  margin-left: 8px;
+  font-size: 14px;
+}
+.download {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.download > p {
+  font-size: 14px;
+  margin: 22px 0;
+}
+.download_button {
+  width: 136px;
+  height: 40px;
+  background-color: black;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin: 0 3px;
+  position: relative;
+}
+.download_button > i {
+  position: absolute;
+  top: 7px;
+  left: 12px;
+  font-size: 25px;
+  color: white;
+}
+.download_button > div {
+  position: absolute;
+  top: 7px;
+  right: 12px;
+}
+.download_button > div > p {
+  color: white;
+  font-size: 12px;
+  /* margin-top: 2px; */
+}
+footer {
+  height: 105px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 60px 0 30px 0;
+}
+.footer_info {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+.footer_info > a {
+  margin: 0 8px;
+  color: grey;
+}
+.footer_language {
+  font-size: 12px;
+  color: grey;
+  margin: 14px 0;
+}
+.footer_language > select {
+  border: none;
+  font-size: 12px;
+  color: grey;
+}
+.footer_language > select:focus {
+  outline: none;
+}
+.footer_language > span {
+  margin: 0 16px;
+}
