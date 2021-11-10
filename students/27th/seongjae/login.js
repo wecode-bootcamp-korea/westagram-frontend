@@ -22,7 +22,11 @@ passwordInput.addEventListener("keyup", (e) => {
 });
 
 $button.addEventListener("click", () => {
-  location.href = "main.html";
+  if (handleIdInput.length > 8 && handlepasswordInput.length >= 1) {
+    location.href = "main.html";
+  } else {
+    alert("아이디를 8자리이상 혹은 비밀번호를 입력해주세요.");
+  }
 });
 
 //color: #0095F6
