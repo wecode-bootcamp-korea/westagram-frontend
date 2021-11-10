@@ -17,13 +17,13 @@
         <div class="form-container">
           <form id="login">
             <div class="input-wrapper">
-              <input type="text" placeholder="아이디" />
+              <input type="text" placeholder="아이디" id="id" />
             </div>
             <div class="input-wrapper">
-              <input type="password" placeholder="비밀번호" />
+              <input type="password" placeholder="비밀번호" id="pw" />
             </div>
             <div class="input-wrapper">
-              <button>로그인</button>
+              <button id="login-button" disabled>로그인</button>
             </div>
             <div class="input-wrapper pw-remind">
               <a href="#">비밀번호를 잊으셨나요?</a>
@@ -32,5 +32,7 @@
         </div>
       </div>
     </main>
+
+    <script src="js/login.js"></script>
   </body>
 </html>
