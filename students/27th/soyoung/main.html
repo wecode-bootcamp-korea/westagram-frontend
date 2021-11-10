@@ -11,9 +11,299 @@
       href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style/common.css" />
-    <link rel="stylesheet" href="style/main.css" />
+    <link rel="stylesheet" href="css/common.css" />
+    <link rel="stylesheet" href="css/main.css" />
     <script src="js/main.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <header id="header">
+      <div class="inner-container">
+        <h1 id="westagramLogo">westagram</h1>
+        <!-- Search Input -->
+        <div class="header__wrap-input">
+          <input
+            type="text"
+            value
+            id="searchKeyWord"
+            class="header__search-input"
+            placeholder="검색"
+          />
+          <button
+            type="button"
+            id="searchClear"
+            class="header__search-clearBtn"
+          >
+            <img src="images/search_clear.png" alt="검색 삭제 버튼" />
+          </button>
+        </div>
+        <!-- Navbar -->
+        <nav>
+          <ul class="navbar__menus">
+            <li class="navbar__menu">
+              <a href="#">
+                <img src="images/home.png" alt="홈으로 이동버튼"
+              /></a>
+            </li>
+            <li class="navbar__menu">
+              <a href="#">
+                <img src="images/message.png" alt="메세지페이지 이동버튼"
+              /></a>
+            </li>
+            <li class="navbar__menu">
+              <a href="#">
+                <img src="images/stotyadd.png" alt="스토리추가페이지 이동버튼"
+              /></a>
+            </li>
+            <li class="navbar__menu">
+              <a href="#">
+                <img src="images/explore.png" alt="탐색페이지 이동버튼"
+              /></a>
+            </li>
+            <li class="navbar__menu">
+              <a href="#">
+                <img src="images/heart.png" alt="하트알람페이지 이동버튼"
+              /></a>
+            </li>
+            <li class="navbar__menu">
+              <a href="#">
+                <img src="images/profile.png" alt="프로필페이지 이동버튼"
+              /></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main id="main">
+      <div class="inner-container">
+        <!-- Feeds -->
+        <section class="feeds">
+          <!-- Feed -->
+          <article class="feed">
+            <!-- User info -->
+            <div class="feed__header">
+              <div class="feed__user-info user__info">
+                <a href="" class="feed__link-profile user__avartar"
+                  ><img src="images/user1_avatarimage.png" alt="프로필로 이동"
+                /></a>
+                <div class="feed__user__desc user__desc">
+                  <a class="feed__user__id user__id">cafeWeCoffee</a>
+                  <a class="feed__user__locator user__sub-desc">
+                    카페 위커피 선릉점 - Cafe WeCoffee
+                  </a>
+                </div>
+              </div>
+              <button class="feed__more-btn">
+                <img src="images/morebutton.png" alt="더보기 버튼" />
+              </button>
+            </div>
+            <!-- Images -->
+            <div class="feed__wrap-images">
+              <img
+                class="feed__images"
+                src="images/feedImage.png"
+                alt="크리스마스 트리"
+              />
+            </div>
+            <!-- Feed Info -->
+            <div class="feed__info">
+              <!-- Action button -->
+              <div class="info__action-btns">
+                <div class="action-btns__left">
+                  <div id="heartToggleBtn" class="action-btn">
+                    <img src="images/heart.png" alt="하트 토글버튼" />
+                  </div>
+                  <a id="commentAddBtn" class="action-btn">
+                    <img src="images/commentbutton.png" alt="코멘트 이동버튼" />
+                  </a>
+                  <a id="meassageWriteBtn" class="action-btn">
+                    <img src="images/message.png" alt="메세지페이지 이동버튼" />
+                  </a>
+                </div>
+                <div id="favoritesToggleBtn" class="action-btn">
+                  <img
+                    src="images/favoritsbutton.png"
+                    alt="즐겨찾기 토글버튼"
+                  />
+                </div>
+              </div>
+              <!-- Like count -->
+              <span class="info__like-count">좋아요 452개</span>
+              <!-- Content -->
+              <p class="info__cont">
+                <a href="" title="cafeWeCoffee" class="cont__user-id"
+                  >cafeWeCoffee</a
+                >
+                11월 카페 위커피 크리스마스 이벤트...&nbsp;
+                <button class="cont__more-btn">더 보기</button>
+              </p>
+              <!-- Comment -->
+              <ul class="info__comments" id="feedComments">
+                <li class="info__comment">
+                  <div class="comment__left">
+                    <a class="comment__user-id" href="">weweco</a
+                    ><span class="comment__cont"
+                      >벌써 크리스마스가 다가오네요~🎄</span
+                    >
+                  </div>
+                  <button id="commentHeartToggleBtn" class="comment__heart-btn">
+                    <img src="images/heart.png" alt="하트 버튼" />
+                  </button>
+                </li>
+              </ul>
+              <!-- Desciption comment -->
+              <span class="info__feed-time">12시간 전</span>
+            </div>
+            <!-- Comment Input -->
+            <div class="feed__comment-input">
+              <input
+                type="text"
+                name="comment"
+                id="commentInput"
+                class="comment__input"
+                placeholder="댓글 달기..."
+              />
+              <button
+                type="button"
+                id="commentAddBtn"
+                class="comment__add-btn"
+                disabled
+              >
+                게시
+              </button>
+            </div>
+          </article>
+        </section>
+        <!-- Main-right -->
+        <section class="main-right">
+          <!-- Personal User Info -->
+          <div class="personal">
+            <div class="personal__user-info user__info">
+              <a href="" class="personal__link-profile user__avartar">
+                <img src="images/user2_avatarimage.png" alt="프로필 이미지" />
+              </a>
+              <div class="personal__user-desc user__desc">
+                <a class="personal__link-profile user__id">WeCoffee</a>
+                <p class="personal__sub-des user__sub-desc">위커피</p>
+              </div>
+            </div>
+            <button class="personal__trans-btn">전환</button>
+          </div>
+          <!-- Recommend -->
+          <div class="recommend">
+            <div class="recommend__tit">
+              <span>회원님을 위한 추천</span>
+              <button class="recommend__more-btn" type="button">
+                모두 보기
+              </button>
+            </div>
+            <ul class="recommend__lists">
+              <li class="recommend__list">
+                <div class="user__info">
+                  <a class="recommend__link-profile user__avartar">
+                    <img
+                      src="images/user3_avatarimage.png"
+                      alt="프로필로 이동"
+                    />
+                  </a>
+                  <div class="recommend__user-desc user__desc">
+                    <a class="recommend__link-profile user__id"
+                      >yourDiaryCoffee</a
+                    >
+                    <div class="recommend__sub-desc user__sub-desc">
+                      Instagram 추천
+                    </div>
+                  </div>
+                </div>
+                <button class="recommend__follow-btn" type="button">
+                  팔로우
+                </button>
+              </li>
+              <li class="recommend__list">
+                <div class="user__info">
+                  <a class="recommend__link-profile user__avartar">
+                    <img
+                      src="images/user4_avatarimage.png"
+                      alt="프로필로 이동"
+                    />
+                  </a>
+                  <div class="recommend__user-desc user__desc">
+                    <a class="recommend__link-profile user__id"
+                      >yourDiaryCoffee</a
+                    >
+                    <div class="recommend__sub-desc user__sub-desc">
+                      Instagram 추천
+                    </div>
+                  </div>
+                </div>
+                <button class="recommend__follow-btn" type="button">
+                  팔로우
+                </button>
+              </li>
+              <li class="recommend__list">
+                <div class="user__info">
+                  <a class="recommend__link-profile user__avartar">
+                    <img
+                      src="images/user5_avatarimage.png"
+                      alt="프로필로 이동"
+                    />
+                  </a>
+                  <div class="recommend__user-desc user__desc">
+                    <a class="recommend__link-profile user__id"
+                      >yourDiaryCoffee</a
+                    >
+                    <div class="recommend__sub-desc user__sub-desc">
+                      Instagram 추천
+                    </div>
+                  </div>
+                </div>
+                <button class="recommend__follow-btn" type="button">
+                  팔로우
+                </button>
+              </li>
+            </ul>
+          </div>
+          <footer>
+            <nav class="footer-nav">
+              <ul class="footer-nav__items">
+                <li class="footer-nav__item">
+                  <a href="" target="_blank">소개</a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="" target="_blank">도움말</a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="" target="_blank">홍보 센터</a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="" target="_blank">API</a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="" target="_blank">채용정보</a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="" target="_blank">개인정보처리방침</a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="" target="_blank">약관</a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="" target="_blank">위치</a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="" target="_blank">인기 계정</a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="" target="_blank">해시 태그</a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="" target="_blank">언어</a>
+                </li>
+              </ul>
+            </nav>
+            <span class="copylight">© 2021 Westagram from Meta</span>
+          </footer>
+        </section>
+      </div>
+    </main>
+  </body>
 </html>
