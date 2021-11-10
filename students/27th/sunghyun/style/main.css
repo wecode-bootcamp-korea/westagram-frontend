@@ -12,7 +12,7 @@ nav {
 }
 .navWrapper {
   width: 100%;
-  max-width: 800px;
+  max-width: 930px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -48,26 +48,33 @@ nav img {
   position: relative;
   justify-content: center;
   align-items: center;
-  padding: 0;
-  font-size: 10px;
+  padding: 3px;
+  font-size: 14px;
+  width: 214px;
 }
-.search span {
-  position: absolute;
-  color: var(--color-light-gray);
-  font-size: 11px;
-}
+
 .search input {
   text-align: center;
-  font-size: 12px;
-  padding: 3px 0;
-  width: 180px;
+  font-size: 15px;
+  /* padding: 3px 0; */
+  width: 100%;
+}
+.searchText {
+  position: absolute;
+}
+.searchText span {
+  color: var(--color-light-gray);
+  font-size: 15px;
+}
+.searchText i {
+  position: relative;
+  top: -1px;
+  margin-right: 5px;
+  font-size: 11px;
+  color: var(--color-light-gray);
 }
 .searchText--none {
   opacity: 0;
-}
-
-.search span i {
-  margin-right: 5px;
 }
 .navBtnWrapper {
   display: flex;
@@ -109,7 +116,7 @@ main {
   position: relative;
   /* top: 100px; */
   margin-top: 90px;
-  max-width: 800px;
+  max-width: 930px;
   width: 100%;
   /* height: 100%; */
   justify-content: center;
@@ -131,25 +138,31 @@ main img {
   margin-bottom: 20px;
 }
 .feedpadding {
-  padding: 0 15px;
+  padding: 0 16px;
 }
 .feedHeader {
   display: flex;
   justify-content: space-between;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 14px;
+  padding-bottom: 14px;
 }
 .feedProfile {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.feedProfile b {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.feedProfileInfo {
   margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  overflow: hidden;
+}
+.feedProfileInfo b {
   font-size: 16px;
+}
+.feedProfileInfo span {
+  font-size: 14px;
 }
 .feedHeader .fa-ellipsis-h {
   font-size: 13px;
@@ -157,8 +170,8 @@ main img {
   margin: auto 0;
 }
 .feedImg {
-  width: 550px;
-  max-height: 570px;
+  width: 614px;
+  max-height: 614px;
   height: 100%;
   object-fit: cover;
   border-radius: 0;
@@ -169,20 +182,25 @@ main img {
   margin-top: 7px;
 }
 .feedBtnBox i {
-  font-size: 20px;
+  font-size: 24px;
   color: #807d7d;
 }
 .btnsLeft {
   display: flex;
 }
-
+.btnsLeft button {
+  padding: 8px;
+}
+.btnsLeft .liked {
+  padding-left: 0;
+}
 .heart--liked i {
   color: #ed4956;
 }
 .whoLiked {
   display: flex;
   align-items: center;
-  font-size: 13px;
+  font-size: 14px;
 }
 .whoLiked b {
   font-weight: 700;
@@ -199,7 +217,8 @@ main img {
 }
 .feedDescription,
 .feedCommentText {
-  font-size: 13px;
+  font-size: 14px;
+  margin-bottom: 4px;
 }
 .feedComment {
   padding: 1px 0;
@@ -368,7 +387,7 @@ footer > * {
   line-height: 1.3em;
 }
 .copyright {
-  width: 280px;
+  /* width: 290px; */
   display: block;
   margin-top: 10px;
 }
