@@ -4,6 +4,7 @@ const loginBtn = document.querySelector('.loginBtn');
 const loginForm = document.querySelector('.inputWapper');
 
 function checkLoginForm() {
+  // console.log(loginForm.value);
   const allchecked = !!id.value && !!password.value;
 
   allchecked

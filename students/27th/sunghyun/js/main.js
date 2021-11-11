@@ -5,22 +5,42 @@ const addCommentBtn = document.querySelector('#addCommentBtn');
 const search = document.querySelector('#search');
 const searchInput = search.firstElementChild;
 const searchText = search.lastElementChild;
+const feedComments = document.querySelector('.feedComments');
+let commentId = 2;
 
 function makeCommentInner(nickName, comment) {
   return `<p class="feedCommentText">
   <b class="commentProfile">${nickName}</b>
   <span>${comment}</span>
   </p>
-  <i class="far fa-heart"></i>`;
+  <div class="commentBtn">
+  <i class="far fa-trash-alt" id="t_${commentId}"></i>
+  <i class="far fa-heart"></i>
+</div>`;
 }
 
 function makeComment() {
   const newComment = document.createElement('div');
   newComment.className = 'feedComment';
   newComment.innerHTML = makeCommentInner(userNickName, commentInput.value);
+  newComment.id = `comment_${commentId++}`;
   comments.append(newComment);
   commentInput.value = '';
 }
+
+// SEARCH
+search.addEventListener('click', () => {
+  searchInput.focus();
+});
+searchInput.addEventListener('blur', () => {
+  if (!!searchInput.value) return;
+  searchText.classList.remove('searchText--none');
+});
+searchInput.addEventListener('focus', () => {
+  searchText.classList.add('searchText--none');
+});
+
+// COMMENT INPUT
 commentInput.addEventListener('keyup', (e) => {
   if (!commentInput.value) {
     addCommentBtn.classList.add('mainBtn--disable');
@@ -35,13 +55,15 @@ commentInput.addEventListener('keyup', (e) => {
 });
 addCommentBtn.addEventListener('click', makeComment);
 
-search.addEventListener('click', () => {
-  searchInput.focus();
-});
-searchInput.addEventListener('blur', () => {
-  if (!!searchInput.value) return;
-  searchText.classList.remove('searchText--none');
-});
-searchInput.addEventListener('focus', () => {
-  searchText.classList.add('searchText--none');
+// COMMENTS REACT
+feedComments.addEventListener('click', (e) => {
+  const target = e.target;
+  const targetClass = target.className;
+  const targetId = target.id;
+  if (targetClass.includes('fa-trash-alt')) {
+    const removeTarget = document.querySelector(
+      `#comment_${targetId.split('_')[1]}`
+    );
+    removeTarget.remove();
+  }
 });

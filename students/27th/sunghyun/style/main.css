@@ -101,8 +101,6 @@ nav img {
 }
 
 /* MAIN */
-html {
-}
 body {
   display: flex;
   justify-content: center;
@@ -227,7 +225,14 @@ main img {
 .commentProfile {
   font-weight: 700;
 }
-.feedComment .fa-heart {
+.fa-trash-alt {
+  opacity: 0;
+}
+.feedComment:hover .fa-trash-alt {
+  opacity: 1;
+  cursor: pointer;
+}
+.feedComment .far {
   color: var(--color-gray);
   font-size: 5px;
   margin-right: 6px;
@@ -336,10 +341,10 @@ main img {
   border: 2px solid transparent;
   background: linear-gradient(#fff, #fff) padding-box,
     linear-gradient(to left bottom, #ff5f5f, #fdae65) border-box;
-  /* background: linear-gradient(to left bottom, #fff, #fff) padding-box,
-    linear-gradient(to left bottom, #ff5f5f, #fdae65) border-box; */
   padding: 1px;
   object-fit: cover;
+  /* background: linear-gradient(to left bottom, #fff, #fff) padding-box,
+      linear-gradient(to left bottom, #ff5f5f, #fdae65) border-box; */
 }
 
 .storyInfo {
