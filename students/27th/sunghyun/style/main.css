@@ -144,6 +144,7 @@ main img {
 }
 
 .feeds {
+  flex: 7;
   margin-bottom: 20px;
   font-size: 11px;
 }
@@ -179,19 +180,26 @@ main img {
 .feedProfileInfo span {
   font-size: 14px;
 }
-
+.feed {
+  max-width: 614px;
+}
 .feedHeader .fa-ellipsis-h {
   margin: auto 0;
   font-size: 13px;
   color: var(--color-gray);
 }
-
-.feedImg {
-  width: 614px;
-  max-height: 614px;
+.feedImgWrapper {
+  position: relative;
+  overflow: hidden;
   height: 100%;
+  max-width: 614px;
+  max-height: 614px;
+}
+.feedImg {
   border-radius: 0;
   object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .feedBtnBox {
@@ -322,6 +330,7 @@ main img {
 
 /* MAIN RIGHT */
 .main-right {
+  flex: 3;
   margin-left: 20px;
 }
 
