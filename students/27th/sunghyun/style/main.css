@@ -217,6 +217,7 @@ main img {
   font-size: 14px;
   margin-bottom: 4px;
 }
+/* COMMENT */
 .feedComment {
   padding: 1px 0;
   display: flex;
@@ -225,12 +226,27 @@ main img {
 .commentProfile {
   font-weight: 700;
 }
+.commentBtn {
+  display: flex;
+}
 .fa-trash-alt {
   opacity: 0;
 }
 .feedComment:hover .fa-trash-alt {
   opacity: 1;
   cursor: pointer;
+}
+.hearts {
+  position: relative;
+}
+.hearts .fas.fa-heart {
+  color: #ed4956;
+  position: absolute;
+  left: 0;
+  opacity: 0;
+}
+.hearts .fas.fa-heart.showHeart {
+  opacity: 1;
 }
 .feedComment .far {
   color: var(--color-gray);

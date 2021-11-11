@@ -15,7 +15,10 @@ function makeCommentInner(nickName, comment) {
   </p>
   <div class="commentBtn">
   <i class="far fa-trash-alt" id="t_${commentId}"></i>
+  <div class="hearts">
   <i class="far fa-heart"></i>
+  <i class="fas fa-heart"></i>
+</div>
 </div>`;
 }
 
@@ -65,5 +68,7 @@ feedComments.addEventListener('click', (e) => {
       `#comment_${targetId.split('_')[1]}`
     );
     removeTarget.remove();
+    return;
   }
+  targetClass.includes('fa-heart') && target.classList.toggle('showHeart');
 });
