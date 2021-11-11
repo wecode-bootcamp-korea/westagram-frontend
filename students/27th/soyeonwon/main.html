@@ -7,10 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style/common.css">
-  <link rel="stylesheet" href="style/main.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style/common.css" />
+  <link rel="stylesheet" href="style/main.css" />
   <script defer src="js/main.js"></script>
 </head>
 
@@ -18,14 +18,17 @@
 
   <nav>
     <div class="head_logo">
-      <img src="img/instagram.png" alt="">
+      <img src="img/instagram.png" alt="인스타그램로고" />
       <span class="logo">westagram</span>
     </div>
-    <input type="text">
+    <div class="search_box">
+      <input type="text" placeholder="검색" />
+      <img src="img/search.png" alt="검색아이콘" />
+    </div>
     <div class="head_icon">
-      <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png" alt="">
-      <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" alt="">
-      <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png" alt="">
+      <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png" alt="" />
+      <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" alt="" />
+      <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png" alt="" />
     </div>
   </nav>
 
@@ -34,25 +37,25 @@
       <article>
         <div class="profile_box">
           <div>
-            <img src="img/kk.jpg" alt="" class="profile_img">
-            <div class="username">wecode_bootcamp</div>
+            <img src="img/kk.jpg" alt="" class="profile_img" />
+            <div class="username">soyeonwon</div>
           </div>
-          <img src="img/option.png" alt="" id="option">
+          <img src="img/option.png" alt="" id="option" />
         </div>
-        <img src="img/kk.jpg" alt="" class="feed_img">
+        <img src="img/kk.jpg" alt="" class="feed_img" />
 
         <section class="feeds_icon">
           <div>
-            <img src=" https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" alt="">
-            <img src="img/bubble.png" alt="">
-            <img src="img/send.png" alt="">
+            <img src=" https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" alt="" />
+            <img src="img/bubble.png" alt="" />
+            <img src="img/send.png" alt="" />
           </div>
-          <img src="img/save.png" alt="">
+          <img src="img/save.png" alt="" />
         </section>
 
         <section class="likes_box">
-          <img src="img/kk.jpg" alt="" class="likes_profile_img">
-          <span>soyeonwon</span>
+          <img src="img/img01.png" alt="" class="likes_profile_img" />
+          <span>wecode_bootcamp</span>
           <span>님&nbsp</span>
           <span>외 4명</span>
           <span>이 좋아합니다</span>
@@ -63,23 +66,23 @@
           <span>어쩌구 저쩌구</span>
         </section>
 
-        <div class="comments_list" hidden>댓글 추가 추가 추가</div>
+        <ul class="comments_list"></ul>
         <div class="time">54분 전</div>
 
-        <section class="comments_box">
-          <input type="text" placeholder="댓글 달기...">
-          <button>게시</button>
-        </section>
+        <form class="comments_box">
+          <input type="text" placeholder="댓글 달기..." class="comments_input">
+          <button class="enter">게시</button>
+        </form>
       </article>
 
     </div>
 
     <div class="main-right">
       <div class="profile_box_side">
-        <img src="img/kk.jpg" alt="" class="profile_box_side_img">
+        <img src="img/img01.png" alt="" class="profile_box_side_img">
         <div>
           <div class="username">wecode_bootcamp</div>
-          <div>weCode - 위코드</div>
+          <div class="text">weCode | 위코드</div>
         </div>
       </div>
       <div class="story_box">
@@ -89,24 +92,24 @@
         </div>
         <div>
           <div class="profile_box_story">
-            <img src="img/kk.jpg" alt="" class="profile_box_story_img">
+            <img src="img/img02.jpg" alt="" class="profile_box_story_img">
             <div>
               <div class="username">wecode_bootcamp</div>
-              <div>16분 전</div>
+              <div class="text">16분 전</div>
             </div>
           </div>
           <div class="profile_box_story">
-            <img src="img/kk.jpg" alt="" class="profile_box_story_img">
+            <img src="img/img03.jpg" alt="" class="profile_box_story_img">
             <div>
               <div class="username">wecode_bootcamp</div>
-              <div>3시간 전</div>
+              <div class="text">3시간 전</div>
             </div>
           </div>
           <div class="profile_box_story">
-            <img src="img/kk.jpg" alt="" class="profile_box_story_img">
+            <img src="img/img04.jpg" alt="" class="profile_box_story_img">
             <div>
               <div class="username">wecode_bootcamp</div>
-              <div>20시간 전</div>
+              <div class="text">20시간 전</div>
             </div>
           </div>
         </div>
@@ -120,28 +123,28 @@
         </div>
 
         <div class="profile_box_recommend"">
-          <img src=" img/kk.jpg" alt="" class="profile_box_recommend_img">
+          <img src="img/img05.jpg" alt="" class="profile_box_recommend_img">
           <div>
             <div class="username">wecode_bootcamp</div>
-            <div>weCode - 위코드</div>
+            <div class="text">wecode님 외 12명이 팔로우 ...</div>
           </div>
           <button>팔로우</button>
         </div>
 
         <div class="profile_box_recommend"">
-          <img src="img/kk.jpg" alt="" class="profile_box_recommend_img">
+          <img src="img/img06.jpg" alt="" class="profile_box_recommend_img">
           <div>
             <div class="username">wecode_bootcamp</div>
-            <div>weCode - 위코드</div>
+            <div class="text">wecode_bootcamp님 외 4 ...</div>
           </div>
           <button>팔로우</button>
         </div>
 
         <div class="profile_box_recommend"">
-          <img src=" img/kk.jpg" alt="" class="profile_box_recommend_img">
+          <img src="img/img07.jpg" alt="" class="profile_box_recommend_img">
           <div>
             <div class="username">wecode_bootcamp</div>
-            <div>weCode - 위코드</div>
+            <div class="text">wecode님 외 7명이 팔로우 ...</div>
           </div>
           <button>팔로우</button>
         </div>
