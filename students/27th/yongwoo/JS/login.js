@@ -11,7 +11,6 @@ nameBtn.addEventListener('keyup', function(){
     } else {
         loginBtn.style.backgroundColor = "#b2dffc";
     }
-    console.dir(nameBtn.value)
 });
 
 passwordBtn.addEventListener('keyup', function(){
