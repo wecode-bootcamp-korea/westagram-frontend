@@ -17,6 +17,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 10px;
 }
 
 nav img {
@@ -87,6 +88,7 @@ nav img {
 
 .navBtnWrapper {
   display: flex;
+  padding: 0 10px;
 }
 
 .navBtn {
@@ -127,6 +129,7 @@ main {
   position: relative;
   margin-top: 90px;
   max-width: 930px;
+  padding: 0 10px;
 }
 
 main img {
@@ -462,4 +465,13 @@ footer > * {
 .copyright {
   display: block;
   margin-top: 10px;
+}
+
+@media (max-width: 900px) {
+  body {
+    min-width: 500px;
+  }
+  .main-right {
+    display: none;
+  }
 }
