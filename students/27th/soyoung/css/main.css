@@ -23,15 +23,15 @@ body {
 
 .user__id {
   display: block;
+  margin-bottom: 4px;
   font-size: var(--font-small);
   font-weight: var(--weight-semi-bold);
-  margin-bottom: 4px;
 }
 
 .user__sub-desc {
-  font-size: var(--font-micro);
-  color: var(--color-dark-gray);
   margin-top: 8px;
+  color: var(--color-dark-gray);
+  font-size: var(--font-micro);
 }
 
 /* More */
@@ -48,7 +48,6 @@ body {
 #header .inner-container {
   display: flex;
   justify-content: space-between;
-  flex-direction: row;
   align-items: center;
 }
 
@@ -101,18 +100,16 @@ body {
 /* Feed Header*/
 .feeds {
   flex: 6;
-  width: 614px;
   margin-right: 24px;
 }
 
 .feed {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 614px;
   border: 1px solid var(--color-gray);
   border-radius: var(--size-border-radius);
   background-color: var(--color-white);
-  overflow: hidden;
 }
 
 .feed__header {
@@ -164,9 +161,9 @@ body {
 }
 
 .info__like-count {
+  padding: 8px 8px;
   font-size: var(--font-small);
   font-weight: var(--weight-semi-bold);
-  padding: 8px 8px;
 }
 
 .info__cont {
@@ -193,8 +190,8 @@ body {
 }
 
 .comment__user-id {
-  font-weight: var(--weight-bold);
   margin-right: 4px;
+  font-weight: var(--weight-bold);
 }
 
 .comment__heart-btn img {
@@ -204,9 +201,9 @@ body {
 
 /* Feed Time */
 .info__feed-time {
-  font-size: 8px;
-  color: var(--color-dark-gray);
   padding: 8px;
+  color: var(--color-dark-gray);
+  font-size: 8px;
 }
 
 /* Feed Comment Input*/
@@ -223,8 +220,8 @@ body {
 
 .comment__add-btn {
   flex: 1;
-  text-align: right;
   color: var(--color-opacity-blue);
+  text-align: right;
 }
 
 .comment__add-btn:disabled {
@@ -234,7 +231,6 @@ body {
 /* Main-right */
 .main-right {
   flex: 4;
-  width: 293px;
   display: flex;
   flex-direction: column;
 }
@@ -245,6 +241,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 12px 0 24px 0;
+  width: 100%;
 }
 
 .personal__link-profile img {
@@ -256,18 +253,22 @@ body {
 }
 
 .personal__trans-btn {
-  font-weight: var(--weight-semi-bold);
   color: var(--color-blue);
+  font-weight: var(--weight-semi-bold);
 }
 
 /* Recommend */
+.recommend {
+  width: 100%;
+}
+
 .recommend__tit {
   display: flex;
   justify-content: space-between;
+  padding-bottom: 16px;
   color: var(--color-dark-gray);
   font-size: var(--font-small);
   font-weight: var(--weight-semi-bold);
-  padding-bottom: 16px;
 }
 
 .recommend__more-btn {
@@ -292,6 +293,11 @@ body {
 }
 
 /* Footer */
+.footer-nav {
+  width: 100%;
+  font-size: var(--font-micro);
+}
+
 .footer-nav__item {
   display: inline-block;
 }

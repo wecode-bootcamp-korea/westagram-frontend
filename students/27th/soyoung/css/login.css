@@ -7,13 +7,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
   background-color: var(--color-light-gray);
+  text-align: center;
 }
 
 /* Container */
 .login-container {
-  width: 350px;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -22,7 +21,6 @@ body {
 
 /* Login Form */
 .login__form {
-  width: 100%;
   margin: 10px auto;
   padding: 30px 35px;
   border: 1px solid var(--color-gray);
@@ -30,12 +28,11 @@ body {
 }
 
 #westagramLogo {
-  font-size: 51px;
   margin: 22px auto 12px;
+  font-size: 51px;
 }
 
 #userLogin {
-  width: 100%;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -44,13 +41,13 @@ body {
 }
 
 .login__input {
-  width: 100%;
-  font-size: var(--font-micro);
+  width: 240px;
   padding: 12px 0px 10px 11px;
   margin: 0 40px 6px;
   border: 1px solid var(--color-gray);
   border-radius: var(--size-border-radius);
   background-color: var(--color-light-gray);
+  font-size: var(--font-micro);
 }
 
 .login__input:focus {
@@ -58,14 +55,14 @@ body {
 }
 
 #loginSubmitBtn {
-  width: 100%;
-  font-size: var(--font-small);
-  font-weight: var(--weight-bold);
-  color: var(--color-white);
+  width: 240px;
   padding: 7px 9px;
   margin-top: 8px;
+  color: var(--color-white);
   border-radius: var(--size-border-radius);
   background-color: var(--color-opacity-blue);
+  font-size: var(--font-small);
+  font-weight: var(--weight-bold);
 }
 
 #loginSubmitBtn:disabled {
@@ -74,15 +71,14 @@ body {
 
 /* Line OR */
 .line-or {
-  position: relative;
   display: block;
-  width: 100%;
-  color: var(--color-dark-gray);
+  width: 240px;
   padding: 15px 0;
+  margin: 0 auto;
+  color: var(--color-dark-gray);
 }
 
 .txt-or {
-  display: inline-block;
   font-size: var(--font-small);
 }
 
@@ -93,48 +89,47 @@ body {
   width: calc(50% - 20px);
   height: 1px;
   margin: 8px 0;
-  vertical-align: top;
   background-color: var(--color-gray);
+  vertical-align: top;
 }
 
 /* Other Login Info*/
 .login__moveToFacebook {
-  display: block;
+  margin-top: 16px;
+  color: var(--color-indigo);
   font-size: var(--font-small);
   font-weight: var(--weight-semi-bold);
-  color: var(--color-indigo);
-  margin-top: 16px;
 }
 
 .login__moveToFacebook img {
   width: 16px;
   height: 16px;
-  vertical-align: top;
   margin-right: 4px;
+  vertical-align: top;
 }
 
 #login__moveToFindPw {
   display: block;
-  font-size: var(--font-micro);
-  font-weight: var(--weight-regular);
-  color: var(--color-indigo);
   margin-top: 18px;
+  color: var(--color-indigo);
+  font-size: var(--font-micro);
 }
 
 /* Login Join */
 .login__join {
-  width: 100%;
-  font-size: var(--font-small);
-  padding: 20px 35px;
+  padding: 24px 35px;
   border: 1px solid var(--color-gray);
   background-color: var(--color-white);
+  font-size: var(--font-small);
 }
 
 .login__join p {
+  width: 320px;
+  margin: 0 auto;
   font-size: inherit;
 }
 
 .join__moveTojoin {
-  font-weight: var(--weight-semi-bold);
   color: var(--color-blue);
+  font-weight: var(--weight-semi-bold);
 }
