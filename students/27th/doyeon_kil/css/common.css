@@ -22,36 +22,37 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
+
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
 html, body {
   height: 100%;
   background-color: rgb(249,249,249);
 }
+
 ol, ul {
 	list-style: none;
 }
+
 blockquote, q {
 	quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
 	content: '';
 	content: none;
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
 
 .small-profile-circle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
   width: 42px;
   height: 42px;
   border: 2px solid transparent;
@@ -69,12 +70,8 @@ table {
 }
 
 .profile-circle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  width: 66px;
-  height: 66px;
+  width: 60px;
+  height: 60px;
   border: 2px solid transparent;
   border-radius: 70%;
   background-image: linear-gradient(white, white), linear-gradient(45deg, rgb(250, 144, 67), rgb(193, 42, 130));
@@ -87,4 +84,23 @@ table {
   height: 56px;
   border: 2px solid transparent;
   border-radius: 70%;
+}
+
+.user-name {
+  display: block;
+  text-decoration-line: none;
+  font-weight: bold;
+  color: #262626;
+  font-size: 14px;
+
+  margin-top: 4px;
+  margin-bottom: 3px;
+}
+
+.user-id {
+  display: block;
+  text-decoration-line: none;
+  font-weight: bold;
+  color: #262626;
+  font-size: 14px;
 }

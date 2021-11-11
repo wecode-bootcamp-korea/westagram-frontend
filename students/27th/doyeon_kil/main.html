@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/main.css" />
+    
 
     <!-- font awesome 5 -->
     <link rel="stylesheet" href="css/all.min.css" />
@@ -58,7 +59,7 @@
             <div class="feed-body">
               <div class="button-wrapper">
                 <div class="button-container">
-                  <button class="button-like"><i class="far fa-heart"></i></button>
+                  <button class="button-like" onclick="feedLikeToggle(this)"><i class="far fa-heart"></i></button>
                   <button class="button-comment"><i class="far fa-comment"></i></button>
                   <button class="button-share"><i class="far fa-paper-plane"></i></button>
                 </div>
@@ -73,9 +74,12 @@
                     <div class="comment main-comment">
                       <label> <a class="user-name" href="#">ralo</a>&nbsp;<span>ㅇㅇ</span> </label>
                     </div>
-                    <div class="comment">
+                    <div id="comment-0" class="comment">
                       <label> <a class="user-name" href="#">um_stil_alive</a>&nbsp;<span>ㅇㅇ</span> </label>
-                      <button><i class="far fa-heart"></i></button>
+                      <label>
+                        <button id="comment-like-button-0" class="comment-like-button" onclick="commentLikeToggle(this)"><i class="far fa-heart"></i></button>
+                        <button id="comment-delete-button-0" class="comment-delete-button" onclick="deleteComment(this)"><i class="fas fa-trash"></i></button>
+                      </label>
                     </div>
                   </div>
                   <div class="feed-time-ago">
@@ -84,8 +88,8 @@
                 </div>
               </div>
               <form id="comment-form" class="comment-input-container">
-                <textarea id="comment-input" class="comment-input" placeholder="댓글 달기..."></textarea>
-                <button class="comment-input-button" type="submit">게시</button>
+                <input id="comment-input" class="comment-input" placeholder="댓글 달기..."></input>
+                <button class="comment-input-button" type="submit" onclick="pushComment()">게시</button>
               </form>
             </div>
           </article>
@@ -93,7 +97,9 @@
         <section class="people-section">
           <div class="people-container">
             <div class="user-container">
-              <img class="profile-img user-profile-img" src="img/ralo.jpeg" />
+              <div class="profile-circle">
+                <img class="profile-img user-profile-img" src="img/ralo.jpeg" />
+              </div>
               <div class="user-info">
                 <label>
                   <a class="user-id" href="#">ralo</a>
@@ -107,7 +113,6 @@
                 <h5>회원님을 위한 추천</h5>
                 <a href="#">모두 보기</a>
               </div>
-              <!-- 팔로우 추천 리스트 시작 -->
               <ul class="recommended-people-list">
                 <li>
                   <img class="small-profile-img recommended-profile-img" src="img/paka.jpeg" />
@@ -142,7 +147,6 @@
                   <button class="follow-button">팔로우</button>
                 </li>
               </ul>
-              <!-- 팔로우 추천 리스트 끝 -->
             </div>
             <div class="corp-etc">
               <ul class="link-list">
