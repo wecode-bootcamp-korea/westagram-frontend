@@ -2,36 +2,100 @@ const postBox = document.querySelector(".postBox");
 const commentBox = document.querySelector(".commentBox");
 const inputvalue = document.querySelector(".input-Box");
 const postButton = document.querySelector(".post");
+const inputBox = document.querySelector(".inputBox");
+const searchBox = document.querySelector(".searchBox");
+const recommendBox = document.createElement("div");
+let temp = 0;
 let divBox = [];
 let number = 0;
-/*
-11/10
-display hidden 속성 class를 가진 글삭제 span태그 동적으로 생성
-마우스 오버시 글삭제 버튼 노출
-글삭제 버튼 누를 시 해당 이벤트 태그의 조상태그에서 부모태그 remove
-*/
+let userList = [];
+
+class SearchList {
+  constructor(id, image, description) {
+    this.id = id;
+    this.image = image;
+    this.description = description;
+  }
+}
+
+let firstFriend = new SearchList(
+  "wecode",
+  "image/image1.png",
+  "djjoiw님의 친구"
+);
+let secondfriend = new SearchList(
+  "wecoda",
+  "image/image1.png",
+  "djjoiw님의 친구"
+);
+let thirdfriend = new SearchList(
+  "wecpda",
+  "image/image1.png",
+  "djjoiw님의 친구"
+);
+let forthFriend = new SearchList(
+  "weqpda",
+  "image/image1.png",
+  "djjoiw님의 친구"
+);
+let fifthfriend = new SearchList(
+  "wzqpda",
+  "image/image1.png",
+  "djjoiw님의 친구"
+);
+userList.push(firstFriend, secondfriend, thirdfriend, forthFriend, fifthfriend);
 
 function heart(event) {
   if (event.target.classList[2] === "heart") {
-    //타겟의 클래스 리스트 2번쨰 인덱스 값이 Heart면 빨갛게 채워주고 빨갛다면 하얗게 만들어 줌
-    event.target.setAttribute("class", "fas fa-heart fullHeart"); // setAttribute속성을 추가하는 것이 아니라 재할당 시킴
+    event.target.setAttribute("class", "fas fa-heart fullHeart");
   } else if (event.target.classList[2] === "fullHeart") {
     event.target.setAttribute("class", "far fa-heart  heart");
-    console.log(event.target.classList);
   }
-  //   const heartParent = event.target.parentNode;
-  //   const a = document.getElementById(heartParent.id);
-  //   console.log(a);
-  //   console.log(commentBox);
-  //   commentBox.removeChild(a);
-  //   commentBox.remove(a); //조상노드에서 이벤트타겟아이디랑 일치하는 부모요소 제거
 }
 
 function doDelete(event) {
   let buttonWrapper = event.target.parentNode;
-  commentBox.removeChild(buttonWrapper);
+  buttonWrapper.remove();
+}
+
+function doRecommend(event) {
+  for (let i = 0; i < temp; i++) {
+    recommendBox.removeChild(recommendBox.firstChild);
+  }
+
+  if (event.target.value.length === 0) {
+    recommendBox.remove();
+  } else {
+    recommendBox.setAttribute("class", "recommendBox"); // 검색추천창 생성
+    searchBox.appendChild(recommendBox);
+    userList.forEach((el) => {
+      if (
+        el["id"].substr(0, event.target.value.length) === event.target.value
+      ) {
+        const recommendWrapper = document.createElement("div");
+        const firstRecommend = document.createElement("div");
+        const imageBox = document.createElement("img");
+        const userID = document.createElement("div");
+        const userDescription = document.createElement("div");
+        const secondFlexBox = document.createElement("div");
+        recommendWrapper.setAttribute("class", "recommendWrapper");
+        imageBox.setAttribute("src", el["image"]);
+        imageBox.setAttribute("class", "recommendImage");
+        recommendBox.appendChild(recommendWrapper);
+        recommendWrapper.appendChild(firstRecommend);
+        recommendWrapper.appendChild(secondFlexBox);
+        secondFlexBox.appendChild(userID).textContent = el["id"];
+        secondFlexBox.appendChild(userDescription).textContent =
+          el["description"];
+        firstRecommend.appendChild(imageBox);
+      }
+    });
+  }
+  temp = recommendBox.childElementCount;
 }
 function init() {
+  inputBox.addEventListener("keyup", doRecommend);
+
   inputvalue.addEventListener("keyup", () => {
     if (inputvalue.value.length > 0) {
       postButton.disabled = false;
@@ -61,7 +125,7 @@ function init() {
       .appendChild(heartIcon)
       .setAttribute("class", "far fa-heart heart");
     divBox[number].appendChild(deleteButton).textContent = "댓글 삭제";
-    heartIcon.addEventListener("click", heart); // 동적으로 생성된 태그 변수 클릭할 시 heart 함수 호출  하지만 실행 로직 이해가 x
+    heartIcon.addEventListener("click", heart);
     deleteButton.addEventListener("click", doDelete);
     inputvalue.value = "";
     number++;
@@ -86,7 +150,7 @@ function init() {
         .appendChild(heartIcon)
         .setAttribute("class", "far fa-heart heart");
       divBox[number].appendChild(deleteButton).textContent = "댓글 삭제";
-      heartIcon.addEventListener("click", heart); // 동적으로 생성된 태그 변수 클릭할 시 heart 함수 호출  하지만 실행 로직 이해가 x
+      heartIcon.addEventListener("click", heart);
       deleteButton.addEventListener("click", doDelete);
       inputvalue.value = "";
       number++;
