@@ -1,303 +1,377 @@
 header {
-    width: 100%;
-    position: fixed;
-    height: 80px;
-    background-color: #fff;
-    border-bottom: 1px solid #dbdbdb;
-    top:0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  position: fixed;
+  height: 80px;
+  background-color: #fff;
+  border-bottom: 1px solid #dbdbdb;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 70%;
-    margin: 20px auto;
-    position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  margin: 20px auto;
+  position: fixed;
 }
-
 
 .logoBar {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
-.logoBar img{
-    width: 30px;
-    margin: 0 10px;
+.logoBar img {
+  width: 30px;
+  margin: 0 10px;
 }
 
-.logoBar .logoName a{
-    text-decoration-line: none;
-    align-items: center;
-    font-size: 30px;
-    border-left: 1px solid #000;
-    width:300px;
-    padding: 0 10px; 
-    font-family: 'Lobster', cursive;
-    color: #000;
+.logoBar .logoName a {
+  text-decoration-line: none;
+  align-items: center;
+  font-size: 30px;
+  border-left: 1px solid #000;
+  width: 300px;
+  padding: 0 10px;
+  font-family: "Lobster", cursive;
+  color: #000;
 }
 
 .searchBar {
-    padding: 0 auto;
-    position: relative;
-} 
-.searchBar input{
-    font-size: 15px;
-    padding: 5px 20px;
-    outline: none;
-    border: 1px solid #dbdbdb;
-    border-radius: 3px;
-    background-color: #fafafa;
-    
+  padding: 0 auto;
+  position: relative;
 }
-.beforeSearch {   
-    position: absolute;
-    left: 46%;
-    top:7px;
-    color: #dbdbdb;
+.searchBar input {
+  font-size: 15px;
+  padding: 5px 20px;
+  outline: none;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  background-color: #fafafa;
+}
+.beforeSearch {
+  position: absolute;
+  left: 46%;
+  top: 7px;
+  color: #dbdbdb;
 }
 .searchBar input::placeholder {
-    color: #dbdbdb;
-
+  color: #dbdbdb;
 }
 .beforeSearch:focus {
-    opacity: 0;
+  opacity: 0;
 }
-
 
 .searchBar .fas {
-    color: #dbdbdb;
+  color: #dbdbdb;
 }
 
-.naviBar a img{
-    width: 30px;
-    margin: 0 10px;
+.naviBar a img {
+  width: 30px;
+  margin: 0 10px;
 }
 
 main {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 article {
-    width: 40%;
-    margin: 120px 0 150px 220px;
-    border: 1px solid #dbdbdb;
+  width: 40%;
+  margin: 120px 0 150px 220px;
+  border: 1px solid #dbdbdb;
 }
 
 .profileBox {
-    height: 60px;
-    display: flex;
-    border-bottom: 1px solid #dbdbdb;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #fff;
+  height: 60px;
+  display: flex;
+  border-bottom: 1px solid #dbdbdb;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
 }
 .profileBox img {
-    width:40px;
-    border-radius: 40px;
-    margin: 5px 10px;
+  width: 40px;
+  border-radius: 40px;
+  margin: 5px 10px;
 }
 
 .profileBox .myId {
-    font-size: 20px;
-    margin-right: 400px;
+  font-size: 20px;
+  margin-right: 400px;
 }
 
 .profileBox .fas {
-    margin-right: 15px;
+  margin-right: 15px;
 }
 
 .imageBox {
-    width: 100%;
+  width: 100%;
 }
 
 .imageBox img {
-    width: 100%;
+  width: 100%;
 }
 
 .estimateBox {
-    width: 100%;
-    height: 50px;
-    font-size: 25px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
+  width: 100%;
+  height: 50px;
+  font-size: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
 }
-.commentBox {
-    width: 20%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    list-style: none;
+.commentBtnBar {
+  width: 20%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
-.commentBox a {
-    text-decoration: none;
+.commentBtnBar a {
+  text-decoration: none;
+  margin: 5px;
 }
 .likeBtn::after {
-    font-family: "FontAwesome"; content: "\f004";
-    color: #000;
-    font-weightL
+  font-family: "FontAwesome";
+  content: "\f004";
+  color: #000;
 }
-.likeBtn:hover::after {
-    font-family: "FontAwesome"; content: "\f004";
-    color: #8e8e8e;
 
-}
 .commentBtn::after {
-    font-family: "FontAwesome"; content: "\f075";
-    color: #000;
+  font-family: "FontAwesome";
+  content: "\f075";
+  color: #000;
+}
+
+.shareBtn::after {
+  font-family: "FontAwesome";
+  content: "\f1d8";
+  color: #000;
+}
+
+.bookmarkBtn::after {
+  margin-right: 10px;
+  font-family: "FontAwesome";
+  content: "\f02e";
+  color: #000;
+}
+
+.likeBtn:hover::after {
+  font-family: "FontAwesome";
+  content: "\f004";
+  color: #8e8e8e;
 }
 .commentBtn:hover::after {
-    font-family: "FontAwesome"; content: "\f075";
-    color: #8e8e8e;
-}
-.shareBtn::after {
-    font-family: "FontAwesome"; content: "\f1d8";
-    color: #000;
+  font-family: "FontAwesome";
+  content: "\f075";
+  color: #8e8e8e;
 }
 .shareBtn:hover::after {
-    font-family: "FontAwesome"; content: "\f1d8";
-    color: #8e8e8e;
-}
-.bookmarkBtn::after {
-    margin-right: 10px;
-    font-family: "FontAwesome"; content: "\f02e";
-    color: #000;
+  font-family: "FontAwesome";
+  content: "\f1d8";
+  color: #8e8e8e;
 }
 .bookmarkBtn:hover::after {
-    margin-right: 10px;
-    font-family: "FontAwesome"; content: "\f02e";
-    color: #8e8e8e;
+  margin-right: 10px;
+  font-family: "FontAwesome";
+  content: "\f02e";
+  color: #8e8e8e;
+}
+.howManyLikes {
+  width: 100%;
+  margin: 5px 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.howManyLikes img {
+  width: 5%;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.commentBox {
+  width: 100%;
+}
+.commentBox ul {
+  list-style: none;
+  text-align: left;
+}
+.commentBox ul li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 5px 10px;
 }
 
+.commentResult a {
+  text-decoration: none;
+  color: #000;
+}
+
+.writeId {
+  font-weight: bolder;
+  padding-right: 5px;
+}
+
+.beforeFewMin {
+  padding: 5px 10px;
+}
+
+.addComment {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+}
 .addComment input {
-    width: 100%;
-    height: 40px;
-    border: none;
-    padding: 5px 10px;
-    outline: none;
+  width: 100%;
+  border: none;
+  padding: 10px 10px;
+  outline: none;
+}
+#postBtn {
+  width: 10%;
+  border: none;
+  background-color: #fff;
+  color: #c5e1fa;
+  font-weight: 600;
+  padding: 5px 10px;
 }
 
 .main-right {
-    position: fixed;
-    right: 270px;
-    top: 120px
+  position: fixed;
+  right: 270px;
+  top: 120px;
 }
 .sideContainer {
-    width: 300px;
-    margin-left: 30px;
+  width: 300px;
+  margin-left: 30px;
 }
 
 .showMyId {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 .showMyId img {
-    width: 60px;
-    border-radius: 60px;
+  width: 60px;
+  border-radius: 60px;
 }
 .showMyId div {
-    margin-left: 10px;
+  margin-left: 10px;
 }
-.showMyId h1 {font-size: 20px; font-weight: 400;}
+.showMyId h1 {
+  font-size: 20px;
+  font-weight: 400;
+}
 .showMyId h2 {
-    font-size: 15px;
-    color: #999;
-    font-weight: 300;
+  font-size: 15px;
+  color: #999;
+  font-weight: 300;
 }
 
 .storyContainer {
-    margin-top: 20px;
-    width: 380px;
-    height: 250px;
-    border: 1px solid #e6e6e6;
-    background-color: #fff;
+  margin-top: 20px;
+  width: 380px;
+  height: 250px;
+  border: 1px solid #e6e6e6;
+  background-color: #fff;
 }
 .storyBar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 15px;
-    margin: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  margin: 20px;
 }
 .storyName {
-    font-size: 15px;
-    color: #7c7c7c;
+  font-size: 15px;
+  color: #7c7c7c;
 }
 .storyBar a {
-    font-size: 15px;
-    color: #000;
-    text-decoration: none;
+  font-size: 15px;
+  color: #000;
+  text-decoration: none;
 }
 
-.stroyAccount{width:100%;}
-.stroyAccount ul {list-style: none;}
+.stroyAccount {
+  width: 100%;
+}
+.stroyAccount ul {
+  list-style: none;
+}
 .stroyAccount ul li {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    margin: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 20px;
 }
 .stroyAccount ul li img {
-    width: 60px;
-    border-radius: 60px;
-    margin-right:10px;
+  width: 60px;
+  border-radius: 60px;
+  margin-right: 10px;
 }
-#ubloadTime {color:#7c7c7c;}
+#ubloadTime {
+  color: #7c7c7c;
+}
 
 .addFriendContainer {
-    margin-top: 20px;
-    width: 380px;
-    height: 250px;
-    border: 1px solid #e6e6e6;
-    background-color: #fff;
+  margin-top: 20px;
+  width: 380px;
+  height: 250px;
+  border: 1px solid #e6e6e6;
+  background-color: #fff;
 }
 .addFriendBar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 15px;
-    margin: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  margin: 20px;
 }
 .addFriendName {
-    font-size: 15px;
-    color: #7c7c7c;
+  font-size: 15px;
+  color: #7c7c7c;
 }
 .addFriendBar a {
-    font-size: 15px;
-    color: #000;
-    text-decoration: none;
+  font-size: 15px;
+  color: #000;
+  text-decoration: none;
 }
 
-.addFriendAccountccount{width:100%;}
+.addFriendAccountccount {
+  width: 100%;
+}
 
-.addFriendAccount ul {list-style: none;}
+.addFriendAccount ul {
+  list-style: none;
+}
+
 .addFriendAccount ul li {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
 }
 
 .addFriendAccount ul li img {
-    width: 60px;
-    border-radius: 60px;
-    margin-right: 10px;
+  width: 60px;
+  border-radius: 60px;
+  margin-right: 10px;
 }
-#howManyAddFriend {color:#7c7c7c; width: 60% }
+#howManyAddFriend {
+  color: #7c7c7c;
+  width: 60%;
+}
+
 #addFollow {
-    width: 70%;
-    font-size: 15px;
-    color: #4193ef;
-    text-align: right;
-    text-decoration: none;
+  width: 70%;
+  font-size: 15px;
+  color: #4193ef;
+  text-align: right;
+  text-decoration: none;
 }

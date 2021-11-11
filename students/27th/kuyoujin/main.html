@@ -15,7 +15,7 @@
         <header>
             <nav>
                 <div class="logoBar">
-                    <img src="logo.png" alt="">
+                    <img src="img/logo.png" alt="">
                     <div class="logoName"><a href="login.html">westagram</a></div>
                 </div>
                 <div class="searchBar">
@@ -26,9 +26,9 @@
                     </div>
                 </div>
                 <div class="naviBar">
-                    <a href ="login.html"><img src="explore.png" alt=""/></a>
-                    <a href ="login.html"><img src="heart.png" alt="" href=""/></a>
-                    <a href ="login.html"><img src="profile.png" alt="" href=""/></a>
+                    <a href ="login.html"><img src="img/explore.png" alt=""/></a>
+                    <a href ="login.html"><img src="img/heart.png" alt="" href=""/></a>
+                    <a href ="login.html"><img src="img/profile.png" alt="" href=""/></a>
                 </div>
             </nav>
         </header>
@@ -36,15 +36,15 @@
             <div class="feeds">
                 <article>
                     <div class="profileBox">
-                        <img src="knitting_img.jpeg" alt="">
+                        <img src="img/knitting_img.jpeg" alt="">
                         <p class="myId">what_are_u</p>
                         <i class="fas fa-ellipsis-h" href=login.html" ></i>
                     </div>
                     <div class="imageBox">
-                        <img src="cafe_img.jpeg" alt="">
+                        <img src="img/cafe_img.jpeg" alt="">
                     </div>
                     <div class="estimateBox">
-                        <div class="commentBox">
+                        <div class="commentBtnBar">
                             <a href="login.html" class="likeBtn"></a> 
                             <a href="login.html" class="commentBtn"></a> 
                             <a href="login.html" class="shareBtn"></a> 
@@ -54,25 +54,27 @@
                         </div>
                     </div>
                     <div class="howManyLikes">
-
+                        <img src="img/knitting_img.jpeg" alt="">
+                        <p>1명이 당신을 좋아합니다.</p>
                     </div>
                     <div class="commentBox">
-                        <div class="feedsComment">
-                            <p id="writeId">sodalite.1204</p>
-                            <p id="writeContent">모르겠다</p>
-                        </div>
-
+                        <ul class="commentList">
+                            <li class="commentResult">
+                                <a href="login.html" class="writeId">sodalite.1204</a>
+                                <p class="writeContent">모르겠다</p>
+                            </li>
+                        </ul>
                     </div>
-                    <p>42분전</p>
-                    <div class="addComment">
-                        <input type="text" placeholder="댓글 달기...">
-                    </div>
+                    <p class="beforeFewMin">42분전</p>
+                    <form class="addComment">
+                        <input id="commentText" type="text" placeholder="댓글 달기..." />
+                        <button type="submit" id="postBtn">게시</button>
+                    </form>
                 </article>
-            </div>
             <div class="main-right">
                 <div class="sideContainer">
                     <div class="showMyId">
-                        <img src="myphoto.jpg" alt=""/>
+                        <img src="img/myphoto.jpg" alt=""/>
                         <div>
                             <h1>sodalite.1204</h1>
                             <h2>구유진입니다</h2>                        
@@ -81,14 +83,14 @@
                     <div class="storyContainer">
                         <div class="storyBar">
                             <p class="storyName">스토리</p>
-                            <a href="login.html" class="allVies">모두 보기</a>
+                            <a href="login.html" class="allView">모두 보기</a>
                         </div>
                         <div class="storyBox">
                             <div class="stroyAccount">
                                 <ul>
                                     <li>
                                         <span class="storyAndId">
-                                            <img src="myphoto.jpg" alt=""></span>
+                                            <img src="img/myphoto.jpg" alt=""></span>
                                         <span class="storyAndId">
                                             <p id="userId">sodalite.1204</p>
                                             <p id="ubloadTime">14분전</p>
@@ -109,7 +111,7 @@
                                 <ul>
                                     <li>
                                         <span class="photoAndId">
-                                            <img src="myphoto.jpg" alt="">
+                                            <img src="img/myphoto.jpg" alt="">
                                         </span>
                                         <span class="photoAndId">
                                             <p id="addFriendId">sodalite.1204</p>
@@ -126,3 +128,4 @@
         </main>
     </body>
 </html>
+sd
