@@ -7,12 +7,10 @@ let pwCheck = false;
 
 idContainer.addEventListener("keyup", () => {
   idCheck = idContainer.value.length > 0 ? true : false;
-  console.log("id", idCheck, idCheck && pwCheck);
   buttonAbler.disabled = !(idCheck && pwCheck);
 });
 
 pwContainer.addEventListener("keyup", () => {
   pwCheck = pwContainer.value.length > 0 ? true : false;
-  console.log("pw", pwCheck, idCheck && pwCheck);
   buttonAbler.disabled = !(idCheck && pwCheck);
 });

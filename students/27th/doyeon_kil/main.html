@@ -39,7 +39,7 @@
     <main>
       <section class="main-section">
         <section class="feeds-wrapper">
-          <article class="feed">
+          <article id="feed-0" class="feed">
             <div class="feed-header">
               <div class="feed-writer">
                 <div class="small-profile-circle">
@@ -69,22 +69,23 @@
               <div class="feed-content">
                 <p><a class="user-name" href="#">paka9999</a>님 외 <a class="user-name" href="#">7명</a>이 좋아합니다</p>
                 <div class="feed-comments">
-                  <div class="comment main-comment">
-                    <label> <a class="user-name" href="#">ralo</a>&nbsp;<span>ㅇㅇ</span> </label>
-                  </div>
-                  <div class="comment">
-                    <label> <a class="user-name" href="#">um_stil_alive</a>&nbsp;<span>ㅇㅇ</span> </label>
-                    <button><i class="far fa-heart"></i></button>
+                  <div class="comments">
+                    <div class="comment main-comment">
+                      <label> <a class="user-name" href="#">ralo</a>&nbsp;<span>ㅇㅇ</span> </label>
+                    </div>
+                    <div class="comment">
+                      <label> <a class="user-name" href="#">um_stil_alive</a>&nbsp;<span>ㅇㅇ</span> </label>
+                      <button><i class="far fa-heart"></i></button>
+                    </div>
                   </div>
                   <div class="feed-time-ago">
                     <p>2시간 전</p>
                   </div>
                 </div>
               </div>
-              <form class="comment-input-container">
-                <textarea class="comment-input" placeholder="댓글 달기..."></textarea>
-
-                <button class="comment-input-button" href="#">게시</button>
+              <form id="comment-form" class="comment-input-container">
+                <textarea id="comment-input" class="comment-input" placeholder="댓글 달기..."></textarea>
+                <button class="comment-input-button" type="submit">게시</button>
               </form>
             </div>
           </article>
@@ -164,5 +165,7 @@
         </section>
       </section>
     </main>
+
+    <script src="js/main.js"></script>
   </body>
 </html>
