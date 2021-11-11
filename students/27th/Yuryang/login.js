@@ -1,17 +1,26 @@
-$(".id_input").on("input", checkInput);
-$(".password_input").on("input", checkInput);
+"use strict";
 
-// input 입력 시에 checkInput 함수실행
-function checkInput() {
-  var idCheck = $(".id_input").val(); // idCheck 변수
-  var passwordCheck = $(".password_input").val(); // idCheck 변수
-  var btnLogin = $(".btn_submit");
+// id,pw 각각 한 글자 이상 써야 버튼이 활성화
+// 활성화 되면 연한 파란색 -> 파란색
+const id = document.querySelector("#id");
+const password = document.querySelector("#password");
+const loginBtn = document.querySelector("#login");
+const input = document.querySelector("#input");
 
-  if (idCheck === "" || passwordCheck === "") {
-    // 기본 로그인 버튼 색상
-    btnLogin.removeClass("on");
-  } else {
-    // ID 비밀번호 입력 시에 로그인 버튼 배경색 변경
-    btnLogin.addClass("on");
-  }
-}
+id.addEventListener("keyup", function (event) {
+  if (!!id.value && !!password.value) {
+    loginBtn.removeAttribute("disabled", false);
+    loginBtn.style.backgroundColor = "#499ee9";
+  } else !id.value && !password.value;
+  button.removeAttribute("disabled", true);
+  button.style.backgroundColor = "#c4e1fb";
+});
+
+password.addEventListener("keyup", function (event) {
+  if (!!id.value && !!password.value) {
+    loginBtn.removeAttribute("disabled", false);
+    loginBtn.style.backgroundColor = "#499ee9";
+  } else !id.value && !password.value;
+  button.removeAttribute("disabled", true);
+  button.style.backgroundColor = "#c4e1fb";
+});

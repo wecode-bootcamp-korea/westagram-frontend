@@ -18,6 +18,28 @@ a {
   text-decoration: none;
 }
 
-input:focus {
+.guide-list > a:after,
+.guide-list > a::after {
+  content: "•";
+}
+
+.guide-list > a:after:last-child,
+.guide-list > a::afte:last-child {
+  content: " ";
+}
+
+/* input:focus {
   outline: none;
+} */
+
+nav {
+  background-color: pink;
+}
+
+.mainRightRecommand {
+  background-color: coral;
+}
+.mainRightRecommand > b {
+  /* padding-left: 10px; */
+  padding-left: 1000px;
 }
