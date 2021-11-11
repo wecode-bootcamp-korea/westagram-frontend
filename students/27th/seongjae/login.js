@@ -22,10 +22,10 @@ passwordInput.addEventListener("keyup", (e) => {
 });
 
 $button.addEventListener("click", () => {
-  if (handleIdInput.length > 8 && handlepasswordInput.length >= 1) {
+  if (handleIdInput.includes("@") === true && handlepasswordInput.length >= 5) {
     location.href = "main.html";
   } else {
-    alert("아이디를 8자리이상 혹은 비밀번호를 입력해주세요.");
+    alert("아이디에 '@'를 포함하시거나, 비밀번호를 5자리 이상 입력해주세요.");
   }
 });
 
