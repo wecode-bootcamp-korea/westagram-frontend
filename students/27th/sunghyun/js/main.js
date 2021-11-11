@@ -32,19 +32,17 @@ const makeComment = () => {
   commentInput.value = '';
 };
 
-const ToggleSearchTitle = () => {
-  searchTitle.classList.toggle('searchText--none');
-};
-
 // SEARCH
 searchWrapper.addEventListener('click', () => {
   searchInput.focus();
 });
 searchInput.addEventListener('blur', () => {
   if (!!searchInput.value) return;
-  ToggleSearchTitle();
+  searchTitle.classList.remove('searchText--none');
 });
-searchInput.addEventListener('focus', ToggleSearchTitle);
+searchInput.addEventListener('focus', () => {
+  searchTitle.classList.add('searchText--none');
+});
 
 // COMMENT INPUT
 commentInput.addEventListener('keyup', (e) => {
