@@ -1,3 +1,10 @@
+main {
+  display: flex;
+  justify-content: center;
+  background-color: #fafafa;
+  min-width: 930px;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -45,7 +52,7 @@
   margin-left: 20px;
 }
 
-/*   위에는 네비게이션바 */
+/*    위에는 네비게이션바 & main 레이아웃    */
 
 .feed {
   width: 600px;
@@ -72,9 +79,11 @@
 .feed-article-user-profile img {
   height: 40px;
   width: 40px;
-  border-radius: 50%;
   margin-right: 15px;
+  border-radius: 50%;
 }
+
+/*    위에는 feed 첫 줄    */
 
 .feed-article-img img {
   width: 100%;
@@ -91,21 +100,26 @@
   margin-right: 15px;
 }
 
-.feed-article-like-font {
+/*    위에는 feed img밑에 icons    */
+
+.feed-article-like-bold-font {
   font-weight: 650;
 }
 
 .feed-article-like img {
   height: 16px;
   width: 16px;
-  border-radius: 50%;
   margin-right: 5px;
+  border-radius: 50%;
 }
+
 .feed-article-like {
   display: flex;
-  margin-left: 15px;
   align-items: center;
+  margin-left: 15px;
 }
+
+/*    위에는 feed icons밑에 좋아요 개수    */
 
 .feed-article-posting {
   display: flex;
@@ -115,7 +129,7 @@
 
 .feed-article-posting-username {
   font-weight: 650;
-  margin-right: 7px;
+  margin-right: 5px;
 }
 
 .feed-article-posting-more {
@@ -123,19 +137,21 @@
   color: rgba(139, 138, 138, 0.8);
 }
 
+/*    위에는 feed posting    */
+
 .feed-article-comment {
   display: flex;
   justify-content: space-between;
 }
 
-.feed-article-comment-box {
+.feed-article-comment-leftbox {
   display: flex;
   margin-left: 15px;
   margin-top: 5px;
 }
-.feed-article-comment-username {
+.feed-article-comment-leftbox-username {
+  margin-right: 5px;
   font-weight: 650;
-  margin-right: 7px;
 }
 
 .feed-article-comment-icon {
@@ -143,75 +159,63 @@
   color: rgba(139, 138, 138, 0.9);
 }
 
+.newcomment {
+  margin-left: 15px;
+  margin-top: 5px;
+}
+
+/*    위에는 feed comment & newcomment    */
+
 .feed-article-time {
   margin-left: 15px;
   margin-top: 5px;
-  font-size: 14px;
   color: rgba(139, 138, 138, 0.8);
+  font-size: 14px;
 }
 
-.feed-article-add {
-  margin-top: 5px;
+.feed-comment-add {
   padding: 5px;
+  margin-top: 5px;
   border-top: 1px solid rgb(218, 217, 217);
 }
 
-.feed-article-add-comment {
+.feed-comment-add-input {
   width: 91%;
   height: 30px;
   border: 0px;
   text-indent: 10px;
 }
 
-.feed-article-add-comment::placeholder {
+.feed-article-comment-add-input::placeholder {
   font-weight: 550;
   opacity: 0.8;
 }
 
-.feed-article-add-comment-btn {
+.feed-comment-add-btn {
   position: relative;
-  color: #b9dcfa;
-  font-weight: 600;
-  background-color: white;
   border: 0px solid white;
+  color: #b9dcfa;
+  background-color: white;
+  font-weight: 600;
 }
 
-.feed-article-add-comment-btn:hover {
+.feed-comment-add-btn:hover {
   color: #0095f6;
 }
 
-.comment {
-  margin-left: 15px;
-  margin-top: 5px;
-  display: flex;
-}
-
-.comment-user {
-  margin-right: 7px;
-  font-weight: 650;
-}
-
-.hidden {
-  display: none;
-}
-
-main {
-  display: flex;
-  justify-content: center;
-  background-color: #fafafa;
-}
+/*    위에는 feed newcomment input   */
 
 .main-right {
+  width: 300px;
   margin-top: 35px;
   margin-left: 30px;
-  width: 300px;
 }
 
 .main-right-channel-img img {
   height: 40px;
   width: 40px;
-  border-radius: 50%;
   margin-right: 10px;
+  border-radius: 50%;
 }
 
 .main-right-channel {
@@ -224,117 +228,136 @@ main {
 }
 
 .main-right-channel-title h3 {
-  font-size: 14px;
   color: rgba(139, 138, 138, 0.8);
+  font-size: 14px;
 }
 
 .main-right-story-nav {
-  margin-top: 10px;
   display: flex;
   justify-content: space-between;
+  margin-top: 10px;
 }
 
-.main-right-story-nav div:first-child {
-  color: rgba(139, 138, 138, 0.8);
+.main-right-story-nav-left {
   margin-left: 10px;
+  color: rgba(139, 138, 138, 0.8);
   font-size: 14px;
 }
 
-.main-right-story-nav div:last-child {
-  font-weight: 700;
+.main-right-story-nav-right {
   margin-right: 10px;
+  font-weight: 700;
   font-size: 14px;
 }
 
 .main-right-story {
   width: 100%;
   margin-top: 20px;
-  border: 1px solid rgb(218, 217, 217);
   background-color: white;
+  border: 1px solid rgb(218, 217, 217);
 }
 
-.main-right-recommend-icons {
+.main-right-story-channel-icons {
   display: flex;
   align-items: center;
   padding: 10px;
 }
 
-.main-right-recommend-icons-img img {
+.main-right-story-channel-icons-img img {
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
+.main-right-story-channel-icons-title h4 {
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.main-right-story-channel-icons-title h3 {
+  font-size: 12px;
+  color: rgba(139, 138, 138, 0.8);
+}
+
+/*    위에는 메인 오른쪽, 스토리    */
+
+.main-right-recommend-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.main-right-recommend-nav-left {
+  margin-left: 10px;
+  color: rgba(139, 138, 138, 0.8);
+  font-size: 14px;
+}
+
+.main-right-recommend-nav-right {
+  margin-right: 10px;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.main-right-recommend {
+  width: 100%;
+  margin-top: 20px;
+  background-color: white;
+  border: 1px solid rgb(218, 217, 217);
+}
+
+.main-right-recommend-channel-icons {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.main-right-recommend-channel-icons-img img {
   height: 40px;
   width: 40px;
   border-radius: 50%;
   margin-right: 10px;
 }
 
-.main-right-recommend-icons-title h4 {
+.main-right-recommend-channel-icons-title {
+  display: flex;
+}
+
+.main-right-recommend-channel-icons-title h4 {
   font-size: 13px;
   font-weight: 650;
 }
 
-.main-right-recommend-icons-title h3 {
+.main-right-recommend-channel-icons-title h3 {
+  color: rgba(139, 138, 138, 0.8);
   font-size: 12px;
-  color: rgba(139, 138, 138, 0.8);
 }
 
-.main-right-recommend-under {
-  width: 100%;
-  margin-top: 20px;
-  border: 1px solid rgb(218, 217, 217);
-  background-color: white;
-}
-
-.main-right-recommend-under-nav {
-  margin-top: 10px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.main-right-recommend-under-nav div:first-child {
-  color: rgba(139, 138, 138, 0.8);
-  margin-left: 10px;
-  font-size: 14px;
-}
-
-.main-right-recommend-under-nav div:last-child {
-  font-weight: 700;
-  margin-right: 10px;
-  font-size: 14px;
-}
-
-.main-right-recommend-under-title {
-  display: flex;
-}
-
-.main-right-recommend-under-title div:last-child {
-  font-size: 14px;
-  color: #0095f6;
+.main-right-recommend-channel-icons-title div:last-child {
   font-weight: 650;
+  font-size: 13px;
+  color: #0095f6;
 }
+/*    위 메인 오른쪽, 추천채널    */
 
 .main-right-footer {
   margin-top: 20px;
 }
 
 .main-right-footer h5 {
+  margin-bottom: 3px;
   font-size: 12px;
   color: rgba(139, 138, 138, 0.8);
-  margin-bottom: 3px;
 }
 
 .margin-right-footer-copyright {
+  margin-top: 10px;
   font-size: 12px;
   color: rgba(139, 138, 138, 0.8);
-  margin-top: 10px;
-}
-
-main {
-  min-width: 930px;
 }
 
 @media screen and (max-width: 930px) {
-  main {
-  }
-
   .main-right {
     display: none;
   }
