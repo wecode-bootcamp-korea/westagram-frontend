@@ -1,59 +1,48 @@
-#header{
+.all-wrap{
   position: relative;
-  height: 55px;
-  z-index: 3;
+  width: 800px;
+  margin: 0 auto;
 }
 
-.nav-bar{
+#header{
   width: 100%;
-  position: fixed;
-  transform: translateX(-50%);
-  left: 50%;
-  margin: 0 auto;
-  align-items: center;
   border-bottom: 1px solid #ccc;
-  background-color: #fff;
 }
-
-.nav-width{
+.nav-bar{
+  
   margin: 0 auto;
-  width: 935px;
   display: flex;
+  align-items: center;
+  position: fixed;
 }
-
 .nav-bar .nav-wrap{
   height: 54px;
   flex-grow: 1;
   display: flex;
 }
-
 .nav-wrap:nth-child(1){
   justify-content: start;
 }
-
 .nav-wrap:nth-child(2){
   justify-content: center;
 }
-
 .nav-wrap:nth-child(3){
   justify-content: flex-end;
-}
 
+}
 .nav-wrap:nth-child(3) .menu:nth-child(3){
   margin-right: 0;
 }
-
 .nav-wrap .menu{
   display: flex;
   align-items: center;
-}
 
+}
 .logo-text{
   font-family: 'Lobster', cursive;
   border-left: 1px solid #333;
   padding-left: 10px;
 }
-
 .logo-box{
   width: 30px;
   margin-right: 20px;
@@ -71,7 +60,6 @@
   background-color: rgba(250, 250, 250,1);
   color: #333;
 } 
-
 .search-wrap .search-bar-img{
   width: 12px;
   height: 12px;
@@ -84,120 +72,94 @@
   width: 15px;
   border: none;
 }
-
-#main{
-  width: 935px;
-  margin: 30px auto;
+.wrapper{
+  max-width: 800px;
+  margin: 55px auto;
 }
-
 #article{
   display: flex;
-  justify-content: space-between;
+  width: 100%;
 }
-
 #feed-section{
-  width: 613px;
+  width: 65%;
+  margin-right: 20px;
   border: 1px solid #ccc;
   background-color: rgba(250, 250, 250,1);
 }
-
 #aside-section{
-  width: 290px;
-  perspective: 0em;
+  width: 35%;
 }
-
-#aside-section .aside-inner{
-  position: fixed;
-}
-
 .feed-user{
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10px 15px;
 }
-
 .feed-info{
   display: flex;
   align-items: center;
 }
-
 .feed-user-profile-name{
   padding-left: 10px;
   font-size: 1.2em;
 }
-
 .feed-user-profile-img{
   width: 50px;
   height: 50px;
   border-radius: 70%;
   overflow: hidden;
 }
-
 .profile{
   display: flex;
   align-items: center;
 }
-
 .profile .profile-img{
   width: 50px;
   height: 50px;
   border-radius: 70%;
   overflow: hidden;
 }
-
 .profile .profile-img img{
   height: 100%;
 }
-
 .profile .profile-description{
   padding-left: 15px;
 }
-
-
 .profile .profile-description .korean-name{
   color: rgba(100,100,100);
 }
-
 .story-feed{
   border: 1px solid #ccc;
   margin: 20px 0;
   height: 220px;
   overflow: hidden;
 }
-
 .story-wrap{
   margin: 0 auto;
   width: 85%;
 }
-
 .story-feed-head-wrap{
   display: flex;
   justify-content: space-between;
   margin: 10px 0;
 }
-
 .story-profile{
   display: flex;
   align-items: center;
   margin: 10px 0;
 }
-
 .story-profile .story-profile-img{
   width: 40px;
   height: 40px;
   border-radius: 70%;
   overflow: hidden;
 }
-
 .story-profile .story-profile-img img{
   height: 100%;
 }
-
 .story-profile-description{
   padding-left: 15px;
 }
-
 .story-same-followers-view{
   text-overflow: ellipsis;
   overflow: hidden;
@@ -206,100 +168,60 @@
   width: 150px;
 
 }
-
 .story-feed-all-view{
 }
-
 .story-feed-recommend{
   border: 1px solid #ccc;
   margin: 20px 0;
   height: 190px;
   overflow: hidden;
 }
-
 .interaction{
   display: flex;
   justify-content: space-between;
   padding: 10px 15px;
 }
-
 .like-btn, .review-btn, .share-btn, .keep-btn {
   font-size: 1.4em;
   padding-right: 15px;
 }
-
 .keep-btn{
   padding-right: 0pc;
 }
 .reaction-contents-wrap{
   padding: 0 15px;
 }
-
 .check-like{
   display: flex;
   align-items: center;
   padding: 0 0 10px;
 }
-
 .check-like-id-profile-1{
   width: 20px;
   height: 20px;
   border-radius: 70%;
   overflow: hidden;
 }
-
 .check-like-id-profile-1 img{
   height: 100%;
 }
-
 .check-like-summary{
   padding-left: 15px;
 }
-
 .contents{
+  margin-bottom: 10px;
 }
-
-.minimal-contents{
-  height: 30px;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-
-.more-btn{
-  cursor: pointer;
-}
-
 .review-list{
-  position: relative;
   padding: 10px 0;
 }
-
-.review-id{
-  font-weight: bold;
-}
-
-.review-contents{
-  padding-left: 5px;
-}
-
-.review-like{
-  position: absolute;
-  right: 0;
-  cursor: pointer;
-}
-
-.input-review-container{
+.input-review{
   position: relative;
   border-top: 1px solid #ccc;
 }
-
-.input-review-container input{
-  width: 100%;
+.input-review input{
   border: none;
   padding: 10px 15px;
 }
-
 .review-upload-btn{
   position: absolute;
   right: 15px;
