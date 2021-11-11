@@ -22,7 +22,6 @@ commentInput.addEventListener('keypress', function(value){
         
         addCommentUnoderList.style.display ="flex";     
         boldNameWrap.style.marginRight = "5px";
-
         return commentInput.value = "";
     };
 })

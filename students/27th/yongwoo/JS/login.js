@@ -16,7 +16,6 @@ nameBtn.addEventListener('keyup', function(){
 passwordBtn.addEventListener('keyup', function(){
     let nameLength = nameBtn.value.length;
     let passwordLength = passwordBtn.value.length;
-
     if(nameLength >= 1 && passwordLength >= 5 && nameBtn.value.indexOf('@') !== -1){
         loginBtn.style.backgroundColor = "#0095f6";        
     } else {
