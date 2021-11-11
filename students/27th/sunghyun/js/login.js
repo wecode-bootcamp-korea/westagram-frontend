@@ -3,16 +3,16 @@ const password = document.querySelector('#password');
 const loginBtn = document.querySelector('.loginBtn');
 const loginForm = document.querySelector('.inputWapper');
 
-function checkLoginForm() {
-  // console.log(loginForm.value);
+const checkLoginForm = () => {
   const allchecked = !!id.value && !!password.value;
 
   allchecked
     ? loginBtn.classList.remove('loginBtn--disable')
     : loginBtn.classList.add('loginBtn--disable');
   loginBtn.disabled = !allchecked;
-}
-function checkLoginValidation() {
+};
+
+const checkLoginValidation = () => {
   const idvalid = id.value.includes('@');
   const pwdvalid = password.value.length >= 5;
   if (idvalid && pwdvalid) {
@@ -26,7 +26,7 @@ function checkLoginValidation() {
   !pwdvalid && (alertText += ` 비밀번호는 5자리 이상이어야 합니다.`);
 
   alert(alertText);
-}
+};
 
 id.addEventListener('keyup', checkLoginForm);
 password.addEventListener('keyup', (e) => {

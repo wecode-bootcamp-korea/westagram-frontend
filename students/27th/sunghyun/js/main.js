@@ -2,46 +2,49 @@ const userNickName = 'ria';
 const comments = document.querySelector('.feedComments');
 const commentInput = document.querySelector('#commentInput');
 const addCommentBtn = document.querySelector('#addCommentBtn');
-const search = document.querySelector('#search');
-const searchInput = search.firstElementChild;
-const searchText = search.lastElementChild;
+const searchWrapper = document.querySelector('#search');
+const searchInput = searchWrapper.firstElementChild;
+const searchTitle = searchWrapper.lastElementChild;
 const feedComments = document.querySelector('.feedComments');
 let commentId = 2;
 
-function makeCommentInner(nickName, comment) {
-  return `<p class="feedCommentText">
-  <b class="commentProfile">${nickName}</b>
-  <span>${comment}</span>
+const makeCommentInner = (nickName, comment) => {
+  return `
+  <p class="feedCommentText">
+    <b class="commentProfile">${nickName}</b>
+    <span>${comment}</span>
   </p>
   <div class="commentBtn">
-  <i class="far fa-trash-alt" id="t_${commentId}"></i>
-  <div class="hearts">
-  <i class="far fa-heart"></i>
-  <i class="fas fa-heart"></i>
-</div>
-</div>`;
-}
+    <i class="far fa-trash-alt" id="t_${commentId}"></i>
+    <div class="hearts">
+    <i class="far fa-heart"></i>
+    <i class="fas fa-heart"></i>
+    </div>
+  </div>`;
+};
 
-function makeComment() {
+const makeComment = () => {
   const newComment = document.createElement('div');
   newComment.className = 'feedComment';
   newComment.innerHTML = makeCommentInner(userNickName, commentInput.value);
   newComment.id = `comment_${commentId++}`;
   comments.append(newComment);
   commentInput.value = '';
-}
+};
+
+const ToggleSearchTitle = () => {
+  searchTitle.classList.toggle('searchText--none');
+};
 
 // SEARCH
-search.addEventListener('click', () => {
+searchWrapper.addEventListener('click', () => {
   searchInput.focus();
 });
 searchInput.addEventListener('blur', () => {
   if (!!searchInput.value) return;
-  searchText.classList.remove('searchText--none');
+  ToggleSearchTitle();
 });
-searchInput.addEventListener('focus', () => {
-  searchText.classList.add('searchText--none');
-});
+searchInput.addEventListener('focus', ToggleSearchTitle);
 
 // COMMENT INPUT
 commentInput.addEventListener('keyup', (e) => {
@@ -54,6 +57,7 @@ commentInput.addEventListener('keyup', (e) => {
   addCommentBtn.disabled = false;
   if (e.key === 'Enter') {
     makeComment();
+    return;
   }
 });
 addCommentBtn.addEventListener('click', makeComment);

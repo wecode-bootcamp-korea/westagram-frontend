@@ -1,195 +1,207 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Westargram 김성현 main</title>
-  <link rel="stylesheet" href="./style/common.css">
-  <link rel="stylesheet" href="./style/main.css">
-  <script src="https://kit.fontawesome.com/2a96163556.js" crossorigin="anonymous"></script>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-
-</head>
-<body>
-  <nav>
-    <div class="navWrapper">
-      <div class="logoWapper">
-        <img src="./src/instagram.png" alt="logo">
-        <div class="logoTitle">Westagram</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Westargram 김성현 main</title>
+    <link rel="stylesheet" href="./style/common.css" />
+    <link rel="stylesheet" href="./style/main.css" />
+    <script
+      src="https://kit.fontawesome.com/2a96163556.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="navWrapper">
+        <div class="logoWapper">
+          <img src="./src/instagram.png" alt="logo" />
+          <div class="logoTitle">Westagram</div>
+        </div>
+        <div id="search" class="search input">
+          <input type="text" />
+          <div class="searchText">
+            <i class="fas fa-search"></i><span>Search</span>
+          </div>
+        </div>
+        <div class="navBtnWrapper">
+          <div class="navBtn">
+            <img src="./src/explore.png" alt="explore" />
+            <div class="navBtnMore navBtnMore--none"></div>
+          </div>
+          <div class="navBtn">
+            <img src="./src/heart.png" alt="heart" />
+            <div class="navBtnMore"></div>
+          </div>
+          <div class="navBtn">
+            <img src="./src/profile.png" alt="profile" />
+            <div class="navBtnMore navBtnMore--none"></div>
+          </div>
+        </div>
       </div>
-      <div id="search" class="search input">
-        <input type="text">
-        <div class="searchText"><i class="fas fa-search"></i><span>Search</span></div>
-      </div>
-      <div class="navBtnWrapper">
-        <div class="navBtn">
-          <img src="./src/explore.png" alt="explore">
-          <div class="navBtnMore navBtnMore--none"></div>
-        </div>
-        <div class="navBtn">
-          <img src="./src/heart.png" alt="heart">
-          <div class="navBtnMore"></div>
-        </div>
-        <div class="navBtn">
-          <img src="./src/profile.png" alt="profile">
-          <div class="navBtnMore navBtnMore--none"></div>
-        </div>
-    </div>
-    </div>
-  </nav>
-  <main>
-    
-    <div class="feeds">
-      <article class="feed wrapper">
-        <div class="feedHeader feedpadding">
-          <div class="feedProfile">
-            <img src="./src/maria3.jpeg" alt="profile">
-            <div class="feedProfileInfo">
-              <b>ria</b>
-              <span>picnic</span>
+    </nav>
+    <main>
+      <div class="feeds">
+        <article class="feed wrapper">
+          <div class="feedHeader feedpadding">
+            <div class="feedProfile">
+              <img src="./src/maria3.jpeg" alt="profile" />
+              <div class="feedProfileInfo">
+                <b>ria</b>
+                <span>picnic</span>
+              </div>
             </div>
+            <i class="fas fa-ellipsis-h"></i>
           </div>
-          <i class="fas fa-ellipsis-h"></i>
-        </div>
-        <img class="feedImg" src="./src/fly.jpeg" alt="feed-img">
-        <div class="feedDetail feedpadding">
-          <div class="feedBtnBox">
-            <div class="btnsLeft">
-              <button class="liked heart--liked"><i class="fas fa-heart"></i></button>
-              <button class="comment"><i class="far fa-comment"></i></button>
-              <button class="share"><i class="far fa-paper-plane"></i></button>
+          <img class="feedImg" src="./src/fly.jpeg" alt="feed-img" />
+          <div class="feedDetail feedpadding">
+            <div class="feedBtnBox">
+              <div class="btnsLeft">
+                <button class="liked heart--liked">
+                  <i class="fas fa-heart"></i>
+                </button>
+                <button class="comment"><i class="far fa-comment"></i></button>
+                <button class="share">
+                  <i class="far fa-paper-plane"></i>
+                </button>
+              </div>
+              <div class="btnRight">
+                <button class="save"><i class="far fa-bookmark"></i></button>
+              </div>
             </div>
-            <div class="btnRight">
-              <button class="save"><i class="far fa-bookmark"></i></button>
+            <div class="whoLiked">
+              <div class="likedProfile">
+                <img src="./src/likedprofile.jpeg" alt="" />
+                <b>ria</b>님
+              </div>
+              <b>&nbsp;외 10명</b>이 좋아합니다
             </div>
-          </div>
-          <div class="whoLiked">
-            <div class="likedProfile">
-              <img src="./src/likedprofile.jpeg" alt="">
-              <b>ria</b>님 
-            </div>
-           <b>&nbsp;외 10명</b>이 좋아합니다
-          </div>
-          <p class="feedDescription">
-            <b>ria</b> 오늘도 밤하늘은 이뻐! <span class="moreDetail">더보기</span>
-          </p>
-        </div>
-        <div class="feedComments feedpadding">
-          <div class="feedComment" id="comment_1">
-            <p class="feedCommentText">
-              <b class="commentProfile">tjdgus05</b>
-              <span>이쁘다~~</span>
+            <p class="feedDescription">
+              <b>ria</b> 오늘도 밤하늘은 이뻐!
+              <span class="moreDetail">더보기</span>
             </p>
-            <div class="commentBtn">
-              <i class="far fa-trash-alt" id="t_1"></i>
-              <div class="hearts">
-                <i class="far fa-heart"></i>
-                <i class="fas fa-heart showHeart"></i>
+          </div>
+          <div class="feedComments feedpadding">
+            <div class="feedComment" id="comment_1">
+              <p class="feedCommentText">
+                <b class="commentProfile">tjdgus05</b>
+                <span>이쁘다~~</span>
+              </p>
+              <div class="commentBtn">
+                <i class="far fa-trash-alt" id="t_1"></i>
+                <div class="hearts">
+                  <i class="far fa-heart"></i>
+                  <i class="fas fa-heart showHeart"></i>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="time feedpadding">33분 전</div>
-        <div class="feedCommentInput feedpadding">
-          <input id="commentInput" type="text" placeholder="댓글 달기...">
-          <button id="addCommentBtn" class="mainBtn mainBtn--disable">게시</button>
-        </div>
-      </article>
-    </div>
-    <div class="main-right">
-      <div class="myProfile">
-        <img src="./src/maria3.jpeg" alt="">
-        <div class="profileInfo">
-          <span class="myId">ria</span>
-          <span class="myNickname">피크닉</span>
-        </div>
+          <div class="time feedpadding">33분 전</div>
+          <div class="feedCommentInput feedpadding">
+            <input id="commentInput" type="text" placeholder="댓글 달기..." />
+            <button id="addCommentBtn" class="mainBtn mainBtn--disable">
+              게시
+            </button>
+          </div>
+        </article>
       </div>
-      <div class="storyWrapper rightWrapper wrapper">
-        <div class="rightHeader">
-          <span class="rightTitle">스토리</span>
-          <span class="showAll">모두 보기</span>
-        </div>
-        <div class="stories">
-          <div class="story">
-              <img src="./src/p1.jpeg" alt="profile img">
-            <div class="storyInfo">
-              <span>nypl</span>
-              <span>20분 전</span>
-            </div>
-          </div>
-          <div class="story">
-              <img src="./src/p2.jpeg" alt="profile img">
-            <div class="storyInfo">
-              <span>chistX</span>
-              <span>50분 전</span>
-            </div>
-          </div>
-          <div class="story">
-              <img src="./src/p3.jpeg" alt="profile img">
-            <div class="storyInfo">
-              <span>ee_me</span>
-              <span>2시간 전</span>
-            </div>
-          </div>
-          <div class="story">
-            <img src="./src/p4.jpeg" alt="profile img">
-            <div class="storyInfo">
-              <span>짹짹</span>
-              <span>12시간 전</span>
-            </div>
+      <div class="main-right">
+        <div class="myProfile">
+          <img src="./src/maria3.jpeg" alt="" />
+          <div class="profileInfo">
+            <span class="myId">ria</span>
+            <span class="myNickname">피크닉</span>
           </div>
         </div>
+        <div class="storyWrapper rightWrapper wrapper">
+          <div class="rightHeader">
+            <span class="rightTitle">스토리</span>
+            <span class="showAll">모두 보기</span>
+          </div>
+          <div class="stories">
+            <div class="story">
+              <img src="./src/p1.jpeg" alt="profile img" />
+              <div class="storyInfo">
+                <span>nypl</span>
+                <span>20분 전</span>
+              </div>
+            </div>
+            <div class="story">
+              <img src="./src/p2.jpeg" alt="profile img" />
+              <div class="storyInfo">
+                <span>chistX</span>
+                <span>50분 전</span>
+              </div>
+            </div>
+            <div class="story">
+              <img src="./src/p3.jpeg" alt="profile img" />
+              <div class="storyInfo">
+                <span>ee_me</span>
+                <span>2시간 전</span>
+              </div>
+            </div>
+            <div class="story">
+              <img src="./src/p4.jpeg" alt="profile img" />
+              <div class="storyInfo">
+                <span>짹짹</span>
+                <span>12시간 전</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="recommandWrapper rightWrapper wrapper">
+          <div class="rightHeader">
+            <span class="rightTitle">회원님을 위한 추천</span>
+            <span class="showAll">모두 보기</span>
+          </div>
+          <div class="recommends">
+            <div class="recommend">
+              <div class="recommendMain">
+                <img src="./src/p5.jpeg" alt="profile img" />
+                <div class="storyInfo">
+                  <span>abd_world</span>
+                  <span>ee_me님 외 2명이...</span>
+                </div>
+              </div>
+              <button class="mainBtn">팔로우</button>
+            </div>
+            <div class="recommend">
+              <div class="recommendMain">
+                <img src="./src/p6.jpeg" alt="profile img" />
+                <div class="storyInfo">
+                  <span>joyyyyy</span>
+                  <span>ria님 외 12명이...</span>
+                </div>
+              </div>
+              <button class="mainBtn">팔로우</button>
+            </div>
+            <div class="recommend">
+              <div class="recommendMain">
+                <img src="./src/p7.jpeg" alt="profile img" />
+                <div class="storyInfo">
+                  <span>hwnhwan12</span>
+                  <span>peakup님 외 2명이...</span>
+                </div>
+              </div>
+              <button class="mainBtn">팔로우</button>
+            </div>
+          </div>
+        </div>
+        <footer>
+          <p class="instagramInfo">
+            Instagram 정보 &#183; 지원 &#183; 홍보 센터 &#183; API &#183; 채용
+            정보 &#183; 개인정보처리방침 &#183; 약관 &#183; 디렉터리 &#183;
+            프로필 &#183; 해시태그 &#183; 언어
+          </p>
+          <span class="copyright"> © 2019 INSTAGRAM </span>
+        </footer>
       </div>
-      <div class="recommandWrapper rightWrapper wrapper">
-        <div class="rightHeader">
-          <span class="rightTitle">회원님을 위한 추천</span>
-          <span class="showAll">모두 보기</span>
-        </div>
-        <div class="recommends">
-          <div class="recommend">
-            <div class="recommendMain">
-              <img src="./src/p5.jpeg" alt="profile img">
-              <div class="storyInfo">
-                <span>abd_world</span>
-                <span>ee_me님 외 2명이...</span>
-              </div>
-            </div>
-            <button class="mainBtn">팔로우</button>
-          </div>
-          <div class="recommend">
-            <div class="recommendMain">
-              <img src="./src/p6.jpeg" alt="profile img">
-              <div class="storyInfo">
-                <span>joyyyyy</span>
-                <span>ria님 외 12명이...</span>
-              </div>
-            </div>
-            <button class="mainBtn">팔로우</button>
-          </div>
-          <div class="recommend">
-            <div class="recommendMain">
-
-              <img src="./src/p7.jpeg" alt="profile img">
-              <div class="storyInfo">
-                <span>hwnhwan12</span>
-                <span>peakup님 외 2명이...</span>
-              </div>
-            </div>
-            <button class="mainBtn">팔로우</button>
-          </div>
-        </div>
-      </div>
-      <footer>
-        <p class="instagramInfo">
-          Instagram 정보 &#183; 지원 &#183; 홍보 센터 &#183; API &#183; 채용 정보 &#183; 개인정보처리방침 &#183; 약관 &#183; 디렉터리 &#183; 프로필 &#183; 해시태그 &#183; 언어
-        </p>
-        <span class="copyright">
-          © 2019 INSTAGRAM
-        </span>
-      </footer>
-    </div>
-  </main>
-  <script src="./js/main.js"></script>
-</body>
+    </main>
+    <script src="./js/main.js"></script>
+  </body>
 </html>
