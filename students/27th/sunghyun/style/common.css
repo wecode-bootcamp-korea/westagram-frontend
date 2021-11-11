@@ -128,7 +128,6 @@ table {
 :root {
   --bg-gray: #fafafa;
   --border-light-gray: #ededed;
-  /* --color-light-gray: #d2d2d2; */
   --color-light-gray: #b1b1b1;
   --color-gray: #a2a2a2;
   --color-black: #343434;
@@ -137,44 +136,54 @@ table {
   --btn-blue--hover: #c4e1fb;
   --btn-blue: #5bb2ff;
 }
+
 * {
   box-sizing: border-box;
 }
+
 input {
   border: none;
   background: transparent;
 }
+
 input:focus {
   outline: none;
 }
+
 b {
   font-weight: 600;
 }
+
 .input {
+  padding: 14px;
   border: var(--border-light-gray) 1px solid;
   border-radius: 4px;
-  padding: 14px;
   background-color: var(--bg-gray);
 }
+
 .input::placeholder {
   color: var(--color-gray);
   font-weight: 500;
 }
+
 button {
+  background: none;
   border: none;
   border-radius: 4px;
-  background: none;
   cursor: pointer;
 }
+
 img {
   width: 32px;
   height: 32px;
   border: var(--border-light-gray) 1px solid;
 }
+
 .wrapper {
-  border: #ededed 1px solid;
   background: #fff;
+  border: #ededed 1px solid;
 }
+
 .moreDetail {
   color: var(--color-gray);
 }
