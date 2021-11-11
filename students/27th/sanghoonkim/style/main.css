@@ -5,6 +5,7 @@ nav {
   background-color: white;
   z-index: 999;
 }
+
 .navWrap {
   margin: 0 auto;
   max-width: 1000px;
@@ -13,27 +14,33 @@ nav {
   align-items: center;
   padding: 12px 0px;
 }
+
 .logo {
   display: flex;
   align-items: center;
 }
+
 .logo img {
   width: 28px;
   margin-right: 16px;
 }
+
 .logo .solid {
   border: 1px solid black;
   height: 30px;
 }
+
 .logo .logoText {
   font-size: 30px;
   font-family: "Lobster", cursive;
   padding-left: 16px;
 }
+
 .searchBox {
   width: 250px;
   position: relative;
 }
+
 .searchBox input {
   width: 100%;
   font-size: var(--medium);
@@ -44,6 +51,7 @@ nav {
   padding: 5px 0px;
   color: var(--lightgray);
 }
+
 .searchBox .searchText {
   font-size: var(--medium);
   color: var(--lightgray);
@@ -52,21 +60,26 @@ nav {
   top: 50%;
   transform: translate(-50%, -50%);
 }
+
 .menuIcons {
   display: flex;
 }
+
 .menuIcons li img {
   width: 28px;
 }
+
 .menuIcons li {
   margin-left: 25px;
 }
-/* main */
+
+/* ---------------------------------------main */
 main {
   background-color: var(--verylightgray);
-  height: 5000px;
+  height: 100%;
   position: relative;
 }
+
 .mainWrap {
   max-width: 1000px;
   margin: 0 auto;
@@ -74,6 +87,7 @@ main {
   display: flex;
   position: relative;
 }
+
 .feeds {
   height: 100%;
   max-width: 680px;
@@ -81,6 +95,7 @@ main {
   float: left;
   margin-right: 28px;
 }
+
 .feeds article {
   background-color: white;
   border: 1px solid var(--lightgray);
@@ -88,21 +103,25 @@ main {
   width: 100%;
   margin-bottom: 30px;
 }
+
 .feedHeader {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10px;
 }
+
 .feedHeader .profile {
   display: flex;
   align-items: center;
 }
+
 .feedHeader .profile span {
   margin-left: 10px;
   font-weight: bold;
   font-size: var(--small);
 }
+
 .feedHeader .profile img {
   width: 30px;
   border-radius: 50%;
@@ -111,6 +130,7 @@ main {
 .feedImg img {
   width: 100%;
 }
+
 .likesAndComments {
   padding: 14px;
   display: flex;
@@ -124,80 +144,87 @@ main {
   font-size: 26px;
   margin-bottom: 10px;
 }
+
 .icons ul {
   display: flex;
 }
+
 .icons ul li {
   margin-right: 10px;
 }
+
 .likes {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
 }
+
 .likesAndComments .likes img {
   width: 20px;
   border-radius: 50%;
   border: 1px solid var(--lightgray);
   margin-right: 6px;
 }
+
 .commentInputBox {
   display: flex;
   justify-content: space-between;
   border-top: 1px solid var(--lightgray);
   padding: 14px;
 }
+
 .commentInputBox input {
   width: 95%;
   outline: none;
   border: none;
   font-size: 14px;
 }
+
 .comment {
-  /* padding-left: 5px; */
+  padding-left: 5px;
 }
+
 .commentInputBox .submitBtn {
   width: 5%;
   font-size: 14px;
   color: var(--blue);
 }
-/* right */
-.fixSup {
-  max-width: 320px;
-  position: absolute;
-  right: 0;
-  width: 100%;
-  border: 1px solid red;
-}
+
+/* ----------------------------right */
 .mainRight {
   max-width: 320px;
   position: fixed;
   width: 100%;
-  left: 680px;
 }
+
 .rightProfileWrap {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 12px;
 }
+
 .rightProfileWrap .rightProfile {
   display: flex;
   align-items: center;
 }
+
 .rightProfileWrap .rightProfile img {
   width: 50px;
   border-radius: 50%;
 }
+
 .rightProfile span {
   padding-left: 10px;
 }
+
 .blueText {
   color: var(--blue);
   font-weight: bold;
   font-size: 13px;
 }
-/* StoryBox */
+
+/* --------------------------------StoryBox */
 .storyBox {
   border: 1px solid var(--lightgray);
   border-radius: 3px;
@@ -207,15 +234,18 @@ main {
   overflow-y: scroll;
   background-color: white;
 }
+
 .asideHead {
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
 }
+
 .asideHead .asideH2 {
   font-size: 14px;
   color: var(--gray);
 }
+
 .storyImg {
   display: flex;
   align-items: center;
@@ -226,6 +256,7 @@ main {
   background: rgb(249, 252, 103);
   background: linear-gradient(32deg, rgba(249, 252, 103, 1) 0%, rgba(210, 63, 105, 1) 43%, rgba(163, 25, 137, 1) 100%);
 }
+
 .storyImg img {
   width: 90%;
   height: 90%;
@@ -233,15 +264,18 @@ main {
   border: 1px solid white;
   box-sizing: border-box;
 }
+
 .storyItem {
   display: flex;
   align-items: center;
   margin-bottom: 6px;
 }
+
 .storyItem .nameAndTime {
   padding-left: 10px;
 }
-/* recommentBox */
+
+/* ---------------------------------recommentBox */
 .recommendBox {
   border: 1px solid var(--lightgray);
   border-radius: 3px;
@@ -250,23 +284,28 @@ main {
   overflow-y: scroll;
   background-color: white;
 }
+
 .recommendItem {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-bottom: 8px;
 }
+
 .recommendItem .imgAndInfo {
   display: flex;
   align-items: center;
 }
+
 .recommendItem img {
   width: 35px;
   border-radius: 100%;
 }
+
 .nameAndRecommend {
   padding-left: 10px;
 }
+
 .recommendItem .followBtn {
   color: var(--blue);
   font-size: 14px;
