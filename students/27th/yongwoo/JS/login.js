@@ -6,20 +6,21 @@ nameBtn.addEventListener('keyup', function(){
     let nameLength = nameBtn.value.length;
     let passwordLength = passwordBtn.value.length;
 
-    if(nameLength >= 1 && passwordLength >= 1){
+    if(nameLength >= 1 && passwordLength >= 5 && nameBtn.value.indexOf('@') !== -1 ){
+        loginBtn.style.backgroundColor = "#0095f6";        
+    } else {
+        loginBtn.style.backgroundColor = "#b2dffc";
+    }
+    console.dir(nameBtn.value)
+});
+
+passwordBtn.addEventListener('keyup', function(){
+    let nameLength = nameBtn.value.length;
+    let passwordLength = passwordBtn.value.length;
+
+    if(nameLength >= 1 && passwordLength >= 5 && nameBtn.value.indexOf('@') !== -1){
         loginBtn.style.backgroundColor = "#0095f6";        
     } else {
         loginBtn.style.backgroundColor = "#b2dffc";
     }
 });
-
-// passwordBtn.addEventListener('keyup', function(){
-//     let nameLength = nameBtn.value.length;
-//     let passwordLength = passwordBtn.value.length;
-
-//     if(nameLength >= 1 && passwordLength >= 1){
-//         loginBtn.style.backgroundColor = "#0095f6";        
-//     } else {
-//         loginBtn.style.backgroundColor = "#b2dffc";
-//     }
-// });

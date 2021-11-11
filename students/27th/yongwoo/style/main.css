@@ -1,40 +1,52 @@
+body {
+    padding-top: 40px;
+}
 nav {
-    width: 100%;
-    height: 54px;
-    border-bottom:1px solid rgb(219, 219, 219) ;
+    position: fixed;
+    top: 0;
     display: flex;
     justify-content: center;
     background-color: #FFFFFF;
+    width: 100%;
+    height: 54px;
+    border-bottom:1px solid rgb(219, 219, 219) ;
 }
+
 .navContainer {
-    width: 935px;
     display: flex;
     justify-content: space-between;
+    width: 935px;
 }
+
 .navContainer .logoWrap {
-    width: 150px;
     display: flex;
     align-items: center;
+    width: 150px;
 }
+
 .navContainer .logoWrap img{
-    cursor: pointer;
     width: 25px;
+    cursor: pointer;
 }
+
 .navContainer .logoWrap .columnLine {
     width: 1px;
     height: 25px;
     margin-left: 22px;
     border-right: 1px solid rgb(14, 14, 14);
 }
+
 .navContainer .logoWrap .logo {
+    margin-left: 25px;
     font-size: 22px;
     font-family: 'Lobster', cursive;
-    margin-left: 25px;
 }
+
 .search {
     display: flex;
     align-items: center;
 }
+
 .search input {
     width: 215px;
     height: 28px;
@@ -44,164 +56,219 @@ nav {
     background-color: #fafafa;
     text-align: center;
 }
+
 .pictogramWrap {
-    width: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100px;
 }
+
 .pictogramWrap img{
-    cursor: pointer;
     width: 23px;
+    cursor: pointer;
 }
+
 .mainContainer {
+    display: flex;
+    justify-content: space-between;
     margin: 0 auto;
     width: 935px;
     margin-top: 55px;
-    display: flex;
-    justify-content: space-between;
 }
+
 .feeds {
-    width: 614px;
-    /* height: 880px; */
-    border: 1px solid rgba(var(--b6a,219,219,219),1);
     display: flex;
     flex-direction: column;
+    width: 614px;
     margin-bottom: 30px;
+    border: 1px solid rgba(var(--b6a,219,219,219),1);
 }
+
 .profileWrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 570px;
     height: 60px;
     margin: 0 auto;
     padding: 20px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
+
 .profileWrap .logoWrap{
     display: flex;
     align-items: center;
 }
+
 .profileWrap .logoWrap img {
     width: 32px;
     height: 32px;
     background-color: black;
     border-radius: 16px;
 }
+
 .profileWrap .logoWrap h2 {
-    font-size: 14px;
     margin-left: 5px;
+    font-size: 14px;
 }
+
 .profileWrap i {
     cursor: pointer;
 }
+
 .photoWrap {
     width: 612px;
 }
+
 .photoWrap img{
     width: 100%;
 }
+
 .feedsPictogram {
-    margin: 0 auto;
-    width: 570px;
-    height: 40px;
-    padding-top: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 570px;
+    height: 40px;
+    margin: 0 auto;
+    padding-top: 10px;
 }
+
 .feedsPictogram .feedsPictogramLeft {
-    width: 100px;
     display: flex;
     justify-content: space-between;
+    width: 100px;
 }
+
 .feedsPictogram .feedsPictogramLeft img {
     width: 24px;
     cursor: pointer;
 }
+
 .saveIcon {
     width: 24px;
     cursor: pointer;
 }
+
 .goodWrap {
-    width: 570px;
-    margin: 0 auto;
     display: flex;
     align-items: center;
+    width: 570px;
+    margin: 0 auto;
 }
+
 .goodWrap p {
+    margin-left: 5px;
     padding: 10px 0;
+    color: #262626;
     font-size: 14px;
     font-weight: bold;
-    color: #262626;
-    margin-left: 5px;
 }
+
 .goodImg {
     width: 20px;
     height: 20px;
     border-radius: 10px;
 }
+
 .textWrap {
-    font-size: 14px;
-    width: 570px;
-    /* height: 80px; */
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
+    width: 570px;
+    margin: 0 auto;
+    font-size: 14px;
 }
+
 .textWrap .text {
     color: #00376b;
 }
+
 .textWrap p {
+    margin-top:3px;
     line-height: 20px;
-    margin-top:3px
 }
+
 .textWrap .commentView {
     color: #8e8e8e;
 }
+
 .textWrap .time {
     color: #8e8e8e;
     font-size: 10px;
 }
+
 .textWrap span{
     font-size: 14px;
     font-weight: bold;
 }
+
 .commentTopline {
-    margin-top: 10px;
-    height: 50px;
-    width: 100%;
-    border-top: 1px solid rgb(219, 219, 219);
     display: flex;
+    width: 100%;
+    height: 50px;
+    margin-top: 10px;
+    border-top: 1px solid rgb(219, 219, 219);
 }
+
 .commentWrap {
-    width: 570px;
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 570px;
+    margin: 0 auto;
 }
+
 .commentWrap input {
     width: 500px;
     border: none;
-    outline: none;
     background: none;
+    outline: none;
 }
+
 .commentWrap button {
     background: none;
     border: none;
     cursor: pointer;
-    color: #0095f6;
+    color: #BFE0FD;
 }
 
+.comment {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 
+.commentNameBold {
+    font-weight: bold;
+}
+
+span.commentText {
+    font-weight: normal;
+}
+
+.comment .heart{
+    width: 15px;
+    transition: 0.5s all;
+    cursor: pointer;
+}
+
+.comment .heartColor{
+    display: none;
+    width: 15px;
+    transition: 0.5s all;
+    cursor: pointer;
+}
+
+.commentStart i{
+    font-size: 15px;
+}
 
 
 .mainRight {
     width: 293px;
     height: 460px;
-    /* border: 1px solid rgb(219, 219, 219); */
 }
+
 .myInfoWrap {
     display: flex;
     justify-content: space-between;
@@ -212,92 +279,110 @@ nav {
     display: flex;
     justify-content: space-between;
 }
+
 .myInfo h2 {
     font-size: 14px;
 }
+
 .myInfo p{
-    font-size: 14px;
     margin-top: 2px;
     color: #8e8e8e;
+    font-size: 14px;
 }
+
 .myInfo {
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-left: 18px;
 }
+
 .myInfoPhotoWrap img {
     width: 56px;
     height: 56px;
     border-radius: 28px;
     background-color: black;
 }
+
 .infoBlue {
-    font-size: 12px;
     color: #0095f6;
+    font-size: 12px;
     font-weight: bold;
 }
+
 .recommendTitle {
-    margin-top: 30px;
     display: flex;
     justify-content: space-between;
+    margin-top: 30px;
 }
+
 .recommendTitle .garyColor {
-    font-size: 14px;
-    font-weight: bold;
     color: #8e8e8e;
+    font-weight: bold;
+    font-size: 14px;
 }
+
 .recommendTitle .blackColor {
-    font-size: 12px;
     color: #262626;
+    font-size: 12px;
     font-weight: 600;
 }
+
 .recommendWrap {
-    margin-top: 16px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: 16px;
 }
+
 .recommendPhoto {
     width: 32px;
     height: 32px;
-    border-radius: 16px;
     border: 1px solid rgb(219, 219, 219); ;
+    border-radius: 16px;
 }
+
 .recommend {
     display: flex;
 }
+
 .recommendText {
     margin-left: 13px;
 }
+
 .recommend h4 {
     color: #262626;
     font-size: 14px;
 }
+
 .recommend p {
-    color: #8e8e8e;
     margin-top: 3px;
+    color: #8e8e8e;
     font-size: 12px;
 }
+
 .follow {
     color: #0095f6;
     font-size: 12px;
     font-weight: bold;
 }
+
 .infomatioinList {
-    margin-top: 37px;
-    color: #c7c7c7;
     display: flex;
-    flex-wrap: wrap;
-    font-size: 11px;
     align-items: center;
     justify-content: start;
+    flex-wrap: wrap;
+    margin-top: 37px;
+    color: #c7c7c7;
+    font-size: 11px;
 }
+
 .infomatioinList li {
+    padding-right: 8px;
     line-height: 17px;
     list-style: none;
-    padding-right: 8px;
 }
+
 .infomation p {
     margin-top: 25px;
     color: #c7c7c7;

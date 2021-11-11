@@ -7,25 +7,25 @@ body{
     height: 100vh;
 }
 .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 350px;
     height: 617px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 .topWrap {
-    width: 348px;
-    height: 380px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 348px;
+    height: 380px;
     border: 1px solid #dbdbdb;
     background-color: #ffffff;
 }
 .logo {
-    font-size: 45px;
     padding: 30px 0;
     font-family: 'Lobster', cursive;
+    font-size: 45px;
 }
 .storeWrap img {
     width: 136px;
@@ -49,20 +49,20 @@ input {
     padding: 8px 0;
     margin: 15px 0;
     color: #ffffff;
-    font-weight: bold;
     background-color: #b2dffc;
     border: none;
     border-radius: 1px;
     outline: none;
+    font-weight: bold;
 }
 .meddleLine{
-    width: 266px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 266px;
+    color: #8e8e8e;
     font-size: 13px;
     font-weight: 600;
-    color: #8e8e8e;
 }
 .line {
     width: 103px;
@@ -71,21 +71,21 @@ input {
 }
 .facebookWrap p {
     margin: 20px 0;
+    color: #385185;
     font-size: 14px;
     font-weight: 600;
-    color: #385185;
 }
 .passwordLost {
-    font-size: 12px;
     color: #00376b;
+    font-size: 12px;
 }
 .signUpWrap {
-    margin-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 348px;
     height: 61px;
+    margin-top: 20px;
     border: 1px solid #dbdbdb;
     background-color: #ffffff;
     font-size: 14px;
@@ -96,6 +96,6 @@ input {
     text-decoration: none;
 }
 .downlodeCopyright {
-    font-size: 14px;
     margin: 20px 0;
+    font-size: 14px;
 }
