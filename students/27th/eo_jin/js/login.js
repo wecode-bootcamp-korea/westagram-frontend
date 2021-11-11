@@ -14,6 +14,7 @@ function activeBtn(){
 
 function handleValidInandPwd(idx, el){
   idAndPwd[idx] = el.value;
+  console.log(idAndPwd[idx])
   if(!idAndPwd[idx]){
     idAndPwd[idx] = false;
   };

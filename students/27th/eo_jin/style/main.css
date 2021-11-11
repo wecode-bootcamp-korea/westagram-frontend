@@ -4,18 +4,20 @@ body {
 
 /* nav header styling */
 nav {
-  height: 54px;
+  height: 55px;
   border-bottom: 1px solid lightgrey;
   background-color: white;
+  display: flex;
+  justify-content: center;
 }
 
 .navWrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0 50px;
   padding: 0 20px;
   height: 100%;
+  width: 935px;
 }
 
 .logoAndName {
@@ -62,6 +64,15 @@ nav .icons li img {
 main {
   position: relative;
   padding: 54px 70px;
+  font-family: -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+  margin: 0 auto;
+  width: 935px;
+  padding: 30px 0px 0px;
+}
+
+.feeds {
+  width: 614px;
 }
 
 .feeds article {
@@ -119,7 +130,7 @@ main {
 .feeds article .response .feedIcons {
   display: flex;
   justify-content: space-between;
-  height: 45px;
+  height: 40px;
   padding: 0px 16px;
 }
 
@@ -147,7 +158,7 @@ main {
   align-items: center;
   height: 20px;
   padding: 0px 16px;
-  margin-bottom: 10px;
+  margin: 10px 0px;
 }
 
 .feeds article .response .feedLike * {
@@ -168,11 +179,71 @@ main {
 }
 
 .feeds article .response .feedText {
-  height: 100px;
+  height: 50px;
+  padding: 0px 16px;
+  overflow-y: scroll;
 }
-/* .feeds article .response .hoursAgo{
 
-} */
+.feeds article .response .feedText .feedTextProfile {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.feeds article .response .feedText .feedTextProfile .feedTextProfileId {
+  font-size: 16px;
+  font-weight: 700;
+  margin-right: 10px;
+}
+
+.feeds article .response .feedText .feedTextProfile .feedDescription {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.feeds article .response .feedText .feedTextProfile .showMoreText {
+  background-color: transparent;
+  border: none;
+  color: #8e8e8e;
+}
+
+.feeds article .response .feedText .shownReply .replyChunk {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.feeds article .response .feedText .shownReply .replyItSelf {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.feeds article .response .feedText .shownReply .replyItSelf .shownReplyId {
+  font-size: 14px;
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.feeds article .response .feedText .shownReply .replyItSelf .shownReplyText {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.feeds article .response .feedText .shownReply img {
+  box-sizing: content-box;
+  width: 14px;
+  height: 14px;
+}
+
+.feeds article .response .hoursAgo {
+  position: absolute;
+  bottom: 20px;
+  left: 16px;
+  font-size: 10px;
+}
+
 /* reply and button styling */
 .feeds article .replyAndBtn {
   width: 100%;
@@ -201,4 +272,189 @@ main {
   background-color: transparent;
   color: #cce6fd;
   font-size: 14px;
+}
+
+.main-right {
+  width: 293px;
+  height: 785px;
+  position: fixed;
+  top: 85px;
+  right: 220px;
+}
+
+.main-right .rightMyProfile {
+  width: 100%;
+  height: 56px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.main-right .rightMyProfile .rightMyProfileImage {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  align-self: center;
+}
+
+.main-right .rightMyProfile .rightMyProfileIdAndText {
+  align-self: center;
+  padding-left: 20px;
+}
+
+.main-right .rightMyProfile .rightMyProfileIdAndText * {
+  height: 18px;
+  font-size: 14px;
+}
+
+.main-right .rightMyProfile .rightMyProfileIdAndText .rightMyProfileId {
+  font-weight: 600;
+}
+
+.main-right .rightMyProfile .rightMyProfileIdAndText .rightMyProfileText {
+  color: #8e8e8e;
+}
+
+.main-right .rightStory {
+  width: 100%;
+  height: 200px;
+  background-color: white;
+  border: 1px solid lightgrey;
+  margin-top: 15px;
+  overflow-y: scroll;
+}
+
+.main-right .rightStory .rightStoryUpper {
+  width: 100%;
+  height: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-right .rightStory .rightStoryUpper * {
+  margin: 0 10px;
+}
+
+.main-right .rightStory .rightStoryUpper .rightStoryUpperTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: #8e8e8e;
+}
+
+.main-right .rightStory .rightStoryUpper button {
+  background-color: transparent;
+  border: none;
+  color: #262626;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.rightOthersWrapper {
+  margin: 0 10px;
+}
+
+.rightOthersWrapper .rightOthers {
+  width: 100%;
+  height: 48px;
+  padding: 8px 0px;
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.rightOthersWrapper .rightOthers .rightOthersProfileImage {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  align-self: center;
+}
+
+.rightOthersWrapper .rightOthers .rightOthersProfile {
+  align-self: center;
+  margin: auto 0px;
+  padding-left: 10px;
+}
+
+.rightOthersWrapper .rightOthers .rightOthersProfile * {
+  align-self: center;
+}
+
+.rightOthersWrapper .rightOthers .rightOthersProfile .rightOthersProfileId {
+  height: 17px;
+  font-size: 14px;
+  font-weight: 600;
+  padding-top: 2px;
+}
+
+.rightOthersWrapper .rightOthers .rightOthersProfile .rightOthersProfileText {
+  height: 16px;
+  font-size: 12px;
+  font-weight: 600;
+  padding-top: 2px;
+  color: #8e8e8e;
+}
+
+.main-right .rightRecommend {
+  width: 100%;
+  height: 175px;
+  background-color: white;
+  border: 1px solid lightgrey;
+  margin-top: 15px;
+  overflow-y: scroll;
+}
+
+.main-right .rightRecommend .rightRecommendUpper {
+  width: 100%;
+  height: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-right .rightRecommend .rightRecommendUpper * {
+  margin: 0 10px;
+}
+
+.main-right .rightRecommend .rightRecommendUpper .rightRecommendUpperTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: #8e8e8e;
+}
+
+.main-right .rightRecommend .rightRecommendUpper button {
+  background-color: transparent;
+  border: none;
+  color: #262626;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.main-right .rightOthers .followOther {
+  background-color: transparent;
+  color: #0095f6;
+  font-weight: 600;
+  line-height: 16px;
+  font-size: 12px;
+  border: none;
+  position: absolute;
+  right: 0px;
+  top: 16px;
+}
+
+.main-right .rightInfo {
+  margin-top: 20px;
+  color: #c7c7c7;
+  font-size: 11px;
+  line-height: 13px;
+  font-weight: 400;
+}
+
+.rightOthers img {
+  border: 1px solid black;
+  background-color: #0095f6;
+}
+@media screen and (max-width: 1330px) {
+  .main-right {
+    display: none;
+  }
 }

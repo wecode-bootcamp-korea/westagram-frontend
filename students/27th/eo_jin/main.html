@@ -16,14 +16,14 @@
   <nav>
     <div class="navWrapper">
       <div class="logoAndName">
-        <img class="logo" src="instagram.png" alt="instagramLogo" />
+        <img class="logo" src="src/instagram.png" alt="instagramLogo" />
         <span class="name">Westagram</span>
       </div>
       <input type="text" placeholder="검색">
       <ul class="icons">
-        <li class="navigate"><img src="explore.png" alt="explore"></li>
-        <li class="likeIssue"><img src="heart.png" alt="heart"></li>
-        <li class="myInfo"><img src="profile.png" alt="profile"></li>
+        <li class="navigate"><img src="src/explore.png" alt="explore"></li>
+        <li class="likeIssue"><img src="src/heart.png" alt="heart"></li>
+        <li class="myInfo"><img src="src/profile.png" alt="profile"></li>
       </ul>
     </div>
   </nav>
@@ -32,44 +32,232 @@
       <article>
         <div class="feedProfile">
           <div class="feedProfileImageAndID">
-            <img class="feedProfileImage" src="profile_of_ej__oh.JPG"/>
+            <img class="feedProfileImage" src="src/profile_of_ej__oh.JPG"/>
             <div class="feedProfileId">ej__oh</div>
           </div>
           <i class="fas fa-ellipsis-h"></i>
         </div>
         <div class="feedImage">
-          <img src="mangorookie.jpeg" alt="mangoAndRookie">
+          <img src="src/mangorookie.jpeg" alt="mangoAndRookie">
         </div>
         <div class="response">
           <div class="feedIcons">
             <div class="feedIconsLeft">
-              <img src="heart.png" alt="heart">
-              <img src="reply.png" alt="reply">
-              <img src="dmbutton.png" alt="dmbutton">
+              <img src="src/heart.png" alt="heart">
+              <img src="src/reply.png" alt="reply">
+              <img src="src/dmbutton.png" alt="dmbutton">
             </div>
-            <img src="save.png" alt="save">
+            <img src="src/save.png" alt="save">
           </div>
           <div class="feedLike">
-            <img class="feedLikeProfileImage" src="profile_of_ej__oh.JPG"/>
+            <img class="feedLikeProfileImage" src="src/profile_of_ej__oh.JPG"/>
             <div class="feedLiketext">@@@님 외 1500명이 좋아합니다</div>
           </div>
           <div class="feedText">
-            <span class="feedTextProfile">
-            </span>
-            <span class="feedDescription"></span>
-            <span class="dotDotDot"></span>
-            <span class="showMore"></span>
+            <div class="feedTextProfile">
+              <span class="feedTextProfileId">ej__oh</span>
+              <span class="feedDescription">위워크에서 진행한 베이킹 클래스 ...</span>
+              <button class="showMoreText">더 보기</button>
+            </div>
+            <div class="shownReply">
+            </div>
           </div>
-          <div class="hoursAgo">42분 전</div>
+          <div class="hoursAgo">
+            42분 전
           </div>
         </div>
         <div class="replyAndBtn">
-          <input type="text" class="reply" placeholder="댓글 달기..."/>
+          <input onkeyup="enterkey()" type="text" class="reply" placeholder="댓글 달기..."/>
           <button class="replyBtn">게시</button>
         </div>
       </article>
     </div>
-    <div class="marin-right"></div>
+    <div class="main-right">
+      <div class="rightMyProfile">
+        <img class="rightMyProfileImage" src="src/profile_of_ej__oh.JPG" alt="ej__oh">
+        <div class="rightMyProfileIdAndText">
+          <div class="rightMyProfileId">ej__oh</div>
+          <div class="rightMyProfileText">Hi || Wecoder__27</div>
+        </div>
+      </div>
+      <div class="rightStory">
+        <div class="rightStoryUpper">
+          <div class="rightStoryUpperTitle">스토리</div>
+          <button class="rightStoryUpperShowAll">모두 보기</button>
+        </div>
+        <div class="rightOthersWrapper">
+          <div class="rightOthers">
+            <img src="src/profile_of_ej__oh.JPG" alt="ej__oh" class="rightOthersProfileImage">
+            <div class="rightOthersProfile">
+              <div class="rightOthersProfileId">ej__oh</div>
+              <div class="rightOthersProfileText">15분 전</div>
+            </div>
+          </div>
+          <div class="rightOthers">
+            <img src="src/profile_of_ej__oh.JPG" alt="ej__oh" class="rightOthersProfileImage">
+            <div class="rightOthersProfile">
+              <div class="rightOthersProfileId">ej__oh</div>
+              <div class="rightOthersProfileText">15분 전</div>
+            </div>
+          </div>
+          <div class="rightOthers">
+            <img src="src/profile_of_ej__oh.JPG" alt="ej__oh" class="rightOthersProfileImage">
+            <div class="rightOthersProfile">
+              <div class="rightOthersProfileId">ej__oh</div>
+              <div class="rightOthersProfileText">15분 전</div>
+            </div>
+          </div>
+          <div class="rightOthers">
+            <img src="src/profile_of_ej__oh.JPG" alt="ej__oh" class="rightOthersProfileImage">
+            <div class="rightOthersProfile">
+              <div class="rightOthersProfileId">ej__oh</div>
+              <div class="rightOthersProfileText">15분 전</div>
+            </div>
+          </div>
+          <div class="rightOthers">
+            <img src="src/profile_of_ej__oh.JPG" alt="ej__oh" class="rightOthersProfileImage">
+            <div class="rightOthersProfile">
+              <div class="rightOthersProfileId">ej__oh</div>
+              <div class="rightOthersProfileText">15분 전</div>
+            </div>
+          </div>
+          <div class="rightOthers">
+            <img src="src/profile_of_ej__oh.JPG" alt="ej__oh" class="rightOthersProfileImage">
+            <div class="rightOthersProfile">
+              <div class="rightOthersProfileId">ej__oh</div>
+              <div class="rightOthersProfileText">15분 전</div>
+            </div>
+          </div>
+          <div class="rightOthers">
+            <img src="src/profile_of_ej__oh.JPG" alt="ej__oh" class="rightOthersProfileImage">
+            <div class="rightOthersProfile">
+              <div class="rightOthersProfileId">ej__oh</div>
+              <div class="rightOthersProfileText">15분 전</div>
+            </div>
+          </div>
+          <div class="rightOthers">
+            <img src="src/profile_of_ej__oh.JPG" alt="ej__oh" class="rightOthersProfileImage">
+            <div class="rightOthersProfile">
+              <div class="rightOthersProfileId">ej__oh</div>
+              <div class="rightOthersProfileText">15분 전</div>
+            </div>
+          </div>
+          <div class="rightOthers">
+            <img src="src/profile_of_ej__oh.JPG" alt="ej__oh" class="rightOthersProfileImage">
+            <div class="rightOthersProfile">
+              <div class="rightOthersProfileId">ej__oh</div>
+              <div class="rightOthersProfileText">15분 전</div>
+            </div>
+          </div>
+          <div class="rightOthers">
+            <img src="src/profile_of_ej__oh.JPG" alt="ej__oh" class="rightOthersProfileImage">
+            <div class="rightOthersProfile">
+              <div class="rightOthersProfileId">ej__oh</div>
+              <div class="rightOthersProfileText">15분 전</div>
+            </div>
+          </div>
+          <div class="rightOthers">
+            <img src="src/profile_of_ej__oh.JPG" alt="ej__oh" class="rightOthersProfileImage">
+            <div class="rightOthersProfile">
+              <div class="rightOthersProfileId">ej__oh</div>
+              <div class="rightOthersProfileText">15분 전</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="rightRecommend">
+        <div class="rightRecommendUpper">
+          <div class="rightRecommendUpperTitle">회원님을 위한 추천</div>
+          <button class="rightRecommendUpperShowAll">모두 보기</button>
+        </div>
+        <div class="rightOthersWrapper">
+          <div class="rightOthers">
+            <img src="src/profile_of_ej__oh.JPG" alt="ej__oh" class="rightOthersProfileImage">
+            <div class="rightOthersProfile">
+              <div class="rightOthersProfileId">ej__oh</div>
+              <div class="rightOthersProfileText">15분 전</div>
+            </div>
+            <button class="followOther">팔로우</button>
+          </div>
+          <div class="rightOthers">
+            <img src="src/profile_of_ej__oh.JPG" alt="ej__oh" class="rightOthersProfileImage">
+            <div class="rightOthersProfile">
+              <div class="rightOthersProfileId">ej__oh</div>
+              <div class="rightOthersProfileText">15분 전</div>
+            </div>
+            <button class="followOther">팔로우</button>
+          </div>
+          <div class="rightOthers">
+            <img src="src/profile_of_ej__oh.JPG" alt="ej__oh" class="rightOthersProfileImage">
+            <div class="rightOthersProfile">
+              <div class="rightOthersProfileId">ej__oh</div>
+              <div class="rightOthersProfileText">15분 전</div>
+            </div>
+            <button class="followOther">팔로우</button>
+          </div>
+          <div class="rightOthers">
+            <img src="src/profile_of_ej__oh.JPG" alt="ej__oh" class="rightOthersProfileImage">
+            <div class="rightOthersProfile">
+              <div class="rightOthersProfileId">ej__oh</div>
+              <div class="rightOthersProfileText">15분 전</div>
+            </div>
+            <button class="followOther">팔로우</button>
+          </div>
+          <div class="rightOthers">
+            <img src="src/profile_of_ej__oh.JPG" alt="ej__oh" class="rightOthersProfileImage">
+            <div class="rightOthersProfile">
+              <div class="rightOthersProfileId">ej__oh</div>
+              <div class="rightOthersProfileText">15분 전</div>
+            </div>
+            <button class="followOther">팔로우</button>
+          </div>
+          <div class="rightOthers">
+            <img src="src/profile_of_ej__oh.JPG" alt="ej__oh" class="rightOthersProfileImage">
+            <div class="rightOthersProfile">
+              <div class="rightOthersProfileId">ej__oh</div>
+              <div class="rightOthersProfileText">15분 전</div>
+            </div>
+            <button class="followOther">팔로우</button>
+          </div>
+          <div class="rightOthers">
+            <img src="src/profile_of_ej__oh.JPG" alt="ej__oh" class="rightOthersProfileImage">
+            <div class="rightOthersProfile">
+              <div class="rightOthersProfileId">ej__oh</div>
+              <div class="rightOthersProfileText">15분 전</div>
+            </div>
+            <button class="followOther">팔로우</button>
+          </div>
+          <div class="rightOthers">
+            <img src="src/profile_of_ej__oh.JPG" alt="ej__oh" class="rightOthersProfileImage">
+            <div class="rightOthersProfile">
+              <div class="rightOthersProfileId">ej__oh</div>
+              <div class="rightOthersProfileText">15분 전</div>
+            </div>
+            <button class="followOther">팔로우</button>
+          </div>
+          <div class="rightOthers">
+            <img src="src/profile_of_ej__oh.JPG" alt="ej__oh" class="rightOthersProfileImage">
+            <div class="rightOthersProfile">
+              <div class="rightOthersProfileId">ej__oh</div>
+              <div class="rightOthersProfileText">15분 전</div>
+            </div>
+            <button class="followOther">팔로우</button>
+          </div>
+          <div class="rightOthers">
+            <img src="src/profile_of_ej__oh.JPG" alt="ej__oh" class="rightOthersProfileImage">
+            <div class="rightOthersProfile">
+              <div class="rightOthersProfileId">ej__oh</div>
+              <div class="rightOthersProfileText">15분 전</div>
+            </div>
+            <button class="followOther">팔로우</button>
+          </div>
+        </div>
+      </div>
+      <div class="rightInfo">
+        소개·도움말·홍보·센터·API·채용 정보·개인정보처리방침·약관·위치·인기 계정·해시태그·언어
+        <br><br>© 2021 INSTAGRAM FROM META
+      </div>
+    </div>
   </main>
   <script src="js/main.js"></script>
 </body>
