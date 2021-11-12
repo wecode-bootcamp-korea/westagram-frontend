@@ -32,7 +32,7 @@ nav .navWrapper .navLeftBox img {
   height: 23px;
 }
 
-nav .navWrapper .navLeftBox .navDiv {
+nav .navWrapper .navLeftBox .navDivider {
   width: 1px;
   height: 24px;
   margin: 0 15px;
@@ -145,20 +145,12 @@ main .mainWrapper .feeds .feedsHead .userHead {
   background: #000;
 }
 
-main .mainWrapper .feeds .feedContent {
-}
-
 main .mainWrapper .feeds .feedContent .feedContentImg {
   display: flex;
   justify-content: space-between;
   margin: 8px 0;
   padding: 0 16px;
 }
-
-/* main .mainWrapper .feeds .feedContent .feedContentImg > div {
-    display: flex;
-    justify-content: space-between;
-} */
 
 main .mainWrapper .feeds .feedContent .feedContentImg > div > img {
   width: 24px;
@@ -189,15 +181,8 @@ main .mainWrapper .feeds .feedsImg img {
   width: 100%;
 }
 
-/* main .mainWrapper .feeds .commentBox .commentSpace {
-    overflow: hidden;
-    display: flex;
-    justify-content: space-between;
-} */
-
 main .mainWrapper .feeds .commentBox,
 main .mainWrapper .feeds .commentSpace {
-  /* border-top: 1px solid #dbdbdb; */
   padding: 0 16px;
 }
 
@@ -218,122 +203,115 @@ main .mainWrapper .feeds .commentSpace .commentLi .commentText .user {
 }
 
 main .mainWrapper .feeds .commentBox {
-  height: 54px;
   display: flex;
   justify-content: space-between;
+  height: 54px;
   background-color: #fff;
 }
 
 main .mainWrapper .feeds .commentBox .comment {
+  width: 100%;
   border: none;
   outline: none;
-  width: 100%;
 }
 
 main .mainWrapper .feeds .commentBox .commentBtn {
+  display: inline;
   width: 30px;
-  font-size: 14px;
   background: #fff;
   border: none;
-  display: inline;
+  font-size: 14px;
 }
 
-main .mainWrapper .main-right {
+main .mainWrapper .mainRight {
   width: 40%;
 }
 
-main .mainWrapper .main-right > span {
-  width: 100%;
+main .mainWrapper .mainRight > span {
   display: flex;
   justify-content: flex-start;
+  width: 100%;
   margin-top: 8px;
 }
 
-main .mainWrapper .main-right > span .user {
+main .mainWrapper .mainRight > span .user {
   width: 56px;
   height: 56px;
   margin-right: 15px;
-  border-radius: 50px;
   background: #000;
+  border-radius: 50px;
 }
 
-main .mainWrapper .main-right > span .userId {
+main .mainWrapper .mainRight > span .userId {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-main .mainWrapper .main-right > div {
-  border: 1px solid #dbdbdb;
+main .mainWrapper .mainRight > div {
   margin-top: 20px;
+  border: 1px solid #dbdbdb;
 }
 
-main .mainWrapper .main-right .feedStory,
-main .mainWrapper .main-right .recommend {
+main .mainWrapper .mainRight .feedStory,
+main .mainWrapper .mainRight .recommend {
   height: 300px;
   padding: 14px;
 }
 
-main .mainWrapper .main-right .feedStory .feedStoryHead,
-main .mainWrapper .main-right .recommend .feedStoryHead {
+main .mainWrapper .mainRight .feedStory .feedStoryHead,
+main .mainWrapper .mainRight .recommend .feedStoryHead {
   display: flex;
   justify-content: space-between;
   font-size: 14px;
 }
 
-main .mainWrapper .main-right .feedStory .feedStoryHead .story,
-main .mainWrapper .main-right .recommend .feedStoryHead .story {
+main .mainWrapper .mainRight .feedStory .feedStoryHead .story,
+main .mainWrapper .mainRight .recommend .feedStoryHead .story {
   color: #8e8e8e;
 }
 
-main .mainWrapper .main-right .feedStory .feedStoryCon,
-main .mainWrapper .main-right .recommend .feedStoryCon {
+main .mainWrapper .mainRight .feedStory .feedStoryCon,
+main .mainWrapper .mainRight .recommend .feedStoryCon {
   margin-top: 14px;
 }
 
-main .mainWrapper .main-right .feedStory .feedStoryCon ul,
-main .mainWrapper .main-right .recommend .feedStoryCon ul {
+main .mainWrapper .mainRight .feedStory .feedStoryCon ul,
+main .mainWrapper .mainRight .recommend .feedStoryCon ul {
   overflow-y: auto;
 }
 
-main .mainWrapper .main-right .feedStory .feedStoryCon ul li {
+main .mainWrapper .mainRight .feedStory .feedStoryCon ul li {
   display: flex;
   margin-bottom: 15px;
 }
 
-main .mainWrapper .main-right .recommend .feedStoryCon ul li {
+main .mainWrapper .mainRight .recommend .feedStoryCon ul li {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 15px;
 }
 
-main
-  .mainWrapper
-  .main-right
-  .recommend
-  .feedStoryCon
-  ul
-  li
-  .feedStoryUserInfo {
+main .mainWrapper .mainRight .recommend .feedStoryCon ul li .feedStoryUserInfo {
   display: flex;
   flex: flex-start;
 }
 
-main .mainWrapper .main-right .recommend .feedStoryCon ul li .follow {
+main .mainWrapper .mainRight .recommend .feedStoryCon ul li .follow {
   color: #0095f6;
   font-size: 14px;
 }
 
-main .mainWrapper .main-right .feedStory .feedStoryCon ul li .feedStoryConUser,
-main .mainWrapper .main-right .recommend .feedStoryCon ul li .feedStoryConUser {
+main .mainWrapper .mainRight .feedStory .feedStoryCon ul li .feedStoryConUser,
+main .mainWrapper .mainRight .recommend .feedStoryCon ul li .feedStoryConUser {
   width: 32px;
   height: 32px;
-  border-radius: 50px;
-  background: #000;
   margin-right: 13px;
+  background: #000;
+  border-radius: 50px;
 }
 
-main .mainWrapper .main-right .recommend {
+main .mainWrapper .mainRight .recommend {
   height: 200px;
 }
