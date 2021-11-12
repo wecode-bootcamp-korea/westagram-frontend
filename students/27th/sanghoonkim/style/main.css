@@ -159,11 +159,43 @@ main {
   margin-bottom: 10px;
 }
 
+.likeBtn {
+  font-size: 26px;
+}
+
+.red {
+  color: #ed4956;
+}
+
 .likesAndComments .likes img {
   width: 20px;
   border-radius: 50%;
   border: 1px solid var(--lightgray);
   margin-right: 6px;
+}
+.mainText {
+  margin-bottom: 5px;
+}
+.commentBox li {
+  position: relative;
+  width: 100%;
+}
+.commentLikeBtn {
+  font-size: 12px;
+  position: absolute;
+
+  right: 20px;
+}
+
+.commentDel {
+  font-size: 12px;
+  right: 0;
+  position: absolute;
+  opacity: 0;
+}
+
+.commentItem:hover > .commentDel {
+  opacity: 1;
 }
 
 .commentInputBox {
@@ -179,10 +211,12 @@ main {
   border: none;
   font-size: 14px;
 }
-
-.comment {
-  padding-left: 5px;
+.commentWrap:hover > .commentDel {
+  opacity: 1;
 }
+/* .comment {
+  padding-left: 5px;
+} */
 
 .commentInputBox .submitBtn {
   width: 5%;
