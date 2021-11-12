@@ -64,7 +64,11 @@ const makeCommentInner = (nickName, comment) => {
 };
 
 const makeComment = () => {
-  const newComment = document.createElement('div');
+  if (!commentInput.value.trim().length) {
+    alert('댓글을 입력해주세요!');
+    return;
+  }
+  const newComment = document.createElement('li');
   newComment.className = 'feedComment';
   newComment.innerHTML = makeCommentInner(userNickName, commentInput.value);
   newComment.id = `comment_${commentId++}`;
