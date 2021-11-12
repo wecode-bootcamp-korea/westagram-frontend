@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="kr">
 
 <head>
     <meta charset="UTF-8">
@@ -16,173 +16,278 @@
 </head>
 
 <body>
-    <nav>
-        <div class="logo">
-            <a href="#">
-                <h1>Westagram</h1>
-            </a>
-        </div>
-        <div class="search">
-            <i class="fas fa-search"></i>
-            <input type="search" id="search" placeholder="검색">
-        </div>
-        <div class="menu_bar">
-            <a href="#"><i class="fas fa-home"></i></a>
-            <a href="#"><i class="far fa-paper-plane"></i></a>
-            <a href="#"><i class="far fa-plus-square"></i></a>
-            <a href="#"><i class="far fa-compass"></i></a>
-            <a href="#"><i class="far fa-heart"></i></a>
-            <a href="#"><i class="fas fa-circle"></i></a>
-        </div>
-    </nav>
-    <section>
-        <aside>
-            <div class="profile">
-                <a href="#"><i class="fas fa-circle"></i></a>
-                <a href="#"><span>youjin_ii</span></a>
-                <span>youjin 🥨</span>
-                <button>전환</button>
-            </div>
-            <div class="recommend">
-                <p>회원님을 위한 추천</p>
-                <button>모두 보기</button>
-                <div class="recommend_follow">
-                    <div class="recommend_follow_profile">
-                        <a href="#"><i class="fas fa-circle"></i></a>
-                        <a href="#"><span>youjin_ii</span></a>
-                        <span>Instagram 신규 가입</span>
-                        <button>팔로우</button>
-                    </div>
-                    <div class="recommend_follow_profile">
-                        <a href="#"><i class="fas fa-circle"></i></a>
-                        <a href="#"><span>youjin_ii</span></a>
-                        <span>Instagram 신규 가입</span>
-                        <button>팔로우</button>
-                    </div>
-                    <div class="recommend_follow_profile">
-                        <a href="#"><i class="fas fa-circle"></i></a>
-                        <a href="#"><span>youjin_ii</span></a>
-                        <span>Instagram 신규 가입</span>
-                        <button>팔로우</button>
-                    </div>
-                    <div class="recommend_follow_profile">
-                        <a href="#"><i class="fas fa-circle"></i></a>
-                        <a href="#"><span>youjin_ii</span></a>
-                        <span>Instagram 신규 가입</span>
-                        <button>팔로우</button>
-                    </div>
-                    <div class="recommend_follow_profile">
-                        <a href="#"><i class="fas fa-circle"></i></a>
-                        <a href="#"><span>youjin_ii</span></a>
-                        <span>wecode_bootcamp님 외 1명이 팔로우</span>
-                        <button>팔로우</button>
-                    </div>
+    <div class="nav_wrapper">
+        <div class="section_nav">
+            <header>
+                <div class="logo">
+                    <a href="#">
+                        <h1>Westagram</h1>
+                    </a>
                 </div>
-            </div>
-        </aside>
+                <div class="search">
+                    <i class="fas fa-search"></i>
+                    <span>검색</span>
+                    <input type="search" id="search" placeholder="">
+                </div>
+
+            </header>
+            <nav>
+                <div class="menu_bar">
+                    <a href="#"><i class="fas fa-home-lg-alt"></i></a>
+                    <a href="#"><i class="fal fa-paper-plane"></i></a>
+                    <a href="#"><i class="fal fa-plus-square"></i></a>
+                    <a href="#"><i class="fal fa-compass"></i></a>
+                    <a href="#"><i class="fal fa-heart"></i></a>
+                    <a href=""><img src="./imgs/chobo.png" class="menu_bar_img" alt=""></a>
+                </div>
+
+            </nav>
+        </div>
+    </div>
+    <section>
         <main>
-            g
-            <div class="story_foller">
-                <i class="fas fa-arrow-circle-right"></i>
-                <i class="fas fa-arrow-circle-left"></i>
-                <a href="#">
-                    <i class="fas fa-circle"></i>
-                    <span>wecode_bootcamp</span>
-                </a>
-                <a href="#">
-                    <i class="fas fa-circle"></i>
-                    <span>wecode_bootcamp</span>
-                </a>
-                <a href="#">
-                    <i class="fas fa-circle"></i>
-                    <span>wecode_bootcamp</span>
-                </a>
-                <a href="#">
-                    <i class="fas fa-circle"></i>
-                    <span>wecode_bootcamp</span>
-                </a>
-                <a href="#">
-                    <i class="fas fa-circle"></i>
-                    <span>wecode_bootcamp</span>
-                </a>
-                <a href="#">
-                    <i class="fas fa-circle"></i>
-                    <span>wecode_bootcamp</span>
-                </a>
-                <a href="#">
-                    <i class="fas fa-circle"></i>
-                    <span>wecode_bootcamp</span>
-                </a>
-                <a href="#">
-                    <i class="fas fa-circle"></i>
-                    <span>wecode_bootcamp</span>
-                </a>
+            <!-- <div class="story_fixed_box">
+            </div> -->
+            <div class="story_follower">
+
+                <div class="toggle_buttons">
+                    <button class="story_next" type="button">
+                        <!-- <i class="fas fa-arrow-circle-left"></i> -->
+                    </button>
+                    <button class="story_previous" type="button">
+                        <i class="fas fa-arrow-circle-right"></i>
+                    </button>
+                </div>
+                <ul>
+                    <li class="story">
+                        <a href="#">
+                            <div class="story_item">
+                                <img src="./imgs/profile_image.jpg" class="story_follower_img" alt="">
+                                <span>wecode</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="story">
+                        <a href="#">
+                            <div class="story_item">
+                                <img src="./imgs/profile_image.jpg" class="story_follower_img" alt="">
+                                <span>wecode</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="story">
+                        <a href="#">
+                            <div class="story_item">
+                                <img src="./imgs/profile_image.jpg" class="story_follower_img" alt="">
+                                <span>wecode</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="story">
+                        <a href="#">
+                            <div class="story_item">
+                                <img src="./imgs/profile_image.jpg" class="story_follower_img" alt="">
+                                <span>wecode</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="story">
+                        <a href="#">
+                            <div class="story_item">
+                                <img src="./imgs/profile_image.jpg" class="story_follower_img" alt="">
+                                <span>wecode</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="story">
+                        <a href="#">
+                            <div class="story_item">
+                                <img src="./imgs/profile_image.jpg" class="story_follower_img" alt="">
+                                <span>wecode</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="story">
+                        <a href="#">
+                            <div class="story_item">
+                                <img src="./imgs/profile_image.jpg" class="story_follower_img" alt="">
+                                <span>wecode</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="story">
+                        <a href="#">
+                            <div class="story_item">
+                                <img src="./imgs/profile_image.jpg" class="story_follower_img" alt="">
+                                <span>wecode</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li></li>
+                    <li></li>
+                </ul>
             </div>
-            </div>
-            <div class="feed">
+            <!-- </div> -->
+            <article>
+                <!-- <div class="feed"> -->
                 <div class="feed_info">
-                    <i class="fas fa-circle"></i>
-                    <a href="#"><span>youjin_ii</span></a>
-                    <a href="#"><span>wework 선릉 2호점</span></a>
-                    <i class="far fa-ellipsis-h"></i>
+                    <a href="#"><img src="./imgs/profile_image.jpg" class="feed_profile_img" alt=""></a>
+                    <div class="feed_profile">
+                        <a href="#"><span class="feed_profile_id">haribo</span></a>
+                        <a href="#"><span class="feed_profile_address">wework 선릉 2호점</span></a>
+                    </div>
+                    <a href="#"><i class="far fa-ellipsis-h"></i></a>
                 </div>
                 <div class="feed_imgs">
-                    <i class="fas fa-arrow-circle-right"></i>
-                    <i class="fas fa-arrow-circle-left"></i>
+                    <button type="button" class="fa-arrow-circle-right"><i
+                            class="fas fa-arrow-circle-right"></i></button>
+                    <button type="button"><i class="fas fa-arrow-circle-left"></i></button>
+                    <div class="feed_imgs_box">
+                        <img src="./imgs/profile_image.jpg" alt="">
+                        <img src="./imgs/profile_image.jpg" alt="">
+                        <img src="./imgs/profile_image.jpg" alt="">
+                    </div>
+
                 </div>
                 <div class="feed_icon">
                     <div class="feed_like">
-                        <a href="#"><i class="far fa-heart"></i></a>
-                        <a href=""><i class="far fa-comment"></i></a>
-                        <a href="#"><i class="far fa-paper-plane"></i></a>
+                        <button><i class="fal fa-heart"></i></button>
+                        <button><i class="far fa-comment"></i></button>
+                        <button><i class="fal fa-paper-plane"></i></button>
                     </div>
                     <div class="feed_mark">
-                        <i class="far fa-bookmark"></i>
+                        <button><i class="far fa-bookmark"></i></button>
                     </div>
                 </div>
                 <div class="feed_like_num">
                     <a href="#">
-                        <span>좋아요</span>
-                        <span>838</span>
-                        <span>개</span>
+                        좋아요<span class="like_num">838</span>개 모두 보기
                     </a>
                 </div>
                 <div class="feed_id">
-                    <a href="#">youjin_ii</a>
-                    <p>git init 🐣</p>
+                    <a href="#">haribo</a>
+                    <p>🐣; Hello, my name is git.</p>
                 </div>
                 <div class="feed_comment_num">
                     <a href="#">댓글 <span>84</span>개 모두 보기</a>
                 </div>
                 <div class="feed_comment">
-
+                    <a href="#">wecode_bootcamp</a>
+                    <div class="feed_comment_upload">
+                        <p>git, you are so cute !</p>
+                    </div>
+                    <i class="far fa-heart"></i>
                 </div>
                 <div class="feed_update_date">
-                    <a href="#">youjin_ii</a>
-                    <p>git init 🐣</p>
+                    <a href="#"><span><span>20</span>시간</span> 전</a>
+                </div>
+                <div class="feed_comment_input">
+                    <form action="" method="post">
+                        <button type="button"><i class="far fa-smile"></i></button>
+                        <textarea name="" id="" cols="50" rows="5" aria-label="댓글 달기..."
+                            placeholder="댓글 달기..."></textarea>
+                        <button type="submit">게시</button>
+                    </form>
+                </div>
+                <!-- </div> -->
+            </article>
+        </main>
+        <aside>
+            <div class="profile">
+                <!-- <div class="profile_wrapper"> -->
+                <a href="#">
+                    <img src="./imgs/chobo.png" class="profile_image" alt="profile_image">
+                </a>
+                <div class="profile_info">
+                    <a href="#">
+                        <p class="profile_id">chobo_coding</p>
+                    </a>
+                    <p>do it 🤓</p>
+                </div>
+                <!-- </div> -->
+                <button>전환</button>
+            </div>
+            <div class="recommend">
+                <div class="recommend_for_you">
+                    <p>회원님을 위한 추천</p>
+                    <button type="button">모두 보기</button>
+                </div>
+                <div class="recommend_follow">
+                    <div class="recommend_follow_profile">
+                        <a href="#"><img src="./imgs/pie.jpeg" class="recommend_follow_profile_img" alt=""></a>
+                        <div class="recommens_follow_info">
+                            <a href="#">
+                                <p class="info_id">like_pie_son</p>
+                            </a>
+                            <p class="info_join">Instagram 신규 가입</p>
+                        </div>
+                        <button>팔로우</button>
+                    </div>
+                    <div class="recommend_follow_profile">
+                        <a href="#"><img src="./imgs/zeus.jpeg" class="recommend_follow_profile_img" alt=""></a>
+                        <div class="recommens_follow_info">
+                            <a href="#">
+                                <p class="info_id">god_of_java</p>
+                            </a>
+                            <p class="info_join">Instagram 신규 가입</p>
+                        </div>
+                        <button>팔로우</button>
+                    </div>
+                    <div class="recommend_follow_profile">
+                        <a href="#"><img src="./imgs/son.png" class="recommend_follow_profile_img" alt=""></a>
+                        <div class="recommens_follow_info">
+                            <a href="#">
+                                <p class="info_id">mooreung_dowon</p>
+                            </a>
+                            <p class="info_join">Instagram 신규 가입</p>
+                        </div>
+                        <button>팔로우</button>
+                    </div>
+                    <div class="recommend_follow_profile">
+                        <a href="#"><img src="./imgs/queen.jpeg" class="recommend_follow_profile_img" alt=""></a>
+                        <div class="recommens_follow_info">
+                            <a href="#">
+                                <p class="info_id">front_queen</p>
+                            </a>
+                            <p class="info_join">Instagram 신규 가입</p>
+                        </div>
+                        <button>팔로우</button>
+                    </div>
+                    <div class="recommend_follow_profile">
+                        <a href="#"><img src="./imgs/bong.jpeg" class="recommend_follow_profile_img" alt=""></a>
+                        <div class="recommens_follow_info">
+                            <a href="#">
+                                <p class="info_id">bongbongs_papa</p>
+                            </a>
+                            <p class="info_join">Instagram 신규 가입</p>
+                        </div>
+                        <button>팔로우</button>
+                    </div>
+
                 </div>
             </div>
-        </main>
+            <footer>
+                <div class="footer_info">
+                    <a href="#"><span>소개</span></a>
+                    <a href="#"><span>도움말</span></a>
+                    <a href="#"><span>홍보 센터</span></a>
+                    <a href="#"><span>API</span></a>
+                    <a href="#"><span>채용 정보</span></a>
+                    <a href="#"><span>개인정보처리방침</span></a>
+                    <a href="#"><span>약관</span></a>
+                    <a href="#"><span>위치</span></a>
+                    <a href="#"><span>인기 계정</span></a>
+                    <a href="#"><span>해시태그</span></a>
+                    <a href="#"><span>언어</span></a>
+                </div>
+                <div class="footer_language">
+                    <span>© 2021 Instagram from Meta</span>
+                </div>
+            </footer>
+        </aside>
 
     </section>
-    <footer>
-        <div class="footer_info">
-            <a href="#"><span>소개</span></a>
-            <a href="#"><span>도움말</span></a>
-            <a href="#"><span>홍보 센터</span></a>
-            <a href="#"><span>API</span></a>
-            <a href="#"><span>채용 정보</span></a>
-            <a href="#"><span>개인정보처리방침</span></a>
-            <a href="#"><span>약관</span></a>
-            <a href="#"><span>위치</span></a>
-            <a href="#"><span>인기 계정</span></a>
-            <a href="#"><span>해시태그</span></a>
-            <a href="#"><span>언어</span></a>
-        </div>
-        <div class="footer_language">
-            <span>© 2021 Instagram from Meta</span>
-        </div>
-    </footer>
+
 </body>
 
 </html>
