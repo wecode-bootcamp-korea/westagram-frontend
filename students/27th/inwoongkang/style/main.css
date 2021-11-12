@@ -2,32 +2,34 @@
   box-sizing: border-box;
 }
 body {
-  background-color: #eee;
   margin: 0;
+  background-color: #eee;
 }
+
 .instaLogo {
   width: 50px;
   border-right: 2px solid black;
   padding-right: 15px;
 }
+
 .logoBox {
   width: 60px;
 }
 
 .nav {
-  background-color: white;
   display: flex;
+  height: 60px;
   position: relative;
   top: 0;
   align-items: center;
-  height: 60px;
+  background-color: white;
 }
 
 .instaTitle {
+  margin-left: 3px;
   font-family: "Lobster", cursive;
   font-size: 30px;
   font-weight: bold;
-  margin-left: 3px;
 }
 
 .inputBox::placeholder {
@@ -39,8 +41,8 @@ body {
 }
 
 .rightIcon {
-  font-size: 30px;
   margin-right: 20px;
+  font-size: 30px;
 }
 
 .inputBox {
@@ -65,13 +67,14 @@ body {
   margin-top: 20px;
   justify-content: center;
 }
+
 .feedTopBox {
   display: flex;
+  width: 500px;
+  height: 50px;
   justify-content: center;
   align-items: center;
   background-color: white;
-  width: 500px;
-  height: 50px;
 }
 
 .box-margin {
@@ -101,22 +104,24 @@ body {
 .imageWrapper {
   height: 500px;
 }
+
 .fontWrapper {
   position: relative;
 }
+
 .leftIcon {
-  font-size: 20px;
   margin-left: 15px;
   margin-top: 10px;
   color: rgb(85, 85, 85);
+  font-size: 20px;
 }
 
 .bookmark {
-  font-size: 20px;
-  margin-right: 15px;
   position: absolute;
-  right: 0;
+  margin-right: 15px;
   margin-top: 10px;
+  right: 0;
+  font-size: 20px;
   color: rgb(85, 85, 85);
 }
 
@@ -125,7 +130,7 @@ body {
   height: 20px;
   border-radius: 50%;
   border: 1px solid rgb(182, 182, 182);
-  margin-top: 0px;
+  margin-left: 0px;
 }
 
 .bold {
@@ -134,8 +139,11 @@ body {
 
 .likeWrapper {
   display: flex;
-  align-items: center;
   height: 35px;
+  margin-left: 15px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  align-items: center;
 }
 
 .likeComment {
@@ -219,8 +227,8 @@ body {
 }
 
 .story {
-  margin-top: 20px;
   width: 100%;
+  margin-top: 20px;
   background-color: white;
   padding: 10px;
 }
@@ -228,8 +236,8 @@ body {
 .smallStory {
   display: flex;
   justify-content: space-between;
-  color: rgb(165, 165, 165);
   margin-bottom: 5px;
+  color: rgb(165, 165, 165);
 }
 
 .allSee {
@@ -237,8 +245,7 @@ body {
   font-weight: bold;
   font-size: 13px;
 }
-/*
-*/
+
 .friendProfile {
   width: 30px;
   height: 30px;
@@ -246,16 +253,15 @@ body {
 }
 
 .imageRound {
-  width: 40px;
-  height: 40px;
-  border: 0.5px solid transparent;
-  background-image: linear-gradient(180deg, pink, purple);
-  border-radius: 50%;
-
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 40px;
+  height: 40px;
   margin: 5px;
+  border: 0.5px solid transparent;
+  background-image: linear-gradient(180deg, pink, purple);
+  border-radius: 50%;
 }
 
 .recommand {
@@ -268,8 +274,8 @@ body {
 }
 
 .time {
-  color: rgb(165, 165, 165);
   margin-left: 19px;
+  color: rgb(165, 165, 165);
   font-size: 13px;
 }
 
@@ -299,6 +305,7 @@ footer {
 }
 
 .deleteBut {
+  display: none;
   position: absolute;
   right: 35px;
   border: none;
@@ -306,7 +313,6 @@ footer {
   background: white;
   color: rgb(165, 165, 165);
   font-size: 12px;
-  display: none;
 }
 
 .comment:hover .deleteBut {
@@ -315,11 +321,11 @@ footer {
 }
 
 .recommendBox {
+  position: absolute;
   width: 100%;
   max-height: 180px;
-  background-color: white;
-  position: absolute;
   overflow: scroll;
+  background-color: white;
 }
 
 .recommendImage {

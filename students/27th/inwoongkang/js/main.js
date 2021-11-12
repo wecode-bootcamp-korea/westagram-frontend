@@ -5,7 +5,7 @@ const postButton = document.querySelector(".post");
 const inputBox = document.querySelector(".inputBox");
 const searchBox = document.querySelector(".searchBox");
 const recommendBox = document.createElement("div");
-let temp = 0;
+let childNumber = 0;
 let divBox = [];
 let number = 0;
 let userList = [];
@@ -43,6 +43,7 @@ let fifthfriend = new SearchList(
   "image/image1.png",
   "djjoiw님의 친구"
 );
+
 userList.push(firstFriend, secondfriend, thirdfriend, forthFriend, fifthfriend);
 
 function heart(event) {
@@ -59,7 +60,7 @@ function doDelete(event) {
 }
 
 function doRecommend(event) {
-  for (let i = 0; i < temp; i++) {
+  for (let i = 0; i < childNumber; i++) {
     recommendBox.removeChild(recommendBox.firstChild);
   }
 
@@ -78,9 +79,11 @@ function doRecommend(event) {
         const userID = document.createElement("div");
         const userDescription = document.createElement("div");
         const secondFlexBox = document.createElement("div");
+
         recommendWrapper.setAttribute("class", "recommendWrapper");
         imageBox.setAttribute("src", el["image"]);
         imageBox.setAttribute("class", "recommendImage");
+
         recommendBox.appendChild(recommendWrapper);
         recommendWrapper.appendChild(firstRecommend);
         recommendWrapper.appendChild(secondFlexBox);
@@ -91,8 +94,9 @@ function doRecommend(event) {
       }
     });
   }
-  temp = recommendBox.childElementCount;
+  childNumber = recommendBox.childElementCount;
 }
+
 function init() {
   inputBox.addEventListener("keyup", doRecommend);
 
@@ -107,27 +111,34 @@ function init() {
       postButton.style.color = "rgba(66, 66, 243, 0.548)";
     }
   });
+
   postBox.addEventListener("click", () => {
     let profileName = document.createElement("span");
     let comment = document.createElement("span");
     let heartIcon = document.createElement("span");
     let deleteButton = document.createElement("button");
     divBox[number] = document.createElement("div");
+
     divBox[number].className = "comment";
     divBox[number].id = number;
     commentBox.appendChild(divBox[number]);
+
     profileName.classList.add("likeComment", "bold", "commentAdd");
     comment.classList.add("likeComment", "dot");
     deleteButton.classList.add("deleteBut");
+
     divBox[number].appendChild(profileName).textContent = "cannon_mj";
     divBox[number].appendChild(comment).textContent = inputvalue.value;
     divBox[number]
       .appendChild(heartIcon)
       .setAttribute("class", "far fa-heart heart");
     divBox[number].appendChild(deleteButton).textContent = "댓글 삭제";
+
     heartIcon.addEventListener("click", heart);
     deleteButton.addEventListener("click", doDelete);
+
     inputvalue.value = "";
+
     number++;
   });
 
@@ -137,22 +148,29 @@ function init() {
       let comment = document.createElement("span");
       let heartIcon = document.createElement("span");
       let deleteButton = document.createElement("button");
+
       divBox[number] = document.createElement("div");
       divBox[number].className = "comment";
       divBox[number].id = number;
+
       commentBox.appendChild(divBox[number]);
+
       profileName.classList.add("likeComment", "bold", "commentAdd");
       comment.classList.add("likeComment", "dot");
       deleteButton.classList.add("deleteBut");
+
       divBox[number].appendChild(profileName).textContent = "cannon_mj";
       divBox[number].appendChild(comment).textContent = inputvalue.value;
       divBox[number]
         .appendChild(heartIcon)
         .setAttribute("class", "far fa-heart heart");
       divBox[number].appendChild(deleteButton).textContent = "댓글 삭제";
+
       heartIcon.addEventListener("click", heart);
       deleteButton.addEventListener("click", doDelete);
+
       inputvalue.value = "";
+
       number++;
     }
   });
