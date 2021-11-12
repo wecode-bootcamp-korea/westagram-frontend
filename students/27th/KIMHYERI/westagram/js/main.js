@@ -9,7 +9,7 @@ const parentForm = document.querySelector(".reply");
 function fillHeart(element) {
     element.classList.toggle("fas");
 }
-
+// 게시 버튼 구현
 function btnColor() {
     if (!commentInput.value.length) {
         postBtn.style.color = "#B8E2FD";
@@ -18,6 +18,8 @@ function btnColor() {
 
     }
 }
+//댓글 삭제 구현
+
 
 function uploadComment() {
     const commentValue = commentInput.value; //input의 value가 배열 값으로
