@@ -1,65 +1,251 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/common.css" />
     <link rel="stylesheet" href="css/main.css" />
     <title>인스타그램 메인페이지</title>
-</head>
-<body>
+  </head>
+  <body>
     <nav>
-        <div class="navWrapper">
-            <h1>
-                <a href="">Westagram</a>
-            </h1>
-            <!-- <div class="iconBox">
-                <div>ss</div>
-                <div>ss</div>
-                <div>ss</div>
-                <div>ss</div>
-            </div> -->
-            <div class="searchBox">
-                <input placeholder="검색"/>
-            </div>
-            <div class="iconBox">
-                <div>ss</div>
-                <div>ss</div>
-                <div>ss</div>
-                <div>ss</div>
-            </div>
+      <div class="navWrapper">
+        <div class="navLeftBox">
+          <img src="img/instagram.png" alt="" />
+          <div class="navDiv"></div>
+          <h1>
+            <a href="">Westagram</a>
+          </h1>
         </div>
+        <div class="searchBox">
+          <input />
+          <div class="searchBoxInner">
+            <span class="searchIcon"></span>
+            <span class="searchText">검색</span>
+          </div>
+        </div>
+        <div class="iconBox">
+          <img
+            src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png"
+            alt=""
+          />
+          <img
+            src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"
+            alt=""
+          />
+          <img
+            src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png"
+            alt=""
+          />
+        </div>
+      </div>
     </nav>
     <main>
-        <div class="mainWrapper">
-            <div class="feeds">
-                <article>
-                    <div class="feedsHead"></div>
-                    <div class="feedsImg"></div>
-                    <form class="feedForm">
-                        <div class="commentBox">
-                            <div class="commentSpace">
-                                <li>하하하하</li>
-                            </div>
-                            <input class="comment" type="text" placeholder="댓글달기"/>
-                            <button class="commentBtn" type="submit">댓글 달기</button>
-                        </div>
-                    </form>
-                </article>
+      <div class="mainWrapper">
+        <section class="feeds">
+          <article>
+            <div class="feedsHead">
+              <div class="feedsHeadLeft">
+                <div class="userHead"></div>
+                <div class="userHeadId">j00_00</div>
+              </div>
+              <div class="feedsHeadRight"></div>
             </div>
-            <div class="main-right">
-                <span>
-                    <div class="user">wecode</div>
-                    <div>wecode_bootcamp</div>
-                </span>
-                <div class="feedStory"></div>
-                <div class="recommend"></div>
+            <div class="feedsImg"><img src="img/cherry.png" alt="" /></div>
+            <div class="feedContent">
+              <div class="feedContentImg">
+                <div class="feedConLeftIcon">
+                  <img src="img/likes.png" alt="" />
+                  <img src="img/heart33.png" alt="" />
+                  <img src="img/share.png" alt="" />
+                </div>
+                <div>
+                  <img src="img/bookmark.png" alt="" />
+                </div>
+              </div>
+              <div class="feedLikes">좋아요 188개</div>
+              <ul class="feedText">
+                <li>j00_00</li>
+                <li>너무 추워</li>
+              </ul>
+              <form class="feedForm">
+                <ul class="commentSpace">
+                  <!-- <li> -->
+                  <!-- <div class="commentText">
+                                        <div class="user">j00_00</div>
+                                        <div class="text">거봐 좋았잖아~~~</div>
+                                    </div>
+                                    <div class="commentLikes">❤️</div> -->
+                  <!-- </li> -->
+                </ul>
+                <div class="commentBox">
+                  <div></div>
+                  <input
+                    class="comment"
+                    type="text"
+                    placeholder="댓글달기..."
+                  />
+                  <button class="commentBtn" type="submit">게시</button>
+                </div>
+              </form>
             </div>
-        </div>
+          </article>
+          <article>
+            <div class="feedsHead">
+              <div class="feedsHeadLeft">
+                <div class="userHead"></div>
+                <div class="userHeadId">j00_00</div>
+              </div>
+              <div class="feedsHeadRight"></div>
+            </div>
+            <div class="feedsImg"><img src="img/cherry.png" alt="" /></div>
+            <div class="feedContent">
+              <div class="feedContentImg">
+                <div>
+                  <img src="img/likes.png" alt="" />
+                  <img src="img/heart33.png" alt="" />
+                  <img src="img/share.png" alt="" />
+                </div>
+                <div>
+                  <img src="img/bookmark.png" alt="" />
+                </div>
+              </div>
+              <div class="feedLikes">좋아요 188개</div>
+              <ul class="feedText">
+                <li>j00_00</li>
+                <li>너무 추워</li>
+              </ul>
+              <form class="feedForm">
+                <ul class="commentSpace">
+                  <!-- <li> -->
+                  <!-- <div class="commentText">
+                                        <div class="user">j00_00</div>
+                                        <div class="text">거봐 좋았잖아~~~</div>
+                                    </div>
+                                    <div class="commentLikes">❤️</div> -->
+                  <!-- </li> -->
+                </ul>
+                <div class="commentBox">
+                  <div></div>
+                  <input
+                    class="comment"
+                    type="text"
+                    placeholder="댓글달기..."
+                  />
+                  <button class="commentBtn" type="submit">게시</button>
+                </div>
+              </form>
+            </div>
+          </article>
+        </section>
+        <aside class="main-right">
+          <span>
+            <div class="user"></div>
+            <div class="userId">
+              <a href="">wecode_bootcamp</a>
+              <span>WeCode | 위코드</span>
+            </div>
+          </span>
+          <div class="feedStory">
+            <div class="feedStoryHead">
+              <div class="story">스토리</div>
+              <div class="viewAll">모두 보기</div>
+            </div>
+            <div class="feedStoryCon">
+              <ul>
+                <li>
+                  <div class="feedStoryConUser"></div>
+                  <div class="feedStoryConTxt">
+                    <div>_yum_s</div>
+                    <div>16분 전</div>
+                  </div>
+                </li>
+                <li>
+                  <div class="feedStoryConUser"></div>
+                  <div class="feedStoryConTxt">
+                    <div>_yum_s</div>
+                    <div>16분 전</div>
+                  </div>
+                </li>
+                <li>
+                  <div class="feedStoryConUser"></div>
+                  <div class="feedStoryConTxt">
+                    <div>_yum_s</div>
+                    <div>16분 전</div>
+                  </div>
+                </li>
+                <li>
+                  <div class="feedStoryConUser"></div>
+                  <div class="feedStoryConTxt">
+                    <div>_yum_s</div>
+                    <div>16분 전</div>
+                  </div>
+                </li>
+                <li>
+                  <div class="feedStoryConUser"></div>
+                  <div class="feedStoryConTxt">
+                    <div>_yum_s</div>
+                    <div>16분 전</div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="recommend">
+            <div class="feedStoryHead">
+              <div class="story">회원님을 위한 추천</div>
+              <div class="viewAll">모두 보기</div>
+            </div>
+            <div class="feedStoryCon">
+              <ul>
+                <li>
+                  <div class="feedStoryUserInfo">
+                    <div class="feedStoryConUser"></div>
+                    <div class="feedStoryConTxt">
+                      <div>_yum_s</div>
+                      <div>16분 전</div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="follow">팔로우</div>
+                  </div>
+                </li>
+                <li>
+                  <div class="feedStoryUserInfo">
+                    <div class="feedStoryConUser"></div>
+                    <div class="feedStoryConTxt">
+                      <div>_yum_s</div>
+                      <div>16분 전</div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="follow">팔로우</div>
+                  </div>
+                </li>
+                <li>
+                  <div class="feedStoryUserInfo">
+                    <div class="feedStoryConUser"></div>
+                    <div class="feedStoryConTxt">
+                      <div>_yum_s</div>
+                      <div>16분 전</div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="follow">팔로우</div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </aside>
+      </div>
     </main>
     <script defer src="js/main.js"></script>
-</body>
+  </body>
 </html>

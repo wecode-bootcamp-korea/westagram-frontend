@@ -1,0 +1,339 @@
+nav,
+main {
+  padding: 0 100px;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+nav .navWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 975px;
+  height: 54px;
+  margin: 0 auto;
+  color: #fff;
+}
+
+nav .navWrapper .navLeftBox {
+  display: flex;
+}
+
+nav .navWrapper .navLeftBox img {
+  width: 23px;
+  height: 23px;
+}
+
+nav .navWrapper .navLeftBox .navDiv {
+  width: 1px;
+  height: 24px;
+  margin: 0 15px;
+  background: #000;
+}
+
+nav .navWrapper h1 a {
+  width: 103px;
+  height: 29px;
+  font-size: 22px;
+  color: #000;
+  font-family: "Lobster", cursive;
+}
+
+nav .navWrapper .searchBox {
+  position: relative;
+  width: 215px;
+  height: 28px;
+  line-height: 28px;
+}
+
+nav .navWrapper .searchBox input {
+  padding: 3px 10px 3px 26px;
+  color: rgba(var(--ild, 38, 38, 38), 1);
+  border: solid 1px rgba(var(--b6a, 219, 219, 219), 1);
+  border-radius: 3px;
+  outline: 0;
+  z-index: 2;
+}
+
+nav .navWrapper .searchBox input:focus .searchIcon {
+  display: none;
+}
+
+nav .navWrapper .searchBox .searchBoxInner {
+  position: absolute;
+  top: -6px;
+  left: 70px;
+  padding: 7px;
+  color: rgba(var(--f52, 142, 142, 142), 1);
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 300;
+  text-align: center;
+  cursor: text;
+  z-index: 2;
+}
+
+nav .navWrapper .searchBox .searchBoxInner .searchIcon {
+  margin-right: 6px;
+  background-image: url("img/search.png");
+  z-index: 3;
+}
+
+nav .iconBox {
+  display: flex;
+}
+
+nav .iconBox > img {
+  width: 20px;
+  margin-left: 20px;
+}
+
+main {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  margin-top: 40px;
+}
+
+main .mainWrapper {
+  display: flex;
+  max-width: 935px;
+  width: 100%;
+  margin: 0 auto 50px;
+  padding-top: 50px;
+}
+
+main .mainWrapper .feeds {
+  width: 60%;
+  margin-right: 28px;
+}
+
+main .mainWrapper .feeds article {
+  margin-bottom: 24px;
+  border: 1px solid #dbdbdb;
+}
+
+main .mainWrapper .feeds .feedsHead .feedsHeadLeft {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+main .mainWrapper .feeds .feedsHead .feedsHeadLeft .userHead {
+  margin-right: 15px;
+  font-weight: bold;
+}
+
+main .mainWrapper .feeds .feedsHead {
+  width: 100%;
+  height: 60px;
+  padding: 14px 16px;
+}
+
+main .mainWrapper .feeds .feedsHead .userHead {
+  border-radius: 50px;
+  width: 32px;
+  height: 32px;
+  background: #000;
+}
+
+main .mainWrapper .feeds .feedContent {
+}
+
+main .mainWrapper .feeds .feedContent .feedContentImg {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0;
+  padding: 0 16px;
+}
+
+/* main .mainWrapper .feeds .feedContent .feedContentImg > div {
+    display: flex;
+    justify-content: space-between;
+} */
+
+main .mainWrapper .feeds .feedContent .feedContentImg > div > img {
+  width: 24px;
+  height: 24px;
+}
+
+main .mainWrapper .feeds .feedContent .feedContentImg .feedConLeftIcon > img {
+  margin-right: 6px;
+}
+
+main .mainWrapper .feeds .feedContent .feedLikes {
+  margin-bottom: 8px;
+  padding: 0 16px;
+}
+
+main .mainWrapper .feeds .feedContent .feedText {
+  display: flex;
+  margin-bottom: 8px;
+  padding: 0 16px;
+}
+
+main .mainWrapper .feeds .feedContent .feedText li:nth-child(1) {
+  margin-right: 5px;
+  font-weight: bold;
+}
+
+main .mainWrapper .feeds .feedsImg img {
+  width: 100%;
+}
+
+/* main .mainWrapper .feeds .commentBox .commentSpace {
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+} */
+
+main .mainWrapper .feeds .commentBox,
+main .mainWrapper .feeds .commentSpace {
+  /* border-top: 1px solid #dbdbdb; */
+  padding: 0 16px;
+}
+
+main .mainWrapper .feeds .commentSpace .commentLi {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+main .mainWrapper .feeds .commentSpace .commentLi .commentText {
+  display: flex;
+  justify-content: space-between;
+}
+
+main .mainWrapper .feeds .commentSpace .commentLi .commentText .user {
+  margin-right: 5px;
+  font-weight: bold;
+}
+
+main .mainWrapper .feeds .commentBox {
+  height: 54px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff;
+}
+
+main .mainWrapper .feeds .commentBox .comment {
+  border: none;
+  outline: none;
+  width: 100%;
+}
+
+main .mainWrapper .feeds .commentBox .commentBtn {
+  width: 30px;
+  font-size: 14px;
+  background: #fff;
+  border: none;
+  display: inline;
+}
+
+main .mainWrapper .main-right {
+  width: 40%;
+}
+
+main .mainWrapper .main-right > span {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 8px;
+}
+
+main .mainWrapper .main-right > span .user {
+  width: 56px;
+  height: 56px;
+  margin-right: 15px;
+  border-radius: 50px;
+  background: #000;
+}
+
+main .mainWrapper .main-right > span .userId {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+main .mainWrapper .main-right > div {
+  border: 1px solid #dbdbdb;
+  margin-top: 20px;
+}
+
+main .mainWrapper .main-right .feedStory,
+main .mainWrapper .main-right .recommend {
+  height: 300px;
+  padding: 14px;
+}
+
+main .mainWrapper .main-right .feedStory .feedStoryHead,
+main .mainWrapper .main-right .recommend .feedStoryHead {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+main .mainWrapper .main-right .feedStory .feedStoryHead .story,
+main .mainWrapper .main-right .recommend .feedStoryHead .story {
+  color: #8e8e8e;
+}
+
+main .mainWrapper .main-right .feedStory .feedStoryCon,
+main .mainWrapper .main-right .recommend .feedStoryCon {
+  margin-top: 14px;
+}
+
+main .mainWrapper .main-right .feedStory .feedStoryCon ul,
+main .mainWrapper .main-right .recommend .feedStoryCon ul {
+  overflow-y: auto;
+}
+
+main .mainWrapper .main-right .feedStory .feedStoryCon ul li {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+main .mainWrapper .main-right .recommend .feedStoryCon ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+main
+  .mainWrapper
+  .main-right
+  .recommend
+  .feedStoryCon
+  ul
+  li
+  .feedStoryUserInfo {
+  display: flex;
+  flex: flex-start;
+}
+
+main .mainWrapper .main-right .recommend .feedStoryCon ul li .follow {
+  color: #0095f6;
+  font-size: 14px;
+}
+
+main .mainWrapper .main-right .feedStory .feedStoryCon ul li .feedStoryConUser,
+main .mainWrapper .main-right .recommend .feedStoryCon ul li .feedStoryConUser {
+  width: 32px;
+  height: 32px;
+  border-radius: 50px;
+  background: #000;
+  margin-right: 13px;
+}
+
+main .mainWrapper .main-right .recommend {
+  height: 200px;
+}
