@@ -3,38 +3,51 @@ const replyBtn = document.querySelector(".replyAndBtn .replyBtn");
 let reply;
 
 function handleReply(){
-  const newDivReplyChunk = document.createElement("div");
-  newDivReplyChunk.className = "replyChunk";
-  const newDivReplyItSelf = document.createElement("div");
-  newDivReplyItSelf.className = "replyItSelf";
-  const newSpanShownReplyId = document.createElement("span");
-  newSpanShownReplyId.className = "shownReplyId";
-  const newSpanReplyText = document.createElement("span");
-  newSpanReplyText.className = "shownReplyText";
-  const newImgHeartIcon = document.createElement("img");
-  newImgHeartIcon.setAttribute("src", "src/heart.png")
+  if(reply){
+    // div, span, img 태그 생성하고 class 부여
+    const DivReplyChunk = document.createElement("div");
+    DivReplyChunk.className = "replyChunk";
+    const DivReplyItSelf = document.createElement("div");
+    DivReplyItSelf.className = "replyItSelf";
+    const SpanShownReplyId = document.createElement("span");
+    SpanShownReplyId.className = "shownReplyId";
+    const SpanReplyText = document.createElement("span");
+    SpanReplyText.className = "shownReplyText";
+    const ImgHeartIcon = document.createElement("img");
+    ImgHeartIcon.setAttribute("src", "src/heart.png")
 
-  newSpanShownReplyId.innerText  = "canon_mj";
-  newSpanReplyText.innerHTML = reply;
+    // 생성된 2개의 span 태그에 각각 아이디와 reply를 content로 부여
+    SpanShownReplyId.innerText  = "canon_mj";
+    SpanReplyText.innerHTML = reply;
 
-  const divShownReply = document.querySelector(".shownReply");
-  divShownReply.appendChild(newDivReplyChunk);
-  newDivReplyChunk.appendChild(newDivReplyItSelf);
-  newDivReplyItSelf.appendChild(newSpanShownReplyId);
-  newDivReplyItSelf.appendChild(newSpanReplyText);
-  newDivReplyChunk.appendChild(newImgHeartIcon);
-
-  replyInput.value = "";
+    // 이제 레이아웃대로 만들어진 태그들 차곡차곡 쌓기
+    const divReply = document.querySelector(".reply");
+    divReply.appendChild(DivReplyChunk);
+    DivReplyChunk.appendChild(DivReplyItSelf);
+    DivReplyItSelf.appendChild(SpanShownReplyId);
+    DivReplyItSelf.appendChild(SpanReplyText);
+    DivReplyChunk.appendChild(ImgHeartIcon);
+    
+    // 댓글 입력창 비우고 reply에 빈 문자열 할당
+    replyInput.value = "";
+    reply = "";
+  }
+  
 }
 
+// reply input event function
 replyInput.addEventListener("input", () => {
   reply = replyInput.value;
 })
 
-replyBtn.addEventListener("click", handleReply)
 
+// event handler
+// click event handler
+replyBtn.addEventListener("click", handleReply);
+
+// enter keydown event handler
 function enterkey() {
   if (window.event.keyCode == 13) {
-    handleReply()
+    handleReply();
   }
 }

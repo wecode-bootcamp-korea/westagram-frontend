@@ -19,55 +19,53 @@
         <img class="logo" src="src/instagram.png" alt="instagramLogo" />
         <span class="name">Westagram</span>
       </div>
-      <input type="text" placeholder="검색">
+      <input type="text" placeholder="검색" />
       <ul class="icons">
-        <li class="navigate"><img src="src/explore.png" alt="explore"></li>
-        <li class="likeIssue"><img src="src/heart.png" alt="heart"></li>
-        <li class="myInfo"><img src="src/profile.png" alt="profile"></li>
+        <li class="navigate"><img src="src/explore.png" alt="explore" /></li>
+        <li class="likeIssue"><img src="src/heart.png" alt="heart" /></li>
+        <li class="myInfo"><img src="src/profile.png" alt="profile" /></li>
       </ul>
     </div>
   </nav>
   <main>
     <div class="feeds">
       <article>
-        <div class="feedProfile">
-          <div class="feedProfileImageAndID">
-            <img class="feedProfileImage" src="src/profile_of_ej__oh.JPG"/>
-            <div class="feedProfileId">ej__oh</div>
+        <div class="feedUpper">
+          <div class="imageAndID">
+            <img class="profileImage" src="src/profile_of_ej__oh.JPG" />
+            <div class="profileId">ej__oh</div>
           </div>
           <i class="fas fa-ellipsis-h"></i>
         </div>
         <div class="feedImage">
-          <img src="src/mangorookie.jpeg" alt="mangoAndRookie">
+          <img src="src/mangorookie.jpeg" alt="mangoAndRookie" />
         </div>
-        <div class="response">
+        <div class="feedInfo">
           <div class="feedIcons">
-            <div class="feedIconsLeft">
+            <div class="iconsLeft">
               <img src="src/heart.png" alt="heart">
               <img src="src/reply.png" alt="reply">
               <img src="src/dmbutton.png" alt="dmbutton">
             </div>
-            <img src="src/save.png" alt="save">
+            <img class="iconsRight" src="src/save.png" alt="save" />
           </div>
           <div class="feedLike">
-            <img class="feedLikeProfileImage" src="src/profile_of_ej__oh.JPG"/>
-            <div class="feedLiketext">@@@님 외 1500명이 좋아합니다</div>
+            <img class="profileImage" src="src/profile_of_ej__oh.JPG"/>
+            <div class="liketext"><span>jrong.__</span> 님 외 <span>1500</span> 명이 좋아합니다</div>
           </div>
           <div class="feedText">
-            <div class="feedTextProfile">
-              <span class="feedTextProfileId">ej__oh</span>
-              <span class="feedDescription">위워크에서 진행한 베이킹 클래스 ...</span>
-              <button class="showMoreText">더 보기</button>
-            </div>
-            <div class="shownReply">
-            </div>
+            <span class="profileId">ej__oh</span>
+            <span class="feedDescription">위워크에서 진행한 베이킹 클래스 ...</span>
+            <button class="showMoreBtn">더 보기</button>
+          </div>
+          <div class="reply">
           </div>
           <div class="hoursAgo">
             42분 전
           </div>
         </div>
         <div class="replyAndBtn">
-          <input onkeyup="enterkey()" type="text" class="reply" placeholder="댓글 달기..."/>
+          <input onkeyup="enterkey()" type="text" class="reply" placeholder="댓글 달기..." />
           <button class="replyBtn">게시</button>
         </div>
       </article>

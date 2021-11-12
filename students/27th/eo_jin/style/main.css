@@ -63,7 +63,6 @@ nav .icons li img {
 /* main styling */
 main {
   position: relative;
-  padding: 54px 70px;
   font-family: -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial,
     sans-serif;
   margin: 0 auto;
@@ -71,18 +70,15 @@ main {
   padding: 30px 0px 0px;
 }
 
-.feeds {
-  width: 614px;
-}
-
 .feeds article {
   background-color: white;
-  width: 614px;
-  height: 900px;
+  width: 616px;
+  /* height: 931px; */
   border: 1px solid lightgrey;
 }
 
-.feeds article .feedProfile {
+/* feedUpper styling */
+.feeds article .feedUpper {
   width: 100%;
   height: 60px;
   padding: 14px;
@@ -91,28 +87,30 @@ main {
   align-items: center;
 }
 
-.feeds article .feedProfile .feedProfileImageAndID {
+.feeds article .feedUpper .imageAndID {
   display: flex;
   justify-content: flex-start;
 }
 
-.feeds article .feedProfile .feedProfileId {
-  margin: auto 0;
-  margin-left: 15px;
-  padding: 2px;
-  font-weight: 600;
-}
-.feeds article .feedProfile .feedProfileImage {
+.feeds article .feedUpper .imageAndID .profileImage {
   width: 32px;
   height: 32px;
   border-radius: 50%;
 }
 
-.feeds article .feedProfile i {
+.feeds article .feedUpper .imageAndID .profileId {
+  margin: auto 0;
+  margin-left: 15px;
+  padding: 2px;
+  font-weight: 600;
+}
+
+.feeds article .feedUpper i {
   font-size: 15px;
 }
+
+/* feedImage styling */
 .feeds article .feedImage {
-  width: 100%;
   height: 614px;
 }
 
@@ -121,133 +119,138 @@ main {
   height: 100%;
 }
 
-.feeds article .response {
+/* feedInfo styling */
+.feeds article .feedInfo {
   position: relative;
-  width: 100%;
-  height: 175px;
 }
 
-.feeds article .response .feedIcons {
+/* feedIcons styling */
+.feeds article .feedInfo .feedIcons {
+  box-sizing: content-box;
   display: flex;
   justify-content: space-between;
   height: 40px;
-  padding: 0px 16px;
+  padding: 6px 16px 8px;
 }
 
-.feeds article .response .feedIcons .feedIconsLeft img {
+.feeds article .feedInfo .feedIcons .iconsLeft img {
   box-sizing: content-box;
   width: 24px;
   height: 24px;
   padding: 8px;
 }
 
-.feeds article .response .feedIcons img {
+.feeds article .feedInfo .feedIcons .iconsRight {
   box-sizing: content-box;
   width: 24px;
   height: 24px;
   padding: 8px;
 }
 
-.feeds article .response .feedIcons .feedIconsLeft img:first-child {
+.feeds article .feedInfo .feedIcons .iconsLeft img:first-child {
   padding-left: 0px;
 }
 
-.feeds article .response .feedLike {
+/* feedLike styling */
+.feeds article .feedInfo .feedLike {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  height: 20px;
+  height: 18px;
   padding: 0px 16px;
-  margin: 10px 0px;
+  margin-bottom: 8px;
 }
 
-.feeds article .response .feedLike * {
-  display: inline-block;
-  height: 100%;
-  padding: 5px;
-}
-
-.feeds article .response .feedLike .feedLikeProfileImage {
-  box-sizing: content-box;
+.feeds article .feedInfo .feedLike .profileImage {
   border-radius: 50%;
   width: 20px;
-  padding-left: 0px;
+  height: 20px;
+  border: 1px solid lightgrey;
 }
 
-.feeds article .response .feedLike .feedLiketext {
+.feeds article .feedInfo .feedLike .liketext {
   font-size: 14px;
+  margin-left: 10px;
 }
 
-.feeds article .response .feedText {
-  height: 50px;
+.feeds article .feedInfo .feedLike .liketext span {
+  font-weight: 600;
+}
+
+/* feedText styling */
+.feeds article .feedInfo .feedText {
   padding: 0px 16px;
-  overflow-y: scroll;
 }
 
-.feeds article .response .feedText .feedTextProfile {
+.feeds article .feedInfo .feedText {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   margin-bottom: 5px;
 }
 
-.feeds article .response .feedText .feedTextProfile .feedTextProfileId {
+.feeds article .feedInfo .feedText .profileId {
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 600;
   margin-right: 10px;
 }
 
-.feeds article .response .feedText .feedTextProfile .feedDescription {
+.feeds article .feedInfo .feedText .feedDescription {
   font-size: 14px;
   font-weight: 400;
 }
 
-.feeds article .response .feedText .feedTextProfile .showMoreText {
+.feeds article .feedInfo .feedText .showMoreBtn {
   background-color: transparent;
   border: none;
   color: #8e8e8e;
 }
 
-.feeds article .response .feedText .shownReply .replyChunk {
+/* reply styling */
+.feeds article .feedInfo .reply .replyChunk {
   display: flex;
   justify-content: space-between;
   margin-bottom: 5px;
+  padding: 0px 16px;
 }
 
-.feeds article .response .feedText .shownReply .replyItSelf {
+.feeds article .feedInfo .reply .replyItSelf {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
 
-.feeds article .response .feedText .shownReply .replyItSelf .shownReplyId {
+.feeds article .feedInfo .reply .replyItSelf .shownReplyId {
   font-size: 14px;
   font-weight: 600;
   margin-right: 10px;
 }
 
-.feeds article .response .feedText .shownReply .replyItSelf .shownReplyText {
+.feeds article .feedInfo .reply .replyItSelf .shownReplyText {
   font-size: 14px;
   font-weight: 400;
 }
 
-.feeds article .response .feedText .shownReply img {
+.feeds article .feedInfo .reply img {
   box-sizing: content-box;
   width: 14px;
   height: 14px;
 }
 
-.feeds article .response .hoursAgo {
-  position: absolute;
-  bottom: 20px;
-  left: 16px;
+/* hoursAgo styling */
+.feeds article .feedInfo .hoursAgo {
+  height: 19px;
+  padding: 0px 16px;
+  margin: 0 0 16px;
   font-size: 10px;
+  display: flex;
+  align-items: center;
 }
 
 /* reply and button styling */
 .feeds article .replyAndBtn {
   width: 100%;
-  height: 53px;
+  height: 48px;
   padding: 6px 16px;
   border: none;
   border-top: 1px solid lightgrey;
