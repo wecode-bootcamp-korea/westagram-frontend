@@ -2,22 +2,30 @@ body {
   background-color: #fafafa;
 }
 
+button {
+  border: none;
+  background-color: transparent;
+}
+
+input:focus {
+  outline: none;
+}
+
 /* nav header styling */
 nav {
+  display: flex;
+  justify-content: center;
   height: 55px;
   border-bottom: 1px solid lightgrey;
   background-color: white;
-  display: flex;
-  justify-content: center;
 }
 
 .navWrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
-  height: 100%;
   width: 935px;
+  padding: 0 20px;
 }
 
 .logoAndName {
@@ -35,19 +43,19 @@ nav .logoAndName .logo {
 
 .logoAndName .name {
   text-align: center;
+  padding-left: 14px;
+  color: #171717;
   font-family: "Lobster", cursive;
   font-size: 26px;
-  color: #171717;
-  padding-left: 14px;
 }
 
 nav input {
   width: 200px;
   height: 30px;
   padding: 7px;
-  background-color: #fafafa;
   border: 1px solid lightgrey;
   border-radius: 5px;
+  background-color: #fafafa;
 }
 
 ul.icons {
@@ -63,28 +71,26 @@ nav .icons li img {
 /* main styling */
 main {
   position: relative;
+  width: 935px;
+  margin: 0 auto;
+  padding: 30px 0px 0px;
   font-family: -apple-system, system-ui, "Segoe UI", Roboto, Helvetica, Arial,
     sans-serif;
-  margin: 0 auto;
-  width: 935px;
-  padding: 30px 0px 0px;
 }
 
 .feeds article {
-  background-color: white;
   width: 616px;
-  /* height: 931px; */
   border: 1px solid lightgrey;
+  background-color: white;
 }
 
 /* feedUpper styling */
 .feeds article .feedUpper {
-  width: 100%;
-  height: 60px;
-  padding: 14px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 60px;
+  padding: 14px;
 }
 
 .feeds article .feedUpper .imageAndID {
@@ -126,9 +132,9 @@ main {
 
 /* feedIcons styling */
 .feeds article .feedInfo .feedIcons {
-  box-sizing: content-box;
   display: flex;
   justify-content: space-between;
+  box-sizing: content-box;
   height: 40px;
   padding: 6px 16px 8px;
 }
@@ -157,20 +163,20 @@ main {
   justify-content: flex-start;
   align-items: center;
   height: 18px;
-  padding: 0px 16px;
   margin-bottom: 8px;
+  padding: 0px 16px;
 }
 
 .feeds article .feedInfo .feedLike .profileImage {
-  border-radius: 50%;
   width: 20px;
   height: 20px;
   border: 1px solid lightgrey;
+  border-radius: 50%;
 }
 
 .feeds article .feedInfo .feedLike .liketext {
-  font-size: 14px;
   margin-left: 10px;
+  font-size: 14px;
 }
 
 .feeds article .feedInfo .feedLike .liketext span {
@@ -190,9 +196,9 @@ main {
 }
 
 .feeds article .feedInfo .feedText .profileId {
+  margin-right: 10px;
   font-size: 16px;
   font-weight: 600;
-  margin-right: 10px;
 }
 
 .feeds article .feedInfo .feedText .feedDescription {
@@ -201,8 +207,8 @@ main {
 }
 
 .feeds article .feedInfo .feedText .showMoreBtn {
-  background-color: transparent;
   border: none;
+  background-color: transparent;
   color: #8e8e8e;
 }
 
@@ -221,9 +227,9 @@ main {
 }
 
 .feeds article .feedInfo .reply .replyItSelf .shownReplyId {
+  margin-right: 10px;
   font-size: 14px;
   font-weight: 600;
-  margin-right: 10px;
 }
 
 .feeds article .feedInfo .reply .replyItSelf .shownReplyText {
@@ -239,216 +245,184 @@ main {
 
 /* hoursAgo styling */
 .feeds article .feedInfo .hoursAgo {
-  height: 19px;
-  padding: 0px 16px;
-  margin: 0 0 16px;
-  font-size: 10px;
   display: flex;
   align-items: center;
+  height: 19px;
+  margin: 0 0 16px;
+  padding: 0px 16px;
+  font-size: 10px;
 }
 
 /* reply and button styling */
 .feeds article .replyAndBtn {
+  display: flex;
+  justify-content: space-between;
   height: 48px;
   padding: 6px 16px;
   border-top: 1px solid lightgrey;
-  display: flex;
-  justify-content: space-between;
 }
 
 .feeds article .replyAndBtn .reply {
+  border: none;
   width: 90%;
   font-size: 14px;
   color: #262626;
 }
 
 .feeds article .replyAndBtn .replyBtn {
-  /* border: none; */
+  border: none;
   background-color: transparent;
   color: #cce6fd;
   font-size: 14px;
 }
 
 .main-right {
-  width: 293px;
-  height: 785px;
   position: fixed;
   top: 85px;
   right: 220px;
+  width: 293px;
 }
 
 .main-right .rightMyProfile {
-  width: 100%;
-  height: 56px;
   display: flex;
   justify-content: flex-start;
+  height: 56px;
 }
 
-.main-right .rightMyProfile .rightMyProfileImage {
+.main-right .rightMyProfile .image {
+  align-self: center;
   width: 45px;
   height: 45px;
   border-radius: 50%;
-  align-self: center;
 }
 
-.main-right .rightMyProfile .rightMyProfileIdAndText {
+.main-right .rightMyProfile .profileIdAndText {
   align-self: center;
   padding-left: 20px;
 }
 
-.main-right .rightMyProfile .rightMyProfileIdAndText * {
+.main-right .rightMyProfile .profileIdAndText * {
   height: 18px;
   font-size: 14px;
 }
 
-.main-right .rightMyProfile .rightMyProfileIdAndText .rightMyProfileId {
+.main-right .rightMyProfile .profileIdAndText .profileId {
   font-weight: 600;
 }
 
-.main-right .rightMyProfile .rightMyProfileIdAndText .rightMyProfileText {
+.main-right .rightMyProfile .profileIdAndText .profileText {
   color: #8e8e8e;
+}
+
+.upper button {
+  font-size: 12px;
+  font-weight: 600;
+  color: #262626;
 }
 
 .main-right .rightStory {
-  width: 100%;
   height: 200px;
-  background-color: white;
-  border: 1px solid lightgrey;
   margin-top: 15px;
+  border: 1px solid lightgrey;
+  background-color: white;
   overflow-y: scroll;
 }
 
-.main-right .rightStory .rightStoryUpper {
-  width: 100%;
-  height: 32px;
+.main-right .rightStory .upper {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 32px;
+  padding: 0 10px;
 }
 
-.main-right .rightStory .rightStoryUpper * {
-  margin: 0 10px;
-}
-
-.main-right .rightStory .rightStoryUpper .rightStoryUpperTitle {
+.main-right .rightStory .upper .title {
   font-size: 14px;
   font-weight: 600;
   color: #8e8e8e;
 }
 
-.main-right .rightStory .rightStoryUpper button {
-  background-color: transparent;
-  border: none;
-  color: #262626;
-  font-size: 12px;
-  font-weight: 600;
-}
-
-.rightOthersWrapper {
+/* othersWrapper styling */
+.othersWrapper {
   margin: 0 10px;
 }
 
-.rightOthersWrapper .rightOthers {
-  width: 100%;
-  height: 48px;
-  padding: 8px 0px;
+.othersWrapper .othersProfile {
   display: flex;
   justify-content: flex-start;
   position: relative;
+  height: 48px;
+  padding: 8px 0px;
 }
 
-.rightOthersWrapper .rightOthers .rightOthersProfileImage {
+.othersWrapper .othersProfile img {
+  align-self: center;
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  align-self: center;
 }
 
-.rightOthersWrapper .rightOthers .rightOthersProfile {
+.othersWrapper .othersProfile .others {
   align-self: center;
   margin: auto 0px;
   padding-left: 10px;
+  font-weight: 600;
 }
 
-.rightOthersWrapper .rightOthers .rightOthersProfile * {
-  align-self: center;
-}
-
-.rightOthersWrapper .rightOthers .rightOthersProfile .rightOthersProfileId {
+.othersWrapper .othersProfile .others .profileId {
   height: 17px;
-  font-size: 14px;
-  font-weight: 600;
   padding-top: 2px;
+  font-size: 14px;
 }
 
-.rightOthersWrapper .rightOthers .rightOthersProfile .rightOthersProfileText {
+.othersWrapper .othersProfile .others .ago {
   height: 16px;
-  font-size: 12px;
-  font-weight: 600;
   padding-top: 2px;
+  font-size: 12px;
   color: #8e8e8e;
 }
 
-.main-right .rightRecommend {
-  width: 100%;
+.main-right .recommend {
   height: 175px;
-  background-color: white;
-  border: 1px solid lightgrey;
   margin-top: 15px;
+  border: 1px solid lightgrey;
+  background-color: white;
   overflow-y: scroll;
 }
 
-.main-right .rightRecommend .rightRecommendUpper {
-  width: 100%;
-  height: 32px;
+.main-right .recommend .upper {
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-.main-right .rightRecommend .rightRecommendUpper * {
+  height: 32px;
   margin: 0 10px;
+  font-weight: 600;
 }
 
-.main-right .rightRecommend .rightRecommendUpper .rightRecommendUpperTitle {
+.main-right .recommend .upper .title {
   font-size: 14px;
-  font-weight: 600;
   color: #8e8e8e;
 }
 
-.main-right .rightRecommend .rightRecommendUpper button {
-  background-color: transparent;
-  border: none;
-  color: #262626;
-  font-size: 12px;
-  font-weight: 600;
-}
-
-.main-right .rightOthers .followOther {
-  background-color: transparent;
+.main-right .othersProfile button {
+  position: absolute;
+  right: 0px;
+  top: 16px;
   color: #0095f6;
   font-weight: 600;
   line-height: 16px;
   font-size: 12px;
-  border: none;
-  position: absolute;
-  right: 0px;
-  top: 16px;
 }
 
 .main-right .rightInfo {
   margin-top: 20px;
-  color: #c7c7c7;
   font-size: 11px;
   line-height: 13px;
   font-weight: 400;
+  color: #c7c7c7;
 }
 
-.rightOthers img {
-  border: 1px solid black;
-  background-color: #0095f6;
-}
-@media screen and (max-width: 1330px) {
+@media screen and (max-width: 1300px) {
   .main-right {
     display: none;
   }

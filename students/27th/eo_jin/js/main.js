@@ -36,9 +36,13 @@ function handleReply(){
 }
 
 // reply input event function
-replyInput.addEventListener("input", () => {
-  reply = replyInput.value;
-})
+function init(){
+  replyInput.addEventListener("input", () => {
+    reply = replyInput.value;
+  })
+}
+init();
+
 
 
 // event handler
