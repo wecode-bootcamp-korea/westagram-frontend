@@ -1,66 +1,83 @@
-const westagramMainLogo = document.querySelector('.westagram');
-const messageInput = document.querySelector('.message-input');
-const posingButton = document.querySelector('.posting span');
+/** @format */
+
+const westagramMainLogo = document.querySelector(".westagram");
+const messageInput = document.querySelector(".message-input");
+const postingButton = document.querySelector(".posting button");
+
+const messageList = document.querySelector(".message-list");
+const messageListId = document.querySelector(".message-list-id");
+const messageListContent = document.querySelector(".message-list-content");
+const messageListHeart = document.querySelector(".message-list-heart");
+const messageListButton = document.querySelector(".message-list-button");
+
+const allForm = document.querySelector(".comment-input-bar");
+const blankHeart = document.querySelector(".blank-heart");
+const fullHeart = document.querySelector(".full-heart");
+
+const heart = document.querySelector(".heart");
+const tagComment = document.querySelector(".tag-comment");
+const tagCommentId = document.querySelector(".tag-comment-id");
+const tagCommentContent = document.querySelector(".tag-comment-content");
+
+const HIDDEN_CLASS = "hidden";
+const POINTER_CURSOR = "non-disabled";
+
+function makingRedHeart() {
+	fullHeart.classList.add(HIDDEN_CLASS);
+	blankHeart.classList.remove(HIDDEN_CLASS);
+}
+fullHeart.addEventListener("click", makingRedHeart);
 
 function backLoginPage() {
-  location.href = 'index.html';
+	location.href = "index.html";
 }
-westagramMainLogo.addEventListener('click', backLoginPage);
+westagramMainLogo.addEventListener("click", backLoginPage);
 
-function createMessage() {
-  return `
-  <div class='message'>
-  <span
-  class='userId'
-  style='color: ${color}';
-  ${username}</span>
-  </div>
-  <p class='content'>${createMessageContent(content)}</p>
-  <span class='time'>${currentTime(createdAt)}</span>
-  <span class='reply'>${reply}</span>
-  `
+function createMessage(event) {
+	event.preventDefault();
+	const text = messageInput.value;
+
+	const commentList = document.createElement("li");
+	commentList.setAttribute("class", "comment-list");
+	const textId = document.createElement("p");
+	textId.setAttribute("class", "text-id");
+	const textElements = document.createElement("li");
+	textElements.setAttribute("class", "text-elements");
+	const deleteButton = document.createElement("button");
+	deleteButton.setAttribute("class", "delete-button");
+	const textHeart = document.createElement("i");
+	textHeart.setAttribute("class", "far fa-heart");
+
+	textId.textContent = "naniboo_o";
+	textElements.textContent = text;
+	deleteButton.textContent = "X";
+
+	commentList.appendChild(textId);
+	commentList.appendChild(textElements);
+	commentList.appendChild(deleteButton);
+	commentList.appendChild(textHeart);
+
+	messageList.appendChild(commentList);
+
+	function deleteMessage() {
+		commentList.remove();
+	}
+	deleteButton.addEventListener("click", deleteMessage);
+
+	messageInput.value = "";
 }
 
-const CHAT = {
-  type: 'text',
-  color: 'black',
-  username: 'naniboo_o',
-  createdAt: '2021-11-10-T13:51:12.000Z',
-  content: createMessageContent,
+allForm.addEventListener("submit", createMessage);
+
+function handleCommentAction() {
+	if (messageInput.value) {
+		postingButton.disabled = false;
+		postingButton.style.color = "#0095F6";
+		postingButton.classList.add(POINTER_CURSOR);
+	} else if (!messageInput.value) {
+		postingButton.disabled = true;
+		postingButton.style.color = "#b5d7fa";
+		postingButton.classList.remove(POINTER_CURSOR);
+	}
 }
-
-function currentTime(newDate) {
-  const hours = String(newDate.getHours()).padStart(2, 0);
-  const minutes = String(newDate.getMinutes()).padStart(2, 0);
-
-  return `${hours}시 ${minutes}`;
-}
-currentTime(new Date());
-
-const messageList = document.querySelector('.message-list');
-
-/*
-for (let i = 0; i < CHAT.length; i++) {
-  const message = CHAT[i];
-
-  const messageElements = document.querySelector('li');
-
-  if (message.type === 'text') {
-    messageElements.innerHTML = createMessage(message);
-  }
-
-  messageList.appendChild(messageElements);
-}
-*/
-function createMessageContent(event) {
-  event.preventDefault();
-  const messageInputValue = messageInput.value;
-  const messageElements = document.querySelector('li');
-
-  
-    messageElements.innerHTML = messageInputValue;
-  
-
-  messageList.appendChild(messageElements);
-}
-messageInput.addEventListener('submit', createMessageContent);
+allForm.addEventListener("keydown", handleCommentAction);
