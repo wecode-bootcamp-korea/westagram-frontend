@@ -61,12 +61,6 @@
 .main-right-box-comment-bar-left i {
 	margin-right: 13px;
 }
-.full-heart {
-	margin-left: -42px;
-}
-.heart-red {
-	color: #ec4956;
-}
 .main-right-box-comment-bar-center {
 	display: flex;
 	margin: -10px 110px 0px 0px;
@@ -115,6 +109,11 @@
 	color: var(--message-gray);
 	margin: 12px 0px 0px 0px;
 }
+.message-list {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
 .comment-list {
 	display: flex;
 }
@@ -123,9 +122,8 @@
 	font-size: 15px;
 	font-weight: 600;
 }
-.heart {
-	margin-top: -30px;
-	margin-left: 100px;
+.fa-heart {
+	margin-top: 5px;
 	font-size: 15px;
 }
 .message-list-button {
@@ -179,6 +177,6 @@
 	margin-top: 8px;
 	margin-bottom: 5px;
 }
-.hidden {
-	display: none;
+.blank-heart-icon {
+	font-size: 25px;
 }

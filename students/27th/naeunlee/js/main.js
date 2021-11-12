@@ -11,22 +11,8 @@ const messageListHeart = document.querySelector(".message-list-heart");
 const messageListButton = document.querySelector(".message-list-button");
 
 const allForm = document.querySelector(".comment-input-bar");
-const blankHeart = document.querySelector(".blank-heart");
-const fullHeart = document.querySelector(".full-heart");
 
-const heart = document.querySelector(".heart");
-const tagComment = document.querySelector(".tag-comment");
-const tagCommentId = document.querySelector(".tag-comment-id");
-const tagCommentContent = document.querySelector(".tag-comment-content");
-
-const HIDDEN_CLASS = "hidden";
 const POINTER_CURSOR = "non-disabled";
-
-function makingRedHeart() {
-	fullHeart.classList.add(HIDDEN_CLASS);
-	blankHeart.classList.remove(HIDDEN_CLASS);
-}
-fullHeart.addEventListener("click", makingRedHeart);
 
 function backLoginPage() {
 	location.href = "index.html";
