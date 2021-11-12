@@ -34,6 +34,8 @@ function onBtnClick() {
         const fontBoldClass = 'font-bold';
         const heart1 = "fas";
         const heart2 = "fa-heart";
+        const trash1 = "far";
+        const trash2 = "fa-trash-alt";
 
         let user = myId;
 
@@ -41,12 +43,15 @@ function onBtnClick() {
         let li = document.createElement('li');
         let span = document.createElement('span');
         let i = document.createElement('i');
+        let i2 = document.createElement('i');
 
 
         commentList.append(li);   //    <ul><li> </li></ul>
         li.append(commentContent);     //    <ul><li><댓글 내용<li><ul>
         li.append(i);
         i.classList.add(heart1, heart2);
+        li.append(i2);
+        i2.classList.add(trash1, trash2);
 
 
         feedComment.value = "";
@@ -74,8 +79,10 @@ function onBtnClick() {
 // 댓글 좋아요 버튼 누르기 기능
 function onLikeClick(e) {
     // e.target.style.color = "red";    // classList 가 왜 안될까  ---> 우선순위가 밀린 것
-    if (e.target.tagName === 'I') {
+    
+    if (e.target.classList.contains('fa-heart')) {
         e.target.classList.toggle("red");
+        console.log(e.target.classList);
     }
 }
 
@@ -109,22 +116,36 @@ function onBtnColorChange() {
 
 
 // 댓글 삭제 기능
-/* 1. 마우스를 오버하면 삭제 버튼이 생긴다.
- * 1-1. 삭제 버튼은 문자 x 로 하자.
- * 1-2. <li><span class> atom </span>dsfsdfsfsa 내용 삽입하기 <i></i></li>
- * 2. 그 삭제 버튼을 누르면 삭제 되어진다.
- * */
+/* 
+ * 1. */
+
+
+
+
+
 
 function onDeleteComment(e) {
     if (e.target.tagName === 'LI') {
-        console.log(e.target);
-        const span = document.createElement('span');
+        console.log(e.target.children);
 
+        for (let i = 0; i < e.target.children.length; i++) {
+            console.log(e.target.children[i].className);
+            if (e.target.children[i].className.contains('fa-trash-alt')){
+                console.log('ddd');
+            }
+        }
+
+        //if () {    // 휴지통 아이콘이 이미 있다면
+            
+            
+
+
+        //    trashIcon.addEventListener('click', onClickTrash);
+        //}
     }
 }
 
 commentList.addEventListener('mouseover', onDeleteComment);
-
 
 
 
