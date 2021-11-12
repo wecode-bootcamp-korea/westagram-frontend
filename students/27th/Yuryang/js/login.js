@@ -1,5 +1,7 @@
 "use strict";
 
+// 로그인 버튼을 누르면 main.html로 연결
+
 // id,pw 각각 한 글자 이상 써야 버튼이 활성화
 // 활성화 되면 연한 파란색 -> 파란색
 const id = document.querySelector("#id");
