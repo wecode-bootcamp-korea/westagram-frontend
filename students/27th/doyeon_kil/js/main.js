@@ -3,6 +3,12 @@ const userId = "ralo";
 
 let commentId = 1;
 
+theForm.addEventListener('submit', e => {
+  e.preventDefault();
+  pushComment();
+  inputClear();
+})
+
 const inputClear = () => {
   theForm.getElementsByClassName("comment-input")[0].value = "";
 };
@@ -21,7 +27,6 @@ const pushComment = () => {
 </div>`;
 
   commentContainer.innerHTML += newComment;
-  inputClear();
 };
 
 const feedLikeToggle = (e) => {
