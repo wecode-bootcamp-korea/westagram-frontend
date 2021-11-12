@@ -10,29 +10,32 @@ header nav {
   position: sticky;
   top: 0;
 
+  padding: 5px 50px;
+
   background-color: white;
   border-bottom: 1px solid #dbdbdb;
-  z-index: 3;
 
-  padding: 5px 50px;
+  z-index: 3;
 }
 
 nav h1 {
-  font-family: "Lobster", cursive;
-  font-size: 25px;
-
   margin-top: 3px;
   padding-left: 45px;
+
+  font-family: "Lobster", cursive;
+  font-size: 25px;
 }
 
 nav span {
   position: absolute;
-
-  font-size: 25px;
-  padding-right: 10px;
-  border-right: 1px solid rgb(139, 139, 139);
   top: 6px;
   left: 0;
+
+  padding-right: 10px;
+
+  border-right: 1px solid rgb(139, 139, 139);
+
+  font-size: 25px;
 }
 
 nav .nav-container {
@@ -42,13 +45,14 @@ nav .nav-container {
   align-items: center;
   justify-content: space-between;
 
-  margin: 4px auto;
   max-width: 935px;
+  margin: 4px auto;
 }
 
 nav .nav-logo {
   display: flex;
   justify-content: center;
+
   margin-top: -3px;
 }
 
@@ -59,11 +63,12 @@ nav .nav-container .nav-input {
 }
 
 nav .nav-container .nav-input input {
+  padding: 5px;
+  height: 100%;
+
   background-color: rgb(249, 249, 249);
   border: 1px solid #dbdbdb;
   border-radius: 4px;
-  padding: 5px;
-  height: 100%;
 }
 
 nav .nav-container .nav-input .nav-icon {
@@ -78,7 +83,6 @@ nav .nav-container .nav-input input:focus ~ .nav-icon {
   display: none;
 }
 
-/* css 플레이스홀더 */
 nav .nav-container input::-webkit-input-placeholder {
   text-align: center;
 }
@@ -86,12 +90,12 @@ nav .nav-container input::-webkit-input-placeholder {
 nav .nav-container .menu-icon-wrapper {
   display: flex;
   justify-content: space-between;
+
   height: 100%;
 }
 
 nav .nav-container .menu-icon-wrapper img {
   width: 45px;
-
   padding-left: 22px;
 }
 
@@ -103,20 +107,20 @@ main {
 .main-section {
   display: flex;
   justify-content: center;
+
   padding-top: 30px;
 }
-
 
 .main-section .feeds-wrapper {
   display: flex;
   flex-direction: column;
 }
 
-@media screen and (min-width:960px){
+@media screen and (min-width: 960px) {
   .main-section .feeds-wrapper {
     display: flex;
     flex-direction: column;
-  
+
     margin-right: 28px;
   }
 }
@@ -135,10 +139,10 @@ main {
   align-items: center;
   justify-content: space-between;
 
-  border-bottom: 1px solid rgb(214, 214, 214);
   padding: 20px;
-
   max-height: 69px;
+
+  border-bottom: 1px solid rgb(214, 214, 214);
 }
 
 .main-section .feeds-wrapper .feed .feed-header .feed-writer {
@@ -151,8 +155,9 @@ main {
 
 .main-section .feeds-wrapper .feed .feed-header .writer-info .location-info {
   display: block;
-  text-decoration-line: none;
+
   color: #262626;
+  text-decoration-line: none;
   font-size: 12px;
 }
 
@@ -168,26 +173,31 @@ main {
 
 .main-section .feeds-wrapper .feed .feed-body .button-wrapper {
   display: flex;
-  width: 100%;
   justify-content: space-between;
+
+  width: 100%;
 }
 
 .main-section .feeds-wrapper .feed .feed-body .button-wrapper .button-container {
   display: flex;
+
   margin: 10px;
 }
 
 .button-like {
   width: 40px;
   height: 40px;
+
   background-color: transparent;
   border: none;
+
   font-size: 24px;
 }
 
 .button-like.liked {
   width: 40px;
   height: 40px;
+
   background-color: transparent;
   border: none;
 
@@ -198,26 +208,31 @@ main {
 .button-comment {
   width: 40px;
   height: 40px;
-  font-size: 24px;
-  border: none;
+
   background-color: transparent;
+  border: none;
+
+  font-size: 24px;
 }
 
 .button-share {
   width: 40px;
   height: 40px;
-  font-size: 24px;
-  border: none;
+
   background-color: transparent;
+  border: none;
+
+  font-size: 24px;
 }
 
 .button-bookmark {
   width: 40px;
   height: 40px;
-  font-size: 24px;
+
   border: none;
   background-color: transparent;
-  float: right;
+
+  font-size: 24px;
 }
 
 .main-section .feeds-wrapper .feed .feed-body .feed-content {
@@ -240,76 +255,88 @@ span {
 .main-section .feeds-wrapper .feed .feed-body .feed-content .feed-comments .comment {
   display: flex;
   justify-content: space-between;
+
   margin-bottom: 0px;
 }
 
 .main-section .feeds-wrapper .feed .feed-body .feed-content .feed-comments .comment .comment-like-button {
+  height: 12px;
+
   border: none;
   background-color: transparent;
-  height: 12px;
+
   font-size: 12px;
 }
 
 .main-section .feeds-wrapper .feed .feed-body .feed-content .feed-comments .comment .comment-like-button.liked {
+  height: 12px;
+
   border: none;
   background-color: transparent;
 
-  height: 12px;
   font-size: 12px;
   color: red;
 }
 
 .main-section .feeds-wrapper .feed .feed-body .feed-content .feed-comments .comment .comment-like-button {
+  height: 12px;
+
   border: none;
   background-color: transparent;
-  height: 12px;
+
   font-size: 12px;
 }
 
 .main-section .feeds-wrapper .feed .feed-body .feed-content .feed-comments .comment .comment-delete-button {
+  height: 12px;
+
   border: none;
   background-color: transparent;
-  height: 12px;
+
   font-size: 12px;
 }
 
 .main-section .feeds-wrapper .feed .feed-body .feed-content .feed-comments .feed-time-ago {
-  font-size: 10px;
-  color: #8e8e8e;
-
   margin-top: 5px;
   margin-bottom: 16px;
+
+  font-size: 10px;
+  color: #8e8e8e;
 }
 
 .main-section .feeds-wrapper .feed .comment-input-container {
   display: flex;
 
   height: 40px;
-  border-top: 1px solid rgb(214, 214, 214);
   padding: 8px 16px;
+
+  border-top: 1px solid rgb(214, 214, 214);
 }
 
 .main-section .feeds-wrapper .feed .comment-input-container .comment-input {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   width: 100%;
-  height: 25px !important;
-  font-size: 14px;
-  border: none;
+  height: 25px;
   resize: none;
+
+  border: none;
+
+  font-size: 14px;
 }
 
 .main-section .feeds-wrapper .feed .comment-input-container .comment-input-button {
+  width: 30px;
+  padding: 0;
+  margin-left: 6px;
+
   border: none;
   background-color: transparent;
-  width: 30px;
 
   font-size: 14px;
   color: #0095f6;
-
-  padding: 0;
-  margin-left: 6px;
 }
 
 .main-section .feeds-wrapper .feed .comment-input-container .comment-input-button:disabled {
@@ -321,10 +348,11 @@ span {
 
 .main-section .people-section {
   width: 293px;
+
   background-color: transparent;
 }
 
-@media screen and (max-width:960px){
+@media screen and (max-width: 960px) {
   .main-section .people-section {
     display: none;
   }
@@ -334,6 +362,7 @@ span {
   position: fixed;
   display: flex;
   flex-direction: column;
+
   width: 292px;
 }
 
@@ -372,15 +401,15 @@ span {
 }
 
 .main-section .people-section .people-container .user-container .user-conversion {
+  width: 35px;
+  padding: 0;
+  margin-left: 6px;
+
   border: none;
   background-color: transparent;
-  width: 35px;
 
   font-size: 12px;
   color: #0095f6;
-
-  padding: 0;
-  margin-left: 6px;
 }
 
 .main-section .people-section .people-container .recommended-people {
@@ -441,26 +470,27 @@ span {
   border: none;
   background-color: transparent;
   width: 50px;
+  
+  padding: 0;
+  margin-left: 6px;
 
   font-size: 12px;
   color: #0095f6;
-
-  padding: 0;
-  margin-left: 6px;
 }
 
 .main-section .people-section .people-container .corp-etc {
   display: flex;
   flex-direction: column;
+
   color: #c7c7c7;
   font-size: 11px;
   text-decoration: none;
 }
 
 .main-section .people-section .people-container .corp-etc ul.link-list {
-  list-style: none;
-
   padding-bottom: 16px;
+  
+  list-style: none;
 }
 
 .main-section .people-section .people-container .corp-etc ul.link-list li {
