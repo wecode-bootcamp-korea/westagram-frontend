@@ -1,39 +1,61 @@
 'use strict';
 
-const innerForm = document.querySelector(".button1");
 const commentInput = document.querySelector(".button2");
 const postBtn = document.querySelector(".button3");
 const thisIsTextarea = document.querySelector(".please");
-const parentForm = document.querySelector(".please");
+const parentForm = document.querySelector(".reply");
 
-function uploadComment() {
-    const commentValue = commentInput.value;
-    const createTag = document.createElement("div");
-    const createTag1 = document.createElement("span");
-    const createTag2 = document.createElement("span");
+// 하트구현
+function fillHeart(element) {
+    element.classList.toggle("fas");
+}
 
-    if (commentValue !== "") {
-        createTag.className += "newDiv";
-        createTag1.className += "name";
-        createTag2.className += "newComment";
-        createTag1.innerHTML = "kimel_khr";
-        createTag2.innerHTML = commentValue;
-
-        parentForm.appendChild(createTag);
-        createTag.appendChild(createTag1);
-        createTag.appendChild(createTag2);
-        thisIsTextarea.value = "";
+function btnColor() {
+    if (!commentInput.value.length) {
+        postBtn.style.color = "#B8E2FD";
+    } else if (commentInput.value.length) {
+        postBtn.style.color = "#0095F6";
 
     }
+}
 
-    createTag.addEventListener("click", function(e) {
-        createTag.remove();
-    });
+function uploadComment() {
+    const commentValue = commentInput.value; //input의 value가 배열 값으로
+    const createDiv = document.createElement("div");
+    const createSpan0 = document.createElement("span");
+    const createSpan1 = document.createElement("span");
+    const createSpan2 = document.createElement("span");
+    const createImg = document.createElement('i');
+
+    if (commentValue !== "") {
+        createDiv.className = "text-0";
+        createSpan1.className = "text1";
+        createSpan2.className = "text2";
+        createSpan1.innerHTML = "kimel_khr";
+        createSpan2.innerHTML = commentValue;
+        createImg.className = "far fa-heart";
+        createSpan0.className = "textGrop";
+        createImg.onclick = () => fillHeart(createImg);
+
+        parentForm.appendChild(createDiv);
+        createDiv.appendChild(createSpan0);
+        createSpan0.appendChild(createSpan1);
+        createSpan0.appendChild(createSpan2);
+        createDiv.appendChild(createImg);
+        thisIsTextarea.value = "";
+        commentInput.value = "";
+    }
+}
+
+function clicke() {
+    postBtn.disabled = false;
+    postBtn.style.color = "#B8E2FD";
 }
 
 function enterCode(e) {
     if (e.keyCode === 13) {
         uploadComment();
+        commentInput.value = "";
     }
 }
 
@@ -43,3 +65,10 @@ function pressBtn() {
 }
 
 pressBtn();
+
+const init = () => {
+    commentInput.addEventListener('keyup', btnColor);
+    postBtn.addEventListener('click', clicke);
+};
+
+init();
