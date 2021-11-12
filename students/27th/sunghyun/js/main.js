@@ -81,6 +81,11 @@ const showSearchedUsers = () => {
     return;
   }
   const filteredUsers = getUsers(searchInput.value, usersInfo);
+  if (!filteredUsers.length) {
+    searchResults.innerHTML =
+      '<li class="searchResultEmpty">검색결과 없음</li>';
+    return;
+  }
   const dropdownInner = makeUsersDropdownInner(filteredUsers);
   searchResults.innerHTML = dropdownInner;
 };
