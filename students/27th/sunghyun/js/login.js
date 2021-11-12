@@ -6,7 +6,7 @@
 
   const checkLoginForm = () => {
     const allchecked = !!id.value && !!password.value;
-
+    console.log(loginForm.value);
     allchecked
       ? loginBtn.classList.remove('loginBtn--disable')
       : loginBtn.classList.add('loginBtn--disable');
@@ -16,7 +16,6 @@
 
   const checkLoginValidation = () => {
     const items = loginForm.elements;
-    console.log(items.id.value);
     for (const item of items) {
       if (item.name === 'id' && !item.value.includes('@')) {
         alert(`아이디에 '\@'이 포함되어야 합니다.`);

@@ -29,12 +29,13 @@
             <i class="fas fa-search"></i><span>Search</span>
           </div>
           <div class="searchUsersWrapper">
-            <div class="square"></div>
-            <ul class="searchResults">
+            <div class="searchSquare dropdownSquare"></div>
+            <ul class="searchResults dropdown">
               <li class="searchResultEmpty">검색결과 없음</li>
             </ul>
           </div>
         </div>
+        
         <div class="navBtnWrapper">
           <div class="navBtn">
             <img src="./src/explore.png" alt="explore" />
@@ -44,9 +45,28 @@
             <img src="./src/heart.png" alt="heart" />
             <div class="navBtnMore"></div>
           </div>
-          <div class="navBtn">
-            <img src="./src/profile.png" alt="profile" />
+          <div class="navProfile navBtn">
+            <img src="./src/maria3.jpeg" alt="profile" />
             <div class="navBtnMore navBtnMore--none"></div>
+            <div class="profileDropdownWrapper">
+              <div class="profileDropdownSquare dropdownSquare"></div>
+              <ul class="profileDropdown dropdown">
+                <li class="profileDropdownItem">
+                  <i class="fas fa-user-alt"></i>
+                  <span>프로필</span>
+                </li>
+                <li class="profileDropdownItem">
+                  <i class="far fa-bookmark"></i>
+                  <span>저장됨</span>
+                </li>
+                <li class="profileDropdownItem">
+                  <i class="fas fa-cog"></i>
+                  <span>설정</span>
+                </li>
+                <li class="profileDropdownItem">로그아웃</li>
+              </ul>
+            </div>
+
           </div>
         </div>
       </div>
@@ -131,44 +151,44 @@
             <span class="rightTitle">스토리</span>
             <span class="showAll">모두 보기</span>
           </div>
-          <div class="stories">
-            <div class="story">
+          <ul class="stories">
+            <li class="story">
               <img src="./src/p1.jpeg" alt="profile" />
               <div class="storyInfo">
                 <span>nypl</span>
                 <span>20분 전</span>
               </div>
-            </div>
-            <div class="story">
+            </li>
+            <li class="story">
               <img src="./src/p2.jpeg" alt="profile" />
               <div class="storyInfo">
                 <span>chistX</span>
                 <span>50분 전</span>
               </div>
-            </div>
-            <div class="story">
+            </li>
+            <li class="story">
               <img src="./src/p3.jpeg" alt="profile" />
               <div class="storyInfo">
                 <span>ee_me</span>
                 <span>2시간 전</span>
               </div>
-            </div>
-            <div class="story">
+            </li>
+            <li class="story">
               <img src="./src/p4.jpeg" alt="profile" />
               <div class="storyInfo">
                 <span>짹짹</span>
                 <span>12시간 전</span>
               </div>
-            </div>
-          </div>
+            </li>
+          </ul>
         </div>
         <div class="recommandWrapper rightWrapper wrapper">
           <div class="rightHeader">
             <span class="rightTitle">회원님을 위한 추천</span>
             <span class="showAll">모두 보기</span>
           </div>
-          <div class="recommends">
-            <div class="recommend">
+          <ul class="recommends">
+            <li class="recommend">
               <div class="recommendMain">
                 <img src="./src/p5.jpeg" alt="profile" />
                 <div class="storyInfo">
@@ -177,8 +197,8 @@
                 </div>
               </div>
               <button class="mainBtn">팔로우</button>
-            </div>
-            <div class="recommend">
+            </li>
+            <li class="recommend">
               <div class="recommendMain">
                 <img src="./src/p6.jpeg" alt="profile" />
                 <div class="storyInfo">
@@ -187,8 +207,8 @@
                 </div>
               </div>
               <button class="mainBtn">팔로우</button>
-            </div>
-            <div class="recommend">
+            </li>
+            <li class="recommend">
               <div class="recommendMain">
                 <img src="./src/p7.jpeg" alt="profile" />
                 <div class="storyInfo">
@@ -197,8 +217,8 @@
                 </div>
               </div>
               <button class="mainBtn">팔로우</button>
-            </div>
-          </div>
+            </li>
+          </ul>
         </div>
         <footer>
           <p class="instagramInfo">

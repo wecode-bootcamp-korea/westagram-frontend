@@ -7,7 +7,7 @@
   const searchTitle = document.querySelector('#searchText');
   const searchUsersWrapper = document.querySelector('.searchUsersWrapper');
   const feedComments = document.querySelector('.feedComments');
-
+  let popupItem;
   const usersInfo = [
     {
       id: 1,
@@ -70,7 +70,6 @@
       let dropdown = '';
       users.forEach((user, i) => {
         const { username, userInfo, img } = user;
-
         dropdown += `<li class="searchResult" id="search_${i + 1}">
       <img src="./src/${img}" alt="userprofile">
       <div class="searchResultInfo">
@@ -170,12 +169,33 @@
       targetClass.includes('fa-heart') && target.classList.toggle('showHeart');
     });
   };
+  // Profile click
+  const profileActions = () => {
+    const navProfile = document.querySelector('.navProfile');
+    const profileDropdownWrapper = document.querySelector(
+      '.profileDropdownWrapper'
+    );
+    navProfile.addEventListener('click', (e) => {
+      e.stopPropagation();
+      popupItem = profileDropdownWrapper;
+      profileDropdownWrapper.style.visibility = 'visible';
+    });
+  };
 
   // init
+
+  const bodyTag = document.querySelector('body');
+  bodyTag.addEventListener('click', (e) => {
+    if (!!popupItem) {
+      popupItem.style.visibility = 'hidden';
+      popupItem = '';
+    }
+  });
   const init = () => {
     searchActions();
     commentActions();
     commentsActions();
+    profileActions();
   };
   init();
 })();
