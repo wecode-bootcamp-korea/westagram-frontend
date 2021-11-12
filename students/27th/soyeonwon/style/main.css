@@ -561,3 +561,11 @@ main {
 .corp_area li {
   display: inline-block;
 }
+
+.corp_area li::after {
+  content: " ·";
+}
+
+.corp_area li:last-child::after {
+  display: none;
+}
