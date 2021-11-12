@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS 파일 위치 -->
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/common.css" />
+
+    <!-- 폰트 설정 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- JS 파일 위치 -->
+    <script defer src="../westagram/login.js"></script>
+
+    <!-- 아이콘 -->
+    <script
+      defer
+      src="https://kit.fontawesome.com/d4bcf9a929.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>westagram</title>
+  </head>
+
+  <body>
+    <!-- header -->
+    <header>
+      <div class="headerArea">
+        <!-- 헤더 왼쪽 로고 영역 -->
+        <div class="headerLogoArea">
+          <img src="image/instagram.png" alt="instar" />
+          <!-- h1이 위로 갔을 때 -->
+          <h1>Westagram</h1>
+          <!-- 접근성과 가상요소 background-img를 쓰기 위해 div 안에 span 사용 -->
+          <!-- <div class="logoImg">
+            <span class="blind">인스타그램에 오신것을 환영합니다.</span> -->
+          </div>
+        </div>
+      </div>
+
+      <!-- 헤더 중간 서치 영역 -->
+      <div class="headerSearchBarArea">
+        <i class="fas fa-search"></i>
+        <form name="SearchBarForm" action="login.js" method="post">
+          <label for="searchBar">
+            <input type="text" name="" id="searchBar" placeholder="검색" />
+          </label>
+      </div>
+
+      <!-- 헤더 오른쪽 아이콘 영역-->
+      <div class="headerIconsArea">
+        <!--웹 접근성, background-image를 쓰기 위해 div사용 span은 blind처리 -->
+        <div class="exploreImg">
+          <span class="blind">탐색하기</span>
+        </div>
+        <div class="heartImg">
+          <span class="blind">활동 피드</span>
+        </div>
+        <div class="profileImg">
+          <span class="blind">프로필</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- 메인으로 전체 한 번 감싸기 -->
+    <!-- <main>은 IE 호환x 하위로 footer도 둘 수 없음 따라서 div 사용  -->
+    <div class="main">
+      <!-- 메인 중간 부분 전체로 한 번 감싸기-->
+      <div class="feeds">
+        <!-- feeds의 계정 영역  -->
+        <div class="feedsAccountArea">
+          <img src="image/otherprofile.png" alt="계정 사진">
+          <p><b>y.raeng_ </b></p>
+          <p><b>・・・</b></p>
+        </div>
+
+        <!-- feeds의 사진 -->
+        <article class="photo">
+          <h2 class="blind">사진</h2>
+        </article>
+
+        <!-- feeds의 사진 하단 -->
+        <div class="feedsFooter"></div>
+
+          <!-- 계정, 내용, ~분전  -->
+
+        <!-- 댓글 달기... , 게시 -->
+      </div>
+
+      <!-- 오른쪽 영역 푸터 포함 묶기-->
+      <div class="mainRightArea">
+        <!-- 오른쪽 영역 위쪽 계정 부분 -->
+        <div class="mainRightMyAccount"></div>
+
+        <!-- 스토리 -->
+        <div class="mainRightStories"></div>
+
+        <!-- 회원님을 위한 추천 -->
+        <div class="mainRightRecommand"></div>
+
+        <!-- footer -->
+        <footer class="footer">
+          <ul class="guide-list">
+            <li><a href="#">Westagram 정보</a></li>
+            <li><a href="#">도움말</a></li>
+            <li><a href="#">홍보 센터</a></li>
+            <li><a href="#">API</a></li>
+            <li><a href="#">채용 정보</a></li>
+            <li><a href="#">개인정보처리방침</a></li>
+            <li><a href="#">약관</a></li>
+            <li><a href="#">위치</a></li>
+            <li><a href="#">인기 계정</a></li>
+            <li><a href="#">해시태그</a></li>
+            <li><a href="#">언어</a></li>
+            <li><a href="#">since &copy; 2019 WESTAGRAM</a></li>
+          </ul>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

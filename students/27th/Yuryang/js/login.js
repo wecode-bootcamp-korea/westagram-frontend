@@ -7,7 +7,7 @@ const password = document.querySelector("#password");
 const loginBtn = document.querySelector("#login");
 const input = document.querySelector("#input");
 
-id.addEventListener("keyup", (event) => {
+id.addEventListener("keyup", function (event) {
   if (!!id.value && !!password.value) {
     loginBtn.removeAttribute("disabled", false);
     loginBtn.style.backgroundColor = "#499ee9";
@@ -16,7 +16,7 @@ id.addEventListener("keyup", (event) => {
   button.style.backgroundColor = "#c4e1fb";
 });
 
-password.addEventListener("keyup", (event) => {
+password.addEventListener("keyup", function (event) {
   if (!!id.value && !!password.value) {
     loginBtn.removeAttribute("disabled", false);
     loginBtn.style.backgroundColor = "#499ee9";

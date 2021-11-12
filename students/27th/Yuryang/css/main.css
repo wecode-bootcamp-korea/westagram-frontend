@@ -1,0 +1,197 @@
+header {
+  display: flex;
+  justify-content: center;
+  height: 60px;
+}
+
+/* 헤더 왼쪽 로고 영역 */
+.headerArea {
+  display: flex;
+  justify-content: space-between;
+}
+
+.headerLogoArea {
+  padding-top: 15px;
+  width: 250px;
+}
+
+.headerLogoArea img {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+h1 {
+  display: inline-block;
+  font-family: "Lobster", cursive;
+  font-weight: lighter;
+  font-size: x-large;
+  text-align: center;
+}
+
+h1::before {
+  padding-right: 10px;
+  font-size: large;
+  content: "|";
+  color: black;
+}
+
+.logoImg {
+  width: 20px;
+  height: 20px;
+  /* background-image: url(../image/instagram.png) no-repeat; */
+  background-size: cover;
+}
+
+/* 헤더 중간 서치 영역 */
+.headerSearchBarArea {
+  position: relative;
+  padding: 15px 310px 15px 310px;
+}
+
+.fa-search {
+  font-size: 10px;
+  position: absolute;
+  top: 26px;
+  left: 390px;
+  color: #36363679;
+}
+
+input {
+  background-color: rgba(214, 214, 214, 0.2);
+  border: 2px solid rgb(226, 226, 226);
+  border-radius: 3px;
+  text-align: center;
+  width: 220px;
+  height: 30px;
+}
+
+::placeholder {
+  color: #36363679;
+}
+
+/* 헤더 오른쪽 아이콘 영역 */
+.headerIconsArea {
+  display: flex;
+}
+
+/* = .headerIconsArea .a  파비콘처럼 class명 두개를 지정해서 둘 수도 있다.   */
+.headerIconsArea div {
+  margin: 15px 10px 0 20px;
+  /* line-height: 10px; */
+}
+
+.exploreImg {
+  width: 30px;
+  height: 31px;
+  background-size: contain;
+  background-image: url(../image/explore.png);
+}
+
+.heartImg {
+  width: 32px;
+  height: 30px;
+  background-size: cover;
+  background-image: url(../image/heart.png);
+}
+
+.profileImg {
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+  background-image: url(../image/profile.png);
+}
+
+/* 메인 */
+.main {
+  padding-top: 70px;
+  max-width: 1245px;
+  transform: translateX(20%);
+}
+
+.feeds {
+  display: inline-block;
+  width: 780px;
+  height: 60px;
+}
+
+/* 피즈 계정 영역 */
+.feedsAccountArea {
+  position: relative;
+  justify-content: left;
+  height: 70px;
+  border: 1px solid rgb(194, 194, 194);
+  background-color: white;
+}
+
+.feedsAccountArea img {
+  top: 15px;
+  left: 15px;
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid rgb(194, 194, 194);
+}
+
+.feedsAccountArea p {
+  position: absolute;
+  top: 25px;
+  left: 70px;
+  font-weight: bolder;
+}
+
+.feedsAccountArea p:last-child {
+  position: absolute;
+  top: 20px;
+  left: 740px;
+  font-size: x-large;
+}
+
+/* 피즈 사진 영역 */
+.photo {
+  width: 780px;
+  height: 680px;
+  background-image: url(../image/cloud.jpg);
+  background-color: coral;
+  background-size: cover;
+  overflow: hidden;
+}
+
+/* 피즈 사진 하단 */
+.feedsFooter {
+  border: 1px solid rgb(194, 194, 194);
+}
+
+/* 오른쪽 영역 스토리 */
+.mainRightArea div {
+}
+
+.mainRightArea {
+  float: right;
+  width: 390px;
+  padding-bottom: 100px;
+  /* border: 2px solid darkgreen; */
+  background-color: red;
+}
+
+/* 푸터 */
+
+.footer {
+  /* float: right; */
+}
+
+footer > ul > li > a {
+  color: rgb(162, 162, 162);
+}
+
+footer > ul > li > a:after {
+  content: "•";
+  font-size: small;
+}
+
+.footer > ul > li:last-child a:after {
+  /* color: brown; */
+  content: " ";
+}
