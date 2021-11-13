@@ -1,37 +1,51 @@
-const userEmail = document.getElementById("userEmail");
-const userPw = document.getElementById("userPw");
-const loginSubmitBtn = document.getElementById("loginSubmitBtn");
-const emailErrorMs = document.getElementById("emailErrorMs");
-const pwErrorMs = document.getElementById("pwErrorMs");
+const loginForm = document.getElementById("userLogin");
+const EMAIL_REQUIRED = "이메일에는 @가 있어야합니다.";
+const PASSSWORD_REQUIRED = "비밀번호는 5자리 이상이어야합니다.";
 
-// make login toggle button
-function makeToggleLoginBtn() {
-  let emailValueLength = userEmail.value.length;
-  let pwValueLength = userPw.value.length;
-  let isEmailValid = userEmail.value.includes("@");
+function showErrorMessage(isValid, errorType, message) {
+  isValid ? (errorType.innerHTML = "") : (errorType.innerHTML = message);
+}
+
+function removeErrorMessage(errorType) {
+  errorType.innerHTML = "";
+}
+
+function validateInput() {
+  let emailValueLength = loginForm.userEmail.value.length;
+  let pwValueLength = loginForm.userPw.value.length;
+  let isEmailValid = loginForm.userEmail.value.includes("@");
   let isPwValid = pwValueLength >= 5;
-  let isInputValid = isEmailValid && isPwValid;
 
-  if (emailValueLength)
-    isEmailValid
-      ? (emailErrorMs.innerHTML = "")
-      : (emailErrorMs.innerHTML = "이메일에는 @가 있어야합니다.");
-  else emailErrorMs.innerHTML = "";
+  emailValueLength
+    ? showErrorMessage(isEmailValid, emailErrorMs, EMAIL_REQUIRED)
+    : removeErrorMessage(emailErrorMs);
 
-  if (pwValueLength)
-    isPwValid
-      ? (pwErrorMs.innerHTML = "")
-      : (pwErrorMs.innerHTML = "비밀번호는 5자리 이상이어야합니다.");
-  else pwErrorMs.innerHTML = "";
+  pwValueLength
+    ? showErrorMessage(isPwValid, pwErrorMs, PASSSWORD_REQUIRED)
+    : removeErrorMessage(pwErrorMs);
 
-  isInputValid
-    ? (loginSubmitBtn.style.backgroundColor = "var(--color-blue)")
-    : (loginSubmitBtn.style.backgroundColor = "var(--color-opacity-blue)");
+  return isEmailValid && isPwValid;
+}
+
+function enableButton() {
+  const isInputValid = validateInput();
+
+  loginSubmitBtn.style.backgroundColor = isInputValid
+    ? "var(--color-blue)"
+    : "var(--color-opacity-blue)";
 
   loginSubmitBtn.disabled = !isInputValid;
 }
 
-// Set input addEventListener
-[userEmail, userPw].map((elem) =>
-  elem.addEventListener("input", makeToggleLoginBtn)
-);
+function goToMain() {
+  location.href = "main.html";
+}
+
+function init() {
+  [userEmail, userPw].map((elem) =>
+    elem.addEventListener("input", enableButton)
+  );
+  loginSubmitBtn.addEventListener("click", goToMain);
+}
+
+init();
