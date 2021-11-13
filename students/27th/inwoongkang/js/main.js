@@ -4,7 +4,14 @@ const inputvalue = document.querySelector(".input-Box");
 const postButton = document.querySelector(".post");
 const inputBox = document.querySelector(".inputBox");
 const searchBox = document.querySelector(".searchBox");
+const profileUser = document.querySelector(".profileWrappeerUser");
+const profileWrapper = document.querySelector(".profileWrapper");
 const recommendBox = document.createElement("div");
+const profileUserBox = document.createElement("div");
+const profileBox = document.createElement("div");
+const saveBox = document.createElement("div");
+const settingBox = document.createElement("div");
+const logoutBox = document.createElement("div");
 let childNumber = 0;
 let divBox = [];
 let number = 0;
@@ -97,7 +104,22 @@ function doRecommend(event) {
   childNumber = recommendBox.childElementCount;
 }
 
+function openProfile() {
+  profileBox.textContent = "프로필";
+  saveBox.textContent = "저장됨";
+  settingBox.textContent = "설정";
+  logoutBox.textContent = "로그아웃";
+  profileUserBox.classList.add("profileUser");
+  profileWrapper.appendChild(profileUserBox);
+  profileUserBox.appendChild(profileBox);
+  profileUserBox.appendChild(saveBox);
+  profileUserBox.appendChild(settingBox);
+  profileUserBox.appendChild(logoutBox);
+}
+
 function init() {
+  profileUser.addEventListener("click", openProfile);
+
   inputBox.addEventListener("keyup", doRecommend);
 
   inputvalue.addEventListener("keyup", () => {
