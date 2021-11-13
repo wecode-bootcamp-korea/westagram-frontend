@@ -28,7 +28,7 @@
     }
     location.href = 'main.html';
     alert(`로그인 되었습니다.\n${items.id.value}님 좋은 하루되세요 :)`);
-    loginForm.reset();
+    // loginForm.reset();
   };
 
   const init = () => {

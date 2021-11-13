@@ -7,6 +7,7 @@
   const searchTitle = document.querySelector('#searchText');
   const searchUsersWrapper = document.querySelector('.searchUsersWrapper');
   const feedComments = document.querySelector('.feedComments');
+
   let popupItem;
   const usersInfo = [
     {
@@ -49,8 +50,8 @@
 
   // SEARCH
   const searchActions = () => {
+    const searchResults = document.querySelector('.searchResults');
     const showSearchedUsers = () => {
-      const searchResults = document.querySelector('.searchResults');
       if (!searchInput.value) {
         searchResults.innerHTML =
           '<li class="searchResultEmpty">검색결과 없음</li>';
@@ -85,20 +86,22 @@
       return usersInfo.filter((user) => user.username.includes(username));
     };
 
-    searchWrapper.addEventListener('click', () => {
+    searchWrapper.addEventListener('click', (e) => {
+      e.stopPropagation();
       searchInput.focus();
     });
 
     searchInput.addEventListener('focus', () => {
-      searchUsersWrapper.classList.add('searchUsersWrapper--visible');
-      searchTitle.classList.add('searchText--none');
+      if (!!popupItem) popupItem.style.visibility = 'hidden';
+      popupItem = searchUsersWrapper;
+      searchUsersWrapper.style.visibility = 'visible';
+      searchTitle.style.visibility = 'hidden';
       showSearchedUsers();
     });
 
     searchInput.addEventListener('blur', () => {
-      searchUsersWrapper.classList.remove('searchUsersWrapper--visible');
       if (!!searchInput.value) return;
-      searchTitle.classList.remove('searchText--none');
+      searchTitle.style.visibility = 'visible';
     });
     searchInput.addEventListener('input', showSearchedUsers);
   };
@@ -177,6 +180,8 @@
     );
     navProfile.addEventListener('click', (e) => {
       e.stopPropagation();
+      if (!!popupItem) popupItem.style.visibility = 'hidden';
+
       popupItem = profileDropdownWrapper;
       profileDropdownWrapper.style.visibility = 'visible';
     });
@@ -191,6 +196,7 @@
       popupItem = '';
     }
   });
+
   const init = () => {
     searchActions();
     commentActions();
