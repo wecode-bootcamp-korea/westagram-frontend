@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/common.css">
     <link rel="stylesheet" href="./css/main.css">
+    <script defer src="./js/main.js"></script>
 </head>
 
 <body>
@@ -25,9 +26,9 @@
                     </a>
                 </div>
                 <div class="search">
-                    <i class="fas fa-search"></i>
-                    <span>검색</span>
-                    <input type="search" id="search" placeholder="">
+                    <!-- <i class="fas fa-search"></i> -->
+                    <!-- <span>검색</span> -->
+                    <input type="search" id="search" placeholder="\f002 검색">
                 </div>
 
             </header>
@@ -128,6 +129,7 @@
                 </ul>
             </div>
             <!-- </div> -->
+
             <article>
                 <!-- <div class="feed"> -->
                 <div class="feed_info">
@@ -152,41 +154,63 @@
                 <div class="feed_icon">
                     <div class="feed_like">
                         <button><i class="fal fa-heart"></i></button>
-                        <button><i class="far fa-comment"></i></button>
+                        <button><i class="fal fa-comment"></i></button>
                         <button><i class="fal fa-paper-plane"></i></button>
                     </div>
                     <div class="feed_mark">
-                        <button><i class="far fa-bookmark"></i></button>
+                        <button><i class="fal fa-bookmark"></i></button>
                     </div>
                 </div>
-                <div class="feed_like_num">
-                    <a href="#">
-                        좋아요<span class="like_num">838</span>개 모두 보기
-                    </a>
-                </div>
-                <div class="feed_id">
-                    <a href="#">haribo</a>
-                    <p>🐣; Hello, my name is git.</p>
-                </div>
-                <div class="feed_comment_num">
-                    <a href="#">댓글 <span>84</span>개 모두 보기</a>
-                </div>
-                <div class="feed_comment">
-                    <a href="#">wecode_bootcamp</a>
-                    <div class="feed_comment_upload">
-                        <p>git, you are so cute !</p>
+                <div class="feed_under">
+                    <div class="feed_like_num">
+                        <a href="#">
+                            좋아요 <span class="like_num">838</span>개 모두 보기
+                        </a>
                     </div>
-                    <i class="far fa-heart"></i>
-                </div>
-                <div class="feed_update_date">
-                    <a href="#"><span><span>20</span>시간</span> 전</a>
+                    <div class="feed_user">
+                        <a href="#"><span class="feed_user_name">haribo</span></a>
+                        &nbsp;
+                        <span class="feed_user_text">🐣; Hello, my name is git. <br />
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ipsam cumque sit,
+                            perferendis explicabo sequi quae nesciunt perspiciatis nisi ad eius, atque
+                            etblanditiis quod autem molestiae vitae provident!</span>
+                    </div>
+                    <div class="feed_comment_num">
+                        <a href="#">댓글 <span>84</span>개 모두 보기</a>
+                    </div>
+                    <ul class="feed_comment">
+                        <li>
+                            <div>
+                                <a href="#"><span class="feed_id_name">chobo_coding</span></a>
+                                &nbsp;
+                                <span class="feed_id_text">git, you are so cute !<br /></span>
+                            </div>
+                            <button type="button"><i class="far fa-heart like_heart"></i></button>
+                        </li>
+                        <li>
+                            <div>
+                                <a href="#"><span class="feed_id_name">chobo_coding</span></a>
+                                &nbsp;
+                                <span class="feed_id_text">so dangerous,,<br /></span>
+                            </div>
+                            <button type="button"><i class="far fa-heart like_heart "></i></button>
+                        </li>
+
+                    </ul>
+
+                    <div class="feed_update_date">
+                        <a href="#">
+                            <time class="update_time">2일 전</time>
+                        </a>
+                    </div>
+
                 </div>
                 <div class="feed_comment_input">
                     <form action="" method="post">
-                        <button type="button"><i class="far fa-smile"></i></button>
-                        <textarea name="" id="" cols="50" rows="5" aria-label="댓글 달기..."
-                            placeholder="댓글 달기..."></textarea>
-                        <button type="submit">게시</button>
+                        <button type="button"><i class="fal fa-smile"></i></button>
+                        <textarea name="textarea" id="textarea" cols="50" rows="5" placeholder="댓글 달기..."></textarea>
+                        <!-- <input id="textarea" type="text" placeholder="댓글 달기..."> -->
+                        <button type="button" class="comment_posting">게시</button>
                     </form>
                 </div>
                 <!-- </div> -->
@@ -217,7 +241,7 @@
                         <a href="#"><img src="./imgs/pie.jpeg" class="recommend_follow_profile_img" alt=""></a>
                         <div class="recommens_follow_info">
                             <a href="#">
-                                <p class="info_id">like_pie_son</p>
+                                <p class="info_id">prince_pie_son</p>
                             </a>
                             <p class="info_join">Instagram 신규 가입</p>
                         </div>
@@ -227,7 +251,7 @@
                         <a href="#"><img src="./imgs/zeus.jpeg" class="recommend_follow_profile_img" alt=""></a>
                         <div class="recommens_follow_info">
                             <a href="#">
-                                <p class="info_id">god_of_java</p>
+                                <p class="info_id">zeus_of_java</p>
                             </a>
                             <p class="info_join">Instagram 신규 가입</p>
                         </div>
@@ -237,7 +261,7 @@
                         <a href="#"><img src="./imgs/son.png" class="recommend_follow_profile_img" alt=""></a>
                         <div class="recommens_follow_info">
                             <a href="#">
-                                <p class="info_id">mooreung_dowon</p>
+                                <p class="info_id">djang_o_rider</p>
                             </a>
                             <p class="info_join">Instagram 신규 가입</p>
                         </div>
@@ -257,7 +281,7 @@
                         <a href="#"><img src="./imgs/bong.jpeg" class="recommend_follow_profile_img" alt=""></a>
                         <div class="recommens_follow_info">
                             <a href="#">
-                                <p class="info_id">bongbongs_papa</p>
+                                <p class="info_id">js_seja_highness</p>
                             </a>
                             <p class="info_join">Instagram 신규 가입</p>
                         </div>
@@ -274,6 +298,7 @@
                     <a href="#"><span>API</span></a>
                     <a href="#"><span>채용 정보</span></a>
                     <a href="#"><span>개인정보처리방침</span></a>
+                    <br /><br />
                     <a href="#"><span>약관</span></a>
                     <a href="#"><span>위치</span></a>
                     <a href="#"><span>인기 계정</span></a>
@@ -289,5 +314,6 @@
     </section>
 
 </body>
+
 
 </html>
