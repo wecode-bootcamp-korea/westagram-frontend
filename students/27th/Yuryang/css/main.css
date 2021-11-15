@@ -1,31 +1,38 @@
 header {
+  background-color: white;
   display: flex;
   justify-content: center;
-  height: 60px;
+  padding: 20px 0 20px 0;
+  border: 2px solid rgb(226, 226, 226);
+}
+
+input {
+  outline: none;
 }
 
 /* 헤더 왼쪽 로고 영역 */
-.headerArea {
-  display: flex;
-  justify-content: space-between;
-}
 
 .headerLogoArea {
+  display: flex;
+  align-items: center;
   padding-top: 15px;
   width: 250px;
 }
 
-.headerLogoArea img {
-  width: 20px;
-  height: 20px;
+.logoImg {
+  display: inline-block;
   margin-right: 10px;
+  width: 30px;
+  height: 30px;
+  background-image: url("../image/instagram.png");
+  background-size: cover;
 }
 
 h1 {
   display: inline-block;
   font-family: "Lobster", cursive;
   font-weight: lighter;
-  font-size: x-large;
+  font-size: xx-large;
   text-align: center;
 }
 
@@ -36,43 +43,39 @@ h1::before {
   color: black;
 }
 
-.logoImg {
-  width: 20px;
-  height: 20px;
-  /* background-image: url(../image/instagram.png) no-repeat; */
-  background-size: cover;
-}
-
 /* 헤더 중간 서치 영역 */
 .headerSearchBarArea {
   position: relative;
-  padding: 15px 310px 15px 310px;
+  padding: 15px 300px 15px 300px;
 }
 
 .fa-search {
-  font-size: 10px;
+  font-size: 15px;
   position: absolute;
-  top: 26px;
-  left: 390px;
+  top: 33px;
+  left: 401px;
   color: #36363679;
 }
 
-input {
-  background-color: rgba(214, 214, 214, 0.2);
+#headerSearchBar {
+  padding: 3px 70px 5px 70px;
+  margin-top: 5px;
+  /* background-color: rgba(214, 214, 214, 0.2); */
   border: 2px solid rgb(226, 226, 226);
-  border-radius: 3px;
   text-align: center;
-  width: 220px;
-  height: 30px;
+  line-height: 30px;
 }
 
 ::placeholder {
+  padding-top: 2px;
+  font-size: large;
   color: #36363679;
 }
 
 /* 헤더 오른쪽 아이콘 영역 */
 .headerIconsArea {
   display: flex;
+  padding-right: 45px;
 }
 
 /* = .headerIconsArea .a  파비콘처럼 class명 두개를 지정해서 둘 수도 있다.   */
@@ -104,32 +107,31 @@ input {
 
 /* 메인 */
 .main {
-  padding-top: 70px;
+  padding: 80px 0 80px 0px;
   max-width: 1245px;
-  transform: translateX(20%);
+  transform: translateX(40%);
 }
 
 .feeds {
-  display: inline-block;
   width: 780px;
-  height: 60px;
+  height: auto;
 }
 
 /* 피즈 계정 영역 */
 .feedsAccountArea {
   position: relative;
   justify-content: left;
-  height: 70px;
+  padding-top: 80px;
   border: 1px solid rgb(194, 194, 194);
   background-color: white;
 }
 
 .feedsAccountArea img {
-  top: 15px;
-  left: 15px;
+  top: 20px;
+  left: 20px;
   position: absolute;
-  width: 35px;
-  height: 35px;
+  width: 40px;
+  height: 40px;
   object-fit: cover;
   border-radius: 50%;
   border: 1px solid rgb(194, 194, 194);
@@ -137,16 +139,17 @@ input {
 
 .feedsAccountArea p {
   position: absolute;
-  top: 25px;
-  left: 70px;
+  top: 27px;
+  left: 85px;
   font-weight: bolder;
+  font-size: x-large;
 }
 
 .feedsAccountArea p:last-child {
   position: absolute;
-  top: 20px;
-  left: 740px;
-  font-size: x-large;
+  top: 25px;
+  left: 720px;
+  font-size: xx-large;
 }
 
 /* 피즈 사진 영역 */
@@ -154,33 +157,174 @@ input {
   width: 780px;
   height: 680px;
   background-image: url(../image/cloud.jpg);
-  background-color: coral;
   background-size: cover;
   overflow: hidden;
 }
 
-/* 피즈 사진 하단 */
-.feedsFooter {
+/* 피즈 사진 하단 아이콘 영역*/
+.feedsUnderArea {
   border: 1px solid rgb(194, 194, 194);
+  padding-top: 15px;
+  background-color: white;
 }
 
-/* 오른쪽 영역 스토리 */
-.mainRightArea div {
+.feedsUnderAreaIcons {
+  padding: 0 20px 5px 10px;
+  font-size: 1.8rem;
 }
 
+.feedsUnderAreaIcons > i:nth-child(-n + 3) {
+  margin-right: 10px;
+  
+}
+
+.fa-bookmark {
+  padding-left: 580px;
+}
+
+/* 님 외  */
+.feedsLikes {
+  display: flex;
+  padding: 10px 0 0 12px;
+}
+
+.fa-user-circle {
+  font-size: 1.6rem;
+  padding-right: 10px;
+}
+
+#feedsLikesAccount,
+#feedsLikesCount {
+  font-weight: bold;
+  font-size: large;
+}
+
+#feedsLikesCount {
+  padding-left: 5px;
+}
+
+/* 댓글 내용 */
+.commentContent {
+  display: flex;
+  padding: 10px 20px 7px 15px;
+  font-size: large;
+  border-bottom: 1px solid rgb(194, 194, 194);
+}
+
+#commentId1,
+#commentId2 {
+  font-weight: bold;
+}
+#moreComment {
+  color: #36363679;
+}
+
+.commentContent > i {
+  display: flex;
+  margin-left: auto;
+  margin-top: 20px;
+}
+
+#commentTime {
+  display: block;
+  color: #36363679;
+}
+
+/* 댓글 달기, 게시 폼 */
+#newComment {
+  display: flex;
+  margin: 10px;
+  border: 0;
+  outline: 0;
+  width: 90%;
+  resize: none;
+  font-size: xx-large;
+}
+
+#commentSubmit {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-bottom: auto;
+  padding-right: 20px;
+  outline: 0;
+  border: 0;
+  font-size: large;
+  color: #5188ff80;
+  background-color: white;
+  cursor: pointer;
+}
+
+
+/* 오른쪽 영역 */
 .mainRightArea {
-  float: right;
+  position: absolute;
+  top: 70px;
+  right: 2%;
   width: 390px;
   padding-bottom: 100px;
-  /* border: 2px solid darkgreen; */
-  background-color: red;
 }
 
-/* 푸터 */
-
-.footer {
-  /* float: right; */
+.myAccount{
+  padding-bottom: 20px;
 }
+
+#myAccountImage {
+  background-image: url(/image/anthony.png);
+  background-position: -70% -70%;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  transform: translateX(5%);
+}
+
+
+#myAccountId {
+  transform: translate(30%,-260%);
+  font-weight: bold;
+  font-size: large;
+  color: black;
+}
+
+
+#myAccountIntroduce {
+  transform: translate(30%, -240%);
+  color: #36363679;
+  font-size: large;
+}
+
+
+/* 스토리*/
+.mainRightStories{
+  border: 2px solid rgb(194, 194, 194);
+  background-color: white;
+}
+
+#storiesProfile1{
+  position: relative;
+  background-image: url(/image/coco.png);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  padding: px;
+  outline-color: red solid 6px;
+  border: white solid 2px;
+}
+
+#storiesId1 {
+  position: absolute;
+  left: 60px;
+  top: 10px
+
+}
+
+#
+
+.Recommands{
+  border: 2px solid rgb(194, 194, 194);
+  background-color: white;
+}
+/* >는 바로 자식요소 띄어쓰기는 자식요소 전부 */
 
 footer > ul > li > a {
   color: rgb(162, 162, 162);
@@ -192,6 +336,5 @@ footer > ul > li > a:after {
 }
 
 .footer > ul > li:last-child a:after {
-  /* color: brown; */
   content: " ";
 }

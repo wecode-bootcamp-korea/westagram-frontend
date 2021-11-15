@@ -26,3 +26,7 @@ password.addEventListener("keyup", function (event) {
   button.removeAttribute("disabled", true);
   button.style.backgroundColor = "#c4e1fb";
 });
+
+// function goToMain() {
+//   loaction.href = "main.html";
+// }
