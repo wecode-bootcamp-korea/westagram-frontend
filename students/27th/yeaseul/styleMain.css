@@ -3,10 +3,8 @@ html {
 }
 
 body {
-  /* display: flex; */
   height: 100%;
   padding: 0 180px;
-  /* justify-content: space-around; */
 }
 
 header {
@@ -22,11 +20,13 @@ header nav {
   background-color: white;
 }
 
-/* 해당 태그 아직 완벽하게 이해가지 않음 */
+.mainFeed {
+  display: flex;
+}
 
-/* nav{
-    display: flex;
-} */
+.mainSection {
+  background-color: white;
+}
 
 .westaLink a {
   font-family: "Lobster", cursive;
@@ -37,7 +37,6 @@ header nav {
   text-decoration: none;
 }
 /* 왜 .westaLink span은 적용이 되지않고 .westaLink a는 적용이 되냐 */
-
 .headerContainer img {
   width: 25px;
   padding-right: 10px;
@@ -49,11 +48,23 @@ header nav {
   padding: 10px;
 }
 
+.search {
+  position: relative;
+}
+
+.search i {
+  position: absolute;
+  left: 15px;
+  top: 32%;
+  color: #c3c5c7;
+}
+
 .search input {
   width: 200px;
   padding: 5px;
   margin: 10px;
   border: 1px solid #dbdbdb;
+  text-align: center;
 }
 
 /* 본문 및 사이드바 */
@@ -61,7 +72,8 @@ header nav {
 .feedContainer {
   border: 1px solid #dbdbdb;
   width: 638px;
-  height: 900px;
+  height: 860px;
+  margin-bottom: 15px;
 }
 
 .containerWrapper {
@@ -86,7 +98,7 @@ header nav {
 .storyBoximage {
   border: 1px solid #dbdbdb;
   width: 617px;
-  height: 110px;
+  height: 100px;
   padding: 10px;
   margin: 25px;
   margin-left: 0%;
@@ -95,12 +107,55 @@ header nav {
   justify-content: space-around;
 }
 
+.storyBoximage img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+  border: 2px solid red;
+  padding: 2px;
+  background-clip: content-box;
+}
+
+.storyBoximage span {
+  font-size: 13.2px;
+}
+
 .sidebar {
   width: 260px;
   padding: 20px;
   margin-bottom: 20px;
   float: right;
   border: 1px solid #dbdbdb;
+}
+
+.commentReaction {
+  background-color:white;
+  padding-left: 11px;
+  padding-top: 10px;
+  border-top: 1px solid #dbdbdb;
+}
+
+#commentInput {
+  width: 520px;
+  height: 15px;
+  background-color: none;
+  border: none;
+  input:focus {
+    overflow: none;
+  }
+}
+
+#submit {
+  border: none;
+  background-color: white;
+  color:  rgb(0, 149, 246);
+  font-size: 15px;
+  font-weight: bolder;
+}
+
+#commentLists {
+  padding top: 0px;
+  margin : 9px;
 }
 
 .comment button {
@@ -147,7 +202,7 @@ header nav {
 /* 피드하단 */
 
 .feedbox {
-  height: 50px;
+  height: 35px;
   width: 610px;
   margin: 5px;
   display: flex;
@@ -156,12 +211,18 @@ header nav {
   margin-left: 10px;
 }
 
+ul {
+  list-style: none;
+  padding-left: 20px;
+}
+
 .like {
-  padding-bottom: 20px;
+  padding-bottom: 10px;
 }
 
 .like img {
   padding-left: 10px;
+  vertical-align: middle;
 }
 
 .like span {
@@ -217,5 +278,118 @@ header nav {
 
 /* aside부분 */
 
-.aside {
+.asideboxCotainer {
+  position: relative;
+  display: inline-block;
+}
+
+.asidebox {
+  background-color: white;
+  border: none;
+  padding-left: 30px;
+  padding-top: 13px;
+  width: 310px;
+  height: 600px;
+  position: sticky;
+  top: 85px;
+}
+
+.anotherProfile {
+  display: inline-flex;
+}
+
+.name {
+  background-color: white;
+  width: 70px;
+}
+
+.account {
+  padding-left: 15px;
+  /* display: inline-block; */
+  width: 80px;
+  height: 50px;
+  padding-top: 20px;
+  padding-right: 90px;
+}
+
+.reverseButton {
+  padding-top: 10px;
+  width: 80px;
+  height: 50px;
+  border: none;
+  background-color: transparent;
+  color: #0095f6;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.asideTextContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.asideTextContainer span {
+  margin-top: 20px;
+}
+
+.recommentText {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  width: 310px;
+}
+
+.recomment {
+  color: #828282;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.allView {
+  font-size: 12px;
+  font-weight: bold;
+  color: black;
+}
+
+.recommentFriendList img {
+  border-radius: 50px;
+  margin-top: 12px;
+  vertical-align: middle;
+}
+
+.follow {
+  color: #0095f6;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.friend1{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+}
+.friend2{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+}
+.friend3{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+}
+.friend4{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+}
+.friend5{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
 }
