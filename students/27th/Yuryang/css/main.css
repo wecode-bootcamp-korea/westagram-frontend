@@ -108,6 +108,7 @@ h1::before {
 /* 메인 */
 .main {
   padding: 80px 0 80px 0px;
+  width: auto;
   max-width: 1245px;
   transform: translateX(40%);
 }
@@ -116,6 +117,12 @@ h1::before {
   width: 780px;
   height: auto;
 }
+
+/* 댓글 넘침 방지 height 설정 추가 하면 창이 늘어나는 함수를 나중에 만들어야 하나?*/
+/* .feedsUnderCommentArea{
+  height: 250px;
+  background-color: yellow;
+} */
 
 /* 피즈 계정 영역 */
 .feedsAccountArea {
@@ -204,57 +211,82 @@ h1::before {
 }
 
 /* 댓글 내용 */
-.commentContent {
-  display: flex;
+/* 댓글 새로 추가되면 틀 안에 들어가야하므로 높이 설정해줘야함 댓글 토탈창 */
+.commentArea {
   padding: 10px 20px 7px 15px;
   font-size: large;
   border-bottom: 1px solid rgb(194, 194, 194);
 }
 
-#commentId1,
-#commentId2 {
+.commentContent{
+  display: flex;
+  position: relative;
+}
+
+.commentId {
   font-weight: bold;
 }
-#moreComment {
-  color: #36363679;
+
+.comment{
+  display: flex;
+  text-align: end;
+  padding-left: 10px;
+  font-size: large;
 }
 
-.commentContent > i {
+.moreComment {
+  color: #36363679;
+  margin-top: 5px;
+}
+
+.commentTime {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  
   display: flex;
   margin-left: auto;
-  margin-top: 20px;
+  
+  font-size: large;
+  color: #36363679;
 }
 
-#commentTime {
-  display: block;
-  color: #36363679;
+.commentPart2{
+  display: flex;
+  justify-content: space-between;
+  width: 737px;
+}
+
+/* display는 부모요소에게 */
+.heartIcon {
+  padding: 2px;
 }
 
 /* 댓글 달기, 게시 폼 */
+
 #newComment {
-  display: flex;
-  margin: 10px;
+  display: inline;
+  padding: 20px 0 0 40px;
   border: 0;
   outline: 0;
-  width: 90%;
   resize: none;
-  font-size: xx-large;
+  font-size: x-large;
 }
 
 #commentSubmit {
-  display: flex;
-  flex-direction: column;
-  margin-left: auto;
-  margin-bottom: auto;
-  padding-right: 20px;
-  outline: 0;
+  transform: translate(120%, -120%);
+  outline: 0; 
   border: 0;
   font-size: large;
-  color: #5188ff80;
+  color: #499ee9; 
   background-color: white;
   cursor: pointer;
 }
 
+#newComment + #commentSubmit.deactivated {  
+  color:#c4e1fb;
+  cursor: text;
+} 
 
 /* 오른쪽 영역 */
 .mainRightArea {
@@ -265,67 +297,90 @@ h1::before {
   padding-bottom: 100px;
 }
 
-.myAccount{
-  padding-bottom: 20px;
-}
-
 #myAccountImage {
-  background-image: url(/image/anthony.png);
-  background-position: -70% -70%;
+  background-image: url(/image/profile2.png);
+  background-size: cover;
   border-radius: 50%;
+  border: 3px solid red;
   width: 80px;
   height: 80px;
-  transform: translateX(5%);
+  transform: translate(20%, 20%);
 }
 
-
 #myAccountId {
-  transform: translate(30%,-260%);
+  transform: translate(30%,-200%);
   font-weight: bold;
   font-size: large;
   color: black;
 }
 
-
 #myAccountIntroduce {
-  transform: translate(30%, -240%);
+  transform: translate(30%, -210%);
   color: #36363679;
   font-size: large;
 }
-
 
 /* 스토리*/
 .mainRightStories{
   border: 2px solid rgb(194, 194, 194);
   background-color: white;
+  margin-top: 30px;
 }
 
-#storiesProfile1{
+.storiesProfile{
+  padding: 10px;
+}
+.storiesUl1:first-child {
+  display: flex;
+  justify-content: space-between;
+  color: #36363679;
+  font-weight: bold;
+}
+.storiesMoreProfile {
+  justify-content: space-between;
+  color: black;
+  
+}
+
+
+.storiesUl2 {
   position: relative;
-  background-image: url(/image/coco.png);
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  padding: px;
-  outline-color: red solid 6px;
-  border: white solid 2px;
+  margin-top: 20px;
+}
+.storiesUl2 li {
+  display: inline-block;
+  line-height: 35px;
+  vertical-align: text-top;
+}
+/* span tag라서 블록 요소화 */
+/* boder outline 차이 boder 는 부피 차지 값이 있는데 outline은 영향을 미치지 않는다. */
+.storiesPhoto{  
+  background-image: url(/image/profile3.png);
+  background-size: cover;
+  width: 60px;
+  height: 60px;
+  border-radius: 50px;
+  border: 3px solid red;
 }
 
-#storiesId1 {
+.storiesId{
+  font-weight: bold;
+}
+
+.storiesTime {
   position: absolute;
-  left: 60px;
-  top: 10px
-
+  bottom: 0;
+  left: 65px;
 }
 
-#
 
-.Recommands{
+
+/* .Recommands{
   border: 2px solid rgb(194, 194, 194);
   background-color: white;
-}
+} */
 /* >는 바로 자식요소 띄어쓰기는 자식요소 전부 */
-
+/* 
 footer > ul > li > a {
   color: rgb(162, 162, 162);
 }
@@ -337,4 +392,4 @@ footer > ul > li > a:after {
 
 .footer > ul > li:last-child a:after {
   content: " ";
-}
+} */

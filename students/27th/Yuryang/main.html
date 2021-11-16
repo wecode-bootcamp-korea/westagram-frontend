@@ -93,56 +93,56 @@
 
       <!-- feeds의 사진 하단 전체 영역 -->
       <div class="feedsUnderArea">
-        <!--feeds 아이콘-->
-        <!-- i tag 대신에 css에 font-family: "fontawsome" /content: "\유니코드" color 스타일링도 가능-->
-        <div class="feedsUnderAreaIcons">
-          <i class="fas fa-heart"></i>
-          <i class="far fa-comment"></i>
-          <i class="far fa-paper-plane"></i>
-          <i class="far fa-bookmark"></i>
-        </div>
 
-        <!-- ~가 좋아합니다  -->
-        <div class="feedsLikes">
-          <i class="fas fa-user-circle"></i>
-          <span id="feedsLikesAccount">
-            anieworld
-          </span>
-          <p> 님</p>
-          <span id=feedsLikesCount>외 10명</span>
-          <p>이 좋아합니다.</p>
-          </span>
-        </div>
+        <!-- 댓글창 넘침 방지를 위해 height 지정하기 위해 div로 한 번 묶음 -->
+        <div class="feedsUnderCommentArea">
 
-        <!--댓글 내용 -->
-        <div class="commentContent">
-          <ul class="commentConetentList">
-            <li class="commentIdContentList">
-              <span id="commentId1">canon_mj</span>
-              <span id="comment1">무보정 실화?...</span>
-              <!-- ...inlineblock/width/white-space/text-overflow:ellipsis/overflow:hidden 적용 -->
-              <span id="moreComment">더보기</span>
-            <li class="commentIdContentListNext">
-              <span id="commentId2">0zy</span>
-              <span id="comment2">아 저때 하늘 예뻤는데</span>
-              <span id="commentTime">42분 전</span>
-            </li>
-          </ul>
-          <i class="far fa-heart"></i>
-        </div>
+          <!--feeds 아이콘-->
+          <!-- i tag 대신에 css에 font-family: "fontawsome" /content: "\유니코드" color 스타일링도 가능-->
+          <div class="feedsUnderAreaIcons">
+            <i class="fas fa-heart"></i>
+            <i class="far fa-comment"></i>
+            <i class="far fa-paper-plane"></i>
+            <i class="far fa-bookmark"></i>
+          </div>
+
+          <!-- ~가 좋아합니다  -->
+          <div class="feedsLikes">
+            <i class="fas fa-user-circle"></i>
+            <span id="feedsLikesAccount">
+              anieworld
+            </span>
+            <p> 님</p>
+            <span id=feedsLikesCount>외 10명</span>
+            <p>이 좋아합니다.</p>
+            </span>
+          </div>
 
 
-        <!-- 댓글 달기, 게시  -->
-        <div id="comments">
-          <div id="commentRow">
-            <label for="newComment">
-              <textarea id="newComment" name="newComment" rows="2" placeholder="댓글 달기..."></textarea>
-            </label>
-            <button id=commentSubmit type="submit" onclick="submitComment()">게시</button>
+          <!--댓글 내용 -->
+          <div class="commentArea">
+            <ul class="commentContent">
+              <li class="commentId">0_z0</li>
+              <li class="comment">무보정 실화?...</li>
+            </ul>
+            <!-- ...inlineblock/width/white-space/text-overflow:ellipsis/overflow:hidden 적용 -->
+            <ul class="commentPart2">
+              <li class="moreComment">더 보기</li>
+              <li class="commentTime">42분 전</li>
+              <li class="heartIcon">
+                <i class="far fa-heart"></i>
+              </li>
+            </ul>
           </div>
         </div>
 
-
+        <!-- 댓글 달기, 게시  -->
+        <div class="commentsRepleArea">
+          <div id="commentRow">
+            <textarea id="newComment" name="newComment" cols="50" rows="2" placeholder="댓글 달기..."></textarea>
+            <button id="commentSubmit" type="button" type="submit" class="deactivated">게시</button>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -151,42 +151,37 @@
       <!-- 오른쪽 영역 위쪽 계정 부분 -->
       <div class="myAccount">
         <!-- 내 계정 -->
-        <a href="#">
-          <ul id="myAccountArea">
-            <li id="myAccountImage">
-              <span class="blind">내 프로필</span>
-            </li>
-            <li id="myAccountId">RyangO_O</li>
-            <li id="myAccountIntroduce">27기 위코더</li>
-          </ul>
-        </a>
-      </div>
-
-      <!-- 스토리 -->
-      <div class="mainRightStories">
-        <ul>
-          <li id="storiesProfile1">
-            <span id="storiesId1">Help</span>
-            <span id="storiesTime1">16분 전</span>
+        <ul id="myAccountArea">
+          <li id="myAccountImage">
+            <span class="blind">내 프로필</span>
           </li>
-          </li>
-
-          <li>
-            <span id="storiesId2">Me</span>
-            <span id="storiesTime2">3시간 전</span>
-          </li>
-          <li>
-            <span id="storiesId3">Plz</span>
-            <span id="storiesTime3">20시간 전</span>
-          </li>
+          <li id="myAccountId">RyangO_O</li>
+          <li id="myAccountIntroduce">27기 위코더</li>
         </ul>
       </div>
+
+      <!-- 스토리 영역-->
+      <div class="mainRightStories">
+        <!-- 스토리 모드보기 묶기 -->
+        <div class="storiesProfile">
+          <ul class="storiesUl1">
+            <li>스토리</li>
+            <li class="storiesMoreProfile">모두보기</li>
+          </ul>
+          <!-- 계정 이미지, 아이디, 타임 -->
+          <ul class="storiesUl2">
+            <li class="storiesPhoto"></li>
+            <li class="storiesId">_Help</li>
+            <li class="storiesTime">16분 전</li>
+          </ul>
+        </div><!-- // .storiesProfile -->
+      </div><!-- // .mainRightStories -->
 
       <!-- 회원님을 위한 추천 -->
       <div class="maingRightRecommands"></div>
 
       <!-- footer -->
-      <footer class="footer">
+      <!-- <footer class="footer">
         <ul class="guide-list">
           <li><a href="#">Westagram 정보</a></li>
           <li><a href="#">도움말</a></li>
@@ -201,7 +196,7 @@
           <li><a href="#">언어</a></li>
           <li><a href="#">since &copy; 2019 WESTAGRAM</a></li>
         </ul>
-      </footer>
+      </footer> -->
     </div>
   </div>
   </div>
