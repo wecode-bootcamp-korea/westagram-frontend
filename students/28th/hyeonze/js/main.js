@@ -19,6 +19,7 @@ window.onload = function() {
         el.innerHTML = `<strong>username </strong>${inputUpload.value}<small> 방금전</small>`;
         if (contentFlag) {
             comments.appendChild(el);
+            inputUpload.value = "";
         }
     }
 
