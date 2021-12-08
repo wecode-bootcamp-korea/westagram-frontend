@@ -192,7 +192,6 @@ document.getElementById('mainSearchInput').addEventListener('keyup',function(eve
                     searchResult.removeChild(searchResult.children[i]);
                 }
             }
-            
         }
     }
 })
