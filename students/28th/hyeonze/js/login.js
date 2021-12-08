@@ -2,19 +2,24 @@
 window.onload = function(){
     let userName = document.querySelector('.username');
     let userPassword = document.querySelector('.userpassword');
-    let button = document.querySelector('button')
+    let button = document.querySelector('button');
+    let btnActivated = false;
 
-    let activateBtn = () => {
+    let activateBtn = (e) => {
         let userName = document.querySelector('.username').value;
         let userPw = document.querySelector('.userpassword').value;
 
         if (userName && userPw) {
             button.style.backgroundColor = '#0095F6';
             button.setAttribute('onclick', "location.href='main.html'");
+            btnActivated = true;
         } else {
             button.style.backgroundColor = '#c5e1fa';
             button.setAttribute('onclick', "");
+            btnActivated = false;
         }
+
+        if (e.keyCode === 13 && btnActivated) location.href="main.html";
     }
 
     userName.addEventListener('keyup', activateBtn);
