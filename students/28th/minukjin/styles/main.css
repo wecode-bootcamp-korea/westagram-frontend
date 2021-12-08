@@ -1,0 +1,271 @@
+.header-wrap {
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid rgb(200, 200, 200);
+  margin-bottom: 5rem;
+}
+
+header {
+  display: flex;
+  font-size: 5rem;
+  width: 30%;
+  margin-right: 2rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+i {
+  margin: 0.4rem;
+  font-size: 3rem;
+}
+
+header i {
+  margin: 1.5rem;
+  padding: 1rem;
+  padding-right: 2.2rem;
+  order: -1;
+  border-right: 2px solid black;
+}
+header h1 {
+  margin: 1rem;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 40%;
+}
+.search {
+  position: relative;
+}
+.search input {
+  width: 25rem;
+  padding: 0.6rem;
+  border: 1px solid rgb(219, 219, 219);
+  border-radius: 5px;
+  background-color: rgb(240, 240, 240);
+  text-align: center;
+}
+
+.search > i {
+  position: absolute;
+  left: 8rem;
+  font-size: 1.5rem;
+  color: rgb(200, 200, 200);
+}
+
+.main-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.main {
+  width: 37%;
+}
+
+.feed {
+  border: 1px solid rgb(219, 219, 219);
+  border-radius: 3px;
+}
+.feed-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+}
+.feed-profile {
+  display: flex;
+  align-items: center;
+  width: 50%;
+}
+.feed-profile h3 {
+  font-weight: bold;
+}
+.feed-profile img {
+  display: inline-block;
+  width: 5rem;
+  height: 5rem;
+  margin-right: 1rem;
+  border: 1px solid rgb(219, 219, 219);
+  border-radius: 50%;
+  order: -1;
+}
+
+.feed-more i {
+  font-size: 2rem;
+  color: rgb(190, 190, 190);
+}
+.feed-image img {
+  display: inline-block;
+  width: 100%;
+}
+
+.feed-wrap {
+  padding: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.feed-wrap span {
+  font-weight: bold;
+}
+
+.feed-icon {
+  display: flex;
+  justify-content: space-between;
+}
+/* .feed-icon i {
+  padding: 0.4rem;
+} */
+
+.feed-like {
+  display: flex;
+  align-items: center;
+  margin: 1rem 0;
+}
+.feed-like img {
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid rgb(219, 219, 219);
+  border-radius: 50%;
+}
+/* .feed-like p {
+  font-size: 1.5rem;
+} */
+
+.feed-content {
+  display: flex;
+}
+.feed-content p {
+  width: 60%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.feed-content span {
+  margin-right: 0.7rem;
+}
+.feed-content button {
+  color: rgb(205, 205, 205);
+}
+.feed-reply {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.feed-reply span {
+  margin-right: 0.7rem;
+}
+.feed-reply i {
+  font-size: 1.5rem;
+  order: 10;
+}
+.feed-reply-time {
+  color: rgb(190, 190, 190);
+  font-weight: 400;
+}
+.feed-reply-form {
+  position: relative;
+}
+.feed-reply-form input {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-top: 1px solid rgb(219, 219, 219);
+  background-color: rgb(250, 250, 250);
+}
+.feed-reply-form button {
+  font-size: 1.2rem;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  color: rgb(197, 225, 251);
+}
+
+aside {
+  width: 25%;
+  margin-left: 3rem;
+  font-size: 1.5rem;
+}
+aside p,
+aside button {
+  font-weight: bold;
+}
+aside span {
+  color: rgb(190, 190, 190);
+}
+article {
+  margin: 0 0 1.5rem 1.5rem;
+  padding: 0 0 1.5rem;
+}
+.aside-profile {
+  display: flex;
+  align-items: center;
+}
+.aside-profile img {
+  width: 5rem;
+  height: 5rem;
+  margin-right: 1rem;
+  border-radius: 50%;
+}
+.aside-box {
+  position: relative;
+  border: 1px solid rgb(219, 219, 219);
+  padding: 1.5rem;
+  border-radius: 3px;
+}
+.aside-box h3 {
+  font-size: 1.5rem;
+  color: rgb(190, 190, 190);
+}
+.aside-box > button {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+.story-box {
+  display: flex;
+  margin-top: 1rem;
+  align-items: center;
+}
+.story-box img {
+  background-image: linear-gradient(pink, yellow);
+  padding: 1px;
+  width: 4rem;
+  height: 4rem;
+  margin: 0.2rem 1rem 0.2rem 0.2rem;
+  border-color: transparent;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 50%;
+}
+
+.recommend-box {
+  display: flex;
+  margin-top: 0.7rem;
+  align-items: center;
+}
+
+.recommend-box img {
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-right: 1rem;
+  border: 1px solid rgb(219, 219, 219);
+  border-radius: 50%;
+}
+.recommend-box button {
+  position: absolute;
+  right: 15px;
+  color: rgb(45, 128, 252);
+}
+
+.recommend-box span {
+  display: inline-block;
+  width: 40%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

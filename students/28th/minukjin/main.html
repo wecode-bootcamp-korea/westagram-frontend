@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>westagram</title>
+  <link rel="stylesheet" href="./styles/reset.css"/>
+  <link rel="stylesheet" href="./styles/common.css"/>
+  <link rel="stylesheet" href="./styles/main.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
+  
+</head>
+<body>
+  <div class="header-wrap">
+    <header>
+      <h1>westagram</h1>
+      <i class="fas fa-camera-retro"></i>
+    </header>
+    <nav>
+      <div class="search">
+        <input type="text" placeholder="검색"/>
+        <i class="fas fa-search"></i>
+      </div>
+      <div class="icon">
+        <i class="far fa-compass"></i>
+        <i class="far fa-heart"></i>
+        <i class="far fa-compass"></i>
+      </div>  
+    </nav>
+  </div>
+  <div class="main-wrap">
+    <main class="main">
+      <section class="feed">
+        <div class="feed-header">
+          <div class="feed-profile">
+            <h3>minuk</h3>
+            <img src="./images/profile01.jpg" alt="minuk_profile"/>
+          </div>
+          <div class="feed-more">
+            <i class="fas fa-ellipsis-h"></i>
+          </div>
+        </div>
+        <div class="feed-image">
+          <img src="./images/feed_image01.jpg" alt="minuk_feed_image"/>
+        </div>
+        <div class="feed-wrap">
+          <div class="feed-icon">
+            <div>
+              <i class="far fa-heart"></i>
+              <i class="far fa-comment-alt"></i>
+              <i class="far fa-share-square"></i>
+            </div>
+            <i class="far fa-bookmark"></i>
+          </div>
+          <div class="feed-like">
+            <img src="./images/profile02.jpg" alt="user01_like_profile"/>
+            <p><span>uk</span>님 <span>외 6명</span>이 좋아합니다 </p>
+          </div>
+          <div class="feed-content">
+            <p><span>minuk</span>Lorem Ipsum is simply dummy text of the printing and 
+              typesetting industry. Lorem Ipsum has been the industry's 
+              standard dummy text ever since the 1500s, when an unknown printer 
+              took a galley of type and scrambled it to make a type specimen book. 
+              It has survived not only five centuries, but also the leap into electronic 
+              typesetting, remaining essentially unchanged. It was popularised in the 1960s 
+              with the release of Letraset sheets containing Lorem Ipsum passages, 
+              and more recently with desktop publishing software like Aldus PageMaker 
+              including versions of Lorem Ipsum.
+            </p>
+            <button>더 보기</button>
+            </div>
+            <div class="feed-reply">
+              <i class="far fa-heart"></i>
+              <p><span>aaa</span>안녕하세요.</p>
+            </div>
+            <span class="feed-reply-time">42분전</span>
+          </div>
+        <form class="feed-reply-form">
+          <label for="reply"></label>
+          <input id="reply-input" type="text" placeholder="댓글 달기..."/>
+          <button id="reply-button" type="submit">게시</button>
+        </form>
+      </section>
+    </main>
+    <aside>
+      <article class="aside-profile">
+        <img src="./images/profile03.jpg" alt="user02_profile" />
+        <div>
+          <p>book</p>
+          <span>boookkk</span>
+        </div>
+      </article>
+      <article class="aside-box story">
+        <h3>스토리</h3>
+        <button>모두 보기</button>
+        <div class="story-box">
+          <img src="./images/story01.jpg" alt="user03_profile" />
+          <div>
+            <p>aaaaaaa</p>
+            <span>42분 전</span>
+          </div>
+          <button></button>
+        </div>
+        <div class="story-box">
+          <img src="./images/story02.jpg" alt="user04_profile" />
+          <div>
+            <p>bbbbbbb</p>
+            <span>21분 전</span>
+          </div>
+        </div>
+        <div class="story-box">
+          <img src="./images/story03.jpg" alt="user05_profile" />
+          <div>
+            <p>ccccccc</p>
+            <span>3분 전</span>
+          </div>
+        </div>
+        <div class="story-box">
+          <img src="./images/story04.jpg" alt="user06_profile" />
+          <div>
+            <p>dddddddddd</p>
+            <span>50분 전</span>
+          </div>
+        </div>
+      </article>
+      <article class="aside-box recommend">
+        <h3>회원님을 위한 추천</h3>
+        <button>모두 보기</button>
+        <div class="recommend-box">
+          <img src="./images/story01.jpg"  alt="user02_profile" />
+          <div>
+            <p>aaaaaaa</p>
+            <span>Lorem Ipsum is simply dummy text of the printing and 
+              typesetting industry.</span>
+          </div>
+          <button>팔로우</button>
+        </div>
+        <div class="recommend-box">
+          <img src="./images/story02.jpg"  alt="user03_profile" />
+          <div>
+            <p>bbbbbbb</p>
+            <span>Lorem Ipsum is simply dummy text of the printing and 
+              typesetting industry.</span>
+          </div>
+          <button>팔로우</button>
+        </div>
+        <div class="recommend-box">
+          <img src="./images/story03.jpg" alt="user04_profile" />
+          <div>
+            <p>ccccccc</p>
+            <span>Lorem Ipsum is simply dummy text of the printing and 
+              typesetting industry.</span>
+          </div>
+          <button>팔로우</button>
+        </div>
+        <div class="recommend-box">
+          <img src="./images/story01.jpg"  alt="user05_profile" />
+          <div>
+            <p>ddddddd</p>
+            <span>Lorem Ipsum is simply dummy text of the printing and 
+              typesetting industry.</span>
+          </div>
+          <button>팔로우</button>
+        </div>
+      </article>
+    </aside>
+  </div>
+  <footer></footer>
+  <script src="./js/main.js"></script>
+</body>
+</html>
