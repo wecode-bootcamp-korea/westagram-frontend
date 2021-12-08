@@ -118,7 +118,6 @@ const addFeedComment = (event) =>{
         
         commentSpan.append(removeBtn);
 
-
         feedCommentsBox[index].appendChild(commentSpan);
         inputCommentsTextArea[index].value='';
     }    
@@ -192,7 +191,6 @@ document.getElementById('mainSearchInput').addEventListener('keyup',function(eve
                     searchResult.removeChild(searchResult.children[i]);
                 }
             }
-
         }
     }
 })
