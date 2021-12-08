@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/login.css">
+    <link rel="stylesheet" href="style/common.css">
+    <script src="https://kit.fontawesome.com/9b1960ff86.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="container">
+    <h1 class="logo">Westagram</h1>
+    <form action="" class="form">
+        <div class="form__input">
+            <input type="text" name="id" id="id"
+                class="login-input" placeholder="  전화번호, 사용자 이름 또는 이메일">
+            <input type="password" name="password" id="password"
+                class="login-input" placeholder="  비밀번호">
+        </div>
+        <button class="login-input" id="login-button">로그인</button>
+        <p class="notice hide">id는 @를 포함하고, 비밀번호는 5글자 이상이어야 합니다.</p>
+    </form>
+    <div class="forget-password">비밀번호를 잊으셨나요?</div>
+</div>
+
+<script src="js/login.js"></script>
+
+</body>
+</html>
