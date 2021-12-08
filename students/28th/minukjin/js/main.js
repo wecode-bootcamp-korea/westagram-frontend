@@ -1,7 +1,6 @@
 const replyInput = document.querySelector('#reply-input');
 const replyBtn = document.querySelector('#reply-button');
 const replyList = document.querySelector('.feed-replys');
-const replyLike = document.querySelector('.fa-heart');
 const replyForm = document.querySelector('.feed-reply-form');
 
 const replyBtnActive = () => {
@@ -23,5 +22,9 @@ const replySubmit = () => {
   replyInput.value = null;
 }
 
+replyForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  replySubmit();
+});
+
 replyInput.addEventListener('keyup', replyBtnActive);
-replyBtn.addEventListener('click', replySubmit);
