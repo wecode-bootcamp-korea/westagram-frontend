@@ -20,14 +20,20 @@ window.addEventListener('resize',function(event){
 document.getElementById('mainSearchInput').addEventListener('focusin',function(event){
     const searchInput = document.getElementById('mainSearchInput');
     const searchIcon = document.getElementById('searchIcon');
+    const searchResultBox = document.getElementById('searchResultBox');
     searchIcon.style.display='none'
+    searchResultBox.style.display='block'
+    searchResultBox.style.left='-1.1vw'
     searchInput.style.paddingLeft='12px'
 })
 
 document.getElementById('mainSearchInput').addEventListener('focusout',function(event){
     const searchInput = document.getElementById('mainSearchInput');
     const searchIcon = document.getElementById('searchIcon');
+    const searchResultBox = document.getElementById('searchResultBox');
     searchIcon.style.display='inline'
+    searchResultBox.style.display='none'
+    searchResultBox.style.left='0vw'
     searchInput.style.paddingLeft='30px'
 })
 
@@ -95,12 +101,38 @@ const addFeedComment = (event) =>{
 
         commentSpan.appendChild(inputCommentsTextNode);
         
+
+        const heartIcon = document.createElement('i');
+        heartIcon.className='far fa-heart'
+        heartIcon.onclick = function(event){
+            likeClick(event);
+        }
+        commentSpan.appendChild(heartIcon);
+
+        const removeBtn = document.createElement('span');
+        removeBtn.innerHTML='삭제';
+        removeBtn.id='removeBtn';
+        removeBtn.onclick = function(event){
+            removeComment(event);
+        }
+        
+        commentSpan.append(removeBtn);
+
+
         feedCommentsBox[index].appendChild(commentSpan);
         inputCommentsTextArea[index].value='';
     }    
 }
 
-//
+const likeClick = (event) =>{
+    event.target.style.color='red';
+}
+
+const removeComment = (event) =>{
+    event.target.parentNode.parentNode.removeChild(event.target.parentNode)
+}
+
+// 
 
 const followOrNotReduce = () =>{
     const followOrNot = document.getElementsByClassName('followOrNot');
@@ -112,3 +144,70 @@ const followOrNotReduce = () =>{
 }
 
 followOrNotReduce();
+
+//
+
+const memberArray = [
+    {id:'wecode', desc:'>wecode | 위코드'},
+    {id:'westudy', desc:'>wecode | 위코드 스터디'},
+    {id:'KJH', desc:'leit_motif'},
+    {id:'abcdefg', desc:'alphabet'},
+    {id:'lovepet', desc:'love_pet'}
+]
+
+document.getElementById('mainSearchInput').addEventListener('input',function(event){
+    const searchResult = document.getElementById('searchResult')
+    if (event.target.value.length>1){
+        const result = memberArray.filter(member=>member['id'].toLowerCase().includes(event.target.value.toLowerCase()))
+        if(!checkChildren(result)){
+            for (let i=0; i<result.length; i++){
+                const resultSpan = document.createElement('span');
+                resultSpan.innerHTML = result[i].id;
+                searchResult.appendChild(resultSpan);
+            }
+        }
+        if (searchResult.children.length>0){
+            for (let i=0; i<searchResult.children.length; i++){
+                if (!searchResult.children[i].innerHTML.toLowerCase().includes(event.target.value.toLowerCase())){
+                    searchResult.removeChild(searchResult.children[i]);
+                }
+            }
+        }
+    }    
+})
+
+document.getElementById('mainSearchInput').addEventListener('keyup',function(event){
+    const searchResult = document.getElementById('searchResult');
+    if (event.key==='Backspace'){
+        if (searchResult.children.length>0){
+            for (let i=0; i<searchResult.children.length; i++){
+                if (!searchResult.children[i].innerHTML.toLowerCase().includes(event.target.value.toLowerCase())){
+                    searchResult.removeChild(searchResult.children[i]);
+                }
+            }
+        }
+        if (event.target.value.length===0){
+            if (searchResult.hasChildNodes){
+                for (let i=0; i<searchResult.children.length; i++){
+                    searchResult.removeChild(searchResult.children[i]);
+                }
+            }
+            
+        }
+    }
+})
+
+const checkChildren = (result) =>{
+    if (searchResult.children.length>0){
+        for (let i=0; i<searchResult.children.length; i++){
+            for (let j=0; j<result.length; j++){
+                if (searchResult.children[i].innerHTML.toLowerCase().includes(result[j].id.toLowerCase())){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }else{
+        return false;
+    }
+}
