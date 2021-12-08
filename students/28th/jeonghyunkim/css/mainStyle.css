@@ -1,0 +1,568 @@
+html,body{
+    margin:0;
+    padding:0;
+    height:100%;
+}
+
+#mainContainer{
+    width:100%;
+    min-height:100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;    
+    background-color: rgba(var(--b3f,250,250,250),1);
+}
+
+#mainContainer #navContainer{
+    width:100%;
+    height:60px;
+    position:fixed;
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    background-color: rgba(var(--d87,255,255,255),1);
+    border-bottom: 1px solid rgba(var(--b6a,219,219,219),1);
+    z-index:9999;
+}
+
+#mainContainer #navContainer #navRowBar{
+    max-width:935px;
+    width:935px;
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+}
+
+#mainContainer #navContainer #navRowBar header{
+    font-size:34px;
+    flex:1 0 127px;
+    font-family:'Billabong', sans-serif;
+    cursor: pointer;
+}
+
+#mainContainer #navContainer #navRowBar #navRowBarSearch #mainSearchInput{
+    width:18.3vw;
+    height:36px;
+    background: rgba(var(--b3f,250,250,250),1);
+    color: rgba(var(--f52,142,142,142),1);
+    border: solid 1px rgba(var(--b6a,219,219,219),1);
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 300;
+    cursor: text;
+    padding-left:30px;
+    transition:0.3s ease;
+}
+
+#mainContainer #navContainer #navRowBar #navRowBarSearch #searchIcon{
+    position:relative;
+    font-size:12px;
+    color:#8d8d8d;
+    top:0px;
+    left:25px;
+    
+}
+
+#mainContainer #navContainer #navRowBar #navBtns{
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex:1 0 127px;
+    font-size:25px;
+}
+
+#mainContainer #navContainer #navRowBar #navBtns i{
+    margin-right:23px;
+    cursor:pointer;
+}
+
+#mainContainer #navContainer #navRowBar #navBtns #profileImg{
+    width:28px;
+    height:28px;
+    background-image:url('../images/jh_profile.jpg');
+    background-size:30px 30px;
+    border-radius:50%;
+    cursor:pointer;
+}
+
+#mainContainer #bodyContainer{
+    max-width:935px;
+    width:100%;
+    display:flex;
+    flex-direction:row;
+    justify-content: flex-start;
+    padding-top:60px;
+}
+
+#mainContainer #bodyContainer #feedContainer{
+    max-width:605px;
+    width:100%;
+    float:left;
+    margin-right:28px;
+}
+
+#mainContainer #bodyContainer #feedContainer #friendsFeed{
+    background: rgba(var(--d87,255,255,255),1);
+    border: 1px solid rgba(var(--b6a,219,219,219),1);
+    border-radius:3px;
+    margin:26px 0;
+    padding:2px 0;
+}
+
+#mainContainer #bodyContainer #feedContainer #friendsFeed ul{
+    display:flex;
+    flex-direction: row;
+    list-style-type:none;
+    padding-left:20px;
+    
+}
+
+#mainContainer #bodyContainer #feedContainer #friendsFeed ul li{
+    margin-right:18px;
+    text-align: center;
+}
+
+#mainContainer #bodyContainer #feedContainer #friendsFeed ul li #friendImgBorder{
+    border-radius:50%;
+    border:3px solid transparent;
+    width:58px;
+    height:58px;
+    background-image: linear-gradient(#fff, #fff), linear-gradient(to right, #f0d798, #f26265);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    display:flex;
+    justify-content: center;
+}
+
+#mainContainer #bodyContainer #feedContainer #friendsFeed ul li #friendImgBorder #friendImg{
+    width:55px;
+    height:55px;
+    background-image:url('../images/jh_profile.jpg');
+    background-size:55px 55px;
+    background-repeat:no-repeat;
+    border-radius:50%;
+    margin-top:1px;
+}
+
+#mainContainer #bodyContainer #feedContainer #feeds{
+    background: rgba(var(--d87,255,255,255),1);
+    border: 1px solid rgba(var(--b6a,219,219,219),1);
+    width:100%;
+    max-height:900px;
+    min-height:inherit;
+    margin-bottom:100px;
+}
+
+#mainContainer #bodyContainer #feedContainer #feeds #feedProfile{
+    display:flex;
+    flex-direction: row;
+    background-color: rgba(var(--d87,255,255,255),1);
+    border-bottom: 1px solid rgba(var(--ce3,239,239,239),1);
+    padding:14px 4px 14px 16px;
+}
+
+#mainContainer #bodyContainer #feedContainer #feeds #feedProfile #feedProfileInfo {
+    display:flex;
+    flex-direction: row;
+    flex-basis: 550px;
+}
+
+#mainContainer #bodyContainer #feedContainer #feeds #feedProfile #feedProfileInfo #feedProfileImg{
+    width:42px;
+    height:42px;
+    background-image:url('../images/jh_profile.jpg');
+    background-size:42px 42px;
+    border-radius:50%;
+}
+#mainContainer #bodyContainer #feedContainer #feeds #feedProfile #feedProfileInfo #feedProfileDetail{
+    margin-left:14px;
+}
+
+#mainContainer #bodyContainer #feedContainer #feeds #feedProfile #feedProfileInfo #feedProfileDetail a{
+    display:block;
+    text-decoration: none;
+    color: rgba(var(--i1d,38,38,38),1);
+}
+
+#mainContainer #bodyContainer #feedContainer #feeds #feedProfile #feedProfileInfo #feedProfileDetail a:nth-child(1){
+    font-weight: 600;
+}
+
+#mainContainer #bodyContainer #feedContainer #feeds #feedProfile #feedProfileInfo #feedProfileDetail a:nth-child(2){
+    font-size:12px;
+}
+
+#mainContainer #bodyContainer #feedContainer #feeds #feedProfile #feedProfileBtn{
+    display:flex;
+    align-items: center;
+    font-size:14px;
+}
+
+#mainContainer #bodyContainer #feedContainer #feeds #feedProfile #feedProfileBtn a{
+    color: rgba(var(--i1d,38,38,38),1);
+    text-decoration: none;
+}
+
+#mainContainer #bodyContainer #feedContainer #feeds #feedImg{
+    height:550px;
+    background-color: rgba(var(--d87,255,255,255),1);
+    margin:0;
+    padding:0;
+}
+
+#mainContainer #bodyContainer #feedContainer #feeds #feedImg #feedImgBox{
+    background-image:url('../images/cafe_photos.jpg');
+    background-size:cover;
+    background-repeat: no-repeat;
+    width:100%;
+    height:100%;
+}
+
+#mainContainer #bodyContainer #feedContainer #feeds #feedImg #feedImgLengthDot{
+    display:flex;
+    justify-content: center;
+    margin:15px 0;
+}
+
+#mainContainer #bodyContainer #feedContainer #feeds #feedImg #feedImgLengthDot i{
+    font-size:2px;
+    color:rgba(var(--d69,0,149,246),1);
+}
+
+#mainContainer #bodyContainer #feedContainer #feeds #feedBtns{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top:18px;
+    padding:0 15px;
+    z-index:9999;
+}
+
+#mainContainer #bodyContainer #feedContainer #feeds #feedBtns #feedOptionBtns i{
+    font-size:24px;
+    font-weight: 300;
+    margin-right:10px;
+    cursor:pointer;
+}
+
+#mainContainer #bodyContainer #feedContainer #feeds #feedBtns #feedScrapBtn i{
+    font-size:28px;
+    font-weight: 300;
+    cursor:pointer;
+    
+}
+
+#mainContainer #bodyContainer #feedContainer #feeds #feedLikes{
+    display:flex;
+    flex-direction: row;
+    margin-top:18px;
+    padding:0 15px;
+}
+
+#mainContainer #bodyContainer #feedContainer #feeds #feedLikes #feedLikesImg{
+    display:inline-block;
+    
+}
+
+#mainContainer #bodyContainer #feedContainer #feeds #feedLikes #feedLikesImg:nth-child(1){
+    width:20px;
+    height:20px;
+    background-image:url('../images/jh_profile.jpg');
+    background-size:20px 20px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    margin-right:-9px;
+    z-index: 2;
+}
+#mainContainer #bodyContainer #feedContainer #feeds #feedLikes #feedLikesImg:nth-child(2){
+    width:20px;
+    height:20px;
+    background-image:url('../images/peach.jpg');
+    background-size:20px 20px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    z-index: 1;
+}
+#mainContainer #bodyContainer #feedContainer #feeds #feedLikes #feedLikesCount{
+    font-size:14px;
+    margin-left:15px;
+}
+
+#mainContainer #bodyContainer #feedContainer #feeds #feedLikes #feedLikesCount #feedLikesCountBold{
+    font-weight:600;
+}
+
+#mainContainer #bodyContainer #feedContainer #feeds #feedContents{
+    margin-top:8px;
+    margin-left:14px;
+    margin-right:14px;
+}
+
+#mainContainer #bodyContainer #feedContainer #feeds #feedContents #feedContentsBox{
+    font-size:14px;
+}
+
+#mainContainer #bodyContainer #feedContainer #feeds #feedContents #feedContentsBox #feedContentsBold{
+    font-weight:600;
+    margin-right:10px;
+}
+
+
+
+#mainContainer #bodyContainer #feedContainer #feeds #feedContents #feedContentsBox #feedExtendContents{
+    background-color:#fff;
+    border:none;
+    cursor:pointer;
+    font-size:14px;
+    color: rgba(var(--f52,142,142,142),1);
+}
+
+#mainContainer #bodyContainer #feedContainer #feeds #feedContentsTime{
+    color: rgba(var(--f52,142,142,142),1);
+    font-size:11px;
+    margin-top:5px;
+    margin-left:15px;
+    margin-bottom:15px;
+}
+
+#mainContainer #bodyContainer #feedContainer #feeds #feedCommentsBox{
+    display:flex;
+    flex-direction: column;
+    font-size:14px;
+    margin-top:5px;
+    margin-left:15px;
+}
+
+#mainContainer #bodyContainer #feedContainer #feeds #feedCommentsBox #feedCommentsBold{
+    font-weight:600;
+    margin-right:10px;
+}
+
+#mainContainer #bodyContainer #feedContainer #feeds #inputComments{
+    border-top: 1px solid rgba(var(--b6a,219,219,219),1);
+    margin-top:5px;
+    padding:15px;
+}
+
+#mainContainer #bodyContainer #feedContainer #feeds #inputComments #inputCommentsBox{
+    display:flex;
+    flex-direction: row;
+}
+
+#mainContainer #bodyContainer #feedContainer #feeds #inputComments #inputCommentsBox #inputCommentsEmojiBtn i{
+    font-size:20px;
+}
+
+#mainContainer #bodyContainer #feedContainer #feeds #inputComments #inputCommentsBox #inputCommentsType{
+    font-size:14px;
+    margin-left:13px;
+}
+
+#mainContainer #bodyContainer #feedContainer #feeds #inputComments #inputCommentsBox #inputCommentsType textarea{
+    width:500px;
+    height:18px !important;
+    line-height:18px;
+    font-size:inherit;
+    border:none;
+    overflow:hidden;
+    resize:none;
+    outline:none;
+}
+
+#mainContainer #bodyContainer #feedContainer #feeds #inputComments #inputCommentsBox #inputCommentsSubmit #inputCommentsSubmitBtn{
+    width:30px;
+    background-color:#fff;
+    border:none;
+    font-size:14px;
+    font-weight:600;
+    color:rgba(var(--d69,0,149,246),1);
+    opacity:0.3;
+    padding:0;
+    margin:0;
+}
+
+#mainContainer #bodyContainer #sideWrapper{
+    position:relative;
+    top: 53px;
+}
+
+#mainContainer #bodyContainer #sideWrapper #sideContainer{
+    position:fixed;
+}
+
+
+#mainContainer #bodyContainer #sideContainer #profileSwap #profileSwapBox{
+    display:flex;
+    flex-direction: row;
+}
+
+#mainContainer #bodyContainer #sideContainer #profileSwap #profileSwapBox #profileImg{
+    width:57px;
+    height:60px;
+    background-image:url('../images/jh_profile.jpg');
+    background-size:59px 67px;
+    border-radius:50%;
+    cursor:pointer;
+}
+
+#mainContainer #bodyContainer #sideContainer #profileSwap #profileSwapBox #profileInfo{
+    margin-left:25px;
+    align-self:center;
+    flex-basis:170px;
+}
+
+#mainContainer #bodyContainer #sideContainer #profileSwap #profileSwapBox #profileInfo a{
+    text-decoration: none;
+    display:block;
+}
+
+#mainContainer #bodyContainer #sideContainer #profileSwap #profileSwapBox #profileInfo a:nth-child(1){
+    color: rgba(var(--i1d,38,38,38),1);
+}
+
+#mainContainer #bodyContainer #sideContainer #profileSwap #profileSwapBox #profileInfo a:nth-child(2){
+    font-size:14px;
+    color: rgba(var(--f52,142,142,142),1);
+}
+
+#mainContainer #bodyContainer #sideContainer #profileSwap #profileSwapBox #profileSwapBtn{
+    width:30px;
+    height:30px;
+    background-color:rgba(var(--b3f,250,250,250),1);
+    border:none;
+    font-size:12px;
+    font-weight:600;
+    color:rgba(var(--d69,0,149,246),1);
+    align-self:center;
+    margin-left:20px;
+    padding:0;
+    cursor:pointer;
+}
+
+#mainContainer #bodyContainer #sideContainer #recommendFriends{
+    margin-top:18px;
+}
+
+#mainContainer #bodyContainer #sideContainer #recommendFriends #recommendTextBar{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding:4px 4px;
+}
+
+#mainContainer #bodyContainer #sideContainer #recommendFriends #recommendTextBar span{
+    font-size:14px;
+    font-weight:600;
+    color: rgba(var(--f52,142,142,142),1);
+}
+
+#mainContainer #bodyContainer #sideContainer #recommendFriends #recommendTextBar a{
+    font-size:12px;
+    font-weight:600;
+}
+
+#mainContainer #bodyContainer #sideContainer #recommendFriendList{
+    padding-top:8px;
+    padding-left:5px;
+}
+
+#mainContainer #bodyContainer #sideContainer #recommendFriendList ul{
+    list-style-type:none;
+    margin:0;
+    padding:0;
+}
+
+#mainContainer #bodyContainer #sideContainer #recommendFriendList ul #recommendFriendListTag{
+    display:flex;
+    flex-direction: row;
+    margin-bottom:12px;
+}
+
+#mainContainer #bodyContainer #sideContainer #recommendFriendList ul #recommendFriendListTag:nth-child(1) .recommendFriendImg{
+    width:30px;
+    height:30px;
+    background-image:url('../images/jh_profile.jpg');
+    background-size:32px 34px;
+    border-radius:50%;
+    cursor:pointer;
+}
+
+#mainContainer #bodyContainer #sideContainer #recommendFriendList ul #recommendFriendListTag:nth-child(2) .recommendFriendImg{
+    width:30px;
+    height:30px;
+    background-image:url('../images/peach.jpg');
+    background-size:32px 34px;
+    border-radius:50%;
+    cursor:pointer;
+}
+
+#mainContainer #bodyContainer #sideContainer #recommendFriendList ul #recommendFriendListTag:nth-child(3) .recommendFriendImg{
+    width:30px;
+    height:30px;
+    background-image:url('../images/cafe_photos.jpg');
+    background-size:32px 34px;
+    border-radius:50%;
+    cursor:pointer;
+}
+
+#mainContainer #bodyContainer #sideContainer #recommendFriendList ul #recommendFriendListTag:nth-child(4) .recommendFriendImg{
+    width:30px;
+    height:30px;
+    background-image:url('../images/unsplash_instagram.png');
+    background-size:32px 34px;
+    border-radius:50%;
+    cursor:pointer;
+}
+
+#mainContainer #bodyContainer #sideContainer #recommendFriendList ul #recommendFriendListTag:nth-child(5) .recommendFriendImg{
+    width:30px;
+    height:30px;
+    background-image:url('../images/peach.jpg');
+    background-size:32px 34px;
+    border-radius:50%;
+    cursor:pointer;
+}
+
+#mainContainer #bodyContainer #sideContainer #recommendFriendList ul #recommendFriendListTag .recommendFriendInfo{
+    margin-left:14px;
+}
+
+#mainContainer #bodyContainer #sideContainer #recommendFriendList ul #recommendFriendListTag .recommendFriendInfo span{
+    display:block;
+}
+
+#mainContainer #bodyContainer #sideContainer #recommendFriendList ul #recommendFriendListTag .recommendFriendInfo .recommendFriendID{
+    font-size:14px;
+    font-weight:600;
+}
+
+#mainContainer #bodyContainer #sideContainer #recommendFriendList ul #recommendFriendListTag .recommendFriendInfo .followOrNot{
+    font-size:12px;
+    color: rgba(var(--f52,142,142,142),1);
+    margin-top:3px;
+}
+
+#mainContainer #bodyContainer #sideContainer #sideFooter{
+    font-size:11px;
+    color: rgba(var(--edc,199,199,199),1);
+    padding:20px 4px;
+}
+
+#mainContainer #bodyContainer #sideContainer #sideFooter #sideFooterTextBar{
+    margin-bottom:4px;
+}
+
+#mainContainer #bodyContainer #sideContainer #sideFooter #sideFooterBottom{
+    font-size:10px;
+    margin-top:20px;
+}
+
+
+#sideFooterPartText::after{
+    font-size:10px;
+    margin-left:3px;
+    padding:0;
+    content:'·';
+}

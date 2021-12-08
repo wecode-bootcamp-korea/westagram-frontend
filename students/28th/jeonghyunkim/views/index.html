@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Westagram</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" charset='utf-8'>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <link href="http://fonts.cdnfonts.com/css/billabong" rel="stylesheet">
+        <link rel="stylesheet" href="../css/landingStyle.css">
+    </head>
+    <body>
+        <main id='landingContainer'>
+            <article id='landingArticle'>
+                <section id='imgBox'>
+                    
+                </section>
+                <section id='loginBox'>
+                    <div id='inputBox'>
+                        <header>Westagram</header>
+                        <input class='loginInput' maxlength='75' type='text' required='true' placeholder="전화번호, 사용자 이름 또는 이메일">
+                        <input class='loginInput' type='password' required='true' placeholder='비밀번호'>
+                        <button class='loginBtn' onclick='loginFunc()'>로그인</button>
+                        <section id='loginHrContainer'>
+                            <div class='loginHr'></div>
+                            <span>또는</span>
+                            <div class='loginHr'></div>
+                        </section>
+                        <section id='inputBoxFooter'>
+                            <i class="fab fa-facebook-square" id='facebookLogo'></i>
+                            <span id='facebookLogin' onclick='facebookLoginFunc()'>Facebook으로 로그인</span>
+                        </section>
+                        <span id='forgetPw' onclick='forgetPWFunc()'>비밀번호를 잊으셨나요?</p>
+                    </div>
+                    <div id='registerBox'>
+                        <span>계정이 없으신가요?</span>
+                        <a href='#!'>가입하기</a>
+                    </div>
+                </section>
+            </article>
+        </main>
+        <footer>
+            asdf
+        </footer>
+    </body>
+    <script src='../js/landingJS.js'>
+    </script>
+</html>

@@ -1,0 +1,151 @@
+html,body{
+    margin:0;
+    padding:0;
+    height:100%;
+}
+
+footer{
+    text-align:center;
+    background-color: rgba(var(--b3f,250,250,250),1);
+    padding:30px;
+}
+
+#landingContainer{
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;    
+    background-color: rgba(var(--b3f,250,250,250),1);
+}
+
+#landingArticle{
+    max-width: 935px;
+    width:100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    margin:32px auto 0;
+    padding-bottom:32px;
+}
+
+#landingArticle #imgBox{
+    width:336px;
+    height:618px;
+    align-self:center;
+    background-image:url('../images/unsplash_instagram.png');
+    background-size:contain;
+    margin-right:15px;
+    margin-left:-35px;
+}
+
+#landingArticle #loginBox{
+    max-width:350px;
+    color: rgba(var(--i1d,38,38,38),1);
+    flex-grow:1;
+    margin-top:30px;
+}
+
+#landingArticle #loginBox header{
+    justify-content: center;
+    align-items: center;
+    font-size:52px;
+    font-family:'Billabong', sans-serif;
+    margin:22px auto 30px;
+}
+
+#landingArticle #loginBox #forgetPw{
+    text-align: center;
+    color:#385185;
+    font-size:12px;
+    cursor:pointer;
+    margin-top:12px;
+    margin-bottom:6px;
+
+}
+
+#landingArticle #loginBox #inputBox{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(var(--d87,255,255,255),1);
+    border:1px solid lightgrey; 
+}
+
+#landingArticle #loginBox #inputBox .loginInput{
+    -webkit-box-pack:center;
+    border: 0.5px solid lightgray;
+    border-radius:2px;
+    background:rgba(var(--b3f,250,250,250),1);
+    color: rgba(var(--i1d,38,38,38),1);
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-size:12px;
+    margin:0 40px 10px;
+    padding:9px 0 11px 8px;
+}
+
+#landingArticle #loginBox #inputBox .loginBtn{
+    border:none;
+    border-radius:3px;
+    background-color: rgba(var(--d69,0,149,246),.3); 
+    color:#fff;
+    font-size:14px;
+    font-weight:600;
+    margin:8px 40px;
+    padding:5px;
+}
+
+#landingArticle #loginBox #inputBox #loginHrContainer{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin:10px 40px 18px;
+}
+#landingArticle #loginBox #inputBox #loginHrContainer .loginHR{
+    display:inline-block;
+    height:1px;
+    background-color:rgba(var(--b38,219,219,219),1);
+    flex-grow:1;
+}
+
+#landingArticle #loginBox #inputBox #loginHrContainer span{
+    font-weight:600;
+    font-size:13px;
+    margin:0 18px;
+    color: rgba(var(--f52,142,142,142),1);
+}
+
+#landingArticle #loginBox #inputBox #inputBoxFooter{
+    text-align: center;
+    color:#385185;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-weight:600;
+    font-size:14px;
+    cursor:pointer;
+    margin:8px 40px;
+}
+
+
+#facebookLogo{
+    font-size:18px;
+}
+
+#landingArticle #loginBox #registerBox{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(var(--d87,255,255,255),1);
+    border:1px solid lightgrey; 
+    font-size:14px;
+    margin-top:12px;
+    padding:20px;
+
+}
+
+#landingArticle #loginBox #registerBox a{
+    text-decoration: none;
+    color:rgba(var(--d69,0,149,246),1);
+    font-weight:600;
+    margin-left:5px;
+}

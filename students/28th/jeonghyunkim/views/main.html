@@ -1,0 +1,296 @@
+<html>
+    <head>
+        <title>Westagram</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" charset='utf-8'>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <link href="http://fonts.cdnfonts.com/css/billabong" rel="stylesheet">
+        <link rel="stylesheet" href="../css/mainStyle.css">
+    </head>
+    <body>
+        <main id='mainContainer'>
+            <article id='navContainer'>
+                <nav id='navRowBar'>
+                    <header>Westagram</header>
+                    <div id='navRowBarSearch'>
+                        <i class="fas fa-search" id='searchIcon'></i>
+                        <input id='mainSearchInput' type='text' placeholder="검색">
+                    </div>
+                    <section id='navBtns'>
+                        <i class="fas fa-home"></i>
+                        <i class="fas fa-location-arrow"></i>
+                        <i class="far fa-plus-square"></i>
+                        <i class="far fa-compass"></i>
+                        <i class="far fa-heart"></i>
+                        <div id='profileImg'></div>
+                    </section>
+                </nav>
+            </article>
+            <article id='bodyContainer'>
+                <article id='feedContainer'>
+                    <section id='friendsFeed'>
+                        <ul>
+                            <li>
+                                <div id='friendImgBorder'>
+                                    <div id='friendImg'></div>
+                                </div>
+                                <span>friends1</span>
+                            </li>
+                            <li>
+                                <div id='friendImgBorder'>
+                                    <div id='friendImg'></div>
+                                </div>
+                                <span>friends2</span>
+                            </li>
+                            <li>
+                                <div id='friendImgBorder'>
+                                    <div id='friendImg'></div>
+                                </div>
+                                <span>friends3</span>
+                            </li>
+                        </ul>
+                    </section>
+                    <section id='feeds'>
+                        <header id='feedProfile'>
+                            <div id='feedProfileInfo'>
+                                <div id='feedProfileImg'>
+
+                                </div>
+                                <div id='feedProfileDetail'>    
+                                    <a href='#!'>lIlIlIlI</a>
+                                    <a href='#!'>서울 강서구</a>
+                                </div>
+                            </div>
+                            <div id='feedProfileBtn'>
+                                <a href='#!'><i class="fas fa-ellipsis-h"></i></a>
+                            </div>
+                        </header>
+                        <section id='feedImg'>
+                            <div id='feedImgBox'>
+
+                            </div>
+                            <div id='feedImgLengthDot'>
+                                <i class="fas fa-circle"></i>
+                            </div>
+                        </section>
+                        <section id='feedBtns'>
+                            <div id='feedOptionBtns'>
+                                <i class="far fa-heart"></i>
+                                <i class="far fa-comment"></i>
+                                <i class="fas fa-location-arrow"></i>
+                            </div>
+                            <div id='feedScrapBtn'>
+                                <i class="far fa-sticky-note"></i>
+                            </div>
+                        </section>
+                        <section id='feedLikes'>
+                            <div id='feedLikesImg'>
+                                
+                            </div>
+                            <div id='feedLikesImg'>
+
+                            </div>
+                            <div id='feedLikesCount'>
+                                <span id='feedLikesCountBold'>kjh_</span>님 <span id='feedLikesCountBold'>외 n명</span>이 좋아합니다.
+                            </div>
+                        </section>
+                        <section id='feedContents'>
+                            <div id='feedContentsBox'>
+                                <span id='feedContentsComment'><span id='feedContentsBold'>lIlIlIlI</span><span id='feedContentsCommentBody'>인스타그램 클로닝 테스트! 인스타그램 클로닝 테스트! 인스타그램 클로닝 테스트! 인스타그램 클로닝 테스트! 인스타그램 클로닝 테스트!</span></span>
+                                <button id='feedExtendContents' name='0' onclick='feedExtendContents(event)'>더 보기</button>
+                            </div>
+                        </section>
+                        <section id='feedComments'>
+                            <div id='feedCommentsBox' name='0'>
+                                <span><span id='feedCommentsBold'>test</span>안녕!</span>
+                            </div>
+                        </section>
+                        <section id='feedContentsTime'>
+                            <div id='feedContentsTimeBox'>
+                                <span>1시간 전</span>
+                            </div>
+                        </section>
+                        <section id='inputComments'>
+                            <div id='inputCommentsBox'>
+                                <div id='inputCommentsEmojiBtn'>
+                                    <i class="far fa-smile"></i>
+                                </div>
+                                <div id='inputCommentsType'>
+                                    <textarea id='inputCommentsTextarea' name='0' placeholder='댓글 달기...'></textarea>
+                                </div>
+                                <div id='inputCommentsSubmit'>
+                                    <button id='inputCommentsSubmitBtn' name='0' onclick='addFeedComment(event)'>게시</button>
+                                </div>
+                            </div>
+                        </section>
+                    </section>
+                    <section id='feeds'>
+                        <header id='feedProfile'>
+                            <div id='feedProfileInfo'>
+                                <div id='feedProfileImg'>
+
+                                </div>
+                                <div id='feedProfileDetail'>    
+                                    <a href='#!'>lIlIlIlI</a>
+                                    <a href='#!'>서울 강서구</a>
+                                </div>
+                            </div>
+                            <div id='feedProfileBtn'>
+                                <a href='#!'><i class="fas fa-ellipsis-h"></i></a>
+                            </div>
+                        </header>
+                        <section id='feedImg'>
+                            <div id='feedImgBox'>
+
+                            </div>
+                            <div id='feedImgLengthDot'>
+                                <i class="fas fa-circle"></i>
+                            </div>
+                        </section>
+                        <section id='feedBtns'>
+                            <div id='feedOptionBtns'>
+                                <i class="far fa-heart"></i>
+                                <i class="far fa-comment"></i>
+                                <i class="fas fa-location-arrow"></i>
+                            </div>
+                            <div id='feedScrapBtn'>
+                                <i class="far fa-sticky-note"></i>
+                            </div>
+                        </section>
+                        <section id='feedLikes'>
+                            <div id='feedLikesImg'>
+                                
+                            </div>
+                            <div id='feedLikesImg'>
+
+                            </div>
+                            <div id='feedLikesCount'>
+                                <span id='feedLikesCountBold'>kjh_</span>님 <span id='feedLikesCountBold'>외 n명</span>이 좋아합니다.
+                            </div>
+                        </section>
+                        <section id='feedContents'>
+                            <div id='feedContentsBox'>
+                                <span id='feedContentsComment'><span id='feedContentsBold'>lIlIlIlI</span><span id='feedContentsCommentBody'>인스타그램 클로닝 테스트! 인스타그램 클로닝 테스트! 인스타그램 클로닝 테스트! 인스타그램 클로닝 테스트! 인스타그램 클로닝 테스트!</span></span>
+                                <button id='feedExtendContents' name='1' onclick='feedExtendContents(event)'>더 보기</button>
+                            </div>
+                        </section>
+                        <section id='feedComments'>
+                            <div id='feedCommentsBox' name='1'>
+                                <span><span id='feedCommentsBold'>test</span>안녕!</span>
+                            </div>
+                        </section>
+                        <section id='feedContentsTime'>
+                            <div id='feedContentsTimeBox'>
+                                <span>1시간 전</span>
+                            </div>
+                        </section>
+                        <section id='inputComments'>
+                            <div id='inputCommentsBox'>
+                                <div id='inputCommentsEmojiBtn'>
+                                    <i class="far fa-smile"></i>
+                                </div>
+                                <div id='inputCommentsType'>
+                                    <textarea id='inputCommentsTextarea' name='1' placeholder='댓글 달기...'></textarea>
+                                </div>
+                                <div id='inputCommentsSubmit'>
+                                    <button id='inputCommentsSubmitBtn' name='1' onclick='addFeedComment(event)'>게시</button>
+                                </div>
+                            </div>
+                        </section>
+                    </section>
+                </article>
+                <article id='sideWrapper'>
+                    <section id='sideContainer'>
+                        <section id='profileSwap'>
+                            <div id='profileSwapBox'>
+                                <div id='profileImg'></div>
+                                <div id='profileInfo'>
+                                    <a href='#!'>lIlIlIlI</a>
+                                    <a>김정현</a>
+                                </div>
+                                <button id='profileSwapBtn'>전환</button>
+                            </div>
+                        </section>
+                        <section id='recommendFriends'>
+                            <div id='recommendTextBar'>
+                                <span>회원님을 위한 추천</span>
+                                <a>모두 보기</a>
+                            </div>
+                            <div id='recommendFriendList'>
+                                <ul>
+                                    <li id='recommendFriendListTag'>
+                                        <div class='recommendFriendImg'>
+                                            
+                                        </div>
+                                        <div class='recommendFriendInfo'>
+                                            <span class='recommendFriendID'>friends1</span>
+                                            <span class='followOrNot'>abcdefghijklmnop님 외 n명이 팔로우합니다.</span>
+                                        </div>
+                                    </li>
+                                    <li id='recommendFriendListTag'>
+                                        <div class='recommendFriendImg'>
+                                            
+                                        </div>
+                                        <div class='recommendFriendInfo'>
+                                            <span class='recommendFriendID'>friends2</span>
+                                            <span class='followOrNot'>회원님을 팔로우합니다.</span>
+                                        </div>
+                                    </li>
+                                    <li id='recommendFriendListTag'>
+                                        <div class='recommendFriendImg'>
+                                            
+                                        </div>
+                                        <div class='recommendFriendInfo'>
+                                            <span class='recommendFriendID'>friends3</span>
+                                            <span class='followOrNot'>strong_strawberry님 외 n명이 팔로우합니다.</span>
+                                        </div>
+                                    </li>
+                                    <li id='recommendFriendListTag'>
+                                        <div class='recommendFriendImg'>
+                                            
+                                        </div>
+                                        <div class='recommendFriendInfo'>
+                                            <span class='recommendFriendID'>friends4</span>
+                                            <span class='followOrNot'>회원님을 팔로우합니다.</span>
+                                        </div>
+                                    </li>
+                                    <li id='recommendFriendListTag'>
+                                        <div class='recommendFriendImg'>
+                                            
+                                        </div>
+                                        <div class='recommendFriendInfo'>
+                                            <span class='recommendFriendID'>friends5</span>
+                                            <span class='followOrNot'>회원님을 팔로우합니다.</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                        <section id='sideFooter'>
+                            <div id='sideFooterTextBar'>
+                                <span id='sideFooterPartText'>소개</span>
+                                <span id='sideFooterPartText'>도움말</span>
+                                <span id='sideFooterPartText'>홍보 센터</span>
+                                <span id='sideFooterPartText'>API</span>
+                                <span id='sideFooterPartTextEnd'>채용 정보</span>
+                            </div>
+                            <div id='sideFooterTextBar'>
+                                <span id='sideFooterPartText'>개인정보처리방침</span>
+                                <span id='sideFooterPartText'>약관</span>
+                                <span id='sideFooterPartText'>위치</span>
+                                <span id='sideFooterPartText'>인기 계정</span>
+                                <span id='sideFooterPartText'>해시태그</span>
+                                <span id='sideFooterPartTextEnd'>언어</span>
+                            </div>
+                            <div id='sideFooterBottom'>
+                                <span>© 2021 WESTAGRAM FROM KJH</span>
+                            </div>
+                            
+                        </section>
+                    </section>
+                    
+                </article>
+            </article>
+        </main>
+    </body>
+    <script src='../js/mainJS.js'></script>
+</html>
