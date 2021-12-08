@@ -4,6 +4,8 @@ window.onload = function() {
     let btnUpload = document.querySelector('.btn_upload');
     let contentFlag = false;
     let comments = document.querySelector('.comments');
+    let article = document.querySelector('article');
+    let feeds = document.querySelector('.feeds');
 
     inputUpload.addEventListener("keyup", function() {
         if (inputUpload.value) {
@@ -24,7 +26,7 @@ window.onload = function() {
     }
 
     const handleComment = (event) => {
-        console.dir(event.target);
+        // console.dir(event.target);
         const eventClassName = event.target.className;
 
         if(eventClassName === 'btn_upload') addComment(document.createElement('span'));

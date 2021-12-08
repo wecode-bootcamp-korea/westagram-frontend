@@ -124,7 +124,7 @@ main .feeds{
     position: absolute;
     top: 77px;
     width: 60%;
-    height: 1147px;
+    /* height: 1147px; */
     background: #fff;
 }
 
@@ -153,6 +153,10 @@ main .feeds .top_menu > span > img{
     height: 42px;
     border-radius: 50%;
     margin-right: 20px;
+}
+
+article {
+    height: 100%;
 }
 
 .feeds > article > img{
@@ -187,7 +191,6 @@ main .feeds .bottom_menu > span:last-child > i {
 
 main .feeds .comments {
     display: flex;
-    position: relative;
     flex-direction: column;
     background: yellow;
 }
@@ -209,9 +212,6 @@ main .feeds .comments i {
     color: #a3a3a3;
     position: absolute;
     right: 20px;
-    /* right: 20px;
-    bottom: 115px;
-    color: #a3a3a3; */
 }
 
 main .feeds .add_comments {
@@ -219,7 +219,7 @@ main .feeds .add_comments {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    bottom: 0;
+    bottom: -62px;
     width: 100%;
     height: 62px;
     background: #fff;
