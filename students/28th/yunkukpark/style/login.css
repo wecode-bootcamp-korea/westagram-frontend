@@ -1,0 +1,71 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+input,
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 6px;
+  font-size: 12px;
+  background-color: #fafafa;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+}
+
+.login-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 350px;
+  border: 1px solid #dbdbdb;
+  padding: 20px 40px;
+}
+
+.logo {
+  font-family: 'Lobster', cursive;
+  font-size: 50px;
+  margin-top: 22px;
+  margin-bottom: 50px;
+  letter-spacing: -0.05em;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 70px;
+}
+
+.input-group input {
+  margin-bottom: 6px;
+}
+
+.input-group .login-button {
+  margin-top: 10px;
+  padding: 8px;
+  border: none;
+  color: #fff;
+  background-color: #0095f6;
+  font-size: 14px;
+  font-weight: 700;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.login-button:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.lost-password {
+  font-size: 14px;
+  color: #0095f6;
+  line-height: 1.285;
+  letter-spacing: -0.05em;
+}
