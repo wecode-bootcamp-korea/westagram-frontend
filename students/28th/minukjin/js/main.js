@@ -4,17 +4,9 @@ const replyList = document.querySelector('.feed-replys');
 const replyLike = document.querySelector('.fa-heart');
 const replyForm = document.querySelector('.feed-reply-form');
 
-function replyBtnActive() {
-  // console.log(replyInput.value);
+const replyBtnActive = () => {
   return replyInput.value ? replyBtn.style.color = 'blue' : replyBtn.style.color = 'rgb(197, 225, 251)';
 }
-// function replySubmit() {
-//   const inputValue = replyInput.value;
-//   const replyAddTag = document.createElement('p')
-//   const replyAddValue = document.createTextNode(inputValue);
-//   replyAddTag.appendChild(replyAddValue);
-//   replyList.appendChild(replyAddTag);
-// }
 
 const replySubmit = () => {
   const replyAddTag = document.createElement('li');
@@ -31,20 +23,5 @@ const replySubmit = () => {
   replyInput.value = null;
 }
 
-//  const likeColorToggle = () => {
-  
-//  }
-
-// replyInput.addEventListener('keyup', (e) => {
-//   e.preventDefault();
-//   if (e.keyCode === 13) replySubmit();
-//   else replyBtnActive();
-// });
-replyForm.addEventListener('submit', (e) => {
-  e.preventDefault();
-  if (e.keyCode === 13) replySubmit();
-  else replyBtnActive();
-})
+replyInput.addEventListener('keyup', replyBtnActive);
 replyBtn.addEventListener('click', replySubmit);
-
-// replyLike.addEventListener('click', likeColorToggle);
