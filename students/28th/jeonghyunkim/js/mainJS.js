@@ -9,7 +9,6 @@ window.addEventListener('resize',function(event){
             sideWrapper.style.display='none'
             bodyContainer.style.marginLeft='7vw'
         }else if(window.innerWidth<=690){
-            sideWrapper.style.display='none'
             bodyContainer.style.marginLeft='0vw'
         }else{
             bodyContainer.style.marginLeft='0px'
