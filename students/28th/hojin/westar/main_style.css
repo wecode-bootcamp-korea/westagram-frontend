@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    background: yellow;
+}
+
+
+
+.header{
+    width: 80%;
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+   
+    align-items: center;
+}
+
+.container .nav ul li{
+    display: inline-block;
+    margin: 0 15px;
+}
+
+
+
+
+.nav .input-search {
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 5px 10px 5px 10px;
+}
+
+.feeds{
+    width: 45%;
+    height: 100vh;
+    position: absolute;
+    left: 20%;
+    
+    transform: translate(-20%);
+
+    background : blue;
+}
+
+.feeds article{
+    background: green;
+    width: 100%;
+    height: 70%;
+    position: absolute;
+    background-image: url('feeds.jpeg');
+    
+}
+
+.main-right{
+    width: 25%;
+    height: 80%;
+    position: absolute;
+    left: 80%;
+    
+    transform: translate(-90%);
+
+    background : red;
+    float: right;
+
+}
+
