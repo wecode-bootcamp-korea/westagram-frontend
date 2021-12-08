@@ -1,0 +1,269 @@
+@import url("./common.css");
+
+header {
+  position: fixed;
+  z-index: 999;
+  inset: 0 0 95%;
+  background-color: #fff;
+}
+
+header nav {
+  padding: 0.75rem 9rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 0 3px gray;
+}
+
+.search {
+  position: relative;
+}
+
+nav input {
+  padding: 0.4rem 2.5rem;
+  padding-left: 2.5em;
+  border-radius: 0.3em;
+}
+
+nav input:focus.fa-search {
+  display: none;
+}
+
+.search .fa-search {
+  position: absolute;
+  left: 3%;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+}
+
+header nav .nav__icons {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+  gap: var(--gap, 0.75em);
+  cursor: pointer;
+  position: relative;
+}
+.nav__icons::after {
+  content: "1";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  top: -10%;
+  left: 27%;
+  text-align: center;
+  font-size: 0.75rem;
+  background-color: red;
+  color: #fff;
+  border-radius: 50%;
+}
+
+/* ************************************************** */
+/* SECTION: main grid part */
+main {
+  min-height: 100vh;
+  margin: 0 15vw;
+  margin-top: calc(4rem + 5vh);
+  display: grid;
+  grid-template-columns: 35rem 1fr;
+  grid-template-rows: 20vh auto;
+  gap: 1.25rem;
+  font-family: "Roboto", sans-serif;
+  position: relative;
+}
+
+/* ************************************************** */
+/* SECTION:   stories for others */
+.stories__wrapper {
+  padding: 0.5rem 1rem;
+  --gap: 2em;
+  border: 1px solid var(--border-primary);
+  background-color: #fff;
+  overflow: hidden;
+  position: relative;
+}
+.stories {
+  transition: transform 1s linear;
+  /* background-color: red; */
+}
+.story {
+  height: 60%;
+  border-radius: 50%;
+}
+.story p {
+  font-size: 0.875rem;
+}
+.stories .fas.hidden {
+  display: none;
+}
+.stories__wrapper i {
+  position: absolute;
+  font-size: 1.25rem;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.3;
+  cursor: pointer;
+}
+.stories__wrapper .fa-chevron-circle-left {
+  left: 3%;
+}
+.stories__wrapper .fa-chevron-circle-right {
+  right: 3%;
+}
+
+/* ************************************************** */
+/* SECTION:  recommendations */
+
+.recommends__wrapper {
+  grid-row: span 2;
+}
+.recommends__fixed {
+  position: fixed;
+}
+.profile {
+  height: 20vh;
+}
+.profile img {
+  height: 50%;
+}
+.profile p {
+  font-size: 0.875rem;
+}
+.recommends__wrapper a {
+  display: inline-block;
+  margin-left: auto;
+  color: skyblue;
+  font-size: 0.75rem;
+  transition: all 0.5s;
+}
+.recommends__wrapper a:hover {
+  color: blue;
+  font-weight: bold;
+}
+.recommendation h3 {
+  display: inline-block;
+  margin-bottom: 2rem;
+  color: var(--fc-primary);
+}
+.recommendation h3 + a {
+  color: inherit;
+}
+
+.other-profile p {
+  font-size: 0.75rem;
+  color: var(--fc-secondary);
+  font-family: sans-serif;
+}
+
+.other-profile + .other-profile {
+  margin-top: 1.75rem;
+}
+
+/* ************************************************** */
+/* SECTION:  feed */
+.feed__wrapper {
+  box-shadow: 0 0 10px lightgray;
+}
+.feed {
+  display: grid;
+  grid-template-rows: min-content minmax(auto, 80vh) 1fr 2fr;
+}
+
+/* 1) Header */
+.feed__header {
+  padding: 1rem;
+}
+.feed__header .fa-ellipsis-h {
+  margin-left: auto;
+  cursor: pointer;
+}
+
+/* 2) main image Carousel */
+.feed__carousel {
+  box-shadow: 0 0 10px lightgray;
+  overflow: hidden;
+  position: relative;
+}
+.carousel__container {
+  --gap: 0;
+  height: 100%;
+  transition: all 0.5s ease-in-out;
+}
+.carousel__container img {
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+.feed__carousel .fas {
+  position: absolute;
+  top: 50%;
+  opacity: 0.4;
+  font-size: 1.25rem;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.feed__carousel .fa-chevron-circle-left {
+  left: 1em;
+}
+.feed__carousel .fa-chevron-circle-right {
+  right: 1em;
+}
+
+/* 3) icon buttons */
+.feed__icons {
+  padding: 1rem;
+  position: relative;
+}
+.feed__icons i {
+  font-size: 1.25rem;
+}
+.feed__icons i + i {
+  margin-left: 0.875rem;
+}
+.fa-bookmark {
+  position: absolute;
+  right: 5%;
+}
+
+.feed__icons p {
+  width: fit-content;
+  margin-top: 0.75rem;
+}
+
+/* 4) comments */
+.comments {
+  padding: 1rem;
+  flex: 1;
+  box-shadow: 0 1px 10px lightgray;
+}
+
+.comment__input {
+  background-color: aqua;
+  position: relative;
+}
+.comment__input .fa-smile {
+  position: absolute;
+  left: 4%;
+}
+.comment__input textarea {
+  padding: 0 10%;
+  display: inline-block;
+  width: 100%;
+  min-height: 100%;
+  outline: none;
+  border: none;
+  overflow-y: hidden;
+}
+.comment__input .add__comment {
+  position: absolute;
+  right: 4%;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: blue;
+  font-weight: bold;
+}

@@ -1,0 +1,72 @@
+@import url(./common.css);
+
+body {
+  display: grid;
+  place-items: center;
+}
+.login__box {
+  min-width: 300px;
+  width: 50vw;
+  padding: 2rem;
+  border: 1.5px solid var(--border-input);
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 5px lightgray, -1px -1px 5px lightgray;
+  text-align: center;
+  position: relative;
+}
+
+.login__box h1 {
+  margin-bottom: 3rem;
+  font-size: 3rem;
+}
+
+.login input {
+  width: 100%;
+  padding: 1rem 0 1rem 1em;
+  border-radius: 0.5rem;
+  position: relative;
+}
+
+.login input + input {
+  margin-top: 0.5rem;
+}
+
+.login button {
+  margin: 2rem 0 3rem;
+  padding: 0.75rem 0;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.divider {
+  position: relative;
+}
+.divider::before,
+.divider::after {
+  content: "";
+  position: absolute;
+  inset: 0 30%;
+  border-top: 1px solid lightgray;
+}
+.divider::before {
+  transform: translateX(-70%) translateY(50%);
+}
+.divider::after {
+  transform: translateX(70%) translateY(50%);
+}
+
+#facebook-img {
+  width: 1rem;
+  display: inline-block;
+}
+
+.fa-login {
+  display: inline-block;
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: darkblue;
+  margin: 1rem 0;
+}
+.forgot-password {
+  display: block;
+}
