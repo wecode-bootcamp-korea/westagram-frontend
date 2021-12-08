@@ -1,0 +1,184 @@
+@import url('common.css');
+
+/* 전체 */
+.wrap {
+    width: 100%;
+    height: 100vh;
+    background-color: #fafafa;
+}
+
+main {
+    width: 100%;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 로그인 박스 */
+.login_box {
+    width: 350px;
+    height: 382px;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    border: 1px solid #dbdbdb;
+    border-radius: 1px;
+    background-color: #fff;
+}
+
+h1.logo {
+    font-family: 'Rochester';
+    font-size: 3rem;
+    text-align: center;
+    margin: 20px auto 34px;
+}
+
+article {
+    height: 137px;
+}
+
+.login_input {
+    position: relative;
+    width: 268px;
+    height: 38px;
+    margin: 0 auto;
+}
+
+.login_input:first-child {
+    margin-bottom: 8px;
+}
+
+.login_input > input {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    vertical-align: bottom;
+}
+
+input::placeholder {
+    color: transparent;
+}
+
+input:placeholder-shown + label {
+    font-size: 0.75rem;
+    color: #8e8e8e;
+    top: 10px;
+    left: 8px;
+}
+
+.default_padding {
+    padding: 5px 8px;
+}
+
+.change_padding {
+    padding: 15px 8px 5px;
+}
+
+input:not(:empty) + label, label{
+    color:#8e8e8e;
+    font-size: 0.47rem;
+    pointer-events: none;
+    position: absolute;
+    top: 4px;
+    left: 8px;
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+}
+
+button.login_btn {
+    width: 268px;
+    height: 30px;
+    margin: 15px auto;
+    border: 0;
+    border-radius: 3px;
+    background-color: rgba(0, 149, 246, 0.3);
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+button.login_btn:not([disabled]):hover {
+    cursor: pointer;
+}
+
+/* 로그인 버튼 하단 */
+.line {
+    position: relative;
+    color: #8e8e8e;
+    font-size: 0.8rem;
+    font-weight: 600;
+    height: 30px;
+    line-height: 30px;
+}
+
+.line::before, .line::after {
+    position: absolute;
+    content: '';
+    border-top: 1px solid rgba(219, 219, 219, 1);
+    inset: 0 35%;
+}
+
+.line::before {
+    transform: translateX(-78%) translateY(50%);
+}
+
+.line::after {
+    transform: translateX(78%) translateY(50%);
+}
+
+.facebook {
+    height: 55px;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 55px;
+}
+
+a.go_to_facebook {
+    color: #385185;
+}
+
+img#facebook_icon {
+    width: 1rem;
+    vertical-align: middle;
+}
+
+a.go_to_facebook > span {
+    font-size: 0.875rem;
+    font-weight: 600;
+}
+
+.find_pw {
+    margin-top: 3px;
+}
+
+a.forgot_pw {
+    color: #00376b;
+    font-size: 0.78rem;
+}
+
+/* 가입하기 */
+.go_to_join {
+    width: 350px;
+    height: 63px;
+    margin: 0 auto;
+    border: 1px solid #dbdbdb;
+    border-radius: 1px;
+    background-color: #fff;
+}
+
+.go_to_join > p {
+    line-height: 63px;
+    font-size: 0.875rem;
+    color: #262626;
+}
+
+.go_to_join > p > a {
+    font-weight: 600;
+    color: #0095f6;
+}

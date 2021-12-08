@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Westagram</title>
+    <link rel="stylesheet" href="./static/css/login.css" />
+</head>
+
+<body>
+    <div class="wrap">
+        <main class="login_main">
+            <div class="login_box">
+                <h1 class="logo">Westagram</h1>
+                <article>
+                    <div class="login_input">
+                        <input type="text" id="user_id" class="default_padding" placeholder="전화번호, 사용자 이름 또는 이메일">
+                        <label for="user_id">전화번호, 사용자 이름 또는 이메일</label>
+                    </div>
+                    <div class="login_input">
+                        <input type="password" id="user_pw" class="default_padding" placeholder="비밀번호">
+                        <label for="user_pw">비밀번호</label>
+                    </div>
+                    <button type="submit" class="login_btn" disabled>로그인</button>
+                </article>
+                <div class="line">
+                    <span>또는</span>
+                </div>
+                <div class="facebook">
+                    <a href="https://www.facebook.com/" class="go_to_facebook"><img src="static/img/facebook.png"
+                            id="facebook_icon">
+                        <span>Facebook으로 로그인</span>
+                    </a>
+                </div>
+                <div class="find_pw">
+                    <a href="https://www.instagram.com/accounts/password/reset/" class="forgot_pw">비밀번호를 잊으셨나요?</a>
+                </div>
+            </div>
+            <div class="go_to_join">
+                <p>계정이 없으신가요? <a href="https://www.instagram.com/accounts/emailsignup/" target="_self">가입하기</a></p>
+            </div>
+        </main>
+        <footer></footer>
+    </div>
+    <script type="text/javascript" src="./static/js/login.js"></script>
+</body>
+
+</html>
