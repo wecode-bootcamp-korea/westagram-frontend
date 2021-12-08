@@ -103,3 +103,35 @@ function handleMyMenu(e) {
     }
 }
 
+
+const $feedEnd = document.querySelector('.feed__end');
+const callback = (entry, observer) => {
+    if(entry[0].isIntersecting && entry[0].intersectionRatio === 1) {
+         loading();
+    } else {
+
+    }
+}
+
+let options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 1,
+  }
+const observer = new IntersectionObserver(callback, options)
+observer.observe($feedEnd);
+
+
+
+function loading() {
+    console.log('loading...')
+    // const target = e.target;
+    // console.log(target)
+    // const y = e.pageY
+    // console.log(window.scrollY, document.scrollHeight)
+}
+
+function displayFeed() {
+
+}
+
