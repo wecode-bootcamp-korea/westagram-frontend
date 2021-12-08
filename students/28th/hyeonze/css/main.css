@@ -1,0 +1,421 @@
+@import url(common.css);
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background: #fafafa;
+}
+
+body:before {
+    content: "";
+    position: fixed;
+    display: inline-block;
+    right: 0;
+    top: 54px;
+    width: 100%;
+    height: 1px;
+    background: #e6e6e6;
+}
+
+.nav_color {
+    position: fixed;
+    width: 100%;
+    height: 54px;
+    background: #fff;
+}
+
+#wrap {
+    position: relative;
+    width: 80%;
+    height: 100%;
+}
+
+.nav_wrap {
+    position: fixed;
+    z-index: 1;
+    width: 80%;
+    background: #fff;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 54px;
+}
+
+nav .logo {
+    padding-bottom: 5px;
+    font-size: 30px;
+    font-family: 'Lobster', cursive;
+}
+
+nav .logo i {
+    margin-right: 46px;
+    font-size: 30px;
+}
+
+nav .logo i:after {
+    content: "";
+    position: relative;
+    left: 23px;
+    top: 3px;
+    display: inline-block;
+    width: 2px;
+    height: 28px;
+    background: #000;
+}
+
+nav .search_box {
+    position: relative;
+    width: 288px;
+    height: 38px;
+    background: #fafafa;
+    border: 1px solid #dbdbdb;
+    text-align: center;
+}
+
+nav .search_box input{
+    width: 100%;
+    height: 100%;
+}
+
+nav .search_box i{
+    position: absolute;
+    left: 108px;
+    top: 10px;
+    color: #a7a7a7;
+}
+
+nav .btns {
+    display: flex;
+    align-items: flex-end;
+}
+
+nav .btns:after {
+    content: "";
+    display: inline-block;
+    position: relative;
+    right: 85px;
+    top: 7px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #f00;
+}
+
+nav .btns img {
+    width: 32px;
+    height: 32px;
+    margin-left: 35px;
+}
+
+main {
+    display: flex;
+    position: relative;
+    width: 100%;
+    background: red;
+}
+
+main .feeds{
+    position: absolute;
+    top: 77px;
+    width: 60%;
+    height: 1147px;
+    background: #fff;
+}
+
+main .feeds .top_menu{
+    display: flex;
+    height: 82px;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+}
+
+main .feeds .top_menu > span {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+main .feeds .top_menu > span:last-child {
+    margin-right: 22px;
+    color: #2a2a2a;
+}
+
+main .feeds .top_menu > span > img{
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.feeds > article > img{
+    width: 100%;
+    height: 818px;
+}
+
+main .feeds .bottom_menu {
+    display: flex;
+    position: relative;
+    align-items: center;
+    width: 100%;
+    height: 62px;
+    background: #fff;
+}
+
+main .feeds .bottom_menu > span > i {
+    margin: 0 10px;
+    font-size: 32px;
+    color: #414141;
+}
+
+main .feeds .bottom_menu > span:first-child > i {
+    color: #eb4b59;
+}
+
+main .feeds .bottom_menu > span:last-child > i {
+    position: absolute;
+    top: 15px;
+    right: 0;
+}
+
+main .feeds .comments {
+    display: flex;
+    flex-direction: column;
+}
+
+main .feeds .comments span {
+    padding-left: 10px;
+}
+
+main .feeds .comments span small {
+    color: #a3a3a3;
+}
+
+main .feeds .comments span:first-child {
+    padding: 10px;
+    font-weight: bold;
+}
+
+main .feeds .comments i {
+    position: absolute;
+    right: 20px;
+    bottom: 115px;
+    color: #a3a3a3;
+}
+
+main .feeds .add_comments {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    bottom: 0;
+    width: 100%;
+    height: 62px;
+    background: #fff;
+    border-top: 1px solid #dbdbdb;
+    font-size: 14px;
+}
+
+main .feeds .add_comments input {
+    width: 90%;
+    height: 50%;
+    margin-left: 15px;
+}
+
+main .feeds .add_comments button {/*.btn_upload*/
+    margin-right: 15px;
+    color: #c5e2fa;
+    background: #fff;
+}
+
+main .main-right{
+    position: absolute;
+    left: 60%;
+    top: 77px;
+    width: 30%;
+    margin-left: 20px;
+    background: #fafafa;
+}
+
+main .main-right img {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+}
+
+main .main-right .user {
+    position: relative;
+}
+
+main .main-right .user span:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    background: #000;
+    color: #fff;
+}
+
+main .main-right .user span:nth-child(2) {
+    position: absolute;
+    left: 93px;
+    top: 20px;
+    font-weight: bold;
+}
+
+main .main-right .user span:last-child {
+    position: absolute;
+    left: 93px;
+    top: 40px;
+    color: #9b9b9b;
+}
+/* sotries */
+main .main-right .stories {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    margin-top: 20px;
+    width: 100%;
+    height: 250px;
+    border-radius: 5px;
+    border: 1px solid #e6e6e6;
+    justify-content: space-between;
+    background: #fff;
+}
+
+.stories span {
+    padding: 10px;
+}
+
+.stories > span:first-child {
+    color: #999;
+}
+
+.stories ul {
+    position: absolute;
+    width: 100%;
+    top: 30px;
+}
+
+.stories ul li {
+    position: relative;
+    display: flex;
+    height: 60px;
+    padding-left: 15px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.stories ul li div {
+    position: relative;
+}
+
+.stories ul li div span {
+    position: absolute;
+    width: 100px;
+}
+
+.stories ul li div span:first-child {
+    top: -25px;
+    font-weight: bold;
+}
+
+.stories ul li div span:last-child {
+    top: -5px;
+    color: #a3a3a3;
+}
+/* recommended */
+main .main-right .recommended {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 220px;
+    border-radius: 5px;
+    border: 1px solid #e6e6e6;
+    justify-content: space-between;
+    background: #fff;
+}
+
+.recommended ul {
+    position: absolute;
+    width: 100%;
+    top: 30px;
+}
+
+.recommended span {
+    padding: 10px;
+}
+
+.recommended > span:first-child {
+    color: #999;
+}
+
+.recommended ul {
+    position: absolute;
+    width: 100%;
+    top: 30px;
+}
+
+.recommended ul li {
+    position: relative;
+    display: flex;
+    height: 60px;
+    padding-left: 15px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.recommended ul li div {
+    position: relative;
+}
+
+.recommended ul li div span {
+    position: absolute;
+    width: 140px;
+}
+
+.recommended ul li div span:first-child {
+    top: -25px;
+    font-weight: bold;
+}
+
+.recommended ul li div span:nth-child(2) {
+    top: -5px;
+    color: #a3a3a3;
+}
+
+.recommended ul li div span:last-child {
+    left: 190px;
+    top: -15px;
+    color: #3e99ed;
+}
+
+.main-right-copy {
+    position: relative;
+}
+
+.main-right-copy > span, .main-right-copy > span > a {
+    color: #c7c7c7;
+    font-size: 16px;
+}
+
+.main-right-copy > span:first-of-type {
+    position: absolute;
+}
+
+.main-right-copy > span:last-child {
+    position: absolute;
+    top: 70px;
+}
