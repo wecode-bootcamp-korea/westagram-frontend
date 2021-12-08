@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+
+h1 {
+    font-family: 'Lobster', cursive;
+}
+
+
+body {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: baseline;
+    position: relative;
+    background-color: #fafafa;
+}
+
+/* navigation */
+
+nav {
+    width: 100%;
+    height: 54px;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+}
+nav > .logo-wrapper {
+    display: flex;
+    flex-flow:row;
+    height: 30px;
+    margin: 12px 10px;
+}
+nav > .logo-wrapper > img{
+    width: 60px;
+    height: 30px;
+    padding: 0px 15px;
+    border-right: 2px solid black;
+}
+nav > .logo-wrapper > h1{
+    padding: 0px 15px;
+}
+
+nav > .search-wrapper {
+    display: flex;
+    position:relative;
+    height: 54px;
+    align-items: center;
+}
+nav > .search-wrapper > .search-icon {
+    position:absolute;
+    color: #a6a9ac;
+}
+
+nav > .search-wrapper > .searchingbox {
+    width : 140px;
+    background-color: #fafafa;
+    border:1px solid #dbdbdb;
+    border-radius: 2px;
+    text-align: center;
+}
+nav > .search-wrapper > input::placeholder {
+    color: #a6a9ac;
+    background-image: url(/Users/seongyoonkyeong/Documents/[wecode]Westagram/search.png);
+    background-size: 10px;
+    background-repeat: no-repeat;
+    background-position-x: 35px;
+    background-position-y: center;
+}
+nav >.icons-wrapper {
+    position: relative;
+    display:flex;
+    height: 30px;
+    margin: 12px 10px;
+}
+nav > .icons-wrapper > img {
+    height: 100%;
+    padding : 3px 10px;
+}
+
+nav > .icons-wrapper:after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 65px;
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: red;
+}
+
+/* main */
+
+main {
+    width: 935px;
+    min-height: 1vh;
+    display: flex;
+    justify-content: start;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+/* main feeds */
+
+main > .feeds {
+    width: 615px;
+    height: fit-content;
+    display: flex;
+    flex-flow: column wrap;
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+}
+main > .feeds > .article {
+    width: 615px;
+    height: 675px;
+    display: block;
+}
+main > .feeds > .article > .article-header {
+    width: 615px;
+    height: 60px;
+    display: flex;
+}
+main > .feeds > .article > .article-main-wrapper {
+    width: 615px;
+    height: 615px;
+    display: flex;
+    overflow-x: hidden;
+}
+/* 이미지가 터져요! */
+main > .feeds > .article .article-main {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+main > .feeds > .article > .article-header {
+    width: 615px;
+    height: 60px;
+    padding: 14px 4px 14px 16px;
+    display: flex;
+    justify-content: space-between;
+}
+main > .feeds > .article > .article-header > .header-profile {
+    width: 500px;
+    height: 32px;
+    display: flex;
+    text-align: center;
+}
+main > .feeds > .article > .article-header > .header-profile > .article-user-image {
+    width: 32px;
+    height:32px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+main > .feeds > .article > .article-header > .header-profile > .article-user-image >img {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+main > .feeds > .article > .article-header > .header-profile > .article-user-information {
+    height: 32px;
+    text-align: center;
+    padding: 5px 15px;
+    font-weight: bold;
+}
+main > .feeds > .article > .article-header > .article-option {
+    height: 32px;
+    width: 32px;
+    padding: 5px 10px;
+    margin-right: 20px;
+}
+main > .feeds > .article-icons-wrapper{
+    width: 614px;
+    height: 54px;
+    display: flex;
+    flex-flow: row wrap;
+    position: relative;
+}
+main > .feeds > .article-icons-wrapper > img{
+    height: 100%;
+    padding: 10px;
+}
+main > .feeds > .article-icons-wrapper > .bookmark {
+    position: absolute;
+    right: 10px;
+}
+main > .feeds > .like-wrapper{
+    width: 615px;
+    height: 18px;
+    padding: 0px 16px;
+    margin-bottom: 8px;
+}
+main > .feeds > .comment-wrapper{
+    width: 615px;
+    height: 66px;
+    padding: 0px 16px;
+}
+main > .feeds > .time-wrapper{
+    width: 615px;
+    height: 19px;
+    padding-left: 16px;
+    margin-bottom: 16px;
+    font-size: smaller;
+    color: #b4b4b4;
+}
+main > .feeds > .comment-input-wrapper{
+    width: 614px;
+    height: 53px;
+    padding: 6px 16px;
+    border-top: 1px solid #dbdbdb;
+    display: flex;
+    justify-content:space-between;
+    text-align: center;
+}
+main > .feeds > .comment-input-wrapper > .comment-input-text {
+    width : 518px;
+    height : 27px;
+    margin: 5px 0px;
+    border: none;
+}
+main > .feeds > .comment-input-wrapper > .comment-input-text::placeholder {
+    color: #8e8e8e;
+}
+input:focus {
+    outline: none;
+}
+main > .feeds > .comment-input-wrapper > .comment-input-button {
+    height: 27px;
+    background-color: white;
+    color: #c0dffd;
+    margin: 10px 10px;
+}
+
+/* main-right */
+
+main > .main-right {
+    width: 293px;
+    height: 732px;
+    position: fixed;
+    right: 30px;
+    display: flex;
+    flex-flow: column;
+}
+main > .main-right > .user-information {
+    width: 293px;
+    height: 56px;
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0px 0px 10px 0px;
+}
+main > .main-right > .user-information > .user-image {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+main > .main-right > .user-information > .user-image> img {
+    width: 100%;
+    height: 100%;
+}
+main > .main-right > .user-information > .user-text {
+    width: 237px;
+    padding: 5px 0px 5px 23px;
+}
+main > .main-right > .user-information > .user-text > .user-id {
+    display: inline-flex;
+    width: 237px;
+    font-weight: bold;
+}
+main > .main-right > .user-information > .user-text > .user-nickname {
+    display: inline-flex;
+    width: 237px;
+    color: #b4b4b4;
+}
+main > .main-right > .story {
+    width: 293px;
+    height: 240px;
+    border: 1px solid #dbdbdb;
+    background-color: white;
+    border-radius: 2px;
+}
+main > .main-right > .story > .story-header{
+    width: 100%;
+    height: 31px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+main > .main-right > .story > .story-header > .story-story, .all-story {
+    align-self: center;
+    margin: 17px 15px;
+    font-size: small;
+}
+main > .main-right > .recommendation {
+    width: 293px;
+    height: 240px;
+    border: 1px solid #dbdbdb;
+    background-color: white;
+    border-radius: 2px;
+    margin-top: 30px;
+}
+main > .main-right > .recommendation > .recommendation-header{
+    width: 100%;
+    height: 31px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+main > .main-right > .recommendation > .recommendation-header > .recommendation-for-you, .all-recommendation {
+    align-self: center;
+    margin: 17px 15px;
+    font-size: small;
+}
+main > .main-right > .recommendation > .recommendation-header > .recommendation-for-you, .story-story {
+    color: #b4b4b4;
+}
