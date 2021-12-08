@@ -187,7 +187,9 @@ main .feeds .bottom_menu > span:last-child > i {
 
 main .feeds .comments {
     display: flex;
+    position: relative;
     flex-direction: column;
+    background: yellow;
 }
 
 main .feeds .comments span {
@@ -204,10 +206,12 @@ main .feeds .comments span:first-child {
 }
 
 main .feeds .comments i {
+    color: #a3a3a3;
     position: absolute;
     right: 20px;
+    /* right: 20px;
     bottom: 115px;
-    color: #a3a3a3;
+    color: #a3a3a3; */
 }
 
 main .feeds .add_comments {

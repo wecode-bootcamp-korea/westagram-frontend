@@ -16,7 +16,7 @@ window.onload = function() {
     });
 
     const addComment = (el) => {
-        el.innerHTML = `<strong>username </strong>${inputUpload.value}<small> 방금전</small>`;
+        el.innerHTML = `<strong>username </strong>${inputUpload.value}<small> 방금전</small><i class="far fa-heart"></i>`;
         if (contentFlag) {
             comments.appendChild(el);
             inputUpload.value = "";
