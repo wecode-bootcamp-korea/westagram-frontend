@@ -21,11 +21,11 @@ user_id.addEventListener('keyup', changeInputAndButton);
 user_pw.addEventListener('keyup', changeInputAndButton);
 login_btn.addEventListener('click', function () {
     if (!this.hasAttribute('disabled')) {
-        location.href = '../../main.html';
+        location.href = './main.html';
     }
 });
 login_article.addEventListener('keydown', function (e) {
     if ((!login_btn.hasAttribute('disabled')) && (e.key === 'Enter')) {
-        location.href = '../../main.html';
+        location.href = './main.html';
     }
 })

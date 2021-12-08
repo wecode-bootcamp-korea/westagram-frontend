@@ -26,7 +26,7 @@
                     </div>
                     <div class="icons_box">
                         <img src="./static/img/home.png" class="icons" alt="홈" />
-                        <img src="./static/img/send.png" class="icons" alt="다이렉트 메시지" />
+                        <img src="./static/img/send.png" class="icons rotateimg18" alt="다이렉트 메시지" />
                         <img src="./static/img/plus.png" class="icons" alt="추가" />
                         <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png"
                             class="icons" alt="탐색" />
@@ -39,7 +39,60 @@
         </header>
         <main>
             <section>
-                <div class="story_box"></div>
+                <div class="story_box">
+                    <div class="story_wrap">
+                        <ul>
+                            <li>
+                                <div class="story_border story_old_border">
+                                    <img src="./static/img/profile.jpg" class="story_profile" alt="내 스토리" />
+                                </div>
+                                <p class="story_account story_old_color">Your story</p>
+                            </li>
+                            <li>
+                                <div class="story_border story_new_border">
+                                    <img src="./static/img/profile1.jpg" class="story_profile" alt="이흥용 과자점 스토리" />
+                                </div>
+                                <p class="story_account story_new_color">lee_heung_yong_cake</p>
+                            </li>
+                            <li>
+                                <div class="story_border story_old_border">
+                                    <img src="./static/img/cat.jpg" class="story_profile" alt="고양이러버 스토리" />
+                                </div>
+                                <p class="story_account story_old_color">cat_lover</p>
+                            </li>
+                            <li>
+                                <div class="story_border story_old_border">
+                                    <img src="./static/img/coffee.jpg" class="story_profile" alt="카페 스토리" />
+                                </div>
+                                <p class="story_account story_old_color">cafe_knotted</p>
+                            </li>
+                            <li>
+                                <div class="story_border story_old_border">
+                                    <img src="./static/img/profile2.jpg" class="story_profile" alt="여행 스토리" />
+                                </div>
+                                <p class="story_account story_old_color">crazy_for_travel</p>
+                            </li>
+                            <li>
+                                <div class="story_border story_old_border">
+                                    <img src="./static/img/starbucks.jpg" class="story_profile" alt="스타벅스 스토리" />
+                                </div>
+                                <p class="story_account story_old_color">starbucks_korea</p>
+                            </li>
+                            <li>
+                                <div class="story_border story_old_border">
+                                    <img src="./static/img/stationary.jpg" class="story_profile" alt="문구 스토리" />
+                                </div>
+                                <p class="story_account story_old_color">stationary_store</p>
+                            </li>
+                            <li>
+                                <div class="story_border story_old_border">
+                                    <img src="./static/img/macbook.jpg" class="story_profile" alt="애플 스토리" />
+                                </div>
+                                <p class="story_account story_old_color">apple_store_kr</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
                 <div class="post_box">
                     <article>
                         <div class="post_wrap">
@@ -54,13 +107,34 @@
                             </div>
                             <div class="post_body">
                                 <div class="post_photo_wrap">
-                                    <img src="./static/img/christmas_cookies1.jpg" class="post_photos" alt="사진" />
+                                    <div class="post_photo_container">
+                                        <img src="./static/img/christmas_cookies1.jpg" class="post_photos" alt="사진1" />
+                                        <img src="./static/img/christmas_cookies2.jpg" class="post_photos" alt="사진2" />
+                                    </div>
+                                    <img src="./static/img/left-chevron.png" class="post_prev btn_size" alt="이전" />
+                                    <img src="./static/img/right-chevron.png" class="post_next btn_size" alt="다음" />
                                 </div>
                                 <div class="post_footer">
-                                    <div class="post_icons">
-                                        <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"
-                                            class="icons" alt="하트" />
-                                        <img src="./static/img/send.png" class="icons" alt="다이렉트 메시지" />
+                                    <div class="post_icons_wrap">
+                                        <div class="post_icons_box1">
+                                            <button class="post_icons_btn"><img
+                                                    src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"
+                                                    class="post_icons" alt="하트" />
+                                            </button>
+                                            <button class="post_icons_btn">
+                                                <img src="./static/img/chat.png" class="post_icons" alt="댓글" />
+                                            </button>
+                                            <button class="post_icons_btn">
+                                                <img src="./static/img/send.png" class="post_icons rotateimg18"
+                                                    alt="다이렉트 메시지" />
+                                            </button>
+                                        </div>
+                                        <div class="post_icons_box2">
+                                            <button class="post_icons_btn">
+                                                <img src="./static/img/bookmark_default.png" class="post_icons"
+                                                    alt="북마크" />
+                                            </button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -71,6 +145,7 @@
             <aside></aside>
         </main>
     </div>
+    <script type="text/javascript" src="./static/js/main.js"></script>
 </body>
 
 </html>

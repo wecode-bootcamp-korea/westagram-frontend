@@ -95,6 +95,14 @@ img.profile {
     border-radius: 50%;
 }
 
+.rotateimg18 {
+    -webkit-transform:rotate(18deg);
+    -moz-transform: rotate(18deg);
+    -ms-transform: rotate(18deg);
+    -o-transform: rotate(18deg);
+    transform: rotate(18deg);
+  }
+
 /* main */
 main {
     width: 100%;
@@ -116,7 +124,83 @@ section {
     height: 118px;
     margin-bottom: 24px;
     border: 1px solid #dbdbdb;
+    padding: 16px 10px;
     background-color: #fff;
+}
+
+.story_wrap > ul {
+    height: 84px;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+.story_wrap > ul > li {
+    min-width: 80px;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.story_border {
+    width: 62px;
+    height: 62px;
+    margin: 0 auto;
+    border-radius: 50%;
+    background-color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 55px;
+}
+
+.story_old_border {
+    border: 1px solid #dbdbdb;
+}
+
+.story_new_border {
+    background: white;
+    border-radius: 50%;
+    position: relative;
+    z-index: 0;
+}
+
+.story_new_border::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 1px;
+    left: 0;
+    right: 0;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    background-image: linear-gradient(208deg, rgba(217,44,123,1) 80%, rgba(249,155,74,1) 100%);
+}
+
+.story_profile {
+    width: 56px;
+    height: 56px;
+    border: 1px solid #dbdbdb;
+    border-radius: 50%;
+    vertical-align: middle;
+}
+
+.story_account {
+    max-width: 76px;
+    font-size: 0.7rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.story_old_color {
+    color: #828282;
+}
+
+.story_new_color {
+    color: #262626;
 }
 
 /* 포스트 */
@@ -169,7 +253,7 @@ img.post_option {
     vertical-align: middle;
 }
 
-.post_info:hover {
+.post_info:hover, .post_icons_btn {
     cursor: pointer;
 }
 
@@ -180,12 +264,69 @@ img.post_option {
 
 .post_photo_wrap {
     width: 100%;
-    height: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.post_photo_container {
+    display: flex;
 }
 
 img.post_photos {
     width: inherit;
+    max-width: 100%;
     height: auto;
+    display: block;
+}
+
+img.post_prev {
+    position: absolute;
+    left: 8px;
+    top: 50%;
+}
+
+img.post_next {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+}
+
+.btn_size {
+    width: 25px;
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(163deg) brightness(103%) contrast(96%) drop-shadow(0px 0px 3px #5b5b5b);
+    opacity: 0.6;
+}
+
+.btn_size:hover {
+    cursor: pointer;
+}
+
+.post_icons_wrap {
+    width: 100%;
+    height: 54px;
+    padding: 6px 5px;
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    vertical-align: middle;
+}
+
+button.post_icons_btn {
+    width: 40px;
+    height: 40px;
+    border: 0;
+    background-color: #fff;
+    vertical-align: middle;
+}
+
+.post_icons {
+    width: 24px;
+    vertical-align: middle;
+}
+
+.post_icons:hover {
+    filter: invert(55%) sepia(1%) saturate(0%) hue-rotate(184deg) brightness(99%) contrast(85%);
 }
 
 /* 사이드메뉴 */
