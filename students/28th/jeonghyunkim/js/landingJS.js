@@ -17,9 +17,11 @@ inputID.addEventListener('input',function(event){
     if (event.target.value.includes('@') && inputPW.value.length>=5){
         loginBtn.style.backgroundColor='rgba(var(--d69,0,149,246),1)'
         loginBtn.style.cursor='pointer';
+        loginBtn.removeAttribute('disabled');
     }else{
         loginBtn.style.backgroundColor='rgba(var(--d69,0,149,246),.3)'
         loginBtn.style.cursor='inherit';
+        loginBtn.setAttribute('disabled',true);
     }
 })
 
