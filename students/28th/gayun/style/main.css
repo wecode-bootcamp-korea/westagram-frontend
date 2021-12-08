@@ -4,7 +4,7 @@
     --blue:rgb(55,135,237);
     --grey: rgb(250, 249, 249);
     --border-grey: rgb(224,224,224);
-    --border-grey-darker: rhb(214,213,214);
+    --border-grey-darker: rgb(214,213,214);
     --light-blue: rgb(185,217,251);
 }
 
@@ -194,59 +194,75 @@ main {
 }
 
 .feed__end {
-    height: 40px;
-    background-color: aquamarine;
+    height: 100px;
 }
 
-.skeleton-feed {
-    margin-bottom: 30px;
-    border: 1px solid lightgray;
+.skeleton {
+    border: 1px solid var(--border-grey);
+    background-color: var(--border-grey)
 }
 
-.feed__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1em;
-    border-bottom: 1px solid lightgray;
-}
-
-.feed__header--user {
+.skeleton__header{
     display: flex;
     align-items: center;
+    padding: 7px;
+    height: 5em;
 }
 
-.feed__header--img-container {
+.skeleton__header--profileImg {
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+    background-color: var(--white);
+}
+
+.skeleton__header--id {
+    width: 50px;
+    height: 20px;
+    margin-left: 5px;
+    background-color: var(--white);
+}
+
+.skeleton__img {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 3em;
-    height: 3em;
-    border-radius: 30px;
-    background: linear-gradient(39deg, rgba(254,218,117,1) 0%, rgba(250,126,30,1) 22%, rgba(214,41,118,1) 44%, rgba(150,47,191,1) 72%, rgba(79,91,213,1) 100%);}
-
-.feed__header--img {
-    width: 88%;
-    height: 88%;
-    border: 3px solid var(--white);
-    border-radius: 30px;
+    height: 200px;
+    background-color: var(--white);
 }
 
-.feed__header--id {
-    margin-left: 1em;
+.loading {
+    width: 30px;
 }
 
-.feed__img-container > img {
-    width: 100%;
-}
-
-.feed__buttons {
+.skeleton__comment {
     display: flex;
-    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
 }
 
-.feed__button > i {
-    cursor: pointer;
+#comment--text2 {
+    width: 250px;
+}
+
+.skeleton__comment--id {
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    background-color: var(--white);
+}
+
+.skeleton__comment--text {
+    width: 200px;
+    height: 20px;
+    margin-left: 5px;
+    background-color: var(--white);
+}
+
+.skeleton__comment--input {
+    height: 50px;
+    border-top: 1px solid var(--border-grey-darker);
+    background-color: var(--border-grey);
 }
 
 .liked {
