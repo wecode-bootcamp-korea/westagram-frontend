@@ -9,7 +9,7 @@ window.onload = function(){
         let userName = document.querySelector('.username').value;
         let userPw = document.querySelector('.userpassword').value;
 
-        if (userName && userPw) {
+        if (userName && (userName.indexOf('@') !== -1) && (userPw.length >= 5)) {
             button.style.backgroundColor = '#0095F6';
             button.setAttribute('onclick', "location.href='main.html'");
             btnActivated = true;
