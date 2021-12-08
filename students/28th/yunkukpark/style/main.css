@@ -261,6 +261,7 @@ main {
 .feed-bottom {
   padding: 0 16px;
   padding-bottom: 8px;
+  border-bottom: 1px solid #dbdbdb;
 }
 
 .feed-controler {
@@ -276,9 +277,28 @@ main {
   align-items: center;
 }
 
+.icon-group.left i {
+  position: relative;
+  opacity: 1;
+  transition: opacity 300ms ease-in-out;
+}
+
+.icon-group.left i:hover {
+  opacity: 0.7;
+}
+
+.icon-group.left i.fa-comment,
+.icon-group.left i.fa-paper-plane {
+  top: -2px;
+}
+
 .icon-item {
-  width: 40px;
-  height: 40px;
+  width: 38px;
+  height: 38px;
+}
+
+.feed-controler .right {
+  text-align: right;
 }
 
 .feed-bottom-info {
@@ -325,6 +345,12 @@ main {
   margin-bottom: 8px;
 }
 
+.feed-comment-item {
+  display: flex;
+  justify-content: space-between;
+  line-height: 1;
+}
+
 /* Comment Wrapper */
 .comment-wrapper {
   display: flex;
@@ -335,7 +361,14 @@ main {
 }
 
 .comment-wrapper i {
-  font-size: 24px;
+  position: relative;
+  top: 1px;
+  font-size: 18px;
+  margin-right: 4px;
+}
+
+.comment-wrapper button {
+  padding: 0;
 }
 
 .comment-wrapper input {
@@ -382,6 +415,14 @@ main {
   font-weight: 700;
   padding: 0px;
   color: #0094f6;
+  opacity: 1;
+
+  transition: opacity 0.3s ease-in-out;
+}
+
+.user-info-button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
 }
 
 /* Recommend Section */

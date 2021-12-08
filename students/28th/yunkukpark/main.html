@@ -141,15 +141,15 @@
                     <i class="ic-heart"></i>
                   </div>
                   <div class="icon-item">
-                    <i class="ic-compass"></i>
+                    <i class="far fa-comment"></i>
                   </div>
                   <div class="icon-item">
-                    <i class="ic-compass"></i>
+                    <i class="far fa-paper-plane"></i>
                   </div>
                 </div>
                 <div class="right">
                   <div class="icon-item">
-                    <i class="ic-compass"></i>
+                    <i class="far fa-bookmark"></i>
                   </div>
                 </div>
               </section>
@@ -157,7 +157,7 @@
                 <div class="feed-like">
                   <dl>
                     <dt>좋아요</dt>
-                    <dd>476개</dd>
+                    <dd><span class="like-hit">476</span>개</dd>
                   </dl>
                 </div>
                 <div class="feed-desc-group">
@@ -165,16 +165,22 @@
                     <dt class="user-id">h_sej1n_</dt>
                     <dd class="feed-content">응애 기타쳐버렸지🎸</dd>
                   </dl>
+                  <ul class="feed-comment-list"></ul>
+
                   <p class="comment-more">댓글 3개 모두 보기</p>
                   <p class="feed-uploaded">4시간 전</p>
                 </div>
               </div>
             </section>
             <section class="comment-wrapper">
-              <i class="fa fa-glass"></i>
-              <input type="text" placeholder="댓글 달기..." />
+              <button type="button">
+                <i class="far fa-smile"></i>
+              </button>
+              <input name="comment" type="text" placeholder="댓글 달기..." />
               <!-- TODO: user-info-button 괜찮은 클래스로 바꿔서 재사용 하기 -->
-              <button class="user-info-button">게시</button>
+              <button type="submit" class="comment-submit-button user-info-button" disabled>
+                게시
+              </button>
             </section>
           </div>
         </div>
