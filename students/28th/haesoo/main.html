@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <link href="/style/reset.css" rel="stylesheet" />
+    <link href="/style/common.css" rel="stylesheet" />
+    <title>Westagram</title>
+  </head>
+  <body>
+    <nav class="navigation">
+      <a href="#">Westagram</a>
+      <div class="navigation__search">
+        <i class="fas fa-search"></i>
+        <input placeholder="검색" />
+      </div>
+      <div class="navigation__icons">
+        <img src="/src/navigation_icons/home.png" alt="home icon" />
+        <img src="/src/navigation_icons/messenger.png" alt="messenger icon" />
+        <img src="/src/navigation_icons/more.png" alt="make contents icon" />
+        <img src="/src/navigation_icons/compass.png" alt="contents icon" />
+        <img src="/src/navigation_icons/like.png" alt="like information" />
+        <img src="/src/navigation_icons/profile.jpg" class="profile-img" alt="profile image"></img>
+      </div>
+    </nav>
+    <main>
+      <section class="contents-container">
+        <div class="story-container"></div>
+        <div class="feed-container">
+          <header class="feed-header">
+            <div class="header__image"></div>
+            <div class="header__id">__hackney</div>
+            <button class="header__button">•••</button>
+          </header>
+          <div class="feed-image">
+            <div class="image__upload">
+              <img src="/src/1.jpeg" />
+            </div>
+            <div class="image__buttons">
+              <p></p>
+              <p></p>
+              <p></p>
+            </div>
+          </div>
+          <div class="feed-icons">
+            <div class="feed-icons__left">
+              <button><img src="/src/navigation_icons/like.png" /></button>
+              <button><img src="/src/content_icons/chat.png" /></button>
+              <button><img src="/src/content_icons/navigation.png" /></button>
+            </div>
+            <div class="feed-icons__right">
+              <button><img src="/src/content_icons/save-instagram.png" /></button>
+            </div>
+          </div>
+          <div class="feed-information">
+            <div class="feed-likes">좋아요 170개</div>
+            <div class="feed-user">
+              <div class="feed-user__id">__hackney</div>
+              <div class="feed-user__text">안뇽 나는 인스타그램 클론중</div>
+            </div>
+          </div>
+          <div class="feed-comment">
+            <div class="feed-comment__left">
+              <i class="far fa-smile"></i>
+              <input class="comment__input" placeholder="댓글 달기..." type="text" />
+            </div>
+            <button class="feed-comment__button">게시</button>
+          </div>
+          </div>
+        </div>
+      </section>
+      <section class="user-container">
+        <div class="user-wrapper">
+          <div class="user-wrapper__image"></div>
+          <div class="user-wrapper__information">
+            <div class="user-wrapper__id">__hackney</div>
+            <div class="user-wrapper__name">정해수</div>
+          </div>
+          <div class="user-wrapper__mode">전환</div>
+        </div>
+        <div class="recommend-wrapper"></div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,157 @@
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-color: #fafafa;
+  overflow-x: hidden;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+}
+
+.login-container {
+  width: 100%;
+  height: auto;
+  background-color: #ffffff;
+  border: 1px solid #dbdbdb;
+  padding: 20px 40px;
+  padding-bottom: 10px;
+}
+
+.logo {
+  width: 100%;
+  height: 100px;
+  margin-bottom: 10px;
+  padding: 20px;
+  text-align: center;
+  font-family: "Lobster", cursive;
+  font-size: 50px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.login-form input {
+  width: 100%;
+  height: 32px;
+  margin: 4px;
+  padding-left: 10px;
+  border: 1px solid #dbdbdb;
+  border-radius: 4px;
+  font-size: 12px;
+  background-color: #fafafa;
+}
+
+.login-form input:focus {
+  outline: none;
+}
+
+.login-button {
+  width: 100%;
+  height: 32px;
+  margin-top: 10px;
+  border-radius: 4px;
+  background-color: #0095f6;
+  color: #fafafa;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.login-container p {
+  width: 100%;
+  height: 32px;
+  margin: 20px 0px;
+  padding: 18px;
+  color: #8d8d8d;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.login-container .facebook-button {
+  display: block;
+  width: 100%;
+  height: px;
+  color: #385085;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.find-password-container {
+  width: 100%;
+  padding: 20px 0px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.find-password-container a {
+  font-weight: 500;
+  color: #385085;
+}
+
+.sign-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  height: 80px;
+  margin-top: 10px;
+  background-color: #ffffff;
+  border: 1px solid #dbdbdb;
+}
+
+.sign-container p {
+  margin: 0px 2px;
+  font-size: 14px;
+}
+
+.sign-container a {
+  margin: 0px 2px;
+  color: #0095f6;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+footer {
+  position: absolute;
+  bottom: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #8d8d8d;
+  font-size: 14px;
+}
+
+.footer__tag a {
+  cursor: pointer;
+  margin-left: 4px;
+}
+
+.footer__text {
+  margin-top: 10px;
+}
