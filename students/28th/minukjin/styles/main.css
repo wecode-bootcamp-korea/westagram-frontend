@@ -116,9 +116,6 @@ nav {
   display: flex;
   justify-content: space-between;
 }
-/* .feed-icon i {
-  padding: 0.4rem;
-} */
 
 .feed-like {
   display: flex;
@@ -131,12 +128,10 @@ nav {
   border: 1px solid rgb(219, 219, 219);
   border-radius: 50%;
 }
-/* .feed-like p {
-  font-size: 1.5rem;
-} */
 
 .feed-content {
   display: flex;
+  margin-bottom: 1rem;
 }
 .feed-content p {
   width: 60%;
@@ -152,19 +147,24 @@ nav {
   color: rgb(205, 205, 205);
 }
 .feed-reply {
+  position: relative;
+}
+.feed-reply > div {
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
+
 .feed-reply span {
   margin-right: 0.7rem;
 }
 .feed-reply i {
+  position: absolute;
+  right: 0;
   font-size: 1.5rem;
   order: 10;
 }
 .feed-reply-time {
-  color: rgb(190, 190, 190);
+  color: rgb(210, 210, 210);
   font-weight: 400;
 }
 .feed-reply-form {
@@ -264,7 +264,7 @@ article {
 
 .recommend-box span {
   display: inline-block;
-  width: 40%;
+  width: 30%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;

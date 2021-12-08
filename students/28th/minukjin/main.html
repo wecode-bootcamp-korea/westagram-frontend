@@ -70,16 +70,21 @@
             </p>
             <button>더 보기</button>
             </div>
-            <div class="feed-reply">
-              <i class="far fa-heart"></i>
-              <p><span>aaa</span>안녕하세요.</p>
-            </div>
-            <span class="feed-reply-time">42분전</span>
+            <ul class="feed-replys">
+              <li class="feed-reply">
+                <div>
+                  <span>aaa</span>
+                  <p>안녕하세요.</p>
+                  <i class="far fa-heart"></i>
+                </div>
+                <span class="feed-reply-time">42분전</span>
+              </li>
+            </ul>
           </div>
         <form class="feed-reply-form">
           <label for="reply"></label>
           <input id="reply-input" type="text" placeholder="댓글 달기..."/>
-          <button id="reply-button" type="submit">게시</button>
+          <button id="reply-button" type="button">게시</button>
         </form>
       </section>
     </main>
