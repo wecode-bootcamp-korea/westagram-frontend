@@ -1,56 +1,55 @@
-
 /* || main_header : header 전체 */
 .main_header {
-    align-items: center;
+    width: 100%;
+    height: 54px;
     background-color: #fff;
     border-bottom: 1px solid #dbdbdb;
     position: fixed;
     top: 0;
-    transition: height .2s ease-in-out;
-    width: 100%;
     z-index: 10;
+    align-items: center;
+    transition: height .2s ease-in-out;
 }
 
 /* max-width 구간 */
 .header_content {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
     max-width: 975px;
-    padding: 0 20px;
-    transition: height .2s ease-in-out;
     width: 100%;
+    padding: 0 20px;
     margin: 0 auto;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    transition: height .2s ease-in-out;
 }
 
 /* 로고 */
 .main_header h1 {
-    font-size: 35px;
     height: 100%;
+    font-size: 35px;
     line-height: 50px;
     flex: 1 9999 0%;
 }
 
 /* search space */
 .main_header .search_wrap {
-    flex: 0 1 auto;
-    height: 28px;
     min-width: 125px;
     width: 215px;
+    height: 28px;
     display: flex;
+    flex: 0 1 auto;
     align-items: center;
     justify-content: center;
-    background: #fafafa;
-    background: rgba(var(--b3f,250,250,250),1);
     padding: 3px 12px;
-    border: solid 1px rgba(var(--b6a,219,219,219),1);
+    background: #fafafa;
+    border: solid 1px rgba(var(--b6a, 219, 219, 219), 1);
     border-radius: 3px;
 }
 
 .search_wrap input {
     width: 100%;
     height: 100%;
-    color: rgba(var(--f52,142,142,142),1);
+    color: rgba(var(--f52, 142, 142, 142), 1);
     border: 0;
     font-size: 14px;
     line-height: 18px;
@@ -58,43 +57,51 @@
 }
 
 .search_wrap input::placeholder {
-    color: rgba(var(--f52,142,142,142),1);
     font-weight: 100;
+    color: rgba(var(--f52, 142, 142, 142), 1);
 }
 
 .search_wrap i {
-    color: rgba(var(--f52,142,142,142),.9);
+    color: rgba(var(--f52, 142, 142, 142), .9);
     margin-right: 6px;
     padding-top: 2px;
 }
 
 /* navigation */
 .main_header nav {
-    align-content: center;
-    align-items: center;
     display: flex;
     flex: 1 0 0%;
+    align-content: center;
+    align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-end;
 }
 
 .main_header nav ul {
-    display: flex;
+    width: 100%;
     padding-left: 14px;
+    display: flex;
     white-space: nowrap;
     flex-direction: row;
-    width: 100%;
     justify-content: space-between;
     align-items: end;
 }
 
+.main_header nav ul li:not(:first-child) {
+    margin-left: 24px;
+}
+
 /* navigation : my profile (right) */
 .header_my_profile {
-    border-radius: 50%;
-    overflow: hidden;
     width: 21px;
     height: 21px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.header_my_profile a img {
+    object-fit: cover;
 }
 
 .header_my_profile a,
@@ -102,3 +109,311 @@
     width: 100%;
     height: 100%;
 }
+
+/* || main content space */
+main {
+    margin-top: 54px;
+}
+
+main .main_wrap {
+    /* display: flex;
+    flex-flow: row nowrap; */
+    max-width: 935px;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+/* feed wrap */
+.main_wrap .feed_wrap {
+    max-width: 614px;
+    width: 100%;
+    margin-right: 28px;
+    float: left;
+}
+
+/* recommend wrap (aside) */
+.main_wrap .recommend_aside {
+    max-width: 293px;
+    width: 100%;
+    height: 100vh;
+    margin-bottom: 30px;
+    position: fixed;
+    top: 88px;
+    left: 687px;
+    right: 0;
+    /* display: flex;
+    flex-direction: column; */
+}
+
+/* my profile - profile img, name, desc, transform */
+#my_profile {
+    height: auto;
+    margin: 18px 4px 10px 0px;
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+}
+
+#my_profile .profile_img {
+    width: 56px;
+    height: 56px;
+    margin: 5px 17px 5px 0px;
+    border-radius: 50%;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.profile_img>img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.my_info {
+    flex: auto;
+}
+
+.my_info em,
+.my_info span {
+    display: block;
+}
+
+.my_info em,
+.recommend_user_title em {
+    color: #262626;
+    font-weight: 600;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.my_info span,
+.recommend_user_title span {
+    color: #8E8E8E;
+}
+
+.my_transform,
+.users_list li button {
+    margin: -2px 0 -3px;
+    color: #0095f6;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    cursor: pointer;
+}
+
+.recommend_me {
+    width: 100%;
+    margin-bottom: 12px;
+    display: inline-block;
+}
+
+.recommend_me .title {
+    padding: 4px 0px;
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.recommend_me .title h4 {
+    margin: -3px 0 -4px;
+    color: #8e8e8e;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 18px;
+}
+
+.recommend_me .title button {
+    margin: -2px 0 -3px;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+    color: #262626;
+}
+
+/* recommend section : users list */
+.users_list {
+    padding: 8px 0px;
+}
+
+.users_list li {
+    padding: 8px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* flex: 0 0 auto; */
+}
+
+.recommend_user_img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 12px;
+    overflow: hidden;
+}
+
+.recommend_user_img img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.recommend_user_title {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+}
+
+.recommend_user_title span {
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* footer */
+footer .footer_link_list {
+    margin-bottom: 16px;
+}
+
+.footer_link_list a,
+address {
+    color: #c7c7c7;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 13px;
+}
+
+.footer_link_list a:not(:last-of-type)::after {
+    content: '・';
+    display: inline-block;
+    margin: 0 0.25em 0 0.25em;
+}
+
+/* || users feed space */
+
+/* users story section */
+.users_story {
+    background: #fff;
+    margin-bottom: 24px;
+    margin-top: 0;
+    padding: 16px 0;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+}
+
+.users_story .users_story_content {
+    width: 100%;
+    height: 84px;
+    position: relative;
+}
+
+.arrows {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+}
+
+.arrows i {
+    width: 25px;
+    height: 25px;
+    font-size: 14px;
+    line-height: 18px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin: 0px 10px;
+    box-shadow: 0px 1px 13px rgb(0, 0, 0, .25);
+    z-index: 1;
+}
+
+.arrows i::before {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: inline-block;
+    vertical-align: sub;
+}
+
+.users_story_content > div {
+    width: 100%;
+    height: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    -ms-overflow-style: none; /* IE, Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+.users_story_content > div::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+.story {
+    display: flex;
+    flex-direction: row;
+    /* padding: 0px 10px; */
+}
+
+.story li {
+    height: 100%;
+    padding: 0 4px;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.story li:first-of-type {
+    padding-left: 14px;
+}
+
+.story li:last-of-type {
+    padding-right: 14px;
+}
+
+.story li > div {
+    width: 66px;
+    height: 66px;
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.story li > div::before {
+    content: '';
+    display: block;
+    width: 66px;
+    height: 66px;
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid #e4455f;
+    box-sizing: border-box;
+}
+
+.story li > div img {
+    height: 100%;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    object-fit: cover;
+    box-sizing: border-box;
+}
+
+.story li > em {
+    max-width: 74px;
+    font-size: 12px;
+    text-align: center;
+    line-height: 16px;
+    letter-spacing: .01em;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+/* || users feed section */
