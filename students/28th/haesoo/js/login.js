@@ -19,26 +19,12 @@ function handleKeyup(event) {
 
   if (!loginButton.disabled) {
     loginButton.addEventListener("click", handleButtonClick);
-    pressEnterKey();
+    if (event.keyCode === 13) goMainPage();
   }
 }
 
 function handleButtonClick() {
   goMainPage();
-}
-
-function pressEnterKey() {
-  loginId.addEventListener("keyup", (event) => {
-    if (event.keyCode === 13) {
-      goMainPage();
-    }
-  });
-
-  loginPassword.addEventListener("keyup", (event) => {
-    if (event.keyCode === 13) {
-      goMainPage();
-    }
-  });
 }
 
 function goMainPage() {
