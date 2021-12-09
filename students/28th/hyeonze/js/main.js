@@ -30,7 +30,7 @@ window.onload = function() {
     });
 
     const addComment = (el) => {
-        el.innerHTML = `<strong>username </strong>${inputUpload.value}<small> 방금전</small><i class="fas fa-times-circle"></i><i class="far fa-heart hearts"></i>`;
+        el.innerHTML = `<strong>username </strong>${inputUpload.value}<small> 방금전</small><i class="fas fa-times-circle circles"></i><i class="far fa-heart hearts"></i>`;
         if (!contentFlag) return;
 
         comments.appendChild(el);
@@ -40,7 +40,6 @@ window.onload = function() {
     }
 
     const handleComment = (event) => {
-        // console.dir(event.target);
         const eventClassName = event.target.className;
 
         if(eventClassName === 'btn_upload') addComment(document.createElement('span'));
