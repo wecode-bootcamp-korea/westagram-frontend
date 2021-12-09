@@ -1,8 +1,9 @@
-const inputId = document.querySelector("#input");
+const inputId = document.querySelector("#id_input");
 const inputPassword = document.querySelector("#password");
 const button = document.querySelector("#btn-login");
+const body = document.querySelector("body");
 
-function loginBtn() {
+function activateLoginBtn() {
     let idValue = inputId.value;
     let passwordValue = inputPassword.value;
 
@@ -10,12 +11,22 @@ function loginBtn() {
         button.disabled = false;
         button.style.cursor = "pointer";
         button.style.backgroundColor = "#1c7ed6";
-    }else {
+    } else {
         button.disabled = true;
         button.style.cursor = "default";
         button.style.backgroundColor = "#bfdffd";
     }
 };
 
-inputId.addEventListener('keyup', loginBtn);
-inputPassword.addEventListener('keyup', loginBtn);
+function clickLoginBtn() {
+    location.href="main.html";
+};
+function enterLogin(e) {
+    if (e.keyCode==13 && button.disabled === false) {
+        clickLoginBtn();
+    };
+};
+
+window.addEventListener('keydown',einterLogin);
+inputId.addEventListener('keyup', activateLoginBtn);
+inputPassword.addEventListener('keyup', activateLoginBtn);
