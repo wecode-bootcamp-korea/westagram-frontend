@@ -1,6 +1,6 @@
 const replyInput = document.querySelector('#reply-input');
 const replyBtn = document.querySelector('#reply-button');
-const replyList = document.querySelector('.feed-replys');
+const replyList = document.querySelector('.feed-replyList');
 const replyForm = document.querySelector('.feed-reply-form');
 
 const replyBtnActive = () => {

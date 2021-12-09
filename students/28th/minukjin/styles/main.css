@@ -1,15 +1,19 @@
 .header-wrap {
   display: flex;
   justify-content: center;
-  border-bottom: 1px solid rgb(200, 200, 200);
   margin-bottom: 5rem;
+  border-bottom: 1px solid rgb(200, 200, 200);
 }
 
 header {
   display: flex;
-  font-size: 5rem;
   width: 30%;
   margin-right: 2rem;
+  font-size: 5rem;
+}
+
+h1 {
+  margin: 1rem;
 }
 
 h3 {
@@ -25,35 +29,35 @@ header i {
   margin: 1.5rem;
   padding: 1rem;
   padding-right: 2.2rem;
-  order: -1;
   border-right: 2px solid black;
+  order: -1;
 }
-header h1 {
-  margin: 1rem;
-}
+
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 40%;
 }
+
 .search {
   position: relative;
 }
+
 .search input {
   width: 25rem;
   padding: 0.6rem;
   border: 1px solid rgb(219, 219, 219);
   border-radius: 5px;
-  background-color: rgb(240, 240, 240);
+  background: rgb(240, 240, 240);
   text-align: center;
 }
 
 .search > i {
   position: absolute;
   left: 8rem;
-  font-size: 1.5rem;
   color: rgb(200, 200, 200);
+  font-size: 1.5rem;
 }
 
 .main-wrap {
@@ -69,6 +73,7 @@ nav {
   border: 1px solid rgb(219, 219, 219);
   border-radius: 3px;
 }
+
 .feed-header {
   display: flex;
   justify-content: space-between;
@@ -76,14 +81,17 @@ nav {
   padding: 2rem;
   text-align: center;
 }
+
 .feed-profile {
   display: flex;
   align-items: center;
   width: 50%;
 }
+
 .feed-profile h3 {
   font-weight: bold;
 }
+
 .feed-profile img {
   display: inline-block;
   width: 5rem;
@@ -95,9 +103,10 @@ nav {
 }
 
 .feed-more i {
-  font-size: 2rem;
   color: rgb(190, 190, 190);
+  font-size: 2rem;
 }
+
 .feed-image img {
   display: inline-block;
   width: 100%;
@@ -122,6 +131,7 @@ nav {
   align-items: center;
   margin: 1rem 0;
 }
+
 .feed-like img {
   width: 3rem;
   height: 3rem;
@@ -133,22 +143,26 @@ nav {
   display: flex;
   margin-bottom: 1rem;
 }
+
 .feed-content p {
   width: 60%;
-  overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  overflow: hidden;
 }
 
 .feed-content span {
   margin-right: 0.7rem;
 }
+
 .feed-content button {
   color: rgb(205, 205, 205);
 }
+
 .feed-reply {
   position: relative;
 }
+
 .feed-reply > div {
   display: flex;
   align-items: center;
@@ -157,32 +171,37 @@ nav {
 .feed-reply span {
   margin-right: 0.7rem;
 }
+
 .feed-reply i {
   position: absolute;
   right: 0;
   font-size: 1.5rem;
   order: 10;
 }
+
 .feed-reply-time {
   color: rgb(210, 210, 210);
   font-weight: 400;
 }
+
 .feed-reply-form {
   position: relative;
 }
+
 .feed-reply-form input {
   width: 100%;
   padding: 1rem;
   border: none;
   border-top: 1px solid rgb(219, 219, 219);
-  background-color: rgb(250, 250, 250);
+  background: rgb(250, 250, 250);
 }
+
 .feed-reply-form button {
-  font-size: 1.2rem;
   position: absolute;
   top: 12px;
   right: 20px;
   color: rgb(197, 225, 251);
+  font-size: 1.2rem;
 }
 
 aside {
@@ -190,63 +209,73 @@ aside {
   margin-left: 3rem;
   font-size: 1.5rem;
 }
+
 aside p,
 aside button {
   font-weight: bold;
 }
+
 aside span {
   color: rgb(190, 190, 190);
 }
+
 article {
   margin: 0 0 1.5rem 1.5rem;
   padding: 0 0 1.5rem;
 }
+
 .aside-profile {
   display: flex;
   align-items: center;
 }
+
 .aside-profile img {
   width: 5rem;
   height: 5rem;
   margin-right: 1rem;
   border-radius: 50%;
 }
+
 .aside-box {
   position: relative;
-  border: 1px solid rgb(219, 219, 219);
   padding: 1.5rem;
+  border: 1px solid rgb(219, 219, 219);
   border-radius: 3px;
 }
+
 .aside-box h3 {
-  font-size: 1.5rem;
   color: rgb(190, 190, 190);
+  font-size: 1.5rem;
 }
+
 .aside-box > button {
   position: absolute;
   top: 15px;
   right: 15px;
 }
+
 .story-box {
   display: flex;
-  margin-top: 1rem;
   align-items: center;
+  margin-top: 1rem;
 }
+
 .story-box img {
-  background-image: linear-gradient(pink, yellow);
-  padding: 1px;
   width: 4rem;
   height: 4rem;
   margin: 0.2rem 1rem 0.2rem 0.2rem;
-  border-color: transparent;
+  padding: 1px;
   border-width: 1px;
   border-style: solid;
+  border-color: transparent;
   border-radius: 50%;
+  background-image: linear-gradient(pink, yellow);
 }
 
 .recommend-box {
   display: flex;
-  margin-top: 0.7rem;
   align-items: center;
+  margin-top: 0.7rem;
 }
 
 .recommend-box img {
@@ -256,6 +285,7 @@ article {
   border: 1px solid rgb(219, 219, 219);
   border-radius: 50%;
 }
+
 .recommend-box button {
   position: absolute;
   right: 15px;
@@ -265,7 +295,7 @@ article {
 .recommend-box span {
   display: inline-block;
   width: 30%;
-  overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  overflow: hidden;
 }
