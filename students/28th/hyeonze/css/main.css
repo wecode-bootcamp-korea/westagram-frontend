@@ -100,7 +100,7 @@ nav .btns:after {
     display: inline-block;
     position: relative;
     right: 85px;
-    top: 7px;
+    top: 3px;
     width: 4px;
     height: 4px;
     border-radius: 50%;
@@ -111,6 +111,74 @@ nav .btns img {
     width: 32px;
     height: 32px;
     margin-left: 35px;
+}
+
+nav .btns span:last-child {
+    position: relative;
+}
+
+nav .btns span:last-child:before {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    display: inline-block;
+    left: 33px;
+    top: -2px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #000;
+}
+
+nav .btns span:last-child img {
+    width: 32px;
+    height: 32px;
+    margin-left: 35px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    cursor: pointer;
+}
+
+
+nav .btns span:last-child ul.profile_menu:before{
+    content: "";
+    position: absolute;
+    display: inline-block;
+    right: 23px;
+    top: -5px;
+    width: 10px;
+    height: 10px;
+    transform: rotate(45deg);
+    background: #fff;
+    box-shadow: -5px -5px 5px #eee;
+}
+
+nav .btns span:last-child ul.profile_menu{
+    display: none;
+    position: absolute;
+    left: -100px;
+    top: 46px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px #eee, -5px -5px 5px #eee;
+}
+
+nav .btns span:last-child ul.profile_menu.on{
+    display: block;
+}
+
+nav .btns span:last-child ul.profile_menu li{
+    width: 180px;
+    padding: 10px;
+    background: #fff;
+}
+
+nav .btns span:last-child ul.profile_menu li:last-child{
+    border-top: 1px solid #dbdbdb;
+}
+
+nav .btns span:last-child ul.profile_menu li i{
+    display: inline-block;
+    width: 20px;
 }
 
 main {
@@ -220,6 +288,7 @@ main .feeds .comments i.hearts {
     position: absolute;
     right: 20px;
     transition: color 1s;
+    cursor: pointer;
 }
 
 main .feeds .comments i.red {
@@ -229,6 +298,7 @@ main .feeds .comments i.red {
 main .feeds .comments i.fa-times-circle{
     margin-left: 5px;
     color: #a3a3a3;
+    cursor: pointer;
 }
 
 main .feeds .add_comments {
@@ -271,6 +341,27 @@ main .main-right img {
     border-radius: 50%;
 }
 
+main .main-right .stories img {
+    z-index: 2;
+    border: 2px solid #fff;
+}
+
+main .main-right .stories ul li:before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    z-index: 1;
+    left: 12px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: yellow;
+    background: -webkit-repeating-linear-gradient(120deg, #ff04a3, #f7ab27 100%, #ff3366 100%);
+    background: -moz-repeating-linear-gradient(120deg, #ff04a3, #f7ab27 100%, #ff3366 100%);
+    background: -o-repeating-linear-gradient(120deg, #ff04a3, #f7ab27 100%, #ff3366 100%);
+    background: repeating-linear-gradient(120deg, #ff04a3, #f7ab27 100%, #ff3366 100%);
+}
+
 main .main-right .user {
     position: relative;
 }
@@ -299,7 +390,7 @@ main .main-right .user span:last-child {
     top: 40px;
     color: #9b9b9b;
 }
-/* sotries */
+/* stories */
 main .main-right .stories {
     position: relative;
     display: flex;

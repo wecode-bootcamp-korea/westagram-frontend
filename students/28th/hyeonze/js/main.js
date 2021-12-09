@@ -5,8 +5,15 @@ window.onload = function() {
     let contentFlag = false;
     let comments = document.querySelector('.comments');
     let hearts = document.querySelectorAll('.hearts');
+    let profileBtn = document.querySelector('.profile');
+    let profileMenu = document.querySelector('.profile_menu');
 
-    // 댓글좋아요기능 / 삭제기능
+    // 프로필버튼
+    profileBtn.addEventListener("click", (e) => {
+        profileMenu.classList.toggle('on');
+    });
+    
+    // 댓글좋아요기능 + 삭제기능
     comments.addEventListener("click", (e) => {
         console.log(e.target);
         if (e.target.classList.contains('hearts')) { // 좋아요기능
