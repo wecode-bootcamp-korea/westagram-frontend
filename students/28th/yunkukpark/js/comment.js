@@ -1,4 +1,5 @@
 (() => {
+  const commentButtonAtController = document.querySelector('.fa-comment');
   const commentWrapper = document.querySelector('.comment-wrapper');
   const commentSubmitButton = document.querySelector('.comment-submit-button');
   const commentButton = document.querySelector('.button-primary');
@@ -47,8 +48,6 @@
     feedCommentItem.appendChild(commentLikeButtonWrapper);
 
     feedCommentList.appendChild(feedCommentItem);
-
-    console.log(feedCommentItem);
   };
 
   const checkFilled = (input) => {
@@ -66,4 +65,8 @@
 
   commentWrapper.addEventListener('keyup', handleCommentButton);
   commentSubmitButton.addEventListener('click', submitComment);
+
+  commentButtonAtController.addEventListener('click', () => {
+    commentInput.focus();
+  });
 })();
