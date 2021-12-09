@@ -1,29 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Westagram.main</title>
+  <link rel="stylesheet" href="common.css">
+  <link rel="stylesheet" href="main.css">
+  <script src="https://kit.fontawesome.com/e264982194.js" crossorigin="anonymous"></script>
 </head>
-<body>
-  <nav>
-    <div class="logo"></div>
-    <div class="searchbar"><input type="text"></div>
-    <div class="menubox"></div>
-  </nav>
-  <section>
-    <div class="feeds">
-      <article></article>
-    </div>
-    <div class="main-right">
-      <div class="profile"></div>
-      <div class="story"></div>
-      <div class="recommendation"></div>
-    </div>
-  </section>
-  <footer>
 
-  </footer>
+<body>
+  <article>
+    <div class="nav">
+      <div class="navLogo">
+        <i class="fab fa-instagram"></i>
+        <h1>Instagram</h1>
+      </div>
+      <div class="navSearchbar">
+        <i class="fas fa-search"></i>
+        <input type="text" placeholder="검색">
+      </div>
+      <div class="navMenu">
+        <div class="navMenu-content">
+        <img id=navMenuImg alt="seadrch-img" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png">
+        <img id=navMenuImg alt="heart-img" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png">
+        <img id=navMenuImg alt="mypage-img" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png">
+        </div>
+      </div>
+    </div>
+  </article>
+  <main>
+    <section class="mainContents">
+      <div class="feeds">
+        <div>
+          <div class="feed-top">
+            <div class="feed-account">
+              <img alt="feedprofile" src="feedprofile.JPG" class="roundimg">
+              <a href="#">__mjee</a>
+            </div>
+            <i class="fas fa-ellipsis-h"></i>
+          </div>
+          <div class="feed-img">
+            <img alt="feedimg" src="feedimg.jpg" class="feedimg">
+          </div>
+          <div class="commentBox">
+            <div class="likesButton"></div>
+            <div class="wholikethis"></div>
+            <div class="comments"></div>
+            <div class="writeaComment">
+              <textarea placeholder="댓글 달기..."></textarea>
+              <button>게시</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="main-right">
+          <div class="profile">
+            <div class="pfp">
+              <img alt="pfp" src="profilepicture.JPG" class="roundimg">
+            </div>
+            <div class="myprofile">
+              <span>rlaydtjs</span>
+              <span>김용선</span>
+            </div>
+          </div>
+          <div class="story">
+            <div class="story-top">
+              <div class="story-top-header">
+              <span>스토리</span>
+              <span>모두 보기</span>
+            </div>
+            <div>
+              <div>사진 및 아이디 &몇분전</div>
+              <div>사진 및 아이디 &몇분전</div>
+              <div>사진 및 아이디 &몇분전</div>
+              <div>사진 및 아이디 &몇분전</div>
+            </div>
+          </div>
+          <div class="rec">
+            <div class="rec-top">
+              <span>회원님을 위한 추천</span>
+              <span>모두 보기</span>
+            </div>
+            <div>
+              <div>사진 및 아이디 인기 팔로우</div>
+              <div>사진 및 아이디 인기 팔로우</div>
+              <div>사진 및 아이디 인기 팔로우</div>
+              <div>사진 및 아이디 인기 팔로우</div>
+            </div>
+          </div>
+          </div>
+          <div class="addInfo">
+            <a href="#">Instagram 정보</a>
+            <a href="#">지원</a>
+            <a href="#">홍보 센터</a>
+            <a href="#">API</a>
+            <a href="#">채용 정보</a>
+            <a href="#">개인정보처리방침</a>
+            <a href="#">약관</a>
+            <a href="#">디렉터리</a>
+            <a href="#">프로필</a>
+            <a href="#">해시태그</a>
+            <a href="#">언어</a>
+            <a href="#">©2019 INSTAGRAM</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="main.js"></script>
 </body>
+
 </html>

@@ -1,15 +1,22 @@
-const inputContainer = document.querySelector("inputContainer");
 
-inputContainer.addEventListener("keyup", (e) => {
-  const btn = document.querySelector("btn");
-  const inputIdVal = document.querySelector(".inputId").value;
-  const inputPwVal = document.querySelector(".inputPw").value;
-  if (inputIdValength && inputPwVal.length >= 3) {
-    btn.style.backgroundColor = "#0095F6";
-  } else if (!inputIdVal || inputPwVal.length < 3) {
-    btn.style.backgroundColor = "#b2dffc";
-  }
-});
-// function wrongAlert() {
-//   alert('잘못된 비밀번호입니다. 다시 확인하세요.')
-// }
+
+const loginId = document.querySelector("#inputId");
+const loginPw = document.querySelector("#inputPw");
+const loginButton = document.querySelector(".btn");
+
+function loginBtn() {
+    let idValue = loginId.value;
+    let pwValue = loginPw.value;
+
+    if(idValue.length > 2 && pwValue.length > 2) {
+      loginButton.disabled = false;
+      loginButton.style.backgroundColor = "#1c7ed6";
+    } else {
+      loginButton.disabled = true;
+      loginButton.style.backgroundColor = "#C0DFFD";
+    }
+};
+
+loginId.addEventListener('keyup', loginBtn);
+loginPw.addEventListener('keyup', loginBtn);
+
