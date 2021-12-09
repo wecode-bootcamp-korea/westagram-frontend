@@ -272,19 +272,33 @@ main {
   font-size: 24px;
 }
 
+.feed-controler i,
+.fas.is-liked {
+  cursor: pointer;
+  transition: opacity 300ms ease-in-out, color 0.3s ease-in-out;
+}
+
+.feed-controler i:hover,
+.icon-group.left i:hover {
+  opacity: 0.5;
+}
+
 .icon-group {
   display: flex;
   align-items: center;
 }
 
+.icon-group.left i.fas {
+  color: transparent;
+}
+
+i.fas.is-liked.fa-heart {
+  color: #ff4747;
+}
+
 .icon-group.left i {
   position: relative;
   opacity: 1;
-  transition: opacity 300ms ease-in-out;
-}
-
-.icon-group.left i:hover {
-  opacity: 0.5;
 }
 
 .icon-item {
