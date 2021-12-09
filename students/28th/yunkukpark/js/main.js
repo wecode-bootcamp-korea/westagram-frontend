@@ -1,6 +1,6 @@
 const commentWrapper = document.querySelector('.comment-wrapper');
 const commentSubmitButton = document.querySelector('.comment-submit-button');
-const commentButton = document.querySelector('.user-info-button');
+const commentButton = document.querySelector('.button-primary');
 const commentInput = document.querySelector('input[name=comment]');
 
 const setLayout = () => {
