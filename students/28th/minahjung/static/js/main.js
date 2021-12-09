@@ -99,7 +99,10 @@ writeBtn.addEventListener('click', function () {
         if (e.key === 'Enter') {
             if (!(e.shiftKey)) {
                 e.preventDefault();
-                writeReply(replyContent.value);
+                writeReply(replyContent.value.replaceAll('\t', '<br />'));
+            }
+            if (e.shiftKey) {
+                replyContent.value = `${replyContent.value + '\t'}`;
             }
         }
     }
