@@ -147,90 +147,97 @@ const observer = new IntersectionObserver(callback, options)
 observer.observe($feedEnd);
 
 
-const $newFeed = document.createElement('article');
 
 function loading() {
+    const $newFeed = document.createElement('article');
     $newFeed.classList.add('skeleton');
     $newFeed.innerHTML = skeletonHtml;
     $feeds.appendChild($newFeed);
     displayCount++;
     setTimeout(() => {
-        displayFeed(displayCount);
+        displayFeed($newFeed, displayCount);
     }, 2000)
 
 }
 
-// let commentHtml;
-function displayFeed(index) {
-       const data = feedData[index];
-    //    console.log(data)
-       $newFeed.classList.remove('skeleton');
-       $newFeed.classList.add('feed');
-    //    data.comment.forEach((com) => console.log(com.commentId, com.commentText))
-    console.log(data.comment)   
-    data.comment.forEach((com) => {
-        console.log(com.commentId, com.commentText)
-    })
-    const commentHtml = data.comment.map((com) => {
-        return `
-            <ul class="comment">
-                <span class="comment_item">
-                    <span class="comment__id">${com.commentId}</span>
-                    <span class="comment__text">${com.commentText}</span>
-                </span>
-                <button class="comment__delete-button">
-                    <i class="fas fa-times"></i>
-                </button>
-            </ul>`
-       }).join('');
-       console.log(commentHtml ?? 'where is it...?')
-       $newFeed.innerHTML = `
-       <article class="feed">
-       <div class="feed__header">
-           <span class="feed__header--user">
-               <span class="feed__header--img-container">
-                   <img class="feed__header--img" src="${data.profileImg}" alt="">
-               </span>
-               <span class="feed__header--id">${data.feedId}</span>
-           </span>
-           <button class="feed_header--button">
-               <i class="fas fa-ellipsis-h"></i>
-           </button>
-       </div>
-       <div class="feed__img-container">
-           <img src="${data.imgContent}" alt="" class="feed-img">
-       </div>
-       <div class="feed__buttons">
-           <span class="feed__buttons1">
-               <button class="feed__button">
-                   <i class="far fa-heart"></i>
-               </button>
-               <button class="feed__button">
-                   <i class="far fa-comment"></i>
-               </button>
-               <button class="feed__button">
-                   <i class="far fa-share-square"></i>
-               </button>
-           </span>
-           <span class="feed__buttons2">
-               <button class="feed__button">
-                   <i class="far fa-bookmark"></i>
-               </button>
-           </span>
-       </div>
-       <div class="people-who-like">
-           <img src="images/profile-img2.jpg" alt="" class="people-who-like__img">
-           <span class="people-who-like__comment">${data.likesCount[0]}님 외 ${data.likesCount.length}명이 좋아합니다.</span>
-       </div>
-       <div class="feed__textContent">${data.textContent}</div>
-       <li class="comments">
-           ${commentHtml}
-       </li>
-       <form class="comment__input">
-           <input type="text" placeholder=" 댓글 달기..." name="" id="" class="comment__input--text">
-           <button class="comment__input--button">게시</button>
-       </form>
-   </article>
-       `
+function displayFeed(feedEl, index) {
+    const data = feedData[index];
+    console.log(data)
+    feedEl.classList.remove('skeleton');
+
+    if(data) {
+        feedEl.classList.add('feed');
+        const commentHtml = data.comment.map((com) => {
+            return `
+                <ul class="comment">
+                    <span class="comment_item">
+                        <span class="comment__id">${com.commentId}</span>
+                        <span class="comment__text">${com.commentText}</span>
+                    </span>
+                    <button class="comment__delete-button">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </ul>`
+        }).join('');
+
+        feedEl.innerHTML = `
+                <div class="feed__header">
+                    <span class="feed__header--user">
+                        <span class="feed__header--img-container">
+                            <img class="feed__header--img" src="${data.profileImg}" alt="">
+                        </span>
+                        <span class="feed__header--id">${data.feedId}
+                        </span>
+                    </span>
+                    <button class="feed_header--button">
+                        <i class="fas fa-ellipsis-h"></i>
+                    </button>
+                </div>
+                <div class="feed__img-container">
+                    <img src="${data.imgContent}" alt="" class="feed-img">
+                </div>
+                <div class="feed__buttons">
+                    <span class="feed__buttons1">
+                        <button class="feed__button">
+                            <i class="far fa-heart"></i>
+                        </button>
+                        <button class="feed__button">
+                            <i class="far fa-comment"></i>
+                        </button>
+                        <button class="feed__button">
+                            <i class="far fa-share-square"></i>
+                        </button>
+                    </span>
+                    <span class="feed__buttons2">
+                        <button class="feed__button">
+                            <i class="far fa-bookmark"></i>
+                        </button>
+                    </span>
+                </div>
+                <div class="people-who-like">
+                    <img src="images/profile-img2.jpg" alt="" class="people-who-like__img">
+                    <span class="people-who-like__comment">${data.likesCount[0]}님 외 ${data.likesCount.length}명이 좋아합니다.</span>
+                </div>
+                <div class="feed__textContent">${data.textContent}</div>
+                <li class="comments">
+                    ${commentHtml}
+                </li>
+                <form class="comment__input">
+                    <input type="text" placeholder=" 댓글 달기..." name="" id="" class="comment__input--text">
+                    <button class="comment__input--button">게시</button>
+                </form>
+        `
+    } else {
+        feedEl.classList.add('noFeedContainer');
+        feedEl.innerHTML = noFeedHtml;
+        $feedEnd.unObserve;
+    }
 }
+
+const noFeedHtml = `
+    <div class="noFeed">
+        <i id="noFeed__icon" class="fas fa-exclamation-circle"></i>
+        <p class="noFeed__text">불러올 피드가 없습니다.</p>
+    </div>
+`
 
