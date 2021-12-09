@@ -1,25 +1,60 @@
+const feedImage = document.querySelector('.feed-main');
 const feedControler = document.querySelector('.feed-controler');
 const feedHeartIcon = feedControler.querySelector('.fa-heart');
 
 const commentList = document.querySelector('.feed-comment-list');
-let commentHeartIcons = commentList.querySelectorAll('.fa-heart');
+const commentHeartIcons = commentList.querySelectorAll('.fa-heart');
 
-const detectAndChangeHeartIcons = () => {
-  commentHeartIcons = commentList.querySelectorAll('.fa-heart');
-  commentHeartIcons.forEach((commentHeartIcon, index) => {
-    console.log(commentHeartIcon);
-    commentHeartIcon.addEventListener('click', () => {
-      console.log(index);
-    });
-  });
+const handleCommentHeartIcon = (event) => {
+  const classListArray = event.target.classList.value.split(' ');
+  const isHeartButton = classListArray.find((classItem) =>
+    classItem === 'fa-heart' ? true : false,
+  );
+  if (event.target && isHeartButton) {
+    changeHeartIcon(event.target);
+  }
 };
 
-const feedCommentObserver = new MutationObserver(detectAndChangeHeartIcons);
+const checkLiked = () => {
+  const classList = feedHeartIcon.classList;
+  const classListArray = classList.value.split(' ');
+  const isLiked = classListArray.find((classItem) => (classItem === 'fas' ? true : false));
+  return isLiked;
+};
 
-feedCommentObserver.observe(commentList, {
-  childList: true,
-});
+const setLikeHit = () => {
+  const likeHitSpan = document.querySelector('.like-hit');
+  let likeHit = Number(document.querySelector('.like-hit').innerText);
+  const isLiked = checkLiked();
+  isLiked ? (likeHitSpan.innerHTML = likeHit + 1) : (likeHitSpan.innerHTML = likeHit - 1);
+};
 
-commentHeartIcons.forEach((commentHeart) => {
-  commentHeart.addEventListener('click', (event) => console.log('들어옴'));
-});
+const changeHeartIcon = (icon2Change) => {
+  const borderIconClassName = 'far';
+  const filledIconClassName = 'fas';
+  const classList = icon2Change.classList;
+
+  const classListArray = classList.value.split(' ');
+  const isSolidIcon = classListArray.find((classItem) =>
+    classItem === borderIconClassName ? true : false,
+  );
+
+  classList.toggle('is-liked');
+  if (isSolidIcon) {
+    classList.remove(borderIconClassName);
+    classList.add(filledIconClassName);
+  } else {
+    classList.remove(filledIconClassName);
+    classList.add(borderIconClassName);
+  }
+};
+
+const handleLikeHit = () => {
+  changeHeartIcon(feedHeartIcon);
+  setLikeHit();
+};
+
+feedImage.addEventListener('dblclick', handleLikeHit);
+feedHeartIcon.addEventListener('click', handleLikeHit);
+
+commentList.addEventListener('click', handleCommentHeartIcon);
