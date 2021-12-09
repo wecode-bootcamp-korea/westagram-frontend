@@ -12,7 +12,7 @@ window.onload = function() {
     profileBtn.addEventListener("click", (e) => {
         profileMenu.classList.toggle('on');
     });
-    
+
     // 댓글좋아요기능 + 삭제기능
     comments.addEventListener("click", (e) => {
         console.log(e.target);
@@ -42,6 +42,7 @@ window.onload = function() {
 
         comments.appendChild(el);
         inputUpload.value = "";
+        btnUpload.style.color = '#c5e2fa';
 
         hearts = document.querySelectorAll('.hearts');
     }
