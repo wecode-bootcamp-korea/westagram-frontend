@@ -23,7 +23,7 @@ document.getElementById('mainSearchInput').addEventListener('focusin',function(e
     const searchResultBox = document.getElementById('searchResultBox');
     searchIcon.style.display='none'
     searchResultBox.style.display='block'
-    searchResultBox.style.left='-1.1vw'
+    searchResultBox.style.left='-0.9vw'
     searchInput.style.paddingLeft='12px'
 })
 
@@ -62,8 +62,7 @@ const setInputCommentsSubmitBtnEvent = () =>{
     const inputCommentsSubmitBtn = document.querySelectorAll('#inputCommentsSubmitBtn');    
     const inputCommentsTextArea = document.querySelectorAll('#inputCommentsTextArea')
     for (let i=0; i<inputCommentsSubmitBtn.length; i++){
-        inputCommentsTextArea[i].addEventListener('input',function(event){
-            console.log(event.target.value);
+        const submitBtnChangeFunc = (event) =>{
             if (event.target.value.replace(/(^\s*)|(\s*$)/gi, "")){
                 inputCommentsSubmitBtn[i].style.opacity=1;
                 inputCommentsSubmitBtn[i].style.cursor='pointer';
@@ -71,23 +70,27 @@ const setInputCommentsSubmitBtnEvent = () =>{
                 inputCommentsSubmitBtn[i].style.opacity=0.3;
                 inputCommentsSubmitBtn[i].style.cursor='inherit'
             }
+        }
+        inputCommentsTextArea[i].addEventListener('input',function(event){
+            submitBtnChangeFunc(event);
+            
+        })
+        inputCommentsTextArea[i].addEventListener('keydown',function(event){
+            if (event.key==='Enter' && event.target.value.length>0){
+                addFeedComment(event);
+            }   
+            submitBtnChangeFunc(event);
         })
     }
 }
 
 setInputCommentsSubmitBtnEvent();
 
-document.getElementById('inputCommentsTextarea').addEventListener('keydown',function(event){
-    if (event.key==='Enter' && event.target.value.length>0){
-        addFeedComment(event);
-    }
-})
-
 const addFeedComment = (event) =>{
     const index = event.target.name;
     const feedCommentsBox = document.querySelectorAll('#feedCommentsBox');
     const inputCommentsTextArea = document.querySelectorAll('#inputCommentsTextarea');
-    const inputComments = inputCommentsTextArea[index].value;
+    let inputComments = inputCommentsTextArea[index].value.replace(/\n/g, "");
 
     if (inputComments.length>0){   
         const commentSpan = document.createElement('span');
@@ -96,9 +99,8 @@ const addFeedComment = (event) =>{
         clientName.id = 'feedCommentsBold';
         clientName.innerHTML = 'test2'
         commentSpan.appendChild(clientName);
-
+        
         const inputCommentsTextNode = document.createTextNode(inputComments);
-
         commentSpan.appendChild(inputCommentsTextNode);
         
 
@@ -119,8 +121,14 @@ const addFeedComment = (event) =>{
         commentSpan.append(removeBtn);
 
         feedCommentsBox[index].appendChild(commentSpan);
-        inputCommentsTextArea[index].value='';
-    }    
+        inputCommentsTextArea[index].focus();
+        inputCommentsTextArea[index].value=null;
+    }
+
+    if (event.target.tagName==='BUTTON'){
+        event.target.style.opacity=0.3;
+        event.target.style.cursor='inherit'
+    }
 }
 
 const likeClick = (event) =>{
@@ -161,7 +169,7 @@ document.getElementById('mainSearchInput').addEventListener('input',function(eve
         if(!checkChildren(result)){
             for (let i=0; i<result.length; i++){
                 const resultSpan = document.createElement('span');
-                resultSpan.innerHTML = result[i].id;
+                resultSpan.innerHTML = result[i].id+`  ${result[i].desc}`;
                 searchResult.appendChild(resultSpan);
             }
         }
@@ -209,3 +217,81 @@ const checkChildren = (result) =>{
         return false;
     }
 }
+
+//
+
+const navGoMain = () =>{
+    window.location.href='main.html'
+}
+
+const navDirectMessage = () =>{
+    const floatingArea = document.querySelector('#navBtnsFloatingArea')
+    if (floatingArea.children.length===0){
+        const newDmSpan = document.createElement('span');
+        newDmSpan.innerHTML = 'new direct message area';
+        floatingArea.appendChild(newDmSpan);
+    }
+    document.querySelector('#navBtnsFloatingBox').classList.add('active');
+    document.querySelector('#hideContainer').classList.add('active');
+    document.querySelector('#navBtnsArrowDiv').style.left = '113px'
+}
+
+const navNewPost = () =>{
+    const floatingArea = document.querySelector('#navBtnsFloatingArea')
+    if (floatingArea.children.length===0){
+        const newPostSpan = document.createElement('span');
+        newPostSpan.innerHTML = 'new post area';
+        floatingArea.appendChild(newPostSpan);
+    }
+    document.querySelector('#navBtnsFloatingBox').classList.add('active');
+    document.querySelector('#hideContainer').classList.add('active');
+    document.querySelector('#navBtnsArrowDiv').style.left = '160px'
+}
+
+const navTripFeeds = () =>{
+    const floatingArea = document.querySelector('#navBtnsFloatingArea')
+    if (floatingArea.children.length===0){
+        const tripSpan = document.createElement('span');
+        tripSpan.innerHTML = 'trip feeds area';
+        floatingArea.appendChild(tripSpan);
+    }
+    document.querySelector('#navBtnsFloatingBox').classList.add('active');
+    document.querySelector('#hideContainer').classList.add('active');
+    document.querySelector('#navBtnsArrowDiv').style.left = '205px'
+}
+
+const navViewLikes = () =>{
+    const floatingArea = document.querySelector('#navBtnsFloatingArea')
+    if (floatingArea.children.length===0){
+        const likeSpan = document.createElement('span');
+        likeSpan.innerHTML = 'like area';
+        floatingArea.appendChild(likeSpan);
+    }
+    document.querySelector('#navBtnsFloatingBox').classList.add('active');
+    document.querySelector('#hideContainer').classList.add('active');
+    document.querySelector('#navBtnsArrowDiv').style.left = '254px'
+}
+
+const navViewProfile = () =>{
+    const floatingArea = document.querySelector('#navBtnsFloatingArea')
+    if (floatingArea.children.length===0){
+        const profileSpan = document.createElement('span');
+        profileSpan.innerHTML = 'profile area'
+        floatingArea.appendChild(profileSpan);
+    }
+    document.querySelector('#navBtnsFloatingBox').classList.add('active');
+    document.querySelector('#hideContainer').classList.add('active');
+    document.querySelector('#navBtnsArrowDiv').style.left = '304px'
+}
+
+const removeNavActive = () =>{
+    document.querySelector('#navBtnsFloatingBox').classList.remove('active');
+    document.querySelector('#hideContainer').classList.remove('active');
+    const floatingArea = document.querySelector('#navBtnsFloatingArea')
+    if (floatingArea.hasChildNodes){
+        for (let i=0; i<floatingArea.children.length; i++){
+            floatingArea.removeChild(floatingArea.children[i])
+        }
+    } 
+}
+

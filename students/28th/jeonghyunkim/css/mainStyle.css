@@ -14,6 +14,19 @@ html,body{
     background-color: rgba(var(--b3f,250,250,250),1);
 }
 
+#hideContainer{
+    position:fixed;
+    width:100%;
+    min-height:100%;
+    z-index:10000;
+    display:none;
+}
+
+#hideContainer.active{
+    display:block;
+}
+
+
 #mainContainer #navContainer{
     width:100%;
     height:60px;
@@ -39,8 +52,12 @@ html,body{
     font-size:34px;
     flex:1 0 127px;
     font-family:'Billabong', sans-serif;
-    cursor: pointer;
 }
+
+#mainContainer #navContainer #navRowBar header span{
+    cursor:pointer;
+}
+
 #mainContainer #navContainer #navRowBar #navRowBarSearch{
     display: flex;
     flex-direction: column;
@@ -65,13 +82,24 @@ html,body{
     display:none;
 }
 
+@media screen and (max-width:1001px){
+    #mainContainer #navContainer #navRowBar #navRowBarSearch{
+        height:180px;
+    }
+    #mainContainer #navContainer #navRowBar #navRowBarSearch #navRowBarSearchInput #mainSearchInput{
+        margin-top:70px;
+    }
+}
+
 
 #mainContainer #navContainer #navRowBar #navRowBarSearch #searchResultBox #searchArrowDiv{
     position: relative;
     width: 14px;
     height: 14px;
-    left:9.8vw;
+    top:10px;
+    left:9.3vw;
     background: rgba(var(--d87,255,255,255),1);
+    box-shadow: 0 0 5px 1px rgba(var(--jb7,0,0,0),.0975);
     border: 1px solid rgba(var(--f23,255,255,255),1);
     transform: rotate(45deg);
     z-index:2;
@@ -80,22 +108,31 @@ html,body{
 
 #mainContainer #navContainer #navRowBar #navRowBarSearch #searchResultBox #searchResult{
     position:relative;
-    top:-9px;
-    left:17px;
-    width:18.3vw;
+    display:flex;
+    flex-direction: column; 
+    top:0px;
+    left:-1.1vw;
+    width:22vw;
     height: 100%;
     background: rgba(var(--d87,255,255,255),1);
     box-shadow: 0 0 5px 1px rgba(var(--jb7,0,0,0),.0975);
     border-radius: 6px;
     transition:0.3s ease;
-    z-index:1;
-    display:flex;
-    flex-direction: column;
+    z-index:2;
+    margin:0;
+    padding:0;
+
 }
 
 #mainContainer #navContainer #navRowBar #navRowBarSearch #searchResultBox #searchResult span{
-    margin:0;
-    padding:0;
+    border-bottom:1px solid #adadad;
+    padding:3px 0 ;
+    padding-left:10px;
+    margin-bottom:3px;
+}
+
+#mainContainer #navContainer #navRowBar #navRowBarSearch #searchResultBox #searchResult span:hover{
+    background-color:#ededed
 }
 
 
@@ -110,24 +147,73 @@ html,body{
 
 #mainContainer #navContainer #navRowBar #navBtns{
     display:flex;
-    flex-direction: row;
-    justify-content: flex-end;
+    flex-direction: column;
     flex:1 0 127px;
     font-size:25px;
+    margin-top:50px;
+    height:80px;
 }
 
-#mainContainer #navContainer #navRowBar #navBtns i{
+#mainContainer #navContainer #navRowBar #navBtns #navBtnsBox{
+    display:flex;
+    flex-direction: column;
+}
+
+#mainContainer #navContainer #navRowBar #navBtns #navBtnsBox #navBtnsArea{
+    display:flex;
+    flex-direction:row;
+    justify-content: flex-end;
+}
+
+#mainContainer #navContainer #navRowBar #navBtns #navBtnsBox #navBtnsArea i{
     margin-right:23px;
     cursor:pointer;
 }
 
-#mainContainer #navContainer #navRowBar #navBtns #profileImg{
+#mainContainer #navContainer #navRowBar #navBtns #navBtnsBox #navBtnsArea #profileImg{
     width:28px;
     height:28px;
     background-image:url('../images/jh_profile.jpg');
     background-size:30px 30px;
     border-radius:50%;
     cursor:pointer;
+}
+
+#mainContainer #navContainer #navRowBar #navBtns #navBtnsBox #navBtnsFloatingBox{
+    display:flex;
+    flex-direction: column;
+    visibility: hidden;
+}
+
+#mainContainer #navContainer #navRowBar #navBtns #navBtnsBox #navBtnsFloatingBox.active{
+    display:flex;
+    flex-direction: column;
+    visibility: visible;
+}
+
+#mainContainer #navContainer #navRowBar #navBtns #navBtnsBox #navBtnsFloatingBox #navBtnsArrowDiv{
+    position: relative;
+    width: 14px;
+    height: 14px;
+    top:6px;
+    left:304px;
+    background: rgba(var(--d87,255,255,255),1);
+    box-shadow: 0 0 5px 1px rgba(var(--jb7,0,0,0),.0975);
+    border: 1px solid rgba(var(--f23,255,255,255),1);
+    transform: rotate(45deg);
+    z-index:10000;
+}
+
+#mainContainer #navContainer #navRowBar #navBtns #navBtnsBox #navBtnsFloatingBox #navBtnsFloatingArea{
+    position:relative;
+    align-self:flex-end;
+    top:-2px;
+    width:256px;
+    background: rgba(var(--d87,255,255,255),1);
+    box-shadow: 0 0 5px 1px rgba(var(--jb7,0,0,0),.0975);
+    border-radius: 6px;
+    z-index:10000;
+    padding:4px 4px 4px 10px;
 }
 
 #mainContainer #bodyContainer{

@@ -7,10 +7,13 @@
         <link rel="stylesheet" href="../css/mainStyle.css">
     </head>
     <body>
+        <article id='hideContainer' onclick='removeNavActive()'>
+                
+        </article>
         <main id='mainContainer'>
             <article id='navContainer'>
                 <nav id='navRowBar'>
-                    <header>Westagram</header>
+                    <header><span onclick='navGoMain()'>Westagram</span></header>
                     <div id='navRowBarSearch'>
                         <div id='navRowBarSearchInput'>
                             <i class="fas fa-search" id='searchIcon'></i>
@@ -26,16 +29,27 @@
                         </div>
                     </div>
                     <section id='navBtns'>
-                        <i class="fas fa-home"></i>
-                        <i class="fas fa-location-arrow"></i>
-                        <i class="far fa-plus-square"></i>
-                        <i class="far fa-compass"></i>
-                        <i class="far fa-heart"></i>
-                        <div id='profileImg'></div>
+                        <div id='navBtnsBox'>
+                            <section id='navBtnsArea'>
+                                <i class="fas fa-home" onclick='navGoMain()'></i>
+                                <i class="fas fa-location-arrow" onclick='navDirectMessage()'></i>
+                                <i class="far fa-plus-square" onclick='navNewPost()'></i>
+                                <i class="far fa-compass" onclick='navTripFeeds()'></i>
+                                <i class="far fa-heart" onclick='navViewLikes()'></i>
+                                <div id='profileImg' onclick='navViewProfile()'></div>
+                            </section>
+                            <section id='navBtnsFloatingBox'>
+                                <div id='navBtnsArrowDiv'>
+        
+                                </div>
+                                <div id='navBtnsFloatingArea'>
+                                    
+                                </div>
+                            </section>
+                        </div>
                     </section>
                 </nav>
             </article>
-            
             <article id='bodyContainer'>
                 <article id='feedContainer'>
                     <section id='friendsFeed'>
