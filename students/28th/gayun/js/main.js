@@ -230,7 +230,7 @@ function displayFeed(feedEl, index) {
     } else {
         feedEl.classList.add('noFeedContainer');
         feedEl.innerHTML = noFeedHtml;
-        $feedEnd.unObserve;
+        observer.unobserve($feedEnd);
     }
 }
 
