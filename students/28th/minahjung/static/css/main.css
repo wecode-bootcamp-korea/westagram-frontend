@@ -147,6 +147,10 @@ img.story_next {
     filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(163deg) brightness(103%) contrast(96%) drop-shadow(0px 0px 3px #808080);
 }
 
+.btn_style:hover, .btn_size {
+    cursor: pointer;
+}
+
 .story_wrap {
     overflow: hidden;
 }
@@ -435,6 +439,14 @@ button.post_icons_btn {
     font-size: 0.85rem;
 }
 
+.submit_reply:hover {
+    cursor: default;
+}
+
+.submit_reply:not([disabled]):hover {
+    cursor: pointer;
+}
+
 /* 사이드메뉴 */
 aside {
     width: 293px;
@@ -449,9 +461,11 @@ aside {
 }
 
 .aside_profile {
-    width: 66px;
-    height: 66px;
-    line-height: 61px;
+    width: 62px;
+    height: 62px;
+    line-height: 56px;
+    background-color: 1px solid #fff;
+    border-radius: 50%;
     text-align: center;
 }
 
@@ -469,7 +483,7 @@ aside {
 .aside_id > p {
     font-size: 0.8rem;
     width: 100%;
-    margin-left: 12px;
+    padding-left: 12px;
     line-height: 1.2rem;
 }
 
@@ -485,6 +499,7 @@ aside {
 .change_account_btn {
     margin: 0 auto;
     padding: 0;
+    padding-left: 8px;
     background-color: #fff;
     border: 0;
     color: #0095f6;
@@ -509,4 +524,72 @@ aside {
 .aside_recommend_header > span:last-child {
     font-size: 0.77rem;
     color: #262626;
+}
+
+.aside_recommend_body {
+    padding: 12px 0 12px 6px;
+}
+
+.aside_recommend_account {
+    display: flex;
+    align-items: center;
+    padding: 4px 0;
+}
+
+.recommend_profile {
+    width: 44px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.recommend_photo {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.recommend_id {
+    width: 200px;
+}
+
+.recommend_id > p {
+    font-size: 0.74rem;
+}
+
+.recommend_id > p:first-child {
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.recommend_id > p:last-child {
+    color: #8e8e8e;
+}
+
+button.follow_btn {
+    padding-left: 4px;
+}
+
+.aside_tags {
+    margin-bottom: 20px;
+}
+
+.aside_tags > li {
+    font-size: 0.7rem;
+    display: inline;
+}
+
+.aside_tags > li > a {
+    color: #c7c7c7;
+}
+
+.aside_tags > li:not(:first-child)::before {
+    content: '\00B7';
+    padding-right: 6px;
+    color: #c7c7c7;
+}
+
+.copyright > p {
+    font-size: 0.7rem;
+    color: #c7c7c7;
 }

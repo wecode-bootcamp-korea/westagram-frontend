@@ -13,12 +13,14 @@ function slideNextStoryPhoto() {
     storyBox.style.transform = `translateX(-${moveDistance + 20}px)`;
     storyBox.style.transition = 'transform 0.3s ease-in-out';
     forwardBtn.style.display = 'block';
+    backwardBtn.style.display = 'none';
 }
 
 function slidePrevStoryPhoto() {
     storyBox.style.transform = `translateX(${0}px)`;
     storyBox.style.transition = 'transform 0.3s ease-in-out';
     forwardBtn.style.display = 'none';
+    backwardBtn.style.display = 'block';
 }
 
 backwardBtn.addEventListener('click', slideNextStoryPhoto);
