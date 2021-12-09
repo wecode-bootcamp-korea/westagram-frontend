@@ -364,18 +364,22 @@ button.post_icons_btn {
     font-weight: 600;
 }
 
-.post_content > a {
+.post_content > a, .reply_wrap > a {
     font-size: 0.8rem;
     font-weight: 600;
 }
 
-.post_account > a:hover {
-    cursor: pointer;
+.post_content > a:hover, .reply_wrap > a:hover {
+    text-decoration: underline;
 }
 
-.post_content > p {
+.post_content > p, .reply_wrap > p {
     display: inline;
     font-size: 0.8rem;
+}
+
+.reply_wrap > p {
+    margin-left: 8px;
 }
 
 .post_created_at {

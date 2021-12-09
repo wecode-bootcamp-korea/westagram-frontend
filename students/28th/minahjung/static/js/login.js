@@ -19,6 +19,7 @@ function changeInputAndButton() {
 
 user_id.addEventListener('keyup', changeInputAndButton);
 user_pw.addEventListener('keyup', changeInputAndButton);
+
 login_btn.addEventListener('click', function () {
     if (!this.hasAttribute('disabled')) {
         location.href = './main.html';
