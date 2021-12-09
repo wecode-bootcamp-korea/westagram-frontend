@@ -207,10 +207,20 @@ main .feeds .comments span:first-child {
     font-weight: bold;
 }
 
-main .feeds .comments i {
+main .feeds .comments i.hearts {
     color: #a3a3a3;
     position: absolute;
     right: 20px;
+    transition: color 1s;
+}
+
+main .feeds .comments i.red {
+    color: #f00;
+}
+
+main .feeds .comments i.fa-times-circle{
+    margin-left: 5px;
+    color: #a3a3a3;
 }
 
 main .feeds .add_comments {
@@ -382,6 +392,7 @@ main .main-right .recommended {
 
 .recommended ul li div {
     position: relative;
+    width: 100%;
 }
 
 .recommended ul li div span {
@@ -400,7 +411,7 @@ main .main-right .recommended {
 }
 
 .recommended ul li div span:last-child {
-    left: 190px;
+    right: -83px;
     top: -15px;
     color: #3e99ed;
 }
