@@ -34,15 +34,14 @@ html,body{
     display:flex;
     flex-direction:row;
     justify-content: center;
-    align-content:self;
     background-color: rgba(var(--d87,255,255,255),1);
     border-bottom: 1px solid rgba(var(--b6a,219,219,219),1);
-    z-index:9999;
+    z-index:10001;
 }
 
 #mainContainer #navContainer #navRowBar{
     max-width:935px;
-    width:935px;
+    width:100%;
     display:flex;
     flex-direction:row;
 }
@@ -59,8 +58,6 @@ html,body{
 }
 
 #mainContainer #navContainer #navRowBar #navRowBarSearch{
-    display: flex;
-    flex-direction: column;
     align-self:center;
 }
 
@@ -76,6 +73,14 @@ html,body{
     cursor: text;
     padding-left:30px;
     transition:0.3s ease;
+}
+
+#mainContainer #navContainer #navRowBar #navRowBarSearch #navRowBarSearchInput #searchIcon{
+    position:relative;
+    font-size:12px;
+    color:#8d8d8d;
+    top:0px;
+    left:25px;
 }
 
 #mainContainer #navContainer #navRowBar #navRowBarSearch #searchResultBox{
@@ -128,16 +133,6 @@ html,body{
     background-color:#ededed
 }
 
-
-#mainContainer #navContainer #navRowBar #navRowBarSearch #searchIcon{
-    position:relative;
-    font-size:12px;
-    color:#8d8d8d;
-    top:0px;
-    left:25px;
-    
-}
-
 #mainContainer #navContainer #navRowBar #navBtns{
     align-self:center;
     flex:1 0 127px;
@@ -170,14 +165,14 @@ html,body{
 }
 
 #mainContainer #navContainer #navRowBar #navBtns #navBtnsBox #navBtnsFloatingBox{
-    position:absolute;
+    display:flex;
+    flex-direction: column;
     align-self: flex-end;
+    position:absolute;
     visibility: hidden;
 }
 
 #mainContainer #navContainer #navRowBar #navBtns #navBtnsBox #navBtnsFloatingBox.active{
-    display:flex;
-    flex-direction: column;
     visibility: visible;
 }
 
@@ -190,7 +185,6 @@ html,body{
     box-shadow: 0 0 5px 1px rgba(var(--jb7,0,0,0),.0975);
     border: 1px solid rgba(var(--f23,255,255,255),1);
     transform: rotate(45deg);
-    z-index:10000;
 }
 
 #mainContainer #navContainer #navRowBar #navBtns #navBtnsBox #navBtnsFloatingBox #navBtnsFloatingArea{
@@ -200,7 +194,6 @@ html,body{
     background: rgba(var(--d87,255,255,255),1);
     box-shadow: 0 0 5px 1px rgba(var(--jb7,0,0,0),.0975);
     border-radius: 6px;
-    z-index:10000;
     padding:4px 4px 4px 10px;
 }
 
@@ -216,7 +209,6 @@ html,body{
 #mainContainer #bodyContainer #feedContainer{
     max-width:605px;
     width:100%;
-    float:left;
     margin-right:28px;
 }
 
@@ -350,7 +342,6 @@ html,body{
     justify-content: space-between;
     margin-top:18px;
     padding:0 15px;
-    z-index:9999;
 }
 
 #mainContainer #bodyContainer #feedContainer #feeds #feedBtns #feedOptionBtns i{
