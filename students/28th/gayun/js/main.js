@@ -11,6 +11,8 @@ const $myButton = document.querySelector('.my');
 const $peopleWhoLike = document.querySelector('.people-who-like__comment');
 const $searchResultContainer = document.querySelector('.search__result--container');
 
+const idArr = [["images/profile-img2.jpg", 'wecode_bootcamp', 'wecode | 위코드'], ["images/profile-img.jpg", 'i_love_coding', '아코딩'], [null, 'sunglass', null], [null, 'sweat_shirt', null], [null, 'newziland4043', null], [null, 'huggy_woggy__33', null]];
+
 $search.addEventListener('keyup', searchId);
 document.addEventListener('click', handleMyMenu);
 
@@ -168,7 +170,6 @@ function handleEvent(e) {
 
 function displayFeed(feedEl, index) {
     const data = feedData[index];
-    // console.log(data)
     feedEl.classList.remove('skeleton');
     feedEl.addEventListener('click', handleEvent);
 
@@ -190,8 +191,8 @@ function displayFeed(feedEl, index) {
         feedEl.innerHTML = `
                 <div class="feed__header">
                     <span class="feed__header--user">
-                        <span class="feed__header--img-container">
-                            <img class="feed__header--img" src="${data.profileImg}" alt="">
+                        <span class="feed__header--img-container profile-container">
+                            <img class="feed__header--img profile-img" src="${data.profileImg}" alt="">
                         </span>
                         <span class="feed__header--id">${data.feedId}
                         </span>
