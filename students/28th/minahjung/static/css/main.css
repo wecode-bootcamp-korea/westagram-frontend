@@ -14,20 +14,19 @@ header {
 }
 
 nav {
-    width: 100%;
-    height: 60px;
     background-color: #fff;
     border-bottom: 1px solid #dbdbdb;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
+    z-index: 3;
 }
 
 .nav_wrap {
     width: 100%;
     max-width: 975px;
-    height: inherit;
+    height: 60px;
     margin: 0 auto;
     padding: 0 20px;
     vertical-align: middle;
@@ -113,7 +112,7 @@ main {
     justify-content: center;
 }
 
-section {
+main > section {
     width: 642px;
     padding-right: 28px;
     position: relative;
@@ -146,10 +145,6 @@ img.story_next {
 .btn_style {
     width: 23px;
     filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(163deg) brightness(103%) contrast(96%) drop-shadow(0px 0px 3px #808080);
-}
-
-.btn_style:hover {
-    cursor: pointer;
 }
 
 .story_wrap {
@@ -241,6 +236,7 @@ img.story_next {
 
 /* 포스트 */
 article {
+    margin-bottom: 24px;
     width: 100%;
     height: 100%;
     border: 1px solid #dbdbdb;
@@ -289,10 +285,6 @@ img.post_option {
     vertical-align: middle;
 }
 
-.post_info:hover, .post_icons_btn {
-    cursor: pointer;
-}
-
 .post_body {
     width: 100%;
     height: 100%;
@@ -334,10 +326,6 @@ img.post_next {
     opacity: 0.6;
 }
 
-.btn_size:hover {
-    cursor: pointer;
-}
-
 .post_icons_wrap {
     width: 100%;
     height: 54px;
@@ -365,15 +353,82 @@ button.post_icons_btn {
     filter: invert(55%) sepia(1%) saturate(0%) hue-rotate(184deg) brightness(99%) contrast(85%);
 }
 
-.post_reply_wrap {
-    height: 100%;
+.post_content_wrap {
+    padding-left: 16px;
+    padding-right: 16px;
 }
 
 .post_likes {
     height: 27px;
-    padding-left: 16px;
     font-size: 0.875rem;
     font-weight: 600;
+}
+
+.post_content > a {
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.post_account > a:hover {
+    cursor: pointer;
+}
+
+.post_content > p {
+    display: inline;
+    font-size: 0.8rem;
+}
+
+.post_created_at {
+    padding: 8px 0 20px 0;
+}
+
+.post_created_at > p {
+    font-size: 0.6rem;
+    color: #8e8e8e;
+}
+
+.post_reply_wrap {
+    padding: 5px 16px;
+    border-top: 1px solid #efefef;
+    display: flex;
+    vertical-align: middle;
+}
+
+.emoticon_btn {
+    width: 40px;
+    padding-left: 0;
+    padding-right: 17px;
+}
+
+.post_reply_wrap > textarea {
+    resize: none;
+    width: 100%;
+    height: 40px;
+    min-height: 40px;
+    padding: 0;
+    padding-top: 9px;
+    padding-bottom: 8px;
+    border: 0;
+    outline: 0;
+    overflow-y: hidden;
+    font-family: inherit;
+    font-size: 0.88rem;
+}
+
+.post_reply_wrap > textarea::placeholder {
+    color: #8e8e8e;
+}
+
+.emoticon {
+    width: 23px;
+    vertical-align: middle;
+}
+
+.submit_reply {
+    min-width: 40px;
+    color: rgba(0, 149, 246, 0.3);
+    font-weight: 600;
+    font-size: 0.85rem;
 }
 
 /* 사이드메뉴 */

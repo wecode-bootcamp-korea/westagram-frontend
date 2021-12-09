@@ -34,6 +34,7 @@ const maxPhotoNum = document.querySelectorAll('.post_photos').length;
 const distance = container.clientWidth;
 
 (function () {
+    // show post photo
     if (maxPhotoNum === 1) {
         prevBtn.style.display = 'none';
         nextBtn.style.display = 'none';
@@ -42,7 +43,7 @@ const distance = container.clientWidth;
     let index = 0;
     prevBtn.style.display = 'none';
 
-    function slideToNextPhoto() {
+    function showNextPhoto() {
         if (index === maxPhotoNum - 1) return;
         index += 1;
         container.style.transform = `translateX(${-distance * index}px)`;
@@ -51,7 +52,7 @@ const distance = container.clientWidth;
         if (index === maxPhotoNum - 1) nextBtn.style.display = 'none';
     };
 
-    function slideToPrevPhoto() {
+    function showPrevPhoto() {
         if (index === 0) return;
         index -= 1;
         container.style.transform = `translateX(${distance * index}px)`;
@@ -60,6 +61,28 @@ const distance = container.clientWidth;
         if (maxPhotoNum > 1) nextBtn.style.display = 'block';
     };
 
-    nextBtn.addEventListener('click', slideToNextPhoto);
-    prevBtn.addEventListener('click', slideToPrevPhoto);
+    nextBtn.addEventListener('click', showNextPhoto);
+    prevBtn.addEventListener('click', showPrevPhoto);
 })();
+
+// resize reply textarea
+const resizeTextareaHeight = function (textarea) {
+    this.textarea = textarea;
+    this.autoHeight = function () {
+        var element_ = document.querySelector(`${this.textarea}`);
+        element_.onkeydown = function (e) {
+            height(e);
+        }
+        element_.onkeyup = function (e) {
+            height(e);
+        }
+        function height(e) {
+            element_.style.height = '1px';
+            element_.style.height = `${e.currentTarget.scrollHeight}px`;
+        }
+    }
+}
+
+const textarea_reply = new resizeTextareaHeight('.write_reply');
+
+textarea_reply.autoHeight();
