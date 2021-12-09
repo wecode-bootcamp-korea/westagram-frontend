@@ -126,6 +126,7 @@ const $feedEnd = document.querySelector('.feed__end');
 console.log($feedEnd)
 const callback = (entry, observer) => {
     if(entry[0].isIntersecting && entry[0].intersectionRatio === 1) {
+        console.log(entry)
          loading();
     } else {
 

@@ -4,7 +4,7 @@
     --blue:rgb(55,135,237);
     --grey: rgb(250, 249, 249);
     --border-grey: rgb(224,224,224);
-    --border-grey-darker: rgb(214,213,214);
+    --border-grey-darker: rgb(142,142,142);
     --light-blue: rgb(185,217,251);
 
     --container-padding: 1rem;
@@ -14,9 +14,9 @@
     --profile-img-container-M: 2rem;
     --profile-img-container-S: 1rem;
     --profile-img-size: 88%;
-    --border: 0.2rem;
+    --profile-border: 0.2rem;
     --profile-img-border-radius: 3em;
-
+    --profile-img-gradient: linear-gradient(39deg, rgba(254,218,117,1) 0%, rgba(250,126,30,1) 22%, rgba(214,41,118,1) 44%, rgba(150,47,191,1) 72%, rgba(79,91,213,1) 100%);
 }
 
 * {
@@ -147,6 +147,15 @@ input::placeholder {color: var(--border-grey)}
     border-top: 1px solid var(--border-grey);
 }
 
+.top-story__wrap {
+    display: flex;
+    padding: var(--container-padding);
+}
+
+.top-story__container {
+    margin-left: var(--item-padding);
+}
+
 main {
     display: flex;
     width: 100%;
@@ -186,12 +195,13 @@ main {
     width: var(--profile-img-container-L);
     height: var(--profile-img-container-L);
     border-radius: var(--profile-img-border-radius);
-    background: linear-gradient(39deg, rgba(254,218,117,1) 0%, rgba(250,126,30,1) 22%, rgba(214,41,118,1) 44%, rgba(150,47,191,1) 72%, rgba(79,91,213,1) 100%);}
+    background: var(--profile-img-gradient);
+}
 
 .feed__header--img {
     width: var(--profile-img-size);
     height: var(--profile-img-size);
-    border: var(--border) solid var(--white);
+    border: var(--profile-border) solid var(--white);
     border-radius: var(--profile-img-border-radius);
 }
 
@@ -236,9 +246,6 @@ main {
     font-size: 0.9rem;
 }
 
-.feed__textContent {
-}
-
 .comments {
     margin-top: var(--container-padding);
     list-style: none;
@@ -254,7 +261,6 @@ main {
 
 .comment__item {
     margin-right: var(--item-padding);
-    background-color: violet;
 }
 
 .comment__id {
@@ -267,6 +273,7 @@ main {
     justify-content: space-between;
     align-items: center;
     height: 3rem;
+    padding-left: var(--container-padding);
     border-top: 1px solid var(--border-grey);
 }
 
@@ -291,10 +298,9 @@ main {
     cursor: pointer;
 }
 
-
 .feed__end {
-    height: 10em;
-    background-color: violet;
+    width: 100%;
+    height: 10vh;
 }
 
 .skeleton {
@@ -405,23 +411,21 @@ main {
 }
 
 .account__id {
-    /* margin: 0; */
     font-weight: 800;
 }
 
 .account__name {
     display: flex;
-    justify-content: space-between;
-    color: gray
+    color: gray;
 }
 
-.account__name > p {
-    margin: 0;
-    font-weight: 500;
+.account__name > p:nth-child(1) {
+    font-weight: 600;
 }
 
 .account__name > p:nth-child(2) {
-    border-left: 1px solid gray;
+    margin-left: var(--item-padding);
+    font-weight: 350;
 }
 
 .main-right {
@@ -430,20 +434,21 @@ main {
 }
 
 .story {
-    padding: 0.5em;
+    padding: var(--container-padding);
     width: 100%;
-    height: 15em;
+    height: 15rem;
     border: 1px solid var(--border-grey);
     /* overflow: scroll; */
     background-color: var(--white);
-
 }
 
 .story__header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 2rem;
+    /* height: 2rem; */
+    color: var(--border-grey-darker);
+    font-weight: 600;
 }
 
 .story__header > button {
@@ -467,14 +472,21 @@ main {
     border-radius: 3rem;
 }
 
-.story__list > ul > span {
+.story__item--text {
     display: flex;
+    flex-direction: column;
     margin-left: 1rem;
+}
+
+.story__item--time {
+    margin-left: var(--item-padding);
+    font-size: 0.8rem;
+    color: gray;
 }
 
 .recommend {
     margin-top: 1em;
-    padding: 1rem;
+    padding: var(--container-padding);
     width: 100%;
     border: 1px solid var(--border-grey);
     background-color: var(--white);
@@ -484,10 +496,9 @@ main {
     display: flex;
     justify-content: space-between;
     margin-bottom: 0.5rem;
-}
-
-.recommend__header > span {
-    color: gray;
+    /* font-size: 2rem; */
+    font-weight: 600;
+    color: var(--border-grey-darker);
 }
 
 .recommend__header > button {
@@ -503,7 +514,6 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0;
 }
 
 .recommend__list > ul > span {
@@ -512,23 +522,23 @@ main {
 }
 
 .recommend__item--text > p {
-    margin: 0;
-    margin-left: 1em;
+    margin-left: var(--container-padding)
 }
 
-.recommend__list > ul > span > img {
-    width: 2em;
-    height: 2em;
-    border-radius: 3em;
+.recommend__item--img {
+    width: var(--profile-img-container-M);
+    height: var(--profile-img-container-M);
+    border-radius: var(--profile-img-border-radius);
 }
 
-.recommend__list > ul > span > span > p:nth-child(2) {
-    color: gray;
+.recommend__item--people {
+    color: var(--border-grey-darker);
+    font-size: 0.8rem;
 }
 
-.recommend__list > ul > button {
+.recommend__item--button {
     font-weight: 700;
-    color: rgb(0, 110, 255);
+    color: blue;
 }
 
 .hide {
@@ -536,23 +546,21 @@ main {
 }
 
 footer {
-    margin-top: 3em;
-    color: var(--border-grey);
-    font-size: 5px;
+    margin-top: var(--container-padding);
+    color: var(--border-grey-darker);
+    font-size: 0.6rem;
 }
 
 @media screen and (max-width: 700px) {
     main {
-        margin: 2em 0 0 0;
+        margin: 2rem 0 0 0;
     }
 
     .feeds-wrap {
         display: flex;
+        flex-direction: column;
         align-items: center;
-    }
-
-    .feeds {
-        margin: 0;
+        flex-basis: 100%;
     }
 
     .main-right {
