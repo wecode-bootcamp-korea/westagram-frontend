@@ -123,6 +123,7 @@ const skeletonHtml = `
         <div class="skeleton__comment--input"></div>
 `
 const $feedEnd = document.querySelector('.feed__end');
+console.log($feedEnd)
 const callback = (entry, observer) => {
     if(entry[0].isIntersecting && entry[0].intersectionRatio === 1) {
          loading();
@@ -175,7 +176,7 @@ function displayFeed(feedEl, index) {
         const commentHtml = data.comment.map((com) => {
             return `
                 <ul class="comment">
-                    <span class="comment_item">
+                    <span class="comment__item">
                         <span class="comment__id">${com.commentId}</span>
                         <span class="comment__text">${com.commentText}</span>
                     </span>
@@ -201,32 +202,34 @@ function displayFeed(feedEl, index) {
                 <div class="feed__img-container">
                     <img src="${data.imgContent}" alt="" class="feed-img">
                 </div>
-                <div class="feed__buttons">
-                    <span class="feed__buttons1">
-                        <button class="feed__button">
-                            <i class="far fa-heart"></i>
-                        </button>
-                        <button class="feed__button">
-                            <i class="far fa-comment"></i>
-                        </button>
-                        <button class="feed__button">
-                            <i class="far fa-share-square"></i>
-                        </button>
-                    </span>
-                    <span class="feed__buttons2">
-                        <button class="feed__button">
-                            <i class="far fa-bookmark"></i>
-                        </button>
-                    </span>
+                <div class="feed__contents-wrap">
+                    <div class="feed__buttons">
+                        <span class="feed__buttons1">
+                            <button class="feed__button">
+                                <i class="far fa-heart"></i>
+                            </button>
+                            <button class="feed__button">
+                                <i class="far fa-comment"></i>
+                            </button>
+                            <button class="feed__button">
+                                <i class="far fa-share-square"></i>
+                            </button>
+                        </span>
+                        <span class="feed__buttons2">
+                            <button class="feed__button">
+                                <i class="far fa-bookmark"></i>
+                            </button>
+                        </span>
+                    </div>
+                    <div class="people-who-like">
+                        <img src="images/profile-img2.jpg" alt="" class="people-who-like__img">
+                        <p class="people-who-like__comment" data-num=${index}>${data.likesCount[0]}님 외 ${data.likesCount.length}명이 좋아합니다.</p>
+                    </div>
+                    <div class="feed__textContent">${data.textContent}</div>
+                    <li class="comments">
+                        ${commentHtml}
+                    </li>
                 </div>
-                <div class="people-who-like">
-                    <img src="images/profile-img2.jpg" alt="" class="people-who-like__img">
-                    <span class="people-who-like__comment" data-num=${index}>${data.likesCount[0]}님 외 ${data.likesCount.length}명이 좋아합니다.</span>
-                </div>
-                <div class="feed__textContent">${data.textContent}</div>
-                <li class="comments">
-                    ${commentHtml}
-                </li>
                 <form class="comment__input">
                     <input type="text" placeholder=" 댓글 달기..." name="" id="" class="comment__input--text">
                     <button class="comment__input--button">게시</button>
