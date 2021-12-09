@@ -34,7 +34,7 @@
 
     const commentLikeButtonWrapper = document.createElement('button');
     const commentLikeButton = document.createElement('i');
-    commentLikeButton.className = 'ic-heart';
+    commentLikeButton.className = 'far fa-heart';
     commentLikeButtonWrapper.appendChild(commentLikeButton);
 
     feedUserId.innerHTML = userId;
