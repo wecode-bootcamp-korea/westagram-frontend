@@ -10,6 +10,7 @@ const $deleteButton = document.querySelector('.comment__delete-button');
 const $myButton = document.querySelector('.my');
 const $peopleWhoLike = document.querySelector('.people-who-like__comment');
 const $searchResultContainer = document.querySelector('.search__result--container');
+const $searchResultWrap = document.querySelector('.search__result--wrap');
 
 const idArr = [["images/profile-img2.jpg", 'wecode_bootcamp', 'wecode | 위코드'], ["images/profile-img.jpg", 'i_love_coding', '아코딩'], [null, 'sunglass', null], [null, 'sweat_shirt', null], [null, 'newziland4043', null], [null, 'huggy_woggy__33', null]];
 
@@ -74,9 +75,9 @@ function handleLike(e) {
 function searchId(e) {
     const target = e.target;
     if(target.value.length > 0) {
-        $searchResultContainer.classList.remove('hide');
+        $searchResultWrap.classList.remove('hide');
     } else {
-        $searchResultContainer.classList.add('hide');
+        $searchResultWrap.classList.add('hide');
     }
     const filteredId = idArr.filter((id) => {
         return id[1].includes(target.value);
@@ -84,17 +85,18 @@ function searchId(e) {
     const defaultImgUrl = 'images/default_profile-img.png';
     const html = filteredId.map((id) => {
         return `
-            <ul class="search__result--item">
+            <li class="search__result--item">
                 <img src="${id[0] ?? defaultImgUrl}" alt="" class="search__result--img">
                 <span class="search__result--text">
                     <p class="search__result--title">${id[1]}</p>
                     <p class="search__result--subtitle">${id[2]}</p>
                 </span>
-            </ul>
+            </li>
 
         `
     }).join('');
     $searchResultContainer.innerHTML = html;
+    console.log(html)
 }
 
 function handleMyMenu(e) {
@@ -158,7 +160,6 @@ function loading() {
 
 function handleEvent(e) {
     const target = e.target.className;
-    // console.log(target.className)
     if(target === 'fas fa-times') {
         deleteComment(e);
     } else if(target === 'comment__input--button') {
