@@ -11,17 +11,11 @@ const $myButton = document.querySelector('.my');
 const $peopleWhoLike = document.querySelector('.people-who-like__comment');
 const $searchResultContainer = document.querySelector('.search__result--container');
 
-$commentButton.addEventListener('click', addComment);
-$commentContainer.addEventListener('click', deleteComment);
-$feedButtons.addEventListener('click', handleLike);
 $search.addEventListener('keyup', searchId);
 document.addEventListener('click', handleMyMenu);
 
-const idArr = [["images/profile-img2.jpg", 'wecode_bootcamp', 'wecode | 위코드'], ["images/profile-img.jpg", 'i_love_coding', '아코딩'], [null, 'sunglass', null], [null, 'sweat_shirt', null], [null, 'newziland4043', null], [null, 'huggy_woggy__33', null]];
-const peopleWhoLikeArr = ['ace123', 'bbi3', 'case_44', 'catcat_239', '23dd234'];
 const myId = 'canon_mj';
 
-$peopleWhoLike.textContent = `${peopleWhoLikeArr[0]}님 외 ${peopleWhoLikeArr.length - 1}명이 좋아합니다.`
 let feedData = [];
 async function fetchData() {
     feedData = await (await fetch('data/data.json')).json()
@@ -30,16 +24,17 @@ fetchData()
 
 let displayCount = 0;
 
-
 function addComment(e) {
     e.preventDefault();
-    const commentVal = $commentInput.value;
+    const target = e.target;
+    const $commentInput = target.previousSibling.previousSibling;
+    const $commentContainer = $commentInput.parentNode.previousSibling.previousSibling;
     const newCommentEl = document.createElement('ul');
     newCommentEl.classList.add('comment');
     newCommentEl.innerHTML = `
         <span class="comment_item">
             <span class="comment__id">${myId}</span>
-            <span class="comment__text">${commentVal}</span>
+            <span class="comment__text">${$commentInput.value}</span>
         </span>
         <button class="comment__delete-button">
             <i class="fas fa-times"></i>
@@ -53,27 +48,26 @@ function deleteComment(e) {
     const target = e.target;
     if(target.className !== 'fas fa-times') return;
     const commentItem = target.parentNode.parentNode;
+    const $commentContainer = commentItem.parentNode;
     $commentContainer.removeChild(commentItem);
 }
 
 function handleLike(e) {
     const target = e.target;
+    const $likeComment = target.parentNode.parentNode.parentNode.nextSibling.nextSibling.childNodes[2].nextSibling;
+    const feedNumber = $likeComment.dataset.num;
+    const likeList = feedData[feedNumber].likesCount;
 
-    if(!target.className.includes('fa-heart')) {
-        return;
-    } else {
-        target.classList.toggle('far');
-        target.classList.toggle('fas');
-        target.classList.toggle('liked');
-    }
+    target.classList.toggle('far');
+    target.classList.toggle('fas');
+    target.classList.toggle('liked');
+
     if(target.classList.contains('liked')) {
-        peopleWhoLikeArr.push(myId);
+        $likeComment.textContent = `${likeList[0]}님 외 ${likeList.length + 1}명이 좋아합니다.`
     } else {
-        peopleWhoLikeArr.pop();
+        $likeComment.textContent = `${likeList[0]}님 외 ${likeList.length}명이 좋아합니다.`
     }
-    $peopleWhoLike.textContent = `${peopleWhoLikeArr[0]}님 외 ${peopleWhoLikeArr.length - 1}명이 좋아합니다.`
 }
-
 
 function searchId(e) {
     const target = e.target;
@@ -146,8 +140,6 @@ let options = {
 const observer = new IntersectionObserver(callback, options)
 observer.observe($feedEnd);
 
-
-
 function loading() {
     const $newFeed = document.createElement('article');
     $newFeed.classList.add('skeleton');
@@ -160,10 +152,23 @@ function loading() {
 
 }
 
+function handleEvent(e) {
+    const target = e.target.className;
+    // console.log(target.className)
+    if(target === 'fas fa-times') {
+        deleteComment(e);
+    } else if(target === 'comment__input--button') {
+        addComment(e);
+    } else if(target.includes('fa-heart')) {
+        handleLike(e);
+    }
+}
+
 function displayFeed(feedEl, index) {
     const data = feedData[index];
-    console.log(data)
+    // console.log(data)
     feedEl.classList.remove('skeleton');
+    feedEl.addEventListener('click', handleEvent);
 
     if(data) {
         feedEl.classList.add('feed');
@@ -216,7 +221,7 @@ function displayFeed(feedEl, index) {
                 </div>
                 <div class="people-who-like">
                     <img src="images/profile-img2.jpg" alt="" class="people-who-like__img">
-                    <span class="people-who-like__comment">${data.likesCount[0]}님 외 ${data.likesCount.length}명이 좋아합니다.</span>
+                    <span class="people-who-like__comment" data-num=${index}>${data.likesCount[0]}님 외 ${data.likesCount.length}명이 좋아합니다.</span>
                 </div>
                 <div class="feed__textContent">${data.textContent}</div>
                 <li class="comments">
@@ -240,4 +245,3 @@ const noFeedHtml = `
         <p class="noFeed__text">불러올 피드가 없습니다.</p>
     </div>
 `
-
