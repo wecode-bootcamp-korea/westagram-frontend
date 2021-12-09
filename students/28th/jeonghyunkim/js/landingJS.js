@@ -50,7 +50,7 @@ inputPW.addEventListener('input',function(event){
 inputPW.addEventListener('keydown',function(event){
     if (event.key==='Enter'){
         if (inputID.value.includes('@') && inputPW.value.length>=5){
-            console.log('logined');
+            // console.log('logined');
         }else{
             alert('ID, PW를 모두 입력해주시기 바랍니다.');
         }

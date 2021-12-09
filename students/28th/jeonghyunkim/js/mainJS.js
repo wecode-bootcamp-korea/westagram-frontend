@@ -23,7 +23,6 @@ document.getElementById('mainSearchInput').addEventListener('focusin',function(e
     const searchResultBox = document.getElementById('searchResultBox');
     searchIcon.style.display='none'
     searchResultBox.style.display='block'
-    searchResultBox.style.left='-0.9vw'
     searchInput.style.paddingLeft='12px'
 })
 
@@ -33,7 +32,6 @@ document.getElementById('mainSearchInput').addEventListener('focusout',function(
     const searchResultBox = document.getElementById('searchResultBox');
     searchIcon.style.display='inline'
     searchResultBox.style.display='none'
-    searchResultBox.style.left='0vw'
     searchInput.style.paddingLeft='30px'
 })
 
@@ -233,7 +231,7 @@ const navDirectMessage = () =>{
     }
     document.querySelector('#navBtnsFloatingBox').classList.add('active');
     document.querySelector('#hideContainer').classList.add('active');
-    document.querySelector('#navBtnsArrowDiv').style.left = '113px'
+    document.querySelector('#navBtnsArrowDiv').style.transform='translateX(2.3em) rotate(45deg)'
 }
 
 const navNewPost = () =>{
@@ -245,7 +243,7 @@ const navNewPost = () =>{
     }
     document.querySelector('#navBtnsFloatingBox').classList.add('active');
     document.querySelector('#hideContainer').classList.add('active');
-    document.querySelector('#navBtnsArrowDiv').style.left = '160px'
+    document.querySelector('#navBtnsArrowDiv').style.transform='translateX(4.2em) rotate(45deg)'
 }
 
 const navTripFeeds = () =>{
@@ -257,7 +255,7 @@ const navTripFeeds = () =>{
     }
     document.querySelector('#navBtnsFloatingBox').classList.add('active');
     document.querySelector('#hideContainer').classList.add('active');
-    document.querySelector('#navBtnsArrowDiv').style.left = '205px'
+    document.querySelector('#navBtnsArrowDiv').style.transform='translateX(6em) rotate(45deg)'
 }
 
 const navViewLikes = () =>{
@@ -269,7 +267,7 @@ const navViewLikes = () =>{
     }
     document.querySelector('#navBtnsFloatingBox').classList.add('active');
     document.querySelector('#hideContainer').classList.add('active');
-    document.querySelector('#navBtnsArrowDiv').style.left = '254px'
+    document.querySelector('#navBtnsArrowDiv').style.transform='translateX(7.96em) rotate(45deg)'
 }
 
 const navViewProfile = () =>{
@@ -281,7 +279,7 @@ const navViewProfile = () =>{
     }
     document.querySelector('#navBtnsFloatingBox').classList.add('active');
     document.querySelector('#hideContainer').classList.add('active');
-    document.querySelector('#navBtnsArrowDiv').style.left = '304px'
+    document.querySelector('#navBtnsArrowDiv').style.transform='translateX(9.9em) rotate(45deg)'
 }
 
 const removeNavActive = () =>{

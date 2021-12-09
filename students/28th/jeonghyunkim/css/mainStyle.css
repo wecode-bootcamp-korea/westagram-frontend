@@ -4,6 +4,15 @@ html,body{
     height:100%;
 }
 
+@media screen and (max-width:1001px){
+    #mainContainer #navContainer #navRowBar #navRowBarSearch{
+        height:180px;
+    } 
+    #mainContainer #navContainer #navRowBar #navRowBarSearch #navRowBarSearchInput #mainSearchInput{
+        margin-top:70px;
+    }
+}
+
 #mainContainer{
     width:100%;
     min-height:100%;
@@ -34,6 +43,7 @@ html,body{
     display:flex;
     flex-direction:row;
     justify-content: center;
+    align-content:self;
     background-color: rgba(var(--d87,255,255,255),1);
     border-bottom: 1px solid rgba(var(--b6a,219,219,219),1);
     z-index:9999;
@@ -44,11 +54,10 @@ html,body{
     width:935px;
     display:flex;
     flex-direction:row;
-    justify-content: center;
-    align-items: center;
 }
 
 #mainContainer #navContainer #navRowBar header{
+    align-self:center;
     font-size:34px;
     flex:1 0 127px;
     font-family:'Billabong', sans-serif;
@@ -61,8 +70,9 @@ html,body{
 #mainContainer #navContainer #navRowBar #navRowBarSearch{
     display: flex;
     flex-direction: column;
-    height:80px;
+    align-self:center;
 }
+
 #mainContainer #navContainer #navRowBar #navRowBarSearch #navRowBarSearchInput #mainSearchInput{
     width:18.3vw;
     height:36px;
@@ -73,31 +83,25 @@ html,body{
     font-size: 14px;
     font-weight: 300;
     cursor: text;
-    margin-top:20px;
     padding-left:30px;
     transition:0.3s ease;
 }
+
 #mainContainer #navContainer #navRowBar #navRowBarSearch #searchResultBox{
-    position:relative;
+    position:absolute;
+    top:45px;
+    width:18.3vw;
+    height:100%;
+    min-height:180px;
     display:none;
 }
-
-@media screen and (max-width:1001px){
-    #mainContainer #navContainer #navRowBar #navRowBarSearch{
-        height:180px;
-    }
-    #mainContainer #navContainer #navRowBar #navRowBarSearch #navRowBarSearchInput #mainSearchInput{
-        margin-top:70px;
-    }
-}
-
 
 #mainContainer #navContainer #navRowBar #navRowBarSearch #searchResultBox #searchArrowDiv{
     position: relative;
     width: 14px;
     height: 14px;
     top:10px;
-    left:9.3vw;
+    left:8.5vw;
     background: rgba(var(--d87,255,255,255),1);
     box-shadow: 0 0 5px 1px rgba(var(--jb7,0,0,0),.0975);
     border: 1px solid rgba(var(--f23,255,255,255),1);
@@ -110,9 +114,7 @@ html,body{
     position:relative;
     display:flex;
     flex-direction: column; 
-    top:0px;
-    left:-1.1vw;
-    width:22vw;
+    width:100%;
     height: 100%;
     background: rgba(var(--d87,255,255,255),1);
     box-shadow: 0 0 5px 1px rgba(var(--jb7,0,0,0),.0975);
@@ -146,12 +148,9 @@ html,body{
 }
 
 #mainContainer #navContainer #navRowBar #navBtns{
-    display:flex;
-    flex-direction: column;
+    align-self:center;
     flex:1 0 127px;
     font-size:25px;
-    margin-top:50px;
-    height:80px;
 }
 
 #mainContainer #navContainer #navRowBar #navBtns #navBtnsBox{
@@ -180,8 +179,8 @@ html,body{
 }
 
 #mainContainer #navContainer #navRowBar #navBtns #navBtnsBox #navBtnsFloatingBox{
-    display:flex;
-    flex-direction: column;
+    position:absolute;
+    align-self: flex-end;
     visibility: hidden;
 }
 
@@ -195,8 +194,7 @@ html,body{
     position: relative;
     width: 14px;
     height: 14px;
-    top:6px;
-    left:304px;
+    top:35px;
     background: rgba(var(--d87,255,255,255),1);
     box-shadow: 0 0 5px 1px rgba(var(--jb7,0,0,0),.0975);
     border: 1px solid rgba(var(--f23,255,255,255),1);
@@ -206,8 +204,7 @@ html,body{
 
 #mainContainer #navContainer #navRowBar #navBtns #navBtnsBox #navBtnsFloatingBox #navBtnsFloatingArea{
     position:relative;
-    align-self:flex-end;
-    top:-2px;
+    top:25px;
     width:256px;
     background: rgba(var(--d87,255,255,255),1);
     box-shadow: 0 0 5px 1px rgba(var(--jb7,0,0,0),.0975);
@@ -278,9 +275,6 @@ html,body{
 #mainContainer #bodyContainer #feedContainer #feeds{
     background: rgba(var(--d87,255,255,255),1);
     border: 1px solid rgba(var(--b6a,219,219,219),1);
-    width:100%;
-    max-height:900px;
-    min-height:inherit;
     margin-bottom:100px;
 }
 
@@ -345,7 +339,6 @@ html,body{
     background-image:url('../images/cafe_photos.jpg');
     background-size:cover;
     background-repeat: no-repeat;
-    width:100%;
     height:100%;
 }
 
@@ -709,4 +702,33 @@ html,body{
     margin-left:3px;
     padding:0;
     content:'·';
+}
+
+.navbar{
+    display:flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
+
+.navbar .navLogo{
+    align-self:center;
+    display:flex;
+    flex-direction: row;
+}
+
+.navbar .navSearchbar{
+    align-self:center;
+    display:flex;
+    flex-direction: row;
+}
+
+.navbar .navButtonContainer{
+    align-self:center;
+    display:flex;
+    flex-direction: row;
+}
+
+.navbar .navButtonContainer .navButtonContents{
+    display:flex;
+    flex-direction: column;
 }
