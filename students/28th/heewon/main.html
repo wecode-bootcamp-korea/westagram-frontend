@@ -40,7 +40,7 @@
                             </li>
                             <li class="header_my_profile">
                                 <a href="#"><img
-                                        src="https://t1.daumcdn.net/liveboard/fanzeel/2ae537d1d5574377aed88cf5551d764a.JPG"
+                                        src="https://images.unsplash.com/photo-1617198420518-e2b79c2cdbb2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1064&q=80"
                                         alt="my profile img"></a>
                             </li>
                         </ul>
@@ -93,58 +93,68 @@
                             </div>
                         </div>
                     </div>
-                    <article class="users_feed">
-                        <section class="user_profile">
-                            <div><img
-                                    src="https://t1.daumcdn.net/liveboard/fanzeel/2ae537d1d5574377aed88cf5551d764a.JPG"
-                                    alt="user profile img"></div>
-                            <em>kangheewon</em>
-                        </section>
-                        <span class="feed_handler"></span>
-                        <ul class="feed_imgs">
-                            <li><img src="" alt="feed_img1"></li>
-                            <li><img src="" alt="feed_img2"></li>
-                        </ul>
-                        <ul class="feed_img_list">
-                            <li></li>
-                            <li></li>
-                        </ul>
-                        <section class="feed_reaction">
-                            <span>like</span>
-                            <span>comment</span>
-                            <span>share</span>
-                            <span>bookmark</span>
-                        </section>
-                        <section class="like_people"><em>dlwlrma</em>님 외 <em>12,020명</em>이 좋아합니다</section>
-                        <section class="feed_desc_wrap">
-                            <div class="user_desc">
-                                <em>kangheewon</em>
-                                <p>hello world 🌏</p>
-                            </div>
-                            <a href="#">댓글 <b>120개</b> 모두 보기</a>
-                            <ul>
-                                <li>
-                                    <em>dlwlrma</em>
-                                    <span>우와 멋지다!!</span>
-                                </li>
-                                <li>
-                                    <em>taeyeon_ss</em>
-                                    <span>✨</span>
-                                </li>
+                    <section class="users_feed_list">
+                        <article class="user_feed">
+                            <header>
+                                <section class="user_profile">
+                                    <div><img
+                                            src="https://images.unsplash.com/photo-1617198420518-e2b79c2cdbb2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1064&q=80"
+                                            alt="user profile img"></div>
+                                    <em>kangheewon</em>
+                                </section>
+                                <i class="feed_handler fas fa-ellipsis-h fa-1x"></i>
+                            </header>
+                            <ul class="feed_imgs">
+                                <li><img src="https://images.unsplash.com/photo-1633113212875-8ecf30ad2e81?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80" alt="feed_img1"></li>
+                                <!-- <li><img src="https://images.unsplash.com/photo-1633113211800-4acbb59fc254?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80" alt="feed_img2"></li> -->
                             </ul>
-                            <b>1일 전</b>
-                            <section class="post_comment_wrap">
-                                <span class="emoji">emoji</span>
-                                <input type="text" placeholder="댓글 달기...">
-                                <button>게시</button>
+                            <ul class="feed_img_dots">
+                                <li></li>
+                                <li class="active_feed_dots"></li>
+                            </ul>
+                            <section class="feed_reaction">
+                                <span><i class="far fa-heart fa-2x"></i></span>
+                                <span><i class="far fa-comment fa-2x"></i></span>
+                                <span><i class="far fa-paper-plane fa-2x"></i></span>
+                                <span><i class="far fa-bookmark fa-2x"></i></span>
                             </section>
-                        </section>
-                    </article>
+                            <a href="#" class="like_people">좋아요 <em>12,020개</em></a>
+                            <section class="feed_desc_wrap">
+                                <div class="user_desc">
+                                    <em>kangheewon</em>&nbsp;
+                                    <span>hello world 🌏</span>
+                                </div>
+                                <a href="#" class="more_comment">댓글 <b>120개</b> 모두 보기</a>
+                                <ul class="comment_list">
+                                    <li>
+                                        <div class="user_desc">
+                                            <em>dlwlrma</em>
+                                            <span>우와 멋지다!!</span>
+                                        </div>
+                                        <button><i class="far fa-heart fa-xs"></i></button>
+                                    </li>
+                                    <li>
+                                        <div class="user_desc">
+                                            <em>taeyeon_ss</em>
+                                            <span>✨</span>
+                                        </div>
+                                            <button><i class="far fa-heart fa-xs"></i></button>
+                                    </li>
+                                </ul>
+                                <time class="before_post">1일 전</time>
+                            </section>
+                            <section class="post_comment_wrap">
+                                <button class="emoji"><i class="far fa-smile fa-2x"></i></button>
+                                <input type="text" placeholder="댓글 달기...">
+                                <button class="post_comment_btn">게시</button>
+                            </section>
+                        </article>
+                    </section>
                 </section>
                 <aside class="recommend_aside">
                     <div id="my_profile">
                         <div class="profile_img">
-                            <img src="https://t1.daumcdn.net/liveboard/fanzeel/2ae537d1d5574377aed88cf5551d764a.JPG"
+                            <img src="https://images.unsplash.com/photo-1617198420518-e2b79c2cdbb2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1064&q=80"
                                 alt="user profile img">
                         </div>
                         <div class="my_info">

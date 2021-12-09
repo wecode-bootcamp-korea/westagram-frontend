@@ -1,45 +1,41 @@
-/* || main_header : header 전체 */
+/* || main_header : header 전체 로고, 검색창, 네비게이션 */
 .main_header {
+    position: fixed;
+    top: 0;
     width: 100%;
     height: 54px;
     background-color: #fff;
     border-bottom: 1px solid #dbdbdb;
-    position: fixed;
-    top: 0;
     z-index: 10;
-    align-items: center;
-    transition: height .2s ease-in-out;
 }
 
 /* max-width 구간 */
 .header_content {
-    max-width: 975px;
-    width: 100%;
-    padding: 0 20px;
-    margin: 0 auto;
     display: flex;
     align-items: center;
     flex-direction: row;
-    transition: height .2s ease-in-out;
+    max-width: 975px;
+    padding: 0 20px;
+    margin: 0 auto;
 }
 
 /* 로고 */
 .main_header h1 {
+    flex: 1 9999 0%;
     height: 100%;
     font-size: 35px;
     line-height: 50px;
-    flex: 1 9999 0%;
 }
 
-/* search space */
+/* 검색창 */
 .main_header .search_wrap {
-    min-width: 125px;
-    width: 215px;
-    height: 28px;
     display: flex;
     flex: 0 1 auto;
     align-items: center;
     justify-content: center;
+    min-width: 125px;
+    width: 215px;
+    height: 28px;
     padding: 3px 12px;
     background: #fafafa;
     border: solid 1px rgba(var(--b6a, 219, 219, 219), 1);
@@ -50,21 +46,19 @@
     width: 100%;
     height: 100%;
     color: rgba(var(--f52, 142, 142, 142), 1);
-    border: 0;
     font-size: 14px;
     line-height: 18px;
-    background: transparent;
 }
 
 .search_wrap input::placeholder {
-    font-weight: 100;
     color: rgba(var(--f52, 142, 142, 142), 1);
+    font-weight: 100;
 }
 
 .search_wrap i {
-    color: rgba(var(--f52, 142, 142, 142), .9);
     margin-right: 6px;
     padding-top: 2px;
+    color: rgba(var(--f52, 142, 142, 142), .9);
 }
 
 /* navigation */
@@ -73,26 +67,25 @@
     flex: 1 0 0%;
     align-content: center;
     align-items: center;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-end;
 }
 
 .main_header nav ul {
-    width: 100%;
-    padding-left: 14px;
     display: flex;
     white-space: nowrap;
     flex-direction: row;
     justify-content: space-between;
     align-items: end;
+    width: 100%;
+    padding-left: 14px;
 }
 
 .main_header nav ul li:not(:first-child) {
     margin-left: 24px;
 }
 
-/* navigation : my profile (right) */
+/* navigation : 내 프로필 */
 .header_my_profile {
     width: 21px;
     height: 21px;
@@ -110,56 +103,374 @@
     height: 100%;
 }
 
-/* || main content space */
+/* || main content : header를 제외한 컨텐츠 부분. 회원 스토리, 회원 추천, 피드 */
 main {
     margin-top: 54px;
 }
 
 main .main_wrap {
-    /* display: flex;
-    flex-flow: row nowrap; */
+    display: flex;
+    justify-content: space-between;
     max-width: 935px;
     margin: 0 auto;
     padding-top: 30px;
 }
 
-/* feed wrap */
+/* 회원 피드 영역 : 회원 스토리 목록, 회원 피드 목록 */
 .main_wrap .feed_wrap {
     max-width: 614px;
-    width: 100%;
     margin-right: 28px;
-    float: left;
 }
 
-/* recommend wrap (aside) */
-.main_wrap .recommend_aside {
-    max-width: 293px;
-    width: 100%;
-    height: 100vh;
-    margin-bottom: 30px;
-    position: fixed;
-    top: 88px;
-    left: 687px;
-    right: 0;
-    /* display: flex;
-    flex-direction: column; */
+/* 회원 스토리 목록 영역 */
+.users_story {
+    background: #fff;
+    margin-bottom: 24px;
+    margin-top: 0;
+    padding: 16px 0;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
 }
 
-/* my profile - profile img, name, desc, transform */
-#my_profile {
-    height: auto;
-    margin: 18px 4px 10px 0px;
+.users_story .users_story_content {
+    position: relative;
+    height: 84px;
+}
+
+/* 스토리 화살표 2개 */
+.arrows {
+    position: absolute;
     display: flex;
-    flex: 0 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.arrows i {
+    width: 25px;
+    height: 25px;
+    margin: 0px 10px;
+    background-color: #fff;
+    font-size: 14px;
+    line-height: 18px;
+    border-radius: 50%;
+    box-shadow: 0px 1px 13px rgb(0, 0, 0, .25);
+    z-index: 1;
+}
+
+.arrows i::before {
+    display: inline-block;
+    vertical-align: sub;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.users_story_content>div {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -ms-overflow-style: none;
+    /* IE, Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.users_story_content>div::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Opera */
+}
+
+.story {
+    display: flex;
+    flex-direction: row;
+}
+
+.story li {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 80px;
+    height: 100%;
+    padding: 0 4px;
+}
+
+.story li:first-of-type {
+    padding-left: 14px;
+}
+
+.story li:last-of-type {
+    padding-right: 14px;
+}
+
+.story li>div {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.story li>div::before {
+    content: '';
+    position: absolute;
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    border: 2px solid #e4455f;
+    box-sizing: border-box;
+}
+
+.story li>div img {
+    height: 100%;
+    border-radius: 50%;
+    border: 4px solid #fff;
+    object-fit: cover;
+    box-sizing: border-box;
+}
+
+.story li>em {
+    display: block;
+    max-width: 74px;
+    font-size: 12px;
+    text-align: center;
+    line-height: 16px;
+    letter-spacing: .01em;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+/* 회원 피드 영역 */
+.user_feed {
+    margin-bottom: 24px;
+    background-color: #fff;
+    border-radius: 3px;
+    border: 1px solid rgba(var(--b6a, 219, 219, 219), 1);
+}
+
+
+/* 피드 작성자의 정보 및 피드 컨트롤러 버튼 (header) */
+.user_feed header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 8px 14px 16px;
+    box-sizing: border-box;
+}
+
+.user_profile {
+    display: flex;
+    align-items: center;
+    width: calc(100% - 48px);
+}
+
+.user_profile>div {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.user_profile em {
+    margin-left: 14px;
+    font-weight: 600;
+}
+
+.user_profile>div img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.feed_handler {
+    padding: 8px;
+    vertical-align: middle;
+}
+
+/* 사용자가 올린 피드 이미지 */
+.feed_imgs {
+    height: 612px;
+}
+
+.feed_imgs li {
+    height: 100%;
+    overflow: hidden;
+}
+
+.feed_imgs li img {
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 사용자 피드의 사진이 여러 개일 경우 나타내는 dots */
+.feed_img_dots {
+    display: flex;
+    justify-content: center;
+    margin: 15px 0px;
+}
+
+.feed_img_dots li {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin-right: 4px;
+    background-color: #a8a8a8;
+    border-radius: 50%;
+}
+
+.active_feed_dots {
+    background-color: #0095f6 !important;
+}
+
+
+/* 피드 리액션 할 수 있는 하트, 댓글, 공유, 북마크  */
+.feed_reaction {
+    display: flex;
+    align-items: center;
+    margin-top: -34px;
+    padding: 6px 16px 8px;
+}
+
+.feed_reaction span {
+    display: inline-block;
+    padding: 5px 8px;
+    line-height: 18px;
+}
+
+.feed_reaction span:first-of-type {
+    margin-left: -8px;
+}
+
+.feed_reaction span:last-of-type {
+    margin-left: auto;
+    margin-right: -10px;
+    padding: 5px 10px;
+    box-sizing: border-box;
+}
+
+/* 회원 피드에 눌러진 하트 갯수 */
+.like_people {
+    display: block;
+    margin-bottom: 8px;
+    padding: 0px 16px;
+    font-weight: 600;
+}
+
+/* 피드 올린 회원의 아이디와 피드 설명글 */
+.feed_desc_wrap {
+    padding: 0px 16px;
+}
+
+
+/* 피드 내에서 회원의 아이디와 설명글 및 댓글 */
+.user_desc {
+    margin-bottom: 4px;
+}
+
+.user_desc em {
+    margin-left: -5px;
+    padding-left: 5px;
+    font-weight: 600;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.user_desc span {
+    display: inline;
+    overflow-wrap: break-word;
+}
+
+/* 댓글 리스트 */
+.comment_list {
+    box-sizing: border-box;
+}
+
+.comment_list li {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
+.comment_list li button {
+    padding: 0px 8px;
+}
+
+/* 댓글 모두 보기 */
+.more_comment {
+    display: block;
+    margin-bottom: 4px;
+    color: #8e8e8e;
+}
+
+/* time tag : 1일 전 포스트 */
+.before_post {
+    display: block;
+    color: #8e8e8e;
+    font-size: 10px;
+    margin-bottom: 16px;
+}
+
+/* 댓글 작성란 */
+.post_comment_wrap {
+    display: flex;
+    align-items: center;
+    padding: 6px 16px;
+    border-top: 1px solid #efefef;
+}
+
+.emoji {
+    padding: 8px 16px 8px 0;
+}
+
+.post_comment_wrap input {
+    display: flex;
+    flex-grow: 1;
+    max-width: 100%;
+    height: 18px;
+    line-height: 18px;
+    overflow-y: hidden;
+}
+
+.post_comment_wrap input::placeholder {
+    color: #8e8e8e;
+}
+
+.post_comment_btn {
+    color: #0095f6;
+    opacity: .3;
+}
+
+
+/* 오른쪽 고정 프로필 및 회원님을 위한 추천 영역 */
+.main_wrap .recommend_aside {
+    position: fixed;
+    top: 88px;
+    max-width: 293px;
+    height: 100vh;
+    margin-bottom: 30px;
+    transform: translateX(643px);
+}
+
+/* 로그인한 회원 상세 프로필 (aside) */
+#my_profile {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    height: auto;
+    margin: 18px 4px 10px 0px;
+}
+
 #my_profile .profile_img {
+    display: inline-block;
     width: 56px;
     height: 56px;
     margin: 5px 17px 5px 0px;
     border-radius: 50%;
-    display: inline-block;
     overflow: hidden;
 }
 
@@ -181,9 +492,9 @@ main .main_wrap {
 .recommend_user_title em {
     color: #262626;
     font-weight: 600;
-    overflow-x: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    overflow-x: hidden;
 }
 
 .my_info span,
@@ -202,17 +513,17 @@ main .main_wrap {
 }
 
 .recommend_me {
+    display: inline-block;
     width: 100%;
     margin-bottom: 12px;
-    display: inline-block;
 }
 
 .recommend_me .title {
-    padding: 4px 0px;
-    margin-top: 12px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-top: 12px;
+    padding: 4px 0px;
 }
 
 .recommend_me .title h4 {
@@ -225,30 +536,29 @@ main .main_wrap {
 
 .recommend_me .title button {
     margin: -2px 0 -3px;
+    color: #262626;
     font-size: 12px;
     font-weight: 600;
     line-height: 16px;
-    color: #262626;
 }
 
-/* recommend section : users list */
+/* 회원님을 위한 추천 */
 .users_list {
     padding: 8px 0px;
 }
 
 .users_list li {
-    padding: 8px 0px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* flex: 0 0 auto; */
+    padding: 8px 0px;
 }
 
 .recommend_user_img {
     width: 32px;
     height: 32px;
-    border-radius: 50%;
     margin-right: 12px;
+    border-radius: 50%;
     overflow: hidden;
 }
 
@@ -265,9 +575,9 @@ main .main_wrap {
 
 .recommend_user_title span {
     font-size: 12px;
-    overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    overflow: hidden;
 }
 
 /* footer */
@@ -288,132 +598,3 @@ address {
     display: inline-block;
     margin: 0 0.25em 0 0.25em;
 }
-
-/* || users feed space */
-
-/* users story section */
-.users_story {
-    background: #fff;
-    margin-bottom: 24px;
-    margin-top: 0;
-    padding: 16px 0;
-    border: 1px solid #dbdbdb;
-    border-radius: 3px;
-}
-
-.users_story .users_story_content {
-    width: 100%;
-    height: 84px;
-    position: relative;
-}
-
-.arrows {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: absolute;
-}
-
-.arrows i {
-    width: 25px;
-    height: 25px;
-    font-size: 14px;
-    line-height: 18px;
-    border-radius: 50%;
-    background-color: #fff;
-    margin: 0px 10px;
-    box-shadow: 0px 1px 13px rgb(0, 0, 0, .25);
-    z-index: 1;
-}
-
-.arrows i::before {
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    display: inline-block;
-    vertical-align: sub;
-}
-
-.users_story_content > div {
-    width: 100%;
-    height: 100%;
-    overflow-x: auto;
-    overflow-y: hidden;
-
-    -ms-overflow-style: none; /* IE, Edge */
-    scrollbar-width: none; /* Firefox */
-}
-
-.users_story_content > div::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Opera */
-}
-
-.story {
-    display: flex;
-    flex-direction: row;
-    /* padding: 0px 10px; */
-}
-
-.story li {
-    height: 100%;
-    padding: 0 4px;
-    width: 80px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-.story li:first-of-type {
-    padding-left: 14px;
-}
-
-.story li:last-of-type {
-    padding-right: 14px;
-}
-
-.story li > div {
-    width: 66px;
-    height: 66px;
-    position: relative;
-    border-radius: 50%;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.story li > div::before {
-    content: '';
-    display: block;
-    width: 66px;
-    height: 66px;
-    position: absolute;
-    border-radius: 50%;
-    border: 2px solid #e4455f;
-    box-sizing: border-box;
-}
-
-.story li > div img {
-    height: 100%;
-    border-radius: 50%;
-    border: 4px solid #fff;
-    object-fit: cover;
-    box-sizing: border-box;
-}
-
-.story li > em {
-    max-width: 74px;
-    font-size: 12px;
-    text-align: center;
-    line-height: 16px;
-    letter-spacing: .01em;
-    display: block;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
-
-
-/* || users feed section */
