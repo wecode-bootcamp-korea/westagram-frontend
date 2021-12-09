@@ -13,8 +13,7 @@ body {
   justify-content: space-between;
   align-items: center;
   width: 100vw;
-  height: 54px;
-  padding: 0px 40px;
+  padding: 14px 40px;
   background-color: #ffff;
   border: 1px solid #dbdbdb;
   text-align: center;
@@ -33,7 +32,7 @@ body {
   justify-content: left;
   align-items: center;
   width: 230px;
-  height: 28px;
+  padding: 8px;
   background-color: #fafafa;
   border: 1px solid #dbdbdb;
   border-radius: 4px;
@@ -66,25 +65,24 @@ body {
 
 .navigation__icons img {
   width: 20px;
-  height: 20px;
   margin: 0px 10px;
 }
 
 .navigation__icons .profile-img {
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
 }
 
 main {
   display: flex;
   width: 935px;
-  height: 100%;
   margin: 0px 100px;
   padding-top: 84px;
 }
 
 .contents-container {
   width: 600px;
-  height: auto;
   padding: 0px 10px 20px 20px;
 }
 
@@ -93,7 +91,6 @@ main {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 118px;
   background-color: #fff;
   padding: 20px;
   margin-bottom: 24px;
@@ -107,32 +104,30 @@ main {
   justify-content: center;
   align-items: center;
   width: 70px;
-  height: 100%;
 }
 
 .story-container__contents .story__image {
   width: 50px;
-  height: 50px;
   margin-bottom: 4px;
 }
 
 .story__image img {
   width: 100%;
-  height: 100%;
+  height: 50px;
   border-radius: 50%;
 }
 
 .story-container__contents .story__id {
   width: 100%;
-  height: 16px;
   padding: 3px 0px;
   font-size: 13px;
   text-align: center;
 }
 
 .contents-container .feed-container {
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  height: auto;
   background-color: #fff;
   border: 1px solid #dbdbdb;
   border-radius: 4px;
@@ -141,28 +136,23 @@ main {
 .feed-container .feed-header {
   position: relative;
   display: flex;
-  justify-content: center;
   align-items: center;
   width: 100%;
-  height: 60px;
   padding: 20px 20px;
 }
 
 .feed-header .header__image {
-  position: absolute;
-  left: 20px;
   width: 28px;
   height: 28px;
+  margin-right: 20px;
   border: 1px solid #dbdbdb;
   border-radius: 50%;
 }
 
 .feed-header .header__id {
-  position: absolute;
-  left: 60px;
-  width: 100px;
+  width: auto;
+  font-size: 18px;
   font-weight: 600;
-  text-align: left;
 }
 
 .feed-header .header__button {
@@ -205,27 +195,22 @@ main {
 }
 
 .feed-icons {
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 54px;
+  padding: 10px 0px;
 }
 
 .feed-icons .feed-icons__left {
-  position: absolute;
   width: 50%;
-  height: 25px;
   left: 0px;
   padding: 0px 20px;
   cursor: pointer;
 }
 
 .feed-icons__right {
-  position: absolute;
   width: 50%;
-  height: 25px;
   right: 0;
   padding: 0px 10px;
   text-align: right;
@@ -233,7 +218,6 @@ main {
 
 .feed-icons button img {
   width: 20px;
-  height: 20px;
   margin-right: 10px;
 }
 
@@ -241,14 +225,13 @@ main {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 60px;
-  padding: 0px 20px;
+  padding: 10px 20px;
 }
 
 .feed-information .feed-likes {
   width: 100%;
-  font-weight: 600;
   font-size: 14px;
+  font-weight: 600;
   margin-bottom: 20px;
 }
 
@@ -261,6 +244,7 @@ main {
   width: auto;
   font-weight: 600;
   font-size: 16px;
+  cursor: pointer;
 }
 
 .feed-user .feed-user__text {
@@ -273,8 +257,7 @@ main {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 50px;
-  padding: 0px 20px;
+  padding: 20px 20px;
   border-top: 1px solid #dbdbdb;
 }
 
@@ -295,24 +278,21 @@ main {
 .feed-comment__add {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  height: auto;
 }
 
 .feed-comment__add .comment-wrapper {
   display: flex;
-  align-items: center;
   width: 100%;
-  height: auto;
   padding: 0px 20px;
   margin-bottom: 10px;
 }
 
 .feed-comment__add .comment-id {
   width: auto;
+  margin-right: 10px;
   font-weight: 600;
   font-size: 16px;
-  margin-right: 10px;
+  cursor: pointer;
 }
 
 .feed-comment__add .comment-text {
@@ -327,47 +307,41 @@ main {
 }
 
 .user-container {
-  position: sticky;
   display: flex;
   flex-direction: column;
-  padding: 0px 10px;
   width: 310px;
-  height: 764px;
+  padding: 0px 10px;
 }
 
 .user-wrapper {
   display: flex;
   align-items: center;
   width: 100%;
-  height: 100px;
-  padding: 10px;
+  padding: 20px 10px;
 }
 
 .user-wrapper__information {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-left: 20px;
   width: 180px;
+  margin-left: 20px;
 }
 
 .user-wrapper__image {
   width: 50px;
-  height: 50px;
-  background-color: rgb(51, 170, 206);
   border-radius: 50%;
   cursor: pointer;
 }
 
 .user-wrapper__image img {
   width: 100%;
-  height: 100%;
+  height: 50px;
   border-radius: 50%;
 }
 
 .user-wrapper__information {
   width: 140px;
-  height: 100%;
   padding: 15px 4px;
 }
 
@@ -379,8 +353,8 @@ main {
 }
 
 .user-wrapper__information .user-wrapper__name {
-  color: #9c9c9c;
   margin-top: 4px;
+  color: #9c9c9c;
 }
 
 .user-wrapper__mode {
@@ -480,8 +454,7 @@ footer {
 
 footer .footer-tags {
   width: 100%;
-  height: 30px;
-  padding: 0px 20px;
+  padding: 20px 20px;
   margin-bottom: 10px;
   color: #c0c0c0;
   font-size: 12px;
