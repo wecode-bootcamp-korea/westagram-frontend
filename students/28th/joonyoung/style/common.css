@@ -32,6 +32,7 @@ img {
   max-width: 100%;
   object-fit: cover;
 }
+
 a {
   text-decoration: none;
   color: inherit;
@@ -64,9 +65,19 @@ input {
 .hidden {
   display: none;
 }
+i {
+  cursor: pointer;
+}
 
-.img-h-5vh {
-  height: 5vh;
+.icon-w {
+  width: 1rem;
+  display: inline-block;
+}
+.w-6 {
+  width: 1.5rem;
+}
+.h-6 {
+  height: 1.5rem;
 }
 
 .flex {
@@ -90,20 +101,37 @@ input {
 .mt-1 {
   margin-top: 0.25rem;
 }
+.mb-1 {
+  margin-bottom: 0.25rem;
+}
 .p-1 {
   padding: 1rem;
+}
+.heart path {
+  cursor: pointer;
+  stroke: black;
+  fill: #fff;
+  transition: all 0.4s ease-out;
+}
+.heart path.liked {
+  stroke: red;
+  fill: red;
+  animation: heartBeatSvg 0.4s ease-out;
+}
+.heart path:not(.liked):hover {
+  stroke: var(--border-primary);
 }
 
 /* ******************************************************** */
 /* ******** UTIL:  Animations */
-@keyframes heartBeat {
+@keyframes heartBeatSvg {
   0% {
     transform: scale(1);
   }
   50% {
     transform: scale(1.25);
   }
-  75% {
+  80% {
     transform: scale(0.9);
   }
   100% {

@@ -1,19 +1,18 @@
 @import url("./common.css");
 
-header {
+#navbar {
+  --padding: 10vw;
+  padding: 0 var(--padding);
   position: fixed;
+  inset: 0 0 90vh;
   z-index: 999;
-  inset: 0 0 95%;
   background-color: #fff;
+  box-shadow: 0 0 3px gray;
 }
 
 header nav {
-  padding: 0.75rem 9rem;
-  display: flex;
+  height: 100%;
   justify-content: space-between;
-  align-items: center;
-  background-color: #fff;
-  box-shadow: 0 0 3px gray;
 }
 
 .search {
@@ -40,25 +39,77 @@ nav input:focus.fa-search {
 }
 
 header nav .nav__icons {
-  display: flex;
-  align-items: center;
   font-size: 1.5rem;
-  gap: var(--gap, 0.75em);
+  --gap: 0.75em;
   cursor: pointer;
   position: relative;
 }
 .nav__icons::after {
   content: "1";
+  width: 0.875rem;
+  height: 0.875rem;
   position: absolute;
-  width: 10px;
-  height: 10px;
   top: -10%;
-  left: 27%;
+  left: 25%;
   text-align: center;
   font-size: 0.75rem;
   background-color: red;
   color: #fff;
   border-radius: 50%;
+}
+.nav__icons .profile-img {
+  position: relative;
+}
+.nav__icons .profile-img img {
+  width: 3vw;
+  height: 3vw;
+  border-radius: 50%;
+}
+
+/* ************************************************** */
+/* SECTION:  profile dropdown box */
+.profile-dropbox {
+  position: absolute;
+  top: 150%;
+  left: 20%;
+  right: -10%;
+  z-index: 90;
+  font-size: 0.875rem;
+  border-radius: 0.5rem;
+  background-color: #fff;
+  box-shadow: 1px 2px 2px lightgray, -1px 2px 2px lightgray;
+  transform-origin: top;
+  transform: scale(1, 0);
+  transition: transform 0.5s ease-out;
+}
+.profile-dropbox.open {
+  transform: scale(1, 1);
+}
+.profile-dropbox::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  right: 17%;
+  width: 1.5em;
+  height: 1.5em;
+  transform: rotate(45deg) translateY(-50%);
+  background-color: #fff;
+}
+
+.profile-dropbox li {
+  padding: 0.75rem 1rem;
+  transition: all 0.2s ease-in;
+}
+.profile-dropbox li *:first-child {
+  display: inline-block;
+  margin-right: 1em;
+}
+.profile-dropbox li:last-child {
+  border-top: 1px solid lightgray;
+}
+.profile-dropbox li:hover {
+  background-color: rgb(230, 230, 230, 0.4);
 }
 
 /* ************************************************** */
@@ -66,10 +117,10 @@ header nav .nav__icons {
 main {
   min-height: 100vh;
   margin: 0 15vw;
-  margin-top: calc(4rem + 5vh);
+  margin-top: calc(8vh + 2.25rem);
   display: grid;
   grid-template-columns: 35rem auto;
-  grid-template-rows: 20vh auto;
+  grid-template-rows: 16vh auto;
   gap: 1.5rem;
   font-family: "Roboto", sans-serif;
   position: relative;
@@ -88,11 +139,15 @@ main {
 .stories {
   transition: transform 0.5s linear;
 }
-.story {
-  height: 60%;
+.story img {
+  min-width: 7vh;
+  height: 7vh;
   border-radius: 50%;
+  cursor: pointer;
 }
+
 .story p {
+  text-align: center;
   font-size: 0.875rem;
 }
 
@@ -101,7 +156,7 @@ main {
   font-size: 1.25rem;
   border-radius: 50%;
   background-color: #fff;
-  opacity: 0.45;
+  opacity: 0.5;
   cursor: pointer;
 }
 .stories__wrapper i:hover {
@@ -116,7 +171,6 @@ main {
 
 /* ************************************************** */
 /* SECTION:  recommendations */
-
 .recommends__wrapper {
   grid-row: span 2;
 }
@@ -124,10 +178,12 @@ main {
   position: fixed;
 }
 .profile {
-  height: 20vh;
+  height: 18vh;
 }
 .profile img {
-  height: 50%;
+  width: 6vw;
+  height: 6vw;
+  border-radius: 50%;
 }
 .profile p {
   font-size: 0.875rem;
@@ -143,9 +199,9 @@ main {
   color: blue;
   font-weight: bold;
 }
+
 .recommendation h3 {
   display: inline-block;
-  margin-bottom: 2rem;
   color: var(--fc-primary);
 }
 .recommendation h3 + a {
@@ -158,14 +214,22 @@ main {
   font-family: sans-serif;
 }
 
-.other-profile + .other-profile {
+.other-profile {
   margin-top: 1.75rem;
+}
+.other-profile img {
+  width: 3vw;
+  height: 3vw;
+  border-radius: 50%;
 }
 
 /* ************************************************** */
 /* SECTION:  feed */
 .feed__wrapper {
   box-shadow: 0 0 10px lightgray;
+}
+.feed__wrapper:last-child {
+  margin-bottom: 5rem;
 }
 .feed {
   display: grid;
@@ -176,6 +240,12 @@ main {
 .feed__header {
   padding: 1rem;
 }
+.feed__header img {
+  width: 3vw;
+  height: 3vw;
+  border-radius: 50%;
+}
+
 .feed__header .fa-ellipsis-h {
   margin-left: auto;
   cursor: pointer;
@@ -183,19 +253,17 @@ main {
 
 /* 2) main image Carousel */
 .feed__carousel {
-  box-shadow: 0 0 10px lightgray;
   overflow: hidden;
   position: relative;
+  max-height: 85vh;
 }
-.carousel__container {
+.img__container {
   --gap: 0;
   height: 100%;
   transition: all 0.5s ease-in-out;
 }
-.carousel__container img {
+.img__container img {
   min-width: 100%;
-  min-height: 100%;
-  object-fit: cover;
 }
 .feed__carousel .fas {
   position: absolute;
@@ -215,39 +283,61 @@ main {
 /* 3) icon buttons */
 .feed__icons {
   padding: 1rem;
+  --gap: 1.25rem;
   position: relative;
 }
+
 .feed__icons i {
+  cursor: pointer;
   font-size: 1.25rem;
+  transition: color 0.4s ease-out;
 }
-.feed__icons i + i {
-  margin-left: 0.875rem;
+.feed__icons i:hover {
+  color: var(--border-primary);
 }
-.fa-bookmark {
+
+.feed__icons .fa-bookmark {
   position: absolute;
   right: 5%;
 }
-
 .feed__icons p {
   width: fit-content;
-  margin-top: 0.75rem;
+  margin-top: 1rem;
 }
 
 /* 4) comments */
 .comments {
-  padding: 1rem;
   flex: 1;
-  box-shadow: 0 1px 10px lightgray;
+  border-bottom: 1px double lightgray;
+}
+
+.comments .heart {
+  margin-left: auto;
+}
+
+.comments li {
+  padding: 0.3rem 1rem;
+}
+
+.comments li a.see-more {
+  color: lightgray;
+  cursor: pointer;
+  transition: color 0.4s ease-out;
+}
+
+.comments li a.see-more:hover {
+  color: gray;
 }
 
 .comment__input {
-  background-color: aqua;
   position: relative;
 }
+
 .comment__input .fa-smile {
   position: absolute;
   left: 4%;
 }
+
 .comment__input textarea {
   padding: 0 10%;
   display: inline-block;
@@ -257,6 +347,7 @@ main {
   border: none;
   overflow-y: hidden;
 }
+
 .comment__input .add__comment {
   position: absolute;
   right: 4%;
@@ -266,4 +357,18 @@ main {
   cursor: pointer;
   color: blue;
   font-weight: bold;
+}
+
+/* ******************************************* */
+/* TODO: Media queries */
+@media screen and (max-width: 768px) {
+  #navbar {
+    --padding: 5vw;
+  }
+  main {
+    display: block;
+  }
+  .recommends__wrapper {
+    display: none;
+  }
 }
