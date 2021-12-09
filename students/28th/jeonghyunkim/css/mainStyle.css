@@ -4,15 +4,6 @@ html,body{
     height:100%;
 }
 
-@media screen and (max-width:1001px){
-    #mainContainer #navContainer #navRowBar #navRowBarSearch{
-        height:180px;
-    } 
-    #mainContainer #navContainer #navRowBar #navRowBarSearch #navRowBarSearchInput #mainSearchInput{
-        margin-top:70px;
-    }
-}
-
 #mainContainer{
     width:100%;
     min-height:100%;
@@ -101,7 +92,7 @@ html,body{
     width: 14px;
     height: 14px;
     top:10px;
-    left:8.5vw;
+    left:45%;
     background: rgba(var(--d87,255,255,255),1);
     box-shadow: 0 0 5px 1px rgba(var(--jb7,0,0,0),.0975);
     border: 1px solid rgba(var(--f23,255,255,255),1);
@@ -702,33 +693,4 @@ html,body{
     margin-left:3px;
     padding:0;
     content:'·';
-}
-
-.navbar{
-    display:flex;
-    flex-direction: row;
-    justify-content:space-between;
-}
-
-.navbar .navLogo{
-    align-self:center;
-    display:flex;
-    flex-direction: row;
-}
-
-.navbar .navSearchbar{
-    align-self:center;
-    display:flex;
-    flex-direction: row;
-}
-
-.navbar .navButtonContainer{
-    align-self:center;
-    display:flex;
-    flex-direction: row;
-}
-
-.navbar .navButtonContainer .navButtonContents{
-    display:flex;
-    flex-direction: column;
 }

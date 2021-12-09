@@ -1,3 +1,5 @@
+//// js #1. 윈도우 이벤트
+
 window.addEventListener('resize',function(event){
     const sideWrapper = document.querySelector('#sideWrapper')
     const bodyContainer = document.querySelector('#bodyContainer');
@@ -16,6 +18,13 @@ window.addEventListener('resize',function(event){
         }
     }
 })
+// 리사이징 이벤트
+////
+
+
+
+
+//// js #2. navigation bar 이벤트
 
 document.getElementById('mainSearchInput').addEventListener('focusin',function(event){
     const searchInput = document.getElementById('mainSearchInput');
@@ -34,123 +43,7 @@ document.getElementById('mainSearchInput').addEventListener('focusout',function(
     searchResultBox.style.display='none'
     searchInput.style.paddingLeft='30px'
 })
-
-//
-
-const feedContentsCommentBody = document.querySelectorAll('#feedContentsCommentBody')
-let temp = [];
-
-for (let i=0; i<feedContentsCommentBody.length; i++){
-    temp.push(feedContentsCommentBody[i].innerHTML);
-    const reduceCommentString = feedContentsCommentBody[i].innerHTML.slice(0,10).trim() + '...';
-    feedContentsCommentBody[i].innerHTML = reduceCommentString;
-}
-
-const feedExtendContents = (event) =>{
-    const extendBtn = document.querySelectorAll('#feedExtendContents');
-    extendBtn[event.target.name].style.display = 'none';
-    feedContentsCommentBody[event.target.name].innerHTML=temp[event.target.name];
-}
-
-//
-
-
-
-const setInputCommentsSubmitBtnEvent = () =>{
-    const inputCommentsSubmitBtn = document.querySelectorAll('#inputCommentsSubmitBtn');    
-    const inputCommentsTextArea = document.querySelectorAll('#inputCommentsTextArea')
-    for (let i=0; i<inputCommentsSubmitBtn.length; i++){
-        const submitBtnChangeFunc = (event) =>{
-            if (event.target.value.replace(/(^\s*)|(\s*$)/gi, "")){
-                inputCommentsSubmitBtn[i].style.opacity=1;
-                inputCommentsSubmitBtn[i].style.cursor='pointer';
-            }else{
-                inputCommentsSubmitBtn[i].style.opacity=0.3;
-                inputCommentsSubmitBtn[i].style.cursor='inherit'
-            }
-        }
-        inputCommentsTextArea[i].addEventListener('input',function(event){
-            submitBtnChangeFunc(event);
-            
-        })
-        inputCommentsTextArea[i].addEventListener('keydown',function(event){
-            if (event.key==='Enter' && event.target.value.length>0){
-                addFeedComment(event);
-            }   
-            submitBtnChangeFunc(event);
-        })
-    }
-}
-
-setInputCommentsSubmitBtnEvent();
-
-const addFeedComment = (event) =>{
-    const index = event.target.name;
-    const feedCommentsBox = document.querySelectorAll('#feedCommentsBox');
-    const inputCommentsTextArea = document.querySelectorAll('#inputCommentsTextarea');
-    let inputComments = inputCommentsTextArea[index].value.replace(/\n/g, "");
-
-    if (inputComments.length>0){   
-        const commentSpan = document.createElement('span');
-
-        const clientName = document.createElement('span');
-        clientName.id = 'feedCommentsBold';
-        clientName.innerHTML = 'test2'
-        commentSpan.appendChild(clientName);
-        
-        const inputCommentsTextNode = document.createTextNode(inputComments);
-        commentSpan.appendChild(inputCommentsTextNode);
-        
-
-        const heartIcon = document.createElement('i');
-        heartIcon.className='far fa-heart'
-        heartIcon.onclick = function(event){
-            likeClick(event);
-        }
-        commentSpan.appendChild(heartIcon);
-
-        const removeBtn = document.createElement('span');
-        removeBtn.innerHTML='삭제';
-        removeBtn.id='removeBtn';
-        removeBtn.onclick = function(event){
-            removeComment(event);
-        }
-        
-        commentSpan.append(removeBtn);
-
-        feedCommentsBox[index].appendChild(commentSpan);
-        inputCommentsTextArea[index].focus();
-        inputCommentsTextArea[index].value=null;
-    }
-
-    if (event.target.tagName==='BUTTON'){
-        event.target.style.opacity=0.3;
-        event.target.style.cursor='inherit'
-    }
-}
-
-const likeClick = (event) =>{
-    event.target.style.color='red';
-}
-
-const removeComment = (event) =>{
-    event.target.parentNode.parentNode.removeChild(event.target.parentNode)
-}
-
-// 
-
-const followOrNotReduce = () =>{
-    const followOrNot = document.getElementsByClassName('followOrNot');
-    for (let i=0; i<followOrNot.length; i++){
-        if (followOrNot[i].innerHTML.length>24){
-            followOrNot[i].innerHTML = followOrNot[i].innerHTML.slice(0,25).trim()+'...';
-        }
-    }
-}
-
-followOrNotReduce();
-
-//
+// 검색바 focus in/out 애니메이트
 
 const memberArray = [
     {id:'wecode', desc:'>wecode | 위코드'},
@@ -215,8 +108,7 @@ const checkChildren = (result) =>{
         return false;
     }
 }
-
-//
+// 검색 결과 이벤트. input, backspace 이벤트 및 영역 include 유효 검사 함수 
 
 const navGoMain = () =>{
     window.location.href='main.html'
@@ -292,4 +184,129 @@ const removeNavActive = () =>{
         }
     } 
 }
+// navbar button onclick 함수
+////
 
+
+
+
+//// js #3. 피드 이벤트
+
+const feedContentsCommentBody = document.querySelectorAll('#feedContentsCommentBody')
+let temp = [];
+
+for (let i=0; i<feedContentsCommentBody.length; i++){
+    temp.push(feedContentsCommentBody[i].innerHTML);
+    const reduceCommentString = feedContentsCommentBody[i].innerHTML.slice(0,10).trim() + '...';
+    feedContentsCommentBody[i].innerHTML = reduceCommentString;
+}
+
+const feedExtendContents = (event) =>{
+    const extendBtn = document.querySelectorAll('#feedExtendContents');
+    extendBtn[event.target.name].style.display = 'none';
+    feedContentsCommentBody[event.target.name].innerHTML=temp[event.target.name];
+}
+
+// 각 피드 컨텐츠 reduce & extend
+
+const setInputCommentsSubmitBtnEvent = () =>{
+    const inputCommentsSubmitBtn = document.querySelectorAll('#inputCommentsSubmitBtn');    
+    const inputCommentsTextArea = document.querySelectorAll('#inputCommentsTextArea')
+    for (let i=0; i<inputCommentsSubmitBtn.length; i++){
+        const submitBtnChangeFunc = (event) =>{
+            if (event.target.value.replace(/(^\s*)|(\s*$)/gi, "")){
+                inputCommentsSubmitBtn[i].style.opacity=1;
+                inputCommentsSubmitBtn[i].style.cursor='pointer';
+            }else{
+                inputCommentsSubmitBtn[i].style.opacity=0.3;
+                inputCommentsSubmitBtn[i].style.cursor='inherit'
+            }
+        }
+        inputCommentsTextArea[i].addEventListener('input',function(event){
+            submitBtnChangeFunc(event);
+            
+        })
+        inputCommentsTextArea[i].addEventListener('keydown',function(event){
+            if (event.key==='Enter' && event.target.value.length>0){
+                addFeedComment(event);
+            }   
+            submitBtnChangeFunc(event);
+        })
+    }
+}
+
+setInputCommentsSubmitBtnEvent();
+
+const addFeedComment = (event) =>{
+    const index = event.target.name;
+    const feedCommentsBox = document.querySelectorAll('#feedCommentsBox');
+    const inputCommentsTextArea = document.querySelectorAll('#inputCommentsTextarea');
+    let inputComments = inputCommentsTextArea[index].value.replace(/\n/g, "");
+
+    if (inputComments.length>0){   
+        const commentSpan = document.createElement('span');
+
+        const clientName = document.createElement('span');
+        clientName.id = 'feedCommentsBold';
+        clientName.innerHTML = 'test2'
+        commentSpan.appendChild(clientName);
+        
+        const inputCommentsTextNode = document.createTextNode(inputComments);
+        commentSpan.appendChild(inputCommentsTextNode);
+        
+
+        const heartIcon = document.createElement('i');
+        heartIcon.className='far fa-heart'
+        heartIcon.onclick = function(event){
+            likeClick(event);
+        }
+        commentSpan.appendChild(heartIcon);
+
+        const removeBtn = document.createElement('span');
+        removeBtn.innerHTML='삭제';
+        removeBtn.id='removeBtn';
+        removeBtn.onclick = function(event){
+            removeComment(event);
+        }
+        
+        commentSpan.append(removeBtn);
+
+        feedCommentsBox[index].appendChild(commentSpan);
+        inputCommentsTextArea[index].focus();
+        inputCommentsTextArea[index].value=null;
+    }
+
+    if (event.target.tagName==='BUTTON'){
+        event.target.style.opacity=0.3;
+        event.target.style.cursor='inherit'
+    }
+}
+// 댓글 작성시 발생하는 이벤트 ( 댓글 달기, 댓글 textarea 유효 검사)
+
+const likeClick = (event) =>{
+    event.target.style.color='red';
+}
+
+const removeComment = (event) =>{
+    event.target.parentNode.parentNode.removeChild(event.target.parentNode)
+}
+// 좋아요, 삭제 버튼 이벤트
+////
+
+
+
+
+//// js #4. 사이드바 이벤트
+
+const followOrNotReduce = () =>{
+    const followOrNot = document.getElementsByClassName('followOrNot');
+    for (let i=0; i<followOrNot.length; i++){
+        if (followOrNot[i].innerHTML.length>24){
+            followOrNot[i].innerHTML = followOrNot[i].innerHTML.slice(0,25).trim()+'...';
+        }
+    }
+}
+
+followOrNotReduce();
+// 사이드바 follow 문장 축소
+////
