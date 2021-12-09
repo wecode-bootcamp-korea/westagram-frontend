@@ -2,6 +2,9 @@ const replyInput = document.querySelector('#reply-input');
 const replyBtn = document.querySelector('#reply-button');
 const replyList = document.querySelector('.feed-replyList');
 const replyForm = document.querySelector('.feed-reply-form');
+const feedHeart = document.querySelector('.feed-heart');
+const replyHearts = document.getElementsByClassName('reply-heart');
+
 
 const replyBtnActive = () => {
   return replyInput.value ? replyBtn.style.color = 'blue' : replyBtn.style.color = 'rgb(197, 225, 251)';
@@ -14,12 +17,16 @@ const replySubmit = () => {
     <div>
       <span>user</span>
       <p>${replyInput.value}</p>
-      <i class="far fa-heart"></i>
-      </div>
+      <i class="far fa-heart reply-heart"></i>
+    </div>
     <span class="feed-reply-time">1분전</span>
   `;
   replyList.appendChild(replyAddTag);
   replyInput.value = null;
+}
+
+const feedHeartToggle = () => {
+  feedHeart.classList.toggle('icon-heart');
 }
 
 replyForm.addEventListener('submit', (e) => {
@@ -28,3 +35,13 @@ replyForm.addEventListener('submit', (e) => {
 });
 
 replyInput.addEventListener('keyup', replyBtnActive);
+feedHeart.addEventListener('click', feedHeartToggle);
+
+replyList.addEventListener('click', () => {
+  [].forEach.call(replyHearts, (replyHeart) => {
+    replyHeart.addEventListener('click', () => {
+      console.log();
+      replyHeart.classList.toggle('icon-heart');
+    }, true);
+  });
+});
