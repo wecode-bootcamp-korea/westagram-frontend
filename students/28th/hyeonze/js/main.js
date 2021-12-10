@@ -8,22 +8,22 @@ window.onload = function() {
     let profileMenu = document.querySelector('.profile_menu');
     let searchInput = document.querySelector('.search_bar');
     let filteredList = document.querySelector('.suggestions_list');
-    let resultContainer = document.querySelector('.suggestions_cap');
+    let resultContainer = document.querySelector('.suggestions_container');
     let accountArray = [
         {
-          id: "wecode_bootcamp",
-          nickname: ">wecode | 위코드",
-          image: "images/wecode.jpg"
+            id: "wecode_bootcamp",
+            nickname: ">wecode | 위코드",
+            image: "images/wecode.jpg"
         },
         {
             id: "wecode_fullstack_bootcamp",
             nickname: "Wecode Fullstack Bootcamp",
             image: "images/fullstack.jpg"
         }   
-      ];
+    ];
 
     const searchFunc = (objId) => {
-        searchId = searchInput.value;
+        const searchId = searchInput.value;
         return objId.indexOf(searchId) !== -1;
     }
 
@@ -31,26 +31,25 @@ window.onload = function() {
         const containerCap = document.querySelector(".suggestions_cap");
         resultContainer.style.display = "block";
         containerCap.style.display = "block";
-        const filteredOne = document.createElement("li");
+        const filteredOne = document.createElement("li"); // 새로만들 li
         filteredOne.innerHTML = `
         <img src=${account.image} alt=${account.id} />
         <div class="uservalue">
             <p class="userid">${account.id}</p>
             <p class="usernickname">${account.nickname}</p>
-        </div>`;
-        filteredList.appendChild(filteredOne);
+        </div>`; // 내용추가
+        filteredList.appendChild(filteredOne);//붙이기
       };
 
-      searchInput.addEventListener("keyup", () => {
+    searchInput.addEventListener("keyup", () => {
         // 초기화
         filteredList.innerHTML = "";
         resultContainer.style.display = "none";
-        // input 값이 있다면,
-        if (searchInput.value) {
-          const filteredAccount = accountArray.filter((x) => searchFunc(x.id));
-          // filteredAccout 배열이 있다면,
-          if (filteredAccount) {
-            filteredAccount.forEach((acc) => showFilteredAccount(acc));
+
+        if (searchInput.value) { // input 값이 있다면,
+          const filteredAccount = accountArray.filter((x) => searchFunc(x.id)); // 인풋값을 id에 포함한 객체만 남은 배열
+          if (filteredAccount) { // filteredAccout 배열이 있다면,
+            filteredAccount.forEach((acc) => showFilteredAccount(acc)); // 해당객체들을 li에 추가
           }
         }
       });
