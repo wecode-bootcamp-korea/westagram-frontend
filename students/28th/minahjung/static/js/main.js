@@ -1,9 +1,9 @@
 // story start
 const forwardBtn = document.getElementsByClassName('story_prev')[0];
 const backwardBtn = document.getElementsByClassName('story_next')[0];
-const storyBox = document.querySelector('ul');
-const maxStoryNum = document.querySelectorAll('li').length;
-const storyWidth = document.querySelectorAll('li')[0].clientWidth;
+const storyBox = document.getElementsByClassName('story')[0];
+const maxStoryNum = document.querySelectorAll('.story_list').length;
+const storyWidth = document.querySelectorAll('.story_list')[0].clientWidth;
 const storyBoxWidth = storyBox.clientWidth;
 const moveDistance = ((maxStoryNum * storyWidth) - storyBoxWidth);
 
