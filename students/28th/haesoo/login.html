@@ -21,17 +21,23 @@
           <div class="logo">Westagram</div>
           <form class="login-form">
             <input
-              class="login-form__id"
-              placeholder="전화번호,사용자 이름 또는 이메일"
-              type="text"
+              class="login-form__id js-id"
+              placeholder="전화번호, 사용자 이름 또는 이메일"
+              type="form"
             />
             <input
-              class="login-form__password"
+              class="login-form__password js-password"
               placeholder="비밀번호"
-              type="text"
+              type="password"
             />
-            <button disabled class="login-button" type="button">로그인</button>
+            <input disabled class="login-button" type="submit" value="로그인" />
           </form>
+          <p class="hide js-valid-id valid-message">
+            @ 가 포함된 유효한 이메일을 입력해주세요.
+          </p>
+          <p class="hide js-valid-password valid-message">
+            비밀번호를 12자리 이상 입력해주세요.
+          </p>
           <p>또는</p>
           <button class="facebook-button">Facebook으로 로그인</button>
           <section class="find-password-container">
@@ -55,6 +61,6 @@
       </div>
       <div class="footer__text">© 2021 Instagram from Meta</div>
     </footer>
+    <script src="/students/28th/haesoo/js/login.js"></script>
   </body>
-  <script src="/students/28th/haesoo/js/login.js"></script>
 </html>
