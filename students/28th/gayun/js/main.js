@@ -7,31 +7,29 @@ const $myButton = document.querySelector('.my');
 const $searchResultContainer = document.querySelector('.search__result--container');
 const $searchResultWrap = document.querySelector('.search__result--wrap');
 
-const idArr = [["images/profile-img2.jpg", 'wecbsdfp', 'account | clkdj'], ["images/profile-img.jpg", 'i_love_coding', '아코딩'], [null, 'sunglass', null], [null, 'sweat_shirt', null], [null, 'newziland4043', null], [null, 'huggy_woggy__33', null]];
+const myId = 'canon_mj';
+const idArr = [["images/profile-img2.jpg", 'wecbsdfp', 'account | clkdj'], ['images/profile-img8.jpg', 'wow_easy', 'thisIsWowEasy', null], ['images/profile-img6.jpg', 'IthinkChester', 'Chester', '체스터'], ["images/profile-img.jpg", 'i_love_coding', '아코딩'], [null, 'sunglass', null], [null, 'sweat_shirt', null], [null, 'newziland4043', null], [null, 'huggy_woggy__33', null]];
+
+const html = new Html();
 
 $search.addEventListener('keyup', searchId);
 document.addEventListener('click', handleMyMenu);
-
-const myId = 'canon_mj';
 
 let feedData = [];
 let storyData = [];
 
 async function fetchData() {
     feedData = await(await fetch('data/feed.json')).json();
-    await loading();
     storyData = await(await fetch('data/story.json')).json();
+    await addSkeletonFeed();
     await addTopStory(storyData);
     await startObserve();
 }
 
-fetchData()
-
-const html = new Html();
+fetchData();
 
 function addTopStory(data) {
     $topStoryWrap.innerHTML = html.addTopStory(data);
-
 }
 
 function addComment(e) {
@@ -94,11 +92,12 @@ let nextFeedCheckIndex = 0;
 const skeletonHtml = html.addSkeleton();
 const $feedEnd = document.querySelector('.feed__end');
 
+
 const callback = (entry, observer) => {
     if(entry[0].isIntersecting && entry[0].intersectionRatio === 1) {
         nextFeedCheckIndex++;
         if(nextFeedCheckIndex < feedData.length) {
-            loading();
+            addSkeletonFeed();
 
         } else {
             displayNoFeedMessage();
@@ -112,7 +111,7 @@ let options = {
     root: null,
     rootMargin: '0px',
     threshold: 1,
-  }
+}
 
 const observer = new IntersectionObserver(callback, options)
 
@@ -120,26 +119,14 @@ function startObserve() {
     observer.observe($feedEnd);
 }
 
-function loading() {
+function addSkeletonFeed() {
     const $newFeed = document.createElement('article');
     $newFeed.classList.add('skeleton');
     $newFeed.innerHTML = skeletonHtml;
     $feeds.appendChild($newFeed);
-
     setTimeout(() => {
         displayFeed($newFeed);
     }, 2000)
-}
-
-function handleEvent(e) {
-    const target = e.target.className;
-    if(target === 'fas fa-times') {
-        deleteComment(e);
-    } else if(target === 'comment__input--button') {
-        addComment(e);
-    } else if(target.includes('fa-heart')) {
-        handleLike(e);
-    }
 }
 
 let displayCount = 0;
@@ -152,6 +139,17 @@ function displayFeed(feedEl) {
 
     feedEl.classList.add('feed');
     feedEl.innerHTML = html.addFeed(data, index);
+}
+
+function handleEvent(e) {
+    const target = e.target.className;
+    if(target === 'fas fa-times') {
+        deleteComment(e);
+    } else if(target === 'comment__input--button') {
+        addComment(e);
+    } else if(target.includes('fa-heart')) {
+        handleLike(e);
+    }
 }
 
 function displayNoFeedMessage() {
