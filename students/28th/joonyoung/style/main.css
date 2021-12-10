@@ -61,8 +61,8 @@ header nav .nav__icons {
   position: relative;
 }
 .nav__icons .profile-img img {
-  width: 3vw;
-  height: 3vw;
+  width: 6vh;
+  height: 6vh;
   border-radius: 50%;
 }
 
@@ -139,12 +139,25 @@ main {
 .stories {
   transition: transform 0.5s linear;
 }
+
 .story img {
   min-width: 7vh;
   height: 7vh;
   border-radius: 50%;
   cursor: pointer;
+  position: relative;
 }
+
+/* FIXME: 스토리 border에 circle animation 추가 */
+/* .story::before {
+  content: "";
+  position: absolute;
+  width: 8vh;
+  height: 8vh;
+  border: 2px solid magenta;
+  border-radius: 50%;
+  transform: translate(-5%, -5%);
+} */
 
 .story p {
   text-align: center;
@@ -159,12 +172,15 @@ main {
   opacity: 0.5;
   cursor: pointer;
 }
+
 .stories__wrapper i:hover {
   opacity: 0.7;
 }
+
 .stories__wrapper .fa-chevron-circle-left {
   left: 3%;
 }
+
 .stories__wrapper .fa-chevron-circle-right {
   right: 3%;
 }
@@ -174,20 +190,25 @@ main {
 .recommends__wrapper {
   grid-row: span 2;
 }
+
 .recommends__fixed {
   position: fixed;
 }
+
 .profile {
   height: 18vh;
 }
+
 .profile img {
   width: 6vw;
   height: 6vw;
   border-radius: 50%;
 }
+
 .profile p {
   font-size: 0.875rem;
 }
+
 .recommends__wrapper a {
   display: inline-block;
   margin-left: auto;
@@ -195,6 +216,7 @@ main {
   font-size: 0.75rem;
   transition: all 0.5s;
 }
+
 .recommends__wrapper a:hover {
   color: blue;
   font-weight: bold;
@@ -204,6 +226,7 @@ main {
   display: inline-block;
   color: var(--fc-primary);
 }
+
 .recommendation h3 + a {
   color: inherit;
 }
@@ -217,6 +240,7 @@ main {
 .other-profile {
   margin-top: 1.75rem;
 }
+
 .other-profile img {
   width: 3vw;
   height: 3vw;
@@ -227,13 +251,15 @@ main {
 /* SECTION:  feed */
 .feed__wrapper {
   box-shadow: 0 0 10px lightgray;
+  font-size: 0.8rem;
 }
 .feed__wrapper:last-child {
   margin-bottom: 5rem;
 }
 .feed {
   display: grid;
-  grid-template-rows: min-content minmax(auto, 80vh) 1fr 2fr;
+  grid-template-rows: min-content minmax(auto, 80vh) max-content 2fr;
+  /* heaer, carousel, icon-container, comments */
 }
 
 /* 1) Header */
@@ -255,7 +281,6 @@ main {
 .feed__carousel {
   overflow: hidden;
   position: relative;
-  max-height: 85vh;
 }
 .img__container {
   --gap: 0;
@@ -268,10 +293,13 @@ main {
 .feed__carousel .fas {
   position: absolute;
   top: 50%;
-  opacity: 0.4;
-  font-size: 1.25rem;
+  opacity: 0.45;
+  font-size: 1.5rem;
   transform: translateY(-50%);
   cursor: pointer;
+}
+.feed__carousel .fas:hover {
+  opacity: 0.8;
 }
 .feed__carousel .fa-chevron-circle-left {
   left: 1em;
@@ -282,7 +310,7 @@ main {
 
 /* 3) icon buttons */
 .feed__icons {
-  padding: 1rem;
+  padding: 1rem 1rem 0;
   --gap: 1.25rem;
   position: relative;
 }
@@ -292,6 +320,7 @@ main {
   font-size: 1.25rem;
   transition: color 0.4s ease-out;
 }
+
 .feed__icons i:hover {
   color: var(--border-primary);
 }
@@ -300,37 +329,80 @@ main {
   position: absolute;
   right: 5%;
 }
+
 .feed__icons p {
-  width: fit-content;
   margin-top: 1rem;
+  width: fit-content;
+  font-weight: bold;
 }
 
 /* 4) comments */
+.comments__wrapper {
+  --gap: 0;
+  overflow: hidden;
+}
+
 .comments {
   flex: 1;
+  min-height: 15vh;
   border-bottom: 1px double lightgray;
 }
 
-.comments .heart {
+.comments .comment-front .heart {
   margin-left: auto;
 }
 
-.comments li {
-  padding: 0.3rem 1rem;
+.comment {
+  position: relative;
 }
 
-.comments li a.see-more {
+.comment-front {
+  padding: 0 1em;
+  /* font-size: 0.9rem; */
+  background-color: #fff;
+  transition: transform 0.4s ease-in;
+  position: absolute;
+  inset: 0;
+  /* z-index: -1; */
+}
+
+.comment-delete {
+  padding: 0.2em 0;
+  padding-right: 1em;
+  justify-content: flex-end;
+  --gap: 1em;
+  background-color: var(--bg-delete);
+}
+
+.comment-delete .fas {
+  justify-content: center;
+  font-size: 2.5vw;
+  transition: all 0.4s ease-in-out;
+  cursor: pointer;
+}
+
+.comment-delete .fas:hover {
+  color: rgb(230, 230, 230, 0.4);
+  transform: scale(1.1);
+}
+
+.comment a.see-more {
   color: lightgray;
   cursor: pointer;
   transition: color 0.4s ease-out;
 }
 
-.comments li a.see-more:hover {
+.comments .comment-front a.see-more:hover {
   color: gray;
 }
 
 .comment__input {
   position: relative;
+  padding-top: 1rem;
+}
+
+.comment__input #multiline {
+  padding-bottom: 1rem;
 }
 
 .comment__input .fa-smile {
@@ -355,8 +427,12 @@ main {
   border: none;
   outline: none;
   cursor: pointer;
-  color: blue;
+  color: var(--bg-btn-inactive);
   font-weight: bold;
+}
+
+.comment__input .add__comment.active {
+  color: var(--bg-btn-active);
 }
 
 /* ******************************************* */

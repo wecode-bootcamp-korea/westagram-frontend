@@ -56,10 +56,10 @@
     <main>
       <section class="stories__wrapper flex items-center">
         <ul class="stories flex items-center">
-          <div class="story">
+          <li class="story">
             <img src="./public/stories/story1.jpg" alt="story profile image" />
             <p>Enna</p>
-          </div>
+          </li>
           <li class="story">
             <img src="./public/stories/story2.jpg" alt="story profile image" />
             <p>Jesy</p>
@@ -133,8 +133,8 @@
                   alt="profile image"
                 />
                 <div class="others__desc">
-                  <h4>wecode28기</h4>
-                  <p>wecode님외 36명이 follow</p>
+                  <h4>Younha</h4>
+                  <p>Enna Kim외 10명이 follow</p>
                 </div>
                 <a href="#">follow</a>
               </div>
@@ -144,8 +144,8 @@
                   alt="profile image"
                 />
                 <div class="others__desc">
-                  <h4>wecode28기</h4>
-                  <p>wecode님외 36명이 follow</p>
+                  <h4>wework</h4>
+                  <p>wecode28님외 236명이 follow</p>
                 </div>
                 <a href="#">follow</a>
               </div>
@@ -194,6 +194,7 @@
                 stroke="black"
               >
                 <path
+                  class="heart-path"
                   stroke-linecap="round"
                   stroke-linejoin="round"
                   stroke-width="2"
@@ -208,24 +209,32 @@
           </section>
           <section class="comments__wrapper flex flex-col">
             <ul class="comments">
-              <li class="flex mb-1 items-center">
-                <strong>Younha</strong>
-                <span>와 정말 멋있다!</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-6 w-6 heart"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="black"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-                  />
-                </svg>
-                <i class="fas fa-trash-alt"></i>
+              <li class="comment">
+                <section class="comment-delete">
+                  <div class="comment-delete comment flex items-center">
+                    <i class="fas fa-times"></i>
+                    <i class="fas fa-trash-alt"></i>
+                  </div>
+                </section>
+                <section class="comment-front flex items-center">
+                  <strong>Younha</strong>&nbsp;&nbsp;
+                  <span>와 정말 멋있다!</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6 heart"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="black"
+                  >
+                    <path
+                      class="heart-path"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+                    />
+                  </svg>
+                </section>
               </li>
             </ul>
             <article class="comment__input">

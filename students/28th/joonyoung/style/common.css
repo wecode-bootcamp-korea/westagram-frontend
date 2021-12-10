@@ -10,10 +10,12 @@
 }
 
 :root {
-  --bg-login-inactive: rgba(0, 120, 190, 0.6);
-  --bg-login-active: rgb(0, 120, 190);
+  --bg-btn-inactive: rgba(0, 120, 190, 0.6);
+  --bg-btn-active: rgb(0, 120, 190);
 
   --bg-input: rgb(250, 250, 250);
+  --bg-delete: rgb(237, 82, 97);
+
   --border-input: rgb(230, 230, 230);
   --border-primary: rgb(230, 230, 230);
 
@@ -52,7 +54,7 @@ input {
   display: block;
   width: 100%;
   padding: 0.5rem 0;
-  background-color: var(--bg-login-inactive);
+  background-color: var(--bg-btn-inactive);
   color: #fff;
   border: none;
   border-radius: 0.5rem;
@@ -93,6 +95,9 @@ i {
 .space-between {
   justify-content: space-between;
 }
+.justify-end {
+  justify-content: flex-end;
+}
 
 .text-gray {
   color: lightgray;
@@ -121,6 +126,7 @@ i {
 .heart path:not(.liked):hover {
   stroke: var(--border-primary);
 }
+/* TODO: Skeleton animation */
 
 /* ******************************************************** */
 /* ******** UTIL:  Animations */
@@ -138,3 +144,15 @@ i {
     transform: scale(1);
   }
 }
+
+/* @keyframes springAnimation {
+  0% {
+    transform: translateX(--startPos);
+  }
+  20% {
+    transform: translateX(--endPos);
+  }
+  40% {
+    transform: translateX(--endPos)
+  }
+} */
