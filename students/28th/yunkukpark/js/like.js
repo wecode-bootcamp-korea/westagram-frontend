@@ -1,9 +1,13 @@
 const feedImage = document.querySelector('.feed-main');
+const feedImageWrapper = document.querySelector('.feed-image-wrapper');
 const feedControler = document.querySelector('.feed-controler');
 const feedHeartIcon = feedControler.querySelector('.fa-heart');
 
 const commentList = document.querySelector('.feed-comment-list');
 const commentHeartIcons = commentList.querySelectorAll('.fa-heart');
+
+const borderIconClassName = 'far';
+const filledIconClassName = 'fas';
 
 const handleCommentHeartIcon = (event) => {
   const classListArray = event.target.classList.value.split(' ');
@@ -18,7 +22,9 @@ const handleCommentHeartIcon = (event) => {
 const checkLiked = () => {
   const classList = feedHeartIcon.classList;
   const classListArray = classList.value.split(' ');
-  const isLiked = classListArray.find((classItem) => (classItem === 'fas' ? true : false));
+  const isLiked = classListArray.find((classItem) =>
+    classItem === filledIconClassName ? true : false,
+  );
   return isLiked;
 };
 
@@ -30,8 +36,6 @@ const setLikeHit = () => {
 };
 
 const changeHeartIcon = (icon2Change) => {
-  const borderIconClassName = 'far';
-  const filledIconClassName = 'fas';
   const classList = icon2Change.classList;
 
   const classListArray = classList.value.split(' ');
@@ -52,6 +56,20 @@ const changeHeartIcon = (icon2Change) => {
 const handleLikeHit = () => {
   changeHeartIcon(feedHeartIcon);
   setLikeHit();
+  animateHeart();
+};
+
+const animateHeart = () => {
+  const feedImageWrapperHeart = feedImageWrapper.querySelector('.fa-heart');
+  const animantionValue = `heart-move 3s`;
+
+  const isLiked = checkLiked();
+  if (isLiked) {
+    feedImageWrapperHeart.style.animation = animantionValue;
+    setTimeout(() => {
+      feedImageWrapperHeart.style.removeProperty('animation');
+    }, 2000);
+  }
 };
 
 feedImage.addEventListener('dblclick', handleLikeHit);

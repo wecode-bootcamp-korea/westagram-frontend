@@ -248,7 +248,7 @@ main {
 
 /* Feed Main */
 .feed-image-wrapper {
-  width: 100%;
+  position: relative;
   overflow: hidden;
 }
 
@@ -256,6 +256,16 @@ main {
   display: block;
   width: 100%;
   object-fit: cover;
+}
+
+.feed-image-wrapper i {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ff4747;
+  font-size: 50px;
+  opacity: 0;
 }
 
 .feed-bottom {
@@ -514,5 +524,19 @@ i.fas.is-liked.fa-heart {
 
   .main-right {
     display: none;
+  }
+}
+
+@keyframes heart-move {
+  0% {
+    top: 60%;
+    opacity: 1;
+  }
+  30% {
+    top: 45%;
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
   }
 }
