@@ -5,41 +5,165 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style/main.css">
-    <title>Main</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <title>mainLayout</title>
 </head>
 <body>
     <nav class="navbar">
-        <div class="navbar-logo"></div>
-        <div class="navbar-search"></div>
-        <div class="navbar-icons"></div>
+        <div class="navbar-logo">
+                <class class="fab fa-instagram"></class>
+                <span> | </span>
+                <span>Westagram</span>  
+        </div>
+            <input type="text" placeholder="검색"  id="navbar-search">
+        <div class="navbar-icons">
+            <img src="img/explore.png" alt="explore">
+            <img src="img/heart.png" alt="heart">
+            <img src="img/profile.png" alt="profile">
+        </div>
     </nav>
     <main class="container">
-        <div class="feeds">
-            <aricle class="contents">
-                <div class="contents-name"></div>
-                <div class="contents-img"></div>
-                <div class="contents-icons"></div>
-                <div class="contents-writes"></div>
-                <div class="contents-comments"></div>
-            </aricle>
-        </div>
-        <div class="mainright">
-            <div class="mainright-name"></div>
+        <aricle class="feeds">
+            <div class="feeds-profile">
+                <div class="feeds-profile-imgAndName">
+                    <img src="img/My_Picture.jpeg" alt="My_Picture">
+                    <span>Seokho__lee</span>
+                </div>
+                <i class="fas fa-ellipsis-h"></i>
+            </div>
+            <section class="feeds-img-wrapper">
+                <img src="img/interior.jpeg" alt="interior" class="feeds-img">
+            </section>
+            <div class="feeds-icons">
+                <div class="feeds-icons-left">
+                    <i class="fas fa-heart"></i>
+                    <i class="far fa-comment"></i>
+                    <i class="fas fa-external-link-alt"></i>
+                </div>
+                <div class="feeds-icons-right">
+                    <i class="far fa-bookmark"></i>
+                </div>
+            </div>
+            <div class="feeds-writes">
+                <div class="writes-like">
+                    <div class="writes-like-wrapper">
+                        <img src="img/contents-write-profile.jpg" alt="feeds-write-profile">
+                        <span>dezeen님 외 10명이 좋아합니다</span>
+                    </div>
+                </div>
+                <div class="wirtes-write">
+                    <div class="wirtes-write-wte">
+                        <div>canon_nj 인테리어 참 멋지네요... <span>더 보기</span></div>
+                        <div id="wte-nece">
+                            neceosecius 너무 좋네요~~~~~~~~!!!
+                            <img src="img/heart.png" alt="heart" id="write-heart">
+                        </div>
+                        <div id="before">42분 전</div>
+                    </div>
+                </div>
+            </div>
+            <div class="feeds-comment">
+                <input type="text" placeholder="댓글 달기...">
+                <button>게시</button>
+            </div>
+            
+            <!-- <div class="feeds-comments">댓글 달기...
+                <span>게시</span>
+            </div> -->
+        </aricle>
+        <aside class="mainright">
+            <div class="mainright-name">
+                <img src="img/My_Picture.jpeg" alt="My_Picture" id="mainright-img">
+                <div class="mainright-name-word">
+                    <div>Seokho__lee</div>
+                    <div id="wecode">WeCode | 위코드 </div>
+                </div>
+            </div>
             <div class="mainright-story">
-                <div class="story-allview"></div>
-                <div class="story-profile"></div>
+                <div class="story-storyAndview">
+                    <div class="story">스토리</div>
+                    <div class="all">모두 보기</div>
+                </div>
+                <div class="story-people">
+                    <div class="story-profile">
+                        <img src="img/profile.png" alt="">
+                        <div>
+                            <p>yum_s</p>
+                            <p class="time">16분 전</p>
+                        </div>
+                    </div>
+                    <div class="story-profile">
+                        <img src="img/profile.png" alt="">
+                        <div>
+                            <p>drink_eat_drink</p>
+                            <p class="time">3시간 전</p>
+                        </div>
+                    </div>
+                    <div class="story-profile">
+                        <img src="img/profile.png" alt="">
+                        <div>
+                            <p>hyukyc</p>
+                            <p class="time">20분 전</p>
+                        </div>
+                    </div>
+                    <div class="story-profile">
+                        <img src="img/profile.png" alt="">
+                        <p>jiminkeek</p>
+                    </div>
+                </div>
             </div>
+
             <div class="mainright-suggest">
-                <div class="story-allview"></div>
-                <div class="story-profile"></div>
+                <div class="suggest-storyAndview">
+                    <div class="story">회원님을 위한 추천</div>
+                    <div class="all">모두 보기</div>
+                </div>
+                <div class="suggest-people">
+                    <div class="suggest-profile">
+                        <div class="suggest-profileflex">
+                            <img src="img/profile.png" alt="">
+                            <div>
+                                <p>joaaaaahye</p>
+                                <p class="time">_leqend_a님 외 2명이...</p>
+                            </div>
+                        </div>
+                        <div class="follow">팔로우</div>
+                    </div>
+
+                    <div class="suggest-profile">
+                        <div class="suggest-profileflex">
+                            <img src="img/profile.png" alt="">
+                            <div>
+                                <p>rampart81</p>
+                                <p class="time">ringo.in.seoul님 외 12...</p>
+                            </div>
+                        </div>
+                        <div class="follow">팔로우</div>
+                    </div>
+                    
+                    <div class="suggest-profile">
+                        <div class="suggest-profileflex">
+                            <img src="img/profile.png" alt="">
+                            <div>
+                                <p>shawnjjoo</p>
+                                <p class="time">jimmylee1220님 외 1...</p>
+                            </div>
+                        </div>
+                        <div class="follow">팔로우</div>
+                    </div>
+                </div>
             </div>
-            <div class="mainright-terms"></div>
-        </div>
+            <div class="mainright-terms">
+                <div>instagram 정보 . 지원 . 홍보 센터 . API .<br />
+                채용 정보 . 개인정보처리방침 . 약관 . <br />
+                디렉터리 . 프로필 . 해시태그 . 언어</div>
+                <div class="INSTA">2019 INSTAGRAM</div>
+            </div>
+        </aside>
     </main>
-
-
-
-
 
 
     <script src="js/main.js" defer></script>

@@ -1,0 +1,392 @@
+/* root */
+
+/* font size 12px */
+
+
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Lobster', cursive;
+}
+
+body {
+    width: 956px;
+    height: 760px;
+    background-color: rgb(232, 232, 232);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    width: 956px;
+    height: 56px;
+}
+
+.navbar-logo {
+    font-size: 20px;
+    margin-left: 68px;
+}
+
+input {
+    width: 164px;
+    height: 20px;
+    padding-left: 62px;
+    border-radius: 5px;
+    background-color: rgb(247, 247, 247);
+    border: 1px solid rgb(196, 196, 196);
+}
+
+input::placeholder {
+    color: rgb(196, 196, 196);
+}
+
+.navbar-icons img{
+    width:20px;
+    height:20px;
+    margin: 8px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.feeds {
+    margin-top: 40px;
+    margin-left: 128px;
+    width: 466px;
+    height: 655px;
+    /* background-color: red; */
+}
+
+.feeds-profile {
+    width: 466px;
+    height: 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+}
+
+.feeds-profile-imgAndName {
+    padding-left: 12px;
+    display: flex;
+    align-items: center;
+    
+}
+
+.feeds-profile span {
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+.feeds-profile i {
+    padding-right: 12px;
+}
+
+.feeds-profile img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+.feeds-img-wrapper {
+    width: 100%;
+}
+
+.feeds-img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+}
+
+.feeds-icons {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    height: 36px;
+}
+
+.feeds-icons-left {
+    padding: 8px 12px 6px;
+}
+
+.feeds-icons-left i {
+    padding-right: 12px;
+}
+
+.feeds-icons-right {
+    padding: 8px 12px 6px;
+}
+
+.feeds-writes {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    height: 86px;
+}
+
+.writes-like {
+    display: flex;
+    align-items: center;
+    padding-left: 12px;
+}
+
+.writes-like-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.writes-like-wrapper img{
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+}
+
+.writes-like span {
+    padding-left: 6px;
+    font-size: 12px;
+}
+
+.wirtes-write {
+    display: flex;
+    justify-content: space-between;
+}
+
+.wirtes-write-wte {
+    margin-top: 12px;
+    padding-left: 12px;
+    font-size: 12px;
+}
+
+.wirtes-write span {
+    color: rgb(196, 196, 196);
+}
+
+.wte-nece {
+    display: flex;
+    justify-content: center;
+    width: 8px;
+    height: 8px;
+    /* padding: 50px; */
+}
+
+#write-heart {
+    width: 12px;
+    height: 12px;
+    margin-left: 268px;
+}   
+
+#before {
+    color: rgb(196, 196, 196);
+    font-size: 10px;
+    margin-top: 3px;
+}
+
+.feeds-comment {
+    height: 30px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgb(196, 196, 196);
+}
+
+.feeds-comment input {
+    margin-left: 12px;
+    padding: 0;
+    border: none;
+    background-color: white;
+    font-size: 8px;
+    width: 90%;
+}
+
+input:focus {
+    outline: none;
+}
+
+.feeds-comment button {
+    border: none;
+    background-color: white;
+    margin-right: 12px;
+    font-size: 8px;
+    color: rgb(51, 143, 255);
+
+}
+
+/* .feeds-comments {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 30px;
+    background-color: white;
+    font-size: 10px;
+    color: rgb(196, 196, 196);
+    padding: 0 12px;
+    border-top: 0.1px solid rgb(196, 196, 196);
+} */
+
+.mainright {
+    width: 225px;
+    height: 655px;
+    /* background-color: red; */
+}
+
+.mainright-name img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.mainright-name {
+    width: 225px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+}
+
+.mainright-name-word {
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+#wecode {
+    font-size: 6px;
+    color: rgb(196, 196, 196);
+
+}
+
+.mainright-story {
+    width: 225px;
+    height: 170px;
+    background-color: white;
+    border: 1px solid rgb(196, 196, 196);
+    overflow: hidden;
+}
+
+.story-storyAndview {
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 10px 4px 10px;
+}
+
+.story {
+    color: rgb(196, 196, 196);
+    font-size: 10px;
+}
+
+.all {
+    font-weight: bolder;
+}
+
+.story-people {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 10px;
+}
+
+.story-profile {
+    display: flex;
+    font-size: 12px;
+    margin-bottom: 10px;
+    align-items: center;
+    justify-content: ;
+}
+
+.story-profile img {
+    width: 24px;
+    height: 24px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.story-profile p {
+    margin-left: 10px;
+}
+
+.time {
+    color: rgb(196, 196, 196);
+}
+
+.mainright {
+    margin-top: 40px;
+    margin-right: 80px;
+}
+
+.mainright-suggest {
+    display: flex;
+    flex-direction: column;
+    width: 225px;
+    height: 150px;
+    background-color: white;
+    margin-top: 12px;
+    border: 1px solid rgb(196, 196, 196);
+}
+
+.suggest-storyAndview {
+    display: flex;
+    justify-content: space-between;    
+    font-size: 12px;
+    padding: 6px 10px 4px 10px;
+}
+
+.suggest-people {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 10px;
+}
+
+.follow {
+    color: #067ff0;
+}
+
+.mainright-terms {
+    font-size: 8px;
+    color: rgb(196, 196, 196);
+    margin-top: 10px;
+}
+
+.INSTA {
+    margin-top: 10px;
+}
+
+.suggest-profile {
+    display: flex;
+    font-size: 12px;
+    margin-bottom: 10px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.suggest-profile img {
+    width: 24px;
+    height: 24px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.suggest-profileflex {
+    display: flex;
+}
+
+.suggest-profileflex p {
+    margin-left: 10px;
+}
+
+
+/* story-profile img {
+    width: 24px;
+    height: 24px;
+    border: 1px solid black;
+    border-radius: 50%; */
+
+/* story-profile {
+    display: flex;
+    font-size: 12px;
+    margin-bottom: 10px;
+    align-items: center; */
