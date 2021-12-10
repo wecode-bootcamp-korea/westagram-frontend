@@ -49,7 +49,7 @@ function addComment(e) {
 }
 
 function deleteComment(e) {
-    const target = e.target;ㅗㅛ
+    const target = e.target;
     if(target.className !== 'fas fa-times') return;
     const commentItem = target.parentNode.parentNode;
     const $commentContainer = commentItem.parentNode;
