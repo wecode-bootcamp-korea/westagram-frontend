@@ -70,7 +70,7 @@ nav .logo i:after {
     background: #000;
 }
 
-nav .search_box {
+nav .search_container {
     position: relative;
     width: 288px;
     height: 38px;
@@ -79,12 +79,12 @@ nav .search_box {
     text-align: center;
 }
 
-nav .search_box input{
+nav .search_container input{
     width: 100%;
     height: 100%;
 }
 
-nav .search_box input::placeholder{
+nav .search_container input::placeholder{
     text-align: center;
     opacity: 0.5;
     background: url(../images/search.svg) no-repeat 115px;
@@ -92,7 +92,7 @@ nav .search_box input::placeholder{
     color: #000;
 }
 
-nav .search_box i{
+nav .search_container i{
     position: absolute;
     left: 108px;
     top: 10px;
@@ -408,7 +408,7 @@ nav .logo i:after {
     background: #000;
 }
 
-nav .search_box {
+nav .search_container {
     position: relative;
     width: 288px;
     height: 38px;
@@ -417,12 +417,12 @@ nav .search_box {
     text-align: center;
 }
 
-nav .search_box input{
+nav .search_container input{
     width: 100%;
     height: 100%;
 }
 
-nav .search_box input::placeholder{
+nav .search_container input::placeholder{
     text-align: center;
     opacity: 0.5;
     background: url(../images/search.svg) no-repeat 115px;
@@ -430,11 +430,64 @@ nav .search_box input::placeholder{
     color: #000;
 }
 
-nav .search_box i{
+nav .search_container i{
     position: absolute;
     left: 108px;
     top: 10px;
     color: #a7a7a7;
+}
+
+.search_container > .suggestions_cap {
+    display: none;
+    position: relative;
+}
+
+.search_container > .suggestions_cap:before {
+    content: "";
+    z-index: 1;
+    position: relative;
+    display: inline-block;
+    top: 7px;
+    width: 10px;
+    height: 10px;
+    transform: rotate(45deg);
+    box-shadow: -5px -5px 5px #eee;
+    background: #fff;
+}
+
+.search_container > .suggestions_cap > div.suggestions_container > ul {
+    position: absolute;
+    left: -10%;
+    top: 15px;
+    width: 120%;
+    box-shadow: 5px 5px 5px #eee, -5px -5px 5px #eee;
+}
+
+.search_container > .suggestions_cap > div.suggestions_container > ul > li {
+    display: flex;
+    padding: 10px 0;
+    padding-left: 10px;
+    align-items: center;
+    background: #fff;
+}
+
+.search_container > .suggestions_cap > div.suggestions_container > ul > li > img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+.search_container > .suggestions_cap > div.suggestions_container > ul > li > div.uservalue {
+    text-align: left;
+}
+
+.search_container > .suggestions_cap > div.suggestions_container > ul > li > div.uservalue > p.userid{
+    font-weight: bold;
+}
+
+.search_container > .suggestions_cap > div.suggestions_container > ul > li > div.uservalue >  p.usernickname{
+    color: #A9A9A9;
 }
 
 nav .btns {

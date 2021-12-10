@@ -4,15 +4,72 @@ window.onload = function() {
     let btnUpload = document.querySelector('.btn_upload');
     let contentFlag = false;
     let comments = document.querySelector('.comments');
-    let hearts = document.querySelectorAll('.hearts');
     let profileBtn = document.querySelector('.profile');
     let profileMenu = document.querySelector('.profile_menu');
+    let searchInput = document.querySelector('.search_bar');
+    let filteredList = document.querySelector('.suggestions_list');
+    let resultContainer = document.querySelector('.suggestions_cap');
+    let accountArray = [
+        {
+          id: "wecode_bootcamp",
+          nickname: ">wecode | 위코드",
+          image: "images/wecode.jpg"
+        },
+        {
+            id: "wecode_fullstack_bootcamp",
+            nickname: "Wecode Fullstack Bootcamp",
+            image: "images/fullstack.jpg"
+        }   
+      ];
+
+    const searchFunc = (objId) => {
+        searchId = searchInput.value;
+        return objId.indexOf(searchId) !== -1;
+    }
+
+    const showFilteredAccount = (account) => {
+        const containerCap = document.querySelector(".suggestions_cap");
+        resultContainer.style.display = "block";
+        containerCap.style.display = "block";
+        const filteredOne = document.createElement("li");
+        filteredOne.innerHTML = `
+        <img src=${account.image} alt=${account.id} />
+        <div class="uservalue">
+            <p class="userid">${account.id}</p>
+            <p class="usernickname">${account.nickname}</p>
+        </div>`;
+        filteredList.appendChild(filteredOne);
+      };
+
+      searchInput.addEventListener("keyup", () => {
+        // 초기화
+        filteredList.innerHTML = "";
+        resultContainer.style.display = "none";
+        // input 값이 있다면,
+        if (searchInput.value) {
+          const filteredAccount = accountArray.filter((x) => searchFunc(x.id));
+          // filteredAccout 배열이 있다면,
+          if (filteredAccount) {
+            filteredAccount.forEach((acc) => showFilteredAccount(acc));
+          }
+        }
+      });
+
+    // focusout시, 검색 결과 사라지기
+    searchInput.addEventListener("focusout", () => {
+        const containerCap = document.querySelector(".suggestions_cap");
+        resultContainer.style.display = "none";
+        containerCap.style.display = "none";
+    });
+
+
+
 
     // 프로필버튼
     const activateProfile = (e) => profileMenu.classList.toggle('on');
 
     // 댓글좋아요기능 + 삭제기능
-    const addLikedOrDeleteComment = (e) => {
+    const modifyCommentStatus = (e) => {
         if (e.target.classList.contains('hearts')) { // 좋아요기능
             e.target.classList.toggle("red");
             if (e.target.className.startsWith("far")) e.target.className = e.target.className.replace("far", "fas");
@@ -53,7 +110,7 @@ window.onload = function() {
     btnUpload.addEventListener("click", handleComment);
     inputUpload.addEventListener("keyup", handleComment);
     inputUpload.addEventListener("keydown", activateBtn);
-    comments.addEventListener("click", addLikedOrDeleteComment);
+    comments.addEventListener("click", modifyCommentStatus);
     profileBtn.addEventListener("click", activateProfile);
 }
 
