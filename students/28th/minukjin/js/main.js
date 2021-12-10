@@ -3,12 +3,10 @@ const replyBtn = document.querySelector('#reply-button');
 const replyList = document.querySelector('.feed-replyList');
 const replyForm = document.querySelector('.feed-reply-form');
 const feedHeart = document.querySelector('.feed-heart');
-const replyHearts = document.getElementsByClassName('reply-heart');
-
 
 const replyBtnActive = () => {
   return replyInput.value ? replyBtn.style.color = 'blue' : replyBtn.style.color = 'rgb(197, 225, 251)';
-}
+};
 
 const replySubmit = () => {
   const replyAddTag = document.createElement('li');
@@ -23,11 +21,15 @@ const replySubmit = () => {
   `;
   replyList.appendChild(replyAddTag);
   replyInput.value = null;
-}
+};
 
 const feedHeartToggle = () => {
   feedHeart.classList.toggle('icon-heart');
-}
+};
+
+const replyHeartToggle = (e) => {
+  e.target.classList.toggle('icon-heart');
+};
 
 replyForm.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -36,12 +38,4 @@ replyForm.addEventListener('submit', (e) => {
 
 replyInput.addEventListener('keyup', replyBtnActive);
 feedHeart.addEventListener('click', feedHeartToggle);
-
-replyList.addEventListener('click', () => {
-  [].forEach.call(replyHearts, (replyHeart) => {
-    replyHeart.addEventListener('click', () => {
-      console.log();
-      replyHeart.classList.toggle('icon-heart');
-    }, true);
-  });
-});
+replyList.addEventListener('click', replyHeartToggle);
