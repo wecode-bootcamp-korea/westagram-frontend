@@ -6,7 +6,7 @@ const feedHeart = document.querySelector('.feed-heart');
 const replys = document.querySelectorAll('.fa-times');
 
 const replyBtnActive = () => {
-  return replyInput.value ? replyBtn.style.color = 'blue' : replyBtn.style.color = 'rgb(197, 225, 251)';
+  replyInput.value ? replyBtn.style.color = 'blue' : replyBtn.style.color = 'rgb(197, 225, 251)';
 };
 
 const replySubmit = () => {
@@ -37,11 +37,15 @@ const replyRemove = (e) => {
   if (e.target.id === 'remove') e.target.parentNode.remove();
 };
 
-replyForm.addEventListener('submit', (e) => {
-  e.preventDefault();
-  replySubmit();
-});
-replyInput.addEventListener('keyup', replyBtnActive);
-feedHeart.addEventListener('click', feedHeartToggle);
-replyList.addEventListener('click', replyHeartToggle);
-replyList.addEventListener('dblclick', replyRemove);
+const init = () => {
+  replyInput.addEventListener('keyup', replyBtnActive);
+  feedHeart.addEventListener('click', feedHeartToggle);
+  replyList.addEventListener('click', replyHeartToggle);
+  replyList.addEventListener('dblclick', replyRemove);
+  replyForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    replySubmit();
+  });
+};
+
+init();
