@@ -7,7 +7,7 @@ const $myButton = document.querySelector('.my');
 const $searchResultContainer = document.querySelector('.search__result--container');
 const $searchResultWrap = document.querySelector('.search__result--wrap');
 
-const idArr = [["images/profile-img2.jpg", 'wecode_bootcamp', 'wecode | 위코드'], ["images/profile-img.jpg", 'i_love_coding', '아코딩'], [null, 'sunglass', null], [null, 'sweat_shirt', null], [null, 'newziland4043', null], [null, 'huggy_woggy__33', null]];
+const idArr = [["images/profile-img2.jpg", 'wecbsdfp', 'account | clkdj'], ["images/profile-img.jpg", 'i_love_coding', '아코딩'], [null, 'sunglass', null], [null, 'sweat_shirt', null], [null, 'newziland4043', null], [null, 'huggy_woggy__33', null]];
 
 $search.addEventListener('keyup', searchId);
 document.addEventListener('click', handleMyMenu);
@@ -19,6 +19,7 @@ let storyData = [];
 
 async function fetchData() {
     feedData = await(await fetch('data/feed.json')).json();
+    await loading();
     storyData = await(await fetch('data/story.json')).json();
     await addTopStory(storyData);
 }
@@ -30,7 +31,6 @@ let displayCount = 0;
 const html = new Html();
 
 function addTopStory(data) {
-    console.log(data)
     $topStoryWrap.innerHTML = html.addTopStory(data);
 
 }
@@ -95,7 +95,8 @@ const skeletonHtml = html.addSkeleton();
 const $feedEnd = document.querySelector('.feed__end');
 const callback = (entry, observer) => {
     if(entry[0].isIntersecting && entry[0].intersectionRatio === 1) {
-         loading();
+        console.log('observer callback: '+displayCount);
+        loading();
     }
 }
 
@@ -113,10 +114,32 @@ function loading() {
     $newFeed.classList.add('skeleton');
     $newFeed.innerHTML = skeletonHtml;
     $feeds.appendChild($newFeed);
-    displayCount++;
-    setTimeout(() => {
-        displayFeed($newFeed, displayCount);
-    }, 1000)
+
+    let index = displayCount;
+    index++;
+    console.log('loading: '+index)
+    // console.log(displayCount, index)
+
+    const data = feedData[index];
+
+    // console.log(index,feedData.length)
+    // console.log(data, [...data].length)
+
+    if(index <= feedData.length - 1) {
+        // console.log('true?'+index, displayCount, feedData.length)
+        // console.log('true'+index,feedData.length)
+        setTimeout(() => {
+            displayFeed($newFeed, true);
+        }, 1000)
+    } else {
+        observer.unobserve($feedEnd);
+
+        // console.log('else'+index, feedData.length)
+        setTimeout(() => {
+            displayFeed($newFeed, false);
+        }, 500)
+    }
+    index++;
 
 }
 
@@ -131,18 +154,21 @@ function handleEvent(e) {
     }
 }
 
-function displayFeed(feedEl, index) {
+function displayFeed(feedEl, hasData) {
+    // console.log(hasData)
+    const index = displayCount++;
     const data = feedData[index];
     feedEl.classList.remove('skeleton');
     feedEl.addEventListener('click', handleEvent);
 
-    if(data) {
+    if(hasData === true) {
         feedEl.classList.add('feed');
         feedEl.innerHTML = html.addFeed(data, index);
     } else {
+        console.log('no data')
         feedEl.classList.add('noFeedContainer');
         feedEl.innerHTML = noFeedHtml;
-        observer.unobserve($feedEnd);
+        // observer.unobserve($feedEnd);
     }
 }
 

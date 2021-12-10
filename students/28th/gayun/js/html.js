@@ -16,7 +16,6 @@ export class Html {
             </span>
         `
         }).join('');
-        console.log(html)
         return html;
     }
 
@@ -90,6 +89,7 @@ export class Html {
     }
 
     addFeed(data, index) {
+        // console.log(index)
         return `
                 <div class="feed__header">
                     <span class="feed__header--user">
