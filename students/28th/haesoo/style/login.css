@@ -51,7 +51,8 @@ main {
   width: 100%;
 }
 
-.login-form input {
+.login-form .login-form__id,
+.login-form__password {
   width: 100%;
   height: 32px;
   margin: 4px;
@@ -66,10 +67,11 @@ main {
   outline: none;
 }
 
-.login-button {
+.login-form .login-button {
   width: 100%;
   height: 32px;
   margin-top: 10px;
+  border: none;
   border-radius: 4px;
   background-color: #0095f6;
   color: #fafafa;
@@ -83,21 +85,32 @@ main {
   opacity: 0.3;
 }
 
+.login-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .login-container p {
   width: 100%;
-  height: 32px;
-  margin: 20px 0px;
-  padding: 18px;
+  padding: 10px 0px;
   color: #8d8d8d;
   font-size: 14px;
   font-weight: 600;
   text-align: center;
 }
 
+.login-container .valid-message {
+  width: 80%;
+  font-size: 12px;
+  font-weight: 300;
+}
+
 .login-container .facebook-button {
   display: block;
   width: 100%;
-  height: px;
+  padding: 20px;
   color: #385085;
   font-weight: 600;
   font-size: 14px;
@@ -158,4 +171,21 @@ footer {
 
 .footer__text {
   margin-top: 10px;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  animation: fade-in 1s;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
