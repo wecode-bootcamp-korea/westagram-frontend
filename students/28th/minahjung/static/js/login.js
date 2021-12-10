@@ -1,7 +1,7 @@
 let user_id = document.getElementById('user_id');
 let user_pw = document.getElementById('user_pw');
 const login_btn = document.getElementsByClassName('login_btn')[0];
-const login_article = document.querySelector('article');
+const login_form = document.querySelector('form');
 
 function changeInputAndButton() {
     // padding 변경
@@ -25,7 +25,7 @@ login_btn.addEventListener('click', function () {
         location.href = './main.html';
     }
 });
-login_article.addEventListener('keydown', function (e) {
+login_form.addEventListener('keydown', function (e) {
     if ((!login_btn.hasAttribute('disabled')) && (e.key === 'Enter')) {
         location.href = './main.html';
     }
