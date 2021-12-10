@@ -90,13 +90,19 @@ function handleMyMenu(e) {
         $myButton.classList.add('hide');
     }
 }
-
+let nextFeedCheckIndex = 0;
 const skeletonHtml = html.addSkeleton();
 const $feedEnd = document.querySelector('.feed__end');
+
 const callback = (entry, observer) => {
     if(entry[0].isIntersecting && entry[0].intersectionRatio === 1) {
-        console.log('observer callback: '+displayCount);
-        loading();
+        nextFeedCheckIndex++;
+        if(nextFeedCheckIndex < feedData.length) {
+            loading();
+
+        } else {
+            displayNoFeedMessage();
+        }
     }
 }
 
@@ -115,32 +121,9 @@ function loading() {
     $newFeed.innerHTML = skeletonHtml;
     $feeds.appendChild($newFeed);
 
-    let index = displayCount;
-    index++;
-    console.log('loading: '+index)
-    // console.log(displayCount, index)
-
-    const data = feedData[index];
-
-    // console.log(index,feedData.length)
-    // console.log(data, [...data].length)
-
-    if(index <= feedData.length - 1) {
-        // console.log('true?'+index, displayCount, feedData.length)
-        // console.log('true'+index,feedData.length)
-        setTimeout(() => {
-            displayFeed($newFeed, true);
-        }, 1000)
-    } else {
-        observer.unobserve($feedEnd);
-
-        // console.log('else'+index, feedData.length)
-        setTimeout(() => {
-            displayFeed($newFeed, false);
-        }, 500)
-    }
-    index++;
-
+    setTimeout(() => {
+        displayFeed($newFeed);
+    }, 1000)
 }
 
 function handleEvent(e) {
@@ -154,22 +137,20 @@ function handleEvent(e) {
     }
 }
 
-function displayFeed(feedEl, hasData) {
-    // console.log(hasData)
+function displayFeed(feedEl) {
     const index = displayCount++;
     const data = feedData[index];
     feedEl.classList.remove('skeleton');
     feedEl.addEventListener('click', handleEvent);
 
-    if(hasData === true) {
         feedEl.classList.add('feed');
         feedEl.innerHTML = html.addFeed(data, index);
-    } else {
-        console.log('no data')
-        feedEl.classList.add('noFeedContainer');
-        feedEl.innerHTML = noFeedHtml;
-        // observer.unobserve($feedEnd);
-    }
 }
 
-const noFeedHtml = html.handleNoFeed();
+function displayNoFeedMessage() {
+    const $noFeedEl = document.createElement('article');
+    $noFeedEl.classList.add('noFeedContainer');
+    $noFeedEl.innerHTML = html.handleNoFeed();
+    $feeds.appendChild($noFeedEl);
+    observer.unobserve($feedEnd);
+}
