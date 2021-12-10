@@ -1,3 +1,18 @@
+// submenu start
+const profileBtn = document.getElementById('profile_menu');
+const submenu = document.querySelector('.account_menu');
+
+function toggleProfileSubmenu() {
+    if (submenu.style.display == 'block') {
+        submenu.style.display = 'none';
+    } else {
+        submenu.style.display = 'block';
+    }
+}
+
+profileBtn.addEventListener('click', toggleProfileSubmenu);
+// submenu end
+
 // story start
 const forwardBtn = document.getElementsByClassName('story_prev')[0];
 const backwardBtn = document.getElementsByClassName('story_next')[0];

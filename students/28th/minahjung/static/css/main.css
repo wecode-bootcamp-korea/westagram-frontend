@@ -33,6 +33,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    position: relative;
 }
 
 .logo_box {
@@ -90,8 +91,26 @@ a > h1.logo {
     cursor: pointer;
 }
 
+button#profile_menu {
+    width: 24px;
+    height: 24px;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    border-radius: 50%;
+}
+
+button#profile_menu:focus {
+    outline: 1px solid black;
+}
+
 img.profile {
     border-radius: 50%;
+    vertical-align: middle;
+}
+
+img.profile:focus {
+    outline: 1px solid black;
 }
 
 .rotateimg180 {
@@ -100,7 +119,65 @@ img.profile {
     -ms-transform: rotate(180deg);
     -o-transform: rotate(180deg);
     transform: rotate(180deg);
-  }
+}
+
+/* account submenu */
+.account_menu {
+    position: absolute;
+    max-width: 230px;
+    top: 60px;
+    right: 0px;
+    border-radius: 5px;
+    background-color: #fff;
+    font-size: 0.875rem;
+    box-shadow: 0 0 5px #dbdbdb;
+    display: none;
+}
+
+.account_menu::before {
+    content: '';
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: -10px;
+    right: 22px;
+    -webkit-transform:rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    background-color: #fff;
+    box-shadow: -3px -3px 7px 0 #dbdbdb;
+}
+
+.account_menu_wrap {
+    display: flexbox;
+    flex-direction: column;
+}
+
+.account_submenu {
+    width: 230px;
+    height: 37px;
+    padding: 8px 16px;
+    display: flex;
+    line-height: 16px;
+    align-items: center;
+}
+
+img.submenu_icons {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+}
+
+.account_submenu span {
+    padding-left: 16px;
+}
+
+.logout {
+    padding: 10px 16px 15px 16px;
+    border-top: 1px solid #dbdbdb;
+}
 
 /* main */
 main {
