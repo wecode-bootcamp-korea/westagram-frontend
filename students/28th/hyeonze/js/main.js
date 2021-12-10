@@ -41,25 +41,25 @@ window.onload = function() {
         filteredList.appendChild(filteredOne);//붙이기
       };
 
-    searchInput.addEventListener("keyup", () => {
-        // 초기화
+    const openSearchWindow = () => {
+    // 초기화
         filteredList.innerHTML = "";
         resultContainer.style.display = "none";
 
         if (searchInput.value) { // input 값이 있다면,
-          const filteredAccount = accountArray.filter((x) => searchFunc(x.id)); // 인풋값을 id에 포함한 객체만 남은 배열
-          if (filteredAccount) { // filteredAccout 배열이 있다면,
-            filteredAccount.forEach((acc) => showFilteredAccount(acc)); // 해당객체들을 li에 추가
-          }
+            const filteredAccount = accountArray.filter((x) => searchFunc(x.id)); // 인풋값을 id에 포함한 객체만 남은 배열
+            if (filteredAccount) { // filteredAccout 배열이 있다면,
+                filteredAccount.forEach((acc) => showFilteredAccount(acc)); // 해당객체들을 li에 추가
+            }
         }
-      });
+    }
 
     // focusout시, 검색 결과 사라지기
-    searchInput.addEventListener("focusout", () => {
+    const closeSearchWindow = () => {
         const containerCap = document.querySelector(".suggestions_cap");
         resultContainer.style.display = "none";
         containerCap.style.display = "none";
-    });
+    }
 
 
 
@@ -106,6 +106,8 @@ window.onload = function() {
         if(eventClassName === 'input_upload' && event.keyCode === 13) addComment(document.createElement('span'));
     }
 
+    searchInput.addEventListener("input", openSearchWindow);
+    searchInput.addEventListener("focusout", closeSearchWindow);
     btnUpload.addEventListener("click", handleComment);
     inputUpload.addEventListener("keyup", handleComment);
     inputUpload.addEventListener("keydown", activateBtn);
