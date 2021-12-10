@@ -9,33 +9,29 @@ window.onload = function() {
     let profileMenu = document.querySelector('.profile_menu');
 
     // 프로필버튼
-    profileBtn.addEventListener("click", (e) => {
-        profileMenu.classList.toggle('on');
-    });
+    const activateProfile = (e) => profileMenu.classList.toggle('on');
 
     // 댓글좋아요기능 + 삭제기능
-    comments.addEventListener("click", (e) => {
-        console.log(e.target);
+    const addLikedOrDeleteComment = (e) => {
         if (e.target.classList.contains('hearts')) { // 좋아요기능
             e.target.classList.toggle("red");
             if (e.target.className.startsWith("far")) e.target.className = e.target.className.replace("far", "fas");
             else if (e.target.className.startsWith("fas")) e.target.className = e.target.className.replace("fas", "far");
-        } else if (e.target.classList.contains('fa-times-circle')) e.target.parentNode.remove();
-    });
-
-    // 댓글 제거기능
+        } else if (e.target.classList.contains('fa-times-circle')) e.target.parentNode.remove(); // 삭제기능
+    }
 
     // 게시버튼 활성화 && 내용포함여부확인 기능
-    inputUpload.addEventListener("keydown", function() {
-        if (inputUpload.value) {
+    const activateBtn = (e) => {
+        if (e.target.value) {
             btnUpload.style.color = '#3e99ed';
             contentFlag = true;
         } else {
             btnUpload.style.color = '#c5e2fa';
             contentFlag = false;
         }
-    });
+    }
 
+    // 댓글달기
     const addComment = (el) => {
         el.innerHTML = `<strong>username </strong>${inputUpload.value}<small> 방금전</small><i class="fas fa-times-circle circles"></i><i class="far fa-heart hearts"></i>`;
         if (!contentFlag) return;
@@ -58,6 +54,9 @@ window.onload = function() {
 
     btnUpload.addEventListener("click", handleComment);
     inputUpload.addEventListener("keyup", handleComment);
+    inputUpload.addEventListener("keydown", activateBtn);
+    comments.addEventListener("click", addLikedOrDeleteComment);
+    profileBtn.addEventListener("click", activateProfile);
 }
 
 // 리팩토링전
