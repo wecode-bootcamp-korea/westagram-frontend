@@ -1,4 +1,4 @@
-
+"use strict";
 
 const loginId = document.querySelector("#inputId");
 const loginPw = document.querySelector("#inputPw");
@@ -8,7 +8,7 @@ function loginBtn() {
     let idValue = loginId.value;
     let pwValue = loginPw.value;
 
-    if(idValue.length > 2 && pwValue.length > 2) {
+    if(idValue.length > 4 && pwValue.length > 4) {
       loginButton.disabled = false;
       loginButton.style.backgroundColor = "#1c7ed6";
     } else {

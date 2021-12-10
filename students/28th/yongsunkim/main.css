@@ -44,7 +44,6 @@ article {
   background: ##FAFAFA;
 }
 
-
 .nav .navSearchbar input {
   background-color: ##FAFAFA;
   border: none;
@@ -62,6 +61,7 @@ article {
   justify-content: space-between;
   width: 200px;
 }
+
 .nav .navMenu #navMenuImg {
   width: 30px;
 }
@@ -78,18 +78,24 @@ article {
 }
 
 .mainContents .roundimg {
-  width: 50px;
-  height: 50px; 
+  width: 40px;
+  height: 40px; 
   border-radius: 70%;
 }
 
 .feed-top {
+  display: flex;
+  justify-content: space-between;
   border: 1px solid #DBDBDB
 }
 
-.feedimg {
+.feed-account {
+  display: flex;
+}
+
+.feedImg {
   width: 100%;
-  height: 750px;
+  height: 100%;
 }
 
 .feeds {
@@ -98,17 +104,59 @@ article {
   max-width: 650px;
 }
 
-.feed-top {
-}
-.feed-top .feed-account {
-}
-.feed-top .feed-account .fa-ellipsis-h {
-}
 .commentBox {
+  border: 1px #DBDBDB;
+  border-style: none solid;
+}
+
+.commentBox .likesButton {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 20px;
+  /* 버튼 크기 조종 구현 불가, 이미지 파일 밑에 보더라인 깨짐*/
+}
+
+.whoLikeThisWrap {
+  padding: 10px;
+}
+.whoLikeThisWrap .whoLikeThis {
+  display: flex;
+  padding-bottom: 10px;
+}
+
+.friendsImg {
+  margin-right: 5px;
+  width: 26px;
+  height: 26px; 
+  border-radius: 70%;
 }
 
 .writeaComment {
+  padding: 10px;
+  justify-content: center;
+  flex-direction: row;
   border: 1px solid #DBDBDB;
+}
+
+.writeaComment #commentBtn{
+  position: absolute;
+  padding: 20px;
+
+}
+
+textarea {
+  width: 90%;
+  height: 3rem;
+  border: none;
+  resize: none;
+  }
+
+
+
+.writeaComment #commentBtn {
+  border: none;
+  color: #C0DFFD;
+  background-color: #ffffff;
 }
 
 .main-wrap {
@@ -119,23 +167,34 @@ article {
 .main-right {
   position: fixed;
   flex-direction: column;
-  /* justify-content: space-between; */
+  justify-content: space-between;
   margin: 10px 10px 10px 20px;
   width: 20%;
 }
 
 .profile {
   display: flex;
+  margin-bottom: 10px;
 }
 
-.story {
+h5{
+  margin:5px;
+}
+
+.story-top {
+  margin-bottom: 10px;
   background-color: #ffffff;
   border: 1px solid #DBDBDB
 }
 
 .rec {
+  margin-bottom: 10px;
   background-color: #ffffff;
   border: 1px solid #DBDBDB
+}
+
+.addInfo{
+  color: #DBDBDB;
 }
 
 a {
