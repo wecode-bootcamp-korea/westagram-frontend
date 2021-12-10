@@ -1,11 +1,8 @@
-// 로그인 아이디 인풋에서는 아이디 관련 validation 검사
-// 패스워드 인풋에서는 비밀번호 관련 validation 검사
-// 두 개 다 검사 통과하면 disalbed 해제
-
 const loginForm = document.querySelector(".login-form");
 const loginId = document.querySelector(".js-id");
 const loginPassword = document.querySelector(".js-password");
 const loginButton = document.querySelector(".login-button");
+
 const validIdMessage = document.querySelector(".valid-id-message");
 const validPwMessage = document.querySelector(".valid-password-message");
 
@@ -67,6 +64,8 @@ function handleSubmit(event) {
 
   if (isValid) {
     location.href = "/students/28th/haesoo/main.html";
+    loginId.value = "";
+    loginPassword = "";
   } else {
     alert("아이디와 비밀번호를 확인해주세요.");
   }
