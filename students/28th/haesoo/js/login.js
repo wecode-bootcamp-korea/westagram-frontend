@@ -3,16 +3,16 @@ const loginId = document.querySelector(".js-id");
 const loginPassword = document.querySelector(".js-password");
 const loginButton = document.querySelector(".login-button");
 
-const validIdMessage = document.querySelector(".valid-id-message");
-const validPwMessage = document.querySelector(".valid-password-message");
+const validIdMessage = document.querySelector(".js-valid-id");
+const validPwMessage = document.querySelector(".js-valid-password");
 
 let isIdValid = false;
 let isPasswordValid = false;
 let isValid = false;
 
 loginForm.addEventListener("submit", handleSubmit);
-loginId.addEventListener("keyup", handleCheckIdValid);
-loginPassword.addEventListener("keyup", handleCheckPwValid);
+loginId.addEventListener("input", handleCheckIdValid);
+loginPassword.addEventListener("input", handleCheckPwValid);
 
 function handleCheckIdValid(event) {
   const id = event.target.value;
