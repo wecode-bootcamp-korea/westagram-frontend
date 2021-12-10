@@ -530,6 +530,11 @@ aside {
     height: 400px;
 }
 
+.aside_wrap {
+    position: fixed;
+    width: inherit;
+}
+
 .aside_account {
     margin-top: 16px;
     display: flex;
@@ -630,16 +635,20 @@ aside {
     width: 200px;
 }
 
-.recommend_id > p {
+.recommend_id > a, .recommend_id > p {
     font-size: 0.74rem;
 }
 
-.recommend_id > p:first-child {
+.recommend_id > a {
     font-weight: 600;
     margin-bottom: 4px;
 }
 
-.recommend_id > p:last-child {
+.recommend_id > a:hover {
+    text-decoration: underline;
+}
+
+.recommend_id > p {
     color: #8e8e8e;
 }
 

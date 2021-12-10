@@ -5,8 +5,10 @@ const submenu = document.querySelector('.account_menu');
 function toggleProfileSubmenu() {
     if (submenu.style.display == 'block') {
         submenu.style.display = 'none';
+        submenu.style.transition = 'transform 0.3s ease-in-out';
     } else {
         submenu.style.display = 'block';
+        submenu.style.transition = 'transform 0.3s ease-in-out';
     }
 }
 
@@ -83,8 +85,8 @@ prevBtn.addEventListener('click', showPrevPhoto);
 // reply start
 // activate write reply button
 const replyContent = document.querySelector('textarea');
-const writeBtn = document.getElementsByClassName('submit_reply')[0];
-const replyBox = document.getElementsByClassName('post_reply')[0];
+const writeBtn = document.querySelector('.submit_reply');
+const replyBox = document.querySelector('.post_reply');
 
 function activateReplyButton() {
     if (replyContent.value.length > 0) {
