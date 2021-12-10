@@ -1,5 +1,5 @@
-let user_id = document.getElementById('user_id');
-let user_pw = document.getElementById('user_pw');
+const user_id = document.getElementById('user_id');
+const user_pw = document.getElementById('user_pw');
 const login_btn = document.getElementsByClassName('login_btn')[0];
 const login_form = document.querySelector('form');
 
@@ -17,8 +17,8 @@ function changeInputAndButton() {
     }
 }
 
-user_id.addEventListener('keyup', changeInputAndButton);
-user_pw.addEventListener('keyup', changeInputAndButton);
+user_id.addEventListener('input', changeInputAndButton);
+user_pw.addEventListener('input', changeInputAndButton);
 
 login_btn.addEventListener('click', function () {
     if (!this.hasAttribute('disabled')) {
