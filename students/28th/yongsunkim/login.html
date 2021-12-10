@@ -5,28 +5,23 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>westagram.login</title>
+  <link rel="stylesheet" href="reset.css">
   <link rel="stylesheet" href="common.css">
   <link rel="stylesheet" href="login.css">
   <style type="text/css"></style>
 </head>
 <body>
-  <div class="container">
-    <h1 class="main" style="font-size:60px;">Instagram</h1>
-    <div class="content">
-      <div class="inputContainer">
-        <input id="inputId" type="text" placeholder="전화번호, 사용자 이름 또는 이메일">
-        <input id="inputPw" type="text" placeholder="비밀번호">
-      </div>
-      <button class="btn" disabled="disabled">
-        로그인
-      </button>
+  <main class="mainContainer">
+    <div class="loginInner">
+    <h1>Westagram</h1>
+    <div class="loginContent">
+      <input id="id" type="text" placeholder="전화번호, 사용자 이름 또는 이메일">
+      <input id="pw" type="text" placeholder="비밀번호">
+      <button class="btn" disabled="disabled">로그인</button>
     </div>
-    <div class="findPassword">
-      <a href="#">
-        <span>비밀번호를 잊으셨나요?</span>
-      </a>
+    <a href="#">비밀번호를 잊으셨나요?</a>
     </div>
-  </div>
-  <script src="login.js"></script>
+  </main>
+  <script type="text/javascript" src="login.js"></script>
 </body>
 </html>

@@ -119,6 +119,7 @@ article {
 .whoLikeThisWrap {
   padding: 10px;
 }
+
 .whoLikeThisWrap .whoLikeThis {
   display: flex;
   padding-bottom: 10px;
@@ -138,10 +139,12 @@ article {
   border: 1px solid #DBDBDB;
 }
 
+textarea:focus, input:focus {
+  outline: none;
+}
+
 .writeaComment #commentBtn{
   position: absolute;
-  padding: 20px;
-
 }
 
 textarea {
@@ -150,8 +153,6 @@ textarea {
   border: none;
   resize: none;
   }
-
-
 
 .writeaComment #commentBtn {
   border: none;
