@@ -1,39 +1,45 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>Westagram Login</title>
-    <meta name="viewport" content="width=device-width">
-    <link href="style/style/login.css" rel="stylesheet">
-    <link href="https://fonts.google.com/specimen/Lobster?preview.text=&preview.text_type=custom" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-</head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="style/style/login.css" rel="stylesheet" />
+    <link
+      href="https://fonts.google.com/specimen/Lobster?preview.text=&preview.text_type=custom"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body>
-  <div class="bigcontainer">
-    <div class="container">
-      <div class="logo">Westagram</div>
-      <div class="warp">
-      <div class="loginId">
-        <input type="text" placeholder="전화번호, 사용자 이름 또는 이메일" id="ID"/> 
-       </div>
-        <div class="loginPw">
-        <input type="password" placeholder="비밀번호" id="PW"/> 
+  <body>
+    <div class="bigcontainer">
+      <div class="container">
+        <div class="logo">Westagram</div>
+        <div class="warp loginform">
+          <div class="loginId">
+            <input
+              type="text"
+              placeholder="전화번호, 사용자 이름 또는 이메일"
+              id="id"
+            />
+          </div>
+          <div class="loginPw">
+            <input type="text" placeholder="비밀번호" id="pw" />
+          </div>
+          <button id="loginBtn" type="button" disabled>로그인</button>
+          <a href="">
+            <footer>비밀번호를 잊으셨나요?</footer>
+          </a>
         </div>
-        <button class="login-btn" type="button" disabled> 로그인</button>
-     </div>
-       <a href="">
-       <footer>비밀번호를 잊으셨나요?</footer> 
-       </a>
       </div>
+      <div class="bottom">Copyright by SeongYong</div>
     </div>
-    </div>
-    <div class="bottom"> Copyright by SeongYong </div>
-   </div>
-  <script src="/js/login.js"></script>
-</body>
+    <script src="js/login.js"></script>
+  </body>
 </html>
-
-

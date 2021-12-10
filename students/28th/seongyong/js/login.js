@@ -1,14 +1,65 @@
-const thisIsButton = document.getElementsByClassName("login-btn")[0];
-const body = document.querySelector("body");
+"use strict";
 
-body.addEventListener("keyup", function () {
-  console.log("check");
-  const id = document.getElementById("ID").value;
-  const pw = document.getElementById("PW").value;
+const inputs = document.getElementsByClassName("loginform")[0];
+const loginBtn = document.getElementById("loginBtn");
 
-  if (id && pw) {
-    // console.log("check");
-    thisIsButton.style.backgroundColor = "#2F78D2";
+const handleInput = () => {
+  const idValue = document.getElementById("id").value;
+  const pwValue = document.getElementById("pw").value;
+
+  const isValidId = checkValue(idValue);
+  const isValidPw = checkValue(pwValue);
+
+  console.log(idValue, pwValue);
+  if (isValidId && isValidPw) {
+    loginButton(true);
+  } else {
+    loginButton(false);
   }
-  //   id.value.indexOf('@') > 0 && pw.value.length >= 6?
-});
+};
+
+function loginButton(btnValid) {
+  if (btnValid) {
+    loginBtn.disabled = false;
+    loginBtn.style.opacity = 1;
+    loginBtn.style.cursor = "pointer";
+
+    if (window.event.keyCode === 13) {
+      success();
+    }
+  } else {
+    loginBtn.disabled = true;
+    loginBtn.style.opacity = 0.4;
+    loginBtn.style.cursor = "default";
+  }
+}
+
+function checkValue(value) {
+  if (value.length > 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+// loginButton.addEventListener("keyup", function (e) {
+//   const id = document.getElementById(".id").value;
+//   const pw = document.getElementById(".pw").value;
+
+//   if (id.length > 0 && pw.length > 0) {
+//     return disabled;
+//   }
+
+// });
+const success = () => console.log("Success");
+
+function init() {
+  console.log(inputs, loginBtn);
+  // inputs.addEventListner("input", handleInput);
+  // inputs.addEventListner("keyup", handleInput);
+  inputs.addEventListener("input", handleInput);
+  loginBtn.addEventListener("click", loginButton);
+  // loginBtn.addEventListener("click", () => console.log("Click"));
+}
+
+init();
