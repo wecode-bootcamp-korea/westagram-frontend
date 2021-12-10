@@ -3,6 +3,10 @@
   padding: 0;
   margin: 0;
 }
+:root {
+  --header-width: 4rem;
+  --button-moreComments: 3rem;
+}
 
 html,
 body {
@@ -10,14 +14,19 @@ body {
   height: 100%;
 }
 
+li {
+  list-style: none;
+}
+
 header {
   display: flex;
   align-items: center; /*nav를 header 기준 세로 축 중앙 */
-  position: fixed;
+  height: var(--header-width);
+  /* position: fixed;
   top: 0;
-  left: 0; /*header 화면 위로 붙이기 */
-  right: 0;
-  height: 5vw;
+  left: 0;
+  right: 0; */
+  /* height: 5vw; */
 }
 
 header nav {
@@ -57,9 +66,9 @@ header nav > * {
 }
 
 #searchBox {
-  /* display: flex; */
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   height: 40px;
   text-align: center;
   border-radius: 5px;
@@ -74,6 +83,7 @@ header #searchBox input {
   padding: 0 10px;
   border: 0;
 }
+
 /* 검색 활성화 시 테두리 제거 */
 #searchBox input:focus {
   outline: 0;
@@ -98,20 +108,308 @@ header #searchBox input::placeholder {
 main {
   display: flex;
   justify-content: space-between;
-  margin-top: 5vw;
+  height: 100vh;
 }
 /* 각 section 별로 width 지정 필요
 width의 기준 element 무엇인지 확인 요망 */
 main section:nth-child(1) {
-  width: 75%;
-  background-color: burlywood;
+  width: 60vw;
+  height: 100%;
+  text-align: center;
+  background-color: #fafafa;
 }
 
 main section:nth-child(2) {
-  width: 25%;
-  background-color: cadetblue;
+  width: 40vw;
+  height: 100%;
+  background-color: #fafafa;
+  /* border-left: 1px solid black; */
 }
 
-#feedContainer {
-  width: ;
+.feedContainer {
+  width: 700px;
+  display: inline-block;
+  margin-left: 13vw;
+  margin-top: 5vh;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  /* margin-left: 15vw; */
+  /* position: relative;
+  left: 20%; */
+  /* height: 800px; */
+  background-color: white;
 }
+
+.profileBlock {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 43px;
+  padding: 3px 15px;
+  background-color: white;
+}
+
+.profileAccount {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  background-color: white;
+  /* text-align: left; */
+}
+
+.profileAccount .profileImage {
+  height: 90%;
+  margin-right: 10px;
+  border: 0.5px solid lightgray;
+  border-radius: 50%;
+}
+
+.fa-ellipsis-h {
+  color: #262626;
+}
+
+.profileAccount span {
+  font-size: small;
+  font-weight: bolder;
+}
+
+.myFeedImage {
+  display: block;
+  width: 100%;
+}
+
+.toolBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 45px;
+  background-color: white;
+}
+
+.toolBoxThree {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  width: 150px;
+  padding-left: 20px;
+}
+
+.toolBoxThree img {
+  height: 100%;
+}
+
+.toolBox i {
+  font-size: 32px;
+}
+/* .toolBoxHeart {
+  
+} */
+.toolBox .fa-bookmark {
+  margin-right: 20px;
+}
+
+.commentSection {
+  background-color: chartreuse;
+}
+
+.likeMessageBlock {
+  display: flex;
+  align-items: center;
+  height: 30px;
+  padding-left: 20px;
+  margin: 15px 0;
+  background-color: white;
+  text-align: left;
+  /* vertical-align: middle; */
+}
+
+.likeMessageBlock img {
+  height: 75%;
+  border: 0.5px solid lightgray;
+  border-radius: 50%;
+}
+
+.likeMessageBlock span {
+  padding-left: 5px;
+  font-size: 15px;
+  font-weight: bold;
+}
+/* .commentsAndButton {
+  display: flex;
+  justify-content: space;
+} */
+
+/* .commentContainer {
+  display: flex;
+  justify-content: space-between;
+} */
+
+.commentList {
+  line-height: 1.5;
+}
+
+.commentsAndButton {
+  display: flex;
+  padding-left: 20px;
+  /* padding-right: 20px; */
+}
+
+.minBfrComments {
+  display: block;
+}
+
+/* .moreComments {
+  margin-left: 20px;
+  border: 0;
+  width: 60px;
+  height: 15px;
+  border: 0;
+  font-size: 15px;
+  background-color: white;
+  color: rgba(142, 142, 142, 0.7);
+  cursor: pointer;
+} */
+
+.minBfrComments {
+  text-align: left;
+}
+
+.postComment {
+  width: 100%;
+  height: 3vh;
+  text-align: left;
+  border-top: 1px solid lightgray;
+  margin-top: 10px;
+  padding-left: 20px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.postComment input {
+  width: 89%;
+  height: 100%;
+  border: 0;
+  margin: 0;
+  /* max-width: 90%; */
+}
+
+.postComment button {
+  width: 10%;
+  height: 100%;
+  border: 0;
+  color: lightblue;
+  background-color: white;
+  /* max-width: 10%; */
+}
+
+.side1,
+.side2,
+.side3 {
+  width: 20vw;
+  margin-left: 2vw;
+  margin-bottom: 10px;
+}
+
+.side1 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 5vh;
+  padding: 5px;
+  background-color: none;
+}
+
+.recommendAccount {
+  height: 50px;
+  border-radius: 50%;
+}
+
+.recommendAccountName {
+  padding-left: 10px;
+}
+
+.side2 {
+  /* height: 20vh; */
+  padding: 20px;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  background-color: white;
+}
+
+.storyHead,
+.recommendHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  /* padding: 10px; */
+}
+
+.storyHead span,
+.recommendHead span {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #8e8e8e;
+}
+
+.storyHead .allStory,
+.recommendHead .allRecommendation {
+  border: 0;
+  font-size: 1rem;
+  font-weight: bold;
+  background-color: white;
+  cursor: pointer;
+}
+
+.accountOfStory span {
+  display: block;
+  padding-left: 20px;
+  padding-bottom: 2px;
+}
+
+.storyElementList {
+  display: flex;
+  padding-bottom: 10px;
+}
+
+.storyElementList:last-child {
+  padding: 0;
+}
+
+.temp {
+  display: flex;
+}
+
+.recommendElementList {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.recommendElementList:last-child {
+  padding: 0;
+}
+
+.followButton {
+  font-size: 1rem;
+  color: #0095f6;
+  border: 0;
+  background-color: white;
+}
+
+.side3 {
+  padding: 20px;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  background-color: white;
+}
+
+/* .recommend {
+} */
+
+/* .recommendAccountName {
+
+} */

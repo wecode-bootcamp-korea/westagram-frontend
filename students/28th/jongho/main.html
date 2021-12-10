@@ -14,62 +14,158 @@
     <nav>
       <div id="logoContainer">
         <i class="fab fa-instagram"></i>
-        <img src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png" alt="logo">
+        <img src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png" alt="Instagram Logo" />
       </div>
       <div id="searchBox">
         <i class="fas fa-search"></i>
         <input type="text" placeholder="검색">
       </div>
       <div id="searchHeartPerson">
-          <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png" alt="searchImg">
-          <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" alt="heart">
-          <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png" alt="person">
+          <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png" alt="Explore Button" />
+          <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" alt="Heart symbol" />
+          <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png" alt="Person symbol" />
       </div>
     </nav>
   </header>
   <main>
     <section>
-      <div id="feedContainer">
-        feed section
-        <div>profile and account
-          <div>
-            <img id="profileImage" src="https://user-images.githubusercontent.com/93215875/145150249-bc2e2a6e-bdd0-4c02-9005-1b748cc1a428.jpg" alt="profile image">
+      <article class="feedContainer">
+        <div class="profileBlock">
+          <div class="profileAccount">
+            <img class="profileImage" src="https://user-images.githubusercontent.com/93215875/145150249-bc2e2a6e-bdd0-4c02-9005-1b748cc1a428.jpg" alt="profile image" />
             <span>나의 계정명</span>
           </div>
-          <div>setting 점 3개</div>
+          <i class="fas fa-ellipsis-h"></i>
         </div>
-        <div>
-          images
-          <img id="myfeedImage"src="https://user-images.githubusercontent.com/93215875/144997737-23918ede-3150-428b-a491-b8f816d7652b.jpg" alt="mandalorian">
+        <img class="myFeedImage"src="https://user-images.githubusercontent.com/93215875/144997737-23918ede-3150-428b-a491-b8f816d7652b.jpg" alt="Mandalorian" />
+        <div class="toolBox">
+          <div class="toolBoxThree">
+            <i class="far fa-heart toolBoxElement"></i>
+            <i class="far fa-comment toolBoxElement" id="speechBubble"></i>
+            <i class="fas fa-external-link-alt toolBoxElement" id="share"></i>
+          </div>
+          <i class="far fa-bookmark toolBoxElement"></i>
         </div>
-        <div>
-          <img class="toolBox" id="toolBoxHeart" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" alt="heart">
-          <i class="far fa-comment toolBox" id="speechBubble"></i>
-          <i class="fas fa-external-link-alt toolBox" id="share"></i>
-          <i class="far fa-bookmark toolBox" id="bookmark"></i>
+        <div class="likeMessageBlock">
+          <img class="profileImageLikeMessage" src="https://user-images.githubusercontent.com/93215875/145150249-bc2e2a6e-bdd0-4c02-9005-1b748cc1a428.jpg" alt="profile image" />
+          <span>10명이 좋아합니다</span>
         </div>
-        <div>
-          <div>10명이 좋아합니다</div>
-          <div>댓글 목록(몇분전)+더보기버튼
-            <ul>
-              <li class="comments"></li>
+        <div class="commentContainer">
+          <div class="commentsAndButton">
+            <ul class="commentList">
               <li class="comments">
-                아이디 내용
-                <span>몇분전</span>
+                <span class="commentId">Jongho Yoon</span>
+                <span class="commentSentence">위코드 프로젝트</span>
+                <span><i class="far fa-heart"></i></span>
+              </li>
+              <li class="comments">
+                <span class="commentId">Jongho Yoon</span>
+                <span class="commentSentence">위코드 프로젝트</span>
+                <i class="far fa-heart"></i>
+                <!-- <div class="minBfrComments">n분 전</div> -->
               </li>
             </ul>
-            <div>더보기 버튼</div>
+            <!-- <span class="minBfrComments">몇분전</span> -->
           </div>
+          <!-- <div>
+            <img class="toolBoxElement toolBoxHeart" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" alt="Heart symbol" />
+          </div> -->
         </div>
-        <div>
-          댓글달기
+        <!-- <div class="minBfrComments">n분 전</div> -->
+        <div class="postComment">
+          <input class="inputComment"type="text" placeholder="댓글 달기...">
+          <button class="pushComment-Btn">게시</button>
         </div>
-      </div>
+      </article>
     </section>
     <section>
-      side menu section
+      <div class="side1">
+        <img class="recommendAccount" src="https://user-images.githubusercontent.com/93215875/145207780-59e8db6a-25f0-470e-ab3d-12422ddf20ec.jpg" alt="wecode mark" />
+        <div class="recommendAccountName">
+          <p>account name1</p>
+          <p>account name2</p>
+        </div>
+      </div>
+      <article class="side2">
+        <div class="storyHead">
+          <span>스토리</span>
+          <button class="allStory">모두 보기</button>
+        </div>
+        <ul>
+          <li class="storyElementList">
+            <img class="recommendAccount" src="https://user-images.githubusercontent.com/93215875/145207780-59e8db6a-25f0-470e-ab3d-12422ddf20ec.jpg" alt="wecode mark" />
+            <div class="accountOfStory">
+              <span>ID</span>
+              <span>before Time</span>
+            </div>
+          </li>
+          <li class="storyElementList">
+            <img class="recommendAccount" src="https://user-images.githubusercontent.com/93215875/145207780-59e8db6a-25f0-470e-ab3d-12422ddf20ec.jpg" alt="wecode mark" />
+            <div class="accountOfStory">
+              <span>ID</span>
+              <span>before Time</span>
+            </div>
+          </li>
+          <li class="storyElementList">
+            <img class="recommendAccount" src="https://user-images.githubusercontent.com/93215875/145207780-59e8db6a-25f0-470e-ab3d-12422ddf20ec.jpg" alt="wecode mark" />
+            <div class="accountOfStory">
+              <span>ID</span>
+              <span>before Time</span>
+            </div>
+          </li>
+          <li class="storyElementList">
+            <img class="recommendAccount" src="https://user-images.githubusercontent.com/93215875/145207780-59e8db6a-25f0-470e-ab3d-12422ddf20ec.jpg" alt="wecode mark" />
+            <div class="accountOfStory">
+              <span>ID</span>
+              <span>before Time</span>
+            </div>
+          </li>
+        </ul>
+      </article>
+      <article class="side3">
+        <div class="recommendHead">
+          <span>회원님을 위한 추천</span>
+          <button class="allRecommendation">모두 보기</button>
+        </div>
+        <ul>
+          <li class="recommendElementList">
+            <div class="temp">
+              <img class="recommendAccount" src="https://user-images.githubusercontent.com/93215875/145207780-59e8db6a-25f0-470e-ab3d-12422ddf20ec.jpg" alt="wecode mark" />
+              <div class="accountOfStory">
+                <span>ID</span>
+                <span>before Time</span>
+              </div>
+            </div>
+            <div>
+              <button class="followButton" type="button">팔로우</button>
+            </div>
+          </li>
+          <li class="recommendElementList">
+            <div class="temp">
+              <img class="recommendAccount" src="https://user-images.githubusercontent.com/93215875/145207780-59e8db6a-25f0-470e-ab3d-12422ddf20ec.jpg" alt="wecode mark" />
+              <div class="accountOfStory">
+                <span>ID</span>
+                <span>before Time</span>
+              </div>
+            </div>
+            <div>
+              <button class="followButton" type="button">팔로우</button>
+            </div>
+          </li>
+          <li class="recommendElementList">
+            <div class="temp">
+              <img class="recommendAccount" src="https://user-images.githubusercontent.com/93215875/145207780-59e8db6a-25f0-470e-ab3d-12422ddf20ec.jpg" alt="wecode mark" />
+              <div class="accountOfStory">
+                <span>ID</span>
+                <span>before Time</span>
+              </div>
+            </div>
+            <div>
+              <button class="followButton" type="button">팔로우</button>
+            </div>
+          </li>
+        </ul>
     </section>
-    <!-- <span>임시요소 보자마자 삭제할것</span> -->
   </main>
 </body>
 </html>
