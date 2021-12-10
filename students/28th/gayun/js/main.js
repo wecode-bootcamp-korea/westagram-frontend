@@ -22,11 +22,10 @@ async function fetchData() {
     await loading();
     storyData = await(await fetch('data/story.json')).json();
     await addTopStory(storyData);
+    await startObserve();
 }
 
 fetchData()
-
-let displayCount = 0;
 
 const html = new Html();
 
@@ -48,7 +47,7 @@ function addComment(e) {
 }
 
 function deleteComment(e) {
-    const target = e.target;
+    const target = e.target;ㅗㅛ
     if(target.className !== 'fas fa-times') return;
     const commentItem = target.parentNode.parentNode;
     const $commentContainer = commentItem.parentNode;
@@ -90,6 +89,7 @@ function handleMyMenu(e) {
         $myButton.classList.add('hide');
     }
 }
+
 let nextFeedCheckIndex = 0;
 const skeletonHtml = html.addSkeleton();
 const $feedEnd = document.querySelector('.feed__end');
@@ -102,6 +102,8 @@ const callback = (entry, observer) => {
 
         } else {
             displayNoFeedMessage();
+            observer.unobserve($feedEnd);
+
         }
     }
 }
@@ -113,7 +115,10 @@ let options = {
   }
 
 const observer = new IntersectionObserver(callback, options)
-observer.observe($feedEnd);
+
+function startObserve() {
+    observer.observe($feedEnd);
+}
 
 function loading() {
     const $newFeed = document.createElement('article');
@@ -123,7 +128,7 @@ function loading() {
 
     setTimeout(() => {
         displayFeed($newFeed);
-    }, 1000)
+    }, 2000)
 }
 
 function handleEvent(e) {
@@ -137,14 +142,16 @@ function handleEvent(e) {
     }
 }
 
+let displayCount = 0;
+
 function displayFeed(feedEl) {
     const index = displayCount++;
     const data = feedData[index];
     feedEl.classList.remove('skeleton');
     feedEl.addEventListener('click', handleEvent);
 
-        feedEl.classList.add('feed');
-        feedEl.innerHTML = html.addFeed(data, index);
+    feedEl.classList.add('feed');
+    feedEl.innerHTML = html.addFeed(data, index);
 }
 
 function displayNoFeedMessage() {
@@ -152,5 +159,4 @@ function displayNoFeedMessage() {
     $noFeedEl.classList.add('noFeedContainer');
     $noFeedEl.innerHTML = html.handleNoFeed();
     $feeds.appendChild($noFeedEl);
-    observer.unobserve($feedEnd);
 }
