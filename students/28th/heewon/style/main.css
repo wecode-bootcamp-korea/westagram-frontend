@@ -3,7 +3,7 @@
     position: fixed;
     top: 0;
     width: 100%;
-    height: 54px;
+    height: 60px;
     background-color: #fff;
     border-bottom: 1px solid #dbdbdb;
     z-index: 10;
@@ -15,6 +15,7 @@
     align-items: center;
     flex-direction: row;
     max-width: 975px;
+    height: 100%;
     padding: 0 20px;
     margin: 0 auto;
 }
@@ -34,8 +35,8 @@
     align-items: center;
     justify-content: center;
     min-width: 125px;
-    width: 215px;
-    height: 28px;
+    width: 268px;
+    height: 36px;
     padding: 3px 12px;
     background: #fafafa;
     border: solid 1px rgba(var(--b6a, 219, 219, 219), 1);
@@ -381,7 +382,6 @@ main .main_wrap {
 }
 
 .user_desc span {
-    display: inline;
     overflow-wrap: break-word;
 }
 
@@ -443,6 +443,7 @@ main .main_wrap {
 .post_comment_btn {
     color: #0095f6;
     opacity: .3;
+    transition: opacity .3s;
 }
 
 
@@ -597,4 +598,16 @@ address {
     content: '・';
     display: inline-block;
     margin: 0 0.25em 0 0.25em;
+}
+
+
+/* || media query */
+@media (max-width: 1000px) {
+    .main_wrap .feed_wrap {
+        margin: 0 auto;
+    }
+
+    .recommend_aside {
+        display: none;
+    }
 }

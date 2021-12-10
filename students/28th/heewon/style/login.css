@@ -90,20 +90,14 @@ main.login_main {
 .login_btn button {
     width: 100%;
     text-align: center;
-    background-color: rgba(var(--d69, 0, 149, 246), .3);
+    background-color: #0095f6;
     border-radius: 4px;
     padding: 5px 9px;
     color: #fff;
     font-weight: 600;
-    transition: background .4s;
-    pointer-events: none;
-}
-
-/* login_btn active */
-.login_active {
-    cursor: pointer;
-    background-color: #0095f6 !important;
-    background-color: rgba(var(--d69,0,149,246),1) !important;
+    transition: opacity .4s;
+    /* pointer-events: none; */
+    opacity: .3;
 }
 
 
