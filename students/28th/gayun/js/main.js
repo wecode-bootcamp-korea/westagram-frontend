@@ -1,6 +1,7 @@
 import { Html } from './html.js';
 
 const $search = document.querySelector('.search');
+const $topStoryWrap = document.querySelector('.top-story__wrap');
 const $feeds = document.querySelector('.feeds');
 const $myButton = document.querySelector('.my');
 const $searchResultContainer = document.querySelector('.search__result--container');
@@ -14,14 +15,25 @@ document.addEventListener('click', handleMyMenu);
 const myId = 'canon_mj';
 
 let feedData = [];
+let storyData = [];
+
 async function fetchData() {
-    feedData = await (await fetch('data/data.json')).json()
+    feedData = await(await fetch('data/feed.json')).json();
+    storyData = await(await fetch('data/story.json')).json();
+    await addTopStory(storyData);
 }
+
 fetchData()
 
 let displayCount = 0;
 
 const html = new Html();
+
+function addTopStory(data) {
+    console.log(data)
+    $topStoryWrap.innerHTML = html.addTopStory(data);
+
+}
 
 function addComment(e) {
     e.preventDefault();
@@ -104,7 +116,7 @@ function loading() {
     displayCount++;
     setTimeout(() => {
         displayFeed($newFeed, displayCount);
-    }, 2000)
+    }, 1000)
 
 }
 

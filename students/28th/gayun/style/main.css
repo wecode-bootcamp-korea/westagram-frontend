@@ -9,7 +9,7 @@
     --profile-img-container-M: 2rem;
     --profile-img-container-S: 1rem;
     --profile-img-size: 90%;
-    --profile-border: 0.15rem;
+    --profile-border: 0.2rem;
     --profile-img-border-radius: 3rem;
     --profile-img-gradient: linear-gradient(39deg, rgba(254,218,117,1) 0%, rgba(250,126,30,1) 22%, rgba(214,41,118,1) 44%, rgba(150,47,191,1) 72%, rgba(79,91,213,1) 100%);
 }
@@ -152,12 +152,25 @@ input::placeholder {color: var(--border-grey)}
     display: flex;
     padding: var(--container-padding);
     padding-bottom: 0;
+    overflow-x: scroll;
+}
+
+.top-story__wrap::-webkit-scrollbar {
+    display: none;
 }
 
 .top-story__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+.top-story__img-container {
     margin-left: var(--item-padding);
     width: var(--profile-img-container-XL);
     height: var(--profile-img-container-XL);
+    margin-bottom: var(--item-padding);
 }
 
 .top-story__img {

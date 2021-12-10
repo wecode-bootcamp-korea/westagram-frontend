@@ -3,6 +3,23 @@ export class Html {
         this.defaultImgUrl = 'images/default_profile-img.png';
     }
 
+    addTopStory(data) {
+        const html = data.map((i) => {
+            return `
+            <span class="top-story__container">
+                <div class="top-story__img-container profile-container">
+                    <img class="top-story__img profile-img" src="${i.profileImg}" alt="story-img">
+                </div>
+                <div class="top-story__id">
+                    ${i.profileId}
+                </div>
+            </span>
+        `
+        }).join('');
+        console.log(html)
+        return html;
+    }
+
     writeComment(id, value) {
         return `
             <span class="comment_item">
@@ -26,7 +43,7 @@ export class Html {
                     <img src="${id[0] ?? this.defaultImgUrl}" alt="" class="search__result--img">
                     <span class="search__result--text">
                         <p class="search__result--title">${id[1]}</p>
-                        <p class="search__result--subtitle">${id[2]}</p>
+                        <p class="search__result--subtitle">${id[2] ?? ''}</p>
                     </span>
                 </li>
             `
