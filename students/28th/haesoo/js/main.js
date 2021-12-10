@@ -9,7 +9,6 @@ function handleInput(event) {
   const comment = commentInput.value;
   if (comment && event.keyCode === 13) {
     makeComment(comment);
-    commentInput.value = "";
   }
 }
 
@@ -17,15 +16,28 @@ function handleClick() {
   const comment = commentInput.value;
   if (comment) {
     makeComment(comment);
-    commentInput.value = "";
   }
 }
 
 function makeComment(text) {
-  return (commentContainer.innerHTML = `
-      <div class="comment-wrapper">
-        <span class="comment-id">__jaehyunjeong</span>
-        <span class="comment-text">${text}</span>
-      </div>
-    `);
+  const commentWrapper = document.createElement("ul");
+  commentWrapper.className = "comment-wrapper";
+
+  const comment = `
+    <span class="comment-id">__jaehyunjeong</span>
+    <span class="comment-text">${text}</span>
+    <button class="delete-button">X</button>
+  `;
+  commentWrapper.innerHTML = comment;
+  commentContainer.appendChild(commentWrapper);
+  commentInput.value = "";
+
+  deleteComment(commentWrapper);
+}
+
+function deleteComment(comment) {
+  const deleteButton = comment.querySelector(".delete-button");
+  deleteButton.addEventListener("click", () => {
+    comment.remove();
+  });
 }
