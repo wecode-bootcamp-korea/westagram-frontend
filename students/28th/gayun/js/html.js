@@ -4,7 +4,7 @@ export class Html {
     }
 
     addTopStory(data) {
-        const html = data.map((i) => {
+        return data.map((i) => {
             return `
             <span class="top-story__container">
                 <div class="top-story__img-container profile-container">
@@ -16,7 +16,6 @@ export class Html {
             </span>
         `
         }).join('');
-        return html;
     }
 
     writeComment(id, value) {
@@ -36,7 +35,7 @@ export class Html {
             return id[1].includes(targetVal);
         })
 
-        const html = filteredId.map((id) => {
+        return filteredId.map((id) => {
             return `
                 <li class="search__result--item">
                     <img src="${id[0] ?? this.defaultImgUrl}" alt="" class="search__result--img">
@@ -47,8 +46,6 @@ export class Html {
                 </li>
             `
         }).join('')
-
-        return html;
     }
 
     addSkeleton() {
@@ -73,7 +70,7 @@ export class Html {
     }
 
     addComment(data) {
-        const commentHtml = data.map((data) => {
+        return data.map((data) => {
             return `
                 <ul class="comment">
                     <span class="comment__item">
@@ -85,10 +82,21 @@ export class Html {
                     </button>
                 </ul>`
         }).join('');
-        return commentHtml;
     }
 
     addFeed(data, index) {
+        function handleTextContent(text) {
+            if(text.length > 30) {
+                text = text.slice(0, 30);
+                return `
+                    ${text}<button class="feed__more-text">...더보기</button>
+                `
+            } else {
+                return text;
+            }
+
+        }
+
         return `
                 <section class="feed__header">
                     <span class="feed__header--user">
@@ -128,7 +136,7 @@ export class Html {
                         <img src="images/profile-img2.jpg" alt="" class="people-who-like__img">
                         <p class="people-who-like__comment" data-num=${index}>${data.likesCount[0]}님 외 ${data.likesCount.length}명이 좋아합니다.</p>
                     </div>
-                    <div class="feed__textContent">${data.textContent}</div>
+                    <div class="feed__textContent">${handleTextContent(data.textContent)}</div>
                     <li class="comments">
                         ${this.addComment(data.comment)}
                     </li>
@@ -150,6 +158,24 @@ export class Html {
     }
 
     addStory(data) {
-        return data.map
+        function calculateDateGap(date) {
+            const uploadDate = new Date(date).getDate();
+            const today = new Date().getDate();
+            return today - uploadDate;
+        }
+
+        return data.map((i) => {
+            return `
+            <li class="story__item">
+                <span class="story__img-container profile-container">
+                    <img src="${i.profileImg}" alt="story-profile-img" class="story__item--img profile-img">
+                </span>
+                <span class="story__item--text">
+                    <p class="story__item--id">${i.profileId}</p>
+                    <p class="story__item--time">${calculateDateGap(i.uploadDate)}일 전</p>
+                </span>
+            </li>
+            `
+        }).join('');
     }
 }

@@ -42,10 +42,14 @@
 .story {
     padding: var(--container-padding);
     width: 100%;
-    height: 15rem;
     border: 1px solid var(--border-grey);
-    /* overflow: scroll; */
     background-color: var(--white);
+}
+
+.collapse {
+    height: 12rem;
+    overflow: hidden;
+
 }
 
 .story__header {
@@ -56,8 +60,9 @@
     font-weight: 600;
 }
 
-.story__header > button {
+.story__header--button {
     font-weight: 700;
+    cursor: pointer;
 }
 
 .story__list {
@@ -82,7 +87,6 @@
 }
 
 .story__item--time {
-    margin-left: var(--item-padding);
     font-size: 0.8rem;
     color: gray;
 }

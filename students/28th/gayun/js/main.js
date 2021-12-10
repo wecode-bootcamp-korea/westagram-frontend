@@ -6,6 +6,8 @@ const $feeds = document.querySelector('.feeds');
 const $myButton = document.querySelector('.my');
 const $searchResultContainer = document.querySelector('.search__result--container');
 const $searchResultWrap = document.querySelector('.search__result--wrap');
+const $storyContainer = document.querySelector('.story__list');
+const $showAllButton = document.querySelector('.story__header--button');
 
 const myId = 'canon_mj';
 const idArr = [["images/profile-img2.jpg", 'wecbsdfp', 'account | clkdj'], ['images/profile-img8.jpg', 'wow_easy', 'thisIsWowEasy', null], ['images/profile-img6.jpg', 'IthinkChester', 'Chester', '체스터'], ["images/profile-img.jpg", 'i_love_coding', '아코딩'], [null, 'sunglass', null], [null, 'sweat_shirt', null], [null, 'newziland4043', null], [null, 'huggy_woggy__33', null]];
@@ -13,6 +15,7 @@ const idArr = [["images/profile-img2.jpg", 'wecbsdfp', 'account | clkdj'], ['ima
 const html = new Html();
 
 $search.addEventListener('keyup', searchId);
+$showAllButton.addEventListener('click', showAllStories);
 document.addEventListener('click', handleMyMenu);
 
 let feedData = [];
@@ -24,6 +27,7 @@ async function fetchData() {
     await addSkeletonFeed();
     await addTopStory(storyData);
     await startObserve();
+    await addStory();
 }
 
 fetchData();
@@ -149,6 +153,8 @@ function handleEvent(e) {
         addComment(e);
     } else if(target.includes('fa-heart')) {
         handleLike(e);
+    } else if (target === 'feed__more-text') {
+        displayMoreFeedText(e)
     }
 }
 
@@ -157,4 +163,27 @@ function displayNoFeedMessage() {
     $noFeedEl.classList.add('noFeedContainer');
     $noFeedEl.innerHTML = html.handleNoFeed();
     $feeds.appendChild($noFeedEl);
+}
+
+function displayMoreFeedText(e) {
+    const target = e.target;
+    const $feedText = target.parentNode
+    const $likeComment = target.parentNode.previousSibling.previousSibling.childNodes[2].nextSibling;
+    const feedNum = $likeComment.dataset.num;
+
+    $feedText.textContent = feedData[feedNum].textContent;
+    console.log(feedData[feedNum].textContent);
+}
+
+function addStory() {
+    $storyContainer.innerHTML = html.addStory(storyData);
+}
+
+function showAllStories() {
+    $storyContainer.classList.toggle('collapse');
+    if($storyContainer.classList.contains('collapse')) {
+        $showAllButton.textContent = '모두 보기';
+    } else {
+        $showAllButton.textContent = '접기';
+    }
 }
