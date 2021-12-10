@@ -4,12 +4,14 @@
   width: 22px;
   height: 22px;
 }
+
 .write_logo {
   display: inline-block;
   background: url("../imgs/background01.png") no-repeat -94px -72px;
   width: 123px;
   height: 29px;
 }
+
 .compass_icon {
   display: inline-block;
   background: url("../imgs/explore.png") no-repeat;
@@ -23,31 +25,33 @@
   width: 70px;
   height: 51px;
 }
+
 .user_icon_profile {
   display: inline-block;
   background: url("../imgs/profile.png") no-repeat;
   width: 70px;
   height: 51px;
 }
+
 .small_search_icon {
   display: inline-block;
   background: url("../imgs/background01.png") no-repeat -337px -246px;
   width: 10px;
   height: 10px;
 }
+
 #header .inner .logo > a {
   color: transparent;
 }
+
 #header .inner .logo div {
   vertical-align: middle;
 }
+
 #header {
   width: 100%; /* 공중에 띄움 */
   position: absolute; /* 최상단 배치용도  */
   z-index: 999; /* absolute는 x축에서 1개 y축에서 1개 이상의 값 부여 필요 */
-  left: 0;
-  top: 0;
-  background: white;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
@@ -60,6 +64,7 @@
   align-items: center; /* y축 정렬 */
   transition: all 1s;
 }
+
 #header.on .inner {
   height: 52px;
 }
@@ -68,6 +73,7 @@
   position: relative;
   margin-right: 30px;
 }
+
 #header .inner .logo .insta_icon:after {
   content: "";
   width: 2px;
@@ -78,9 +84,11 @@
   top: -4px;
   transition: all 0.5s;
 }
+
 #header .search_box {
   position: relative;
 }
+
 #search-field {
   width: 185px;
   height: 28px;
@@ -94,66 +102,74 @@
   font-size: 14px;
   outline: none; /* 포커스시 나타나는 파란선 */
 }
+
 #search-field::placeholder {
   /* :: 속성선택자 */
   font-size: 0; /* 포커스 안될때 검색글자 보이는 용도 */
 }
+
 #search-field:focus::placeholder {
   font-size: 14px; /* 포커스시 검색글자 보이는 용도 */
 }
-#header .search_box .fake_field {
+
+#header .search_box .search_field_small {
   position: absolute; /* 검색창 위에 글자 보이는 용도 */
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   pointer-events: none; /* 검색 누를때 포인터 인식 방지 */
 }
-#search-field:focus ~ .fake_field > span:nth-child(1) {
+
+#search-field:focus ~ .search_field_small > span:nth-child(1) {
   transform: translateX(-105px); /* 포커스시 글자 숨김*/
 }
-#search-field:focus ~ .fake_field > span:nth-child(2) {
+
+#search-field:focus ~ .search_field_small > span:nth-child(2) {
   display: none;
 }
+
 #right_icons {
   width: 132px; /* 부모값 좌우 고정 */
   display: flex;
   justify-content: space-between; /* x축 정렬공간 자동분배 */
 }
+
 .main_right {
   width: 293px;
   position: absolute;
-  right: -20px;
-  top: -40px;
+  right: -1px;
+  top: -12px;
 }
-.main_right .on {
-  /* 위치 조정 관련 코드 */
-  position: fixed;
-  top: 130px;
-}
-.main_right .profile_thumb {
+
+.main_right .profile_small_img {
   width: 50px;
   height: 50px;
   border-radius: 50%;
   overflow: hidden;
   margin-right: 10px;
 }
-.main_right .profile_thumb img {
+
+.main_right .profile_small_img img {
   width: 100%;
   height: 100%;
 }
+
 .main_right .user_profile {
   display: flex;
   align-items: center;
   font-size: 14px;
   color: #262626;
 }
+
 .main_right .detail .id {
   margin-bottom: 5px;
 }
+
 .main_right .detail .ko_name {
   font-size: 12px;
   color: #999;
 }
+
 .main_right > article {
   border: 1px solid rgba(0, 0, 0, 0.09);
   border-radius: 3px;
@@ -178,24 +194,29 @@
   color: #262626;
   cursor: pointer;
 }
-.thumb_user {
+
+.scroll_userlist {
   display: flex;
   align-items: center;
   padding: 10px 20px;
 }
-.thumb_user .profile_thumb {
+
+.scroll_userlist .profile_small_img {
   width: 34px;
   height: 34px;
 }
-.thumb_user .time {
+
+.scroll_userlist .time {
   font-size: 10px;
   letter-spacing: 0.2px;
   color: #999;
 }
+
 .main_right .scroll_inner {
   height: 182px;
   overflow: hidden auto;
 }
+
 .main_right .follow {
   color: #0095f6;
   position: absolute;
@@ -209,30 +230,35 @@
   width: 15px;
   height: 3px;
 }
+
 .alpha_heart_icon_outline {
   display: inline-block;
   background: url("../imgs/background01.png") no-repeat -52px -261px;
   width: 24px;
   height: 22px;
 }
+
 .bubble_icon {
   display: inline-block;
   background: url("../imgs/background01.png") no-repeat -239px -202px;
   width: 24px;
   height: 24px;
 }
+
 .share_icon {
   display: inline-block;
   background: url("../imgs/background01.png") no-repeat -324px -52px;
   width: 21px;
   height: 24px;
 }
+
 .bookmark_outline {
   display: inline-block;
   background: url("../imgs/background01.png") no-repeat -237px -286px;
   width: 19px;
   height: 24px;
 }
+
 .bookmark_outline.on {
   background: url("../imgs/background01.png") no-repeat -159px -286px;
   width: 19px;
@@ -245,6 +271,7 @@
   display: flex;
   justify-content: center;
 }
+
 #main_container .inner {
   width: 930px;
   height: 500px;
@@ -252,16 +279,17 @@
 }
 
 .contents {
-  width: 614px;
-  height: 500px;
+  margin-left: 60px;
+  width: 509px;
+  height: 526px;
   border: 1px solid rgba(0, 0, 0, 0.09);
   border-radius: 3px;
-  margin-bottom: 60px;
-  background: white;
 }
+
 .contents .sprite_more_icon .toggle_box {
   display: block;
 }
+
 .contents .toggle_box {
   text-align: center;
   position: absolute;
@@ -271,21 +299,20 @@
   border-radius: 3px;
   display: none;
 }
-.contents .toggle_box > li {
-  padding: 5px 10px;
-  background: #fff;
-}
+
 .contents .toggle_box > li input {
   border: none;
   font-size: inherit;
 }
-.contents .top {
+
+.contents .contents_top {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
 }
-.contents .top .profile_img {
+
+.contents .contents_top .profile_img {
   width: 30px;
   height: 30px;
 
@@ -293,10 +320,12 @@
   overflow: hidden; /* 자식 크기 넘는거 방지*/
   margin-top: 4px;
 }
-.contents .top .profile_img img {
+
+.contents .contents_top .profile_img img {
   width: 100%; /* 100%미만시 이미지 안들어감 */
 }
-.contents .top .user_container {
+
+.contents .contents_top .user_container {
   display: flex;
 }
 
@@ -311,35 +340,44 @@
   padding: 5px 20px;
   color: #262626;
 }
+
 .contents .comment_container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 5px 20px;
 }
+
 .contents .comment_container .comment {
   display: flex;
   font-size: 14px;
   flex-direction: column;
 }
-.contents .comment_container .comment-detail {
+
+.contents .comment_container .comment_detail {
   display: flex;
 }
+
 .contents .comment_container .comment .nick_name {
   margin-right: 10px;
 }
+
 .contents .timer {
   font-size: 10px;
   letter-spacing: 0.2px;
   color: #999;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.09);
   padding: 10px 20px;
+  bottom: 20px;
 }
+
 .contents .comment_field {
   min-height: 56px;
   padding: 0 20px;
   position: relative;
+  color: #999;
+  border: 1px solid rgba(0, 0, 0, 0.09);
 }
+
 .contents .comment_field input {
   width: 100%;
   height: 56px;
@@ -347,26 +385,22 @@
   outline: none;
   background: transparent;
 }
-.contents .comment_field input:focus ~ .upload_btn {
+
+.contents .comment_field input:focus ~ .upload_btn_m_text {
   pointer-events: initial;
   opacity: 1;
 }
-.contents .comment_field .upload_btn {
+
+.contents .comment_field .upload_btn_m_text {
   color: #3897f0;
   position: absolute;
   right: 20px;
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
-
   opacity: 0.6;
 }
-.bottom_icons .heart_icon_outline_test {
-  background: url("../imgs/heart.png");
-}
-.small_heart_icon_outline {
-  display: inline-block;
-  background: url("../imgs/background01.png") no-repeat -323px -274px;
-  width: 12px;
-  height: 11px;
+
+.likes_count {
+  font-size: 13px;
 }

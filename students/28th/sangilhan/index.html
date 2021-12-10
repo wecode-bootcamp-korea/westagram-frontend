@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../211207/CSS/reset.css">
-    <link rel="stylesheet" href="../211207/CSS/common.css">
-    <link rel="stylesheet" href="../211207/CSS/index.css">
+    <link rel="stylesheet" href="../211207/CSS/reset.css" />
+    <link rel="stylesheet" href="../211207/CSS/common.css" />
+    <link rel="stylesheet" href="../211207/CSS/index.css" />
+    <script src="main.js" defer ></script>
     <title>Westagram</title>
 </head>
 <body>
-    <script src="https://code.jquery.com/jquery-3.6.0.slim.js"></script>
     <section id="container">
         <header id="header">
             <section class="inner">
@@ -21,8 +21,8 @@
                     </a>
                 </h1>
                 <div class="search_box">
-                    <input type="text" placeholder="검색" id="search-field">
-                    <div class="fake_field">
+                    <input type="text" placeholder="검색" id="search-field" />
+                    <div class="search_field_small">
                         <span class="small_search_icon"></span>
                         <span>검색</span>
                     </div>
@@ -36,63 +36,56 @@
                     <div class="inner">
                         <div class="contents_box">
                             <article class="contents"> 
-                               <header class="top">
+                               <header class="contents_top">
                                    <div class="user_container">
                                        <div class="profile_img">
-                                           <img src="../211207/imgs/profile.png" alt="프로필이미지">
+                                           <img src="../211207/imgs/profile.png" alt="프로필이미지" />
                                        </div>
                                        <div class="user_name">
-                                           <div class="nick_name">Wecode_Week2</div>
-                                           <div class="country">서울, 한국</div>
+                                           <p class="nick_name">Wecode_Week2</p>
+                                           <p class="country">워싱턴 DC, 미국</p>
                                        </div>
                                    </div>
-                                   <div class="sprite_more_icon" data-name="more"></div>
                                </header>
                                <div class="img_section">
                                    <div class="trans_inner">
                                        <div>
-                                           <img src="https://media.istockphoto.com/photos/brandenburg-gate-picture-id490614171?b=1&k=20&m=490614171&s=170667a&w=0&h=4Ak2kvxjmCf0HpjFTvSZb_QGsqSrASSJ_MI63oBHOEU=">
+                                           <img src="https://media.istockphoto.com/photos/brandenburg-gate-picture-id490614171?b=1&k=20&m=490614171&s=170667a&w=0&h=4Ak2kvxjmCf0HpjFTvSZb_QGsqSrASSJ_MI63oBHOEU=" />
                                        </div>
                                    </div>
                                </div>
-                               
                                <div class="bottom_icons">
                                    <div class="left_icons">
                                     <dlv class="heart_btn">
-                                        <div class="alpha_heart_icon_outline" name="39" data-name="heartbeat"></div>
+                                        <div class="alpha_heart_icon_outline"></div>
                                     </dlv>
                                        <div class="bubble_icon"></div>
-                                       <div class="share_icon" data-name="share"></div>
+                                       <div class="share_icon"></div>
                                    </div>
                                    <div class="right_icon">
-                                       <div class="bookmark_outline" data-name="bookmark"></div>
+                                       <div class="bookmark_outline"></div>
                                    </div>
                                </div>
-        
                                <div class="likes m_text">
-                                   좋아요
-                                   <span id="like-count-37">2,346</span>
-                                   개
+                                   <span class="likes_count">좋아요 2,222 개</span>
                                </div>
                                <div class="comment_container">
-                                   <div class="comment" id="comment-list-ajax-post37">
-                                       <div class="comment-detail">
-                                       <div class="nick_name m_text">Test</div>
-                                       <div>Testing</div>
+                                   <div class="comment">
+                                       <div class="comment_detail">
+                                       <p class="comment_text_test">댓글 테스트 진행중</p>
                                     </div>
-                                   </div>
-                                   
+                                   </div>                 
                                </div>
-                               <div class="timer" id="add-comment-post37">1시간 전</div>
+                               <div class="timer">1시간 전</div>
                                <div class="comment_field">
-                                   <input type="text" placeholder="댓글달기...">
-                                   <div class="upload_btn m_text">게시</div>
+                                   <input type="text" class="comment_test" placeholder="댓글달기..." />
+                                    <div class="upload_btn_m_text">게시</div>
                                </div> 
                                </article>
-               <div class="main_right">
+                            <div class="main_right">
                            <div class="user_profile">
-                               <div class="profile_thumb">
-                                <img src="../211207/imgs/profile.png" alt="프로필사진">
+                               <div class="profile_small_img">
+                                <img src="../211207/imgs/profile.png" alt="프로필사진" />
                                </div>
                                <div class="detail">
                                    <div class="id m_text">Insta_Week2_test</div>
@@ -105,36 +98,36 @@
                                    <div class="more">모두 보기</div>
                                </header>
                                <div class="scroll_inner">
-                                   <div class="thumb_user">
-                                       <div class="profile_thumb">
-                                        <img src="../211207/imgs/profile.png" alt="프로필사진">
+                                   <div class="scroll_userlist">
+                                    <div class="profile_small_img">
+                                        <img src="../211207/imgs/profile.png" alt="프로필사진" />
                                        </div>
                                        <div class="detail">
                                            <div class="id">001</div>
                                            <div class="time">1시간 전</div>
                                        </div> 
                                    </div>
-                                   <div class="thumb_user">
-                                    <div class="profile_thumb">
-                                        <img src="../211207/imgs/profile.png" alt="프로필사진">
+                                   <div class="scroll_userlist">
+                                    <div class="profile_small_img">
+                                        <img src="../211207/imgs/profile.png" alt="프로필사진" />
                                     </div>
                                     <div class="detail">
                                         <div class="id">002</div>
                                         <div class="time">2시간 전</div>
                                     </div> 
                                 </div>
-                                <div class="thumb_user">
-                                    <div class="profile_thumb">
-                                        <img src="../211207/imgs/profile.png" alt="프로필사진">
+                                <div class="scroll_userlist">
+                                    <div class="profile_small_img">
+                                        <img src="../211207/imgs/profile.png" alt="프로필사진" />
                                     </div>
                                     <div class="detail">
                                         <div class="id">003</div>
                                         <div class="time">24시간 전</div>
                                     </div> 
                                 </div>
-                                <div class="thumb_user">
-                                    <div class="profile_thumb">
-                                        <img src="../211207/imgs/profile.png" alt="프로필사진">
+                                <div class="scroll_userlist">
+                                    <div class="profile_small_img">
+                                        <img src="../211207/imgs/profile.png" alt="프로필사진" />
                                     </div>
                                     <div class="detail">
                                         <div class="id">004</div>
@@ -148,22 +141,21 @@
                                    <p>회원님을 위한 추천</p>
                                    <div class="more">모두 보기</div>
                                </header>
-                               <div class="thumb_user">
-                                <div class="profile_thumb">
-                                    <img src="../211207/imgs/profile.png" alt="프로필사진">
+                               <div class="scroll_userlist">
+                                <div class="profile_small_img">
+                                    <img src="../211207/imgs/profile.png" alt="프로필사진" />
                                 </div>
                                 <div class="detail">
                                     <div class="id">009</div>
                                     <div class="time">회원님을 팔로우합니다.</div>
                                 </div> 
                                 <a href="../211207/HTML/login.html"><div class="follow">팔로우</div></a>
-
                             </div>
                            </article> 
-                       </div>
-                       <script src="../211207/main.js"></script>
+                       </div>  
                     </div>
                 </header>
             </section>
 </body>
+
 </html>
