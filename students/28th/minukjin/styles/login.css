@@ -1,23 +1,34 @@
-.login-wrap {
-  width: 70rem;
-  height: 78rem;
-  margin: 0 auto;
-  margin-top: 2.5rem;
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 45%;
   border: 2px solid rgb(230, 230, 230);
   border-radius: 3px;
   background: rgb(255, 255, 255);
-  text-align: center;
 }
 
-h1 {
+.login-container h1 {
   margin: 10rem;
   font-size: 8rem;
 }
 
-input {
+.login-container input {
   display: block;
   width: 45rem;
-  margin: 1rem auto;
+  margin: 1rem;
   padding: 1.5rem;
   color: rgb(175, 175, 175);
   border: 1px solid rgb(245, 245, 245);
@@ -26,28 +37,24 @@ input {
   font-size: 1.5rem;
 }
 
-input:focus {
+.login-container input:focus {
   color: rgb(95, 95, 95);
 }
 
-button {
+.login-container button {
   display: block;
   width: 45rem;
   height: 4.5rem;
   margin: 3rem auto;
   color: rgb(255, 255, 255);
-  background-color: rgb(197, 225, 251);
+  background-color: rgb(48, 137, 219);
   border-radius: 5px;
   font-size: 2rem;
   text-align: center;
+  opacity: 0.4;
 }
 
-.login-wrap > .btn-active:hover {
-  box-shadow: 45rem 0 0 0 rgba(0, 0, 0, 0.1) inset;
-  cursor: pointer;
-}
-
-a {
+.login-container a {
   display: inline-block;
   margin: 22rem 2rem 2rem 2rem;
   padding: 1rem;
@@ -55,7 +62,7 @@ a {
   font-size: 1.7rem;
 }
 
-a:hover {
+.login-container a:hover {
   color: rgb(173, 68, 91);
   cursor: pointer;
 }

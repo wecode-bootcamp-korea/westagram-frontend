@@ -10,13 +10,15 @@
   <link rel="stylesheet" href="./styles/login.css" />
 </head>
 <body>
-  <div class="login-wrap">
+  <main class="login-container">
     <h1>westagram</h1>
-    <input type="text" id="id" placeholder="전화번호, 사용자 이름 또는 이메일"/>
-    <input type="password" id="pw" placeholder="비밀번호"/>
-    <button type="submit" id="btn"><span>로그인</span></button>
+    <form class="login-form">
+      <input type="text" id="id" placeholder="전화번호, 사용자 이름 또는 이메일"/>
+      <input type="password" id="pw" placeholder="비밀번호"/>
+      <button type="button" id="btn" disabled><span>로그인</span></button>
+    </form>
     <a href="/">비밀번호를 잊으셨나요?</a>
-  </div>
+  </main>
   <script src="./js/login.js"></script>
 </body>
 </html>
