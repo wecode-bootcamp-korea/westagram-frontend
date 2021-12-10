@@ -8,12 +8,6 @@
   --button-moreComments: 3rem;
 }
 
-html,
-body {
-  width: 100%;
-  height: 100%;
-}
-
 li {
   list-style: none;
 }
@@ -21,7 +15,7 @@ li {
 header {
   display: flex;
   align-items: center; /*nav를 header 기준 세로 축 중앙 */
-  height: var(--header-width);
+  height: var(--header-height);
   /* position: fixed;
   top: 0;
   left: 0;
@@ -34,8 +28,8 @@ header nav {
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
-  height: 100%;
-  border-bottom: 1px solid lightgray;
+  height: var(--header-height);
+  border-bottom: 1px solid var(--gray-border);
   background-color: #ffffff;
 }
 /*nav의 직계자식들 width를 동일하게 맞추어 space-between 했을 때 검색창이 중앙에 오도록 만듦 */
@@ -131,7 +125,7 @@ main section:nth-child(2) {
   display: inline-block;
   margin-left: 13vw;
   margin-top: 5vh;
-  border: 1px solid lightgray;
+  border: 1px solid var(--gray-border);
   border-radius: 4px;
   /* margin-left: 15vw; */
   /* position: relative;
@@ -161,7 +155,7 @@ main section:nth-child(2) {
 .profileAccount .profileImage {
   height: 90%;
   margin-right: 10px;
-  border: 0.5px solid lightgray;
+  border: 0.5px solid var(--gray-border);
   border-radius: 50%;
 }
 
@@ -227,7 +221,7 @@ main section:nth-child(2) {
 
 .likeMessageBlock img {
   height: 75%;
-  border: 0.5px solid lightgray;
+  border: 0.5px solid var(--gray-border);
   border-radius: 50%;
 }
 
@@ -280,7 +274,7 @@ main section:nth-child(2) {
   width: 100%;
   height: 3vh;
   text-align: left;
-  border-top: 1px solid lightgray;
+  border-top: 1px solid var(--gray-border);
   margin-top: 10px;
   padding-left: 20px;
   padding-top: 2px;
@@ -299,7 +293,7 @@ main section:nth-child(2) {
   width: 10%;
   height: 100%;
   border: 0;
-  color: lightblue;
+  color: var(--deactive-blue-color);
   background-color: white;
   /* max-width: 10%; */
 }
@@ -333,7 +327,7 @@ main section:nth-child(2) {
 .side2 {
   /* height: 20vh; */
   padding: 20px;
-  border: 1px solid lightgray;
+  border: 1px solid var(--gray-border);
   border-radius: 4px;
   background-color: white;
 }
@@ -351,7 +345,7 @@ main section:nth-child(2) {
 .recommendHead span {
   font-size: 1rem;
   font-weight: bold;
-  color: #8e8e8e;
+  color: var(--gray-text);
 }
 
 .storyHead .allStory,
@@ -395,14 +389,14 @@ main section:nth-child(2) {
 
 .followButton {
   font-size: 1rem;
-  color: #0095f6;
+  color: var(--active-blue-color);
   border: 0;
   background-color: white;
 }
 
 .side3 {
   padding: 20px;
-  border: 1px solid lightgray;
+  border: 1px solid var(--gray-border);
   border-radius: 4px;
   background-color: white;
 }
