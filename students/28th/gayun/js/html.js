@@ -89,9 +89,8 @@ export class Html {
     }
 
     addFeed(data, index) {
-        // console.log(index)
         return `
-                <div class="feed__header">
+                <section class="feed__header">
                     <span class="feed__header--user">
                         <span class="feed__header--img-container profile-container">
                             <img class="feed__header--img profile-img" src="${data.profileImg}" alt="">
@@ -102,11 +101,11 @@ export class Html {
                     <button class="feed_header--button">
                         <i class="fas fa-ellipsis-h"></i>
                     </button>
-                </div>
-                <div class="feed__img-container">
+                </section>
+                <section class="feed__img-container">
                     <img src="${data.imgContent}" alt="" class="feed-img">
-                </div>
-                <div class="feed__contents-wrap">
+                </section>
+                <section class="feed__contents-wrap">
                     <div class="feed__buttons">
                         <span class="feed__buttons1">
                             <button class="feed__button">
@@ -133,7 +132,7 @@ export class Html {
                     <li class="comments">
                         ${this.addComment(data.comment)}
                     </li>
-                </div>
+                </section>
                 <form class="comment__input">
                     <input type="text" placeholder=" 댓글 달기..." name="" id="" class="comment__input--text">
                     <button class="comment__input--button">게시</button>
@@ -148,5 +147,9 @@ export class Html {
             <p class="noFeed__text">불러올 피드가 없습니다.</p>
         </div>
     `
+    }
+
+    addStory(data) {
+        return data.map
     }
 }
