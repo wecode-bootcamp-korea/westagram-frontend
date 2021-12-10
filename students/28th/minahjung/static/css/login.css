@@ -186,3 +186,40 @@ a.forgot_pw {
     font-weight: 600;
     color: #0095f6;
 }
+
+/* footer */
+footer {
+    font-size: 0.75rem;
+    text-align: center;
+}
+
+.footer_tags_wrap {
+    max-width: 750px;
+    height: 80px;
+    margin: 0 auto;
+}
+
+ul.footer_tags {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    line-height: 30px;
+}
+
+ul.footer_tags > li {
+    max-width: 120px;
+    vertical-align: middle;
+}
+
+ul.footer_tags > li > a, .copyright p {
+    color: #8e8e8e;
+}
+
+ul.footer_tags > li:not(:first-child)::before {
+    content: ' ';
+    padding: 0 8px;
+    color: #8e8e8e;
+}
