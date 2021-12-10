@@ -310,3 +310,38 @@ const followOrNotReduce = () =>{
 followOrNotReduce();
 // 사이드바 follow 문장 축소
 ////
+
+document.getElementById('friendsFeed').addEventListener('scroll',function(event){
+    const ulWidth = document.getElementById('friendsFeedUl').scrollWidth
+    const scrollEndPos = ulWidth-event.target.clientWidth;
+    const scrollLeft = Math.round(event.target.scrollLeft);
+    
+    if (scrollLeft===0){
+        document.getElementById('friendsFeedPrev').style.visibility='hidden'
+        document.getElementById('friendsFeedNext').style.visibility='visible'
+    }else if (scrollLeft===scrollEndPos){
+        document.getElementById('friendsFeedPrev').style.visibility='visible'
+        document.getElementById('friendsFeedNext').style.visibility='hidden'
+    }else if (scrollLeft>0 && scrollLeft<scrollEndPos){
+        document.getElementById('friendsFeedPrev').style.visibility='visible'
+        document.getElementById('friendsFeedNext').style.visibility='visible'
+    }
+})
+
+const friendsFeedScrollPrev = () =>{
+    const friendsFeedWidth = document.getElementById('friendsFeed').clientWidth;
+    const ulWidth = document.getElementById('friendsFeedUl').offsetWidth
+    const scrollEndPos = ulWidth-friendsFeedWidth;
+    document.getElementById('friendsFeed').scrollLeft-=scrollEndPos*0.6;
+}
+
+const friendsFeedScrollNext = () =>{
+    const friendsFeedWidth = document.getElementById('friendsFeed').clientWidth;
+    const ulWidth = document.getElementById('friendsFeedUl').offsetWidth
+    const scrollEndPos = ulWidth-friendsFeedWidth;
+    document.getElementById('friendsFeed').scrollLeft+=scrollEndPos*0.6;
+}
+
+if (document.getElementById('friendsFeedUl').scrollWidth === document.getElementById('friendsFeed').clientWidth){
+    document.getElementById('friendsFeedNext').style.visibility='hidden';
+}
