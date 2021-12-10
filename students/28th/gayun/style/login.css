@@ -6,7 +6,12 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 7rem;
     height: 100%;
+}
+
+.logo {
+    margin: 2rem;
 }
 
 .form {
@@ -26,6 +31,7 @@ body {
     height: 3rem;
     border: none;
     border-radius: 5px;
+    outline: none;
     font-size: 1rem;
 }
 
@@ -34,9 +40,15 @@ body {
     background-color: rgb(248, 248, 248);
 }
 
-button {
-    background-color: rgb(197, 227, 255);
-    color: white;
+.login-button {
+    margin: 0.5rem;
+    height: 3rem;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 1rem;
+    background-color: var(--light-blue);
+    color: var(--white);
     font-weight: 800;
 }
 
@@ -46,7 +58,10 @@ button {
 }
 
 .active {
-    background-color: rgb(90, 138, 228);
+    background-color: var(--blue);
+    color: var(--white);
+    font-weight: 800;
+    cursor: pointer;
 }
 
 .hide {

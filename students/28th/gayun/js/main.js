@@ -96,17 +96,14 @@ let nextFeedCheckIndex = 0;
 const skeletonHtml = html.addSkeleton();
 const $feedEnd = document.querySelector('.feed__end');
 
-
 const callback = (entry, observer) => {
     if(entry[0].isIntersecting && entry[0].intersectionRatio === 1) {
         nextFeedCheckIndex++;
         if(nextFeedCheckIndex < feedData.length) {
             addSkeletonFeed();
-
         } else {
             displayNoFeedMessage();
             observer.unobserve($feedEnd);
-
         }
     }
 }

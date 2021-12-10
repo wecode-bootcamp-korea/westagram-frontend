@@ -2,7 +2,7 @@
 const $form = document.querySelector('form');
 const $idInput = document.querySelector('#id');
 const $pwInput = document.querySelector('#password');
-const $loginButton = document.querySelector('#login-button');
+const $loginButton = document.querySelector('.login-button');
 const $notice = document.querySelector('.notice');
 
 
@@ -18,13 +18,20 @@ function activeButton() {
         if(idInputVal.includes('@') && pwInputVal.length >= 5) {
             if(!$loginButton.classList.contains('active')) {
                 $loginButton.classList.add('active');
+                $loginButton.disabled = false;
             }
             if(!$notice.classList.contains('hide')) {
                 $notice.classList.add('hide');
             }
+        } else {
+            $loginButton.classList.remove('active');
+            $notice.classList.remove('hide');
+            $loginButton.disabled = true;
         }
     } else {
         $loginButton.classList.remove('active');
-        $notice.classList.remove('hide')
+        $notice.classList.remove('hide');
+        $loginButton.disabled = true;
     }
 }
+
