@@ -47,9 +47,7 @@ window.onload = function() {
         const eventClassName = event.target.className;
 
         if(eventClassName === 'btn_upload') addComment(document.createElement('span'));
-        if(eventClassName === 'input_upload') {
-            if(event.keyCode === 13) addComment(document.createElement('span'));
-        }
+        if(eventClassName === 'input_upload' && event.keyCode === 13) addComment(document.createElement('span'));
     }
 
     btnUpload.addEventListener("click", handleComment);
