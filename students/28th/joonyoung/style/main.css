@@ -175,6 +175,27 @@ main {
   transition: transform 0.5s linear;
   /* padding-right: 1rem; */
 }
+.story {
+  position: relative;
+  min-width: 7vh;
+  height: 7vh;
+  /* background-color: blue; */
+}
+.story::before {
+  content: "";
+  position: absolute;
+  inset: -5px;
+  border-radius: 50%;
+  background: var(--bg-circle);
+}
+
+.story::after {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border-radius: 50%;
+  background-color: #fff;
+}
 
 .story img {
   min-width: 7vh;
@@ -182,6 +203,7 @@ main {
   border-radius: 50%;
   cursor: pointer;
   position: relative;
+  z-index: 100;
 }
 
 /* FIXME: 스토리 border에 circle animation 추가 */
@@ -207,6 +229,7 @@ main {
   background-color: #fff;
   opacity: 0.5;
   cursor: pointer;
+  z-index: 999;
 }
 
 .stories__wrapper i:hover {
@@ -303,9 +326,20 @@ main {
   padding: 1rem;
 }
 .feed__header img {
-  width: 3vw;
-  height: 3vw;
+  width: 5vh;
+  height: 5vh;
   border-radius: 50%;
+}
+.feed__header p {
+  font-size: 1.125rem;
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+
+.feed__header p:hover {
+  color: var(--gray-400);
 }
 
 .feed__header .fa-ellipsis-h {
@@ -323,9 +357,11 @@ main {
   height: 100%;
   transition: all 0.5s ease-in-out;
 }
+
 .img__container img {
   min-width: 100%;
 }
+
 .feed__carousel .fas {
   position: absolute;
   top: 50%;
@@ -334,21 +370,23 @@ main {
   transform: translateY(-50%);
   cursor: pointer;
 }
+
 .feed__carousel .fas:hover {
   opacity: 0.8;
 }
+
 .feed__carousel .fa-chevron-circle-left {
   left: 1em;
 }
+
 .feed__carousel .fa-chevron-circle-right {
   right: 1em;
 }
 
 /* 3) icon buttons */
 .feed__icons {
-  padding: 1rem 1rem 0;
+  padding: 1rem 1.5rem 0 1rem;
   --gap: 1.25rem;
-  position: relative;
 }
 
 .feed__icons i {
@@ -362,12 +400,11 @@ main {
 }
 
 .feed__icons .fa-bookmark {
-  position: absolute;
-  right: 5%;
+  margin-left: auto;
 }
 
 .feed__icons p {
-  margin-top: 1rem;
+  margin: 0.5em 0 1em;
   width: fit-content;
   font-weight: bold;
 }
@@ -415,8 +452,7 @@ main {
 }
 
 .comment-front {
-  padding: 0 1em;
-  /* font-size: 0.9rem; */
+  padding: 0 1rem;
   background-color: #fff;
   transition: transform 0.4s ease-in;
   position: absolute;
@@ -438,10 +474,6 @@ main {
   padding-top: 1rem;
 }
 
-.comment__input #multiline {
-  padding-bottom: 1rem;
-}
-
 .comment__input .fa-smile {
   position: absolute;
   left: 4%;
@@ -451,10 +483,8 @@ main {
   padding: 0 10%;
   display: inline-block;
   width: 100%;
-  min-height: 100%;
   outline: none;
   border: none;
-  overflow-y: hidden;
 }
 
 .comment__input .add__comment {
@@ -474,7 +504,7 @@ main {
 
 /* ******************************************* */
 /* TODO: Media queries */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 968px) {
   #navbar {
     --padding: 5vw;
   }

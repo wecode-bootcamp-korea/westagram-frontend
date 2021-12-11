@@ -13,6 +13,8 @@ const ACTIVE = "active";
 const LIKE = "liked";
 const HEART = "heart-path";
 const FRONT_COMMENT = "comment-front";
+const SHIFT = "Shift";
+const ENTER = "Enter";
 
 // utilities
 const addClass = (target, classVar) => target?.classList.add(classVar);
@@ -117,28 +119,6 @@ const slideStoryToRight = (e) => {
 storyLeftBtn.addEventListener("click", slideStoryToLeft);
 storyRightBtn.addEventListener("click", slideStoryToRight);
 
-// stories.addEventListener("scroll", slideStoryToRight);
-
-// storyLeftBtn.addEventListener("click", (e) => {
-//   const leftOffset = leftEnd - stories.getBoundingClientRect().left;
-//   if (storyRightBtn.classList.contains(HIDDEN)) toggleArrow(storyRightBtn);
-//   if (leftOffset <= offset) {
-//     prevMoved -= leftOffset + 16;
-//     toggleArrow(storyLeftBtn);
-//   } else prevMoved -= offset;
-//   stories.style.transform = `translateX(-${prevMoved}px)`;
-// });
-
-// storyRightBtn.addEventListener("click", (e) => {
-//   const rightOffset = stories.getBoundingClientRect().right - rightEnd;
-//   if (storyLeftBtn.classList.contains(HIDDEN)) toggleArrow(storyLeftBtn);
-//   if (rightOffset <= offset) {
-//     prevMoved += rightOffset + 16;
-//     toggleArrow(storyRightBtn);
-//   } else prevMoved += offset;
-//   stories.style.transform = `translateX(-${prevMoved}px)`;
-// });
-
 // SECTION: Carousel for Feed image -> 모든 feed에 대해 시행해야 한다!!
 const feeds = [...document.querySelectorAll(".feed")];
 feeds.map((feed) => {
@@ -193,6 +173,8 @@ feeds.map((feed) => {
   const commentInput = commentsWrapper.querySelector(
     ".comment__input textarea"
   );
+  const textAreaRect = getElementRect(commentInput);
+  // console.log((textAreaRect.right - textAreaRect.left) * 0.8);
   const addCommentBtn = commentsWrapper.querySelector(".add__comment");
 
   // SECTION: comment btn active
@@ -233,19 +215,6 @@ feeds.map((feed) => {
   };
   commentList.addEventListener("click", addHeartClass);
 
-  // SECTION 4) enter / button click시 댓글 달리도록 하는 로직
-  const addCommentWithEnter = (e) => {
-    if (e.key !== "Enter") return;
-    e.preventDefault();
-    addCommentWithBtnClick(e);
-  };
-  const addCommentWithBtnClick = (e) => {
-    uploadComment("joonyg10", commentInput.value);
-    toggleClass(e.target, ACTIVE);
-  };
-  commentInput.addEventListener("keydown", addCommentWithEnter);
-  addCommentBtn.addEventListener("click", addCommentWithBtnClick);
-
   // SECTION: Slide logic
   let isMoving = false,
     dragAnimationID,
@@ -268,6 +237,7 @@ feeds.map((feed) => {
     currPos = e.pageX;
     movedBy = currPos - startPos;
     if (Math.abs(movedBy) >= minimumRequiredMove) movedBy = -maxMoved;
+    else movedBy = 0;
     animation(getClosestSelector(e.target, FRONT_COMMENT));
   };
 
@@ -275,6 +245,7 @@ feeds.map((feed) => {
     isMoving = false;
     cancelAnimationFrame(dragAnimationID);
     moveCommentByCalc();
+    movedBy = 0;
   };
 
   const animation = (target) => {
@@ -288,21 +259,58 @@ feeds.map((feed) => {
       target.style.transform = `translateX(${movedBy}px)`;
     }
   };
-
   commentList.addEventListener("mousedown", startCommentDrag);
   commentList.addEventListener("mousemove", movingComment);
   commentList.addEventListener("mouseup", endCommentDrag);
 
-  // REVIEW: comment추가 하는 로직
+  // FIXME: comment추가 하는 로직
+  let lines = 0;
+
+  const addCommentWithEnter = (e) => {
+    e.preventDefault();
+    addCommentWithBtnClick(e);
+  };
+  const addCommentWithBtnClick = (e) => {
+    uploadComment(
+      "joonyg10",
+      e.target.value.replace(/(?:\r\n|\r|\n)/g, "<br />")
+    );
+    toggleClass(e.target, ACTIVE);
+  };
+
+  const handleInput = (e) => {
+    if (e.key === ENTER) {
+      e.shiftKey ? adjustInputHeight(e) : addCommentWithEnter(e);
+    }
+  };
+  const adjustInputHeight = (e) => {
+    if (e.keyCode == 8) {
+      e.target.style.height = `${e.target.scrollHeight}px`;
+      console.log("DELETE", e.target.scrollHeight);
+    }
+    if (e.key === ENTER && e.shiftKey) {
+      ++lines;
+      console.log(e.target.scrollHeight);
+      e.target.style.height = `${e.target.scrollHeight + 8}px`;
+    }
+  };
+
+  commentInput.addEventListener("keyup", handleInput);
+  commentInput.addEventListener("keyup", adjustInputHeight);
+  addCommentBtn.addEventListener("click", addCommentWithBtnClick);
+
   const checkCommentsLen = (comment) => {
-    return comment.length > 40
-      ? `<a class='see-more'>...더보기</a> <span class='hidden'>${comment}</span>`
-      : comment;
+    return lines === 0
+      ? comment
+      : `<a class='see-more'>...더보기</a> <span class='hidden'>
+        ${comment}
+      </span>`;
   };
 
   const uploadComment = (user, comment) => {
     if (!comment) return;
     comment = checkCommentsLen(comment);
+
     const newCommentLi = document.createElement("li");
     newCommentLi.className = "comment";
     newCommentLi.innerHTML = `
@@ -312,9 +320,9 @@ feeds.map((feed) => {
         <i class="fas fa-trash-alt"></i>
       </div>
     </section>
-    <section class="comment-front flex items-center">
+    <section class="comment-front flex">
       <strong>${user}</strong>&nbsp;&nbsp;
-      <span>${comment}</span>
+      <span class="actual-comment"></span>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         class="h-6 w-6 heart"
@@ -332,26 +340,9 @@ feeds.map((feed) => {
       </svg>
     </section>
     `;
+    newCommentLi.querySelector(".actual-comment").innerHTML = comment;
     commentList.appendChild(newCommentLi);
     commentInput.value = null;
-  };
-
-  // TODO: 5) textarea auto line change
-  const adjustInputHeight = (e) => {
-    // console.log(e.target.style, e.target.scrollHeight);
-    resizeInput(e.target.value);
-  };
-  commentInput.addEventListener("keyup", adjustInputHeight);
-
-  // TODO: 6) resize textarea input
-  const resizeInput = (value) => {
-    let numberOfLineBreak = (value.match(/\n/g) || []).length;
-    console.log(value, numberOfLineBreak);
-
-    // resized Height = line-height * \n count + padding(top, bottom) + min-height
-    let resizedHeight = (numberOfLineBreak + 1) * 16 + 32;
+    lines = 0;
   };
 });
-
-// // **************************************************
-// // Utility fuctions

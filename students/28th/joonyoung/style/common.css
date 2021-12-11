@@ -123,6 +123,11 @@ i {
 .heart path:not(.liked):hover {
   stroke: var(--border-primary);
 }
+
+/* .circle {
+  animation: lineCirculate 1s ease-in-out;
+  animation-iteration-count: 2;
+} */
 /* TODO: Skeleton animation */
 
 /* ******************************************************** */
@@ -141,6 +146,15 @@ i {
     transform: scale(1);
   }
 }
+
+/* @keyframes lineCirculate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(720deg);
+  }
+} */
 
 /* TODO: 만약 시간이 남으면 삭제 버튼 왼쪽으로 드래그 할때 animation 추가 */
 /* @keyframes springAnimation {

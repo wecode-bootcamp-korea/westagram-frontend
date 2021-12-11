@@ -57,20 +57,41 @@
     <main>
       <section class="stories__wrapper flex items-center">
         <ul class="stories flex items-center">
-          <li class="story">
-            <div class="img-svg-circle"></div>
+          <li class="story" style="--bg-circle: red">
             <img src="./public/stories/story1.jpg" alt="story profile image" />
             <p>Enna</p>
           </li>
-          <li class="story">
-            <img src="./public/stories/story2.jpg" alt="story profile image" />
+          <!-- <li class="story flex items-center" style="--name: Enna">
+            <img src="./public/stories/story1.jpg" alt="story profile image" />
+          </li> -->
+          <li
+            class="story"
+            style="--bg-circle: linear-gradient(#e66465, #9198e5)"
+          >
+            <img
+              src="./public/stories/story2.jpg"
+              alt="story profile image"
+              class="story-img"
+            />
             <p>Jesy</p>
           </li>
-          <li class="story">
+          <li
+            class="story"
+            style="--bg-circle: linear-gradient(to top left, #9198e5, #ee6465)"
+          >
             <img src="./public/stories/story3.jpg" alt="story profile image" />
             <p>Denial</p>
           </li>
-          <li class="story">
+          <li
+            class="story"
+            style="
+              --bg-circle: linear-gradient(
+                to bottom right,
+                rgba(255, 0, 0, 0),
+                rgba(255, 0, 0, 1)
+              );
+            "
+          >
             <img src="./public/stories/story4.jpg" alt="story profile image" />
             <p>Meow</p>
           </li>
@@ -210,7 +231,7 @@
             </div>
             <p>좋아요 <span class="like-counter"> 8,920</span>개</p>
           </section>
-          <section class="comments__wrapper flex flex-col">
+          <section class="comments__wrapper">
             <ul class="comments">
               <li class="comment">
                 <section class="comment-delete">
@@ -219,9 +240,9 @@
                     <i class="fas fa-trash-alt"></i>
                   </div>
                 </section>
-                <section class="comment-front flex items-center">
+                <section class="comment-front flex">
                   <strong>Younha</strong>&nbsp;&nbsp;
-                  <span>와 정말 멋있다!</span>
+                  <span class="actual-comment">와 정말 멋있다!</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="h-6 w-6 heart"
