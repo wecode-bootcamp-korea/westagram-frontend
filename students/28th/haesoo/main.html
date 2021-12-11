@@ -20,9 +20,13 @@
   <body>
     <nav class="navigation">
       <a href="#">Westagram</a>
-      <div class="navigation__search">
+      <div class="js-navigation navigation__search">
         <i class="fas fa-search"></i>
-        <input placeholder="검색" />
+        <input class="js-search-input" placeholder="검색" />
+        <div class="hide search-container">
+         <ul class="search-list">
+        </ul>
+        </div>
       </div>
       <div class="navigation__icons">
         <img alt="home icon" src="/students/28th/haesoo/src/navigation_icons/home.png" />
@@ -33,6 +37,7 @@
         <img alt="profile image" src="/students/28th/haesoo/src/navigation_icons/profile.jpg" class="profile-img" />
       </div>
     </nav>
+
     <main>
       <section class="contents-container">
         <div class="story-container">
