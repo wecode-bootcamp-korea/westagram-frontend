@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="main_style.css" />
   <link rel="stylesheet" href="reset.css" />
   <link rel="stylesheet" href="common.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet" />
   <script defer src="main_script.js"></script>
   <script src="https://kit.fontawesome.com/8fa5fefe3b.js" crossorigin="anonymous"></script>
   <title>Westagram Main Page</title>
@@ -14,15 +15,15 @@
 <body>
   <header>
     <nav>
-      <div id="logoContainer">
-        <i class="fab fa-instagram"></i>
-        <img src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png" alt="Instagram Logo" />
+      <div id="symbolBlock">
+        <img class="instaImg" src="images/instagram_logo.png" alt="instagram logo">
+        <span class="instagramLogo">Instagram</span>
       </div>
-      <div id="searchBox">
-        <i class="fas fa-search"></i>
-        <input type="text" placeholder="검색">
+      <div id="searchBlock">
+        <img class="magnifier" src="images/돋보기.png" alt="돋보기" />
+        <input class="searchInput" type="text" placeholder="검색" />
       </div>
-      <div id="searchHeartPerson">
+      <div id="otherContents">
           <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png" alt="Explore Button" />
           <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" alt="Heart symbol" />
           <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png" alt="Person symbol" />
@@ -81,89 +82,89 @@
       </article>
     </section>
     <section>
-      <div class="side1">
-        <img class="recommendAccount" src="https://user-images.githubusercontent.com/93215875/145207780-59e8db6a-25f0-470e-ab3d-12422ddf20ec.jpg" alt="wecode mark" />
-        <div class="recommendAccountName">
+      <div class="myAccount">
+        <img class="accountRecomm" src="https://user-images.githubusercontent.com/93215875/145207780-59e8db6a-25f0-470e-ab3d-12422ddf20ec.jpg" alt="wecode mark" />
+        <div class="recommName">
           <p>account name1</p>
           <p>account name2</p>
         </div>
       </div>
-      <article class="side2">
+      <article class="recommStory">
         <div class="storyHead">
           <span>스토리</span>
-          <button class="allStory">모두 보기</button>
+          <button class="seeAllBtn">모두 보기</button>
         </div>
         <ul>
-          <li class="storyElementList">
-            <img class="recommendAccount" src="https://user-images.githubusercontent.com/93215875/145207780-59e8db6a-25f0-470e-ab3d-12422ddf20ec.jpg" alt="wecode mark" />
-            <div class="accountOfStory">
+          <li class="storyList">
+            <img class="accountRecomm" src="https://user-images.githubusercontent.com/93215875/145207780-59e8db6a-25f0-470e-ab3d-12422ddf20ec.jpg" alt="wecode mark" />
+            <div class="accountBlock">
               <span>ID</span>
               <span>before Time</span>
             </div>
           </li>
-          <li class="storyElementList">
-            <img class="recommendAccount" src="https://user-images.githubusercontent.com/93215875/145207780-59e8db6a-25f0-470e-ab3d-12422ddf20ec.jpg" alt="wecode mark" />
-            <div class="accountOfStory">
+          <li class="storyList">
+            <img class="accountRecomm" src="https://user-images.githubusercontent.com/93215875/145207780-59e8db6a-25f0-470e-ab3d-12422ddf20ec.jpg" alt="wecode mark" />
+            <div class="accountBlock">
               <span>ID</span>
               <span>before Time</span>
             </div>
           </li>
-          <li class="storyElementList">
-            <img class="recommendAccount" src="https://user-images.githubusercontent.com/93215875/145207780-59e8db6a-25f0-470e-ab3d-12422ddf20ec.jpg" alt="wecode mark" />
-            <div class="accountOfStory">
+          <li class="storyList">
+            <img class="accountRecomm" src="https://user-images.githubusercontent.com/93215875/145207780-59e8db6a-25f0-470e-ab3d-12422ddf20ec.jpg" alt="wecode mark" />
+            <div class="accountBlock">
               <span>ID</span>
               <span>before Time</span>
             </div>
           </li>
-          <li class="storyElementList">
-            <img class="recommendAccount" src="https://user-images.githubusercontent.com/93215875/145207780-59e8db6a-25f0-470e-ab3d-12422ddf20ec.jpg" alt="wecode mark" />
-            <div class="accountOfStory">
+          <li class="storyList">
+            <img class="accountRecomm" src="https://user-images.githubusercontent.com/93215875/145207780-59e8db6a-25f0-470e-ab3d-12422ddf20ec.jpg" alt="wecode mark" />
+            <div class="accountBlock">
               <span>ID</span>
               <span>before Time</span>
             </div>
           </li>
         </ul>
       </article>
-      <article class="side3">
-        <div class="recommendHead">
+      <article class="recommWraper">
+        <div class="recommHeader">
           <span>회원님을 위한 추천</span>
-          <button class="allRecommendation">모두 보기</button>
+          <button class="seeAllBtn">모두 보기</button>
         </div>
         <ul>
-          <li class="recommendElementList">
-            <div class="temp">
-              <img class="recommendAccount" src="https://user-images.githubusercontent.com/93215875/145207780-59e8db6a-25f0-470e-ab3d-12422ddf20ec.jpg" alt="wecode mark" />
-              <div class="accountOfStory">
+          <li class="recommList">
+            <div class="recommCont">
+              <img class="accountRecomm" src="https://user-images.githubusercontent.com/93215875/145207780-59e8db6a-25f0-470e-ab3d-12422ddf20ec.jpg" alt="wecode mark" />
+              <div class="accountBlock">
                 <span>ID</span>
                 <span>before Time</span>
               </div>
             </div>
             <div>
-              <button class="followButton" type="button">팔로우</button>
+              <button class="followBtn" type="button">팔로우</button>
             </div>
           </li>
-          <li class="recommendElementList">
-            <div class="temp">
-              <img class="recommendAccount" src="https://user-images.githubusercontent.com/93215875/145207780-59e8db6a-25f0-470e-ab3d-12422ddf20ec.jpg" alt="wecode mark" />
-              <div class="accountOfStory">
+          <li class="recommList">
+            <div class="recommCont">
+              <img class="accountRecomm" src="https://user-images.githubusercontent.com/93215875/145207780-59e8db6a-25f0-470e-ab3d-12422ddf20ec.jpg" alt="wecode mark" />
+              <div class="accountBlock">
                 <span>ID</span>
                 <span>before Time</span>
               </div>
             </div>
             <div>
-              <button class="followButton" type="button">팔로우</button>
+              <button class="followBtn" type="button">팔로우</button>
             </div>
           </li>
-          <li class="recommendElementList">
-            <div class="temp">
-              <img class="recommendAccount" src="https://user-images.githubusercontent.com/93215875/145207780-59e8db6a-25f0-470e-ab3d-12422ddf20ec.jpg" alt="wecode mark" />
-              <div class="accountOfStory">
+          <li class="recommList">
+            <div class="recommCont">
+              <img class="accountRecomm" src="https://user-images.githubusercontent.com/93215875/145207780-59e8db6a-25f0-470e-ab3d-12422ddf20ec.jpg" alt="wecode mark" />
+              <div class="accountBlock">
                 <span>ID</span>
                 <span>before Time</span>
               </div>
             </div>
             <div>
-              <button class="followButton" type="button">팔로우</button>
+              <button class="followBtn" type="button">팔로우</button>
             </div>
           </li>
         </ul>

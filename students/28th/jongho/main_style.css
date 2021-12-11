@@ -1,26 +1,11 @@
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-:root {
-  --header-width: 4rem;
-  --button-moreComments: 3rem;
-}
-
 li {
   list-style: none;
 }
 
-header {
+/* header {
   display: flex;
-  align-items: center; /*nav를 header 기준 세로 축 중앙 */
+  align-items: center;
   height: var(--header-height);
-  /* position: fixed;
-  top: 0;
-  left: 0;
-  right: 0; */
-  /* height: 5vw; */
 }
 
 header nav {
@@ -32,26 +17,88 @@ header nav {
   border-bottom: 1px solid var(--gray-border);
   background-color: #ffffff;
 }
-/*nav의 직계자식들 width를 동일하게 맞추어 space-between 했을 때 검색창이 중앙에 오도록 만듦 */
+
 header nav > * {
   width: 300px;
+} */
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  border-bottom: 1.5px solid var(--gray-border);
 }
 
-#logoContainer {
+nav {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 15px 40px;
+}
+
+main {
+  height: 100%;
+  margin-top: var(--navbar-height);
+}
+/* 인스타그램 로고 */
+#symbolBlock {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  /* text-align: center; */
+  width: 20%;
+}
+
+#symbolBlock .instaImg {
+  height: var(--navbar-height);
+}
+
+#symbolBlock .instagramLogo {
+  font-size: 35px;
+  font-family: "Lobster", cursive;
+}
+/* 검색 요소 박스 */
+#searchBlock {
+  display: flex;
+  border: 1px solid var(--gray-border);
+  border-radius: 5px;
+  padding-left: 40px;
+  padding-right: 40px;
+  width: 20%;
+}
+
+#searchBlock input {
+  height: var(--navbar-height);
+  width: 40px;
+  border: 0;
+  outline: none;
+}
+
+#searchBlock img {
+  height: var(--navbar-height);
+}
+/* 우측 탐색기능들 */
+#otherContents {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 20%;
+}
+
+#otherContents img {
+  height: var(--navbar-height);
+}
+
+/* #symbolBlock img {
+  height: 5vh;
+} */
+
+/* #symbolBlock {
+  font-family: "Lobster", cursive;
   font-size: 40px;
-  /* vertical-align: top; */
-  /* height: 100px; */
 }
 
-#logoContainer img {
-  height: 40px;
-}
-
-#logoContainer i::after {
+#symbolBlock i::after {
   display: inline-block;
   padding: 0 40px;
   font-size: 40px;
@@ -59,44 +106,20 @@ header nav > * {
   content: "|";
 }
 
-#searchBox {
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
+#searchBlock {
   height: 40px;
   text-align: center;
   border-radius: 5px;
   background-color: #fbfbfb;
-  border: 1px solid #d8d8d8;
+  border: 1px solid var(--gray-border);
   color: #afafaf;
 }
 
-header #searchBox input {
+#searchBlock input {
   width: 20%;
   height: 100%;
   padding: 0 10px;
   border: 0;
-}
-
-/* 검색 활성화 시 테두리 제거 */
-#searchBox input:focus {
-  outline: 0;
-  width: 80%;
-}
-
-header #searchBox input::placeholder {
-  color: #afafaf;
-  font-size: 15px;
-}
-
-#searchHeartPerson {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-
-#searchHeartPerson > img {
-  width: 10%;
 }
 /*여기까지가 header 세팅 내용 */
 main {
@@ -298,15 +321,15 @@ main section:nth-child(2) {
   /* max-width: 10%; */
 }
 
-.side1,
-.side2,
-.side3 {
+.myAccount,
+.recommStory,
+.recommWraper {
   width: 20vw;
   margin-left: 2vw;
   margin-bottom: 10px;
 }
 
-.side1 {
+.myAccount {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -315,16 +338,16 @@ main section:nth-child(2) {
   background-color: none;
 }
 
-.recommendAccount {
+.accountRecomm {
   height: 50px;
   border-radius: 50%;
 }
 
-.recommendAccountName {
+.recommName {
   padding-left: 10px;
 }
 
-.side2 {
+.recommStory {
   /* height: 20vh; */
   padding: 20px;
   border: 1px solid var(--gray-border);
@@ -333,7 +356,7 @@ main section:nth-child(2) {
 }
 
 .storyHead,
-.recommendHead {
+.recommHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -342,14 +365,14 @@ main section:nth-child(2) {
 }
 
 .storyHead span,
-.recommendHead span {
+.recommHeader span {
   font-size: 1rem;
   font-weight: bold;
   color: var(--gray-text);
 }
 
-.storyHead .allStory,
-.recommendHead .allRecommendation {
+.storyHead .seeAllBtn,
+.recommHeader .seeAllBtn {
   border: 0;
   font-size: 1rem;
   font-weight: bold;
@@ -357,53 +380,46 @@ main section:nth-child(2) {
   cursor: pointer;
 }
 
-.accountOfStory span {
+.accountBlock span {
   display: block;
   padding-left: 20px;
   padding-bottom: 2px;
 }
 
-.storyElementList {
+.storyList {
   display: flex;
   padding-bottom: 10px;
 }
 
-.storyElementList:last-child {
+.storyList:last-child {
   padding: 0;
 }
 
-.temp {
+.recommCont {
   display: flex;
 }
 
-.recommendElementList {
+.recommList {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-bottom: 10px;
 }
 
-.recommendElementList:last-child {
+.recommList:last-child {
   padding: 0;
 }
 
-.followButton {
+.followBtn {
   font-size: 1rem;
   color: var(--active-blue-color);
   border: 0;
   background-color: white;
 }
 
-.side3 {
+.recommWraper {
   padding: 20px;
   border: 1px solid var(--gray-border);
   border-radius: 4px;
   background-color: white;
 }
-
-/* .recommend {
-} */
-
-/* .recommendAccountName {
-
-} */
