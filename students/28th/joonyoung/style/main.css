@@ -41,13 +41,11 @@ header nav {
 }
 
 nav input {
-  padding: 0.4rem 2.5rem;
-  padding-left: 2.5em;
+  padding: 0.65rem 2.5rem;
+  padding-left: 2.5rem;
+  font-size: 0.75rem;
+  border: 1px solid var(--border-primary);
   border-radius: 0.3em;
-}
-
-nav input:focus.fa-search {
-  display: none;
 }
 
 .search .fa-search {
@@ -66,6 +64,7 @@ header nav .nav__icons {
   position: relative;
 }
 
+/* Badge */
 .nav__icons::after {
   content: "1";
   width: 0.875rem;
@@ -87,6 +86,10 @@ header nav .nav__icons {
 .nav__icons .profile-img img {
   width: 6vh;
   height: 6vh;
+
+  min-width: 6vh;
+  min-height: 6vh;
+
   border-radius: 50%;
 }
 
@@ -106,9 +109,11 @@ header nav .nav__icons {
   transform: scale(1, 0);
   transition: transform 0.5s ease-out;
 }
+
 .profile-dropbox.open {
   transform: scale(1, 1);
 }
+
 .profile-dropbox::after {
   content: "";
   position: absolute;
@@ -125,15 +130,21 @@ header nav .nav__icons {
   padding: 0.75rem 1rem;
   transition: all 0.2s ease-in;
 }
+
 .profile-dropbox li *:first-child {
   display: inline-block;
   margin-right: 1em;
 }
+
 .profile-dropbox li:last-child {
   border-top: 1px solid lightgray;
 }
+
 .profile-dropbox li:hover {
   background-color: rgb(230, 230, 230, 0.4);
+}
+.profile-dropbox li img {
+  width: 1rem;
 }
 
 /* ************************************************** */
@@ -162,6 +173,7 @@ main {
 }
 .stories {
   transition: transform 0.5s linear;
+  /* padding-right: 1rem; */
 }
 
 .story img {
@@ -248,7 +260,7 @@ main {
 
 .recommendation h3 {
   display: inline-block;
-  color: var(--fc-primary);
+  color: var(--gray-400);
 }
 
 .recommendation h3 + a {
@@ -257,7 +269,7 @@ main {
 
 .other-profile p {
   font-size: 0.75rem;
-  color: var(--fc-primary);
+  color: var(--gray-400);
   font-family: sans-serif;
 }
 

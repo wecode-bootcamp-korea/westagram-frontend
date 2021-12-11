@@ -15,9 +15,9 @@ const HEART = "heart-path";
 const FRONT_COMMENT = "comment-front";
 
 // utilities
-const toggleArrow = (arrow) => arrow.classList.toggle(HIDDEN);
-const addClass = (target, classVar) => target.classList.add(classVar);
-const toggleClass = (target, classVar) => target.classList.toggle(classVar);
+const addClass = (target, classVar) => target?.classList.add(classVar);
+const removeClass = (target, classVar) => target?.classList.remove(classVar);
+const toggleClass = (target, classVar) => target?.classList.toggle(classVar);
 const checkElementHasClass = (target, classVar) =>
   target.classList.contains(classVar);
 const getClosestSelector = (target, selector) => {
@@ -62,6 +62,7 @@ const removeFilteredList = (e) => {
     currFilteredUser = next;
   }
 };
+
 const focusOutSearch = (e) => {
   if (e.key === "Escape") removeFilteredList(e);
 };
@@ -90,25 +91,53 @@ const offset = storyWrapper.offsetWidth / 2;
 let prevMoved = 0;
 
 // FIXME: 맨 양쪽에 도달 헀을 때, <- , -> 가 없어지고 다른 버튼 클릭시 생기도록. 안되는 경우가 있는듯?
-storyLeftBtn.addEventListener("click", (e) => {
-  const leftOffset = leftEnd - stories.getBoundingClientRect().left;
-  if (storyRightBtn.classList.contains(HIDDEN)) toggleArrow(storyRightBtn);
+const slideStoryToLeft = (e) => {
+  const leftOffset = leftEnd - getElementRect(stories).left;
+  if (checkElementHasClass(storyRightBtn, HIDDEN))
+    toggleClass(storyRightBtn, HIDDEN);
   if (leftOffset <= offset) {
     prevMoved -= leftOffset + 16;
-    toggleArrow(storyLeftBtn);
+    toggleClass(storyLeftBtn, HIDDEN);
   } else prevMoved -= offset;
   stories.style.transform = `translateX(-${prevMoved}px)`;
-});
+};
 
-storyRightBtn.addEventListener("click", (e) => {
-  const rightOffset = stories.getBoundingClientRect().right - rightEnd;
-  if (storyLeftBtn.classList.contains(HIDDEN)) toggleArrow(storyLeftBtn);
+const slideStoryToRight = (e) => {
+  const rightOffset = getElementRect(stories).right - rightEnd;
+  if (checkElementHasClass(storyLeftBtn, HIDDEN))
+    toggleClass(storyLeftBtn, HIDDEN);
+
   if (rightOffset <= offset) {
     prevMoved += rightOffset + 16;
-    toggleArrow(storyRightBtn);
+    toggleClass(storyRightBtn, HIDDEN);
   } else prevMoved += offset;
   stories.style.transform = `translateX(-${prevMoved}px)`;
-});
+};
+
+storyLeftBtn.addEventListener("click", slideStoryToLeft);
+storyRightBtn.addEventListener("click", slideStoryToRight);
+
+// stories.addEventListener("scroll", slideStoryToRight);
+
+// storyLeftBtn.addEventListener("click", (e) => {
+//   const leftOffset = leftEnd - stories.getBoundingClientRect().left;
+//   if (storyRightBtn.classList.contains(HIDDEN)) toggleArrow(storyRightBtn);
+//   if (leftOffset <= offset) {
+//     prevMoved -= leftOffset + 16;
+//     toggleArrow(storyLeftBtn);
+//   } else prevMoved -= offset;
+//   stories.style.transform = `translateX(-${prevMoved}px)`;
+// });
+
+// storyRightBtn.addEventListener("click", (e) => {
+//   const rightOffset = stories.getBoundingClientRect().right - rightEnd;
+//   if (storyLeftBtn.classList.contains(HIDDEN)) toggleArrow(storyLeftBtn);
+//   if (rightOffset <= offset) {
+//     prevMoved += rightOffset + 16;
+//     toggleArrow(storyRightBtn);
+//   } else prevMoved += offset;
+//   stories.style.transform = `translateX(-${prevMoved}px)`;
+// });
 
 // SECTION: Carousel for Feed image -> 모든 feed에 대해 시행해야 한다!!
 const feeds = [...document.querySelectorAll(".feed")];
@@ -116,40 +145,45 @@ feeds.map((feed) => {
   const feedCarousel = feed.querySelector(".feed__carousel");
   const feedImgContainer = feed.querySelector(".img__container");
   const feedImages = [...feedImgContainer.querySelectorAll("img")];
-  const feedIcons = feed.querySelector(".feed__icons");
   const [feedLeftBtn, feedRightBtn] = feedCarousel.querySelectorAll("i.fas");
+  const feedIcons = feed.querySelector(".feed__icons");
   let currIdx = 0;
 
-  feedLeftBtn.addEventListener("click", (e) => {
+  const slideFeedLeft = (e) => {
     if (currIdx === 0) return;
-    else if (currIdx === 1) toggleArrow(feedLeftBtn);
-    else if (currIdx === feedImages.length - 1) toggleArrow(feedRightBtn);
+    else if (currIdx === 1) toggleClass(feedLeftBtn, HIDDEN);
+    else if (currIdx === feedImages.length - 1)
+      toggleClass(feedRightBtn, HIDDEN);
     feedImgContainer.style.transform = `translateX(-${
       --currIdx * feedImgContainer.offsetWidth
     }px)`;
-  });
+  };
 
-  feedRightBtn.addEventListener("click", (e) => {
-    if (currIdx === 0) toggleArrow(feedLeftBtn);
-    else if (currIdx === feedImages.length - 2) toggleArrow(feedRightBtn);
+  const slideFeedRight = (e) => {
+    if (currIdx === 0) toggleClass(feedLeftBtn, HIDDEN);
+    else if (currIdx === feedImages.length - 2)
+      toggleClass(feedRightBtn, HIDDEN);
     else if (currIdx === feedImages.length - 1) return;
     feedImgContainer.style.transform = `translateX(-${
       ++currIdx * feedImgContainer.offsetWidth
     }px)`;
-  });
+  };
+  feedLeftBtn.addEventListener("click", slideFeedLeft);
+  feedRightBtn.addEventListener("click", slideFeedRight);
 
-  // FIXME: 3) like버튼 클릭시 좋아요 갯수를 동적으로 update
+  // SECTION: 3) like버튼 클릭시 좋아요 갯수를 동적으로 update
+  const likeCounter = feedIcons.querySelector(".like-counter");
+  let currLikes = parseInt(likeCounter.innerHTML.replace(",", ""));
+
   const updateLikes = (e) => {
     if (!checkElementHasClass(e.target, HEART)) return;
     toggleClass(e.target, LIKE);
-    const likeCounter = e.target.closest(".feed__icons").lastChildElement;
-    let currLikes = parseInt(likeCounter.innerHTML.replace(",", "")) + 1;
-    if (!e.target.classList.contains("like")) currLikes -= 2;
+    currLikes += 1;
+    if (!checkElementHasClass(e.target, LIKE)) currLikes -= 2;
     likeCounter.innerHTML = currLikes
       .toString()
       .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   };
-
   feedIcons.addEventListener("click", updateLikes);
 
   // **********************************************************
@@ -161,9 +195,10 @@ feeds.map((feed) => {
   );
   const addCommentBtn = commentsWrapper.querySelector(".add__comment");
 
-  // SECTION: btn active
+  // SECTION: comment btn active
   const activeBtn = (e) => {
     if (e.target.value) addClass(addCommentBtn, ACTIVE);
+    else removeClass(addCommentBtn.ACTIVE);
   };
   commentInput.addEventListener("input", activeBtn);
 
@@ -193,8 +228,8 @@ feeds.map((feed) => {
 
   // SECTION 3) heart button click시 liked class 추가
   const addHeartClass = (e) => {
-    if (e.target.nodeName !== "path") return;
-    toggleClass(e.target, LIKE);
+    if (!checkElementHasClass(e.target, HEART)) return;
+    updateLikes(e);
   };
   commentList.addEventListener("click", addHeartClass);
 
@@ -202,15 +237,16 @@ feeds.map((feed) => {
   const addCommentWithEnter = (e) => {
     if (e.key !== "Enter") return;
     e.preventDefault();
-    uploadComment("joonyg10", commentInput.value);
-    toggleClass(addCommentBtn, ACTIVE);
+    addCommentWithBtnClick(e);
   };
   const addCommentWithBtnClick = (e) => {
     uploadComment("joonyg10", commentInput.value);
     toggleClass(e.target, ACTIVE);
   };
+  commentInput.addEventListener("keydown", addCommentWithEnter);
+  addCommentBtn.addEventListener("click", addCommentWithBtnClick);
 
-  // FIXME:
+  // SECTION: Slide logic
   let isMoving = false,
     dragAnimationID,
     startPos,
@@ -218,18 +254,13 @@ feeds.map((feed) => {
     movedBy;
   const commentBox = getElementRect(commentList.querySelector(".comment"));
   const minimumRequiredMove = commentBox.width * 0.05;
-  const maxMoved = 132;
-  // console.log(minimumRequiredMove, maxMoved, commentBox.width);
+  const maxMoved = commentBox.width * 0.28;
 
-  // FIXME:
-  const commentFront = commentList.querySelector("li.comment .comment-front");
-
-  // SECTION: 7-1) relative logic
   const startCommentDrag = (e) => {
     if (!checkElementHasClass(e.target, FRONT_COMMENT)) return;
     isMoving = true;
     startPos = e.pageX;
-    dragAnimationID = requestAnimationFrame(animation);
+    dragAnimationID = requestAnimationFrame(() => animation(e.target));
   };
 
   const movingComment = (e) => {
@@ -237,37 +268,38 @@ feeds.map((feed) => {
     currPos = e.pageX;
     movedBy = currPos - startPos;
     if (Math.abs(movedBy) >= minimumRequiredMove) movedBy = -maxMoved;
-
-    // animation();
     animation(getClosestSelector(e.target, FRONT_COMMENT));
   };
+
   const endCommentDrag = () => {
     isMoving = false;
     cancelAnimationFrame(dragAnimationID);
     moveCommentByCalc();
   };
+
   const animation = (target) => {
-    // console.log(target);
-    // moveCommentByCalc();
     moveCommentByCalc(target);
     if (isMoving) requestAnimationFrame(animation);
   };
 
   // FIXME: target : undefined error (if로 Filtering했는데도 발생)
   const moveCommentByCalc = (target) => {
-    // commentFront.style.transform = `translateX(${movedBy}px)`;
     if (target) {
       target.style.transform = `translateX(${movedBy}px)`;
     }
   };
+
   commentList.addEventListener("mousedown", startCommentDrag);
   commentList.addEventListener("mousemove", movingComment);
   commentList.addEventListener("mouseup", endCommentDrag);
 
-  commentInput.addEventListener("keydown", addCommentWithEnter);
-  addCommentBtn.addEventListener("click", addCommentWithBtnClick);
+  // REVIEW: comment추가 하는 로직
+  const checkCommentsLen = (comment) => {
+    return comment.length > 40
+      ? `<a class='see-more'>...더보기</a> <span class='hidden'>${comment}</span>`
+      : comment;
+  };
 
-  // FIXME: comments에 drag하는 eventlistener 추가!
   const uploadComment = (user, comment) => {
     if (!comment) return;
     comment = checkCommentsLen(comment);
@@ -305,37 +337,21 @@ feeds.map((feed) => {
   };
 
   // TODO: 5) textarea auto line change
-  const adjustInputHeight = () => {
-    // console.log(e.target.style);
-    // e.target.style.height = `100px`;
-    // e.target.style.height = resizeInput(e.target.style.height) + "px";
+  const adjustInputHeight = (e) => {
+    // console.log(e.target.style, e.target.scrollHeight);
+    resizeInput(e.target.value);
   };
   commentInput.addEventListener("keyup", adjustInputHeight);
 
   // TODO: 6) resize textarea input
-  // const resizeInput = (height) => {
-  //   console.log(height);
-  //   let numberOfLineBreak = height.match(/\n/g || []).length;
-  //   console.log(numberOfLineBreak);
+  const resizeInput = (value) => {
+    let numberOfLineBreak = (value.match(/\n/g) || []).length;
+    console.log(value, numberOfLineBreak);
 
-  //   // resized Height = line-height * \n count + padding(top, bottom) + min-height
-  //   let resizedHeight = (numberOfLineBreak + 1) * 16 + 32;
-  // };
+    // resized Height = line-height * \n count + padding(top, bottom) + min-height
+    let resizedHeight = (numberOfLineBreak + 1) * 16 + 32;
+  };
 });
 
 // // **************************************************
 // // Utility fuctions
-const checkCommentsLen = (comment) => {
-  return comment.length > 40
-    ? `<a class='see-more'>...더보기</a> <span class='hidden'>${comment}</span>`
-    : comment;
-};
-
-// FIXME: Heart Svg animation function
-
-// window.addEventListener("DOMContentLoaded", () => {
-//   const heartBtns = [...document.querySelectorAll(".heart path")];
-//   heartBtns.map((heartBtn) => {
-//     heartBtn.addEventListener("click", addHeartClass);
-//   });
-// });

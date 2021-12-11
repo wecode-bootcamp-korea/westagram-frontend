@@ -16,11 +16,10 @@
   --bg-input: rgb(250, 250, 250);
   --bg-delete: rgb(237, 82, 97);
 
-  --border-input: rgb(230, 230, 230);
   --border-primary: rgb(230, 230, 230);
 
-  --fc-primary: rgba(151, 151, 151, 0.8);
   --gray-200: rgb(229 231 235);
+  --gray-400: rgb(156 163 175);
 }
 
 /* ******************************************************** */
@@ -33,6 +32,7 @@ img {
   display: block;
   max-width: 100%;
   object-fit: cover;
+  cursor: pointer;
 }
 
 a {
@@ -74,13 +74,10 @@ i {
   cursor: pointer;
 }
 
-.icon-w {
-  width: 1rem;
-  display: inline-block;
-}
 .w-6 {
   width: 1.5rem;
 }
+
 .h-6 {
   height: 1.5rem;
 }
@@ -89,15 +86,18 @@ i {
   display: flex;
   gap: var(--gap, 1em);
 }
+
 .flex-col {
   flex-direction: column;
 }
+
 .items-center {
   align-items: center;
 }
 
 .text-gray {
   color: lightgray;
+  color: var(--gray-400);
 }
 
 .mt-1 {
