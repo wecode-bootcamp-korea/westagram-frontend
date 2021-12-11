@@ -61,9 +61,6 @@ window.onload = function() {
         containerCap.style.display = "none";
     }
 
-
-
-
     // 프로필버튼
     const activateProfile = (e) => profileMenu.classList.toggle('on');
 
@@ -114,37 +111,3 @@ window.onload = function() {
     comments.addEventListener("click", modifyCommentStatus);
     profileBtn.addEventListener("click", activateProfile);
 }
-
-// 리팩토링전
-// window.onload = function() {
-//     let body = document.querySelector('body');
-//     let inputUpload = document.querySelector('.input_upload');
-//     let btnUpload = document.querySelector('.btn_upload');
-//     let contentFlag = false;
-//     let comments = document.querySelector('.comments');
-
-//     const addComment = (el) => {
-//         el.innerHTML = `<strong>username </strong>${inputUpload.value}<small> 방금전</small>`;
-//         if (contentFlag) {
-//             comments.appendChild(el);
-//         }
-//     }
-
-//     inputUpload.addEventListener("keyup", function() {
-//         if (inputUpload.value) {
-//             btnUpload.style.color = '#3e99ed';
-//             contentFlag = true;
-//         } else {
-//             btnUpload.style.color = '#c5e2fa';
-//             contentFlag = false;
-//         }
-//     });
-
-//     btnUpload.addEventListener("click", function() {
-//         addComment(document.createElement('span'));
-//     });
-
-//     inputUpload.addEventListener("keyup", function(e) {
-//         if (e.keyCode === 13) addComment(document.createElement('span'));
-//     });
-// }
