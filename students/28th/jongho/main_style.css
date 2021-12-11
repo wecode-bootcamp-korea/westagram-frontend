@@ -1,27 +1,3 @@
-li {
-  list-style: none;
-}
-
-/* header {
-  display: flex;
-  align-items: center;
-  height: var(--header-height);
-}
-
-header nav {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  width: 100%;
-  height: var(--header-height);
-  border-bottom: 1px solid var(--gray-border);
-  background-color: #ffffff;
-}
-
-header nav > * {
-  width: 300px;
-} */
-
 header {
   position: fixed;
   top: 0;
@@ -32,9 +8,10 @@ header {
 
 nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
-  padding: 15px 40px;
+  padding: 15px 0px;
+  background-color: white;
 }
 
 main {
@@ -44,27 +21,37 @@ main {
 /* 인스타그램 로고 */
 #symbolBlock {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: 20%;
 }
 
-#symbolBlock .instaImg {
+nav img {
   height: var(--navbar-height);
+}
+
+/* 검색 요소 박스 */
+#searchBlock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--gray-border);
+  border-radius: 5px;
+  width: 20%;
+}
+
+#searchBlock img {
+  height: 1rem;
 }
 
 #symbolBlock .instagramLogo {
   font-size: 35px;
   font-family: "Lobster", cursive;
 }
-/* 검색 요소 박스 */
-#searchBlock {
-  display: flex;
-  border: 1px solid var(--gray-border);
-  border-radius: 5px;
-  padding-left: 40px;
-  padding-right: 40px;
-  width: 20%;
+
+#symbolBlock .instagramLogo::before {
+  padding: 0 40px;
+  content: "|";
 }
 
 #searchBlock input {
@@ -73,53 +60,13 @@ main {
   border: 0;
   outline: none;
 }
-
-#searchBlock img {
-  height: var(--navbar-height);
-}
 /* 우측 탐색기능들 */
 #otherContents {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 20%;
-}
-
-#otherContents img {
-  height: var(--navbar-height);
-}
-
-/* #symbolBlock img {
-  height: 5vh;
-} */
-
-/* #symbolBlock {
-  font-family: "Lobster", cursive;
-  font-size: 40px;
-}
-
-#symbolBlock i::after {
-  display: inline-block;
-  padding: 0 40px;
-  font-size: 40px;
-  color: black;
-  content: "|";
-}
-
-#searchBlock {
-  height: 40px;
-  text-align: center;
-  border-radius: 5px;
-  background-color: #fbfbfb;
-  border: 1px solid var(--gray-border);
-  color: #afafaf;
-}
-
-#searchBlock input {
-  width: 20%;
-  height: 100%;
-  padding: 0 10px;
-  border: 0;
+  padding: 0 80px;
 }
 /*여기까지가 header 세팅 내용 */
 main {
@@ -127,8 +74,7 @@ main {
   justify-content: space-between;
   height: 100vh;
 }
-/* 각 section 별로 width 지정 필요
-width의 기준 element 무엇인지 확인 요망 */
+
 main section:nth-child(1) {
   width: 60vw;
   height: 100%;
@@ -140,7 +86,6 @@ main section:nth-child(2) {
   width: 40vw;
   height: 100%;
   background-color: #fafafa;
-  /* border-left: 1px solid black; */
 }
 
 .feedContainer {
@@ -150,10 +95,6 @@ main section:nth-child(2) {
   margin-top: 5vh;
   border: 1px solid var(--gray-border);
   border-radius: 4px;
-  /* margin-left: 15vw; */
-  /* position: relative;
-  left: 20%; */
-  /* height: 800px; */
   background-color: white;
 }
 
