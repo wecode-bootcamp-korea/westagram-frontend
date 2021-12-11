@@ -23,7 +23,6 @@
 
   const validateLogin = (id, password) => {
     const validateId = (id) => {
-      // TODO: 스트링 메소드 특정 문자 찾기 확인할 것
       if (id.indexOf('@') === -1) {
         alert('님 아이디에 @ 안씀');
         return false;
@@ -54,12 +53,16 @@
     }
   };
 
-  userId.addEventListener('keyup', handleButton);
-  userPassword.addEventListener('keyup', handleButton);
-  userPassword.addEventListener('keyup', (event) => {
-    if (event.code === 'Enter') {
-      handleLogin();
-    }
-  });
-  loginButton.addEventListener('click', handleLogin);
+  const init = () => {
+    userId.addEventListener('keyup', handleButton);
+    userPassword.addEventListener('keyup', handleButton);
+    userPassword.addEventListener('keyup', (event) => {
+      if (event.code === 'Enter') {
+        handleLogin();
+      }
+    });
+    loginButton.addEventListener('click', handleLogin);
+  };
+
+  init();
 })();
