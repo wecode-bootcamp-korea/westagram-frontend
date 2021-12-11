@@ -1,7 +1,12 @@
 // Const varaibles
-let search = [
+const allUsers = [
   { id: 1, username: "Enna", img: "./public/stories/story1.jpg" },
-  { id: 2, username: "Enna", img: "./public/stories/story2.jpg" },
+  { id: 2, username: "Jesy", img: "./public/stories/story2.jpg" },
+  { id: 3, username: "Mike", img: "./public/stories/story3.jpg" },
+  { id: 4, username: "Meow", img: "./public/stories/story4.jpg" },
+  { id: 5, username: "Mally", img: "./public/stories/story5.jpg" },
+  { id: 6, username: "John", img: "./public/stories/story6.jpg" },
+  { id: 7, username: "Kai", img: "./public/stories/story7.jpg" },
 ];
 const HIDDEN = "hidden";
 const ACTIVE = "active";
@@ -13,12 +18,61 @@ const FRONT_COMMENT = "comment-front";
 const toggleArrow = (arrow) => arrow.classList.toggle(HIDDEN);
 const addClass = (target, classVar) => target.classList.add(classVar);
 const toggleClass = (target, classVar) => target.classList.toggle(classVar);
-const checkElementNotHaveClass = (target, classVar) =>
-  !target.classList.contains(classVar);
+const checkElementHasClass = (target, classVar) =>
+  target.classList.contains(classVar);
+const getClosestSelector = (target, selector) => {
+  if (checkElementHasClass(target, selector)) return target;
+  target.closest(selector);
+};
 const getElementRect = (ele) => ele.getBoundingClientRect();
 
 // **************************************************
-// [X] Nav profile image Dropdown
+// SECTION: Search Bar 만들기
+const navbarSearch = document.querySelector("header nav .search");
+const filteredList = navbarSearch.querySelector(".filtered-user");
+
+const filterUserByInput = (inputValue) => {
+  return allUsers.filter((user) =>
+    user.username.toLowerCase().includes(inputValue.toLowerCase())
+  );
+};
+
+const updateBySearch = (e) => {
+  if (e.target !== document.activeElement) return;
+  removeFilteredList(e);
+  const searchInput = e.target.value;
+  const filteredUser = filterUserByInput(searchInput);
+  filteredUser.map((user) => {
+    const newUser = document.createElement("li");
+    newUser.className = "flex items-center";
+    newUser.innerHTML = `
+      <img src="${user.img}"  alt="recommend user image ${user.id}" class="w-6 h-6" />
+      <p>${user.username}</p>
+    `;
+    filteredList.appendChild(newUser);
+  });
+};
+
+const removeFilteredList = (e) => {
+  // filteredList.innerHTML = ''도 있지만 원시적으로 해보았음.
+  let currFilteredUser = e.target.nextElementSibling.firstElementChild;
+  while (currFilteredUser) {
+    const next = currFilteredUser.nextElementSibling;
+    filteredList.removeChild(currFilteredUser);
+    currFilteredUser = next;
+  }
+};
+const focusOutSearch = (e) => {
+  if (e.key === "Escape") removeFilteredList(e);
+};
+
+navbarSearch.addEventListener("focus", updateBySearch);
+navbarSearch.addEventListener("input", updateBySearch);
+navbarSearch.addEventListener("focusout", removeFilteredList);
+window.addEventListener("keydown", focusOutSearch);
+
+// **************************************************
+// SECTION: Nav profile image Dropdown
 const mainProfileImage = document.querySelector(".profile-img");
 mainProfileImage.addEventListener("click", () =>
   toggleClass(mainProfileImage.nextElementSibling, "open")
@@ -35,7 +89,7 @@ const [leftEnd, rightEnd] = [slideStart.left, slideStart.right];
 const offset = storyWrapper.offsetWidth / 2;
 let prevMoved = 0;
 
-// FIXME: 맨 양쪽에 도달 헀을 때, <- , -> 가 없어지고 다른 버튼 클릭시 생기도록 안되는 경우가 있는듯?
+// FIXME: 맨 양쪽에 도달 헀을 때, <- , -> 가 없어지고 다른 버튼 클릭시 생기도록. 안되는 경우가 있는듯?
 storyLeftBtn.addEventListener("click", (e) => {
   const leftOffset = leftEnd - stories.getBoundingClientRect().left;
   if (storyRightBtn.classList.contains(HIDDEN)) toggleArrow(storyRightBtn);
@@ -86,7 +140,7 @@ feeds.map((feed) => {
 
   // FIXME: 3) like버튼 클릭시 좋아요 갯수를 동적으로 update
   const updateLikes = (e) => {
-    if (!checkElementNotHaveClass(e.target, HEART)) return;
+    if (!checkElementHasClass(e.target, HEART)) return;
     toggleClass(e.target, LIKE);
     const likeCounter = e.target.closest(".feed__icons").lastChildElement;
     let currLikes = parseInt(likeCounter.innerHTML.replace(",", "")) + 1;
@@ -115,14 +169,14 @@ feeds.map((feed) => {
 
   // SECTION:  delete comment
   const deleteComment = (e) => {
-    if (checkElementNotHaveClass(e.target, "fa-trash-alt")) return;
+    if (!checkElementHasClass(e.target, "fa-trash-alt")) return;
     commentList.removeChild(e.target.closest("li"));
   };
   commentList.addEventListener("click", deleteComment);
 
   // SECTION: X 버튼 click시 translate원상복구
   const resetDelete = (e) => {
-    if (checkElementNotHaveClass(e.target, "fa-times")) return;
+    if (!checkElementHasClass(e.target, "fa-times")) return;
     e.target.closest(
       "section"
     ).nextElementSibling.style.transform = `translateX(0px)`;
@@ -131,7 +185,7 @@ feeds.map((feed) => {
 
   // SECTION: 2) comment의 길이가 길어진 경우 see-more클릭시 내용볼 수 있게하는 로직
   const seeMoreComment = (e) => {
-    if (checkElementNotHaveClass(e.target, "see-more")) return;
+    if (!checkElementHasClass(e.target, "see-more")) return;
     toggleClass(e.target, HIDDEN);
     toggleClass(e.target.nextElementSibling, HIDDEN);
   };
@@ -165,15 +219,14 @@ feeds.map((feed) => {
   const commentBox = getElementRect(commentList.querySelector(".comment"));
   const minimumRequiredMove = commentBox.width * 0.05;
   const maxMoved = 132;
-  console.log(minimumRequiredMove, maxMoved, commentBox.width);
+  // console.log(minimumRequiredMove, maxMoved, commentBox.width);
 
   // FIXME:
   const commentFront = commentList.querySelector("li.comment .comment-front");
-  const commentDelete = commentList.querySelector("li.comment .comment-delete");
 
   // SECTION: 7-1) relative logic
   const startCommentDrag = (e) => {
-    if (checkElementNotHaveClass(e.target, FRONT_COMMENT)) return;
+    if (!checkElementHasClass(e.target, FRONT_COMMENT)) return;
     isMoving = true;
     startPos = e.pageX;
     dragAnimationID = requestAnimationFrame(animation);
@@ -184,19 +237,28 @@ feeds.map((feed) => {
     currPos = e.pageX;
     movedBy = currPos - startPos;
     if (Math.abs(movedBy) >= minimumRequiredMove) movedBy = -maxMoved;
-    animation();
+
+    // animation();
+    animation(getClosestSelector(e.target, FRONT_COMMENT));
   };
-  const endCommentDrag = (e) => {
+  const endCommentDrag = () => {
     isMoving = false;
     cancelAnimationFrame(dragAnimationID);
     moveCommentByCalc();
   };
-  const animation = () => {
-    moveCommentByCalc();
+  const animation = (target) => {
+    // console.log(target);
+    // moveCommentByCalc();
+    moveCommentByCalc(target);
     if (isMoving) requestAnimationFrame(animation);
   };
-  const moveCommentByCalc = () => {
-    commentFront.style.transform = `translateX(${movedBy}px)`;
+
+  // FIXME: target : undefined error (if로 Filtering했는데도 발생)
+  const moveCommentByCalc = (target) => {
+    // commentFront.style.transform = `translateX(${movedBy}px)`;
+    if (target) {
+      target.style.transform = `translateX(${movedBy}px)`;
+    }
   };
   commentList.addEventListener("mousedown", startCommentDrag);
   commentList.addEventListener("mousemove", movingComment);

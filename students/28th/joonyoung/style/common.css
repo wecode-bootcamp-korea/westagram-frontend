@@ -19,12 +19,12 @@
   --border-input: rgb(230, 230, 230);
   --border-primary: rgb(230, 230, 230);
 
-  --fc-primary: gray;
-  --fc-secondary: rgba(151, 151, 151, 0.8);
+  --fc-primary: rgba(151, 151, 151, 0.8);
+  --gray-200: rgb(229 231 235);
 }
 
 /* ******************************************************** */
-/* *******INIT: */
+/* *******RESET:  reset */
 body {
   min-height: 100vh;
   font-family: "Lobster", cursive;
@@ -47,9 +47,9 @@ input {
   border: 1px solid var(--border-input);
   outline: none;
 }
-/* ******************************************************** */
-/* ******** UTIL:  */
 
+/* ******************************************************** */
+/* ******** UTIL:  유틸리티 클래스 정의  */
 .btn {
   display: block;
   width: 100%;
@@ -60,13 +60,16 @@ input {
   border-radius: 0.5rem;
   outline: none;
 }
+
 .btn.active {
   background-color: var(--bg-login-active);
   cursor: pointer;
 }
+
 .hidden {
   display: none;
 }
+
 i {
   cursor: pointer;
 }
@@ -91,12 +94,6 @@ i {
 }
 .items-center {
   align-items: center;
-}
-.space-between {
-  justify-content: space-between;
-}
-.justify-end {
-  justify-content: flex-end;
 }
 
 .text-gray {
@@ -145,6 +142,7 @@ i {
   }
 }
 
+/* TODO: 만약 시간이 남으면 삭제 버튼 왼쪽으로 드래그 할때 animation 추가 */
 /* @keyframes springAnimation {
   0% {
     transform: translateX(--startPos);

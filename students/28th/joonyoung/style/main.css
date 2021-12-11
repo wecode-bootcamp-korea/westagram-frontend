@@ -19,6 +19,27 @@ header nav {
   position: relative;
 }
 
+.search .filtered-user {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  border-radius: 0.3rem;
+  box-shadow: -1px 1px 10px lightgray, 1px 1px 10px lightgray;
+}
+
+.search .filtered-user li {
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid black;
+  cursor: pointer;
+  transition: all 0.4s ease-out;
+}
+
+.search .filtered-user li:hover {
+  background-color: lightgray;
+}
+
 nav input {
   padding: 0.4rem 2.5rem;
   padding-left: 2.5em;
@@ -44,6 +65,7 @@ header nav .nav__icons {
   cursor: pointer;
   position: relative;
 }
+
 .nav__icons::after {
   content: "1";
   width: 0.875rem;
@@ -57,9 +79,11 @@ header nav .nav__icons {
   color: #fff;
   border-radius: 50%;
 }
+
 .nav__icons .profile-img {
   position: relative;
 }
+
 .nav__icons .profile-img img {
   width: 6vh;
   height: 6vh;
@@ -233,7 +257,7 @@ main {
 
 .other-profile p {
   font-size: 0.75rem;
-  color: var(--fc-secondary);
+  color: var(--fc-primary);
   font-family: sans-serif;
 }
 
@@ -356,6 +380,28 @@ main {
   position: relative;
 }
 
+.comment-delete {
+  padding: 0.2em 0;
+  padding-right: 1em;
+  justify-content: flex-end;
+  --gap: 1em;
+  border-radius: 1em;
+  background-color: var(--bg-delete);
+}
+
+.comment-delete .fas {
+  justify-content: center;
+  font-size: 1.5rem;
+  transition: all 0.4s ease-in-out;
+  color: var(--gray-200);
+  cursor: pointer;
+}
+
+.comment-delete .fas:hover {
+  color: rgb(230, 230, 230, 0.4);
+  transform: scale(1.1);
+}
+
 .comment-front {
   padding: 0 1em;
   /* font-size: 0.9rem; */
@@ -363,27 +409,6 @@ main {
   transition: transform 0.4s ease-in;
   position: absolute;
   inset: 0;
-  /* z-index: -1; */
-}
-
-.comment-delete {
-  padding: 0.2em 0;
-  padding-right: 1em;
-  justify-content: flex-end;
-  --gap: 1em;
-  background-color: var(--bg-delete);
-}
-
-.comment-delete .fas {
-  justify-content: center;
-  font-size: 2.5vw;
-  transition: all 0.4s ease-in-out;
-  cursor: pointer;
-}
-
-.comment-delete .fas:hover {
-  color: rgb(230, 230, 230, 0.4);
-  transform: scale(1.1);
 }
 
 .comment a.see-more {
@@ -442,7 +467,7 @@ main {
     --padding: 5vw;
   }
   main {
-    display: block;
+    grid-template-columns: auto;
   }
   .recommends__wrapper {
     display: none;
