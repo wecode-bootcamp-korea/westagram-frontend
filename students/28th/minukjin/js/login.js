@@ -31,10 +31,18 @@ const loginAvailable = () => {
   const loginValidation = idValidate() && passwordValidate();
   
   loginValidation ? loginActiveSuccess() : loginActiveFail();
+  return loginValidation;
 };
+
+const login = () => {
+  loginAvailable() 
+    ? loginBtn.querySelector('a').className = ""
+    : loginBtn.querySelector('a').className = "loginBtn";
+}
 
 const init = () => {
   loginForm.addEventListener('input', loginAvailable);
+  loginBtn.addEventListener('click', login);
 };
 
 init();
