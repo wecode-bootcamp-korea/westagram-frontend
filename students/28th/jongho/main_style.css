@@ -16,7 +16,8 @@ nav {
 
 main {
   height: 100%;
-  margin-top: var(--navbar-height);
+  margin-top: 75.5px;
+  background-color: #fafafa;
 }
 /* 인스타그램 로고 */
 #symbolBlock {
@@ -42,6 +43,20 @@ nav img {
 
 #searchBlock img {
   height: 1rem;
+  opacity: 0.5;
+}
+
+#searchBlock input {
+  height: var(--navbar-height);
+  width: 40px;
+}
+
+#searchBlock input::placeholder {
+  color: var(--gray-text);
+}
+
+#searchBlock input:focus {
+  width: 60%;
 }
 
 #symbolBlock .instagramLogo {
@@ -54,12 +69,6 @@ nav img {
   content: "|";
 }
 
-#searchBlock input {
-  height: var(--navbar-height);
-  width: 40px;
-  border: 0;
-  outline: none;
-}
 /* 우측 탐색기능들 */
 #otherContents {
   display: flex;
@@ -71,27 +80,27 @@ nav img {
 /*여기까지가 header 세팅 내용 */
 main {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   height: 100vh;
 }
 
 main section:nth-child(1) {
-  width: 60vw;
+  /* width: 60vw; */
   height: 100%;
   text-align: center;
   background-color: #fafafa;
 }
 
 main section:nth-child(2) {
-  width: 40vw;
+  /* width: 40vw; */
   height: 100%;
   background-color: #fafafa;
 }
 
 .feedContainer {
-  width: 700px;
+  max-width: 1000px;
   display: inline-block;
-  margin-left: 13vw;
+  /* margin-left: 6vw; */
   margin-top: 5vh;
   border: 1px solid var(--gray-border);
   border-radius: 4px;
@@ -102,8 +111,7 @@ main section:nth-child(2) {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 43px;
-  padding: 3px 15px;
+  padding: 10px 15px;
   background-color: white;
 }
 
@@ -117,7 +125,7 @@ main section:nth-child(2) {
 }
 
 .profileAccount .profileImage {
-  height: 90%;
+  height: 50px;
   margin-right: 10px;
   border: 0.5px solid var(--gray-border);
   border-radius: 50%;
@@ -127,10 +135,10 @@ main section:nth-child(2) {
   color: #262626;
 }
 
-.profileAccount span {
+/* .profileAccount span {
   font-size: small;
   font-weight: bolder;
-}
+} */
 
 .myFeedImage {
   display: block;
@@ -214,52 +222,29 @@ main section:nth-child(2) {
   /* padding-right: 20px; */
 }
 
-.minBfrComments {
-  display: block;
-}
-
-/* .moreComments {
-  margin-left: 20px;
-  border: 0;
-  width: 60px;
-  height: 15px;
-  border: 0;
-  font-size: 15px;
-  background-color: white;
-  color: rgba(142, 142, 142, 0.7);
-  cursor: pointer;
-} */
-
-.minBfrComments {
-  text-align: left;
-}
-
 .postComment {
-  width: 100%;
-  height: 3vh;
-  text-align: left;
+  display: flex;
+  justify-content: space-between;
   border-top: 1px solid var(--gray-border);
   margin-top: 10px;
   padding-left: 20px;
-  padding-top: 2px;
-  padding-bottom: 2px;
+  padding-right: 20px;
 }
 
 .postComment input {
-  width: 89%;
-  height: 100%;
-  border: 0;
-  margin: 0;
-  /* max-width: 90%; */
+  height: 50px;
+  font-size: 20px;
+}
+
+.postComment input::placeholder {
+  color: var(--gray-text);
 }
 
 .postComment button {
-  width: 10%;
-  height: 100%;
   border: 0;
   color: var(--deactive-blue-color);
+  font-size: 20px;
   background-color: white;
-  /* max-width: 10%; */
 }
 
 .myAccount,
@@ -274,6 +259,7 @@ main section:nth-child(2) {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  max-width: 450px;
   margin-top: 5vh;
   padding: 5px;
   background-color: none;
@@ -290,6 +276,7 @@ main section:nth-child(2) {
 
 .recommStory {
   /* height: 20vh; */
+  max-width: 450px;
   padding: 20px;
   border: 1px solid var(--gray-border);
   border-radius: 4px;
@@ -301,7 +288,7 @@ main section:nth-child(2) {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   /* padding: 10px; */
 }
 
@@ -359,6 +346,7 @@ main section:nth-child(2) {
 }
 
 .recommWraper {
+  max-width: 450px;
   padding: 20px;
   border: 1px solid var(--gray-border);
   border-radius: 4px;
