@@ -23,14 +23,17 @@
           <i class="fas fa-search"></i>
         </div>
         <div class="nav__icons flex items-center">
-          <i class="fas fa-home"></i>
+          <img
+            src="./public//icons/home.png"
+            alt="navbar-home-icon"
+            class="w-6 h-6"
+          />
           <i class="fas fa-paper-plane"></i>
           <i class="far fa-plus-square"></i>
           <i class="far fa-compass"></i>
           <i class="far fa-heart"></i>
           <div class="profile-img">
             <img src="./public/profile.jpg" alt="user profile image" />
-            <div id="dropbox-arrow"></div>
           </div>
           <ul class="profile-dropbox">
             <li>
@@ -46,7 +49,7 @@
               <span>설정</span>
             </li>
             <li>
-              <img src="./public/icons/repeat.png" alt="" />
+              <img src="./public/icons/repeat.png" alt="repeat-icon" />
               <span>계정전환</span>
             </li>
             <li>로그아웃</li>
@@ -57,41 +60,19 @@
     <main>
       <section class="stories__wrapper flex items-center">
         <ul class="stories flex items-center">
-          <li class="story" style="--bg-circle: red">
+          <li class="story">
             <img src="./public/stories/story1.jpg" alt="story profile image" />
             <p>Enna</p>
           </li>
-          <!-- <li class="story flex items-center" style="--name: Enna">
-            <img src="./public/stories/story1.jpg" alt="story profile image" />
-          </li> -->
-          <li
-            class="story"
-            style="--bg-circle: linear-gradient(#e66465, #9198e5)"
-          >
-            <img
-              src="./public/stories/story2.jpg"
-              alt="story profile image"
-              class="story-img"
-            />
+          <li class="story">
+            <img src="./public/stories/story2.jpg" alt="story profile image" />
             <p>Jesy</p>
           </li>
-          <li
-            class="story"
-            style="--bg-circle: linear-gradient(to top left, #9198e5, #ee6465)"
-          >
+          <li class="story">
             <img src="./public/stories/story3.jpg" alt="story profile image" />
             <p>Denial</p>
           </li>
-          <li
-            class="story"
-            style="
-              --bg-circle: linear-gradient(
-                to bottom right,
-                rgba(255, 0, 0, 0),
-                rgba(255, 0, 0, 1)
-              );
-            "
-          >
+          <li class="story">
             <img src="./public/stories/story4.jpg" alt="story profile image" />
             <p>Meow</p>
           </li>
@@ -144,7 +125,6 @@
                   src="./public/recommends/recommendation1.jpg"
                   alt="profile image"
                 />
-
                 <div class="others__desc">
                   <h4>wecode28기</h4>
                   <p>wecode님외 36명이 follow</p>

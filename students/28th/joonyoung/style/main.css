@@ -1,17 +1,18 @@
 @import url("./common.css");
 
-#navbar {
-  --padding: 10vw;
+header#navbar {
+  --padding: 15vw;
   padding: 0 var(--padding);
+  min-height: 4rem;
   position: fixed;
-  inset: 0 0 90vh;
+  inset: 0 0 91vh;
   z-index: 999;
   background-color: #fff;
   box-shadow: 0 0 3px gray;
 }
 
 header nav {
-  height: 100%;
+  min-height: 100%;
   justify-content: space-between;
 }
 
@@ -42,17 +43,19 @@ header nav {
 
 nav input {
   padding: 0.65rem 2.5rem;
-  padding-left: 2.5rem;
+  padding-left: 1.75rem;
   font-size: 0.75rem;
   border: 1px solid var(--border-primary);
   border-radius: 0.3em;
 }
 
 .search .fa-search {
+  font-size: 0.65em;
   position: absolute;
-  left: 3%;
+  left: 5%;
   top: 0;
   bottom: 0;
+  color: gray;
   display: flex;
   align-items: center;
 }
@@ -67,10 +70,10 @@ header nav .nav__icons {
 /* Badge */
 .nav__icons::after {
   content: "1";
-  width: 0.875rem;
-  height: 0.875rem;
+  width: 0.975em;
+  height: 0.975em;
   position: absolute;
-  top: -10%;
+  top: 0;
   left: 25%;
   text-align: center;
   font-size: 0.75rem;
@@ -84,12 +87,8 @@ header nav .nav__icons {
 }
 
 .nav__icons .profile-img img {
-  width: 6vh;
-  height: 6vh;
-
-  min-width: 6vh;
-  min-height: 6vh;
-
+  width: 2rem;
+  height: 2rem;
   border-radius: 50%;
 }
 
@@ -104,7 +103,8 @@ header nav .nav__icons {
   font-size: 0.875rem;
   border-radius: 0.5rem;
   background-color: #fff;
-  box-shadow: 1px 2px 2px lightgray, -1px 2px 2px lightgray;
+  box-shadow: 1px 2px 2px lightgray, -1px 2px 2px lightgray,
+    0 -1px 2px var(--gray-200);
   transform-origin: top;
   transform: scale(1, 0);
   transition: transform 0.5s ease-out;
@@ -117,13 +117,13 @@ header nav .nav__icons {
 .profile-dropbox::after {
   content: "";
   position: absolute;
-  z-index: -1;
   top: 0;
   right: 17%;
   width: 1.5em;
   height: 1.5em;
   transform: rotate(45deg) translateY(-50%);
   background-color: #fff;
+  box-shadow: -3px -3px 4px var(--gray-200);
 }
 
 .profile-dropbox li {
@@ -141,8 +141,9 @@ header nav .nav__icons {
 }
 
 .profile-dropbox li:hover {
-  background-color: rgb(230, 230, 230, 0.4);
+  background-color: var(--bg-hover-primary);
 }
+
 .profile-dropbox li img {
   width: 1rem;
 }
@@ -152,10 +153,10 @@ header nav .nav__icons {
 main {
   min-height: 100vh;
   margin: 0 15vw;
-  margin-top: calc(8vh + 2.25rem);
+  margin-top: calc(9vh + 2rem);
   display: grid;
   grid-template-columns: 35rem auto;
-  grid-template-rows: 16vh auto;
+  grid-template-rows: 7rem auto;
   gap: 1.5rem;
   font-family: "Roboto", sans-serif;
   position: relative;
@@ -165,61 +166,55 @@ main {
 /* SECTION:   stories for others */
 .stories__wrapper {
   padding: 0.5rem 1rem;
-  --gap: 2em;
+  --gap: 1.5em;
   border: 1px solid var(--border-primary);
-  background-color: #fff;
   overflow: hidden;
   position: relative;
 }
-.stories {
+
+ul.stories {
   transition: transform 0.5s linear;
-  /* padding-right: 1rem; */
 }
+
 .story {
+  min-height: var(--fs-story-img);
+  height: var(--fs-story-img);
+  transform: translateY(-11%);
   position: relative;
-  min-width: 7vh;
-  height: 7vh;
-  /* background-color: blue; */
 }
+
 .story::before {
   content: "";
   position: absolute;
-  inset: -5px;
+  inset: -4.5px;
   border-radius: 50%;
-  background: var(--bg-circle);
+  background: var(--bg-story-circle);
 }
 
 .story::after {
   content: "";
   position: absolute;
-  inset: -3px;
+  inset: -2.5px;
   border-radius: 50%;
   background-color: #fff;
 }
 
 .story img {
-  min-width: 7vh;
-  height: 7vh;
+  min-width: var(--fs-story-img);
+  height: var(--fs-story-img);
   border-radius: 50%;
   cursor: pointer;
   position: relative;
-  z-index: 100;
+  z-index: var(--z-index-img);
 }
 
-/* FIXME: 스토리 border에 circle animation 추가 */
-/* .story::before {
-  content: "";
-  position: absolute;
-  width: 8vh;
-  height: 8vh;
-  border: 2px solid magenta;
-  border-radius: 50%;
-  transform: translate(-5%, -5%);
-} */
-
 .story p {
+  position: absolute;
+  top: 115%;
+  left: 0;
+  right: 0;
   text-align: center;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
 }
 
 .stories__wrapper i {
@@ -229,7 +224,7 @@ main {
   background-color: #fff;
   opacity: 0.5;
   cursor: pointer;
-  z-index: 999;
+  z-index: var(--z-index-arrow);
 }
 
 .stories__wrapper i:hover {
