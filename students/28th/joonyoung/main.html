@@ -165,31 +165,40 @@
             <i class="fas fa-ellipsis-h"></i>
           </header>
           <article class="feed__carousel">
-            <div class="img__container flex">
+            <div class="img__container flex items-center">
               <img
                 src="./public/feed/feed1/pexels-fauxels-3184291.jpg"
-                alt=""
+                alt="feed 1st image team gathered"
               />
               <img
                 src="./public/feed/feed1/pexels-fauxels-3184302.jpg"
-                alt=""
+                alt="feed 2nd image man~"
               />
               <img
                 src="./public/feed/feed1/pexels-fauxels-3184433.jpg"
-                alt=""
+                alt="feed 3rd image hivefive"
               />
-              <img src="./public/feed/feed1/pexels-min-an-853168.jpg" alt="" />
+              <img
+                src="./public/feed/feed1/pexels-min-an-853168.jpg"
+                alt="feed 4th image sunset"
+              />
               <img
                 src="./public/feed/feed1/pexels-this-is-zun-1116302.jpg"
-                alt=""
+                alt="feed 5th image make start"
               />
             </div>
             <i class="fas fa-chevron-circle-left hidden"></i>
             <i class="fas fa-chevron-circle-right"></i>
-            <div class="slide__btn"></div>
           </article>
           <section class="feed__icons">
-            <div class="flex items-center">
+            <ul class="carousel__navigator flex items-center">
+              <li class="slide_btn current" data-idx="0"></li>
+              <li class="slide_btn" data-idx="1"></li>
+              <li class="slide_btn" data-idx="2"></li>
+              <li class="slide_btn" data-idx="3"></li>
+              <li class="slide_btn" data-idx="4"></li>
+            </ul>
+            <article class="flex items-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="h-6 w-6 heart"
@@ -208,7 +217,7 @@
               <i class="far fa-comment"></i>
               <i class="far fa-paper-plane"></i>
               <i class="far fa-bookmark"></i>
-            </div>
+            </article>
             <p>좋아요 <span class="like-counter"> 8,920</span>개</p>
           </section>
           <section class="comments__wrapper">

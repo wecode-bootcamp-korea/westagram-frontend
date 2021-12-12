@@ -277,10 +277,12 @@ ul.stories {
 .recommendation p + a {
   color: inherit;
 }
+
 .other-profile h4 {
   font-size: 0.875rem;
   font-weight: 500;
 }
+
 .other-profile p {
   line-height: 1.7;
   font-size: 0.75rem;
@@ -302,7 +304,7 @@ ul.stories {
 .other-profile a {
   display: inline-block;
   margin-left: auto;
-  color: rgb(0, 153, 243);
+  color: var(--blue-400);
   font-size: 0.8rem;
 }
 
@@ -312,39 +314,42 @@ ul.stories {
   box-shadow: 0 0 10px lightgray;
   font-size: 0.8rem;
 }
+
 .feed__wrapper:last-child {
   margin-bottom: 5rem;
 }
+
 .feed {
   display: grid;
-  grid-template-rows: min-content minmax(auto, 80vh) max-content 2fr;
+  grid-template-rows: min-content minmax(auto, 60vh) max-content 2fr;
   /* heaer, carousel, icon-container, comments */
 }
 
 /* 1) Header */
 .feed__header {
-  padding: 1rem;
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid lightgray;
 }
+
 .feed__header img {
-  width: 5vh;
-  height: 5vh;
+  width: var(--fs-img);
+  height: var(--fs-img);
   border-radius: 50%;
 }
+
 .feed__header p {
-  font-size: 1.125rem;
-  font-weight: bold;
-  text-decoration: underline;
+  margin-left: 0.25em;
+  font-size: 0.875rem;
+  font-weight: 500;
   cursor: pointer;
-  transition: all 0.4s ease-in-out;
 }
 
 .feed__header p:hover {
-  color: var(--gray-400);
+  text-decoration: underline;
 }
 
 .feed__header .fa-ellipsis-h {
   margin-left: auto;
-  cursor: pointer;
 }
 
 /* 2) main image Carousel */
@@ -352,14 +357,17 @@ ul.stories {
   overflow: hidden;
   position: relative;
 }
+
 .img__container {
   --gap: 0;
   height: 100%;
   transition: all 0.5s ease-in-out;
 }
 
+/* FIXME:  */
 .img__container img {
   min-width: 100%;
+  height: 100%;
 }
 
 .feed__carousel .fas {
@@ -372,21 +380,44 @@ ul.stories {
 }
 
 .feed__carousel .fas:hover {
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 .feed__carousel .fa-chevron-circle-left {
-  left: 1em;
+  left: 4%;
 }
 
 .feed__carousel .fa-chevron-circle-right {
-  right: 1em;
+  right: 4%;
 }
 
 /* 3) icon buttons */
 .feed__icons {
-  padding: 1rem 1.5rem 0 1rem;
+  padding: 0.875rem 1.5rem 0 1rem;
   --gap: 1.25rem;
+  position: relative;
+}
+
+.carousel__navigator {
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  right: 0;
+  --gap: 0.25em;
+  justify-content: center;
+}
+
+.carousel__navigator .slide_btn {
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 50%;
+  background-color: var(--gray-400);
+  transition: all 0.4s ease-out;
+  cursor: pointer;
+}
+
+.carousel__navigator .slide_btn.current {
+  background-color: var(--blue-400);
 }
 
 .feed__icons i {
@@ -509,6 +540,7 @@ ul.stories {
     --padding: 5vw;
   }
   main {
+    margin: 0 8vw;
     grid-template-columns: auto;
   }
   .recommends__wrapper {

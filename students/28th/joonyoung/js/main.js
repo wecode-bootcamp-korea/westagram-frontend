@@ -8,12 +8,13 @@ const allUsers = [
   { id: 6, username: "John", img: "./public/stories/story6.jpg" },
   { id: 7, username: "Kai", img: "./public/stories/story7.jpg" },
 ];
-const HIDDEN = "hidden";
-const ACTIVE = "active";
-const LIKE = "liked";
-const HEART = "heart-path";
-const FRONT_COMMENT = "comment-front";
-const SHIFT = "Shift";
+const HIDDEN = "hidden",
+  ACTIVE = "active";
+const LIKE = "liked",
+  CURR = "current",
+  HEART = "heart-path",
+  FRONT_COMMENT = "comment-front",
+  SHIFT = "Shift";
 const ENTER = "Enter";
 
 // utilities
@@ -125,29 +126,66 @@ feeds.map((feed) => {
   const feedImages = [...feedImgContainer.querySelectorAll("img")];
   const [feedLeftBtn, feedRightBtn] = feedCarousel.querySelectorAll("i.fas");
   const feedIcons = feed.querySelector(".feed__icons");
-  let currIdx = 0;
+  const feedNavigator = feedIcons.querySelector(".carousel__navigator");
+  const feedNavBtns = [...feedNavigator.children];
+
+  let prevIdx = 0,
+    currIdx = 0,
+    carouselSize = feedImages.length - 1;
 
   const slideFeedLeft = (e) => {
     if (currIdx === 0) return;
     else if (currIdx === 1) toggleClass(feedLeftBtn, HIDDEN);
-    else if (currIdx === feedImages.length - 1)
-      toggleClass(feedRightBtn, HIDDEN);
-    feedImgContainer.style.transform = `translateX(-${
-      --currIdx * feedImgContainer.offsetWidth
-    }px)`;
+    else if (currIdx === carouselSize) toggleClass(feedRightBtn, HIDDEN);
+    prevIdx = currIdx--;
+    updateNavigator();
+    slideFeed();
   };
 
   const slideFeedRight = (e) => {
     if (currIdx === 0) toggleClass(feedLeftBtn, HIDDEN);
-    else if (currIdx === feedImages.length - 2)
-      toggleClass(feedRightBtn, HIDDEN);
-    else if (currIdx === feedImages.length - 1) return;
+    else if (currIdx === carouselSize - 1) toggleClass(feedRightBtn, HIDDEN);
+    else if (currIdx === carouselSize) return;
+    prevIdx = currIdx++;
+    updateNavigator();
+    slideFeed();
+  };
+
+  const slideFeed = () => {
     feedImgContainer.style.transform = `translateX(-${
-      ++currIdx * feedImgContainer.offsetWidth
+      currIdx * feedImgContainer.offsetWidth
     }px)`;
   };
+
   feedLeftBtn.addEventListener("click", slideFeedLeft);
   feedRightBtn.addEventListener("click", slideFeedRight);
+
+  const navigateToSlide = (e) => {
+    if (!checkElementHasClass(e.target, "slide_btn")) return;
+    if (checkElementHasClass(e.target, CURR)) return;
+    prevIdx = currIdx;
+    currIdx = parseInt(e.target?.dataset?.idx);
+
+    if (prevIdx === 0 && currIdx < carouselSize) {
+      toggleClass(feedLeftBtn, HIDDEN);
+    } else if (prevIdx === carouselSize && currIdx > 0) {
+      toggleClass(feedRightBtn, HIDDEN);
+    } else if (currIdx === 0) {
+      toggleClass(feedLeftBtn, HIDDEN);
+      if (prevIdx === carouselSize) toggleClass(feedRightBtn, HIDDEN);
+    } else if (currIdx === carouselSize) {
+      toggleClass(feedRightBtn, HIDDEN);
+      if (prevIdx === 0) toggleClass(feedLeftBtn, HIDDEN);
+    }
+    updateNavigator();
+    slideFeed();
+  };
+
+  const updateNavigator = () => {
+    toggleClass(feedNavBtns[prevIdx], CURR);
+    toggleClass(feedNavBtns[currIdx], CURR);
+  };
+  feedNavigator.addEventListener("click", navigateToSlide);
 
   // SECTION: 3) like버튼 클릭시 좋아요 갯수를 동적으로 update
   const likeCounter = feedIcons.querySelector(".like-counter");
@@ -213,7 +251,7 @@ feeds.map((feed) => {
   };
   commentList.addEventListener("click", addHeartClass);
 
-  // SECTION: Slide logic
+  // SECTION: Comment slide logic
   let isMoving = false,
     dragAnimationID,
     startPos,
