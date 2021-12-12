@@ -38,11 +38,11 @@
 
   const animateHeart = () => {
     const feedImageWrapperHeart = feedImageWrapper.querySelector('.fa-heart');
-    const animantionValue = `heart-move 3s`;
+    const animationValue = `heart-move 3s`;
 
     const isLiked = checkLiked();
     if (isLiked) {
-      feedImageWrapperHeart.style.animation = animantionValue;
+      feedImageWrapperHeart.style.animation = animationValue;
       setTimeout(() => {
         feedImageWrapperHeart.style.removeProperty('animation');
       }, 2000);
