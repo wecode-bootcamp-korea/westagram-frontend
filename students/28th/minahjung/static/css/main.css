@@ -58,8 +58,9 @@ a > h1.logo {
 
 /* search box */
 .search_box {
-    width: 215px;
-    height: 28px;
+    width: 100%;
+    max-width: 268px;
+    height: 36px;
 }
 
 .search_box > input {
@@ -68,6 +69,7 @@ a > h1.logo {
     border: 1px solid #dbdbdb;
     border-radius: 3px;
     padding: 0 10px;
+    background: #fafafa;
 }
 
 .search_box > input::placeholder {
@@ -86,14 +88,17 @@ a > h1.logo {
 .icons_box {
     width: 100%;
     max-width: 360px;
-    padding-left: 105px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 
 .icons {
     width: 22px;
     height: 22px;
+}
+
+.icons, button#profile_menu {
+    margin-left: 22px;
 }
 
 .icons:hover {
@@ -107,6 +112,7 @@ button#profile_menu {
     padding: 0;
     outline: 0;
     border-radius: 50%;
+    margin-right: 20px;
 }
 
 button#profile_menu:focus {
@@ -253,7 +259,7 @@ img.story_next {
     position: relative;
 }
 
-.story_wrap > ul > li {
+li.story_list {
     min-width: 80px;
     height: 100%;
     text-align: center;
@@ -262,12 +268,16 @@ img.story_next {
     justify-content: space-between;
 }
 
-.story_wrap > ul > li:first-child {
+li.story_list:first-child {
     margin-left: 10px;
 }
 
-.story_wrap > ul > li:last-child {
+li.story_list:last-child {
     margin-right: 10px;
+}
+
+li.story_list:hover {
+    cursor: pointer;
 }
 
 .story_border {
@@ -468,13 +478,42 @@ button.post_icons_btn {
     text-decoration: underline;
 }
 
-.post_content > p, .reply_wrap > p {
+.post_content > p {
     display: inline;
     font-size: 0.8rem;
 }
 
-.reply_wrap > p {
+.reply_wrap {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+}
+
+.reply_wrap > a {
+    height: 100%;
+}
+
+.reply_wrap > span {
+    width: 100%;
     margin-left: 8px;
+}
+
+.reply_wrap button {
+    margin-left: 8px;
+    padding: 0;
+}
+
+.reply_wrap button > img {
+    width: 0.8rem;
+    vertical-align: text-top;
+}
+
+.heart_blank {
+    display: block;
+}
+
+.heart_red {
+    display: none;
 }
 
 .post_created_at {
@@ -692,4 +731,11 @@ button.follow_btn {
 .copyright > p {
     font-size: 0.7rem;
     color: #c7c7c7;
+}
+
+/* mediaquery */
+@media screen and (max-width: 1000px) {
+    aside {
+        display: none;
+    }
 }

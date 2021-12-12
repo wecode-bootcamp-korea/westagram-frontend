@@ -113,9 +113,21 @@ writeBtn.addEventListener('click', function () {
 
 // write reply
 (function () {
+    let index = 0;
     function writeReply(content) {
-        replyBox.innerHTML += '<div class="reply_wrap"><a href="https://www.instagram.com/mina_0120/">my1nsta</a><p>' + content + '</p></div>';
+        replyBox.innerHTML += `<div class="reply_wrap" id="reply${index}">
+            <a href="https://www.instagram.com/mina_0120/">my1nsta</a>
+            <span>${content}</span>
+            <button type="button" class="like_reply" onclick="toggleLikeReply()">
+                <img src="./static/img/heart-blank.png" class="heart_blank">
+                <img src="./static/img/heart-red.png" class="heart_red">
+            </button>
+            <button type="button" class="delete_reply">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>`;
         replyContent.value = '';
+        index++
     };
 
     writeBtn.addEventListener('click', () => writeReply(replyContent.value));
@@ -134,8 +146,20 @@ writeBtn.addEventListener('click', function () {
     }
 
     replyContent.addEventListener('keypress', (e) => writeReplyByEnterKey(e, this.value));
-
 })();
+
+// like reply
+function toggleLikeReply(e) {
+    const unlike = document.querySelector('.heart_blank');
+    const liked = document.querySelector('.heart_red');
+    if (liked.style.display == "block") {
+        unlike.style.display = "block";
+        liked.style.display = "none";
+    } else {
+        unlike.style.display = "none";
+        liked.style.display = "block";
+    }
+}
 
 // resize reply textarea
 const resizeTextareaHeight = function (textarea) {
