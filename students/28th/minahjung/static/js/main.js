@@ -115,7 +115,7 @@ writeBtn.addEventListener('click', function () {
 (function () {
     let index = 0;
     function writeReply(content) {
-        replyBox.innerHTML += `<div class="reply_wrap" id="reply${index}">
+        const comment = `<div class="reply_wrap" id="reply${index}">
             <a href="https://www.instagram.com/mina_0120/">my1nsta</a>
             <span>${content}</span>
             <button type="button" class="like_reply" onclick="toggleLikeReply()">
@@ -126,6 +126,7 @@ writeBtn.addEventListener('click', function () {
                 <i class="fas fa-times"></i>
             </button>
         </div>`;
+        replyBox.innerHTML += comment;
         replyContent.value = '';
         index++
     };
@@ -149,7 +150,7 @@ writeBtn.addEventListener('click', function () {
 })();
 
 // like reply
-function toggleLikeReply(e) {
+function toggleLikeReply() {
     const unlike = document.querySelector('.heart_blank');
     const liked = document.querySelector('.heart_red');
     if (liked.style.display == "block") {
