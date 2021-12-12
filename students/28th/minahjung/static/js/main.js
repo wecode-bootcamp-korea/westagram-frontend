@@ -1,18 +1,25 @@
 // submenu start
 const profileBtn = document.getElementById('profile_menu');
 const submenu = document.querySelector('.account_menu');
+const overlay = document.getElementsByClassName('overlay')[0];
 
 function toggleProfileSubmenu() {
     if (submenu.style.display == 'block') {
         submenu.style.display = 'none';
+        overlay.style.display = 'none';
         submenu.style.transition = 'transform 0.3s ease-in-out';
     } else {
         submenu.style.display = 'block';
+        overlay.style.display = 'block';
         submenu.style.transition = 'transform 0.3s ease-in-out';
     }
 }
 
 profileBtn.addEventListener('click', toggleProfileSubmenu);
+overlay.addEventListener('click', function () {
+    submenu.style.display = 'none';
+    this.style.display = 'none';
+})
 // submenu end
 
 // story start

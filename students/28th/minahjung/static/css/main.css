@@ -47,6 +47,15 @@ a > h1.logo {
     color: #000;
 }
 
+.overlay {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+    display: none;
+}
+
 /* search box */
 .search_box {
     width: 215px;
@@ -132,6 +141,7 @@ img.profile:focus {
     font-size: 0.875rem;
     box-shadow: 0 0 5px #dbdbdb;
     display: none;
+    z-index: 6;
 }
 
 .account_menu::before {
@@ -177,6 +187,10 @@ img.submenu_icons {
 .logout {
     padding: 10px 16px 15px 16px;
     border-top: 1px solid #dbdbdb;
+}
+
+.account_submenu:hover, .logout:hover {
+    cursor: pointer;
 }
 
 /* main */
