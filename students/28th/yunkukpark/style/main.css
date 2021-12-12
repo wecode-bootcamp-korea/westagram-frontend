@@ -2,6 +2,10 @@ body {
   background-color: #fafafa;
 }
 
+button {
+  padding: 0;
+}
+
 .is-story {
   border: 1px solid #dbdbdb;
 }
@@ -135,6 +139,94 @@ body {
   height: 32px;
 }
 
+.my-menu {
+  position: relative;
+}
+
+.my-menu .avatar:hover::after,
+.my-menu .avatar.is-active::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 2px solid #8e8e8e;
+  content: '';
+}
+
+.my-menu-content {
+  display: none;
+  position: absolute;
+  width: 225px;
+  top: 37px;
+  left: -175px;
+  padding: 10px 0;
+  background-color: #fff;
+  font-size: 16px;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.my-menu-content.is-active {
+  display: block;
+}
+
+.my-menu-content::before,
+.my-menu-content::after {
+  position: absolute;
+  left: 83%;
+  transform: translateX(-50%);
+  top: -24px;
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 12px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 12px solid transparent;
+  border-left: 10px solid transparent;
+  content: '';
+}
+
+.my-menu-content::before {
+  border-bottom-color: #e0e2e7;
+}
+.my-menu-content::after {
+  top: -22px;
+  border-bottom-color: #fff;
+}
+
+.my-menu-item {
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  height: 35px;
+}
+
+.my-menu-item i {
+  position: relative;
+  top: 2px;
+  width: 14px;
+  height: 14px;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.my-menu-item i.fa-bookmark {
+  left: 1px;
+}
+
+.my-menu-item:nth-last-child(2) {
+  margin-bottom: 5px;
+}
+
+.my-menu-item:last-child {
+  padding: 10px 15px 0 15px;
+  border-top: 1px solid #dbdbdb;
+}
+
 /* MAIN */
 main {
   display: flex;
@@ -238,7 +330,7 @@ main {
 
 .more-btn {
   display: block;
-  width: 30px;
+  width: 20px;
 }
 
 .more-btn img {

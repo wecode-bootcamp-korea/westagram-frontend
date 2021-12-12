@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -26,17 +26,37 @@
             <i class="ic-search"></i>
             <input type="text" placeholder="검색" />
           </div>
-          <ul class="user-action-group">
-            <li class="user-action-item"><i class="ic-compass"></i></li>
-            <li class="user-action-item is-new">
+          <div class="user-action-group">
+            <div class="user-action-item"><i class="ic-compass"></i></div>
+            <div class="user-action-item is-new">
               <i class="ic-heart"></i>
-            </li>
-            <li class="user-action-item">
-              <div class="avatar avatar-26">
+            </div>
+            <div class="user-action-item my-menu">
+              <button type="button" class="dropdown-button avatar avatar-26">
                 <img src="./assets/image/yunkuk-avatar.jpg" alt="유저아바타" />
+              </button>
+
+              <div class="my-menu-content">
+                <ul class="my-menu-list">
+                  <li class="my-menu-item">
+                    <i class="far fa-user-circle"></i>
+                    <a href="#">프로필</a>
+                  </li>
+                  <li class="my-menu-item">
+                    <i class="far fa-bookmark"></i>
+                    <a href="#">저장됨</a>
+                  </li>
+                  <li class="my-menu-item">
+                    <i class="fas fa-cog"></i>
+                    <a href="#">설정</a>
+                  </li>
+                  <li class="my-menu-item">
+                    <button type="button">로그아웃</button>
+                  </li>
+                </ul>
               </div>
-            </li>
-          </ul>
+            </div>
+          </div>
         </div>
       </nav>
 
@@ -310,5 +330,6 @@
     <script src="./js/layout.js"></script>
     <script src="./js/comment.js"></script>
     <script src="./js/like.js"></script>
+    <script src="./js/dropdown.js"></script>
   </body>
 </html>
