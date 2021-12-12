@@ -259,7 +259,7 @@ feeds.map((feed) => {
     movedBy;
   const commentBox = getElementRect(commentList.querySelector(".comment"));
   const minimumRequiredMove = commentBox.width * 0.05;
-  const maxMoved = commentBox.width * 0.28;
+  const maxMoved = commentBox.width * 0.16;
 
   const startCommentDrag = (e) => {
     if (!checkElementHasClass(e.target, FRONT_COMMENT)) return;
@@ -301,32 +301,35 @@ feeds.map((feed) => {
 
   // FIXME: comment추가 하는 로직
   let lines = 0;
-
   const addCommentWithEnter = (e) => {
     e.preventDefault();
     addCommentWithBtnClick(e);
   };
+
   const addCommentWithBtnClick = (e) => {
     uploadComment(
       "joonyg10",
-      e.target.value.replace(/(?:\r\n|\r|\n)/g, "<br />")
+      commentInput.value.replace(/(?:\r\n|\r|\n)/g, "<br />")
     );
-    toggleClass(e.target, ACTIVE);
+    toggleClass(addCommentBtn, ACTIVE);
   };
 
   const handleInput = (e) => {
-    if (e.key === ENTER) {
+    e.target.value
+      ? addClass(addCommentBtn, ACTIVE)
+      : removeClass(addCommentBtn, ACTIVE);
+
+    if (e.key === ENTER && checkElementHasClass(addCommentBtn, ACTIVE)) {
       e.shiftKey ? adjustInputHeight(e) : addCommentWithEnter(e);
     }
   };
+
   const adjustInputHeight = (e) => {
     if (e.keyCode == 8) {
       e.target.style.height = `${e.target.scrollHeight}px`;
-      console.log("DELETE", e.target.scrollHeight);
     }
     if (e.key === ENTER && e.shiftKey) {
       ++lines;
-      console.log(e.target.scrollHeight);
       e.target.style.height = `${e.target.scrollHeight + 8}px`;
     }
   };
@@ -336,49 +339,55 @@ feeds.map((feed) => {
   addCommentBtn.addEventListener("click", addCommentWithBtnClick);
 
   const checkCommentsLen = (comment) => {
-    return lines === 0
-      ? comment
-      : `<a class='see-more'>...더보기</a> <span class='hidden'>
-        ${comment}
-      </span>`;
+    if (lines > 0)
+      comment = `<a class='see-more'>...더보기</a> <span class='hidden'>
+    ${comment}
+  </span>`;
+    return [lines > 0, comment];
   };
 
   const uploadComment = (user, comment) => {
     if (!comment) return;
-    comment = checkCommentsLen(comment);
+    const [isMultiLine, newComment] = checkCommentsLen(comment);
 
     const newCommentLi = document.createElement("li");
     newCommentLi.className = "comment";
     newCommentLi.innerHTML = `
-    <section class="comment-delete">
-      <div class="comment-delete comment flex items-center">
-        <i class="fas fa-times"></i>
-        <i class="fas fa-trash-alt"></i>
-      </div>
-    </section>
-    <section class="comment-front flex">
-      <strong>${user}</strong>&nbsp;&nbsp;
-      <span class="actual-comment"></span>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        class="h-6 w-6 heart"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="black"
-      >
-        <path
-          class="heart-path"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="2"
-          d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-        />
-      </svg>
-    </section>
+      <section class="comment-delete">
+        <div class="comment-delete__icons flex">
+          <i class="fas fa-times flex items-center"></i>
+          <i class="fas fa-trash-alt flex items-center"></i>
+        </div>
+      </section>
+      <section class="comment-front flex ${!isMultiLine ?? "items-center"}">
+        <strong>${user}</strong>&nbsp;&nbsp;
+        <span class="actual-comment">${newComment}</span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="heart"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="black"
+        >
+          <path
+            class="heart-path"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+          />
+        </svg>
+      </section>
     `;
+
+    // [X] multiline일 때, 댓글의 높이를 조정!
+    if (isMultiLine) {
+      newCommentLi.style.height = `${lines * 16}px`;
+    }
     newCommentLi.querySelector(".actual-comment").innerHTML = comment;
     commentList.appendChild(newCommentLi);
     commentInput.value = null;
+    commentInput.style.height = "24px";
     lines = 0;
   };
 });
