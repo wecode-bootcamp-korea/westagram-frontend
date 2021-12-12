@@ -42,8 +42,7 @@ const filterUserByInput = (inputValue) => {
 const updateBySearch = (e) => {
   if (e.target !== document.activeElement) return;
   removeFilteredList(e);
-  const searchInput = e.target.value;
-  const filteredUser = filterUserByInput(searchInput);
+  const filteredUser = filterUserByInput(e.target.value);
   filteredUser.map((user) => {
     const newUser = document.createElement("li");
     newUser.className = "flex items-center";
@@ -59,9 +58,9 @@ const removeFilteredList = (e) => {
   // filteredList.innerHTML = ''도 있지만 원시적으로 해보았음.
   let currFilteredUser = e.target.nextElementSibling.firstElementChild;
   while (currFilteredUser) {
-    const next = currFilteredUser.nextElementSibling;
+    const nextUser = currFilteredUser.nextElementSibling;
     filteredList.removeChild(currFilteredUser);
-    currFilteredUser = next;
+    currFilteredUser = nextUser;
   }
 };
 
@@ -82,7 +81,6 @@ mainProfileImage.addEventListener("click", () =>
 );
 
 // SECTION: Carousel for story
-// [X] Carousel for stories
 const storyWrapper = document.querySelector(".stories__wrapper");
 const stories = storyWrapper.querySelector(".stories");
 const [storyLeftBtn, storyRightBtn] = storyWrapper.querySelectorAll("i.fas");

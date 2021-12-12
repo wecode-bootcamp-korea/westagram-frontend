@@ -157,7 +157,7 @@ main {
   display: grid;
   grid-template-columns: 35rem auto;
   grid-template-rows: 7rem auto;
-  gap: 1.5rem;
+  gap: 1.75rem;
   font-family: "Roboto", sans-serif;
   position: relative;
 }
@@ -250,12 +250,12 @@ ul.stories {
 }
 
 .profile {
-  height: 18vh;
+  height: 6.75rem;
 }
 
 .profile img {
-  width: 6vw;
-  height: 6vw;
+  width: var(--fs-story-img);
+  height: var(--fs-story-img);
   border-radius: 50%;
 }
 
@@ -263,42 +263,47 @@ ul.stories {
   font-size: 0.875rem;
 }
 
-.recommends__wrapper a {
-  display: inline-block;
-  margin-left: auto;
-  color: skyblue;
-  font-size: 0.75rem;
-  transition: all 0.5s;
-}
-
-.recommends__wrapper a:hover {
-  color: blue;
-  font-weight: bold;
-}
-
 .recommendation h3 {
   display: inline-block;
   color: var(--gray-400);
 }
 
-.recommendation h3 + a {
-  color: inherit;
+.recommendation .title p {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: var(--gray-500);
 }
 
+.recommendation p + a {
+  color: inherit;
+}
+.other-profile h4 {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
 .other-profile p {
+  line-height: 1.7;
   font-size: 0.75rem;
   color: var(--gray-400);
   font-family: sans-serif;
 }
 
 .other-profile {
-  margin-top: 1.75rem;
+  margin-top: 1rem;
 }
 
 .other-profile img {
-  width: 3vw;
-  height: 3vw;
+  width: var(--fs-img);
+  height: var(--fs-img);
   border-radius: 50%;
+}
+
+.recommends__wrapper a,
+.other-profile a {
+  display: inline-block;
+  margin-left: auto;
+  color: rgb(0, 153, 243);
+  font-size: 0.8rem;
 }
 
 /* ************************************************** */
