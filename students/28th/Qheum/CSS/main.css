@@ -1,3 +1,6 @@
+input:focus {
+    outline: none;
+}
 .all-wrapper {
     display: flex;
     width: 100vw;
@@ -42,7 +45,6 @@
 .content-wrapper {
     display: flex;
     width: 100vw;
-    height: 100vh;
     justify-content: center;
     padding-top: 60px;
     background-color: #FAFAFA;
@@ -50,7 +52,6 @@
 
 .feed {
     width: 615px;
-    height: 1000px;
     border: 2px solid #E6E6E6;
     background-color: white;
 }
@@ -105,18 +106,47 @@
 
 }
 
-.feed-reply-wrapper {
-    display: flex;
-}
-
-
 .feed-comment {
     padding-left: 10px;
 }
 
+#feed-reply-wrapper {
+    border-bottom: 1px solid gray;
+    padding: 5px 0px;
+    list-style: none;
+}
+
+#feed-reply-wrapper li :first-child {
+    font-weight: 700;
+}
+
 .feed-reply-comment {
     padding-left: 10px;
+    padding-bottom: 10px;
 }
+
+.feed-reply-input {
+    display: flex;
+    padding: 0px 0px 15px 0px;
+}
+.feed-reply-input input{
+    border: none;
+    width: 520px;
+    font-size: 15px;
+    padding: 5px 5px 5px 15px;
+}
+
+button {
+    border: none;
+    background-color: white;
+    color: blue;
+    opacity: 1;
+}
+
+button:disabled {
+    opacity: 0.3;
+}
+
 
 .sidebar-wrapper {
     display: flex;
