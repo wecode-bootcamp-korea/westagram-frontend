@@ -1,3 +1,5 @@
+"use strict"
+
 // submenu start
 const profileBtn = document.getElementById('profile_menu');
 const submenu = document.querySelector('.account_menu');
@@ -93,7 +95,7 @@ prevBtn.addEventListener('click', showPrevPhoto);
 // activate write reply button
 const replyContent = document.querySelector('textarea');
 const writeBtn = document.querySelector('.submit_reply');
-const replyBox = document.querySelector('.post_reply');
+const replyBox = document.querySelector('.reply_wrap');
 
 function activateReplyButton() {
     if (replyContent.value.length > 0) {
@@ -112,45 +114,59 @@ writeBtn.addEventListener('click', function () {
 });
 
 // write reply
-(function () {
-    let index = 0;
-    function writeReply(content) {
-        const comment = `<div class="reply_wrap" id="reply${index}">
-            <a href="https://www.instagram.com/mina_0120/">my1nsta</a>
+function writeReply(content) {
+    const newCommentList = document.createElement("li");
+    const newComment = `<a href="https://www.instagram.com/mina_0120/">my1nsta</a>
             <span>${content}</span>
-            <button type="button" class="like_reply" onclick="toggleLikeReply()">
+            <button type="button" class="like_reply">
                 <img src="./static/img/heart-blank.png" class="heart_blank">
                 <img src="./static/img/heart-red.png" class="heart_red">
             </button>
             <button type="button" class="delete_reply">
                 <i class="fas fa-times"></i>
-            </button>
-        </div>`;
-        replyBox.innerHTML += comment;
-        replyContent.value = '';
-        index++
-    };
+            </button>`;
+    newCommentList.innerHTML = newComment;
+    replyBox.appendChild(newCommentList);
+    deleteThisReply(newCommentList);
+    likeThisReply(newCommentList);
 
-    writeBtn.addEventListener('click', () => writeReply(replyContent.value));
+    replyContent.value = '';
+};
 
-    // press enter key to write reply
-    function writeReplyByEnterKey(e, content) {
-        if (e.key === 'Enter') {
-            if (!(e.shiftKey)) {
-                e.preventDefault();
-                writeReply(replyContent.value.replaceAll('\t', '<br />'));
-            }
-            if (e.shiftKey) {
-                replyContent.value = `${replyContent.value + '\t'}`;
-            }
+writeBtn.addEventListener('click', () => writeReply(replyContent.value));
+
+// press enter key to write reply
+function writeReplyByEnterKey(e, content) {
+    if (e.key === 'Enter') {
+        if (!(e.shiftKey)) {
+            e.preventDefault();
+            writeReply(replyContent.value.replaceAll('\t', '<br />'));
+        }
+        if (e.shiftKey) {
+            replyContent.value = `${replyContent.value + '\t'}`;
         }
     }
+}
 
-    replyContent.addEventListener('keypress', (e) => writeReplyByEnterKey(e, this.value));
-})();
+replyContent.addEventListener('keypress', (e) => writeReplyByEnterKey(e, this.value));
+
+// delete reply
+function deleteComment(newCommentList) {
+    newCommentList.remove();
+}
+
+function deleteThisReply(newCommentList) {
+    const deleteBtn = document.querySelector('.delete_reply');
+    deleteBtn.addEventListener('click', () => deleteComment(newCommentList));
+}
 
 // like reply
-function toggleLikeReply() {
+function likeThisReply(newCommentList) {
+    const likeBtn = document.querySelector('.like_reply');
+    likeBtn.addEventListener('click', () => toggleLikeReply(newCommentList));
+}
+
+function toggleLikeReply(newCommentList) {
     const unlike = document.querySelector('.heart_blank');
     const liked = document.querySelector('.heart_red');
     if (liked.style.display == "block") {

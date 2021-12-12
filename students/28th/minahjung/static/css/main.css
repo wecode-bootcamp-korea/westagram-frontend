@@ -469,12 +469,12 @@ button.post_icons_btn {
     font-weight: 600;
 }
 
-.post_content > a, .reply_wrap > a {
+.post_content > a, .reply_wrap li > a {
     font-size: 0.8rem;
     font-weight: 600;
 }
 
-.post_content > a:hover, .reply_wrap > a:hover {
+.post_content > a:hover, .reply_wrap li > a:hover {
     text-decoration: underline;
 }
 
@@ -483,17 +483,21 @@ button.post_icons_btn {
     font-size: 0.8rem;
 }
 
-.reply_wrap {
+.reply_wrap li {
     display: flex;
     justify-content: space-between;
     font-size: 0.8rem;
 }
 
-.reply_wrap > a {
+ul.reply_wrap {
+    list-style: none;
+}
+
+.reply_wrap li > a {
     height: 100%;
 }
 
-.reply_wrap > span {
+.reply_wrap li > span {
     width: 100%;
     margin-left: 8px;
 }
