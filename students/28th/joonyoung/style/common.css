@@ -29,11 +29,12 @@
     rgba(253, 33, 29, 0.6045605742296919) 95%,
     rgba(69, 72, 252, 1) 100%
   );
-  --bg-loading: linear-gradient(
+  --bg-loading: darkgray;
+  --bg-skeleton: linear-gradient(
     90deg,
     rgba(255, 255, 255, 0) 0,
     rgba(255, 255, 255, 0.2) 20%,
-    rgba(255, 255, 255, 0.5) 60%,
+    rgba(255, 255, 255, 0.7) 60%,
     rgba(255, 255, 255, 0)
   );
   --border-primary: rgb(230, 230, 230);
@@ -45,8 +46,10 @@
   --gray-500: rgb(161 161 170);
 
   --z-index-img: 50;
-  --z-index-arrow: 99;
-  --z-index-dropdown: 999;
+  --z-index-arrow: 90;
+  --z-index-dropdown: 100;
+  --z-index-skeleton: 999;
+  --z-index-navbar: 1000;
 }
 
 /* ******************************************************** */
@@ -77,6 +80,10 @@ input {
   outline: none;
 }
 
+i {
+  cursor: pointer;
+}
+
 /* ******************************************************** */
 /* ******** UTIL:  유틸리티 클래스 정의  */
 .btn {
@@ -97,10 +104,6 @@ input {
 
 .hidden {
   display: none;
-}
-
-i {
-  cursor: pointer;
 }
 
 .w-6 {
@@ -157,17 +160,15 @@ i {
 .heart path:not(.liked):hover {
   stroke: var(--border-primary);
 }
-
-/* .circle {
-  animation: lineCirculate 1s ease-in-out;
-  animation-iteration-count: 2;
+/* 
+.skeleton {
+  z-index: var(--z-index-skeleton);
+  background: var(--bg-loading) var(--bg-skeleton);
+  background-size: 200%;
+  background-position: right;
+  background-repeat: no-repeat;
+  animation: loading 2s ease-out 2, img__loaded 100ms 3s forwards;
 } */
-
-/* TODO: Skeleton animation */
-.loading {
-  background: var(--bg-loading);
-  animation: loading 2s infinite;
-}
 
 /* ******************************************************** */
 /* ******** UTIL:  Animations */
@@ -188,7 +189,27 @@ i {
 
 @keyframes loading {
   to {
-    transform: translateX(100%);
+    background-position: left;
+  }
+}
+
+@keyframes image__loaded {
+  to {
+    background: none;
+    z-index: 0;
+  }
+}
+
+@keyframes storyLoaded {
+  to {
+    background: var(--bg, #fff);
+    inset: var(--inset, -2.5px);
+    z-index: var(--z-index, 0);
+  }
+}
+
+@keyframes feedStoryLoaded {
+  to {
   }
 }
 

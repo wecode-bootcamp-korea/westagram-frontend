@@ -6,7 +6,7 @@ header#navbar {
   min-height: 3rem;
   position: fixed;
   inset: 0 0 91vh;
-  z-index: 999;
+  z-index: var(--z-index-navbar);
   background-color: #fff;
   box-shadow: 0 0 3px gray;
 }
@@ -73,7 +73,7 @@ header nav .nav__icons {
   width: 0.975em;
   height: 0.975em;
   position: absolute;
-  top: 0;
+  top: -5%;
   left: 25%;
   text-align: center;
   font-size: 0.75rem;
@@ -84,6 +84,19 @@ header nav .nav__icons {
 
 .nav__icons .profile-img {
   position: relative;
+}
+
+.nav__icons .profile-img::after {
+  content: "";
+  position: absolute;
+  inset: -10px;
+  z-index: var(--z-index-skeleton);
+  background: var(--bg-loading) var(--bg-skeleton);
+  background-size: 200%;
+  background-repeat: no-repeat;
+  background-position: right;
+  border-radius: 50%;
+  animation: loading 2s ease-out 2, image__loaded 100ms 3s forwards;
 }
 
 .nav__icons .profile-img img {
@@ -173,6 +186,7 @@ main {
 }
 
 ul.stories {
+  position: relative;
   transition: transform 0.5s linear;
 }
 
@@ -194,9 +208,14 @@ ul.stories {
 .story::after {
   content: "";
   position: absolute;
-  inset: -2.5px;
+  inset: -5px;
+  z-index: var(--z-index-skeleton);
   border-radius: 50%;
-  background-color: #fff;
+  background: var(--bg-loading) var(--bg-skeleton);
+  background-size: 200%;
+  background-repeat: no-repeat;
+  background-position: right;
+  animation: loading 2s ease-out 2, storyLoaded 100ms 3s forwards;
 }
 
 .story img {
@@ -219,12 +238,12 @@ ul.stories {
 
 .stories__wrapper i {
   position: absolute;
+  z-index: var(--z-index-arrow);
   font-size: 1.25rem;
   border-radius: 50%;
   background-color: #fff;
   opacity: 0.5;
   cursor: pointer;
-  z-index: var(--z-index-arrow);
 }
 
 .stories__wrapper i:hover {
@@ -253,6 +272,23 @@ ul.stories {
   height: 6.75rem;
 }
 
+.profile .profile-img {
+  position: relative;
+}
+
+.profile .profile-img::after {
+  content: "";
+  position: absolute;
+  inset: -5px;
+  z-index: var(--z-index-skeleton);
+  border-radius: 50%;
+  background: var(--bg-loading) var(--bg-skeleton);
+  background-size: 200%;
+  background-repeat: no-repeat;
+  background-position: right;
+  animation: loading 2s ease-out 2, image__loaded 100ms 3s forwards;
+}
+
 .profile img {
   width: var(--fs-story-img);
   height: var(--fs-story-img);
@@ -276,6 +312,22 @@ ul.stories {
 
 .recommendation p + a {
   color: inherit;
+}
+
+.other-profile .skeleton {
+  position: relative;
+}
+
+.other-profile .skeleton::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: var(--bg-loading) var(--bg-skeleton);
+  background-size: 200%;
+  background-position: right;
+  background-repeat: no-repeat;
+  animation: loading 2s ease-out 2, image__loaded 100ms 3s forwards;
 }
 
 .other-profile h4 {
@@ -331,10 +383,38 @@ ul.stories {
   border-bottom: 1px solid lightgray;
 }
 
+.feed__header-img {
+  position: relative;
+}
+
 .feed__header img {
   width: var(--fs-img);
   height: var(--fs-img);
   border-radius: 50%;
+  position: relative;
+  z-index: var(--z-index-img);
+}
+
+.feed__header-img::before,
+.feed__header-img::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.feed__header-img::after {
+  --inset: -3.75px;
+  --z-index: -1;
+  --bg: var(--bg-story-circle);
+  z-index: var(--z-index-skeleton);
+  position: absolute;
+  background: var(--bg-loading) var(--bg-skeleton);
+  background-size: 200%;
+  background-repeat: no-repeat;
+  background-position: right;
+  animation: loading 2s ease-out 2, storyLoaded 100ms 3s forwards;
 }
 
 .feed__header p {
@@ -358,13 +438,25 @@ ul.stories {
   position: relative;
 }
 
+.feed__carousel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: var(--z-index-skeleton);
+  background: var(--bg-loading) var(--bg-skeleton);
+  background-position: right;
+  background-size: 200%;
+  background-repeat: no-repeat;
+  animation: loading 2s ease-out 2, image__loaded 100ms 3s forwards;
+}
+
 .img__container {
   --gap: 0;
   height: 100%;
   transition: all 0.5s ease-in-out;
 }
 
-/* FIXME:  */
+/* FIXME:  Image size! */
 .img__container img {
   min-width: 100%;
   height: 100%;
@@ -373,6 +465,7 @@ ul.stories {
 .feed__carousel .fas {
   position: absolute;
   top: 50%;
+  z-index: var(--z-index-arrow);
   opacity: 0.45;
   font-size: 1.5rem;
   transform: translateY(-50%);
@@ -444,7 +537,6 @@ ul.stories {
 .comments__wrapper {
   --gap: 0;
   overflow: hidden;
-  /* border: 10px solid blue; */
 }
 
 .comments {

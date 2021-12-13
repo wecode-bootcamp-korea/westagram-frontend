@@ -5,7 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style/main.css" />
-    <link rel="favicon" type="image/x-icon" href="./public/icons/favicon.ico" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="/public/icons/favicon.ico"
+    />
     <script
       src="https://kit.fontawesome.com/0c083e0e80.js"
       crossorigin="anonymous"
@@ -60,6 +64,8 @@
     </header>
     <main>
       <section class="stories__wrapper flex items-center">
+        <i class="fas fa-chevron-circle-left hidden"></i>
+        <i class="fas fa-chevron-circle-right"></i>
         <ul class="stories flex items-center">
           <li class="story">
             <img src="./public/stories/story1.jpg" alt="story profile image" />
@@ -102,13 +108,13 @@
             <p>Emily</p>
           </li>
         </ul>
-        <i class="fas fa-chevron-circle-left hidden"></i>
-        <i class="fas fa-chevron-circle-right"></i>
       </section>
       <aside class="recommends__wrapper">
         <section class="recommends__fixed">
           <header class="profile flex items-center">
-            <img src="./public/profile.jpg" alt="profile image" />
+            <div class="profile-img">
+              <img src="./public/profile.jpg" alt="profile image" />
+            </div>
             <article>
               <h3>Joonyg10</h3>
               <p class="text-gray mt-1">박준영</p>
@@ -122,10 +128,12 @@
             </header>
             <article class="others__profile">
               <section class="other-profile flex items-center">
-                <img
-                  src="./public/recommends/recommendation1.jpg"
-                  alt="profile image"
-                />
+                <div class="skeleton">
+                  <img
+                    src="./public/recommends/recommendation1.jpg"
+                    alt="profile image"
+                  />
+                </div>
                 <div class="others__desc">
                   <h4>wecode28기</h4>
                   <p>wecode님외 36명이 follow</p>
@@ -133,10 +141,12 @@
                 <a href="#">follow</a>
               </section>
               <section class="other-profile flex items-center">
-                <img
-                  src="./public/recommends/recommendation2.jpg"
-                  alt="profile image"
-                />
+                <div class="skeleton">
+                  <img
+                    src="./public/recommends/recommendation2.jpg"
+                    alt="profile image"
+                  />
+                </div>
                 <div class="others__desc">
                   <h4>Younha</h4>
                   <p>Enna Kim외 10명이 follow</p>
@@ -144,10 +154,12 @@
                 <a href="#">follow</a>
               </section>
               <section class="other-profile flex items-center">
-                <img
-                  src="./public/recommends/recommendation3.jpg"
-                  alt="profile image"
-                />
+                <div class="skeleton">
+                  <img
+                    src="./public/recommends/recommendation3.jpg"
+                    alt="profile image"
+                  />
+                </div>
                 <div class="others__desc">
                   <h4>wework</h4>
                   <p>wecode28님외 236명이 follow</p>
@@ -161,7 +173,9 @@
       <section class="feed__wrapper">
         <article class="feed">
           <header class="feed__header flex items-center">
-            <img src="./public/stories/story1.jpg" alt="Enna's Feed icon" />
+            <div class="feed__header-img">
+              <img src="./public/stories/story1.jpg" alt="Enna's Feed icon" />
+            </div>
             <p>Enna</p>
             <i class="fas fa-ellipsis-h"></i>
           </header>

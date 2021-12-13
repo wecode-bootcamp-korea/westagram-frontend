@@ -299,7 +299,7 @@ feeds.map((feed) => {
   commentList.addEventListener("mousemove", movingComment);
   commentList.addEventListener("mouseup", endCommentDrag);
 
-  // FIXME: comment추가 하는 로직
+  // SECTION: 댓글 추가 로직
   let lines = 0;
   const addCommentWithEnter = (e) => {
     e.preventDefault();
@@ -380,7 +380,7 @@ feeds.map((feed) => {
       </section>
     `;
 
-    // [X] multiline일 때, 댓글의 높이를 조정!
+    // [O] multiline일 때, 댓글의 높이를 조정!
     if (isMultiLine) {
       newCommentLi.style.height = `${lines * 16}px`;
     }
