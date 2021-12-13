@@ -51,7 +51,12 @@ function checkValue(value) {
 //   }
 
 // });
-const success = () => console.log("Success");
+// const success = () => console.log("Success");
+
+function success() {
+  alert("환영합니다!");
+  location.replace("http://127.0.0.1:5500/students/28th/seongyong/main.html");
+}
 
 function init() {
   console.log(inputs, loginBtn);
