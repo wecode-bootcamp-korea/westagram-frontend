@@ -23,9 +23,10 @@ const removeClass = (target, classVar) => target?.classList.remove(classVar);
 const toggleClass = (target, classVar) => target?.classList.toggle(classVar);
 const checkElementHasClass = (target, classVar) =>
   target.classList.contains(classVar);
+
 const getClosestSelector = (target, selector) => {
   if (checkElementHasClass(target, selector)) return target;
-  target.closest(selector);
+  return target.closest(selector);
 };
 const getElementRect = (ele) => ele.getBoundingClientRect();
 
@@ -157,9 +158,6 @@ feeds.map((feed) => {
     }px)`;
   };
 
-  feedLeftBtn.addEventListener("click", slideFeedLeft);
-  feedRightBtn.addEventListener("click", slideFeedRight);
-
   const navigateToSlide = (e) => {
     if (!checkElementHasClass(e.target, "slide_btn")) return;
     if (checkElementHasClass(e.target, CURR)) return;
@@ -185,12 +183,14 @@ feeds.map((feed) => {
     toggleClass(feedNavBtns[prevIdx], CURR);
     toggleClass(feedNavBtns[currIdx], CURR);
   };
+  feedLeftBtn.addEventListener("click", slideFeedLeft);
+  feedRightBtn.addEventListener("click", slideFeedRight);
   feedNavigator.addEventListener("click", navigateToSlide);
 
-  // SECTION: 3) like버튼 클릭시 좋아요 갯수를 동적으로 update
+  // **********************************************************
+  //  3) like버튼 클릭시 좋아요 갯수를 동적으로 update
   const likeCounter = feedIcons.querySelector(".like-counter");
   let currLikes = parseInt(likeCounter.innerHTML.replace(",", ""));
-
   const updateLikes = (e) => {
     if (!checkElementHasClass(e.target, HEART)) return;
     toggleClass(e.target, LIKE);
@@ -200,6 +200,7 @@ feeds.map((feed) => {
       .toString()
       .replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   };
+
   feedIcons.addEventListener("click", updateLikes);
 
   // **********************************************************
@@ -210,24 +211,21 @@ feeds.map((feed) => {
     ".comment__input textarea"
   );
   const textAreaRect = getElementRect(commentInput);
-  // console.log((textAreaRect.right - textAreaRect.left) * 0.8);
   const addCommentBtn = commentsWrapper.querySelector(".add__comment");
 
-  // SECTION: comment btn active
+  // comment btn active
   const activeBtn = (e) => {
     if (e.target.value) addClass(addCommentBtn, ACTIVE);
     else removeClass(addCommentBtn.ACTIVE);
   };
-  commentInput.addEventListener("input", activeBtn);
 
-  // SECTION:  delete comment
+  // delete comment
   const deleteComment = (e) => {
     if (!checkElementHasClass(e.target, "fa-trash-alt")) return;
     commentList.removeChild(e.target.closest("li"));
   };
-  commentList.addEventListener("click", deleteComment);
 
-  // SECTION: X 버튼 click시 translate원상복구
+  // X 버튼 click시 translate원상복구
   const resetDelete = (e) => {
     if (!checkElementHasClass(e.target, "fa-times")) return;
     e.target.closest(
@@ -236,36 +234,40 @@ feeds.map((feed) => {
   };
   commentList.addEventListener("click", resetDelete);
 
-  // SECTION: 2) comment의 길이가 길어진 경우 see-more클릭시 내용볼 수 있게하는 로직
+  // comment의 길이가 길어진 경우 see-more클릭시 내용볼 수 있게하는 로직
   const seeMoreComment = (e) => {
     if (!checkElementHasClass(e.target, "see-more")) return;
     toggleClass(e.target, HIDDEN);
     toggleClass(e.target.nextElementSibling, HIDDEN);
   };
-  commentList.addEventListener("click", seeMoreComment);
 
-  // SECTION 3) heart button click시 liked class 추가
+  // heart button click시 liked class 추가
   const addHeartClass = (e) => {
     if (!checkElementHasClass(e.target, HEART)) return;
     updateLikes(e);
   };
+
+  commentInput.addEventListener("input", activeBtn);
+  commentList.addEventListener("click", deleteComment);
+  commentList.addEventListener("click", seeMoreComment);
   commentList.addEventListener("click", addHeartClass);
 
-  // SECTION: Comment slide logic
+  // **********************************************************
+  // Comment slide logic
   let isMoving = false,
     dragAnimationID,
     startPos,
     currPos,
     movedBy;
   const commentBox = getElementRect(commentList.querySelector(".comment"));
-  const minimumRequiredMove = commentBox.width * 0.05;
+  const minimumRequiredMove = commentBox.width * 0.1;
   const maxMoved = commentBox.width * 0.16;
 
   const startCommentDrag = (e) => {
     if (!checkElementHasClass(e.target, FRONT_COMMENT)) return;
     isMoving = true;
     startPos = e.pageX;
-    dragAnimationID = requestAnimationFrame(() => animation(e.target));
+    dragAnimationID = requestAnimationFrame(animation);
   };
 
   const movingComment = (e) => {
@@ -273,32 +275,37 @@ feeds.map((feed) => {
     currPos = e.pageX;
     movedBy = currPos - startPos;
     if (Math.abs(movedBy) >= minimumRequiredMove) movedBy = -maxMoved;
-    else movedBy = 0;
+    // else movedBy = 0;
+    // console.log("target >>>", e.target);
     animation(getClosestSelector(e.target, FRONT_COMMENT));
   };
 
   const endCommentDrag = () => {
     isMoving = false;
+    movedBy = 0;
     cancelAnimationFrame(dragAnimationID);
     moveCommentByCalc();
-    movedBy = 0;
   };
 
   const animation = (target) => {
+    console.log("target >>>", target);
     moveCommentByCalc(target);
     if (isMoving) requestAnimationFrame(animation);
   };
 
   // FIXME: target : undefined error (if로 Filtering했는데도 발생)
   const moveCommentByCalc = (target) => {
+    // console.log(target);
     if (target) {
       target.style.transform = `translateX(${movedBy}px)`;
     }
   };
+
   commentList.addEventListener("mousedown", startCommentDrag);
   commentList.addEventListener("mousemove", movingComment);
   commentList.addEventListener("mouseup", endCommentDrag);
 
+  // **********************************************************
   // SECTION: 댓글 추가 로직
   let lines = 0;
   const addCommentWithEnter = (e) => {
@@ -306,40 +313,8 @@ feeds.map((feed) => {
     addCommentWithBtnClick(e);
   };
 
-  const addCommentWithBtnClick = (e) => {
-    uploadComment(
-      "joonyg10",
-      commentInput.value.replace(/(?:\r\n|\r|\n)/g, "<br />")
-    );
-    toggleClass(addCommentBtn, ACTIVE);
-  };
-
-  const handleInput = (e) => {
-    e.target.value
-      ? addClass(addCommentBtn, ACTIVE)
-      : removeClass(addCommentBtn, ACTIVE);
-
-    if (e.key === ENTER && checkElementHasClass(addCommentBtn, ACTIVE)) {
-      e.shiftKey ? adjustInputHeight(e) : addCommentWithEnter(e);
-    }
-  };
-
-  const adjustInputHeight = (e) => {
-    if (e.keyCode == 8) {
-      e.target.style.height = `${e.target.scrollHeight}px`;
-    }
-    if (e.key === ENTER && e.shiftKey) {
-      ++lines;
-      e.target.style.height = `${e.target.scrollHeight + 8}px`;
-    }
-  };
-
-  commentInput.addEventListener("keyup", handleInput);
-  commentInput.addEventListener("keyup", adjustInputHeight);
-  addCommentBtn.addEventListener("click", addCommentWithBtnClick);
-
   const checkCommentsLen = (comment) => {
-    if (lines > 0)
+    if (lines > 0 || comment.length >= 30)
       comment = `<a class='see-more'>...더보기</a> <span class='hidden'>
     ${comment}
   </span>`;
@@ -390,4 +365,36 @@ feeds.map((feed) => {
     commentInput.style.height = "24px";
     lines = 0;
   };
+
+  const addCommentWithBtnClick = (e) => {
+    uploadComment(
+      "joonyg10",
+      commentInput.value.replace(/(?:\r\n|\r|\n)/g, "<br />")
+    );
+    toggleClass(addCommentBtn, ACTIVE);
+  };
+
+  const handleInput = (e) => {
+    e.target.value
+      ? addClass(addCommentBtn, ACTIVE)
+      : removeClass(addCommentBtn, ACTIVE);
+
+    if (e.key === ENTER && checkElementHasClass(addCommentBtn, ACTIVE)) {
+      e.shiftKey ? adjustInputHeight(e) : addCommentWithEnter(e);
+    }
+  };
+
+  const adjustInputHeight = (e) => {
+    if (e.keyCode == 8) {
+      e.target.style.height = `${e.target.scrollHeight}px`;
+    }
+    if (e.key === ENTER && e.shiftKey) {
+      ++lines;
+      e.target.style.height = `${e.target.scrollHeight + 8}px`;
+    }
+  };
+
+  commentInput.addEventListener("keyup", handleInput);
+  commentInput.addEventListener("keyup", adjustInputHeight);
+  addCommentBtn.addEventListener("click", addCommentWithBtnClick);
 });

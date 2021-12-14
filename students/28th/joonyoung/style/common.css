@@ -160,15 +160,6 @@ i {
 .heart path:not(.liked):hover {
   stroke: var(--border-primary);
 }
-/* 
-.skeleton {
-  z-index: var(--z-index-skeleton);
-  background: var(--bg-loading) var(--bg-skeleton);
-  background-size: 200%;
-  background-position: right;
-  background-repeat: no-repeat;
-  animation: loading 2s ease-out 2, img__loaded 100ms 3s forwards;
-} */
 
 /* ******************************************************** */
 /* ******** UTIL:  Animations */
@@ -196,7 +187,6 @@ i {
 @keyframes image__loaded {
   to {
     background: none;
-    z-index: 0;
   }
 }
 
@@ -207,21 +197,3 @@ i {
     z-index: var(--z-index, 0);
   }
 }
-
-@keyframes feedStoryLoaded {
-  to {
-  }
-}
-
-/* TODO: 만약 시간이 남으면 삭제 버튼 왼쪽으로 드래그 할때 animation 추가 */
-/* @keyframes springAnimation {
-  0% {
-    transform: translateX(--startPos);
-  }
-  20% {
-    transform: translateX(--endPos);
-  }
-  40% {
-    transform: translateX(--endPos)
-  }
-} */

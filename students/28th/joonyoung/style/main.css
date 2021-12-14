@@ -178,7 +178,7 @@ main {
 /* ************************************************** */
 /* SECTION:   stories for others */
 .stories__wrapper {
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1rem 1.125rem;
   --gap: 1.5em;
   border: 1px solid var(--border-primary);
   overflow: hidden;
@@ -193,7 +193,6 @@ ul.stories {
 .story {
   min-height: var(--fs-story-img);
   height: var(--fs-story-img);
-  transform: translateY(-11%);
   position: relative;
 }
 
@@ -215,7 +214,7 @@ ul.stories {
   background-size: 200%;
   background-repeat: no-repeat;
   background-position: right;
-  animation: loading 2s ease-out 2, storyLoaded 100ms 3s forwards;
+  animation: loading 2s ease-out 2 reverse, storyLoaded 100ms 3s forwards;
 }
 
 .story img {
@@ -239,6 +238,7 @@ ul.stories {
 .stories__wrapper i {
   position: absolute;
   z-index: var(--z-index-arrow);
+  z-index: 0.1;
   font-size: 1.25rem;
   border-radius: 50%;
   background-color: #fff;
@@ -405,7 +405,7 @@ ul.stories {
 }
 
 .feed__header-img::after {
-  --inset: -3.75px;
+  --inset: -3px;
   --z-index: -1;
   --bg: var(--bg-story-circle);
   z-index: var(--z-index-skeleton);
@@ -466,6 +466,7 @@ ul.stories {
   position: absolute;
   top: 50%;
   z-index: var(--z-index-arrow);
+  /* z-index: 1000; */
   opacity: 0.45;
   font-size: 1.5rem;
   transform: translateY(-50%);
@@ -570,7 +571,7 @@ ul.stories {
   width: 8%;
   display: inline-flex;
   justify-content: center;
-  font-size: 1.125rem;
+  font-size: 0.975rem;
   transition: all 0.4s ease-in-out;
   color: var(--white-100);
   cursor: pointer;
