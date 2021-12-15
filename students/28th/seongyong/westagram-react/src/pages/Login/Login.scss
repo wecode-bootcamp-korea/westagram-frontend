@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+
+  .bigContainer {
+    position: relative;
+    width: 800px;
+    height: 600px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+  }
+  .container {
+    width: 500px;
+    height: 550px;
+    border: 1px solid #d0d6d6;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .container .logo {
+    width: 410px;
+    padding: 65px;
+    font-size: 60px;
+    font-family: "Lobster", cursive;
+    text-align: center;
+  }
+
+  input {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #d0d6d6;
+    opacity: 0.8;
+  }
+
+  input:hover {
+    opacity: 1;
+  }
+
+  .loginPw {
+    padding: 10px;
+  }
+
+  button {
+    width: 300px;
+    height: 40px;
+    color: white;
+    font-size: 15px;
+    border: 1px solid #a3caff;
+    background-color: #072144;
+    opacity: 0.4;
+    border-radius: 15px;
+    padding-left: 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+
+  footer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    font-size: 15px;
+  }
+
+  .bottom {
+    margin-top: 100px;
+    font-family: "Courier New", Courier, monospace;
+  }
+}
