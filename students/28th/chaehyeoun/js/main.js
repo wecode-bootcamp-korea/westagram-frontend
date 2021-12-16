@@ -15,7 +15,7 @@ function registerComment(value){
     const newCommentList=document.createElement("li");
     const newComment=`<span class="insta_id">saram</span><span>${value}</span>`;
     
-    console.log(newComment);
+    //console.log(newComment);
     newCommentList.innerHTML=newComment;
     commentList.appendChild(newCommentList);
  

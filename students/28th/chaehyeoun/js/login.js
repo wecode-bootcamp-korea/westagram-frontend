@@ -6,10 +6,19 @@ function loginBtn() {
     let idValue = inputId.value;
     let passwordValue = inputPassword.value;
 
-    if(idValue.length > 0 && passwordValue.length > 0) {
-        button.disabled = false;
+    if(idValue.length > 0 && passwordValue.length >= 5 ) {
+        {
+            let s=idValue.includes("@");
+            //console.log(s);
+            if(s){
+                button.disabled = false;
+                button.style.backgroundColor = "hotpink";
+            }
+            
+        }
+       
     
-        button.style.backgroundColor = "hotpink";
+        
     }else {
         button.disabled = true;
 
