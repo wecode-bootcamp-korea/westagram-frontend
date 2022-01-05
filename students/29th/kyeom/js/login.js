@@ -1,3 +1,4 @@
+// id, pw 입력하면 로그인 버튼 활성화
 const id = document.querySelector('#id');
 const password = document.querySelector('#password');
 const submit = document.querySelector('#submit');
@@ -10,6 +11,8 @@ function disableSubmit() {
     submit.disabled = true : submit.disabled = false;
 }
 
+
+// 로그인 폼 submit
 const form = document.querySelector('form');
 form.addEventListener('submit', function (event) {
     event.preventDefault();

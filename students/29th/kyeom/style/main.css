@@ -15,7 +15,7 @@ nav {
 input.search, .feed-wrapper, .profile-img {
     border: 1px solid var(--gray2);
 }
-.feed-bar, .feed-bar header, .button-wrapper, .button-left, form.comment, .recommendation-header {
+.feed-bar, .feed-bar header, .button-wrapper, .button-left, form.comment, .recommendation-header, .recommendation-profile {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -25,14 +25,14 @@ input.search, .feed-wrapper, .profile-img {
     max-width: 935px;
 }
 /* nav */
-/*
 .nav-relative {
     position: relative;
 }
 .nav-container {
     position: fixed;
+    top: 0;
+    width: 100%;
 }
-*/
 #nav-wrapper {
     display: flex;
     flex-direction: row;
@@ -86,6 +86,7 @@ img.menu {
     justify-content: space-between;
     padding: 30px 0;
     margin: auto;
+    margin-top: var(--desktop-nav-height);
 }
 .feed-container {
     margin-right: 28px;
@@ -171,7 +172,7 @@ input.comment {
     border: none;
     margin-right: 8px;
 }
-section.comment .submit {
+section.comment .submit, button.follow, button.switch {
     all: unset;
     font-weight: 600;
     color: var(--blue);
@@ -189,6 +190,7 @@ section.comment .submit:disabled {
 .user-wrapper {
     display: flex;
     align-items: center;
+    margin: 18px auto 10px;
 }
 .user-img {
     width: 64px;
@@ -202,12 +204,12 @@ section.comment .submit:disabled {
 .user-profile .name {
     margin-bottom: 4px;
 }
-.user-profile :last-child {
+.user-profile .name+div {
     color: var(--gray3);
 }
 /* 회원님을 위한 추천 */
 .recommendation-wrapper {
-    margin-top: 22px;
+    padding-top: 12px;
 }
 .recommendation-header {
     font-weight: 600;
@@ -215,6 +217,24 @@ section.comment .submit:disabled {
 .recommendation-header :first-child {
     color: var(--gray3);
 }
-.recommendation-header :last-child {
+.recommendation-header button {
+    all: unset;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+.recommendation-section {
+    padding: 8px 0 8px 4px;
+}
+.recommendation-profile {
+    padding: 8px 0;
+}
+.recommendation-profile .profile-img {
+    width: 32px;
+    height: 32px;
+}
+.recommendation-profile .name {
+    flex-grow: 1;
+}
+.recommendation-profile button.follow, button.switch {
     font-size: 1.2rem;
 }
