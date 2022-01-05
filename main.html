@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>westagram</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style/common.css">
+    <link rel="stylesheet" href="style/main.css">
+</head>
+<body>
+    <div class="nav-relative">
+        <div class="nav-container">
+            <nav>
+                <div id="nav-wrapper">
+                    <h1 class="h1">westagram</h1>
+                    <div class="search">
+                        <input class="search" type="text" placeholder="검색">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <div id="menu-wrapper">
+                        <img class="menu" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png" alt="explore">
+                        <img class="menu" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" alt="heart">
+                        <img class="menu" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png" alt="profile">
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <main>
+        <div id="main-wrapper">
+            <div class="feed-container">
+                <article class="feed-wrapper">
+                    <div class="feed-bar">
+                        <header>
+                            <div class="profile-img">
+                                <img src="img/profile.jpg" alt="">
+                            </div>
+                            <div class="name">kyeom</div>
+                        </header>
+                        <input class="button" type="image" src="https://cdn-icons.flaticon.com/png/512/3426/premium/3426508.png?token=exp=1641283220~hmac=da829162a007caff9d9199ead232ac55" alt="">
+                    </div>
+                    <section class="feed-img">
+                        <img src="img/coffee.jpg" alt="">
+                    </section>
+                    <section class="button-wrapper">
+                        <div class="button-left">
+                            <div class="button">
+                                <i class="far fa-heart"></i>
+                            </div>
+                            <input class="button" type="image" src="https://cdn-icons.flaticon.com/png/512/1947/premium/1947247.png?token=exp=1641272052~hmac=ef4fd90cf74cd7e9e1c7fcc61b1e9aa7" alt="">
+                            <input class="button" type="image" src="https://cdn-icons.flaticon.com/png/512/1947/premium/1947267.png?token=exp=1641272052~hmac=779b08e5a0127c2d88ec2afb1a552c3e" alt="">
+                        </div>
+                        <input class="button" type="image" src="https://cdn-icons.flaticon.com/png/512/1947/premium/1947270.png?token=exp=1641272052~hmac=6de6a152713e2e08f27e689ce057d45e" alt="">
+                    </section>
+                    <section class="message">
+                        <span class="name">wecode_bootcamp</span>님 <span>외 10명</span>이 좋아합니다
+                    </section>
+                    <section class="content">
+                        <span class="name">kyeom</span>
+                        <span>프린터 앞에 가 보셨나요</span>
+                    </section>
+                    <section class="uploaded-comment"></section>
+                    <section class="comment">
+                        <form class="comment">
+                            <input class="comment" type="textarea" placeholder="댓글 달기…">
+                            <button class="submit" type="submit">게시</button>
+                        </form>
+                    </section>
+                </article>
+            </div>
+            <aside class="main-right">
+                <div class="side-wrapper">
+                    <div class="user-wrapper">
+                        <div class="user-img">
+                            <img src="img/wecode.jpg" alt="">
+                        </div>
+                        <div class="user-profile">
+                            <div class="id name">wecode_bootcamp</div>
+                            <div>WeCode 29th | 위코드 29기</div>
+                        </div>
+                    </div>
+                    <div class="recommendation-wrapper">
+                        <div class="recommendation-header">
+                            <div>회원님을 위한 추천</div>
+                            <div>모두 보기</div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
