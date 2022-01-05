@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap');
 @font-face {
     font-family: system;
     font-style: normal;
     font-weight: 300;
+    letter-spacing: 1;
     src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
 }
 
@@ -22,7 +23,7 @@ a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, bo
     font-family: "system", sans-serif;
     /*font-weight: 400;*/
     font-size: 14px;
-    border: 1px dotted red;
+
 }
 
 input:focus,
@@ -67,7 +68,7 @@ nav{
 }
 
 h1{
-    font-family: 'Lobster', cursive;
+    font-family: 'Lobster Two', cursive;
     font-size: 22px;
     border-left: 1px solid black;
     padding: 0 0 0 10px;
@@ -108,7 +109,7 @@ nav input{
     font-weight: bold;
 }
 main{
-    padding: 90px 0 0 0;   
+    padding: 90px 0 30px 0;   
 }
 .main-container{
     display: flex;
@@ -126,6 +127,7 @@ img{
     width: 100%;
     display: flex;
     align-items: center;
+    
 }
 
 .feeds{
@@ -146,6 +148,7 @@ img{
     height: 40px;
     overflow: hidden;
     border-radius: 20px;
+    margin-right: 14px;
 }
 .feeds-like, .interaction-bar, article, .feeds-minute{
     padding: 0 16px;
@@ -240,10 +243,19 @@ i:nth-child(1){
 
 }
 .story-header, .recommendation-header{
-    padding: 6px 12px;
+    padding: 8px 12px;
+    justify-content: space-between;
+    color: #8e8e8e;
+    
 }
 .story-stack, .recommendation-stack{
-    padding: 6px 8px;
+    padding: 6px 12px;
+}
+.recommendation-stack{
+    justify-content: space-between;
+}
+.recommended-users{
+    display: flex;
 }
 .name{
     color: #8e8e8e;
@@ -256,8 +268,22 @@ i:nth-child(1){
     padding-bottom: 4px;
     padding-top: 4px;
 }
+.view-all{
+    font-size: 12px;
+    color: #262626;
+}
+
+.recommendation-stack .follow-button{
+    font-size: 12px;
+    color: #0095f6;
+}
+
 .caption{
     font-size: 12px;
     color: #8e8e8e;
     margin: 2px;
+}
+footer{
+    font-size: 11px;
+    color: #c7c7c7;
 }
