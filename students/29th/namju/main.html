@@ -241,20 +241,15 @@
             <span>42분 전</span>
           </div>
 
-          <form
-            class="feed-comment-form"
-            method="post"
-            onSubmit="return false;"
-          >
+          <form class="feed-comment-form" method="post">
             <div class="textarea-wrap">
               <textarea
                 rows="1"
                 class="comment-area"
                 placeholder="댓글 달기..."
-                oninput="auto_grow(this)"
               ></textarea>
             </div>
-            <button class="btn-add-comment" type="button">게시</button>
+            <button class="btn-add-comment" type="button" disabled>게시</button>
           </form>
         </article>
 
@@ -444,10 +439,9 @@
                 rows="1"
                 class="comment-area"
                 placeholder="댓글 달기..."
-                oninput="auto_grow(this)"
               ></textarea>
             </div>
-            <button class="btn-add-comment" type="button">게시</button>
+            <button class="btn-add-comment" type="button" disabled>게시</button>
           </form>
         </article>
 
@@ -638,10 +632,9 @@
                 rows="1"
                 class="comment-area"
                 placeholder="댓글 달기..."
-                oninput="auto_grow(this)"
               ></textarea>
             </div>
-            <button class="btn-add-comment" type="button">게시</button>
+            <button class="btn-add-comment" type="button" disabled>게시</button>
           </form>
         </article>
       </section>

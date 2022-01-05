@@ -1,12 +1,17 @@
-// textarea 콘텐츠에 따라 높이 조정
-function auto_grow(element) {
-  element.style.height = "18px";
-  element.style.height = element.scrollHeight + "px";
-}
-
-// 댓글 추가 + 게시 버튼 active
 const commentAddBtn = document.getElementsByClassName("btn-add-comment");
 const commentTextArea = document.getElementsByClassName("comment-area");
+
+// textarea 콘텐츠에 따라 높이 조정
+function auto_grow() {
+  this.style.height = "18px";
+  this.style.height = element.scrollHeight + "px";
+}
+
+Array.from(commentTextArea).forEach((item, index) => {
+  item.addEventListener("input", auto_grow);
+});
+
+// 댓글 추가 + 게시 버튼 active
 
 const addComment = (index) => {
   const feedComment = document.getElementsByClassName("feed-comment");
@@ -40,28 +45,31 @@ Array.from(commentAddBtn).forEach((item, index) => {
   item.addEventListener("click", () => {
     addComment(index);
     commentTextArea[index].value = null;
+    commentAddBtn[index].disabled = true;
   });
 });
 
 // add thru enter
 Array.from(commentTextArea).forEach((item, index) => {
   item.addEventListener("keypress", (e) => {
-    if (e.key === "Enter") {
+    if (e.key === "Enter" && commentTextArea[index].value) {
       addComment(index);
       e.preventDefault();
       commentTextArea[index].value = null;
+    } else if (e.key === "Enter" && !commentTextArea[index].value) {
+      e.preventDefault();
     }
   });
 
   item.addEventListener("keyup", () => {
     if (item.value) {
-      commentAddBtn[index].id = "active";
+      commentAddBtn[index].disabled = false;
     }
   });
 
   item.addEventListener("keyup", () => {
     if (!item.value) {
-      commentAddBtn[index].id = "";
+      commentAddBtn[index].disabled = true;
     }
   });
 });
@@ -140,7 +148,6 @@ function getOffset(el) {
 
 let startSideBar = getOffset(feed).left + feed.offsetWidth + 28;
 sideBar.style.left = startSideBar + "px";
-
 sideBar.style.width = (main.offsetWidth - 40) * 0.3 + "px";
 
 visualViewport.addEventListener("resize", () => {
