@@ -3,9 +3,10 @@
 const pwInput = document.querySelector('.login--password');
 const loginBtn = document.querySelector('.login--button');
 const idInput = document.querySelector('.login--id');
+const notice = document.querySelector('.login--notice');
 
-const ID = 'reach';
-const PASSWORD = '123';
+const ID = 'hsuj86@gmail.com';
+const PASSWORD = '123456';
 
 pwInput.addEventListener('keyup', () => {
   const id = idInput.value;
@@ -22,17 +23,33 @@ pwInput.addEventListener('keyup', () => {
 
 function handleSubmit() {
   const id = idInput.value;
+  const idResult = id.includes('@');
   const password = pwInput.value;
 
   if (id === '' && password === '') {
-    console.log('null');
+    return;
+  } else if (idResult && password.length <= 5) {
+    notice.innerHTML = '비밀번호가 짧습니다.';
+    pwInput.style.borderColor = 'tomato';
+  } else if (idResult && password !== PASSWORD) {
+    notice.innerHTML = '비밀번호를 확인해 주세요.';
+    pwInput.style.borderColor = 'tomato';
+  } else if (!idResult && password === PASSWORD) {
+    notice.innerHTML = '올바른 이메일 형식이 아닙니다.';
+    idInput.style.borderColor = 'tomato';
+  } else if (id !== ID && password === PASSWORD) {
+    notice.innerHTML = '이메일을 확인해 주세요.';
+    idInput.style.borderColor = 'tomato';
   } else if (id === ID && password === PASSWORD) {
-    console.log('success');
-    pwInput.style.borderColor = '#d6d6d6';
+    alert('로그인에 성공하셨습니다.');
+    notice.innerHTML = '';
+    idInput.value = '';
+    pwInput.value = '';
     idInput.style.borderColor = '#d6d6d6';
+    pwInput.style.borderColor = '#d6d6d6';
   } else {
-    idInput.style.borderColor = 'red';
-    pwInput.style.borderColor = 'red';
+    idInput.style.borderColor = 'tomato';
+    pwInput.style.borderColor = 'tomato';
   }
 }
 
