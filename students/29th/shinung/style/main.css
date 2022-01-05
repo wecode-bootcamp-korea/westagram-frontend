@@ -1,0 +1,414 @@
+/* common */
+body {
+  background-color: #fafafa;
+}
+
+/* Nav */
+.nav {
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+  background-color: #ffffff;
+  border-bottom: 1px solid #ededed;
+}
+
+/* Nav-company*/
+.company {
+  display: flex;
+  align-items: center;
+  width: 400px;
+}
+
+.company--logo i {
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.company--line {
+  height: 35px;
+  width: 1px;
+  background-color: black;
+  margin: 0 15px;
+}
+
+.company--title {
+  font-family: 'Lobster', cursive;
+  font-weight: 100;
+  font-size: 30px;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+/* Nav-search */
+.search {
+  position: relative;
+  width: 430px;
+}
+
+.search--input {
+  width: 200px;
+  padding: 6px;
+  background-color: #fafafa;
+  border: 1px solid #d9d9d9;
+  border-radius: 3px;
+}
+
+.search--placeholder {
+  position: absolute;
+  left: 80px;
+  top: 6px;
+  pointer-events: none;
+}
+
+.search--placeholder .fa-search {
+  font-size: 11px;
+  color: #d9d9d9;
+}
+
+.search--placeholder {
+  font-size: 15px;
+  color: #d9d9d9;
+}
+
+/* nav-info */
+.info {
+  display: flex;
+  width: 150px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.info img {
+  width: 25px;
+  cursor: pointer;
+}
+
+/* Main */
+.main {
+  display: flex;
+  justify-content: center;
+  background-color: #fafafa;
+}
+
+/* Feeds */
+.feeds {
+  width: 600px;
+  margin-top: 140px;
+  border: 1px solid #e5e5e5;
+  background-color: white;
+}
+
+.main-right {
+  width: 300px;
+  height: 500px;
+  margin-top: 140px;
+  margin-left: 25px;
+}
+
+/* Feed */
+.feed .user {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  height: 55px;
+}
+
+.user--info {
+  display: flex;
+  align-items: center;
+}
+
+.user--info img {
+  width: 40px;
+  border-radius: 50%;
+  margin: 0 15px 0 10px;
+}
+
+.user .etc {
+  width: 15px;
+  margin-right: 10px;
+}
+
+.user--name {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Feed image */
+.feed .image {
+  width: 600px;
+  height: 600px;
+  margin-bottom: -4px;
+}
+
+/* Feed evaluation */
+.feed .evaluation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 55px;
+}
+
+.feed .evaluation div img {
+  width: 23px;
+  margin-left: 13px;
+  cursor: pointer;
+}
+
+.feed .evaluation .bookmark {
+  width: 23px;
+  margin-left: 12px;
+  cursor: pointer;
+  margin-right: 13px;
+}
+
+/* Feed like */
+.feed .howmany {
+  display: flex;
+  align-items: center;
+  height: 20px;
+  padding-bottom: 10px;
+}
+
+.feed .howmany img {
+  width: 20px;
+  border-radius: 50%;
+  border: 1px solid #e5e5e5;
+  margin: 0 5px 0 13px;
+  cursor: pointer;
+}
+
+.feed .howmany a {
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}
+
+/* Content */
+.feed .content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 2px 0;
+  background-color: white;
+}
+
+.feeds .content--user,
+.comment--user {
+  margin: 0 0 0 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Comment */
+.feed .comments {
+  padding: 0;
+  margin: 0 0 5px 0;
+}
+
+.feed .comment {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 2px 0;
+  background-color: white;
+  /* margin-bottom: 10px; */
+  list-style: none;
+}
+
+.feed .comment div {
+  display: flex;
+  align-items: center;
+  height: 30px;
+}
+
+.feed .comment .comment--text {
+  margin: 0 0 0 5px;
+  width: 415px;
+  word-wrap: break-word;
+}
+
+.feed .comment img {
+  width: 15px;
+  color: #a1a1a1;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+/* Comment input */
+.feeds .add {
+  display: flex;
+  position: relative;
+}
+
+.feeds .add input {
+  width: 100%;
+  padding: 20px 15px;
+  border: none;
+  font-size: 16px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.feeds .add input::placeholder {
+  color: #949494;
+}
+
+.feeds .add div {
+  position: absolute;
+  top: 5px;
+  right: 1px;
+  cursor: pointer;
+}
+
+.feeds .add--btn {
+  color: #2e91ef;
+  opacity: 0.5;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  display: inline-block;
+  text-align: center;
+  background-color: white;
+}
+
+/* Main--right user */
+.main-right .user {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.main-right .user img {
+  width: 60px;
+  border-radius: 50%;
+  margin-left: 5px;
+}
+
+.main-right .user .user-info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 17px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.main-right .user .user-info .user-id {
+  font-weight: bold;
+}
+
+.main-right .user .user-info .user-name {
+  color: #949494;
+}
+
+/* Main--right Story */
+.main-right .story {
+  width: 300px;
+  height: 250px;
+  border: 1px solid #e5e5e5;
+  margin-top: 20px;
+  background-color: #ffffff;
+  overflow: auto;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.main-right .story .story-info,
+.main-right .suggestion .suggestion-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+.story .story-info span:nth-child(1),
+.suggestion .suggestion-info span:nth-child(1) {
+  color: #949494;
+}
+
+.story .story-info span:nth-child(2),
+.suggestion .suggestion-info span:nth-child(2) {
+  font-weight: bold;
+  color: black;
+}
+
+.story .story-user,
+.suggestion .suggestion-user {
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+  margin-bottom: 10px;
+}
+
+.story .story-user img,
+.suggestion .suggestion-user img {
+  width: 48px;
+  border-radius: 50%;
+}
+
+.story .story-user-info p,
+.suggestion .suggestion-user-info p {
+  margin: 0 0 0 10px;
+}
+
+.story .story-user-id,
+.suggestion .suggestion-user-id {
+  font-weight: bold;
+}
+
+.story .story-user-name,
+.suggestion .suggestion-user-name {
+  color: #949494;
+}
+
+/* Suggestion */
+.main-right .suggestion {
+  width: 300px;
+  height: 225px;
+  border: 1px solid #e5e5e5;
+  margin-top: 20px;
+  padding-bottom: 10px;
+  background-color: #ffffff;
+}
+
+.main-right .suggestion .suggestion-user-info {
+  width: 170px;
+  padding-right: 10px;
+}
+
+.main-right .suggestion .suggestion-follow {
+  color: #2e91ef;
+  font-weight: bold;
+}
+
+.main-right .suggestion .suggestion-user-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* etc & compony */
+.etc {
+  width: 275px;
+  color: #c4c4c4;
+  margin-top: 15px;
+}
+
+.compony {
+  color: #c4c4c4;
+  font-weight: 600;
+}
+
+/* footer */
+footer {
+  width: 100%;
+  height: 100px;
+}

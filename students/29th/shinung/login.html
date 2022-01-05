@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>westagram</title>
+    <link rel="stylesheet" href="style/login.css" />
+    <link rel="stylesheet" href="style/common.css" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="https://upload.wikimedia.org/wikipedia/commons/e/e7/Instagram_logo_2016.svg"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <script src="/js/login.js" defer></script>
+  </head>
+  <body>
+    <section>
+      <main>
+        <!-- Left image -->
+        <img src="img/iphone.png" alt="iphone" class="main__img" />
+
+        <!-- Main -->
+        <div class="login--form">
+          <!-- Log-in -->
+          <form class="login">
+            <h1 class="login--title">westagram</h1>
+            <input
+              type="text"
+              placeholder="전화번호, 사용자 이름 또는 이메일"
+              class="login--id"
+            />
+            <input
+              type="password"
+              placeholder="비밀번호"
+              class="login--password"
+            />
+            <button class="login--button">로그인</button>
+            <div class="separate">
+              <div class="separate--line"></div>
+              <p class="separate--text">또는</p>
+              <div class="separate--line"></div>
+            </div>
+            <button class="login--facebook">
+              <img src="/img/facebook.svg" alt="facebook" />
+              <p>Facebook으로 로그인</p>
+            </button>
+            <p class="forget--password">비밀번호를 잊으셨나요?</p>
+          </form>
+
+          <!-- Sign-In -->
+          <div class="signin">
+            <p>
+              계정이 없으신가요?
+              <a href="">가입하기</a>
+            </p>
+          </div>
+
+          <!-- Download -->
+          <div class="download">
+            <div>앱을 다운로드하세요.</div>
+            <div>
+              <img
+                src="/img/appstore.png"
+                alt="app-store"
+                class="download--app-store"
+              />
+              <img
+                src="/img/googleplay.png"
+                alt="google-play"
+                class="download--google-play"
+              />
+            </div>
+          </div>
+        </div>
+      </main>
+    </section>
+  </body>
+</html>
