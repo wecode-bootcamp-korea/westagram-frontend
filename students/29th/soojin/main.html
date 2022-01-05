@@ -12,37 +12,38 @@
     </head>
 
     <body>
-        <script src="login.js"></script>
-        <div class="wrap">
-            <header>
-                <h1>Westagram</h1>
-                
-                <div>
-                    <input type="text" placeholder="검색"> 
-                </div>
-                
-                <img width="50px" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png">
-            </header>
-
-
-            <div class="mainpage">
-                <section class="feeds">
-                    <div class="article">
-                        <div class="profile"></div>
-                        <div class="photo"></div>
-                        <div class="explanation"></div>
-                        <div class="comments"></div>
-                    
-
-                    </div>
-
-                </section>
-                <section class="main-right">
-                    <img src="./images/suggestion.png">
-                    
-                </section>
+        <!-- <script src="login.js"></script> -->
+    
+        <nav class="wrap">
+            <div class="item">Westagram</div>
+            <div class="item"><input type="text" placeholder="Search"></div>
+            <div class="item" id="icons">
+                <div class="icon"><img width="50px" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png"></div>
+                <div class="icon"><img width="50px" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"></div>
+                <div class="icon"><img width="50px" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png"></div>
 
             </div>
-        </div>
+        </nav>
+            
+        <main class="mainpage" role="main">
+            <section>
+                <div class="feeds">
+                    <div class="article">
+                        <div><h1>sojjnng</h1></div>
+                        <div><img src="./images/IMG_9317.jpg"></div>
+                        <!-- <div class="profile"></div>
+                        <div class="photo"></div>
+                        <div class="explanation"></div>
+                        <div class="comments"></div> -->
+
+                    </div>
+                </div>
+            </section>
+
+            <section class = "main-right">
+                <img src = "./images/suggestion.png">
+            </section>
+        
+        </main>
     </body>
 </html>
