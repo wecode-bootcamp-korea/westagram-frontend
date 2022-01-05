@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+}
+
+.westagram {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    height: 100vh;
+    position: relative;
+
+    /* display: grid;
+    place-items: center; */
+    text-align: center;
+}
+
+.westagramContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    padding: 80px 55px;
+    border: 1px solid #e2e2e2;
+    background-color: white;
+}
+
+.westagramContainer h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 64px;
+    font-weight: normal ;
+    margin-top: 0px;
+   
+}
+
+.login input, button {
+    width: 230px;
+    margin: 4px;
+    padding : 9px;
+    border: 1px solid #e2e2e2;
+    border-radius: 4px;
+}
+
+.login input {
+    cursor: text;
+    background-color: ghostwhite;;
+}
+
+#westaButton {
+    background-color:dodgerblue;
+    margin-bottom: 80px;
+    color: white;
+    font-weight: bold; 
+    opacity: 0.5;
+}
+
+/* .loggedIn {
+    opacity: 1;
+} */
+
+.login button:hover {
+    cursor: pointer;
+    /* opacity: 0.85; */
+}
+
+a {
+    font-size: 10px;
+    color : dodgerblue;
+    text-decoration-line: none;
+}
