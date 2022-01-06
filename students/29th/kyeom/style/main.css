@@ -1,39 +1,48 @@
 :root {
     --desktop-nav-height: 60px;
 }
+
 body {
     font-size: 1.4rem;
 }
+
 img {
     width: 100%;
     border-radius: inherit;
 }
+
 nav {
-    background-color: white;
     border-bottom: 1px solid var(--gray2);
+    background-color: white;
 }
+
 input.search, .feed-wrapper, .profile-img {
     border: 1px solid var(--gray2);
 }
+
 .feed-bar, .feed-bar header, .button-wrapper, .button-left, form.comment, .recommendation-header, .recommendation-profile {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-#nav-wrapper, #main-wrapper {
+
+.nav-wrapper, .main-wrapper {
     width: 100%;
     max-width: 935px;
 }
+
 /* nav */
 .nav-relative {
     position: relative;
 }
+
 .nav-container {
     position: fixed;
     top: 0;
     width: 100%;
 }
-#nav-wrapper {
+
+.nav-wrapper {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -42,199 +51,246 @@ input.search, .feed-wrapper, .profile-img {
     padding: 14px 0 12px;
     margin: auto;
 }
+
 .h1 {
     font-size: 2.5rem;
 }
+
 /* 검색창 */
 div.search {
     position: relative;
 }
+
 input.search {
-    background-color: var(--gray1);
     width: 293px;
     min-width: 125px;
     height: 36px;
-    border-radius: 3px;
     padding: 3px 32px;
+    border-radius: 3px;
+    background-color: var(--gray1);
 }
+
 input.search:focus {
     padding: 3px 12px;
 }
+
 i.fa-search {
     position: absolute;
-    color: var(--gray2);
-    width: 8px;
-    height: 8px;
     top: 10px;
     left: 12px;
+    width: 8px;
+    height: 8px;
+    color: var(--gray2);
 }
+
 /* nav 오른쪽 메뉴 */
-#menu-wrapper {
+.menu-wrapper {
     display: flex;
     justify-content: space-between;
     width: 120px;
 }
+
 img.menu {
     width: 24px;
     height: 24px;
     cursor: pointer;
 }
 
+
 /* main */
-#main-wrapper {
+.main-wrapper {
     display: flex;
     justify-content: space-between;
     padding: 30px 0;
     margin: auto;
     margin-top: var(--desktop-nav-height);
 }
+
 .feed-container {
     margin-right: 28px;
 }
+
 .feed-wrapper {
-    background-color: white;
     max-width: 614px;
+    background-color: white;
 }
+
 .feed-wrapper section:not(.feed-img) {
     padding-right: 16px;
     padding-left: 16px;
 }
+
 .feed-bar {
     padding: 14px 16px;
 }
+
 .name {
     font-weight: 600;
 }
+
 .profile-img {
     width: 36px;
     height: 36px;
-    border-radius: 50%;
     margin-right: 14px;
+    border-radius: 50%;
 }
+
 /* 좋아요, 댓글, 공유, 저장된 항목 버튼 */
 .button-wrapper {
     padding: 8px 16px;
 }
+
 .button {
     width: 24px;
     height: 24px;
     margin: 4px;
 }
+
 .button-wrapper .button:first-child {
     margin-left: 0;
 }
+
 .button-wrapper .button:last-child {
     margin-right: 0;
 }
+
 .fa-heart {
-    font-size: 22px;
     padding-top: 2px;
+    font-size: 22px;
     cursor: pointer;
 }
+
 .fa-heart.far {
     color: #5e5e5e;
 }
+
 .fa-heart.fas {
     color: rgb(237, 73, 86);
 }
+
 /* 좋아요 알림 메세지 */
 .message {
     margin-bottom: 8px;
 }
+
 .message span {
     font-weight: 600;
 }
+
 /* 피드 내용 */
 section.content, section.uploaded-comment {
     margin-bottom: 12px;
 }
+
 section.content .name {
     margin-right: 2px;
 }
+
 /* 업로드된 댓글 */
 section.uploaded-comment div {
     margin-bottom: 4px;
 }
+
 section.uploaded-comment .name {
     margin-right: 8px;
 }
+
 section.uploaded-comment span.uploaded-comment {
     overflow-wrap: break-word;
 }
+
 /* 댓글 달기 */
 section.comment {
-    border-top: 1px solid var(--gray2);
     padding: 6px 16px;
+    border-top: 1px solid var(--gray2);
 }
+
 input.comment {
     flex-grow: 1;
     height: 3.6rem;
-    border: none;
     margin-right: 8px;
+    border: none;
 }
+
 section.comment .submit, button.follow, button.switch {
     all: unset;
-    font-weight: 600;
     color: var(--blue);
+    font-weight: 600;
     cursor: pointer;
 }
+
 section.comment .submit:disabled {
     color: var(--lightblue);
 }
+
 /* aside */
 .main-right {
     position: fixed;
     top: calc(34px + var(--desktop-nav-height));
     width: 293px;
 }
+
 .user-wrapper {
     display: flex;
     align-items: center;
     margin: 18px auto 10px;
 }
+
 .user-img {
     width: 64px;
     height: 64px;
     border-radius: 50%;
 }
+
 .user-profile {
     flex-grow: 1;
     margin-left: 12px;
 }
+
 .user-profile .name {
     margin-bottom: 4px;
 }
+
 .user-profile .name+div {
     color: var(--gray3);
 }
+
 /* 회원님을 위한 추천 */
 .recommendation-wrapper {
     padding-top: 12px;
 }
+
 .recommendation-header {
     font-weight: 600;
 }
+
 .recommendation-header :first-child {
     color: var(--gray3);
 }
+
 .recommendation-header button {
     all: unset;
     font-size: 1.2rem;
     cursor: pointer;
 }
+
 .recommendation-section {
     padding: 8px 0 8px 4px;
 }
+
 .recommendation-profile {
     padding: 8px 0;
 }
+
 .recommendation-profile .profile-img {
     width: 32px;
     height: 32px;
 }
+
 .recommendation-profile .name {
     flex-grow: 1;
 }
+
 .recommendation-profile button.follow, button.switch {
     font-size: 1.2rem;
 }
