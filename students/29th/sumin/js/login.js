@@ -23,7 +23,6 @@ function clickLoginButton(event) {
     window.location.href='main.html'
 }
 
-
 userId.addEventListener('input', doLogin);
 userPw.addEventListener('input', doLogin);
 loginButton.addEventListener('click', clickLoginButton);

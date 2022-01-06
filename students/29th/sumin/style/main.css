@@ -37,6 +37,7 @@ nav {
   border-style: none;
   background-color: rgb(239, 239, 239);
   margin: 5px 17px;
+  outline: none;
 }
 
 .nav-icon {
@@ -121,16 +122,60 @@ article {
 .feed-like {
   font-size: 15px;
   font-weight: 700;
-  padding-left: 15px;
+  padding-left: 20px;
   width: 585px;
   height: 30px;
   display: flex;
   align-items: center;
 }
 
+.feed-content {
+  width: 600px;
+  display: flex;
+  padding-left: 10px;
+  align-items: center;
+}
+
+.content {
+  padding-left: 15px;
+}
+
 .feed-comment {
   width: 600px;
   height: 70px;
+}
+
+.reply {
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+}
+
+.btn-change {
+  color: rgb(0, 149, 246);
+  border: none;
+  background-color: white;
+  font-weight: 600;
+}
+
+.reply-btn {
+  color: rgb(197, 225, 251);
+  border: none;
+  background-color: white;
+  font-weight: 600;
+}
+
+.reply-input::placeholder {
+  font-size: 15px;
+}
+
+.reply-input {
+  outline: none;
+  margin-left: 10px;
+  width: 500px;
+  height: 35px;
+  padding-left: 10px;
+  border: none;
 }
 
 .main-right {
@@ -173,4 +218,77 @@ article {
 .change-id {
   color: rgb(0, 149, 246);
   font-weight: 600;
+}
+
+.recommand {
+  border: solid 1px rgb(0, 0, 0, 0.2);
+  width: 300px;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.reco-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.top-one {
+  color: rgb(0, 0, 0, 0.5);
+  font-weight: 500;
+}
+
+.top-two {
+  font-weight: 500;
+}
+
+.recommand-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.reco-info {
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.friend-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.friend-info {
+  margin-left: 8px;
+}
+
+.friend-id {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.how-many {
+  font-size: 13px;
+  color: rgb(0, 0, 0, 0.5);
+}
+
+.follow {
+  font-size: 15px;
+  color: rgb(0, 149, 246);
+}
+
+.friend-img.ring {
+  border: 3px solid palevioletred;
+}
+
+.comment-box {
+  list-style: none;
 }
