@@ -1,6 +1,6 @@
-const email = document.querySelector('.informaition1')
-const pw = document.querySelector('.informaition2')
-const btn = document.querySelector('.on-btn')
+const email = document.querySelector('.user')
+const pw = document.querySelector('.password')
+const btn = document.querySelector('.btn')
 
 function btnActive () {
   if ((email.value !== "")&& (pw.value !== "") ) {
