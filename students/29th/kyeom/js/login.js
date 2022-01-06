@@ -1,7 +1,7 @@
 const id = document.querySelector('.id');
 const password = document.querySelector('.password');
 const submit = document.querySelector('.submit');
-const form = document.querySelector('form');
+const form = document.forms.login;
 
 function disableSubmitBtn () {
     submit.disabled = true;
