@@ -1,12 +1,7 @@
-* {
-  font-size: 14px;
-}
-
 body {
-  background-color: #fafafa;
-  min-height: 450px;
-  height: 100vh;
   position: relative;
+  height: 100vh;
+  min-height: 500px;
 }
 
 .login {
@@ -14,6 +9,8 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
   width: 350px;
   padding: 10px 0;
   border: 1px solid #dbdbdb;
@@ -21,50 +18,43 @@ body {
   background-color: #fff;
 }
 
-.logo {
+.westagram-logo {
+  margin: 22px auto 36px;
   font-size: 60px;
-  margin: 22px auto 12px;
-  text-align: center;
 }
 
 .login-form {
   display: flex;
   flex-direction: column;
-  margin-top: 24px;
 }
 
 .login-form input {
   margin: 0 40px 6px;
   height: 38px;
+  padding: 0 8px;
   border-radius: 3px;
-  padding: 8px;
   font-size: 12px;
-}
-
-.login-form input:focus {
-  border: 1px solid #c7c7c7;
-  outline: none;
 }
 
 .login-form button {
   margin: 8px 40px;
   height: 30px;
-  background-color: #0095f6;
-  font-weight: 600;
-  color: #fff;
   padding: 5px 9px;
   border-radius: 4px;
+  color: #fff;
+  background-color: #0095f6;
+  font-weight: 600;
 }
 
 .login-form button:disabled {
-  background-color: rgba(0, 149, 246, 0.3);
+  background-color: #0095f6;
+  opacity: 0.3;
   cursor: default;
 }
 
-a {
+.login a {
   margin: 52px auto 10px;
+  color: #01376a;
   font-size: 12px;
   font-weight: 600;
-  color: #01376a;
-  text-decoration: none;
 }
