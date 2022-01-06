@@ -1,52 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="style/common.css" rel="stylesheet" >
-    <link href="style/main.css" rel="stylesheet" >
+    <link href="style/common.css" rel="stylesheet">
+    <link href="style/main.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/2601574f2d.js" crossorigin="anonymous"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
     </style>
 </head>
+
 <body>
     <nav>
-        <div style="width: 58vw; display:flex; justify-content: space-between; position: relative; left: 15vw; align-items: center;">
-            <div style="width : 650px; height:5vh; display: flex; justify-content: space-between; align-items: center;">
+        <div
+            style="width: 60vw; display:flex; justify-content: space-between; position: relative; left: 15vw; align-items: center; ">
+            <div
+                style="width : 650px; height:5vh; display: flex; justify-content: space-between; align-items: center;position: relative;">
                 <div style="display: flex; justify-content: center;align-items: center;">
-                    <img src="img/instagram.png" class = "instagram-logo"> 
-                    <span style="font-size: 25px; font-family: 'Lobster', cursive; padding-bottom: 2px;">&nbsp;| westagram</span>
+                    <img src="img/instagram.png" class="instagram-logo">
+                    <span style="font-size: 25px; font-family: 'Lobster', cursive; padding-bottom: 2px;">&nbsp;|
+                        westagram</span>
                 </div>
-                <div>
-                     <input type="text" id = "input-search" class="input-search" placeholder="검색" >
+                <div class="search-box">
+                    <input type="text" id="input-search" class="input-search" placeholder="검색">
+                    <!-- <div class="search-list">
+                        <div class="search-list-model">
+                            <img src="img/example2.jpg" class="aside-img img-border-circle">
+                            <div class="aside-img-owner">
+                                <p>java</p>
+                                <span>difficult!</span>
+                            </div>
+                        </div>
+                        <div class="search-list-model">
+                            <img src="img/example3.jpg" class="aside-img img-border-circle">
+                            <div class="aside-img-owner">
+                                <p>ello</p>
+                                <span>안녕하신가!</span>
+                            </div>
+                        </div>
+                        <div class="search-list-model">
+                            <img src="img/example4.jpg" class="aside-img img-border-circle">
+                            <div class="aside-img-owner">
+                                <p>hi</p>
+                                <span>ㅈㄷㅁㄹㅁㄴㅇㄹㅁㄴㅇㄹ!</span>
+                            </div>
+                        </div>
+                    </div> -->
                 </div>
             </div>
-            <div style="height: 5vh; font-size: 23px; width: 15vw; display: flex; justify-content: space-between; align-items: center; ">
+            <div
+                style="height: 5vh; font-size: 23px; width: 15vw; display: flex; justify-content: space-between; align-items: center; position: relative; right: 7%;">
                 <i class="fas fa-home"></i>
                 <i class="fas fa-plane"></i>
                 <i class="far fa-plus-square"></i>
                 <i class="far fa-compass"></i>
                 <i class="far fa-heart"></i>
-                <img src="img/profile.jpg" class = "profile-img" style="width: 30px; height: 30px;">
+                <div class="nav-detail-box">
+                    <div class="nav-profile">
+                        <img src="img/profile.jpg" class="profile-img" style="width: 30px; height: 30px;"
+                            onclick="openNavDetail()">
+                    </div>
+                    <div class="nav-detail">
+                        <span><i class="far fa-user-circle"></i>&nbsp;&nbsp;프로필</span>
+                        <span><i class="far fa-hdd"></i>&nbsp;&nbsp;저장됨</span>
+                        <span><i class="fas fa-cog"></i>&nbsp;&nbsp;설정</span>
+                        <span style="border-top:2px #EBEBEB solid;">로그아웃</span>
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
     <main>
         <article>
-            <section class = "feed">
+            <section class="feed">
                 <div class="feed-profile">
-                    <div class = "feed-profile-box">
-                        <img src="img/profile.jpg" class = "profile-img">
+                    <div class="feed-profile-box">
+                        <img src="img/profile.jpg" class="profile-img">
                         <span>su__cozy</span>
                     </div>
-                    <button class = "border-none background-none" style="font-size: 25px;">...</button>
+                    <button class="border-none background-none" style="font-size: 25px;">...</button>
                 </div>
-                
+
                 <div class="feed-img-box">
-                    <img src="img/feed1.jpeg" class = "feed-img"> 
+                    <img src="img/feed1.jpeg" class="feed-img">
                 </div>
 
                 <div class="feed-fn">
@@ -61,7 +101,7 @@
                 </div>
 
                 <div class="feed-like">
-                    <img src="img/profile.jpg" class = "feed-like-img">
+                    <img src="img/profile.jpg" class="feed-like-img">
                     <span><strong>su__cozy</strong>님 <strong>외 10명</strong>이 좋아합니다.</span>
                 </div>
 
@@ -69,8 +109,11 @@
                     <span><strong>su__cozy</strong> 위워크에서 진행한 베이킹 클래스</span>
                 </div>
                 <div class="feed-comment">
-                    <span><span><strong>wecode</strong> 재미있네~!!!</span><div><i class="fas fa-heart"></i><button onclick="deleteComment(this)" class = "border-none background-none">삭제</button></div></span>
-                    
+                    <span><span><strong>wecode</strong> 재미있네~!!!</span>
+                        <div><i class="fas fa-heart" onclick="likeFn(this)"></i><button onclick="deleteComment(this)"
+                                class="border-none background-none">삭제</button></div>
+                    </span>
+
                 </div>
                 <p>42분 전</p>
                 <hr>
@@ -79,122 +122,75 @@
                     <button onclick="fnComment(this)">게시</button>
                 </div>
             </section>
-            <section class = "feed">
-                <div class="feed-profile">
-                    <div class = "feed-profile-box">
-                        <img src="img/example8.jpg" class = "profile-img">
-                        <span>wewewewe</span>
-                    </div>
-                    <button class = "border-none background-none" style="font-size: 25px;">...</button>
-                </div>
-                
-                <div class="feed-img-box">
-                    <img src="img/feed2.jpg" class = "feed-img"> 
-                </div>
 
-                <div class="feed-fn">
-                    <div class="feed-fn-box-first">
-                        <i class="fas fa-heart"></i>
-                        <i class="far fa-comment"></i>
-                        <i class="far fa-share-square"></i>
-                    </div>
-                    <div class="feed-fen-box-second">
-                        <i class="fas fa-box"></i>
-                    </div>
-                </div>
 
-                <div class="feed-like">
-                    <img src="img/profile.jpg" class = "feed-like-img">
-                    <span><strong>su__cozy</strong>님 <strong>외 10명</strong>이 좋아합니다.</span>
-                </div>
-
-                <div class="feed-text">
-                    <span><strong>su__cozy</strong> 위워크에서 진행한 베이킹 클래스</span>
-                </div>
-                <div class="feed-comment">
-                    <span><span><strong>wecode</strong> 재미있네~!!!</span><i class="fas fa-heart"></i></span>
-                    
-                </div>
-                <p>42분 전</p>
-                
-                <hr>
-                <div class="feed-comment-write-box">
-                    <input type="text" class="feed-comment-write border-none" placeholder="댓글 달기...">
-                    <button onclick="fnComment(this)">게시</button>
-                </div>
-            </section>
-            <div class = "search-list-box">
-                <img src="img/example2.jpg" class="aside-img img-border-circle">
-                        <div class = "aside-img-owner">
-                            <p>java</p>
-                            <span>difficult!</span>
-                        </div>
-            </div>
         </article>
-            <aside>
-                <div class="aside-profile">
-                        <img src="img/profile.jpg" class = "profile-img">
-                        <span>su__cozy</span>
-                </div>
+        <aside>
+            <div class="aside-profile">
+                <img src="img/profile.jpg" class="profile-img">
+                <span>su__cozy</span>
+            </div>
 
-                <div class="aside-story">
-                    <p>스토리</p>
-                    <div class="aside-story-img-box">
-                        <img src="img/example1.jpg" class="aside-img img-border-circle">
-                        <div class = "aside-img-owner">
-                            <p>gildong</p>
-                            <span>hi!</span>
-                        </div>
-                    </div>
-                    <div class="aside-story-img-box">
-                        <img src="img/example2.jpg" class="aside-img img-border-circle">
-                        <div class = "aside-img-owner">
-                            <p>java</p>
-                            <span>difficult!</span>
-                        </div>
-                    </div>
-                    <div class="aside-story-img-box">
-                        <img src="img/example3.jpg" class="aside-img img-border-circle">
-                        <div class = "aside-img-owner">
-                            <p>steve</p>
-                            <span>hi!</span>
-                        </div>
-                    </div>
-                    <div class="aside-story-img-box">
-                        <img src="img/example4.jpg" class="aside-img img-border-circle">
-                        <div class = "aside-img-owner">
-                            <p>buck</p>
-                            <span>hello!!!!!!</span>
-                        </div>
+            <div class="aside-story">
+                <p>스토리</p>
+                <div class="aside-story-img-box">
+                    <img src="img/example1.jpg" class="aside-img img-border-circle">
+                    <div class="aside-img-owner">
+                        <p>gildong</p>
+                        <span>hi!</span>
                     </div>
                 </div>
+                <div class="aside-story-img-box">
+                    <img src="img/example2.jpg" class="aside-img img-border-circle">
+                    <div class="aside-img-owner">
+                        <p>java</p>
+                        <span>difficult!</span>
+                    </div>
+                </div>
+                <div class="aside-story-img-box">
+                    <img src="img/example3.jpg" class="aside-img img-border-circle">
+                    <div class="aside-img-owner">
+                        <p>steve</p>
+                        <span>hi!</span>
+                    </div>
+                </div>
+                <div class="aside-story-img-box">
+                    <img src="img/example4.jpg" class="aside-img img-border-circle">
+                    <div class="aside-img-owner">
+                        <p>buck</p>
+                        <span>hello!!!!!!</span>
+                    </div>
+                </div>
+            </div>
 
-                <div class="aside-recommendation">
-                    <p>회원님을 위한 추천</p>
-                    <div class="aside-recommendation-img-box">
-                        <img src="img/example5.jpg" class="aside-img img-border-circle">
-                        <div class = "aside-img-owner">
-                            <p>wecode12</p>
-                            <span>whatup!</span>
-                        </div>
-                    </div>
-                    <div class="aside-recommendation-img-box">
-                        <img src="img/example6.jpg" class="aside-img img-border-circle">
-                        <div class = "aside-img-owner">
-                            <p>wstate</p>
-                            <span>cong</span>
-                        </div>
-                    </div>
-                    <div class="aside-recommendation-img-box">
-                        <img src="img/example7.jpg" class="aside-img img-border-circle">
-                        <div class = "aside-img-owner">
-                            <p>wecode123333</p>
-                            <span>hi!ASDASD</span>
-                        </div>
+            <div class="aside-recommendation">
+                <p>회원님을 위한 추천</p>
+                <div class="aside-recommendation-img-box">
+                    <img src="img/example5.jpg" class="aside-img img-border-circle">
+                    <div class="aside-img-owner">
+                        <p>wecode12</p>
+                        <span>whatup!</span>
                     </div>
                 </div>
-            </aside>
+                <div class="aside-recommendation-img-box">
+                    <img src="img/example6.jpg" class="aside-img img-border-circle">
+                    <div class="aside-img-owner">
+                        <p>wstate</p>
+                        <span>cong</span>
+                    </div>
+                </div>
+                <div class="aside-recommendation-img-box">
+                    <img src="img/example7.jpg" class="aside-img img-border-circle">
+                    <div class="aside-img-owner">
+                        <p>wecode123333</p>
+                        <span>hi!ASDASD</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
     </main>
     <script src="js/main.js"></script>
 </body>
+
 </html>
