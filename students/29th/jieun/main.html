@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>westagram</title>
+    <link rel="stylesheet" href="style/common.css">
+    <link rel="stylesheet" href="style/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="gnb">
+            <div class="logo">westagram</div>
+            <input class="search" type="text" placeholder="검색">
+            <div class="gnb-icon">
+                <div class="icon">
+                    <img alt="메인" src="icon/home.svg">
+                </div>
+                <div class="icon">
+                    <img alt="메시지" src="icon/dm.svg">
+                </div>
+                <div class="icon">
+                    <img alt="새 게시물" src="icon/new.svg">
+                </div>
+                <div class="icon">
+                    <img alt="알고리즘" src="icon/algorism.svg">
+                </div>
+                <div class="icon">
+                    <img alt="활동" src="icon/heart.svg">
+                </div>
+                <div class="icon">
+                    <img class="profile-img" alt="" src="img/hongseoli.jpeg" width="24px">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="feed">
+            <div class="feed-header">
+                <div class="feed-user">
+                    <img class="profile-img" alt="프로필 사진" src="img/hongseoli.jpeg" width="32px">
+                    <a class="feed-profile-id" href="">hongseoli</a>
+                </div>
+                <a href="">
+                    <img alt="더 보기" src="icon/more.svg" width="24px">
+                </a>
+            </div>
+            <article>
+                <img class="feed-img" alt="img" src="img/feed_2.jpg">
+            </article>
+            <div class="feed-post">
+                <div class="feed-post-icon">
+                    <div class="feed-icon">
+                        <img alt="좋아요" src="icon/heart.svg">
+                    </div>
+                    <div class="feed-icon">
+                        <img alt="댓글 달기" src="icon/comment.svg">
+                    </div>
+                    <div class="feed-icon">
+                        <img alt="게시물 공유" src="icon/dm.svg">
+                    </div>
+                    <div class="feed-icon">
+                        <img alt="저장" src="icon/bookmark.svg">
+                    </div>
+                </div>
+                <div class="post">
+                    <a class="like" href="">
+                        좋아요
+                        <span>3,225,835</span>개
+                    </a>
+                    <div class="content">
+                    <a class="id" href="">hongseoli</a>
+                    <span>미모 점검 중</span>
+                    </div>
+                    <a href="">
+                        <p class="comment-more">댓글 15,458개 모두 보기</p>
+                    </a>
+                    <div class="comment-div">
+                        <div class="comment-msg">
+                            <a class="id" href="">82people</a>
+                            <span>안녕하세요 뷰티디렉터 김현식입니다 😊 아주 좋은 제안 드릴 건데 dm 잠시 소통 가능하세요?</span>
+                            <div class="new-comment"></div>
+                        </div>
+                    </div>
+                    <p class="time">3일 전</p>
+                </div>
+            </div>
+            <div class="commentBox">
+                <div class="comment-icon">
+                    <img alt="이모지" src="icon/emoji.svg">
+                </div>
+                <input id="comment" onchange="commentUpload()" type="text" placeholder="댓글 달기...">
+                <button>게시</button>
+            </div>
+        </div>
+        </div>
+
+        <div class="right">
+            <div class="profile">
+                <div class="right-profile-img">
+                    <img class="profile-img" alt="프로필 사진" src="img/hongseoli.jpeg" width="56px">
+                </div>
+                <div class="user">
+                    <div class="id"><a href="">hongseoli</a></div>
+                    <div class="name">홍설이</div>
+                </div>
+                <div class="font-small"><a href="">전환</a></div>
+            </div>
+            
+            <div class="recommend">
+                <div class="for">회원님을 위한 추천</div>
+            <div class="recommend-item">
+                <div class="recommend-img">
+                    <img class="profile-img" alt="프로필 사진" src="img/gyeongtaeabuji.jpeg" width="32px">
+                </div>
+                <div class="item">
+                    <div class="id"><a href="">gyeongtaeabuji</a></div>
+                    <div class="relationship">회원님을 팔로우합니다</div>
+                </div>
+                <div class="font-small"><a href="">팔로우</a></div>
+            </div>
+
+            <div class="recommend-item">
+                <div class="recommend-img">
+                    <img class="profile-img" alt="프로필 사진" src="img/jrong.__.jpeg" width="32px">
+                </div>
+                <div class="item">
+                    <div class="id"><a href="">jrong.__</a></div>
+                    <div class="relationship">회원님을 팔로우합니다</div>
+                </div>
+                <div class="font-small"><a href="">팔로우</a></div>
+            </div>
+            <div class="recommend-item">
+                <div class="recommend-img">
+                    <img class="profile-img" alt="프로필 사진" src="img/huccikang.jpeg" width="32px">
+                </div>
+                <div class="item">
+                    <div class="id"><a href="">huccikang</a></div>
+                    <div class="relationship">회원님을 위한 추천</div>
+                </div>
+                <div class="font-small"><a href="">팔로우</a></div>
+            </div>
+            <div class="recommend-item">
+                <div class="recommend-img">
+                    <img class="profile-img" alt="프로필 사진" src="img/corgibh.jpeg" width="32px">
+                </div>
+                <div class="item">
+                    <div class="id"><a href="">corgibh</a></div>
+                    <div class="relationship">jrong.__님이 팔로우합니다</div>
+                </div>
+                <div class="font-small"><a href="">팔로우</a></div>
+            </div>
+            <div class="recommend-item">
+                <div class="recommend-img">
+                    <img class="profile-img" alt="프로필 사진" src="img/zzangjeolmi.jpeg" width="32px">
+                </div>
+                <div class="item">
+                    <div class="id"><a href="">zzangjeolmi</a></div>
+                    <div class="relationship">회원님을 위한 추천</div>
+                </div>
+                <div class="font-small"><a href="">팔로우</a></div>
+            </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+
+</body>
+</html>
