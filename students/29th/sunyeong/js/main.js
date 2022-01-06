@@ -3,9 +3,12 @@ window.onload = function () {
     for (let i = 0; i < writeBox.length; i++) {
         writeBox[i].addEventListener('keydown', function (e) {
             if (e.code === 'Enter') {
-                let addTag = document.createElement('span'); addTag.innerHTML =
+
+                let addTag = document.createElement('span');
+                addTag.innerHTML =
                     `<span><strong>wecode</strong> ${writeBox[i].value}</span><div><i class='fas fa-heart' onclick='heartColorChange(this)'></i><button onclick=deleteComment(this) 
                     class = 'border-none background-none'>삭제</button></div>`
+                console.log(addTag)
                 writeBox[i].parentNode.parentNode.children[5].appendChild(addTag)
                 writeBox[i].parentNode.children[0].value = '';
             }
