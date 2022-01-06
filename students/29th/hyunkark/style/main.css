@@ -23,7 +23,7 @@
         box-sizing: border-box;
         font-family: "system", sans-serif;
         font-size: 14px;
-
+        -webkit-font-smoothing: antialiased;
     }
 
     input:focus,
@@ -160,7 +160,7 @@
         margin-right: 14px;
     }
 
-    .feeds-like, .interaction-bar, article, .feeds-minute {
+    .feeds-like, .interaction-bar, article, .feeds-minute{
         padding: 0 16px;
     }
 
@@ -171,8 +171,7 @@
     }
 
     .comment-hidden{
-        padding: 2px 0;
-        background-color: #888888;
+        padding: 2px 16px;
     }
 
     .add-comment{
@@ -227,10 +226,9 @@
 
     .feeds-minute{
         margin-top: 0px;
-        padding-bottom: 16px;
+        padding-bottom: 4px;
         font-size: 10px;
         color: #8e8e8e;
-        border-bottom: 1px solid #efefef;
     }
 
     .comment-container{
@@ -239,6 +237,8 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        border-top: 1px solid #efefef;
+        margin-top: 8px;
     }
 
     .comment{
@@ -277,7 +277,7 @@
         overflow: hidden;
         margin-right: 12px;
     }
-    
+
     .story, .recommendation{
         border: 1px solid #dbdbdb;
         border-radius: 3px;
