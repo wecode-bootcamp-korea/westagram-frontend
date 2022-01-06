@@ -10,30 +10,20 @@ function onAdd() {
   if (value) {
     const li = document.createElement('li');
     li.setAttribute('class', 'comment');
-
-    const div = document.createElement('div');
-
-    const userId = document.createElement('p');
-    userId.setAttribute('class', 'comment--user');
-    userId.innerHTML = `JavaScript`;
-
-    const text = document.createElement('p');
-    text.setAttribute('class', 'comment--text');
-    text.innerHTML = `${value}`;
-
-    const img = document.createElement('img');
-    img.setAttribute('src', './img/heart.png');
-
-    div.appendChild(userId);
-    div.appendChild(text);
-
-    li.appendChild(div);
-    li.appendChild(img);
+    li.innerHTML = `
+      <li class="comment">
+        <div>
+          <p class="comment--user">xeexulee</p>
+          <p class="comment--text">${value}</p>
+        </div>
+        <img src="./img/heart.png" alt="like" />
+      </li>
+    `;
 
     ul.appendChild(li);
 
     commentInput.value = '';
-    // commentInput.focus();
+    commentInput.blur();
   }
 }
 

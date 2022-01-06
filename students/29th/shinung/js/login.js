@@ -41,7 +41,7 @@ function handleSubmit() {
     notice.innerHTML = '이메일을 확인해 주세요.';
     idInput.style.borderColor = 'tomato';
   } else if (id === ID && password === PASSWORD) {
-    alert('로그인에 성공하셨습니다.');
+    alert('환영합니다.');
     notice.innerHTML = '';
     idInput.value = '';
     pwInput.value = '';
