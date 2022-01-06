@@ -219,8 +219,8 @@ body {
   width: 100%;
   padding: 2px 0;
   background-color: white;
-  /* margin-bottom: 10px; */
   list-style: none;
+  position: relative;
 }
 
 .feed .comment div {
@@ -231,15 +231,37 @@ body {
 
 .feed .comment .comment--text {
   margin: 0 0 0 5px;
-  width: 415px;
+  width: 370px;
   word-wrap: break-word;
 }
 
-.feed .comment img {
-  width: 15px;
+.feed .comment .comment--delete {
+  width: 30px;
+  margin: 0;
+  font-size: 14px;
+  color: #a1a1a1;
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  right: 43px;
+}
+
+.feed .comment .like {
+  width: 22px;
   color: #a1a1a1;
   cursor: pointer;
   margin-right: 15px;
+}
+
+.feed .comment .liked {
+  width: 22px;
+  color: #d24855;
+  cursor: pointer;
+  margin-right: 15px;
+}
+
+.feed .comment .none {
+  display: none;
 }
 
 /* Comment input */
@@ -294,6 +316,7 @@ body {
 .main--right .user .user--info {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   margin-left: 17px;
   margin-top: 10px;
   cursor: pointer;
