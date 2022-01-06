@@ -1,289 +1,341 @@
-@import url('https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap');
-@font-face {
-    font-family: system;
-    font-style: normal;
-    font-weight: 300;
-    letter-spacing: 1;
-    src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
-}
+/*General*/
+    @import url('https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;500&display=swap');
+    @font-face {
+        font-family: system;
+        font-style: normal;
+        font-weight: 300;
+        letter-spacing: 1;
+        src: local(".SFNSText-Light"), local(".HelveticaNeueDeskInterface-Light"), local(".LucidaGrandeUI"), local("Ubuntu Light"), local("Segoe UI Light"), local("Roboto-Light"), local("DroidSans"), local("Tahoma");
+    }
 
-a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font: inherit;
-    vertical-align: baseline;
-}
+    a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font: inherit;
+        vertical-align: baseline;
+    }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "system", sans-serif;
-    /*font-weight: 400;*/
-    font-size: 14px;
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "system", sans-serif;
+        font-size: 14px;
 
-}
+    }
 
-input:focus,
-select:focus,
-textarea:focus,
-button:focus {
-    outline: none;
-}
-.profile-container, .feeds-profile, .feeds-like,
-.interaction-bar, .recommendation-header, .story-header,
-.story-stack, .recommendation-stack{
-    display: flex;
-    align-items: center;
-}
+    input:focus,
+    select:focus,
+    textarea:focus,
+    button:focus {
+        outline: none;
+    }
 
-body{
-    background-color: #fafafa;
-}
-input{
-    border: none;
+    .profile-container, .feeds-profile, .feeds-like,
+    .interaction-bar, .recommendation-header, .story-header,
+    .story-stack, .recommendation-stack{
+        display: flex;
+        align-items: center;
+    }
 
-}
-nav{
-    position: fixed;
-    width: 100vw;
-    height: 60px;
-    border-bottom: 1px solid #dbdbdb;
-    top: 0px;
-    background-color: #fff;
-}
-.nav-container{
-    width: 975px;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 auto;
-}
-.nav-container div{
-    display: flex;
-    justify-content: center;
-}
+    body{
+        background-color: #fafafa;
+    }
 
-h1{
-    font-family: 'Lobster Two', cursive;
-    font-size: 22px;
-    border-left: 1px solid black;
-    padding: 0 0 0 10px;
-}
+/*nav*/
+    input{
+        border: none;
 
-nav img{
-    height: 24px;
-    width: auto;
-    margin: 0 12px;
-}
-nav img[src*="profile"]{
-    margin-right: 0;
-}
-nav img[src*="instagram"]{
-    margin: 2px 12px 0 0;
-}
-nav .search-box{
-    border: 1px solid #bdbdbd;
-    width: 268px;
-    height: 36px;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 0 12px;
-    border-radius: 3px;
-    background-color: #EFEFEF;
-}
-.search-box i{
-    padding-top: 6px;
-    font-size: 12px;
-    color: #A7A9AC;
-}
-nav input{
-    padding-left: 5px;
-    font-size: 14px;
-    background-color: transparent;
-}
-.bold{
-    font-weight: bold;
-}
-main{
-    padding: 90px 0 30px 0;   
-}
-.main-container{
-    display: flex;
-    justify-content: center;
-}
+    }
 
-.main-right{
-    width: 293px;
-    /*position: -webkit-sticky;  사파리 브라우저 지원 
-    position: sticky;
-    top: 4px;*/
-}
+    nav{
+        position: fixed;
+        width: 100vw;
+        height: 60px;
+        border-bottom: 1px solid #dbdbdb;
+        top: 0px;
+        background-color: #fff;
+    }
 
-img{
-    width: 100%;
-    display: flex;
-    align-items: center;
+    .nav-container{
+        width: 975px;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 auto;
+    }
+    .nav-container div{
+        display: flex;
+        justify-content: center;
+    }
+
+    h1{
+        font-family: 'Lobster Two', cursive;
+        font-size: 22px;
+        border-left: 1px solid black;
+        padding: 0 0 0 10px;
+    }
+
+    nav img{
+        height: 24px;
+        width: auto;
+        margin: 0 12px;
+    }
+
+    nav img[src*="profile"]{
+        margin-right: 0;
+    }
+
+    nav img[src*="instagram"]{
+        margin: 2px 12px 0 0;
+    }
+
+    nav .search-box{
+        border: 1px solid #bdbdbd;
+        width: 268px;
+        height: 36px;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 0 12px;
+        border-radius: 3px;
+        background-color: #EFEFEF;
+    }
+
+    .search-box i{
+        padding-top: 6px;
+        font-size: 12px;
+        color: #A7A9AC;
+    }
+
+    nav input{
+        padding-left: 5px;
+        font-size: 14px;
+        background-color: transparent;
+    }
+
+/*main*/
+    .bold{
+        font-weight: 600;
+    }
+
+    main{
+        padding: 90px 0 30px 0;   
+    }
+
+    .main-container{
+        display: flex;
+        justify-content: center;
+    }
+
+    img{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        
+    }
+
+    .feeds{
+        width: 614px;
+        margin: 0 28px 0 0;
+    }
+
+    .feeds section{
+        border: 1px solid #dbdbdb;
+        border-radius: 3px;
+    }
+
+    .feeds-profile{
+        justify-content: space-between;
+        padding: 0 16px 0 14px;
+    }
+
+    .feeds-profile-img{
+        width: 40px;
+        height: 40px;
+        overflow: hidden;
+        border-radius: 20px;
+        margin-right: 14px;
+    }
+
+    .feeds-like, .interaction-bar, article, .feeds-minute {
+        padding: 0 16px;
+    }
+
+    .feeds-like{
+        font-size: 14px;
+        height: 18px;
+        margin: 0 0 8px;
+    }
+
+    .comment-hidden{
+        padding: 2px 0;
+        background-color: #888888;
+    }
+
+    .add-comment{
+        width: 40px;
+        height: 80%;
+        background-color: transparent;
+        border: none;
+    }
+
+    section{
+        background-color: #fff;
+    }
+
+    i{
+        height: 24px;
+    }
+
+    article{
+        height: 22px;
+    }
+
+    .like-profile-img{
+        width: 14px;
+        height: 14px;
+        border-radius: 7px;
+        overflow: hidden;
+        margin-right: 4px;
+    }
+
+    .like-profile-img img{
+        width: 100%;
+        
+    }
+
+    .interaction-bar{
+        justify-content:space-between;
+        height: 54px;
+    }
+
+    .interaction-bar i{
+        font-size: 24px;
+        padding: 4px;
+    }
+
+    i:nth-child(1){
+        padding-left: 0;
+    }
+
+    .feeds-profile{
+        height: 60px;
+    }
+
+    .feeds-minute{
+        margin-top: 0px;
+        padding-bottom: 16px;
+        font-size: 10px;
+        color: #8e8e8e;
+        border-bottom: 1px solid #efefef;
+    }
+
+    .comment-container{
+        padding: 0 16px;
+        height: 53px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .comment{
+        max-width: 517px;
+        width: 80%;
+    }
+
+/*main-right*/
+    .main-right{
+        width: 293px;
+    }
+
+    /*profile*/
+        .profile{
+            display: flex;
+            align-items: center;
+            padding: 18px 0 10px 0;
+        }
+
+        .profile-img-container {
+            width: 56px;
+            height: 56px;
+            overflow: hidden;
+            border-radius: 28px;
+            margin-right: 18px;
+        }
+
+        .profile .bold{
+            margin-bottom: 2px;
+        }
+
+    .aside-profile-img-container{
+        width: 32px;
+        height: 32px;
+        border-radius: 16px;
+        overflow: hidden;
+        margin-right: 12px;
+    }
     
-}
+    .story, .recommendation{
+        border: 1px solid #dbdbdb;
+        border-radius: 3px;
+        margin-top: 4px;
+        margin-bottom: 8px;
 
-.feeds{
-    width: 614px;
-    overflow: auto;
-    margin: 0 28px 0 0;
-}
-.feeds section{
-    border: 1px solid #dbdbdb;
-    border-radius: 3px;
-}
-.feeds-profile{
-    justify-content: space-between;
-    padding: 0 16px 0 14px;
-}
-.feeds-profile-img{
-    width: 40px;
-    height: 40px;
-    overflow: hidden;
-    border-radius: 20px;
-    margin-right: 14px;
-}
-.feeds-like, .interaction-bar, article, .feeds-minute{
-    padding: 0 16px;
-}
+    }
 
-.feeds-like{
-    font-size: 14px;
-    height: 18px;
-    margin: 0 0 8px;
-}
+    .story-header, .recommendation-header{
+        padding: 8px 12px;
+        justify-content: space-between;
+        color: #8e8e8e;
+        
+    }
 
-section{
-    background-color: #fff;
-}
+    .story-stack, .recommendation-stack{
+        padding: 6px 12px;
+    }
 
-i{
-    height: 24px;
-}
-article{
-    height: 22px;
-}
-.like-profile-img{
-    width: 14px;
-    height: 14px;
-    border-radius: 7px;
-    overflow: hidden;
-    margin-right: 4px;
-}
+    .recommendation-stack{
+        justify-content: space-between;
+    }
 
-.like-profile-img img{
-    width: 100%;
-    
-}
-.interaction-bar{
-    justify-content:space-between;
-    height: 54px;
-}
-.interaction-bar i{
-    font-size: 24px;
-    padding: 4px;
-}
-i:nth-child(1){
-    padding-left: 0;
-}
-.feeds-profile{
-    height: 60px;
-}
-.feeds-minute{
-    padding-bottom: 16px;
-    font-size: 10px;
-    color: #8e8e8e;
-    border-bottom: 1px solid #efefef;
-}
-.comment-container{
-    padding: 0 16px;
-    height: 53px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.comment{
-    max-width: 517px;
-    width: 80%;
-}
-.profile{
-    display: flex;
-    align-items: center;
-    padding: 18px 0 10px 0;
-}
-.profile-img-container {
-    width: 56px;
-    height: 56px;
-    overflow: hidden;
-    border-radius: 28px;
-    margin-right: 18px;
-}
-.profile .bold{
-    margin-bottom: 2px;
-}
-.aside-profile-img-container{
-    width: 32px;
-    height: 32px;
-    border-radius: 16px;
-    overflow: hidden;
-    margin-right: 12px;
-}
-.story, .recommendation{
-    border: 1px solid #dbdbdb;
-    border-radius: 3px;
-    margin-top: 4px;
-    margin-bottom: 8px;
+    .recommended-users{
+        display: flex;
+    }
 
-}
-.story-header, .recommendation-header{
-    padding: 8px 12px;
-    justify-content: space-between;
-    color: #8e8e8e;
-    
-}
-.story-stack, .recommendation-stack{
-    padding: 6px 12px;
-}
-.recommendation-stack{
-    justify-content: space-between;
-}
-.recommended-users{
-    display: flex;
-}
-.name{
-    color: #8e8e8e;
-}
-.story{
-    padding-bottom: 4px;
-    padding-top: 4px;
-}
-.recommendation{
-    padding-bottom: 4px;
-    padding-top: 4px;
-}
-.view-all{
-    font-size: 12px;
-    color: #262626;
-}
+    .name{
+        color: #8e8e8e;
+    }
 
-.recommendation-stack .follow-button{
-    font-size: 12px;
-    color: #0095f6;
-}
+    .story{
+        padding-bottom: 4px;
+        padding-top: 4px;
+    }
 
-.caption{
-    font-size: 12px;
-    color: #8e8e8e;
-    margin: 2px;
-}
-footer{
-    font-size: 11px;
-    color: #c7c7c7;
-}
+    .recommendation{
+        padding-bottom: 4px;
+        padding-top: 4px;
+    }
+    .view-all{
+        font-size: 12px;
+        color: #262626;
+    }
+
+    .recommendation-stack .follow-button{
+        font-size: 12px;
+        color: #0095f6;
+    }
+
+    .caption{
+        font-size: 12px;
+        color: #8e8e8e;
+        margin: 2px;
+    }
+
+/*footer*/
+    footer{
+        font-size: 11px;
+        color: #c7c7c7;
+    }
