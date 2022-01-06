@@ -5,7 +5,6 @@ const btn = document.querySelector("button");
 const REMOVE_CLASSNAME = "nonwork";
 const USERNAME_KEY = "username";
 
-// id 입력란에 @ 포함 && pw 5글자 이상 시 true
 function dologin() {
   const inputid = idbox.value;
   const inputpw = pwbox.value;
@@ -30,8 +29,8 @@ function dowaring(event) {
   if (inputid.indexOf("@") != -1 && inputpw.length >= 5) {
     localStorage.setItem(USERNAME_KEY, inputid);
   } else {
-    event.preventDefault();
     alert("ID 혹은 PW를 확인해주세요");
+    event.preventDefault();
   }
 }
 
