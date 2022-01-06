@@ -62,6 +62,10 @@ nav {
     margin-left: -125px;
 }
 
+.icon {
+    width: 30px;
+}
+
 .nav-right {
     display: flex;
     align-items: center;
@@ -73,44 +77,229 @@ nav {
 
 
 main {
-    margin-top: 80px;
     display: flex;
-    padding: 20px 70px;
-
+    margin: 140px 70px;
 }
 
 .feeds {
     display: flex;
     border: 1px solid #e6e6e6;
+    border-radius: 3px;
     background-color: #ffffff;
+    margin-right: 30px;
 }
 
-.icon {
-    width: 30px;
+article > .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+article > .top > .left {
+    display: flex;
+    align-items: center;
+}
+
+article > .top > .left > .profile-img-m {
+    width: 40px;
+    margin: 15px; 
+}
+
+.ids {
+    font-weight: bold;
 }
 
 .dot-menu {
-    width: 35px;
-}
-
-.dot-list {
-    width: 15px;
-}
-
-
-
-.profile-img-s {
-    width: 30px;
-}
-
-.profile-img-m {
-    width: 45px;
-}
-
-.profile-img-l {
-    width: 65px;
+    width: 25px;
+    margin: 15px;
 }
 
 .feed-img {
-    width: 500px;
+    width: 550px;
 }
+
+article > .action-keys {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 10px 10px 12px;
+}
+
+article > .action-keys > .action-left-keys > .icon {
+    padding-right: 4px;
+}
+
+article > .action-keys > .action-right-keys > .icon {
+    width: 23px;
+}
+
+article > .text-contents {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 15px 15px 15px;
+}
+
+article > .text-contents > .liked-people {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+article > .text-contents > .liked-people > .profile-img-s {
+    width: 25px;
+    padding-right: 5px;
+}
+
+.sir {
+    padding-right: 4px;
+}
+
+article > .text-contents > .liked-people > .number-of-people {
+    font-weight: bold;
+}
+
+article > .text-contents > .posted-time {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-top: 5px;
+    font-size: 14px;
+    color: #9b9b9b;
+}
+
+article > .write-comment {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 15px 15px 15px;
+    border-top: 1px solid #e6e6e6;
+}
+
+article > .write-comment > input {
+    border: none;
+}
+
+article > .write-comment > input::placeholder {
+    font-size: 15px;
+}
+
+article > .write-comment > span {
+    color: #3e99ed;
+    opacity: 60%;
+}
+
+.main-right {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-right > .my-area {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.main-right > .my-area > .profile-img-l {
+    width: 60px;
+    margin-right: 10px;
+}
+
+.main-right > .my-area > .id-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-right > .my-area > .id-area > .my-name {
+    margin-left: -4px;
+    font-size: 14px;
+    color: #9b9b9b;
+}
+
+.main-right > .story-area {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    padding: 15px;
+    background-color: #ffffff;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+}
+
+.main-right > .story-area > .story-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-right > .story-area > .story-title > span:nth-child(1) {
+    color: #9b9b9b;
+}
+
+.main-right > .story-area > .story-title > span:nth-child(2) {
+    font-weight: bold;
+}
+
+.main-right > .story-area > .story-set {
+    display: flex;
+    align-items: center;
+} 
+
+.main-right > .story-area > .story-set > .story-info {
+    padding: 15px;
+}
+
+.main-right .profile-img-m {
+    width: 45px;
+}
+
+.main-right > .story-area > .story-set > .story-info > .story-time {
+    display: flex;
+    color: #9b9b9b;
+}
+
+.main-right > .recommendation-area {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    background-color: #ffffff;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+}
+
+.main-right > .recommendation-area > .recommend-title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-right > .recommendation-area > .recommend-title > span:nth-child(1) {
+    color: #9b9b9b;
+}
+
+.main-right > .recommendation-area > .recommend-title > span:nth-child(2) {
+    font-weight: bold;
+}
+
+.main-right > .recommendation-area > .recommend-set {
+    display: flex;
+    align-items: center;
+}
+
+.main-right > .recommendation-area > .recommend-set > .recommend-info {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.main-right > .recommendation-area > .recommend-set > .recommend-info > .followed-people {
+    display: flex;
+    color: #9b9b9b;
+}
+
+.main-right > .recommendation-area > .recommend-set > .recommend-info > .followed-people > .ids {
+    font-weight: normal;
+}
+
+
+
+
