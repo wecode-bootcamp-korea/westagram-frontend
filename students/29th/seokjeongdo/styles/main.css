@@ -5,20 +5,25 @@
 }
 
 body {
-  /* padding-top: 60px; */
+  margin: 0;
 }
 
 header {
-  /* position: fixed; */
-  height: 60px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
   display: flex;
+  height: 60px;
   justify-content: center;
   padding: 1rem;
   font-size: 22px;
+  background-color: #ffffff;
   border-bottom: 1px solid #dbdbdb;
 }
 
 .headerWrap {
+  /* position: fixed; */
   width: 1000px;
   display: flex;
   justify-content: space-between;
