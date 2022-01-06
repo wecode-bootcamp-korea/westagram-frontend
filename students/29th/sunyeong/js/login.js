@@ -19,7 +19,12 @@ function login() {
         alert('아이디에 @를 포함하세요');
         return;
     }
-    if (loginPassword.value.length < 6) {
+
+    if (loginId.value.length < 5) {
+        alert('아이디를 5자 이상 입력하세요');
+        return;
+    }
+    if (loginPassword.value.length < 5) {
         alert('비밀번호를 5자 이상 입력하세요');
         return;
     }
