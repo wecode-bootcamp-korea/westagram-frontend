@@ -1,33 +1,67 @@
 body{
     margin: 0;
 }
+
 nav{
-    font-size: 35px;
     position: fixed;
-    width: 100%;
-    height: 6vh;
-    z-index: 1;
-    background-color: white;
     top:0;
-    padding: 10px;
+    padding: 10px;    
+    height: 6vh;
+    font-size: 35px;
+    background-color: white;
+    z-index: 1;
 }
+
+.nav-bar{
+    position: relative;
+    display:flex;
+    justify-content: space-between;   
+    align-items: center;
+    width: 60vw;
+    left: 15vw;
+}
+
+.nav-bar-box-one{
+    position: relative;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;  
+    width : 650px; 
+    height:5vh;  
+}
+
+.nav-bar-logo{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
 .instagram-logo { 
     width: 25px;
 }
-.input-search{
-    width: 300px;
-    border:1px #EBEBEB solid;
-    padding-left: 10px;
-    height: 35px;
-    background-color: #FAFAFA;
+
+.nav-bar-logo > span{
+    padding-bottom: 2px;
+    font-size: 25px; 
+    font-family: 'Lobster', cursive; 
 }
-.search-box{
+
+.nav-bar-search-box{
     position: absolute;
-    top : 12%;
-    right : 15px;
     display: flex;
     flex-direction: column;
+    top : 12%;
+    right : 15px;
 }
+
+.nav-bar-search{
+    width: 300px;
+    padding-left: 10px;
+    height: 35px;
+    border:1px #EBEBEB solid;
+    background-color: #FAFAFA;
+}
+
 .search-list{
     width: 300px;
     display: flex;
@@ -38,73 +72,86 @@ nav{
 .search-list-model{
     width: 300px;
     display: flex;
-    font-size: 13px;
     border:1px #EBEBEB solid;
     padding: 5px;
+    font-size: 13px;
 }
+
 .search-list-model>img{
     width: 28px;
     height: 28px;
 }
+
+.nav-bar-box-two{
+    position: relative;
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+    width: 15vw;   
+    height: 5vh; 
+    right: 7%;
+    font-size: 23px; 
+   
+}
+
 .nav-detail-box{
     position: absolute;
-    top : 10% ;
-    right: -35%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    
+    top : 10% ;
+    right: -35%;
 }
-.nav-profile{
-}
+
 .nav-detail{
     display: flex;
     flex-direction: column;
+    width: 200px;
+    padding: 5px;
     border:2px #EBEBEB solid;
     background-color: white;
     font-size: 18px;
-    width: 200px;
-    padding: 5px;
     z-index: 0;
 }
+
 .nav-detail>span{
     padding: 5px;
 }
 
 main{
+    width: 100vw;
     margin: 0 auto;
     margin-top: 7vh;
     background-color: #FAFAFA;
-    width: 100vw;
-    height: 1600px;
 }
+
 article{
-    width: 50vw;
-    height: 100vh;
     position: relative;
+    width: 50vw;
     top : 10px;
     left: 15vw;
 }
 
 section{
-    border:2px #EBEBEB solid;
     width: 800px;
     margin-bottom: 20px;
+    border:2px #EBEBEB solid;
 }
 
-section >p{
-    margin-left: 10px;
+.feed {
+    width: 650px;
 }
-.feed-profile{
-    margin: 10px 0px;
+
+.feed-profile-box{
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 50px;
+    margin: 10px 0px;
 }
 
-.feed-profile-box{
+.feed-profile{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -119,44 +166,37 @@ section >p{
     margin-right: 10px;
 }
 
-.feed {
-    width: 650px;
-}
-.feed-profile{
-    display: flex;
-}
 .feed-img-box{
-    width: 100%;
     height: 500px;
-
 }
+
 .feed-img{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    
 }
 
-.feed-fn{
+.feed-function-box{
+    display: flex;
+    justify-content: space-between;
     margin-top: 15px;
     padding-left: 10px;
-    padding-right: 10px;
-    display: flex;
-    font-size: 25px;
-    justify-content: space-between;
+    padding-right: 10px;    
+    font-size: 25px;    
 }
-.feed-fn-box-first{
-    width: 100px;
+
+.feed-function-box-first{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100px;
 }
 
 .feed-like{
-    margin-top: 10px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    margin-top: 10px;
 }
 
 .feed-like-img{
@@ -173,18 +213,18 @@ section >p{
 }
 
 .feed-comment{
-    margin-top: 5px;
-    padding-left: 10px;
     display:flex;
     justify-content: space-between;
-    margin-right: 10px;
     flex-direction: column;
-    
-}
-.feed-comment > span{
     margin-top: 5px;
+    margin-right: 10px;
+    padding-left: 10px;
+}
+
+.feed-comment > span{
     display: flex;
     justify-content: space-between;
+    margin-top: 5px;
 }
 
 .feed-comment-write-box{
@@ -196,22 +236,25 @@ section >p{
     justify-content: space-between;
     
 }
+
+.feed-comment-write{
+    width: 80%;
+    background-color: #FAFAFA;
+}
+
 .feed-comment-write:focus{
     outline: none;
 }
+
 .feed-comment-write-box>button{
     background-color: transparent;
     border-style: none;
     color:#CCE6FD;
     font-size: 15px;
 }
+
 .feed-comment-write-box>button:hover{
     color:#0f6bbd;
-}
-
-.feed-comment-write{
-    width: 80%;
-    background-color: #FAFAFA;
 }
 
 aside{
@@ -220,53 +263,58 @@ aside{
     top: 8vh;
     right: 25vw;
     overflow: hidden;
-    
 }
 
 .aside-profile{
     display: flex;
     align-items: center;
     margin-bottom: 10px;
+    margin-left: 5px;
 }
-
 
 .aside-story{
-    border:2px #EBEBEB solid;
     padding : 5px 20px;
-    
+    border:2px #EBEBEB solid;    
 }
+
 .aside-story>p{
+    margin: 10px 0;
     color:gray;
 }
 
-.aside-story-img-box{
+.aside-story-box{
     display: flex;
     margin-top: 10px;
 }
 
-.aside-img-owner > p{
-    margin: 0px;
-}
-.aside-recommendation{
-    margin-top: 20px;
-    border:2px #EBEBEB solid;
-    padding : 5px 20px;
-
-}
-.aside-recommendation>p{
-    color:gray;
-}
-.aside-recommendation-img-box{
-    display: flex;
-    margin-top: 10px;
-}
-.aside-img-owner > p{
-    margin: 0px;
-}
 .aside-img{
     width: 40px;
     height: 40px;
     margin-right: 10px;
 }
 
-@media(max-width:1500px) { aside {  display:none;  } }
+.aside-img-owner > p{
+    margin: 0px;
+}
+
+.aside-recommendation{
+    margin-top: 20px;
+    padding : 5px 20px;
+    border:2px #EBEBEB solid;
+}
+
+.aside-recommendation>p{
+    color:gray;
+}
+
+.aside-recommendation-box{
+    display: flex;
+    margin-top: 10px;
+}
+
+
+@media(max-width:1500px) { 
+    aside {  
+        display:none;  
+    } 
+}
