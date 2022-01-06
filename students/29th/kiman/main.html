@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/common.css" />
+    <link rel="stylesheet" href="style/main.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <title>Main</title>
+  </head>
+  <body>
+    <nav id="menubar">
+      <div id="menu">
+        <div id="left">
+          <i class="fab fa-instagram"></i>
+          <div>westagram</div>
+        </div>
+        <div id="center">
+          <input type="text" placeholder="검색" />
+        </div>
+        <div id="right">
+          <i class="far fa-compass"></i>
+          <i class="far fa-heart"></i>
+          <i class="far fa-user"></i>
+        </div>
+      </div>
+    </nav>
+    <main id="main">
+      <!--FEED MAIN 확인-->
+      <div id="mainfeed">
+        <article id="article">
+          <div class="writer">
+            <div class="profile">
+              <img src="test.jpg" alt="writer profile img" />
+              <div class="mainname">Wecode Bootcamp</div>
+            </div>
+            <div class="smallmenu">
+              <i class="fas fa-ellipsis-h"></i>
+            </div>
+          </div>
+          <div class="feedimg">
+            <img class="mainimg" src="test.jpg" alt="main feed img" />
+          </div>
+          <div class="commentbox">
+            <div class="smalllogo">
+              <div class="smalllogoleft">
+                <i id="likeheart" class="fas fa-heart"></i>
+                <i class="far fa-comment"></i>
+                <i class="fas fa-external-link-alt"></i>
+              </div>
+              <div class="smalllogoright">
+                <i class="far fa-bookmark"></i>
+              </div>
+            </div>
+            <div class="like"></div>
+            <div class="comment">
+              <ul></ul>
+            </div>
+            <div class="commentinputbox">
+              <input
+                class="commentinput"
+                maxlength="70"
+                type="text"
+                placeholder="댓글달기..."
+              />
+              <button class="commentbtn">게시</button>
+            </div>
+          </div>
+        </article>
+      </div>
+      <!--Feed Right-->
+      <div id="mainright">
+        <div id="rightdetail">
+          <div class="myinf">
+            <img src="test.jpg" alt="my profile img" />
+            <div class="myname">
+              <div class="mymainname">Wecode_Bootcamp</div>
+              <div class="mysubname">Wecode | 위코드</div>
+            </div>
+          </div>
+        </div>
+        <div class="story">
+          <div class="storytitle">
+            <div class="stotyleft">스토리</div>
+            <div class="storyright">모두 보기</div>
+          </div>
+          <div class="storycontents">
+            <div class="storycontent">
+              <img src="test.jpg" alt="stroy profile img" />
+              <div class="storywriters">
+                <div class="storywriter">Wecode_Bootcamp</div>
+                <div class="storytimelog">1시간 전</div>
+              </div>
+            </div>
+            <div class="storycontent">
+              <img src="test.jpg" alt="stroy profile img" />
+              <div class="storywriters">
+                <div class="storywriter">Wecode_Bootcamp</div>
+                <div class="storytimelog">1시간 전</div>
+              </div>
+            </div>
+            <div class="storycontent">
+              <img src="test.jpg" alt="stroy profile img" />
+              <div class="storywriters">
+                <div class="storywriter">Wecode_Bootcamp</div>
+                <div class="storytimelog">1시간 전</div>
+              </div>
+            </div>
+            <div class="storycontent">
+              <img src="test.jpg" alt="stroy profile img" />
+              <div class="storywriters">
+                <div class="storywriter">Wecode_Bootcamp</div>
+                <div class="storytimelog">1시간 전</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="push">
+          <div class="pushtitle">
+            <div class="pushleft">회원님을 위한 추천</div>
+            <div class="pushright">모두 보기</div>
+          </div>
+          <div class="pushcontents">
+            <div class="pushcontent">
+              <div class="pushinf">
+                <img src="test.jpg" alt="push profile img" />
+                <div class="pushwriters">
+                  <div class="pushwriter">Wecode_Bootcamp</div>
+                  <div class="pushothers">???님 외 2명이 팔로우 합니다.</div>
+                </div>
+              </div>
+              <div class="pushfollow">팔로우</div>
+            </div>
+            <div class="pushcontent">
+              <div class="pushinf">
+                <img src="test.jpg" alt="push profile img" />
+                <div class="pushwriters">
+                  <div class="pushwriter">Wecode_Bootcamp</div>
+                  <div class="pushothers">???님 외 2명이 팔로우 합니다.</div>
+                </div>
+              </div>
+              <div class="pushfollow">팔로우</div>
+            </div>
+            <div class="pushcontent">
+              <div class="pushinf">
+                <img src="test.jpg" alt="push profile img" />
+                <div class="pushwriters">
+                  <div class="pushwriter">Wecode_Bootcamp</div>
+                  <div class="pushothers">???님 외 2명이 팔로우 합니다.</div>
+                </div>
+              </div>
+              <div class="pushfollow">팔로우</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="js/main.js"></script>
+  </body>
+</html>
