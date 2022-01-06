@@ -101,7 +101,7 @@ body {
   background-color: white;
 }
 
-.main-right {
+.main--right {
   width: 300px;
   height: 500px;
   margin-top: 140px;
@@ -279,19 +279,19 @@ body {
 }
 
 /* Main--right user */
-.main-right .user {
+.main--right .user {
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
 
-.main-right .user img {
+.main--right .user img {
   width: 60px;
   border-radius: 50%;
   margin-left: 5px;
 }
 
-.main-right .user .user-info {
+.main--right .user .user--info {
   display: flex;
   flex-direction: column;
   margin-left: 17px;
@@ -299,16 +299,16 @@ body {
   cursor: pointer;
 }
 
-.main-right .user .user-info .user-id {
+.main--right .user .user--info .user--id {
   font-weight: bold;
 }
 
-.main-right .user .user-info .user-name {
+.main--right .user .user--info .user--name {
   color: #949494;
 }
 
-/* Main--right Story */
-.main-right .story {
+/* Main---right Story */
+.main--right .story {
   width: 300px;
   height: 250px;
   border: 1px solid #e5e5e5;
@@ -321,56 +321,56 @@ body {
   display: none;
 }
 
-.main-right .story .story-info,
-.main-right .suggestion .suggestion-info {
+.main--right .story .story--info,
+.main--right .suggestion .suggestion--info {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px;
 }
 
-.story .story-info span:nth-child(1),
-.suggestion .suggestion-info span:nth-child(1) {
+.story .story--info span:nth-child(1),
+.suggestion .suggestion--info span:nth-child(1) {
   color: #949494;
 }
 
-.story .story-info span:nth-child(2),
-.suggestion .suggestion-info span:nth-child(2) {
+.story .story--info span:nth-child(2),
+.suggestion .suggestion--info span:nth-child(2) {
   font-weight: bold;
   color: black;
 }
 
-.story .story-user,
-.suggestion .suggestion-user {
+.story .story--user,
+.suggestion .suggestion--user {
   display: flex;
   align-items: center;
   margin-left: 15px;
   margin-bottom: 10px;
 }
 
-.story .story-user img,
-.suggestion .suggestion-user img {
+.story .story--user img,
+.suggestion .suggestion--user img {
   width: 48px;
   border-radius: 50%;
 }
 
-.story .story-user-info p,
-.suggestion .suggestion-user-info p {
+.story .story--user--info p,
+.suggestion .suggestion--user--info p {
   margin: 0 0 0 10px;
 }
 
-.story .story-user-id,
-.suggestion .suggestion-user-id {
+.story .story--user--id,
+.suggestion .suggestion--user--id {
   font-weight: bold;
 }
 
-.story .story-user-name,
-.suggestion .suggestion-user-name {
+.story .story--user--name,
+.suggestion .suggestion--user--name {
   color: #949494;
 }
 
 /* Suggestion */
-.main-right .suggestion {
+.main--right .suggestion {
   width: 300px;
   height: 225px;
   border: 1px solid #e5e5e5;
@@ -379,17 +379,17 @@ body {
   background-color: #ffffff;
 }
 
-.main-right .suggestion .suggestion-user-info {
+.main--right .suggestion .suggestion--user--info {
   width: 170px;
   padding-right: 10px;
 }
 
-.main-right .suggestion .suggestion-follow {
+.main--right .suggestion .suggestion--follow {
   color: #2e91ef;
   font-weight: bold;
 }
 
-.main-right .suggestion .suggestion-user-name {
+.main--right .suggestion .suggestion--user--name {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
