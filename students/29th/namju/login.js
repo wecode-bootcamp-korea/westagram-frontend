@@ -12,6 +12,15 @@ const goToMainPage = () => {
   window.location.href = "./main.html";
 };
 
+const goToMainPageEnter = (e) => {
+  e.key === "Enter" && btnLogin.disabled === false
+    ? (window.location.href = "./main.html")
+    : false;
+};
+
 inputAccount.addEventListener("keyup", activateBtnLogin);
 inputPassword.addEventListener("keyup", activateBtnLogin);
 btnLogin.addEventListener("click", goToMainPage);
+
+inputAccount.addEventListener("keydown", goToMainPageEnter);
+inputPassword.addEventListener("keydown", goToMainPageEnter);
