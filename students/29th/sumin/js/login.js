@@ -20,9 +20,13 @@ function doLogin() {
 
 function clickLoginButton(event) {
     event.preventDefault()
+    localStorage.setItem('name',userId.value);
     window.location.href='main.html'
 }
 
 userId.addEventListener('input', doLogin);
 userPw.addEventListener('input', doLogin);
 loginButton.addEventListener('click', clickLoginButton);
+
+
+console.log(localStorage.getItem('name'));
