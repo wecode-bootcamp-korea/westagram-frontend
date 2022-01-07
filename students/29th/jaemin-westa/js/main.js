@@ -1,7 +1,7 @@
 const commnetArea = document.getElementsByClassName('posting-area')[0];
 const postingBtn = document.getElementsByClassName('posting-button')[0];
 
-// comment button active event
+// [Mission4] 댓글 내용 입력 후 Enter press, 혹은 게시 버튼 클릭 시 댓글 추가 기능
 commnetArea.addEventListener('input', function(){
     if(commnetArea.value.length > 0){
         postingBtn.style.opacity = '1';
@@ -12,17 +12,17 @@ commnetArea.addEventListener('input', function(){
     }
 });
 
-// comment upload event : click
+// 게시 버튼 클릭 시 댓글 추가 기능
 postingBtn.addEventListener('click', function(){
     if(postingBtn.style.opacity === "1") commentEvent();
 })
 
-// comment upload event : enter -> error : 공백시에도 들어감
+// 엔터 키 댓글 추가 기능
 commnetArea.addEventListener('keyup', function(event){
     if(event.keyCode == 13 && postingBtn.style.opacity === "1") commentEvent();
 })
 
-// comment upload function
+// 게시 버튼 클릭 시, 엔터 키 댓글 추가 기능 (익명 함수 표현식)
 const commentEvent = function(){
     const addLocation = document.getElementsByClassName('comment-list')[0];
     const addCommentWrap = document.createElement('li');
@@ -50,7 +50,7 @@ const commentEvent = function(){
     postingBtn.style.opacity = '0.5';
     postingBtn.style.cursor = 'default';
 
-    // comment-counting
+    // [자체 추가] 댓글 추가 시 모두 보기 갯수 증가
     const commnetCounting = function(){
         const counting = document.getElementsByClassName('comment-list')[0].children.length;
         const conutTxt = document.getElementsByClassName('comment-counting')[0];
@@ -60,7 +60,7 @@ const commentEvent = function(){
     commnetCounting();
 }
 
-// description more button
+// [자체 추가] 더 보기 버튼 클릭 시 설명 글 노출
 const moreBtn = document.getElementsByClassName('desc-more-btn')[0];
 
 moreBtn.addEventListener('click', function(){
@@ -70,32 +70,21 @@ moreBtn.addEventListener('click', function(){
     descTxt.style.WebkitBoxOrient = "unset"
 })
 
+// [Mission] 추가 구현 사항 - Mission 8 | nav 프로필 사진 클릭 시 메뉴 박스 생성
 // why...?? 1. 버튼변수에담기 2.버튼클릭시 이벤트발생 3.style로 값 못가져와서 getComputedStyle 사용 4. 상단값은 되고 여기는 왜..?
-const userBtn = document.getElementsByClassName('icon-human')[0];
 
-userBtn.addEventListener('click', function(){
+document.addEventListener("click", function(event){
     const profilePopUpWrap = document.getElementsByClassName('pop-wrap')[0];
-    const profilePopUpWrapProps = window.getComputedStyle(document.getElementsByClassName('pop-wrap')[0]).display
+    const profilePopBtn = document.getElementsByClassName("pop-click-btn")[0];
+    let targetElement = event.target; // 클릭 했을 때 클릭 되는 요소
 
-    if(profilePopUpWrapProps == "none") profilePopUpWrap.style.display = "block"
-})
+    do{
+        if(targetElement == profilePopBtn){
+            profilePopUpWrap.style.display = "block"
+            return;
+        }
+        targetElement = targetElement.parentNode;
+    }while (targetElement);
 
-document.addEventListener('click', function(){
-    const profilePopUpWrap = document.getElementsByClassName('pop-wrap')[0];
-    const profilePopUpWrapProps = window.getComputedStyle(document.getElementsByClassName('pop-wrap')[0]).display
-    if(profilePopUpWrapProps == "block") profilePopUpWrap.style.display = "none"
-})
-
-
-// function clickInEvent(event) {
-//     event.currentTarget.querySelector(userBtn).show();
-// }
-// clickInEvent();
-
-// function clickOutEvent(event){
-//     var target = event.target;
-//     if(target == event.currentTarget.querySelector(userBtn)){
-//         target.hide();
-//     }
-// }
-// clickOutEvent();
+    profilePopUpWrap.style.display = "none"
+});

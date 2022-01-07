@@ -1,3 +1,5 @@
+// [Mission2] ID, PW 입력 시 로그인 버튼 활성화 기능
+// [Mission] 추가 구현 사항 - Mission 5 | ID, PW validation
 document.addEventListener('input', function(){
     const idBtn = document.getElementsByClassName("id-write-box")[0];
     const pwBtn = document.getElementsByClassName("pw-write-box")[0];
