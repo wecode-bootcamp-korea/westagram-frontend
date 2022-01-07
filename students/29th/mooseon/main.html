@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="kr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,19 +8,47 @@
     <link rel="stylesheet" href="./common.css" type="text/css">
     <link rel="stylesheet" href="./main.css" type="text/css">
     <title>WESTAGRAM_Main</title>
-  
+
 </head>
+
+<div class="appBar">
+    <div class="instagram-logo">
+        <img src="logo.png" class="logo">
+    </div>
+    <div class="inputText">
+        <input type="text" class="search" placeholder=" 검색">
+    </div>
+    <div class="appBarMenuDiv">
+        <ul class="appBarMenu">
+            <li class="menuIcon"><i class="fas fa-home"></i></li>
+            <li class="menuIcon"><i class="far fa-paper-plane"></i></li>
+            <li class="menuIcon"><i class="far fa-compass"></i></li>
+            <li class="menuIcon"><i class="far fa-heart"></i></li>
+            <li class="menuIcon"><img src="cat.jpg" alt="" class="appBarProfile"></li>
+        </ul>
+    </div>
+</div>
+
 <body>
     <header>
         <nav>
-            <img id="logo" src="insta_logo.png" alt="logo"></img>
-            <img id="title" src="insta_title.png" alt="title"></img>    
-            <input id="search" type="search" placeholder="검색">
-            <img class="rightSide" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png" alt="explore"></img>    
-            <img class="rightSide" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" alt="heart"></img>    
-            <img class="rightSide" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png" alt="profile"></img>    
+            <div class="nav-left">
+                <img id="logo" src="insta_logo.png" alt="logo">
+                <img id="title" src="insta_title.png" alt="title">
+            </div>
+            <div class="input">
+                <input id="search" type="search" placeholder="검색">
+            </div>
+            <div class="nav-right">
+                <img class="right-side" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png"
+                    alt="explore"></img>
+                <img class="right-side" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"
+                    alt="heart"></img>
+                <img class="right-side" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png"
+                    alt="profile"></img>
+            </div>
         </nav>
-    </header>  
+    </header>
     <main>
         <div id="feeds">
             <article>
@@ -48,12 +77,12 @@
                     <img alt="mini-heart">
                 </div>
                 <div>
-                    <span>댓글 달기...</span>
+                    <input type="text" class="comment" placeholder="댓글 달기...">
                     <span>게시</span>
                 </div>
-            </article>  
+            </article>
         </div>
-        <section>
+        <aside>
             <div id="main-right">
                 <div class="story">
                     <div>
@@ -152,20 +181,120 @@
                 <p>Instagram 정보 ∙ 지원 ∙ 홍보 센터 ∙ API ∙ <br>채용 정보 ∙ 개인정보처리방침 ∙ 약관 ∙ <br>디렉터리 ∙ 프로필 ∙ 해시태그 ∙ 언어</p>
                 <span>© 2019 INSTAGRAM </span>
             </div>
-        </section>
+        </aside>
     </main>
     <footer></footer>
     <script src="main.js"></script>
 </body>
-</html> 
- 
+
+</html>
+
 
 article /section 누가더상위개념
 footer어디에 넣어 아니면 필수?with header
 css .class최대한 구체적으로 첨부터 적응시켜야하는지
+전체 다 적용시키려면 구체적 X
+아이디같은 경우는 문서 전체에서 유니크한 부분이기 때문에 어차피 구체적으로 할 필요 X
+scss -> css 전처리기
 
 
 
+<body>
 
+    <div class="view">
+        <section class="section">
+            <div class="content">
+                <div class="content-profile">
+                    <div><img src="goodCat.jpeg" alt="" class="content-profilePhoto"></div>
+                    <div class="content-more">
+                        <div class="content-id">super_cat</div>
+                        <div class="content-moreIcon"><i class="fas fa-ellipsis-h"></i></div>
+                    </div>
+                </div>
+                <div class="content-contents">
+                    <img src="brightCat.jpg" class="content-contents" alt="">
+                </div>
+                <div class="content_bottom">
+                    <div class="content-menuDiv">
+                        <ul class="content-menuLeft">
+                            <li class="content-menuIcon"><i class="far fa-heart"></i></li>
+                            <li class="content-menuIcon"><i class="far fa-comment"></i></li>
+                            <li class="content-menuIcon"><i class="far fa-paper-plane"></i></li>
+                        </ul>
+                        <ul class="content-menuRight">
+                            <li class="content-menuIcon"><i class="far fa-bookmark"></i></li>
+                        </ul>
+                    </div>
+                    <div class="views">조회 2,331,635회</div>
+                    <div class="content-contents-contents">
+                        <div class="contents-id">super_cat</div>
+                        <div class="contents-contents">it's my friend !!</div>
+                        <div class="contents-contents-hashtag">#bright_cat112</div>
+                        <div class="comment">
+                            <div class="comment-id">bright_cat112</div>
+                            <div class="comment-content">it's my photo haha</div>
+                            <div class="comment-heart"><i class="far fa-heart"></i></div>
+                        </div>
+                    </div>
+                    <div class="comment-registration">
+                        <input type="text" class="input-comment" placeholder="댓글 달기...">
+                        <div class="regist">게시</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <aside class="aside">
+            <div class="myProfile">
+                <div><img src="cat.jpg" alt="" class="myProfile-photo"></div>
+                <div>
+                    <div class="myProfile-id">real_fast95</div>
+                    <div class="myProfile-name">고졍</div>
+                </div>
+                <div class="myProfile-idChange">전환</div>
+            </div>
+            <div class="recommendId">
+                <div class="recommendId-notice">회원님을 위한 추천</div>
+                <div class="recommendId-total">모두 보기</div>
+            </div>
+            <div class="recommend-elementBox">
+                <div class="recommend-element">
+                    <div class="recommendedProfile">
+                        <img src="nero.png" alt="" class="recommendedPhoto">
+                    </div>
+                    <div class="recommendedBox">
+                        <div class="recommendedAccount">
+                            <div class="recommendedId">meow94</div>
+                            <div class="recommendedFollower">bright_cat님이 팔로우 합니다.</div>
+                        </div>
+                        <div class="followButton">팔로우</div>
+                    </div>
+                </div>
+                <div class="recommend-element">
+                    <div class="recommendedProfile">
+                        <img src="burnoutCat.jpg" alt="" class="recommendedPhoto">
+                    </div>
+                    <div class="recommendedBox">
+                        <div class="recommendedAccount">
+                            <div class="recommendedId">burnout_Cat</div>
+                            <div class="recommendedFollower">bright_cat님이 팔로우 합니다.</div>
+                        </div>
+                        <div class="followButton">팔로우</div>
+                    </div>
+                </div>
+                <div class="recommend-element">
+                    <div class="recommendedProfile">
+                        <img src="GymPT.jpeg" alt="" class="recommendedPhoto">
+                    </div>
+                    <div class="recommendedBox">
+                        <div class="recommendedAccount">
+                            <div class="recommendedId">MuscleCat</div>
+                            <div class="recommendedFollower">bright_cat님이 팔로우 합니다.</div>
+                        </div>
+                        <div class="followButton">팔로우</div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
 
-
+</body>
