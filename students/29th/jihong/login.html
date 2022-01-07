@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Westagram</title>
+    
+    <link rel="stylesheet" type="text/css" href="style/common.css">
+    <link rel="stylesheet" type="text/css" href="style/login.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <script src="js/login.js" defer></script>
+</head>
+<body>
+    <div class="wrapper" >
+        <h1 class="header-title">Westagram</h1>
+        <div class="main">
+            <form class="login-form">
+                <div class=login-section>
+                    <div class="section1-box">
+                        <div class="section1-box-1">
+                            <label class="label-1">
+                                <input class="input-id" type="text" placeholder="Phone number, username or email">
+                            </label>
+                            <div class="section1-box-2"></div>
+                        </div>
+                    </div>
+                    <div class="section1-box">
+                        <div class="section1-box-1">
+                            <label class="label-1">
+                                <input class="input-pw" type="password" placeholder="Password">
+                            </label>
+                            <div class="section1-box-2"></div>
+                        </div>
+                    </div>
+                    <div class="section2-box">
+                        <button id="btn-login" onclick="myfunction()" type="button" disabled="disabled">
+                            <div class="btn-login-title">Log In</div>
+                        </button>
+                    </div>
+                    <div class="section3-box">
+                        <div class="text-line"></div>
+                        <div class="text-1">OR</div>
+                        <div class="text-line"></div>
+                    </div>
+                    <div class="section4-box">    
+                        <button class="btn-facebook" type="button">
+                            <i class="fab fa-facebook-square"></i>
+                            <span class="btn-faceook-title">Log in with Facebook</span>
+                        </button>
+                    </div>  
+                </div>
+                <a class = "login-section2" href="#">Forgot password?</a>
+            </form>    
+        </div>
+    </div>
+</body>
+</html>
