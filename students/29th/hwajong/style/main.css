@@ -1,0 +1,289 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid rgb(234, 234, 234);
+}
+
+.header-content {
+  width: 1000px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo-title {
+  display: flex;
+}
+
+.title-divider {
+  margin: 0 8px;
+}
+
+.header-user__icon i {
+  margin-left: 8px;
+}
+
+input {
+  outline-style: none;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(250, 250, 250);
+}
+
+.main-content {
+  margin-right: 5px;
+  margin-top: 20px;
+  background-color: white;
+  border: 1px solid rgb(255,255,255);
+}
+
+.main-feed {
+  width: 650px;
+  display: flex;
+  flex-direction: column;
+}
+
+.feed-userBar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.feed-userInfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.feed-user__img img {
+  height: 614px;
+  width: 100%;
+}
+
+.user-img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+.user-id {
+  padding-left: 8px;
+}
+
+.feed-reaction {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  margin-bottom: 9px;
+}
+
+.feed-reaction__icons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.feed-reaction__icons i {
+  margin-right: 6px;
+}
+
+.reaction-img {
+  width: 16px;
+  height: 16px;
+}
+
+.feed-comment {
+  display: flex;
+  flex-direction: column;
+}
+
+.feed-comment__like {
+  display: flex;
+  margin: 5px 0;
+}
+
+.user-comment {
+  display: flex;
+}
+
+.user-comment__user-id {
+  margin-right: 8px;
+}
+
+.friends-comment {
+  display: flex;
+  justify-content: space-between;
+}
+
+.friends-comment__friend-id {
+  margin-right: 8px;
+}
+
+.friends-comment__times p {
+  color: rgb(234, 234, 234);
+}
+
+.friends-img {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+
+.feed-comment__write {
+  display: flex;
+  width: 100%;
+  border-top: 1px solid rgb(255, 255, 255);
+}
+
+.feed-comment__content {
+  width: 600px;
+  text-align: left;
+}
+
+.feed-comment__content {
+  border: none;
+  padding: 9px;
+}
+
+.feed-comment__button {
+  width: 50px;
+  border: none;
+  color: #cbe4fc;
+  background-color: white;
+  margin-bottom: 0px;
+}
+
+.main-right {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: 30px;
+}
+
+.main-right__userInfo {
+  width: 250px;
+  display: flex;
+}
+
+.main-right__userInfo__img img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.main-right__userInfo__idName {
+  margin-top: 8px;
+}
+
+.main-right__userInfo__name {
+  color: rgb(160, 160, 160);
+}
+
+.main-right__friendsStory {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(240, 240, 240);
+  padding: 9px;
+  height: 250px;
+  background-color: white;
+}
+
+.main-right__friendsStory__title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.friendsStory__title__story {
+  color: rgb(175, 175, 175);
+}
+
+.main-right__friendsStory__list {
+  display: flex;
+  flex-direction: column;
+  margin: 9px 0;
+}
+.friendsStory__list__allInfo {
+  display: flex;
+  margin-bottom: 9px;
+}
+
+.friendsStory__list__img img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.friendsStory__list__status__time {
+  color: rgb(175, 175, 175);
+  font-size: 13px;
+}
+
+.main-right__recommend {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  border: 1px solid rgb(255, 255, 255);
+  padding: 9px;
+  width: 280px;
+  background-color: white;
+}
+
+.recommend__title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.recommend__smallTitle {
+  color: rgb(175, 175, 175);
+}
+
+.recommend__list {
+  display: flex;
+}
+
+.recommend__list__img img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.recommend__list__allInfo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.recommend__list__status__followerDigit {
+  color: rgb(175, 175, 175);
+  font-size: 13px;
+}
+
+.recommend__following button {
+  margin-top: 10px;
+  border: none;
+  color: #3b99ef;
+  font-size: 15px;
+  background-color: white;
+}
+
+.westagram__copywrite__content {
+  margin-top: 10px;
+  color: #cdcdcd;
+}
+
+.westagram__copywrite__mutual {
+  margin-top: 10px;
+  color: #cdcdcd;
+}
