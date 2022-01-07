@@ -27,6 +27,10 @@ const addComment = (index) => {
   usrName.innerHTML = "southpole_pbf";
   const commentSpan = document.createElement("span");
   commentSpan.innerHTML = commentTextArea[index].value;
+
+  const commentBtns = document.createElement("div");
+  commentBtns.classList.add("comment-btns");
+
   const likeButton = document.createElement("button");
   likeButton.type = "button";
   likeButton.classList.add("btn-like");
@@ -37,11 +41,24 @@ const addComment = (index) => {
     likeUnlike(this);
   });
 
+  const deleteButton = document.createElement("button");
+  deleteButton.type = "button";
+  deleteButton.classList.add("btn-delete");
+  const deleteIcon = document.createElement("img");
+  deleteIcon.src = "/assets/delete.svg";
+  deleteIcon.alt = "delete comment";
+  deleteButton.addEventListener("click", function () {
+    deleteComment(this);
+  });
+
   likeButton.appendChild(heartEmpty);
+  deleteButton.appendChild(deleteIcon);
+  commentBtns.appendChild(likeButton);
+  commentBtns.appendChild(deleteButton);
   commentLeft.appendChild(usrName);
   commentLeft.appendChild(commentSpan);
   comment.appendChild(commentLeft);
-  comment.appendChild(likeButton);
+  comment.appendChild(commentBtns);
   feedComment[index].appendChild(comment);
   commentTextArea[index].value = null;
   commentTextArea[index].style.height = "18px";
@@ -104,6 +121,27 @@ btnLike.forEach((item) => {
     likeUnlike(this);
   });
 });
+
+// 댓글 삭제
+const btnDelete = Array.from(document.querySelectorAll(".btn-delete"));
+
+// 질문!!! 이렇게 하면 왜 안되나요.. 콜백함수? this? 머리 터짐
+// const deleteComment = () => {
+//   this.parentNode.parentNode.remove();
+// };
+
+// btnDelete.forEach((item) => {
+//   item.addEventListener("click", deleteComment);
+// });
+
+const deleteComment = (e) => {
+  e.parentNode.parentNode.remove();
+};
+
+btnDelete.forEach((item) => {
+  item.addEventListener("click", () => deleteComment(item));
+});
+// 왜인지는 모르겠지만... 파라미터 있는 함수를 인자로 쓰려면 arrow function 이용하면 편하댄다....
 
 // sidebar position + width 맞춰주기!!! (fixed를 위해!)
 

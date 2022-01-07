@@ -231,7 +231,8 @@
   text-overflow: ellipsis;
 }
 
-.feed-comment .feed-comment-wrap .btn-like {
+.feed-comment .feed-comment-wrap .btn-like,
+.feed-comment .feed-comment-wrap .btn-delete {
   padding: 0;
 }
 
@@ -239,6 +240,19 @@
   box-sizing: content-box;
   width: 14px;
   padding: 1px 6px;
+}
+
+.feed-comment .feed-comment-wrap .btn-delete {
+  display: none;
+}
+
+.feed-comment .feed-comment-wrap .btn-delete img {
+  width: 15px;
+  margin-left: -4px;
+}
+
+.feed-comment .feed-comment-wrap:hover .btn-delete {
+  display: inline-block;
 }
 
 .feed-time {
