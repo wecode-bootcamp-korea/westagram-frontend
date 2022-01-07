@@ -1,0 +1,76 @@
+.wrap {
+  height: 100vh;
+}
+.login-box {
+  border: 1px solid rgb(232, 231, 231);
+  width: 400px;
+  height: 480px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
+}
+
+input {
+  width: 18rem;
+  margin-bottom: 6px;
+  padding: 10px;
+  border: 1px solid rgb(232, 231, 231);
+  border-radius: 3px;
+  background-color: rgb(245, 244, 244);
+  font-size: 12px;
+}
+
+input::placeholder {
+  color: rgb(133, 131, 131);
+}
+
+button {
+  width: 78%;
+  padding: 6px;
+  border: none;
+  border-radius: 3px;
+  background-color: rgba(105, 155, 224, 0.5);
+  margin-top: 10px;
+  padding: 7px;
+  color: white;
+}
+
+.or {
+  display: flex;
+  flex-basis: 100%;
+  font-size: 13px;
+  color: rgb(159, 158, 158);
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.or::before,
+.or::after {
+  content: "";
+  flex-grow: 1;
+  background-color: rgb(159, 158, 158);
+  height: 1px;
+  font-size: 0px;
+  margin: 7px 16px;
+}
+
+.facebook {
+  display: block;
+  margin: 40px 0 20px 0;
+  color: rgb(47, 47, 179);
+  font-weight: bold;
+  text-decoration-line: none;
+}
+
+.forget-password {
+  display: block;
+  font-size: 13px;
+  color: rgb(159, 158, 158);
+  text-decoration-line: none;
+}

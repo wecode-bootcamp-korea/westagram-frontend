@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>westagram_main</title>
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+    </style>
+  </head>
+
+  <body>
+    <div class="wrap">
+      <nav>
+        <div class="nav-wrap">
+          <div class="nav_left">
+            <img
+              class="logo"
+              src="./img/instagram-icon-vector-27.png"
+              alt="instagram"
+              width="30px"
+            />
+            <span class="westagram">Westagram</span>
+          </div>
+          <input type="text" placeholder="검색" class="search_bar" />
+          <span class="nav_icon">
+            <img
+              src="./img/explore.png"
+              alt="nav-search"
+              class="nav_1"
+              width="30px"
+            />
+            <img
+              src="./img/heart.png"
+              alt="nav-heart"
+              class="nav_2"
+              width="30px"
+            />
+            <img
+              src="./img/profile.png"
+              alt="nav-mypage"
+              class="nav_3"
+              width="30px"
+            />
+            <link
+              rel="stylesheet"
+              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+            />
+          </span>
+        </div>
+      </nav>
+
+      <main>
+        <div class="main-wrap">
+          <div class="feeds">
+            <div class="user">
+              <img
+                src="./img/1.jpeg"
+                alt="myprofile_photo"
+                class="myprofile_photo"
+              />
+              <span class="user_id">parkhyeluin</span>
+            </div>
+            <article class="photobox">
+              <img src="./img/9.jpeg" alt="feed_photo" class="feed_photo" />
+              <div class="photo-icon">
+                <i class="fa fa-heart-o" id="heart"></i>
+                <img src="./img/comment.png" alt="blah" class="chat" />
+                <img src="./img/share.png" alt="share" class="share" />
+                <img src="./img/bookmark.png" alt="save" class="save" />
+              </div>
+
+              <div class="inbox">
+                <div class="like">
+                  <strong>parkhyeluin</strong>님 <strong>외 4명</strong>이
+                  좋아합니다
+                </div>
+                <span class="first" style="font-weight: bold">parkhyeluin</span>
+                <span class="second">🇫🇷 IN PARIS</span>
+                <span class="class" style="color: grey">더 보기</span>
+                <div class="new_comment"></div>
+                <div class="time" style="font-size: 13px">54분 전</div>
+              </div>
+
+              <div class="comment_container">
+                <input type="text" placeholder="댓글 달기..." class="comment" />
+                <button id="btn_id" class="btn">게시</button>
+              </div>
+            </article>
+          </div>
+
+          <div class="main-right">
+            <div class="user_2">
+              <img
+                src="./img/1.jpeg"
+                alt="user_photo"
+                class="main_right_profile_photo"
+              />
+              <span class="user_id2">parkhyeluin</span>
+            </div>
+            <div class="box_1">
+              <div class="all_story">
+                <span class="story">스토리</span>
+                <span class="all_story">모두 보기</span>
+              </div>
+              <div class="id_1">
+                <img src="./img/2.jpeg" alt="jinxsik" class="img_jinxsik" />
+                <span class="jinxsik">jinxsik</span>
+              </div>
+              <div class="id_2">
+                <img src="./img/17.jpeg" alt="trooioi" class="img_trooioi" />
+                <span class="trooioi">trooioi</span>
+              </div>
+              <div class="id_3">
+                <img src="./img/20.jpeg" alt="insiruu" class="img_insiruu" />
+                <span class="insiruu">insiruu</span>
+              </div>
+              <div class="id_4">
+                <img src="./img/19.jpeg" alt="bominkim" class="img_bominkim" />
+                <span class="bominkim">bominkim</span>
+              </div>
+            </div>
+
+            <div class="box_2">
+              <div class="all_recommend">
+                <span class="recommend">회원님을 위한 추천</span>
+                <span class="all_recommend">모두 보기</span>
+              </div>
+              <div class="re_id_1">
+                <img src="./img/13.jpeg" alt="googoogoo" class="img_goo" />
+                <span class="goo">googoogoo</span>
+                <button class="follow">follow</button>
+              </div>
+              <div class="re_id_2">
+                <img src="./img/11.jpeg" alt="hoohoohoo" class="img_hoo" />
+                <span class="hoo">hoohoohoo</span>
+                <button class="follow">follow</button>
+              </div>
+              <div class="re_id_3">
+                <img src="./img/10.jpeg" alt="poopoopoo" class="img_poo" />
+                <span class="poo">poopoopoo</span>
+                <button class="follow">follow</button>
+              </div>
+            </div>
+            <div class="box_aside">
+              <p class="etc">
+                westagram 정보 • 지원 • 홍보 센터 • API • 채용 정보 •
+                개인정보처리방침 • 약관 • 디렉터리 • 프로필 • 해시태그 • 언어
+              </p>
+              <div class="date">© 2022 WESTAGRAM</div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>
