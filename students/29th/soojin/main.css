@@ -23,7 +23,7 @@ a {
     padding: 10px;
     height: 60px;
     width: 66%;
-    background-color: pink;
+    background-color: white;
     font-family: 'Lobster', cursive;
 }
 
@@ -33,7 +33,7 @@ a {
 
 .item input {
     background-color: #efefef;
-    border: 1px solid #e2e2e2;
+    border: 0px solid #e2e2e2;
     border-radius: 4px;
     width: 250px;
     height: 30px;
@@ -57,25 +57,19 @@ ul#icons {
     margin: 5px;
 }
 
-
 .feeds {
     position: relative;
-    
 }
 
 .article {
     /* position: absolute; */
-    
     top: 10%;
     width: 60%;
     background-color: white;
-    /* background-color: blueviolet;
-    border: 2px solid yellow; */
 }
 
 .profile {
     display: flex;
-    /* justify-content:flex-end; */
     align-items: center;
 }
 
@@ -95,27 +89,50 @@ ul#icons {
 
 .profile h2 {
     font-size: 12px;
+    font-weight: normal;
 }
 
 .photo img {
     width: 100%;
 }
 
-.explanation #icons {
+.information {
+    padding-left: 5px;
+}
+
+.information #icons {
     display: flex;
     align-items: center;
+}
+
+.numberOfLikes {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.numberOfLikes img {
+    width: 30px;
+}
+
+.explanation {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.explanation a {
+    padding: 5px;
+    font-weight: bold;
 }
 
 .main-right {
     position: fixed;
     top: 100px;
     right: 17%;
-    background-color: aqua;
     width: 25%;
 }
 
 .main-right img {
     width: 100%;
 }
-
-
