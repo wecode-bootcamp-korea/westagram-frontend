@@ -62,6 +62,7 @@ const createResultBox = (key) => {
 
 const filterIds = (e) => {
   searchModal.style.display = "block";
+
   if (searchModal.children.length > 1) {
     while (searchModal.children.length > 1) {
       searchModal.removeChild(searchModal.lastChild);
@@ -71,6 +72,10 @@ const filterIds = (e) => {
   const keysOfAccounts = Object.keys(accounts);
   const filtered = keysOfAccounts.filter((word) => word.includes(e.value));
   filtered.forEach((e) => createResultBox(e));
+
+  if (searchInput.value == "") {
+    searchModal.style.display = "none";
+  }
 };
 
 searchInput.addEventListener("keyup", function () {
