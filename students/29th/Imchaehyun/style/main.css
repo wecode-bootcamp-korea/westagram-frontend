@@ -1,0 +1,289 @@
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+
+}
+
+main { 
+	margin-left: 100px;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+nav {
+	width: 770px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.navInstagramWrapper {
+	display: flex;
+	align-items: center;
+	width: 150px;
+	justify-content: center
+}
+
+.navRightWrapper {
+	display: flex;
+	align-items: center;
+	width: 100px;
+	justify-content: space-between;
+}
+
+.navIcon {
+	width: 20px;
+	height: 20px;
+	display: block
+}
+
+#navInstagramLogo {
+	font-size: 20px;
+	padding-left: 10px;
+}
+
+#searchIconId {
+	width: 10px;
+	height: 10px;
+	position: absolute;
+	top: 7.5px;
+	left: 52px;
+}
+
+.searchBox::placeholder {
+	text-align: center;
+}
+
+.searchWrapper {
+	margin-right: 40px;
+	position: relative;
+}
+
+.searchBox {
+	height: 25px;
+	width: 150px;
+	border: 1px solid grey;
+}
+
+.icon {
+	width: 14px;
+	height: 14px;
+}
+
+.iconButton {
+	width: 18px;
+	height: 18px;
+	border: 0;
+	outline: 0;
+	padding: 2px;
+	background-color: transparent;
+}
+
+.feedIconContainer {
+	margin: 10px 10px 5px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.seeMore {
+	width: 12px;
+	height: 10px;
+	display: block;
+}
+
+.commentWriter {
+	display: block;
+}
+
+.feedTop {
+	height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-left: 10px;
+}
+
+.feedProfileContainer {
+	height: 40px;
+	display: flex;
+	align-items: center;
+}
+
+.feedProfile {
+	width: 32px;
+	height: 32px;
+	border-radius: 70%;
+   overflow: hidden;
+	border: 0.3px solid black;
+	display: inline-block;
+	margin-top: 4px;
+	margin-right: 8px;
+}
+
+.feedProfileId {
+	font-size: 14px;
+	display: block;
+}
+
+.seeMoreButton {
+	display: block;
+	width: 28px;
+	height: 28px;
+	border: 0;
+	outline: 0;
+	background-color: transparent;
+}
+
+.feedPicture {
+	width: 100%;
+	height: 65%;
+}
+
+.likesWrapper {
+	display: flex;
+	align-items: center;
+	margin: 0px 10px;
+}
+
+.likeProfilePicture {
+	width: 24px;;
+	height: 24px;
+	border-radius: 70%;
+   overflow: hidden;
+	border: 0.3px solid black;
+	display: block;
+}
+
+.likesStatus {
+	margin: 5px 10px;
+	display: inline
+}
+
+.feedContent {
+	margin: 5px 10px;
+}
+
+.minutesAgo {
+	margin: 5px 10px;
+	font-size: 9px;
+}
+
+.commentWrite {
+	display: block;
+	width: 100%;
+	height: 35px;
+	font-size: 15px;
+	border: thin solid grey;
+	border-left: 0;
+	border-right: 0;
+	border-bottom: 0;
+} 
+
+.commentWrite::placeholder {
+	font-size: 12px;
+}
+
+article {
+	width: 450px;
+	height: 650px;
+	border: thin solid black;
+	background-color: white;
+}
+
+.mainRight {
+	width: 300px;
+	height: 360px;
+	border: thin solid black;
+	margin-top: 100px;
+	background-color: white;
+}
+
+.rightMyProfileWrapper {
+	display: flex;
+	justify-content: space-between;
+	margin-left: 10px;
+	margin-top: 10px;
+	margin-right: 10px;
+}
+
+.recommendWrapper {
+	padding: 0px 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	font-size: 12px;
+}
+
+.seeAll {
+	text-decoration: none;
+	font-weight: bold;
+	color: black;
+}
+
+.rightMyProfilePicture {
+	width: 48px;
+	height: 48px;
+	border-radius: 70%;
+   overflow: hidden;
+	border: 0.3px solid black;
+	flex: 2;
+}
+
+.rightMyProfileId {
+	flex: 6.5;
+	margin-left: 10px;
+	font-weight: bold;
+}
+
+.transform {
+	flex: 1.5;
+	border: 0;
+	outline: 0;
+	background-color: transparent;
+	font-size: 14px;
+	color: blue;
+}
+
+.followBoxProfilePicture {
+	width: 32px;
+	height: 32px;
+	border-radius: 70%;
+   overflow: hidden;
+	border: 0.3px solid black;
+	margin-right: 10px;
+	flex: 1.4;
+}
+
+.followBox {	
+	padding: 0 10px;	
+	display: flex;
+	align-items: center;
+}
+
+.followBoxProfileId {
+	font-size: 14px;
+	font-weight: bold;	
+	line-height: 7px;
+}
+
+.recommendWho {
+	flex: 7.1;
+}
+
+.whoFollowsWho {
+	font-size: 10px;
+	color: grey;
+	line-height: 5px;
+}
+
+.followButton {
+	flex: 1.5;
+	border: 0;
+	outline: 0;
+	background-color: transparent;
+	font-size: 14px;
+	color: blue;
+}
+
