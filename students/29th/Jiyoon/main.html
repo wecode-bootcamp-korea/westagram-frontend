@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Westagram Main Page</title>
+  <link href="style/common.css" rel="stylesheet" type="text/css" />
+  <link href="
+  style/main.css" rel="stylesheet" type="text/css" />
+  <script src="https://kit.fontawesome.com/b8a578b8fb.js" crossorigin="anonymous"></script>
+  <script defer src='js/main.js'></script>
+</head>
+
+<body>
+
+  <!--header-->
+  <header>
+    <div class="title">
+      <img src="img/logo.png" alt="logo">
+      <h1>
+        Westagram
+      </h1>
+    </div>
+
+    <div>
+      <input class="input-div" type="text" placeholder="검색">
+      <i class="fas fa-search"></i>
+    </div>
+
+    <nav class="right-menu">
+        <img src="img/explore.png">
+        <img src="img/heart.png">
+        <img src="img/profile.png">
+    </nav>
+  </header>
+
+  <!--main-->
+  <main>
+    <div class="feeds">
+      <!--article-->
+      <article>
+        <header class="article-header">
+          <div class="article-profile">
+            <img class="img-profile" src="img/yoon.jpeg" alt="img-profile">
+            <span class="userID main-id font-point">
+            and_you
+            </span>
+          </div>
+
+          <i class="fas fa-ellipsis-h"></i>
+        </header>
+        
+        <div class="main-image">
+         <img src="img/feed.jpeg" alt="and_you님의 피드 사진" class="mainPic">
+        </div>
+
+        <nav class="icons-react">
+          <div class="icons-left">
+            <img class="icon-react" src="img/heart.png">
+            <img class="icon-react" src="img/comment.png">
+            <img class="icon-react" src="img/share.png">
+          </div>
+          <img class="icon-react" src="img/save.png">
+        </nav>
+
+        <!-- article text data -->
+        <div class="reaction">
+
+          <!-- 좋아한 사람들 -->
+          <div class="liked-people">
+            <img class="pic" src="img/yoon6.jpeg" alt="earpearp님의 프로필 사진">
+            <p><span class= "font-point">earpearp</span>님 <span class= "font-point">외 2,412,751명</span>이 좋아합니다</p>
+          </div>
+
+           <!-- 사진 설명 -->
+          <div class="description">
+            <p><span class= "font-point userID">and_you</span><span class="at-tag">@coding @koo</span> 😍</p>
+          </div>
+
+          <!-- 댓글 -->
+          <div class="comment-section">
+            <ul class="comments">
+              <li>
+                <span>
+                  <span class= "font-point userID">bestsilveristhebest</span>여기 어디에요? 😀
+                </span>
+                <img class="comment-heart" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" alt="하트">
+              </li>
+              <!-- input 값 여기에 추가 -->
+            </ul>
+            <div class="time-log">
+              <span>32분 전</span>
+            </div>
+          </div>         
+
+          <div class="comment">
+            <input id="input-comment" class="input-comment" type="text" placeholder="댓글 달기..." >
+            <button type="submit" class="submit-comment" disabled>게시</button>
+          </div>
+
+      </article>
+    </div>
+
+    <!--aside-->
+    
+    <div class="main-right">
+      <div class="myProfile">
+        <img class="pic" src="img/jiyoon.jpeg">
+        <div>
+          <span class="userID font-point">seizetheday</span>
+          <span class="sub-span">JIYOON KIM</span>  
+        </div>
+      </div>
+      
+      
+      <!-- story section -->
+      <div class="section-story">
+
+        <div class="menu-title">
+          <span class="sub-title">스토리</span>
+          <span class="find-more">모두 보기</span>
+        </div>
+
+        <ul class="story-list">
+          <li>
+            <div class="gradient-wrap">
+              <img class="img-profile story" src="img/chan2.jpeg">
+            </div>
+            <div  class="profile-text">
+              <span class="userID font-point">lovelychaeeun</span>
+              <span class="overtime">10분 전</p>
+            </div>
+          </li>
+
+          <li>
+            <div class="gradient-wrap">
+              <img class="img-profile story" src="img/goeun.png">
+            </div>
+            <div  class="profile-text">
+              <span class="userID font-point">bestsilveristhebest</span>
+              <span class="overtime">20분 전</p>
+            </div>
+          </li>
+
+          <li>
+            <div class="gradient-wrap">
+              <img class="img-profile story" src="img/chan1.jpeg">
+            </div>
+            <div  class="profile-text">
+              <span class="userID font-point">superchan</span>
+              <span class="overtime">1시간 전</p>
+            </div>
+          </li>
+
+          <li>
+            <div class="gradient-wrap">
+              <img class="img-profile story" src="img/goeun.jpeg">
+            </div>
+            <div  class="profile-text">
+              <span class="userID font-point">goeun_lovely</span>
+              <span class="overtime">10분 전</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      
+        <!-- recommendation -->
+        <!-- recommendation section -->
+      <div class="section-recommend">
+
+        <div class="menu-title">
+          <span class="sub-title">회원님을 위한 추천</span>
+          <span class="find-more">모두 보기</span>
+        </div>
+        
+        <ul class="recommend-list">
+          <li>
+            <div class="recommend-friend-profile">
+              <img class="img-profile" src="img/yoon3.jpeg" alt="howareyou님의 프로필 사진">
+              <div class="profile-text">
+                <span class="userID font-point">howareyou</span>
+                <span class="sub-span">lovelychaeeun님 외 2명이... </span>
+              </div>
+            </div>
+            <span class="btn-follow">팔로우</span>
+          </li>
+
+          <li>
+            <div class="recommend-friend-profile">
+              <img class="img-profile" src="img/imfine.jpeg" alt="imfine님의 프로필 사진">
+              <div class="profile-text">
+                <span class="userID font-point">imfine</span>
+                <span class="sub-span">bestsilveristhebest님 외 3명이...</span>  
+              </div>
+            </div>
+            <span class="btn-follow">팔로우</span>
+          </li>
+          <li>
+
+            <div class="recommend-friend-profile">
+              <img class="img-profile" src="img/hello.jpeg" alt="thankyou님의 프로필 사진">
+              <div class="profile-text">
+                <span class="userID font-point">thankyou</span>
+                <span class="sub-span">momo님 외 5명이 팔로우합...</span>  
+              </div>
+            </div>
+            <span class="btn-follow">팔로우</span>
+          </li>
+        </ul>
+      </div>
+
+      <footer>
+        <p>instagram ∙ 정보 ∙ 지원 ∙ 홍보 센터 ∙ API ∙ 채용 정보 ∙ 개인정보처리방침 ∙ 약관 ∙ 디렉터리 ∙ 프로필 ∙ 해시태그 ∙ 언어</p>
+        <p>© 2021 INSTAGRAM</p>
+      </footer>
+
+    </div>
+  </main>
+
+</body>
+
+</html>
