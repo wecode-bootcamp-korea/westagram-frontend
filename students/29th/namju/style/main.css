@@ -651,3 +651,23 @@ ul {
 .profile-modal .profile-modal-item.logout {
   border-top: 1px solid #dbdbdb;
 }
+
+@media screen and (max-width: 975px) {
+  .main .feed {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  .main .sidebar {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  #searchInput,
+  .placeholder,
+  .logo .logo-border,
+  .logo .westagram-logo {
+    display: none;
+  }
+}
