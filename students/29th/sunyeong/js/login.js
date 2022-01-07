@@ -10,6 +10,9 @@ function loginEvent() {
     if (loginId.value.length >= 1 && loginPassword.value.length >= 1) {
         buttonLogin.disabled = false;
         buttonLogin.style.backgroundColor = '#0095F6';
+    } else {
+        buttonLogin.disabled = true;
+        buttonLogin.style.backgroundColor = '#C5E1FB';
     }
 }
 
