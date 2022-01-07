@@ -1,59 +1,40 @@
-body {
-  font-size: 14px;
-}
-
 .header {
-  background-color: #fff;
-  height: 60px;
-  border-bottom: 1px #dbdbdb solid;
   position: fixed;
-  top: 0;
-  left: 0;
   width: 100%;
-  z-index: 1000;
+  border-bottom: 1px #dbdbdb solid;
+  background-color: #fff;
+  z-index: 200;
 }
 
-.header .content-area {
-  height: 100%;
-  margin: 0 auto;
+.header .header-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 60px;
   max-width: 975px;
-  padding: 20px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-.header .logo {
+.header .logo a {
   display: flex;
   align-items: center;
 }
 
-.header .logo .img-wrap {
+.header .logo img {
   width: 20px;
-  overflow: hidden;
   margin-right: 18px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-.header .logo .img-wrap img {
-  width: 100%;
-}
-
-.header .logo .border {
+.header .logo .logo-border {
   height: 24px;
   border-right: 1px solid #000;
   margin-right: 18px;
 }
 
-.header .logo .westagram {
+.header .logo .westagram-logo {
   font-size: 30px;
   margin-top: 4px;
-}
-
-.search-box {
-  text-align: center;
 }
 
 .search-box {
@@ -63,19 +44,20 @@ body {
 .search-box input {
   width: 200px;
   height: 28px;
-  padding: 12px;
+  padding: 0 12px;
 }
 
 .search-box .placeholder {
+  position: absolute;
+  top: 50%;
+  left: calc(50% - 4px);
+  transform: translate(-50%, -50%);
   color: #a5a5a5;
   font-size: 12px;
-  position: absolute;
-  left: calc(50% - 4px);
-  top: 50%;
-  transform: translate(-50%, -50%);
+  pointer-events: none;
 }
 
-.search-box .placeholder i {
+.search-box .placeholder .fa-search {
   margin-right: 4px;
 }
 
@@ -103,26 +85,25 @@ body {
   position: relative;
 }
 
-.nav-btns .new {
+.nav-btns .likes::after {
+  content: "";
   position: absolute;
+  left: calc(50% - 2px);
+  bottom: -6px;
   width: 4px;
   height: 4px;
   border-radius: 50%;
   background-color: #ee4956;
-  bottom: -6px;
-  left: calc(50% - 2px);
 }
 
-/*  */
-/*  */
-/*  */
-/* Main */
+/* header 끝~~~ */
+/* main 시작합니당~~~~ */
 
 .main {
   display: flex;
   max-width: 975px;
+  margin: 0 auto 0;
   padding: 0 20px;
-  margin: 0 auto 0px;
 }
 
 /* feed */
@@ -140,10 +121,10 @@ body {
 
 .feed-card {
   width: 100%;
+  margin-bottom: 24px;
   border: 1px solid #dbdbdb;
   border-radius: 1px;
   background-color: #fff;
-  margin-bottom: 24px;
 }
 
 /* feed : header */
@@ -155,7 +136,7 @@ body {
   padding: 16px;
 }
 
-.feed-header .left {
+.feed-header .feed-header-left {
   display: flex;
   align-items: center;
 }
@@ -172,8 +153,6 @@ body {
 .feed-header .profile-pic-wrap .profile-pic {
   width: 100%;
 }
-
-/* feed : main-img */
 
 .feed-img {
   width: 100%;
@@ -239,16 +218,27 @@ body {
   margin-bottom: 4px;
 }
 
-.feed-comment .comment {
+.feed-comment .feed-comment-wrap {
   margin-bottom: 4px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.feed-comment .comment svg {
-  width: 12px;
-  height: 12px;
+.feed-comment .feed-comment-wrap .comment {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.feed-comment .feed-comment-wrap .btn-like {
+  padding: 0;
+}
+
+.feed-comment .feed-comment-wrap .btn-like img {
+  box-sizing: content-box;
+  width: 14px;
+  padding: 1px 6px;
 }
 
 .feed-time {
@@ -269,20 +259,15 @@ body {
   min-height: 53px;
 }
 
-.textarea-wrap {
-  width: auto;
+.feed-comment-form .comment-area {
   flex-grow: 1;
-}
-
-.feed-comment-form textarea {
   border: none;
   resize: none;
   overflow: hidden;
-  width: 100%;
-  min-height: 18px;
+  height: 18px;
 }
 
-.feed-comment-form textarea:focus {
+.feed-comment-form .comment-area:focus {
   outline: none;
 }
 
@@ -313,10 +298,7 @@ body {
 
 .sidebar {
   position: fixed;
-  left: 0;
-  margin-top: 100px;
-  /* padding-right: 13px; */
-  /* 문제!!! 여기 도대체 왜 13을 줘야 딱 맞는지 정말로 모르겠다....ㅠㅠㅠㅠ */
+  top: 100px;
 }
 
 .sidebar .info-me {
@@ -329,12 +311,13 @@ body {
 }
 
 .info-me .profile-pic-wrap {
-  width: 56px;
+  flex-shrink: 0;
+  max-width: 56px;
   height: 56px;
-  overflow: hidden;
-  border-radius: 50%;
   margin-right: 12px;
   border: 1px #e6e6e6 solid;
+  border-radius: 50%;
+  overflow: hidden;
 }
 
 .info-me .profile-pic {
@@ -344,15 +327,22 @@ body {
 .info-me .profile-info {
   font-size: 14px;
   line-height: 18px;
+  overflow: hidden;
 }
 
 .info-me .profile-info strong {
   display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .info-me .profile-info div {
   color: #8e8e8e;
   font-weight: 400;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 /* story & rec */
@@ -364,17 +354,6 @@ body {
   background-color: #fff;
   padding: 12px 16px;
   margin-bottom: 12px;
-}
-
-.story-list {
-  height: 150px;
-  overflow-y: scroll;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-}
-
-.story-list::-webkit-scrollbar {
-  display: none;
 }
 
 .story-title,
@@ -409,6 +388,17 @@ ul {
   margin: 8px 0;
 }
 
+.story-list {
+  height: 150px;
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.story-list::-webkit-scrollbar {
+  display: none;
+}
+
 .story-item,
 .rec-item {
   display: flex;
@@ -421,6 +411,7 @@ ul {
   width: 38px;
   height: 38px;
   margin-right: 12px;
+  flex-shrink: 0;
 }
 
 .story-list .img-gradient .story-img-wrap {
@@ -436,6 +427,10 @@ ul {
   z-index: 100;
 }
 
+.story-list .story-item .story-img-wrap img {
+  width: 100%;
+}
+
 .gradient {
   position: absolute;
   top: 0px;
@@ -447,9 +442,31 @@ ul {
     circle at 30% 107%,
     #fdf497 0%,
     #fdf497 5%,
-    #fd5949 45%,
-    #d6249f 60% /* #285aeb 90% */
+    #fd5949 65%,
+    #d6249f 80%
   );
+}
+
+.story-list .story-item-desc {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.story-list .story-item-desc a {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.story-list .story-item-desc span {
+  font-size: 12px;
+  color: #8e8e8e;
+}
+
+.rec-list .rec-item .rec-profile {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
 }
 
 .rec-img-wrap {
@@ -466,11 +483,10 @@ ul {
   width: 100%;
 }
 
-.story-list .story-item-desc,
 .rec-list .rec-item-desc {
   display: flex;
   flex-direction: column;
-  flex-shrink: 2;
+  flex-shrink: 1;
   overflow: hidden;
 }
 
@@ -483,26 +499,12 @@ ul {
   color: #8e8e8e;
 }
 
-.rec-list .rec-item .rec-profile {
-  display: flex;
-  overflow: hidden;
-}
-
 .rec-list .rec-item button {
   width: 35px;
   flex-shrink: 0;
   padding: 0;
   font-weight: 600;
   color: #0095f6;
-}
-
-.story-list .story-item-desc span {
-  font-size: 12px;
-  color: #8e8e8e;
-}
-
-.story-list .story-item .story-img-wrap img {
-  width: 100%;
 }
 
 /* terms */
