@@ -8,9 +8,9 @@ function dolike() {
   let like = count++;
 
   if (like % 2 === 1) {
-    likecontent.innerText = `${localStorage.getItem(
-      "username"
-    )}님이 좋아합니다.`;
+    likecontent.innerText = `${localStorage
+      .getItem("username")
+      .split("@", 1)}님이 좋아합니다.`;
     likebtn.style.color = "red";
   } else {
     likebtn.style.color = "gray";
@@ -53,7 +53,7 @@ function savecomment() {
   const commenticon = document.createElement("i");
   commenticon.classList = "fas fa-heart";
   if (window.event.keyCode == 13) {
-    userid.innerText = localStorage.getItem("username");
+    userid.innerText = localStorage.getItem("username").split("@", 1);
     usercomment.innerText = newcomment.value;
     usercommentdel.innerText = "X";
     userwrite.appendChild(userid);
@@ -95,7 +95,7 @@ function uploadcommentbtn() {
   usercommentdel.classList = "hidden";
   const commenticon = document.createElement("i");
   commenticon.classList = "fas fa-heart";
-  userid.innerText = localStorage.getItem("username");
+  userid.innerText = localStorage.getItem("username").split("@", 1);
   usercomment.innerText = newcomment.value;
   usercommentdel.innerText = "X";
   userwrite.appendChild(userid);
