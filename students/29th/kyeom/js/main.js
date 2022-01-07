@@ -11,17 +11,19 @@ function hideSearchIcon() {
 }
 
 
-like();
 function like() {
-    const likeBtn = document.querySelector('.fa-heart');
-    likeBtn.addEventListener('click', function (event) {
-        event.target.classList.toggle('fas');
-        event.target.classList.toggle('far');
+    const likeBtnArr = document.querySelectorAll('.fa-heart');
+    likeBtnArr.forEach(likeBtn => {
+        likeBtn.addEventListener('click', function (event) {
+            event.target.classList.toggle('fas');
+            event.target.classList.toggle('far');
+        });
     });
 }
 
 
 addComment();
+like();
 function addComment() {
     const form = document.forms.commentForm;
     const comment = form.elements.comment;
@@ -61,8 +63,8 @@ function addComment() {
     function createCommentElement(idContent, commentContent) {
         const commentSection = document.querySelector('section.uploaded-comment');
         const commentWrapper = document.createElement('div');
-        const idElement = document.createElement('span');
-        const commentElement = document.createElement('span');
+        const idElement = document.createElement('div');
+        const commentElement = document.createElement('div');
 
         commentWrapper.appendChild(idElement);
         commentWrapper.appendChild(commentElement);
@@ -74,6 +76,40 @@ function addComment() {
 
         idElement.innerHTML = idContent;
         commentElement.innerHTML = commentContent;
+
+        function createLikeCommentAndDeleteComment() {
+            const likeCommentIcon = document.createElement('i');
+            const likeCommentDiv = document.createElement('div');
+            const deleteCommentBtn = document.createElement('button');
+
+            likeCommentDiv.appendChild(likeCommentIcon);
+            commentWrapper.appendChild(deleteCommentBtn);
+            commentWrapper.appendChild(likeCommentDiv);
+
+            likeCommentIcon.classList.add('far', 'fa-heart');
+            likeCommentDiv.classList.add('like-comment');
+            deleteCommentBtn.classList.add('delete-comment');
+
+            deleteCommentBtn.innerHTML = "삭제";
+            deleteCommentBtn.addEventListener('click', function (event) {
+                commentWrapper.remove();
+                idElement.remove();
+                commentElement.remove();
+                likeCommentIcon.remove();
+                likeCommentDiv.remove();
+                deleteCommentBtn.remove();
+
+                const deleteCommentBtnArr = document.querySelectorAll('.delete-comment');
+                let commentIndex = deleteCommentBtnArr.indexOf(event.target);
+                idArr = JSON.parse(localStorage.getItem('storedId'));
+                commentArr = JSON.parse(localStorage.getItem('comment'));
+                idArr.splice(commentIndex, 1);
+                commentArr.splice(commentIndex, 1);
+                localStorage.setItem('storedId', JSON.stringify(idArr));
+                localStorage.setItem('comment', JSON.stringify(commentArr));
+            });
+        }
+        createLikeCommentAndDeleteComment();
     }
 }
 

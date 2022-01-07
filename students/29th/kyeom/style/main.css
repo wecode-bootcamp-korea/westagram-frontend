@@ -154,7 +154,7 @@ img.menu {
     margin-right: 0;
 }
 
-.fa-heart {
+.button-wrapper .fa-heart {
     padding-top: 2px;
     font-size: 22px;
     cursor: pointer;
@@ -187,7 +187,9 @@ section.content .name {
 }
 
 /* 업로드된 댓글 */
-section.uploaded-comment div {
+section.uploaded-comment > .uploaded-comment {
+    display: flex;
+    align-items: center;
     margin-bottom: 4px;
 }
 
@@ -195,8 +197,25 @@ section.uploaded-comment .name {
     margin-right: 8px;
 }
 
-section.uploaded-comment span.uploaded-comment {
+section.uploaded-comment > .uploaded-comment > .uploaded-comment {
+    flex-grow: 1;
     overflow-wrap: break-word;
+}
+
+.like-comment {
+    width: 12px;
+    height: 12px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.delete-comment {
+    all: unset;
+    margin-right: 8px;
+    color: var(--gray3);
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
 }
 
 /* 댓글 달기 */
