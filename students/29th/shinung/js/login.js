@@ -42,12 +42,7 @@ function handleSubmit() {
     notice.innerHTML = '이메일을 올바르지 않습니다.';
     idInputBorder;
   } else if (id === ID && password === PASSWORD) {
-    alert('환영합니다.');
-    notice.innerHTML = '';
-    idInput.value = '';
-    pwInput.value = '';
-    idInput.style.borderColor = '#d6d6d6';
-    pwInputBorder;
+    location.replace('http://127.0.0.1:5500/main.html');
   } else {
     idInputBorder;
     pwInputBorder;
