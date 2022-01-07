@@ -23,7 +23,7 @@
 
         <div class="search-box">
           <input type="text" id="searchInput" />
-          <div class="placeholder">
+          <div class="placeholder" id="placeholder">
             <i class="fas fa-search"></i>
             <span class="placeholder-text">검색</span>
           </div>
@@ -473,9 +473,25 @@
       </aside>
     </main>
 
+    <aside class="search-modal">
+      <div id="triangle"></div>
+      <article class="result-box">
+        <div class="account-img-wrap">
+          <img src="" alt="" class="account-img">
+        </div>
+        <p class="account-info">
+          <h1 class="account-id">
+          </h1>
+          <h2 class="account-desc">
+          </h2>
+        </p>
+      </article>
+    </aside>
+
     <script
       src="https://kit.fontawesome.com/f4ebd4994e.js"
       crossorigin="anonymous"
     ></script>
+    <script src="./modal.js"></script>
   </body>
 </html>

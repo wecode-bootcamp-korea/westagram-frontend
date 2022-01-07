@@ -136,6 +136,7 @@ const btnDelete = Array.from(document.querySelectorAll(".btn-delete"));
 
 const deleteComment = (e) => {
   e.parentNode.parentNode.remove();
+  e.removeEventlistner("click", deleteComment);
 };
 
 btnDelete.forEach((item) => {

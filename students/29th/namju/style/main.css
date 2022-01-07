@@ -537,3 +537,64 @@ ul {
 .terms-link {
   margin-bottom: 12px;
 }
+
+/* search-modal */
+.search-modal {
+  position: fixed;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
+  border: 1px solid #dbdbdb;
+  background-color: #fff;
+  padding: 8px;
+  display: none;
+  z-index: 1500;
+  box-shadow: 0 0 5px 1px rgba(var(--jb7, 0, 0, 0), 0.0975);
+}
+
+.search-modal #triangle {
+  width: 15px;
+  height: 15px;
+  border-bottom: 15px solid #fff;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  position: absolute;
+  top: -15px;
+  left: 185px;
+  -webkit-filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.5));
+}
+
+.search-modal .result-box {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  overflow: hidden;
+}
+
+.search-modal .result-box:hover {
+  background-color: #fafafa;
+}
+
+.search-modal .result-box .account-img-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 12px;
+}
+
+.search-modal .result-box .account-img-wrap .account-img {
+  width: 100%;
+}
+
+.search-modal .result-box .account-info .account-id {
+  font-size: 14px;
+}
+
+.search-modal .result-box .account-info .account-desc {
+  font-size: 14px;
+  font-weight: 400;
+  color: #8e8e8e;
+}
