@@ -1,0 +1,561 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  background-color: #fafafa;
+  display: flex;
+  height: 170vh;
+  justify-content: center;
+  /* align-items: center; */
+  /* 여러 항목들이 있을때 아예 중앙정렬 해버리려고 저 속성까지 줘버리면
+  많은 항목들이 있는 웹사이트를 스크롤 해서 내려볼때 하나하나 다 중앙 정렬이 됐다고 하면
+  웹사이트 구성이 망가지기 때문에
+  로그인 페이지 같이 하나의 항목을 중앙 정렬하고 싶을 때 써야함
+  주의 해야함. */
+  /* margin-top: 150px; */
+  /* 마진값을 주면 배경색을 적용한 메인부분 위에 하얀색 공간이 남아 버림
+  그래서 메인 윗부분 패딩에 값을 더해서 늘렸음 */
+  padding-top: 100px;
+}
+
+.nav {
+  display: flex;
+  /* position: fixed;
+  top: 0; */
+  position: sticky;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 80px;
+  background-color: white;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.navLogo {
+  display: flex;
+  width: 574px;
+  justify-content: center;
+  align-items: center;
+}
+
+.navLogo .sectionLine {
+  margin: 0 10px;
+}
+
+.navSearch {
+  width: 470px;
+}
+input {
+  width: 220px;
+  height: 32px;
+  border: 1px solid #dfdfdf;
+  background-color: #fafafa;
+  border-radius: 3px;
+  text-align: center;
+  outline: none;
+}
+.navSearch input::placeholder {
+  background-image: url(https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-256.png);
+  background-size: contain;
+  background-position: 80px;
+  background-repeat: no-repeat;
+}
+/* 왜 input에 직접 속성을 줄 때는 적용이 안되는지 궁금 */
+
+.fa-instagram {
+  font-size: 25px;
+}
+
+.sectionLine {
+  font-size: 30px;
+  font-weight: lighter;
+}
+
+.logoFont {
+  font-family: "Lobster", cursive;
+  font-size: 30px;
+}
+
+.navIcon {
+  display: flex;
+  align-items: center;
+  width: 278px;
+}
+.iconHeart {
+  margin: 0 20px;
+}
+img {
+  width: 30px;
+  height: 30px;
+}
+
+input {
+  width: 220px;
+  height: 32px;
+  border: 1px solid #dfdfdf;
+  background-color: #fafafa;
+  border-radius: 3px;
+  text-align: center;
+  outline: none;
+}
+.searchBar input::placeholder {
+  background-image: url(https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-256.png);
+  background-size: contain;
+  background-position: 80px;
+  background-repeat: no-repeat;
+}
+/* -------------여기까지 헤더------------ */
+
+/* ------------오른쪽에 있는 피드 부분--------- */
+
+.feeds {
+  margin-right: 30px;
+}
+
+.feedTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #dfdfdf;
+  border-bottom: none;
+  width: 500px;
+  height: 70px;
+  background-color: white;
+}
+.feedTopLeft {
+  width: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 15px;
+}
+.feedTopRight {
+  margin-right: 15px;
+}
+
+.profileImg {
+  width: 45px;
+  height: 45px;
+  border-radius: 100px;
+}
+
+.feedImg img {
+  width: 500px;
+  height: 600px;
+  border: 1px solid #dfdfdf;
+  margin-bottom: -5px;
+}
+.feedIcon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-right: 1px solid #dfdfdf;
+  border-left: 1px solid #dfdfdf;
+  border-bottom: none;
+  width: 500px;
+  height: 50px;
+  background-color: white;
+}
+.feedIconLeft {
+  width: 120px;
+  display: flex;
+  justify-content: space-between;
+  margin-left: 15px;
+}
+.feedIconLeft img {
+  width: 30px;
+  height: 30px;
+}
+.fa-bookmark {
+  font-size: 25px;
+  margin-right: 10px;
+}
+
+.bold {
+  font-weight: bolder;
+}
+
+.feedLikePeople {
+  width: 500px;
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  padding-bottom: 15px;
+  border: 1px solid #dfdfdf;
+  border-top: 0;
+  border-bottom: 0;
+  background-color: white;
+}
+.feedLikePeople span {
+  font-size: 14px;
+}
+.likePeople {
+  border-radius: 30px;
+  margin-right: 10px;
+}
+
+.feedCommentSecond {
+  display: flex;
+  justify-content: space-between;
+}
+
+.fa-heart {
+  color: gray;
+}
+
+.feedCommentList {
+  width: 500px;
+  border: 1px solid #dfdfdf;
+  border-top: 0;
+  padding: 10px 10px 10px 20px;
+  background-color: white;
+}
+
+.feedCommentFirst span {
+  font-size: 14px;
+}
+.feedCommentSecond span {
+  font-size: 14px;
+}
+.feedCommentTime span {
+  font-size: 14px;
+}
+.light {
+  color: gray;
+}
+
+.feedCommentPost {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.commentPost {
+  width: 500px;
+  height: 40px;
+  border: 1px solid #dfdfdf;
+  outline: none;
+  background-color: white;
+  border-top: none;
+  font-size: 14px;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.feedCommentPost {
+  position: relative;
+}
+
+.postText {
+  border: none;
+  background-color: white;
+  position: absolute;
+  color: skyblue;
+  opacity: 0.5;
+  right: 15px;
+}
+
+.publishColor {
+  color: skyblue;
+  opacity: 0.5;
+}
+
+/* ------------------------여기까지 피드-------------------------- */
+
+/* ------------------------여기부터 계정+스토리 부분-------------------------- */
+
+.div Right {
+  margin-left: 30px;
+  font-size: 14px;
+}
+
+.accountImg {
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  margin-right: 5px;
+  margin-bottom: 20px;
+}
+
+.accountRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mainRightAccount {
+  display: flex;
+  margin-left: 12px;
+}
+
+.storyHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 10px;
+  width: 300px;
+  height: 30px;
+  border: 1px solid #dfdfdf;
+  border-bottom: none;
+  background-color: white;
+  font-size: 14px;
+}
+.mainRightStory img {
+  border-radius: 50%;
+  border: 2px solid transparent;
+  background-image: linear-gradient(white, white),
+    linear-gradient(to right, red, orange);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  margin-left: 15px;
+}
+
+.storyFirst {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.storyFirst img {
+  width: 55px;
+  height: 55px;
+}
+.storySecond {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.storySecond img {
+  width: 55px;
+  height: 55px;
+}
+
+.storyThird {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+.storyThird img {
+  width: 55px;
+  height: 55px;
+}
+
+.storyFourth {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+.storyFourth img {
+  width: 55px;
+  height: 55px;
+}
+.accountRight {
+  margin-left: 10px;
+}
+.mainRightStory {
+  width: 300px;
+  height: 230px;
+  border: 1px solid #dfdfdf;
+  background-color: white;
+  overflow: auto;
+}
+
+.mainRightStory::-webkit-scrollbar {
+  display: none;
+}
+
+/* ------------------------여기까지 계정+스토리 부분-------------------------- */
+
+/* ------------------------여기부터 추천계정 부분-------------------------- */
+
+.recommendHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 10px;
+  font-size: 14px;
+  width: 300px;
+  height: 30px;
+  border: 1px solid #dfdfdf;
+  border-bottom: none;
+  background-color: white;
+  font-size: 14px;
+}
+
+.mainRightRecommend {
+  width: 300px;
+  height: 200px;
+  border-top: none;
+  border: 1px solid #dfdfdf;
+  margin-top: 15px;
+  background-color: white;
+  overflow: auto;
+}
+
+.mainRightRecommend::-webkit-scrollbar {
+  display: none;
+}
+
+.recommendFirst {
+  margin-left: 15px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.recommendFirst img {
+  width: 45px;
+  height: 45px;
+  border-radius: 100px;
+  margin-right: 10px;
+}
+
+.recommendAccount1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 160px;
+  margin-right: 10px;
+}
+
+.recommendAccount1 .light {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.recommendSecond {
+  margin-left: 15px;
+  display: flex;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.recommendSecond img {
+  width: 45px;
+  height: 45px;
+  border-radius: 100px;
+  margin-right: 10px;
+}
+.recommendAccount2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 160px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-right: 10px;
+}
+
+.recommendAccount2 .light {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.recommendThird {
+  margin-left: 15px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.recommendAccount3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 160px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-right: 10px;
+}
+
+.recommendThird img {
+  width: 45px;
+  height: 45px;
+  border-radius: 100px;
+  margin-right: 10px;
+}
+
+.recommendAccount3 .light {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.recommendFourth {
+  margin-left: 15px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.recommendAccount4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 160px;
+  margin-right: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.recommendAccount4 .light {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.recommendFourth img {
+  width: 45px;
+  height: 45px;
+  border-radius: 100px;
+  margin-right: 10px;
+}
+
+/* ------------------------여기까지 추천계정 부분-------------------------- */
+
+/* ------------------------여기부터 저작권 부분-------------------------- */
+
+.mainRightEtc {
+  width: 300px;
+  overflow: auto;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #c5c5c5;
+}
+
+.mainRightLogo {
+  margin-top: 35px;
+  font-size: 14px;
+  color: #c5c5c5;
+}
+
+.followColor {
+  color: #0d96f7;
+  margin-top: 16px;
+  margin-right: 13px;
+}
+
+/* ------------------------여기까지 저작권 부분-------------------------- */
+
+.postTextAdd {
+  background-color: #0d96f7;
+  color: white;
+}
