@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login_ver01_20220104</title>
+    <link rel="stylesheet" href="./style/login.css">
+    <link rel="stylesheet" href="./style/common.css">
+    <script src="https://kit.fontawesome.com/b86790bed9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="wrap">
+        <main id="main">
+            <aside id="aside">
+                <div id="phone-wrap">
+                    <div id ="img-wrap">
+                        <img src="./img/phoneFade01.jpeg" class="phone-img phone-img-root" alt="img">
+                        <img src="./img/phoneFade02.jpeg" class="phone-img" alt="img">
+                        <img src="./img/phoneFade03.jpeg" class="phone-img" alt="img">
+                        <img src="./img/phoneFade04.jpeg" class="phone-img" alt="img">
+                        <img src="./img/phoneFade05.jpeg" class="phone-img" alt="img">
+                    </div>
+                </div>
+            </aside>
+            <section id="section">
+                <div id="login-wrap">
+                    <div id="login-box">
+                        <div id="logo" class="img-sprite"></div>
+                        <div id="input-wrap">
+                            <label class="user-loing-txt">
+                                <span class="action-txt id-action-txt">전화번호, 사용자 이름 또는 이메일</span>
+                                <input type="text" class="write-box id-write-box">
+                            </label>
+                            <label class="user-loing-txt">
+                                <span class="action-txt pw-action-txt">비밀번호</span>
+                                <input type="password" class="write-box pw-write-box">
+                            </label>
+                            <label class="user-loing-txt">
+                                <a href="./main.html" id="login-btn">로그인</a>
+                            </label>
+                        </div>
+                    </div>
+                    <div id="boundary-wrap">
+                        <div id="boundary-line"></div>
+                        <span id="or">또는</span>
+                        <div id="boundary-line"></div>
+                    </div>
+                    <div id="find">
+                        <div id="find-facebook">
+                            <span class="facebook-icon img-sprite"></span>
+                            <span class="login-txt">Facebook으로 로그인</span>
+                        </div>
+                        <p id="find-password">비밀번호를 잊으셨나요?</p>
+                    </div>
+                </div>
+                <div id="join-wrap">
+                    <span>계정이 없으신가요?</span>
+                    <a href="#">가입하기</a>
+                </div>
+                <div id="download-wrap">
+                    <p>앱을 다운로드하세요.</p>
+                    <div id="btn-wrap">
+                        <a href="#"><img src="./img/appStore.png" alt="app-store"></a>
+                        <a href="#"><img src="./img/googlePlay.png" alt="google-play"></a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer id="footer">
+            <ul>
+                <li><a href="#">Meta</a></li>
+                <li><a href="#">소개</a></li>
+                <li><a href="#">블로그</a></li>
+                <li><a href="#">채용 정보</a></li>
+                <li><a href="#">도움말</a></li>
+                <li><a href="#">API</a></li>
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">약관</a></li>
+                <li><a href="#">인기 계정</a></li>
+                <li><a href="#">해시태그</a></li>
+                <li><a href="#">위치</a></li>
+                <li><a href="#">Instagram Life</a></li>
+                <li><a href="#">뷰티</a></li>
+                <li><a href="#">댄스</a></li>
+                <li><a href="#">피트니스</a></li>
+                <li><a href="#">식음료</a></li>
+                <li><a href="#">집 및 정원</a></li>
+                <li><a href="#">음악</a></li>
+                <li><a href="#">시각 예술</a></li>
+            </ul>
+            <div id="copyright">
+                <select name="languege" id="languege">
+                    <option value="korean">한국어</option>
+                    <option value="english">English</option>
+                    <option value="japanese">日本語</option>
+                    <option value="chinese">中国人</option>
+                </select>
+                <span>© 2022 Instagram from Meta</span>
+            </div>
+        </footer>
+    </div>
+    <script src="./js/login.js"></script>
+</body>
+</html>

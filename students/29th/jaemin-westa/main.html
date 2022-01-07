@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main_ver01_20220104</title>
+    <link rel="stylesheet" href="./style/main.css">
+    <link rel="stylesheet" href="./style/common.css">
+    <script src="https://kit.fontawesome.com/b86790bed9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="header-inner-wrap">
+                <div class="logo-wrap">
+                    <img src="./img/header_logo.png" alt="logo" class="logo-calligraph">
+                </div>
+                <div class="search-wrap">
+                    <div class="input-inner">
+                        <i class="fas fa-search icon-glass" style="color: #888; font-size: 14px;"></i>
+                        <span class="search-text">검색</span>
+                    </div>
+                    <input type="text" name="search" id="header-search">
+                </div>
+                <nav id="nav">
+                    <div class="icon icon-home"><i class="fas fa-home nav-icon"></i></div>
+                    <div class="icon icon-paper-plane"><i class="far fa-paper-plane nav-icon"></i></div>
+                    <div class="icon icon-plus-square"><i class="far fa-plus-square nav-icon"></i></div>
+                    <div class="icon icon-compass"><i class="far fa-compass nav-icon"></i></div>
+                    <div class="icon icon-heart"><i class="far fa-heart nav-icon"></i></div>
+                    <div class="icon icon-human">
+                        <div class="pop-wrap">
+                            <div class="arrow-box"></div>
+                            <ul class="profile-pop">
+                                <li class="profile-pop-menu">
+                                    <div class="pop-icon"><i class="far fa-user"></i></div>
+                                    <span>프로필</span>
+                                </li>
+                                <li class="profile-pop-menu">
+                                    <div class="pop-icon"><i class="far fa-bookmark"></i></div>
+                                    <span>저장됨</span>
+                                </li>
+                                <li class="profile-pop-menu">
+                                    <div class="pop-icon"><i class="fas fa-cog"></i></div>
+                                    <span>설정</span>
+                                </li>
+                                <li class="profile-pop-menu">
+                                    <div class="pop-icon"><i class="fas fa-sync-alt"></i></div>
+                                    <span>계정 전환</span>
+                                </li>
+                                <li class="profile-pop-menu"><span>로그아웃</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <main id="main">
+            <div class="feeds">
+                <div id="story-wrap">
+                    <ul class="story-user-list">
+                        <li class="story-user">
+                            <div class="story-tum story-tum01"></div>
+                            <span class="user-id">chick</span>
+                        </li>
+                        <li class="story-user">
+                            <div class="story-tum story-tum02"></div>
+                            <span class="user-id">deer</span>
+                        </li>
+                        <li class="story-user">
+                            <div class="story-tum story-tum03"></div>
+                            <span class="user-id">dolphin</span>
+                        </li>
+                        <li class="story-user">
+                            <div class="story-tum story-tum04"></div>
+                            <span class="user-id">chicken</span>
+                        </li>
+                        <li class="story-user">
+                            <div class="story-tum story-tum05"></div>
+                            <span class="user-id">eagle</span>
+                        </li>
+                    </ul>
+                </div>
+                <article id="article">
+                    <div class="article-header">
+                        <div class="article-thumbnail"></div>
+                        <div class="article-user-wrap">
+                            <p class="article-user">raccoons</p>
+                            <p class="address">북극</p>
+                        </div>
+                        <i class="fas fa-ellipsis-h"></i>
+                    </div>
+                    <div class="article-img">
+                        <div class="img"></div>
+                    </div>
+                    <div class="article-icon-wrap">
+                        <a href="#" class="icon icon-heart"><i class="far fa-heart"></i></a>
+                        <a href="#" class="icon icon-comment"><i class="far fa-comment"></i></i></a>
+                        <a href="#" class="icon icon-paper-plane"><i class="far fa-paper-plane"></i></a>
+                        <a href="#" class="icon icon-bookmark"><i class="far fa-bookmark"></i></a>
+                    </div>
+                    <div class="article-like">
+                        <div class="like-thumbnail"></div>
+                        <p><span class="like-user">tiger</span>님 <span class="like-total">외 29명</span>이 좋아합니다</p>
+                    </div>
+                    <div class="article-description">
+                        <div class="desc-header">
+                            <p class="desc-txt">
+                                <a href="#" class="desc-user">raccoons</a>북극에 오로라를 보러 왔다. 하늘이 정말 아름답구나. 다시 태어나면 북극곰으로 태어나고 싶다.
+                            </p>
+                            <button type="button" class="desc-more-btn">더 보기</button>
+                        </div>
+                        <ul class="hashtag">
+                            <li>#오로라</li>
+                            <li>#하늘</li>
+                            <li>#북극</li>
+                            <li>#북극곰</li>
+                        </ul>
+                    </div>
+                    <div class="article-comment-record">
+                        <p class="comment-btn">댓글&nbsp;<span class="comment-counting">2</span>개 모두 보기</p>
+                        <ul class="comment-list">
+                            <li class="comment-list-add">
+                                <a href="#" class="comment-user">tiger</a>
+                                <span class="user-comment">부럽다 ㅎㅎ</span>
+                                <a href="#" class="icon-mini-heart"><i class="far fa-heart"></i></a>
+                            </li>
+                            <li class="comment-list-add">
+                                <a href="#" class="comment-user">white-bear</a>
+                                <span class="user-comment">다음에 또 놀러와</span>
+                                <a href="#" class="icon-mini-heart"><i class="far fa-heart"></i></a>
+                            </li>
+                        </ul>
+                        <p class="comment_time">1일 전</p>
+                    </div>
+                    <div class="article-comment-posting">
+                        <button type="button" class="smile-button">
+                            <i class="far fa-smile"></i>
+                        </button>
+                        <input type="text" placeholder="댓글 달기..." class="posting-area"></ㅑ>
+                        <button type="button" class="posting-button">게시</button>
+                    </div>
+                </article>
+            </div>
+            <div class="main-right">
+                <div class="main-fixed-space">
+                    <div class="login-user">
+                        <div class="login-user-tum-wrap">
+                            <div class="login-user-tum-img"></div>
+                        </div>
+                        <div class="nickname-wrap">
+                            <p>raccoons</p>
+                            <p>너구리</p>
+                        </div>
+                        <button type="button" class="change-btn">전환</button>
+                    </div>
+                    <div class="suggestion-wrap">
+                        <div class="suggestion-header">
+                            <span>회원님을 위한 추천</span>
+                            <a href="#">모두 보기</a>
+                        </div>
+                        <div class="suggestion-list-wrap">
+                            <div class="suggestion-list">
+                                <div class="suggestion-tum-wrap">
+                                    <div class="suggestion-tum-img"></div>
+                                </div>
+                                <div class="suggestion-user-wrap">
+                                    <p>elephant</p>
+                                    <p>회원님을 위한 추천</p>
+                                </div>
+                                <button type="button" class="follow-button">팔로우</button>
+                            </div>
+                            <div class="suggestion-list">
+                                <div class="suggestion-tum-wrap">
+                                    <div class="suggestion-tum-img"></div>
+                                </div>
+                                <div class="suggestion-user-wrap">
+                                    <p>lion</p>
+                                    <p>회원님을 위한 추천</p>
+                                </div>
+                                <button type="button" class="follow-button">팔로우</button>
+                            </div>
+                            <div class="suggestion-list">
+                                <div class="suggestion-tum-wrap">
+                                    <div class="suggestion-tum-img"></div>
+                                </div>
+                                <div class="suggestion-user-wrap">
+                                    <p>rabit</p>
+                                    <p>회원님을 위한 추천</p>
+                                </div>
+                                <button type="button" class="follow-button">팔로우</button>
+                            </div>
+                            <div class="suggestion-list">
+                                <div class="suggestion-tum-wrap">
+                                    <div class="suggestion-tum-img"></div>
+                                </div>
+                                <div class="suggestion-user-wrap">
+                                    <p>tiger</p>
+                                    <p>회원님을 위한 추천</p>
+                                </div>
+                                <button type="button" class="follow-button">팔로우</button>
+                            </div>
+                            <div class="suggestion-list">
+                                <div class="suggestion-tum-wrap">
+                                    <div class="suggestion-tum-img"></div>
+                                </div>
+                                <div class="suggestion-user-wrap">
+                                    <p>weasel</p>
+                                    <p>회원님을 위한 추천</p>
+                                </div>
+                                <button type="button" class="follow-button">팔로우</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-foo">
+                        <ul>
+                            <li><a href="#">소개</a></li>
+                            <li><a href="#">도움말</a></li>
+                            <li><a href="#">홍보 센터</a></li>
+                            <li><a href="#">API</a></li>
+                            <li><a href="#">채용 정보</a></li>
+                            <li><a href="#">개인정보처리방침</a></li>
+                            <li><a href="#">약관</a></li>
+                            <li><a href="#">위치</a></li>
+                            <li><a href="#">인기 계정</a></li>
+                            <li><a href="#">해시태그</a></li>
+                            <li><a href="#">언어</a></li>
+                        </ul>
+                        <span class="copy">© 2022 INSTAGRAM FROM META</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="./js/main.js"></script>
+</body>
+</html>
