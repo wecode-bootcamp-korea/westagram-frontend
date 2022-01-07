@@ -1,4 +1,3 @@
-// textarea 콘텐츠에 따라 높이 조정
 const commentTextArea = document.querySelectorAll(".comment-area");
 
 const autoHeightTextarea = (element) => {
@@ -12,7 +11,6 @@ Array.from(commentTextArea).forEach((item) => {
   });
 });
 
-// 댓글 추가 + 게시 버튼 active
 const commentAddBtn = document.getElementsByClassName("btn-add-comment");
 
 const addComment = (index) => {
@@ -65,14 +63,12 @@ const addComment = (index) => {
   commentAddBtn[index].disabled = true;
 };
 
-// add thru button click
 Array.from(commentAddBtn).forEach((item, index) => {
   item.addEventListener("click", () => {
     addComment(index);
   });
 });
 
-// add thru enter
 Array.from(commentTextArea).forEach((item, index) => {
   item.addEventListener("keypress", (e) => {
     if (e.key === "Enter" && commentTextArea[index].value) {
@@ -96,7 +92,6 @@ Array.from(commentTextArea).forEach((item, index) => {
   });
 });
 
-// 말풍선 누르면 textarea focus 되도록
 const commentBtn = document.getElementsByClassName("btn-comment");
 
 Array.from(commentBtn).forEach((item, index) => {
@@ -105,7 +100,6 @@ Array.from(commentBtn).forEach((item, index) => {
   });
 });
 
-// like unlike
 const btnLike = Array.from(document.querySelectorAll(".btn-like"));
 
 function likeUnlike(e) {
@@ -122,17 +116,7 @@ btnLike.forEach((item) => {
   });
 });
 
-// 댓글 삭제
 const btnDelete = Array.from(document.querySelectorAll(".btn-delete"));
-
-// 질문!!! 이렇게 하면 왜 안되나요.. 콜백함수? this? 머리 터짐
-// const deleteComment = () => {
-//   this.parentNode.parentNode.remove();
-// };
-
-// btnDelete.forEach((item) => {
-//   item.addEventListener("click", deleteComment);
-// });
 
 const deleteComment = (e) => {
   e.parentNode.parentNode.remove();
@@ -142,9 +126,6 @@ const deleteComment = (e) => {
 btnDelete.forEach((item) => {
   item.addEventListener("click", () => deleteComment(item));
 });
-// 왜인지는 모르겠지만... 파라미터 있는 함수를 인자로 쓰려면 arrow function 이용하면 편하댄다....
-
-// sidebar position + width 맞춰주기!!! (fixed를 위해!)
 
 const setSideBarPosition = () => {
   const main = document.getElementById("main");
