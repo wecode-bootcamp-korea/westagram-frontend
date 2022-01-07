@@ -1,0 +1,225 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* min-height는 height 속성의 사용값이 자신의 값보다 작아지는걸 방지 */
+    background-color: #FAFAFA;
+    padding: 0 0 32px 0;
+    margin: 32px 0 0 0;
+}
+
+.wrapper {
+    border: 1px solid #DBDBDB;
+    width: 350px;
+    height: 382px;
+    padding: 10px 0;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-color: white;
+    margin-bottom: 10px;
+}
+
+.header-title {
+    font-family: 'Lobster', cursive;
+    font-size: 36px;
+    text-align: center;
+    width: 175px;
+    height: 51px;
+    margin: 22px 86.5px 12px 86.5px;
+    color : #262626;
+}
+
+.main {
+    width: 348px;
+    height: 265px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom:10px;
+}
+
+form.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 265px;
+}
+
+.login-section {
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 여기는 Id,Pw 입력창 부분*/
+
+.section1-box {
+    display: flex;
+    width: 268px;
+    height: 38px;
+    margin: 0 40px 6px 40px;
+    border: 1px solid #DBDBDB; 
+    border-radius: 3px;
+    justify-content: center;
+    align-items: center;
+}
+
+.section1-box-1 {
+    display: flex;
+    width: 268px;
+    height: 38px;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+}
+
+.label-1 {
+    display: flex;
+    width: 258px;
+    height: 36px;
+}
+
+
+.input-id, .input-pw {
+    width: 258px;
+    height: 36px;
+    padding: 9px 0px 10px 8px;
+    background-color: #fafafa;
+    border: 0;
+}
+
+.input-id::placeholder, .input-pw::placeholder {
+    font-size: 12px;
+    color : #979797;
+}
+
+.input-id:focus, .input-pw:focus {
+    outline: 1;
+    outline-color: #dbdbdb; 
+}
+
+.section1-box-2 {
+    display: flex;
+    padding-right: 8px;
+    background-color: #fafafa;
+    height: 36px;
+}
+
+/* 여기는 Login 버튼 부분*/
+
+.section2-box {
+    width: 268px;
+    height: 30px;
+    margin: 8px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#btn-login {
+    width: 268px;
+    height: 30px;
+    padding: 5px 9px;
+    border: 0px;
+    border-radius: 4px;
+    color: white;
+    background-color : rgb(187,224,253);
+}
+
+.btn-login-title {
+    width: 248px;
+    height: 18px;
+}
+
+/* 여기는 4번째 부분 */
+
+.section3-box {
+    width: 268px;
+    height: 15px;
+    margin: 10px 40px 18px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-1 {
+    width: 18.828px;
+    height: 15px;
+    display: flex;
+    background-color: white;
+    margin: 0 18px;
+    font-size: 13px;
+    color: #8E8E8E;
+    align-items: center;
+    flex-basis: 100%;
+    justify-content: space-between;
+}
+
+.text-1::before {
+    content: "";
+    flex-grow: 1;
+    line-height: 0px;
+    margin: 0 18px 0 -18px;
+    background: #DBDBDB;
+    height: 1px;
+    font-size: 0px;
+}
+
+.text-1::after {
+    content: "";
+    flex-grow: 1;
+    line-height: 0px;
+    margin: 0 -18px 0 18px;
+    background: #DBDBDB;
+    height: 1px;
+    font-size: 0px;
+}
+
+/* 여기는 5번째 부분 */
+
+.section4-box {
+    width: 268px;
+    height: 20px;
+    margin: 8px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-facebook {
+    border: 0px;
+    background-color: white;
+    width: 268px;
+    height: 20px;
+    padding: 0px;
+}
+
+.btn-facebook:hover {
+    cursor: pointer;
+}
+
+.fa-facebook-square {
+    font-size: 16px;
+    margin-right: 8px;
+    color: #385185;
+}
+
+.btn2-description {
+    font-size: 14px;
+    font-weight: 500;
+    color: #385185;
+}
+
+/* 마지막 부분 */
+
+a.login-section2 {
+    width: 348px;
+    height: 16px;
+    margin-top: 12px;  
+    font-size: 12px;
+    font-weight: 400;
+    text-decoration: none;
+    text-align: center;
+    color: #00376B;
+}
