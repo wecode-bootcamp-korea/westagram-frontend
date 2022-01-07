@@ -42,13 +42,32 @@
               alt="likes and comments"
             />
           </a>
-          <a href="#" class="profile">
+          <a href="#" class="profile" id="profileBtn">
             <img
               src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png"
               alt="my profile"
             />
           </a>
         </nav>
+
+        <aside class="profile-modal" id="profileModal">
+          <div id="triangle-profile"></div>
+          <ul>
+            <li class="profile-modal-item">
+              <img alt="my profile" src="./assets/profile.svg" />
+              <div>프로필</div>
+            </li>
+            <li class="profile-modal-item">
+              <img alt="my bookmarks" src="./assets/bookmark.svg" />
+              <div>저장됨</div>
+            </li>
+            <li class="profile-modal-item">
+              <img alt="settings" src="./assets/settings.svg" />
+              <div>설정</div>
+            </li>
+            <li class="profile-modal-item logout">로그아웃</li>
+          </ul>
+        </aside>
       </div>
     </header>
 

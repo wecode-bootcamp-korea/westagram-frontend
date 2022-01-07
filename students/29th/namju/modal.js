@@ -82,16 +82,6 @@ searchInput.addEventListener("keyup", function () {
   filterIds(this);
 });
 
-const closeModalClickOutside = (e) => {
-  e.target.closest(".search-modal") === null
-    ? (searchModal.style.display = "none")
-    : false;
-};
-
-window.addEventListener("click", (e) => {
-  closeModalClickOutside(e);
-});
-
 const hideShowPlaceholder = () => {
   if (searchInput.value) {
     placeholder.style.display = "none";
@@ -101,3 +91,33 @@ const hideShowPlaceholder = () => {
 };
 
 searchInput.addEventListener("keyup", hideShowPlaceholder);
+
+const closeModalClickOutside = (e, fieldClassName, elementNone) => {
+  e.target.closest(fieldClassName) === null
+    ? (elementNone.style.display = "none")
+    : false;
+};
+
+window.addEventListener("click", (e) => {
+  closeModalClickOutside(e, ".search-modal", searchModal);
+});
+
+const profileModal = document.querySelector("#profileModal");
+const profileBtn = document.querySelector("#profileBtn");
+
+const openCloseModal = () => {
+  if (profileModal.style.display === "none") {
+    profileModal.style.display = "block";
+  } else {
+    profileModal.style.display = "none";
+  }
+};
+
+profileBtn.addEventListener("click", openCloseModal);
+
+window.addEventListener("click", (e) => {
+  e.target.closest(".profile-modal") === null &&
+  e.target.closest(".profile") === null
+    ? (profileModal.style.display = "none")
+    : false;
+});
