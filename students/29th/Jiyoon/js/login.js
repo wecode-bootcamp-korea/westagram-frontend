@@ -14,7 +14,29 @@ const login = function () {
 
 idValue.addEventListener("keyup", login);
 passwordValue.addEventListener("keyup", login);
+loginButton.addEventListener('click',login);
 
-// loginButton.addEventListener('click', () => {
-//   console.log(id)
-// })
+const changeScreen = function () {
+  return ((idValue.value.includes("@")||idValue.value.includes("-"))&&passwordValue.value.length>0)? location.href ="./main.html" : -1
+}
+
+// function trigger o console.log("llll")
+// condition 너였구나, if/not 너가 안 걸리고 있었구나! .. 
+// console.log("condition",idValue.value.includes("@"));
+// location.href change 
+
+loginButton.addEventListener("click",changeScreen)
+
+
+loginAlert = document.getElementById("loginAlert")
+
+const informPassword = function () {
+  return alert("@를 포함한 이메일 주소와 한 글자 이상의 비밀번호를 입력해주세요.")
+};
+
+loginAlert.addEventListener("click", informPassword)
+
+
+
+
+

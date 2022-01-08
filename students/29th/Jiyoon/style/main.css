@@ -187,8 +187,8 @@ article {
     justify-content: space-between;
 }
 .icon-react {
-    width: 24px;
-    height: 24px;
+    width: 25px;
+    height: 25px;
 }
 .icons-left {
     display: flex;
@@ -250,10 +250,12 @@ ul.comments li {
     color: #262626;
     font-size: 14px;
     margin-top: 0;
+    margin-bottom: 7px;
 }
 
 ul.comments span {
   height: 15px;
+  margin-bottom: 7px;
 }
 img.comment-heart {
     width: 12px;
@@ -275,23 +277,22 @@ div.time-log span {
     align-items:baseline;
 }
 
-.input-comment {
+.comment-input {
     font-size: 14px;
     width: 560px;
     height: 18px;
     padding: 28px 16px;
     border-style: none;
-    box-sizing: border-box;
     color: #262626;
 }
-.input-comment:focus {
+.comment-input:focus {
 	outline: none;
 }
-.input-comment::placeholder {
+.comment-input::placeholder {
     color: #8e8e8e;
 }
-button.submit-comment {
-    color: #0095f6;
+button.comment-submit {
+    color: #0094f6ea;
     background-color: #fff;
     border-style: none;
     height: 40px;
@@ -300,14 +301,9 @@ button.submit-comment {
     font-size: 14px;
     font-weight: 600;
 }
-.submit-comment:disabled {
+.comment-submit:disabled {
     color: #B9DFFC;
 }
-button.submit-comment:focus {
-    outline: none;
-}
-
-
 
 /* main-right */
 .myProfile {
@@ -332,9 +328,6 @@ button.submit-comment:focus {
 .myProfile div span.userID {
     margin-bottom: 4px;
 }
-
-
-
 
 /* story & recommendation */
 .menu-title {
@@ -363,7 +356,6 @@ button.submit-comment:focus {
 }
 
 ul.story-list img.story {
-    box-sizing: content-box;
     border: 1px solid #fff;
 }
 div.gradient-wrap {
@@ -373,7 +365,7 @@ div.gradient-wrap {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    background: radial-gradient(circle at bottom left, #F58529 20%, #C42D91);
+    background: radial-gradient(circle at bottom left, #f58020 20%, #be278c);
 }
 ul.story-list .profile-text {
     margin-top: 3px;
