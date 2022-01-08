@@ -586,17 +586,29 @@ ul {
   border-radius: 50%;
   overflow: hidden;
   margin-right: 12px;
+  flex-shrink: 0;
 }
 
 .search-modal .result-box .account-img-wrap .account-img {
   width: 100%;
 }
 
+.search-modal .result-box .account-info {
+  width: calc(100% - 56px);
+  flex-shrink: 1;
+}
+
 .search-modal .result-box .account-info .account-id {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   font-size: 14px;
 }
 
 .search-modal .result-box .account-info .account-desc {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   font-size: 14px;
   font-weight: 400;
   color: #8e8e8e;
@@ -665,7 +677,7 @@ ul {
 
 @media screen and (max-width: 530px) {
   #searchInput,
-  .placeholder,
+  #placeholder,
   .logo .logo-border,
   .logo .westagram-logo {
     display: none;
