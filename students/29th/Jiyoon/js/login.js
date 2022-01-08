@@ -17,7 +17,7 @@ passwordValue.addEventListener("keyup", login);
 loginButton.addEventListener('click',login);
 
 const changeScreen = function () {
-  return ((idValue.value.includes("@")||idValue.value.includes("-"))&&passwordValue.value.length>0)? location.href ="./main.html" : -1
+  return ((idValue.value.includes("@")||idValue.value.includes("-"))&&passwordValue.value.length>0)? location.href ="./main.html" : alert("이메일 주소가 올바르지 않습니다.")
 }
 
 // function trigger o console.log("llll")
