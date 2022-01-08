@@ -31,6 +31,7 @@ function addComment() {
     const id = sessionStorage.getItem('id');
     let commentArr = [];
     let idArr = [];
+    let commentIndex = 0;
 
     submit.disabled = true;
     comment.addEventListener('input', function disableSubmitBtn() {
@@ -49,12 +50,13 @@ function addComment() {
 
     form.addEventListener('submit', function (event) {
         event.preventDefault();
-        createCommentElement(id, comment.value);
 
         idArr.push(id);
         commentArr.push(comment.value);
         localStorage.setItem('storedId', JSON.stringify(idArr));
         localStorage.setItem('comment', JSON.stringify(commentArr));
+
+        createCommentElement(id, comment.value);
 
         comment.value = '';
         submit.disabled = true;
@@ -89,6 +91,8 @@ function addComment() {
             likeCommentIcon.classList.add('far', 'fa-heart');
             likeCommentDiv.classList.add('like-comment');
             deleteCommentBtn.classList.add('delete-comment');
+            console.log(commentIndex);
+            deleteCommentBtn.dataset.commentIndex = commentIndex++;
 
             deleteCommentBtn.innerHTML = "삭제";
             deleteCommentBtn.addEventListener('click', function (event) {
@@ -99,12 +103,15 @@ function addComment() {
                 likeCommentDiv.remove();
                 deleteCommentBtn.remove();
 
-                const deleteCommentBtnArr = document.querySelectorAll('.delete-comment');
-                let commentIndex = deleteCommentBtnArr.indexOf(event.target);
+                commentIndex = event.target.dataset.commentIndex;
+                console.log(commentIndex);
+
                 idArr = JSON.parse(localStorage.getItem('storedId'));
                 commentArr = JSON.parse(localStorage.getItem('comment'));
                 idArr.splice(commentIndex, 1);
                 commentArr.splice(commentIndex, 1);
+
+                console.log(idArr, commentArr);
                 localStorage.setItem('storedId', JSON.stringify(idArr));
                 localStorage.setItem('comment', JSON.stringify(commentArr));
             });
