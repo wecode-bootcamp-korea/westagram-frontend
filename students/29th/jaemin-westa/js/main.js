@@ -108,20 +108,109 @@ const LikeEvent = document.addEventListener('click', function(e){
     document.getElementsByClassName('like-counting')[0].innerText = num
 })
 
-{/* <i class="fas fa-heart"></i> */}
+
 
 // [Mission] 추가 구현 사항 - Mission 7 | 아이디 검색 기능
-/*
-    실제 인스타 nav 검색창에 아이디를 입력 시 검색 기능이 실행됩니다.
-    아이디 데이터를 담고 있는 배열을 선언해주세요.
-    검색 창에 텍스트 입력 시 배열의 요소 중 해당 텍스트에 일치하는 아이디만 보일 수 있도록 구현해주세요.
-    for 문이 아닌 다른 array method를 사용해 구현해주세요.
-*/
+const searchBarInput = document.getElementById('header-search');
+const searchList = document.getElementsByClassName('search-list')[0];
+const searchListWrap = document.getElementsByClassName('search-list-wrap')[0];
 
-// 실행o : a.style.opacity = ''
-// 1번 : const a = document.getElementsByClassName('클래스명')[0];
-// if(a.style.opacity === "1") 함수호출();
+let userList = [
+    {userId : "eagle", userName : "독수리", userImage : "url(./img/user_eagle.jpeg)"},
+    {userId : "deer", userName : "사슴", userImage : "url(./img/user_deer.jpeg)"},
+    {userId : "lion", userName : "사자", userImage : "url(./img/user_lion.jpeg)"},
+    {userId : "elephant", userName : "코끼리", userImage : "url(./img/user_elephant.jpeg)"}
+];
 
-// 실행x : b.style.display = ''
-// 2번 : const b = document.getElementsByClassName('클래스명')[0];
-// if(b.style.display === "none") 함수호출();
+const searchListDisplay = function(){
+    const filtered_data = userList.filter((i) => i.userId.includes(searchBarInput.value));
+    // 검색 결과가 있는 경우
+    if(filtered_data.length > 0){
+        searchList.style.justifyContent = "unset";
+        const appendList = filtered_data.map(i => {
+            return `
+            <div class="search-user">
+                <div class="search-user-tum-wrap">
+                    <div class="search-user-tum-img" style="background: ${i.userImage} no-repeat center center; background-size: cover;"></div>
+                </div>
+                <div class="search-nickname-wrap">
+                    <p>${i.userId}</p>
+                    <p>${i.userName}</p>
+                </div>
+            </div>
+        `
+        }).join('');
+        searchList.innerHTML = appendList;
+    }
+    // 검색 결과가 없는 경우
+    if (filtered_data.length === 0) {
+        searchList.style.justifyContent = "space-between";
+        searchList.innerHTML =  `
+        <div class="recentSearches-wrap">
+            <div class="recentSearches"></div>
+        </div>
+        <div class="recentSearchesNone-wrap">
+            <div class="recentSearchesNone">검색 결과가 없습니다.</div>
+        </div>
+        <div class="recentSearches-bottom-space"></div>
+        `
+    }
+}
+
+// 검색바 클릭 시 돋보기 텍스트 숨기기, 검색 팝업창 노출
+const iconAndTxtDisplay = function(){
+    const searchBar = document.getElementById('header-search');
+    const iconGlass = document.getElementsByClassName('icon-glass')[0];
+    const SearchTxt = document.getElementsByClassName('search-text')[0];
+    const SearchListWrap = document.getElementsByClassName('search-list-wrap')[0];
+
+    let clickElement = event.target; // 클릭 했을 때 클릭 되는 요소
+
+    do{
+        if(clickElement == searchBar || clickElement == SearchListWrap){
+            iconGlass.style.display = "none";
+            SearchTxt.style.display = "none";
+            SearchListWrap.style.display = "block";
+            searchBar.setAttribute('placeholder', '검색');
+            searchList.style.justifyContent = "space-between";
+            searchList.innerHTML =  `
+            <div class="recentSearches-wrap">
+                <div class="recentSearches">최근 검색 항목</div>
+            </div>
+            <div class="recentSearchesNone-wrap">
+                <div class="recentSearchesNone">최근 검색 내역 없음.</div>
+            </div>
+            <div class="recentSearches-bottom-space"></div>
+            `
+            return;
+        }
+        clickElement = clickElement.parentNode;
+    }while (clickElement);
+
+    searchBarInput.value = '';
+    iconGlass.style.display = "inline-block";
+    SearchTxt.style.display = "inline-block";
+    SearchListWrap.style.display = "none";
+    searchBar.removeAttribute('placeholder');
+}
+
+document.addEventListener("click", function(event){
+    iconAndTxtDisplay();
+});
+
+document.addEventListener("keyup", function(event){
+    searchListDisplay();
+    // 검색 단어가 없는 경우
+    if(searchBarInput.value.length == 0){
+        searchList.innerHTML =  `
+            <div class="recentSearches-wrap">
+                <div class="recentSearches"></div>
+            </div>
+            <div class="recentSearchesNone-wrap">
+                <div class="recentSearchesNone">검색 결과가 없습니다.</div>
+            </div>
+            <div class="recentSearches-bottom-space"></div>
+        `
+        searchList.style.justifyContent = "space-between";
+    }
+})

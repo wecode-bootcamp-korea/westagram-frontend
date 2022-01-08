@@ -21,7 +21,38 @@
                         <i class="fas fa-search icon-glass" style="color: #888; font-size: 14px;"></i>
                         <span class="search-text">검색</span>
                     </div>
-                    <input type="text" name="search" id="header-search">
+                    <div class="search-list-wrap">
+                        <div class="search-arrow-box"></div>
+                        <div class="search-list"> <!-- 검색 시 justify-content: unset; 로 변경 -->
+                            <!-- <div class="recentSearches-wrap">
+                                <div class="recentSearches">최근 검색 항목</div>
+                            </div>
+                            <div class="recentSearchesNone-wrap">
+                                <div class="recentSearchesNone">최근 검색 내역 없음.</div>
+                            </div>
+                            <div class="recentSearches-bottom-space"></div> -->
+                            <!-- search -->
+                            <!-- <div class="search-user">
+                                <div class="search-user-tum-wrap">
+                                    <div class="search-user-tum-img"></div>
+                                </div>
+                                <div class="search-nickname-wrap">
+                                    <p>raccoons</p>
+                                    <p>너구리</p>
+                                </div>
+                            </div>
+                            <div class="search-user">
+                                <div class="search-user-tum-wrap">
+                                    <div class="search-user-tum-img"></div>
+                                </div>
+                                <div class="search-nickname-wrap">
+                                    <p>raccoons</p>
+                                    <p>너구리</p>
+                                </div>
+                            </div> -->
+                        </div>
+                    </div>
+                    <input type="text" name="search" id="header-search" />
                 </div>
                 <nav id="nav">
                     <div class="icon icon-home"><i class="fas fa-home nav-icon"></i></div>
@@ -49,7 +80,7 @@
                                     <div class="pop-icon"><i class="fas fa-sync-alt"></i></div>
                                     <span>계정 전환</span>
                                 </li>
-                                <li class="profile-pop-menu"><span>로그아웃</span></li>
+                                <li class="profile-pop-menu logout_btn" onClick="location.href='./login.html'"><span>로그아웃</span></li>
                             </ul>
                         </div>
                     </div>
