@@ -1,6 +1,5 @@
 *{
-    box-sizing: border-box;
-    
+    box-sizing: border-box; 
 }
 
 .navWrap{
@@ -10,6 +9,7 @@
     right: 0px;
     left:0px;
 }
+
 .nav {
     position: absolute;
     background-color: white;
@@ -20,22 +20,25 @@
     align-items: center;
     width: 100%;
 }
+
 .navLogo{
     display: flex;
     align-items: center;
 }
+
 .logoIcon{
     width: 30px;
     height: 20px;
     padding-right: 10px;
     border-right: 3px solid rgb(49, 49, 49);
 }
+
 .logo{
     font-family: 'Lobster', cursive;
     font-size: 20px;
    padding-left: 10px;
-    
 }
+
 .searchInput{
     background-image: url(https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-256.png);
     background-repeat: no-repeat;
@@ -63,40 +66,48 @@
     justify-content: center;
     background-color: lightslategray;
 }
+
 .main{
     padding-top: 50px;
     background-color: #fafafa;
     display: flex;
 }
+
 .feeds{
     display: flex;
     flex-direction: column;
 }
+
 .feed{
     border: 1px solid #dbdbdb;
     display: flex;
     flex-direction: column;
 }
+
 .feedTop{
     display: flex;
     justify-content: space-between;
     padding: 3px 20px;
     align-items: center;
 }
+
 .feedUser{
     display: flex;
     align-items: center;
 }
+
 .feedUserImg{
     width: 25px;
     height: 25px;
     border-radius: 50%;
     margin-right: 12px;
 }
+
 .feedMore{
     margin: 5px;
     font-weight: 900;
 }
+
 .feedImg{
     width: 600px;
 }
@@ -104,44 +115,62 @@
 .lovesIcons{
     display: flex;
 }
+
 .heart{
     width: 25px;
 }
+
 .comments{
     margin-top: 20px;
 }
+
 .newComment {
     margin: 5px auto;
 }
+.writeComment{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
 input{
     width: 100%;
-    
+    height: 30px;
+    border: 1px solid #dbdbdb;
+    border-right: 0px;
+    border-left: 0px;
 }
-/* .postComment{
+
+.commentBtn{
     position: absolute;
-    bottom: 0px;
-    right: 0px;
+    right: 1px;
+ 
     border: 0px;
     background-color: #fff;
-} */
+}
+
 .mainRight{
     margin-left: 30px;
 }
+
 .user {
     margin: 10px auto;
     width: 200px;
     display: flex;
     align-items: center;
 }
+
 .userImg{
     width: 40px;
     height: 40px;
     border-radius: 50%;
     margin-right: 12px;
 }
+
 .userInfo p:nth-child(1) { 
     margin: 0;
 }
+
 .userInfo p:nth-child(2){
     font-size: 12px;
     color: #c8c8c8;
@@ -151,7 +180,6 @@ input{
 
 .storiesWrap{
     width: 220px;
-   
     border: 1px solid #dbdbdb;
     margin-bottom: 10px;
     background-color: white;
@@ -159,20 +187,24 @@ input{
     flex-direction: column;
     padding: 10px;
 }
+
 .storiesTitle{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+
 .stories{
     height: 100px;
     overflow: hidden;
 }
+
 .storiesTitle a{
     font-size: 12px;
     text-decoration-line: none;
     color: black;
 }
+
 .storiesTitle p, .userRecommend p{
     font-size: 12px;
     color: #8e8e8e;
@@ -185,16 +217,19 @@ input{
     display: flex;
     align-items: center;
 }
+
 .storyUserImg{
     width: 25px;
     height: 25px;
     border-radius: 50%;
     margin-right: 12px;
 }
+
 .storyUserInfo p:nth-child(1) { 
     margin: 0;
     font-size: 12px;
 }
+
 .storyUserInfo p:nth-child(2){
     font-size: 10px;
     color: #c8c8c8;
@@ -211,8 +246,8 @@ input{
 
 .footer{
     width: 220px;
-
 }
+
 .footer p {
     font-size: 11px;
     color: #c7c7c7;
