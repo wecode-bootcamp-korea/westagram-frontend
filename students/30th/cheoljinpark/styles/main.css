@@ -50,21 +50,19 @@
 
 .main-container main .feeds {
   margin: 0 15px 0 100px;
-  padding: 60px 8px 20px 8px; 
-  background-color: coral;
+  padding: 60px 8px 20px 8px;
   width: 800px;
   height: 1000px;
 }
 
 .main-container main .feeds article {
-  display: flex;
   position: relative;
-  flex-direction: column;
   justify-content: space-between;
-  height: 1000px;
+  height: 1000px'
 }
 .main-container main .feeds article .feed-titlebox {
   display: flex;
+  margin-bottom: 15px;
 }
 
 .main-container main .feeds article .feed-titlebox .feed-titlelogo {
@@ -88,12 +86,56 @@
   margin-top: 2px;
 }
 
-.main-container main .feeds article .feed-titlebox .feed-menus{
+.main-container main .feeds article .feed-titlebox .feed-config{
   position: absolute;
   right: 25px;
 }
 
-.main-container main .feeds article .feed-img {
-  width: 600px;
-  height: 480px;
+.main-container main .feeds article .feed-img img{
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.main-container main .feeds article .feed-menus {
+  position: relative;
+}
+
+.main-container main .feeds article .feed-menus .feed-menus-left {
+  display: inline;
+}
+
+.main-container main .feeds article .feed-menus .feed-menus-left span {
+  margin-left: 12px;
+}
+
+.main-container main .feeds article .feed-menus .material-icons {
+  font-size: 35px;
+}
+
+.main-container main .feeds article .feed-menus .feed-menus-right {
+  display: inline;
+}
+
+.main-container main .feeds article .feed-menus .feed-menus-right .material-icons {
+  position: absolute;
+  right: 0;
+  margin-right: 12px;
+}
+
+.main-container main .feeds article .feed-menus .liker-profile {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  background-color: #9595e1;
+  color: white;
+  text-align: center;
+  padding-top: 6px;
+  font-size: 20px;
+}
+
+.main-container main .feeds article .feed-menus .like-counter {
+  display: inline;
+  margin-left: 4px;
+  font-size: 18px;
 }
