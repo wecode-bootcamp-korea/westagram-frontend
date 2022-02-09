@@ -1,14 +1,11 @@
 .main-container nav {
-  height: 120px;
-}
-
-.main-container nav {
   display: flex;
-  padding: 20px 100px;
+  padding: 20px 150px;
   text-align: center;
   align-items: center;
   font-size: 30px;
   justify-content: space-between;
+  height: 120px;
 }
 
 .main-container nav .main-logo {
@@ -49,12 +46,13 @@
 
 .main-container main {
   display: flex;
+  justify-content: space-around;
 }
 
 .main-container main .feeds {
-  margin: 0 15px 0 100px;
+  margin: 0 15px 0 150px;
   padding: 60px 8px 20px 8px;
-  width: 800px;
+  width: 70%;
   height: 1000px;
 }
 
@@ -75,8 +73,9 @@
   background-color: #222;
   color: #FFF;
   text-align: center;
-  padding-top: 15px;
+  padding-top: 17px;
   margin: 0 20px;
+  font-size: 12px;
 }
 
 .main-container main .feeds article .feed-titlebox .feed-title .feed-title-name {
@@ -191,5 +190,20 @@
 .main-container main .main-right {
   padding-top: 50px;
   background-color: #9595e1;
-  width: 400px;
+  width: 30%;
+  margin-right: 100px;
+}
+.main-container main .main-right .side-titlebox {
+  display: flex;
+}
+
+.main-container main .main-right .side-titlebox .side-titlelogo {
+  width: 70px;
+  height: 70px;
+  border-radius: 100%;
+  background-color: #222;
+  color: #FFF;
+  text-align: center;
+  padding-top: 25px;
+  margin: 0 20px;
 }
