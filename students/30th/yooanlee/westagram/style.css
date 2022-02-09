@@ -1,0 +1,38 @@
+* {
+  box-sizing:border-box; font-family: 'Lobster', sans-serif;
+}
+
+.wrapper{
+  display:grid;
+  grid-template-rows: 3fr 1fr 1fr 1fr; 
+  align-items: center; 
+  justify-content: center; 
+  gap: 12px; 
+}
+.logo{
+  display:grid; 
+  justify-content: center; 
+  font-family: 'Lobster', cursive;
+   width:480px;
+  height:64px;
+}
+
+.logo img{
+  width:272px;
+}
+
+.textbox{
+  color: grey;
+  display:grid;
+  width:480px;
+  height:64px;
+  grid-template-columns: 2em 1fr 2em 2em;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  align-content: center;
+  padding: 0 4px;
+}
+.blue{
+  color: white;
+  background:#5288EC
+}
