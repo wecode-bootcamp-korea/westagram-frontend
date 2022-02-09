@@ -11,12 +11,18 @@
 <body>
     <nav>
         <div class="inner">
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><h1>Instagram</h1></a>
-            <input type="text" placeholder="검색"><i class="fas fa-search"></i>
-            <a href="#"><i class="far fa-compass"></i></a>
-            <a href="#"><i class="far fa-heart"></i></a>
-            <a href="#"><i class="far fa-user"></i></a>
+            <div class="nav_logo">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><h1>Instagram</h1></a>
+            </div>
+            <div class="nav_search">
+                <input type="text" placeholder="검색"><i class="fas fa-search"></i>
+            </div>
+            <div class="nav_icon">
+                <a href="#"><i class="far fa-compass"></i></a>
+                <a href="#"><i class="far fa-heart"></i></a>
+                <a href="#"><i class="far fa-user"></i></a>
+            </div>
         </div>
     </nav>
     <main>
@@ -25,10 +31,16 @@
                 <div class="feeds">
                     <article>
                         <div id="user">
-                            <a href="#" class="user">>wecode</a>
-                            <p>wecode_bootcamp</p>
-                            <span>WeCode - 위코드</span>
-                            <a href="#"><i class="fas fa-bars"></i></a>
+                            <div class="profile">
+                                <a href="#" class="user">>wecode</a>
+                                <div class="logo">
+                                    <span>wecode_bootcamp</span>
+                                    <span>WeCode - 위코드</span>
+                                </div>
+                            </div>
+                            <div class="menu_bar">
+                                <i class="fas fa-bars hamburger"></i>
+                            </div>
                         </div>
                         <div id="img"></div>
                         <ul class="icon">
@@ -58,8 +70,10 @@
                 <div class="main-right">
                     <div class="userMain">
                         <a href="#">>wecode</a>
-                        <h3>wecode_bootcamp</h3>
-                        <h4>WeCode | 위코드</h4>
+                        <div class="main_user">
+                            <span>wecode_bootcamp</span>
+                            <span>WeCode | 위코드</span>
+                        </div>
                     </div>
                     <div class="insta-story">
                         <div class="intro_story">
@@ -69,23 +83,29 @@
                         <ul class="story">
                             <li class="set">
                                 <div class="pic1"></div>
-                                <h3>alexishyuni</h3>
+                                <div class="others">
+                                    <span>alexishyuni</span>
+                                    <span>2시간 전</span>
+                                </div>
                             </li>
-                            <h4 class="st_time1">2시간 전</h4>
                         </ul>
                         <ul class="story">
                             <li class="set">
                                 <div class="pic2"></div>
-                                <h3>jminkeek</h3>
+                                <div class="others">
+                                    <span>jminkeek</span>
+                                    <span>1시간 전</span>
+                                </div>
                             </li>
-                            <h4 class="st_time2">1시간 전</h4>
                         </ul>
                         <ul class="story">
                             <li class="set">
                                 <div class="pic3"></div>
-                                <h3>drink_eat_drink</h3>
+                                <div class="others">
+                                    <span>drink_eat_drink</span>
+                                    <span>13분 전</span>
+                                </div>
                             </li>
-                            <h4 class="st_time3">13분 전</h4>
                         </ul>
                         <ul class="story">
                             <li class="set">

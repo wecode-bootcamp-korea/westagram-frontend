@@ -8,19 +8,26 @@ body{
 a{cursor: pointer; color: #aaa;}
 nav{
     width: 100%;
-    padding: 5px;
-    padding-right: 35px;
     margin: 0 auto;
     vertical-align: middle;
     border-bottom: 2px solid #ddd;
     background-color: #fff;
+    padding: 25px;
 }
 .inner{
     width: 1180px;
-    margin: 0 auto;
     display: flex;
-    padding: 20px;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
     position: relative;
+    
+}
+.nav_logo{
+    display: flex;
+}
+.nav_icon{
+    display: flex;
 }
 .fa-instagram{
     color: #222;
@@ -63,7 +70,7 @@ input::placeholder{
     line-height: 20px;
     font-size: 13px;
     position: absolute;
-    left: 585px; top: 27px;
+    left: 585px; top: 8px;
     margin-right: 10px;
 }
 .fa-compass{
@@ -103,7 +110,7 @@ main> .inner{
 article{
     width: 100%;
     position: relative;
-    padding-top: 8px;
+    /* padding-top: 8px; */
     background-color: #fff;
     border: 2px solid #ddd;
     border-radius: 5px;
@@ -122,6 +129,26 @@ article{
     margin-right: 18px;
     margin-left: 23px;
 }
+#user{
+    display: flex;
+    padding: 8px;
+}
+.logo {
+    display: flex;
+    flex-direction: column;
+}
+.logo span:nth-child(1){
+    font-weight: bold;
+}
+.menu_bar {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+}
+.hamburger {
+    font-size: 20px;
+    padding-right: 10px;
+}
 p{
     float: left;
     line-height: 40px;
@@ -133,18 +160,11 @@ p{
     top: 30px; left: -148px;
     font-size: 14px;
 }
-.fa-bars{
-    position: absolute;
-    right: 23px; top: 25px;
-    color: #aaa;
-    font-size: 25px;
-}
 #img{
     background-image: url(img/girl.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100.3%; height: 700px;
-    margin-top: 50px;margin-left: -1px;
+    height: 700px;
     background-position: center;
 }
 .icon{
@@ -273,8 +293,7 @@ p{
 .userMain{
     display: flex;
     align-content: center;
-    padding-top: 42px;
-    position: relative;
+    margin-top: 40px;
     margin-bottom: 20px;
 }
 .userMain>a{
@@ -288,22 +307,21 @@ p{
     font-size: 12px;
     text-align: center;
 }
-.userMain>h3{
-    margin-left: 10px;
-    margin-top: 5px;
-    font-size: 15px;
+.main_user{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 52px;
+    padding-left: 15px;
 }
-.userMain>h4{
-    color: #aaa;
-    position: absolute;
-    top: 65px; left: 63px;
-    font-size: 16px;
+.main_user span:nth-child(2){
+    color: #bbb;font-weight: bold;
 }
 .insta-story{
     border: 2px solid #ddd;
     border-radius: 5px;
     height: 238px;
-    overflow: hidden;
+    overflow: scroll;
     margin-bottom: 20px;
     background-color: #fff;
 }
@@ -365,10 +383,9 @@ margin-bottom: 10px;
     background-repeat: no-repeat;
     border: 3px solid palevioletred;
 }
-.story h3{
-    font-weight: bold;
-    font-size: 16px;
-    margin-left: 10px;
+.others{
+    display: flex;
+    flex-direction: column;
 }
 .st_time1{
     color: #aaa;
