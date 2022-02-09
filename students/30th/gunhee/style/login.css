@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  position: relative;
+}
+
+header {
+  /* @import url("https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Poor+Story&family=Roboto&family=Source+Sans+Pro:wght@200&display=swap"); */
+  font-family: "Poor Story", cursive;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 30px;
+  font-size: 40px;
+}
+
+#layout {
+  width: 340px;
+  height: 380px;
+  padding: 10px 50px;
+  border: 2px solid #dbdbdb;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 60%;
+  /* border-radius: 50%; */
+}
+
+input {
+  width: 100%;
+  height: 38px;
+  margin-bottom: 7px;
+  border: 1px solid #dbdbdb;
+  padding-left: 10px;
+  border-radius: 3%;
+}
+
+input:focus {
+  outline: none;
+}
+
+.btnLayout {
+  height: 100%;
+}
+
+button {
+  width: 100%;
+  height: 30px;
+  background-color: #c0dffd;
+  color: white;
+  border: 0;
+}
+
+#login_btn {
+  margin-top: 5px;
+  border-radius: 3%;
+}
+
+footer {
+  width: 100%;
+  text-align: center;
+}
+
+a {
+  font-size: 13px;
+  color: #00376b;
+}
