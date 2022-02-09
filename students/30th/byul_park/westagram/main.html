@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Westagram_main</title>
+    <script src="https://kit.fontawesome.com/319ea18cd4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <nav>
+        <div class="inner">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><h1>Instagram</h1></a>
+            <input type="text" placeholder="검색"><i class="fas fa-search"></i>
+            <a href="#"><i class="far fa-compass"></i></a>
+            <a href="#"><i class="far fa-heart"></i></a>
+            <a href="#"><i class="far fa-user"></i></a>
+        </div>
+    </nav>
+    <main>
+        <div class="inner">
+            <div class="wrap">
+                <div class="feeds">
+                    <article>
+                        <div id="user">
+                            <a href="#" class="user">>wecode</a>
+                            <p>wecode_bootcamp</p>
+                            <span>WeCode - 위코드</span>
+                            <a href="#"><i class="fas fa-bars"></i></a>
+                        </div>
+                        <div id="img"></div>
+                        <ul class="icon">
+                            <div class="left">
+                                <li><i class="fas fa-heart"></i></li>
+                                <li><i class="far fa-comment"></i></li>
+                                <li><i class="fas fa-share-square"></i></li>
+                            </div>
+                            <li><i class="far fa-bookmark"></i></li>
+                        </ul>
+                        
+                        <div class="profile">
+                            <div class="photo"></div>
+                            <span class="like"><a style="font-weight: bold; color: #000; font-size: 17px;" href="#">seungyoun_iain</a>님 <b>외 4명</b>이 좋아합니다</span>
+                        </div>
+                        <div class="chat">
+                            <p class="comment"><b>wecode_bootcamp</b> "위코드는 단순 교육업체가 아닌 개발자 커뮤니티입니다. Wecode에서 배우고 저는 5개의 회사에서 오퍼를 받았습니다. - Wecode 졸업생 강병진님"..<button class="more_btn">더 보기</button></p>
+                            <p class="timeout"><b>54</b>분전 ..</p>
+                        </div>
+                        <ul id="todo-list"></ul>
+                        <form id="todo-form">
+                            <input type="text" placeholder="댓글 달기..." required/>
+                            <button class="post">게시</button>
+                        </form>
+                    </article>
+                </div>
+                <div class="main-right">
+                    <div class="userMain">
+                        <a href="#">>wecode</a>
+                        <h3>wecode_bootcamp</h3>
+                        <h4>WeCode | 위코드</h4>
+                    </div>
+                    <div class="insta-story">
+                        <div class="intro_story">
+                            <h2>스토리</h2>
+                            <button class="all">모두 보기</button>
+                        </div>
+                        <ul class="story">
+                            <li class="set">
+                                <div class="pic1"></div>
+                                <h3>alexishyuni</h3>
+                            </li>
+                            <h4 class="st_time1">2시간 전</h4>
+                        </ul>
+                        <ul class="story">
+                            <li class="set">
+                                <div class="pic2"></div>
+                                <h3>jminkeek</h3>
+                            </li>
+                            <h4 class="st_time2">1시간 전</h4>
+                        </ul>
+                        <ul class="story">
+                            <li class="set">
+                                <div class="pic3"></div>
+                                <h3>drink_eat_drink</h3>
+                            </li>
+                            <h4 class="st_time3">13분 전</h4>
+                        </ul>
+                        <ul class="story">
+                            <li class="set">
+                                <div class="pic4"></div>
+                                <h3>bebe_sunnie</h3>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="recommend">
+                        <div class="intro_recommend">
+                            <h2>회원님을 위한 추천</h2>
+                            <button class="all">모두 보기</button>
+                        </div>
+
+                        <ul class="follow">
+                            <li class="sett">
+                                <div class="picc1"></div>
+                                <h3>bowerbird_sym</h3>
+                                <a style="color: rgb(30, 145, 194); font-weight: bold;" href="#">팔로우</a>
+                            </li>
+                            <h4 class="follow1">회원님을 팔로우합니다</h4>
+                        </ul>
+                        <ul class="follow">
+                            <li class="sett">
+                                <div class="picc2"></div>
+                                <h3>baekyoungk89</h3>
+                                <a style="color: rgb(30, 145, 194); font-weight: bold;" href="#">팔로우</a>
+                            </li>
+                            <h4 class="follow2">회원님을 팔로우합니다</h4>
+                        </ul>
+                        <ul class="follow">
+                            <li class="sett">
+                                <div class="picc3"></div>
+                                <h3>smileday.wjkm</h3>
+                                <a style="color: rgb(30, 145, 194); font-weight: bold;" href="#">팔로우</a>
+                            </li>
+                            <h4 class="follow3">회원님을 팔로우합니다</h4>
+                        </ul>
+                    </div>
+                    
+                    <div id="footer">
+                        <p>Instagram 정보 · 지원 · 홍보 센터 · API · 채용 정보 · 개인정보처리방침 · 약관 ·<br>디렉터리 · 프로필 · 해시태그 · 언어</p>
+                        <span>© 2022 Instagram</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
