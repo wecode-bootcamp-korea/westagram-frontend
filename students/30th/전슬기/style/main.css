@@ -1,0 +1,117 @@
+img {
+  width: 20px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  background-color: white;
+  border-bottom: 2px solid #efefef;
+}
+
+.navRow {
+  display: flex;
+  align-items: center;
+}
+
+.navRow:nth-child(2) {
+  position: relative;
+}
+
+.navRow input {
+  background-color: #fafafa;
+  border: 2px solid #e5e5e5;
+  border-radius: 3px;
+  text-align: center;
+  font-size: 11px;
+}
+
+#searchIcon {
+  width: 8px;
+  position: absolute;
+  left: 33px;
+  top: 8px;
+}
+
+.navRow img {
+  margin: 0 10px;
+}
+
+.navRow span {
+  font-family: "Lobster", cursive;
+  font-size: 25px;
+}
+
+.navRow:first-child img {
+  border-right: 2px solid black;
+  padding-right: 10px;
+  width: 30px;
+}
+
+.feedMain {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  background-color: #fafafa;
+}
+
+.feed {
+  display: flex;
+  flex-direction: column;
+  margin: 50px 10px;
+  background-color: white;
+  border: 2px solid #efefef;
+}
+
+.feedColumn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+}
+
+.feedColumnRow {
+  display: flex;
+  align-items: center;
+}
+
+.feedColumnRow span {
+  font-size: 14px;
+}
+
+.feedColumnRow .fa-heart {
+  color: #ed4955;
+  font-size: larger;
+}
+
+#chatIcon {
+  width: 24px;
+  margin: 0 5px;
+}
+
+#uploadIcon {
+  width: 17px;
+}
+
+.profileImg {
+  width: 30px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.feedImg {
+  width: 500px;
+}
+
+.smaller img {
+  width: 20px;
+}
+
+.smaller span {
+  font-size: 12px;
+}
