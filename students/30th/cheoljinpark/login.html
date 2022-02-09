@@ -2,18 +2,31 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./styles/login.css">
+  <link rel="stylesheet" href="./styles/common.css">
+  <link rel="stylesheet" href="./styles/login.css" />
+  <script defer src="./js/login.js"></script>
 </head>
 
 <body>
-  <div>
+  <div class="main-container">
+    <header class="logo">
+      Westagram
+    </header>
+    <section class="login-box">
+      <input type="text" id="user-id" placeholder="전화번호, 사용자 이름 또는 이메일" />
+      <input type="password" id="user-pw" placeholder="비밀번호" />
+      <button class="login-btn">로그인</button>
+    </section>
+    <footer class="search-passwd">
+      <a href="#">비밀번호를 잊으셨나요?</a>
+    </footer>
   </div>
 </body>
 
