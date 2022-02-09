@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/main.css" />
+    <link rel="stylesheet" href="style/common.css" />
+    <title>Westagram</title>
+    <script defer src="js/main.js"></script>
+    <script
+      defer
+      src="https://kit.fontawesome.com/b3f0d3ce61.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="whole">
+      <nav id="main-navigation">
+        <div class="nav-box">
+          <div class="instagram-icon">
+            <i class="fab fa-instagram"></i>
+            <h1 class="instagram-font">Westagram</h1>
+          </div>
+          <div id="search-box">
+            <input type="text" name="seach" id="search" />
+            <span><i class="fas fa-search"></i> 검색</span>
+          </div>
+          <div class="nav-icons">
+            <a href="#"
+              ><img
+                src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png"
+                alt="compass"
+                class="nav-imgs"
+            /></a>
+            <a href="#"
+              ><img
+                src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"
+                alt="heart"
+                class="nav-imgs"
+            /></a>
+            <a href="#"
+              ><img
+                src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png"
+                alt="my-page"
+                class="nav-imgs"
+            /></a>
+          </div>
+        </div>
+      </nav>
+      <main>
+        <section id="feeds">
+          <article class="main-article">
+            <div id="article-header">
+              <div class="profiles feeds_my_id">
+                <a href="#" class="profile-img">
+                  <span>>wecode</span>
+                </a>
+                <div class="id_text">
+                  <span class="bold">wecode_bootcamp</span>
+                  <span>WeCode - 위코드</span>
+                </div>
+              </div>
+              <a href="#">
+                <i class="fas fa-ellipsis-h"></i>
+              </a>
+            </div>
+            <div class="contents"></div>
+            <div class="article-bottom">
+              <div class="article-btns">
+                <div>
+                  <i class="far fa-heart"></i>
+                  <i class="far fa-comment"></i>
+                  <i class="fas fa-share-square"></i>
+                </div>
+                <div>
+                  <i class="far fa-bookmark"></i>
+                </div>
+              </div>
+              <div class="like-section">
+                <div class="like-profile"></div>
+                <span>
+                  <span class="like-representive bold">seungyoun_iain</span>님
+                  외 <span class="like-people bold">4명</span>이 좋아합니다
+                </span>
+              </div>
+              <div class="article-text">
+                <span>
+                  <span class="bold">wecode_bootcamp</span>
+                  "위코드는 단순 교육업체가 아닌 개발자 커뮤니티입니다.
+                  Wecode에서 배우고 저는 총 5개 회사에서 오퍼를 받았습니다." -
+                  Wecode 졸업생 김병진님 인터뷰 -
+                </span>
+              </div>
+              <span class="upload-time">54분 전</span>
+            </div>
+            <div class="commants">
+              <form class="commants-form" action="">
+                <button class="emoji">
+                  <i class="far fa-smile"></i>
+                </button>
+                <textarea
+                  name="commants-area"
+                  id="commants-area"
+                  placeholder="댓글 달기..."
+                  autocomplete="off"
+                  autocorrect="off"
+                ></textarea>
+                <button class="commants-submit">게시</button>
+              </form>
+            </div>
+          </article>
+        </section>
+        <aside id="story-recommand">
+          <div class="story-recommand-section">
+            <div class="profiles-header">
+              <div class="profiles aside_my_id_profile">
+                <a href="#" class="profile-img">
+                  <span>>wecode</span>
+                </a>
+                <div class="id_text">
+                  <span class="bold">wecode_bootcamp</span>
+                  <span>WeCode - 위코드</span>
+                </div>
+              </div>
+              <button class="aside-btns id-change">전환</button>
+            </div>
+            <div id="story">
+              <div class="aside-header">
+                <span class="aside-title">스토리</span>
+                <button class="aside-btns">모두 보기</button>
+              </div>
+              <div class="recommands">
+                <div class="profiles recommand-profiles">
+                  <a href="#" class="profile-img">
+                    <img src="" alt="" />
+                  </a>
+                  <div class="id_text">
+                    <span class="bold">alexishyuni</span>
+                    <span>2시간 전</span>
+                  </div>
+                </div>
+                <div class="profiles recommand-profiles">
+                  <a href="#" class="profile-img">
+                    <img src="" alt="" />
+                  </a>
+                  <div class="id_text">
+                    <span class="bold">jminkeek</span>
+                    <span>1시간 전</span>
+                  </div>
+                </div>
+                <div class="profiles recommand-profiles">
+                  <a href="#" class="profile-img">
+                    <img src="" alt="" />
+                  </a>
+                  <div class="id_text">
+                    <span class="bold">drink_eat_drink</span>
+                    <span>13분 전</span>
+                  </div>
+                </div>
+                <div class="profiles recommand-profiles">
+                  <a href="#" class="profile-img">
+                    <img src="" alt="" />
+                  </a>
+                  <div class="id_text">
+                    <span class="bold">beeb_ssunie</span>
+                    <span>6시간 전</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="recommand">
+              <div class="aside-header">
+                <span class="aside-title">회원님을 위한 추천</span>
+                <button class="aside-btns">모두 보기</button>
+              </div>
+              <div>
+                <div class="profiles recommand-profiles">
+                  <a href="#" class="profile-img">
+                    <img src="" alt="" />
+                  </a>
+                  <div class="id_text">
+                    <span class="bold">alexishyuni</span>
+                    <span>2시간 전</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </main>
+    </div>
+  </body>
+</html>

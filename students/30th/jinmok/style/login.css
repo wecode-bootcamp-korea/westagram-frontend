@@ -1,0 +1,100 @@
+main {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 350px;
+  height: 380px;
+  padding: 30px 40px 25px 40px;
+  border: 1px solid #dbdbdb;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.title {
+  margin-bottom: 50px;
+  font-size: 40px;
+}
+
+.name-input,
+.password-input,
+button {
+  width: 100%;
+}
+
+.name-input,
+.password-input {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 40px;
+  padding: 0 10px;
+  background-color: #fafafa;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+}
+
+.name-input {
+  margin-bottom: 10px;
+}
+
+.password-input {
+  margin-bottom: 15px;
+}
+
+input {
+  position: absolute;
+  width: 246px;
+  padding: 0;
+  outline: unset;
+  border: none;
+  background-color: unset;
+  font-size: 12px;
+}
+
+.input-placeholder {
+  position: absolute;
+  color: #8e8e8e;
+  font-size: 12px;
+  transition: all 0.1s ease-out;
+}
+
+.name-input:focus-within,
+.password-input:focus-within {
+  outline: 1px solid #8e8e8e;
+}
+
+#visible-password {
+  align-self: flex-end;
+  width: fit-content;
+  height: 100%;
+  border: none;
+  background-color: unset;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+#login-btn {
+  height: 30px;
+  border: unset;
+  border-radius: 5px;
+  background-color: #c5e0fc;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.find-password {
+  color: #00366b;
+  font-size: 12px;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/login.css" />
+    <link rel="stylesheet" href="style/common.css" />
+    <title>Westagram</title>
+    <script defer src="js/login.js"></script>
+  </head>
+  <body>
+    <main>
+      <div id="top">
+        <h1 class="instagram-font title">Westagram</h1>
+        <div class="name-input">
+          <span class="input-placeholder">
+            전화번호, 사용자 이름 또는 이메일
+          </span>
+          <input
+            type="text"
+            name="user-name"
+            id="user-name"
+            class="log-input"
+          />
+        </div>
+        <div class="password-input">
+          <span class="input-placeholder">비밀번호</span>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            class="log-input"
+          />
+          <button id="visible-password"></button>
+        </div>
+        <button id="login-btn">로그인</button>
+      </div>
+      <a href="#" class="find-password">비밀번호를 잊어셨나요?</a>
+    </main>
+  </body>
+</html>
