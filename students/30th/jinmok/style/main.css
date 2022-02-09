@@ -265,17 +265,17 @@ main {
   margin-bottom: 15px;
 }
 
-.recommands {
+.storys {
   height: 180px;
   overflow: scroll;
 }
 /* Hide scrollbar for Chrome, Safari and Opera */
-.recommands::-webkit-scrollbar {
+.storys::-webkit-scrollbar {
   display: none;
 }
 
 /* Hide scrollbar for IE, Edge and Firefox */
-.recommands {
+.storys {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
@@ -304,9 +304,43 @@ main {
   color: #159af6;
 }
 
-.recommand-profiles .profile-img {
+.story-profiles .profile-img {
   width: 40px;
   height: 40px;
+  overflow: hidden;
+}
+
+.story-profiles .profile-img img {
+}
+
+.story-profiles .id_text {
+  margin-left: 13px;
+}
+
+.story-profiles .id_text span:first-child {
+  font-size: 17px;
+  margin-bottom: 5px;
+}
+.story-profiles .id_text span:last-child {
+  color: #8e8e8e;
+  font-size: 12px;
+}
+
+.storys .story-profiles:not(:first-child) {
+  margin-top: 15px;
+}
+
+#recommand-section {
+  margin-bottom: 40px;
+}
+
+.recommand-profiles .profile-img {
+  width: 35px;
+  height: 35px;
+  overflow: hidden;
+}
+
+.recommand-profiles .profile-img img {
 }
 
 .recommand-profiles .id_text {
@@ -322,6 +356,35 @@ main {
   font-size: 12px;
 }
 
-.recommands .recommand-profiles:not(:first-child) {
+.recommands .recommand-profile-follow:not(:first-child) {
   margin-top: 15px;
+}
+
+.recommand-profile-follow {
+  display: flex;
+  justify-content: space-between;
+}
+
+#aside_bottom {
+  color: #c8c8c8;
+  font-size: 12px;
+}
+
+#aside_bottom_nav {
+  margin-bottom: 25px;
+}
+
+#aside_bottom_nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  line-height: 20px;
+}
+
+#aside_bottom_nav ul a {
+  color: #c8c8c8;
+}
+
+#aside_bottom_nav ul li:not(:last-child)::after {
+  content: "·";
+  padding: 0 3px;
 }

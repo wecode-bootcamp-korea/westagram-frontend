@@ -8,7 +8,7 @@ mainBox.style.transform = 'translateX(-'+(mainBox.offsetWidth+storyRecommand.off
 const mainNavigation = document.getElementById('main-navigation');
 mainNavigation.style.height = String(navBox.offsetHeight)+"px";
 
-console.log(navBox.style.width);
-console.log(mainBox.offsetWidth+storyRecommand.offsetWidth);
-console.log(mainBox.offsetWidth);
-console.log(storyRecommand.offsetWidth);
+const profileImg = document.getElementsByClassName('profile-img');
+for (const key in profileImg) {
+    console.log(profileImg[key]);
+}
