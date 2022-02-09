@@ -1,0 +1,86 @@
+* {
+  box-sizing: border-box;
+  /* review point:  box-sizing : 박스 크기를 화면에 표시하는 방식을 변경하는 속성, 
+    화면에 보이는 대로 width 값을 줄 수 있음 (border-box)*/
+  /* *{} : 한꺼번에 스타일 지정이 가능 */
+}
+
+.container_login {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  justify-content: center;
+  /* height 과 width 사이즈가 content와 같음 */
+  background-color: whitesmoke;
+  /* review point: div의 default height은 그 안에 있는 컨텐트의 크기. 
+                   100%라는 의미는 child의 크기에 100% 맞게 셋업하겠다. 라는 뜻! 
+                   100vh, 100vw 라고 하는 건 (viewportHeight) */
+}
+
+.mainBox_login {
+  width: 350px;
+  max-width: 350px;
+  height: 382px;
+  margin: 12px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  border: 1px solid lightgray;
+}
+
+.login_logo {
+  position: relative;
+  top: -40px;
+  font-family: "Lobster", sans-serif;
+  font-size: 350%;
+  font-weight: normal;
+  margin: 0 auto;
+  /* margin-top: 20px; */
+  /* review point: By assigning auto to the left and right margins of an element, 
+    they take up the available horizontal space in the element's container equally 
+    – and thus the element gets centered */
+  /* review point: relative positioning 은 본인기준으로 움직인다 주변 포지션이랑 아무관계가 없다.
+                   absolute positioning 은 positioning 되어있는 요소 기준으로 움직인다.
+                   예를 들면, mainBox 에 position : relative 그리고 h1 이 absolute라면 h1은 
+                    mainbox 기준으로 움직인다. mainbox 포지션이 없을시 body tag 기준!   */
+}
+
+.login_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.elementOfLogin {
+  width: 268px;
+  height: 40px;
+  padding: 9px 0 7px 8px;
+  margin: 0 auto;
+  background-color: whitesmoke;
+  border: 1px solid lightgray;
+  border-radius: 3px;
+}
+
+.loginbtn {
+  width: 268px;
+  height: 30px;
+  margin: 20px 40px;
+  color: white;
+  background-color: lightskyblue;
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+
+#id_input {
+  margin-bottom: 8px;
+}
+
+#forgot_password {
+  position: relative;
+  color: darkblue;
+  background-color: white;
+  border: transparent;
+  bottom: -50px;
+  margin: 0 auto;
+}
