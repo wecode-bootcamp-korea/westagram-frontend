@@ -47,6 +47,10 @@
   margin: 0 15px;
 }
 
+.main-container main {
+  display: flex;
+}
+
 .main-container main .feeds {
   margin: 0 15px 0 100px;
   padding: 60px 8px 20px 8px;
@@ -157,4 +161,35 @@
 .main-container main .feeds article .feed-descripton .timestamp {
   margin-top: 5px;
   font-size: 14px;
+}
+
+.main-container main .feeds article .feed-comment-box {
+  position: relative;
+  margin-top: 20px;
+  margin-left: 12px;
+}
+
+.main-container main .feeds article .feed-comment-box input {
+  width: 100%;
+  height: 40px;
+  font-size: 14px;
+}
+
+.main-container main .feeds article .feed-comment-box button {
+  position: absolute;
+  width: 10%;
+  height: 100%;
+  right: 0;
+  box-shadow: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  color: #518fd6;
+  font-size: 14px;
+}
+
+.main-container main .main-right {
+  padding-top: 50px;
+  background-color: #9595e1;
+  width: 400px;
 }
