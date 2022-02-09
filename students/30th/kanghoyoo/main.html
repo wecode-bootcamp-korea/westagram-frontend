@@ -61,20 +61,51 @@
             </div>
             <div class="article-img">
               <img
-                src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=781&q=80"
+                src="https://images.unsplash.com/photo-1504297050568-910d24c426d3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHw0OXx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60"
                 alt="메인 이미지"
                 class="art-img"
               />
             </div>
             <div class="icons-wrap">
               <div class="icons">
-                <i class="fas fa-heart"></i>
+                <button class="heart" onclick="toggleImg"><i class="fas fa-heart"></i></button>
                 <i class="far fa-comment"></i>
                 <i class="fas fa-file-upload"></i>
               </div>
               <div>
                 <i class="fas fa-bookmark"></i>
               </div>
+            </div>
+            <div class="alert">
+              <img
+                src="https://images.unsplash.com/photo-1644329901564-1e47f5d1b81a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw2OHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=60"
+                alt="이미지"
+                class="loveProfile"
+              />
+              <span class="good"
+                ><span class="bold">alneworld</span>님 외
+                <span class="bold">10명</span>이좋아합니다</span
+              >
+            </div>
+            <div class="comments">
+              <p class="mentsWrap">
+                <span class="commentId" id="oneId">vertex7785</span
+                ><span class="comment" id="cmt1"
+                  >시간이 벌써 이렇게 지났네...</span
+                >
+              </p>
+              <p class="mentsWrap">
+                <span class="commentId" id="twoId">coke_0kal</span
+                ><span class="comment" id="cmt2"
+                  >스파게티가 생각이 나는 날이야~!</span
+                >
+              </p>
+              <p class="mentTime">42분 전</p>
+            </div>
+            <hr style="border: 1px solid gainsboro" ; width="100%" ; />
+            <div class="input">
+              <input type="text" class="commentInput"value="" placeholder="댓글 달기..." />
+              <input type="button" class="send" click="" value="게시"></input>
             </div>
           </article>
         </div>
@@ -162,7 +193,7 @@
               <div class="recomment">
                 <div class="another-profile">
                   <img
-                    src="https://images.unsplash.com/photo-1499996860823-5214fcc65f8f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8aHVtYW58ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60"
+                    src="https://images.unsplash.com/photo-1501196354995-cbb51c65aaea?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzd8fCUwOHBlb3BsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
                     alt="다른 프로필"
                     class="another-img2"
                   />
@@ -171,11 +202,12 @@
                   <p>de_lo</p>
                   <span class="flowing">_blosanrang님 외 2명이 팔로잉 중</span>
                 </div>
+                <a href="#">팔로우</a>
               </div>
               <div class="recomment">
                 <div class="another-profile">
                   <img
-                    src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8aHVtYW58ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60"
+                    src="https://images.unsplash.com/photo-1463453091185-61582044d556?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fCUwOHBlb3BsZXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"
                     alt="다른 프로필"
                     class="another-img2"
                   />
@@ -184,11 +216,12 @@
                   <p>Caldit_q</p>
                   <span class="flowing">kukuro_P님 외 2명이 팔로잉 중</span>
                 </div>
+                <a href="#">팔로우</a>
               </div>
               <div class="recomment">
                 <div class="another-profile">
                   <img
-                    src="https://images.unsplash.com/photo-1593529467220-9d721ceb9a78?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fGh1bWFufGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60"
+                    src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8JTA4cGVvcGxlfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60"
                     alt="다른 프로필"
                     class="another-img2"
                   />
@@ -199,6 +232,7 @@
                     >js_lover_html님 외 2명이 팔로잉 중</span
                   >
                 </div>
+                <a href="#">팔로우</a>
               </div>
             </div>
           </div>
