@@ -31,7 +31,11 @@ nav {
   font-size: 11px;
 }
 
-#searchIcon {
+.navRow input::placeholder {
+  color: #b5b5b5;
+}
+
+.searchIcon {
   width: 8px;
   position: absolute;
   left: 33px;
@@ -43,14 +47,10 @@ nav {
 }
 
 .navRow span {
+  padding-left: 10px;
+  border-left: 2px solid black;
   font-family: "Lobster", cursive;
-  font-size: 25px;
-}
-
-.navRow:first-child img {
-  border-right: 2px solid black;
-  padding-right: 10px;
-  width: 30px;
+  font-size: 22px;
 }
 
 .feedMain {
@@ -89,12 +89,17 @@ nav {
   font-size: larger;
 }
 
-#chatIcon {
+.comments {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.chatIcon {
   width: 24px;
   margin: 0 5px;
 }
 
-#uploadIcon {
+.uploadIcon {
   width: 17px;
 }
 
@@ -108,10 +113,52 @@ nav {
   width: 500px;
 }
 
-.smaller img {
-  width: 20px;
+.feedColumnSmall {
+  padding: 0 12px;
 }
 
-.smaller span {
+.feedColumnSmall img {
+  width: 20px;
+  margin-right: 5px;
+}
+
+.feedColumnSmall p {
   font-size: 12px;
+  margin: 0;
+}
+
+.feedContent {
+  margin-bottom: 10px;
+}
+
+.gray {
+  color: #b5b5b5;
+}
+
+.feedColumnSmall .smallHeart {
+  width: 10px;
+}
+
+.feedColumn:last-child {
+  margin-top: 10px;
+  border-top: 2px solid #efefef;
+}
+
+.feedColumn input {
+  width: 93%;
+  border: none;
+}
+
+.feedColumn input::placeholder {
+  color: #b5b5b5;
+}
+
+.feedColumn input:focus {
+  outline: none;
+}
+
+.feedColumn button {
+  all: unset;
+  font-size: 12px;
+  color: #c5e1fb;
 }

@@ -16,7 +16,7 @@
       </div>
 
       <div class="navRow">
-        <img id="searchIcon" alt="search icon" src="img/search.png" />
+        <img class="searchIcon" alt="search icon" src="img/search.png" />
         <input placeholder="검색" />
       </div>
 
@@ -59,41 +59,45 @@
         <div class="feedColumn">
           <div class="feedColumnRow">
             <i class="fas fa-heart"></i>
-            <img id="chatIcon" alt="chat icon" src="img/chat.png" />
-            <img id="uploadIcon" alt="share icon" src="img/upload.png" />
+            <img class="chatIcon" alt="chat icon" src="img/chat.png" />
+            <img class="uploadIcon" alt="share icon" src="img/upload.png" />
           </div>
           <img alt="more icon" src="img/bookmark.png" />
         </div>
 
-        <div class="feedColumn">
-          <div class="feedColumnRow smaller">
+        <div class="feedColumn feedColumnSmall">
+          <div class="feedColumnRow feedContent">
             <img
               alt="profile image of haetnim"
               class="profileImg"
               src="img/햇님.jpeg"
             />
-            <span
-              ><strong>hae_nim</strong>님 <strong>외 10명</strong>이
-              좋아합니다</span
-            >
+            <p>
+              <strong>hae_nim</strong>님 <strong>외 10명</strong>이 좋아합니다
+            </p>
           </div>
         </div>
-        <div class="feedColumn">
-          <div class="feedColumnRow smaller">
-            <span
-              ><strong>hae_dal_byeol</strong> 별님이는 아래에서 찍어도
-              귀여워</span
-            >
+        <div class="feedColumn feedColumnSmall">
+          <p>
+            <strong>hae_dal_byeol</strong> 별님이는 아래에서 찍어도 귀여워...
+            <span class="gray">더 보기</span>
+          </p>
+        </div>
+        <div class="feedColumn feedColumnSmall">
+          <div class="feedColumnRow comments">
+            <p><strong>dal_nim</strong> 달님이가 더 귀여워>_<</p>
+          </div>
+          <div class="feedColumnRow">
+            <img alt="heart icon" class="smallHeart" src="img/heart.png" />
           </div>
         </div>
-        <div class="feedColumn">
-          <div class="feedColumnRow smaller">
-            <span><strong>dal_nim</strong> 달님이가 더 귀여워</span>
-          </div>
-          <div class="feedColumnRow smaller">
-            <img class="smaller" alt="heart icon" src="img/heart.png" />
-          </div>
+        <div class="feedColumn feedColumnSmall">
+          <p><span class="gray">42분 전</span></p>
         </div>
+        <form class="feedColumn">
+          <input class="comment" placeholder="댓글 달기..." />
+          <button class="postButton">게시</button>
+        </form>
       </div>
 
       <div class="rightBar"></div>
