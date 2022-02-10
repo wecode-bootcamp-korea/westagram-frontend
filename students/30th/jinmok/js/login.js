@@ -75,17 +75,25 @@ function earasePasswordInput() {
     activateBtn(passwordInput.value.length, nameInput.value.length);
 }
 
-
 nameInput.addEventListener('keyup', earaseNameInput);
 nameInput.addEventListener('keypress', keypressNameInput);
+nameInput.addEventListener('input', keypressNameInput);
 passwordInput.addEventListener('keyup', earasePasswordInput);
 passwordInput.addEventListener('keypress', keypressPasswordInput);
+passwordInput.addEventListener('input', keypressPasswordInput);
 
 loginBtn.addEventListener('click', () => {
     if (loginBtn.disabled === false) {
         document.getElementById('loginForm').reset();
     }
 })
+
+const loginForm = document.getElementById('loginForm');
+function handleForm(event) {
+    event.preventDefault();
+}
+loginForm.addEventListener('submit', handleForm);
+
 
 visiblePassword.addEventListener('click', () => {
     if (passwordInput.type === 'password'){
