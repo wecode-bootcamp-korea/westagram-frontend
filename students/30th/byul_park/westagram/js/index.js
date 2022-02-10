@@ -7,12 +7,13 @@ function onLogin(event){
     event.preventDefault();
     const id = document.querySelector("input#id").value;
     const password = document.querySelector("input#password").value;
-    if(!id){
-        alert('ID를 작성해주세요.');
+    const string = "@";
+    if(!id || !id.includes(string)){
+        alert('ID를 다시 확인해주세요.');
         return
     }
-    if(!password){
-        alert('Password를 작성해주세요');
+    if(!password || password.length < 5){
+        alert('Password를 확인해주세요');
         return
     }
     location.href = 'main.html';
