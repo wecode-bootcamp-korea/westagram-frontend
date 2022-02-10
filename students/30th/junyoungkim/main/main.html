@@ -18,9 +18,12 @@
         <div class="main-title-line"></div>
         <h1 class="main-title">Westagram</h1>
       </div>
-      <div class="search-bar"><input class="search" type="text" placeholder="검색"></div>
+      <div class="search-bar">
+        <input class="search" type="text" placeholder="검색">
+        <img class="search-logo" src="https://cdn-icons.flaticon.com/png/512/2811/premium/2811806.png?token=exp=1644408241~hmac=6f29c2149faa3611e5aeb3480e912304" alt="">
+      </div>
       <div class="nav-logo">
-        <img class="compass-logo logo" src="https://cdn-icons-png.flaticon.com/512/633/633839.png" alt="">
+        <img class="compass-logo logo" src="https://cdn-icons.flaticon.com/png/512/825/premium/825402.png?token=exp=1644394138~hmac=ab4f81fab7d36ea7440c10aac726bbda" alt="">
         <img class="like-logo logo" src="https://cdn-icons-png.flaticon.com/512/1077/1077035.png" alt="">
         <img class="user-logo logo" src="https://cdn-icons-png.flaticon.com/512/456/456283.png" alt="">
       </div>
@@ -63,32 +66,36 @@
             <img class="like-user-photo" src="wallpaper.png" alt="like-users">
             <p class="like-users"><b>_danbi_22</b>님 <b>외 10명</b>이 좋아합니다</p>
           </div>
-          <div class="comment-container">
             <div class="comment-info">
-              <p class="comment"><b>junzerokim</b> 단뱌❤️</p>
-              <p class="comment"><b>_danbi_22</b> 귀엽지?❤️</p>
-              <p class="comment-time">45분 전</p>
+              <div class="comment">
+                <p><b>junzerokim</b>&nbsp;단뱌~</p>
+                <img class="comment-like-logo" src="https://cdn-icons-png.flaticon.com/512/1077/1077035.png" alt="">
+              </div>
+              <div class="comment">
+                <p><b>_danbi_22</b>&nbsp;귀엽지?</p>
+                <img class="comment-like-logo" src="https://cdn-icons-png.flaticon.com/512/1077/1077035.png" alt="">
+              </div>
+              <!-- <p class="comment-time">45분 전</p> -->
             </div>
-            <div class="comment-like">
-              <img class="comment-like-logo" src="https://cdn-icons-png.flaticon.com/512/1077/1077035.png" alt="">
-            </div>
+          <div class="comment-write">
+            <input class="comment-box" type="text" placeholder="댓글 달기...">
+            <button class="comment-btn">게시</button>
           </div>
-          <input class="comment-box" type="text" placeholder="댓글 달기...">
         </article>
       </div>
       <div class="main-right">
         <div class="user-main">
           <img class="profile" src="wallpaper.png" alt="profile">
           <div class="user-main-info">
-            <p class="user-main-id">junzerokim</p>
+            <p class="user-main-id"><b>junzerokim</b></p>
             <p class="user-main-detail">김준영</p>
           </div>
         </div>
         <div class="story">
           <div class="story-nav">
-            <div class="story-title">스토리</div>
+            <div class="story-title"><b>스토리</b></div>
             <b>
-              <div class="story-all">모두 보기</div>
+              <div class="story-all"><b>모두 보기</b></div>
             </b>
           </div>
           <div class="story-user">
@@ -103,8 +110,20 @@
         </div>
         <div class="recommend">
           <div class="recommend-nav">
-            <div class="recommend-for-you">회원님을 위한 추천</div>
+            <div class="recommend-for-you"><b>회원님을 위한 추천</b></div>
             <div class="recommend-all"><b>모두 보기</b></div>
+          </div>
+          <div class="recommend-user">
+            <div class="recommend-user-info">
+              <img class="profile" src="wallpaper.png" alt="">
+              <div class="recommend-user-id">
+                <p class="recommend-user-id-name"><b>v_bee2</b></p>
+                <p class="recommend-upload-time">_danbi_22님 외 12명이 ...</p>
+              </div>
+              <div class="recommend-user-follow">
+                <p class="recommend-user-follow-btn"><b>팔로우</b></p>
+              </div>
+            </div>
           </div>
         </div>
         <footer class="company-info">

@@ -1,3 +1,6 @@
+body {
+}
+
 * {
   box-sizing: border-box;
   font-family: sans-serif;
@@ -6,12 +9,11 @@
 }
 
 .container {
-  width: 100%;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  background-color: #FAFAFA;
 }
 
 .main-title {
@@ -33,16 +35,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 150px;
+  margin-left: 10%;
 }
 
 .search {
   width: 200px;
   height: 30px;
-  border: none;
+  border: 1px solid lightgray;
   border-radius: 5px;
   text-align: center;
-  background-color: rgb(0, 0, 0, .05);
+  background-color: rgb(0, 0, 0, .02);
 }
 
 .search:focus {
@@ -53,37 +55,45 @@
   color: rgb(0, 0, 0, .4)
 }
 
+.search-logo {
+  position: relative;
+  right: 135px;
+  top: 4px;
+  width: 15px;
+}
+
 .main-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  height: 75px;
   border-bottom: gray;
   margin-bottom: 5px;
-  padding: 10px 0;
 }
 
 .main-content {
   width: 100%;
   height: 100%;
   display: flex;
+  justify-content: center;
   border-top: 1px solid rgb(0, 0, 0, .2);
 }
 
 .feeds {
-  width: 55%;
-  height: 100%;
-  margin-left: 15%;
+  width: 1000px;
+  margin-left: 30%;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 80px;
 }
 
 .main-article {
   width: 90%;
   height: 100%;
   border: 1px solid rgb(0, 0, 0, .2);
-  margin-top: 20%;
+  border-bottom: none;
   border-radius: 5px;
   display: flex;
   flex-direction: column;
@@ -91,8 +101,7 @@
 
 .main-right {
   width: 30%;
-  height: 60%;
-  margin-top: 1%;
+  height: 100%;
 }
 
 .logo {
@@ -191,12 +200,6 @@
   border-radius: 100%;
 }
 
-.comment-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
 .comment-info {
   margin-left: 25px;
   margin-top: 5px;
@@ -215,11 +218,12 @@
 }
 
 .comment-box {
+  flex: 10;
   border-right: none;
   border-left: none;
   border-top: 1px solid rgb(0, 0, 0, .1);
   border-bottom: 1px solid rgb(0, 0, 0, .1);
-  padding: 27px 20px;
+  padding: 25px 20px;
   margin-top: 10px;
   font-size: 18px;
 }
@@ -232,11 +236,42 @@
   outline-style: none;
 }
 
+.comment-btn {
+  flex: 1;
+  font-size: 18px;
+  color: #B1DFFC;
+  border: none;
+  border-top: 1px solid rgb(0, 0, 0, .1);
+  border-bottom: 1px solid rgb(0, 0, 0, .1);
+  background: none;
+  background-color: white;
+  position: relative;
+  top: 10px;
+  height: 73px;
+  padding-right: 15px;
+}
+
+.comment-btn-on {
+  cursor: pointer;
+  color: #0695F6;
+}
+
+.comment-write {
+  display: flex;
+}
+
+.comment {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
 .user-main {
   width: 100%;
-  margin-top: 15%;
   display: flex;
   margin-left: -15px;
+  margin-top: 80px;
 }
 
 .user-main-info {
@@ -251,7 +286,8 @@
 }
 
 .story {
-  background-color: lightgray;
+  border: 1px solid rgb(0, 0, 0, .1);
+  border-radius: 5px;
   width: 300px;
   height: 250px;
   margin-bottom: 20px;
@@ -269,7 +305,7 @@
   margin-left: 15px;
   margin-top: 15px;
   font-size: 15px;
-  /* color: rgb(0, 0, 0, .4) */
+  color: rgb(0, 0, 0, .4)
 }
 
 .story-all {
@@ -307,7 +343,8 @@
 }
 
 .recommend {
-  background-color: lightgray;
+  border: 1px solid rgb(0, 0, 0, .1);
+  border-radius: 5px;
   width: 300px;
   height: 250px;
 }
@@ -323,7 +360,7 @@
   margin-left: 15px;
   margin-top: 15px;
   font-size: 15px;
-  /* color: rgb(0, 0, 0, .4) */
+  color: rgb(0, 0, 0, .4)
 }
 
 .recommend-all {
@@ -345,4 +382,40 @@
 
 .company-name {
   margin-top: 10px;
+}
+
+.recommend .profile {
+  margin: 0;
+  margin-left: 13px;
+}
+
+.recommend-user-info img {
+  width: 43px;
+  height: 43px;
+}
+
+.recommend-user-info {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.recommend-user-id {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10px;
+  font-size: 14px;
+}
+
+.recommend-upload-time {
+  color: rgb(0, 0, 0, .4);
+}
+
+.recommend-user-follow {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #0695F6;
 }
