@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const textBox = document.getElementsByClassName("textbox")[0];
 const searchImg = document.getElementsByClassName("fa-search")[0];
 const textBoxValue = textBox.value;
@@ -29,9 +28,4 @@ function mentSend() {
     "</span></p>";
   mentTimes.innerText = "1초 전";
   mentGet = "";
-=======
-function toggleImg() {
-  bt = document.getElementsByClassName("fa-heart");
-  bt.style.color = "red";
->>>>>>> 1898555e0107f98e18ae5c97a0016a4371c384d4
 }
