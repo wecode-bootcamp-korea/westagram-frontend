@@ -5,7 +5,8 @@ const commentsDiv = document.querySelector(".comments");
 function postComment(event) {
   event.preventDefault();
   const newComment = document.createElement("p");
-  newComment.innerHTML = commentInput.value;
+  const userName = document.querySelector(".user").innerHTML;
+  newComment.innerHTML = `<strong>${userName}</strong> ${commentInput.value}`;
   commentsDiv.appendChild(newComment);
   commentInput.value = "";
 }
