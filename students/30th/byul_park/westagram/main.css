@@ -3,6 +3,7 @@
 
 body{
     width: 100%;
+    margin-bottom: 10px;
     background-color: rgb(251, 248, 248);
 }
 a{cursor: pointer; color: #aaa;}
@@ -19,9 +20,7 @@ nav{
     display: flex;
     margin: 0 auto;
     justify-content: space-between;
-    align-items: center;
     position: relative;
-    
 }
 .nav_logo{
     display: flex;
@@ -100,11 +99,10 @@ main> .inner{
 .wrap{
     display: flex;
     width: 100%;
-    margin: 0 auto;
 }
 .feeds{
     width: 60%;
-    margin-left: 60px;
+    margin-left: 88px;
     padding-top: 40px;
 }
 article{
@@ -131,7 +129,12 @@ article{
 }
 #user{
     display: flex;
+    justify-content: space-between;
     padding: 8px;
+}
+.profile{
+    display: flex;
+    align-items: center;
 }
 .logo {
     display: flex;
@@ -160,7 +163,7 @@ p{
     top: 30px; left: -148px;
     font-size: 14px;
 }
-#img{
+.main_img{
     background-image: url(img/girl.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -168,9 +171,10 @@ p{
     background-position: center;
 }
 .icon{
-    width: 100%; height: 60px;
+    width: 100%;
     display: flex;
-    margin-top: 13px;
+    align-items: center;
+    margin: 15px 0px;
     justify-content: space-between;
 }
 .left{
@@ -195,38 +199,34 @@ p{
     font-size: 30px;
     padding-right: 20px;
 }
-.profile{
+.write{
     width: 100%;
     display: flex;
+    justify-content: center;
     align-items: center;
+    padding-bottom: 15px;
 }
 .photo{
-    width: 30px; height: 30px;
+    width: 32px; height: 32px;
     border-radius: 50%;
     border: 1px solid #aaa;
     margin-left: 25px;
     background-position: center;
     background-image: url(img/flower.jpeg);
-    margin-top: -14px;
-
 }
-.like{
+.today_diary{
     width: 100%;
-    line-height: 30px;
-    font-weight: normal;
-    margin-bottom: 10px;
-    margin-left: 6px;
-    margin-top: -11px;
+    padding-left: 10px;
 }
 .chat{
-    margin-right: 50px;
-    padding-top: 5px;
+    display: flex;
+    flex-direction: column;
 }
 .comment{
     font-size: 17px;
     font-weight: normal;
     line-height: normal;
-    padding-left: 30px;
+    padding: 0 30px;
 }
 .more_btn{
     background-color: transparent;
@@ -241,9 +241,10 @@ p{
     font-weight: normal;
     width: 100%;
     color: #aaa;
-    font-size: 15px;
+    font-size: 17px;
     text-indent: 30px;
     line-height: normal;
+    padding-top: 3px;
     padding-bottom: 10px;
 }
 #todo-form input{
@@ -314,13 +315,16 @@ p{
     height: 52px;
     padding-left: 15px;
 }
+.main_user span:nth-child(1){
+    font-weight: bold;
+}
 .main_user span:nth-child(2){
     color: #bbb;font-weight: bold;
 }
 .insta-story{
     border: 2px solid #ddd;
     border-radius: 5px;
-    height: 238px;
+    height: 230px;
     overflow: scroll;
     margin-bottom: 20px;
     background-color: #fff;
@@ -383,27 +387,27 @@ margin-bottom: 10px;
     background-repeat: no-repeat;
     border: 3px solid palevioletred;
 }
+.pic5{
+    background-image: url(img/pic5.JPG);
+    width: 45px; height: 45px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border: 3px solid palevioletred;
+}
 .others{
     display: flex;
     flex-direction: column;
+    padding-left: 18px;
 }
-.st_time1{
-    color: #aaa;
-    font-size: 11px;
-    position: absolute;
-    right: 275px;top: 205px;
+.others span:nth-child(1){
+    font-weight: bold;
 }
-.st_time2{
+.others span:nth-child(2){
     color: #aaa;
-    font-size: 11px;
-    position: absolute;
-    right: 277px;top: 261px;
-}
-.st_time3{
-    color: #aaa;
-    font-size: 11px;
-    position: absolute;
-    right: 280px;top: 315px;
+    font-weight: bold;
+    font-size: 13px;
 }
 .recommend{
     border: 2px solid #ddd;
@@ -431,6 +435,8 @@ margin-bottom: 10px;
     display: flex;
     justify-content: space-between;
     margin-bottom: 12px;
+    align-items: center;
+    padding: 0 10px;
     }
 .sett >a{
     margin-left: 30px;
@@ -465,33 +471,19 @@ margin-bottom: 10px;
     background-repeat: no-repeat;
     border: 1px solid #ddd;
 }
-.sett>h3{
+.other_p{
+    display: flex;
+    flex-direction: column;
+}
+.other_p span:nth-child(1){
     font-weight: bold;
-    font-size: 16px;
-    margin-left: 0px;
-    margin-top: 7px;
 }
-.follow1{
-    font-size: 12px;
+.other_p span:nth-child(2){
+    font-weight: bold;
     color: #aaa;
-    position: absolute;
-    right: 213px;
-    top: 466px;
+    font-size: 13px;
 }
-.follow2{
-    font-size: 12px;
-    color: #aaa;
-    position: absolute;
-    right: 212px;
-    top: 523px;
-}
-.follow3{
-    font-size: 12px;
-    color: #aaa;
-    position: absolute;
-    right: 212px;
-    top: 580px;
-}
+
 #footer>p{
     width: 250px;
     color: #ccc;
