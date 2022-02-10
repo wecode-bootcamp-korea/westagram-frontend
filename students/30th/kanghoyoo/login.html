@@ -17,17 +17,22 @@
         <div class="input">
           <input
             type="text"
-            id="id"
+            class="id idpw"
             placeholder="전화번호, 사용자 이름 또는 이메일"
             value=""
           />
-          <input type="password" id="pw" placeholder="비밀번호" value="" />
+          <input
+            type="password"
+            class="pw idpw"
+            placeholder="비밀번호"
+            value=""
+          />
         </div>
         <div class="bt">
           <button
-            id="login"
+            class="login"
             name="button"
-            onclick="location.href='./main.html';"
+            onclick="loginLink()"
             disabled="true"
           >
             로그인
