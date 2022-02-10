@@ -25,10 +25,6 @@ function onWrite(event){
     return (id && password) ? btn.classList.remove('disabled'):btn.classList.add('disabled');
 }
 
-// idInput.addEventListener("keydown", onWrite); 
-//&&:and ||:or
-//down->press->up 순서로 가기떄문에 키패드가 눌려지는 그 순간부터 이벤트가 시작되서 한박자 느리게 찍힌다
-// passwordInput.addEventListener("keydown",onWrite);
 idInput.addEventListener("keyup", onWrite);
 passwordInput.addEventListener("keyup",onWrite);
 btn.addEventListener("click",onLogin);
