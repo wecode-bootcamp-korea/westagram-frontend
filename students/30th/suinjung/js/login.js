@@ -22,20 +22,51 @@ const blueBtn = document.getElementsByClassName("log-btn")[0];
 //지정된 메소드).setAttribute("속성명", "속성값") // 해당 요소에 속성="속성값" 추가
 
 // Mission 1 ver.2
+// window.addEventListener("keyup", function () {
+//   const inputName = document.querySelector("#name"); //문서에서 아이디명이 'name'인 요소를 변수에 담아라.
+//   const inputPassword = document.querySelector("#password");
+//   if (inputName.value.length > 0 && inputPassword.value.length > 0) {
+//     blueBtn.style.backgroundColor = "#0095f6";
+//     blueBtn.disabled = false;
+//     blueBtn.style.cursor = "pointer";
+//     // blueBtn.setAttribute("onclick", "location.href='main.html'");
+//   } else if (inputName.value.length == 0 || inputPassword.value.length == 0) {
+//     blueBtn.disabled = true;
+//     blueBtn.style.backgroundColor = "#C4E1FB";
+//     blueBtn.style.cursor = "default";
+//   }
+// });
+// blueBtn.addEventListener("click", function () {
+//   location.href = "main.html";
+// });
+const keyEnter = document.getElementsByClassName("loginText")[0];
+// Mission 1 ver.3 (삼항연산자)
 window.addEventListener("keyup", function () {
   const inputName = document.querySelector("#name"); //문서에서 아이디명이 'name'인 요소를 변수에 담아라.
   const inputPassword = document.querySelector("#password");
-  if (inputName.value.length > 0 && inputPassword.value.length > 0) {
-    blueBtn.style.backgroundColor = "#0095f6";
-    blueBtn.disabled = false;
-    blueBtn.style.cursor = "pointer";
-    // blueBtn.setAttribute("onclick", "location.href='main.html'");
-  } else if (inputName.value.length == 0 || inputPassword.value.length == 0) {
-    blueBtn.disabled = true;
-    blueBtn.style.backgroundColor = "#C4E1FB";
-    blueBtn.style.cursor = "default";
+  const result =
+    inputName.value.length > 0 && inputPassword.value.length > 0
+      ? loginActive()
+      : loginNonActive();
+});
+
+function loginActive() {
+  blueBtn.style.backgroundColor = "#0095f6";
+  blueBtn.disabled = false;
+  blueBtn.style.cursor = "pointer";
+  blueBtn.setAttribute("onclick", "location.href='main.html'");
+}
+keyEnter.addEventListener("keyup", function (e) {
+  if (e.key == "Enter" && blueBtn.disabled == false) {
+    //콘솔로그로 확인해라 니가 모르겠으면 / (value = KeyboardEvent) 내가 찾고 싶은것은 KeyboardEvent안에 key라는 키의 값이"Enter"인지 궁금한 상태야/
+    location.href = "main.html";
   }
 });
-blueBtn.addEventListener("click", function () {
-  location.href = "main.html";
-});
+
+function loginNonActive() {
+  blueBtn.style.backgroundColor = "#C4E1FB";
+  blueBtn.disabled = true;
+  blueBtn.style.cursor = "default";
+}
+
+//활성화 하고 엔터하면 들어가진다...ㅃㅃㅃㅃㅃㅃㅃ
