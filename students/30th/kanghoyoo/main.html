@@ -22,7 +22,7 @@
             >
           </div>
           <div class="search">
-            <input type="text" class="textbox" placeholder="검색" />
+            <input type="text" class="textbox" placeholder="검색" value=""/>
             <i class="fas fa-search"></i>
           </div>
           <div class="page">
@@ -89,22 +89,25 @@
             </div>
             <div class="comments">
               <p class="mentsWrap">
-                <span class="commentId" id="oneId">vertex7785</span
+                <span class="commentId oneId">vertex7785</span
                 ><span class="comment" id="cmt1"
                   >시간이 벌써 이렇게 지났네...</span
                 ><span class="more">  더 보기</span></p>
               </p>
               <p class="mentsWrap">
-                <span class="commentId" id="twoId">coke_0kal</span
+                <span class="commentId twoId">coke_0kal</span
                 ><span class="comment" id="cmt2"
                   >스파게티가 생각이 나는 날이야~!</span
                 >
-              </p>
+                </p>
+            </div>
+            <div>
               <p class="mentTime">42분 전</p>
             </div>
+            
             <div class="input">
               <input type="text" class="commentInput"value="" placeholder="댓글 달기..." />
-              <input type="button" class="send" click="" value="게시"></input>
+              <input type="button" class="send" onclick="mentSend()" value="게시"></input>
             </div>
           </article>
         </div>
