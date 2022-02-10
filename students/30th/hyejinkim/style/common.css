@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+}
+.logo-font {
+  font-family: "Lobster", cursive;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.login-form {
+  padding: 50px 50px;
+  border: 1px solid #e0e4e7;
+  border-radius: 5px;
+  text-align: center;
+}
+.login-form #logo {
+  display: inline-block;
+  margin-bottom: 40px;
+  font-size: 46px;
+}
+.login-form .loginWrpper {
+  width: 350px;
+}
+.text-field {
+  width: 100%;
+  border-radius: 5px;
+  padding: 15px 10px;
+  margin: 5px 0;
+  font-size: 14px;
+  background-color: #fafafa;
+  border: 1px solid #e0e4e7;
+}
+.submit-button {
+  display: inline-block;
+  font-size: 16px;
+  color: white;
+  background-color: #b1dffc;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  padding: 12px 10px;
+  margin-top: 10px;
+  margin-bottom: 80px;
+}
+.submit-button-after {
+  cursor: pointer;
+  background-color: #0195f3;
+}
+.links a {
+  text-decoration: none;
+  color: #3b4e84;
+  /* font-weight: bold; */
+}
+
+/* 질문 모음 */
+/* 
+  form과 button은 무슨 관계? 
+  button은 type에 따라 무슨 기능 차이가 있는지?
+  bold 폰트도 import 해야해요?
+  모니터별로 버튼 색깔이 다르게 나오는데, 인스타그램 페이지는 어떻게 색이 일정한지..ㅇㅅㅇ
+*/

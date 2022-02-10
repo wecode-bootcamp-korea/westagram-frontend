@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>westagram</title>
+    <link href="./style/common.css" rel="stylesheet" type="text/css" />
+    <link href="./style/main.css" rel="stylesheet" type="text/css" />
+    <script defer src="./js/main.js"></script>
+    <script
+      src="https://kit.fontawesome.com/e264982194.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="feeds-container">
+      <div class="navbar-container">
+        <nav class="navbar">
+          <div class="navbar-left">
+            <div class="navbar-left-1">
+              <a class="navbar-item logo-img">
+                <img class="navIcon" src="./images/logo.png" />
+              </a>
+              <a class="navbar-item logo-font"> Westagram </a>
+            </div>
+          </div>
+          <div class="navbar-left-2">
+            <div class="searchWrapper navbar-item">
+              <img src="./images/search.png" />
+              <input placeholder="검색" />
+            </div>
+          </div>
+          <div class="navbar-right">
+            <a class="navbar-item"
+              ><img class="navIcon" src="./images/explore.png"
+            /></a>
+            <a class="navbar-item"
+              ><img class="navIcon" src="./images/heart.png"
+            /></a>
+            <a class="navbar-item"
+              ><img class="navIcon" src="./images/profile.png"
+            /></a>
+          </div>
+        </nav>
+      </div>
+      <main class="main">
+        <div class="feeds">
+          <article class="article">
+            <div class="flexBox">
+              <div class="profile">
+                <img src="./images/profiles/profile00.jpg" />
+                <div class="profile-info">
+                  <h3 class="profile-id">tyui3185</h3>
+                  <h3 class="profile-bottom">서울, 세운상가</h3>
+                </div>
+              </div>
+              <img alt="dotMenu" src="./images/option.png" class="dotMenu" />
+            </div>
+            <div class="feedImage">
+              <img src="./images/feedImage01.png" />
+            </div>
+            <div class="feedBottom-wrapper">
+              <div class="feedMenu">
+                <div class="feedMenu-left">
+                  <div
+                    class="postLikeBtn postLikeBtn-white"
+                    onclick="postLike(event)"
+                  ></div>
+                  <img src="./images/chat.png" />
+                  <img src="./images/share.png" />
+                </div>
+                <div class="feedMenu-right">
+                  <img class="bookMarkBtn" src="./images/bookmark.png" />
+                </div>
+              </div>
+              <div>
+                <div class="likeCount">
+                  <img src="./images/profiles/profile04.png" />
+                  <p>
+                    <b id="likeUser">aineworld</b>님 외
+                    <b id="likeUserCnt">10명</b>이 좋아합니다
+                  </p>
+                </div>
+                <p class="postArea">
+                  <b id="postUser">tyui3185</b>
+                  <span class="postContent"
+                    >위코드 사람들과 함께 산책 중입니다 어때요 룰루랄라~~</span
+                  >
+                  <!-- <b class="morePost">더 보기</b> -->
+                </p>
+                <div class="comment-print">
+                  <div class="comment-one">
+                    <p><b class="commentUser">canon_mj</b>엄청 재밌었지~~</p>
+                    <div
+                      class="commentLikeBtn commentLikeBtn-white"
+                      onclick="commentLike(event)"
+                    ></div>
+                  </div>
+                </div>
+                <p class="postTime">42분 전</p>
+              </div>
+            </div>
+            <div class="comment-write">
+              <input id="comment" type="text" placeholder="댓글 달기..." />
+              <button id="commentBtn" type="submit">게시</button>
+            </div>
+          </article>
+          <article class="article">
+            <div class="flexBox">
+              <div class="profile">
+                <img src="./images/profiles/profile00.jpg" />
+                <div class="profile-info">
+                  <h3 class="profile-id">tyui3185</h3>
+                  <h3 class="profile-bottom">서울, 이문동 철길</h3>
+                </div>
+              </div>
+              <img alt="dotMenu" src="./images/option.png" class="dotMenu" />
+            </div>
+            <div class="feedImage">
+              <img src="./images/feedImage02.png" />
+            </div>
+            <div class="feedBottom-wrapper">
+              <div class="feedMenu">
+                <div class="feedMenu-left">
+                  <div
+                    class="postLikeBtn postLikeBtn-white"
+                    onclick="postLike(event)"
+                  ></div>
+                  <img src="./images/chat.png" />
+                  <img src="./images/share.png" />
+                </div>
+                <div class="feedMenu-right">
+                  <img class="bookMarkBtn" src="./images/bookmark.png" />
+                </div>
+              </div>
+              <div>
+                <div class="likeCount">
+                  <img src="./images/profiles/profile04.png" />
+                  <p>
+                    <b id="likeUser">aineworld</b>님 외
+                    <b id="likeUserCnt">10명</b>이 좋아합니다
+                  </p>
+                </div>
+                <p class="postArea">
+                  <b id="postUser">tyui3185</b>
+                  <span class="postContent">기차가 칙칙폭폭 달려가요</span>
+                  <!-- <b class="morePost">더 보기</b> -->
+                </p>
+                <div class="comment-print">
+                  <div class="comment-one">
+                    <p><b class="commentUser">code_hj</b>철길 분위기 있네</p>
+                    <div
+                      class="commentLikeBtn commentLikeBtn-white"
+                      onclick="commentLike(event)"
+                    ></div>
+                  </div>
+                </div>
+                <p class="postTime">42분 전</p>
+              </div>
+            </div>
+            <div class="comment-write">
+              <input id="comment" type="text" placeholder="댓글 달기..." />
+              <button id="commentBtn" type="submit">게시</button>
+            </div>
+          </article>
+        </div>
+        <div class="main-right">
+          <div class="profile">
+            <img src="./images/profile_icon.jpg" />
+            <div class="profile-info">
+              <h3 class="profile-id">wecode_bootcamp</h3>
+              <h3 class="profile-bottom">WeCode | 위코드</h3>
+            </div>
+          </div>
+          <div class="sideBox storyBox">
+            <div class="sideMenu">
+              <h4 class="sideMenu-title">스토리</h4>
+              <h4 class="sideMenu-showAll">모두 보기</h4>
+            </div>
+            <div class="profile">
+              <img src="./images/profiles/profile01.png" />
+              <div class="profile-info">
+                <h3 class="profile-id">_yums_s</h3>
+                <h3 class="profile-bottom">16분 전</h3>
+              </div>
+            </div>
+            <div class="profile">
+              <img src="./images/profiles/profile03.png" />
+              <div class="profile-info">
+                <h3 class="profile-id">drink_eat_drink</h3>
+                <h3 class="profile-bottom">3시간 전</h3>
+              </div>
+            </div>
+            <div class="profile">
+              <img src="./images/profiles/profile02.png" />
+              <div class="profile-info">
+                <h3 class="profile-id">hyukyc</h3>
+                <h3 class="profile-bottom">20시간 전</h3>
+              </div>
+            </div>
+          </div>
+          <div class="sideBox recommend">
+            <div class="sideMenu">
+              <h4 class="sideMenu-title">회원님을 위한 추천</h4>
+              <h4 class="sideMenu-showAll">모두 보기</h4>
+            </div>
+            <div class="profile">
+              <img src="./images/profiles/profile04.png" />
+              <div class="profile-info">
+                <h3 class="profile-id">joaaaaahye</h3>
+                <h3 class="profile-bottom">_legend_a님 외 2명이 좋아합니다</h3>
+              </div>
+              <div class="profile-follow">
+                <h3>팔로우</h3>
+              </div>
+            </div>
+            <div class="profile">
+              <img src="./images/profiles/profile05.png" />
+              <div class="profile-info">
+                <h3 class="profile-id">rampart81</h3>
+                <h3 class="profile-bottom">
+                  ringo_in_seoul님 외 12명이 좋아합니다
+                </h3>
+              </div>
+              <div class="profile-follow">
+                <h3>팔로우</h3>
+              </div>
+            </div>
+            <div class="profile">
+              <img src="./images/profiles/profile06.png" />
+              <div class="profile-info">
+                <h3 class="profile-id">shawnjioo</h3>
+                <h3 class="profile-bottom">
+                  jimmylee220님 외 1명이 좋아합니다
+                </h3>
+              </div>
+              <div class="profile-follow">
+                <h3>팔로우</h3>
+              </div>
+            </div>
+          </div>
+          <footer class="footer">
+            <p>Instagram 정보 · 지원 · 홍보 센터 · API ·</p>
+            <p>채용 정보 · 개인정보처리방침 · 약관 ·</p>
+            <p>디렉터리 · 프로필 · 해시태그 · 언어</p>
+            <p class="copyright">2019 INSTAGRAM</p>
+          </footer>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
