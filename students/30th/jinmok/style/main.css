@@ -9,6 +9,8 @@
   border-bottom: 1.5px solid #bdbfc1;
   width: 100%;
   background-color: white;
+  font-family: ‘Noto Sans KR’, sans-serif, ’dotum’, ’돋움’,
+    ’Apple SD Gothic Neo’;
 }
 
 #main-navigation,
@@ -150,12 +152,20 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 24px;
   margin-bottom: 15px;
 }
 
-.article-btns div i:not(:last-child) {
+.article-btns div button:not(:last-child) {
   margin-right: 15px;
+}
+
+.article-btns div button {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.heartButton:checked {
+  color: red;
 }
 
 .like-section {
@@ -186,18 +196,6 @@ main {
   margin-bottom: 7px;
 }
 
-.id_comment {
-  display: flex;
-  align-self: baseline;
-  width: 100%;
-  font-size: 14px;
-  margin-bottom: 10px;
-}
-
-.id_comment div:first-child {
-  margin-right: 5px;
-}
-
 .comment-box {
   width: 100%;
 }
@@ -206,10 +204,31 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  margin-bottom: 10px;
+}
+
+.id_comment {
+  display: flex;
+  align-self: baseline;
+  flex-grow: 1;
+  font-size: 14px;
+}
+
+.id_comment div:first-child {
+  margin-right: 5px;
 }
 
 .comment {
-  width: auto;
+  align-self: start;
+  flex-grow: 1;
+  line-height: 17px;
+  word-break: break-all;
+}
+
+.commentHeart {
+  padding-left: 10px;
+  align-self: center;
+  cursor: pointer;
 }
 
 .upload-time {
@@ -268,6 +287,8 @@ main {
   top: 90px;
   left: 50%;
   transform: translateX(-50%);
+  font-family: ‘Noto Sans KR’, sans-serif, ’dotum’, ’돋움’,
+    ’Apple SD Gothic Neo’;
 }
 
 .story-recommand-section {

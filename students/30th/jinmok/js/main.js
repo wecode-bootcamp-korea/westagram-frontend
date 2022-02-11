@@ -1,3 +1,5 @@
+'use strict';
+
 const mainBox = document.getElementsByTagName('main')[0];
 const navBox = document.getElementsByClassName('nav-box')[0];
 const storyRecommand = document.getElementById('story-recommand');
@@ -75,6 +77,6 @@ function handleForm(event) {
     const commentText = document.createElement("div");
     commentText.setAttribute('class', 'comment-text')
     commentBox.appendChild(commentText);
-    commentText.innerHTML = '<div class="id_comment"><div class="bold">wecode_bootcomp</div><div class="comment">'+comment+'</div></div><button><i class="far fa-heart"></i></button>';
+    commentText.innerHTML = '<div class="id_comment"><div class="bold">wecode_bootcomp</div><div class="comment">'+comment+'</div></div><button class="commentHeart"><i class="far fa-heart"></i></button>';
 }
 commentsForm.addEventListener('submit', handleForm);
