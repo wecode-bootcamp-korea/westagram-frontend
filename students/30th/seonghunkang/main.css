@@ -195,12 +195,17 @@ input[type="text"]::placeholder {
   width: 20px;
   border: 1px solid #d5ceca;
   border-radius: 50%;
+  margin-right: 4px;
 }
 
 /* comment box */
 
-.new_comment {
-  margin-left: 7px;
+#new_comment {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  padding-left: 8px;
+  margin: 0;
 }
 
 .comment_box {
@@ -209,6 +214,12 @@ input[type="text"]::placeholder {
   /* margin-top: 6px; */
 }
 
+.delete {
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+/* add a comment box */
 .new_comment_box {
   display: flex;
   border: 1px solid lightgray;
@@ -216,6 +227,7 @@ input[type="text"]::placeholder {
 
 #comment_input {
   flex: 8;
+  height: 40px;
   border: none;
 }
 
@@ -226,6 +238,7 @@ input[type="text"]::placeholder {
 #post_button {
   color: rgb(0, 0, 255, 50%);
   background-color: white;
+  cursor: pointer;
   border: none;
 }
 
