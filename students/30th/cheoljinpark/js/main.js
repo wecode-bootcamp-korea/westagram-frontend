@@ -1,8 +1,18 @@
-const commentBox = document.getElementsByClassName('feed-commantlist')[0];
+const commentBtn = document.getElementsByClassName('comment-add')[0];
 
-commentBox.addEventListener('keydown', function(e) {
+function submit() {
+  const comment = document.getElementsByClassName('comment-text')[0];
   
-  if (e.KeyCode == 13) {
-    commentBox.appendChild('li');
-  } 
+  
+}
+
+commentBtn.addEventListener('keydown', (e) => {
+  submit();
+
+});
+
+commentBtn.addEventListener('click', (e) => {
+  if (e.code === 'Enter')
+  submit();
+  
 });
