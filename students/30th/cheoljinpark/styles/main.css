@@ -59,11 +59,18 @@
 .main-container main .feeds article {
   position: relative;
   justify-content: space-between;
-  height: 1000px'
+  height: 1000px;
+  border: 3px solid #DDD;
 }
 .main-container main .feeds article .feed-titlebox {
   display: flex;
-  margin-bottom: 15px;
+  padding: 0 15px;
+  align-items: center;
+  height: 80px;
+  justify-content: space-between;
+}
+.main-container main .feeds article .feed-titlebox .feed-titleboxleft {
+  display: flex;
 }
 
 .main-container main .feeds article .feed-titlebox .feed-titlelogo {
@@ -74,13 +81,11 @@
   color: #FFF;
   text-align: center;
   padding-top: 17px;
-  margin: 0 20px;
   font-size: 12px;
 }
 
-.main-container main .feeds article .feed-titlebox .feed-config{
-  position: absolute;
-  right: 25px;
+.main-container main .feeds article .feed-titlebox .feed-title {
+  margin-left: 15px;
 }
 
 .main-container main .feeds article .feed-img img{
@@ -153,28 +158,40 @@
 }
 
 .main-container main .feeds article .feed-commentbox {
-  position: relative;
-  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+
+.main-container main .feeds article .feed-commentbox .feed-comment {
+  display: flex;
   margin-left: 12px;
+  justify-content: space-between;
+  border: 3px solid #DDD;
 }
 
-.main-container main .feeds article .feed-commentbox input {
-  width: 100%;
-  height: 40px;
+.main-container main .feeds article .feed-commentbox .feed-comment textarea {
+  width: 700px;
+  height: 50px;
   font-size: 14px;
+  overflow: auto;
+  resize: none;
+  border: none;
+  width: 90%;
+  padding-top: 15px;
 }
 
-.main-container main .feeds article .feed-commentbox button {
-  position: absolute;
-  width: 10%;
-  height: 100%;
-  right: 0;
+.main-container main .feeds article .feed-commentbox .feed-comment button {
   box-shadow: none;
+  width: 10%;
   border: none;
   background-color: transparent;
   cursor: pointer;
   color: #518fd6;
   font-size: 14px;
+  height: 50px;
+  text-align: center;
 }
 
 .main-container main .main-right {
@@ -218,12 +235,6 @@
 }
 
 .main-container main .main-right .side-storiesbox .side-storieslist {
-  list-style-type: none;
-  padding-inline-start: 0;
-  padding-left: 10px;
-  overflow: auto;
-  margin-block-end: 0;
-  margin-block-start: 0;
   height: 255px;
 }
 
