@@ -6,6 +6,7 @@
   font-size: 30px;
   justify-content: space-between;
   height: 120px;
+  border-bottom: 3px solid #DDD;
 }
 
 .main-container nav .main-logo {
@@ -47,10 +48,12 @@
 .main-container main {
   display: flex;
   justify-content: center;
+  background-color: rgba(249, 249, 249, 0.962);
+  height: 100vh;
 }
 
 .main-container main .feeds {
-  margin: 0 15px 0 150px;
+  margin-right: 15px;
   padding: 60px 8px 20px 8px;
   width: 900px;
   height: 1000px;
@@ -61,6 +64,7 @@
   justify-content: space-between;
   height: 1000px;
   border: 3px solid #DDD;
+  background-color: white;
 }
 .main-container main .feeds article .feed-titlebox {
   display: flex;
@@ -89,7 +93,7 @@
 }
 
 .main-container main .feeds article .feed-img img{
-  width: 100%;
+  width: 878px;
   margin-bottom: 10px;
 }
 
@@ -142,6 +146,7 @@
 .main-container main .feeds article .feed-descripton {
   margin-top: 20px;
   margin-left: 12px;
+  background-color: white;
 }
 
 .main-container main .feeds article .feed-descripton span.blur {
@@ -162,24 +167,24 @@
   flex-direction: column;
   justify-content: space-between;
   padding-top: 10px;
+  height: 152px;
 }
 
 .main-container main .feeds article .feed-commentbox .feed-comment {
   display: flex;
-  margin-left: 12px;
   justify-content: space-between;
   border: 3px solid #DDD;
+  border-left: 0;
+  border-right: 0;
+  padding-left: 12px;
 }
 
-.main-container main .feeds article .feed-commentbox .feed-comment textarea {
-  width: 700px;
+.main-container main .feeds article .feed-commentbox .feed-comment input {
+  width: 90%;
   height: 50px;
   font-size: 14px;
   overflow: auto;
-  resize: none;
   border: none;
-  width: 90%;
-  padding-top: 15px;
 }
 
 .main-container main .feeds article .feed-commentbox .feed-comment button {
@@ -197,7 +202,6 @@
 .main-container main .main-right {
   padding-top: 50px;
   width: 400px;
-  margin-right: 100px;
 }
 .main-container main .main-right .side-titlebox {
   display: flex;
@@ -236,6 +240,7 @@
 
 .main-container main .main-right .side-storiesbox .side-storieslist {
   height: 255px;
+  background-color: white;
 }
 
 .main-container main .main-right .side-storiesbox .side-storieslist .side-story:nth-child(1) .story-profile {
@@ -263,6 +268,7 @@
   height: 300px;
   width: 300px;
   border: 3px solid #DDD;
+  background-color: white;
 }
 
 .main-container main .main-right .side-recommandsbox .side-recommandstitle {
@@ -302,4 +308,15 @@
 
 .main-container main .main-right .side-recommandsbox .side-recommandslist .side-recommand:nth-child(5) .recommand-profile {
   background-image: url('../img/rupixen-com-pzPcfPVhHl8-unsplash.jpg');
+}
+
+.main-container main .main-right .side-information {
+  margin: 15px 0;
+  opacity: 0.4;
+  width: 300px;
+}
+
+.main-container main .main-right .side-company {
+  opacity: 0.4;
+  width: 300px;
 }

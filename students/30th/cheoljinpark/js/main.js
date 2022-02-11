@@ -1,18 +1,25 @@
-const commentBtn = document.getElementsByClassName('comment-add')[0];
+const commentInput = document.getElementsByClassName('comment-text')[0];
+const commentBtn = document.getElementsByClassName('comment-add');
 
 function submit() {
   const comment = document.getElementsByClassName('comment-text')[0];
+  const commentList = document.getElementsByClassName('feed-commentlist')[0];
   
+  const newcomment = commentList.appendChild("li");
   
+  newcomment.value = comment.value;
 }
 
-commentBtn.addEventListener('keydown', (e) => {
-  submit();
+console.log(commentBtn);
 
-});
+// commentBtn.addEventListener('click', (e) => {
+//   submit();
+//   commentInput.value = '';
+// });
 
-commentBtn.addEventListener('click', (e) => {
-  if (e.code === 'Enter')
-  submit();
-  
-});
+// commentInput.addEventListener('keydown', (e) => {
+//   if (e.code === 'Enter') {
+//     submit();
+//     commentInput.value = '';
+//   }
+// });
