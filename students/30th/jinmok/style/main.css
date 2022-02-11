@@ -110,6 +110,10 @@ main {
   flex-direction: column;
 }
 
+.article-header-menu {
+  color: black;
+}
+
 .feeds_my_id .profile-img {
   width: 40px;
   height: 40px;
@@ -174,7 +178,38 @@ main {
 .article-text {
   line-height: 19px;
   font-size: 14px;
-  margin-bottom: 3px;
+  margin-bottom: 7px;
+}
+
+.reply {
+  color: #909090;
+  margin-bottom: 7px;
+}
+
+.id_comment {
+  display: flex;
+  align-self: baseline;
+  width: 100%;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.id_comment div:first-child {
+  margin-right: 5px;
+}
+
+.comment-box {
+  width: 100%;
+}
+
+.comment-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.comment {
+  width: auto;
 }
 
 .upload-time {
@@ -182,12 +217,12 @@ main {
   color: #909090;
 }
 
-.commants {
+.comments {
   border-top: 1.5px solid #efefef;
   padding: 15px 15px;
 }
 
-.commants-form {
+#comments-form {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -205,7 +240,7 @@ main {
   font-size: 25px;
 }
 
-.commants-submit {
+#comments-submit {
   padding: 0;
   width: max-content;
   border: none;
@@ -214,7 +249,7 @@ main {
   font-size: 14px;
 }
 
-#commants-area {
+#comments-area {
   padding: 0;
   flex-grow: 1;
   max-height: 72px;
@@ -224,7 +259,7 @@ main {
   outline: unset;
   resize: none;
   scroll-behavior: unset;
-  overflow: hidden;
+  overflow: auto;
 }
 
 #story-recommand {

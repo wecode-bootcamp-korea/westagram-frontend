@@ -61,7 +61,7 @@
                   <span>WeCode - 위코드</span>
                 </div>
               </div>
-              <a href="#">
+              <a class="article-header-menu" href="#">
                 <i class="fas fa-ellipsis-h"></i>
               </a>
             </div>
@@ -92,23 +92,31 @@
                   Wecode 졸업생 김병진님 인터뷰 -
                 </span>
               </div>
+              <button class="reply">댓글</button>
               <span class="upload-time">54분 전</span>
             </div>
-            <div class="commants">
-              <form class="commants-form" action="">
+            <div class="comments">
+              <form id="comments-form" method="post" action="">
                 <button class="emoji">
                   <i class="far fa-smile"></i>
                 </button>
                 <textarea
-                  name="commants-area"
-                  id="commants-area"
+                  name="comments-area"
+                  id="comments-area"
                   placeholder="댓글 달기..."
                   autocomplete="off"
                   autocorrect="off"
                   onkeydown="resize(this)"
                   onkeyup="resize(this)"
                 ></textarea>
-                <button class="commants-submit">게시</button>
+                <button
+                  id="comments-submit"
+                  type="submit"
+                  form="comments-form"
+                  disabled
+                >
+                  게시
+                </button>
               </form>
             </div>
           </article>
