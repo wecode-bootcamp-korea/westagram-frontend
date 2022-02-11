@@ -81,29 +81,38 @@ function handleForm(event) {
 }
 commentsForm.addEventListener('submit', handleForm);
 
-const heartButton = document.querySelectorAll('.heartButton');
 
-function clickHeartButton() {
-    const heartButton = document.querySelectorAll('.heartButton');
-    for (const i in heartButton) {
 
-    }
+// function clickHeartButton() {
+//     const heartButton = document.querySelectorAll('.heartButton');
+//     for (const i in heartButton) {
+
+//     }
+// }
+
+function clickButton(e) {
+    e.target.classList.toggle('far');
+    e.target.classList.toggle('fa');
+    e.target.classList.toggle('fa-solid');
+    e.target.closest('button').classList.toggle('hover');
 }
+
+const heartButton = document.querySelectorAll('.heartButton');
 
 heartButton[0].addEventListener('click', (e) => {
     if (e.target.classList.contains('far')){
-        e.target.classList.remove('far');
-        e.target.classList.add('fa');
-        e.target.classList.add('fa-solid');
+        clickButton(e);
         e.target.style.color = '#ED4956';
-        e.target.closest('button').classList.remove('hover');
         e.target.classList.toggle('active');
     } else {
-        e.target.classList.add('far');
-        e.target.classList.remove('fa');
-        e.target.classList.remove('fa-solid');
+        clickButton(e);
         e.target.style.color = 'black';
-        e.target.closest('button').classList.add('hover');
         e.target.classList.toggle('active');
     }
+})
+
+const bookmarkButton = document.querySelector('.bookmarkButton');
+
+bookmarkButton.addEventListener('click', (e) => {
+    clickButton(e);
 })
