@@ -77,18 +77,9 @@ function handleForm(event) {
     const commentText = document.createElement("div");
     commentText.setAttribute('class', 'comment-text')
     commentBox.appendChild(commentText);
-    commentText.innerHTML = '<div class="id_comment"><div class="bold">wecode_bootcomp</div><div class="comment">'+comment+'</div></div><button class="commentHeart heartButton"><i class="far fa-heart"></i></button>';
+    commentText.innerHTML = '<div class="id_comment"><div class="bold">wecode_bootcomp</div><div class="comment">'+comment+'</div></div><button class="commentHeart heartButton hover" onclick="clickHeartButton(this)"><i class="far fa-heart"></i></button>';
 }
 commentsForm.addEventListener('submit', handleForm);
-
-
-
-// function clickHeartButton() {
-//     const heartButton = document.querySelectorAll('.heartButton');
-//     for (const i in heartButton) {
-
-//     }
-// }
 
 function clickButton(e) {
     e.target.classList.toggle('far');
@@ -97,22 +88,47 @@ function clickButton(e) {
     e.target.closest('button').classList.toggle('hover');
 }
 
-const heartButton = document.querySelectorAll('.heartButton');
+// const heartButton = document.querySelector('.heartButton');
 
-heartButton[0].addEventListener('click', (e) => {
-    if (e.target.classList.contains('far')){
-        clickButton(e);
-        e.target.style.color = '#ED4956';
-        e.target.classList.toggle('active');
+// heartButton.addEventListener('click', (e) => {
+//     if (e.target.classList.contains('far')){
+//         clickButton(e);
+//         e.target.style.color = '#ED4956';
+//         e.target.classList.toggle('active');
+//     } else {
+//         clickButton(e);
+//         e.target.style.color = 'black';
+//         e.target.classList.toggle('active');
+//     }
+// })
+
+// const bookmarkButton = document.querySelector('.bookmarkButton');
+
+// bookmarkButton.addEventListener('click', (e) => {
+//     clickButton(e);
+// })
+
+function clickButton(e) {
+    e.classList.toggle('far');
+    e.classList.toggle('fa');
+    e.classList.toggle('fa-solid');
+    e.closest('button').classList.toggle('hover');
+}
+
+function clickHeartButton(e) {
+    const iconInButton = e.querySelector('i')
+    if (iconInButton.classList.contains('far')){
+        clickButton(iconInButton);
+        e.style.color = '#ED4956';
+        e.classList.toggle('active');
     } else {
-        clickButton(e);
-        e.target.style.color = 'black';
-        e.target.classList.toggle('active');
+        clickButton(iconInButton);
+        e.style.color = 'black';
+        e.classList.toggle('active');
     }
-})
+}
 
-const bookmarkButton = document.querySelector('.bookmarkButton');
-
-bookmarkButton.addEventListener('click', (e) => {
-    clickButton(e);
-})
+const clickBookmarkButton = (e) => {
+    const iconInButton = e.querySelector('i');
+    clickButton(iconInButton);
+}
