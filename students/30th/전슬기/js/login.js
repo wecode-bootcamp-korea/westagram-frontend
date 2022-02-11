@@ -1,3 +1,4 @@
+const loginForm = document.querySelector(".loginForm");
 const inputId = document.querySelector("#loginId");
 const inputPw = document.querySelector("#loginPassword");
 const btnLogin = document.querySelector("#loginButton");
@@ -17,7 +18,7 @@ function moveToMain(event) {
   location.href = "main.html";
 }
 
-window.addEventListener("keyup", () => {
+loginForm.addEventListener("input", () => {
   inputId.value && inputPw.value ? activeBtn() : inactiveBtn();
 });
 btnLogin.addEventListener("click", moveToMain);

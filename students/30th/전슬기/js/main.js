@@ -14,7 +14,7 @@ function postComment(event) {
   event.preventDefault();
   if (commentInput.value) {
     const newComment = document.createElement("p");
-    const userName = document.querySelector(".user").innerHTML;
+    const userName = document.querySelector(".user").innerText;
     newComment.innerHTML = `<strong>${userName}</strong> ${commentInput.value}`;
     commentsDiv.appendChild(newComment);
     commentInput.value = "";
