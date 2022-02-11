@@ -15,6 +15,11 @@ main {
   border-radius: 3px;
 }
 
+.logo,
+.ForgotPwd {
+  cursor: pointer;
+}
+
 .loginBorder {
   background-color: white;
   height: 400px;
@@ -58,15 +63,23 @@ input {
   border-radius: 3px;
 }
 
-input:hover {
+.idInput:hover,
+.pwInput:hover {
   background-color: white;
   border: 1px solid gray;
+}
+
+input[type="password"]:disabled {
+  /* background: rgba(47, 148, 243, 0.253); */
+  background: rgba(47, 148, 243);
+  cursor: pointer;
 }
 
 .isloginButton {
   padding: 5px 6px;
   margin-top: 12px;
-  background-color: rgb(47, 148, 243);
+  /* background-color: rgb(47, 148, 243); */
+  background: rgba(47, 148, 243, 0.253);
   opacity: 98%;
   border: none;
   border-radius: 3px;
@@ -89,7 +102,7 @@ input:hover {
   width: 100%;
 }
 
-p {
+.ForgotPwd {
   text-align: center;
   font-size: small;
   font-weight: bold;

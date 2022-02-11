@@ -20,69 +20,124 @@
   <title>westagram</title>
 </head>
 
-<body style="background-color:rgb(255, 235, 252);">
+<!-- <body style="background-color:rgb(255, 235, 252);"> -->
 
+<body>
   <div>
-    <div style="background-color:rgb(198, 219, 150);">
-      <nav>
-        <div class="nav">
-          <h1 class="logo">westagram</h1>
+    <!-- <nav style="background-color:rgb(172, 0, 146);"> -->
+    <nav>
+      <div class="nav">
+        <!-- 위스타그램 로고 -->
+        <h1 class="logo">westagram</h1>
+        <div class="inputBox">
+          <!-- 검색바 -->
+          <input type="password " id="password" placeholder="검색">
+        </div>
+        <div>
           <div>
-            <input type="password " id="password" placeholder="검색"> <!-- 검색아이콘 추가 -->
-          </div>
-          <div>
-            아이콘
+            <!-- 최상단 네비 아이콘 & 프로필이미지 -->
+            <img class="navImg" src="../img/direct-instagram.png">
+            <img class="navImg" src="../img/heart.png">
+            <img class="navUserImg" src="../img/light.PNG">
           </div>
         </div>
-      </nav>
-      <main style="background-color: rgb(191, 180, 255);">
-        메인 전체
+      </div>
+    </nav>
+    <div class="navOutline"></div>
+  </div>
+  <div class="main">
+    <!-- <div style="background-color:rgb(198, 219, 150);"> -->
+    <div>
+      <main>
+        <!-- <main style="background-color: rgb(191, 180, 255);"> -->
+        <!-- 하단 섹션 시작부분 -->
+        <br>
         <section class="main">
-          <div class="feed" style="background-color: rgb(180, 255, 230);">
-            피드(스토리)
+          <!-- <div class="feed" style="background-color: rgb(180, 255, 230);"> -->
+          <div>
             <div>
-              <article style="background-color:rgb(219, 203, 150);">
-                <div class="feedsMain" style="width: 614px;">
+              <!-- <article style="background-color:rgb(219, 203, 150);"> -->
+              <article>
+                <div class="feedsMain">
                   <div class="feedIdText">
-                    <img class="profileImg" src="../img/sakura.PNG">
-                    <!-- <div>nyj_n</div> -->
-                    nyj_n
+                    <!-- 피드 상단 프로필이미지 & 아이디 -->
+                    <img class="profileImg" alt="profileImg" src="../img/light.PNG">
+                    <div cl>nyj_n</div>
+                    <!-- nyj_n -->
                   </div>
-                  <img src="../img/sakura.PNG">
-                  <div>
-                    아이콘
+                  <img class="feedImg" alt="profileImg" src="../img/sakura.PNG">
+                  <div class="feedBottomIcon">
+                    <div>
+                      <!-- 피드 하단 아이콘 -->
+                      <img class="feedIcon" alt="heartIcon" src="../img/heart.png">
+                      <img class="feedIcon" alt="chatIcon" src="../img/chat-bubble.png">
+                      <img class="feedIcon" alt="directIcon" src="../img/direct-instagram.png">
+                    </div>
+                    <div>
+                      <img class="feedIcon" alt="saveIcon" src="../img/save-instagram.png">
+                    </div>
                   </div>
-                  <div style="font-size: small;">
-                    누군가 좋아합니다
+                  <!-- 피드 좋아요 -->
+                  <div class="feedBottom">
+                    <div style="font-size: small; font-weight: bold;">
+                      누군가 좋아합니다
+                    </div>
+                    <div class="comentTextStyle">
+                      <!-- 피드 아이디 & 내용 -->
+                      <!-- <a>nyj_n</a>벚꽃 🌸 -->
+                      <div class="idStyle">nyj_n</div>
+                      <a>벚꽃 🌸</a>
+                    </div>
                   </div>
-                  <div>
-                    <a>nyj_n</a>벚꽃 🌸
-                  </div>
+                  <!--  -->
                   <section class="coment">
                     <div>
-                      <input type="text " placeholder="댓글달기..">
-                      <button>게시</button>
+                      <div>
+                        <!-- 피드댓글 input -->
+                        <input type="text " placeholder="댓글달기..">
+                        <button>게시</button>
+                      </div>
                     </div>
                   </section>
+                  <!--  -->
                 </div>
               </article>
             </div>
           </div>
           <!--피드 -->
-          <div class="mainRight" style="background-color:rgb(255, 171, 149);">
+          <!-- <div class="mainRight" style="background-color:rgb(255, 171, 149);"> -->
+          <div class="mainRight">
             <div>
-              <div>
-                <img class="rightImg" src="../img/sakura.PNG">
+              <div class="mainRightImg">
                 <div>
-                  아이디
+                  <!-- 상단 이미지 -->
+                  <img class="rightImg" alt="profileImg" src="../img/light.PNG">
+                </div>
+                <div>
+                  nyj_n
+                </div>
+              </div>
+              <!--  -->
+              <div>
+                <p>회원님을 위한 추천</p>
+              </div>
+              <div class="mainRightImg">
+                <div>
+                  <!-- 추천 아이디 -->
+                  <img class="recommendImg" alt="profileImg" src="../img/bluebottle.PNG">
+                </div>
+                <div>
+                  Yookiki
                 </div>
               </div>
             </div>
-          </div>
+            </class=>
         </section>
       </main>
     </div>
   </div>
+  <!-- 2 -->
+
 
 </body>
 
