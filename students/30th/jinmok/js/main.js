@@ -77,6 +77,33 @@ function handleForm(event) {
     const commentText = document.createElement("div");
     commentText.setAttribute('class', 'comment-text')
     commentBox.appendChild(commentText);
-    commentText.innerHTML = '<div class="id_comment"><div class="bold">wecode_bootcomp</div><div class="comment">'+comment+'</div></div><button class="commentHeart"><i class="far fa-heart"></i></button>';
+    commentText.innerHTML = '<div class="id_comment"><div class="bold">wecode_bootcomp</div><div class="comment">'+comment+'</div></div><button class="commentHeart heartButton"><i class="far fa-heart"></i></button>';
 }
 commentsForm.addEventListener('submit', handleForm);
+
+const heartButton = document.querySelectorAll('.heartButton');
+
+function clickHeartButton() {
+    const heartButton = document.querySelectorAll('.heartButton');
+    for (const i in heartButton) {
+
+    }
+}
+
+heartButton[0].addEventListener('click', (e) => {
+    if (e.target.classList.contains('far')){
+        e.target.classList.remove('far');
+        e.target.classList.add('fa');
+        e.target.classList.add('fa-solid');
+        e.target.style.color = '#ED4956';
+        e.target.closest('button').classList.remove('hover');
+        e.target.classList.toggle('active');
+    } else {
+        e.target.classList.add('far');
+        e.target.classList.remove('fa');
+        e.target.classList.remove('fa-solid');
+        e.target.style.color = 'black';
+        e.target.closest('button').classList.add('hover');
+        e.target.classList.toggle('active');
+    }
+})

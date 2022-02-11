@@ -164,8 +164,24 @@ main {
   cursor: pointer;
 }
 
-.heartButton:checked {
-  color: red;
+.hover:hover {
+  opacity: 0.5;
+}
+
+@keyframes clickScaleUp {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.active {
+  animation: clickScaleUp 0.2s ease-in-out;
 }
 
 .like-section {
