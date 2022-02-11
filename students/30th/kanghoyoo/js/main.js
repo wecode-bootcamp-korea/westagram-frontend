@@ -20,12 +20,22 @@ textBox.addEventListener("keydown", function () {
 
 const ment = document.getElementsByClassName("mentsWrap")[1];
 function mentSend() {
-  const mentGet = document.getElementsByClassName("commentInput")[0].value;
+  const mentGet = document.getElementsByClassName("commentInput")[0];
   const mentTimes = document.getElementsByClassName("mentTime")[0];
-  ment.innerHTML +=
-    '<p class="mentsMoreWrap"><span class="commentId">Kangho_Yoo</span><span class="comment">' +
-    mentGet +
-    "</span></p>";
-  mentTimes.innerText = "1초 전";
-  mentGet = "";
+  if (mentGet.value !== "") {
+    ment.innerHTML +=
+      '<p class="mentsMoreWrap"><span class="commentId">Kangho_Yoo</span><span class="comment">' +
+      mentGet.value +
+      "</span><input type='button' class='delate' onclick='delate();' value='X'/></p>";
+    mentTimes.innerText = "1초 전";
+  }
+  mentGet.value = "";
+}
+
+function enterkey() {
+  if (window.event.keyCode == 13) mentSend();
+}
+
+function delate() {
+  document.getElementsByClassName("mentsMoreWrap")[0].remove();
 }
