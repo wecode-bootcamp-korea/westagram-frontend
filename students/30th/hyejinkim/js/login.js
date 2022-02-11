@@ -1,7 +1,5 @@
-const idInput = document.querySelector("#id");
-const pwInput = document.querySelector("#password");
-const loginBtn = document.querySelector(".submit-button");
-
+/* 
+// button 클릭 이벤트 - 이벤트 위임 활용 전
 function btnAbled() {
   if (idInput.value && pwInput.value) {
     loginBtn.disabled = false;
@@ -11,86 +9,77 @@ function btnAbled() {
     loginBtn.classList.remove("submit-button-after");
   }
 }
-
-idInput.addEventListener("keyup", btnAbled);
-pwInput.addEventListener("keyup", btnAbled);
-/*
-  이벤트 위임
-  - form 태그에 이벤트 등록 -> 하위 요소에도 이벤트 위임이 된다
-
-  input 이벤트
-  - input 안의 내용이 변경되었을 때 감지
-  - 복붙하는 경우
-
-  contains, includes
-  - contains : 자식 노드를 포함하고 있는지 boolean 리턴
-  - includes : 배열에 요소를 포함하고 있는지 boolean 리턴
-
-  불리언 네이밍 컨벤션
-  - is를 prefix로 붙여라
-  
-  함수명 네이밍 컨벤션
-  - 동작을 알 수 있는 동사형으로 쓴다 (ex> checkId, checkPw)
-
-  함수는 기능 단위로 분배한다
-  - handleLogin으로 검증 + 버튼 활성화 둘다 할 수 있지만
-  - 검증, 버튼 활성화를 각각 구분해주는 것이 다른 페이지에서도 재사용 가능
-  
-  중복되는 동작은 삼항 연산자로 줄인다
-  - 3항 연산자
-  - 조건안에 로직이 길어지면 if문, f/t 처럼 간단하면 3항 연산자를 쓴다
-    
-    function handleBtn(btnValid) {
-      loginBtn.disabled = btnValid ? false : true;
-
-      - not 연산자로 줄일 수 있다
-      loginBtn.disabled = !btnValid // 반대값
-      
-      loginBtn.style.opacity = btnValid ? 1 : 0.5;
-      loginBtn.style.cursor = btnValid ? "pointer" : "default";
-    }
-
-  버튼 커서
-  - default : 기본값 (화살표);
-
-  window.event.code
-  - keycode 보다 code 쓰기 (keycode는 이제 지원 안될거임)
-  - 윈도우 어디든 엔터키 누르면 alert 창을 띄운다 
-
-  페이지 이동
-  - location.href / window.location.pathname : 새 주소로 이동 (이력o, 뒤로가기 가능)
-  - location.replace : 현재 주소를 새 주소로 바꾼다 (이력x, 뒤로가기 불가)
-  
-  init() 함수
-  - entry point : 자바스크립트 코드를 작성하고, 
-    특정 요소에서 이벤트가 발생했을 때 원하는 동작을 실행시킨다. 
-    이벤트를 감지하면 실행된다
-    아 여기서 이벤트를 실행시킬거야 라는 의미. 구분해주는 역할이다
-    init으로 구분해주는게 효율적이다
-
-  태그 선택
-  - querySelector : 특정 엘리먼트에서 찾는 것. 더 효율적이다
-  - getElementById : document 다 돌아야 함!
-
-  전역, 로컬 변수
-  - 특정 함수에서만 쓸거면 로컬로 쓰기
-  - 그치만 init 때문에 전역 변수로 선언 해주는게 편함
-
 */
 
-// 배열 메소드
-// 5. ID, PW validation
-/*
-    현재 id, pw 입력 시 무조건 로그인 버튼이 활성화 외어 있도록 구현이 되어 있습니다.
-    실제 로그인 하는 경우를 생각하며 validation(유효성 검사) 기능을 추가해주세요.
-    ex) id >>> '@' 포함 / pw >>> 5글자 이상
-*/
+"use strict";
 
-// git 질문
-// 1. PR이 깃헙에서 안뜨는 현상
-// 2. 다른 사람들꺼 다운 받으려면?
-// 3. git 리포지토리에 활성 변경 내용이 너무 많습니다 라고 떠요
+const loginForm = document.querySelector(".loginForm");
+const loginBtn = document.querySelector(".loginBtn");
 
-// 그외 질문
-// 1. 댓글란 <div><p> vs <ul><li>
-// 2. 네비 <a> vs <ul><li>
+// button 이벤트
+function handleBtn(btnValid) {
+  // 파라미터 : true, false 일때 요소+Valid
+  // 1) 버튼 변경
+  loginBtn.disabled = !btnValid; // 반대값
+  loginBtn.style.opacity = btnValid ? 1 : 0.5; // true 1, false 0.5
+  loginBtn.style.cursor = btnValid ? "pointer" : "default"; // default - 마우스 커서
+  // 2) 페이지 이동
+  // Q> window.event 를 쓴 이유 : 클릭 후 어디서든 엔터치면 이동? window.event 정확한 의미는 브라우저 어디에서나? 인지
+  if (window.event.code === "Enter") {
+    success();
+  }
+}
+
+// id 검사 - @ 포함 / 통과 true / X false
+function checkId(value) {
+  if (value.includes("@")) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+// pw 검사 - 5자 이상 / 통과 true / X false
+function checkPw(value) {
+  if (value.length >= 5) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+// input 이벤트
+/*Q> 사실 button에도 해당 이벤트가 걸려있는건가?
+A 요소에 따라 B가 바뀐다. 라고 하려면 이벤트 위임이 좋은가?*/
+
+function handleInput() {
+  // 1. value를 받아온다
+  const idValue = document.querySelector("#id").value;
+  const pwValue = document.querySelector("#password").value;
+  // 2. id, pw 유효성 검사
+  const isValidId = checkId(idValue); // id 검사
+  const isValidPw = checkPw(pwValue); // pw 검사
+  // 3. 결과에 따라 버튼 live
+  if (isValidId && isValidPw) {
+    handleBtn(true);
+  } else {
+    handleBtn(false);
+  }
+}
+
+// 페이지 이동
+function success() {
+  alert("환영합니다!");
+  location.href = "./main.html";
+  // location.replace = "./main.html";
+  // window.location.pathname = "./main.html";
+  // Q> href는 window 안붙이고, pathname은 window 붙이는 이유?
+}
+
+const init = () => {
+  loginForm.addEventListener("keyup", handleInput); // 일반적인 키입력
+  loginForm.addEventListener("input", handleInput); // 복붙 CASE / input 혹은 textarea 요소에 값이 변경되었을 때
+  loginBtn.addEventListener("click", success);
+};
+
+init();

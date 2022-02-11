@@ -9,67 +9,27 @@
   </head>
   <body>
     <div class="container">
-      <form class="login-form">
+      <form class="loginForm">
         <h1 id="logo" class="logo-font">Westagram</h1>
-        <div class="loginWrpper">
-          <input
-            id="id"
-            type="text"
-            class="text-field"
-            placeholder="전화번호, 사용자 이름 또는 이메일"
-          />
-          <input
-            id="password"
-            type="password"
-            class="text-field"
-            placeholder="비밀번호"
-          />
-          <button
-            type="button"
-            class="submit-button"
-            disabled
-            onclick="location.href='main.html';"
-          >
-            로그인
-          </button>
-        </div>
+        <!-- <div class="loginWrpper"> -->
+        <input
+          id="id"
+          type="text"
+          class="text-field"
+          placeholder="전화번호, 사용자 이름 또는 이메일"
+        />
+        <input
+          id="password"
+          type="password"
+          class="text-field"
+          placeholder="비밀번호"
+        />
+        <button type="button" class="loginBtn" disabled>로그인</button>
+        <!-- </div> -->
         <div class="links">
-          <a href="feeds.html">비밀번호를 잊으셨나요?</a>
+          <a href="./main.html">비밀번호를 잊으셨나요?</a>
         </div>
       </form>
     </div>
   </body>
 </html>
-
-<!-- 세션 정리 -->
-<!--
-
-  1. form 안의 button
-    - submit 때문에 reload 발생
-    - e.preventDefault()로 기본 이벤트를 없애주거나
-    - type을 button으로 바꾼다 (아무 이벤트 없음)
-
-  2. css 선택자
-    - 작성 순서 : html 태그 순서대로 쓴다
-    - 지양해야 할 선택자
-      1) id : 클래스 재사용 때문에 id는 최대한 지양한다.
-      2) tag : 팀원 파일 a에도 모두 적용되니, common.css에만 쓴다.
-      3) 자식 요소 : 부모 input 보다 class 명을 따로 주고 스타일링 권장
-         ㄴ 태그마다 클래스를 준다
-         ㄴ 단, 스타일링이 필요없는데 의미를 나타내는 건 NO
-      4) 개별 스타일링을 클래스로 저장하는 것이 좋다
-          ㄴ fontSize40, fontBold 등..
-      5) BEM 구조 __  -- : SCSS 전처리를 사용하면 안써두 된다
-      ex> SCSS 예시
-      .loginForm {
-        input {
-
-        }
-        button {
-
-        }
-      }
-      
-  3. 정렬
-    - html, body, loginContainer에 height: 100% 주고 시작한다.
--->
