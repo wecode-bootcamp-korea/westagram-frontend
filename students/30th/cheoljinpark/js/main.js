@@ -28,8 +28,7 @@ function fadeIn() {
 
 function scrollingDown() {
   const commentList = document.getElementsByClassName('feed-commentlist')[0];
-  const newComments = document.getElementsByClassName('new-commentbox')[0];
-
+  
   commentList.scrollTop = commentList.scrollHeight;
 }
 
