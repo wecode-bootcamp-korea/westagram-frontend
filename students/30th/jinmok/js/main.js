@@ -70,22 +70,24 @@ reply.after(commentBox);
 function handleForm(event) {
     event.preventDefault();
     const comment = commentsInput.value;
-    commentsForm.reset();
-    commentsSubmit.style.color = "#b3dffc"
-    commentsSubmit.style.cursor = "default";
-    commentsSubmit.setAttribute('disabled', true)
-    const commentText = document.createElement("div");
-    commentText.setAttribute('class', 'comment-text')
-    commentBox.appendChild(commentText);
-    commentText.innerHTML = `
-    <div class="id_comment">
-        <div class="bold">wecode_bootcomp</div>
-        <div class="comment">${comment}</div>
-    </div>
-    <button class="commentHeart heartButton hover" onclick="clickHeartButton(this)">
-        <i class="far fa-heart"></i>
-    </button>
-    <button class="deleteButton redHover" onclick="clickDeleteButton(this)">x</button>`;
+    if (comment.length > 0) {
+        commentsForm.reset();
+        commentsSubmit.style.color = "#b3dffc"
+        commentsSubmit.style.cursor = "default";
+        commentsSubmit.setAttribute('disabled', true)
+        const commentText = document.createElement("div");
+        commentText.setAttribute('class', 'comment-text')
+        commentBox.appendChild(commentText);
+        commentText.innerHTML = `
+        <div class="id_comment">
+            <div class="bold">wecode_bootcomp</div>
+            <div class="comment">${comment}</div>
+        </div>
+        <button class="commentHeart heartButton hover" onclick="clickHeartButton(this)">
+            <i class="far fa-heart"></i>
+        </button>
+        <button class="deleteButton redHover" onclick="clickDeleteButton(this)">x</button>`;
+    }
 }
 commentsForm.addEventListener('submit', handleForm);
 
