@@ -3,14 +3,16 @@ const inputId = document.querySelector("#loginId");
 const inputPw = document.querySelector("#loginPassword");
 const btnLogin = document.querySelector("#loginButton");
 
-function inactiveBtn() {
-  btnLogin.style.backgroundColor = "#c5e1fb";
-  btnLogin.disabled = true;
-}
+// function isLoginValid() {
+//   (inputId.value && inputPw.value) 불리언 값  반환
+// }
 
 function activeBtn() {
-  btnLogin.style.backgroundColor = "#0084ff";
-  btnLogin.disabled = false;
+  btnLogin.style.backgroundColor =
+    inputId.value && inputPw.value ? "#0084ff" : "#c5e1fb";
+  btnLogin.disabled = inputId.value && inputPw.value ? false : true;
+  btnLogin.style.cursor =
+    inputId.value && inputPw.value ? "pointer" : "default";
 }
 
 function moveToMain(event) {
@@ -18,7 +20,5 @@ function moveToMain(event) {
   location.href = "main.html";
 }
 
-loginForm.addEventListener("input", () => {
-  inputId.value && inputPw.value ? activeBtn() : inactiveBtn();
-});
+loginForm.addEventListener("input", activeBtn);
 btnLogin.addEventListener("click", moveToMain);
