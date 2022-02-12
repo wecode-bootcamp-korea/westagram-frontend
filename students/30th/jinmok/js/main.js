@@ -77,7 +77,15 @@ function handleForm(event) {
     const commentText = document.createElement("div");
     commentText.setAttribute('class', 'comment-text')
     commentBox.appendChild(commentText);
-    commentText.innerHTML = '<div class="id_comment"><div class="bold">wecode_bootcomp</div><div class="comment">'+comment+'</div></div><button class="commentHeart heartButton hover" onclick="clickHeartButton(this)"><i class="far fa-heart"></i></button>';
+    commentText.innerHTML = `
+    <div class="id_comment">
+        <div class="bold">wecode_bootcomp</div>
+        <div class="comment">${comment}</div>
+    </div>
+    <button class="commentHeart heartButton hover" onclick="clickHeartButton(this)">
+        <i class="far fa-heart"></i>
+    </button>
+    <button class="deleteButton redHover" onclick="clickDeleteButton(this)">x</button>`;
 }
 commentsForm.addEventListener('submit', handleForm);
 
@@ -117,18 +125,27 @@ function clickButton(e) {
 
 function clickHeartButton(e) {
     const iconInButton = e.querySelector('i')
+    const likePeople = e.closest('.article-bottom').querySelector('.like-people');
+    const likePeopleCount = parseInt(likePeople.textContent);
     if (iconInButton.classList.contains('far')){
         clickButton(iconInButton);
         e.style.color = '#ED4956';
         e.classList.toggle('active');
+        likePeople.innerText = `${likePeopleCount+1}명`
     } else {
         clickButton(iconInButton);
         e.style.color = 'black';
         e.classList.toggle('active');
+        likePeople.innerText = `${likePeopleCount-1}명`
     }
 }
 
 const clickBookmarkButton = (e) => {
     const iconInButton = e.querySelector('i');
     clickButton(iconInButton);
+}
+
+function clickDeleteButton(e) {
+    const commentText = e.closest('.comment-text');
+    commentText.remove();
 }

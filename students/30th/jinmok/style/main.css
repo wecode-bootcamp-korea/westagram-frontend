@@ -217,6 +217,7 @@ main {
 }
 
 .comment-text {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -245,6 +246,18 @@ main {
   padding-left: 10px;
   align-self: center;
   cursor: pointer;
+}
+
+.deleteButton {
+  position: absolute;
+  left: -9px;
+  top: -1.5px;
+  color: #bdbfc1;
+  cursor: pointer;
+}
+
+.redHover:hover {
+  color: #ed4956;
 }
 
 .upload-time {
