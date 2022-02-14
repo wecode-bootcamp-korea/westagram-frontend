@@ -1,0 +1,95 @@
+/* * {
+  box-sizing: border-box;
+} */
+
+/* html {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} */
+
+/* body {
+  display: flex;
+  justify-content: center;
+} */
+
+.logo,
+.pwForgot,
+.loginButton {
+  cursor: pointer;
+}
+
+.loginBox {
+  position: relative;
+  top: 250px;
+  width: 348px;
+  height: 368px;
+  margin: 0 auto;
+  border: 1px solid #dbdbdb;
+  text-align: center;
+  background-color: white;
+}
+
+.logo {
+  text-align: center;
+  font-family: "Lobster", cursive;
+  font-size: 40px;
+  font-weight: lighter;
+}
+
+#idInput,
+#pwInput {
+  width: 268px;
+  height: 38px;
+  border: 1px solid;
+  margin-bottom: 6px;
+  padding-top: 8px;
+  padding-bottom: 7px;
+  padding-left: 10px;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  background-color: rgba(236, 236, 236, 0.562);
+}
+
+#idInput:focus,
+#pwInput:focus {
+  outline: none;
+}
+
+#idInput:hover,
+#pwInput:hover {
+  background-color: white;
+  border: 1px solid gray;
+}
+/* 
+::placeholder {
+  font-size: 10pt;
+} */
+
+.loginButton {
+  width: 268px;
+  height: 38px;
+  position: absolute;
+  left: 40px;
+  padding-top: 10px;
+  padding-bottom: 7px;
+  padding-left: 8px;
+  color: white;
+  background-color: #b9def7;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+.forgotPwd {
+  position: relative;
+  top: 80px;
+  margin-top: 52px;
+  font-size: small;
+  font-weight: bold;
+  line-height: 14px;
+  text-align: center;
+  text-decoration-line: none;
+  color: #12569b;
+}
