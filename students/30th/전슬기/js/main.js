@@ -5,8 +5,10 @@ const commentsDiv = document.querySelector(".comments");
 function activeBtn() {
   if (commentInput.value) {
     commentBtn.style.color = "#3c99f0";
+    commentBtn.style.cursor = "pointer";
   } else {
     commentBtn.style.color = "#c5e1fb";
+    commentBtn.style.cursor = "default";
   }
 }
 
@@ -21,5 +23,5 @@ function postComment(event) {
   }
 }
 
-commentInput.addEventListener("keyup", activeBtn);
+commentInput.addEventListener("input", activeBtn);
 commentBtn.addEventListener("click", postComment);
