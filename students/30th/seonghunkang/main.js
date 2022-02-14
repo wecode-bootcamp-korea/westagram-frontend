@@ -1,29 +1,32 @@
 const comment_btn = document.querySelector(".comment_input");
 const post_btn = document.querySelector("#post_button");
-console.log(comment_btn);
+const delete_btn = document.querySelector("#delete");
+console.log(delete_btn);
 // const delete_btn = document.querySelector(".delete");
 
 
 function register_comment() {
     let comment = $("#comment_input").val();
     console.log(comment);
-    let delete_btn = $(".delete").val();
     let temp_html = `<ul id="new_comment">
                         <li class = "a_comment">
-                        <span>wecode_bootcamp</span>
-                        <span>${comment}</span>
+                            <span>wecode_bootcamp</span>
+                            <span>${comment}</span>
                         </li>
                         <li>
-                        <span>${delete_btn}</span>
-                        </li>
-                    </ul>  
+                            <span id="delete">x</span>
+                        </li>  
+                    </ul>
     `;
     $("#comment_box").append(temp_html);
+}
+
+function delete_comment() {
 
 }
 
 post_btn.addEventListener("click", register_comment);
-
+delete_btn.addEventListener("click",delete_comment);
 
 
 // userId.innerText, userID.className

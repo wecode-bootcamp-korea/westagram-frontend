@@ -10,7 +10,10 @@
       href="https://fonts.googleapis.com/css?family=Lobster"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <script src="https://kit.fontawesome.com/6dfe2a7b19.js" crossorigin="anonymous"></script>   
+    <script
+      src="https://kit.fontawesome.com/6dfe2a7b19.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="main.js" defer></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   </head>
@@ -23,11 +26,11 @@
       </div>
       <div class="search-box">
         <img
-              src ="./img/magnifying.svg"
-              alt="search bar"
-              class="fa-magnifying-glass"
+          src="./img/magnifying.svg"
+          alt="search bar"
+          class="fa-magnifying-glass"
         />
-        <input type="text" class="search_bar" placeholder="검색" >  
+        <input type="text" class="search_bar" placeholder="검색" />
       </div>
       <div class="menus">
         <li class="navbar_right_side_icon">
@@ -41,18 +44,21 @@
         </li>
       </div>
     </nav>
+
     <!-- main Section -->
+
     <main class="main_section">
       <!-- main_left_box -->
+
       <div class="feeds">
         <div id="post">
           <div class="account_name">
             <div class="story">
               <img
-              src ="./img/coming_up.png"
-              alt="logo"
-              class="profile_logo"
-              id="profile_pic_in_post"
+                src="./img/coming_up.png"
+                alt="logo"
+                class="profile_logo"
+                id="profile_pic_in_post"
               />
               <div class="texts_in_account_box">
                 <h4>_yummy_apple</h4>
@@ -74,170 +80,160 @@
             </div>
             <div class="menus">
               <li class="bookmark_icon">
-              <i class="far fa-bookmark"></i>
+                <i class="far fa-bookmark"></i>
               </li>
             </div>
           </div>
-            <div class="likes">
-              <div class="story">
-                <img
-                src ="./img/coming_up.png"
+          <div class="likes">
+            <div class="story">
+              <img
+                src="./img/coming_up.png"
                 alt="a profile"
                 class="profile_logo"
                 id="profile_pic_in-likes"
-                />
-                <div class="texts_in_likes">
-                  <h4><span>aineworld</span>님 외 <span>10명</span>이 좋아합니다</h4>
-                </div>
+              />
+              <div class="texts_in_likes">
+                <h4>
+                  <span>aineworld</span>님 외 <span>10명</span>이 좋아합니다
+                </h4>
               </div>
             </div>
+          </div>
           <div id="comment_box">
             <ul id="new_comment">
-              <li class = "a_comment">
+              <li class="a_comment">
                 <span>wecode_bootcamp</span>
                 <span>진정해 맨</span>
               </li>
               <li>
-                <span class="delete">x</span>
-              </li>  
+                <span id="delete">x</span>
+              </li>
             </ul>
           </div>
-            <div class="new_comment_box">
-            <input type="text" placeholder="Add a comment" id="comment_input">  
-            <input type="button" value="post" id="post_button" ></input>
-            </div>
+          <div class="new_comment_box">
+            <input type="text" placeholder="Add a comment" id="comment_input" />
+            <input type="button" value="post" id="post_button" />
           </div>
-        </article>
+        </div>
       </div>
 
       <!-- main_right_box-->
       <div class="main-right">
-          <div class="account_box">
+        <div class="account_box">
+          <img src="./img/wecode.png" alt="logo" class="profile_logo" />
+          <div class="texts_in_account_box">
+            <h4>wecode_bootcamp</h4>
+            <h5 class="info_under_name">WeCode | 위코드</h5>
+          </div>
+        </div>
+
+        <!--first box in the right side  -->
+
+        <div class="side_box_setup">
+          <div class="box_name">
+            <h5 style="color: #a0a0a0">스토리</h5>
+            <h5>모두 보기</h5>
+          </div>
+          <div class="story">
             <img
-              src="./img/wecode.png"
+              src="./img/favicon.png"
               alt="logo"
               class="profile_logo"
-            >
+              id="clickable"
+            />
             <div class="texts_in_account_box">
-              <h4>wecode_bootcamp</h4>
-              <h5 class="info_under_name">WeCode | 위코드</h5>
-            </div>
-          </div>    
-           <!--first box in the right side  -->
-          <div class="side_box_setup">
-            <div class="box_name">
-              <h5 style= "color: #a0a0a0">스토리</h5>
-              <h5>모두 보기</h5>
-            </div>
-            <div class="story">
-              <img
-              src ="./img/favicon.png"
-              alt="logo"
-              class="profile_logo"
-              id="clickable"
-              />
-              <div class="texts_in_account_box">
-                <h4>_yum_s</h4>
-                <h5 class="info_under_name">15분 전</h5>
-              </div>
-            </div>
-            <div class="story">
-              <img
-              src ="./img/ironman.png"
-              alt="logo"
-              class="profile_logo"
-              id="clickable"
-              />
-              <div class="texts_in_account_box">
-                <h4>drink_eat_drink</h4>
-                <h5 class="info_under_name" {
-                  ">3시간 전</h5>
-              </div>
-            </div> 
-            <div class="story">
-              <img
-              src ="./img/profile.png"
-              alt="logo"
-              class="profile_logo"
-              id="clickable"
-              />
-              <div class="texts_in_account_box">
-                <h4>hyukyc</h4>
-                <h5 class="info_under_name">20시간 전</h5>
-              </div>
-            </div> 
-            <div class="story">
-              <img
-              src ="./img/profile_1.png"
-              alt="logo"
-              class="profile_logo"
-              id="clickable"
-              />
-              <div class="texts_in_account_box">
-                <h4>cskang_93</h4>
-                <h5 class="info_under_name">15분 전</h5>
-              </div>
-            </div> 
-          </div>
-           <!--second box in the right side  -->
-          <div class="side_box_setup" id="recommned_section">
-            <div class="box_name">
-              <h5 style= "color: #a0a0a0">회원님을 위한 추천</h5>
-              <h5>모두 보기</h5>
-            </div>
-            <div id="recommend_box" >
-              <div class="story">
-                <img
-                src ="./img/workout_1.png"
-                alt="logo"
-                class="profile_logo"
-                />         
-                <div class="texts_in_account_box">
-                  <h4>joaaaaaaahye</h4>
-                  <h5 class="info_under_name">jimmylee1220님 외1...</h5>
-                </div>
-              </div>
-              <button class="follow_btn">팔로우</button>
-            </div>
-            <div id="recommend_box" >
-                <div class="story">
-                  <img
-                  src ="./img/workout_3.png"
-                  alt="logo"
-                  class="profile_logo"
-                  />         
-                  <div class="texts_in_account_box">
-                    <h4>shawnkjjoo</h4>
-                    <h5 class="info_under_name">_legend_a님 외 2명이...</h5>
-                  </div>
-                </div>
-                <button class="follow_btn">팔로우</button>
-            </div>
-            <div id="recommend_box" >
-              <div class="story">
-                <img
-                src ="./img/workout_5.png"
-                alt="logo"
-                class="profile_logo"
-                />         
-                <div class="texts_in_account_box">
-                  <h4>rampart81</h4>
-                  <h5 class="info_under_name">ringo.in.seoun님 외 12..</h5>
-                </div>
-              </div>
-              <button class="follow_btn">팔로우</button>
+              <h4>_yum_s</h4>
+              <h5 class="info_under_name">15분 전</h5>
             </div>
           </div>
-          <div class="side_box_setup" id="copyright_box" >
-            <div class="box_name" id="copyright">
-              <h5 style= "color: #a0a0a0">Westagram &nbsp; 정보 지원 홍보 센터 API 채용정보 개인정보처리방침 약관</h5>
-              <h5 style= "color: #a0a0a0">디렉터리 프로필 해시태그 언어 </h5>
-              <div>&nbsp</div>
-              <h5 style= "color: #a0a0a0">@ 2022 WESTAGRAM</h5>
-              <!--원래 인스타에서는 이거 리스트로 처리함 (bullet list) ... so cool..   -->
+          <div class="story">
+            <img
+              src="./img/ironman.png"
+              alt="logo"
+              class="profile_logo"
+              id="clickable"
+            />
+            <div class="texts_in_account_box">
+              <h4>drink_eat_drink</h4>
+              <h5 class="info_under_name">3시간 전</h5>
             </div>
           </div>
+          <div class="story">
+            <img
+              src="./img/profile.png"
+              alt="logo"
+              class="profile_logo"
+              id="clickable"
+            />
+            <div class="texts_in_account_box">
+              <h4>hyukyc</h4>
+              <h5 class="info_under_name">20시간 전</h5>
+            </div>
+          </div>
+          <div class="story">
+            <img
+              src="./img/profile_1.png"
+              alt="logo"
+              class="profile_logo"
+              id="clickable"
+            />
+            <div class="texts_in_account_box">
+              <h4>cskang_93</h4>
+              <h5 class="info_under_name">15분 전</h5>
+            </div>
+          </div>
+        </div>
+
+        <!--second box in the right side  -->
+
+        <div class="side_box_setup" id="recommned_section">
+          <div class="box_name">
+            <h5 style="color: #a0a0a0">회원님을 위한 추천</h5>
+            <h5>모두 보기</h5>
+          </div>
+          <div id="recommend_box">
+            <div class="story">
+              <img src="./img/workout_1.png" alt="logo" class="profile_logo" />
+              <div class="texts_in_account_box">
+                <h4>joaaaaaaahye</h4>
+                <h5 class="info_under_name">jimmylee1220님 외1...</h5>
+              </div>
+            </div>
+            <button class="follow_btn">팔로우</button>
+          </div>
+          <div id="recommend_box">
+            <div class="story">
+              <img src="./img/workout_3.png" alt="logo" class="profile_logo" />
+              <div class="texts_in_account_box">
+                <h4>shawnkjjoo</h4>
+                <h5 class="info_under_name">_legend_a님 외 2명이...</h5>
+              </div>
+            </div>
+            <button class="follow_btn">팔로우</button>
+          </div>
+          <div id="recommend_box">
+            <div class="story">
+              <img src="./img/workout_5.png" alt="logo" class="profile_logo" />
+              <div class="texts_in_account_box">
+                <h4>rampart81</h4>
+                <h5 class="info_under_name">ringo.in.seoun님 외 12..</h5>
+              </div>
+            </div>
+            <button class="follow_btn">팔로우</button>
+          </div>
+        </div>
+        <div class="side_box_setup" id="copyright_box">
+          <div class="box_name" id="copyright">
+            <h5 style="color: #a0a0a0">
+              Westagram &nbsp; 정보 지원 홍보 센터 API 채용정보 개인정보처리방침
+              약관
+            </h5>
+            <h5 style="color: #a0a0a0">디렉터리 프로필 해시태그 언어</h5>
+            <div>&nbsp</div>
+            <h5 style="color: #a0a0a0">@ 2022 WESTAGRAM</h5>
+          </div>
+        </div>
+      </div>
     </main>
   </body>
 </html>
-
