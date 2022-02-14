@@ -20,6 +20,7 @@ function postComment(event) {
     newComment.innerHTML = `<strong>${userName}</strong> ${commentInput.value}`;
     commentsDiv.appendChild(newComment);
     commentInput.value = "";
+    commentBtn.style.cursor = "default";
   }
 }
 
