@@ -1,0 +1,508 @@
+/* header start */
+header {
+    width: 100%;
+    height: 90px;
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(235, 233, 233);
+    position: fixed;
+    background-color: white;
+    z-index: 999;
+    top: 0;
+    left: 0;
+}
+.nav {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+/* header logo */
+.logo {
+    width: 300px;
+    display: flex;
+    padding-top: 5px;
+}
+.logo .fa-instagram {
+    font-size: 2rem;
+    color: black;
+    padding-right: 1.1rem;
+    border-right: 2px solid black;
+}
+.logo .wefont {
+    padding-left: 1rem;
+    padding-top: 0.3rem;
+}
+.we {
+    font-family: 'Lobster', cursive;
+    color: black;
+    font-size: 1.6rem;
+}
+/* 헤더 검색바 */
+.searchbar {
+    width: 250px;
+    /* position: relative; */
+}
+.searchbar input {
+    width: 100%;
+    padding: 0.5rem 2rem;
+    margin-top: 6px;
+    background-color: rgba(238, 235, 235, 0.288);
+    border: 1px solid rgba(218, 217, 217, 0.767);
+}
+.searchbar input::placeholder{
+    font-size: 1rem;
+    color: silver;
+    text-align: center;
+    background: url(https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/search-512.png) no-repeat 35% center/20px 20px;
+    filter: invert(0.5);
+}
+input:focus {
+    outline: 1px solid rgb(179, 179, 179);
+}
+/* 헤더 우측 아이콘들  */
+.nav {
+    width: 135px;
+    height: 45px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+.nav div {
+    display: block;
+    width: 33px;
+    /* height: 35px; */
+}
+.navo{
+    background: url(pic/explore.png) no-repeat;
+    background-size: 100%;
+    background-position: center;
+}
+.navt {
+    background: url(pic/heart.png) no-repeat;
+    background-size: 100%;
+    background-position: center;
+}
+.navh {
+    background: url(https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png) no-repeat;
+    background-size: 100%;
+    background-position: center;
+}
+.navt::after {
+    content: "";
+    display: block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: red;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+/* 피드 부분 */
+article {
+    width: 1200px;
+    height: 100%;
+    margin: 5rem auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.peedleft{
+    width: 66%;
+    border: 1px solid #e6e6e6;
+    margin-top: 80px;
+}
+
+.topimg img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.toplogo {
+    display: flex;
+    
+}
+
+.memberid a {
+    margin-top: 15px;
+    margin-left: 15px;
+    color: black;
+    display: block;
+}
+
+.fa-ellipsis-h {
+    color: black;
+    font-size: 1rem;
+    margin-top: 15px;
+}
+
+.peedimg {
+    width: 100%;
+    height: 750px;
+    background: url(pic/example3.jpg) no-repeat;
+    background-size: cover;
+    background-position: 100%;
+}
+
+/* 피드 아이콘들 */
+.peedundericons {
+    display: flex;
+    padding: 10px 0px;
+}
+
+.underleft {
+    width: 96%;
+    display: flex;
+    padding-left: 3px;
+}
+
+.underleft a {
+    display: block;
+    font-size: 1.5rem;
+    margin-left: 13px;
+    color: rgb(145, 145, 145);
+}
+
+.underight a {
+    display: block;
+    font-size: 1.2rem ;
+    color: srgb(145, 145, 145);
+}
+
+.fa-heart {
+    color: red;
+}
+
+.fa-comment {
+    transform: rotateY(180deg);
+}
+
+.fa-bookmark {
+    font-size: 1.4rem;
+}
+
+/* 좋아요부분 */
+.likesleft {
+    display: flex;
+    padding: 0 15px;
+    margin-bottom: 0.5rem;
+}
+
+.likesleft img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+.likesleft p {
+    padding-top: 5px;
+    margin-left: 8px;
+    font-weight: normal;
+}
+
+.likesleft p a {
+    color: black;
+    font-weight: 800;
+}
+
+/* 댓글 달린 부분 */
+.peedtext {
+    padding-left: 17px;
+    border-bottom: 1px solid #e6e6e6;
+    padding-bottom: 10px;
+}
+
+.canon {
+    margin-bottom: 3px;
+}
+
+.id2flexbox {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+}
+
+.id2flexbox p {
+    width: 96%;
+}
+
+.id2flexbox>:nth-child(2) i{
+    color: silver;
+}
+
+.minit a{
+    color: rgb(153, 153, 153);
+    font-weight: normal;
+}
+/* form  댓글 다는 부분*/
+.comment {
+    width: 100%;;
+    position: relative;
+}
+
+.comment input {
+    width: 90%;
+    border: none;
+    padding:20px 0;
+    padding-left: 15px;
+}
+
+.comment input:focus {
+    outline: none;
+}
+
+.upload {
+    padding: 15px 15px;
+    border: none;
+    font-size: 0.8rem;
+    position: absolute;
+    color: rgba(113, 147, 238, 0.747);
+    background-color: none;
+    right: 0px;
+    top: 6px;
+}
+
+.upload:hover {
+    background: none;;
+    color: rgba(113, 147, 238, 0.747);
+}
+
+#commentLists {
+    margin-top: 0.6rem;
+    margin-bottom: 0.7rem;
+}
+
+#commentLists li {
+    width: 100%;
+    margin-bottom: 0.3rem;
+    position: relative;
+    color: black;
+}
+
+.delete {
+    cursor: pointer;
+    position: absolute;
+    right: 19px;;
+}
+
+.name {
+    padding-right: 0.6rem;
+    color: black;
+    font-weight: bold;
+}
+
+/* 피드 오른쪽 스토리 */
+.side-right {
+    width: 368px;
+    margin-top: 5.3rem;
+}
+
+.side-container {
+    margin-bottom: 1rem;
+    display: flex;
+    cursor: pointer;
+}
+
+.side-container > :first-child {
+    width: 60px;
+    height: 60px;
+    margin-right: 1rem;
+    border-radius: 100%;
+    background: url(pic/example4.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.side-container > :last-child {
+    position: relative;
+}
+
+.side-container > :last-child div {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.side-container > :last-child div > :first-child {
+    margin-bottom: 0.3rem;
+    font-weight: bold;
+}
+
+.side-container > :last-child div > :last-child {
+    color: #bababa;
+}
+
+.side-container > :last-child div > :last-child span:before {
+    content: "┃";
+}
+
+.side-story {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background: #fff;
+    border: 1px solid #e6e6e6;
+    border-radius: 5px;
+    height: 258px;
+    overflow-y: hidden;
+}
+
+.side-navigation {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.side-navigation p {
+    color: #bababa;
+}
+
+.see-all {
+    color: rgb(73, 73, 73);
+    font-weight: 760;
+}
+
+.story {
+    display: flex;
+}
+
+.story > :first-child {
+    width: 50px;
+    height: 50px;
+    margin-right: 1rem;
+    border: 2px solid #e56c9f;
+    border-radius: 100%;
+}
+
+.side-story > :nth-child(2),
+.side-story > :nth-child(3),
+.side-story > :nth-child(4) {
+    margin-bottom: 0.8rem;
+}
+
+.story-text {
+    margin-top: 5px;
+}
+
+.story-img-one {
+    background: url(pic/example5.jpg) no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+.story-img-two {
+    background: url(pic/example6.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.story-img-three{
+    background: url(pic/example7.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.story-img-four{
+    background: url(pic/example8.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.bold {
+    margin-bottom: 0.3rem;
+    font-weight: bold;
+}
+
+.color {
+    color: #bababa;
+}
+
+/*추천 시작*/
+.side-pick {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background: #fff;
+    border: 1px solid #e6e6e6;
+    border-radius: 5px;
+    position: relative;
+}
+
+.side-pick > :nth-child(2),
+.side-pick > :nth-child(3) {
+    margin-bottom: 0.3rem;
+}
+
+.side-wrap {
+    display: flex;
+    position: relative;
+}
+
+.sidewraps {
+    display: flex;
+}
+
+.sidewraps>:last-child {
+    margin-top: 1rem;
+}
+
+.side-img {
+    width: 50px;
+    height: 50px;
+    margin-right: 1rem;
+    border-radius: 100%;
+    margin-top: 8px;
+}
+
+.side-wrap-img1 {
+    background: url(pic/feed1.jpg);
+no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.side-wrap-img2 {
+    background: url(pic/feed2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.side-wrap-img3 {
+    background: url(pic/profile.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.side-wrap > :first-child > :last-child > :first-child {
+    margin-bottom: 0.3rem;
+    font-weight: bold;
+}
+
+.side-wrap > :first-child > :last-child > :last-child {
+    color: #bababa;
+}
+
+.side-wrap > :last-child {
+    padding: 1.5rem 0 1rem 1rem;
+    color: #2398ff;
+    background: none;
+    position: absolute;
+    right: 0;
+    border: none;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.footer-wrapper p {
+    color: #acacac;
+    line-height: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
