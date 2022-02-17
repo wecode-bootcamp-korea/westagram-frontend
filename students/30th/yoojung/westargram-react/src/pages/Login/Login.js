@@ -1,5 +1,6 @@
 import React from "react";
-import "./Login.css"
+import { useNavigate } from "react-router-dom";
+import "./Login.scss"
 
 // export default function Login() {
 //   return <div>Login</div>;
@@ -7,8 +8,13 @@ import "./Login.css"
 
 // 혹은 const 함수 방법
 
-const Login = () => {
 
+function Login() {
+  const navigate = useNavigate();
+
+  const goToMain = () => {
+    navigate("/Main");
+  };
 
   return (
     <>
@@ -21,7 +27,7 @@ const Login = () => {
                 <input type="text" id="idInput" placeholder="전화번호, 사용자 이름 또는 이메일" />
                 <input type="password" id="pwInput" placeholder="비밀번호" />
               </form>
-              <button id="loginClick" className="loginButton">로그인</button>
+              <button id="loginClick" className="loginButton" onClick={goToMain}>로그인</button>
               <a className="forgotPwd">비밀번호를 잊으셨나요?</a>
             </div>
           </div>

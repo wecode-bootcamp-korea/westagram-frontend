@@ -1,5 +1,6 @@
 import React from "react";
-import "./Main.css";
+import Nav from "./Nav/Nav"
+import "./Main.scss";
 // import "../../../public/images";
 
 const Main = () => {
@@ -7,27 +8,7 @@ const Main = () => {
 
   return (
     <>
-      <div>
-        <nav>
-          <div className="nav">
-            {/* <!-- 위스타그램 로고 --> */}
-            <h1 className="logo">westagram</h1>
-            <div className="inputBox">
-              {/* <!-- 검색바 --> */}
-              <input type="password " id="password" placeholder="검색" />
-            </div>
-            <div>
-              <div>
-                {/* <!-- 최상단 네비 아이콘 & 프로필이미지 --> */}
-                <img className="navImg" src="/images/direct-instagram.PNG" />
-                <img className="navImg" src="/images/heart.png" />
-                <img className="navUserImg" src="/images/light.PNG" />
-              </div>
-            </div>
-          </div>
-        </nav>
-        <div className="navOutline"></div>
-      </div>
+      <Nav />
       <div className="main">
         <div>
           <main>
