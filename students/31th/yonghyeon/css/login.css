@@ -1,0 +1,89 @@
+body {
+  background-color: #fafafa;
+  height: 100vh;
+}
+
+.main {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.article {
+  min-width: 350px;
+  border: 1px solid #eaeaea;
+  border-radius: 3px;
+  background-color: #ffffff;
+}
+
+.loginSec .title {
+  text-align: center;
+  font-family: 'Lobster Two', cursive;
+  font-size: 50px;
+  margin: 30px auto 30px;
+}
+
+.loginSec .loginSec__loginForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.loginSec .loginSec__loginForm input {
+  padding: 9px 0 7px 8px;
+  margin-bottom: 7px;
+  border-radius: 3px;
+  border: 1px solid #eaeaea;
+  outline: none;
+}
+
+.loginSec .loginSec__loginForm input:focus {
+  border: 1px solid #d3d3d3;
+}
+
+.loginSec .loginSec__loginForm button {
+  font-weight: 700;
+  border: none;
+  border-radius: 3px;
+  background-color: #0095f6;
+  color: white;
+  padding: 7px 0;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.loginSec .loginSec__loginForm button:disabled {
+  cursor: default;
+  background-color: #c0dffd;
+}
+
+.loginSec .loginSec__tag {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 80px 0 30px;
+}
+
+.loginSec .loginSec__tag a {
+  text-decoration: none;
+  color: #385085;
+}
