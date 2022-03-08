@@ -17,7 +17,7 @@ body {
           justify-content: space-between;
   height: 59px;
   border-bottom: 1px solid #dbdbdb;
-  padding: 0 5%;
+  padding: 0 10%;
 }
 
 .nav .navLeft {
@@ -167,6 +167,9 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .article .sectionLeft .sectionLeft__footer .sectionLeft__footer__icons .icons .heart {
@@ -178,10 +181,12 @@ body {
 }
 
 .article .sectionLeft .sectionLeft__footer .sectionLeft__footer__icons .icons .comment {
-  background-image: url("../img/ig-sprite.png");
-  width: 22px;
-  height: 22px;
-  background-position: -189px -353px;
+  font-size: 22px;
+}
+
+.article .sectionLeft .sectionLeft__footer .sectionLeft__footer__icons .icons .sharing {
+  margin-left: 10px;
+  font-size: 22px;
 }
 
 .article .sectionLeft .sectionLeft__footer .sectionLeft__footer__icons .bookmark {
@@ -202,8 +207,7 @@ body {
 
 .article .sectionLeft .sectionLeft__footer .footer__comment {
   padding: 0;
-  max-height: 100px;
-  overflow: auto;
+  max-height: 150px;
 }
 
 .article .sectionLeft .sectionLeft__footer .footer__comment li {
@@ -239,12 +243,7 @@ body {
 }
 
 .article .sectionLeft .sectionLeft__footer .footer__comment li .likeBtn {
-  background: url("../img/ig-sprite.png");
-  background-position: -55px -177px;
   margin-right: 10px;
-  background-size: 214px 213px;
-  width: 12px;
-  height: 10px;
   cursor: pointer;
 }
 
@@ -462,30 +461,31 @@ body {
 }
 
 .story:nth-child(1) .storyImg {
-  background-image: url("../img/user.png");
+  background-image: url("../img/ig-sprite.png"), url("../img/user.png");
 }
 
 .story:nth-child(2) .storyImg {
-  background-image: url("../img/wecode.png");
+  background-image: url("../img/ig-sprite.png"), url("../img/wecode.png");
 }
 
 .story:nth-child(3) .storyImg {
-  background-image: url("../img/cake.png");
+  background-image: url("../img/ig-sprite.png"), url("../img/cake.png");
 }
 
 .story:nth-child(4) .storyImg {
-  background-image: url("../img/flower.png");
+  background-image: url("../img/ig-sprite.png"), url("../img/flower.png");
 }
 
 .story:nth-child(5) .storyImg {
-  background-image: url("../img/circle.png");
+  background-image: url("../img/ig-sprite.png"), url("../img/circle.png");
 }
 
 .story .storyImg {
-  margin-right: 10px;
+  background-position: 0 -111px, 0 0;
+  background-size: 214px 213px, cover;
   width: 32px;
   height: 32px;
-  background-size: cover;
+  margin-right: 10px;
   border-radius: 50%;
 }
 
@@ -503,4 +503,24 @@ body {
 
 .story .storyContent span:last-child {
   color: #8e8e8e;
+}
+
+.overflow {
+  overflow: auto;
+}
+
+.notLike {
+  background: url("../img/ig-sprite.png");
+  background-position: -55px -177px;
+  background-size: 214px 213px;
+  width: 12px;
+  height: 10px;
+}
+
+.like {
+  background-image: url("../img/ig-sprite.png");
+  background-position: -42px -177px;
+  background-size: 214px 213px;
+  width: 12px;
+  height: 11px;
 }
