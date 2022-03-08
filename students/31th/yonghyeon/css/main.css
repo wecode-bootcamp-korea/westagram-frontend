@@ -1,7 +1,7 @@
 @charset "UTF-8";
 body {
   background-color: #fafafa;
-  height: 100vh;
+  height: 150vh;
 }
 
 .nav {
@@ -193,15 +193,59 @@ body {
 
 .article .sectionLeft .sectionLeft__footer .sectionLeft__footer__like,
 .article .sectionLeft .sectionLeft__footer .sectionLeft__footer__comment,
-.article .sectionLeft .sectionLeft__footer .comment {
+.article .sectionLeft .sectionLeft__footer .footer_comment {
   text-align: left;
   padding: 15px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-.article .sectionLeft .sectionLeft__footer .comment {
+.article .sectionLeft .sectionLeft__footer .footer__comment {
   padding: 0;
+  max-height: 100px;
+  overflow: auto;
+}
+
+.article .sectionLeft .sectionLeft__footer .footer__comment li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.article .sectionLeft .sectionLeft__footer .footer__comment li .btnContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.article .sectionLeft .sectionLeft__footer .footer__comment li .delCommentBtn {
+  border: none;
+  background: none;
+  background: url("../img/ig-sprite.png");
+  background-position: -11px -194px;
+  background-size: 214px 213px;
+  width: 1px;
+  height: 7px;
+  cursor: pointer;
+}
+
+.article .sectionLeft .sectionLeft__footer .footer__comment li .likeBtn {
+  background: url("../img/ig-sprite.png");
+  background-position: -55px -177px;
+  margin-right: 10px;
+  background-size: 214px 213px;
+  width: 12px;
+  height: 10px;
+  cursor: pointer;
 }
 
 .article .sectionLeft .sectionLeft__footer .sectionLeft__footer__like {
@@ -251,6 +295,7 @@ body {
   -webkit-box-flex: 0.5;
       -ms-flex-positive: 0.5;
           flex-grow: 0.5;
+  cursor: pointer;
 }
 
 .article .sectionRight {
@@ -354,6 +399,7 @@ body {
   border: none;
   background: none;
   color: #0095f6;
+  cursor: pointer;
   padding: 0;
 }
 
