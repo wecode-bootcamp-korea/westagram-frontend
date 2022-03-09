@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- css -->
-    <link rel="stylesheet" href="./css/main.css" />
-    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./style/main.css" />
+    <link rel="stylesheet" href="./style/common.css" />
 
     <!-- font awsome -->
     <script src="https://kit.fontawesome.com/bc9117c72f.js" crossorigin="anonymous"></script>
@@ -19,24 +19,54 @@
     <title>Westagram</title>
   </head>
   <body>
-    <nav class="nav">
-      <div class="navLeft">
-        <img class="navLogo" src="./img/instagram2.png" alt="" />
-        <div class="divide"></div>
-        <h1 class="navTitle">Westagram</h1>
-      </div>
-      <div class="navCenter">
-        <i class="fa-solid fa-magnifying-glass"></i>
-        <input type="text" placeholder="검색" />
-      </div>
-      <div class="navRight">
-        <ul>
-          <li><img src="./img/explore.png" /></li>
-          <li><img src="./img/heart.png" /></li>
-          <li class="profile"><img src="./img/profile.png" /></li>
-        </ul>
-      </div>
-    </nav>
+    <div class="navContainer">
+      <nav class="nav">
+        <!-- 프로필 모달창  -->
+        <div class="profileModal" data-list="profileModal">
+          <div class="profileModalEdge"></div>
+          <div class="modal__profile" data-list="profile">
+            <span class="modal__profile__img" data-list="profile__img"></span>
+            <span data-list="profile__span">프로필</span>
+          </div>
+          <div class="modal__bookmark" data-list="bookmark">
+            <span class="modal__bookmark__img" data-list="bookmark__img"></span>
+            <span data-list="bookmark__bookmark">저장됨</span>
+          </div>
+          <div class="modal__setting" data-list="setting">
+            <span class="modal__setting__img" data-list="setting__img"></span>
+            <span data-list="setting_span">설정</span>
+          </div>
+          <hr class="profileModal__hr" data-list="logout" />
+          <div class="modal__logout" data-list="logout__div">로그아웃</div>
+        </div>
+
+        <!-- 검색창 -->
+        <div class="searchModal">
+          <div class="searchModalEdge"></div>
+          <div class="searchModal__result">
+            <ul class="searchModal__ul"></ul>
+          </div>
+        </div>
+
+        <!-- header -->
+        <div class="navLeft">
+          <img class="navLogo" src="./img/instagram2.png" alt="" />
+          <div class="divide"></div>
+          <h1 class="navTitle">Westagram</h1>
+        </div>
+        <div class="navCenter">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input class="searchBar" type="text" placeholder="검색" />
+        </div>
+        <div class="navRight">
+          <ul>
+            <li><img src="./img/explore.png" /></li>
+            <li><img src="./img/heart.png" /></li>
+            <li class="profileBtn"><img src="./img/profile.png" data-btn="1" /></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
     <article class="article">
       <section class="sectionLeft">
         <div class="sectionLeft__header">
@@ -68,7 +98,7 @@
           </div>
           <div class="sectionLeft__footer_commentInput">
             <form class="commentForm">
-              <input class="commentInput" type="text" placeholder="댓글 달기" />
+              <input class="commentInput" type="text" placeholder="댓글 달기..." />
               <button>게시</button>
             </form>
           </div>
@@ -136,7 +166,7 @@
                 <div class="recommendImg"></div>
                 <div class="recommendContent">
                   <span>lucky_days</span>
-                  <span>wecode님 외 2명이...</span>
+                  <span class="elip">wecode님 외 2명이...</span>
                 </div>
               </div>
               <button>팔로우</button>
