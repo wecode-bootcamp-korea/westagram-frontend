@@ -1,0 +1,282 @@
+/* body {
+    background-color: #FAFAFA;
+}
+
+button {
+    cursor: pointer;
+} */
+
+.iconBox img, .head img {
+    width: 30px;
+}
+
+.nav {
+    border-bottom: 1px solid #dbdbdb;
+    width: 100%;
+    display: flex; 
+    height: 60px;
+    background-color: #FFFFFF;
+}
+
+.nav .navBox {
+    width: 68%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.nav .navBox .title {
+    position: relative;
+}
+
+.nav .title .logo {
+    position: absolute;
+    font-family: 'Lobster Two', cursive;
+    font-size: 2rem;
+    padding-left: 1rem;
+}
+
+.nav .inpSearch {
+    width: 250px;
+    height: 36px;
+    border-radius: 8px;
+    padding: 0 15px;
+    background: #EFEFEF;
+    border: none;
+}
+
+.nav .iconBox {
+    display: flex;
+    gap: 1rem;
+}
+
+.contMain .mainBox {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
+
+.mainBox .feed {
+    max-width: 614px;
+    width: 100%;
+    border: 1px solid #dbdbdb;
+    margin-right: 28px;
+}
+
+.aside {
+    position: relative;
+    max-width: 304px;
+    width: 100%;
+}
+
+.feed .article {
+    background-color: #fff;
+    position: relative;
+}
+
+.article header div {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 14px 4px 14px 16px;
+}
+
+.article .imgBox .userImg {
+    width: 100%;
+}
+
+.iconBox {
+    position: relative;
+    padding: 7px;
+    cursor: pointer;
+}
+
+.iconBox .icon img:nth-child(1) {
+    width: 22px;
+    padding-right: 5px;
+}
+
+.iconBox .icon img:nth-child(2) {
+    width: 22px;
+    padding-right: 5px;
+}
+
+.iconBox .icon .messIcon{
+    width: 16px;
+}
+
+.save .saveIcon {
+    position: absolute;
+    width: 13px;
+    right: 13px;
+    top: 7px;
+}
+
+.likeBox p {
+    font-weight: 600;
+    font-size: 14px;
+    margin: 0 0 8px 20px;
+}
+
+.likeBox p:nth-child(2) {
+    font-weight: 600;
+    font-size: 15px;
+    margin: 0 0 8px 20px;
+}
+
+.commentBox {
+    width: 93%;
+    height: 8rem;
+    overflow: auto; 
+}
+
+.commentBox .comment {
+    margin: 10px 0 8px 15px;
+    font-size: 12px;
+}
+
+.commentBox img {
+    width: 16px;
+    height: 16px;
+}
+
+.timeBox {
+    font-size: 11px;
+    color: #828282;
+    padding-left: 20px;
+}
+
+.moreIconBox img {
+    position: absolute;
+    top: 1.2rem;
+    right: 1rem;
+    width: 30px;
+    cursor: pointer;
+}
+
+.commentInpBox {
+    border-top: 1px solid #dbdbdb;
+    width: 100%;
+    padding: 10px;
+}
+
+.innerBox {
+    width: 90%;
+    height: 2rem;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.innerBox input {
+    border: none;
+    width: 25rem;
+}
+
+.innerBox button {
+    border: none;
+    background: #fff;
+    color: #B2DFFC;
+}
+
+/* aside */
+
+.myProfile {
+    position: relative;
+    height: 56px;
+}
+
+.myProfile img {
+    width: 3rem;
+}
+
+.myProfile span {
+    font-weight: bold;
+    left: 3.5rem;
+    top: 1.2rem;
+    position: absolute;
+}
+
+/* storyform */
+
+.storyForm, .recomBox {
+    border: 1px solid #dbdbdb;
+    padding: 10px;
+}
+
+.storyForm .header, .recomBox .header {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    font-weight: 600;
+    font-size: 12px;
+    color: #8e8e8e;
+}
+
+.storyForm .header button, .recomBox .header .btn {
+    color: black;
+    font-weight: 500;
+    font-size: 12px;
+}
+
+/* storyList */
+
+.storyList .storyItem {
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    gap: 10px;
+    height: 48px;
+    padding: 10px;
+}
+
+.storyList .storyItem img {
+    width: 2rem;
+    height: 2rem;
+}
+
+.storyList .storyItem .right {
+    display: flex;
+    flex-direction: column;
+    padding-right: 10px;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.right span:nth-child(2) {
+    font-size: 12px;
+}
+
+.storyItem .follow {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: #0095f6;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* recomBox */
+
+.recomBox {
+    border: 1px solid #dbdbdb;
+}
+
+.recomBox .header span {
+    display: block;
+    line-height: 20px;
+}
+
+.footer {
+    width: 90%;
+    font-size: 13px;
+    color: #dbdbdb;
+    margin: 1rem;
+}
+
+.footer p {
+    width: 90%;
+    padding-bottom: 1rem;
+}
