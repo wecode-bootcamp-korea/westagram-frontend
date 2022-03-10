@@ -168,7 +168,25 @@ nav{
 
 
 /* Profile Toggle */
-.profileToggle{
+.overlay{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
+    z-index: 3;
+}
+
+.overlay.active{
+    display: block;
+}
+
+
+.profileOptions{
     position: absolute;
     display: none;
     background-color: white;
@@ -186,11 +204,11 @@ nav{
     display: block;
 }
 
-.profileToggle .toggle__arrow{
+.profileOptions .toggle__arrow{
     transform: translate(132px, -7.5px) rotate(45deg);
 }
 
-.profileToggle__item{
+.profileOptions__item{
     display: flex;
     padding: 11px 15px;
     font-size: 14px;
@@ -467,4 +485,10 @@ nav{
 .copyright{
     margin-top: 20px;
     color: var(--color-dark-grey);
+}
+
+@media screen and (max-width : 950px){
+    .main__right{
+        display: none;
+    }
 }
