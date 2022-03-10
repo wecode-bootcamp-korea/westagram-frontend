@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/common.css" />
+    <title>westagram main</title>
+  </head>
+  <body>
+    <div class="wrap wrap-main">
+      <nav class="status-bar">
+        <div class="status-bar__logo">
+          <a href="login.html"><img src="img/instagram.png" /></a>
+          <div class="status-bar__logo--stick">|</div>
+          <span>westagram</span>
+        </div>
+        <div class="status-bar__search">
+          <input type="text" />
+          <div class="status-bar__position">
+            <i class="fa-solid fa-magnifying-glass fa-xs"></i>
+            <span class="status-bar__span">검색</span>
+          </div>
+          <!-- <input type="text" placeholder="검색" /> -->
+        </div>
+        <div class="status-bar__mypage">
+          <div class="status-bar__icon">
+            <img src="img/compass.png" />
+            <img src="img/heart.png" />
+            <img src="img/profile.png" />
+          </div>
+        </div>
+        <div class="profile hidden">
+          <div class="profile__profile">
+            <div>
+              <i class="fa-solid fa-user fa-sm"></i>
+            </div>
+            <span>Profile</span>
+          </div>
+          <div class="profile__profile">
+            <div>
+              <i class="fa-solid fa-bookmark fa-sm"></i>
+            </div>
+            <span>Saved</span>
+          </div>
+
+          <div class="profile__profile">
+            <div>
+              <i class="fa-solid fa-gear fa-sm"></i>
+            </div>
+            <span>Settings</span>
+          </div>
+
+          <div class="profile__profile">
+            <div>
+              <i class="fa-solid fa-arrow-right-to-bracket fa-sm"></i>
+            </div>
+            <span>Log out</span>
+          </div>
+        </div>
+      </nav>
+      <main class="main">
+        <div class="feeds">
+          <article class="feedscontent">
+            <div class="feedscontent__profile">
+              <div class="feedscontent__topbar">
+                <img
+                  src="https://avatars.githubusercontent.com/u/56650238?v=4"
+                />
+                <span>그니당</span>
+              </div>
+              <div class="feedscontent__icon">
+                <i class="fa-solid fa-ellipsis"></i>
+              </div>
+            </div>
+            <div class="feedscontent__img">
+              <img src="https://avatars.githubusercontent.com/u/56650238?v=4" />
+            </div>
+
+            <div class="feedscontent__status-bar">
+              <div class="feedscontent__right">
+                <img src="img/compass.png" />
+                <img src="img/heart.png" />
+                <img src="img/profile.png" />
+              </div>
+              <div class="feedscontent__left">
+                <img src="img/profile.png" />
+              </div>
+            </div>
+
+            <div class="feedscontent__like">
+              <div class="feedscontent__like-text">
+                <img
+                  src="https://avatars.githubusercontent.com/u/56650238?v=4"
+                />
+                <span>그니당</span>님 <span>외 10명</span>이 좋아합니다.
+              </div>
+              <div class="feedscontent__like-text">
+                <ul class="feedscontent__comment"></ul>
+              </div>
+            </div>
+            <form class="feedscomment">
+              <input
+                class="feedscomment__input"
+                type="text"
+                placeholder="댓글 달기..."
+                maxlength="50"
+              />
+              <button class="feedscomment__btn">게시</button>
+            </form>
+          </article>
+        </div>
+        <main class="main-right">
+          <div class="main-right__mystory">
+            <div class="main-right__img main-right__img--xl">
+              <img src="https://avatars.githubusercontent.com/u/56650238?v=4" />
+            </div>
+            <div class="main-right__text">
+              <h3>wecode_bootcamp</h3>
+              <h3>WeCode | 위코드</h3>
+            </div>
+          </div>
+          <div class="main-right__allstory">
+            <div class="main-right__title">
+              <h3>스토리</h3>
+              <h3>모두 보기</h3>
+            </div>
+            <div class="main-right__otherstory">
+              <div class="main-right__img">
+                <img
+                  src="https://avatars.githubusercontent.com/u/56650238?v=4"
+                />
+              </div>
+              <div class="main-right__text">
+                <h3>wecode_bootcamp</h3>
+                <h3>16분 전</h3>
+              </div>
+            </div>
+            <div class="main-right__otherstory">
+              <div class="main-right__img">
+                <img
+                  src="https://avatars.githubusercontent.com/u/56650238?v=4"
+                />
+              </div>
+              <div class="main-right__text">
+                <h3>wecode_bootcamp</h3>
+                <h3>16분 전</h3>
+              </div>
+            </div>
+            <div class="main-right__otherstory">
+              <div class="main-right__img">
+                <img
+                  src="https://avatars.githubusercontent.com/u/56650238?v=4"
+                />
+              </div>
+              <div class="main-right__text">
+                <h3>wecode_bootcamp</h3>
+                <h3>16분 전</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="main-right__recommend">
+            <div class="main-right__title">
+              <h3>회원님을 위한 추천</h3>
+              <h3>모두 보기</h3>
+            </div>
+            <div class="main-right__otherstory main-right__otherstory--follow">
+              <div class="main-right__img">
+                <img
+                  src="https://avatars.githubusercontent.com/u/56650238?v=4"
+                />
+              </div>
+              <div class="main-right__text">
+                <h3>wecode_bootcamp</h3>
+                <h3>_legend_a님 외 2명이 ...</h3>
+              </div>
+              <div class="main-right__follow">
+                <h3>팔로우</h3>
+              </div>
+            </div>
+            <div class="main-right__otherstory main-right__otherstory--follow">
+              <div class="main-right__img">
+                <img
+                  src="https://avatars.githubusercontent.com/u/56650238?v=4"
+                />
+              </div>
+              <div class="main-right__text">
+                <h3>wecode_bootcamp</h3>
+                <h3>_legend_a님 외 2명이 ...</h3>
+              </div>
+              <div class="main-right__follow">
+                <h3>팔로우</h3>
+              </div>
+            </div>
+            <div class="main-right__otherstory main-right__otherstory--follow">
+              <div class="main-right__img">
+                <img
+                  src="https://avatars.githubusercontent.com/u/56650238?v=4"
+                />
+              </div>
+              <div class="main-right__text">
+                <h3>wecode_bootcamp</h3>
+                <h3>_legend_a님 외 2명이 ...</h3>
+              </div>
+              <div class="main-right__follow">
+                <h3>팔로우</h3>
+              </div>
+            </div>
+          </div>
+        </main>
+      </main>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/5db0f8885f.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

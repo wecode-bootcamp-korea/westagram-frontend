@@ -1,0 +1,497 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Lobster+Two:ital,wght@0,400;0,700;1,700&display=swap");
+
+/* 작성할 때, 배경색을 임의로 지정해놓고 하면 시각적으로 편함 */
+.wrap-main {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 100vh;
+  width: 100vw;
+  background-color: #fafafa;
+}
+
+/* status-bar  */
+/* 좌측 */
+.status-bar {
+  background-color: white;
+  height: 60px;
+  display: flex;
+  border: 1px solid #fafafa;
+  margin-bottom: 40px;
+}
+
+.status-bar__logo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.status-bar__logo--stick {
+  /* background-color: black; */
+  margin: 0px 10px;
+}
+
+.status-bar__logo > span {
+  font-family: "Lobster", cursive;
+  font-size: 23px;
+}
+
+.status-bar__logo {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.status-bar__logo img {
+  width: 25px;
+  height: 25px;
+}
+
+.status-bar__search {
+  flex: 1;
+}
+
+.status-bar__mypage {
+  flex: 1;
+}
+
+/* 중간 */
+.status-bar__search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-grey);
+  position: relative;
+  /* width: 10px; */
+}
+
+.status-bar__search input {
+  border: 2px solid var(--color-grey);
+  width: 65%;
+  height: 45%;
+  background-color: #fafafa;
+}
+
+/* .status-bar__search span {
+  font-size: 13px;
+  position: absolute;
+  bottom: 20px;
+} */
+
+/* .status-bar__search > input::placeholder {
+  text-align: center;
+  font-size: 13px;
+  color: var(--color-grey);
+} */
+
+/* .status-bar__search i {
+  position: absolute;
+  top: 50%;
+  right: 54%;
+} */
+
+/* .status-bar__position span {
+  margin-right: 5px;
+} */
+
+.status-bar__position {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  height: 30px;
+  position: absolute;
+}
+
+.status-bar__position > i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.status-bar__span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5px;
+  margin-top: 2px;
+  font-size: 15px;
+}
+
+/* 우측 */
+.status-bar__mypage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.status-bar__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  /* margin: 0 25px; */
+}
+
+.status-bar__icon img {
+  width: 25px;
+  height: 25px;
+}
+
+.status-bar__icon img:nth-child(2) {
+  margin: 0px 25px;
+}
+
+/* feeds작성 */
+.main {
+  width: 100%;
+  display: flex;
+  /* background-color: #fafafa; */
+  position: relative;
+}
+
+.feeds {
+  position: absolute;
+  top: 0;
+  left: 30%;
+  transform: translate(-30%, 0);
+  width: 500px;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.feedscontent {
+  width: 470px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #ffffff;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  top: 0;
+}
+
+.feedscontent__profile {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+}
+
+.feedscontent__topbar {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.feedscontent__icon {
+  width: 10%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.feedscontent__icon > i {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.feedscontent__topbar > img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.feedscontent__topbar > span {
+  margin-left: 15px;
+  font-weight: 700;
+}
+
+.feedscontent__status-bar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.feedscontent__img > img {
+  width: 100%;
+  height: 470px;
+}
+
+.feedscontent__right {
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.feedscontent__left > img,
+.feedscontent__right > img {
+  width: 25px;
+  height: 25px;
+  margin: 0 5px;
+}
+.fa-regular {
+  color: black;
+}
+
+.feedscontent__left {
+  padding: 5px;
+}
+
+.feedscontent__like {
+  width: 100%;
+  display: flex;
+  justify-items: start;
+  padding: 10px;
+  flex-direction: column;
+}
+
+.feedscontent__like-text {
+  display: block;
+  margin: 6px 0;
+}
+.feedscontent__like-text > img {
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.feedscontent__like-text span {
+  font-weight: 700;
+}
+
+.feedscontent__comment--greeting {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.feedscontent__comment--greeting span {
+  margin-right: 5px;
+}
+
+.heartAndBox > i {
+  margin: 0px 5px;
+}
+
+/* 댓글 달기 */
+.feedscomment {
+  width: 100%;
+  height: 25px;
+  padding: 0 10px;
+}
+
+.feedscomment__input {
+  border: none;
+  width: 90%;
+  font-size: 15px;
+}
+
+.feedscomment__input::placeholder {
+  color: var(--color-grey);
+  padding: 20px;
+}
+
+.feedscomment__input:focus::placeholder {
+  color: transparent;
+}
+
+.feedscomment__btn {
+  border: none;
+  font-size: 15px;
+  background-color: transparent;
+  color: var(--color-grey);
+}
+
+.feedscomment__btn:hover {
+  cursor: pointer;
+}
+
+/* main-right */
+.main-right {
+  /* background-color: tomato; */
+  position: absolute;
+  top: 0;
+  left: 55%;
+  width: 300px;
+  /* transform: translate(-30%, 0); */
+  /* width: 230px; */
+  /* height: 470px; */
+}
+
+.main-right__mystory,
+.main-right__otherstory {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px 40px 10px 10px;
+}
+.main-right__otherstory {
+  padding: 0px 40px 10px 10px;
+}
+
+.main-right__img > img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  margin-left: 3px;
+}
+
+.main-right__img--xl > img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  margin-left: 0px;
+}
+
+.main-right__text {
+  margin-left: 10px;
+}
+
+.main-right__text h3:first-child {
+  margin-bottom: 2px;
+  font-weight: 700;
+}
+
+.main-right__text h3:last-child {
+  color: var(--color-grey);
+  font-weight: 500;
+}
+
+/* 모두보기 */
+.main-right__allstory {
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  overflow-y: scroll;
+  height: 180px;
+}
+
+.main-right__allstory::-webkit-scrollbar {
+  display: none;
+}
+
+.main-right__title {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  font-weight: 700;
+}
+
+.main-right__recommend > .main-right__title {
+  padding-bottom: 0px;
+}
+
+.main-right__title :first-child {
+  color: var(--color-grey);
+}
+
+.main-right__recommend {
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  margin-top: 15px;
+}
+
+.main-right__follow > h3 {
+  font-weight: 700;
+  color: #71b4f4;
+}
+
+.main-right__otherstory--follow {
+  padding: 0;
+  padding: 10px 0px 0px 10px;
+}
+.main-right__otherstory--follow:last-child {
+  padding-bottom: 10px;
+}
+
+.main-right__follow {
+  margin-left: 5px;
+  transform: translate(-5px);
+}
+
+/* 댓글기능 구현 */
+.feedscontent__comment--greeting {
+  position: relative;
+  display: flex;
+  justify-content: start;
+}
+
+.feedscontent__comment--greeting > .fa-regular,
+.feedscontent__comment--greeting > .fa-solid {
+  position: absolute;
+  right: 30px;
+  font-size: 20px;
+}
+
+.feedscontent__comment--greeting > button {
+  position: absolute;
+  right: 0;
+  background-color: transparent;
+  color: black;
+  border: none;
+  font-size: 20px;
+  transform: translateY(-2px);
+}
+
+.feedscontent__comment li {
+  margin: 10px 0;
+}
+
+/* 반응형 웹사이트 구현 */
+
+@media only screen and (max-width: 1400px) {
+  .main-right {
+    display: none;
+  }
+
+  .feeds {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+  }
+}
+/* profile 구현 */
+.profile {
+  background-color: white;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  width: 200px;
+  position: absolute;
+  right: 10%;
+  top: 50px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile__profile {
+  font-size: 20px;
+  display: flex;
+  padding: 10px 10px 2px 25px;
+  transition: 0.2s ease-in-out;
+}
+
+.profile__profile:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.profile__profile > span {
+  margin-left: 10px;
+}
+
+.profile__profile:nth-child(3),
+.profile__profile:nth-child(3) > span {
+  transform: translate(-2px);
+}
+
+.hidden {
+  display: none;
+}
+
+.status-bar__icon img:last-child {
+  cursor: pointer;
+}
