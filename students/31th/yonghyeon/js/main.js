@@ -102,7 +102,7 @@ const resultSearched = (data) => {
   userList.innerHTML = `<div class="searchLi__container">
                           <div class="search__result__img">
                             <img src=${data.pic} />
-                         </div>
+                          </div>
                           <div class="search__result__user">
                             <span>${data.id}</span>
                             <span>${data.name}</span>
@@ -154,9 +154,6 @@ const showProfile = (e) => {
     profileModal.classList.add('hidden');
   }
 };
-// profileBtn.addEventListener('click', (e) => {
-//   profileModal.classList.toggle('hidden');
-// });
 
 // 댓글 추가기능 이벤트
 form.addEventListener('submit', (e) => {
