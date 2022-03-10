@@ -1,0 +1,73 @@
+@import url("../style/common.css");
+
+body{
+    background-color: var(--color-grey);
+}
+
+.loginContainer{
+    width: 420px;
+    height: 500px;
+    margin: 100px auto;
+    border: 1px solid var(--color-border-grey);
+    text-align: center;
+    background-color:var(--color-white);
+}
+
+.logo{
+    font-family: Lobster;
+    font-size: 48px;
+ 
+    padding : 40px 40px 50px;
+}
+
+.loginForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loginForm__id, .loginForm__pwd{
+    width: 300px;
+    padding: 12px;
+    background-color: var(--color-grey);
+    border: 1px solid var(--color-border-grey);
+    border-radius: 3px;
+    margin: 4px;
+    ;
+}
+
+
+.loginForm__id::placeholder, .loginForm__pwd::placeholder{
+    color: var(--color-dark-grey);
+}
+
+.loginForm__id:focus, .loginForm__pwd:focus{
+    border-color: var(--color-dark-grey);
+}
+
+.loginForm__submit{
+    width: 300px;
+    margin: 20px;
+    padding: 10px;
+    background-color: var(--color-blue);
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-size: var(--font-weight-bold);
+    font-weight: 600; 
+    opacity: 0.3;   
+}
+
+.checked{
+    opacity: 1;
+}
+
+.forgotPassword{
+    display: inline-block;
+    margin-top: 130px;
+    font-size: smaller;
+    font-weight: var(--font-weight-bold);
+    color: var(--color-navy);
+    cursor: pointer;
+}
+

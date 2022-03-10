@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+    <link rel="stylesheet" href="../CSS/style/main.css">
+    <script type="module" src="../JS/main.js" defer></script>
+    <script src="https://kit.fontawesome.com/bc9117c72f.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="navbar">
+            <div class="navbar__logo">
+                <i class="fa-brands fa-instagram"></i>
+                <div class="navbar__logo__text">Westagram</div>
+            </div>
+            <div class="navbar__search">
+                <input class="navbar__searchBar" placeholder="검색">
+                <i class="fa-solid fa-magnifying-glass searchIcon"></i>
+                <i class="fa-solid fa-circle-xmark"></i>
+            </div>
+            <div class="navbar__moreFunctions">
+                    <i class="fa-regular fa-compass"></i>
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fas fa-regular fa-user-large"></i>
+                </li>
+            </div>
+            
+            <!-- Search Toggle -->
+            <div class="searchToggle">
+                <div class="toggle__arrow"></div>
+                <div class="searched__items"></div>
+            </div>
+        
+            <!-- Profile Toggle -->
+            <div class="profileToggle">
+                <div class="toggle__arrow"></div>
+                <div class="profileToggle__item">
+                    <i class="fa-solid fa-user"></i>
+                    <div class="profile__description">프로필</div>
+                </div>
+                <div class="profileToggle__item">
+                    <i class="fa-regular fa-bookmark"></i>
+                    <div class="profile__description">저장됨</div>
+                </div>
+                <div class="profileToggle__item">
+                    <i class="fa-solid fa-gear"></i>
+                    <div class="profile__description">설정</div>
+                </div>
+                <div class="profileToggle__item">로그아웃</div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- main -->
+    <main class="main">
+        <!-- main left -->
+        <div class="main__left">
+            <article class="feed">
+                <header class="feed__header">
+                    <div class="feed__header__left">
+                        <div class="img__container">
+                            <img class="avatar__img" src="../IMG/myprofile.jpeg" alt="">
+                         </div>
+                        <div class="avatar__id">thisisme</div>
+                    </div>
+                    <div class="feed__header__right">
+                        <i class="fa fa-light fa-ellipsis"></i>
+                    </div>
+                </header>
+                <div class="feed__image">
+                    <img src="../IMG/baking.jpeg" alt="">
+                </div>
+                <div class="feed__reaction">
+                    <div class="feed__reaction__icons">
+                        <div class="feed__reaction__icons__left">
+                            <i class="fa-regular fa-heart"></i>
+                            <i class="fa-regular fa-comment"></i>
+                            <i class="fas fa-arrow-up-from-bracket"></i>
+                        </div>
+                        <div class="feed__reaction__icons__right">
+                            <i class="fa-regular fa-bookmark"></i>
+                        </div>                        
+                    </div>
+                    <div class="feed__reaction__likes">
+                        <div class="img__container">
+                            <img class="avatar__img" src="../IMG/profile2.jpeg" alt="">
+                        </div>
+                            <span>
+                            <a class="avatar__id" href="#">aineworld</a>님 <b>외 10명</b>이 좋아합니다.
+                        </span>                        
+                    </div>
+                </div>
+                <div class="feed__post">
+                    <a href="#" class="avatar__id">thisisme</a>
+                    <span>위워크에서 진행한 베이킹 클래스...</span>
+                    <button>더 보기</button>
+                </div>
+                <div class="feed__comments">
+                    <div class="feed__comment__item" data-num="1">
+                        <a href="#" class="avatar__id">canon_mj</a>
+                        <span>거봐~너무 좋았잖아~</span>
+                        <span class="feed__comment__more">
+                            <i class="fa-solid fa-x" data-num="1"></i>
+                            <i class="fa-regular fa-heart" data-like="1"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="feed__postTime">42분 전</div>
+                <form class="feed__addComment">
+                    <input class="feed__addComment__input" type="text" placeholder="댓글 달기...">
+                    <button class="feed__addComment__button">게시</button>
+                </form>
+            </article>
+        </div>
+        
+        <!-- main right -->
+        <div class="main__right">
+            <div class="myId">
+                <div class="img__container">
+                    <img class="avatar__img" src="../IMG/myprofile.jpeg" alt="">
+                </div>
+                <div class="id__container">
+                    <div class="avatar__id">wecode_bootcamp</div>
+                    <div class="avatar__description">Wecode | 위코드</div>
+                </div>
+            </div>
+            <!-- story -->
+            <div class="story">
+                <div class="story__header">
+                    <div class="header__text">스토리</div>
+                    <div class="header__seeAll">모두 보기</div>
+                </div>
+                <div class="story__items">
+                    <div class="story__items__item">
+                        <div class="img__container">
+                            <img class="avatar__img" src="../IMG/profile3.jpeg" alt="">
+                        </div>   
+                        <div class="id__container">
+                            <div class="avatar__id">_yum_s</div>
+                            <div class="avatar__description">16분 전</div>
+                        </div>
+                    </div>
+                    <div class="story__items__item">
+                        <div class="img__container">
+                            <img class="avatar__img" src="../IMG/profile4.jpeg" alt="">
+                        </div>   
+                        <div class="id__container">
+                            <div class="avatar__id">drink_eat_drink</div>
+                            <div class="avatar__description">3시간 전</div>
+                        </div>
+                    </div>
+                    <div class="story__items__item">
+                        <div class="img__container">
+                            <img class="avatar__img" src="../IMG/profile5.jpeg" alt="">
+                        </div>   
+                        <div class="id__container">
+                            <div class="avatar__id">hyukyc</div>
+                            <div class="avatar__description">20시간 전</div>
+                        </div>
+                    </div>
+                    <div class="story__items__item">
+                        <div class="img__container">
+                            <img class="avatar__img" src="../IMG/profile8.jpeg" alt="">
+                        </div>   
+                        <div class="id__container">
+                            <div class="avatar__id">jminkeek</div>
+                            <div class="avatar__description">2주 전</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- recommedations -->
+            <div class="recommendations">
+                <div class="recommendations__header">
+                    <div class="header__text">회원님을 위한 추천</div>
+                    <div class="header__seeAll">모두 보기</div>
+                </div>
+                <div class="recommendations__items">
+                    <div class="recommendations__items__item">
+                        <div class="img__container">
+                            <img class="avatar__img" src="../IMG/profile6.jpeg" alt="">
+                        </div>     
+                        <div class="id__container">
+                            <div class="avatar__id">saranghaeeee</div>
+                            <div class="avatar__description">joahaee님 외 2명이 팔로우합니다</div>
+                        </div>
+                        <button class="follow">팔로우</button>
+                    </div>
+                    <div class="recommendations__items__item">
+                        <div class="img__container">
+                            <img class="avatar__img" src="../IMG/profile7.jpeg" alt="">
+                        </div>     
+                        <div class="id__container">
+                            <div class="avatar__id">wecode_bootcamp</div>
+                            <div class="avatar__description">mijnink님 외 14명이 팔로우합니다</div>
+                        </div>
+                        <button class="follow">팔로우</button>
+                    </div>
+                    <div class="recommendations__items__item">
+                        <div class="img__container">
+                            <img class="avatar__img" src="../IMG/profile8.jpeg" alt="">
+                        </div>     
+                        <div class="id__container">
+                            <div class="avatar__id">weworkspace</div>
+                            <div class="avatar__description">wecode_bootcamp님 외 300명이 팔로우합니다</div>
+                        </div>
+                        <button class="follow">팔로우</button>
+                    </div>
+                </div>
+            </div>
+            <!-- more information -->
+            <div class="moreInfos">
+                <ul class="infolists">
+                    <li><a>Instagram 정보</a></li>
+                    <li><a>지원</a></li>
+                    <li><a>홍보 센터</a></li>
+                    <li><a>API</a></li>
+                    <li><a>채용 정보</a></li>
+                    <li><a>개인정보처리방침</a></li>
+                    <li><a>약관</a></li>
+                    <li><a>위치</a></li>
+                    <li><a>디렉토리</a></li>
+                    <li><a>프로필</a></li>
+                    <li><a>해시태그</a></li>
+                    <li><a>언어</a></li>
+                </ul>    
+                </div>
+            <div class="copyright">© 2022 INSTAGRAM FROM META</div>
+        </div>
+    </main>
+
+ 
+
+
+</body>
+</html>
