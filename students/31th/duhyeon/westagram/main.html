@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>westagram🐶</title>
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/common.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <nav class="header">
+        <div class="header-wrap">
+          <div class="header-logo">
+            <img src="/images/instagram.png" alt="" />
+            <span class="logo-font">westagram</span>
+          </div>
+          <div class="header-search">
+            <input type="text" />
+            <p class="search-icon">검색</p>
+          </div>
+          <div class="header-util">
+            <button type="button" class="btn-more-feed">다른 피드</button>
+            <button type="button" class="btn-alram on">알림</button>
+            <button type="button" class="btn-mypage">마이페이지</button>
+            <button type="button" class="btn-profile">프로필</button>
+            <ul class="profile-modal">
+              <li class="modal-profile">프로필</li>
+              <li class="modal-save">저장됨</li>
+              <li class="modal-setting">설정</li>
+              <li class="modal-logout">로그아웃</li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="main">
+        <div class="feeds">
+          <article>
+            <div class="feed-title">
+              <img src="/images/javascript.png" alt="" />
+              <span class="feed-id">weeecode</span>
+              <button type="button" class="btn-feed">더보기</button>
+            </div>
+            <div class="feed-img">
+              <img src="/images/javascript.png" alt="" />
+            </div>
+            <div class="feed-bg">
+              <div class="feed-btn-wrap">
+                <!-- active 추가 -->
+                <button type="button" class="btn-like">좋아요</button>
+                <button type="button" class="btn-write">댓글달기</button>
+                <button type="button" class="btn-share">공유하기</button>
+                <!-- active 추가 -->
+                <button type="button" class="btn-mark">북마크</button>
+              </div>
+              <div class="like-status">
+                <img src="images/javascript.png" alt="" />
+                <p class="like-count">
+                  <span class="bold">duhyeon</span>님
+                  <span class="bold">외 10명</span>이 좋아합니다.
+                </p>
+              </div>
+              <div class="feed-information">
+                <span class="feed-id">weeecode</span>
+                <!-- more class 추가 -->
+                <span class="feed-content">
+                  안에 어떤 내용을 넣지 안에 어떤 내용을 넣지 안에 어떤 내용을
+                  넣지 안에 어떤 내용을 넣지 안에 어떤 내용을 넣지 안에 어떤
+                  내용을 넣지 안에 어떤 내용을 넣지 안에 어떤 내용을 넣지 안에
+                  어떤 내용을 넣지 안에 어떤 내용을 넣지 안에 어떤 내용을 넣지
+                  안에 어떤 내용을 넣지 안에 어떤 내용을 넣지 안에 어떤 내용을
+                  넣지 안에 어떤 내용을 넣지 안에 어떤 내용을 넣지
+                </span>
+                <a href="#" class="btn-more">더보기</a>
+                <div class="feed-comment-wrap">
+                  <div class="user-comment">
+                    <span class="feed-id">duhyeon</span>
+                    <!-- active 추가 -->
+                    <span class="feed-comment">그래서 안에 뭐넣을건데</span>
+                    <button type="button" class="btn-like">like</button>
+                  </div>
+                </div>
+                <p class="write-time">42분 전</p>
+              </div>
+              <div class="write-comment">
+                <input
+                  type="text"
+                  id="feed-comment"
+                  placeholder="댓글 달기..."
+                />
+                <button type="button" class="btn-comment" disabled>게시</button>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="main-right">
+          <div class="profile-section">
+            <img src="/images/javascript.png" alt="" />
+            <dl>
+              <dt id="user-nickname">wecode_bootcamp</dt>
+              <dd class="user-desc">WeCode | 위코드</dd>
+            </dl>
+          </div>
+          <div class="story-section">
+            <div class="more-title-wrap">
+              <p class="title">스토리</p>
+              <a href="" class="btn-story-more">모두 보기</a>
+            </div>
+            <div class="story-wrap">
+              <div class="story-list">
+                <img src="/images/javascript.png" alt="" />
+                <dl>
+                  <dt>wecode_bootcamp</dt>
+                  <dd>WeCode | 위코드</dd>
+                </dl>
+              </div>
+              <div class="story-list">
+                <img src="/images/javascript.png" alt="" />
+                <dl>
+                  <dt>wecode_bootcamp</dt>
+                  <dd>WeCode | 위코드</dd>
+                </dl>
+              </div>
+              <div class="story-list">
+                <img src="/images/javascript.png" alt="" />
+                <dl>
+                  <dt>wecode_bootcamp</dt>
+                  <dd>WeCode | 위코드</dd>
+                </dl>
+              </div>
+              <div class="story-list">
+                <img src="/images/javascript.png" alt="" />
+                <dl>
+                  <dt>wecode_bootcamp</dt>
+                  <dd>WeCode | 위코드</dd>
+                </dl>
+              </div>
+            </div>
+          </div>
+          <div class="recommend-section">
+            <div class="more-title-wrap">
+              <p class="title">회원님을 위한 추천</p>
+              <a href="" class="btn-story-more">모두 보기</a>
+            </div>
+            <div class="recommend-wrap">
+              <div class="recommend-list">
+                <img src="/images/javascript.png" alt="" />
+                <dl>
+                  <dt>wecode_bootcamp</dt>
+                  <dd>hongduhyeon님 외 12명이 팔로우했습니다</dd>
+                </dl>
+                <button type="button" class="btn-follow">팔로우</button>
+              </div>
+              <div class="recommend-list">
+                <img src="/images/javascript.png" alt="" />
+                <dl>
+                  <dt>wecode_bootcamp</dt>
+                  <dd>hongduhyeon님 외 12명이 팔로우했습니다</dd>
+                </dl>
+                <button type="button" class="btn-follow">팔로우</button>
+              </div>
+              <div class="recommend-list">
+                <img src="/images/javascript.png" alt="" />
+                <dl>
+                  <dt>wecode_bootcamp</dt>
+                  <dd>hongduhyeon님 외 12명이 팔로우했습니다</dd>
+                </dl>
+                <button type="button" class="btn-follow">팔로우</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="/js/main.js"></script>
+</html>
