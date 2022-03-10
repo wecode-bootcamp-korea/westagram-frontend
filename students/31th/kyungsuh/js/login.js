@@ -38,6 +38,7 @@ function checkEmailValid() {
 
 checkEmailValid()
 
+// 비밀번호 6자리 이상인 함수 
 function checkPassword() {
     const inpPw = document.querySelector(".inpPass")
     const inputPassAlert = document.querySelector(".inputPassAlert")
@@ -59,13 +60,13 @@ function checkPassword() {
 
 checkPassword()
 
-function changeColor () {
-    const id = inpId.value
-    const pw = inpPw.value
-    if(checkEmailValid() && checkPassword) {
-        btnLogin.classList.add("on")
-    }
-}
+// function changeColor () {
+//     const id = inpId.value
+//     const pw = inpPw.value
+//     if(checkEmailValid() && checkPassword) {
+//         btnLogin.classList.add("on")
+//     }
+// }
 
-inpId.addEventListener('keyup',changeColor)
-inpPw.addEventListener('keyup',changeColor)
+// inpId.addEventListener('keyup',changeColor)
+// inpPw.addEventListener('keyup',changeColor)
