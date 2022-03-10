@@ -1,17 +1,17 @@
 /* font-family: 'Leckerli One', cursive; */
-@import url("https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap');
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    background-color: rgb(244, 239, 239);
+  margin: 0;
+  background-color: rgb(244, 239, 239);
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
 /* .overlayBackground {
@@ -27,541 +27,622 @@ body {
 } */
 
 @media screen and (max-width: 900px) {
-    .mainRight {
-        display: none;
-    }
+  .mainRight {
+    display: none;
+  }
 }
 
 /************* header style start **************/
 
 header {
-    position: relative;
-    height: 10vh;
-    background-color: white;
-    display: flex;
-    align-items: center;
+  position: relative;
+  height: 10vh;
+  background-color: white;
+  display: flex;
+  align-items: center;
 }
 
 /*** header left style start ***/
 
 header .headerLeft {
-    width: 15vw;
-    height: 10vh;
+  width: 15vw;
+  height: 10vh;
 
-    padding: 0;
-    margin-left: 5vw;
+  padding: 0;
+  margin-left: 5vw;
 }
 
 header .headerLeft .headerLogoImg {
-    max-width: 100%;
-    width: 15vw;
-    height: 100%;
+  max-width: 100%;
+  width: 15vw;
+  height: 100%;
 }
 
 /*** header center style start ***/
 
 header .headerCenter {
-    max-width: 100%;
-    margin-left: 10vw;
-    width: 45vw;
-    position: relative;
+  max-width: 100%;
+  margin-left: 10vw;
+  width: 45vw;
+  position: relative;
 }
 
 header .headerCenter .headerSearchBar {
-    width: 35vw;
-    height: 5vh;
-    text-indent: 5vh;
-    font-size: 4vh;
+  width: 35vw;
+  height: 5vh;
+  text-indent: 5vh;
+  font-size: 4vh;
 }
 
 header .headerCenter img {
-    position: absolute;
-    left: 0;
-    height: 5vh;
+  position: absolute;
+  left: 0;
+  height: 5vh;
 }
 
 /*** header right style start ***/
 
 header .headerRight {
-    max-width: 100%;
-    width: 20vw;
-    height: 50%;
-    display: flex;
-    justify-content: space-around;
-    margin-right: 2vw;
-    margin-left: 3vw;
+  max-width: 100%;
+  width: 20vw;
+  height: 50%;
+  display: flex;
+  justify-content: space-around;
+  margin-right: 2vw;
+  margin-left: 3vw;
 }
 
 header .headerRight .headerCompassBtn {
-    border: none;
-    padding: 0;
-    height: 5vh;
-    width: 5vh;
-    background: url(image/compass.png);
-    background-size: cover;
+  border: none;
+  padding: 0;
+  height: 5vh;
+  width: 5vh;
+  background: url(image/compass.png);
+  background-size: cover;
 }
 
 header .headerRight .headerHeartBtn {
-    border: none;
-    padding: 0;
-    height: 5vh;
-    width: 5vh;
-    background: url(image/blackEmptyHeart.png);
-    background-size: cover;
+  border: none;
+  padding: 0;
+  height: 5vh;
+  width: 5vh;
+  background: url(image/blackEmptyHeart.png);
+  background-size: cover;
 }
 
 header .headerRight .headerProfileBtn {
-    border: none;
-    padding: 0;
-    height: 5vh;
-    width: 5vh;
-    background: url(image/profile.png);
-    background-size: cover;
+  border: none;
+  padding: 0;
+  height: 5vh;
+  width: 5vh;
+  background: url(image/profile.png);
+  background-size: cover;
 }
 
 /************* main Style start **************/
 main {
-    height: 110vh;
-    background-color: rgb(218, 217, 217);
-    display: flex;
-    justify-content: space-around;
+  height: 110vh;
+  background-color: rgb(218, 217, 217);
+  display: flex;
+  justify-content: space-around;
 }
 
 /*** main left Style start***/
 main .mainLeft {
-    width: 70vw;
-    height: 98vh;
-    margin-top: 7vh;
-    flex-direction: column;
-    background-color: white;
-    margin-left: 3vw;
+  width: 70vw;
+  height: 98vh;
+  margin-top: 7vh;
+  flex-direction: column;
+  background-color: white;
+  margin-left: 3vw;
 }
 
 main .mainLeft .articleProfile {
-    height: 6vh;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    position: relative;
+  height: 6vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
 }
 
 main .mainLeft .articleProfile .articleProfilePhoto {
-    margin-left: 3vw;
+  margin-left: 3vw;
 }
 
 main .mainLeft .articleProfile .articleProfileName {
-    margin-left: 1vw;
+  margin-left: 1vw;
 }
 
 main .mainLeft .articleProfile .articleProfileOptBtn {
-    position: absolute;
-    padding: 0;
-    right: 0;
-    margin-right: 2.5vw;
-    height: 5vh;
-    width: 5vh;
-    background-color: inherit;
-    border: 0;
+  position: absolute;
+  padding: 0;
+  right: 0;
+  margin-right: 2.5vw;
+  height: 5vh;
+  width: 5vh;
+  background-color: inherit;
+  border: 0;
 }
 
 main .mainLeft .articleProfile .articleProfileOptBtn img {
-    height: 5vh;
-    width: 5vh;
+  height: 5vh;
+  width: 5vh;
 }
 
 main .mainLeft .articleProfilePhoto {
-    margin-left: 2vw;
-    height: 4vh;
-    border-radius: 70%;
+  margin-left: 2vw;
+  height: 4vh;
+  border-radius: 70%;
 }
 
 main .mainLeft .articlePhotoArea {
-    height: 50vh;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 50vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 main .mainLeft .articlePhotoArea .articlePhoto {
-    max-height: 100%;
-    width: auto;
+  max-height: 100%;
+  width: auto;
 }
 
 main .mainLeft .articleTextContent {
-    padding: 1vh 2vw;
-    height: 15vh;
-    overflow: auto;
+  padding: 1vh 2vw;
+  height: 15vh;
+  overflow: auto;
 }
 
 main .mainLeft .articleBtnArea {
-    display: flex;
-    position: relative;
-    align-items: center;
-    margin-left: 2vw;
-    margin-right: 2vw;
-    height: 6vh;
-    border-bottom: 1px solid rgb(188, 188, 188);
+  display: flex;
+  position: relative;
+  align-items: center;
+  margin-left: 2vw;
+  margin-right: 2vw;
+  height: 6vh;
 }
 
 main .mainLeft .articleBtnArea .articleLikeBtn {
-    padding: 0;
-    height: 4vh;
-    width: 4vh;
-    background-color: inherit;
-    border: 0;
+  padding: 0;
+  height: 4vh;
+  width: 4vh;
+  background-color: inherit;
+  border: 0;
 }
 
 main .mainLeft .articleBtnArea .articleLikeBtn img {
-    height: 4vh;
-    width: 4vh;
+  height: 4vh;
+  width: 4vh;
 }
 
 main .mainLeft .articleBtnArea .articleReplyBtn {
-    padding: 0;
-    margin-left: 2vw;
-    height: 4vh;
-    width: 4vh;
-    background-color: inherit;
-    border: 0;
+  padding: 0;
+  margin-left: 2vw;
+  height: 4vh;
+  width: 4vh;
+  background-color: inherit;
+  border: 0;
 }
 
 main .mainLeft .articleBtnArea .articleReplyBtn img {
-    height: 4vh;
-    width: 4vh;
+  height: 4vh;
+  width: 4vh;
 }
 
 main .mainLeft .articleBtnArea .articleSaveBtn {
-    padding: 0;
-    margin-left: 2vw;
-    height: 4vh;
-    width: 4vh;
-    background-color: inherit;
-    border: 0;
+  padding: 0;
+  margin-left: 2vw;
+  height: 4vh;
+  width: 4vh;
+  background-color: inherit;
+  border: 0;
 }
 
 main .mainLeft .articleBtnArea .articleSaveBtn img {
-    height: 4vh;
-    width: 4vh;
+  height: 4vh;
+  width: 4vh;
 }
 
 main .mainLeft .articleBtnArea .articleBookmarkBtn {
-    position: absolute;
-    right: 0;
-    height: 4vh;
-    width: 4vh;
-    border: 0;
-    background-color: inherit;
+  position: absolute;
+  right: 0;
+  height: 4vh;
+  width: 4vh;
+  border: 0;
+  background-color: inherit;
 }
 
 main .mainLeft .articleBtnArea .articleBookmarkBtn img {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 4vh;
-    width: 4vh;
-    border: 0;
-    background-color: inherit;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 4vh;
+  width: 4vh;
+  border: 0;
+  background-color: inherit;
 }
 
 main .mainLeft .articleLikeArea {
-    height: 6vh;
-    display: flex;
-    align-items: center;
-    margin-left: 2vw;
-    margin-right: 2vw;
+  height: 6vh;
+  display: flex;
+  align-items: center;
+  margin-left: 2vw;
+  margin-right: 2vw;
+  border-bottom: 1px solid rgb(188, 188, 188);
 }
 
 main .mainLeft .articleLikeArea .whoFirstLikePhoto {
-    height: 3.5vh;
-    border-radius: 70%;
+  height: 3.5vh;
+  border-radius: 70%;
 }
 
 main .mainLeft .articleLikeArea .infoLikeWho {
-    margin-left: 1vw;
-    height: 3.5vh;
-    width: 60vw;
+  margin-left: 1vw;
+  height: 3.5vh;
+  width: 60vw;
 }
 
 main .mainLeft .articleReplyArea {
-    background-color: inherit;
-    height: 10vh;
-    position: relative;
-    margin-left: 2vw;
-    display: flex;
-    align-items: flex-start;
+  background-color: inherit;
+
+  height: 10vh;
+  width: 68vw;
+
+  position: relative;
+  margin-left: 2vw;
+
+  display: flex;
+  flex-direction: column;
+}
+
+main .mainLeft .articleReplyArea .minibox1 {
+  height: 4vh;
+  width: 68vw;
+
+  display: flex;
+  align-items: center;
+}
+
+main .mainLeft .articleReplyArea .minibox1 .miniboxPhoto1 {
+  height: 3vh;
+  border-radius: 70%;
+}
+
+main .mainLeft .articleReplyArea .minibox1 .miniboxNick1 {
+  height: 4vh;
+  width: 15vw;
+
+  margin-left: 1vw;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+main .mainLeft .articleReplyArea .minibox1 .miniboxComment1 {
+  height: 4vh;
+  width: 40vw;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
+}
+
+main .mainLeft .articleReplyArea .minibox1 .showFullReplyModalBtn {
+  border: 0;
+  background-color: inherit;
+  color: grey;
+
+  position: absolute;
+  right: 2vw;
+}
+
+main .mainLeft .articleReplyArea .minibox2 {
+  height: 4vh;
+  width: 68vw;
+
+  margin-top: 1vh;
+
+  display: flex;
+  align-items: center;
+}
+
+main .mainLeft .articleReplyArea .minibox2 .miniboxPhoto2 {
+  height: 3vh;
+  border-radius: 70%;
+}
+
+main .mainLeft .articleReplyArea .minibox2 .miniboxNick2 {
+  height: 4vh;
+  width: 15vw;
+
+  margin-left: 1vw;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+main .mainLeft .articleReplyArea .minibox2 .miniboxComment2 {
+  height: 4vh;
+  width: 40vw;
+
+  display: flex;
+  align-items: center;
+
+  overflow: hidden;
 }
 
 main .mainLeft .articleReplyArea .articleAllReplyBtn {
-    position: absolute;
-    right: 0;
-    top: 0;
-    margin-right: 2vw;
-    border: 0;
-    padding: 0;
-    height: 3vh;
-    width: 4vw;
-    background-color: inherit;
-    color: grey;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-right: 2vw;
+  border: 0;
+  padding: 0;
+  height: 3vh;
+  width: 4vw;
+  background-color: inherit;
+  color: grey;
 }
 
 main .mainLeft .articleReplyArea .articleAllReplyBtn span {
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 4vw;
-    height: 3vh;
-    padding: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 4vw;
+  height: 3vh;
+  padding: 0;
 }
 
 main .mainLeft .articleInsertReplyArea {
-    background-color: inherit;
-    height: 5vh;
-    margin-left: 2vw;
-    position: relative;
-    display: flex;
-    align-items: flex-start;
+  background-color: inherit;
+  height: 5vh;
+  margin-left: 2vw;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
 }
 
 main .mainLeft .articleInsertReplyArea .articleInsertReplyContent {
-    width: 60vw;
-    border: 0;
+  width: 60vw;
+  border: 0;
 }
 
 main .mainLeft .articleInsertReplyArea .articleInsertReplyContent:focus {
-    outline: none;
+  outline: none;
 }
 
 main .mainLeft .articleInsertReplyArea .articleInsertReplyBtn {
-    border: 0;
-    background-color: inherit;
-    color: rgb(147, 202, 208);
-    position: absolute;
-    right: 2vw;
+  border: 0;
+  background-color: inherit;
+  color: rgb(147, 202, 208);
+  position: absolute;
+  right: 2vw;
 }
 
 /*** main right Style start ***/
 main .mainRight {
-    width: 20vw;
-    margin-top: 7vh;
-    margin-left: 3vh;
-    margin-right: 2vh;
-    flex-direction: column;
-    background-color: inherit;
+  width: 20vw;
+  margin-top: 7vh;
+  margin-left: 3vh;
+  margin-right: 2vh;
+  flex-direction: column;
+  background-color: inherit;
 }
 
 main .mainRight .sidebarLogined {
-    height: 11vh;
-    display: none;
-    align-items: flex-start;
-    flex-direction: column;
-    background-color: inherit;
-    position: relative;
+  height: 11vh;
+  display: none;
+  align-items: flex-start;
+  flex-direction: column;
+  background-color: inherit;
+  position: relative;
 }
 
 main .mainRight .sidebarLogined .sidebarLoginedTop {
-    height: 5vh;
-    display: flex;
-    align-items: center;
+  height: 5vh;
+  display: flex;
+  align-items: center;
 
-    position: relative;
+  position: relative;
 }
 
 main .mainRight .sidebarLogined .sidebarLoginedTop img {
-    height: 5vh;
-    display: flex;
-    align-items: center;
+  height: 5vh;
+  display: flex;
+  align-items: center;
 
-    border-radius: 70%;
+  border-radius: 70%;
 }
 
 main .mainRight .sidebarLogined .sidebarLoginedTop span {
-    width: 18vw;
-    margin-left: 1vw;
+  width: 18vw;
+  margin-left: 1vw;
 }
 
 main .mainRight .sidebarLogined .sidebarLogOutBtn {
-    background-color: white;
-    color: black;
-    border: 0;
-    width: 20vw;
-    height: 4vh;
-    position: absolute;
-    bottom: 1vh;
-    border: 1px solid rgb(179, 179, 179);
+  background-color: white;
+  color: black;
+  border: 0;
+  width: 20vw;
+  height: 4vh;
+  position: absolute;
+  bottom: 1vh;
+  border: 1px solid rgb(179, 179, 179);
 }
 
 main .mainRight .sidebarNotLogined {
-    display: "";
+  display: '';
 }
 
 main .mainRight .sidebarNotLogined button {
-    background-color: white;
-    color: black;
-    border: 0;
-    width: 20vw;
-    height: 2.5vh;
+  background-color: white;
+  color: black;
+  border: 0;
+  width: 20vw;
+  height: 2.5vh;
 }
 
 main .mainRight .sidebarNotLogined .sidebarJoinBtn {
-    margin-top: 1vh;
+  margin-top: 1vh;
 }
 
 main .mainRight .sidebarStory {
-    height: 27vh;
-    width: 20vw;
+  height: 27vh;
+  width: 20vw;
 
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
 
-    border: 1px solid rgb(179, 179, 179);
+  border: 1px solid rgb(179, 179, 179);
 
-    margin-top: 2vh;
-    padding-top: 1.5vh;
-    padding-left: 2vw;
-    padding-right: 2vw;
+  margin-top: 2vh;
+  padding-top: 1.5vh;
+  padding-left: 2vw;
+  padding-right: 2vw;
 
-    background-color: white;
+  background-color: white;
 
-    position: relative;
+  position: relative;
 }
 
 main .mainRight .sidebarStory .sidebarStoryTop {
-    width: 20vw;
-    display: flex;
-    align-items: flex-end;
+  width: 20vw;
+  display: flex;
+  align-items: flex-end;
 }
 
 main .mainRight .sidebarStory .sidebarStoryTop span {
-    font-size: 1.5vh;
-    color: grey;
+  font-size: 1.5vh;
+  color: grey;
 }
 
 main .mainRight .sidebarStory .sidebarStoryTop button {
-    background-color: inherit;
-    border: 0;
-    position: absolute;
-    right: 1vw;
-    font-weight: bold;
-    font-size: 1.5vh;
+  background-color: inherit;
+  border: 0;
+  position: absolute;
+  right: 1vw;
+  font-weight: bold;
+  font-size: 1.5vh;
 }
 
 main .mainRight .sidebarStory .sidebarStoryMain {
-    width: 15vw;
-    height: 23vh;
+  width: 15vw;
+  height: 23vh;
 }
 
 main .mainRight .sidebarStory .sidebarStoryMain .story {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 
-    height: 5.5vh;
+  height: 5.5vh;
 }
 
 main .mainRight .sidebarStory .sidebarStoryMain .story img {
-    width: 3.5vh;
-    border-radius: 70%;
+  width: 3.5vh;
+  border-radius: 70%;
 }
 
 main .mainRight .sidebarStory .sidebarStoryMain button {
-    border: 0;
-    background-color: inherit;
+  border: 0;
+  background-color: inherit;
 
-    width: 18vw;
-    height: 5vh;
-    font-size: 2.5vh;
+  width: 18vw;
+  height: 5vh;
+  font-size: 2.5vh;
 
-    position: absolute;
-    left: 2vw;
+  position: absolute;
+  left: 2vw;
 }
 
 main .mainRight .sidebarRecommend {
-    height: 27vh;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+  height: 27vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 
-    background-color: white;
+  background-color: white;
 
-    position: relative;
+  position: relative;
 
-    border: 1px solid rgb(179, 179, 179);
-    margin-top: 2vh;
-    padding-top: 1.5vh;
-    padding-left: 2vw;
-    padding-right: 2vw;
+  border: 1px solid rgb(179, 179, 179);
+  margin-top: 2vh;
+  padding-top: 1.5vh;
+  padding-left: 2vw;
+  padding-right: 2vw;
 }
 
 main .mainRight .sidebarRecommend .sidebarRecommendTop {
-    width: 20vw;
-    display: flex;
-    align-items: flex-end;
+  width: 20vw;
+  display: flex;
+  align-items: flex-end;
 }
 
 main .mainRight .sidebarRecommend .sidebarRecommendTop span {
-    font-size: 1.5vh;
-    color: grey;
+  font-size: 1.5vh;
+  color: grey;
 }
 
 main .mainRight .sidebarRecommend .sidebarRecommendTop button {
-    background-color: inherit;
-    border: 0;
-    position: absolute;
-    right: 1vw;
-    font-weight: bold;
-    font-size: 1.5vh;
+  background-color: inherit;
+  border: 0;
+  position: absolute;
+  right: 1vw;
+  font-weight: bold;
+  font-size: 1.5vh;
 }
 
 main .mainRight .sidebarRecommend .sidebarRecommendMain {
-    width: 15vw;
-    height: 23vh;
+  width: 15vw;
+  height: 23vh;
 }
 
 main .mainRight .sidebarRecommend .sidebarRecommendMain .recommendWho {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 
-    height: 5.5vh;
+  height: 5.5vh;
 }
 
 main .mainRight .sidebarRecommend .sidebarRecommendMain .recommendWho img {
-    width: 3.5vh;
-    border-radius: 70%;
+  width: 3.5vh;
+  border-radius: 70%;
 }
 
 main .mainRight .sidebarRecommend .sidebarRecommendMain .recommendWho button {
-    border: 0;
-    background-color: inherit;
+  border: 0;
+  background-color: inherit;
 
-    width: 18vw;
-    height: 5vh;
-    font-size: 2.5vh;
+  width: 18vw;
+  height: 5vh;
+  font-size: 2.5vh;
 
-    position: absolute;
-    left: 2vw;
+  position: absolute;
+  left: 2vw;
 }
 main .mainRight .sidebarFooter {
-    margin-top: 2vh;
-    display: flex;
-    color: grey;
-    flex-direction: column;
-    align-items: center;
+  margin-top: 2vh;
+  display: flex;
+  color: grey;
+  flex-direction: column;
+  align-items: center;
 }
 
 main .mainRight .sidebarFooter button {
-    font-size: 2vh;
-    width: 20vw;
-    margin-top: 2vh;
-    border: 0;
-    background-color: inherit;
-    color: grey;
+  font-size: 2vh;
+  width: 20vw;
+  margin-top: 2vh;
+  border: 0;
+  background-color: inherit;
+  color: grey;
 }
 
 main .mainRight .sidebarFooter span {
-    margin-top: 2vh;
-    color: grey;
+  margin-top: 2vh;
+  color: grey;
 }
 
 /* modal center start */
@@ -577,571 +658,602 @@ main .mainRight .sidebarFooter span {
 } */
 
 .modalForLoginBtn {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 
-    margin: auto;
-    padding: 0 3vw;
+  margin: auto;
+  padding: 0 3vw;
 
-    width: 50vw;
-    height: 75vh;
+  width: 50vw;
+  height: 75vh;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
 
-    z-index: 10;
+  z-index: 10;
 }
 
 .modalForLoginBtn .logoForLoginWindow {
-    font-family: "Leckerli One", cursive;
-    font-size: 6vw;
+  font-family: 'Leckerli One', cursive;
+  font-size: 6vw;
 
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .modalForLoginBtn .idInputField {
-    width: 40vw;
-    height: 10vh;
+  width: 40vw;
+  height: 10vh;
 
-    font-size: 3vh;
-    text-align: center;
+  font-size: 3vh;
+  text-align: center;
 
-    margin-top: 4vh;
-    padding: 0;
-    border: 0;
-    background-color: rgb(251, 251, 251);
+  margin-top: 4vh;
+  padding: 0;
+  border: 0;
+  background-color: rgb(251, 251, 251);
 }
 
 .modalForLoginBtn .pwInputField {
-    width: 40vw;
-    height: 10vh;
+  width: 40vw;
+  height: 10vh;
 
-    font-size: 3vh;
-    text-align: center;
+  font-size: 3vh;
+  text-align: center;
 
-    margin-top: 4vh;
-    padding: 0;
-    border: 0;
-    background-color: rgb(251, 251, 251);
+  margin-top: 4vh;
+  padding: 0;
+  border: 0;
+  background-color: rgb(251, 251, 251);
 }
 
 .modalForLoginBtn .loginSubmitBtn {
-    width: 40vw;
-    height: 10vh;
+  width: 40vw;
+  height: 10vh;
 
-    font-size: 3vh;
-    text-align: center;
+  font-size: 3vh;
+  text-align: center;
 
-    margin-top: 3vh;
-    padding: 0;
-    border: 0;
-    background-color: rgb(107, 201, 252);
-    opacity: 0.3;
-    color: white;
+  margin-top: 3vh;
+  padding: 0;
+  border: 0;
+  background-color: rgb(107, 201, 252);
+  opacity: 0.3;
+  color: white;
 }
 
 .modalForLoginBtn .ActiveSubmitBtn {
-    margin-top: 3vh;
+  margin-top: 3vh;
 }
 
 .modalForLoginBtn .showInputStatus {
-    margin-top: 3vh;
-    font-size: 3vh;
+  margin-top: 3vh;
+  font-size: 3vh;
 }
 
 .modalForLoginBtn .showNewAccountBtn {
-    margin-top: 8vh;
-    background-color: inherit;
-    border: 0;
-    color: rgb(102, 115, 254);
+  margin-top: 8vh;
+  background-color: inherit;
+  border: 0;
+  color: rgb(102, 115, 254);
 }
 
 .modalForLoginBtn .showFindPwBtn {
-    margin-top: 1vh;
-    background-color: inherit;
-    border: 0;
-    color: rgb(102, 115, 254);
+  margin-top: 1vh;
+  background-color: inherit;
+  border: 0;
+  color: rgb(102, 115, 254);
 }
 
 .modalForTopMenuBtn {
-    position: absolute;
-    top: 0;
-    bottom: 37%;
-    left: 40%;
-    right: 0;
-    margin: auto;
-    width: 20vw;
-    height: 18vh;
+  position: absolute;
+  top: 0;
+  bottom: 37%;
+  left: 40%;
+  right: 0;
+  margin: auto;
+  width: 20vw;
+  height: 18vh;
 
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
 
-    z-index: 10;
+  z-index: 10;
 }
 
 .modalForTopMenuBtn button {
-    height: 6vh;
+  height: 6vh;
 
-    background-color: inherit;
-    border: 0;
-    border-bottom: 1px solid grey;
+  background-color: inherit;
+  border: 0;
+  border-bottom: 1px solid grey;
 }
 
 .modalForCopyURLBtn {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 
-    margin: auto;
-    padding: 1vh;
+  margin: auto;
+  padding: 1vh;
 
-    width: 50vw;
-    height: 6vh;
+  width: 50vw;
+  height: 6vh;
 
-    display: flex;
-    align-items: flex-end;
+  display: flex;
+  align-items: flex-end;
 
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
 
-    z-index: 10;
+  z-index: 10;
 }
 
 .modalForCopyURLBtn .urlTextBox {
-    border: 1px solid grey;
-    width: 10vw;
-    height: 4vh;
-    width: 37vw;
-    overflow: auto;
+  border: 1px solid grey;
+  width: 10vw;
+  height: 4vh;
+  width: 37vw;
+  overflow: auto;
 }
 
 .modalForCopyURLBtn .urlCopyBtn {
-    border: 1px solid grey;
-    margin-left: 2vw;
+  border: 1px solid grey;
+  margin-left: 2vw;
 
-    height: 4vh;
-    width: 10vw;
+  height: 4vh;
+  width: 10vw;
 
-    background-color: white;
+  background-color: white;
 }
 
 .modalForTermsBtn {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 
-    margin: auto;
-    padding: 0 3vw;
+  margin: auto;
+  padding: 0 3vw;
 
-    width: 90vw;
-    height: 90vh;
+  width: 90vw;
+  height: 90vh;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
 
-    z-index: 10;
+  z-index: 10;
 }
 
 .modalForTermsBtn .termsTextBox {
-    margin-top: 5vh;
+  margin-top: 5vh;
 
-    width: 80vw;
-    height: 75vh;
+  width: 80vw;
+  height: 75vh;
 
-    border: 1px solid rgb(227, 227, 227);
+  border: 1px solid rgb(227, 227, 227);
 
-    resize: none;
+  resize: none;
 
-    overflow: scroll;
+  overflow: scroll;
 }
 
 .modalForTermsBtn .closeTermsModalBtn {
-    margin-top: 3vh;
-    border: 1px solid grey;
-    margin-left: 2vw;
+  margin-top: 3vh;
+  border: 1px solid grey;
+  margin-left: 2vw;
 
-    height: 4vh;
-    width: 10vw;
+  height: 4vh;
+  width: 10vw;
 
-    background-color: white;
+  background-color: white;
 }
 
 .modalForCsBtn {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 
-    margin: auto;
-    padding: 0 3vw;
+  margin: auto;
+  padding: 0 3vw;
 
-    width: 500px;
-    height: 400px;
+  width: 500px;
+  height: 400px;
 
-    display: flex;
+  display: flex;
 
-    flex-direction: column;
+  flex-direction: column;
 
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
 
-    z-index: 10;
+  z-index: 10;
 }
 
 .modalForCsBtn .csNameArea {
-    margin-top: 40px;
-    height: 30px;
-    display: flex;
+  margin-top: 40px;
+  height: 30px;
+  display: flex;
 }
 
 .modalForCsBtn .csNameArea span {
-    margin-right: 100px;
-    height: 30px;
-    width: 50px;
-    display: flex;
+  margin-right: 100px;
+  height: 30px;
+  width: 50px;
+  display: flex;
 }
 
 .modalForCsBtn .csNameArea input {
-    display: flex;
+  display: flex;
 
-    width: 300px;
+  width: 300px;
 }
 
 .modalForCsBtn .csPhoneNumbArea {
-    margin-top: 40px;
-    display: flex;
+  margin-top: 40px;
+  display: flex;
 
-    height: 50px;
+  height: 50px;
 }
 
 .modalForCsBtn .csPhoneNumbArea span {
-    width: 150px;
-    display: flex;
+  width: 150px;
+  display: flex;
 }
 
 .modalForCsBtn .csPhoneNumbArea input {
-    display: flex;
+  display: flex;
 
-    width: 300px;
+  width: 300px;
 }
 
 .modalForCsBtn .csQuestionArea {
-    margin-top: 40px;
-    display: flex;
-    align-items: center;
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
 }
 
 .modalForCsBtn .csQuestionArea span {
-    width: 150px;
-    display: flex;
+  width: 150px;
+  display: flex;
 }
 
 .modalForCsBtn .csQuestionArea textarea {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 
-    width: 300px;
-    height: 130px;
+  width: 300px;
+  height: 130px;
 
-    resize: none;
+  resize: none;
 }
 
 .modalForCsBtn .csSubmitBtn {
-    margin-top: 20px;
+  margin-top: 20px;
 
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 
-    height: 40px;
+  height: 40px;
 
-    overflow: auto;
+  overflow: auto;
 }
 
 .modalForCsBtn .csSubmitBtn input {
-    background-color: white;
-    border: 1px solid rgb(213, 213, 213);
-    width: 100px;
+  background-color: white;
+  border: 1px solid rgb(213, 213, 213);
+  width: 100px;
 }
 /* modal right start */
 .modalForHeartBtn {
-    position: absolute;
-    top: 10vh;
-    right: 3vw;
-    width: 20vw;
-    height: 30vh;
+  position: absolute;
+  top: 10vh;
+  right: 3vw;
+  width: 20vw;
+  height: 30vh;
 
-    overflow: hidden;
+  overflow: hidden;
 
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 
-    background-color: white;
-    padding: 1rem;
-    border-radius: 5px;
-    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
-    z-index: 10;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
 }
 
 .modalForHeartBtn img {
-    width: 5vw;
-    margin: 0 auto;
+  width: 5vw;
+  margin: 0 auto;
 }
 
 .modalForHeartBtn span {
-    margin: 2vh auto;
-    text-align: center;
+  margin: 2vh auto;
+  text-align: center;
 }
 
 .modalForProfileBtn {
-    position: absolute;
-    top: 10vh;
-    right: 0;
+  position: absolute;
+  top: 10vh;
+  right: 0;
 
-    width: 20vw;
-    height: 28vh;
+  width: 20vw;
+  height: 28vh;
 
-    overflow: auto;
-    display: flex;
-    flex-direction: column;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
 
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
-    z-index: 10;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
 }
 
 .modalForProfileBtn button {
-    padding: 0;
+  padding: 0;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 7vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 7vh;
 
-    background-color: white;
+  background-color: white;
 }
 
 .profileMenuBtn,
 .bookmarkMenuBtn,
 .settingMenuBtn {
-    border: 0;
-    border-bottom: 1px solid rgb(189, 188, 188);
+  border: 0;
+  border-bottom: 1px solid rgb(189, 188, 188);
 }
 
 .logoutMenuBtn {
-    border: 0;
+  border: 0;
 }
 
 .modalForProfileBtn .profileMenu input {
-    background-color: inherit;
-    width: 20vw;
-    padding: 0;
+  background-color: inherit;
+  width: 20vw;
+  padding: 0;
 }
 
 .modalForProfileBtn .bookmarkMenu {
-    height: 7vh;
-    width: 20vw;
-    display: flex;
-    justify-content: center;
-    border-bottom: 1px solid rgb(179, 179, 179);
+  height: 7vh;
+  width: 20vw;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid rgb(179, 179, 179);
 }
 
 .modalForProfileBtn .bookmarkMenu input {
-    background-color: inherit;
-    border: 0;
-    width: 20vw;
-    padding: 0;
+  background-color: inherit;
+  border: 0;
+  width: 20vw;
+  padding: 0;
 }
 
 .modalForProfileBtn .settingMenu {
-    height: 7vh;
-    width: 20vw;
-    display: flex;
-    justify-content: center;
-    border-bottom: 1px solid rgb(179, 179, 179);
+  height: 7vh;
+  width: 20vw;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid rgb(179, 179, 179);
 }
 
 .modalForProfileBtn .settingMenu input {
-    background-color: inherit;
-    border: 0;
-    width: 20vw;
-    padding: 0;
+  background-color: inherit;
+  border: 0;
+  width: 20vw;
+  padding: 0;
 }
 
 .modalForProfileBtn .logoutMenu {
-    height: 7vh;
-    width: 20vw;
-    display: flex;
-    justify-content: center;
+  height: 7vh;
+  width: 20vw;
+  display: flex;
+  justify-content: center;
 }
 
 .modalForProfileBtn .logoutMenu input {
-    background-color: inherit;
-    border: 0;
-    width: 20vw;
-    padding: 0;
+  background-color: inherit;
+  border: 0;
+  width: 20vw;
+  padding: 0;
 }
 
 .modalForJoinMember {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 
-    margin: auto;
-    padding: 0 3vw;
+  margin: auto;
+  padding: 0 3vw;
 
-    width: 50vw;
-    height: 75vh;
+  width: 50vw;
+  height: 75vh;
 
-    display: none;
-    flex-direction: column;
-    align-items: center;
+  display: none;
+  flex-direction: column;
+  align-items: center;
 
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
 
-    z-index: 10;
+  z-index: 10;
 }
 
 .modalForJoinMember .logoForJoinWindow {
-    font-family: "Leckerli One", cursive;
-    font-size: 6vw;
+  font-family: 'Leckerli One', cursive;
+  font-size: 6vw;
 
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .modalForJoinMember .idInputField {
-    width: 40vw;
-    height: 10vh;
+  width: 40vw;
+  height: 10vh;
 
-    font-size: 3vh;
-    text-align: center;
+  font-size: 3vh;
+  text-align: center;
 
-    margin-top: 4vh;
-    padding: 0;
-    border: 0;
-    background-color: rgb(251, 251, 251);
+  margin-top: 4vh;
+  padding: 0;
+  border: 0;
+  background-color: rgb(251, 251, 251);
 }
 
 .modalForJoinMember .pwInputField {
-    width: 40vw;
-    height: 10vh;
+  width: 40vw;
+  height: 10vh;
 
-    font-size: 3vh;
-    text-align: center;
+  font-size: 3vh;
+  text-align: center;
 
-    margin-top: 4vh;
-    padding: 0;
-    border: 0;
-    background-color: rgb(251, 251, 251);
+  margin-top: 4vh;
+  padding: 0;
+  border: 0;
+  background-color: rgb(251, 251, 251);
 }
 
 .modalForJoinMember .showInputStatus {
-    margin-top: 3vh;
-    font-size: 3vh;
+  margin-top: 3vh;
+  font-size: 3vh;
 }
 
 .modalForJoinMember .showNewAccountBtn {
-    margin-top: 8vh;
-    background-color: inherit;
-    border: 0;
-    color: rgb(102, 115, 254);
+  margin-top: 8vh;
+  background-color: inherit;
+  border: 0;
+  color: rgb(102, 115, 254);
 }
 
 .modalForJoinMember .showFindPwBtn {
-    margin-top: 1vh;
-    background-color: inherit;
-    border: 0;
-    color: rgb(102, 115, 254);
+  margin-top: 1vh;
+  background-color: inherit;
+  border: 0;
+  color: rgb(102, 115, 254);
 }
 
 .modalForJoinMember .joinSubmitBtn {
-    width: 40vw;
-    height: 10vh;
+  width: 40vw;
+  height: 10vh;
 
-    font-size: 3vh;
-    text-align: center;
+  font-size: 3vh;
+  text-align: center;
 
-    margin-top: 3vh;
-    padding: 0;
-    border: 0;
-    background-color: rgb(107, 201, 252);
-    opacity: 0.3;
-    color: white;
+  margin-top: 3vh;
+  padding: 0;
+  border: 0;
+  background-color: rgb(107, 201, 252);
+  opacity: 0.3;
+  color: white;
 }
 
 .modalWindows .modalForAllReplyBtn {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 
-    margin: auto;
-    padding: 0 3vw;
+  margin: auto;
+  padding: 0 3vw;
 
-    width: 60vw;
-    height: 80vh;
+  width: 60vw;
+  height: 80vh;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
 
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
 
-    overflow: hidden;
-    z-index: 10;
+  overflow: hidden;
+  z-index: 10;
 }
 
 .modalWindows .replyContent {
-    width: 34vw;
-    height: 7vh;
-    display: flex;
-    align-items: center;
-    margin-top: 2vh;
+  width: 34vw;
+  height: 7vh;
+
+  display: flex;
+  align-items: center;
+
+  margin-top: 7vh;
 }
 
 /* 아래 3개 풀 댓글창 들어가는 스타일  */
 .modalWindows .replyContent .replyProfilePhoto {
-    width: 4vw;
-    height: 4vw;
-    border-radius: 70%;
+  width: 4vw;
+  height: 4vw;
+  border-radius: 70%;
+
+  margin-top: 7vh;
+
+  display: flex;
+  align-items: center;
 }
 
-/* .modalWindows .replyContent .replyProfileNickName {
+.modalWindows .replyContent .replyProfileNickName {
+  margin-left: 1vw;
+
+  height: 4vw;
+  width: 18vw;
+
+  margin-top: 7vh;
+
+  display: flex;
+  align-items: center;
+  overflow: hidden;
 }
 
 .modalWindows .replyContent .replyText {
-} */
+  margin-left: 1vw;
+  border-left: 1px solid rgb(196, 196, 196);
+  padding-left: 1vw;
+
+  height: 4vw;
+  width: 30vw;
+
+  margin-top: 7vh;
+
+  display: flex;
+  align-items: center;
+
+  overflow: scroll;
+  position: absolute;
+  left: 25vw;
+}

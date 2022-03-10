@@ -44,9 +44,9 @@ const membersAllInfo = {
 
 const articleStatus = {
   memUniqueNumb: 1,
-  whoLikeThisArticle: [2, 3, 4],
+  whoLikeThisArticle: [2, 3, 4, 5],
   replyWho: [4, 5, 6, 7],
-  replyWhat: ['위코드 사랑해가 이 댓글을 달았으면 성공', '개구리 페페가 이 댓글 달았으면 성공', '감독님 사랑해가 이 댓글 달았으면 성공', '프론트앤드가 이 댓글 달았으면 성공'],
+  replyWhat: ['위코드수세미머리가 이 댓글을 달았으면 성공', 'The Strong 이 댓글 달았으면 성공', 'SunFlower가 이 댓글 달았으면 성공', 'Sally가 이 댓글 달았으면 성공'],
 };
 
 /// 로그인 관련
@@ -174,12 +174,12 @@ articleWriterNick();
 ////// 아티클 중앙 버튼 기능
 
 const replyFirstPhoto = function () {
-  document.querySelector('.whoFirstLikePhoto').src = `image/profilePhoto/${articleStatus.replyWho[0]}.jpg`;
+  document.querySelector('.whoFirstLikePhoto').src = `image/profilePhoto/${articleStatus.whoLikeThisArticle[0]}.jpg`;
 };
 replyFirstPhoto();
 // n명이 좋아합니다 표시기능
 const showHowManyLike = function () {
-  const firstLikeMem = articleStatus.replyWho[0];
+  const firstLikeMem = articleStatus.whoLikeThisArticle[0];
   document.querySelector('.infoLikeWho').textContent = `${membersAllInfo.nickName[firstLikeMem]}님 외의 ${articleStatus.whoLikeThisArticle.length - 1}명이 좋아합니다`;
 };
 showHowManyLike();
@@ -219,7 +219,7 @@ document.querySelector('.articleLikeBtn').addEventListener('click', function () 
   }
 });
 
-// 댓글 버튼 누르면 댓글 달기 창으로 옮겨지는거
+// 댓글 버튼 누르면  댓글 달기 창으로 옮겨지는거
 const moveCursToReply = function () {
   document.querySelector('.articleReplyBtn').addEventListener('click', function () {
     document.querySelector('.articleInsertReplyContent').focus();
@@ -261,7 +261,6 @@ const copyUrl = function () {
   document.querySelector('.urlCopyBtn').addEventListener('click', function () {
     const url = document.querySelector('.urlTextBox');
     navigator.clipboard.writeText(url.value);
-    alert('복사되었습니다.');
   });
 };
 
@@ -474,12 +473,6 @@ const enterSubmitLoginBtn = function () {
 };
 enterSubmitLoginBtn();
 
-// window.addEventListener('keyup', function (e) {
-//   if (modalEntire.display !== 'hide' && e.key === 'Escape') {
-//     hideModalSet();
-//   }
-// });
-
 // 약관버튼 닫기 누르면 닫히는 펑션
 const clickCloseTermBtn = function () {
   document.querySelector('.closeTermsModalBtn').addEventListener('click', function () {
@@ -487,6 +480,39 @@ const clickCloseTermBtn = function () {
   });
 };
 clickCloseTermBtn();
+
+// 로그인테스트 (삭제해야 테스트)
+doLogIn('wecode@naver.com');
+
+// 본문 내용에 최신 2개 댓글 달리는걸로 보이게 하는 펑션
+const showRecentlyReply = function () {
+  // 위 아래칸 쓴 멤버들 고유넘버
+  const topWordMemberUniqueNumb = articleStatus.replyWho[articleStatus.replyWho.length - 2];
+  const bottomWordMemberUniqueNumb = articleStatus.replyWho[articleStatus.replyWho.length - 1];
+
+  document.querySelector('.miniboxPhoto1').src = `image/profilePhoto/${topWordMemberUniqueNumb}.jpg`;
+  document.querySelector('.miniboxNick1').textContent = membersAllInfo.nickName[topWordMemberUniqueNumb];
+  document.querySelector('.miniboxComment1').textContent = articleStatus.replyWhat[articleStatus.replyWho.length - 2];
+
+  if (articleStatus.replyWho.length >= 2) {
+    document.querySelector('.miniboxPhoto2').src = `image/profilePhoto/${bottomWordMemberUniqueNumb}.jpg`;
+    document.querySelector('.miniboxNick2').textContent = membersAllInfo.nickName[bottomWordMemberUniqueNumb];
+    document.querySelector('.miniboxComment2').textContent = articleStatus.replyWhat[articleStatus.replyWho.length - 1];
+  }
+};
+showRecentlyReply();
+
+// 내가 댓글 쓴 거를 아티클에 댓글목록으로 올려버리는 기능
+const insertReplyMine = function () {
+  const insertWhat = document.querySelector('.articleInsertReplyContent').value;
+
+  // 로그인 된 상태일때
+  if (clientStatus.loginStatus) {
+    articleStatus.replyWhat.push(insertWhat);
+    articleStatus.replyWho.push(clientStatus.memUniqueNumb);
+    showRecentlyReply();
+  }
+};
 
 // 약관 내용 넣기
 document.querySelector('.termsTextBox').value = `
