@@ -90,22 +90,34 @@ article {
   flex-direction: column;
   justify-content: space-between;
   width: 280px;
-  height: 520px;
+  height: 600px;
 }
-
+.main-right-title {
+  padding: 8px 16px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+}
 .stories {
   border: 1px solid gainsboro;
   background-color: white;
   width: inherit;
-  height: 200px;
-  overflow-y: scroll;
+  height: 240px;
 }
-
+.user-cell-container-stories {
+  overflow-y: scroll;
+  height: 200px;
+}
 .recommend-freinds {
   width: inherit;
-  height: 160px;
+  height: 200px;
   border: 1px solid gainsboro;
   background-color: white;
+}
+.user-cell-container-recommend {
+  overflow-y: scroll;
+  height: 160px;
 }
 .copy {
   margin-top: 16px;
@@ -259,15 +271,10 @@ article {
 .stories .user-cell {
   margin: 0px 16px;
 }
-.stories::-webkit-scrollbar {
+.user-cell-container::-webkit-scrollbar {
   display: none;
 }
-.recommend-freinds {
-  overflow-y: scroll;
-}
-.recommend-freinds::-webkit-scrollbar {
-  display: none;
-}
+
 .recommend-freinds .user-cell {
   margin: 0px 16px;
 }
