@@ -20,8 +20,11 @@ const searchResults = document.querySelector(".search-info");
 const profileMenu = document.querySelector(".profile-menu");
 const logoutBtn = document.getElementById("logout-btn");
 
+// render user's id
 let id = localStorage.getItem("id") ? localStorage.getItem("id") : "hyodduru";
+userIdEl.innerText = id;
 
+// render login-form or nav & main page depending on whether the user logged in or not
 if (localStorage.getItem("id")) {
   loginContainer.classList.add("hidden");
   nav.classList.remove("hidden");
@@ -32,7 +35,7 @@ if (localStorage.getItem("id")) {
   mainContainer.classList.add("hidden");
 }
 
-//user's data
+// user's data
 const userIds = [
   {
     id: "wecode",
@@ -103,89 +106,9 @@ const userIds = [
 ];
 let resultIds = [];
 
-//user search function
-function filterResult(term) {
-  resultIds = userIds.filter((user) => user.id.includes(term));
-  if (term === "") resultIds = [];
+// Login parts
 
-  searchResults.innerHTML = `${resultIds
-    .map((user) => {
-      return `<li class="user">
-    <img class="profile" src=${user.img} />
-    <div class="user-info">
-      <strong>${user.id}</strong>
-      <p>${user.name}</p>
-    </div>
-  </li>`;
-    })
-    .join("")}`;
-}
-
-// article - comment part
-function createComment(comment) {
-  const li = document.createElement("li");
-  li.innerHTML = `<strong>${id}</strong> ${comment}  <button class ="heart-btn" ><i class ="far fa-heart"></i></button>  <button class="delete-btn"  ><i class="fas fa-times"></i></button>`;
-  li.className = "comment";
-  comments.appendChild(li);
-}
-
-function submitComment(e) {
-  e.preventDefault();
-  if (commentInput.value === "") return;
-  const newComment = commentInput.value;
-  createComment(newComment);
-  commentInput.value = "";
-}
-
-function handleCommentBtn(e) {
-  const comment = e.target.closest("li");
-
-  if (e.target.classList.contains("fa-times")) {
-    comment.remove();
-  }
-
-  if (e.target.classList.contains("fa-heart")) {
-    e.target.classList.toggle("fas");
-  }
-}
-
-// comment submit event
-commentForm.addEventListener("submit", submitComment);
-commentForm.addEventListener("input", (e) => {
-  commentForm.classList.add("activate");
-  if (commentInput.value === "") commentForm.classList.remove("activate");
-});
-
-// Handle delete Btn, heart Btn on the comment line
-comments.addEventListener("click", handleCommentBtn);
-
-//Clicking heart, bookmark on the article-btns bar
-document
-  .querySelector(".article-heart-btn")
-  .addEventListener("click", function () {
-    this.querySelector("i").classList.toggle("fas");
-  });
-document.querySelector(".absolute").addEventListener("click", function () {
-  this.querySelector("i").classList.toggle("fas");
-});
-
-// Show nav - profile menu when clicking the profile icon
-document.addEventListener("click", (e) => {
-  const profileIcon = e.target.closest(".profile-icon");
-  if (profileIcon) profileMenu.classList.toggle("open");
-  else {
-    profileMenu.classList.remove("open");
-  }
-});
-
-// Search user's id & activate search button
-navForm.addEventListener("input", (e) => {
-  navForm.classList.add("activate");
-  if (navInput.value === "") navForm.classList.remove("activate");
-  const term = e.target.value;
-  filterResult(term);
-});
-
+// 1. id & pass validation(mission 5)
 let isValid;
 function checkValidity(id, password) {
   const korCheck = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/g;
@@ -210,7 +133,7 @@ function checkValidity(id, password) {
   return isValid;
 }
 
-// Login handling
+// 2. Login Handling - check id & password validity / render main page when logged in
 loginForm.addEventListener("submit", (e) => {
   e.preventDefault();
   if (id.length === 0 || password.length === 0) return;
@@ -234,17 +157,102 @@ loginForm.addEventListener("submit", (e) => {
   }
 });
 
-//activate login-btn
+//3. activate login-btn when input id & password (mission 2)
 loginForm.addEventListener("input", () => {
   loginForm.classList.add("active");
   if (idInput.value === "" && passwordInput.value === "")
     loginForm.classList.remove("active");
 });
 
-//log out when clicking logout button
+//4.log out when clicking logout button (additional)
 logoutBtn.addEventListener("click", () => {
   localStorage.removeItem("id");
   location.reload();
 });
 
-userIdEl.innerText = id;
+// nav parts
+
+// 1. user search function on nav search box (mission 7)
+function filterResult(term) {
+  resultIds = userIds.filter((user) => user.id.includes(term));
+  if (term === "") resultIds = [];
+
+  searchResults.innerHTML = `${resultIds
+    .map((user) => {
+      return `<li class="user">
+    <img class="profile" src=${user.img} />
+    <div class="user-info">
+      <strong>${user.id}</strong>
+      <p>${user.name}</p>
+    </div>
+  </li>`;
+    })
+    .join("")}`;
+}
+
+// Search user's id & activate search button (mission 7)
+navForm.addEventListener("input", (e) => {
+  navForm.classList.add("activate");
+  if (navInput.value === "") navForm.classList.remove("activate");
+  const term = e.target.value;
+  filterResult(term);
+});
+
+// 2. Show nav - profile menu when clicking the profile icon (mission 8)
+document.addEventListener("click", (e) => {
+  const profileIcon = e.target.closest(".profile-icon");
+  if (profileIcon) profileMenu.classList.toggle("open");
+  else {
+    profileMenu.classList.remove("open");
+  }
+});
+
+// article parts
+
+// article - comment part (mission 6)
+// 1. create comment function
+function createComment(comment) {
+  const li = document.createElement("li");
+  li.innerHTML = `<strong>${id}</strong> ${comment}  <button class ="heart-btn" ><i class ="far fa-heart"></i></button>  <button class="delete-btn"  ><i class="fas fa-times"></i></button>`;
+  li.className = "comment";
+  comments.appendChild(li);
+}
+// 2. submit comment function
+function submitComment(e) {
+  e.preventDefault();
+  if (commentInput.value === "") return;
+  const newComment = commentInput.value;
+  createComment(newComment);
+  commentInput.value = "";
+}
+// 3. delete btn & paint heart btn on comment line
+function handleCommentBtn(e) {
+  const comment = e.target.closest("li");
+
+  if (e.target.classList.contains("fa-times")) {
+    comment.remove();
+  }
+
+  if (e.target.classList.contains("fa-heart")) {
+    e.target.classList.toggle("fas");
+  }
+}
+
+// comment submit events
+commentForm.addEventListener("submit", submitComment);
+commentForm.addEventListener("input", (e) => {
+  commentForm.classList.add("activate");
+  if (commentInput.value === "") commentForm.classList.remove("activate");
+});
+
+comments.addEventListener("click", handleCommentBtn);
+
+// paint heart, bookmark btn when clicking on the article-btns bar
+document
+  .querySelector(".article-heart-btn")
+  .addEventListener("click", function () {
+    this.querySelector("i").classList.toggle("fas");
+  });
+document.querySelector(".absolute").addEventListener("click", function () {
+  this.querySelector("i").classList.toggle("fas");
+});
