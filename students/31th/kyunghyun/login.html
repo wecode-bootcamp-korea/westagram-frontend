@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/login.css" />
+    <link rel="stylesheet" href="./style/login.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <title>login</title>
+  </head>
+
+  <body>
+    <div class="westagram">
+      <section class="westaContainer">
+        <div class="logo">westagram</div>
+        <div class="login">
+          <input
+            onInput="handleIdValue()"
+            id="userId"
+            type="text"
+            placeholder="전화번호, 사용자 이름 또는 이메일"
+          />
+          <input
+            onInput="handleIdValue()"
+            id="password"
+            type="password"
+            placeholder="비밀번호"
+          />
+        </div>
+        <button>로그인</button>
+      </section>
+    </div>
+    <script>
+      const id = document.getElementById("userId");
+      const password = document.getElementById("password");
+      const button = document.querySelector("button");
+      const handleIdValue = () => {
+        if (password.value.length > 1) {
+          button.style.backgroundColor = "#458EFF";
+        } else {
+          button.style.backgroundColor = "rgba(119, 178, 233, 0.5)";
+        }
+      };
+    </script>
+  </body>
+</html>
