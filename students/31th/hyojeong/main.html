@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="js/main.js"></script>
+    <script
+      defer
+      src="https://kit.fontawesome.com/675699ba81.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style/main.css" />
+    <title>Westagram</title>
+  </head>
+  <body>
+    <div id="login-container" class="login-container">
+      <h1>Westagram</h1>
+      <form class="login-form" id="login-form">
+        <input
+          type="text"
+          id="id"
+          placeholder="전화번호, 사용자 이름 또는 이메일"
+        />
+        <input type="password" id="password" placeholder="비밀번호" />
+        <button class="login-btn" id="login-btn">로그인</button>
+      </form>
+
+      <a href="#">비밀번호를 잊으셨나요?</a>
+    </div>
+
+    <nav class="hidden">
+      <div class="logo">
+        <a href="#" class="logo-icon">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <span>Instagram</span>
+      </div>
+
+      <form id="nav-form">
+        <input id="nav-input" type="text" placeholder="검색" />
+        <i class="fas fa-search"></i>
+        <ul class="users search-info"></ul>
+        </ul>
+      </form>
+
+      <ul class="menu-container">
+        <li>
+          <img
+            src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png"
+          />
+        </li>
+        <li>
+          <img
+            src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"
+          />
+        </li>
+        <li class="profile-icon">
+          <img
+            src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png"
+          />
+          <ul class="profile-menu">
+            <span class="triangle"></span>
+            <li><i class="fas fa-user-circle"></i> 프로필</li>
+            <li><i class="far fa-bookmark"></i> 저장됨</li>
+            <li><i class="fas fa-cog"></i> 설정</li>
+            <li id="logout-btn">로그아웃</li>
+          </ul>
+        </li>
+      </ul>      
+    </nav>
+
+    <main class="hidden">
+      <div class="article-container">
+          <article>
+            <div class="article-bar">
+              <div class="profile-box">
+                <img class="profile" src="https://images.unsplash.com/photo-1617294255539-e6e4382ce3c2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8YXNpYW4lMjBzZWxmaWV8ZW58MHx8MHx8&auto=format&fit=crop&w=1400&q=60" alt="profile" />
+                <strong class="profile-id">canon_mj</strong>
+
+              </div>
+            
+              <i class="fas fa-ellipsis-h"></i>
+            </div>
+            <div class="article-photo">
+              <img src="img/feed.jpg" alt="feed-photo" />
+            </div>
+            <div class="article-btns">
+              <button class="article-heart-btn">
+                <i class="far fa-heart"></i>
+              </button>
+              <button>
+                <i class="far fa-comment"></i>
+              </button>
+              <button>
+                <i class="fas fa-external-link-alt"></i>
+              </button>
+              <button class="absolute">
+                <i class="far fa-bookmark"></i>
+              </button>
+            </div>
+
+            <div class="user-info article-description">
+              <strong class="profile-id">canon_mj</strong> 날 좋은 하루💙</
+            ><br />
+            <div class="scroll">
+              <ul
+                id="comments"
+                class="comments article-description user-info"
+              ></ul>
+            </div>
+
+            <form id="comment-form">
+              <input
+                type="text"
+                id="comment-input"
+                class="comment-input"
+                placeholder="댓글 달기..."
+              />
+              <button class="comment-btn">게시</button>
+            </form>
+          </article>
+      </div>
+      <div class="main-right">
+          <div class="user">
+            <img class="profile big" src="img/profile2.JPG" alt="" />
+            <div class="user-info">
+              <strong id="user-id">hyodduru</strong>
+              <p>김효정</p>
+            </div>
+          </div>
+
+          <div class="sub-container">
+            <div class="sub-bar">
+              스토리 <a href="#"><strong>모두 보기</strong></a>
+            </div>
+            <ul class="users">
+              <li class="user">
+                <img class="profile" src="https://images.unsplash.com/photo-1565945887714-d5139f4eb0ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" />
+                <div class="user-info">
+                  <strong>ji_123Andrew</strong>
+                  <p>Sally</p>
+                </div>
+              </li>
+              <li class="user">
+                <img class="profile" src="https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" />
+                <div class="user-info">
+                  <strong>happy_day</strong>
+                  <p>Andrew</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="sub-container">
+            <div class="sub-bar">
+              회원님을 위한 추천 <a href="#"><strong>모두 보기</strong></a>
+            </div>
+            <ul class="users">
+              <li class="user">
+                <img class="profile" src="https://images.unsplash.com/photo-1524601500432-1e1a4c71d692?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8ZnJpZW5kfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=1400&q=60" />
+                <div class="user-info">
+                  <strong>gldis1232123</strong>
+                  <p>ddgoeity님 외 2명이 ....</p>
+                  <a class="follow-link" href="#">팔로우</a>
+                </div>
+              </li>
+              <li class="user">
+                <img class="profile" src="https://images.unsplash.com/photo-1627208753013-8954b7089657?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fGtvcmVhbnxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=1400&q=60" />
+                <div class="user-info">
+                  <strong>h2dong</strong>
+                  <p>hi_12345님 외 4명이 ....</p>
+                  <a class="follow-link" href="#">팔로우</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <p class="instagram-info">
+            Instagram 정보 · 지원 · 홍보센터 · API · 채용 정보 ·
+            개인정보처리방침 · 약관 · 디렉터리 · 프로필 · 해시태그 · 언어<br /><br />
+            ⓒ 2019 INSTAGRAM
+          </p>
+      </div>
+    </main>
+    </div>
+  </body>
+</html>
