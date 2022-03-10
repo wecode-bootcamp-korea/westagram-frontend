@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/common.css" />
+    <link rel="stylesheet" href="style/main.css" />
+    <script src="https://kit.fontawesome.com/5d7a8adc02.js" crossorigin="anonymous"></script>
+    
+    <title>Westagram Main</title>
+  </head>
+  
+  <body>
+    <div class="main-container">
+      <nav class="nav-bar">
+        <div class="navbar-container">
+          <div class="title">
+            <img id="logo-image" src="images/instagram.png" alt="logo" />
+            <span class="devider"></span>
+            <span class="logo" id="logo-main">Westagram </span>
+          </div>
+          <div class="search-bar">
+            <div class="search-bar-inner-text">
+              <i id="magnifying-glass" style="color: gray; font-size: 12px" class="fa-solid fa-magnifying-glass fa-sm"></i>
+              <span style="color: gray; font-size: 12px">검색</span>
+            </div>
+            <input type="text" name="" id="search-input" />
+          </div>
+          <div class="icons">
+            <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png" alt="explore" /><img
+              src=" https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"
+              alt="heart"
+            /><img src="  https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png" alt="my-info" />
+          </div>
+        </div>
+      </nav>
+      <main>
+        <div class="main-contents">
+          <div class="feeds">
+            <article>
+              <div class="post">
+                  <div class="user-cell" style="position: relative;">
+                    <img src="images/otter.png" class="porfile-img"></img>
+                    <div class=user-cell-text>
+                      <span class="user-id">moooo_nhs</span>
+                      <span class="user-cell-desc">wecode</span>
+                    </div>
+                    <i class="fa-solid fa-ellipsis" ></i>
+                  </div>
+                <div class="article-iamge">
+                  <img class="iamge-thumbnail" src="images/otterImage.jpg" alt="" />
+                </div>
+                <div class="article-icons">
+                  <div class="icons-left">
+                    <i class="fa-regular fa-heart fa-xl"></i>
+                    <i class="fa-regular fa-comment fa-xl" style="transform: scaleX(-1);"></i>
+                    <i class="fa-solid fa-arrow-up-from-bracket fa-xl"></i>
+                  </div>
+                  <i class="fa-regular fa-bookmark fa-xl"></i>
+                </div>
+                
+                <div id="articleConnents" class="article-comments">
+                  <div class="likes-count">
+                    <img src="images/핑구.jpeg"></img>
+                    <span  style="font-weight: 600; ">aineworld</span>
+                    님&nbsp;
+                    <span style="font-weight: 600;">외 10명</span>
+                    이 좋아합니다
+                  </div>
+                  <div id="poster-commnets" class="comments">
+                    <div>
+                      <span class="user-name">moooo_nhs</span>
+                      <span class="commnets-desc">I`m in WeWork</span>
+                    </div>
+                  </div>
+                  <div class="comments">
+                    <span class="user-name">wecode</span>
+                    <span class="commnets-desc">nado</span>
+                  </div>
+                  
+                </div>
+                <span class="time-stamp">1시간 전</span>
+                <div class="input-comments">
+                  <button class="input-emoji"><i class="fa-regular fa-face-smile fa-xl"></i></i></button>
+                  <form class="commnet-form">
+                    <input class="comment-input" id="commnetInput" type="text" placeholder="댓글 달기..." autocomplete="off" required>
+                    <button id="commnetButton" class="comment-submit deactive-btn" type="submit" disabled>게시</button>
+                  </form>
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="main-right">
+            <div class="user-cell" id="rigth-user-cell" style="position: relative;">
+              <img src="images/otter.png" class="porfile-img"></img>
+              <div class=user-cell-text>
+                <span class="user-id">moooo_nhs</span>
+                <span class="user-cell-desc">문혜성</span>
+              </div>
+              </div>
+            <div class="stories">
+              <div class="main-right-title"></div>
+              <div class="user-cell" >
+                <img src="images/otter.png" class="porfile-img"></img>
+                <div class=user-cell-text>
+                  <span class="user-id">moooo_nhs</span>
+                  <span class="user-cell-desc">wecode</span>
+                </div>
+              </div>
+              <div class="user-cell" >
+                <img src="images/otter.png" class="porfile-img"></img>
+                <div class=user-cell-text>
+                  <span class="user-id">moooo_nhs</span>
+                  <span class="user-cell-desc">wecode</span>
+                </div>
+              </div>
+              <div class="user-cell" >
+                <img src="images/otter.png" class="porfile-img"></img>
+                <div class=user-cell-text>
+                  <span class="user-id">moooo_nhs</span>
+                  <span class="user-cell-desc">wecode</span>
+                </div>
+              </div>
+              <div class="user-cell" >
+                <img src="images/핑구.jpeg" class="porfile-img"></img>
+                <div class=user-cell-text>
+                  <span class="user-id">moooo_nhs</span>
+                  <span class="user-cell-desc">wecode</span>
+                </div>
+              </div>
+            </div>
+            <div class="recommend-freinds">
+              <div class="main-right-title"></div>
+              <div class="user-cell" >
+                <img src="images/otter.png" class="porfile-img"></img>
+                <div class=user-cell-text>
+                  <span class="user-id">moooo_nhs</span>
+                  <span class="user-cell-desc">wecode</span>
+                </div>
+              </div>
+              <div class="user-cell" >
+                <img src="images/otter.png" class="porfile-img"></img>
+                <div class=user-cell-text>
+                  <span class="user-id">moooo_nhs</span>
+                  <span class="user-cell-desc">wecode</span>
+                </div>
+              </div>
+              <div class="user-cell" >
+                <img src="images/otter.png" class="porfile-img"></img>
+                <div class=user-cell-text>
+                  <span class="user-id">moooo_nhs</span>
+                  <span class="user-cell-desc">wecode</span>
+                </div>
+              </div>
+              
+            </div>
+            <div class="copy">
+              소개 • 도움말 • 홍보 센터 • API • 채용 정보 •<br />
+              개인정보처리방침 • 약관 • 위치 • 인기 계정 • 해시태그 • 언어
+              <p>© 2022 WESTAGRAM FROM WECODE</p>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="js/main.js" />
+  </body>
+</html>
