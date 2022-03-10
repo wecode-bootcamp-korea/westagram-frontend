@@ -8,6 +8,9 @@ const commentWrap = document.getElementsByClassName("feed-comment-wrap")[0];
 const profileModal = document.getElementsByClassName("profile-modal")[0];
 const profileModalButton = document.getElementsByClassName("btn-profile")[0];
 
+// 프로필 overlay처리
+const dim = document.getElementsByClassName("overlay")[0];
+
 // 댓글 달렸을때 적혀야할 값
 const userNickname = document.getElementById("user-nickname").innerHTML;
 const userComment = document.getElementById("feed-comment");
@@ -29,8 +32,13 @@ btnComment.addEventListener("click", function () {
   }
 });
 
-profileModal.addEventListener("blur", function () {
-  this.target.classList.remove("active");
+profileModalButton.addEventListener("click", function () {
+  dim.classList.add("active");
+});
+
+dim.addEventListener("click", function () {
+  dim.classList.remove("active");
+  profileModal.classList.remove("active");
 });
 
 userComment.addEventListener("keyup", function () {

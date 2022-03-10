@@ -68,13 +68,14 @@
   display: inline-block;
   width: 25px;
   height: 25px;
-  background: url(/images/search.png) no-repeat center center;
+  background: url(../images/search.png) no-repeat center center;
   vertical-align: top;
   background-size: 15px;
 }
 .header .header-util {
   position: relative;
   display: flex;
+  z-index: 50;
 }
 .header .header-util button {
   font-size: 0;
@@ -114,7 +115,7 @@
   background-size: 25px;
 }
 .header .header-util .btn-profile {
-  background: url(/images/user.png) no-repeat center center;
+  background: url(../images/user.png) no-repeat center center;
   background-size: 25px;
 }
 
@@ -129,6 +130,7 @@
   border: 1px solid #e9e9e9;
   border-radius: 8px;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+  z-index: 100;
 }
 .profile-modal.active {
   display: block;
@@ -139,7 +141,6 @@
   display: inline-block;
   top: -10px;
   right: 20px;
-  border-top: 10px solid none;
   border-bottom: 10px solid #fff;
   border-right: 10px solid transparent;
   border-left: 10px solid transparent;
@@ -165,15 +166,15 @@
   vertical-align: top;
 }
 .profile-modal .modal-profile:before {
-  background: url(/images/user.png) no-repeat center center;
+  background: url(../images/user.png) no-repeat center center;
   background-size: 20px;
 }
 .profile-modal .modal-save:before {
-  background: url(/images/bookmark_off.png) no-repeat center center;
+  background: url(../images/bookmark_off.png) no-repeat center center;
   background-size: 20px;
 }
 .profile-modal .modal-setting:before {
-  background: url(/images/setting.png) no-repeat center center;
+  background: url(../images/setting.png) no-repeat center center;
   background-size: 20px;
 }
 .profile-modal .modal-logout {
@@ -217,7 +218,7 @@
   font-size: 0;
   width: 20px;
   height: 20px;
-  background: url(/images/option.png) no-repeat center;
+  background: url(../images/option.png) no-repeat center;
   background-size: 20px;
 }
 .feed-bg {
@@ -237,27 +238,27 @@
   float: right;
 }
 .feed-btn-wrap .btn-like {
-  background: url(/images/heart_off.png) no-repeat center center;
+  background: url(../images/heart_off.png) no-repeat center center;
   background-size: 23px;
 }
 .feed-btn-wrap .btn-like.active {
-  background: url(/images/heart_on.png) no-repeat center center;
+  background: url(../images/heart_on.png) no-repeat center center;
   background-size: 23px;
 }
 .feed-btn-wrap .btn-write {
-  background: url(/images/chat.png) no-repeat center center;
+  background: url(../images/chat.png) no-repeat center center;
   background-size: 25px;
 }
 .feed-btn-wrap .btn-share {
-  background: url(/images/upload.png) no-repeat center center;
+  background: url(../images/upload.png) no-repeat center center;
   background-size: 20px;
 }
 .feed-btn-wrap .btn-mark {
-  background: url(/images/bookmark_off.png) no-repeat center center;
+  background: url(../images/bookmark_off.png) no-repeat center center;
   background-size: 23px;
 }
 .feed-btn-wrap .btn-mark.active {
-  background: url(/images/bookmark_on.png) no-repeat center center;
+  background: url(../images/bookmark_on.png) no-repeat center center;
   background-size: 23px;
 }
 .like-status img {
@@ -283,7 +284,6 @@
 .feed-information .feed-content {
   display: inline-block;
   width: 150px;
-  height: 20px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -291,8 +291,6 @@
 }
 .feed-information .feed-content.more {
   display: inline;
-  width: auto;
-  height: auto;
   white-space: normal;
 }
 .feed-information .feed-content.more + .btn-more {
@@ -323,12 +321,12 @@
   width: 15px;
   height: 20px;
   font-size: 0;
-  background: url(/images/heart_off.png) no-repeat 99.9% center;
+  background: url(../images/heart_off.png) no-repeat 99.9% center;
   background-size: 15px 15px;
   vertical-align: top;
 }
 .feed-comment-wrap .btn-like.active {
-  background: url(/images/heart_on.png) no-repeat 99.9% center;
+  background: url(../images/heart_on.png) no-repeat 99.9% center;
   background-size: 15px 15px;
 }
 .write-comment {
@@ -463,4 +461,19 @@
   top: 50%;
   color: #0095f6;
   transform: translateY(-50%);
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+.overlay.active {
+  display: block;
 }
