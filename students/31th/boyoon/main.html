@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="main.css" rel="stylesheet" type="text/css" />
+    <link href="common.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+    <script src="https://kit.fontawesome.com/cbcad42a26.js" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet"> 
+    <script src="https://kit.fontawesome.com/bb070c9615.js" crossorigin="anonymous"></script>
+    <title>westargram mainpage</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav_container">
+            <div class="nav_logo">
+                <i class="fa-brands fa-instagram"></i>
+                <!-- <p>|</p> -->
+                <h1>westargram</h1>
+            </div>
+            <div class="nav_input">
+                <input type="text" class="search" placeholder="검색" />
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="nav_menu">
+                <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png">
+                <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png">
+                <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png">
+            </div>
+        </nav>
+    </header>
+    <!-- main -->
+    <main class="main">
+        <div class="main_container">
+            <div class="feeds">
+                <div class="feeds_list">
+                    <div class="left_box">
+                        <div class="box_title">
+                            <div class="feeds_img_box">
+                                <img src="img/01.jpg" alt="profile" class="profile_img">
+                            </div>
+                            <div class="profile_info">
+                                <p class="profile_id">bboyooning</p>
+                            </div>
+                            <button type="button" class="add_btn">
+                                <img src="img/add_icon.png">
+                            </button>
+                        </div>
+                        <div class="box_mid">
+                            <img src="./img/02.jpg" alt="feed_img">
+                        </div>
+                        <div class="box_bottom">
+                            <div class="box_icons">
+                                <ul class="icons_list">
+                                    <li>
+                                        <button type="button" class="state_btn">
+                                            <i class="fa-regular fa-heart"></i>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="state_btn">
+                                            <i class="fa-regular fa-comment fa-flip-horizontal"></i>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button type="button" class="state_btn">
+                                            <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                                        </button>
+                                    </li>
+                                    <ul class="icons_list_bookmark">
+                                        <button type="button" class="state_btn bookmark">
+                                            <i class="fa fa-bookmark-o"></i>
+                                        </button>
+                                    </ul>
+                                </ul>
+                            </div>
+                            <div class="box_comments">
+                                <div class="likes_comments">
+                                    <div class="likes_user">
+                                        <img src="img/03.jpg" alt="profile" class="profile_img">
+                                    </div>
+                                    <div class="comments_info">
+                                        <p class="comments_title">
+                                            <span class="user_id_span">asdf</span>님<span>&nbsp;외</span><span class="likes_num">&nbsp;10명</span>이 좋아합니다
+                                        </p>
+                                    </div>
+                                </div> 
+                                <div class="comments_list">
+                                    <ul class="comments_info">
+                                        <li>
+                                            <div class="comments_title">
+                                                <span class="user_id">아이디</span>
+                                                <span class="comments_contents">위워크 웅앵웅 쿠킹</span>
+                                                <button type="button" class="comment_btn">더보기</button>
+                                            </div>
+                                            <div class="comments_title">
+                                                <span class="user_id">아이디</span>
+                                                <span class="comments_contents">거봐 좋았잖아</span>
+                                                <button type="button" class="comments_like_btn">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                </button>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="feeds_time">
+                                    <p class="time">42분 전</p>
+                                </div>
+                                <div class="comments_div">
+                                    <input type="text" class="comments_input" placeholder="댓글 달기..." />
+                                    <button type="button" class="posting_box" disabled="disabled">게시</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="feeds_list">
+                    <div class="left_box">
+                        <div class="box_title">
+                            <div class="feeds_img_box">
+                                <img src="img/01.jpg" alt="profile" class="profile_img">
+                            </div>
+                            <div class="profile_info">
+                                <p class="profile_id">bboyooning</p>
+                            </div>
+                            <button type="button" class="add_btn">
+                                <img src="img/add_icon.png">
+                            </button>
+                        </div>
+                        <div class="box_mid">
+                            <img src="./img/02.jpg" alt="feed_img">
+                        </div>
+                        <div class="box_bottom">
+                            <ul class="icons_list">
+                                <li>
+                                    <button type="button" class="state_btn">
+                                        <i class="fa-regular fa-heart"></i>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" class="state_btn">
+                                        <i class="fa-regular fa-comment fa-flip-horizontal"></i>
+                                    </button>
+                                </li>
+                                <li>
+                                    <button type="button" class="state_btn">
+                                        <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                                    </button>
+                                </li>
+                                <ul class="icons_list_bookmark">
+                                    <button type="button" class="state_btn bookmark">
+                                        <i class="fa fa-bookmark-o"></i>
+                                    </button>
+                                </ul>
+                            </ul>
+                            <div class="box_comments">
+                                <div class="likes_comments">
+                                    <div class="likes_user">
+                                        <img src="img/03.jpg" alt="profile" class="profile_img">
+                                    </div>
+                                    <div class="comments_info">
+                                        <p class="comments_title">
+                                            <span class="user_id_span">asdf</span>님<span>&nbsp;외</span><span class="likes_num">&nbsp;10명</span>이 좋아합니다
+                                        </p>
+                                    </div>
+                                </div> 
+                                <div class="comments_list">
+                                    <ul class="comments_info">
+                                        <li>
+                                            <div class="comments_title">
+                                                <span class="user_id">아이디</span>
+                                                <span class="comments_contents">위워크 웅앵웅 쿠킹</span>
+                                                <button type="button" class="comment_btn">더보기</button>
+                                                
+                                            </div>
+                                            <div class="comments_title">
+                                                <span class="user_id">아이디</span>
+                                                <span class="comments_contents">거봐 좋았잖아</span>
+                                                <button type="button" class="comments_like_btn">
+                                                    <i class="fa-regular fa-heart"></i>
+                                                </button>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="feeds_time">
+                                    <p class="time">42분 전</p>
+                                </div>
+                                <div class="comments_div">
+                                    <input type="text" class="comments_input" placeholder="댓글 달기..." />
+                                    <button type="button" class="box" disabled="disabled">
+                                        <span class="">게시</span>
+                                    </button>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+            <div class="main_right">
+                <div class="right_box">
+                    <div class="right_feeds">
+                        <div class="feeds_profile">
+                            <div class="feeds_box">
+                                <img src="img/04.jpg" alt="profile" class="profile_img">
+                            </div>
+                            <div class="profile_info">
+                                <p class="profile_id">wecode</p>
+                                <p class="profile_introduce">위코드</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="story_box">
+                        <div class="story_contents">
+                            <div class="story_top">
+                                <span class="story_title">스토리</span>
+                                <span class="more_info"><a href="#">모두 보기</a></span>
+                            </div>
+                            <div class="story_list">
+                                <ul class="profile story_list_ul">
+                                    <li class="story_list_li">
+                                        <div class="img_box">
+                                            <img src="img/05.jpg" alt="profile" class="profile_img">
+                                        </div>                            
+                                        <div class="profile_info">
+                                            <p class="profile_id">아이디</p>
+                                            <p class="profile_introduce">16분전</p>
+                                        </div>
+                                    </li>
+                                    <li class="story_list_li">
+                                        <div class="img_box">
+                                            <img src="img/06.jpg" alt="profile" class="profile_img">
+                                        </div>                            
+                                        <div class="profile_info">
+                                            <p class="profile_id">아이디</p>
+                                            <p class="profile_introduce">16분전</p>
+                                        </div>
+                                    </li>
+                                    <li class="story_list_li">
+                                        <div class="img_box">
+                                            <img src="img/07.jpg" alt="profile" class="profile_img">
+                                        </div>                            
+                                        <div class="profile_info">
+                                            <p class="profile_id">아이디</p>
+                                            <p class="profile_introduce">16분전</p>
+                                        </div>
+                                    </li>
+                                    <li class="story_list_li">
+                                        <div class="img_box">
+                                            <img src="img/08.jpg" alt="profile" class="profile_img">
+                                        </div>                            
+                                        <div class="profile_info">
+                                            <p class="profile_id">아이디</p>
+                                            <p class="profile_introduce">16분전</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="recommend_box">
+                        <div class="recommend_contents">
+                            <div class="recommend_top">
+                                <span class="recommend-title">회원님을 위한 추천</span>
+                                <span class="more_info"><a href="#">모두 보기</a></span>
+                            </div>
+                            <div class="recommend_list">
+                                <ul class="profile recommend_list_ul">
+                                    <li class="recommend_list_li">
+                                        <div class="img_box">
+                                            <img src="img/09.jpg" alt="profile" class="profile_img">
+                                        </div>
+                                        <div class="profile_info">
+                                            <p class="profile_id">아이디</p>
+                                            <p class="profile_introduce">아이디 외 2명이 팔로우</p>
+                                        </div>
+                                        <div class="follow_btn">
+                                            <button type="button" class="btn">팔로우</button>
+                                        </div>
+                                    </li>
+                                    <li class="recommend_list_li">
+                                        <div class="img_box">
+                                            <img src="img/10.jpg" alt="profile" class="profile_img">
+                                        </div>
+                                        <div class="profile_info">
+                                            <p class="profile_id">아이디</p>
+                                            <p class="profile_introduce">아이디 외 2명이 팔로우</p>
+                                        </div>
+                                        <div class="follow_btn">
+                                            <button type="button" class="btn">팔로우</button>
+                                        </div>
+                                    </li>
+                                    <li class="recommend_list_li">
+                                        <div class="img_box">
+                                            <img src="img/02.jpg" alt="profile" class="profile_img">
+                                        </div>
+                                        <div class="profile_info">
+                                            <p class="profile_id">아이디</p>
+                                            <p class="profile_introduce">아이디 외 2명이 팔로우</p>
+                                        </div>
+                                        <div class="follow_btn">
+                                            <button type="button" class="btn">팔로우</button>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <footer class="footer">
+                        <span>© 2022. Kim Bo Yoon. All rights reserved.</span>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+</body>
+<script src="main.js"></script>
+</html>

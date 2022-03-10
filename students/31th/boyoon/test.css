@@ -1,0 +1,382 @@
+.header {
+    width: 100%;
+    margin: 0 auto;
+    background-color: red;
+    padding: 20px;
+}
+
+.nav_container {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: blue;
+    padding-top: 20px;
+}
+
+.nav_logo {
+    display:flex;
+    justify-content: flex-start;
+}
+
+.fa-instagram {
+    font-size: 20px;
+}
+
+.nav_logo h1 {
+    font-size: 15px;
+}
+
+.nav_input {
+    position: relative;
+}
+
+.nav_input input {
+    width: 200px;
+    padding: 5px;
+    text-align: center;
+}
+
+.nav_input i {
+    position: absolute;
+    font-size: 10px;
+    left: 70px;
+    top: 10px;
+    color: #bbb;
+}
+
+.nav_menu img {
+    width: 30px;
+    padding-right:10px;
+}
+
+
+/* main */
+
+.main {
+    max-width: 900px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background-color: yellow;
+    position: relative;
+}
+
+.main_container {
+    /* max-width: 1200px; */
+    /* width: 100%; */
+    background-color: green;
+    /* padding: 20px; */
+    /* margin:0 auto; */
+    /* display: flex; */
+    /* justify-content: space-between; */
+}
+
+
+
+/* main-left */
+.feeds {
+    margin-top:30px;
+    /* width: 800px; */
+    width: 500px;
+}
+
+.feeds_list_ul {
+    /* width: 800px; */
+    /* height: 100%; */
+    /* margin: 0 auto; */
+    /* padding-top: 30px; */
+    background-color: pink;
+}
+
+.feeds_list_li {
+    /* width: 500px; */
+    /* height: 100%; */
+    background-color: purple;
+    /* margin:0 auto; */
+}
+
+.box_top {
+    display:flex;
+    justify-content: flex-start;
+}
+
+.box_top img {
+    width: 40px;
+    height: 50px;
+    padding-top: 10px;
+    margin-left: 10px;
+}
+
+.feeds_list_li .profile_info {
+    width: 70%;
+}
+
+.box_mid img {
+    width: 500px;
+    height: auto;
+}
+
+.box_bottom {
+    width: 100%;
+}
+
+.icons_list {
+    width:100%;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 10px;
+}
+
+.icons_list_bookmark {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 10px;
+}
+
+.box_comments {
+    width: 100%;
+}
+
+.likes_comments {
+    width:100%;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 10px;
+}
+
+.likes_user img {
+    width: 30px;
+    height: 40px;
+    padding-top: 10px;
+}
+
+.comments_list {
+    width: 100%;
+}
+
+.comments_info {
+    padding-left: 10px;
+}
+
+.user_id, .comments_contents {
+    padding-right: 10px;
+}
+
+.comments_contents {
+    width: 70%;
+}
+
+.comments_title {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.comments_title .comments_like_btn {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.feeds_time .time {
+    margin:3px 0;   
+}
+.comments_div {
+    position: relative;
+    width: 100%;
+    display: flex;
+    /* justify-content: flex-start; */
+}
+
+.comments_div input {
+    width: calc(100% - 30px);
+    height: 30px;
+    position: relative;
+    background-color:#fff;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.comments_div .btn_box {
+    width: 30px;
+    height: 30px;
+    /* position: absolute; */
+    /* right: 0; */
+    /* display: flex; */
+    /* justify-content: flex-end; */
+}
+
+
+
+.feeds_time {
+    padding-left: 10px;
+}
+
+/* main-right */
+
+.main_right {
+    position: absolute;
+    width: 370px;
+    /* overflow: hidden; */
+    height: 100%;
+    /* margin: 0 auto; */
+    /* margin-top: 30px; */
+    background-color: orange;
+    top: 0;
+    right: 0;
+}
+
+.right_box {
+    width: 350px;
+    height: 500px;
+    background: skyblue;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.right_feeds {
+    width: 100%;
+    height: 70px;
+    background-color: red;
+}
+
+.feeds_profile {
+    display: flex;
+    justify-content: flex-start;
+    height: 70px;
+    padding-top: 5px;
+    background-color: brown   
+}
+
+.feeds_profile img {
+    width: 50px;
+    height: 50px;
+    padding-top:10px;
+    padding-left: 10px;
+}
+
+.feeds_profile .profile_introduce {
+    padding-top:0;
+}
+
+.profile_info {
+    width: 100%;
+    height: 100%;
+    padding-left: 10px;
+    /* background-color:#fff; */
+}
+
+.profile_info p {
+    margin: 0;
+    height: 30px;
+    padding-top : 10px;
+}
+
+.story_box {
+    width: 100%;
+    height: 250px;
+    background-color: blue;
+}
+
+.story_contents {
+    height: 100%;
+    border: 1px solid #000;
+    background-color: purple;
+}
+
+.story_top {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-left: 10px;
+    background-color: yellow;
+}
+
+.more_info a {
+    text-decoration: none;
+    color: #000;
+}
+
+
+.more_info {
+    padding-right: 10px;
+}
+
+.story_list_li {
+    height: 60px;
+    display: flex;
+    justify-content: flex-start;
+    background-color: pink;
+    padding-left: 10px;
+
+}
+.story_list_li img {
+    width: 40px;
+    height: 50px;
+    padding-top:10px;
+}
+.story_list_li .profile_info {
+    padding-left: 10px;
+}
+
+.story_list_li .profile_info .profile_introduce {
+    padding-top:0;
+}
+
+.recommend_list_li .profile_introduce {
+    padding-top:0;
+}
+
+.recommend_box {
+    width: 100%;
+    height: 180px;
+}
+
+.recommend_contents {
+    height: 100%;
+    border: 1px solid #000;
+    background-color: yellowgreen;
+}
+
+.recommend_top {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-left: 10px;
+    background-color: yellow;
+}
+
+.recommend_list_li {
+    height: 60px;
+    display: flex;
+    justify-content: flex-start;
+    background-color: pink;
+    padding-left: 10px;
+}
+
+.recommend_list_li img {
+    width: 40px;
+    height: 50px;
+    padding-top:10px;
+}
+
+.recommend_list_li .profile_info {
+    width: 70%;
+}
+
+.follow_btn {
+    width: 20%;
+}
+
+.follow_btn {
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+.footer {
+    text-align: center;
+}
