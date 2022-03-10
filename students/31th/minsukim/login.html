@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style/common.css" />
+    <link rel="stylesheet" href="style/style.css" />
     <title>westagram - login page</title>
   </head>
-  <body>
+  <body class="login-body">
     <div class="login-box">
       <p>westagram</p>
-      <form class="login-box--login-form">
+      <form class="login-box--login-form" action="main.html">
         <div>
           <input
             class="login-box--login-form__userID"
@@ -29,7 +29,9 @@
             placeholder="Password"
           />
         </div>
-        <button class="login-box--login-form__btn" disabled>로그인</button>
+        <button class="login-box--login-form__btn" type="submit" disabled>
+          로그인
+        </button>
       </form>
       <p>Forgot password?</p>
     </div>
@@ -41,11 +43,6 @@
         >Instagram icons created by Freepik - Flaticon</a
       >
     </div>
-    <!-- <a
-      href="https://www.flaticon.com/free-icons/instagram"
-      title="instagram icons"
-      >Instagram icons created by Freepik - Flaticon</a
-    > -->
     <script src="js/login.js"></script>
   </body>
 </html>

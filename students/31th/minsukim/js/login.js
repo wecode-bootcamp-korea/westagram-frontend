@@ -2,7 +2,8 @@ const userId = document.querySelector(".login-box--login-form__userID");
 const userPswd = document.querySelector(".login-box--login-form__pswd");
 const loginBtn = document.querySelector(".login-box--login-form__btn");
 
-function btnEable() {
+function btnEable(event) {
+  event.preventDefault();
   if (userId.value !== "" && userPswd.value !== "") {
     console.log(userId.value);
     console.log(userPswd.value);
