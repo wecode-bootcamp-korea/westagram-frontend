@@ -44,12 +44,17 @@ redHeart.addEventListener('click',()=>{
 })
 
 /////댓글입력 이벤트/////
+const postInteractionParts= document.querySelector(".post-interaction-parts");
+const replyContainer = document.getElementsByClassName("reply-container");
 const replyComponent = document.querySelector('.reply-component');
+
+
 const insertReply=document.querySelector('.insert-reply');
 
 //댓글입력함수
-appendReply=()=>{
-    const replyContainer = document.getElementsByClassName("reply-container");
+const appendReply=(e)=>{
+    e.preventDefault();
+
     const listOrder = replyContainer[0].children.length;
 
     const replyContents = document.createElement("li"); 
@@ -71,15 +76,15 @@ appendReply=()=>{
     replyFunc.setAttribute("class", "reply-func");
 
     const deleteReplyIcon = document.createElement('img');
-    deleteReplyIcon.setAttribute("class",`reply${listOrder} reply-icon`);
+    deleteReplyIcon.setAttribute("class",`delete-icon reply-icon`);
     deleteReplyIcon.setAttribute("src","img/redcross.png");
 
     const likeRedHeart = document.createElement('img');
-    likeRedHeart.setAttribute("class",`reply${listOrder} reply-icon hidden`);
+    likeRedHeart.setAttribute("class",'already-like-icon reply-icon hidden');
     likeRedHeart.setAttribute("src","img/redheart.png");
 
     const unlikeBlankHeart = document.createElement('img');
-    unlikeBlankHeart.setAttribute("class",`reply${listOrder} reply-icon`);
+    unlikeBlankHeart.setAttribute("class",'unlike-icon reply-icon');
     unlikeBlankHeart.setAttribute("src","img/heart_logo.png");
 
     replyContainer[0].appendChild(replyContents);
@@ -90,16 +95,23 @@ appendReply=()=>{
     replyFunc.appendChild(deleteReplyIcon);
     replyFunc.appendChild(likeRedHeart);
     replyFunc.appendChild(unlikeBlankHeart);
-}
 
-//댓글삭제함수(이벤트 위임 : 상위노드에서 하위노드를 제어한다
-
-//댓글입력함수
-const writeReply=(e)=>{
-    e.preventDefault();
-    appendReply();
     insertReply.value="";
 }
-replyComponent.addEventListener('submit',writeReply);
 
+//댓글삭제 및 좋아요 함수
+const deleteReply=(e)=>{
+    if(e.target.classList.contains("delete-icon")){
+        const replyContents= e.target.parentElement.parentElement;
+        replyContents.remove();
+    }else if(e.target.classList.contains("unlike-icon")){
+        e.target.previousSibling.classList.remove("hidden")
+        e.target.classList.add("hidden")
+    } else if(e.target.classList.contains("already-like-icon")){
+        e.target.nextSibling.classList.remove("hidden");
+        e.target.classList.add("hidden")
+    }
+}
 
+replyComponent.addEventListener('submit',appendReply);
+postInteractionParts.addEventListener('click',deleteReply);
