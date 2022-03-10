@@ -6,25 +6,14 @@ const INVISIBLE = 'invisible'
 const insertUserid = document.querySelector('.userid');
 const userid=localStorage.getItem("ID");
 insertUserid.innerHTML=userid;
-//const replyText=localStorage.getItem(userid)[1];
 
-//html요소 좌표찾기
-
-const findLocationTop=(object)=>{
-    return object.getBoundingClientRect().top+"px";
-}
-const findLocationRight=(object)=>{
-    return object.getBoundingClientRect().right+"px";
-}
-const findLocationBottom=(object)=>{
-    return object.getBoundingClientRect().bottom+"px";
-}
-const findLocationLeft=(object)=>{
-    return object.getBoundingClientRect().left+"px";
-}
+/////화면뷰 조정에 따른 레이아웃 변경기능/////
 
 //section 좌측좌표 service-symbol좌표로 맞춰주기
 //personal-container 우측좌표 header-func표로 맞춰주고 화면크기 일정사이즈 미만 축소시 invisible처리
+const findLocationLeft=(object)=>{
+    return object.getBoundingClientRect().left+"px";
+}
 const serviceSymbol = document.querySelector('.service-symbol');
 const section = document.querySelector('section');
 const personalContainer = document.querySelector('.personal-container');
@@ -40,7 +29,7 @@ window.addEventListener('resize',function(){
     }, delay);
 });
 
-//게시글 좋아요버튼 클릭이벤트
+/////게시글 좋아요버튼 클릭이벤트/////
 const blankHeart=document.getElementsByClassName('blank-heart')[0];
 const redHeart=document.getElementsByClassName('red-heart')[0];
 
@@ -54,26 +43,63 @@ redHeart.addEventListener('click',()=>{
     blankHeart.classList.remove("hidden")
 })
 
-////댓글입력 이벤트
+/////댓글입력 이벤트/////
 const replyComponent = document.querySelector('.reply-component');
 const insertReply=document.querySelector('.insert-reply');
 
+//댓글입력함수
+appendReply=()=>{
+    const replyContainer = document.getElementsByClassName("reply-container");
+    const listOrder = replyContainer[0].children.length;
 
-//localStorage에 댓글 저장하고 input창 비우기
-const setText=()=>{
-    replyText.push(insertReply.value);
-    localStorage.setItem(userid,replyText);
-    insertReply.value="";
+    const replyContents = document.createElement("li"); 
+    replyContents.setAttribute("id", "reply"+listOrder);
+    replyContents.setAttribute("class", "reply-line");
+    
+    const viewReply =document.createElement("div");
+    viewReply.setAttribute("class","view-reply");
+
+    const replyWriterId = document.createElement("span")
+    replyWriterId.setAttribute("class", "small-bold-font");
+    replyWriterId.innerText = userid;
+
+    const replyText = document.createElement("span");
+    replyText.setAttribute("class","reply-text");
+    replyText.innerText=insertReply.value;
+    
+    const replyFunc = document.createElement("div");
+    replyFunc.setAttribute("class", "reply-func");
+
+    const deleteReplyIcon = document.createElement('img');
+    deleteReplyIcon.setAttribute("class",`reply${listOrder} reply-icon`);
+    deleteReplyIcon.setAttribute("src","img/redcross.png");
+
+    const likeRedHeart = document.createElement('img');
+    likeRedHeart.setAttribute("class",`reply${listOrder} reply-icon hidden`);
+    likeRedHeart.setAttribute("src","img/redheart.png");
+
+    const unlikeBlankHeart = document.createElement('img');
+    unlikeBlankHeart.setAttribute("class",`reply${listOrder} reply-icon`);
+    unlikeBlankHeart.setAttribute("src","img/heart_logo.png");
+
+    replyContainer[0].appendChild(replyContents);
+    replyContents.appendChild(viewReply);
+    replyContents.appendChild(replyFunc);
+    viewReply.appendChild(replyWriterId);
+    viewReply.appendChild(replyText);
+    replyFunc.appendChild(deleteReplyIcon);
+    replyFunc.appendChild(likeRedHeart);
+    replyFunc.appendChild(unlikeBlankHeart);
 }
-//localStorage에서 댓글 불러와서 댓글창 채우기
-const getText=()=>{
-    for(let i=0; i<replyText.length;i++){
-        console.log("2")
-        console.log(replyText[i])
-    }
-}//
+
+//댓글삭제함수(이벤트 위임 : 상위노드에서 하위노드를 제어한다
+
+//댓글입력함수
 const writeReply=(e)=>{
     e.preventDefault();
-    setText();
+    appendReply();
+    insertReply.value="";
 }
 replyComponent.addEventListener('submit',writeReply);
+
+
