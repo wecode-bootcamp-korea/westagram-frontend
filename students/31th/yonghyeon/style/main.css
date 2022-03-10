@@ -1,7 +1,7 @@
 @charset "UTF-8";
 body {
   background-color: #fafafa;
-  height: 130vh;
+  /* height: 100vh; */
 }
 
 .navContainer {
@@ -580,11 +580,21 @@ body {
   height: 11px;
 }
 
+.overlay {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  /* background-color: #0094f663; */
+  display: none;
+}
 .profileModal {
   position: absolute;
   top: 55px;
   right: -6px;
-  z-index: 999;
+  z-index: 2;
   width: 230px;
   height: 150px;
   display: none;
@@ -738,8 +748,12 @@ body {
   box-shadow: -4px -4px 5px 1px rgba(0, 0, 0, 0.07);
 }
 
-.hidden {
+.show {
   display: block;
+}
+
+.hidden {
+  display: none;
 }
 
 @media (max-width: 1000px) {

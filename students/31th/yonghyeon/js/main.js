@@ -9,6 +9,7 @@ const profileModal = document.querySelector('.profileModal');
 const searchBar = document.querySelector('.searchBar');
 const searchModal = document.querySelector('.searchModal');
 const searchUl = document.querySelector('.searchModal__ul');
+const overlay = document.querySelector('.overlay');
 let count = 0;
 
 // 댓글 추가 기능 함수
@@ -39,24 +40,6 @@ const addComment = (e) => {
   if (ul.offsetHeight >= 140) {
     ul.classList.add('overflow');
   }
-
-  // appendChild 로 만듦
-
-  // const span = document.createElement('span');
-  // span.textContent = input.value;
-
-  // const div = document.createElement('div');
-  // div.setAttribute('class', 'btnContainer');
-  // const likeDiv = document.createElement('div');
-  // likeDiv.setAttribute('class', 'likeBtn');
-  // const btn = document.createElement('button');
-  // btn.setAttribute('class', 'delCommentBtn');
-  // btn.setAttribute('data-target-id', dataId);
-  // div.appendChild(likeDiv);
-  // div.appendChild(btn);
-
-  // li.appendChild(span);
-  // li.appendChild(div);
 };
 
 // 댓글 삭제 기능 함수
@@ -113,7 +96,7 @@ const resultSearched = (data) => {
 
 // user data 불러오기
 const searchId = () => {
-  fetch('../data/idData.json')
+  fetch('./data/idData.json')
     .then((res) => res.json())
     .then((data) => {
       addSearchList(data);
@@ -141,20 +124,6 @@ const clearSearchInput = () => {
   searchUl.innerHTML = ``;
 };
 
-// 프로필 메뉴박스 생성 / 숨김 함수
-const showProfile = (e) => {
-  const key = e.target.dataset.btn;
-  const list = e.target.dataset.list;
-  if (!key && !list) {
-    profileModal.classList.remove('hidden');
-  }
-  if (key) {
-    profileModal.classList.toggle('hidden');
-  } else if (list) {
-    profileModal.classList.add('hidden');
-  }
-};
-
 // 댓글 추가기능 이벤트
 form.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -169,11 +138,11 @@ ul.addEventListener('click', (e) => {
 
 // 검색창 클리어 이벤트
 searchBar.addEventListener('focus', () => {
-  searchModal.classList.add('hidden');
+  searchModal.classList.add('show');
   clearSearchInput();
 });
 searchBar.addEventListener('focusout', () => {
-  searchModal.classList.remove('hidden');
+  searchModal.classList.remove('show');
   clearSearchInput();
 });
 
@@ -186,6 +155,15 @@ searchBar.addEventListener('keyup', (e) => {
 });
 
 // 프로필 메뉴박스 생성 / 숨김 이벤트
-window.addEventListener('click', (e) => {
-  showProfile(e);
+profileBtn.addEventListener('click', (e) => {
+  profileModal.classList.add('show');
+  profileModal.classList.remove('hidden');
+  overlay.classList.add('show');
+  overlay.classList.remove('hidden');
+});
+overlay.addEventListener('click', () => {
+  profileModal.classList.remove('show');
+  profileModal.classList.add('hidden');
+  overlay.classList.remove('show');
+  overlay.classList.add('hidden');
 });
