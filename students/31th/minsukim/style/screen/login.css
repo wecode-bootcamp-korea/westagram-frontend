@@ -2,21 +2,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  /* height: 100vh; */
 }
 
-.login-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(255, 255, 255);
-  border: 1px solid rgba(0, 0, 0, 0.2);
-
-  height: 80vh;
-  max-height: 750px;
-  width: 75vw;
-  max-width: 600px;
+/* login box css */
+.login-box > p:first-child {
+  font-family: "Lobster", cursive;
+  font-size: 85px;
+  margin-bottom: 70px;
+}
+.login-box > p:last-child {
+  color: #0a3566;
+  margin-top: 120px;
 }
 
 .login-box--login-form {
@@ -24,26 +21,6 @@
   flex-direction: column;
   height: 200px;
   justify-content: space-between;
-}
-
-.login-box--login-form input {
-  height: 60px;
-  width: 300px;
-  padding: 15px;
-  background-color: rgb(250, 250, 250);
-  border: var(--border);
-  border-radius: 5px;
-  font-size: 17px;
-}
-
-.login-box--login-form input::placeholder {
-  opacity: 0.7;
-}
-
-.login-box > p:first-child {
-  font-family: "Lobster", cursive;
-  font-size: 85px;
-  margin-bottom: 70px;
 }
 
 .login-box--login-form button {
@@ -56,16 +33,38 @@
   margin-top: 10px;
   background-color: #0095f6;
 }
-
 .login-box--login-form button:disabled {
   background-color: #c4e0f4;
 }
 
-.login-box > p:last-child {
-  color: #0a3566;
-  margin-top: 120px;
+.login-box--login-form input {
+  height: 60px;
+  width: 300px;
+  padding: 15px;
+  background-color: rgb(250, 250, 250);
+  border: var(--border);
+  border-radius: 5px;
+  font-size: 17px;
+}
+.login-box--login-form input::placeholder {
+  opacity: 0.7;
 }
 
+.login-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  margin-top: 50px;
+  height: 80vh;
+  max-height: 750px;
+  width: 75vw;
+  max-width: 600px;
+}
+
+/* showing-icon-screen css */
 @keyframes hideIconScreen {
   0% {
     opacity: 1;
@@ -79,19 +78,16 @@
     visibility: hidden;
   }
 }
-
-#icon-screen img {
+#showing-icon-screen img {
   height: 70px;
   width: 70px;
 }
-
-#icon-screen a {
+#showing-icon-screen a {
   margin-top: 50px;
   font-size: 15px;
   color: rgba(0, 0, 0, 0.3);
 }
-
-#icon-screen {
+#showing-icon-screen {
   display: flex;
   flex-direction: column;
   justify-content: center;
