@@ -100,18 +100,42 @@ const appendReply=(e)=>{
 }
 
 //댓글삭제 및 좋아요 함수
-const deleteReply=(e)=>{
+const replyInteraction=(e)=>{
     if(e.target.classList.contains("delete-icon")){
         const replyContents= e.target.parentElement.parentElement;
         replyContents.remove();
     }else if(e.target.classList.contains("unlike-icon")){
         e.target.previousSibling.classList.remove("hidden")
         e.target.classList.add("hidden")
-    } else if(e.target.classList.contains("already-like-icon")){
+    }else if(e.target.classList.contains("already-like-icon")){
         e.target.nextSibling.classList.remove("hidden");
         e.target.classList.add("hidden")
     }
 }
-
 replyComponent.addEventListener('submit',appendReply);
-postInteractionParts.addEventListener('click',deleteReply);
+postInteractionParts.addEventListener('click',replyInteraction);
+
+/////프로필 누르면 창 나오게하기/////
+const body = document.querySelector("body");
+const myThumbnail = document.getElementsByClassName("my-thumbnail")[0];
+const profileWindow = document.getElementsByClassName("profile-window")[0];
+const showProfileBox=()=>{
+    profileWindow.classList.remove("invisible")
+}
+const closeProfileBox=()=>{
+    profileWindow.classList.add("invisible")
+}
+const profileBoxHandler=(e)=>{
+    e.target==myThumbnail?profileWindow.classList.remove("invisible"):profileWindow.classList.add("invisible")
+}
+
+///프로필 마우스 오버시 음영///
+paintBtnBackground=(e)=>{
+    e.target.classList.add("paint-btn-background")
+}
+removeBtnBackground=(e)=>{
+    e.target.classList.remove("paint-btn-background")
+}
+body.addEventListener('click', profileBoxHandler);
+profileWindow.addEventListener('mouseover', paintBtnBackground);
+profileWindow.addEventListener('mouseout',removeBtnBackground);
