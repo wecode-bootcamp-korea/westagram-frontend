@@ -126,7 +126,10 @@ const closeProfileBox=()=>{
     profileWindow.classList.add("invisible")
 }
 const profileBoxHandler=(e)=>{
-    e.target==myThumbnail?profileWindow.classList.remove("invisible"):profileWindow.classList.add("invisible")
+    if(profileWindow.classList.contains("invisible")){
+        if(e.target==myThumbnail) profileWindow.classList.remove("invisible");
+        else profileWindow.classList.add("invisible");
+    }else profileWindow.classList.add("invisible")
 }
 
 ///프로필 마우스 오버시 음영///
