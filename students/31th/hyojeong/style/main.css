@@ -34,30 +34,30 @@ input:focus {
 /* login */
 
 .login-container {
-  width: 350px;
-  height: 500px;
-  border: 2px solid #e6e6e6;
-  border-radius: var(--border-radius);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 350px;
+  height: 500px;
   padding: 20px;
+  border: 2px solid #e6e6e6;
+  border-radius: var(--border-radius);
   background-color: white;
 }
 
 .login-container h1 {
-  font-family: "Lobster Two", cursive;
-  font-size: 45px;
   flex: 1;
   margin: 30px 0;
+  font-family: "Lobster Two", cursive;
+  font-size: 45px;
 }
 
 .login-form {
-  width: 100%;
   display: flex;
   flex-direction: column;
   flex: 3;
+  width: 100%;
 }
 
 .login-form input {
@@ -166,19 +166,19 @@ nav {
 }
 
 .search-info {
-  z-index: 2;
   position: absolute;
-  background-color: #fff;
   width: 100%;
+  background-color: #fff;
+  z-index: 2;
 }
 
 .search-info .user {
   width: inherit;
+  margin: 0;
+  padding: 7px;
   border-bottom: 2px solid var(--border-color);
   border-left: 2px solid var(--border-color);
   border-right: 2px solid var(--border-color);
-  margin: 0;
-  padding: 7px;
 }
 
 .search-info .user:last-child {
@@ -191,8 +191,8 @@ nav {
 }
 
 .menu-container li {
-  margin: 0 15px;
   position: relative;
+  margin: 0 15px;
   cursor: pointer;
 }
 
@@ -201,17 +201,17 @@ nav {
 }
 
 .profile-menu {
+  position: absolute;
   display: none;
   flex-direction: column;
-  position: absolute;
   top: 50px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 100;
   width: 250px;
   border: 1px solid var(--border-color);
   border-radius: 5px;
   background-color: #fff;
+  z-index: 100;
 }
 
 .profile-menu.open {
@@ -221,9 +221,9 @@ nav {
 .profile-menu li {
   display: flex;
   padding: 15px 15px;
-  font-size: 17px;
   width: 100%;
   margin: 0;
+  font-size: 17px;
 }
 
 .profile-menu li:hover,
@@ -240,6 +240,10 @@ nav {
 }
 
 .triangle {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 0;
   height: 0;
   border: 10x;
@@ -247,10 +251,6 @@ nav {
   border-top: 15px solid transparent;
   border-left: 15px solid transparent;
   border-right: 15px solid transparent;
-  position: absolute;
-  top: -30px;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 /* main */
@@ -259,8 +259,8 @@ nav {
 
 main {
   display: flex;
-  padding: 9px;
   justify-content: space-between;
+  padding: 9px;
   width: 70%;
   height: 100vh;
   margin-top: 300px;
@@ -274,13 +274,13 @@ main {
 }
 
 article {
+  position: relative;
   display: flex;
   flex-direction: column;
-  position: relative;
-  border: 2px solid var(--border-color);
-  border-radius: var(--border-radius);
   height: 900px;
   margin: 0;
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius);
   background-color: white;
 }
 
@@ -299,8 +299,8 @@ article {
 .profile {
   width: 45px;
   height: 45px;
-  border-radius: 50%;
   margin-right: 20px;
+  border-radius: 50%;
 }
 
 .profile-id {
@@ -309,14 +309,14 @@ article {
 }
 
 .article-bar i {
-  cursor: pointer;
   font-size: 20px;
+  cursor: pointer;
 }
 
 .article-photo {
+  flex: 10;
   width: 100%;
   height: 70%;
-  flex: 10;
 }
 
 .article-photo img {
@@ -325,19 +325,19 @@ article {
 }
 
 .article-btns {
+  position: relative;
   flex: 0.7;
   display: flex;
   height: 50px;
   padding: 10px;
-  position: relative;
 }
 
 .article-btns button {
+  margin: 0 2px;
   border: 0;
   background-color: transparent;
-  font-size: 30px;
   color: #414141;
-  margin: 0 2px;
+  font-size: 30px;
 }
 
 .article-heart-btn:hover {
@@ -352,23 +352,23 @@ button.absolute {
 }
 
 .article-description {
-  text-align: left;
   padding: 10px 15px;
   font-size: 20px;
+  text-align: left;
 }
 
 #comment-form {
-  flex: 1;
   position: absolute;
+  flex: 1;
   bottom: 0;
   left: 0;
   width: 100%;
 }
 .comment-input {
+  width: 100%;
   padding: 15px;
   border: 0;
   font-size: 20px;
-  width: 100%;
 }
 
 .comment-input::placeholder {
@@ -382,8 +382,8 @@ button.absolute {
   right: 10px;
   border: 0;
   background-color: transparent;
-  font-size: 20px;
   color: #c4e1fb;
+  font-size: 20px;
   cursor: not-allowed;
 }
 
@@ -393,23 +393,23 @@ button.absolute {
 }
 
 li.comment {
+  position: relative;
   transform: translateX(-15px);
   margin-bottom: 5px;
-  position: relative;
 }
 
 .comments {
+  flex: 2;
   height: 90px;
   overflow-y: auto;
-  flex: 2;
 }
 
 .heart-btn,
 .delete-btn {
+  position: absolute;
   border: 0;
   background-color: transparent;
   font-size: 22px;
-  position: absolute;
 }
 
 .heart-btn {
@@ -459,9 +459,9 @@ li.comment {
 }
 
 .user-info p {
+  margin-top: 3px;
   font-size: 20px;
   color: #999999;
-  margin-top: 3px;
 }
 
 .user .profile.big {
@@ -470,24 +470,24 @@ li.comment {
 }
 
 .sub-container {
-  border: 2px solid var(--border-color);
-  border-radius: var(--border-radius);
   margin: 20px;
   padding-bottom: 10px;
+  border: 2px solid var(--border-color);
+  border-radius: var(--border-radius);
   background-color: white;
 }
 
 .sub-bar {
   display: flex;
   justify-content: space-between;
+  padding: 20px;
   font-size: 20px;
   color: #999999;
-  padding: 20px;
 }
 
 .sub-bar a {
-  text-decoration: none;
   color: black;
+  text-decoration: none;
   font-weight: 800;
 }
 
@@ -502,13 +502,13 @@ li.comment {
 }
 
 .follow-link {
-  color: #2c95f6;
-  font-size: 19px;
-  font-weight: 700;
   position: absolute;
   right: 0px;
   top: 50%;
   transform: translateY(-50%);
+  color: #2c95f6;
+  font-size: 19px;
+  font-weight: 700;
 }
 
 .hidden {
@@ -516,8 +516,8 @@ li.comment {
 }
 
 .instagram-info {
-  color: #c7c7c7;
   padding: 0 20px;
+  color: #c7c7c7;
   font-size: 20px;
 }
 
