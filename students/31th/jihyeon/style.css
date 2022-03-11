@@ -14,17 +14,16 @@ body {
   display: none;
 }
 
-/* .overlayBackground {
+.overlay {
   position: absolute;
-  left: 0;
   top: 0;
-  width: 100vw;
-  height: 100vh;
-  display: block;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(3px);
-  z-index: 5000;
-} */
+  z-index: 5;
+}
 
 @media screen and (max-width: 900px) {
   .mainRight {
@@ -330,6 +329,29 @@ main .mainLeft .articleReplyArea .minibox1 .miniboxComment1 {
   overflow: hidden;
 }
 
+main .mainLeft .articleReplyArea .minibox1 .deleteBtn1 {
+  border: 0;
+  background-color: inherit;
+
+  width: 3vh;
+  height: 3vh;
+  padding: 0;
+
+  position: absolute;
+  right: 8vw;
+}
+
+main .mainLeft .articleReplyArea .minibox1 .deleteBtn1 img {
+  border: 0;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 3vh;
+  height: 3vh;
+}
+
 main .mainLeft .articleReplyArea .minibox1 .showFullReplyModalBtn {
   border: 0;
   background-color: inherit;
@@ -372,6 +394,29 @@ main .mainLeft .articleReplyArea .minibox2 .miniboxComment2 {
   align-items: center;
 
   overflow: hidden;
+}
+
+main .mainLeft .articleReplyArea .minibox2 .deleteBtn2 {
+  border: 0;
+  background-color: inherit;
+
+  width: 3vh;
+  height: 3vh;
+  padding: 0;
+
+  position: absolute;
+  right: 8vw;
+}
+
+main .mainLeft .articleReplyArea .minibox2 .deleteBtn2 img {
+  border: 0;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 3vh;
+  height: 3vh;
 }
 
 main .mainLeft .articleReplyArea .articleAllReplyBtn {
@@ -1180,8 +1225,7 @@ main .mainRight .sidebarFooter span {
   opacity: 0.3;
   color: white;
 }
-
-.modalWindows .modalForAllReplyBtn {
+.modalForAllReplyBtn {
   position: fixed;
   top: 0;
   bottom: 0;
@@ -1201,59 +1245,51 @@ main .mainRight .sidebarFooter span {
   border-radius: 5px;
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
 
-  overflow: hidden;
+  overflow: scroll;
   z-index: 10;
 }
 
-.modalWindows .replyContent {
-  width: 34vw;
+/* 풀 댓글창 들어가는 스타일  */
+
+.replyContent {
+  width: 53vw;
+  height: 3vh;
+
+  position: relative;
+
+  display: flex;
+  margin-top: 8vh;
+}
+
+.replyProfilePhoto {
   height: 7vh;
-
-  display: flex;
-  align-items: center;
-
-  margin-top: 7vh;
-}
-
-/* 아래 3개 풀 댓글창 들어가는 스타일  */
-.modalWindows .replyContent .replyProfilePhoto {
-  width: 4vw;
-  height: 4vw;
   border-radius: 70%;
-
-  margin-top: 7vh;
-
-  display: flex;
-  align-items: center;
 }
 
-.modalWindows .replyContent .replyProfileNickName {
-  margin-left: 1vw;
+.replyProfileNickName {
+  margin-left: 2vw;
 
-  height: 4vw;
-  width: 18vw;
+  height: 7vh;
+  width: 12vw;
 
-  margin-top: 7vh;
-
-  display: flex;
-  align-items: center;
   overflow: hidden;
-}
-
-.modalWindows .replyContent .replyText {
-  margin-left: 1vw;
-  border-left: 1px solid rgb(196, 196, 196);
-  padding-left: 1vw;
-
-  height: 4vw;
-  width: 30vw;
-
-  margin-top: 7vh;
 
   display: flex;
   align-items: center;
+}
 
-  overflow: scroll;
-  position: absolute;
-  left: 25vw;
+.replyText {
+  height: 7vh;
+  width: 40vw;
+
+  display: flex;
+  align-items: center;
+  overflow: auto;
+}
+
+.replyRemoveBtn {
+  background-color: inherit;
+  border: 0;
+  width: 3vw;
+  height: 3vw;
 }

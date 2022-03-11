@@ -8,259 +8,248 @@
     <title>31th Jihyeon Jeon Westagram Made By JS</title>
   </head>
   <body>
-    <header class="header">
-      <section class="headerLeft">
-        <img src="image/westagramCharLogo.png" class="headerLogoImg" alt="error" />
-      </section>
-
-      <section class="headerCenter">
-        <input type="text" class="headerSearchBar" />
-        <img src="image/searchGlass.png" class="hedaerSearchGlass" alt="error" />
-      </section>
-
-      <section class="headerRight">
-        <button class="headerCompassBtn"></button>
-        <button class="headerHeartBtn"></button>
-        <button class="headerProfileBtn"></button>
-      </section>
-    </header>
-
-    <main>
-      <article class="mainLeft">
-        <section class="articleProfile">
-          <img class="articleProfilePhoto" src="" alt="" />
-          <span class="articleProfileName"> 프로필 닉네임</span>
-          <button class="articleProfileOptBtn">
-            <img src="image/articleMenuBtn.png" alt="" />
-          </button>
-        </section>
-        <section class="articlePhotoArea">
-          <img src="image/articlePhoto.avif" class="articlePhoto" alt="error" />
+      <header class="header">
+        <section class="headerLeft">
+          <img src="image/westagramCharLogo.png" class="headerLogoImg" alt="error" />
         </section>
 
-        <section class="articleTextContent">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta dolorum voluptatem deserunt aliquid natus animi voluptas provident aperiam doloremque! Et tenetur nesciunt earum voluptas
-          excepturi consectetur harum eligendi perferendis deleniti? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta dolorum voluptatem deserunt aliquid natus animi voluptas provident
-          aperiam doloremque! Et tenetur nesciunt earum voluptas excepturi consectetur harum eligendi perferendis deleniti? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dicta dolorum
-          voluptatem deserunt aliquid natus animi voluptas provident aperiam doloremque! Et tenetur nesciunt earum voluptas excepturi consectetur harum eligendi perferendis deleniti?
+        <section class="headerCenter">
+          <input type="text" class="headerSearchBar" />
+          <img src="image/searchGlass.png" class="hedaerSearchGlass" alt="error" />
         </section>
 
-        <section class="articleBtnArea">
-          <button class="articleLikeBtn">
+        <section class="headerRight">
+          <button class="headerCompassBtn"></button>
+          <button class="headerHeartBtn"></button>
+          <button class="headerProfileBtn"></button>
+        </section>
+      </header>
+
+      <main class="main">
+        <article class="mainLeft">
+          <section class="articleProfile">
+            <img class="articleProfilePhoto" src="" alt="" />
+            <span class="articleProfileName"> 프로필 닉네임</span>
+            <button class="articleProfileOptBtn">
+              <img src="image/articleMenuBtn.png" alt="" />
+            </button>
+          </section>
+          <section class="articlePhotoArea">
+            <img src="image/articlePhoto.avif" class="articlePhoto" alt="error" />
+          </section>
+
+          <section class="articleTextContent">
+            <p>
+              id: [ 'wecode@naver.com', 'hello@naver.com', 'goodbye@naver.com', 'wecode2@naver.com', 'wecodelover@naver.com', 'goodnight@naver.com', 'kim@naver.com', 'front@naver.com',
+              'back@naver.com', 'full@naver.com', ],
+            </p>
+            <p>pw: ['wecode', 111111, 222222, 333333, 444444, 555555, 666666, 777777, 888888, 999999],</p>
+            <p>nickName: ['wecodetest', 'hello', 'goodbye', 'wecode2', 'wecodelover', 'goodnight', 'kim', 'front', 'back', 'full']</p>
+          </section>
+          <section class="articleBtnArea">
+            <button class="articleLikeBtn">
+              <img src="image/blackEmptyHeart.png" alt="error" />
+            </button>
+            <button class="articleReplyBtn">
+              <img src="image/textBtn.png" alt="error" />
+            </button>
+            <button class="articleSaveBtn">
+              <img src="image/downloadBtn.png" alt="error" />
+            </button>
+            <button class="articleBookmarkBtn">
+              <img src="image/bookmarkEmpty.png" alt="error" />
+            </button>
+          </section>
+
+          <section class="articleLikeArea">
+            <img class="whoFirstLikePhoto" src="image/fullRedHeart.png" alt="error" />
+            <span class="infoLikeWho">첫번째 좋아요 닉네임외의 n명이 좋아합니다. lorem</span>
+          </section>
+
+          <section class="articleReplyArea">
+            <div class="minibox1">
+              <img class="miniboxPhoto1" src="image/profilePhoto/7.jpg" alt="error" />
+              <span class="miniboxNick1"></span>
+              <span class="miniboxComment1"></span>
+              <button class="deleteBtn1"><img src="image/cross.png" alt="" /></button>
+              <button class="showFullReplyModalBtn">더보기</button>
+            </div>
+            <div class="minibox2">
+              <img class="miniboxPhoto2" src="image/profilePhoto/6.jpg" alt="error" />
+              <span class="miniboxNick2"></span>
+              <button class="deleteBtn2"><img src="image/cross.png" alt="" /></button>
+              <span class="miniboxComment2"></span>
+            </div>
+          </section>
+
+          <section class="articleInsertReplyArea">
+            <input type="text" class="articleInsertReplyContent" placeholder="댓글 달기.." />
+            <button class="articleInsertReplyBtn">
+              <span>게시</span>
+            </button>
+          </section>
+        </article>
+
+        <section class="mainRight">
+          <section class="sidebarNotLogined">
+            <button class="sidebarLoginBtn">
+              <span>로그인</span>
+            </button>
+            <button class="sidebarJoinBtn">
+              <span>회원가입</span>
+            </button>
+          </section>
+
+          <section class="sidebarLogined">
+            <section class="sidebarLoginedTop">
+              <img src="" alt="error" />
+              <span></span>
+            </section>
+            <button class="sidebarLogOutBtn">
+              <span>로그아웃</span>
+            </button>
+          </section>
+
+          <section class="sidebarStory">
+            <section class="sidebarStoryTop">
+              <span>스토리</span>
+              <button class="sidebarAllStoryBtn">모두보기</button>
+            </section>
+            <section class="sidebarStoryMain">
+              <div class="story">
+                <img src="image/dummyProfile/a1.png" class="storyPhoto" alt="error" />
+                <button class="storyMember1">dummy1</button>
+              </div>
+              <div class="story">
+                <img src="image/dummyProfile/a2.png" class="storyPhoto" alt="error" />
+                <button class="storyMember2">dummy2</button>
+              </div>
+              <div class="story">
+                <img src="image/dummyProfile/a3.png" class="storyPhoto" alt="error" />
+                <button class="storyMember3">dummy3</button>
+              </div>
+              <div class="story">
+                <img src="image/dummyProfile/a4.png" class="storyPhoto" alt="error" />
+                <button class="storyMember4">dummy4</button>
+              </div>
+            </section>
+          </section>
+
+          <section class="sidebarRecommend">
+            <section class="sidebarRecommendTop">
+              <span>추천 팔로우</span>
+              <button class="sidebarAllRecommendBtn">모두보기</button>
+            </section>
+            <section class="sidebarRecommendMain">
+              <div class="recommendWho">
+                <img class="recommendPhoto1" src="image/dummyProfile/a5.png" alt="error" />
+                <button class="recommendMember1">dummy5</button>
+              </div>
+              <div class="recommendWho">
+                <img class="recommendPhoto2" src="image/dummyProfile/a6.png" alt="error" />
+                <button class="recommendMember2">dummy6</button>
+              </div>
+              <div class="recommendWho">
+                <img class="recommendPhoto3" src="image/dummyProfile/a7.png" alt="error" />
+                <button class="recommendMember3">dummy7</button>
+              </div>
+              <div class="recommendWho">
+                <img class="recommendPhoto4" src="image/dummyProfile/a8.png" alt="error" />
+                <button class="recommendMember4">dummy8</button>
+              </div>
+            </section>
+          </section>
+
+          <footer class="sidebarFooter">
+            <button class="footerCsBtn">westagram 고객문의</button>
+            <button class="footerTermsBtn">westagram 약관</button>
+            <span>@ 2022 Westagram</span>
+            <span>31th Jihyeon Jeon</span>
+          </footer>
+        </section>
+
+        <section class="modalWindows">
+          <!-- 센터 모달 시작-->
+          <div class="modalForLoginBtn">
+            <span class="logoForLoginWindow">Westagram</span>
+            <input type="text" class="idInputField" placeholder="메일주소" />
+            <input type="password" class="pwInputField" placeholder="비밀번호(5자 이상)" />
+            <input type="submit" class="loginSubmitBtn" value="제출" />
+            <span class="showInputStatus">비밀번호가 짧습니다</span>
+            <button class="showNewAccountBtn">회원가입이 필요하신가요?</button>
+            <button class="showFindPwBtn">아이디나 비밀번호를 잊으셨나요?</button>
+          </div>
+
+          <div class="modalForTopMenuBtn">
+            <button class="topMenuReportBtn">신고</button>
+            <button class="topMenuCopyUrlBtn">링크복사</button>
+            <button class="topMenuCancelBtn">게시물로 이동</button>
+          </div>
+
+          <div class="modalForCopyURLBtn">
+            <input
+              type="text"
+              class="urlTextBox"
+              value="제 실Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam dignissimos quo culpa molestias vero nemo neque similique odit error animi iste, ex, minima hic sunt, architecto facilis soluta odio necessitatibus?"
+              readonly
+            />
+            <button class="urlCopyBtn">URL 복사하기</button>
+          </div>
+
+          <div class="modalForTermsBtn">
+            <textarea class="termsTextBox" cols="30" rows="10" readonly></textarea>
+            <button class="closeTermsModalBtn">닫기</button>
+          </div>
+
+          <div class="modalForCsBtn">
+            <div class="csNameArea">
+              <span>성명</span>
+              <input type="text" name="" id="" />
+            </div>
+            <div class="csPhoneNumbArea">
+              <span>휴대전화 연락처</span>
+              <input type="tel" placeholder="010-1234-5678" pattern="[0-1]{3}-[0-9]{4}-[0-9]{4}" />
+            </div>
+            <div class="csQuestionArea">
+              <span>문의사항</span>
+              <textarea name="" id="" cols="30" rows="10" resize="none"></textarea>
+            </div>
+            <div class="csSubmitBtn">
+              <input type="submit" />
+            </div>
+          </div>
+
+          <div class="modalForJoinMember">
+            <span class="logoForJoinWindow">Westagram</span>
+            <input type="text" class="idInputField" placeholder="메일주소" />
+            <input type="password" class="pwInputField" placeholder="비밀번호(5자 이상)" />
+            <input type="submit" class="joinSubmitBtn" value="회원가입" />
+            <span class="showInputStatus">비밀번호가 짧습니다</span>
+            <button class="showNewAccountBtn">회원가입이 필요하신가요?</button>
+            <button class="showFindPwBtn">아이디나 비밀번호를 잊으셨나요?</button>
+          </div>
+
+          <div class="modalForAllReplyBtn"></div>
+          <div class="modalForAllStoryBtn"></div>
+          <div class="modalForAllRecommendBtn"></div>
+
+          <!-- 우측 모달 시작 -->
+          <div class="modalForHeartBtn">
             <img src="image/blackEmptyHeart.png" alt="error" />
-          </button>
-          <button class="articleReplyBtn">
-            <img src="image/textBtn.png" alt="error" />
-          </button>
-          <button class="articleSaveBtn">
-            <img src="image/downloadBtn.png" alt="error" />
-          </button>
-          <button class="articleBookmarkBtn">
-            <img src="image/bookmarkEmpty.png" alt="error" />
-          </button>
-        </section>
-
-        <section class="articleLikeArea">
-          <img class="whoFirstLikePhoto" src="image/fullRedHeart.png" alt="error" />
-          <span class="infoLikeWho">첫번째 좋아요 닉네임외의 n명이 좋아합니다. lorem</span>
-        </section>
-
-        <section class="articleReplyArea">
-          <div class="minibox1">
-            <img class="miniboxPhoto1" src="image/profilePhoto/7.jpg" alt="error" />
-            <span class="miniboxNick1"></span>
-            <span class="miniboxComment1"></span>
-            <button class="showFullReplyModalBtn">더보기</button>
+            <span>게시물 활동</span>
+            <span>다른 사람이 회원님의 게시물을 좋아하거나 댓글을 남기면 여기에 표시됩니다.</span>
           </div>
-          <div class="minibox2">
-            <img class="miniboxPhoto2" src="image/profilePhoto/6.jpg" alt="error" />
-            <span class="miniboxNick2"></span>
-            <span class="miniboxComment2"></span>
+
+          <div class="modalForProfileBtn">
+            <button class="profileMenuBtn">프로필</button>
+            <button class="bookmarkMenuBtn">저장됨</button>
+            <button class="settingMenuBtn">설정</button>
+            <button class="logoutMenuBtn">로그아웃</button>
           </div>
         </section>
+      </main>
+    </div>
 
-        <section class="articleInsertReplyArea">
-          <input type="text" class="articleInsertReplyContent" placeholder="댓글 달기.." />
-          <button class="articleInsertReplyBtn">
-            <span>게시</span>
-          </button>
-        </section>
-      </article>
-
-      <section class="mainRight">
-        <section class="sidebarNotLogined">
-          <button class="sidebarLoginBtn">
-            <span>로그인</span>
-          </button>
-          <button class="sidebarJoinBtn">
-            <span>회원가입</span>
-          </button>
-        </section>
-
-        <section class="sidebarLogined">
-          <section class="sidebarLoginedTop">
-            <img src="" alt="error" />
-            <span></span>
-          </section>
-          <button class="sidebarLogOutBtn">
-            <span>로그아웃</span>
-          </button>
-        </section>
-
-        <section class="sidebarStory">
-          <section class="sidebarStoryTop">
-            <span>스토리</span>
-            <button class="sidebarAllStoryBtn">모두보기</button>
-          </section>
-          <section class="sidebarStoryMain">
-            <div class="story">
-              <img src="image/testProfilePhoto.jpeg" class="storyPhoto" alt="error" />
-              <button class="storyMember1">페페</button>
-            </div>
-            <div class="story">
-              <img src="image/compass.png" class="storyPhoto" alt="error" />
-              <button class="storyMember2">컴파스</button>
-            </div>
-            <div class="story">
-              <img src="image/testProfilePhoto.jpeg" class="storyPhoto" alt="error" />
-              <button class="storyMember3">페페</button>
-            </div>
-            <div class="story">
-              <img src="image/compass.png" class="storyPhoto" alt="error" />
-              <button class="storyMember4">컴파스</button>
-            </div>
-          </section>
-        </section>
-
-        <section class="sidebarRecommend">
-          <section class="sidebarRecommendTop">
-            <span>추천 팔로우</span>
-            <button class="sidebarAllRecommendBtn">모두보기</button>
-          </section>
-          <section class="sidebarRecommendMain">
-            <div class="recommendWho">
-              <img class="recommendPhoto1" src="image/testProfilePhoto.jpeg" alt="error" />
-              <button class="recommendMember1">v팔로우1</button>
-            </div>
-            <div class="recommendWho">
-              <img class="recommendPhoto2" src="image/testProfilePhoto.jpeg" alt="error" />
-              <button class="recommendMember2">팔로우2</button>
-            </div>
-            <div class="recommendWho">
-              <img class="recommendPhoto3" src="image/testProfilePhoto.jpeg" alt="error" />
-              <button class="recommendMember3">팔로우3</button>
-            </div>
-            <div class="recommendWho">
-              <img class="recommendPhoto4" src="image/testProfilePhoto.jpeg" alt="error" />
-              <button class="recommendMember4">팔로우4</button>
-            </div>
-          </section>
-        </section>
-
-        <footer class="sidebarFooter">
-          <button class="footerCsBtn">westagram 고객문의</button>
-          <button class="footerTermsBtn">westagram 약관</button>
-          <span>@ 2022 Westagram</span>
-          <span>31th Jihyeon Jeon</span>
-        </footer>
-      </section>
-
-      <section class="modalWindows">
-        <!-- 센터 모달 시작-->
-        <div class="modalForLoginBtn">
-          <span class="logoForLoginWindow">Westagram</span>
-          <input type="text" class="idInputField" placeholder="메일주소" />
-          <input type="password" class="pwInputField" placeholder="비밀번호(5자 이상)" />
-          <input type="submit" class="loginSubmitBtn" value="제출" />
-          <span class="showInputStatus">비밀번호가 짧습니다</span>
-          <button class="showNewAccountBtn">회원가입이 필요하신가요?</button>
-          <button class="showFindPwBtn">아이디나 비밀번호를 잊으셨나요?</button>
-        </div>
-
-        <div class="modalForTopMenuBtn">
-          <button class="topMenuReportBtn">신고</button>
-          <button class="topMenuCopyUrlBtn">링크복사</button>
-          <button class="topMenuCancelBtn">게시물로 이동</button>
-        </div>
-
-        <div class="modalForCopyURLBtn">
-          <input
-            type="text"
-            class="urlTextBox"
-            value="제 실Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam dignissimos quo culpa molestias vero nemo neque similique odit error animi iste, ex, minima hic sunt, architecto facilis soluta odio necessitatibus?"
-            readonly
-          />
-          <button class="urlCopyBtn">URL 복사하기</button>
-        </div>
-
-        <div class="modalForTermsBtn">
-          <textarea class="termsTextBox" cols="30" rows="10" readonly></textarea>
-          <button class="closeTermsModalBtn">닫기</button>
-        </div>
-
-        <div class="modalForCsBtn">
-          <div class="csNameArea">
-            <span>성명</span>
-            <input type="text" name="" id="" />
-          </div>
-          <div class="csPhoneNumbArea">
-            <span>휴대전화 연락처</span>
-            <input type="tel" placeholder="010-1234-5678" pattern="[0-1]{3}-[0-9]{4}-[0-9]{4}" />
-          </div>
-          <div class="csQuestionArea">
-            <span>문의사항</span>
-            <textarea name="" id="" cols="30" rows="10" resize="none"></textarea>
-          </div>
-          <div class="csSubmitBtn">
-            <input type="submit" />
-          </div>
-        </div>
-
-        <div class="modalForJoinMember">
-          <span class="logoForJoinWindow">Westagram</span>
-          <input type="text" class="idInputField" placeholder="메일주소" />
-          <input type="password" class="pwInputField" placeholder="비밀번호(5자 이상)" />
-          <input type="submit" class="joinSubmitBtn" value="회원가입" />
-          <span class="showInputStatus">비밀번호가 짧습니다</span>
-          <button class="showNewAccountBtn">회원가입이 필요하신가요?</button>
-          <button class="showFindPwBtn">아이디나 비밀번호를 잊으셨나요?</button>
-        </div>
-
-        <div class="modalForAllReplyBtn">
-          <div class="replyContent">
-            <img class="replyProfilePhoto" src="image/profilePhoto/2.jpg" alt="" />
-            <span class="replyProfileNickName">as닉네임칸ㅇㄹㅇㅁdd</span>
-            <span class="replyText">본문 메인칸본문 메인칸본문 메인칸본문 메인칸본문 메인칸본문 메인칸본문 메인칸본문 메인칸</span>
-          </div>
-          <div class="replyContent">
-            <img class="replyProfilePhoto" src="image/profilePhoto/2.jpg" alt="" />
-            <span class="replyProfileNickName">as닉네임칸ㅇㄹㅇㅁdd</span>
-            <span class="replyText">본문 메인칸본문 메인칸본문 메인칸본문 메인칸본문 메인칸본문 메인칸본문 메인칸본문 메인칸</span>
-          </div>
-          <div class="replyContent">
-            <img class="replyProfilePhoto" src="image/profilePhoto/2.jpg" alt="" />
-            <span class="replyProfileNickName">as닉네임칸ㅇㄹㅇㅁdd</span>
-            <span class="replyText">본문 메인칸본문 메인칸본문 메인칸본문 메인칸본문 메인칸본문 메인칸본문 메인칸본문 메인칸</span>
-          </div>
-        </div>
-        <div class="modalForAllStoryBtn"></div>
-        <div class="modalForAllRecommendBtn"></div>
-
-        <!-- 우측 모달 시작 -->
-        <div class="modalForHeartBtn">
-          <img src="image/blackEmptyHeart.png" alt="error" />
-          <span>게시물 활동</span>
-          <span>다른 사람이 회원님의 게시물을 좋아하거나 댓글을 남기면 여기에 표시됩니다.</span>
-        </div>
-
-        <div class="modalForProfileBtn">
-          <button class="profileMenuBtn">프로필</button>
-          <button class="bookmarkMenuBtn">저장됨</button>
-          <button class="settingMenuBtn">설정</button>
-          <button class="logoutMenuBtn">로그아웃</button>
-        </div>
-      </section>
-    </main>
     <script src="script.js"></script>
   </body>
 </html>

@@ -3,7 +3,7 @@
 // 입력정보 obj
 
 const clientStatus = {
-  loginStatus: true,
+  loginStatus: false,
   memUniqueNumb: null,
   id: null,
   nickName: null,
@@ -20,14 +20,14 @@ const membersAllInfo = {
     'goodbye@naver.com',
     'wecode2@naver.com',
     'wecodelover@naver.com',
-    'pepe@naver.com',
+    'goodnight@naver.com',
     'kim@naver.com',
     'front@naver.com',
-    'backend@naver.com',
-    'codegod@naver.com',
+    'back@naver.com',
+    'full@naver.com',
   ],
-  nickName: ['위코드테스트', 'Oleg Ivan', 'Sarah K', '위코드힙합전사', '위코드수세미머리', 'The Strong', 'SunFlower', 'Sally', '프론트앤드지망', '풀스택지젼짱짱맨'],
-  pw: [1234567, 112266, 123455, 1010122, 223344, 444411, 110011, 2223334, 111222333, 1233212],
+  nickName: ['wecodetest', 'hello', 'goodbye', 'wecode2', 'wecodelover', 'goodnight', 'kim', 'front', 'back', 'full'],
+  pw: ['wecode', 111111, 222222, 333333, 444444, 555555, 666666, 777777, 888888, 999999],
   follow: [
     [2, 3, 4, 5],
     [1, 4],
@@ -46,7 +46,7 @@ const articleStatus = {
   memUniqueNumb: 1,
   whoLikeThisArticle: [2, 3, 4, 5],
   replyWho: [4, 5, 6, 7],
-  replyWhat: ['위코드수세미머리가 이 댓글을 달았으면 성공', 'The Strong 이 댓글 달았으면 성공', 'SunFlower가 이 댓글 달았으면 성공', 'Sally가 이 댓글 달았으면 성공'],
+  replyWhat: ['저는 wecodelover입니다', '저는 goodnight입니다', '저는 kim입니다.', '저는 front입니다.'],
 };
 
 /// 로그인 관련
@@ -102,6 +102,7 @@ const doLogOut = function () {
 // 로그아웃 버튼 누르면 로그아웃 되는 펑션
 document.querySelector('.sidebarLogOutBtn').addEventListener('click', function () {
   doLogOut();
+  changeHeartImg();
 });
 
 /// 많이 쓰는 변수
@@ -180,6 +181,7 @@ replyFirstPhoto();
 // n명이 좋아합니다 표시기능
 const showHowManyLike = function () {
   const firstLikeMem = articleStatus.whoLikeThisArticle[0];
+
   document.querySelector('.infoLikeWho').textContent = `${membersAllInfo.nickName[firstLikeMem]}님 외의 ${articleStatus.whoLikeThisArticle.length - 1}명이 좋아합니다`;
 };
 showHowManyLike();
@@ -190,15 +192,21 @@ showHowManyLike();
 // 좋아요 상태에 따라서 하트 이미지 변경해주기
 
 const changeHeartImg = function () {
-  // 좋아요 안한 상태면 -1출력, 한 상태이면 좋아요 목록에서의 index가 나온다.
+  // 로그아웃 상태일때 무조건 빈하트 출력해야됨
   if (!clientStatus.loginStatus) {
+    document.querySelector('.articleLikeBtn img').src = `image/blackEmptyHeart.png`;
   }
 
-  const isAlreadyLike = articleStatus.whoLikeThisArticle.indexOf(clientStatus.memUniqueNumb);
-  if (isAlreadyLike === -1) {
-    document.querySelector('.articleLikeBtn img').src = `image/blackEmptyHeart.png`;
-  } else {
-    document.querySelector('.articleLikeBtn img').src = `image/fullRedHeart.png`;
+  // 로그인 상태일때
+  if (clientStatus.loginStatus) {
+    const isAlreadyLike = articleStatus.whoLikeThisArticle.indexOf(clientStatus.memUniqueNumb);
+    // 이미 좋아요 상태 일때
+    if (isAlreadyLike !== -1) {
+      document.querySelector('.articleLikeBtn img').src = `image/fullRedHeart.png`;
+    } else {
+      // 아직 좋아요 안눌렀을때
+      document.querySelector('.articleLikeBtn img').src = `image/blackEmptyHeart.png`;
+    }
   }
 };
 changeHeartImg();
@@ -206,16 +214,23 @@ showHowManyLike();
 
 // 좋아요 목록에서 현재 사용자 넣고 빼고 하는거
 document.querySelector('.articleLikeBtn').addEventListener('click', function () {
+  // 로그아웃 상태면 아예 안되게
+  if (!clientStatus.loginStatus) {
+    return;
+  }
+
   // 좋아요 안한 상태면 -1출력, 한 상태이면 좋아요 목록에서의 index가 나온다.
   const isAlreadyLike = articleStatus.whoLikeThisArticle.indexOf(clientStatus.memUniqueNumb);
   if (isAlreadyLike === -1) {
     articleStatus.whoLikeThisArticle.push(clientStatus.memUniqueNumb);
     changeHeartImg();
     showHowManyLike();
+    replyFirstPhoto();
   } else {
     articleStatus.whoLikeThisArticle.splice(isAlreadyLike, 1);
     changeHeartImg();
     showHowManyLike();
+    replyFirstPhoto();
   }
 });
 
@@ -441,12 +456,14 @@ const tryLogin = function () {
     const inputPw = document.querySelector('.pwInputField').value;
 
     // 비밀번호 일치할때
-    if (membersAllInfo.pw[inputMemNumb] === Number(inputPw)) {
+    if (String(membersAllInfo.pw[inputMemNumb]) === String(inputPw)) {
       doLogIn(inputId);
       hideModalSet();
       // 로그인 성공했으니까 입력창에 넣은 정보들 비워줌
       document.querySelector('.idInputField').value = null;
       document.querySelector('.pwInputField').value = null;
+      // 로그인 성공했으니까 하트 모양 바꿔줌
+      changeHeartImg();
     } else {
       document.querySelector('.showInputStatus').textContent = '비밀번호가 틀렸습니다';
     }
@@ -481,9 +498,6 @@ const clickCloseTermBtn = function () {
 };
 clickCloseTermBtn();
 
-// 로그인테스트 (삭제해야 테스트)
-doLogIn('wecode@naver.com');
-
 // 본문 내용에 최신 2개 댓글 달리는걸로 보이게 하는 펑션
 const showRecentlyReply = function () {
   // 위 아래칸 쓴 멤버들 고유넘버
@@ -507,11 +521,158 @@ const insertReplyMine = function () {
   const insertWhat = document.querySelector('.articleInsertReplyContent').value;
 
   // 로그인 된 상태일때
-  if (clientStatus.loginStatus) {
+  if (clientStatus.loginStatus && insertWhat) {
     articleStatus.replyWhat.push(insertWhat);
     articleStatus.replyWho.push(clientStatus.memUniqueNumb);
     showRecentlyReply();
   }
+};
+
+// 게시버튼 누르면 댓글 올리는 기능
+const writeReplyBtn = function () {
+  document.querySelector('.articleInsertReplyBtn').addEventListener('click', function () {
+    if (clientStatus.loginStatus) {
+      insertReplyMine();
+      document.querySelector('.articleInsertReplyContent').value = null;
+    }
+  });
+};
+writeReplyBtn();
+
+// 엔터버튼 누르면 댓글 올리는 기능
+const writeReplyByEnter = function () {
+  // 댓글내용이 뭔가 채워져있을때
+  window.addEventListener('keyup', function (e) {
+    if (e.key === 'Enter') {
+      insertReplyMine();
+      document.querySelector('.articleInsertReplyContent').value = null;
+    }
+  });
+};
+writeReplyByEnter();
+
+// 댓글 지우는 버튼 기능
+
+// 위에 버튼 delete
+const activeTopBtn = function () {
+  document.querySelector('.deleteBtn1').addEventListener('click', function () {
+    let tempWhatArr = [];
+    let tempWhoArr = [];
+
+    if (clientStatus.loginStatus && clientStatus.memUniqueNumb === articleStatus.replyWho[articleStatus.replyWhat.length - 2]) {
+      for (let i = 0; i < articleStatus.replyWhat.length - 2; i++) {
+        tempWhatArr[i] = articleStatus.replyWhat[i];
+        tempWhoArr[i] = articleStatus.replyWho[i];
+      }
+      tempWhatArr.push(articleStatus.replyWhat[articleStatus.replyWhat.length - 1]);
+      tempWhoArr.push(articleStatus.replyWho[articleStatus.replyWho.length - 1]);
+
+      articleStatus.replyWhat = tempWhatArr;
+      articleStatus.replyWho = tempWhoArr;
+    }
+
+    showRecentlyReply();
+  });
+};
+activeTopBtn();
+
+// 아래 버튼 pop
+const activeBotBtn = function () {
+  document.querySelector('.deleteBtn2').addEventListener('click', function () {
+    if (clientStatus.loginStatus && clientStatus.memUniqueNumb === articleStatus.replyWho[articleStatus.replyWho.length - 1]) {
+      articleStatus.replyWhat.pop();
+      articleStatus.replyWho.pop();
+      showRecentlyReply();
+    }
+  });
+};
+
+activeBotBtn();
+
+// 더보기 버튼 누르면 풀 댓글 모달창 나오는 기능
+const showFullReplyModal = function () {
+  document.querySelector('.showFullReplyModalBtn').addEventListener('click', function () {
+    document.querySelector('.modalForAllReplyBtn').style.display = 'flex';
+    removeFullReplyContent();
+    createFullReplyContent();
+    deleteBtnActiveInFullWindow();
+  });
+};
+
+showFullReplyModal();
+
+//풀댓글 모달창에 댓글 채우기 (진행중)
+const createFullReplyContent = function () {
+  const modal = document.querySelector('.modalForAllReplyBtn');
+
+  const makeDiv = document.createElement('div');
+  const makeSpan = document.createElement('span');
+  const makeImg = document.createElement('img');
+
+  for (let i = 0; i < articleStatus.replyWho.length; i++) {
+    document.querySelector('.modalForAllReplyBtn').insertAdjacentHTML(
+      'beforeend',
+      `
+    <div class='replyContent'>
+      <img class='replyProfilePhoto' src="image/profilePhoto/${articleStatus.replyWho[i]}.jpg" alt="error">
+      <span class="replyProfileNickName">${membersAllInfo.nickName[articleStatus.replyWho[i]]}</span>
+      <span class="replyText">${articleStatus.replyWhat[i]}</span>
+      <button class="replyRemoveBtn" id="btn${i}">삭제</button>      
+    </div>
+    `
+    );
+  }
+};
+
+// 모달창 댓글 싹 지우기 리셋할라고
+const removeFullReplyContent = function () {
+  document.querySelector('.modalForAllReplyBtn').innerHTML = '';
+};
+
+// 풀댓글창 삭제버튼 활성화
+
+const deleteBtnActiveInFullWindow = function () {
+  const selectDelBtn = document.querySelectorAll('.replyRemoveBtn');
+  selectDelBtn.forEach(function (input) {
+    input.addEventListener('click', function () {
+      // 클릭한 버튼 id값 가져온다.
+      const temp = input.id;
+      // id값에서 넘버 추출
+      // 이 값의 숫자가 articleStatus에서 리플 쓴거 index임.
+      const btnNumb = Number(temp.slice(-1));
+      const replyMemberUniqueNumb = articleStatus.replyWho[btnNumb];
+
+      // 현재 로그인한 사람과 댓글의 작성자 일치할때만 작동해야한다.
+      // 넘버를 바탕으로 articlestatus 에서 글 쓴 내용 글 적은내용 지운다.
+      // 새로운 arr를 articlestatus에 있는 내용으로 대체한다.
+
+      if (replyMemberUniqueNumb === clientStatus.memUniqueNumb) {
+        let tempWhatArr = [];
+        let tempWhoArr = [];
+
+        for (let i = 0; i < btnNumb; i++) {
+          tempWhatArr.push(articleStatus.replyWhat[i]);
+          tempWhoArr.push(articleStatus.replyWho[i]);
+        }
+
+        for (let i = btnNumb + 1; i < articleStatus.replyWho.length; i++) {
+          tempWhatArr.push(articleStatus.replyWhat[i]);
+          tempWhoArr.push(articleStatus.replyWho[i]);
+        }
+
+        articleStatus.replyWhat = tempWhatArr;
+        articleStatus.replyWho = tempWhoArr;
+      }
+
+      // 바뀐 내용으로 리프래쉬 하기 위해서
+      // removefullreplycontent 해주고 create해준다.
+
+      removeFullReplyContent();
+      createFullReplyContent();
+      deleteBtnActiveInFullWindow();
+      showRecentlyReply();
+    });
+  });
 };
 
 // 약관 내용 넣기
@@ -616,5 +777,6 @@ document.querySelector('.termsTextBox').value = `
 제 15 조 (관할법원)
 서비스와 관련하여 사이트와 회원간에 분쟁이 발생할 경우 사이트의 본사 소재지를 관할하는 법원을 관할법원으로 합니다.
 [부칙]
+
 (시행일) 이 약관은 2015년 01월부터 시행합니다.
 `;
