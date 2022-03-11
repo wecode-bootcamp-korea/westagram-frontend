@@ -675,7 +675,86 @@ const deleteBtnActiveInFullWindow = function () {
   });
 };
 
+// 검색어랑 일치하는것들 배열로 만들기
+
+const makeCloseArray = function () {
+  // 검색내용 대문자로 변환
+  const input = document.querySelector('.headerSearchBar').value;
+
+  if (input) {
+    const whatSearched = input.toUpperCase();
+
+    // 멤버이름 다 대문자로 변환
+    const memeberNickName = membersAllInfo.nickName.map(function (x) {
+      return x.toUpperCase();
+    });
+
+    const resultMemberNick = [];
+    const resultMemberNumb = [];
+
+    for (let i = 0; i < memeberNickName.length; i++) {
+      if (memeberNickName[i].indexOf(whatSearched) > -1) {
+        resultMemberNick.push(memeberNickName[i]);
+        resultMemberNumb.push(i);
+      }
+    }
+    return [resultMemberNick, resultMemberNumb];
+  }
+};
+
+// 배열 일치하는것들 검색어창 요소로 넣기
+const showSearchingDisplay = function () {
+  const searchResultArr = makeCloseArray(); // [wecode,wecode2]
+
+  if (searchResultArr) {
+    const searchingNick = searchResultArr[0];
+    const uniqueNumb = searchResultArr[1];
+
+    for (let i = 0; i < 3; i++) {
+      if (searchingNick[i]) {
+        document.querySelector('.modalForSearching').insertAdjacentHTML(
+          'afterbegin',
+          `
+          <div class='searchingContent'>
+            <img class='searchingProfilePhoto' src="image/profilePhoto/${uniqueNumb[i]}.jpg" alt="profile image" />
+            <span class="searchingProfileNickName">${searchingNick[i]}</span>
+          </div>
+          `
+        );
+      }
+    }
+  }
+};
+
+// 요소 싹 다 제거
+const clearSearchingDisplay = function () {
+  document.querySelector('.modalForSearching').innerHTML = '';
+};
+
+// 검색창에 입력할때마다 화면 리프래쉬 해주는 기능
+const refreshSearchingWindow = function () {
+  document.querySelector('.headerSearchBar').addEventListener('keyup', function () {
+    clearSearchingDisplay();
+    showSearchingDisplay();
+    toggleSearchingModal();
+  });
+};
+refreshSearchingWindow();
+
+// 내용 없을때 서칭 모달창 닫기
+const toggleSearchingModal = function () {
+  // 내용 없을때 모달창 닫기
+  if (!document.querySelector('.headerSearchBar').value) {
+    document.querySelector('.modalForSearching').style.display = 'none';
+  } else {
+    document.querySelector('.modalForSearching').style.display = 'flex';
+  }
+};
+
+toggleSearchingModal();
+
 // 약관 내용 넣기
+
 document.querySelector('.termsTextBox').value = `
 제 1 장 총 칙
 

@@ -1249,6 +1249,45 @@ main .mainRight .sidebarFooter span {
   z-index: 10;
 }
 
+.modalForSearching {
+  position: absolute;
+  top: 8vh;
+  left: 30vw;
+
+  margin: auto;
+  padding: 0 3vw;
+
+  width: 35vw;
+  height: 24vh;
+
+  display: flex;
+  flex-direction: column;
+
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+
+  overflow: hidden;
+  z-index: 10;
+}
+
+.modalForSearching .searchingContent {
+  width: 30vw;
+  height: 8vh;
+
+  display: flex;
+  align-items: center;
+}
+
+.modalForSearching .searchingContent .searchingProfilePhoto {
+  height: 8vh;
+  border-radius: 70%;
+}
+
+.modalForSearching .searchingContent .searchingProfileNickName {
+  margin-left: 3vw;
+}
+
 /* 풀 댓글창 들어가는 스타일  */
 
 .replyContent {
