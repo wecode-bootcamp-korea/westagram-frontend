@@ -4,16 +4,13 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  height: 700px;
-  /* border: 10px solid blue; */
-  /* background-color: tomato; */
 }
 
 .logo {
-  font-family: "Lobster", cursive;
-  font-size: 80px;
-  text-align: center;
   padding: 60px 175px;
+  font-family: "Lobster", cursive;
+  text-align: center;
+  font-size: 80px;
 }
 
 /* 로그인 레이아웃 */
@@ -26,10 +23,10 @@
 .login input {
   width: 530px;
   height: 60px;
+  padding: 0px 20px;
   background-color: #efefef;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 5px;
-  padding: 0px 20px;
   font-size: 20px;
 }
 
@@ -39,13 +36,13 @@
 
 .login input::placeholder {
   color: #a1a1a1;
-  /* padding: 0px 20px; */
   font-size: 23px;
 }
 
 .login input:focus::placeholder {
   color: transparent;
 }
+
 .login input:focus {
   outline: none;
   padding: 0px 20px;
@@ -54,12 +51,12 @@
 }
 
 .login__btn {
-  background-color: #c4e1fb;
-  border: none;
   height: 50px;
-  border-radius: 10px;
   margin-top: 25px;
+  background-color: #c4e1fb;
   color: white;
+  border: none;
+  border-radius: 10px;
   font-size: 23px;
   font-weight: 600;
 }

@@ -1,35 +1,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&family=Lobster+Two:ital,wght@0,400;0,700;1,700&display=swap");
 
-/* 작성할 때, 배경색을 임의로 지정해놓고 하면 시각적으로 편함 */
+/* 전체 */
 .wrap-main {
   position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  height: 100vh;
   width: 100vw;
-  background-color: #fafafa;
 }
 
 /* status-bar  */
 /* 좌측 */
 .status-bar {
-  background-color: white;
-  height: 60px;
   display: flex;
+  background-color: white;
   border: 1px solid #fafafa;
   margin-bottom: 40px;
+  padding: 10px 0;
 }
 
 .status-bar__logo {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 
 .status-bar__logo--stick {
-  /* background-color: black; */
-  margin: 0px 10px;
+  width: 1px;
+  height: 15px;
+  background-color: black;
+  margin: 10px;
 }
 
 .status-bar__logo > span {
@@ -59,64 +56,42 @@
 /* 중간 */
 .status-bar__search {
   display: flex;
+  position: relative;
   justify-content: center;
   align-items: center;
   color: var(--color-grey);
-  position: relative;
-  /* width: 10px; */
 }
 
 .status-bar__search input {
-  border: 2px solid var(--color-grey);
   width: 65%;
-  height: 45%;
+  border: 2px solid var(--color-grey);
   background-color: #fafafa;
 }
 
-/* .status-bar__search span {
-  font-size: 13px;
-  position: absolute;
-  bottom: 20px;
-} */
-
-/* .status-bar__search > input::placeholder {
+.status-bar__search input::placeholder {
   text-align: center;
   font-size: 13px;
   color: var(--color-grey);
-} */
+}
 
-/* .status-bar__search i {
+/* input창  클릭시 placeholder 이동 */
+.status-bar__search input:focus::placeholder {
+  text-align: left;
+}
+
+.status-bar__search input:focus {
+  padding-left: 28px;
+}
+
+/* input창 클릭시 icon의 이동 */
+.status-bar__search i {
   position: absolute;
   top: 50%;
   right: 54%;
-} */
-
-/* .status-bar__position span {
-  margin-right: 5px;
-} */
-
-.status-bar__position {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  width: 100%;
-  height: 30px;
-  position: absolute;
 }
 
-.status-bar__position > i {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.status-bar__span {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 5px;
-  margin-top: 2px;
-  font-size: 15px;
+.status-bar__search:focus-within i {
+  left: 20%;
 }
 
 /* 우측 */
@@ -131,7 +106,6 @@
   justify-content: center;
   align-items: center;
   width: 40%;
-  /* margin: 0 25px; */
 }
 
 .status-bar__icon img {
@@ -145,53 +119,52 @@
 
 /* feeds작성 */
 .main {
-  width: 100%;
-  display: flex;
-  /* background-color: #fafafa; */
   position: relative;
+  width: 100%;
+  background-color: #ffffff;
 }
 
 .feeds {
-  position: absolute;
-  top: 0;
-  left: 30%;
-  transform: translate(-30%, 0);
-  width: 500px;
-  border: none;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  width: 500px;
+  top: 0;
+  left: 30%;
+  transform: translate(-30%, 0);
+  border: none;
 }
 
 .feedscontent {
-  width: 470px;
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: #ffffff;
-  border: 2px solid rgba(0, 0, 0, 0.1);
+  width: 470px;
   top: 0;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
 }
 
 .feedscontent__profile {
-  width: 100%;
   display: flex;
   align-items: center;
+  width: 100%;
   padding: 10px 15px;
 }
 
 .feedscontent__topbar {
-  width: 90%;
   display: flex;
-  align-items: center;
   justify-content: flex-start;
+  align-items: center;
+  width: 90%;
 }
 
 .feedscontent__icon {
-  width: 10%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  width: 10%;
 }
 
 .feedscontent__icon > i {
@@ -210,10 +183,10 @@
 }
 
 .feedscontent__status-bar {
-  width: 100%;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 .feedscontent__img > img {
@@ -222,10 +195,10 @@
 }
 
 .feedscontent__right {
-  padding: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 5px;
 }
 
 .feedscontent__left > img,
@@ -243,17 +216,22 @@
 }
 
 .feedscontent__like {
-  width: 100%;
   display: flex;
   justify-items: start;
-  padding: 10px;
   flex-direction: column;
+  width: 100%;
+  padding: 10px;
 }
 
 .feedscontent__like-text {
-  display: block;
   margin: 6px 0;
 }
+
+.feedscontent__like-text--flex {
+  display: flex;
+  align-items: center;
+}
+
 .feedscontent__like-text > img {
   width: 17px;
   height: 17px;
@@ -282,13 +260,12 @@
 /* 댓글 달기 */
 .feedscomment {
   width: 100%;
-  height: 25px;
-  padding: 0 10px;
+  padding: 5px 10px;
 }
 
 .feedscomment__input {
-  border: none;
   width: 90%;
+  border: none;
   font-size: 15px;
 }
 
@@ -314,14 +291,9 @@
 
 /* main-right */
 .main-right {
-  /* background-color: tomato; */
   position: absolute;
   top: 0;
   left: 55%;
-  width: 300px;
-  /* transform: translate(-30%, 0); */
-  /* width: 230px; */
-  /* height: 470px; */
 }
 
 .main-right__mystory,
@@ -331,6 +303,7 @@
   align-items: center;
   padding: 10px 40px 10px 10px;
 }
+
 .main-right__otherstory {
   padding: 0px 40px 10px 10px;
 }
@@ -366,8 +339,8 @@
 /* 모두보기 */
 .main-right__allstory {
   border: 2px solid rgba(0, 0, 0, 0.1);
-  overflow-y: scroll;
   height: 180px;
+  overflow-y: scroll;
 }
 
 .main-right__allstory::-webkit-scrollbar {
@@ -403,6 +376,7 @@
   padding: 0;
   padding: 10px 0px 0px 10px;
 }
+
 .main-right__otherstory--follow:last-child {
   padding-bottom: 10px;
 }
@@ -441,7 +415,6 @@
 }
 
 /* 반응형 웹사이트 구현 */
-
 @media only screen and (max-width: 1400px) {
   .main-right {
     display: none;
@@ -454,38 +427,37 @@
     transform: translate(-50%, 0);
   }
 }
-/* profile 구현 */
+
+/* profile hidden구현 */
 .profile {
-  background-color: white;
-  border: 2px solid rgba(0, 0, 0, 0.2);
-  width: 200px;
   position: absolute;
+  width: 200px;
   right: 10%;
   top: 50px;
   border-radius: 10px;
-  display: flex;
-  flex-direction: column;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  background-color: white;
+  z-index: 100;
 }
 
-.profile__profile {
-  font-size: 20px;
-  display: flex;
+.profile__setting {
   padding: 10px 10px 2px 25px;
+  font-size: 20px;
   transition: 0.2s ease-in-out;
 }
 
-.profile__profile:hover {
+.profile__setting:hover {
   background-color: rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
 
-.profile__profile > span {
+.profile__setting > span {
   margin-left: 10px;
 }
 
-.profile__profile:nth-child(3),
-.profile__profile:nth-child(3) > span {
-  transform: translate(-2px);
+.profile__setting:nth-child(2),
+.profile__setting:nth-child(2) > span {
+  transform: translate(3px);
 }
 
 .hidden {

@@ -8,63 +8,56 @@
     <title>westagram main</title>
   </head>
   <body>
-    <div class="wrap wrap-main">
+    <div class="wrap-main">
       <nav class="status-bar">
         <div class="status-bar__logo">
-          <a href="login.html"><img src="img/instagram.png" /></a>
-          <div class="status-bar__logo--stick">|</div>
+          <a href="login.html">
+            <img alt="westa-logo" src="img/instagram.png" />
+          </a>
+          <div class="status-bar__logo--stick"></div>
           <span>westagram</span>
         </div>
-        <div class="status-bar__search">
-          <input type="text" />
-          <div class="status-bar__position">
-            <i class="fa-solid fa-magnifying-glass fa-xs"></i>
-            <span class="status-bar__span">검색</span>
-          </div>
-          <!-- <input type="text" placeholder="검색" /> -->
-        </div>
+        <form class="status-bar__search">
+          <input type="text" placeholder="검색" />
+          <i class="fa-solid fa-magnifying-glass fa-xs"></i>
+        </form>
         <div class="status-bar__mypage">
           <div class="status-bar__icon">
-            <img src="img/compass.png" />
-            <img src="img/heart.png" />
-            <img src="img/profile.png" />
+            <img alt="icon-compass" src="img/compass.png" />
+            <img alt="icon-heart" src="img/heart.png" />
+            <img alt="icon-profile" src="img/profile.png" />
           </div>
         </div>
+
         <div class="profile hidden">
-          <div class="profile__profile">
-            <div>
+          <ul class="profile__settings">
+            <li class="profile__setting">
               <i class="fa-solid fa-user fa-sm"></i>
-            </div>
-            <span>Profile</span>
-          </div>
-          <div class="profile__profile">
-            <div>
+              <span>Profile</span>
+            </li>
+            <li class="profile__setting">
               <i class="fa-solid fa-bookmark fa-sm"></i>
-            </div>
-            <span>Saved</span>
-          </div>
-
-          <div class="profile__profile">
-            <div>
+              <span>Saved</span>
+            </li>
+            <li class="profile__setting">
               <i class="fa-solid fa-gear fa-sm"></i>
-            </div>
-            <span>Settings</span>
-          </div>
-
-          <div class="profile__profile">
-            <div>
+              <span>Settings</span>
+            </li>
+            <li class="profile__setting">
               <i class="fa-solid fa-arrow-right-to-bracket fa-sm"></i>
-            </div>
-            <span>Log out</span>
-          </div>
+              <span>Log out</span>
+            </li>
+          </ul>
         </div>
       </nav>
+
       <main class="main">
         <div class="feeds">
           <article class="feedscontent">
             <div class="feedscontent__profile">
               <div class="feedscontent__topbar">
                 <img
+                  alt="myprofile-picture"
                   src="https://avatars.githubusercontent.com/u/56650238?v=4"
                 />
                 <span>그니당</span>
@@ -74,23 +67,29 @@
               </div>
             </div>
             <div class="feedscontent__img">
-              <img src="https://avatars.githubusercontent.com/u/56650238?v=4" />
+              <img
+                alt="feed-picture"
+                src="https://avatars.githubusercontent.com/u/56650238?v=4"
+              />
             </div>
 
             <div class="feedscontent__status-bar">
               <div class="feedscontent__right">
-                <img src="img/compass.png" />
-                <img src="img/heart.png" />
-                <img src="img/profile.png" />
+                <img alt="feedscontent-icon" src="img/compass.png" />
+                <img alt="feedscontent-icon" src="img/heart.png" />
+                <img alt="feedscontent-icon" src="img/profile.png" />
               </div>
               <div class="feedscontent__left">
-                <img src="img/profile.png" />
+                <img alt="feedscontent-icon" src="img/profile.png" />
               </div>
             </div>
 
             <div class="feedscontent__like">
-              <div class="feedscontent__like-text">
+              <div
+                class="feedscontent__like-text feedscontent__like-text--flex"
+              >
                 <img
+                  alt="feedscontent-avatar"
                   src="https://avatars.githubusercontent.com/u/56650238?v=4"
                 />
                 <span>그니당</span>님 <span>외 10명</span>이 좋아합니다.
@@ -113,7 +112,10 @@
         <main class="main-right">
           <div class="main-right__mystory">
             <div class="main-right__img main-right__img--xl">
-              <img src="https://avatars.githubusercontent.com/u/56650238?v=4" />
+              <img
+                alt="mystory-picture"
+                src="https://avatars.githubusercontent.com/u/56650238?v=4"
+              />
             </div>
             <div class="main-right__text">
               <h3>wecode_bootcamp</h3>
@@ -128,6 +130,7 @@
             <div class="main-right__otherstory">
               <div class="main-right__img">
                 <img
+                  alt="story-picture"
                   src="https://avatars.githubusercontent.com/u/56650238?v=4"
                 />
               </div>
@@ -139,6 +142,7 @@
             <div class="main-right__otherstory">
               <div class="main-right__img">
                 <img
+                  alt="story-picture"
                   src="https://avatars.githubusercontent.com/u/56650238?v=4"
                 />
               </div>
@@ -150,6 +154,7 @@
             <div class="main-right__otherstory">
               <div class="main-right__img">
                 <img
+                  alt="story-picture"
                   src="https://avatars.githubusercontent.com/u/56650238?v=4"
                 />
               </div>
@@ -168,6 +173,7 @@
             <div class="main-right__otherstory main-right__otherstory--follow">
               <div class="main-right__img">
                 <img
+                  alt="recommend-picture"
                   src="https://avatars.githubusercontent.com/u/56650238?v=4"
                 />
               </div>
@@ -182,6 +188,7 @@
             <div class="main-right__otherstory main-right__otherstory--follow">
               <div class="main-right__img">
                 <img
+                  alt="recommend-picture"
                   src="https://avatars.githubusercontent.com/u/56650238?v=4"
                 />
               </div>
@@ -196,6 +203,7 @@
             <div class="main-right__otherstory main-right__otherstory--follow">
               <div class="main-right__img">
                 <img
+                  alt="recommend-picture"
                   src="https://avatars.githubusercontent.com/u/56650238?v=4"
                 />
               </div>
@@ -211,6 +219,7 @@
         </main>
       </main>
     </div>
+
     <script
       src="https://kit.fontawesome.com/5db0f8885f.js"
       crossorigin="anonymous"
