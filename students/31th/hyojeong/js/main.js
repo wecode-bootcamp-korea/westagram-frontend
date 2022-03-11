@@ -143,7 +143,6 @@ loginForm.addEventListener("submit", (e) => {
 
   checkValidity(id, password);
 
-  console.log(id, password);
   //Clear input
   idInput.value = passwordInput.value = "";
 
@@ -164,7 +163,7 @@ loginForm.addEventListener("input", () => {
     loginForm.classList.remove("active");
 });
 
-//4.log out when clicking logout button (additional)
+//4.log out when logout button is clicked (additional)
 logoutBtn.addEventListener("click", () => {
   localStorage.removeItem("id");
   location.reload();
@@ -172,7 +171,7 @@ logoutBtn.addEventListener("click", () => {
 
 // nav parts
 
-// 1. user search function on nav search box (mission 7)
+// 1. function to search user's id in the nav search box (mission 7)
 function filterResult(term) {
   resultIds = userIds.filter((user) => user.id.includes(term));
   if (term === "") resultIds = [];
@@ -198,7 +197,7 @@ navForm.addEventListener("input", (e) => {
   filterResult(term);
 });
 
-// 2. Show nav - profile menu when clicking the profile icon (mission 8)
+// 2. Show nav - profile menu when the profile icon is clicked (mission 8)
 document.addEventListener("click", (e) => {
   const profileIcon = e.target.closest(".profile-icon");
   if (profileIcon) profileMenu.classList.toggle("open");
@@ -207,17 +206,17 @@ document.addEventListener("click", (e) => {
   }
 });
 
-// article parts
+// main - article parts
 
 // article - comment part (mission 6)
-// 1. create comment function
+// 1. function to create a comment
 function createComment(comment) {
   const li = document.createElement("li");
   li.innerHTML = `<strong>${id}</strong> ${comment}  <button class ="heart-btn" ><i class ="far fa-heart"></i></button>  <button class="delete-btn"  ><i class="fas fa-times"></i></button>`;
   li.className = "comment";
   comments.appendChild(li);
 }
-// 2. submit comment function
+// 2. function to submit a comment
 function submitComment(e) {
   e.preventDefault();
   if (commentInput.value === "") return;
@@ -225,7 +224,7 @@ function submitComment(e) {
   createComment(newComment);
   commentInput.value = "";
 }
-// 3. delete btn & paint heart btn on comment line
+// 3. function to delete btn & paint heart btn in the comment line
 function handleCommentBtn(e) {
   const comment = e.target.closest("li");
 
@@ -247,7 +246,7 @@ commentForm.addEventListener("input", (e) => {
 
 comments.addEventListener("click", handleCommentBtn);
 
-// paint heart, bookmark btn when clicking on the article-btns bar
+// paint heart, bookmark btn in the article-btns bar when they are clicked
 document
   .querySelector(".article-heart-btn")
   .addEventListener("click", function () {
