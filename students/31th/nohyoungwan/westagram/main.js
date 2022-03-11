@@ -20,7 +20,7 @@ function addComment(Value) {
 
 }  
 
-addComment("이것이 자바스크립트구나" );  
+addComment("이것이 자바스크립트구나!!" );  
 
 
 
