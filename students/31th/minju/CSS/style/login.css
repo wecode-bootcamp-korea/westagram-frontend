@@ -6,17 +6,16 @@ body{
 
 .loginContainer{
     width: 420px;
-    height: 500px;
     margin: 100px auto;
     border: 1px solid var(--color-border-grey);
-    text-align: center;
     background-color:var(--color-white);
+    text-align: center;
 }
 
 .logo{
+    padding : 40px 40px 50px;
     font-family: Lobster;
     font-size: 48px;
-    padding : 40px 40px 50px;
 }
 
 .loginForm{
@@ -27,13 +26,12 @@ body{
 
 .loginForm__id, .loginForm__pwd{
     width: 300px;
+    margin: 4px;
     padding: 12px;
     background-color: var(--color-grey);
     border: 1px solid var(--color-border-grey);
     border-radius: 3px;
-    margin: 4px;
 }
-
 
 .loginForm__id::placeholder, .loginForm__pwd::placeholder{
     color: var(--color-dark-grey);
@@ -44,6 +42,7 @@ body{
 }
 
 .loginForm__submit{
+    opacity: 0.3;   
     width: 300px;
     margin: 20px;
     padding: 10px;
@@ -53,7 +52,6 @@ body{
     border-radius: 3px;
     font-size: var(--font-weight-bold);
     font-weight: 600; 
-    opacity: 0.3;   
 }
 
 .checked{
@@ -62,10 +60,10 @@ body{
 
 .forgotPassword{
     display: inline-block;
-    margin-top: 130px;
+    margin: 110px 0px 40px;
+    color: var(--color-navy);
     font-size: smaller;
     font-weight: var(--font-weight-bold);
-    color: var(--color-navy);
     cursor: pointer;
 }
 

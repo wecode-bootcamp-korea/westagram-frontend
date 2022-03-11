@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instagram</title>
+    <title>Westagram</title>
     <link rel="stylesheet" href="../CSS/style/main.css">
     <script src="../JS/main.js" defer></script>
     <script src="https://kit.fontawesome.com/bc9117c72f.js" crossorigin="anonymous"></script>
@@ -41,15 +41,15 @@
                 <div class="toggle__arrow"></div>
                 <div class="profileOptions__item">
                     <i class="fa-solid fa-user"></i>
-                    <div class="profile__description">프로필</div>
+                    <div class="profileOption__description">프로필</div>
                 </div>
                 <div class="profileOptions__item">
                     <i class="fa-regular fa-bookmark"></i>
-                    <div class="profile__description">저장됨</div>
+                    <div class="profileOption__description">저장됨</div>
                 </div>
                 <div class="profileOptions__item">
                     <i class="fa-solid fa-gear"></i>
-                    <div class="profile__description">설정</div>
+                    <div class="profileOption__description">설정</div>
                 </div>
                 <div class="profileOptions__item">로그아웃</div>
             </div>
@@ -61,10 +61,11 @@
         <!-- main left -->
         <div class="main__left">
             <article class="feed">
+                <!-- feed header -->
                 <header class="feed__header">
                     <div class="feed__header__left">
                         <div class="img__container">
-                            <img class="avatar__img" src="../IMG/myprofile.jpeg" alt="">
+                            <img class="avatar__img" alt="my profile image" src="../IMG/myprofile.jpeg">
                          </div>
                         <div class="avatar__id">thisisme</div>
                     </div>
@@ -72,9 +73,11 @@
                         <i class="fa fa-light fa-ellipsis"></i>
                     </div>
                 </header>
-                <div class="feed__image">
-                    <img src="../IMG/baking.jpeg" alt="">
+                <!-- feed img -->
+                <div class="feed__image__container">
+                    <img alt="feed content image" src="../IMG/baking.jpeg">
                 </div>
+                <!-- feed reaction : icons & likes -->
                 <div class="feed__reaction">
                     <div class="feed__reaction__icons">
                         <div class="feed__reaction__icons__left">
@@ -88,33 +91,36 @@
                     </div>
                     <div class="feed__reaction__likes">
                         <div class="img__container">
-                            <img class="avatar__img" src="../IMG/profile2.jpeg" alt="">
+                            <img class="avatar__img" alt="user image"src="../IMG/profile2.jpeg">
                         </div>
                             <span>
                             <a class="avatar__id" href="#">aineworld</a>님 <b>외 10명</b>이 좋아합니다.
                         </span>                        
                     </div>
                 </div>
+                <!-- feed post content -->
                 <div class="feed__post">
                     <a href="#" class="avatar__id">thisisme</a>
                     <span>위워크에서 진행한 베이킹 클래스...</span>
                     <button>더 보기</button>
                 </div>
+                <!-- feed comments -->
                 <div class="feed__comments">
                     <div class="feed__comment__item" data-num="1">
                         <a href="#" class="avatar__id">canon_mj</a>
                         <span>거봐~너무 좋았잖아~</span>
-                        <span class="feed__comment__more">
+                        <span class="feed__comment__reactions">
                             <i class="fa-solid fa-x" data-num="1"></i>
                             <i class="fa-regular fa-heart" data-like="1"></i>
                         </span>
                     </div>
                 </div>
-
+                <!-- feed posting time -->
                 <div class="feed__postTime">42분 전</div>
+                <!-- 댓글 창 -->
                 <form class="feed__addComment">
                     <input class="feed__addComment__input" type="text" placeholder="댓글 달기...">
-                    <button class="feed__addComment__button">게시</button>
+                    <button type="submit" class="feed__addComment__button">게시</button>
                 </form>
             </article>
         </div>
@@ -123,7 +129,7 @@
         <div class="main__right">
             <div class="myId">
                 <div class="img__container">
-                    <img class="avatar__img" src="../IMG/myprofile.jpeg" alt="">
+                    <img class="avatar__img" alt="my profile image" src="../IMG/myprofile.jpeg">
                 </div>
                 <div class="id__container">
                     <div class="avatar__id">wecode_bootcamp</div>
@@ -139,7 +145,7 @@
                 <div class="story__items">
                     <div class="story__items__item">
                         <div class="img__container">
-                            <img class="avatar__img" src="../IMG/profile3.jpeg" alt="">
+                            <img class="avatar__img" alt="random user image" src="../IMG/profile3.jpeg">
                         </div>   
                         <div class="id__container">
                             <div class="avatar__id">_yum_s</div>
@@ -148,7 +154,7 @@
                     </div>
                     <div class="story__items__item">
                         <div class="img__container">
-                            <img class="avatar__img" src="../IMG/profile4.jpeg" alt="">
+                            <img class="avatar__img" alt="random user image" src="../IMG/profile4.jpeg">
                         </div>   
                         <div class="id__container">
                             <div class="avatar__id">drink_eat_drink</div>
@@ -157,7 +163,7 @@
                     </div>
                     <div class="story__items__item">
                         <div class="img__container">
-                            <img class="avatar__img" src="../IMG/profile5.jpeg" alt="">
+                            <img class="avatar__img" alt="random user image" src="../IMG/profile5.jpeg">
                         </div>   
                         <div class="id__container">
                             <div class="avatar__id">hyukyc</div>
@@ -166,7 +172,7 @@
                     </div>
                     <div class="story__items__item">
                         <div class="img__container">
-                            <img class="avatar__img" src="../IMG/profile8.jpeg" alt="">
+                            <img class="avatar__img"alt="random user image" src="../IMG/profile8.jpeg">
                         </div>   
                         <div class="id__container">
                             <div class="avatar__id">jminkeek</div>
@@ -185,7 +191,7 @@
                 <div class="recommendations__items">
                     <div class="recommendations__items__item">
                         <div class="img__container">
-                            <img class="avatar__img" src="../IMG/profile6.jpeg" alt="">
+                            <img class="avatar__img" alt="random user image" src="../IMG/profile6.jpeg">
                         </div>     
                         <div class="id__container">
                             <div class="avatar__id">saranghaeeee</div>
@@ -195,7 +201,7 @@
                     </div>
                     <div class="recommendations__items__item">
                         <div class="img__container">
-                            <img class="avatar__img" src="../IMG/profile7.jpeg" alt="">
+                            <img class="avatar__img" alt="random user image" src="../IMG/profile7.jpeg">
                         </div>     
                         <div class="id__container">
                             <div class="avatar__id">wecode_bootcamp</div>
@@ -205,7 +211,17 @@
                     </div>
                     <div class="recommendations__items__item">
                         <div class="img__container">
-                            <img class="avatar__img" src="../IMG/profile8.jpeg" alt="">
+                            <img class="avatar__img" alt="random user image" src="../IMG/profile8.jpeg">
+                        </div>     
+                        <div class="id__container">
+                            <div class="avatar__id">weworkspace</div>
+                            <div class="avatar__description">wecode_bootcamp님 외 300명이 팔로우합니다</div>
+                        </div>
+                        <button class="follow">팔로우</button>
+                    </div>
+                    <div class="recommendations__items__item">
+                        <div class="img__container">
+                            <img class="avatar__img" alt="random user image" src="../IMG/profile8.jpeg">
                         </div>     
                         <div class="id__container">
                             <div class="avatar__id">weworkspace</div>
@@ -235,9 +251,5 @@
             <div class="copyright">© 2022 INSTAGRAM FROM META</div>
         </div>
     </main>
-
- 
-
-
 </body>
 </html>
