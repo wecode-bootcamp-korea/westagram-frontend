@@ -1,14 +1,46 @@
+h1.loginTitle{
+    font-family: 'Lobster', cursive;
+    margin:15px 0;
+}
 
-body{
-    background-color: rgb(246, 252, 230);
-    
+.username, .pwd{
+    width:200px;
+    margin-bottom:10px;
+    padding:10px;
+    background-color: lightyellow;
+    border : 1px solid green;
 }
-main{
+
+.loginBtn{
+    width:200px;
+    height:30px;
+    color:white;
+    background-color: lightblue;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.btnActivate{
+    width:200px;
+    color:white;
+    background-color: blue;
+    border:none;
+    border-radius:5px;
+}
+
+.loginForm{
     display:flex;
-    justify-content: center;
-    align-items:center;
-    height : 100%;
+    flex-direction: column;
+    align-items: center;
 }
+
+.forgetPwd{
+    margin : 50px 0 0 5px;
+    font-size:x-small;
+    text-decoration: none;
+}
+
 .login{
     display:flex;
     flex-direction:column;
@@ -19,55 +51,12 @@ main{
     background-color: white;
     border : 1px solid yellow;
 }
-.login-container{
-    height: 100px;
-    display:flex;
-    flex-direction: column;
-    justify-content: space-between;
+
+main{
+    height: 100%;
+    display: grid;
+    place-items: center;
+    background-color: rgb(246, 252, 230);
 }
 
-h1.login-title{
-    font-family: 'Lobster', cursive;
-    margin:15px 0;
-}
 
-.username, .pwd{
-    width:200px;
-    height : 30px;
-    padding:10px;
-    background-color: lightyellow;
-    border : 1px solid yellow;
-
-}
-.login-btn{
-    width:200px;
-    height:30px;
-    background-color: lightblue;
-    color:white;
-    border:none;
-    border-radius:5px;
-    cursor:pointer;
-}
-.btn-activate{
-    width:200px;
-    background-color: blue;
-    color:white;
-    border:none;
-    border-radius:5px;
-}
-.forgetPwd{
-    text-decoration: none;
-    font-size:x-small;
-    margin : 50px 0 0 5px;
-}
-
-footer{
-    height:40px;
-    display : flex;
-    justify-content: center;
-    
-}
-.footer-text {
-    text-decoration:none;
-    margin:10px;
-}
