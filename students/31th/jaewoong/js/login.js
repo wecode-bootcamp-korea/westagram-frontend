@@ -5,11 +5,21 @@ const pwd = document.querySelector('.pwd');
 const loginBtn = document.querySelector('.loginBtn');
 const BTN_ACTIVATE ="btnActivate";
 
+const loginBtnActivate=()=>{
+  loginBtn.classList.add(BTN_ACTIVATE);
+  loginBtn.disabled=false;
+}
+
+const loginBtnDectivate=()=>{
+  loginBtn.classList.remove(BTN_ACTIVATE);
+  loginBtn.disabled=true;
+}
+
 const btnColorHandler = (e) =>{
   e.value=username.value;
   username.value && pwd.value
-  ? loginBtn.classList.add(BTN_ACTIVATE)
-  : loginBtn.classList.remove(BTN_ACTIVATE)
+  ? loginBtnActivate()
+  : loginBtnDectivate()
 }
 
 const checkId=()=>{
