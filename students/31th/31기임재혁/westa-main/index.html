@@ -37,18 +37,17 @@
       <!-- div.feeds -->
       <div class="feeds">
         <div class="feeds-profile">
-          <div>
+          <div class="main-feeds">
             <div class="main-profile-box">
               <img class="profile-pic-1" src="/images/profiles/main-profile.jpeg" />
               <p class="user-nickname" class="font-1">jaehyuksssss</p>
             </div>
-            <div class="feeds-pic"></div>
             <img id="picture" src="/images/main-pic/feeds-pic.jpeg" />
-          </div>
+          
 
           <!--comment-->
           <div class="comment">
-            <div>
+            <div class="feeds-footer">
               <div class="comment-icon">
                 <div class="comment-left-icon">
                   <img class="icon" src="images/icon-image/heart.png" />
@@ -69,20 +68,18 @@
                       <span class="font" class="font-1">mong_dory님 외 100명이 좋아합니다</span>
                     </div>
                   </div>
-                  <div class="title-comment">
-                    <div class="comment">
-                      <span class="title-comment-1" class="font-1">jaehyuksssss</span>
-                      <span class="title-comment-2" class="font-1">연어 존밋텡쓰</span>
-                    </div>
-                    <div class="comment">
-                      <span class="title-comment-3" class="font-1">seeni</span>
-                      <span class="title-comment-4" class="font-1">맞지 존맛이라니깐</span>
-                    </div>
                   </div>
                   <div class="submit-form">
-                    <div class="input-comment">
-                      <p class="comment-box"><input type="text" name="댓글달기" value="댓글달기.."></p>
-                      <p><input type="submit" value="게시"></p>
+                    <div id="input-comment">
+                      <!-- write comments -->
+                      <div id="input-comment-view">
+                        
+                      </div>
+                      <!-- input comment -->
+                      <div class="input-comment-text">
+                        <input id="input-text" name="댓글달기" placeholder="댓글달기..">
+                        <button id="btn-submit">게시</button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -189,6 +186,8 @@
     </div>
   </div>
   </div>
+  <script src="comment.js">  
+  </script>
 </body>
 
 </html>
