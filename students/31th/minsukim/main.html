@@ -4,25 +4,128 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style/style.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="style/common.css" />
     <title>westagram - main page</title>
   </head>
-  <body class="main-body">
-    <header>
-      <div class="header">
-        <div class="header-component">1</div>
-        <div class="header-component">
-          <form>
-            <input type="text" name="search" placeholder="검색" />
-          </form>
+  <body class="mainBody">
+    <nav class="nav">
+      <div class="navInner">
+        <div class="titleWrapper">
+          <i class="fa-brands fa-instagram"></i>
+          <span>|</span>
+          <h1 class="title">Weeestagram</h1>
         </div>
-        <div class="header-component">3</div>
+
+        <div class="searchWrapper">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input class="searchBar" placeholder="검색" />
+        </div>
+
+        <div class="status">
+          <i class="fa-solid fa-compass"></i>
+          <i class="fa-solid fa-heart"></i>
+          <i class="fa-solid fa-user"></i>
+        </div>
       </div>
-    </header>
-    <main>
-      <div class="main-feed">main-feed</div>
-      <div class="main-sidebar">main-sidebar</div>
+    </nav>
+
+    <main class="mainContainer">
+      <article>
+        <section class="feed">
+          <div class="feedHeader">
+            <div>
+              <i class="fa-solid fa-circle-user"></i>
+              <p>feed text</p>
+            </div>
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
+          <div class="feedImage">
+            <img src="#" />
+          </div>
+          <div class="commentWrapper">
+            <div class="commentIcon">
+              <div>
+                <i class="fa-solid fa-heart"></i>
+                <i class="fa-solid fa-comment"></i>
+                <i class="fa-solid fa-envelope-open"></i>
+              </div>
+              <i class="fa-solid fa-bookmark"></i>
+            </div>
+
+            <div class="commentLike">
+              <i class="fa-solid fa-circle-user"></i>
+              <p><span class="userName">Minsu</span>님 외 20명이 좋아합니다.</p>
+            </div>
+
+            <ul id="commentList">
+              <li>
+                <span class="userName">Minsu</span>
+                <span>안녕하세요!</span>
+              </li>
+            </ul>
+          </div>
+
+          <form class="comment">
+            <input id="commentInput" type="text" placeholder="댓글달기..." />
+            <button id="submit">게시</button>
+          </form>
+        </section>
+      </article>
+
+      <aside>
+        <section class="sectionWrapper">
+          <i class="fa-solid fa-circle-user"></i>
+          <div class="sectionInner">
+            <p>sectionTest</p>
+            <p>sectionTest2</p>
+          </div>
+        </section>
+        <div class="contentWrapper">
+          <div class="contentHeader">
+            <p>스토리</p>
+            <p>모두 보기</p>
+          </div>
+          <section class="sectionWrapper">
+            <i class="fa-solid fa-circle-user"></i>
+            <div class="sectionInner">
+              <p>sectionTest</p>
+              <p>sectionTest2</p>
+            </div>
+          </section>
+          <section class="sectionWrapper">
+            <i class="fa-solid fa-circle-user"></i>
+            <div class="sectionInner">
+              <p>sectionTest</p>
+              <p>sectionTest2</p>
+            </div>
+          </section>
+          <section class="sectionWrapper">
+            <i class="fa-solid fa-circle-user"></i>
+            <div class="sectionInner">
+              <p>sectionTest</p>
+              <p>sectionTest2</p>
+            </div>
+          </section>
+          <section class="sectionWrapper">
+            <i class="fa-solid fa-circle-user"></i>
+            <div class="sectionInner">
+              <p>sectionTest</p>
+              <p>sectionTest2</p>
+            </div>
+          </section>
+        </div>
+        <section class="recommendationWrapper"></section>
+      </aside>
     </main>
+
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/d33ee304fc.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- JavsScript -->
     <script src="js/main.js"></script>
   </body>
 </html>
