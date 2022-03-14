@@ -89,15 +89,26 @@
   align-items: center;
 }
 
-.feedHeader div i {
+.feedHeader div img {
   margin-right: 10px;
-  font-size: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.feedHeaderName {
+  display: flex;
+  flex-direction: column;
 }
 
-.feedHeader div p {
-  display: inline-block;
+.feedHeaderName p {
   font-weight: bold;
   line-height: 11px;
+}
+
+.feedHeaderName span {
+  margin-top: 10px;
+  color: #c1c1c1;
+  font-size: 7px;
 }
 
 .feedImage {
@@ -139,8 +150,13 @@
   font-size: 14px;
 }
 
-.commentList li {
+.commentList li:first-child {
   margin-bottom: 8px;
+}
+
+.commentList li:last-child {
+  color: #c1c1c1;
+  font-size: 5px;
 }
 
 .commentWrapper .userName {
