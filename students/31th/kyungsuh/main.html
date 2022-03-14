@@ -7,6 +7,7 @@
     <script src="https://kit.fontawesome.com/c8a2d89948.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/c8a2d89948.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/common.css">
     <link rel="stylesheet" href="style/main.css">
@@ -17,20 +18,36 @@
 <body>
     <section class="cont">
         <nav class="nav">
-         <div class="navBox">
+            <div class="navBox">
                 <div class="title">
-                    <img src="src/insta.svg" alt="">
+                    <img src="src/insta.svg" alt="" class="imgLogo">
                     <span class="logo">instagram</span>
                 </div>
                 <div class="searchBox">
                     <input type="text" placeholder="검색" class="inpSearch">
+                    <div>
+                        <div class="resultBox">
+                            <div class="speechBubble"></div>
+                            <div class="innerBox">
+                                <header>
+                                    <div>
+                                        <h4>최근 검색 항목</h4>
+                                        <button>모두 지우기</button>
+                                    </div>
+                                </header>
+                                <ul class="searchList">
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="iconBox">
-                    <img src="src/explore.png" alt="탐색하기">
-                    <img src="src/heart.png" alt="좋아요 버튼">
-                    <img src="src/profile.png" alt="프로필 버튼">
-                </div>
-         </div>
+                        <div class="iconBox">
+                            <img src="src/explore.png" alt="탐색하기">
+                            <img src="src/heart.png" alt="좋아요 버튼">
+                            <img src="src/profile.png" alt="프로필 버튼" id="btnModal">
+                        </div>
+            </div>
         </nav>
         <main class="contMain">
             <section class="mainBox">
@@ -65,16 +82,12 @@
                         </div>
                         <!-- 댓글 창  -->
                         <div class="commentBox">
-                           <!-- <div class="innerBox">
-                                <div class="comment">댓글 달거야!!!!!</div>
-                                <img src="src/heart.png" alt="">
-                           </div> -->
+
                             <div class="moreIconBox">
                                 <img src="src/moreicon.svg" alt="더보기">
                             </div>
                         </div>
 
-                    <!-- 댓글 기능 구현하기 -->
                         <div class="commentInpBox">
                            <form class="innerBox">
                                 <input class="inpComment" type="text" placeholder="댓글달기...">
@@ -84,35 +97,42 @@
                     </article>
                 </div>
                 <aside class="aside">
-                    <div class="myProfile">
-                        <img src="src/basic-profile-img.png" alt="">
-                        <span>a.orazy_sudnics</span>
-                    </div>
-                    <div class="storyForm">
+                  <div class="myProfile">
+                    <img src="src/basic-profile-img.png" alt="">
+                    <span>a.orazy_sudnics</span>
+                  </div>
+                  <div class="storyForm">
                         <div class="header">
-                            <span>스토리</span>
-                            <button>모두 보기</button>
+                          <span>스토리</span>
+                          <button>모두 보기</button>
                         </div>
                         <div class="storyList">
+                           <div class="storyItem">
+                              <img src="src/basic-profile-img.png" alt="">
+                                <div class="right">
+                                  <span>a.orzy</span>
+                                  <span>10분전</span>
+                                </div>
+                            </div>
                             <div class="storyItem">
                                 <img src="src/basic-profile-img.png" alt="">
-                                <div class="right">
+                                  <div class="right">
                                     <span>a.orzy</span>
                                     <span>10분전</span>
+                                  </div>
+                              </div>
+                            <div class="storyItem">
+                              <img src="src/basic-profile-img.png" alt="">
+                              <div class="right">
+                                  <span>a.orzy</span>
+                                  <span>10분전</span>
                                 </div>
                             </div>
                             <div class="storyItem">
                                 <img src="src/basic-profile-img.png" alt="">
                                 <div class="right">
-                                    <span>a.orzy</span>
-                                    <span>10분전</span>
-                                </div>
-                            </div>
-                            <div class="storyItem">
-                                <img src="src/basic-profile-img.png" alt="">
-                                <div class="right">
-                                    <span>a.orzy</span>
-                                    <span>10분전</span>
+                                  <span>a.orzy</span>
+                                  <span>10분전</span>
                                 </div>
                             </div>
                             <div class="storyItem">
@@ -171,6 +191,31 @@
                 </aside>
             </section>
         </main>
+      </section>
+      <!-- 팝업 모달창 -->
+    <section class="modalOverlay" style="display: none";>
+              <div class="modalBox">
+                  <div class="speechBubble"></div>
+                  <div class="item">
+                    <img src="src/modal-profile.svg" alt="">
+                    <span>프로필</span>
+                  </div>
+                  <div class="item">
+                    <img src="src/bookmark-solid.svg" alt="">
+                    <span>저장됨</span>
+                  </div>
+                  <div class="item">
+                    <img src="src/modal_setting.svg" alt="">
+                    <span>설정</span>
+                  </div>
+                  <div class="item">
+                    <img src="src/heart-solid.svg" alt="">
+                    <span>계정전환</span>
+                  </div>
+                  <div class="item">
+                      <span>로그아웃</span>
+                  </div>
+              </div>
     </section>
     
 </body>

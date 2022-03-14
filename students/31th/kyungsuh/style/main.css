@@ -6,6 +6,8 @@ button {
     cursor: pointer;
 } */
 
+
+
 .iconBox img, .head img {
     width: 30px;
 }
@@ -30,6 +32,10 @@ button {
     position: relative;
 }
 
+.nav .navBox .imgLogo {
+    width: 26px;
+}
+
 .nav .title .logo {
     position: absolute;
     font-family: 'Lobster Two', cursive;
@@ -45,6 +51,89 @@ button {
     background: #EFEFEF;
     border: none;
 }
+
+/* 검색 */
+.resultBox {
+    display: none;
+    box-sizing: border-box;
+    border: 1px solid #dbdbdb;
+    width: 375px;
+    height: 362px;
+    margin: 15px -60px 0;
+    position: absolute;
+    z-index: 10;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.resultBox .speechBubble, .modalBox .speechBubble {
+    position: absolute;
+    width: 5px;
+    padding: 10px;
+    transform: rotate(45deg);
+    top: -11px;
+    left: 12rem;
+    background: #fff;
+    border-top: 1px solid #dbdbdb;
+    border-left: 1px solid #dbdbdb;
+}
+
+.resultBox .innerBox {
+    height: 362px;
+    z-index: 10;
+    overflow: auto;
+}
+
+.resultBox .innerBox header {
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.resultBox .innerBox header div {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: center;
+    height: 3rem;
+}
+
+.resultBox .innerBox .searchList {
+    height: 100%;
+}
+
+.resultBox .innerBox .searchList .item {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 5px auto;
+    padding: 6px;
+}
+
+.searchList .item .imgProfile {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.searchList .item .btnClose {
+    width: 10px;
+}
+
+.item .inner {
+    display: flex;
+    width: 85%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inner div span {
+    font-size: 10px;
+}
+
+.inner div span:first-child {
+    display: block;
+    font-size: 12px;
+}
+
 
 .nav .iconBox {
     display: flex;
@@ -131,6 +220,15 @@ button {
     overflow: auto; 
 }
 
+.commentBox .innerBox {
+    display: flex;
+    justify-content: space-between;
+}
+
+.innerBox .deleteBtn {
+    background-color: #fff;
+}
+
 .commentBox .comment {
     margin: 10px 0 8px 15px;
     font-size: 12px;
@@ -161,7 +259,7 @@ button {
     padding: 10px;
 }
 
-.innerBox {
+.commentInpBox .innerBox {
     width: 90%;
     height: 2rem;
     display: flex;
@@ -169,12 +267,12 @@ button {
     margin: 0 auto;
 }
 
-.innerBox input {
+.commentInpBox .innerBox input {
     border: none;
     width: 25rem;
 }
 
-.innerBox button {
+.commentInpBox .innerBox button {
     border: none;
     background: #fff;
 }
@@ -229,6 +327,12 @@ button {
 }
 
 /* storyList */
+
+.storyList  {
+    height: 12rem;
+    overflow: auto;
+    margin-bottom: 2rem;
+}
 
 .storyList .storyItem {
     box-sizing: border-box;
@@ -286,4 +390,80 @@ button {
 .footer p {
     width: 90%;
     padding-bottom: 1rem;
+}
+
+/* 모달창 */
+.modalContainer {
+    position: relative;
+}
+
+.modalOverlay {
+    /* width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 10; */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(1.8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .modalInnerBox {
+    position: relative;
+    height: 100px;
+} */
+
+.modalBox {
+    position: absolute;
+    top: 3.5rem;
+    /* right: -2.75rem; */
+    right: 11.5rem;
+    width: 14rem;
+    height: 13rem;
+    background: #fff;
+    border: 1px solid #dbdbdb;
+    border-radius: 8px;
+    padding: 6px;
+    font-size: 15px;
+    z-index: 10;
+}
+
+.modalOn {
+    display: block;
+}
+
+.modalBox .speechBubble {
+    left: 9.25rem;
+}
+
+.modalBox div img {
+    width: 12px;
+}
+
+.modalBox .item {
+    /* border: 1px solid; */
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    height: 2.5rem;
+}
+.modalBox .item:last-child {
+    border-top: 1px solid #dbdbdb;
+}
+
+
+.modalBox .item img {
+    /* padding-right: 1rem; */
+    margin-right: 8px;
 }
