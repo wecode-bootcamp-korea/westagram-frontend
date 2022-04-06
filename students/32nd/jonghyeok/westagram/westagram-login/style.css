@@ -1,0 +1,95 @@
+* {
+  box-sizing : border-box;
+  margin: 0;
+}
+
+body {
+  background-color: #fafafa;
+}
+
+.container{
+  width: 500px;
+  height: 550px;
+  margin: 0 auto;
+  margin-top: 50px;
+  border: 1px solid #e8e8e8;
+  background-color: white;
+}
+
+
+.logo_name{
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.name{
+  font-size: 60px;
+  margin-left : auto;
+  margin-right : auto;
+  font-family: 'Gamja Flower', cursive;
+  font-weight: bolder;
+  text-align: center; 
+}
+
+.login{
+  margin: 10px 40px;
+  display: flex;
+  flex-direction: column;
+} 
+
+.input-login{
+  margin-bottom: 8px;
+  padding: 14px 8px;
+  border-radius: 3px;
+  border: 1px solid #efefef;
+  background-color: #fafafa;
+  font-size: 18px;
+}
+
+.input-pw{
+  margin-bottom: 18px;
+  padding: 14px 8px;
+  border-radius: 3px;
+  border: 1px solid #efefef;
+  background-color: #fafafa;
+  font-size: 18px;
+}
+
+.input-login::placeholder,
+.input-pw::placeholder{
+  color: #a5a5a5;
+  font-size: 14px;
+}
+
+.button{
+  padding: 10px 0;
+  font-size: 18px;
+  border: none;
+  background-color: #c4e0fb;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.password_search{
+  display: flex;
+  justify-content: center;
+  margin-top: 180px;
+  cursor: pointer;
+  color: #133f6b;
+  font-size: 14px;
+}
+
+input:focus {
+  outline: 1px solid #dbdbdb;
+}
+
+@media screen and (max-width: 568px) { 
+  .container {
+    width: 90%;
+  }
+}
+
+

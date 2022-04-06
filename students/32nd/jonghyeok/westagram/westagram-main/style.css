@@ -1,0 +1,334 @@
+* {
+  box-sizing : border-box;
+  margin: 0
+}
+
+body {
+  background-color: #fafafa;
+}
+
+.container{
+  padding-top: 70px;
+  width: 800px;
+  /* height: 800px; */
+  /* border: 1px solid black; */
+  margin: 25px auto;
+
+}
+
+nav {
+  background-color: white;
+  width: 100%;
+  border-bottom: 1px solid #dbdbdb;
+  /* position sticky는 사용조건이 까다로워서 fixed로 navbar 상위에 픽스 */
+  /* position: sticky;
+  top: 0; */
+  position: fixed;
+  top: 0;
+}
+
+.navbar{
+  /* border: 1px solid black; */
+  width: 100%;
+  max-width: 1024px;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  align-items: center;
+  /* padding-right: 70px; */
+  padding: 0 70px;
+  
+}
+
+
+.main-wrap{
+  /* border: 1px solid black; */
+  width: 100%;
+  /* height: 92%; */
+  display: flex;
+  justify-content: center;
+}
+
+.feeds{
+  /* border: 1px solid black; */
+  width: 55%;
+  height: 95%;
+} 
+
+.main-right{
+  /* border: 1px solid black; */
+  width: 35%;
+  height: 75%;
+  margin-left: 5px;
+}
+
+
+.article{
+  border: 1px solid #dbdbdb;
+  width: 95%;
+  /* height: 90%; */
+  margin-left: 12px;
+  margin-right: 5px;
+  margin-top: 25px;
+  justify-content: center;
+}
+
+
+
+.nav-logo{
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo i{
+  font-size: 25px;
+}
+
+.icon-size{
+  width: 22px;
+  margin-left: 10px;
+  height: 100%;
+}
+
+.search-bar {
+  width: 170px;
+}
+
+.search-bar input {
+  border: 1px solid #dbdbdb;
+  width: 100%;
+  padding: 3px;
+  background-color: #fafafa;
+}
+
+.search-logo i{
+  margin-left: 12px;
+  font-size: 20px;
+  color: rgb(82, 82, 82);
+  cursor: pointer;
+}
+
+.westagram-font{
+  font-family: 'Gamja Flower', cursive;
+  font-size: 18px;
+  margin-left: 12px;
+  padding-left: 12px;
+  border-left: thin solid black;
+  cursor: pointer;
+}
+
+input:focus {
+  outline: 1px solid #dbdbdb;
+}
+
+input::placeholder {
+  color: #b6b6b6;
+  text-align: center;
+}
+
+.writer-section{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 15px;
+  background-color: white;
+}
+
+.writer-profile {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.profile-img {
+  width: 35px;
+  margin-right: 12px;
+  border-radius: 50%;
+  border: 1px solid rgb(187, 187, 187);
+}
+
+.writer-id{
+  font-weight: bold;
+}
+
+.moreOpt-icon{
+  width: 15px;
+}
+
+.img-section {
+  width: 100%;
+}
+
+.feedImg {
+  width: 100%;
+}
+
+.icon-section{
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 12px;
+}
+
+.icon-section,
+.likeCounting-section,
+.contents-section,
+.comments-section,
+.writing-section{
+  background-color: white;
+}
+
+.icon-section i{
+  font-size: 22px;
+  margin: 0 3px;
+  color: rgb(88, 88, 88);
+}
+
+.likeCounting-section{
+  display: flex;
+  align-items: center;
+  padding: 5px 15px;
+}
+
+.like-profile {
+  margin-right: 5px;
+  width: 20px;
+  border-radius: 50%;
+  border: 1px solid rgb(187, 187, 187);
+}
+
+.likeContent{
+  font-size: 13px;
+}
+
+.likeContent span {
+  font-weight: bold;
+}
+
+.contents-section,
+.comments-section{
+  padding: 0px 15px;
+  font-size: 14px;
+}
+
+.comments-section{
+  border-bottom: 1px solid rgb(199, 199, 199);
+}
+
+.comment-box{
+  display: flex;
+  justify-content: space-between;
+}
+
+.userId {
+  font-weight: bold;
+}
+
+.comment-time {
+  color: gray;
+  margin-bottom: 5px;
+}
+
+.writing-section{
+  padding: 10px 15px;
+  display: flex;
+}
+
+.writing-input{
+  border: none;
+  flex: 1;
+}
+
+.writing-input::placeholder{
+  text-align: left;
+}
+
+.writing-btn{
+  border: none;
+  background-color: transparent;
+  color: rgb(76, 144, 223);
+  padding: 0;
+  cursor: pointer;
+}
+
+.main-right{
+  margin-top: 25px;
+}
+.wecode-desc {
+  display: flex;
+  align-items: center;
+}
+.wecode-logo {
+  width: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.wecode-profile{
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.wecode-sub-profile{
+  color: gray;
+  font-weight: normal;
+}
+
+.story-section{
+  background-color: white;
+  margin-top: 12px;
+  border: 1px solid rgb(199, 199, 199);
+  height: 180px;
+  overflow: hidden;
+}
+
+.story-list {
+  list-style: none;
+  padding: 0;
+}
+
+.story-profile{
+  width: 30px;
+  border-radius: 50%;
+  border: 2px solid red;
+  padding: 1px;
+  margin-right: 8px;
+  height: 100%;
+}
+.story-profile2{
+  width: 30px;
+  border-radius: 50%;
+  margin-right: 8px;
+  height: 100%;
+}
+
+.mainSection-header{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px;
+  font-size: 15px;
+}
+
+.story-list {
+  padding: 5px 15px;
+}
+.story{
+  display: flex;
+  align-items: center;
+  margin-bottom: 7px;
+  font-size: 14px;
+}
+
+.recomm-section{
+  background-color: white;
+  margin-top: 12px;
+  border: 1px solid rgb(199, 199, 199);
+}
+
+.story-desc2{
+  flex: 1;
+}
+
+.westa-footer{
+  margin-bottom: 20px;
+}
