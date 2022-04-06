@@ -4,9 +4,11 @@ const pw = document.querySelector("#pw");
 const btn = document.querySelector("button");
 let idvalue;
 let pwvalue;
-pw.setAttribute("minlength", 5);
+const num = Math.floor(Math.random() * 10);
+const user = { name: "anonymous", id: num };
 const checkBlank = function (e) {
   if (e.target.id === `id`) {
+    user.name = idvalue;
     idvalue = e.target.value;
   }
   if (e.target.id === "pw") {
@@ -17,10 +19,9 @@ const checkBlank = function (e) {
     btn.style.backgroundColor = "blue";
   }
 };
-
+window.localStorage.setItem("user", JSON.stringify(user));
 id.addEventListener("change", checkBlank);
 pw.addEventListener("change", checkBlank);
-
 btn.addEventListener("click", (e) => {
   const path = window.location.pathname;
   const num = path.indexOf("login");

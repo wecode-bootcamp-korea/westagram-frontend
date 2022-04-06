@@ -4,6 +4,8 @@ const ul = document.querySelector(".comment>ul");
 const btn = document.querySelector("button");
 let li;
 
+const current = JSON.parse(window.localStorage.getItem("test"));
+
 function getValue(e) {
   let { value } = e.target;
   li = document.createElement("li");
@@ -11,11 +13,13 @@ function getValue(e) {
   let key = e.key;
   if (key === "Enter") {
     ul.appendChild(li);
+    li.id = current.id;
     input.value = "";
   }
 }
 btn.addEventListener("click", () => {
   ul.appendChild(li);
+
   input.value = "";
 });
 input.addEventListener("keydown", getValue);
