@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <script defer src="./js/main.js"></script>
+    <!-- 상단에 defer를 입력 후 head위에 작성한다
+    네트워크상 동시에 불러오기 때문에, html과 js파일을 동시에 불러오는 역할을 한다.
+    -->
+  </head>
+  <body>
+    <div class="allBox">
+      <nav>
+        <div class="topMenuBar">
+          <!-- 상단 메뉴바  975 X 60-->
+          <span class="navTextLogo">westagram</span>
+          <input class="navSearch" type="text" placeholder="검색" />
+          <div>
+            <img class="navLogo" src="./source/img/homepage.png" alt="home" />
+            <img class="navLogo" src="./source/img/send.png" alt="message" />
+            <img class="navLogo" src="./source/img/more.png" alt="post" />
+            <img
+              class="navLogo"
+              src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png"
+              alt="탐색"
+            />
+            <img
+              class="navLogo"
+              src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"
+              alt="좋아요"
+            />
+            <img
+              class="navLogo"
+              src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png"
+              alt="마이페이지"
+            />
+          </div>
+        </div>
+      </nav>
+      <!-- 본문 레아이웃 -->
+      <main class="main">
+        <div class="feedMain">
+          <article class="feedPost">
+            <div class="feedTop">
+              <img src="./source/img/feed.jpeg" alt="" />
+              <div class="feedTopName">heaundea_DDol</div>
+            </div>
+            <img class="feedImg" src="./source/img/ddol.JPG" alt="" />
+            <div class="commentBox">
+              <div class="commentLogoBox">
+                <img
+                  class="navLogo"
+                  src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"
+                  alt="좋아요"
+                />
+                <img class="navLogo" src="./source/img/chat.png" alt="채팅" />
+                <img class="navLogo" src="./source/img/send.png" alt="메시지" />
+                <img
+                  class="navLogo rightLogo"
+                  src="./source/img/bookmark-white.png"
+                  alt="저장"
+                />
+              </div>
+              <div class="likes">좋아요 623개</div>
+              <div class="commentId">heaundea_DDol</div>
+              <p class="commentContent">똘이 너무 귀엽죠?</p>
+              <p class="comments">댓글 271개 모두 보기</p>
+              <!-- 댓글 창 -->
+              <ul class="commentPostList"></ul>
+              <form class="commentInputBox">
+                <img src="./source/img/smile.png" alt="이모티콘" />
+                <input
+                  class="commentInput"
+                  type="text"
+                  placeholder="댓글 달기"
+                />
+                <button class="commentBtn">게시</button>
+              </form>
+            </div>
+          </article>
+        </div>
+        <!-- 우측 레이아웃 -->
+        <div class="feedRight">
+          <div class="feedRightProfile">
+            <img src="./source/img/profile.JPG" alt="프로필" />
+            <div class="profileName">
+              syoung___h
+              <div class="profileKor">석영</div>
+            </div>
+            <div class="profileChange">전환</div>
+          </div>
+          <div class="feedRightRecommendBox">
+            <div class="RecommendText1">회원님을 위한 추천</div>
+            <div class="RecommendText2">모두 보기</div>
+          </div>
+
+          <!-- 친구 추천 탭 -->
+          <div class="recommendFrineds">
+            <div class="freinds">
+              <div class="freind1">
+                <img src="./source/img/freind1.png" alt="친구1" />
+                <div class="profileName">
+                  wecode_bootCamp
+                  <div class="profileKor">위코드 32기</div>
+                </div>
+                <div class="profileChange">팔로우</div>
+              </div>
+              <div class="freind1">
+                <img src="./source/img/freind2.png" alt="친구1" />
+                <div class="profileName">
+                  finda_offical
+                  <div class="profileKor">핀다</div>
+                </div>
+                <div class="profileChange">팔로우</div>
+              </div>
+              <div class="freind1">
+                <img src="./source/img/friend3.png" alt="친구1" />
+                <div class="profileName">
+                  kakao_developer
+                  <div class="profileKor">카카오</div>
+                </div>
+                <div class="profileChange">팔로우</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
