@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Westagram</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/f076572c74.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./style/main.css" />
+    <script src="./js/main.js" defer></script>
+  </head>
+  <body>
+    <header class="main-header">
+      <nav class="gnb">
+        <h1 class="gnb-logo">
+          <a class="gnb-logo-link" href="#">
+            <img class="gnb-logo-img" src="./assets/logo.png" alt="Westagram" />
+            <span class="gnb-logo-title">westagram</span>
+          </a>
+        </h1>
+
+        <div class="gnb-search-wrapper">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input class="gnb-search" type="text" placeholder="검색" />
+
+          <div class="gnb-search-result modal">
+            <ul class="gnb-search-result-list modal-list"></ul>
+          </div>
+        </div>
+
+        <div class="gnb-button-group">
+          <a
+            class="gnb-button button-explore"
+            href="#"
+            aria-label="Explore some feeds"
+          ></a>
+          <button
+            class="gnb-button button-activities"
+            type="button"
+            aria-label="Open your activities modal"
+          ></button>
+          <div class="gnb-profile-setting">
+            <button
+              class="gnb-button button-profile"
+              type="button"
+              aria-label="Open profile settings modal"
+            ></button>
+            <div class="gnb-profile-setting-modal modal">
+              <ul class="gnb-profile-setting-list modal-list">
+                <li class="gnb-profile-setting-item modal-item">
+                  <a href="#">
+                    <i class="fa-regular fa-user"></i>
+                    <span>프로필</span>
+                  </a>
+                </li>
+                <li class="gnb-profile-setting-item modal-item">
+                  <a href="#">
+                    <i class="fa-regular fa-bookmark"></i>
+                    <span>저장됨</span>
+                  </a>
+                </li>
+                <li class="gnb-profile-setting-item modal-item">
+                  <a href="#">
+                    <i class="fa-solid fa-gear"></i>
+                    <span>설정</span>
+                  </a>
+                </li>
+                <li class="gnb-profile-setting-item modal-item">
+                  <a href="#">
+                    <i class="fa-solid fa-arrows-rotate"></i>
+                    <span>계정전환</span>
+                  </a>
+                </li>
+                <li class="gnb-profile-setting-item modal-item">
+                  <a href="#"> 로그아웃 </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="wrapper">
+      <main class="feed">
+        <article class="post">
+          <header class="post-header">
+            <div class="post-header-left">
+              <a href="#">
+                <img
+                  class="post-header-profile"
+                  src="./assets/user-profile.jpeg"
+                  alt="Profile image of Hyeonsu Kim"
+                />
+                <strong class="user-id">garuda352</strong>
+              </a>
+            </div>
+            <div class="post-header-right">
+              <button type="button" class="post-header-button">...</button>
+            </div>
+          </header>
+
+          <div class="post-images">
+            <div class="post-image"></div>
+          </div>
+
+          <div class="post-contents">
+            <div class="post-action-buttons">
+              <div class="post-action-buttons-left">
+                <button
+                  class="post-action-button button-heart"
+                  type="button"
+                  aria-label="Like this post"
+                >
+                  <i class="fa-regular fa-heart"></i>
+                </button>
+                <button
+                  class="post-action-button button-comment"
+                  type="button"
+                  aria-label="Comment this post"
+                >
+                  <i class="fa-regular fa-comment"></i>
+                </button>
+                <button
+                  class="post-action-button button-share"
+                  type="button"
+                  aria-label="Share this post"
+                >
+                  <i class="fa-regular fa-share-from-square"></i>
+                </button>
+              </div>
+              <div class="post-action-buttons-right">
+                <button
+                  class="post-action-button button-bookmark"
+                  type="button"
+                  aria-label="Bookmark this post"
+                >
+                  <i class="fa-regular fa-bookmark"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="post-liked">
+              <a class="post-liked-title" href="#">
+                <img
+                  src="./assets/user-profile-2.jpeg"
+                  alt="Profile image of sfc.seongnam"
+                />
+                <strong class="user-id">sfc.seongnam</strong>
+              </a>
+              <span class="has-margin">님</span>
+              <button class="post-liked-modal-button" type="button">
+                외 60명
+              </button>
+              <span>이 좋아합니다</span>
+            </div>
+
+            <div class="post-description">
+              <a href="#">
+                <strong class="user-id">garuda352</strong>
+              </a>
+              <span class="post-description-content"
+                >우리도 우승하게 해주세요</span
+              >
+            </div>
+
+            <ul class="post-comment-list"></ul>
+
+            <a class="post-created-at" href="#">
+              <span>2020년 12월 20일</span>
+            </a>
+          </div>
+
+          <div class="post-comment">
+            <input
+              class="post-comment-input"
+              type="text"
+              placeholder="댓글 달기..."
+            />
+            <button class="post-comment-button" type="button" disabled>
+              게시
+            </button>
+          </div>
+        </article>
+      </main>
+
+      <aside>
+        <div class="aside-profile">
+          <div class="aside-profile-left">
+            <img
+              class="aside-profile-img"
+              src="./assets/user-profile.jpeg"
+              alt="Profile image of Hyeonsu Kim"
+            />
+            <div class="aside-profile-id">
+              <strong class="user-id">garuda352</strong>
+              <span class="user-username">Hyeonsu Kim</span>
+            </div>
+          </div>
+
+          <div class="aside-profile-right">
+            <button class="aside-profile-button" type="button">전환</button>
+          </div>
+        </div>
+
+        <div class="aside-recommend">
+          <header class="aside-recommend-header">
+            <h3>회원님을 위한 추천</h3>
+            <a href="#">모두 보기</a>
+          </header>
+          <ul class="aside-recommend-list">
+            <li class="aside-recommend-item">
+              <div class="aside-recommend-item-left">
+                <img
+                  class="aside-recommend-item-profile"
+                  src="./assets/user-profile-2.jpeg"
+                  alt="Profile image of Seongnam FC"
+                />
+                <div class="aside-recommend-item-content">
+                  <strong class="user-id">sfc.seongnam</strong>
+                  <span class="aside-recommend-reason">회원님을 위한 추천</span>
+                </div>
+              </div>
+              <div class="aside-recommend-item-right">
+                <button class="aside-recommend-button" type="button">
+                  팔로우
+                </button>
+              </div>
+            </li>
+            <li class="aside-recommend-item">
+              <div class="aside-recommend-item-left">
+                <img
+                  class="aside-recommend-item-profile"
+                  src="./assets/user-profile-2.jpeg"
+                  alt="Profile image of Seongnam FC"
+                />
+                <div class="aside-recommend-item-content">
+                  <strong class="user-id">sfc.seongnam</strong>
+                  <span class="aside-recommend-reason">회원님을 위한 추천</span>
+                </div>
+              </div>
+              <div class="aside-recommend-item-right">
+                <button class="aside-recommend-button" type="button">
+                  팔로우
+                </button>
+              </div>
+            </li>
+            <li class="aside-recommend-item">
+              <div class="aside-recommend-item-left">
+                <img
+                  class="aside-recommend-item-profile"
+                  src="./assets/user-profile-2.jpeg"
+                  alt="Profile image of Seongnam FC"
+                />
+                <div class="aside-recommend-item-content">
+                  <strong class="user-id">sfc.seongnam</strong>
+                  <span class="aside-recommend-reason">회원님을 위한 추천</span>
+                </div>
+              </div>
+              <div class="aside-recommend-item-right">
+                <button class="aside-recommend-button" type="button">
+                  팔로우
+                </button>
+              </div>
+            </li>
+            <li class="aside-recommend-item">
+              <div class="aside-recommend-item-left">
+                <img
+                  class="aside-recommend-item-profile"
+                  src="./assets/user-profile-2.jpeg"
+                  alt="Profile image of Seongnam FC"
+                />
+                <div class="aside-recommend-item-content">
+                  <strong class="user-id">sfc.seongnam</strong>
+                  <span class="aside-recommend-reason">회원님을 위한 추천</span>
+                </div>
+              </div>
+              <div class="aside-recommend-item-right">
+                <button class="aside-recommend-button" type="button">
+                  팔로우
+                </button>
+              </div>
+            </li>
+            <li class="aside-recommend-item">
+              <div class="aside-recommend-item-left">
+                <img
+                  class="aside-recommend-item-profile"
+                  src="./assets/user-profile-2.jpeg"
+                  alt="Profile image of Seongnam FC"
+                />
+                <div class="aside-recommend-item-content">
+                  <strong class="user-id">sfc.seongnam</strong>
+                  <span class="aside-recommend-reason">회원님을 위한 추천</span>
+                </div>
+              </div>
+              <div class="aside-recommend-item-right">
+                <button class="aside-recommend-button" type="button">
+                  팔로우
+                </button>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <footer class="aside-footer">
+          <ul class="aside-footer-list">
+            <li class="aside-footer-item">
+              <a class="aside-footer-item-link" href="#">소개</a>
+            </li>
+            <li class="aside-footer-item">
+              <a class="aside-footer-item-link" href="#">도움말</a>
+            </li>
+            <li class="aside-footer-item">
+              <a class="aside-footer-item-link" href="#">홍보 센터</a>
+            </li>
+            <li class="aside-footer-item">
+              <a class="aside-footer-item-link" href="#">API</a>
+            </li>
+            <li class="aside-footer-item">
+              <a class="aside-footer-item-link" href="#">채용 정보</a>
+            </li>
+            <li class="aside-footer-item">
+              <a class="aside-footer-item-link" href="#">개인정보처리방침</a>
+            </li>
+            <li class="aside-footer-item">
+              <a class="aside-footer-item-link" href="#">약관</a>
+            </li>
+            <li class="aside-footer-item">
+              <a class="aside-footer-item-link" href="#">위치</a>
+            </li>
+            <li class="aside-footer-item">
+              <a class="aside-footer-item-link" href="#">인기 계정</a>
+            </li>
+            <li class="aside-footer-item">
+              <a class="aside-footer-item-link" href="#">해시태그</a>
+            </li>
+            <li class="aside-footer-item">
+              <a class="aside-footer-item-link" href="#">언어</a>
+            </li>
+          </ul>
+          <span class="aside-copy">&copy; 2022 WESTAGRAM FROM WECODE</span>
+        </footer>
+      </aside>
+    </div>
+  </body>
+</html>
