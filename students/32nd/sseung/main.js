@@ -8,19 +8,63 @@ const myData = {
     id: 0,
     userId: 'mschoise',
     userName: '최승이',
-    profileImg: './img/mydata/profile_img.jpg',
-    feeds: [
-        {
-            id: 0,
-            description: `보송보송 졸귀탱 흰둥이 인형🤍💙 저세상 귀여움이라는 흰둥이 인형ㅠㅠ @@나 이거 사고시포>< <br>
-            🛍프로필 '데코픽' 링크에 판매 링크 있어요!`,
-            comments: [
-                {id:0, user:'mschoise', text:'댓글쓴다', checked: true},
-            ],
-        }
-    ]
+    profileImg: './img/profile.jpeg',
 }
 */
+
+const feedData =  [
+    {
+        id: 0,
+        userId: 'reeeed',
+        profileImg: './img/profile.jpeg',
+        imgSrc: ['./img/red/red_1.jpg','./img/red/red_2.jpg','./img/red/red_3.jpg'],
+        description: `보송보송 졸귀탱 흰둥이 인형🤍💙 저세상 귀여움이라는 흰둥이 인형ㅠㅠ @@나 이거 사고시포>< <br>
+        🛍프로필 '데코픽' 링크에 판매 링크 있어요!`,
+        comments: [
+            {id:0, user:'mschoise', text:'댓글쓴다', liked: true},
+        ],
+        likeNum: 92,
+        liked: true,
+    },
+    {
+        id: 1,
+        userId: 'yeeeelow',
+        profileImg: './img/profile.jpeg',
+        imgSrc: ['./img/yellow/yellow_1.jpg','./img/yellow/yellow_2.jpg','./img/yellow/yellow_3.jpg','./img/yellow/yellow_4.jpg','./img/yellow/yellow_5.jpg','./img/yellow/yellow_6.jpg','./img/yellow/yellow_7.jpg'],
+        description: `퐁신퐁신 수플레팬케이크를 주문즉시 만들어주는 찐 디저트맛집🍓<br>
+        확 트인 오션뷰를 감상할 수 있는 매장으로, 포토존도 풍성하답니다!<br>
+        디저트는 수플레, 치즈케이크, 초코푸딩 등 다양해서<br>
+        취향에 맞게 음료와 같이 즐길 수 있는 카페입니다!😆<br>
+        커피는 원두 선택이 가능해서 맛있는 커피를 맛 볼 수 있어요!<br>
+        시즌에 맞춘 다양한 신메뉴를 꾸준히 출시하고 있다는 점👍<br>
+        봄을 맞이하여 딸기 메뉴를 맛보시는건 어떠실까요?!@@`,
+        comments: [
+            {id:0, user:'wecode', text:'노란색 글에대한 댓글 처음!', liked: true},
+        ],
+        likeNum: 72,
+        liked: true,
+    },
+    {
+        id: 2,
+        userId: 'piiiiiink',
+        profileImg: './img/profile.jpeg',
+        imgSrc: ['./img/pink/pink_1.jpg','./img/pink/pink_2.jpg','./img/pink/pink_3.jpg','./img/pink/pink_4.jpg','./img/pink/pink_5.jpg'],
+        description: `아쉬워서 떠나보는 스물다섯 스물하나 촬영지 스팟7💚✨<br><br>
+        #전주 에서 촬영이 이뤄진 #스물다섯스물하나<br>
+        촬영지 모두 공개합니다~🌈<br>
+        모두 희도,이진이가 되어보자~!<br>
+        전주제일고등학교에 있는 수돗가에서 촬영은 하지 않고<br>
+        제일고 안에서 세트로 촬영했다고 힘!🙏🏻<br><br>
+        @@우리도 여기 가볼까?!<br><br>
+        🔖전주 #스물다섯스물하나촬영지`,
+        comments: [
+            {id:0, user:'planner', text:'핑크색 글에대한 댓글이지롱!', liked: false},
+        ],
+        likeNum: 103,
+        liked: true,
+    },
+]
+
 
 
 // 피드내용 엔터에서 말줄임
@@ -58,8 +102,6 @@ function moveImg(index, imgCount) {
     const $imgWidth = get(`.feed[data-id='${index}'] .content_wrap li`).clientWidth;
     const $imgCover = get(`.feed[data-id='${index}'] .content_wrap ul`);
     $imgCover.style.left = `${$imgWidth * -imgCount}px`
-
-    console.log(`imgCount: ${imgCount}, imgLength: ${$imgLength}`)
 
     // 불릿 교체
     const nowFeedbullets = getAll(`.feed[data-id='${index}'] .bullet li`);
@@ -112,7 +154,7 @@ function postDisabled(e, index) {
     if(e.target.value) {
         if(!$nowCommentInput.value.trim('')) {
             // 빈 칸 입력시 disabled상태 유지
-            returnㄴ
+            return
         }
         nowFeedCommentPost.disabled = false;
         nowFeedCommentPost.style.cursor = "pointer"
@@ -139,7 +181,7 @@ function commentPost(e, index) {
     
     const $commentElement = document.createElement('li')
     $commentElement.classList.add('comment')
-    $commentElement.innerHTML = `<div><span class="comment_id">mschoise</span><span class="commment_text">${$nowCommentInput.value}</span></div><label><i class="fa-regular fa-heart like"/><input type="checkbox"></label></i>`
+    $commentElement.innerHTML = `<div><span class="comment_id">mschoise</span><span class="commment_text">${$nowCommentInput.value}</span></div><label><i class="fa-regular fa-heart like"></i><input type="checkbox"></label></i>`
     $commentVoid.appendChild($commentElement)
     
     $nowCommentInput.value = '';

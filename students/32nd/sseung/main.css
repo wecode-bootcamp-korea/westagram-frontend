@@ -71,7 +71,7 @@ nav .search_bar .not_focus {
   color: var(--color--gray);
 }
 
-nav .search_bar .not_focus img {
+nav .search_bar .not_focus i {
   width: 14px;
   height: 14px;
 }
@@ -111,11 +111,16 @@ nav .nav_btn {
   width: calc((100% - 268px)/2);
 }
 
-nav .nav_btn > img {
+nav .nav_btn i, nav .nav_btn img {
   width: 24px;
   height: 24px;
   margin-left: 20px;
   cursor: pointer;
+}
+
+nav .nav_btn i::before {
+  position: relative;
+  top: 12px;
 }
 
 nav .nav_btn .profile_img {
@@ -270,7 +275,8 @@ main > div {
   background-color: #ddd;
 }
 
-.feeds .feed .feed_top .user_id .user_img div {
+.feeds .feed .feed_top .user_id .user_img img {
+  width: 100%;
   border-radius: 13px;
 }
 
@@ -281,7 +287,13 @@ main > div {
 
 .feeds .feed .feed_top .user_id .option {
   width: 20px;
+  height: 20px;
   cursor: pointer;
+}
+
+.feeds .feed .feed_top .user_id .option::before {
+  position: relative;
+  top: -10px;
 }
 
 .feeds .feed .content_slide {
@@ -317,17 +329,13 @@ main > div {
 .feeds .feed .content_slide .arrow_wrap .arrow {
   width: 30px;
   opacity: 0.3;
+  color: #fff;
   cursor: pointer;
 }
 
-.feeds .feed .content_slide .arrow_wrap .prev {
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
-}
-
 .feeds .feed .content_slide .arrow_wrap .next {
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .feeds .feed .content_slide .content_wrap {
@@ -414,18 +422,32 @@ main > div {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding: 10px 0;
 }
 
-.feeds .feed .interaction img {
-  width: 40px;
-  height: 40px;
-  padding: 10px;
+.feeds .feed .interaction .left_btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.feeds .feed .interaction i {
+  width: 30px;
+  height: 30px;
   cursor: pointer;
 }
 
-.feeds .feed .interaction img:first-child {
-  width: 30px;
-  padding-left: 0;
+.feeds .feed .interaction i + i {
+  margin-left: 10px;
+  padding-left: 5px;
+}
+
+.feeds .feed .interaction i::before {
+  position: relative;
+  top: 15px;
 }
 
 .feeds .feed .contents_wrap .contents {
@@ -509,6 +531,7 @@ main > div {
           flex-grow: 0;
   width: 40px;
   padding: 7px 14px 7px 0;
+  cursor: pointer;
 }
 
 .feeds .feed .contents_wrap .comment_wrap .comment_input {
@@ -614,7 +637,8 @@ main > div {
   background-color: #ddd;
 }
 
-.main_right .myInfo .user_profile .user_img div {
+.main_right .myInfo .user_profile .user_img img {
+  width: 100%;
   border-radius: 29px;
 }
 
