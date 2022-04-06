@@ -196,12 +196,13 @@ article {
 
 .article-write {
     height: 50px;
+    padding: 14px;
 }
 
 .textIn {
     border: none;
+    max-width: 90%;
     width: 90%;
-    height: 50px;
 }
 
 .textIn::placeholder {
@@ -211,11 +212,19 @@ article {
 }
 
 .textBt {
+    position: absolute;
     border: none;
     background:none;
     color:skyblue;
     cursor: pointer;
-    margin-bottom: 80px;
+    width: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    right:2%;
+}
+
+#comments li {
+    margin-left: -40px;
 }
 
 .textIn:focus {
