@@ -1,0 +1,349 @@
+/* 박스사이징, 리셋씨에스에스, 초기 바디사이즈 설정, 넵바 사이즈 조절 */
+/* * {
+    box-sizing: border-box;
+} */
+
+body {
+    margin: auto;
+    background-color: #FAFAFA;
+    height: 800px;
+}
+
+.navbar {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 150px;
+    border: 1px solid lightgray;
+    background-color: white;
+}
+
+.navbar__left {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar__logo {
+    font-size: 24px;
+    padding-right: 10px;
+    border-right: 2px solid black;
+}
+
+.navbar__title {
+    font-family: 'Lobster', cursive;
+    font-weight: 700;
+    padding-left: 10px;
+}
+
+.navbar__search {
+    width: 200px;
+    height: 20px;
+    font-size: 12px;
+    font-weight: 400;
+    outline: none;
+    border: 1px solid lightgray;
+    color: gray;
+    background-color: #F9F9F9;
+    text-align: center;
+}
+
+.navbar__search::-webkit-input-placeholder{
+  background-image: url(https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-256.png) ;
+  background-size: contain;
+  background-position:  70px center;
+  background-repeat: no-repeat;
+  /* text-align: center; */
+  /* text-indent: 0; */
+}
+
+.navbar__right img {
+    width: 24px;
+    margin-right: 20px;
+}
+
+
+/* Main 왼쪽 */
+
+.main {
+    display: flex;
+    height: 800px;
+    margin-top: 50px;
+    justify-content: space-evenly;
+}
+
+.main__left{
+    width: 400px;
+    height: 650px;
+    border: 1px solid lightgray;
+    background-color: white;
+}
+
+.main__left__header {
+    height: 50px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    position: relative;
+}
+
+.header__profile {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid hotpink;
+    margin: 0 10px;
+    padding: 2px;
+}
+
+.header__account {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.main__left__header i {
+    position: absolute;
+    right: 20px;
+}
+
+.main__left__article {
+    display: flex;
+    flex-direction: column;
+}
+
+.article__image {
+    width: 100%;
+    height: 400px;
+}
+
+.article__icons {
+    background-color: white;
+    height: 40px;
+    display: flex;
+    position: relative;
+    width: 100%;
+}
+
+.fa-heart {
+    color: #ED4956;
+}
+
+.article__icons button {
+    font-size: 24px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    align-items: center;
+    margin: 0 2px;
+    color: gray;
+}
+
+.fa-bookmark{
+    position: absolute;
+    top: 10px;
+    right: 15px;
+}
+
+.article__like {
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 0;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.like__profile {
+    width: 20px;
+    height: 20px;
+    border: 1px solid lightgray;
+    border-radius: 50%;
+    margin: 0 4px;
+}
+
+.like__account :first-child {
+    font-weight: 600;
+}
+
+.aritcle__content {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+}
+
+.content__account {
+    font-weight: 600;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+.content__text :first-child {
+    color: gray;
+}
+
+.main__left__footer {
+    width: 400px;
+    background-color: white;
+}
+
+.footer__comment__result {
+    position: relative;
+    width: 400px;
+}
+
+.comment__account {
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.comment__heart {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    position: absolute;
+    right: 10px;
+}
+
+.comment__heart img{
+    width: 15px;
+    height: 15px;
+}
+
+.footer__time {
+    color: gray;
+    margin-left: 10px;
+}
+
+.footer__comment__ipnut {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.comment__input {
+    outline: none;
+    border: none;
+    width: 100%;
+    height: 25px;
+    position: relative;
+    left: 0;
+    padding: 4px 0 4px 10px;
+}
+
+.comment__button {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #BFE0FD;
+}
+
+
+/* Main 오른쪽 */
+.main__right{
+    width: 280px;
+    height: 100%;
+}
+
+.main__right__header {
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.account, .description {
+    margin: 0;
+}
+
+.description {
+    color: gray;
+    font-weight: 400;
+}
+
+.main__right__articles {
+    display: flex;
+    flex-direction: column;
+}
+
+.article__story {
+    height: 230px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    border: 1px solid lightgray;
+}
+
+.article__title {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    font-weight: 500;
+}
+
+.story {
+    color: gray;
+    font-size: 14px;
+}
+
+.all {
+    font-size: 14px;
+}
+
+.article__items {
+    margin-top: 5px;
+}
+
+.items__item {
+    display: flex;
+    padding-left: 10px;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.item__profile {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    padding: 2px;
+    margin-right: 4px;
+    border: 2px solid hotpink;
+}
+
+.item__account {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+}
+
+.account {
+    font-weight: 600;
+}
+
+.info {
+    color: gray;
+}
+
+.article__member {
+    border: 1px solid lightgray;
+    height: 180px;
+    background-color: white;
+}
+
+.item__followBtn {
+    margin-left: 65px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #3897F0;
+}
+
+.main__right__footer {
+    font-size: 12px;
+    color: gray;
+}

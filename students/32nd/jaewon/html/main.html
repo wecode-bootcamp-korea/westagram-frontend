@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Westagram Main</title>
+    <link href="../styles/main.css" rel="stylesheet">
+    <script src="../js/main.js" defer></script>
+    <script src="https://kit.fontawesome.com/c542fb4677.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar__left">
+            <i class="fa-brands fa-instagram logo navbar__logo"></i>
+            <h1 class="navbar__title">Westagram</h1>
+        </div>
+        <div class="navbar__middle">
+            <!-- <i class="fa-solid fa-magnifying-glass navbar__search__icon"></i> -->
+            <input type="text" placeholder="검색" class="navbar__search" />
+        </div>
+        <div class="navbar__right">
+            <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png">
+            <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png">
+            <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png">
+        </div>
+    </nav>
+
+    <!-- 메인 왼쪽 -->
+    <article class="main">
+        <article class="main__left article">
+            <header class="main__left__header">
+                <img class="header__profile" src="../img/profile.jpg" alt="profile">
+                <span class="header__account">happy_lily</span>
+                <i class="fa-solid fa-ellipsis"></i>
+            </header>
+            <article class="main__left__article">
+                <img class="article__image" src="../img/main.jpeg"></img>
+                <div class="article__icons">
+                    <button><i class="fa-solid fa-heart"></i></button>
+                    <button><i class="fa-solid fa-comment"></i></button>
+                    <button><i class="fa-solid fa-arrow-up-from-bracket"></i></button>
+                    <button class="bookmark"><i class="fa-solid fa-bookmark"></i></button>
+                </div>
+                <div class="article__like">
+                    <img src="../img/profile.jpg" alt="" class="like__profile">
+                    <span class="like__account"><span>wecode_official</span>님 <span>외 10명</span>이 좋아합니다</span>
+                </div>
+                <div class="article__content">
+                    <span class="content__account">happy_lily</span>
+                    <span class="content__text">위워크에서 진행한 베이킹 클래스... <span>더 보기</span></span>
+                </div>
+            </article>
+            <footer class="main__left__footer">
+                <div class="footer__comment__results">
+                    <div class="footer__comment__result">
+                        <span class="comment__account">wecode_official</span>
+                        <span class="comment__text">거봐 좋았잖아~~~🌼</span>
+                        <button class="comment__heart"><img
+                                src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"></button>
+                    </div>
+
+                </div>
+                <span class="footer__time">
+                    42분 전
+                </span>
+                <form class="footer__comment__ipnut">
+                    <input type="text" placeholder="댓글 달기..." class="comment__input">
+                    <button class="comment__button" disabled>게시</button>
+                </form>
+            </footer>
+        </article>
+
+        <!-- 메인 오른쪽 -->
+        <div class="main__right">
+            <div class="main__right__header">
+                <img class="header__profile" src="../img/profile.jpg" />
+                <div class="header__account">
+                    <p class="account">wecode_bootcamp</p>
+                    <p class="description">WeCode | 위코드</p>
+                </div>
+            </div>
+            <div class="main__right__articles">
+                <div class="article article__story">
+                    <div class="article__title">
+                        <span class="story">스토리</span>
+                        <span class="all">모두 보기</span>
+                    </div>
+                    <div class="article__items">
+                        <div class="items__item">
+                            <img class="item__profile" src="../img/profile.jpg"></img>
+                            <div class="item__account">
+                                <div class="account">_yum_S</div>
+                                <div class="info">16분 전</div>
+                            </div>
+                        </div>
+                        <div class="items__item">
+                            <img class="item__profile" src="../img/profile.jpg"></img>
+                            <div class="item__account">
+                                <div class="account">drink_eat_drink</div>
+                                <div class="info">3시간 전</div>
+                            </div>
+                        </div>
+                        <div class="items__item">
+                            <img class="item__profile" src="../img/profile.jpg"></img>
+                            <div class="item__account">
+                                <div class="account">hyukyc</div>
+                                <div class="info">20시간 전</div>
+                            </div>
+                        </div>
+                        <div class="items__item">
+                            <img class="item__profile" src="../img/profile.jpg"></img>
+                            <div class="item__account">
+                                <div class="account">lalala</div>
+                                <div class="info">21시간 전</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="article article__member ">
+                    <div class="article__title">
+                        <span class="story">회원님을 위한 추천</span>
+                        <span class="all">모두 보기</span>
+                    </div>
+                    <div class="article__items">
+                        <div class="items__item">
+                            <img class="item__profile" src="../img/profile.jpg"></img>
+                            <div class="item__account">
+                                <div class="account">joaaaahye</div>
+                                <div class="info">nuganuga님 외 2명이...</div>
+                            </div>
+                            <div class="item__followBtn">팔로우</div>
+                        </div>
+                        <div class="items__item">
+                            <img class="item__profile" src="../img/profile.jpg"></img>
+                            <div class="item__account">
+                                <div class="account">ramper21</div>
+                                <div class="info">2ourcodffe님 외 12명...</div>
+                            </div>
+                            <div class="item__followBtn">팔로우</div>
+                        </div>
+                        <div class="items__item">
+                            <img class="item__profile" src="../img/profile.jpg"></img>
+                            <div class="item__account">
+                                <div class="account">helloWorld</div>
+                                <div class="info">jjdsadsfdsfs님 외 3명...</div>
+                            </div>
+                            <div class="item__followBtn">팔로우</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main__right__footer">
+                <p>Instagram 정보·지원·홍보 센터·API·채용 정보·개인정보처리방침·약관·디렉터리·프로필·해시태그·언어</p>
+                <p> © 2019 INSTAGRAM</p>
+            </div>
+        </div>
+    </article>
+    </article>
+
+</body>
+
+</html>
