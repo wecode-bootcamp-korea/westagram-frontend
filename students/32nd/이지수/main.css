@@ -1,0 +1,244 @@
+@import url("./reset.css");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
+body {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-color: #fafafa;
+}
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fafafa;
+}
+nav {
+  width: 100%;
+  height: 57px;
+  background-color: #ffffff;
+  align-items: center;
+}
+.nav-ul {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin-left: 500px;
+  justify-content: space-between;
+}
+
+.iconLi {
+  margin: 10px;
+  width: 15%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.inputLi {
+  width: 276px;
+  margin-top: 10px;
+  position: relative;
+}
+.inputLi > div {
+  width: 100%;
+  height: 30px;
+}
+div > input {
+  color: rgba(35, 34, 34, 0.411);
+  width: 100%;
+  height: 30px;
+  border: none;
+  border-radius: 10px;
+  background-color: #efefef;
+}
+.icondiv {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.nav-insta {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+  font-size: 30px;
+  font-family: "Lobster", cursive;
+}
+.nav-insta > p {
+  padding: 0px 10px 0px 0px;
+}
+.fa-instagram {
+  padding: 3px;
+  padding-right: 10px;
+}
+.contentContainer {
+  margin-top: 100px;
+  margin-left: 180px;
+  width: 500px;
+  height: 940px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+a > img {
+  width: 30px;
+  padding-bottom: 5px;
+}
+.navIcon {
+  width: 500px;
+  height: 40px;
+}
+
+.mainimg {
+  width: 660px;
+  height: 680px;
+}
+.sideContainer {
+  width: 400px;
+  height: 940px;
+
+  margin-left: 280px;
+  background-color: #fafafa;
+}
+.nameCon {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  background-color: #ffffff;
+}
+.imgDiv {
+  width: 60px;
+  text-align: center;
+}
+.nameDiv {
+  width: 50px;
+  margin-top: 20px;
+  margin-left: 13px;
+}
+.name {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-bottom: 12px;
+}
+.imgContainer {
+  margin-bottom: 12px;
+}
+.firstContainer {
+  border: 1px solid #908b88;
+  border-radius: 5px;
+}
+.title {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+}
+.title h1 {
+  margin-right: 10px;
+}
+.title > p {
+  padding: 0px;
+}
+.imgiconDiv {
+  width: 120px;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+}
+.iconB {
+  padding: 5px;
+}
+.like {
+  display: flex;
+  flex-direction: row;
+  margin: 10px 10px 30px 10px;
+}
+.comment {
+  margin: 10px;
+}
+.comment > ul > li {
+  display: flex;
+  flex-direction: row;
+}
+.comment > ul > li > p {
+  margin-right: 5px;
+}
+.writing {
+  border-top: 1px solid #908b88;
+  border-bottom: 1px solid #908b88;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+}
+.writing > div {
+  width: 30px;
+  padding: 5px;
+  margin-top: 6px;
+}
+
+.writing > input {
+  background-color: transparent;
+  border-radius: 0px;
+  width: 100%;
+
+  height: 60px;
+}
+button {
+  background-color: #ffffff;
+  width: 50px;
+  border: none;
+  color: rgba(0, 0, 0, 0.54);
+}
+.profile {
+  display: flex;
+  flex-direction: row;
+}
+.imgDiv {
+  margin: 10px;
+}
+.profileImg {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 1px solid red;
+}
+.info {
+  height: 70px;
+  font-size: 15px;
+  margin-top: 20px;
+  margin-left: 17px;
+}
+.info > p {
+  margin: 5px;
+}
+.info > p:first-child {
+  font-weight: bolder;
+}
+.story {
+  height: 300px;
+  border: 1px solid #908b88;
+  border-radius: 5px;
+}
+.storyimg {
+  width: 60px;
+  height: 60px;
+}
+.story > div:first-child {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.story:last-child {
+  margin-top: 40px;
+}
+
+.story:last-child > .profile > .info {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+}
+.story:last-child > .profile > .info > p {
+  color: blue;
+}
