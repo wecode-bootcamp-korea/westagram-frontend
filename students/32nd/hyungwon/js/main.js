@@ -27,7 +27,7 @@ const getValueInput = () =>{
         addCommentContent.innerHTML = inputValue
         divAdd.appendChild(addCommentContent)
     
-        addImg.src = "/img/heart.png"
+        addImg.src = "./img/heart.png"
         addImg.alt = "comment_heart"
         addImg.className = "add_comment_heart"
         add.appendChild(addImg)
@@ -60,7 +60,7 @@ const pressEnter = () => {
         addCommentContent.innerHTML = inputValue
         divAdd.appendChild(addCommentContent)
     
-        addImg.src = "/img/heart.png"
+        addImg.src = "./img/heart.png"
         addImg.alt = "comment_heart"
         addImg.className = "add_comment_heart"
         add.appendChild(addImg)
