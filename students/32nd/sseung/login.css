@@ -1,0 +1,173 @@
+.login, .join {
+  background-color: #fff;
+}
+
+.login_page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.loginNjoin {
+  width: 350px;
+}
+
+.login {
+  border: 1px solid var(--color--lightgray);
+  padding: 20px 40px;
+}
+
+.login .logo {
+  font-family: 'Lobster', cursive;
+  padding-bottom: 40px;
+  font-size: 40px;
+}
+
+.login .login_form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.login .login_form .input_wrap {
+  margin-bottom: 10px;
+}
+
+.login .login_form input {
+  width: 100%;
+  padding: 12px 10px;
+  border: 1px solid var(--color--lightgray);
+  border-radius: 3px;
+  background-color: #FAFAFA;
+  font-size: 0.75em;
+}
+
+.login .login_form input + input {
+  margin-top: 5px;
+}
+
+.login .login_form input::-webkit-input-placeholder {
+  border-radius: 5px;
+  color: var(--color--gray);
+}
+
+.login .login_form input:-ms-input-placeholder {
+  border-radius: 5px;
+  color: var(--color--gray);
+}
+
+.login .login_form input::-ms-input-placeholder {
+  border-radius: 5px;
+  color: var(--color--gray);
+}
+
+.login .login_form input::placeholder {
+  border-radius: 5px;
+  color: var(--color--gray);
+}
+
+.login .login_form button {
+  padding: 7px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 3px;
+  background-color: #0095f6;
+  color: #fff;
+  font-size: 0.9em;
+  font-weight: bold;
+}
+
+.login .login_form button:disabled {
+  opacity: 0.4;
+}
+
+.login .or {
+  margin-top: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  text-align: center;
+  font-size: 0.9em;
+  color: var(--color--gray);
+}
+
+.login .or .line {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  height: 1px;
+  background-color: var(--color--lightgray);
+}
+
+.login .or span {
+  position: relative;
+  top: -6px;
+  padding: 0 20px;
+}
+
+.login .facebook, .login .forget {
+  display: block;
+  margin-top: 20px;
+  color: #4469A4;
+}
+
+.login .facebook {
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+.login .forget {
+  font-size: 0.75em;
+}
+
+.join {
+  margin-top: 10px;
+  border: 1px solid var(--color--lightgray);
+  padding: 20px;
+  text-align: center;
+  font-size: 0.85em;
+}
+
+.join a {
+  color: #0096f6;
+  font-weight: bold;
+}
+
+.app_download {
+  padding: 20px;
+}
+
+.app_download span {
+  font-size: 0.85em;
+}
+
+.app_download .appBtn_wrap {
+  margin-top: 20px;
+}
+
+.app_download .appBtn_wrap button {
+  padding: 15px;
+  border: 0;
+  border-radius: 5px;
+  background-color: #000;
+  color: #fff;
+}
+/*# sourceMappingURL=login.css.map */
