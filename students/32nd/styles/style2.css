@@ -1,0 +1,304 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+p {
+    margin: 0;
+}
+
+body {
+    background-color: #fafafa;
+}
+
+.wrapper {
+    width: 100%;
+    height: auto;
+    /* background-color: yellowgreen; */
+    margin: 0 auto;
+}
+
+nav {
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid rgba(48, 46, 46, 0.3);
+    background-color: white;
+}
+
+.logo {
+    font-family: 'Lobster', cursive;
+    font-size: 30px;
+}
+
+.nav-left img {
+    width: 40px;
+}
+
+.nav-center {
+    position: relative;
+}
+
+.nav-center input {
+    text-align: center;
+    max-width: 200px;
+    width: 100%;
+    background-color: #efefef;
+    color: RGB(161, 161, 161);
+    border: 1px solid rgba(48, 46, 46, 0.3);
+    margin-top: 7px;
+    padding: 3px;
+}
+
+.nav-center input::placeholder {
+    color: gray;
+}
+
+.searchIcon {
+    position: absolute;
+     top: 20%;
+     transform:translateY(-20%);
+     left:10%;
+     transform: translateX(-10%);
+     color : gray;
+}
+
+.searchBar input:focus {
+    outline: none;
+}
+
+input:focus::placeholder{
+    color:transparent;
+}
+
+.nav-right img {
+    width: 25px;
+    margin-left: 20px;
+    margin-top: 6px;
+}
+
+main {
+    width: 100%;
+    height: auto;
+    background-color: #fafafa;
+    display: flex;
+    justify-content: center;
+}
+
+article {
+    position: relative;
+    max-width: 614px;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(45, 42, 42, 0.3);
+    margin-bottom: 50px;
+}
+
+.contents {
+    max-width: 700px;
+    max-height: 800px;
+    width: 100%;
+    height: 100%;
+    padding: 30px 10px;
+}
+
+.article-top {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: white;
+}
+
+.article-top p {
+    margin-left: 20px;
+    font-weight: 550;
+}
+
+.userImg {
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+.dotMore {
+    position: absolute;
+    right: 4%;
+}
+
+.article-main {
+    max-width: 612px;
+    max-height: 612px;
+}
+
+.article-main img {
+    width: 100%;
+    max-height: 612px;
+    height: 100%;
+}
+
+.article-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: white;
+}
+
+.article-bar button {
+    border: none;
+    background:none;
+    cursor: pointer;
+}
+
+.article-bar span {
+    color: rgba(19, 18, 18, 0.3);
+    transition: all 1s;
+}
+
+.bar-like:hover {
+    color : red;
+    transition: all 1s;
+}
+
+.bar-comments:hover {
+    color : black;
+    transition: all 1s;
+}
+
+.bar-share:hover {
+    color : black;
+    transition: all 1s;
+}
+
+
+.bar-bookmark:hover {
+    color : black;
+    transition: all 1s;
+}
+
+.likeUser {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+.article-reaction {
+    display: flex;
+    align-items: center;
+}  
+
+.article-comments {
+    border-bottom: 1px solid rgba(45, 42, 42, 0.3);
+    padding: 15px;
+
+}
+
+.article-write {
+    height: 50px;
+}
+
+.textIn {
+    border: none;
+    width: 90%;
+    height: 50px;
+}
+
+.textIn::placeholder {
+    font-weight: 750;
+    color: gray;
+    padding: 10px;
+}
+
+.textBt {
+    border: none;
+    background:none;
+    color:skyblue;
+    cursor: pointer;
+    margin-bottom: 80px;
+}
+
+.textIn:focus {
+    outline: none;
+}
+
+.article-comments button {
+    border: none;
+    background:none;
+    cursor: pointer;
+}
+
+.comment-like {
+    color: rgba(19, 18, 18, 0.3);
+    transition: all 1s;
+}
+
+.comment-like:hover {
+    color: red;
+    transition: all 1s;
+}
+
+.main-right {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    padding: 30px 10px;
+}
+
+.box-right {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+}
+
+.right-top {
+    display: flex;
+    align-items: center;
+}
+
+.right-top img {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+}
+
+.r-top-text {
+    margin-left: 20px;
+    font-weight: bold;
+}
+.right-story {
+    border: 1px solid #c6c6c6 ;
+    padding: 5px;
+}
+
+.right-story img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    margin-top: 10px;
+}
+
+.story-text {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.story-list {
+    display: flex;
+    align-items: center;
+}
+
+.follow-line {
+    width: 280px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.follow-bt {
+    border: none;
+    background: none;
+    color: rgb(24, 161, 216);
+    font-weight: bold;
+    cursor: pointer;
+}
