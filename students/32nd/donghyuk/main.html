@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <script src="./main.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/7a7c67eab3.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <nav class="nav-bar">
+      <div class="nav-bar__container">
+        <div class="nav-bar__left">
+          <button class="nav-bar__logo">
+            <i class="fab fa-instagram"></i>
+          </button>
+          <div class="vertical-bar"></div>
+          <span class="nav-bar__title">Westagram</span>
+        </div>
+        <div class="nav-bar__center">
+          <input type="text" class="search-bar" placeholder="🔍 검색" />
+        </div>
+        <div class="nav-bar__right">
+          <button class="nav-bar__compass">
+            <img
+              src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png"
+              alt=""
+            />
+          </button>
+          <button class="nav-bar__heart">
+            <img
+              src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"
+              alt=""
+            />
+          </button>
+          <button class="nav-bar__user">
+            <img
+              src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png"
+              alt=""
+            />
+          </button>
+        </div>
+      </div>
+    </nav>
+    <section class="main">
+      <div class="main-feeds">
+        <div class="feed-profile">
+          <div class="profile-left">
+            <img src="./덕순1.jpg" alt="" class="profile-picture" />
+            <span class="profile-id">gel_fos</span>
+          </div>
+          <i class="fas fa-ellipsis-h"></i>
+        </div>
+        <article class="main-article">
+          <img src="./덕순1.jpg" alt="" class="article-img" />
+          <section class="feed-icon-bar">
+            <div class="feed-icon-bar__left">
+              <button class="feed-icon-bar__heart">
+                <i class="far fa-heart"></i>
+              </button>
+              <button class="feed-icon-bar__conmment">
+                <i class="far fa-comment"></i>
+              </button>
+              <button class="feed-icon-bar__upload">
+                <i class="fas fa-external-link-alt"></i>
+              </button>
+            </div>
+            <button class="feed-icon-bar__bookmark">
+              <i class="far fa-bookmark"></i>
+            </button>
+          </section>
+          <section class="like-bar">
+            <img src="./덕순2.jpg" alt="" class="like-bar__image" />
+            <span class="like-bar__text"
+              >aineworld님 외 3,543명이 좋아합니다.</span
+            >
+          </section>
+          <section class="article-content">
+            <div class="article-post">
+              <span class="post__id">gel_fos</span>
+              <span class="post__text">댕댕이🐶</span>
+            </div>
+          </section>
+          <section class="article-comments">
+            <div class="article-comment__row">
+              <span class="comment__id">neceosecius</span>
+              <span class="comment__text">맞팔해요~ 덕순이 귀엽네요👺</span>
+            </div>
+          </section>
+          <span class="article-update__time">11시간전</span>
+          <form class="article-comment__form">
+            <input
+              class="comment__input"
+              type="text"
+              placeholder="댓글 달기..."
+            />
+            <!-- <textarea
+              name=""
+              id=""
+              cols="500"
+              rows="1"
+              class="comment__input"
+              placeholder="댓글 달기..."
+            ></textarea> -->
+            <button class="comment__button">게시</button>
+          </form>
+        </article>
+      </div>
+
+      <div class="main-right">
+        <div class="right-profile">
+          <img src="./덕순1.jpg" alt="" class="right-profile__image" />
+          <div class="right-profile-description">
+            <span class="right-profile__id">gel_fos</span>
+            <span class="right-profile__name">덕순 (5세/닥스훈트)</span>
+          </div>
+        </div>
+        <div class="right-story">
+          <div class="story-header">
+            <span class="story-header__text1">스토리</span>
+            <span class="story-header__text2">모두 보기</span>
+          </div>
+          <section class="story-rows">
+            <div class="story-row">
+              <div class="story-left">
+                <img src="./덕순1.jpg" alt="" class="story-row__image" />
+                <div class="right-profile-description">
+                  <span class="story-row__id">gel_fos</span>
+                  <span class="story-row__follow">덕순 (5세/닥스훈트)</span>
+                </div>
+              </div>
+              <!-- <button class="story-left__follow-text">팔로우</button> -->
+            </div>
+          </section>
+        </div>
+
+        <div class="right-story">
+          <div class="story-header">
+            <span class="story-header__text1">회원님을 위한 추천</span>
+            <span class="story-header__text2">모두 보기</span>
+          </div>
+          <section class="story-rows">
+            <div class="story-row">
+              <div class="story-left">
+                <img src="./덕순1.jpg" alt="" class="story-row__image" />
+                <div class="right-profile-description">
+                  <span class="story-row__id">gel_fos</span>
+                  <span class="story-row__follow">덕순 (5세/닥스훈트)</span>
+                </div>
+              </div>
+              <button class="story-left__follow-text">팔로우</button>
+            </div>
+            <div class="story-row">
+              <div class="story-left">
+                <img src="./덕순1.jpg" alt="" class="story-row__image" />
+                <div class="right-profile-description">
+                  <span class="story-row__id">gel_fos</span>
+                  <span class="story-row__follow">덕순 (5세/닥스훈트)</span>
+                </div>
+              </div>
+              <button class="story-left__follow-text">팔로우</button>
+            </div>
+            <div class="story-row">
+              <div class="story-left">
+                <img src="./덕순1.jpg" alt="" class="story-row__image" />
+                <div class="right-profile-description">
+                  <span class="story-row__id">gel_fos</span>
+                  <span class="story-row__follow">덕순 (5세/닥스훈트)</span>
+                </div>
+              </div>
+              <button class="story-left__follow-text">팔로우</button>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
