@@ -1,0 +1,74 @@
+@import "login.css";
+
+body{
+    background-color: #fafafa;
+}
+
+.login_wrapper{
+    margin: 0 auto;
+    margin-top: 70px;
+    width: 450px;
+    height: 500px;
+    background-color: white;
+}
+
+.login{
+    width: 450px;
+    height: 500px;
+    border: 1px solid rgba(0,0,0,0.1);
+    margin-top: 30px;
+    text-align: center;
+}
+
+.login_logo{
+    font-size: 50px;
+    font-family: 'Lobster', cursive;
+    padding: 20px 60px;
+    text-align: center;
+}
+
+.login_input{
+    display: flex;
+    flex-direction: column;
+    margin: 0px 40px;
+}
+
+.login_input input {
+    padding: 15px 10px;
+    margin-bottom: 15px;
+    border-radius: 7px;
+    border: 1px solid rgba(0,0,0,0.1);
+    background-color: #fafafa;
+    font-size: 17px;
+}
+
+.login_input button {
+    background-color: blue;
+    padding: 10px 0px;
+    border: none;
+    border-radius: 7px;
+    font-size: 17px;
+    color: white;
+    font-weight: bold;
+    margin: 15px 0px;
+    cursor: pointer;
+}
+
+.login_input button:disabled {
+    background-color: #c4e1fc;
+}
+
+.login_btn a {
+    text-decoration-line: none;
+    color: white;
+}
+
+.forget_pwd {
+     display: flex;
+     justify-content: center;
+     margin-top: 75px;
+}
+
+.forget_pwd a {
+    text-decoration-line: none;
+}

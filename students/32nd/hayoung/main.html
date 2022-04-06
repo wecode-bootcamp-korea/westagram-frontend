@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css" />
+    <title>Westagram</title>
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="nav_column_left">
+            <img class="logo" src="instagram.jpeg" alt="instagramLogo" />
+            <span>Westagram</span>
+        </div>
+        <div class="input_search">
+            <input type="text" class="search" placeholder="검색">
+        </div>
+        <div class="nav_column_right">
+            <img class="explore" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png" />
+            <img class="heart" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" />
+            <img class="profile" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png" />
+        </div>
+    </nav>
+    <main>
+        <div class="feeds">
+            <article>
+                <div class="feed">
+                    <div class="feed_post">
+                        <div class="feedIdProfile">
+                            <img class="feedIdPhoto"
+                                src="https://images.unsplash.com/photo-1574158622682-e40e69881006?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80" />
+                            <span>Rumi_xoxo</span>
+                            <img class="dot_icon" src="https://cdn-icons-png.flaticon.com/512/512/512142.png" />
+                        </div>
+                        <img class="feedPhoto"
+                            src="https://images.unsplash.com/photo-1649038578950-1a7087c87a8e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2235&q=80" />
+                    </div>
+                    <div class="feed_icons">
+                        <img class="heart_icon" src="https://cdn-icons-png.flaticon.com/512/1077/1077035.png" />
+                        <img class="bubble_icon" src="https://cdn-icons-png.flaticon.com/512/2462/2462719.png" />
+                        <img class="download_icon" src="https://cdn-icons-png.flaticon.com/512/747/747416.png" />
+                        <img class="save_icon" src="https://cdn-icons-png.flaticon.com/512/84/84510.png" />
+                    </div>
+                    <div class="like_token">
+                        <img class="like_token_profile"
+                            src="https://images.unsplash.com/photo-1606225457115-9b0de873c5db?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" />
+                        <p> <strong>jibsa_rumi</strong>님 <strong>외 320명</strong>이 좋아합니다</p>
+                    </div>
+                    <div class="feed_text">
+                        <span class="feed_user_id">Rumi_xoxo</span>
+                        <p class="feed_user_text">나는 귀엽다 😻</p>
+                    </div>
+                   
+                    <ul class="comments">
+                        <li>
+                            <a class="comment_id"></a>
+                            <span class="comment_text"></span>
+                        </li>
+                    </ul>
+                    <form class="comment_form">
+                        <input type="text" class="comment_write" placeholder="댓글 달기...">
+                        <button type="button" class="comment_btn">게시</button>
+                    </form>
+                     <!-- <ul class="comments">
+                        <li>
+                            <a class="comment_id"></a>
+                            <span class="comment_text"></span>
+                        </li>
+                    </ul>
+                    <div class="comment_box">
+                        <input type="text" class="comment_write" placeholder="댓글 달기...">
+                        <button type="button" class="comment_btn">게시</button>
+                    </div> -->
+                </div>
+            </article>
+        </div>
+        <div class="main_right">
+            <div class="user_id">
+                <img class="user_profile"
+                    src="https://images.unsplash.com/photo-1502444330042-d1a1ddf9bb5b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1173&q=80" />
+                <span class="user_id_name">
+                    <p>ha0__</p>
+                    <p>wecode | 이하영</p>
+                </span>
+            </div>
+            <div class="story_box">
+                <span class="box_text">
+                    <p>스토리</p>
+                    <p>모두 보기</p>
+                </span>
+                <div class="story_id">
+                    <img class="story_id_profile"
+                        src="https://images.unsplash.com/photo-1649035571136-d2fe2a15b341?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" />
+                    <span class="story_id_name">
+                        <p>bts__jk</p>
+                        <p>16분전</p>
+                    </span>
+                </div>
+                <div class="story_id">
+                    <img class="story_id_profile"
+                        src="https://images.unsplash.com/photo-1649026166267-5f474e9280e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80" />
+                    <span class="story_id_name">
+                        <p>hayoung_haha</p>
+                        <p>2시간 전</p>
+                    </span>
+                </div>
+                <div class="story_id">
+                    <img class="story_id_profile"
+                        src="https://images.unsplash.com/photo-1649009060896-119c6ef99a22?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80" />
+                    <span class="story_id_name">
+                        <p>haha__00</p>
+                        <p>5시간 전</p>
+                    </span>
+                </div>
+            </div>
+            <div class="recommend_box">
+                <span class="box_text">
+                    <p>회원님을 위한 추천</p>
+                    <p>모두 보기</p>
+                </span>
+                <div class="recommend_id">
+                    <div class="recommend_ids">
+                        <img class="recommend_id_profile"
+                            src="https://images.unsplash.com/photo-1649035571136-d2fe2a15b341?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" />
+                        <span class="recommend_id_name">
+                            <p>adgd_Dggs</p>
+                            <p>_s2e1f2님 외 2명이...</p>
+                        </span>
+                    </div>
+                    <div class="follower">
+                        <span class="follower_text">팔로워</span>
+                    </div>
+                </div>
+                <div class="recommend_id">
+                    <div class="recommend_ids">
+                        <img class="recommend_id_profile"
+                            src="https://images.unsplash.com/photo-1649026166267-5f474e9280e2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80" />
+                        <span class="recommend_id_name">
+                            <p>jjjjjjjk</p>
+                            <p>thv23님 외 1223명...</p>
+                        </span>
+                    </div>
+                    <div class="follower">
+                        <span class="follower_text">팔로워</span>
+                    </div>
+                </div>
+                <div class="recommend_id">
+                    <div class="recommend_ids">
+                        <img class="recommend_id_profile"
+                            src="https://images.unsplash.com/photo-1649009060896-119c6ef99a22?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80" />
+                        <span class="recommend_id_name">
+                            <p>ha___00000</p>
+                            <p>gdsgd12405님 외1...</p>
+                        </span>
+                    </div>
+                    <div class="follower">
+                        <span class="follower_text">팔로워</span>
+                    </div>
+                </div>
+            </div>
+            <div class="info">
+                <p>Instagram 정보 . 지원 . 홍보 센터 . API . <br>채용 정보 . 개인정보처리방침 . 약관 . <br>디렉터리 . 프로필 . 해시태그 . 언어</p>
+                <p>©2022 INSTAGRAM</p>
+            </div>
+        </div>
+    </main>
+    <script src="main.js"></script>
+</body>
+
+</html>
