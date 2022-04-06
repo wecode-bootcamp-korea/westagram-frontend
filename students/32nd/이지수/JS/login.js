@@ -5,10 +5,9 @@ const btn = document.querySelector("button");
 let idvalue;
 let pwvalue;
 const num = Math.floor(Math.random() * 10);
-const user = { name: "anonymous", id: num };
 const checkBlank = function (e) {
+  const user = { name: idvalue, id: num };
   if (e.target.id === `id`) {
-    user.name = idvalue;
     idvalue = e.target.value;
   }
   if (e.target.id === "pw") {
@@ -17,9 +16,10 @@ const checkBlank = function (e) {
   if (idvalue.includes("@") && pwvalue.length >= 5) {
     btn.disabled = false;
     btn.style.backgroundColor = "blue";
-  }
+    window.localStorage.setItem("user", JSON.stringify(user));
+  } else console.log("아이디 ,비밀번호를 입력해주세요");
 };
-window.localStorage.setItem("user", JSON.stringify(user));
+
 id.addEventListener("change", checkBlank);
 pw.addEventListener("change", checkBlank);
 btn.addEventListener("click", (e) => {
