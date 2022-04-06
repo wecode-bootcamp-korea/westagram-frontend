@@ -1,7 +1,8 @@
 const likeButton = document.body.querySelector(".button-heart");
 const bookmarkButton = document.body.querySelector(".button-bookmark");
-const postCommentInput = document.body.querySelector(".post-comment-input");
+const postCommentForm = document.body.querySelector(".post-comment");
 const postCommentButton = document.body.querySelector(".post-comment-button");
+const postCommentInput = document.body.querySelector(".post-comment-input");
 const postCommentList = document.body.querySelector(".post-comment-list");
 const gnbSearchBar = document.body.querySelector(".gnb-search");
 const gnbSearchResult = document.body.querySelector(".gnb-search-result");
@@ -15,7 +16,7 @@ const gnbProfileSetting = document.body.querySelector(
 
 // 피드 버튼들 동작 시 클래스 fa-solid 바꾸기 등
 
-const heartButtonToggle = likeButton.addEventListener("click", () => {
+likeButton.addEventListener("click", () => {
   likeButton.classList.toggle("liked");
   likeButton.querySelector("i").classList.toggle("fa-regular");
   likeButton.querySelector("i").classList.toggle("fa-solid");
@@ -92,9 +93,11 @@ const createCommentLi = (id, comment) => {
   return li;
 };
 
-// 2-1. 버튼 클릭 시 댓글 추가
+// 2-1. 폼 제풀 시 댓글 추가
 
-postCommentButton.addEventListener("click", () => {
+postCommentForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+
   if (!postCommentInput.value.slice().trim()) {
     return;
   }
@@ -103,20 +106,6 @@ postCommentButton.addEventListener("click", () => {
   postCommentInput.value = "";
   postCommentButton.disabled = true;
   postCommentList.appendChild(newComment);
-});
-
-// 2-2. 엔터 입력 시 댓글 추가
-
-postCommentInput.addEventListener("keyup", (e) => {
-  if (e.code === "Enter") {
-    if (!postCommentInput.value.slice().trim()) {
-      return;
-    }
-    const newComment = createCommentLi("garuda352", postCommentInput.value);
-    postCommentInput.value = "";
-    postCommentButton.disabled = true;
-    postCommentList.appendChild(newComment);
-  }
 });
 
 // 아이디 검색 기능
