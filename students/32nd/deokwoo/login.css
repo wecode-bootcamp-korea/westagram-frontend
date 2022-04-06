@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    width: 350px;
+    height: 490px;
+    padding: 30px 20px;
+    border: 1px solid rgb(230,230,230);
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 100%;
+    flex: 1.5;
+    text-align: center;
+    font-family: "Lobster";
+    font-size: 40px;
+}
+
+.login {
+    width: 100%;
+    flex: 2;
+}
+
+.login input {
+    width: 100%;
+    height: 40px;
+    padding: 0 5px;
+    background-color: rgb(250,250,250);
+    border: 1px solid rgb(240,240,240);
+    border-radius: 5px;
+}
+
+.login input:focus{
+    outline: none;
+}
+
+.login input:first-child{
+    margin-bottom: 5px;
+}
+
+.button {
+    width: 100%;
+    flex: 4;
+}
+
+.btn {
+    width: 100%;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(65, 150, 240);
+    opacity: 0.5;
+}
+
+.active {
+    opacity : 1
+}
+
+.forget{
+    width: 100%;
+    flex: 1;
+    text-align: center;
+    text-decoration: none;
+}
+
+.forget:visited{
+    color: blue;
+}

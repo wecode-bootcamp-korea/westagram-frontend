@@ -1,0 +1,415 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    width: 100%;
+    /* background-color: blue; */
+}
+
+nav {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid rgb(240,240,240);
+    position: fixed;
+    top: 0;
+    background-color: white;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 975px;
+}
+
+.navigation .nav_left{
+    display: flex;
+    align-items: center;
+    font-family: 'Lobster';
+}
+
+.navigation .nav_left .vertical{
+    height: 30px;
+    border-left: 2px solid black;
+    margin: 0 20px;
+}
+
+.navigation .nav_center {
+    position: relative;
+    background-color: rgb(250,250,250);
+    border: 1px solid rgb(220,220,220);
+}
+
+.navigation .nav_center input{
+    width: 150px;
+    height: 25px;
+    padding: 0 5px;
+    background-color: rgb(250,250,250);
+    border: 1px solid rgb(220,220,220);
+    border: none;
+}
+
+.navigation .nav_center input::placeholder{
+    color: rgb(220,220,220);
+    font-size: 16px;
+}
+
+.navigation .nav_center .search {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(220,220,220);
+    font-size: 16px;
+}
+
+.navigation .nav_center .search i{
+    margin-right: 10px;
+}
+
+.navigation .nav_center input:focus{
+    outline: none;
+}
+
+.navigation .nav_right img {
+    width: 32px;
+    height: 32px;
+    margin-left: 20px;
+}
+
+.navigation .nav_right img:first-child{
+    margin: 0;
+}
+
+/* 아래 피드와 정보부분 */
+
+section {
+    padding: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(250,250,250);
+    margin-top: 60px;
+}
+
+/* 피드부분 */
+
+.main_left {
+    max-width: 614px;
+    width: 100%;
+    margin-right: 28px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgb(220,220,220);
+    background-color: white;
+}
+
+/* 피드 머릿글 */
+
+.left_head {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    height: 60px;
+}
+
+.head_left {
+    display: flex;
+    align-items: center;
+}
+
+.head_left .pic img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    vertical-align: top;
+    margin-right: 20px;
+    border: 1px solid rgb(220,220,220);
+}
+
+.head_left span {
+    font-weight: 600;
+}
+
+.head_right {
+    display: flex;
+    align-items: center;
+}
+
+/* 피드 사진영역 */
+
+.left_body img {
+    width: 100%;
+    vertical-align: top;
+}
+
+/* 피드 사진아래 아이콘영역 */
+
+.left_icon {
+    width: 100%;
+    height: 50px;
+    padding : 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left_icon .icon_left i{
+    margin-right : 10px;
+}
+
+.left_icon .icon_left i:first-child{
+    color: red;
+}
+
+.left_icon .icon_left i:last-child{
+    margin: 0;
+}
+
+/* 피드 좋아요 표시 */
+
+.left_like {
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+}
+
+.left_like .pic img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 1px solid rgb(220,220,220);
+}
+
+/* 피드 본문내용 */
+
+.left_content {
+    padding: 0 15px;
+}
+
+.left_content #id1{
+    font-weight: bolder;
+}
+
+/* 피드 댓글부분 */
+
+.left_reply {
+    padding: 0 15px;
+}
+
+.left_reply ul{
+    list-style: none;
+}
+
+.left_reply ul li i{
+    float: right;
+}
+
+.left_reply span {
+    font-weight: bold;
+}
+
+/* 피드 댓글 마지막시간 */
+
+.left_timeline {
+    padding: 0 15px;
+    color: rgb(155,155,155);
+    margin-bottom: 5px;   
+}
+
+/* 댓글입력부분 */
+
+.left_input {
+    border-top: 1px solid rgb(220,220,220);
+    width: 100%;
+    height: 40px;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left_input input{
+    border: none;
+    border-bottom: rgb(220,220,220);
+    width: 80%;
+    height: 40px;
+}
+
+.left_input input:focus {
+    outline: none;
+}
+
+.left_input a {
+    color: rgb(85,150,230);
+    text-decoration: none;
+}
+
+/* 오른쪽 영역 */
+.main_fixed {
+    max-width: 293px;
+    width: 100%;
+}
+
+
+.main_right {
+    max-width: 293px;
+    width: 100%;
+    position: fixed;
+    left: calc(50% + 175px)
+}
+
+/* 오른쪽 상단 프로필 정보 */
+
+.right_header {
+    display: flex;
+    align-items: center;
+}
+
+.right_header .pic img {
+    width: 55px;
+    height: 55px;
+    border: 1px solid rgb(220,220,220);
+    border-radius: 50%;
+    vertical-align: top;
+}
+
+.right_header .id {
+    margin-left: 10px;
+}
+
+.right_header .id #id{
+    font-weight: bold;
+}
+
+.right_header .id .descript {
+    color: #aaaaaa;
+}
+
+/* 오른쪽 스토리, 추천 */
+
+/* 스토리 메뉴 */
+
+.story {
+    width: 100%;
+    border: 1px solid rgb(220,220,220);
+    margin-top: 15px;
+    border-radius: 5px;
+    padding: 15px 15px 0 15px;
+    background-color: white;
+}
+
+.story_header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.right_body .title {
+    color: rgb(160,160,160);
+    font-size: 15px;
+}
+
+.right_body .all{
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.story_main {
+    height: 170px;
+    overflow: scroll;
+}
+
+.story_main ul{
+    list-style: none;
+}
+
+.story_main li {
+    display: flex;
+    margin : 10px 0;
+    align-items: center;
+}
+
+.story_main .pic {
+    width: 40px;
+    height: 40px;
+    background-color: grey;
+    border-radius: 50%;
+}
+
+.story_main .id {
+    margin-left: 15px;
+}
+
+.story_main .id p:first-child {
+    font-weight: bold;
+}
+
+.story_main .id p:last-child {
+    color: #aaaaaa
+}
+
+/* 추천부분 */
+
+.recommand {
+    margin-top: 15px;
+    border: 1px solid rgb(220,220,220);
+    border-radius: 5px;
+    width: 100%;
+    padding: 15px;
+    background-color: white;
+}
+
+.rec_header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rec_main ul{
+    list-style: none;
+}
+
+.rec_main li {
+    display: flex;
+    margin : 10px 0;
+    align-items: center;
+}
+
+.rec_main .pic {
+    width: 40px;
+    height: 40px;
+    background-color: grey;
+    border-radius: 50%;
+    flex-basis: auto;
+}
+
+.rec_main .id {
+    margin-left: 15px;
+    flex: 2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #aaaaaa;
+}
+
+.rec_main .id p{
+    color: black;
+    font-weight: bold;
+}
+
+.rec_main a{
+    color: rgb(85,150,230);
+    text-decoration: none;
+    flex-basis: auto;
+}
