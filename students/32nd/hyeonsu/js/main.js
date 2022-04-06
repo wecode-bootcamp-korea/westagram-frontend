@@ -157,11 +157,15 @@ const paintMatchedArray = () => {
     const matchedLi = document.createElement("li");
     matchedLi.className = "gnb-search-result-item modal-item";
 
+    const matchedLiLink = document.createElement("a");
+    matchedLiLink.href = "#";
+
     const matchedLiLeft = document.createElement("div");
     matchedLiLeft.className = "gnb-search-result-item-left";
     const profileImg = document.createElement("img");
     profileImg.src = el.profileImgUrl;
     profileImg.className = "gnb-search-result-item-img";
+    profileImg.alt = `Profile image of ${el.username}`;
     const idUsernameWrapper = document.createElement("div");
     idUsernameWrapper.className = "gnb-search-result-item-profile";
     const id = document.createElement("strong");
@@ -183,8 +187,10 @@ const paintMatchedArray = () => {
     xButton.className = "fa-solid fa-x";
     matchedLiRight.appendChild(xButton);
 
-    matchedLi.appendChild(matchedLiLeft);
-    matchedLi.appendChild(matchedLiRight);
+    matchedLiLink.appendChild(matchedLiLeft);
+    matchedLiLink.appendChild(matchedLiRight);
+
+    matchedLi.appendChild(matchedLiLink);
 
     gnbSearchResultList.appendChild(matchedLi);
   });
