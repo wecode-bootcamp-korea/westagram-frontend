@@ -36,4 +36,11 @@ document.addEventListener("click", function (e) {
       dle.remove();
     }
   }
+  if (e.target && e.target.id === "likebtn") {
+    const child = e.target.children;
+    const heart = child[0];
+    const fullHeart = child[1];
+    heart.classList.toggle("hidden");
+    fullHeart.classList.toggle("hidden");
+  }
 });
