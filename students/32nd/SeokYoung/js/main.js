@@ -13,13 +13,13 @@ function createComment() {
   li.innerHTML = `<span>syoung__h</span> ${inputText.value} <i class="fa-solid fa-xmark deleteBtn"></i><li>42분 전</li>`;
   commentPostList.appendChild(li);
   inputText.value = "";
-  clickBtn();
+  commentDeleteBtn();
 }
 
-function clickBtn() {
+function commentDeleteBtn() {
   const Btn = document.querySelectorAll(".deleteBtn");
   for (i = 0; i < Btn.length; i++) {
-    Btn[i].addEventListener("click", function active(e) {
+    Btn[i].addEventListener("click", function (e) {
       e.target.parentElement.remove();
     });
   }
