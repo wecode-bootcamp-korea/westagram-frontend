@@ -36,8 +36,6 @@ body {
   background-color: var(--color-background);
 }
 
-/* 상단 Nav 레이아웃 */
-
 nav {
   position: sticky;
   display: flex;
@@ -71,13 +69,33 @@ nav {
   background-color: var(--color-background);
 }
 
+.navLogos {
+  position: relative;
+}
+
 .navLogo {
   justify-content: space-around;
   width: 24px;
   margin-right: 10px;
 }
 
-/* 메인, 본문 레이아웃 */
+.navProfileTab {
+  position: absolute;
+  visibility: hidden;
+  top: 44px;
+  right: 0;
+  width: 100%;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-background);
+  text-align: left;
+  z-index: 5;
+}
+
+.navProfileTabDetail {
+  padding: 10px;
+  color: var(--color-link);
+  border: 1px solid var(--color-border);
+}
 
 .main {
   display: flex;
@@ -117,8 +135,6 @@ nav {
 .feedTopName {
   margin-left: 15px;
 }
-
-/* 댓글 창 */
 
 .commentBox {
   width: 100%;
@@ -203,8 +219,6 @@ nav {
   background-color: white;
 }
 
-/* 우측 레이아웃 */
-
 .feedRight {
   display: flex;
   position: sticky;
@@ -212,6 +226,7 @@ nav {
   top: 100px;
   width: 293px;
   align-self: flex-start;
+  z-index: -1;
 }
 
 .feedRightProfile {

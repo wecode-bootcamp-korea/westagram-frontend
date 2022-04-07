@@ -1,6 +1,7 @@
 const commentBox = document.querySelector(".commentInputBox");
 const inputText = document.querySelector(".commentInput");
 const commentPostList = document.querySelector(".commentPostList");
+const navLogoProfile = document.querySelector(".navLogoProfile");
 
 function commentHandler(x) {
   x.preventDefault();
@@ -25,4 +26,14 @@ function commentDeleteBtn() {
   }
 }
 
+function profileHandler() {
+  const profileTab = document.querySelector(".navProfileTab");
+  if (profileTab.style.visibility == "hidden") {
+    profileTab.style.visibility = "visible";
+  } else {
+    profileTab.style.ivsibility = "hidden";
+  }
+}
+
 commentBox.addEventListener("submit", commentHandler);
+navLogoProfile.addEventListener("click", profileHandler);
