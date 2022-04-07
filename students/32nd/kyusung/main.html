@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="initial-scale=1.0" />
+    <title>Westagram</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Oswald:wght@500&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/common.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+
+    <script
+      defer
+      src="https://kit.fontawesome.com/0bc3b3eb7f.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/main.js"></script>
+  </head>
+
+  <body>
+    <nav class="header">
+      <div class="left-content">
+        <img src="./tobe/instagram_color.png" alt="instagram Color Logo" />
+        <div class="vLine"></div>
+        <p class="mainWestagram">Westagram</p>
+      </div>
+
+      <div class="middle-content">
+        <input type="text" />
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+
+      <div class="right-content">
+        <div class="rightContent-images">
+          <img
+            src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"
+            alt=""
+          />
+          <img
+            src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png"
+            alt=""
+          />
+          <img
+            src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png"
+            alt=""
+          />
+        </div>
+      </div>
+    </nav>
+
+    <section>
+      <div class="mainPage">
+        <div class="feeds">
+          <article>
+            <div class="articleHeader">
+              <div class="headerLeft">
+                <i class="fa-brands fa-apple fa-3x"></i>
+                <span>Wecode 32기~!</span>
+              </div>
+              <div class="headerRight">
+                <i class="fa-solid fa-ellipsis fa-2x"></i>
+              </div>
+            </div>
+
+            <div class="feeds-img">
+              <img src="./tobe/westagramPuppy.jpg" alt="my Article image" />
+            </div>
+            <div class="feeds-img-info">
+              <div class="feeds-info-img">
+                <i class="fa-regular fa-heart fa-3x"></i>
+                <i class="fa-regular fa-comment fa-3x"></i>
+                <i class="fa-regular fa-bookmark fa-3x"></i>
+              </div>
+              <div class="likes">
+                <div class="blankImage"></div>
+                <p>
+                  <span class="author">Voyage_dev</span>님 외<span
+                    class="countLikes"
+                  >
+                    10</span
+                  >명이 좋아합니다
+                </p>
+              </div>
+              <div class="comments">
+                <span>chlrbtjd</span>
+                <p>여긴 어디? 나는 누구?...</p>
+                <div class="comments-right-info">
+                  <button class="deleteComments">삭제</button>
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>
+            </div>
+            <div id="instaForm">
+              <input
+                id="username"
+                type="text"
+                placeholder="사용자 아이디를 입력하세요!"
+              />
+              <input
+                id="userComments"
+                type="text"
+                placeholder="댓글 달기!"
+                onkeyup="enterKey()"
+              />
+              <button id="submit">제출</button>
+            </div>
+          </article>
+        </div>
+
+        <div class="main-right">
+          <div class="rightHeader">
+            <div class="header-img">
+              <img src="./tobe/wecode.png" alt="Wecode Logo" />
+            </div>
+            <div class="header-name">
+              <p>wecode_bootcamp</p>
+              <div class="bottomName">
+                <span>Wecode</span>
+                <div></div>
+                <span>위코드</span>
+              </div>
+            </div>
+          </div>
+          <div class="story">
+            <div class="story-header">
+              <p>스토리</p>
+              <p>모두 보기</p>
+            </div>
+            <div class="stories">
+              <div class="story-info">
+                <div class="story-circle"></div>
+                <div class="story-info-el">
+                  <p>voyage</p>
+                  <span>16분전</span>
+                </div>
+              </div>
+              <div class="story-info">
+                <div class="story-circle"></div>
+                <div class="story-info-el">
+                  <p>wecode</p>
+                  <span>4시간전</span>
+                </div>
+              </div>
+              <div class="story-info">
+                <div class="story-circle"></div>
+                <div class="story-info-el">
+                  <p>coding</p>
+                  <span>40분전</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
