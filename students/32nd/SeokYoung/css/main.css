@@ -40,13 +40,13 @@ body {
 
 nav {
   position: sticky;
-  top: 0;
   display: flex;
   justify-content: center;
+  top: 0;
   width: 100%;
-  background-color: white;
-  border-bottom: 1px solid var(--color-border);
   margin-bottom: 5vh;
+  border-bottom: 1px solid var(--color-border);
+  background-color: white;
 }
 
 .topMenuBar {
@@ -62,18 +62,18 @@ nav {
 }
 
 .navSearch {
-  margin: auto;
   width: 268px;
   height: 36px;
-  background-color: var(--color-background);
+  margin: auto;
+  padding: 16px;
   border: none;
   border-radius: 5px;
-  padding: 16px;
+  background-color: var(--color-background);
 }
 
 .navLogo {
-  width: 24px;
   justify-content: space-around;
+  width: 24px;
   margin-right: 10px;
 }
 
@@ -140,9 +140,9 @@ nav {
 }
 
 .commentId {
-  font-weight: 600;
   padding-top: 10px;
   padding-left: 10px;
+  font-weight: 600;
 }
 
 .commentContent {
@@ -161,6 +161,8 @@ nav {
 }
 
 .commentPost {
+  position: relative;
+  width: 100%;
   padding-bottom: 5px;
 }
 
@@ -177,8 +179,8 @@ nav {
 }
 
 .commentInputBox img {
-  margin-left: 10px;
   width: 25px;
+  margin-left: 10px;
 }
 
 .commentBtn {
@@ -188,18 +190,25 @@ nav {
 }
 
 .commentInput {
-  padding: 10px 10px 10px 20px;
   width: 90%;
+  padding: 10px 10px 10px 20px;
   border: none;
   outline: none;
+}
+
+.deleteBtn {
+  position: absolute;
+  right: 20px;
+  border: 0px;
+  background-color: white;
 }
 
 /* 우측 레이아웃 */
 
 .feedRight {
   display: flex;
-  flex-direction: column;
   position: sticky;
+  flex-direction: column;
   top: 100px;
   width: 293px;
   align-self: flex-start;
@@ -212,9 +221,9 @@ nav {
 
 .feedRightProfile img {
   width: 56px;
+  margin-left: 5px;
   border: 1px solid var(--color-border);
   border-radius: 50%;
-  margin-left: 5px;
 }
 
 .profileName {
@@ -225,14 +234,14 @@ nav {
 
 .profileKor {
   padding-top: 5px;
-  font-weight: 400;
   color: var(--color-gray);
+  font-weight: 400;
 }
 
 .profileChange {
   margin: 0px 0px 0px auto;
-  font-size: 14px;
   color: var(--color-link);
+  font-size: 14px;
 }
 
 /* 우측 하단 */
@@ -245,9 +254,9 @@ nav {
 }
 
 .RecommendText1 {
+  color: var(--color-gray);
   font-size: 14px;
   font-weight: 600;
-  color: var(--color-gray);
 }
 
 .RecommendText2 {
