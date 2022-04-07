@@ -3,7 +3,7 @@ const inputBox = document.querySelector("#inputBox");
 const inputId = document.querySelector("#inputId");
 const inputPass = document.querySelector("#inputPass");
 
-loginBtn.addEventListener("click", btnHandler);
+loginBtn.addEventListener("click", submitCheck);
 inputBox.addEventListener("keyup", activeLogin);
 inputId.addEventListener("keyup", checkId);
 
@@ -17,7 +17,7 @@ function activeLogin() {
   }
 }
 
-function btnHandler() {
+function submitCheck() {
   const idCheck = "@";
   if (!inputId.value.includes(idCheck)) {
     alert("이메일 형식이 아닙니다.");
