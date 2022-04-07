@@ -30,8 +30,10 @@ function profileHandler() {
   const profileTab = document.querySelector(".navProfileTab");
   if (profileTab.style.visibility == "hidden") {
     profileTab.style.visibility = "visible";
+    navLogoProfile.classList.add("navLogoProfileHighlight");
   } else {
-    profileTab.style.ivsibility = "hidden";
+    profileTab.style.visibility = "hidden";
+    navLogoProfile.classList.remove("navLogoProfileHighlight");
   }
 }
 
