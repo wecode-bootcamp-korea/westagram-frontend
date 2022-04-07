@@ -1,7 +1,9 @@
 * {
     box-sizing:border-box;
 }
-
+main{
+    height:100%;
+}
 .navigator {
     border-bottom:1px solid lightgray;
     font-family: 'Lobster', cursive;
@@ -49,6 +51,24 @@ input {
     color:gray;
 }
 
+.explore{
+    height:30px;
+    width:30px;
+    margin-right:15px;
+}
+
+.heart{
+    height:30px;
+    width:30px;
+    margin-right:15px;
+}
+
+.profileicon{
+    height:30px;
+    width:30px;
+
+}
+
 main{
     display:flex;
     flex-direction:row;
@@ -65,17 +85,17 @@ main{
 
 .feeds{
     height:900px;
-    width:550px;
-
+    width:600px;
+    margin-left:150px;
 }
 
 .bigbox{
-    height:850px;
     width:500px;
     border:1px solid lightgray;
     display:flex;
     flex-direction:column;
     margin:0 auto;
+    align-items: stretch;
 }
 
 .fa-circle {
@@ -120,6 +140,7 @@ p{
 }
 
 .likes{
+    margin-top:10px;
     display:block;
     height:40px;
     position:relative;
@@ -138,37 +159,47 @@ p{
 }
 
 .commentbox1{
-    position:relative;
-    height: 30px;
+    display:flex;
+    justify-content: center;
+    flex-direction:row;
+    align-items: stretch;
+    height:100%;
 }
 
 .comment1{
-    position:absolute;
-    left:20px;
-    top:5px;
+    padding-left:40px;
 }
 
+.comment2{
+    padding-left:10px;
+}
 .seemore{
+    padding-left:140px;
     color:lightgray;
     font-size:13px;
 }
 
 .howminutesbefore {
     position:relative;
-    height:30px;
+    display:flex;
 }
 .minutesbefore{
     position:absolute;
     left:20px;
     top:0;
+    height:10px;
     font-size:13px;
     color:lightgray;
 }
 
 .addcomment {
-    height:50px;
     position:relative;
-   
+    height:50px;
+    display:flex;
+    flex-direction: row;
+    overflow:hidden;
+    justify-content: center;;
+    align-items: stretch;
 }
 
 .toaddcomment{
@@ -177,17 +208,231 @@ p{
     text-align:left;
     border:none;
     border-top:1px solid lightgray;
+    position:absolute;
 }
 
 .add{
-    position:absolute;
-    right:10px;
-    top:15px;
     font-size:13px;
     color:lightblue;
     opacity:0.8;
+    border:none;
+    background-color:white;
+    margin:0 auto;
+    position:absolute;
+    right:5px;
+    top:15px;
 }
 
-.div-right{
-    widsth
+.main-right{
+    height:850px;
+    width:400px;
+    margin-right:100px;
+    margin-top:-50px;
+    display:flex;
+    flex-direction:column;
+}
+
+ul{
+    list-style:none;
+    display:flex;
+    align-items: stretch;
+}
+
+.comment1 li{
+    font-weight:bold;
+}
+
+li{
+    list-style:none;
+    display:flex;
+
+
+}
+
+.idinfo{
+    width:100%;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+}
+
+.profile{
+    width:100%;
+    height:100px;
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+}
+
+.house{
+    border-radius: 50%;
+    width:80px;
+    height:80px;
+    margin-left:20px;
+    margin-bottom:20px;
+}
+
+.profileId{
+    margin-left:15px;
+    margin-bottom:20px;
+    font-size:20px;
+}
+
+.story{
+    width:90%;
+    height:300px;
+    margin-left:15px;
+    border:1px solid black;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.storyuser{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width:100%;
+}
+.wordstory{
+    margin-left:10px;
+    margin-top:10px;
+    color:lightgray;
+    font-size:13px;
+}
+
+.storyseeall{
+    margin-right:10px;
+    margin-top:10px;
+    height:30px;
+    font-size:13px;
+}
+.friends{
+    display:flex;
+    flex-direction:row;
+    align-items:stretch;
+    justify-content: center;
+    overflow:hidden;
+    width:100%;
+    position:relative;
+}
+
+
+.yogurt{
+    border-radius: 50%;
+    width:30px;
+    height:30px;
+    border: 1px solid red;
+    position:absolute;
+    left:10px;
+}
+
+.yougurtlover{
+    margin-bottom:10px;
+    padding-bottom:5px;
+    font-size:15px;
+    margin-left:-180px;
+}
+
+.oneminutebefore{
+    color:lightgray;
+    font-size:10px;
+    position:absolute;
+    top:20px;
+    left:50px;
+}
+
+.recommendation{
+    width:90%;
+    height:150px;
+    margin-left:15px;
+    margin-top:15px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    border: 1px solid black;
+}
+
+.restriction{
+    width:90%;
+    height:80px;
+    margin-left:15px;
+    margin-top:15px;
+
+    color:lightgray;
+    opacity:0.8;
+}
+
+.copyright{
+    width:90%;
+    height:20px;
+    margin-left:15px;
+    margin-top:15px;
+
+    color:lightgray;
+    opacity:0.8;
+    font-size:15px;
+}
+
+.recommendationuser{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width:100%;
+}
+
+.client{
+    margin-left:10px;
+    margin-top:10px;
+    color:lightgray;
+    font-size:13px;
+}
+
+.clientseeall{
+    margin-right:10px;
+    margin-top:10px;
+    height:30px;
+    font-size:13px;
+}
+
+.cat{
+    border-radius: 50%;
+    width:30px;
+    height:30px;
+    position:absolute;
+    left:10px;
+}
+
+.animal{
+    display:flex;
+    flex-direction:row;
+    align-items:stretch;
+    justify-content: center;
+    overflow:hidden;
+    width:100%;
+    position:relative;
+    height:40px;
+}
+
+.knowuser{
+margin-bottom:10px;
+padding-bottom:5px;
+font-size:15px;
+margin-left:-220px;
+}
+
+.mightknow{
+    color:lightgray;
+    font-size:10px;
+    position:absolute;
+    top:18px;
+    left:50px;
+}
+
+.follow {
+    color:blue;
+    font-size:15px;
+    position:absolute;
+    right:10px;
+    top:8px;
 }

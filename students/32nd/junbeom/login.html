@@ -3,25 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style/login.css">
+    <link rel="stylesheet" href="style/common.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-    
+    <script src="https://kit.fontawesome.com/02b8c8beab.js" crossorigin="anonymous"></script>
+   
+
     <title>Document</title>
 </head>
 <body>
-    <div class="container">
-        <p>westagram</p>
-        <div class="userinformation">
-            <input type="text" id="user" placeholder="전화번호,사용자 이름 또는 이메일">
-            <input type="password" id="pw" placeholder="비밀번호">
-            <button id="login-btn" disabled>로그인</button>
+    <nav class="navigator">
+        <div class="nav-left">
+            <img class="instagram-img" src="style/instagram.png">
+            <p class="instagram-word">Instagram</p>
+          
         </div>
-        <div class="forgot">
-            <a href="">비밀번호를 잊으셨나요?</a>
-        </div> 
+        <div class="nav-center">
+            <input type="text" class="nav-text" placeholder="검색">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div class="nav-right">
+            <img class="explore" src="style/explore.png">
+            <img class="heart" src="style/heart.png">
+            <img class="profileicon" src="style/profile.png">
+        </div>
+    </nav>
+    
+    <div>
+        <main>
+            <div class="feeds">
+                <div class="bigbox">
+                    <div class="id">
+                        <i class="fa-solid fa-circle"></i>
+                        <p class="userid">beom_pie</p>
+                        <p class="dots">···</p>
+                    </div>
+                    <div>
+                        <img class="dog" src="style/dog.jpg">
+                    </div>
+                    <div class="icons">
+                        <div class="lefticon">
+                            <i class="fa-solid fa-heart"></i>
+                            <i class="fa-solid fa-comment-dots"></i>
+                            <i class="fa-solid fa-share"></i>
+                        </div>
+                        <div class="righticon">
+                            <i class="fa-solid fa-bookmark"></i>
+                        </div>
+                    </div>
+                    <div class="likes">
+                        <i class="fa-regular fa-face-grin-squint"></i>
+                        <span class="howmanylikes"><strong>wecode</strong>님 <strong>외 100명</strong>이 좋아합니다</span>     
+                    </div>
+                    <div class="commentbox1" id="beforecomment">
+                        <span class="comment1"><strong>dog_lover</strong> </span> <span class="comment2">  강아지가 너무 귀여워요...</span><span class="seemore"> 더 보기</span>
+                    </div>
+                    <div class="howminutesbefore" id="oneminutebefore">
+                        <span class="minutesbefore">1분 전</span>
+                    </div>
+                    <div class="addcomment">
+                            <input type="text" class="toaddcomment" id = "oldestcomment" placeholder="   댓글 달기...">
+                            <button class="add">게시</button>
+                    </div>
+                </div>
+            </div>
+            <div class="main-right">
+                <div class="idinfo">
+                    <div class="profile">
+                        <img class="house" src="style/house.jpg">
+                        <p class="profileId"><strong>pet_shop</strong></p>
+                    </div>
+                </div>
+                <div class="story">
+                    <div class="storyuser">
+                        <p class="wordstory">스토리</p>
+                        <p class="storyseeall">모두 보기</p>
+                    </div>
+                    <div class="friends">
+                        <img class="yogurt" src="style/yogurt.jpg">
+                        <p class="yougurtlover">yogurt_lover</p>
+                        <p class="oneminutebefore">1분전</p>
+                    </div>
+                </div>
+                <div class="recommendation">
+                    <div class="recommendationuser">
+                        <p class="client">회원님을 위한 추천</p>
+                        <p class="clientseeall">모두 보기</p>
+                    </div>
+                    <div class="animal">
+                        <img class="cat" src="style/cat.jpg">
+                        <p class="knowuser">seuboi</p>
+                        <p class="mightknow">wecode님 외 3명이...</p>
+                        <p class="follow">팔로우</p>
+                    </div>
+                </div>
+                <div class="restriction">
+                    <p>Instagram 정보 . 지원 . 홍보센터 . API . 채용 정보 . 개인청보처리방침 . 약관 . 디렉터리 . 프로필 . 해시태그 . 언어</p>
+                </div>
+                <div class="copyright">
+                    <p>ⓒ 2021 INSTAGRAM</p>
+                </div>
+
+            </div>
+
+            
+            
+        </main>
     </div>
+    <script type="text/javascript" src="js/main.js"></script>
 </body>
-<script src="js/login.js"></script> 
 </html>
