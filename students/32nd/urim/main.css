@@ -1,3 +1,10 @@
+/* * {
+    box-sizing: border-box;
+} */
+ul {
+  padding: 0;
+}
+
 body {
   background-color: white;
   margin: 0px;
@@ -7,6 +14,8 @@ body {
 } */
 header {
   background-color: white;
+  position: sticky;
+  top: 0;
 }
 .lnb {
   display: flex;
@@ -17,21 +26,13 @@ header {
   margin: auto;
   padding: 10px 0 10px 0;
   background-color: white;
-  /* padding: 10px 0; */
-  /* 위아래 좌우값 */
-
-  /* margin-left: 233px; */
-  /* width: 100%; */
-  /* padding: 5vh; */
-
-  /* margin-left: 10px; */
-  /* border: solid 0.5px; */
 }
 .logo_01 {
   font-family: "Lobster";
   font-size: 17px;
   margin-left: 15px;
 }
+
 .lnbleft {
   display: flex;
   justify-content: flex-start;
@@ -56,8 +57,8 @@ header {
 }
 .search img {
   position: relative;
-  right: -28px;
-  margin-top: 10px;
+  right: -45px;
+  margin-top: 2px;
 }
 
 .lnbright {
@@ -114,7 +115,7 @@ header {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background-image: url(./profile01.jpeg);
+  background-image: url(./photo.jpg);
   background-size: cover;
   background-position: center center;
 }
@@ -175,14 +176,30 @@ header {
   margin: 5px;
   color: rgb(182, 182, 182);
 }
-
-input {
-  width: 618px;
-  height: 40px;
-  border: solid 0.1px #cbcbcb;
-  margin-top: 10px;
-  padding-left: 20px;
+.textarea {
+  display: flex;
+  justify-content: space-between;
 }
+
+#submit {
+  border: none;
+  background-color: #fff;
+  color: #3897f0;
+  margin-right: 23px;
+}
+input {
+  width: 500px;
+  height: 40px;
+  border: none;
+
+  margin-left: 20px;
+}
+/* .line{
+    border-top: solid 0.5px black;
+    width: 640px;
+  
+    
+} */
 .box02 {
   width: 300px;
   height: 45px;
@@ -237,7 +254,11 @@ input {
   padding: 15px;
   font-size: 10px;
 }
-
+.storysection {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
 .instory {
   display: flex;
   align-items: center;
@@ -252,7 +273,7 @@ input {
 .blue {
   color: #3897f0;
   font-weight: bold;
-  padding-right: 10px;
+  padding-right: 20px;
 }
 footer {
 }
