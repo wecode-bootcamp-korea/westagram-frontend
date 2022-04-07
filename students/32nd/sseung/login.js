@@ -35,6 +35,7 @@ $form.addEventListener('submit', (e) => {
     const includeEmail = $id.value.includes('@')
     const pwMinLength = (7 < $pw.value.length && $pw.value.length < 16)
 
+
     if( idCheck && pwCheck ) {
         window.open('./main.html', '_self')
     } else {
