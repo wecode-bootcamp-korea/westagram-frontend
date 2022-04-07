@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="./common.css">
     <link rel="stylesheet" href="./main.css">
     <script src="https://kit.fontawesome.com/095dc48f6a.js" crossorigin="anonymous"></script>
-    
     <script defer src="./main.js"></script>
     <title>westargram</title>
 </head>
@@ -18,10 +17,34 @@
                 <h1>westargram</h1>
             </div>
             <div class="search_bar">
+                <section class="userSearch_wrap">
+                    <p><span>최근 검색 항목</span><button class="link_blue">모두 지우기</button></p>
+                    <article class="myInfo">
+                        <div class="user_profile">
+                            <div class="user_img"><img src="./img/profile.jpeg" class="profile_img" alt="프로필이미지" /></div>
+                            <div><p class="user_id">유저아이디</p><span class="user_name">유저이름</span></div>
+                        </div>
+                        <i class="fa-solid fa-xmark fa-xl remove"></i>
+                    </article>
+                    <article class="myInfo">
+                        <div class="user_profile">
+                            <div class="user_img"><img src="./img/profile.jpeg" class="profile_img" alt="프로필이미지" /></div>
+                            <div><p class="user_id">유저아이디</p><span class="user_name">유저이름</span></div>
+                        </div>
+                        <i class="fa-solid fa-xmark fa-xl remove"></i>
+                    </article>
+                    <article class="myInfo">
+                        <div class="user_profile">
+                            <div class="user_img"><img src="./img/profile.jpeg" class="profile_img" alt="프로필이미지" /></div>
+                            <div><p class="user_id">유저아이디</p><span class="user_name">유저이름</span></div>
+                        </div>
+                        <i class="fa-solid fa-xmark fa-xl remove"></i>
+                    </article>
+                </section>
                 <input class="search_input" type="text" placeholder="검색"/>
-                <div class="not_focus">
-                    <i class="fa-solid fa-magnifying-glass fa-xl"></i>
-                    <p><span>검색</span><span class="reset">x</span></p>
+                <div class="search_input not_focus">
+                    <i class="fa-solid fa-magnifying-glass fa-xl serch_icon"></i>
+                    <p><span>검색</span><i class="fa-solid fa-circle-xmark reset"></i></p>
                 </div>
             </div>
             <div class="nav_btn">

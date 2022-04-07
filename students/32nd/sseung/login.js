@@ -34,7 +34,6 @@ $form.addEventListener('submit', (e) => {
     const pwCheck = ($pw.value === user.pw)
     const includeEmail = $id.value.includes('@')
     const pwMinLength = (7 < $pw.value.length && $pw.value.length < 16)
-    // console.log(pwMinLength)
 
     if( idCheck && pwCheck ) {
         window.open('./main.html', '_self')
@@ -49,6 +48,7 @@ $form.addEventListener('submit', (e) => {
         } else if(!pwCheck){
             errorMessage += `비밀번호를 확인하세요`
         }
+        
         if(!includeEmail) {
             hintMessage += `아이디가 이메일 형식이 아닙니다.\n`
         }

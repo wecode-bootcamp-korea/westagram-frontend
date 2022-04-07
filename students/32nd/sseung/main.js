@@ -10,8 +10,6 @@ const myData = {
     userName: '최승이',
     profileImg: './img/profile.jpeg',
 }
-*/
-
 const feedData =  [
     {
         id: 0,
@@ -64,24 +62,36 @@ const feedData =  [
         liked: true,
     },
 ]
+*/
 
+
+
+const $searchBar = get('.search_input')
+const $userSearchBox = get('.userSearch_wrap')
+
+$searchBar.addEventListener('focus', () => {
+    $userSearchBox.classList.toggle('hidden')
+})
+$searchBar.addEventListener('blur', () => {
+    $userSearchBox.classList.toggle('hidden')
+})
 
 
 // 피드내용 엔터에서 말줄임
 const $descriptionAll_origin = Array.from(getAll('.description'), (x) => x.innerText);
-const $descriptionAll_sum = $descriptionAll_origin.map((x) => {
+const $descriptionAll_short = $descriptionAll_origin.map((x) => {
     let text = '';
     x.includes('\n') ? text = `${x.slice(0, x.indexOf('\n'))}...` : text = x;
     return text
 });
 
-function descriptionAll_summery() {
-    for(let i = 0; i<$descriptionAll_sum.length; i++){
-        getAll('.description')[i].innerText = $descriptionAll_sum[i]
+function changeDescriptionShort() {
+    for(let i = 0; i<$descriptionAll_short.length; i++){
+        getAll('.description')[i].innerText = $descriptionAll_short[i]
     }
 }
 
-descriptionAll_summery()
+changeDescriptionShort()
 
 
 // 불릿 생성 함수
@@ -97,7 +107,7 @@ function addBullet(index) {
 // 피드 데이터 필요
 let $imgCount = 0;
 
-function moveImg(index, imgCount) {
+function slideImg(index, imgCount) {
     const $imgLength = getAll(`.feed[data-id='${index}'] .content_wrap li`).length;
     const $imgWidth = get(`.feed[data-id='${index}'] .content_wrap li`).clientWidth;
     const $imgCover = get(`.feed[data-id='${index}'] .content_wrap ul`);
@@ -128,17 +138,17 @@ function moveImg(index, imgCount) {
 
 function prevImg(index) {
     $imgCount--
-    moveImg(index, $imgCount)
+    slideImg(index, $imgCount)
 }
 
 function nextImg(index) {
     $imgCount++
-    moveImg(index, $imgCount)
+    slideImg(index, $imgCount)
 }
 
 
 // 더보기 클릭 함수
-function moreClick(e) {
+function descriptionMoreBtn(e) {
     const feedDataId = e.target.closest('.feed');
     const $this_description = e.target.previousElementSibling;
     const num = feedDataId.dataset.id
@@ -147,7 +157,7 @@ function moreClick(e) {
 }
 
 // 게시 버튼 함수
-function postDisabled(e, index) {
+function enableCommentBtn(e, index) {
     const nowFeedCommentPost = get(`.feed[data-id='${index}'] .comment_post`)
     const $nowCommentInput = get(`.feed[data-id='${index}'] .comment_input`)
     
@@ -167,7 +177,7 @@ function postDisabled(e, index) {
 
 
 // 댓글 작성 함수
-function commentPost(e, index) {
+function addComment(e, index) {
     e.preventDefault()
     const $commentVoid = get(`.feed[data-id='${index}'] .comments_void`)
     const $nowCommentInput = get(`.feed[data-id='${index}'] .comment_input`)
@@ -221,30 +231,23 @@ commentRemoveClick()
 
 
 
-const $description_more = getAll('.more_des');
+const $descriptionMoreBtn = getAll('.more_des');
 const $commentForm = getAll('.comment_wrap');
 const $commentInput = getAll('.comment_input');
 
-// 피드별로 작동해야할 때 이안에서 작업!
 for(let i = 0; i < $feeds.length; i++) {
-    
-    // 불릿 생성
     addBullet(i)
     
-    // 화살표 클릭
     const $arrowPrev = get(`.feed[data-id='${i}'] .arrow.prev`);
     const $arrowNext = get(`.feed[data-id='${i}'] .arrow.next`);
     $arrowPrev.addEventListener('click', () => {prevImg(i)})
     $arrowNext.addEventListener('click', () => {nextImg(i)})
 
-    // 더보기 클릭
-    $description_more[i].addEventListener('click', moreClick)
+    $descriptionMoreBtn[i].addEventListener('click', descriptionMoreBtn)
 
-    // 댓글 disabled
-    $commentInput[i].addEventListener('keyup', (e) => {postDisabled(e, i)})
+    $commentInput[i].addEventListener('keyup', (e) => {enableCommentBtn(e, i)})
 
-    // 댓글 작성
-    $commentForm[i].addEventListener('submit', (e) => {commentPost(e, i)})
+    $commentForm[i].addEventListener('submit', (e) => {addComment(e, i)})
 }
 
 
