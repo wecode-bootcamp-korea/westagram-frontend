@@ -1,6 +1,7 @@
 * {
     padding: 0px;
     margin: 0px;
+    font-size: 17px;
 }
 
 .navigator{
@@ -12,23 +13,34 @@
     justify-content: space-around;
 }
 
-.logo{   
-    color: #FFF;
-    width: 150px;
-    height: 100%;
-    margin-top: 10px;
-    margin-left: 200px;    
-    flex: 1;  
+
+ .navigator img{
+   width: 100px;
+   height: 80%;
+   padding: 8px 0px 0px 20px;
+
+  
 }
+
+.fa-brands{
+    width: 50px;
+    font-size: 40px;
+    padding-top: 6px;
+    margin-left: 200px;
+}
+
 
 
 .searchBox{
     background-color:rgb(237, 236, 229);
     border-radius: 10px;
-    width: 200px;
+    width: 150px;
     height: 50%;
     margin: 12px 50px 12px 50px;
-    flex: 3;
+    padding-left: 150px;
+    flex: 1
+    
+    
 
 
 }
@@ -53,7 +65,7 @@
 
 
 .main {
-    border: red 2px solid; 
+    /* border: red 2px solid;  */
     padding: 10px 100px 10px 100px;
     margin-top: 20px;
     
@@ -66,13 +78,14 @@
 
 .feeds {
     border: orange 2px solid;
-    padding: 50px 10px 30px 10px;
+    padding:0px 10px 30px 10px;
     margin-right: 10px;
+    font-size: large;
     
 }
 
 .article {
-    border: blue 2px solid;
+    /* border: blue 2px solid; */
     /* background-color: blue; */
     width: 500px;
     height: 100vh;
@@ -80,10 +93,59 @@
 }
 
 .main-right{
-    border: aqua 2px solid;
+    border: #25be44 2px solid;
     width: 250px;
-    height: 600px;
+    height: 700px;
 
     align-items:flex-end;    
  
+}
+
+
+.profile{
+    display: flex;
+    border: aqua 2px solid;
+    width: 200px;
+    height: 50px;
+    align-items: center;
+    padding: 10px 10px 10px 0px;
+    margin: 5px 5px 5px 5px;
+          
+}
+
+#snap {
+    border: none;
+}
+
+
+.ph{
+    height: 100%;
+    margin-right: 10px;
+    
+}
+
+.article img {
+    width: 100%;
+}
+
+.profileName{
+    align-items: center;
+}
+
+.storyBox{
+    border: red 2px solid;
+
+}
+
+.statusBox {
+    /* border: #25be7c 2px solid; */
+    font-size: small;
+    margin-left:10px ;
+    margin-bottom: 10px;
+}
+
+.commentBox {
+    border: #25be7c 2px solid; 
+    height: 130px;
+
 }
