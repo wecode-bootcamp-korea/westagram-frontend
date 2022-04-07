@@ -29,6 +29,5 @@ function btnHandler() {
 }
 
 function checkId() {
-  // const checkEmailForm = `@`;
   console.log(inputId.value);
 }

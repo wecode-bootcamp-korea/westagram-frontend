@@ -1,6 +1,6 @@
-const commentBox = document.querySelector(".commentInputBox"); // input을 감지하는 곳
-const inputText = document.querySelector(".commentInput"); // input 텍스트창
-const commentPostList = document.querySelector(".commentPostList"); // li 태그가 입력될 곳
+const commentBox = document.querySelector(".commentInputBox");
+const inputText = document.querySelector(".commentInput");
+const commentPostList = document.querySelector(".commentPostList");
 
 function commentHandler(x) {
   x.preventDefault();
