@@ -1,7 +1,6 @@
 const instaComment = document.querySelector("#submit");
 const comments = document.querySelector(".feeds-img-info");
 const newComment = document.querySelector(".comments");
-let deleteAll = document.querySelector(".deleteComments");
 
 instaComment.addEventListener("click", () => {
   const instaUser = document.getElementById("username").value;
@@ -21,6 +20,7 @@ instaComment.addEventListener("click", () => {
     newDiv2.className = "comments-right-info";
     heartImg.className = "fa-regular fa-heart";
     button.className = "deleteComments";
+    button.setAttribute("onClick", "deleteCom()");
     button.innerText = "삭제";
 
     comments.appendChild(newDiv);
@@ -29,8 +29,6 @@ instaComment.addEventListener("click", () => {
     newDiv.appendChild(newDiv2);
     newDiv2.appendChild(button);
     newDiv2.appendChild(heartImg);
-
-    deleteAll = document.getElementsByClassName("deleteComments");
 
     document.getElementById("username").value = "";
     document.getElementById("userComments").value = "";
@@ -84,26 +82,11 @@ function enterKey() {
 }
 
 // 댓글삭제
-
-deleteAll.addEventListener("click", (e) => {
+function deleteCom() {
   const deleteComment = document.querySelectorAll(".deleteComments");
-
-  const btn = e.currentTarget; // => 그 이벤트 발생의 'target'을 btn 변수에 선언
-  for (let i = 0; i > deleteComment.length; i++) {
-    if (deleteComment[i].className === btn.className) {
-    }
+  for (let i = 0; i < deleteComment.length; i++) {
+    deleteComment[i].addEventListener("click", (event) => {
+      event.target.closest(".comments").remove();
+    });
   }
-  // for(let i = 0; i > deleteComment.length; i++){
-  //   let a = deleteComment[i];
-  //   const b =
-  // }
-  const deleteAll = btn.parentNode; // btn의 부모 노드 => commentDiv(버튼 태그를 감싸는 상위태그)
-  const deleteParent = deleteAll.parentNode;
-  comments.removeChild(deleteParent);
-});
-
-// function deleteuserComment(event) {
-//   const a = event.target;
-
-//   for (let i = 0; deleteComment.length; i++) {}
-// }
+}
