@@ -10,120 +10,123 @@
     ></script>
     <script defer src="./JS/main.js"></script>
     <link href="./main.css" rel="stylesheet" />
-
     <title>westagram|Main</title>
   </head>
   <body>
-    <nav>
-      <ul class="nav-ul">
-        <li>
-          <div class="nav-insta">
-            <i class="fa-brands fa-instagram"></i>
-            <p>|</p>
-            <h1>instagram</h1>
+    <header>
+      <nav>
+        <ul class="nav-ul">
+          <li>
+            <div class="nav-insta">
+              <i class="fa-brands fa-instagram"></i>
+              <p>|</p>
+              <h1>instagram</h1>
+            </div>
+          </li>
+          <li class="inputLi">
+            <div><input type="text" /></div>
+            <div class="icondiv">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <p>검색</p>
+            </div>
+          </li>
+          <div class="iconLi">
+            <li class="navIcon">
+              <a
+                ><img
+                  src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png"
+              /></a>
+            </li>
+            <li class="navIcon">
+              <a
+                ><img
+                  src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"
+              /></a>
+            </li>
+            <li class="navIcon">
+              <a
+                ><img
+                  src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png"
+              /></a>
+            </li>
           </div>
-        </li>
-        <li class="inputLi">
-          <div><input type="text" /></div>
-          <div class="icondiv">
-            <i class="fa-solid fa-magnifying-glass"></i>검색
-          </div>
-        </li>
-        <div class="iconLi">
-          <li class="navIcon">
-            <a
-              ><img
-                src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png"
-            /></a>
-          </li>
-          <li class="navIcon">
-            <a
-              ><img
-                src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"
-            /></a>
-          </li>
-          <li class="navIcon">
-            <a
-              ><img
-                src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png"
-            /></a>
-          </li>
-        </div>
-      </ul>
-    </nav>
+        </ul>
+      </nav>
+    </header>
     <main>
       <article class="contentContainer">
-        <div class="firstContainer">
-          <div class="nameCon">
-            <div class="imgDiv"><img class="name" src="./img/room.png" /></div>
-            <div class="nameDiv"><p>keroppi</p></div>
-          </div>
-          <div class="imgContainer">
-            <img class="mainimg" src="./img/room.png" />
-          </div>
-          <div class="imgiconDiv">
-            <div class="iconB"><i class="fa-regular fa-heart fa-xl"></i></div>
-            <div class="iconB"><i class="far fa-comment fa-xl"></i></div>
-            <div class="iconB"><i class="fa-solid fa-share-nodes"></i></div>
-          </div>
-          <div class="like">
-            <img />
-            <p>님외 10명이 좋아합니다</p>
-          </div>
-          <div class="title">
-            <h1>kerropi</h1>
-            <p>방꾸미기 종료! 🐸</p>
-          </div>
-          <div class="comment">
-            <ul>
-              <li class="indiComment">
-                <div class="commentCon">
-                  <p class="commentName">pompom</p>
-                  <p class="speak">말랑말랑</p>
-                </div>
-                <div class="commentBtnContainer">
-                  <button class="commentBtn" id="likebtn">
-                    <i class="fa-regular fa-heart fa-xs"></i>
-                    <i class="fa-solid fa-heart hidden"></i>
-                  </button>
-                  <button class="commentBtn" id="delete">
-                    <i class="fa-solid fa-delete-left fa-xs"></i>
-                  </button>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="writing">
-            <div><i class="fa-regular fa-face-laugh-wink fa-xl"></i></div>
-            <input
-              class="commentinput"
-              type="text"
-              placeholder="댓글 달기..."
-            />
-            <button>게시</button>
-          </div>
+        <div class="nameCon">
+          <div class="imgDiv"><img class="name" src="./img/room.png" /></div>
+          <div class="nameDiv"><p>keroppi</p></div>
+        </div>
+        <div class="imgContainer">
+          <img class="mainimg" src="./img/room.png" />
+        </div>
+        <div class="imgiconDiv">
+          <div class="iconB"><i class="fa-regular fa-heart fa-xl"></i></div>
+          <div class="iconB"><i class="far fa-comment fa-xl"></i></div>
+          <div class="iconB"><i class="fa-solid fa-share-nodes"></i></div>
+        </div>
+        <div class="like">
+          <img alt="room picture with frog" class="name" src="./img/room.png" />
+          keroppi
+          <p>님외 10명이 좋아합니다</p>
+        </div>
+        <div class="title">
+          <h1>kerropi</h1>
+          <p>방꾸미기 종료! 🐸</p>
+        </div>
+        <div class="comment">
+          <ul>
+            <li class="indiComment">
+              <div class="commentCon">
+                <p class="commentName">pompom</p>
+                <p class="speak">말랑말랑</p>
+              </div>
+              <div class="commentBtnContainer">
+                <button class="commentBtn" id="likebtn">
+                  <i class="fa-regular fa-heart fa-xs"></i>
+                  <i class="fa-solid fa-heart hidden"></i>
+                </button>
+                <button class="commentBtn" id="delete">
+                  <i class="fa-solid fa-delete-left fa-xs"></i>
+                </button>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="writing">
+          <div><i class="fa-regular fa-face-laugh-wink fa-xl"></i></div>
+          <input class="commentinput" type="text" placeholder="댓글 달기..." />
+          <button class="submitBtn">게시</button>
         </div>
       </article>
-
       <article class="sideContainer">
-        <div class="profile">
+        <section class="profile">
           <div class="imgDiv">
-            <img class="profileImg" src="./img/room.png" />
+            <img
+              alt="room picture with frog"
+              class="profileImg"
+              src="./img/room.png"
+            />
           </div>
           <div class="info">
             <p>keroppi</p>
             <p>I love Frog</p>
           </div>
-        </div>
-        <div class="story">
+        </section>
+        <section class="story">
           <div>
             <p>스토리</p>
             <p>모두보기</p>
           </div>
-
           <div class="profile">
             <div class="imgDiv">
-              <img class="profileImg storyimg" src="./img/room.png" />
+              <img
+                alt="room picture with frog"
+                class="profileImg storyimg"
+                src="./img/room.png"
+              />
             </div>
             <div class="info">
               <p>keroppi</p>
@@ -132,32 +135,43 @@
           </div>
           <div class="profile">
             <div class="imgDiv">
-              <img class="profileImg storyimg" src="./img/room.png" />
+              <img
+                alt="mushroom shape light"
+                class="profileImg storyimg"
+                src="./img/mushroom.png"
+              />
             </div>
             <div class="info">
-              <p>keroppi</p>
+              <p>mushroom</p>
               <p>1시간전</p>
             </div>
           </div>
           <div class="profile">
             <div class="imgDiv">
-              <img class="profileImg storyimg" src="./img/room.png" />
+              <img
+                alt="doll with drinks"
+                class="profileImg storyimg"
+                src="./img/covid.PNG"
+              />
             </div>
             <div class="info">
-              <p>keroppi</p>
+              <p>pompom</p>
               <p>2시간전</p>
             </div>
           </div>
-        </div>
-        <div class="story">
+        </section>
+        <section class="story">
           <div>
             <p>회원님을 위한 추천</p>
             <p>모두보기</p>
           </div>
-
           <div class="profile">
             <div class="imgDiv">
-              <img class="profileImg storyimg" src="./img/covid.PNG" />
+              <img
+                alt="doll with drinks"
+                class="profileImg storyimg"
+                src="./img/covid.PNG"
+              />
             </div>
             <div class="info">
               <div>
@@ -169,7 +183,11 @@
           </div>
           <div class="profile">
             <div class="imgDiv">
-              <img class="profileImg storyimg" src="./img/mushroom.png" />
+              <img
+                alt="mushroom shape light"
+                class="profileImg storyimg"
+                src="./img/mushroom.png"
+              />
             </div>
             <div class="info">
               <div>
@@ -181,7 +199,11 @@
           </div>
           <div class="profile">
             <div class="imgDiv">
-              <img class="profileImg storyimg" src="./img/dpg.PNG" />
+              <img
+                alt="dog with glasses"
+                class="profileImg storyimg"
+                src="./img/dpg.PNG"
+              />
             </div>
             <div class="info">
               <div>
@@ -191,8 +213,9 @@
               <p>팔로우</p>
             </div>
           </div>
-        </div>
+        </section>
       </article>
     </main>
+    <footer></footer>
   </body>
 </html>

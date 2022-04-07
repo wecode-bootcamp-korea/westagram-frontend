@@ -1,61 +1,23 @@
 @import url("./reset.css");
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
-
+:root {
+  --line-color: #908b88;
+}
 body {
-  width: 100%;
-  height: 100vh;
-  position: relative;
   background-color: #fafafa;
 }
+
 main {
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #fafafa;
 }
+
 nav {
-  width: 100%;
+  align-items: center;
   height: 57px;
   background-color: #ffffff;
-  align-items: center;
-}
-.nav-ul {
-  width: 60%;
-  display: flex;
-  flex-direction: row;
-  list-style: none;
-  margin-left: 500px;
-  justify-content: space-between;
-}
-
-.iconLi {
-  margin: 10px;
-  width: 15%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-.inputLi {
-  width: 276px;
-  margin-top: 10px;
-  position: relative;
-}
-.inputLi > div {
-  width: 100%;
-  height: 30px;
-}
-div > input {
-  color: rgba(35, 34, 34, 0.411);
-  width: 100%;
-  height: 30px;
-  border: none;
-  border-radius: 10px;
-  background-color: #efefef;
-}
-.icondiv {
-  position: absolute;
-  top: 10px;
-  left: 10px;
 }
 
 .nav-insta {
@@ -65,173 +27,257 @@ div > input {
   font-size: 30px;
   font-family: "Lobster", cursive;
 }
+
 .nav-insta > p {
   padding: 0px 10px 0px 0px;
 }
+
 .fa-instagram {
   padding: 3px;
   padding-right: 10px;
 }
-.contentContainer {
-  margin-top: 100px;
-  margin-left: 180px;
-  width: 500px;
-  height: 940px;
+
+.nav-ul {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+  list-style: none;
 }
+
+.inputLi {
+  margin-top: 10px;
+  position: relative;
+}
+
+div > input {
+  color: rgba(35, 34, 34, 0.411);
+  width: 265px;
+  height: 33px;
+  border: none;
+  border-radius: 10px;
+  background-color: #efefef;
+}
+
+.icondiv {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.icondiv > p {
+  margin-left: 5px;
+}
+
+.iconLi {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 10px;
+  width: 15%;
+}
+
 a > img {
   width: 30px;
   padding-bottom: 5px;
 }
-.navIcon {
-  width: 500px;
+
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--line-color);
+  border-radius: 5px;
+  margin-top: 50px;
+  margin-left: 180px;
+}
+
+.nameCon {
+  display: flex;
+  flex-direction: row;
+  height: 73px;
+  background-color: #ffffff;
+}
+
+.imgDiv {
+  align-items: center;
+  width: 64px;
+  height: 64px;
+}
+
+.name {
+  width: 40px;
   height: 40px;
+  border-radius: 50%;
+}
+
+.nameDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  font-weight: 600;
 }
 
 .mainimg {
   width: 660px;
   height: 680px;
 }
-.sideContainer {
-  width: 400px;
-  height: 940px;
 
-  margin-left: 280px;
-  background-color: #fafafa;
-}
-.nameCon {
-  width: 100%;
-  height: 70px;
-  display: flex;
-  flex-direction: row;
-  background-color: #ffffff;
-}
-.imgDiv {
-  width: 60px;
-  text-align: center;
-}
-.nameDiv {
-  width: 50px;
-  margin-top: 20px;
-  margin-left: 13px;
-}
-.name {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  margin-bottom: 12px;
-}
 .imgContainer {
   margin-bottom: 12px;
 }
-.firstContainer {
-  border: 1px solid #908b88;
-  border-radius: 5px;
+
+.imgiconDiv {
+  display: flex;
+  flex-direction: row;
 }
+
+.iconB {
+  margin: 10px;
+}
+
+.like {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+}
+
+.like img {
+  margin: 1px;
+  width: 20px;
+  height: 20px;
+}
+
 .title {
   display: flex;
   flex-direction: row;
   margin: 10px;
 }
+
 .title h1 {
   margin-right: 10px;
 }
-.title > p {
-  padding: 0px;
-}
-.imgiconDiv {
-  width: 120px;
-  padding: 10px;
-  display: flex;
-  flex-direction: row;
-}
-.iconB {
-  padding: 5px;
-}
-.like {
-  display: flex;
-  flex-direction: row;
-  margin: 10px 10px 30px 10px;
-}
+
 .comment {
   margin: 10px;
 }
+
 .comment > ul > li {
   display: flex;
   flex-direction: row;
-  height: 30px;
 }
+
 .comment > ul > li > p {
   margin-right: 5px;
   height: 30px;
 }
+
+.indiComment {
+  margin: 4px 0px 4px 0px;
+}
+
 .writing {
-  border-top: 1px solid #908b88;
-  border-bottom: 1px solid #908b88;
-  height: 60px;
   display: flex;
   flex-direction: row;
+  border: 1px 0px 1px 0px var(--line-color) solid;
 }
+
 .writing > div {
-  width: 30px;
-  padding: 5px;
-  margin-top: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 55px;
 }
 
 .writing > input {
-  background-color: transparent;
   border-radius: 0px;
   width: 100%;
-
-  height: 60px;
+  height: 43px;
+  background-color: transparent;
 }
+
 button {
-  background-color: #ffffff;
   width: 50px;
   border: none;
   color: rgba(0, 0, 0, 0.54);
+  background-color: #ffffff;
 }
+
+.commentBtnContainer {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: transparent;
+}
+
+.commentCon {
+  display: flex;
+  flex-direction: row;
+}
+
+.commentBtn:hover {
+  border: 1px solid black;
+}
+
+.commentName {
+  margin-right: 3px;
+}
+
+.sideContainer {
+  margin-left: 280px;
+  width: 400px;
+  height: 940px;
+  background-color: #fafafa;
+}
+
 .profile {
   display: flex;
   flex-direction: row;
 }
+
 .imgDiv {
   margin: 10px;
 }
+
 .profileImg {
   width: 70px;
   height: 70px;
   border-radius: 50%;
   border: 1px solid red;
 }
+
 .info {
-  height: 70px;
-  font-size: 15px;
   margin-top: 20px;
   margin-left: 17px;
+  height: 70px;
+  font-size: 15px;
 }
+
 .info > p {
   margin: 5px;
 }
+
 .info > p:first-child {
   font-weight: bolder;
 }
+
 .story {
-  height: 300px;
-  border: 1px solid #908b88;
+  border: 1px solid var(--line-color);
   border-radius: 5px;
 }
+
 .storyimg {
   width: 60px;
   height: 60px;
 }
+
 .story > div:first-child {
-  padding: 10px;
   display: flex;
   justify-content: space-between;
+  padding: 10px;
+  margin: 6px;
 }
+
 .story:last-child {
   margin-top: 40px;
 }
@@ -241,25 +287,19 @@ button {
   justify-content: space-between;
   width: 70%;
 }
-.story:last-child > .profile > .info > p {
-  color: blue;
+
+.story:last-child > .profile > .info:last-child {
+  padding-bottom: 10px;
 }
 
-.commentBtnContainer {
-  display: flex;
-  justify-content: space-evenly;
-  background-color: transparent;
+.story:last-child > .profile > .info > p {
+  color: rgb(59, 87, 230);
 }
-.commentBtn:hover {
-  border: 1px solid black;
-}
-.commentCon {
-  display: flex;
-  flex-direction: row;
-}
+
 .hidden {
   display: none;
 }
-.commentName {
-  margin-right: 3px;
+
+footer {
+  height: 100px;
 }

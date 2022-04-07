@@ -12,22 +12,40 @@
     <main>
       <article>
         <div class="mainDiv">
-          <h1>westagram</h1>
+          <div class="titleDiv">
+            <h1>westagram</h1>
+          </div>
           <div class="formDiv">
             <form>
               <div class="loginDiv">
-                <input id="id" type="text" />
+                <input
+                  id="id"
+                  type="text"
+                  placeholder="전화번호, 사용자이름 혹은 이메일"
+                />
               </div>
               <div class="loginDiv">
-                <input id="pw" type="password" minlength="5" required />
+                <input
+                  id="pw"
+                  type="password"
+                  minlength="5"
+                  required
+                  placeholder="비밀번호"
+                />
               </div>
               <div class="loginDiv">
-                <button disabled>로그인</button>
+                <button id="loginBtn" disabled>로그인</button>
               </div>
             </form>
-            <div class="loginDiv">
+            <div class="forgot">
               <a>비밀번호를 잊으셨나요?</a>
             </div>
+          </div>
+        </div>
+        <div class="join">
+          <div>
+            <p>계정이 없으신가요?</p>
+            <a href="/">가입하기</a>
           </div>
         </div>
       </article>

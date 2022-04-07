@@ -17,7 +17,7 @@ const checkBlank = function (e) {
     btn.disabled = false;
     btn.style.backgroundColor = "blue";
     window.localStorage.setItem("user", JSON.stringify(user));
-  } else console.log("아이디 ,비밀번호를 입력해주세요");
+  } else alert("아이디 ,비밀번호를 입력해주세요");
 };
 
 id.addEventListener("change", checkBlank);
