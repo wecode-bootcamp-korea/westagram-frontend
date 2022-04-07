@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-*{
+ *{
     margin: 0;
-}
-/* nav-bar */
+} 
+/* nav */
 .nav{
     position: fixed;
     width: 100%;
@@ -11,61 +11,66 @@
     background-color: white;
     border-bottom: 1px solid #fafafa;
 }
+
 .nav-bar{
     display:flex;
-    flex-direction: row;
     align-items: center;
     justify-content: space-between;
     padding-top: 10px;
     padding-left: 20px;
 }
+
 .nav-logo-title{
     font-family: 'Lobster', cursive;
     font-size: 1.5em;
 }
+
 .nav-search-input{
     width: 200px;
     height: 30px;
     padding-left: 45px;
+    color:#cacaca;
+    background-color:#efefef;
     outline:0;
     border: 0;
     border-radius: 3px;
-    background-color:#efefef;
-    color:#cacaca;
+    
 }
+
 .nav-search-icon{
     position: relative;
     left: 35px;
     color: #cacaca;
 }
+
 .nav-icon{
     display: flex;
     margin:0 80px;
 }
-.nav-icon>img{
-    margin-left:20px;
-}
+
 .nav-img{ 
     position: relative;
     width:20px;
-    height: 20px;
     top:5px;
-    background-size: contain;
+    margin-left:20px;
+    /* background-size: contain; */
 }
 
 /* main */
 main{
     display: flex;
     justify-content: center;
-    width: 100vw;
+    width: 100%;
     margin-top: 60px;
     padding-top: 60px;
     background-color: #fafafa;
 }
+/* 왼쪽 부분 */
 .feeds{
     width:100%;
     border:1px solid #cacaca;
 }
+
 /* 왼쪽 사진 */
 .header{
     display: flex;
@@ -74,62 +79,79 @@ main{
     width: 100%;
     border-bottom: 1px solid #cacaca;
 }
+
 .header-id{
     display: flex;
     justify-content: flex-start;
     align-items: center;
     padding:14px 4px 14px 16px;
 }
+
 .id-img{
     width:32px;
     height:32px;
     border-radius: 25px;
 }
+
 .id{
-    padding: 0px 10px;
     margin-top: 5px;
+    padding: 0px 10px;
 }
+
 .header-dot{
     padding: 20px 25px;
 }
+
 .feeds-pic>img{
     width: 100%;
-    height: 100vh;
 }
+
 .feeds-icon{
+    display: flex;
+    justify-content: space-between;
     padding: 10px 16px;
 }
+
 .fa-icon{
     padding-right: 10px;
     font-size: 25px;
 }
+
 .feeds-icon-heart{
     margin-left: -8px;
 }
+
 .feeds-icon-bookmark{
     margin-left: auto;
-    padding-left: 430px;
 }
+
 .feeds-like{
     padding: 10px 10px;
 }
+
 .feeds-article{
     padding:0 10px;
 }
+
 .feeds-article-over{
     color:#cacaca;
 }
+
 .feeds-comment{
-    display: flex;
-    flex-direction: column;
-}
+    padding:10px;
+} 
+
 .comment{
     display:flex;
-    flex-direction: row;
-    padding:0 10px;
+    justify-content: space-between;
 }
 .comment-content{
     padding-left:5px;
+}
+.comment-like,.comment-delete{
+    outline: 0;
+    border: 0;
+    background-color: #fafafa;
 }
 .comment-time{
     padding-left: 10px;
@@ -137,90 +159,112 @@ main{
 }
 .main-right{
     width: 100%;
-    margin-left: 30px;
+    padding-left: 30px;
+    box-sizing: border-box;
 }
+
 .main-feeds{
     position: relative;
 }
+
 .reply-heart{
     padding-left: 390px
 }
+
 .comment-id{
     font-weight: 700;
 }
+
 .feeds-comment-input{
     display: flex;
-    flex-direction: row;
+    justify-content:space-between;
     padding-top:10px;
     border-top: 1px solid #cacaca;
 }
+
 .comment-text{
     height:18px;
-    width:500px;
     padding:10px;
+    background-color: #fafafa;
     outline: 0;
     border: 0;
-    background-color: #fafafa;
 }
+
 .comment-input{
     padding-left: 5px;
     outline:0;
     border: 0;
 }
+
+.comment-button{
+    display: flex;
+}
+
 .comment-btn{
-    margin-left: 25px;
-    margin-top: 10px;
-    outline:0;
-    border: 0;
     background-color: #fafafa;
     color:#0095f6;
+    outline:0;
+    border: 0;
     font-size: 1em;
 }
+
 /* 오른쪽 부분 */
-.main-right{
-    width: 100%;
-    margin-left: 30px;
-}
 .aside-header{
     display: flex; 
     padding: 10px;
 }
+
+.header-aside-img{
+    height:40px;
+    width: 40px;
+    outline:0;
+    border: 0;
+    border-radius: 20px;
+}
+
 .aside-img{
     height:35px;
     width: 35px;
-    outline:0;
-    border: 0;
-    border-radius: 15px;
+    border: 2px solid red;
+    border-radius: 20px;
+    padding:2px;
 }
+
 .aside-id{
     flex-direction: column;
     padding-left: 10px;
 }
+
 .aside-id-bottom, .aside-id-time{
     color:#cacaca;
 }
+
 .recommend, .story{
-    width: 100%;
     margin-top: 15px;
     border:1px solid #cacaca;
     background-color: #ffffff;
 }
+
 .story-header{
     display: flex;
     justify-content: space-between;
     padding:10px;
 }
+
 form{
     padding:10px;
 }
+
 .story-title{
     color:#cacaca;
 }
+
 .recommend-header{
     display: flex;
     justify-content: space-between;
     padding: 10px;
 }
+
 .recommend-title{
     color:#cacaca;
 }
@@ -229,23 +273,61 @@ form{
     justify-content: space-between;
     padding: 10px;
 }
+
 .member-header{
     display: flex;
 }
+
 .follow{
     display: flex;
     align-items: center;
     color:#0095f6;
 }
+
 .aside-info{
     padding-top: 10px;
     color:#cacaca;
 }
+
 .aside-right{
     padding-top: 10px;
     color:#cacaca;
 }
 
+@media only screen and (max-width: 1000px) { 
+    /* nav */
+    .nav-bar{
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
 
+    .nav-search-input{
+        display: none;
+    }
 
+    .nav-search-icon{
+        display: none;
+    }
+
+    /* main */
+    main{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: 60px;
+        padding-top: 60px;
+        background-color: #fafafa;
+    }
+
+    .left{
+        max-width: 100%;
+        padding:0 10px;
+    }
+
+    .right{
+        display: none;
+    }
+}
 

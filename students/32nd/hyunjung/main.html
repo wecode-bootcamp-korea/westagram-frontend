@@ -11,10 +11,10 @@
 <body>
     <nav class="nav">
         <div>
-            <span class="nav-bar">
+            <div class="nav-bar">
                 <div class="nav-logo">
                     <h1 class="nav-logo-title">
-                        <img class="nav-img" src="./img/instagram.png"> | westagram
+                        <img class="nav-img" alt="westagram-logo" src="./img/instagram.png"> | westagram
                     </h1>
                 </div>
                 <div class="nav-search">
@@ -22,19 +22,19 @@
                     <input class="nav-search-input" type="text" placeholder="검색">
                 </div>
                 <div class="nav-icon">
-                    <img class="nav-img nav-icon-exp" src="./img/explore.png"/>
-                    <img class="nav-img nav-icon-heart" src="./img/heart.png"/>
-                    <img class="nav-img nav-icon-profile" src="./img/profile.png">
+                    <img class="nav-img nav-icon-exp" alt="explore-icon" src="./img/explore.png" />
+                    <img class="nav-img nav-icon-heart"  alt="heart-icon" src="./img/heart.png"/>
+                    <img class="nav-img nav-icon-profile" alt="profile-icon" src="./img/profile.png"/>
                 </div>
-            </span>
+            </div>
         </div>
     </nav>
     <main>
-        <section>
+        <section class="left">
             <div class="feeds">
                 <div class="header">
                     <div class="header-id">
-                        <img  class="id-img" src="./img/main.png"> 
+                        <img  class="id-img" alt="profile-img" src="./img/main.png"/> 
                         <div class="id">happyDay01</div>
                     </div>
                     <div class="header-dot">
@@ -42,21 +42,25 @@
                     </div>
                 </div>
                 <div class="feeds-pic">
-                    <img src="./img/mainpage.jpg"/>
+                    <img alt="main-pic" src="./img/mainpage.jpg"/>
                 </div>
                 <section class="feeds-icon">
-                    <span class="feeds-icon-heart">
-                        <i class="fa-icon fa-regular fa-heart heart-button liked"></i>
-                    </span>
-                    <span class="feeds-icon-comment">
-                        <i class="fa-icon fa-regular fa-comment"></i>
-                    </span>
-                    <span class="feeds-icon-plane">
-                        <i class="fa-icon fa-regular fa-paper-plane"></i>
-                    </span>
-                    <span class="feeds-icon-bookmark">
-                        <i class="fa-icon fa-regular fa-bookmark"></i>
-                    </span>
+                    <div class="feeds-icon-left">
+                        <span class="feeds-icon-heart">
+                            <i class="fa-icon fa-regular fa-heart"></i>
+                        </span>
+                        <span class="feeds-icon-comment">
+                            <i class="fa-icon fa-regular fa-comment"></i>
+                        </span>
+                        <span class="feeds-icon-plane">
+                            <i class="fa-icon fa-regular fa-paper-plane"></i>
+                        </span>
+                    </div>
+                    <div class="feeds-icon-right">
+                        <span class="feeds-icon-bookmark">
+                            <i class="fa-icon fa-regular fa-bookmark"></i>
+                        </span>
+                    </div>
                 </section>
                 <div class="feeds-like">
                     좋아요 30,000 개
@@ -67,62 +71,56 @@
                         <span class="feeds-article-content"> 행복한 하루... </span>
                         <span class="feeds-article-over">더 보기</span>
                     </div>
-                    <section class="feeds-comment">
-                        <div class="comment">
-                            <span class="comment-id">smile01234</span>
-                            <p class="comment-content">해삐해삐🎵</p>
-                        </div>
-                        <!-- <span class="feeds-reply-heart">
-                            <i class="fa-regular fa-heart reply-heart"></i>
-                        </span> -->
-                    </section>
-                    <div class="comment-time">55분 전</div>
-                    <div class="feeds-comment-input">
-                        <div class="comment-input">
-                            <input class="comment-text" placeholder="댓글 쓰기...">
-                        </div>
-                        <div>
-                            <button class="comment-btn">게시</button>
+                    <div>
+                        <ul class="feeds-comment"></ul>
+                        <div class="comment-time">55분 전</div>
+                        <div class="feeds-comment-input">
+                            <div class="comment-input">
+                                <input class="comment-text" placeholder="댓글 쓰기..."/>
+                            </div>
+                            <div class="comment-button">
+                                <button class="comment-btn">게시</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section>
+        <section class="right">
             <div class="main-right">
                 <div>
                     <div class="aside-header">
-                        <img class="aside-img" src="/img/main.png">
+                        <img class="header-aside-img" alt="aside-profile-pic" src="./img/main.png">
                         <div class="aside-id"> 
                             <div class="aside-id-top">happyDay01</div>
                             <div class="aside-id-bottom">happyLife</div>
                         </div>
                     </div>
-                    <div>
+                    <div class="aside-form">
                         <form class="story">
                             <div class="story-header">
                                 <div class="story-title">스토리</div>
                                 <div>모두 보기</div>
                             </div>
                             <div class="aside-header">
-                                <img class="aside-img" src="/img/main.png">
+                                <img class="aside-img" alt="story-user-pic01" src="./img/pro01.png" >
                                 <div class="aside-id"> 
-                                    <div class="aside-id-top">happyDay01</div>
-                                    <div class="aside-id-time">30분 전</div>
+                                    <div class="aside-id-top">puppy_love</div>
+                                    <div class="aside-id-time">12분 전</div>
                                 </div>
                             </div>
                             <div class="aside-header">
-                                <img class="aside-img" src="/img/main.png">
+                                <img class="aside-img" alt="story-user-pic02" src="./img/pro02.png">
                                 <div class="aside-id"> 
-                                    <div class="aside-id-top">happyDay01</div>
-                                    <div class="aside-id-time">30분 전</div>
+                                    <div class="aside-id-top">smile_angry</div>
+                                    <div class="aside-id-time">32분 전</div>
                                 </div>
                             </div>
                             <div class="aside-header">
-                                <img class="aside-img" src="/img/main.png">
+                                <img class="aside-img" alt="story-user-pic03" src="./img/pro03.png">
                                 <div class="aside-id"> 
-                                    <div class="aside-id-top">happyDay01</div>
-                                    <div class="aside-id-time">30분 전</div>
+                                    <div class="aside-id-top">kitty_77</div>
+                                    <div class="aside-id-time">55분 전</div>
                                 </div>
                             </div>
                         </form>
@@ -133,9 +131,9 @@
                             </div>
                             <div class="member">
                                 <div class="member-header">
-                                    <img class="aside-img" src="/img/main.png">
+                                    <img class="aside-img" alt="recommend-user-pic01" src="./img/pro04.png">
                                     <div class="aside-id"> 
-                                        <div class="aside-id-top">happyDay01</div>
+                                        <div class="aside-id-top">wink22_puppy</div>
                                         <div class="aside-id-bottom">puppy_love님 외 30명...</div>
                                     </div>
                                 </div>
@@ -143,9 +141,9 @@
                             </div>
                             <div class="member">
                                 <div class="member-header">
-                                    <img class="aside-img" src="/img/main.png">
+                                    <img class="aside-img" alt="recommend-user-pic02" src="./img/pro05.png">
                                     <div class="aside-id"> 
-                                        <div class="aside-id-top">happyDay01</div>
+                                        <div class="aside-id-top">wow_7777</div>
                                         <div class="aside-id-bottom">puppy_love님 외 30명...</div>
                                     </div>
                                 </div>
@@ -153,9 +151,9 @@
                             </div>
                             <div class="member">
                                 <div class="member-header">
-                                    <img class="aside-img" src="/img/main.png">
+                                    <img class="aside-img" alt="recommend-user-pic03" src="./img/pro06.png">
                                     <div class="aside-id"> 
-                                        <div class="aside-id-top">happyDay01</div>
+                                        <div class="aside-id-top">the_best_one01</div>
                                         <div class="aside-id-bottom">puppy_love님 외 30명...</div>
                                     </div>
                                 </div>
