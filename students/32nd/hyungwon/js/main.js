@@ -69,6 +69,8 @@ const pressEnter = () => {
 
 }
 
+// 똑같은 거 클릭에서도 구현
+
 const getClick = () =>{
     if(inputForm.value) {
         const allAdd = document.querySelector('.add_all_comment')
