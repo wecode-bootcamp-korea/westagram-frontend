@@ -10,11 +10,9 @@ const commentBtn = document.querySelector(".comment__button");
 
 let mainFeedsRec = mainFeeds.getBoundingClientRect();
 
-// initialize mainRight position
 mainRight.style.left = `${mainFeedsRec.right + 32}px`;
 navbarContainer.style.left = `${mainFeedsRec.left}px`;
 
-// reposition mainRight when resized
 window.addEventListener("resize", () => {
   mainFeedsRec = mainFeeds.getBoundingClientRect();
 
@@ -22,7 +20,6 @@ window.addEventListener("resize", () => {
   navbarContainer.style.left = `${mainFeedsRec.left}px`;
 });
 
-// make addComment function
 const addComment = (id) => {
   let commentRow = document.createElement("div");
   let commentId = document.createElement("span");
@@ -47,7 +44,6 @@ commentForm.addEventListener("submit", (event) => {
   commentInput.value !== "" ? addComment("gel_fos") : null;
 });
 
-// color change commentInput button
 commentInput.addEventListener("keyup", (event) => {
   console.log(event.target.value);
   event.target.value
