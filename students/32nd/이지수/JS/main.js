@@ -10,11 +10,13 @@ let li;
 const getValue = function (e) {
   const { value } = e.target;
   const clone = comment.cloneNode(true);
-  clone.children[0].innerText = currentUser.name;
-  clone.children[1].innerText = value;
+  const div = clone.children[0];
+  div.querySelector(".commentName").innerText = currentUser.name;
+  div.querySelector(".speak").innerText = value;
   let key = e.key;
   if (key === "Enter") {
     clone.id = currentUser.id;
+    clone.classList.add("new");
     ul.appendChild(clone);
     input.value = "";
   }
@@ -26,3 +28,12 @@ btn.addEventListener("click", () => {
   input.value = "";
 });
 input.addEventListener("keydown", getValue);
+document.addEventListener("click", function (e) {
+  if (e.target && e.target.id == "delete") {
+    const par = e.target.parentNode;
+    const dle = par.nextSibling.parentNode;
+    if (currentUser.id === Number(dle.id)) {
+      dle.remove();
+    }
+  }
+});
