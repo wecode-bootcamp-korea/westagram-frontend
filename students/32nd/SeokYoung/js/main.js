@@ -16,8 +16,6 @@ function createComment() {
   clickBtn();
 }
 
-// <button class="deleteBtn">x</button>
-
 function clickBtn() {
   const Btn = document.querySelectorAll(".deleteBtn");
   for (i = 0; i < Btn.length; i++) {
