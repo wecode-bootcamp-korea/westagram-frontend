@@ -6,20 +6,25 @@ function commentHandler(x) {
   x.preventDefault();
   inputText.value.trim() !== "" ? createComment() : x.preventDefault();
 }
-// 댓글 인풋창 리팩토링
-
-//   if (inputText.value.trim() !== "") {
-//     createComment();
-//   } else {
-//     x.preventDefault();
-//   }
 
 function createComment() {
   const li = document.createElement("li");
   li.classList.add("commentPost");
-  li.innerHTML = `<span>syoung__h</span> ${inputText.value}`;
+  li.innerHTML = `<span>syoung__h</span> ${inputText.value} <i class="fa-solid fa-xmark deleteBtn"></i><li>42분 전</li>`;
   commentPostList.appendChild(li);
   inputText.value = "";
+  clickBtn();
+}
+
+// <button class="deleteBtn">x</button>
+
+function clickBtn() {
+  const Btn = document.querySelectorAll(".deleteBtn");
+  for (i = 0; i < Btn.length; i++) {
+    Btn[i].addEventListener("click", function active(e) {
+      e.target.parentElement.remove();
+    });
+  }
 }
 
 commentBox.addEventListener("submit", commentHandler);
