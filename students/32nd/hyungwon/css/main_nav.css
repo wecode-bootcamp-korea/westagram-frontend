@@ -112,4 +112,46 @@ nav {
     width: 30px;
     margin-right: 20px;
     padding: 1px;
+    border-radius: 50%;
+    padding: 1.5px;
+    outline: 2px solid #CC429A;
+}
+
+.popupbutton {
+    background-color: white;
+    border: none;
+    margin-top: 5px;
+}
+
+.profile_setting {
+    display: none;
+    width: 150px;
+    height: 120px;
+    border: 2px solid #E6E6E6;
+    border-radius: 5px;
+    position: absolute;
+    top: 65px;
+    right: 200px;
+    background-color: white;
+}
+
+.my_account:focus .profile_setting {
+    display: block;
+}
+
+.popup_list {
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+.popup_icon {
+    width: 20px;
+    height: 20px;
+}
+
+.popup_bottom {
+    border-top: 3px solid #E6E6E6;
+    margin-top: 10px;
+    padding-top: 10px;
+    padding-left: 10px;
 }

@@ -33,16 +33,13 @@ const pressEnter = () => {
         heartBtn.type = "button"
         heartBtn.addEventListener("click", function () {
 
-            // 기존 이미지 삭제
             heartBtn.remove()
 
-            // 새로운 이미지 생성
             const RedHeart = document.createElement('img')
             RedHeart.src = "./img/heart1.png"
             RedHeart.className = "add_comment_heart"
             RedHeart.alt="changeHeart"
 
-            // 새로운 div 생성, 그 안에 새로운 이미지 추가
             const newHeartBtn = document.createElement("div")
             newHeartBtn.className = "new_img_box"
             add.appendChild(newHeartBtn)
@@ -68,8 +65,6 @@ const pressEnter = () => {
     inputForm.value=null;
 
 }
-
-// 똑같은 거 클릭에서도 구현
 
 const getClick = () =>{
     if(inputForm.value) {
@@ -101,16 +96,13 @@ const getClick = () =>{
         heartBtn.type = "button"
         heartBtn.addEventListener("click", function () {
 
-            // 기존 이미지 삭제
             heartBtn.remove()
 
-            // 새로운 이미지 생성
             const RedHeart = document.createElement('img')
             RedHeart.src = "./img/heart1.png"
             RedHeart.className = "add_comment_heart"
             RedHeart.alt="changeHeart"
 
-            // 새로운 div 생성, 그 안에 새로운 이미지 추가
             const newHeartBtn = document.createElement("div")
             newHeartBtn.className = "new_img_box"
             add.appendChild(newHeartBtn)
@@ -138,23 +130,18 @@ const getClick = () =>{
 
 
 
-// 기존에 있는 댓글 좋아요 삭제 기능
 const likeComment = () => {
-    // 기존 이미지 삭제
     document.querySelector(".comment_heart").remove()
 
-    // 새로운 이미지 생성
     const redHeart = document.createElement("img")
     redHeart.src = "./img/heart1.png"
     redHeart.className = "new_comment_heart"
     redHeart.alt="changeHeart"
 
-    // 새로운 div 생성
     const firstNewBtn = document.createElement("div")
     firstNewBtn.className = "comment_heart"
     document.querySelector(".comment_already").appendChild(firstNewBtn)
 
-    // 이미지 추가
     firstNewBtn.appendChild(redHeart)
 
 
@@ -166,11 +153,15 @@ const removeComment = () => {
 
 
 
-// 태그 생성
-// let div = document.createElement('div')
-// 태그에 class부여
-// div.className = "DOM"
-// 요소에 텍스트 추가
-// div.innerHTML = "dom"
-// h1태그 안에 추가
-// h1.appendchild(div)
+const reloadPage = () => {
+    location.reload()
+}
+
+
+document.querySelector("body").addEventListener("click", function(e) {
+    if(e.target.className == e.currentTarget.querySelector(".my_account").className) {
+        document.querySelector(".profile_setting").style.display="block"
+    } else {
+        document.querySelector(".profile_setting").style.display="none"
+    }
+})

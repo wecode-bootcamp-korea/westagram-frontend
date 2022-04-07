@@ -7,13 +7,14 @@
     <title>westagram_main</title>
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" media="(max-width:1000px)" href="./css/main_size_down.css">
+    <!-- <link rel="stylesheet" href="./css/main_size_down.css"> -->
 </head>
 
 <body>
     <nav>
         <div class="nav_midline">
             <div class="nav_left">
-                <img src="./img/logo.png" alt="logo" class="insta_logo">
+                <img src="./img/logo.png" onclick="reloadPage()" alt="logo" class="insta_logo">
                 <p class="insta_name">westagram</p>
             </div>
             <div class="nav_mid">
@@ -26,9 +27,29 @@
                     <img src="./img/heart.png" class="heart_alarm"alt="heart_alarm">
                     <div class="alarm_red"></div>
                 </div>
-                <img src="./img/profile.png" class="my_account" alt="my_account">
+                <button class="popupbutton">
+                    <img src="./img/myProfilePhoto.jpg" class="my_account" alt="my_account">
+                </button>
             </div>
         </div>
+        <div class="profile_setting">
+            <ul class="popup_list">
+                <li class="list_1">
+                    <img src="./img/user.png" alt="popup_profile" class="popup_icon">
+                    <span class="popup_name">프로필</span>
+                </li>
+                <li class="list_2">
+                    <img src="./img/mark.png" alt="popup_mark" class="popup_icon">
+                    <span class="popup_name">저장됨</span>
+                </li>
+                <li class="list_3">
+                    <img src="./img/settings.png" alt="popup_settings" class="popup_icon">
+                    <span class="popup_name">설정</span>
+                </li>
+            </ul>
+            <div class="popup_bottom">로그아웃</div>
+        </div>
+
     </nav>
 
     <main>
@@ -172,7 +193,6 @@
                                     <p class="recommanded_p">VS님 외 몇명이 팔로우 했...</p>
                                 </div>
                             </div>
-                            <!-- <div class="follow">팔로우</div> -->
                             <a href="" class="follow">팔로우</a>
                         </div>
                     </div>
@@ -185,7 +205,6 @@
                                     <p class="recommanded_p">function님 외 몇명이 팔로...</p>
                                 </div>
                             </div>
-                            <!-- <div class="follow">팔로우</div> -->
                             <a href="" class="follow">팔로우</a>
                         </div>
                     </div>
@@ -198,7 +217,6 @@
                                     <p class="recommanded_p">length님 외 몇명이 팔로우...</p>
                                 </div>
                             </div>
-                            <!-- <div class="follow">팔로우</div> -->
                             <a href="" class="follow">팔로우</a>
                         </div>
                     </div>
