@@ -1,184 +1,250 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Oswald:wght@500&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="styles/main.css">
-    <script src="https://kit.fontawesome.com/697c1c5315.js" crossorigin="anonymous"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&family=Oswald:wght@500&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="styles/main.css" />
+    <script
+      src="https://kit.fontawesome.com/697c1c5315.js"
+      crossorigin="anonymous"
+    ></script>
     <script defer src="./js/main.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <div class="wrapper">
-        <nav>
-            <div class="nav-left">
-                    <a href="main.html"><img src="./img//insta.png" alt="" style="border-right: 1px solid black; padding-right: 1rem;"></a>
-                    <span class="logo" style="padding-left:1rem;">Westagram</span>
+      <nav>
+        <div class="nav-left">
+          <a href="main.html"
+            ><img alt="인스타 로고" src="./img//insta.png"
+          /></a>
+          <span class="logo">Westagram</span>
+        </div>
+        <div class="nav-center">
+          <div class="searchBar">
+            <input type="text" placeholder="검색" />
+            <div class="searchIcon">
+              <i class="fa-solid fa-magnifying-glass"></i>
             </div>
-            <div class="nav-center">
-                    <div class="searchBar">
-                        <input type="text" placeholder="검색">
-                        <div class="searchIcon">
-                            <i class="fa-solid fa-magnifying-glass"></i>
-                        </div>
-                    </div>                  
+          </div>
+        </div>
+        <div class="nav-right">
+          <a href="#"><img alt="나침반 로고" src="./img/explore.png" /></a>
+          <a href="#"><img alt="하트 로고" src="./img/heart.png" /></a>
+          <a href="./login.html"
+            ><img
+              alt="프로필 로고"
+              src="./img/profile.png"
+              onclick="alert('로그인 화면으로 돌아갑니다 😮')"
+          /></a>
+        </div>
+      </nav>
+      <main>
+        <div class="contents">
+          <article>
+            <div class="article-top">
+              <img alt="유저 이미지" src="./img/userImg.jpg" class="userImg" />
+              <p>Iwannarest_TT</p>
+              <span class="dotMore"
+                ><a href="#"><i class="fa-solid fa-ellipsis"></i></a
+              ></span>
             </div>
-            <div class="nav-right">
-                    <a href="#"><img src="./img/explore.png" alt=""></a>
-                    <a href="#"><img src="./img/heart.png" alt=""></a>
-                    <a href="./login.html"><img src="./img/profile.png" alt="" onclick="alert('로그인 화면으로 돌아갑니다 😮')"></a>
+            <div class="article-main">
+              <img alt="피드사진" src="./img/feed.jpg" />
             </div>
-        </nav>
-        <main>
-            <div class="contents">
-                <article>
-                    <div class="article-top">
-                        <img src="./img/userImg.jpg" alt="" class="userImg">
-                        <p> Iwannarest_TT</p>
-                        <span class="dotMore"><a href="#"><i class="fa-solid fa-ellipsis"></a></i></span>
-                    </div>
-                    <div class="article-main">
-                        <img src="./img/feed.jpg" alt="">
-                    </div>
-                    <div class="article-bar" style="background-color: white;">
-                        <div class="bar-left">
-                            <button><span class="bar-like"><i class="fa-solid fa-heart fa-2x"></i></span></button>
-                            <button><span class="bar-comments"><i class="fa-solid fa-comment fa-2x"></i></span></button>
-                            <button><span class="bar-share"><i class="fa-solid fa-arrow-up-from-bracket fa-2x"></span></i></button>
-                        </div>
-                        <div class="bar-right">
-                            <button><span class="bar-bookmark"><i class="fa-solid fa-bookmark fa-2x"></i></span></button>
-                        </div>
-                    </div>
-                    <div class="article-reaction" style="background-color: white;">
-                        <img src="./img/likeuser.jpg" alt="" class="likeUser"><p><b>&nbsp;&nbsp;goophyishollyshakeit님 외 6명이 좋아합니다</b></p>
-                    </div>
-                    <div class="article-comments" style="background-color: white;">
-                        <div>
-                            <p><b>elsaisfree</b> 정신못차렸누 쥐놈아 쥐놈아...<span style="color: gray;"> 더 보기</span></p>
-                        </div>
-                        <div style="display: flex; justify-content: space-between;">
-                            <p><b>donalduck</b> ㅋㅋ 담고?</p><button><span class="comment-like"><i class="fa-solid fa-heart"></i></span></button>
-                         </div>
-                            <p style="color: gray;">42분 전</p>
-                            <ul id="comments" style="list-style: none;"></ul>
-                         </div>
-                         <!--여기에 댓글 기능을 구현하는거야 수광아-->
-                         <div class="article-write" style="background-color: white; position: relative;">
-                            <form action="#" id="instaForm">
-                                <input type="text" name="username" value="sooboi" placeholder="숨기자" style="display: none;"/>
-                                <input type="text" name="comment" placeholder="댓글 달기..." class="textIn"/>
-                                <button style="background-color: white;" class="textBt">게시</button>
-                            </form>
-                        </div>
-                         <!--여기에 댓글 기능을 구현하는거야 수광아-->          
-                </article><br>
+            <div class="article-bar">
+              <div class="bar-left">
+                <button>
+                  <span class="bar-like"
+                    ><i class="fa-solid fa-heart fa-2x"></i
+                  ></span>
+                </button>
+                <button>
+                  <span class="bar-comments"
+                    ><i class="fa-solid fa-comment fa-2x"></i
+                  ></span>
+                </button>
+                <button>
+                  <span class="bar-share"
+                    ><i class="fa-solid fa-arrow-up-from-bracket fa-2x"></i
+                  ></span>
+                </button>
+              </div>
+              <div class="bar-right">
+                <button>
+                  <span class="bar-bookmark"
+                    ><i class="fa-solid fa-bookmark fa-2x"></i
+                  ></span>
+                </button>
+              </div>
             </div>
-            <div class="main-right">
-              <div class="box-right">
-                <div class="right-top">
-                    <div>
-                        <img src="./img/junbum.jpg" alt="">
-                    </div>
-                    <div class="r-top-text">
-                        <p><b>parkjunbum_wecode</b></p>
-                        <p style="color: #9e9e9e;">Wecode / 위코드 32기</p>
-                    </div>
+            <div class="article-reaction">
+              <img
+                alt="좋아요 유저파일"
+                src="./img/likeuser.jpg"
+                class="likeUser"
+              />
+              <p>
+                <b>&nbsp;&nbsp;goophyishollyshakeit님 외 6명이 좋아합니다</b>
+              </p>
+            </div>
+            <div class="article-comments">
+              <div>
+                <p>
+                  <b>elsaisfree</b> 정신못차렸누 쥐놈아 쥐놈아...
+                  <span class="text-more"> 더 보기</span>
+                </p>
+              </div>
+              <div class="comment-with-like">
+                <p><b>donalduck</b> ㅋㅋ 담고?</p>
+                <button>
+                  <span class="comment-like"
+                    ><i class="fa-solid fa-heart"></i
+                  ></span>
+                </button>
+              </div>
+              <p class="lastInTime">42분 전</p>
+              <ul id="comments"></ul>
+            </div>
+            <div class="article-write">
+              <form action="#" id="instaForm">
+                <input
+                  type="text"
+                  name="username"
+                  value="sooboi"
+                  placeholder="숨기자"
+                  class="hide_input"
+                />
+                <input
+                  type="text"
+                  name="comment"
+                  placeholder="댓글 달기..."
+                  class="textIn"
+                />
+                <button class="textBt">게시</button>
+              </form>
+            </div>
+          </article>
+          <br />
+        </div>
+        <div class="main-right">
+          <div class="box-right">
+            <div class="right-top">
+              <div>
+                <img alt="junbum 유저 이미지" src="./img/junbum.jpg" />
+              </div>
+              <div class="r-top-text">
+                <p><b>parkjunbum_wecode</b></p>
+                <p class="userSubText">Wecode / 위코드 32기</p>
+              </div>
+            </div>
+            <div class="right-story">
+              <div class="story-text">
+                <p class="storyFontGray">스토리</p>
+                <p>모두 보기</p>
+              </div>
+              <div class="story-list">
+                <div class="story-img">
+                  <img
+                    alt="스토리 리스트 유저 이미지"
+                    src="./img/listman.jpg"
+                  />
                 </div>
-                <div class="right-story" style="margin-top: 15px; padding: 10px;">
-                    <div class="story-text">
-                       <p style="color: gray;">스토리</p>
-                       <p>모두 보기</p>
-                    </div>
-                    <div class="story-list">
-                        <div class="story-img">
-                            <img src="./img/listman.jpg" alt="">
-                        </div>
-                        <div class="story-txt" style="margin-left: 10px;">
-                            <b>_yum_s</b>
-                            <p style="color: gray;">16분 전</p>
-                        </div>
-                    </div>
-                    <div class="story-list">
-                        <div class="story-img">
-                            <img src="./img/listman.jpg" alt="">
-                        </div>
-                        <div class="story-txt" style="margin-left: 10px;">
-                            <b>drink_eat_drink</b>
-                            <p style="color: gray;">3시간 전</p>
-                        </div>
-                    </div>
-                    <div class="story-list">
-                        <div class="story-img">
-                            <img src="./img/listman.jpg" alt="">
-                        </div>
-                        <div class="story-txt" style="margin-left: 10px;">
-                            <b>hyukyc</b>
-                            <p style="color: gray;;">20시간 전</p>
-                        </div>
-                    </div>
+                <div class="story-txt">
+                  <b>_yum_s</b>
+                  <p class="story-time">16분 전</p>
                 </div>
-                <div class="right-story" style="margin-top: 15px; padding: 10px;">
-                    <div class="story-text">
-                       <p style="color: gray;;">회원님을 위한 추천</p>
-                       <p>모두 보기</p>
-                    </div>
-                    <div class="story-list">
-                        <div class="story-img">
-                            <img src="./img/listman2.jpg" alt="">
-                        </div>
-                        <div class="story-txt" style="margin-left: 10px;">
-                            <b>_bitcoinIsalive</b>
-                            <div class="follow-line">
-                                <p style="color: gray;;">_piterpan 님 외에 3명이 ...</p>
-                                <button class="follow-bt">팔로우</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="story-list">
-                        <div class="story-img">
-                            <img src="./img/listman2.jpg" alt="">
-                        </div>
-                        <div class="story-txt" style="margin-left: 10px;">
-                            <b>46floor_im_here</b>
-                            <div style="position: relative;">
-                                <div class="follow-line">
-                                <p style="color: gray;;">helloWorld_ 님 외에 8명이 ...</p>
-                                <button class="follow-bt">팔로우</button>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="story-list">
-                        <div class="story-img">
-                            <img src="./img/listman2.jpg" alt="">
-                        </div>
-                        <div class="story-txt" style="margin-left: 10px;">
-                            <b>life_is.once</b>
-                            <div style="position: relative;">
-                                <div class="follow-line">
-                                    <p style="color: gray;">piterpan 님 외에 3명이 ...</p>
-                                    <button class="follow-bt">팔로우</button>
-                            </div>
-                            </div>
-                        </div>
-                    </div>
-                </div><br>
-                <div class="right-footer">
-                    <p style="color: #b8b5b5;">
-                        Instagram 정보·지원·홍보 센터·API·<br>
-                    채용 정보·개인정보처리방침·약관·<br>
-                    디렉터리·프로필·해시태그·언어<br><br>
-                    &copy; 2019 INSTAGRAM
-                    </p>
+              </div>
+              <div class="story-list">
+                <div class="story-img">
+                  <img
+                    alt="스토리 리스트 유저 이미지"
+                    src="./img/listman.jpg"
+                  />
                 </div>
-             </div> 
+                <div class="story-txt">
+                  <b>drink_eat_drink</b>
+                  <p class="story-time">3시간 전</p>
+                </div>
+              </div>
+              <div class="story-list">
+                <div class="story-img">
+                  <img
+                    alt="스토리 리스트 유저 이미지"
+                    src="./img/listman.jpg"
+                  />
+                </div>
+                <div class="story-txt">
+                  <b>hyukyc</b>
+                  <p class="story-time">20시간 전</p>
+                </div>
+              </div>
             </div>
-        </main>
+            <div class="right-story">
+              <div class="story-text">
+                <p class="storyFontGray">회원님을 위한 추천</p>
+                <p>모두 보기</p>
+              </div>
+              <div class="story-list">
+                <div class="story-img">
+                  <img alt="추천 유저 이미지" src="./img/listman2.jpg" />
+                </div>
+                <div class="story-txt">
+                  <b>_bitcoinIsalive</b>
+                  <div class="follow-line">
+                    <p class="storyFontGray">_piterpan 님 외에 3명이 ...</p>
+                    <button class="follow-bt">팔로우</button>
+                  </div>
+                </div>
+              </div>
+              <div class="story-list">
+                <div class="story-img">
+                  <img alt="추천 유저 이미지" src="./img/listman2.jpg" alt="" />
+                </div>
+                <div class="story-txt">
+                  <b>46floor_im_here</b>
+                  <div>
+                    <div class="follow-line">
+                      <p class="storyFontGray">helloWorld_ 님 외에 8명이 ...</p>
+                      <button class="follow-bt">팔로우</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="story-list">
+                <div class="story-img">
+                  <img alt="추천 유저 이미지" src="./img/listman2.jpg" alt="" />
+                </div>
+                <div class="story-txt">
+                  <b>life_is.once</b>
+                  <div>
+                    <div class="follow-line">
+                      <p class="storyFontGray">piterpan 님 외에 3명이 ...</p>
+                      <button class="follow-bt">팔로우</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <br />
+            <div class="right-footer">
+              <p>
+                Instagram 정보·지원·홍보 센터·API·<br />
+                채용 정보·개인정보처리방침·약관·<br />
+                디렉터리·프로필·해시태그·언어<br /><br />
+                &copy; 2019 INSTAGRAM
+              </p>
+            </div>
+          </div>
+        </div>
+      </main>
     </div>
-</body>
+  </body>
 </html>
