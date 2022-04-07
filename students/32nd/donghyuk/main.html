@@ -87,17 +87,22 @@
               <span class="post__text">댕댕이🐶</span>
             </div>
           </section>
-          <section class="article-comments">
-            <div class="article-comment__row">
+          <ul class="article-comments">
+            <li class="article-comment__row">
               <div class="comment__row-left">
                 <span class="comment__id">neceosecius</span>
                 <span class="comment__text">맞팔해요~ 덕순이 귀엽네요👺</span>
               </div>
-              <span class="comment-heart" data-clicked="false">
-                <i class="fas fa-heart"></i>
-              </span>
-            </div>
-          </section>
+              <div class="comment__row-right">
+                <button class="comment-delete"
+                  ><i class="fas fa-trash-alt"></i
+                ></butt>
+                <button class="comment-heart" data-clicked="false">
+                  <i class="fas fa-heart"></i>
+                </button>
+              </div>
+            </li>
+          </ul>
           <span class="article-update__time">11시간전</span>
           <form class="article-comment__form">
             <input
