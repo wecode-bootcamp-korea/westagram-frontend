@@ -5,7 +5,7 @@ const password = document.querySelector(".login-password");
 const loginBtn = document.querySelector(".login-button");
 
 const checkIdAndPwd = () => {
-  if (id.value && password.value) {
+  if (id.value.includes("@") && password.value.length >= 5) {
     loginBtn.style.backgroundColor = "#0095F6";
     loginBtn.removeAttribute("disabled");
   } else {
@@ -14,12 +14,10 @@ const checkIdAndPwd = () => {
   }
 };
 
-id.addEventListener("keydown", (e) => {
-  console.log(e.target.value);
-  console.log(id.value);
+id.addEventListener("keyup", () => {
   checkIdAndPwd();
 });
 
-password.addEventListener("keydown", (e) => {
+password.addEventListener("keyup", () => {
   checkIdAndPwd();
 });
