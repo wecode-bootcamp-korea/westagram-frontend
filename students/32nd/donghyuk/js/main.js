@@ -22,18 +22,26 @@ window.addEventListener("resize", () => {
 
 const addComment = (id) => {
   let commentRow = document.createElement("div");
+  let commentRowLeft = document.createElement("div");
   let commentId = document.createElement("span");
   let commentText = document.createElement("span");
+  let commentHeart = document.createElement("span");
 
   commentRow.classList.add("article-comment__row");
+  commentRowLeft.classList.add("comment__row-left");
   commentId.classList.add("comment__id");
   commentText.classList.add("comment__text");
+  commentHeart.classList.add("comment-heart");
 
   commentId.innerText = id;
   commentText.innerText = commentInput.value;
+  commentHeart.innerHTML = "<i class='fas fa-heart'></i>";
+  commentHeart.setAttribute("data-clicked", "false");
 
-  commentRow.appendChild(commentId);
-  commentRow.appendChild(commentText);
+  commentRowLeft.appendChild(commentId);
+  commentRowLeft.appendChild(commentText);
+  commentRow.appendChild(commentRowLeft);
+  commentRow.appendChild(commentHeart);
   comments.appendChild(commentRow);
 
   commentInput.value = "";
@@ -45,8 +53,19 @@ commentForm.addEventListener("submit", (event) => {
 });
 
 commentInput.addEventListener("keyup", (event) => {
-  console.log(event.target.value);
   event.target.value
     ? (commentBtn.style.color = "#0095F6")
     : (commentBtn.style.color = "#c4e1fb");
+});
+
+comments.addEventListener("click", (event) => {
+  const target = event.target;
+  const targetParentNode = target.parentNode;
+  if (targetParentNode.dataset.clicked === "false") {
+    target.style.color = "red";
+    targetParentNode.setAttribute("data-clicked", "true");
+  } else if (targetParentNode.dataset.clicked === "true") {
+    target.style.color = "black";
+    targetParentNode.setAttribute("data-clicked", "false");
+  }
 });
