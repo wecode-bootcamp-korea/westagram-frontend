@@ -90,9 +90,6 @@ del.addEventListener("click",delHandler)
 let info = document.querySelector(".information")
 let pf = document.querySelector(".profile")
 
-console.log(info)
-console.log(pf)
-
 function showinfo() {
     info.classList.add("show")
     let all = document.createElement("div")
@@ -101,8 +98,11 @@ function showinfo() {
         info.classList.remove("show")
         let all = document.querySelector(".hide")
         all.remove()
+        pf.style.border = "none"
     })
     document.querySelector(".navigation").append(all)
+    pf.style.border = "2px solid red"
+    pf.style.borderRadius = "50%"
 }
 
 pf.addEventListener("click",showinfo)
