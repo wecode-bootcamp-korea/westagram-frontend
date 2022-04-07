@@ -1,46 +1,30 @@
 const likeButton = document.body.querySelector(".button-heart");
-const bookmarkButton = document.body.querySelector(".button-bookmark");
-const postCommentForm = document.body.querySelector(".post-comment");
-const postCommentButton = document.body.querySelector(".post-comment-button");
-const postCommentInput = document.body.querySelector(".post-comment-input");
-const postCommentList = document.body.querySelector(".post-comment-list");
-const gnbSearchBar = document.body.querySelector(".gnb-search");
-const gnbSearchResult = document.body.querySelector(".gnb-search-result");
-const gnbSearchResultList = document.body.querySelector(
-  ".gnb-search-result-list"
-);
-const gnbProfileSettingButton = document.body.querySelector(".button-profile");
-const gnbProfileSetting = document.body.querySelector(
-  ".gnb-profile-setting-modal"
-);
-
-// 피드 버튼들 동작 시 클래스 fa-solid 바꾸기 등
-
 likeButton.addEventListener("click", () => {
   likeButton.classList.toggle("liked");
   likeButton.querySelector("i").classList.toggle("fa-regular");
   likeButton.querySelector("i").classList.toggle("fa-solid");
 });
 
+const bookmarkButton = document.body.querySelector(".button-bookmark");
 bookmarkButton.addEventListener("click", () => {
   bookmarkButton.classList.toggle("bookmarked");
   bookmarkButton.querySelector("i").classList.toggle("fa-regular");
   bookmarkButton.querySelector("i").classList.toggle("fa-solid");
 });
 
-// 댓글 한 글자 이상 작성해야 게시 버튼 활성화
+const postCommentForm = document.body.querySelector(".post-comment");
+const postCommentButton = document.body.querySelector(".post-comment-button");
+const postCommentInput = document.body.querySelector(".post-comment-input");
+const postCommentList = document.body.querySelector(".post-comment-list");
 postCommentInput.addEventListener("keyup", () => {
   postCommentButton.disabled = postCommentInput.value.slice().trim()
     ? false
     : true;
 });
 
-// 댓글 입력하고 enter 프레스 하면 댓글 달리게 하기
-
-// 1. li 엘리먼트를 만드는 함수
 const createCommentLi = (id, comment) => {
-  const li = document.createElement("li");
-  li.className = "post-comment-item";
+  const postCommentItem = document.createElement("li");
+  postCommentItem.className = "post-comment-item";
 
   const postCommentItemLeft = document.createElement("div");
   postCommentItemLeft.className = "post-comment-item-left";
@@ -87,13 +71,11 @@ const createCommentLi = (id, comment) => {
   postCommentItemRight.appendChild(heartButton);
   postCommentItemRight.appendChild(deleteButton);
 
-  li.appendChild(postCommentItemLeft);
-  li.appendChild(postCommentItemRight);
+  postCommentItem.appendChild(postCommentItemLeft);
+  postCommentItem.appendChild(postCommentItemRight);
 
-  return li;
+  return postCommentItem;
 };
-
-// 2-1. 폼 제풀 시 댓글 추가
 
 postCommentForm.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -108,7 +90,11 @@ postCommentForm.addEventListener("submit", (e) => {
   postCommentList.appendChild(newComment);
 });
 
-// 아이디 검색 기능
+const gnbSearchBar = document.body.querySelector(".gnb-search");
+const gnbSearchResult = document.body.querySelector(".gnb-search-result");
+const gnbSearchResultList = document.body.querySelector(
+  ".gnb-search-result-list"
+);
 
 const idDataArray = [
   {
@@ -138,6 +124,12 @@ const idDataArray = [
 ];
 
 let matchedArray = idDataArray;
+
+const filterMatchedArray = (searchingString) => {
+  matchedArray = idDataArray.filter((el) =>
+    el.id.startsWith(searchingString.toLowerCase())
+  );
+};
 
 const paintMatchedArray = () => {
   gnbSearchResultList.innerHTML = "";
@@ -185,6 +177,11 @@ const paintMatchedArray = () => {
   });
 };
 
+gnbSearchBar.addEventListener("keyup", (e) => {
+  filterMatchedArray(e.target.value);
+  paintMatchedArray();
+});
+
 gnbSearchBar.addEventListener("focus", () => {
   gnbSearchResult.classList.add("is-active");
   paintMatchedArray();
@@ -194,18 +191,15 @@ gnbSearchBar.addEventListener("blur", () => {
   gnbSearchResult.classList.remove("is-active");
 });
 
+const gnbProfileSettingButton = document.body.querySelector(".button-profile");
+const gnbProfileSetting = document.body.querySelector(
+  ".gnb-profile-setting-modal"
+);
+
 gnbProfileSettingButton.addEventListener("click", () => {
   gnbProfileSetting.classList.add("is-active");
 });
 
 gnbProfileSettingButton.addEventListener("blur", () => {
   gnbProfileSetting.classList.remove("is-active");
-});
-
-gnbSearchBar.addEventListener("keyup", (e) => {
-  matchedArray = idDataArray.filter((el) =>
-    el.id.startsWith(e.target.value.toLowerCase())
-  );
-
-  paintMatchedArray();
 });
