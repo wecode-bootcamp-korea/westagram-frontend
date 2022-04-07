@@ -1,9 +1,6 @@
 let id = document.querySelector(".id input")
-
 let pw = document.querySelector(".pw input")
-
 let btn = document.querySelector(".button .btn")
-
 let main = document.querySelector(".wrapper")
 
 function validate() {
@@ -22,7 +19,8 @@ function validate() {
 
 main.addEventListener("keyup",validate)
 
-// 페이지 이동
+
+
 
 function gomain() {
     window.location.href = 'http://127.0.0.1:5500/main.html'

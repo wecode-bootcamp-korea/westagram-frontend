@@ -1,22 +1,20 @@
 let src = document.querySelector(".search")
 let point = document.querySelector(".inputsrc")
 
-function hidediv() {
+function hideSearch() {
     src.style.visibility = 'hidden'
     point.setAttribute("placeholder", "검색")
     point.focus()
 }
 
-function showdiv() {
+function showSearch() {
     src.style.visibility = ""
     point.removeAttribute("placeholder")
 }
 
-src.addEventListener("click",hidediv)
-point.addEventListener("focusout",showdiv)
+src.addEventListener("click",hideSearch)
+point.addEventListener("focusout",showSearch)
 
-
-//댓글영역
 
 
 let reply = document.querySelector(".reply_list")
@@ -24,9 +22,9 @@ let ent = document.querySelector(".replyent")
 let text = document.querySelector(".replyInput")
 let btn = document.querySelector(".replyent");
 
-//게시버튼 활성화
 
-function active() {
+
+function activeReply() {
     if(text.value){
         btn.removeAttribute("disabled")
         btn.classList.add("active")
@@ -36,45 +34,42 @@ function active() {
     }
 }
 
-text.addEventListener('keyup',active)
+text.addEventListener('keyup',activeReply)
 
 
-// 댓글추가,삭제 기능
 
-function addreply() {
+function addReply() {
     let li = document.createElement("li")
     let id = document.getElementById("id").textContent
     li.innerHTML = `<span>${id}</span> ${text.value}<i class="fa-regular fa-heart"></i>`
     
-    // 삭제기능 버튼추가
     let delbtn = document.createElement("button")
     delbtn.setAttribute("class","delete")
     delbtn.innerText = "삭제"
     delbtn.addEventListener('click', () => li.remove())
     
-
     li.appendChild(delbtn)
     reply.appendChild(li)
     
     text.value = ""
     btn.setAttribute("disabled",true)
     btn.classList.remove("active")
-
 }
 
-ent.addEventListener("click",addreply)
+ent.addEventListener("click",addReply)
 
-// 엔터키 댓글작성
 
-function enterkey(e) {
+
+function enterKey(e) {
     if(e.code === 'Enter'){
-        addreply()
+        addReply()
     }
 }
 
-text.addEventListener('keydown',enterkey)
+text.addEventListener('keyup',enterKey)
 
-//댓글 삭제기능
+
+
 
 let del = document.querySelector(".delete")
 
@@ -85,22 +80,25 @@ function delHandler(e) {
 del.addEventListener("click",delHandler)
 
 
-// 프로필 메뉴
+
 
 let info = document.querySelector(".information")
 let pf = document.querySelector(".profile")
 
-function showinfo() {
+function showInfo() {
     info.classList.add("show")
-    let all = document.createElement("div")
-    all.setAttribute("class","hide")
-    all.addEventListener("click",() => {
+    let allScreen = document.createElement("div")
+
+    allScreen.setAttribute("class","hide")
+    allScreen.addEventListener("click",() => {
         info.classList.remove("show")
         let all = document.querySelector(".hide")
         all.remove()
         pf.style.border = "none"
     })
-    document.querySelector(".navigation").append(all)
+
+    document.querySelector(".navigation").append(allScreen)
+    
     pf.style.border = "2px solid red"
     pf.style.borderRadius = "50%"
 }
