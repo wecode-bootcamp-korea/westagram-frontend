@@ -68,13 +68,110 @@ const feedData =  [
 
 const $searchBar = get('.search_input')
 const $userSearchBox = get('.userSearch_wrap')
+const $searchInput = get('.search_input')
+
+
+
+
+function createSearchUser() {
+    const createElement = document.createElement('article')
+    createElement.classList.add('myInfo')
+    createElement.innerHTML = `<div class="user_profile">
+    <div class="user_img"><img src="./img/profile.jpeg" class="profile_img" alt="프로필이미지" /></div>
+    <div><p class="user_id">${user.id}</p><span class="user_name">${user.info}</span></div>
+    </div>
+    <i class="fa-solid fa-xmark fa-xl remove"></i>`
+    return createElement
+}
+
+function userSearching(inputValue, userData) {
+    userData.filter((user) => {
+        if((user.id.includes(inputValue) || user.info.includes(inputValue))) {
+            
+            const createElement = document.createElement('article')
+            createElement.classList.add('myInfo')
+            createElement.innerHTML = `<div class="user_profile">
+            <div class="user_img"><img src="./img/profile.jpeg" class="profile_img" alt="프로필이미지" /></div>
+            <div><p class="user_id">${user.id}</p><span class="user_name">${user.info}</span></div>
+            </div>`
+            
+            get('.searched_user').appendChild(createElement)
+        }
+    })
+}
+
+function RemoveLatelyUser() {
+    const $latelyUserRemoveBtn = getAll('.searched_user .remove')
+    for(let i = 0; i < $latelyUserRemoveBtn.length; i++ ) {
+        $latelyUserRemoveBtn[i].addEventListener('click', (e) => {
+            e.target.closest('.myInfo').remove()
+        })
+    }
+
+}
+
+function searchValueIsEmpty() {
+    const latelySearchData = [
+        {id: 'banana', info:'붜내너는 노랭이'},
+        {id: 'apple', info:'유사과'},
+        {id: 'kitkat', info:'킷캣맛있지롱'},
+        {id: 'CherryBlossom', info:'보고싶다'},
+        {id: 'gangnam', info:'강남이다'},
+    ]
+    
+    latelySearchData.filter((user) => {
+        const createElement = document.createElement('article')
+        createElement.classList.add('myInfo')
+        createElement.innerHTML = `<div class="user_profile">
+        <div class="user_img"><img src="./img/profile.jpeg" class="profile_img" alt="프로필이미지" /></div>
+        <div><p class="user_id">${user.id}</p><span class="user_name">${user.info}</span></div>
+        </div>
+        <i class="fa-solid fa-xmark fa-xl remove"></i>`
+        
+        get('.searched_user').appendChild(createElement)
+    })
+
+    RemoveLatelyUser()
+}
+
+function inputKeyupEvent() {
+    let inputValue = ''
+    const userData = [
+        {id: 'wecode', info:'위코드에 오신것을 환영합니다'},
+        {id: 'object', info:'객체라고 하나'},
+        {id: 'browser', info:'공부공부'},
+        {id: 'where', info:'선릉에있지'},
+        {id: 'gangnam', info:'강남이다'},
+        {id: 'banana', info:'붜내너는 노랭이'},
+        {id: 'apple', info:'유사과'},
+        {id: 'kitkat', info:'킷캣맛있지롱'},
+        {id: 'CherryBlossom', info:'보고싶다'},
+    ]
+    
+    $searchInput.addEventListener('keyup', (e) => {
+        get('.searched_user').innerHTML = ''
+        inputValue = e.target.value
+        
+        if(!inputValue) {
+            searchValueIsEmpty()
+        } else {
+            userSearching(inputValue, userData)
+        }
+    
+    
+    })
+
+}
 
 $searchBar.addEventListener('focus', () => {
     $userSearchBox.classList.toggle('hidden')
+    inputKeyupEvent()
 })
-$searchBar.addEventListener('blur', () => {
-    $userSearchBox.classList.toggle('hidden')
-})
+
+
+// $searchBar.addEventListener('blur', () => {
+//     $userSearchBox.classList.toggle('hidden')
+// })
 
 
 // 피드내용 엔터에서 말줄임
@@ -226,8 +323,7 @@ function commentRemoveClick() {
     }
 }
 
-commentLikeClick()
-commentRemoveClick()
+
 
 
 
@@ -251,3 +347,6 @@ for(let i = 0; i < $feeds.length; i++) {
 }
 
 
+searchValueIsEmpty()
+commentLikeClick()
+commentRemoveClick()
