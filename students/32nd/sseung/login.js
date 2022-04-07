@@ -7,8 +7,8 @@ const $submit = get('.submit_btn')
 const $form = get('.login_form')
 
 const user = {
-    id : 'userid',
-    pw : 'pw12345',
+    id : 'userid@gmail.com',
+    pw : 'pw123456789',
 }
 
 console.log(`[임시] ID :${user.id}, PW :${user.pw}`)
@@ -29,9 +29,33 @@ $input.addEventListener('keyup', getInput)
 
 $form.addEventListener('submit', (e) => {
     e.preventDefault()
-    if($id.value === user.id && $pw.value === user.pw) {
+
+    const idCheck = ($id.value === user.id)
+    const pwCheck = ($pw.value === user.pw)
+    const includeEmail = $id.value.includes('@')
+    const pwMinLength = (7 < $pw.value.length && $pw.value.length < 16)
+    // console.log(pwMinLength)
+
+    if( idCheck && pwCheck ) {
         window.open('./main.html', '_self')
     } else {
-        alert('id 또는 pw를 확인하세요')
+        let errorMessage = ''
+        let hintMessage = ''
+
+        if(!idCheck && !pwCheck) {
+            errorMessage += `아이디와 비밀번호를 확인하세요`
+        } else if(!idCheck) {
+            errorMessage += `아이디를 확인하세요`
+        } else if(!pwCheck){
+            errorMessage += `비밀번호를 확인하세요`
+        }
+        if(!includeEmail) {
+            hintMessage += `아이디가 이메일 형식이 아닙니다.\n`
+        }
+        if(!pwMinLength) {
+            hintMessage += `비밀번호는 8자리 ~ 15자리 입니다.\n`
+        }
+
+        alert(`${errorMessage}!${ hintMessage ? '\n\nhint:' : '' }${hintMessage}`)
     }
 })

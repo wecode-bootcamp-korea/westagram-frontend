@@ -167,8 +167,6 @@ function postDisabled(e, index) {
 
 
 // 댓글 작성 함수
-let $allComment = getAll('.comment');
-
 function commentPost(e, index) {
     e.preventDefault()
     const $commentVoid = get(`.feed[data-id='${index}'] .comments_void`)
@@ -186,14 +184,14 @@ function commentPost(e, index) {
     
     $nowCommentInput.value = '';
     
-    // 작성 후 전체 comment 리스트 업데이트
-    $allComment = getAll('.comment');
+    // 리스트 생성 시마다 새로운 리스틑 업데이트하고 이벤트리스너를 달아주기 위해
     commentLikeClick()
     commentRemoveClick()
 }
 
 // 댓글 좋아요
 function commentLikeClick() {
+    $allComment = getAll('.comment');
     const $commentLikeImg = getAll('.comment .like');
     // const $commentCheckbox = getAll('.comment input');
 
