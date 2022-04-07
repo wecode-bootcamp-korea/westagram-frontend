@@ -7,76 +7,96 @@
     <link href="common.css" rel="stylesheet" type="text/css" />
     <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
     <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/e264982194.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a2a4ad8a1c.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <nav>
             <div class = "navigation">
                 <span class = "title">
-                    <img src = "instagram icon.png" class = "icon">
+                    <img alt = "위스타그램 아이콘" src = "instagram icon.png" class = "icon" />
                     <span class = "westa">westagram</span>
                 </span>
-                <span class = "search">
-                    <input type = "text" placeholder = "검색" class = "inside">
-                </span>
+                <input type = "text" placeholder = "검색" class = "inside" />
                 <span class = "pic"> 
-                    <img src = "https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png" class = "picture">
-                    <img src = "https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" class = "picture">
-                    <img src = "https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png" class = "picture">
+                    <img alt = "나침반 아이콘" src = "https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png" class = "picture" />
+                    <img alt = "하트 아이콘" src = "https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" class = "picture" />
+                    <img alt = "마이페이지 아이콘" src = "https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png" class = "picture" />
                 </span>
             </div>
-            </nav>
+        </nav>
         <main>
             <div class = "feeds">
                 <article>
-                    <div class = "nicknameImage">
-                        <img src = "instagram icon.png" class = "profileName">
-                        <span class = "userid">canon_mj</span>
+                    <div class = "flexInArticle">
+                        <div class = "nicknameImage">
+                            <img alt = "canon_mj님의 프로필 사진" src = "instagram icon.png" class = "profileName" />
+                            <span class = "userid">canon_mj</span>
+                        </div>
+                        <img alt = "canon_mj님의 피드사진" src = "https://cdn.pixabay.com/photo/2022/02/24/15/17/cat-7032641_960_720.jpg" class = "feedImage" />
+                        <div class = "likeCommentShare">
+                            <i class="fa-regular fa-heart fa-xl"></i>
+                            <i class="fa-regular fa-comment fa-xl"></i>
+                            <i class="fa-solid fa-arrow-up-from-bracket fa-xl"></i>
+                            <i class="fa-regular fa-bookmark fa-xl"></i>
+                        </div>
+                        <img alt = "aineWorld님의 프로필 사진" src = "instagram icon.png" class = "profileName" />
+                        <span class = "userid">aineWorld</span>님 외 10명이 좋아합니다
+                        <div class = "comment">
+                            <div><span class = "userid">canon_mj</span> 위워크에서 진행한 베이킹 클래스...<span class = "changeColor">더 보기</span></div>
+                            <div><span class = "userid">neceosecius</span> 거봐 좋았잖아~~~~~🙆🏻‍♀️</div>
+                            <div class = "positionOfComment">
+                                <div class = "comments"></div>
+                                <div class = "changeColor">42분 전</div>
+                            </div>  
+                        </div>
+                        <div id = "form">
+                            <input type = "text" placeholder = "댓글 달기..." class = "addComment" />
+                            <input type = "button" disabled value = "게시" id = "btn" />
+                        </div>  
                     </div>
-                    <img src = "https://cdn.pixabay.com/photo/2022/02/24/15/17/cat-7032641_960_720.jpg" class = "feedImage">
-                    <p class = "likeCommentShare">
-                        <img src = "https://cdn.pixabay.com/photo/2018/11/13/21/43/instagram-3814047_960_720.png" class = "expression">
-                        <img src = "https://cdn.pixabay.com/photo/2018/11/13/21/43/instagram-3814056_960_720.png" class = "expression">
-                        <img src = "https://cdn.pixabay.com/photo/2018/11/13/21/44/instagram-3814059_960_720.png" class = "expression">
-                        <img src = "https://cdn.pixabay.com/photo/2018/11/13/21/43/instagram-3814054_960_720.png" class = "save">
-                    </p>
                 </article>
             </div>
             <div class = "feedRight">
                 <div class = "myProfile">
                     <div class = "profile">
-                        <img src = "https://wecode.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F54ded86d-1fe7-4959-b415-28ebd0f9c672%2Flogo.jpeg?table=block&id=12814edc-cd89-42af-a5d6-f769f80c264c&spaceId=4b97eaca-7938-4c43-b27c-a0c55795a841&width=250&userId=&cache=v2" class = "wecode">
-                        <span class = "username">
+                        <img alt = "나의 프로필 사진" src = "https://wecode.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F54ded86d-1fe7-4959-b415-28ebd0f9c672%2Flogo.jpeg?table=block&id=12814edc-cd89-42af-a5d6-f769f80c264c&spaceId=4b97eaca-7938-4c43-b27c-a0c55795a841&width=250&userId=&cache=v2" class = "wecode" />
+                        <span class = "userid">
                             wecode_bootcamp <br>
                             <span class = "changeColor">WeCode | 위코드</span>
                         </span>
                     </div>
                 </div>
-                
                 <div class = "story">
                     <div class = "split">
                         <span class = "changeColor">스토리</span>
                         <span id = "seeall">모두 보기</span>
                     </div>
                     <div class = "profile">
-                        <img src = "https://wecode.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F54ded86d-1fe7-4959-b415-28ebd0f9c672%2Flogo.jpeg?table=block&id=12814edc-cd89-42af-a5d6-f769f80c264c&spaceId=4b97eaca-7938-4c43-b27c-a0c55795a841&width=250&userId=&cache=v2" class = "wecode">
-                        <span class = "username">
+                        <img alt = "_yum_s님의 프로필 사진" src = "https://wecode.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F54ded86d-1fe7-4959-b415-28ebd0f9c672%2Flogo.jpeg?table=block&id=12814edc-cd89-42af-a5d6-f769f80c264c&spaceId=4b97eaca-7938-4c43-b27c-a0c55795a841&width=250&userId=&cache=v2" class = "wecode" />
+                        <span class = "userid">
                             _yum_s <br>
                             <span class = "changeColor">16분 전</span>
                         </span>
                     </div>
                     <div class = "profile">
-                        <img src = "https://wecode.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F54ded86d-1fe7-4959-b415-28ebd0f9c672%2Flogo.jpeg?table=block&id=12814edc-cd89-42af-a5d6-f769f80c264c&spaceId=4b97eaca-7938-4c43-b27c-a0c55795a841&width=250&userId=&cache=v2" class = "wecode">
-                        <span class = "username">
+                        <img alt = "drink_eat_drink님의 프로필 사진" src = "https://wecode.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F54ded86d-1fe7-4959-b415-28ebd0f9c672%2Flogo.jpeg?table=block&id=12814edc-cd89-42af-a5d6-f769f80c264c&spaceId=4b97eaca-7938-4c43-b27c-a0c55795a841&width=250&userId=&cache=v2" class = "wecode" />
+                        <span class = "userid">
                             drink_eat_drink <br>
                             <span class = "changeColor">3시간 전</span>
                         </span>
                     </div>
                     <div class = "profile">
-                        <img src = "https://wecode.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F54ded86d-1fe7-4959-b415-28ebd0f9c672%2Flogo.jpeg?table=block&id=12814edc-cd89-42af-a5d6-f769f80c264c&spaceId=4b97eaca-7938-4c43-b27c-a0c55795a841&width=250&userId=&cache=v2" class = "wecode">
-                        <span class = "username">
+                        <img alt = "hyukyc님의 프로필 사진" src = "https://wecode.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F54ded86d-1fe7-4959-b415-28ebd0f9c672%2Flogo.jpeg?table=block&id=12814edc-cd89-42af-a5d6-f769f80c264c&spaceId=4b97eaca-7938-4c43-b27c-a0c55795a841&width=250&userId=&cache=v2" class = "wecode" />
+                        <span class = "userid">
                             hyukyc <br>
                             <span class = "changeColor">20시간 전</span>
+                        </span>
+                    </div>
+                    <div class = "profile">
+                        <img alt = "jminkeek님의 프로필 사진" src = "https://wecode.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F54ded86d-1fe7-4959-b415-28ebd0f9c672%2Flogo.jpeg?table=block&id=12814edc-cd89-42af-a5d6-f769f80c264c&spaceId=4b97eaca-7938-4c43-b27c-a0c55795a841&width=250&userId=&cache=v2" class = "wecode" />
+                        <span class = "userid">
+                            jminkeek <br>
+                            <span class = "changeColor">1일 전</span>
                         </span>
                     </div>
                 </div>
@@ -85,9 +105,38 @@
                         <span class = "changeColor">회원님을 위한 추천</span>
                         <span id = "seeall">모두 보기</span>
                     </div>
+                    <div class = "split">
+                        <span class = "withoutFollow">
+                            <img alt = "joaaaaaahye님의 프로필 사진" src = "https://wecode.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F54ded86d-1fe7-4959-b415-28ebd0f9c672%2Flogo.jpeg?table=block&id=12814edc-cd89-42af-a5d6-f769f80c264c&spaceId=4b97eaca-7938-4c43-b27c-a0c55795a841&width=250&userId=&cache=v2" class = "wecode" />
+                            <span class = "userid">
+                                joaaaaaahye <br>
+                                <span class = "changeColor">_legend_a님 외 2명이 ...</span>
+                            </span>
+                        </span>
+                        <span class = "follow">팔로우</span>
+                    </div>
+                    <div class = "split">
+                        <span class = "withoutFollow">
+                            <img alt = "rampart81님의 프로필 사진" src = "https://wecode.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F54ded86d-1fe7-4959-b415-28ebd0f9c672%2Flogo.jpeg?table=block&id=12814edc-cd89-42af-a5d6-f769f80c264c&spaceId=4b97eaca-7938-4c43-b27c-a0c55795a841&width=250&userId=&cache=v2" class = "wecode" />
+                            <span class = "userid">
+                                rampart81 <br>
+                                <span class = "changeColor">ringo.in.seoul님 외 12...</span>
+                            </span>
+                        </span>
+                        <span class = "follow">팔로우</span>
+                    </div>
+                    <div class = "split">
+                        <span class = "withoutFollow">
+                            <img alt = "shawnjjoo님의 프로필 사진" src = "https://wecode.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F54ded86d-1fe7-4959-b415-28ebd0f9c672%2Flogo.jpeg?table=block&id=12814edc-cd89-42af-a5d6-f769f80c264c&spaceId=4b97eaca-7938-4c43-b27c-a0c55795a841&width=250&userId=&cache=v2" class = "wecode" />
+                            <span class = "userid">
+                                shawnjjoo <br>
+                                <span class = "changeColor">jimmylee1220님 외 1...</span>
+                            </span>
+                        </span>
+                        <span class = "follow">팔로우</span>
+                    </div>
                 </div>
             </div>
         </main>
-
         <script src = "main.js"></script>
     </body>

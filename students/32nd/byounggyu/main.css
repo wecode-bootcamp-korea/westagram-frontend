@@ -14,40 +14,11 @@
 
 }
 
-.icon {
-    width: 30px;
-    height: 30px;
-}
-
-@font-face {
-    font-family: "인스타글씨";
-    src: url(Lobster-Regular.ttf);
-}
-
-.westa {
-    font-size: 30px;
-    font-family: "인스타글씨";
-}
-
-.search {
-    margin: auto 0;
-}
-
-.inside {
-    text-align: center;
-    height: 25px;
-    width: 250px;
-}
-
 .pic {
     width: 120px;
     display: flex;
     justify-content: space-between;
     margin: auto 0;
-}
-.picture {
-    width: 30px;
-    height: 30px;
 }
 
 main {
@@ -59,41 +30,27 @@ main {
     width: 100vw;
 }
 
-.feeds {
-    margin-right: 40px;
-}
-
 article {
     width: 560px;
-    height: 760px;
     border: 1px solid #dedede;
     background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .nicknameImage {
     display: flex;
     height: 25px;
-    padding: 10px 10px;
+    padding: 10px 0;
     text-align: center;
 }
-.profileName {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    margin-right: 10px;
-}
-.userid {
-    font-weight: bold;
-    padding: auto;
-}
-.feedImage {
-    width: 100%;
-    height: 60%;
-}
+
 .feedRight {
     display: flex;
     flex-direction: column;
     margin-right: 190px;
+    margin-left: 50px;
     width: 20%;
 }
 
@@ -101,35 +58,10 @@ article {
     width: 100%;
     display: flex;
     justify-content: flex-start;
+    height: 30px;
+    text-align: center;
 }
 
- .expression, .save{
-    width: 40px;
-    height: 40px;
-}
-
-.expression {
-    margin-left: 10px;
-}
-
-.save {
-    margin-left: 360px;
-}
-
-.showProfile {
-    width: 100%;
-    height: 45px;
-}
-.wecode {
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    margin-right: 15px;
-}
-.myProfile {
-    width: 100%;
-    height: 45px;
-}
 .story {
     display: flex;
     flex-direction: column;
@@ -140,16 +72,22 @@ article {
     background-color: white;
     margin-top: 10px;
     padding-left: 10px;
+    overflow: scroll;
 }
 
 .recommend {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 100%;
-    height: 160px;
+    height: 200px;
     border: 1px solid #dedede;
     background-color: white;
     margin-top: 30px;
     padding-left: 10px;
+    overflow: scroll;
 }
+
 .split {
     display: flex;
     justify-content: space-between;
@@ -163,15 +101,146 @@ article {
     justify-content: flex-start;
     width: 100%;
 }
-.username {
-    font-weight: bold;
+
+.withoutFollow {
+    display: flex;
+    justify-content: flex-start;
 }
-.changeColor{
-    color: gray;
-    font-weight: normal;
+
+.positionOfComment {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 #seeall {
     font-weight: bold;
     display: flex-end;
+}
+
+#form {
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+}
+
+.inside {
+    height: 25px;
+    width: 250px;
+    opacity: 0.7;
+    margin: auto 0;
+    text-align: center;
+}
+
+.picture {
+    width: 30px;
+    height: 30px;
+}
+
+
+.feeds {
+    margin-right: 40px;
+}
+
+.profileName {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 0 10px;
+}
+
+.userid {
+    padding: auto;
+    font-weight: bold;
+}
+
+.feedImage {
+    width: 100%;
+    height: 75%;
+}
+
+.fa-heart, .fa-comment, .fa-arrow-up-from-bracket, .fa-bookmark{
+    margin-top: 10px;
+    margin-left: 3px;
+    width: 30px;
+    height: 100%;
+}
+
+.fa-heart {
+    margin-left: 5px;
+}
+
+.fa-bookmark {
+    margin-left: 420px;
+}
+
+.comment {
+    margin: 0;
+    margin-left: 10px;
+}
+
+.addComment {
+    border: none;
+    border-top: 1px solid #dedede;
+    width: 550px;
+    padding: 0;
+    padding-left: 10px;
+    height: 50px;
+}
+
+.showProfile {
+    width: 100%;
+    height: 45px;
+}
+
+.wecode {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.myProfile {
+    width: 100%;
+    height: 45px;
+}
+
+.follow {
+    margin: auto 0;
+    color: skyblue;
+}
+
+#btn {
+    border: none;
+    background-color: white;
+    border-top: 1px solid #dedede;
+    color : blue;
+}
+
+@font-face {
+    font-family: "인스타글씨";
+    src: url(Lobster-Regular.ttf);
+}
+
+.westa {
+    font-size: 30px;
+    font-family: "인스타글씨";
+}
+
+.changeColor{
+    color: gray;
+    font-weight: normal;
+}
+
+.comments{
+    overflow: scroll;
+
+}
+
+#btn:hover {
+    cursor: pointer;
 }
