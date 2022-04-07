@@ -37,19 +37,19 @@ a {
 
 .main-header {
   position: fixed;
-  width: 100%;
   top: 0;
   left: 0;
-  border-bottom: 1px solid #dbdbdb;
+  width: 100%;
   background-color: #fff;
+  border-bottom: 1px solid #dbdbdb;
   z-index: 10;
 }
 
 .gnb {
   display: flex;
-  max-width: 935px;
   justify-content: space-between;
   align-items: center;
+  max-width: 935px;
   padding: 10px 24px;
   margin: 0 auto;
 }
@@ -61,23 +61,23 @@ a {
 
 .gnb-logo-img {
   display: block;
-  width: 30px;
-  height: auto;
   flex-grow: 1;
   flex-shrink: 0;
+  width: 30px;
+  height: auto;
 }
 
 .gnb-logo-title::before {
   content: "";
   width: 1px;
   height: 1em;
-  border-left: 2px solid #262626;
   margin: 0 10px;
+  border-left: 2px solid #262626;
 }
 
 .gnb-logo-title {
-  font-family: "Lobster", cursive;
   color: #262626;
+  font-family: "Lobster", cursive;
 }
 
 .gnb-search-wrapper {
@@ -96,17 +96,17 @@ a {
   position: absolute;
   top: 50%;
   left: calc(16px + 10px);
-  transform: translateY(-50%);
   color: #8e8e8e;
+  transform: translateY(-50%);
 }
 
 .gnb-search {
   width: 250px;
   padding: 10px 10px 10px 40px;
-  border: none;
-  border-radius: 4px;
   margin: 0 16px;
   background-color: #efefef;
+  border: none;
+  border-radius: 4px;
 }
 
 .gnb-search::placeholder {
@@ -114,8 +114,8 @@ a {
 }
 
 .modal {
-  display: none;
   position: relative;
+  display: none;
   z-index: 3;
 }
 
@@ -124,10 +124,10 @@ a {
   position: absolute;
   width: 12px;
   height: 12px;
-  border: 1px solid #fff;
   background-color: #fff;
-  transform: rotate(45deg) translateX(-50%);
+  border: 1px solid #fff;
   box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.0975);
+  transform: rotate(45deg) translateX(-50%);
   z-index: 20;
 }
 
@@ -144,9 +144,9 @@ a {
   position: absolute;
   top: 11px;
   padding: 0;
-  border-radius: 8px;
   margin: 0;
   background-color: #fff;
+  border-radius: 8px;
   box-shadow: 0 5px 5px 1px rgba(0, 0, 0, 0.0975);
   list-style-type: none;
   z-index: 25;
@@ -186,8 +186,8 @@ a {
   display: block;
   width: 44px;
   height: 44px;
-  border-radius: 50%;
   margin-right: 12px;
+  border-radius: 50%;
 }
 
 .gnb-search-result-item-id {
@@ -197,8 +197,8 @@ a {
 }
 
 .gnb-search-result-item-username {
-  font-size: 14px;
   color: #8e8e8e;
+  font-size: 14px;
 }
 
 .gnb-button-group {
@@ -257,16 +257,16 @@ a {
 /* FEED */
 
 .feed {
-  max-width: 600px;
-  margin-top: 55px;
   flex-shrink: 0;
   flex-grow: 1;
+  max-width: 600px;
+  margin-top: 55px;
 }
 
 .post {
-  border: 1px solid #dbdbdb;
   margin-bottom: 30px;
   background-color: #fff;
+  border: 1px solid #dbdbdb;
 }
 
 .post-header {
@@ -284,8 +284,8 @@ a {
 .post-header-profile {
   width: 32px;
   height: 32px;
-  border-radius: 50%;
   margin-right: 8px;
+  border-radius: 50%;
 }
 
 .post-header-button {
@@ -302,7 +302,6 @@ a {
 }
 
 .post-image::after {
-  /* post-image를 정사각형으로 유지하기 위한 코드 */
   content: "";
   display: block;
   padding-bottom: 100%;
@@ -364,8 +363,8 @@ a {
   display: block;
   width: 20px;
   height: 20px;
-  border-radius: 50%;
   margin-right: 8px;
+  border-radius: 50%;
 }
 
 .post-liked .has-margin {
@@ -374,8 +373,8 @@ a {
 
 .post-liked-modal-button {
   padding: 0;
-  font-weight: 700;
   font-size: 1em;
+  font-weight: 700;
   cursor: pointer;
 }
 
@@ -388,8 +387,8 @@ a {
 }
 
 .post-comment-list {
-  list-style: none;
   padding: 0;
+  list-style: none;
 }
 
 .post-comment-item {
@@ -420,8 +419,8 @@ a {
 }
 
 .post-created-at span {
-  font-size: 0.7em;
   color: #8e8e8e;
+  font-size: 0.7em;
 }
 
 .post-comment {
@@ -440,8 +439,8 @@ a {
 .post-comment-button {
   flex-shrink: 0;
   padding-right: 16px;
-  font-weight: 700;
   color: #0095f6;
+  font-weight: 700;
   cursor: pointer;
   opacity: 1;
 }
@@ -457,8 +456,7 @@ aside {
   top: 0;
   right: calc((100vw - 935px) / 2);
   width: 300px;
-  padding: 30px;
-  padding-right: 24px;
+  padding: 30px 24px 30px 30px;
   margin-top: 56px;
   background-color: #fafafa;
 }
@@ -479,8 +477,8 @@ aside {
   display: block;
   width: 56px;
   height: 56px;
-  border-radius: 50%;
   margin-right: 16px;
+  border-radius: 50%;
 }
 
 .aside-profile-id .user-id {
@@ -489,13 +487,13 @@ aside {
 }
 
 .aside-profile-id .user-username {
-  font-size: 14px;
   color: #8e8e8e;
+  font-size: 14px;
 }
 
 .aside-profile-button {
-  font-weight: 700;
   color: #0095f6;
+  font-weight: 700;
   cursor: pointer;
 }
 
@@ -540,8 +538,8 @@ aside {
   display: block;
   width: 32px;
   height: 32px;
-  border-radius: 50%;
   margin-right: 12px;
+  border-radius: 50%;
 }
 
 .aside-recommend-item-content .user-id {
@@ -550,24 +548,24 @@ aside {
 
 .aside-recommend-reason {
   display: block;
-  font-size: 12px;
   color: #8e8e8e;
+  font-size: 12px;
 }
 
 .aside-recommend-button {
-  font-weight: 700;
   color: #0095f6;
+  font-weight: 700;
   cursor: pointer;
 }
 
 .aside-footer-list {
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
+  align-items: center;
   padding: 0;
   margin: 0 2px 20px;
-  font-size: 12px;
   color: #c7c7c7;
+  font-size: 12px;
   list-style-type: none;
 }
 
@@ -588,8 +586,8 @@ aside {
 }
 
 .aside-copy {
-  font-size: 12px;
   color: #c7c7c7;
+  font-size: 12px;
 }
 
 @media only screen and (max-width: 1000px) {
