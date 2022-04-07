@@ -69,19 +69,20 @@
                 </div>
 
 
-                <!-- Javascript로 추가될 부분 -->
+                <!-- 이미 존재하는 부분 -->
 
                 <form class="comment">
                     <div class="comment_already">
                         <div class="comment_preview">
                             <div class="profile_name commit_who_name">jhw</div>
                             <div class="commit_who_comment">가자</div>
+                            <button type="button" onclick="removeComment()" class="remove_comment">삭제</button>
                         </div>
-                        <img src="./img/heart.png" alt="comment_heart" class="comment_heart">
+                        <img src="./img/heart.png" onclick="likeComment()"  alt="comment_heart" class="comment_heart">
                     </div>
-                    <div class="add_all_comment">
-                        <div class="add_comment"></div>
-                    </div>
+
+                    <!-- Javascript로 추가된 부분 -->
+                    <div class="add_all_comment"></div>
                 </form>
 
 
@@ -90,7 +91,7 @@
                 <div class="upload_time">1시간 전</div>
                 <div class="upload_comment">
                     <input type="search" class="commit_comment" placeholder="댓글달기..." width="30" onKeypress="javascript:if(event.keyCode==13) {pressEnter()}" >
-                    <button onclick="getValueInput()" onclick="pressEnter()" type="button" class="press_commit">게시</button>
+                    <button onclick="getClick()" type="button" class="press_commit">게시</button>
                 </div>
             </article>
         </div>
