@@ -42,7 +42,6 @@ const addComment = (id) => {
   commentDelete.innerHTML = '<i class="fas fa-trash-alt"></i>';
   commentHeart.innerHTML = '<i class="fas fa-heart"></i>';
 
-  // commentRow.setAttribute("id", Date.now());
   commentHeart.setAttribute("data-clicked", "false");
 
   commentRowLeft.appendChild(commentId);
