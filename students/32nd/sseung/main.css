@@ -46,7 +46,7 @@ nav .search_bar {
 }
 
 nav .search_bar input {
-  width: 100%;
+  width: 268px;
   height: 100%;
   background-color: #efefef;
   border: none;
@@ -57,7 +57,7 @@ nav .search_bar input {
 nav .search_bar .not_focus {
   top: 0;
   left: 0;
-  width: 100%;
+  width: 268px;
   height: 100%;
   padding: 0 16px;
   position: absolute;
@@ -499,6 +499,17 @@ main > div {
   text-align: left;
 }
 
+.feeds .feed .contents_wrap .contents .comment .remove {
+  display: none;
+  width: 14px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.feeds .feed .contents_wrap .contents .comment:hover .remove {
+  display: inline-block;
+}
+
 .feeds .feed .contents_wrap .contents .comment .like {
   width: 14px;
   cursor: pointer;
@@ -756,12 +767,27 @@ main > div {
 }
 
 @media screen and (max-width: 999px) {
+  .main_logo, .nav_btn {
+    -ms-flex-negative: 1;
+        flex-shrink: 1;
+  }
+  .search_bar input {
+    width: 100px;
+    -ms-flex-negative: 0;
+        flex-shrink: 0;
+  }
   .main_right {
     display: none;
   }
   main > div, .feeds {
     max-width: 600px;
     margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  main > div, .feeds {
+    width: 100%;
   }
 }
 /*# sourceMappingURL=main.css.map */

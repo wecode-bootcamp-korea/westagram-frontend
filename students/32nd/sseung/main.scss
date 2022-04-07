@@ -375,19 +375,31 @@ main {
                         display: block;
                         text-align: left;
                     }
-                    
+
+                    .remove {
+                        display: none;
+                        width: 14px;
+                        cursor: pointer;
+                        margin-right: 10px;
+                    }
+
+                    &:hover .remove{
+                        display: inline-block;
+                        
+                    }
+
                     .like {
                         width: 14px;
                         cursor: pointer;
                         &.fa-solid {
                             color: #ED4956;
                         }
-                    }
-
-
+                    }               
+                    
                     input[type="checkbox"] {
                         visibility: hidden;
                     }
+
                 }
             }
 

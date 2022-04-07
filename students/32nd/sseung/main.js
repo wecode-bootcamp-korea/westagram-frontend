@@ -181,7 +181,7 @@ function commentPost(e, index) {
     
     const $commentElement = document.createElement('li')
     $commentElement.classList.add('comment')
-    $commentElement.innerHTML = `<div><span class="comment_id">mschoise</span><span class="commment_text">${$nowCommentInput.value}</span></div><label><i class="fa-regular fa-heart like"></i><input type="checkbox"></label></i>`
+    $commentElement.innerHTML = `<div><span class="comment_id">mschoise</span><span class="commment_text">${$nowCommentInput.value}</span></div><div><i class="fa-solid fa-trash-can remove"></i><label><i class="fa-regular fa-heart like"></i><input type="checkbox"></label></div></i>`
     $commentVoid.appendChild($commentElement)
     
     $nowCommentInput.value = '';
@@ -189,12 +189,13 @@ function commentPost(e, index) {
     // 작성 후 전체 comment 리스트 업데이트
     $allComment = getAll('.comment');
     commentLikeClick()
+    commentRemoveClick()
 }
 
 // 댓글 좋아요
 function commentLikeClick() {
     const $commentLikeImg = getAll('.comment .like');
-    const $commentCheckbox = getAll('.comment input');
+    // const $commentCheckbox = getAll('.comment input');
 
     for(let i = 0; i < $allComment.length; i++) {
         $commentLikeImg[i].addEventListener('click',(e) => {
@@ -207,7 +208,18 @@ function commentLikeClick() {
     }
 }
 
+// 댓글 삭제
+function commentRemoveClick() {
+    const $commentRemove = getAll('.comment .remove');
+    for(let i = 0; i < $commentRemove.length; i++) {
+        $commentRemove[i].addEventListener('click', (e) => {
+            e.target.closest('.comment').remove()
+        })
+    }
+}
+
 commentLikeClick()
+commentRemoveClick()
 
 
 
