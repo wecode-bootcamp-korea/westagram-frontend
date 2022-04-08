@@ -2,14 +2,15 @@ const Id = document.querySelector(".inputId");
 const Pwd = document.querySelector(".inputPwd");
 const loginbtn = document.querySelector(".login_btn");
 
-
-Id.addEventListener("keyup",active)
-Pwd.addEventListener("keyup",active)
+Id.addEventListener("keyup", active);
+Pwd.addEventListener("keyup", active);
 
 function active() {
-    if(Id.value.length !== 0 && Pwd.value.length !== 0){
-        loginbtn.disabled = false;
-    }else {
-        loginbtn.disabled = true;
-    }
+  const idValue = Id.value;
+  const pwdValue = Pwd.value;
+  if (idValue.indexOf("@") != -1 && pwdValue.length >= 5) {
+    loginbtn.disabled = false;
+  } else {
+    loginbtn.disabled = true;
+  }
 }

@@ -1,24 +1,25 @@
-const commentForm = document.querySelector(".comment_form")
-const commentInput = commentForm.querySelector(".comment_write");
-const commentButton = document.querySelector(".comment_btn");
-const newComment = document.querySelector(".comments");
+const comments = document.querySelector(".comments");
+const commentInput = document.querySelector(".comment_write");
+const commentForm = document.querySelector(".comment_form");
 
-function reply (){
-    newComment.appendChild(commentInput);
-    commentInput.innerText = newComment;
-    commentInput.appendChild(text)
+commentForm.addEventListener("submit", onsubmitClickBtn);
 
+function onsubmitClickBtn(e) {
+  e.preventDefault();
+  const commentText = commentInput.value;
+  commentInput.value = "";
+
+  const li = document.createElement("li");
+  const commentId = document.createElement("a");
+  const comment = document.createElement("span");
+
+  commentId.className = "comment_id";
+  commentId.href = "#";
+  commentId.innerText = "hayoung1";
+  comment.className = "comment_text";
+  comment.textContent = commentText;
+
+  li.appendChild(commentId);
+  li.appendChild(comment);
+  comments.appendChild(li);
 }
-
-function submitOnclickBtn(){
-    // const id = document.querySelector(".comment_id");
-    // const text = document.querySelector(".comment_text");
-    const replycomment = commentInput.value;
-    commentInput.value = "";
-    reply(replycomment);
-}
-
-
-commentButton.addEventListener("click",submitOnclickBtn)
-
-
