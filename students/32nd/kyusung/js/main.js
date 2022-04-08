@@ -1,7 +1,6 @@
 const instaComment = document.querySelector("#submit");
 const comments = document.querySelector(".feeds-img-info");
 const newComment = document.querySelector(".comments");
-const heart = document.querySelector(".fa-regular fa-hear");
 
 instaComment.addEventListener("click", () => {
   const instaUser = document.getElementById("username").value;
@@ -100,19 +99,23 @@ function deleteComment() {
 }
 
 function likeHeart() {
-  const likeHeart = document.querySelectorAll(
-    ".fa-regular.fa-heart",
-    ".fa-solid.fa-heart"
-  );
-  console.log(likeHeart.length);
-  console.log(likeHeart);
+  const likeHeart = document.querySelectorAll(".fa-regular.fa-heart");
+  const filledHeart = document.querySelectorAll(".fa-solid.fa-heart");
+
   for (let i = 0; i < likeHeart.length; i++) {
     likeHeart[i].addEventListener("click", (e) => {
       console.log(e.target.className);
 
       if (e.target.className === "fa-regular fa-heart") {
         e.target.className = "fa-solid fa-heart";
-      } else {
+      }
+    });
+  }
+  for (let i = 0; i < filledHeart.length; i++) {
+    filledHeart[i].addEventListener("click", (e) => {
+      console.log(e.target.className);
+
+      if (e.target.className === "fa-solid fa-heart") {
         e.target.className = "fa-regular fa-heart";
       }
     });
