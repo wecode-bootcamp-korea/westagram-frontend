@@ -35,19 +35,28 @@ text.addEventListener("keyup", activeReply);
 function addReply() {
   let li = document.createElement("li");
   let id = document.getElementById("id").textContent;
-  li.innerHTML = `<span>${id}</span> ${text.value}<i class="fa-regular fa-heart"></i>`;
+  let like = document.createElement("i");
+  like.setAttribute("class", "fa-regular fa-heart");
+  like.addEventListener("click", fillHeart);
+
+  li.innerHTML = `<span>${id}</span> ${text.value}`;
 
   let delbtn = document.createElement("button");
   delbtn.setAttribute("class", "delete");
   delbtn.innerText = "삭제";
   delbtn.addEventListener("click", () => li.remove());
 
+  li.appendChild(like);
   li.appendChild(delbtn);
   reply.appendChild(li);
 
   text.value = "";
   btn.setAttribute("disabled", true);
   btn.classList.remove("active");
+}
+
+function getTime(e) {
+  console.log(e.target);
 }
 
 ent.addEventListener("click", addReply);
@@ -90,3 +99,22 @@ function showInfo() {
 }
 
 pf.addEventListener("click", showInfo);
+
+let heart = document.querySelector(".icon_left i:first-child");
+let smallHeart = document.querySelector(".reply_list i");
+
+function fillHeart(e) {
+  let target = e.target;
+  if (target.classList.contains("fa-regular")) {
+    target.classList.remove("fa-regular");
+    target.classList.add("fa-solid");
+    target.style.color = "red";
+  } else {
+    target.classList.remove("fa-solid");
+    target.classList.add("fa-regular");
+    target.style.color = "";
+  }
+}
+
+heart.addEventListener("click", fillHeart);
+smallHeart.addEventListener("click", fillHeart);
