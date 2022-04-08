@@ -7,10 +7,11 @@ body {
   position: fixed;
   display: flex;
   top: 0;
-  left: -50%;
-  transform: translateX(50%);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
   padding: 20px 0;
-  justify-content: center;
+  justify-content: space-between;
   background-color: white;
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
 }
@@ -19,7 +20,7 @@ body {
   display: flex;
   justify-content: flex-start;
   padding: 0 20px;
-  margin: 0 200px;
+  margin: 0 30px;
 }
 
 .logoName {
@@ -53,7 +54,7 @@ body {
 .nav_right {
   display: flex;
   justify-content: flex-end;
-  margin: 0 200px;
+  margin: 0 30px;
 }
 
 .nav_right img {
