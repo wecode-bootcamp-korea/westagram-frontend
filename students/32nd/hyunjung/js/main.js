@@ -1,20 +1,14 @@
-//input창 변수
 const commentInput=document.getElementsByClassName("comment-text")[0];
-//button 변수
 const commentBtn=document.getElementsByClassName('comment-btn')[0];
 const commentSection=document.querySelector('.feeds-comment');
 const commentLikedBtn = document.querySelector('.comment-like');
 
 
-
-//click 이벤트 자체를 매개변수로 받아 replyComment함수호출
-//이후 텍스트 창 value는 공백되면서 초기화
 commentBtn.addEventListener("click",(e) => {
     comment();
     commentInput.value = "";
 });
-//input창 입력후 엔터치면 replyComment 함수호출
-//이후 텍스트 창 value는 공백되면서 초기화
+
 commentInput.addEventListener("keypress",(e) => {
     if(e.code == "Enter"){
         comment();

@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
- *{
+
+* {
     margin: 0;
 } 
-/* nav */
+
 .nav{
     position: fixed;
     width: 100%;
@@ -53,10 +54,9 @@
     width:20px;
     top:5px;
     margin-left:20px;
-    /* background-size: contain; */
 }
 
-/* main */
+
 main{
     display: flex;
     justify-content: center;
@@ -65,13 +65,12 @@ main{
     padding-top: 60px;
     background-color: #fafafa;
 }
-/* 왼쪽 부분 */
+
 .feeds{
     width:100%;
     border:1px solid #cacaca;
 }
 
-/* 왼쪽 사진 */
 .header{
     display: flex;
     justify-content: space-between;
@@ -208,7 +207,6 @@ main{
     font-size: 1em;
 }
 
-/* 오른쪽 부분 */
 .aside-header{
     display: flex; 
     padding: 10px;
@@ -295,7 +293,7 @@ form{
 }
 
 @media only screen and (max-width: 1000px) { 
-    /* nav */
+    
     .nav-bar{
         display:flex;
         flex-direction: row;
@@ -311,7 +309,6 @@ form{
         display: none;
     }
 
-    /* main */
     main{
         display: flex;
         justify-content: center;
