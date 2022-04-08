@@ -3,7 +3,6 @@ const commentBtn=document.getElementsByClassName('comment-btn')[0];
 const commentSection=document.querySelector('.feeds-comment');
 const commentLikedBtn = document.querySelector('.comment-like');
 
-
 commentBtn.addEventListener("click",(e) => {
     comment();
     commentInput.value = "";
