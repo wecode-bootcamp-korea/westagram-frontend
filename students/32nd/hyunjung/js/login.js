@@ -1,4 +1,4 @@
-"use strict";//엄격모드
+"use strict";
 
 const loginId =document.querySelector(".input-id");
 const loginBtn = document.querySelector(".login-button");
@@ -17,8 +17,5 @@ loginForm.addEventListener('keyup',() => {
     }
 });
 
-function success(){
-    alert("환영합니다!!");
-    location.href = "./main.html";
-}
+
 
