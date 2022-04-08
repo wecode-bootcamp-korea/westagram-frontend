@@ -176,7 +176,7 @@ main{
 
 .feeds-comment-input{
     display: flex;
-    justify-content:space-between;
+    /* justify-content:space-between; */
     padding-top:10px;
     border-top: 1px solid #cacaca;
 }
@@ -190,7 +190,7 @@ main{
 }
 
 .comment-input{
-    padding-left: 5px;
+    width: 100%;
     outline:0;
     border: 0;
 }
@@ -295,10 +295,8 @@ form{
 @media only screen and (max-width: 1000px) { 
     
     .nav-bar{
-        display:flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-around;
+        padding: 0;
+        margin-top: 10px;
     }
 
     .nav-search-input{
@@ -309,18 +307,8 @@ form{
         display: none;
     }
 
-    main{
-        display: flex;
-        justify-content: center;
-        width: 100%;
-        margin-top: 60px;
-        padding-top: 60px;
-        background-color: #fafafa;
-    }
-
     .left{
-        max-width: 100%;
-        padding:0 10px;
+        padding:0 15px;
     }
 
     .right{

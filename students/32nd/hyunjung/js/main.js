@@ -1,21 +1,26 @@
 const commentInput=document.getElementsByClassName("comment-text")[0];
 const commentBtn=document.getElementsByClassName('comment-btn')[0];
 const commentSection=document.querySelector('.feeds-comment');
-const commentLikedBtn = document.querySelector('.comment-like');
+const commentLikeBtn = document.querySelector('.comment-like');
+const commentDeleteBtn =document.querySelector(".comment-delete");
 
 commentBtn.addEventListener("click",(e) => {
-    comment();
-    commentInput.value = "";
+    if(commentInput.value.length == 0){
+        alert ("댓글을 입력하시오.");
+    }else{
+        addComment();
+        commentInput.value = "";
+    }
 });
 
 commentInput.addEventListener("keypress",(e) => {
     if(e.code == "Enter"){
-        comment();
+        addComment();
         commentInput.value = "";
     } 
 });
 
-function comment(){
+function addComment(){
     let comment =document.createElement('li');
     let commentLeft =document.createElement('div');
     let commentRight = document.createElement('div');
@@ -63,4 +68,5 @@ function comment(){
     });
 
 }
+
 
