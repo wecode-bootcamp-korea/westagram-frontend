@@ -1,3 +1,5 @@
+"use Strict";
+
 const instaComment = document.querySelector("#submit");
 const comments = document.querySelector(".feeds-img-info");
 const newComment = document.querySelector(".comments");

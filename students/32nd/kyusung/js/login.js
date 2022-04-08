@@ -1,3 +1,5 @@
+"use Strict";
+
 const login_id = document.getElementById("login_id");
 const password = document.getElementById("password");
 const submit = document.getElementById("submit");
