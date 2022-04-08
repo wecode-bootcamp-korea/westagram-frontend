@@ -3,9 +3,8 @@ const commentInput = document.querySelector(".comment_input");
 const commentForm = document.querySelector(".comment_form");
 const commentBtn = document.querySelector(".comment_btn");
 
-commentForm.addEventListener("submit", onsubmitClickBtn);
-
-function clickInput() {
+function clickInput(e) {
+  e.preventDefault();
   if (commentInput.value.length === 0) {
     alert("댓글 입력하시오.");
   } else {
@@ -14,9 +13,7 @@ function clickInput() {
 }
 
 function onsubmitClickBtn(e) {
-  e.preventDefault();
   // const commentText = commentInput.value;
-
   const li = document.createElement("li");
   const commentId = document.createElement("a");
   const comment = document.createElement("span");
@@ -25,7 +22,7 @@ function onsubmitClickBtn(e) {
   commentId.href = "#";
   commentId.innerText = "hayoung1";
   comment.className = "comment_text";
-  // comment.textContent = comment_text;
+  comment.textContent = commentInput.value;
 
   li.appendChild(commentId);
   li.appendChild(comment);
@@ -35,6 +32,6 @@ function onsubmitClickBtn(e) {
 }
 
 const init = () => {
-  commentBtn.addEventListener("click", clickInput);
+  commentForm.addEventListener("submit", clickInput);
 };
 init();
