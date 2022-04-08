@@ -1,9 +1,7 @@
 * {
     box-sizing:border-box;
 }
-main{
-    height:100%;
-}
+
 .navigator {
     border-bottom:1px solid lightgray;
     font-family: 'Lobster', cursive;
@@ -23,32 +21,35 @@ main{
     float:right;
     margin-top:20%;
     padding-left:20px;
+    margin-bottom:20%;
     font-size:30px;
     border-left:1px solid black;
 }
-
-input {
-    text-align:center;
+.nav-center{
+    display:flex;
+    flex-direction: row;
+    position:relative;
 }
-
-.nav-text{
+.nav-left{
+    display:inline-flex
+}
+.nav-right{
+    display:inline-flex
+}
+.search{
     width:300px;
     height:30px;
     font-size:15px;
-}
-
-.nav-center{
-    position:relative;
-    
+    display:flex;
+    text-align:center;
 }
 
 .fa-magnifying-glass {
-    position:absolute;
-    left:0;
-    margin-left:110px;
-    margin-top:5px;
-    font-size:px;
     color:gray;
+    position:absolute;
+    left:110px;
+    top:8px;
+    
 }
 
 .explore{
@@ -69,25 +70,26 @@ input {
 
 }
 
-main{
+.page{
     display:flex;
     flex-direction:row;
-    align-items:center;
     margin-top:50px;
-    justify-content: space-evenly;
 }
 
 .dog{ 
     width:100%;
     height:600px;
     object-fit:cover;
+    display:inline-flex;
 }
 
-.feeds{
-    height:900px;
-    width:600px;
-    margin-left:150px;
+.page{
+    display:flex;
+    justify-content: space-evenly;
+    align-items: stretch;
+
 }
+
 
 .bigbox{
     width:500px;
@@ -141,7 +143,6 @@ p{
 
 .likes{
     margin-top:10px;
-    display:block;
     height:40px;
     position:relative;
 }
@@ -163,7 +164,6 @@ p{
     justify-content: center;
     flex-direction:row;
     align-items: stretch;
-    height:100%;
 }
 
 .comment1{
@@ -177,19 +177,6 @@ p{
     padding-left:140px;
     color:lightgray;
     font-size:13px;
-}
-
-.howminutesbefore {
-    position:relative;
-    display:flex;
-}
-.minutesbefore{
-    position:absolute;
-    left:20px;
-    top:0;
-    height:10px;
-    font-size:13px;
-    color:lightgray;
 }
 
 .addcomment {
@@ -208,7 +195,6 @@ p{
     text-align:left;
     border:none;
     border-top:1px solid lightgray;
-    position:absolute;
 }
 
 .add{
@@ -224,10 +210,10 @@ p{
 }
 
 .main-right{
+
     height:850px;
     width:400px;
-    margin-right:100px;
-    margin-top:-50px;
+    
     display:flex;
     flex-direction:column;
 }
@@ -294,7 +280,7 @@ li{
     justify-content: space-between;
     width:100%;
 }
-.wordstory{
+.seestory{
     margin-left:10px;
     margin-top:10px;
     color:lightgray;
@@ -307,7 +293,7 @@ li{
     height:30px;
     font-size:13px;
 }
-.friends{
+.friendstory{
     display:flex;
     flex-direction:row;
     align-items:stretch;
@@ -318,7 +304,7 @@ li{
 }
 
 
-.yogurt{
+.friend1{
     border-radius: 50%;
     width:30px;
     height:30px;
@@ -333,15 +319,6 @@ li{
     font-size:15px;
     margin-left:-180px;
 }
-
-.oneminutebefore{
-    color:lightgray;
-    font-size:10px;
-    position:absolute;
-    top:20px;
-    left:50px;
-}
-
 .recommendation{
     width:90%;
     height:150px;
@@ -395,44 +372,30 @@ li{
     font-size:13px;
 }
 
+.recommenduser{
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    width:100%;
+    height:40px;
+}
+
 .cat{
     border-radius: 50%;
     width:30px;
     height:30px;
-    position:absolute;
-    left:10px;
+    margin-left:10px;
 }
 
-.animal{
-    display:flex;
-    flex-direction:row;
-    align-items:stretch;
-    justify-content: center;
-    overflow:hidden;
-    width:100%;
-    position:relative;
-    height:40px;
-}
 
 .knowuser{
-margin-bottom:10px;
-padding-bottom:5px;
-font-size:15px;
-margin-left:-220px;
+    font-size:15px;
+    margin-right:210px;
 }
 
-.mightknow{
-    color:lightgray;
-    font-size:10px;
-    position:absolute;
-    top:18px;
-    left:50px;
-}
 
 .follow {
     color:blue;
     font-size:15px;
-    position:absolute;
-    right:10px;
-    top:8px;
+    margin-right:10px;
 }

@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/02b8c8beab.js" crossorigin="anonymous"></script>
+   
 
     <title>Document</title>
 </head>
@@ -15,22 +16,21 @@
     <nav class="navigator">
         <div class="nav-left">
             <img class="instagram-img" src="style/instagram.png">
-            <p class="instagram-word">Instagram</p>
-          
+            <p class="instagram-word">Instagram</p> 
         </div>
         <div class="nav-center">
-            <input type="text" class="nav-text" placeholder="검색">
+            <input type="text" class="search" placeholder="검색">
             <i class="fa-solid fa-magnifying-glass"></i>
         </div>
         <div class="nav-right">
-            <img src="style/explore.png">
-            <img src="style/heart.png">
-            <img src="style/profile.png">
+            <img class="explore" src="style/explore.png">
+            <img class="heart" src="style/heart.png">
+            <img class="profileicon" src="style/profile.png">
         </div>
     </nav>
     
     <div>
-        <main>
+        <main class="page">
             <div class="feeds">
                 <div class="bigbox">
                     <div class="id">
@@ -56,37 +56,57 @@
                         <span class="howmanylikes"><strong>wecode</strong>님 <strong>외 100명</strong>이 좋아합니다</span>     
                     </div>
                     <div class="commentbox1">
-                        <span class="comment1"><strong>dog_lover</strong> 강아지가 너무 귀여워요...<span class="seemore"> 더 보기</span></span>
+                        <span class="comment1"><strong>dog_lover</strong> </span> <span class="comment2">  강아지가 너무 귀여워요...</span><span class="seemore"> 더 보기</span>
                     </div>
-                    <div class="howminutesbefore">
-                        <span class="minutesbefore">1분 전</span>
-                    </div>
+
                     <div class="addcomment">
-                        <input type="text" class="toaddcomment" placeholder="   댓글 달기...">
-                        <buton class="add">게시</button>
+                            <input type="text" class="toaddcomment" placeholder="   댓글 달기...">
+                            <button class="add">게시</button>
                     </div>
                 </div>
-                <div class="main-right">
-                    <div class="idinfo">
-                        <div>
-
-                        </div>
-                        <div>
-
-                        </div>
+            </div>
+            <div class="main-right">
+                <div class="idinfo">
+                    <div class="profile">
+                        <img class="house" src="style/house.jpg">
+                        <p class="profileId"><strong>pet_shop</strong></p>
                     </div>
-                    <div class="story">
-
+                </div>
+                <div class="story">
+                    <div class="storyuser">
+                        <p class="seestory">스토리</p>
+                        <p class="storyseeall">모두 보기</p>
                     </div>
-                    <div class="recommendation">
-
+                    <div class="friendstory">
+                        <img class="friend1" src="style/yogurt.jpg">
+                        <p class="yougurtlover">yogurt_lover</p>
+                        
                     </div>
-
+                </div>
+                <div class="recommendation">
+                    <div class="recommendationuser">
+                        <p class="client">회원님을 위한 추천</p>
+                        <p class="clientseeall">모두 보기</p>
+                    </div>
+                    <div class="recommenduser">
+                        <img class="cat" src="style/cat.jpg">
+                        <p class="knowuser">seuboi</p>
+                        <p class="follow">팔로우</p>
+                    </div>
+                </div>
+                <div class="restriction">
+                    <p>Instagram 정보 . 지원 . 홍보센터 . API . 채용 정보 . 개인청보처리방침 . 약관 . 디렉터리 . 프로필 . 해시태그 . 언어</p>
+                </div>
+                <div class="copyright">
+                    <p>ⓒ 2021 INSTAGRAM</p>
                 </div>
 
             </div>
-            </div>
+
+            
+            
         </main>
     </div>
+    <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
