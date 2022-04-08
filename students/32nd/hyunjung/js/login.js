@@ -1,9 +1,8 @@
 const loginId =document.querySelector(".input-id");
 const loginBtn = document.querySelector(".login-button");
-
 const form =document.querySelector(".login-form");
 
-form.addEventListener('keyup',function(){
+form.addEventListener('keyup',() => {
     const valueId =document.querySelector(".input-id").value;
     const valuePw =document.querySelector(".input-pw").value;
 
