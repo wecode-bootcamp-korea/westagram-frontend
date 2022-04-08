@@ -18,14 +18,17 @@ function render() {
   for(let i=0; i<commentList.length; i++){
     let commentHTML = `
     <div class="comment">
-     <div class="comment-box">
-      <div>
-        <span class="userId">afdgdfsd</span>
-        <span>${commentList[i]}</span>
+      <div class="comment-box">
+        <div>
+          <span class="userId">afdgdfsd</span>
+          <span>${commentList[i]}</span>
+        </div>
+        <div class="deletebtn">
+          <button class='commentDelete'>삭제</button>
+          <i class="fa-regular fa-heart"></i>
+        </div>
       </div>
-      <i class="fa-regular fa-heart"></i>
-    </div>
-    <div class="comment-time">42분 전</div>
+      <div class="comment-time">42분 전</div>
     </div>`
 
     resultHTML = resultHTML + commentHTML
@@ -40,3 +43,18 @@ function onKeyUp(e){
 }
 
 
+// let borderHeart = document.querySelector('.fa-regular fa-heart');
+
+// changeHeart.addEventListener('click', function() {
+//  borderHeart.classList.toggle('borderHeart')
+// })
+
+// let redHeart = document.querySelector('.fa-solid fa-heart').style.display = 'none'
+
+let deleteButton = document.querySelector('.commentDelete');
+
+deleteButton.addEventListener('click', deleteComment);
+console.log('clicked')
+function deleteComment() {
+
+}
