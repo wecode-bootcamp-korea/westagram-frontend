@@ -1,6 +1,7 @@
 const instaComment = document.querySelector("#submit");
 const comments = document.querySelector(".feeds-img-info");
 const newComment = document.querySelector(".comments");
+const heart = document.querySelector(".fa-regular fa-hear");
 
 instaComment.addEventListener("click", () => {
   const instaUser = document.getElementById("username").value;
@@ -19,8 +20,9 @@ instaComment.addEventListener("click", () => {
     newDiv.className = "comments";
     newDiv2.className = "comments-right-info";
     heartImg.className = "fa-regular fa-heart";
+    heartImg.setAttribute("onclick", "likeHeart()");
     button.className = "deleteComments";
-    button.setAttribute("onClick", "deleteCom()");
+    button.setAttribute("onClick", "deleteComment()");
     button.innerText = "삭제";
 
     comments.appendChild(newDiv);
@@ -49,23 +51,30 @@ function enterKey() {
     let instaUser = document.getElementById("username");
     let userComment = document.getElementById("userComments");
     if (instaUser !== "" && userComment !== "") {
-      let newDiv = document.createElement("div");
-      newDiv.className = "comments";
-      let makeP = document.createElement("p");
-      let makeSpan = document.createElement("span");
+      const newDiv = document.createElement("div");
+      const newDiv2 = document.createElement("div");
+      const makeP = document.createElement("p");
+      const makeSpan = document.createElement("span");
+      const button = document.createElement("button");
       const heartImg = document.createElement("i");
-      let newImg = document.createElement("img");
-      newImg.src =
-        "https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png";
 
       makeP.innerHTML = instaUser.value;
       makeSpan.innerHTML = userComment.value;
+
+      newDiv.className = "comments";
+      newDiv2.className = "comments-right-info";
       heartImg.className = "fa-regular fa-heart";
+      heartImg.setAttribute("onclick", "likeHeart()");
+      button.className = "deleteComments";
+      button.setAttribute("onClick", "deleteComment()");
+      button.innerText = "삭제";
 
       comments.appendChild(newDiv);
       newDiv.appendChild(makeP);
       newDiv.prepend(makeSpan);
-      newDiv.appendChild(heartImg);
+      newDiv.appendChild(newDiv2);
+      newDiv2.appendChild(button);
+      newDiv2.appendChild(heartImg);
     } else if (
       (instaUser === "" && userComment !== "") ||
       (instaUser === "" && userComment === "")
@@ -81,12 +90,31 @@ function enterKey() {
   }
 }
 
-// 댓글삭제
-function deleteCom() {
-  const deleteComment = document.querySelectorAll(".deleteComments");
-  for (let i = 0; i < deleteComment.length; i++) {
-    deleteComment[i].addEventListener("click", (event) => {
+function deleteComment() {
+  const el = document.querySelectorAll(".deleteComments");
+  for (let i = 0; i < el.length; i++) {
+    el[i].addEventListener("click", (event) => {
       event.target.closest(".comments").remove();
+    });
+  }
+}
+
+function likeHeart() {
+  const likeHeart = document.querySelectorAll(
+    ".fa-regular.fa-heart",
+    ".fa-solid.fa-heart"
+  );
+  console.log(likeHeart.length);
+  console.log(likeHeart);
+  for (let i = 0; i < likeHeart.length; i++) {
+    likeHeart[i].addEventListener("click", (e) => {
+      console.log(e.target.className);
+
+      if (e.target.className === "fa-regular fa-heart") {
+        e.target.className = "fa-solid fa-heart";
+      } else {
+        e.target.className = "fa-regular fa-heart";
+      }
     });
   }
 }
