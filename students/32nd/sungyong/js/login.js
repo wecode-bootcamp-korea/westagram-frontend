@@ -1,31 +1,35 @@
-const loginId = document.getElementById('loginId');
-const loginPw = document.getElementById('loginPw');
-const loginBtn = document.getElementById('loginBtn');
+const id = document.getElementById('loginId');
+const pw = document.getElementById('loginPw');
+const btn = document.getElementById('loginBtn');
 
-
-loginId.addEventListener('keyup', (e) => {
-    if (e.code === 'Backspace' || e.code === 'Delete' ||e.code === 'ControlLeft') {
-        if (loginId.value === '' || loginId.value === null) {
-            loginBtn.style.backgroundColor = '#CCDFF9'; // id pw 값 삭제시 버튼 색상 초기화
-        }
-    } 
-
-    else if (loginId.value !== '' && loginId.value !== null) {
-        if (loginPw.value !== '' && loginPw.value !== null) {
-            loginBtn.style.backgroundColor = '#769EF6'; // id pw 값 체크 후 버튼 색상 진하게
-        }
+id.addEventListener('keyup', (e) => {
+    if (e.code === 'Backspace' || e.code === 'Delete' || e.code === 'ControlLeft') { // id pw 값 삭제시 -> 색상: 초기화, 커서 : auto
+        (id.value === '' || id.value === null ? btn.disabled = true : btn.disabled = false);
+    }
+    else if (id.value !== '' && id.value !== null) { // id pw 값 체크 후 -> 색상: 진하게, 커서: pointer
+        (pw.value !== '' && pw.value !== null ? btn.disabled = false : btn.disabled = true);
     }
 });
 
-loginPw.addEventListener('keyup', (e) => {
+pw.addEventListener('keyup', (e) => {
     if (e.code === 'Backspace' || e.code === 'Delete') {
-        if (loginPw.value === '' || loginPw.value === null) {
-            loginBtn.style.backgroundColor = '#CCDFF9';
+        (pw.value === '' || pw.value === null ? btn.disabled = true : btn.disabled = false);
+    }
+    else if (id.value !== '' && id.value !== null) {
+        (pw.value !== '' && pw.value !== null ? btn.disabled = false : btn.disabled = true);
+    }
+});
+
+btn.addEventListener('click', (e) => { // missio5 ID, PW validation
+    if(id.value.indexOf('@') !== -1 ) {
+        if (pw.value.length < 5) {
+            alert('패스워드는 최소 5자 이상입니다.');
+        }
+        else {
+            location.href = 'main.html';
         }
     }
-    else if (loginId.value !== '' && loginId.value !== null) {
-        if (loginPw.value !== '' && loginPw.value !== null) {
-            loginBtn.style.backgroundColor = '#769EF6';
-        }
+    else {
+        alert('아이디는 "@" 가 포함되어야 합니다.');
     }
 });
