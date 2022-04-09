@@ -1,15 +1,36 @@
 nav {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
     width: 100%;
-    height: 100px;
-    font-size: 100px;
-    font-family: 'Lobster', cursive;
+    height: 70px;
     margin: 0px;
     border-bottom: 2px solid #EFF0EF;
     background-color: #FFFFFF;
 }
-
+.nav-title {
+    font-family: 'Lobster', cursive;
+    font-size: 20px;
+}
+.nav-search {
+    border: 1px solid #BEBFBE;
+    width: 200px;
+    height: 30px;
+    border-radius: 3px;
+    background-color: #FAFBFA;
+}
+.nav-search::placeholder {
+    background-image: url('../img/free-icon-magnifier-71403.png');
+    background-size: 14px;
+    background-position: 60px center;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+.nav-icon {
+    width: 20px;
+    height: 20px;
+    margin: 0px 10px;
+}
 main {
     width: 100%;
     height: max-content;
@@ -17,22 +38,148 @@ main {
     justify-content: center;
     margin-top: 50px;
 }
-.feeds {
+.feed {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
     width: 50%;
-    border: 2px solid gray;
+    border: 2px solid #EFF0EF;
     margin: 0px 10px;
+}
 
+.feed-header {
+    display: flex;
+    align-items: center;
+    padding: 15px 5px 5px 15px;
+}
+
+.profile-box {
+    width: 50px;
+    height: 50px;
+    border-radius: 70%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.comment-profile-box {
+    width: 30px;
+    height: 30px;
+    border-radius: 70%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.comment-profile-box-story {
+    width: 54px;
+    height: 54px;
+    border-radius: 70%;
+    margin-right: 10px;
+    border: 2px solid transparent;
+    background-image: linear-gradient(#FFFFFF, #FFFFFF), linear-gradient(to right, #eb6b0f, #f765ff, #e42cc9);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}  
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.comment-profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.profile-name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.comment-profile-name {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.feed-img {
+    width: 100%;
+    height: 500px;
+}
+
+.feed-footer {
+    width: 100%;
+}
+
+.feed-icon {
+    width: 25px;
+    height: 25px;
+}
+
+.icon-box {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 20px;
+}
+.comment-box {
+    display: flex;
+    flex-direction: column;
+    margin: 5px 20px;
+}
+.comment-box2 {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    margin: 0px;
+    padding: 0px
+}
+
+.comment-content {
+    font-size: 13px;
+}
+.feed-comment {
+    display: flex;
+    align-items: center;
+    margin: 20px 0px 0px 20px;
+}
+.icon-left .feed-icon {
+    margin-right: 15px;
 }
 .main-right {
     width: 30%;
     margin: 0px 10px;
     text-align: center;
 }
+.comment-input {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border: 0px;
+    padding-left: 20px;
+    border-top: 2px solid #EFF0EF;
+}
 
+.feed-title {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+.comment-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    border: 0px;
+    font-size: 15px;
+    background-color: #FFFFFF;
+    color: #CCDFF9;
+}
 .right-main {
-    border: 1px solid gray;
+    border: 1px solid #EFF0EF;
     margin: 10px 0px;
 }
+
 img {
     width: 100px;
     height: 100px;
@@ -41,6 +188,62 @@ img {
     display: flex;
 }
 
+.right-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    width: 100%;
+    border: 2px solid #EFF0EF;
+    margin: 5px 10px;
+}
+
 .right-footer {
+    margin: 10px 10px;
     text-align: left;
+    color: #BEBFBE;
+    font-weight: bold;
+}
+
+.right-box-header {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 20px 0px 20px;
+}
+
+.profile-box2 {
+    display: flex;
+    flex-direction:column;
+    text-align: left;
+}
+
+a {
+    text-decoration: none;  
+    color:#000000;    
+}
+
+a:visited { color:#000000; }
+a:hover { color:#5B88E6; }
+
+sub {
+    font-weight: bold;
+    color: #949494;
+}
+
+.span-sub {
+    font-size: 13px;
+    color: #949494;
+}
+.span-sub:visited {
+    color: #949494;
+}
+
+.right-box-btn {
+    position: absolute;
+    right: 20px;
+    border: 0px;
+    background-color: #FFFFFF;
+    font-weight: bold;
+    font-size: 15px;
+    color: #2994ff;
 }
