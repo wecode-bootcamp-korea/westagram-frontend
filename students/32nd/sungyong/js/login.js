@@ -1,33 +1,28 @@
-const id = document.getElementById('loginId');
-const pw = document.getElementById('loginPw');
-const btn = document.getElementById('loginBtn');
+const loginId = document.getElementById('loginId');
+const loginPw = document.getElementById('loginPw');
+const loginBtn = document.getElementById('loginBtn');
 
-id.addEventListener('keyup', (e) => {
+loginId.addEventListener('keyup', (e) => {
     if (e.code === 'Backspace' || e.code === 'Delete' || e.code === 'ControlLeft') { // id pw 값 삭제시 -> 색상: 초기화, 커서 : auto
-        (id.value === '' || id.value === null ? btn.disabled = true : btn.disabled = false);
+        (loginId.value === '' || loginId.value === null ? loginBtn.disabled = true : loginBtn.disabled = false);
     }
-    else if (id.value !== '' && id.value !== null) { // id pw 값 체크 후 -> 색상: 진하게, 커서: pointer
-        (pw.value !== '' && pw.value !== null ? btn.disabled = false : btn.disabled = true);
+    else if (loginId.value !== '' && loginId.value !== null) { // id pw 값 체크 후 -> 색상: 진하게, 커서: pointer
+        (loginPw.value !== '' && loginPw.value !== null ? loginBtn.disabled = false : loginBtn.disabled = true);
     }
 });
 
-pw.addEventListener('keyup', (e) => {
+loginPw.addEventListener('keyup', (e) => {
     if (e.code === 'Backspace' || e.code === 'Delete') {
-        (pw.value === '' || pw.value === null ? btn.disabled = true : btn.disabled = false);
+        (loginPw.value === '' || loginPw.value === null ? loginBtn.disabled = true : loginBtn.disabled = false);
     }
-    else if (id.value !== '' && id.value !== null) {
-        (pw.value !== '' && pw.value !== null ? btn.disabled = false : btn.disabled = true);
+    else if (loginId.value !== '' && loginId.value !== null) {
+        (loginPw.value !== '' && loginPw.value !== null ? loginBtn.disabled = false : loginBtn.disabled = true);
     }
 });
 
-btn.addEventListener('click', (e) => { // missio5 ID, PW validation
-    if(id.value.indexOf('@') !== -1 ) {
-        if (pw.value.length < 5) {
-            alert('패스워드는 최소 5자 이상입니다.');
-        }
-        else {
-            location.href = 'main.html';
-        }
+loginBtn.addEventListener('click', (e) => {
+    if(loginId.value.indexOf('@') !== -1 ) {
+        (loginPw.value.length < 5) ? alert('패스워드는 최소 5자 이상입니다.') : location.href = 'main.html';
     }
     else {
         alert('아이디는 "@" 가 포함되어야 합니다.');

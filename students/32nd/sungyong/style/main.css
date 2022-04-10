@@ -8,10 +8,17 @@ nav {
     border-bottom: 2px solid #EFF0EF;
     background-color: #FFFFFF;
 }
-.nav-title {
+.nav-logo-text {
     font-family: 'Lobster', cursive;
     font-size: 20px;
 }
+
+.nav-logo-icon, .nav-icon {
+    width: 20px;
+    height: 20px;
+    margin: 0px 10px;
+}
+
 .nav-search {
     border: 1px solid #BEBFBE;
     width: 200px;
@@ -19,18 +26,19 @@ nav {
     border-radius: 3px;
     background-color: #FAFBFA;
 }
+
 .nav-search::placeholder {
-    background-image: url('../img/free-icon-magnifier-71403.png');
+    background-image: url('../img/search_icon.png');
     background-size: 14px;
     background-position: 60px center;
     background-repeat: no-repeat;
     text-align: center;
 }
-.nav-icon {
-    width: 20px;
-    height: 20px;
-    margin: 0px 10px;
+.nav-search:focus {
+    border: 0px;
+    outline: 2px solid  #BEBFBE;
 }
+
 main {
     width: 100%;
     height: max-content;
@@ -160,7 +168,10 @@ main {
     padding-left: 20px;
     border-top: 2px solid #EFF0EF;
 }
-
+.comment-input:focus {
+    border: 0px;
+        outline: 2px solid  #BEBFBE;
+}
 .feed-title {
     width: 90%;
     display: flex;
@@ -223,7 +234,6 @@ a {
 }
 
 a:visited { color:#000000; }
-a:hover { color:#5B88E6; }
 
 sub {
     font-weight: bold;
@@ -246,4 +256,8 @@ sub {
     font-weight: bold;
     font-size: 15px;
     color: #2994ff;
+}
+
+.right-box-btn:hover {
+    cursor: pointer;
 }
