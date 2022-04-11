@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css"  href="./style/main.css" >
+        <script src="https://kit.fontawesome.com/f595e528b9.js" crossorigin="anonymous"></script>
+        <style>
+                @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+        </style>
+        <title>Westagram</title>
+</head>
+<body>
+       <nav>
+                <div class="logo">
+                        <i class="fa-brands fa-instagram"></i>
+                        <span>Westagram</span>
+                </div>
+                <div class="search">
+                        <input type="text"placeholder="검색">
+                </div>
+               <div class="icons"><img class="bt" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png">
+                <img class="bt" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png">
+                <img class="bt" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png">
+                </div>
+        </nav>
+        <main>
+                <div class="feeds">
+                        <article>
+                                <div class="art-me">
+                                        <span><img src="./images/me.jpg" alt="me"></span>
+                                          <p><b>hoongiahn</b></p>
+                                </div>
+                                <div>
+                                <img  class="travel" src="./images/travel.jpg">
+                                </div>
+                                <div>
+                                        <div class="likes">
+                                                 <div><i class="fa-solid fa-heart"></i>
+                                                 <i class="fa-regular fa-comment"></i>
+                                                 <i class="fa-solid fa-arrow-up-from-bracket"></i></div>
+                                                 <div><i class="fa-regular fa-bookmark"></i></div>
+                                        </div>
+                                        <span class="name">wecode1님</span><span> 외 <b>1412명</b>이 좋아합니다</span>
+                                        
+                                                
+                                                <ul class="commentLists">
+                                                         <li>
+                                                                <span class="name">wecode1</span>
+                                                                <span>여행가고 싶어</span>
+                                                        </li>
+                                                        <li class="name-delete">
+                                                                <div>
+                                                                <span class="name">wecode2</span>
+                                                                <span>어디로 갈까?</span>
+                                                                </div>
+                                                                <div>
+                                                                <span class="delete"></span>
+                                                                </div>
+                                                        </li>
+                                                </ul>
+                                       
+
+                                        <form class="reply" >
+                                                <input class="reply-input" type="text" placeholder="댓글 달기...">
+                                                <button class="submit" disabled>게시</button>
+                                        </form>
+                                </div>
+                        </article>  
+                </div>
+                <div class="main-right">
+                        <div class="info">
+                                <div class="right-me">
+                                        <div class="right-img"><img  src="./images/me.jpg" alt=""></div>
+                                        <div class="right-name"><div class="right-id1">hoongiahn</div><div class="right-id2">Hoon Gi Ahn</div></div>
+                                </div>
+                                        <div class="right-button"><button>전환</button></div>
+                        </div>
+                        <div class="story">
+                                <div class="story-title">
+                                       <div>스토리</div> <button>모두 보기</button>
+                                </div>
+                                <div class="story-friend">
+                                        <div class="friend">
+                                                <div class="friend-img"><img src="./images/me.jpg" alt=""></div>
+                                                <div class="friend-name"><div class="friend-id">name</div><div class="friend-ago">10분전</div></div>
+                                        </div>
+                                        <div class="friend">
+                                                <div class="friend-img"><img src="./images/me.jpg" alt=""></div>
+                                                <div class="friend-name"><div class="friend-id">name</div><div class="friend-ago">10분전</div></div>
+                                        </div>
+                                        <div class="friend">
+                                                <div class="friend-img"><img src="./images/me.jpg" alt=""></div>
+                                                <div class="friend-name"><div class="friend-id">name</div><div class="friend-ago">10분전</div></div>
+                                        </div>
+                                        <div class="friend">
+                                                <div class="friend-img"><img src="./images/me.jpg" alt=""></div>
+                                                <div class="friend-name"><div class="friend-id">name</div><div class="friend-ago">10분전</div></div>
+                                        </div>        
+                                </div>
+                        </div>
+                        <div class="space"></div>
+                        <div class="follow">
+                                <div class="follow-title">
+                                          <div>회원님을 위한 추천</div> <button>모두 보기</button>
+                                 </div>
+                                         <div class="follow-friend">
+                                                <div class="friend2">
+                                                        <div class="friend-div">
+                                                                <div class="friend-img"><img src="./images/me.jpg" alt=""></div>
+                                                                <div class="friend-name"><div class="friend-id">name</div><div class="friend-ago">10분전</div></div>
+                                                        </div>        
+                                                        <button>팔로우</button>
+                                                </div>
+                                                <div class="friend2">
+                                                        <div class="friend-div">
+                                                                <div class="friend-img"><img src="./images/me.jpg" alt=""></div>
+                                                                <div class="friend-name"><div class="friend-id">name</div><div class="friend-ago">10분전</div></div>
+                                                        </div>        
+                                                        <button>팔로우</button>
+                                                </div>
+                                                <div class="friend2">
+                                                        <div class="friend-div">
+                                                                <div class="friend-img"><img src="./images/me.jpg" alt=""></div>
+                                                                <div class="friend-name"><div class="friend-id">name</div><div class="friend-ago">10분전</div></div>
+                                                        </div>        
+                                                        <button>팔로우</button>
+                                                </div>
+                                                      
+                                        </div>
+                                
+                        </div>
+                        
+        
+                        
+        </main>
+        <script src="./js/main.js"></script>
+</body>
+</html>
