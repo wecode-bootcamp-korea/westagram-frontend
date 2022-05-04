@@ -1,0 +1,297 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* navbar */
+.navbar{
+    width: 100%;
+    border-bottom: 1px solid lightgray;
+    background-color: white;
+}
+
+.nav_container{
+    height: 60px;
+    width: 935px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+
+.nav_left_logo{
+    font-family: 'Lobster', cursive;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.fa-instagram{
+    font-size: 25px;
+    margin-right: 8px;
+}
+
+.left_logo_divide{
+    font-size: 25px;
+    color: gray;
+    margin-right: 8px;
+    padding-bottom: 3px;
+}
+
+.left_logo_title{
+    font-size: 20px;
+}
+
+.search{
+    width: 236px;
+    height: 30px;
+    border-radius: 4px;
+    border: 1px solid rgb(217, 217, 217);
+    outline: none;
+    background-color: rgb(242, 242, 242);
+    position: relative;
+    text-align: center;
+}
+
+.nav_right_logo img{
+    width: 24px;
+    margin-left: 10px;
+}
+
+/* main section */
+
+.main_section{
+    background-color: rgb(245, 245, 245);
+    width: 100%;
+    max-height: 100%;
+    margin: auto;
+}
+
+.main_container{
+    width:  935px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+/* feed */
+.feeds{
+    width: 614px;
+    height: auto;
+    background-color: white;
+    margin-top: 30px;
+    border: 1px solid gray;
+    
+}
+
+.feeds_navbar{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px;
+    background-color: white;
+}
+
+.feeds_nav_right{
+    display: flex;
+    align-items: center;
+}
+
+.feeds_profile_img{
+    width: 42px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.feed_img{
+    width: 100%;
+    height: 612px
+}
+
+.feed_img img{
+    width: 100%;
+    height: 100%;
+}
+
+.feed_comment{
+    position: relative;
+}
+
+/* feed footer */
+
+.footer_logo{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 15px 0 15px;
+}
+
+.ft_log{
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.footer_like{
+    font-size: 14px;
+    font-weight: 700;
+    margin-top: 12px;
+    margin-left: 15px;
+}
+
+.footer_description{
+    font-size: 14px;
+    margin-left: 15px;
+}
+
+.footer_time{
+    margin-left: 15px;
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.comment_area{
+    width: 100%;
+    height: 45px;
+    margin-top: 10px;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.input_btn{
+    text-decoration: none;
+    background-color: white;
+    border: none;
+    position: absolute;
+    top: 22px;
+    right: 10px;
+}
+
+.input_btn:hover{
+    cursor: pointer;
+}
+
+
+.comment_up{
+    margin-left: 15px;
+}
+
+.comment_board{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 580px;
+}
+
+.fa-heart{
+    font-size: 18px;
+}
+
+.fa-heart:hover{
+    color: gray;
+}
+
+.fa-trash-can{
+    font-size: 18px;
+}
+
+.fa-trash-can:hover{
+    color: gray
+}
+
+.comment_area:focus{
+    outline: none;
+}
+
+/* main-right */
+
+.main_right{
+    width: 293px;
+    height: 480px;
+    margin-top: 30px;
+    padding: 10px ;
+}
+
+.right_profile{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.right_profile_picture{
+    display: flex;
+    align-items: center;
+}
+
+.right_profile_picture img{
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.switch_btn{
+    color: rgb(63, 63, 255);
+}
+
+.suggest_for_you{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0 15px 0;
+}
+
+.see-all{
+    color: rgb(63, 63, 255);
+}
+
+.suggest_user{
+    margin-bottom: 50px;
+}
+
+.suggest_box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 13px;
+}
+
+.suggest_profile_img{
+    display: flex;
+    align-items: center;
+}
+
+.suggest_profile_img img{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.suggest_id{
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.suggest_nickname{
+    font-size: 12px;
+}
+
+.suggest_follow{
+    color: rgb(63, 63, 255);
+    font-size: 14px;
+}
+
+.right_foot_about{
+    font-size: 13px;
+    color: rgb(179, 179, 179);
+    margin-bottom: 10px;
+}
+
+.right_foot_last{
+    font-size: 13px;
+    color: rgb(179, 179, 179);
+}
