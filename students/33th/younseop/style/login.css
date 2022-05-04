@@ -39,11 +39,11 @@ input {
     margin-bottom: 8px;
 }
 
-#pw {
+#password {
     margin-bottom: 16px;
 }
 
-.login-btn {
+#login-btn {
     width: 100%;
     height: 36px;
     color: #FAFAFA;
@@ -52,6 +52,17 @@ input {
     border-radius: 4px;
     font-size: 14px;
     text-align: center;
+}
+
+#login-btn:disabled {
+    background-color: #C5E1FA;
+}
+
+#login-btn:disabled:hover {
+    cursor: default;
+}
+#login-btn:enabled:hover {
+    cursor: pointer;
 }
 
 .forgot-pw {
