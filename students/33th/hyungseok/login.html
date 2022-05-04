@@ -15,32 +15,40 @@
 </head>
 
 <body>
-    <div class="westargram">
+    <div class="loginPage">
         <div class="loginContainer">
-            <h1 class="title">Westargram</h1>
-            <div class="inputBox">
+            <h1 class="loginTitle">Westargram</h1>
+            <div class="loginInputBox">
                 <input type="text" class="id" placeholder="전화번호, 사용자 이름 또는 이메일">
                 <input type="password" class="password" placeholder="비밀번호">
                 <p class="emailCheck">id : '@', '.' 포함 / pw : 5글자 이상</p>
             </div>
-            <button class="btn">로그인</button>
+            <button class="loginBtn">로그인</button>
             <div class="serviceBox">
                 <a href="#">비밀번호를 잊으셨나요?</a>
             </div>
         </div>
     </div>
 
-    <div class="mainContainer">
-        <div class="navBox">
-            <nav>
+    <div class="mainPage">
+        <nav>
+            <!-- <div class="navBox"> -->
                 <div class="flex1">
                     <img src="instagram_empty.png">
                     <p class="mainTitle">Westargram</p>
                 </div>
                 <div class="flex2">
                     <div class="mainInput">
-                        <input type="text" placeholder="검색">
+                        <input class="searchInput" type="text" placeholder="검색">
                         <i class="fa-solid fa-magnifying-glass"></i>
+
+                        <div class="idFindBox">
+                            <div class="idFindContent">
+                                <img class="searchImg" src="dinosaur.png">
+                                <span class="searchText">dinosaur</span>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
                 <div class="flex3">
@@ -48,8 +56,9 @@
                     <i class="fa-regular fa-heart"></i>
                     <i class="fa-regular fa-user"></i>
                 </div>
-            </nav>
-        </div>
+            <!-- </div> -->
+        </nav>
+
 
         <main>
             <div class="feeds">
