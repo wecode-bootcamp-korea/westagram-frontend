@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Westagram </title>
+    <link rel="shortcut icon" href="images/westagram.ico">
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1 class="logo">
+                <a href="#">Westagram</a>
+            </h1>
+
+            <input type="text" placeholder="검색">
+            
+            <div class="icon_box">
+                <a href="#"><img src="images/explore.png" alt="탐색기"></a>
+                <a href="#"><img src="images/heart.png" alt="좋아요"></a>
+                <a href="#"><img src="images/profile.png" alt="나의페이지"></a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="feed">
+            <article class="post">
+                <div class="user_post_wrap">
+                    <div class="user_info">
+                        <div class="user_img">
+                            <a href="#"><img src="images/mini_profile.jpg" alt="#"></a>
+                        </div>
+                        <div class="user_name">
+                            <a href="#">wecode_bootcamp</a>
+                            <a href="#">WeCode - 위코드</a>
+                        </div>
+                        <button class="more_btn">더보기</button>
+                    </div>
+                    
+                    <div class="user_post_img">
+                        <img src="images/feed.jpg" alt="">
+                    </div>
+                    
+                    <div class="user_post_desc">
+                        <div class="user_check_wrap">
+                            <div>
+                                <button><img src="images/heart.png" alt=""></button>
+                                <button><img src="images/chat.png" alt=""></button>
+                                <button><img src="images/send.png" alt=""></button>
+                            </div>
+                            <button>북마크</button>
+                        </div>
+                        <div class="like_count">
+                            <a href="#"><img src="images/mini_profile.jpg" alt="#"></a>                            
+                            <span class="like_desc">lemon님 외 4명이 좋아합니다.</>
+                        </div>
+                        <div class="user_post_content">
+                            <strong>wecode_bootcamp</strong>
+                            <span>"위코드는 단순 교육업체가 아닌 개발자 커뮤니티 입니다. Wecode에서 배우고 저는 총 5개 회사에서 오퍼를 받았습니다.</span>
+                            <button class="more_btn">더보기</button>
+                            <ul class="coment_new">
+                                <li class="coment_new_box">
+                                    <p><strong>p__jooyoung</strong>🤩🤩</p>
+                                    <button><img src="images/heart.png" alt=""></button>
+                                </li>
+                            </ul>
+                            <button class="more_comment">댓글 147개 모두 보기</button>
+                        </div>
+                    </div>
+                    
+                    <form class="comment_wrap">
+                        <input type="text" placeholder="댓글 달기...">
+                        <button class="comment_enter">게시</button>
+                    </form>
+                </div>
+            </article>
+        </div>
+
+        <div class="main_right">
+            <div class="user_info user_info_right">
+                <div class="user_info_main">
+                    <a href="#"><img src="images/mini_profile.jpg" alt="#"></a>
+                </div>
+                <div class="user_name">
+                    <a href="#">wecode_bootcamp</a>
+                    <a href="#">WeCode - 위코드</a>
+                </div>
+            </div>
+
+            <div class="main_right_box">
+                <div class="story_head">
+                    <p>스토리</p>
+                    <a href="">모두 보기</a>
+                </div>
+                <ul>
+                    <li class="user_progile_mini">
+                        <a href=""><img src="images/mini_profile.jpg" alt="사용자 프로필 사진"></a>                        
+                        <div>
+                            <a href="">alexishyuni</a>
+                            <p>2시간 전</p>
+                        </div>
+                    </li>
+                    <li class="user_progile_mini">
+                        <a href=""><img src="images/mini_profile.jpg" alt="사용자 프로필 사진"></a>                        
+                        <div>
+                            <a href="">alexishyuni</a>
+                            <p>2시간 전</p>
+                        </div>
+                    </li>
+                    <li class="user_progile_mini">
+                        <a href=""><img src="images/mini_profile.jpg" alt="사용자 프로필 사진"></a>                        
+                        <div>
+                            <a href="">alexishyuni</a>
+                            <p>2시간 전</p>
+                        </div>
+                    </li>
+                    <li class="user_progile_mini">
+                        <a href=""><img src="images/mini_profile.jpg" alt="사용자 프로필 사진"></a>                        
+                        <div>
+                            <a href="">alexishyuni</a>
+                            <p>2시간 전</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="main_right_box">
+                <div class="story_head">
+                    <p>회원님을 위한 추천</p>
+                    <a href="">모두 보기</a>
+                </div>
+                <ul>
+                    <li class="user_progile_mini">
+                        <a href=""><img src="images/mini_profile.jpg" alt="사용자 프로필 사진"></a>
+                        <div>
+                            <a href="">alexishyuni</a>
+                            <p>회원님을 위한 추천</p>
+                        </div>
+                        <button class="follow">팔로우</button>
+                    </li>
+                    <li class="user_progile_mini">
+                        <a href=""><img src="images/mini_profile.jpg" alt="사용자 프로필 사진"></a>
+                        <div>
+                            <a href="">__g90ng_dm</a>
+                            <p>회원님을 위한 추천</p>
+                        </div>
+                        <button class="follow">팔로우</button>
+                    </li>
+                    <li class="user_progile_mini">
+                        <a href=""><img src="images/mini_profile.jpg" alt="사용자 프로필 사진"></a>
+                        <div>
+                            <a href="">hsu_koreanart2021</a>
+                            <p>회원님을 위한 추천</p>
+                        </div>
+                        
+                        <button class="follow">팔로우</button>
+                    </li>
+                    <li class="user_progile_mini">
+                        <a href=""><img src="images/mini_profile.jpg" alt="사용자 프로필 사진"></a>
+                        <div>
+                            <a href="">kimmy_cafe</a>
+                            <p>회원님을 위한 추천</p>
+                        </div>
+                        <button class="follow">팔로우</button>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </main>
+</body>
+</html>
