@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Westargram</title>
+    <script src="./js/main.js" defer></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
       rel="stylesheet"
@@ -94,19 +95,19 @@
                 <span>🍫</span>
               </div>
               <div class="commentBox">
-                <ul>
+                <p class="commentTime">42분 전</p>
+                <ul id="commentList">
                   <li>
                     <strong>d.ddablue</strong>
                     <span>우와 초콜렛이다</span>
                   </li>
                 </ul>
               </div>
-              <span class="commentTime">42분 전</span>
             </div>
-            <div class="commentInput">
+            <form class="commentInput">
               <input type="text" placeholder="댓글 달기..." />
-              <button>게시</button>
-            </div>
+              <button class="commentBtn">게시</button>
+            </form>
           </article>
         </div>
 
