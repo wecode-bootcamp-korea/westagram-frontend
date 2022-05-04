@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Westargram</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/e93816992f.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="./style/main.css" />
+    <link rel="stylesheet" href="./style/common.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <div class="logoContainer">
+        <div class="logo">
+          <img src="./img/instagram.png" alt="Westargram logo" />
+          <span>Westargram</span>
+        </div>
+
+        <div class="searchInput">
+          <input type="text" placeholder="검색" />
+        </div>
+
+        <div class="icon">
+          <img
+            src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png"
+            alt=""
+          />
+          <img
+            src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"
+            alt=""
+          />
+          <img
+            src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png"
+            alt=""
+          />
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section class="mainContainer">
+        <!-- Feeds -->
+        <div class="feeds">
+          <article>
+            <div class="feedHeader">
+              <div class="user">
+                <img class="userImg" src="./img/user1.jpg" alt="" />
+                <span class="userId">nueahooy</span>
+              </div>
+              <i class="fa-solid fa-ellipsis"></i>
+            </div>
+            <div class="feedImg"></div>
+            <div class="feedBottom">
+              <div class="icon">
+                <div class="iconLeft">
+                  <button>
+                    <img src="./img/heart (1).png" alt="" />
+                  </button>
+                  <button>
+                    <img class="commentIcon" src="./img/comment.png" alt="" />
+                  </button>
+                  <button>
+                    <img class="navIcon" src="./img/navigator.png" alt="" />
+                  </button>
+                </div>
+                <button>
+                  <img class="bookmarkIcon" src="./img/bookmark.png" alt="" />
+                </button>
+              </div>
+              <div class="likes">
+                <img src="./img/user4.jpg" alt="" />
+                <span>
+                  <strong>hyunsunhye</strong>님<strong> 외 10명</strong>이
+                  좋아합니다
+                </span>
+              </div>
+              <div class="feedText">
+                <strong>nueahooy</strong>
+                <span>🍫</span>
+              </div>
+              <div class="commentBox">
+                <ul>
+                  <li>
+                    <strong>d.ddablue</strong>
+                    <span>우와 초콜렛이다</span>
+                  </li>
+                </ul>
+              </div>
+              <span class="commentTime">42분 전</span>
+            </div>
+            <div class="commentInput">
+              <input type="text" placeholder="댓글 달기..." />
+              <button>게시</button>
+            </div>
+          </article>
+        </div>
+
+        <!-- Main Right -->
+        <aside class="mainRight">
+          <div class="userContainer">
+            <img src="./img/user1.jpg" alt="" />
+            <div class="userIdContainer">
+              <span>nueahooy</span>
+              <span>Wecode | 위코드</span>
+            </div>
+          </div>
+
+          <div class="storyContainer">
+            <div class="storyText">
+              <span>스토리</span>
+              <span>모두 보기</span>
+            </div>
+            <ul>
+              <li class="storyList">
+                <img src="./img/user5.JPG" alt="" />
+                <div class="userInfo">
+                  <span>sorie</span>
+                  <span>16분 전</span>
+                </div>
+              </li>
+              <li class="storyList">
+                <img src="./img/user2.JPG" alt="" />
+                <div class="userInfo">
+                  <span>kimwon.pil</span>
+                  <span>58분 전</span>
+                </div>
+              </li>
+              <li class="storyList">
+                <img src="./img/user3.JPG" alt="" />
+                <div class="userInfo">
+                  <span>52nd-day</span>
+                  <span>1시간 전</span>
+                </div>
+              </li>
+              <li class="storyList">
+                <img src="./img/user4.JPG" alt="" />
+                <div class="userInfo">
+                  <span>hyunsunhye</span>
+                  <span>2시간 전</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="rcmndContainer">
+            <div class="rcmndText">
+              <span>회원님을 위한 추천</span>
+              <span>모두 보기</span>
+            </div>
+            <ul>
+              <li class="rcmndList">
+                <div class="imgAndUserInfo">
+                  <img src="./img/user6.JPG" alt="" />
+                  <div class="userInfo">
+                    <span>summer</span>
+                    <span>areyouberry님 외 2명이 ...</span>
+                  </div>
+                </div>
+                <button>팔로우</button>
+              </li>
+              <li class="rcmndList">
+                <div class="imgAndUserInfo">
+                  <img src="./img/user6.JPG" alt="" />
+                  <div class="userInfo">
+                    <span>summer</span>
+                    <span>areyouberry님 외 2명이 ...</span>
+                  </div>
+                </div>
+                <button>팔로우</button>
+              </li>
+              <li class="rcmndList">
+                <div class="imgAndUserInfo">
+                  <img src="./img/user6.JPG" alt="" />
+                  <div class="userInfo">
+                    <span>summer</span>
+                    <span>areyouberry님 외 2명이 ...</span>
+                  </div>
+                </div>
+                <button>팔로우</button>
+              </li>
+            </ul>
+          </div>
+
+          <footer>
+            <span>
+              소개도움말홍보 센터API채용 정보개인정보처리방침약관위치인기
+              계정해시태그언어
+            </span>
+            <p>© 2022 INSTAGRAM FROM META</p>
+          </footer>
+        </aside>
+      </section>
+    </main>
+  </body>
+</html>
