@@ -3,9 +3,9 @@ const thisIsPsw = document.querySelector(".password");
 const thisIsBtn = document.querySelector(".btn");
 const loginPage = document.querySelector(".westargram");
 const mainPage = document.querySelector(".mainContainer");
-const commentPost = document.querySelector(".commentPost");
-const commentInput = document.querySelector(".commentInput");
-const commentBox = document.querySelector(".commentBox");
+const commentPost = document.querySelector(".articlePost");
+const commentInput = document.querySelector(".articleInput");
+const commentBox = document.querySelector(".articleCommentBox");
 
 thisIsPsw.addEventListener("keydown", () => {
   {

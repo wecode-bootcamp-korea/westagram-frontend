@@ -189,7 +189,7 @@ main{
 /* section, article */
 
 section{
-    flex: 7;
+    width: 100%;
     margin: 50px 0;
 }
 
@@ -235,16 +235,8 @@ article{
     cursor: default;
 }
 
-.articleIcon{
-    flex: 1;
-    cursor: pointer;
-}
-
-
-
-
-.mainImg{
-    height: 70vh;
+.articleHeaderIcon{
+    margin-right: 20px;
 }
 
 .articleImg{
@@ -252,39 +244,51 @@ article{
     height: 600px;
 }
 
-.iconBox{
+.articleIconBox{
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10px;
+    justify-content: space-between;
+    margin: 10px;
 }
-.iconBox i{
+
+.articleIcons{
     font-size: 25px;
-    margin: 0 10px;
     cursor: pointer;
+    margin: 0 5px;
 }
-.iconBox .fa-heart{
- margin-left: 15px;
-} 
-.iconBox .fa-bookmark{
-    flex: 1;
-    text-align: right;
-    margin-right: 15px;
-}
-.feedsContent{
+
+.articleContent{
     text-align: left;
     margin-left: 12px;
 }
-.comment{
-    margin-bottom: 0;
+
+.liksNickname{
+    font-weight: bold;
 }
-.time{
+
+.likeIcon{
+    display: flex;
+}
+.likeIcons{
+    margin: 5px 5px 0 10px;
+    font-size: 12px;
+}
+.likeIconsHeart:hover{
+    color: red;
+    cursor: pointer;
+}
+.likeIconsDelete:hover{
+    color: #1995f6;
+    cursor: pointer;
+}
+
+.articleTime{
     margin-top: 5px;
     margin-right: 5px;
     font-weight: 300;
     font-size: 12px;
 }
-.mainComment{
+
+.articleInputBox{
     width: 100%;
     border-radius: 5px;
     border: none;
@@ -292,13 +296,13 @@ article{
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }
-.commentInput{
+.articleInput{
     width: 90%;
     line-height: 40px;
     border: none;
     outline: none;
 }
-.mainComment button{
+.articlePost{
     border: none;
     width: 40px;
     height: 30px;
@@ -309,29 +313,7 @@ article{
     font-size: 14px;
 }
 
-.goodBox{
-    display: flex;
-}
-.goodBox i{
-    margin: 0 5px 0 10px;
-    font-size: 12px;
-    margin-top: 5px;
-}
-.heart:hover{
-    color: red;
-    cursor: pointer;
-}
-.fa-delete-left:hover{
-    color: #1995f6;
-    cursor: pointer;
-}
 
-.heartUp{
-    margin-top: 5px;
-    font-weight: 300;
-    font-size: 12px;
-    margin-right: 5px;
-}
 
 
 
