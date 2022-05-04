@@ -1,0 +1,273 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.insta {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+}
+
+nav {
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid #dbdbdb;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    position: fixed;
+    background-color: white;
+}
+
+.right_nav {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-instagram {
+    font-size: 20px;
+}
+
+.bar {
+    height: 21px;
+    border-left: 1px solid black;
+}
+
+.name_logo {
+    width: 120px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.name_logo span {
+    font-family: 'Lobster', cursive;
+    font-size: 17px;
+}
+
+.mid_nav {
+    width: 220px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search {
+    width: 200px;
+    height: 27px;
+    border: 1px solid #dbdbdb;
+    border-radius: 2px;
+    background-color: #fafafa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left_nav {
+    width: 100px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fa-compass {
+    font-size: 22px;
+}
+
+.fa-heart {
+    font-size: 22px;
+}
+
+.fa-user {
+    font-size: 22px;
+}
+
+/* 피드 */
+
+main {
+    width: 100%;
+    height: 100vh;
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.feeds {
+    width: 550px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+article {
+    width: 500px;
+    height: 680px;
+    background-color: white;
+    border: 1px solid #dbdbdb;
+}
+
+.top_feed {
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #dbdbdb;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.id_box {
+    width: 150px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.profile_pic {
+    width: 30px;
+    height: 30px;
+    background-image: url(../img/IMG_9480.jpg);
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.insta_id {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.more {
+    width: 50px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_feed {
+    width: 100%;
+    height: 500px;
+    background-image: url(../img/IMG_8851.jpg);
+    background-size: cover;
+}
+
+.icon_bottom {
+    width: 100%;
+    height: 35px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.right_icon_bottom {
+    width: 110px;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.right_icon_bottom .fa-heart {
+    font-size: 22px;
+    color: red;
+}
+
+.fa-comment {
+    font-size: 22px;
+}
+
+.fa-share-from-square {
+    font-size: 22px;
+}
+
+.left_icon_bottom {
+    width: 50px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-bookmark {
+    font-size: 22px;
+}
+
+.like_bottom {
+    width: 100%;
+    height: 30px;
+    background-color: green;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.like_box {
+    width: 220px;
+    height: 100%;
+    background-color: yellow;
+}
+
+.like_pic {
+    width: 22px;
+    height: 22px;
+    background-color: pink;
+    border-radius: 50%;
+}
+
+.like10 {
+    font-size: 13px;
+}
+
+/* 스토리, 추천 */
+
+.main_right {
+    width: 300px;
+    height: 480px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.myid {
+    width: 100%;
+    height: 70px;
+    background-color: pink;
+}
+
+.story {
+    width: 100%;
+    height: 230px;
+    background-color: white;
+    border: 1px solid #dbdbdb;
+}
+
+.recommand {
+    width: 100%;
+    height: 150px;
+    background-color: white;
+    border: 1px solid #dbdbdb;
+}
