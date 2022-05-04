@@ -1,0 +1,374 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+nav {
+    background-color: white;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #E6E6E6;
+    position: fixed;
+    background-color: white;
+    
+}
+a {
+    text-decoration: none;
+}
+#westagram_icon {
+    margin-left: -2%;
+    border-right: 3px solid #E6E6E6;
+    width: 70px;
+}
+#westagram_logo {
+    margin-left: 30px;
+    font-size: 30px;
+    font-family: 'Lobster', cursive;
+}
+#searchBar {
+    margin-left: 500px;
+    width: 300px;
+    height: 40px;
+    text-align: center;
+    font-size: 15px;
+    border: 2px solid #E6E6E6;
+}
+.searchForm {
+    position: relative;
+}
+.searchForm button {
+    position: absolute;
+    right: 22%;
+    top: 30%;
+    border: 1px;
+    cursor: pointer;
+    background-color: white;
+}
+.icon {
+    margin-left: 400px;
+}
+.icon img {
+    width: 35px;
+    height: 35px;
+    margin-left: 60px;
+}
+main {
+    height: 114vh;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.feeds {
+    border: 1px solid #E6E6E6;
+    height: 300vh;
+    width: 850px;
+    margin-left: 15%;
+    position: relative;
+    margin-top: 6.3%;
+}
+.main_right {
+    border: 1px solid #E6E6E6;
+    height: 75vh;
+    width: 500px;
+    right: 4%;
+    top: 13%;
+    position: fixed;
+}
+article {
+    border: 1px solid #E6E6E6;
+    height: 200vh;
+    width: 780px;
+    position: relative;
+    left: 4%;
+    top: 1%;
+    
+}
+.feeds_user_icon {
+    border-radius: 50%;
+    position: absolute;
+    left: 3%;
+    top: 0.5%;
+    object-fit: cover;
+}
+#artice_for_update_button {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 1px;
+    cursor: pointer;
+    position: absolute;
+    right: 2%;
+    top: 1%;
+    background-color: white;
+}
+.feeds_user_id {
+    position: absolute;
+    left: 11%;
+    font-weight: bold;
+    top: 0.7%;
+}
+.feeds_user_name {
+    position: absolute;
+    left: 11%;
+    top: 2%;
+}
+.feeds_top {
+    height: 60px;
+    margin-bottom: 10px;
+}
+#feeds_user_image {
+    position: absolute;
+    left: 3.5%;
+    top: 5%;
+}
+.feeds_middle {
+    position: absolute;
+    left: 3%;
+    display: flex;
+    justify-content: space-between;
+    width: 720px;
+    top: 39%;
+}
+
+#feeds_icon_comment, #feeds_icon_share {
+    margin-left: 20px;
+}
+.summary_comment {
+    position: absolute;
+    top: 42.2%;
+    left: 3%;
+    width: 720px;
+}
+#friends {
+    border-radius: 50%;
+    object-fit: cover;
+}
+.how_many_likes {
+    position: absolute;
+    top: 20%;
+    left: 8%;
+}
+.comment_input {
+    position: absolute;
+    top: 47%;
+    left: 1%;
+    width: 765px;
+    height: 70px;
+    font-size: 17px;
+    border: 1px solid #E6E6E6;
+    
+}
+
+.main_right_top {
+    margin-top: 30px;
+    position: relative;
+    height: 100px;
+    width: 500px;
+    
+}
+.side_user_icon {
+    position: absolute;
+    left: 10%;
+    top: 22%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.side_user_name {
+    position: absolute;
+    left: 25%;
+    top: 50%;
+    color: gray;
+}
+.side_user_id {
+    position: absolute;
+    font-weight: bold;
+    left: 25%;
+    top: 22%;
+    
+}
+.main_right_story {
+    margin-top: 20px;
+    border-top: 1px solid #E6E6E6;
+    border-bottom: 1px solid #E6E6E6;
+    height: 260px;
+    width: 500px;
+    position: relative;
+}
+#story {
+    position: absolute;
+    left: 5%;
+    font-size: 18px;
+    font-weight: bold;
+    color: gray;
+    top: -2%;
+}
+#showAll {
+    position: absolute;
+    right: 5%;
+    font-weight: bold;
+}
+.story_user_icon {
+    border-radius: 50%;
+    position: absolute;
+    left: 5%;
+}
+#story_user1 {
+    position: absolute;
+    top: 20%;
+    object-fit: cover;
+}
+#story_user2 {
+    position: absolute;
+    top: 45%;
+    object-fit: cover;
+}
+#story_user3 {
+    position: absolute;
+    top: 70%;
+    object-fit: cover;
+}
+.stroy_user_name {
+    font-weight: bold;
+    position: absolute;
+    left: 16%;
+    display: block;
+}
+.story_user_time {
+    color: gray;
+    display: block;
+    position: absolute;
+    left: 16%;
+    font-size: 13px;
+}
+#story_user_name1 {
+    position: absolute;
+    top: 20%;
+}
+#story_user_name2 {
+    position: absolute;
+    top: 45%;
+}
+#story_user_name3 {
+    position: absolute;
+    top: 70%;
+}
+#story_user_time1 {
+    position: absolute;
+    top: 30%;
+}
+#story_user_time2 {
+    position: absolute;
+    top: 55%;
+}
+#story_user_time3 {
+    position: absolute;
+    top: 80%;
+}
+.main_right_recommend {
+    margin-top: 32px;
+    height: 260px;
+    width: 500px;
+    position: relative;
+}
+#recommend_for_user {
+    color: gray;
+    font-weight: bold;
+    font-size: 18px;
+    position: absolute;
+    left: 5%;
+    top: -10%;
+}
+#recommend_showAll {
+    position: absolute;
+    right: 5%;
+    font-weight: bold;
+    top: -9%;
+}
+.recommend_user_icon {
+    border-radius: 50%;
+    position: absolute;
+    left: 5%;
+}
+.recommend_user_name {
+    font-weight: bold;
+    position: absolute;
+    left: 16%;
+}
+.recommend_user_name:hover {
+    text-decoration: underline;
+}
+#recommend_user1 {
+    position: absolute;
+    top: 20%;
+    object-fit: cover;
+}
+#recommend_user2 {
+    position: absolute;
+    top: 45%;
+    object-fit: cover;
+}
+#recommend_user3 {
+    position: absolute;
+    top: 70%;
+    object-fit: cover;
+}
+#recommend_user_name1 {
+    position: absolute;
+    top: 20%;
+}
+#recommend_user_name2 {
+    position: absolute;
+    top: 45%;
+}
+#recommend_user_name3 {
+    position: absolute;
+    top: 70%;
+}
+.recommend_follow_text {
+    color: gray;
+    position: absolute;
+    left: 16%;
+}
+#follow_text1 {
+    position: absolute;
+    top: 30%;
+}
+#follow_text2 {
+    position: absolute;
+    top: 55%;
+}
+
+#follow_text3 {
+    position: absolute;
+    top: 80%;
+}
+.follow {
+    font-size: 18px;
+    position: absolute;
+    right: 10%;
+}
+#follow_1 {
+    position: absolute;
+    top: 20%;
+}
+#follow_2 {
+    position: absolute;
+    top: 45%;
+}
+#follow_3 {
+    position: absolute;
+    top: 70%;
+}
+.information {
+    position: absolute;
+    bottom: -10%;
+    color: gray;
+    font-weight: bold;
+    font-size: 13px;
+}
+
