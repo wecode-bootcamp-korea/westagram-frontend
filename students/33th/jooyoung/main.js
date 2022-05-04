@@ -10,6 +10,7 @@ function paintCommnet(newComment){
     const btn = document.createElement("button");
     const img = document.createElement('img');
     const strong = document.createElement('strong');
+    
     li.classList.add("coment_new_box")
     li.appendChild(strong);
     strong.innerText = "p__jooyoung";
