@@ -1,0 +1,375 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background: #fff;
+    border-bottom: 1px solid #dfdfdf;
+    padding: 5px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-wrapper {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    /* max-width: 1000px; */
+}
+
+.logo {
+    display: inline-block;
+    height: 70%;
+    margin-top: 8px;
+    font-family: 'Lobster', cursive;
+    font-weight: 600px;
+    font-size: larger;
+    background-color: #fff;
+}
+
+.search-box {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+    height: 30px;
+    background: #f0f0f0;
+    border: 1px solid #f0f0f0;
+    border-radius: 5px;
+    /* color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    text-transform: capitalize; */
+    background-image: url(../img/magnifier.png);
+    background-repeat: no-repeat;
+    background-size: 15px;
+    background-position: left center;
+    background-position-x: 6%;
+}
+
+.search-box::placeholder {
+    color: darkgray;
+    padding-left: 40px;
+    font-weight: 300;
+}
+
+.nav-icons {
+    height: 22px;
+    position: relative;
+    background-color: #fff;
+}
+
+.icon {
+    height: 100%;
+    display: inline-block;
+    cursor: pointer;
+    margin: 0 10px;
+    background-color: #fff;
+}
+
+.main {
+    width: 100%;
+    padding: 40px 0;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.wrapper {
+    width: 70%;
+    max-width: 1000px;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-gap: 30px;
+}
+
+.left-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.status-wrapper {
+    width: 80;
+    height: 120px;
+    background: #fff;
+    border: 1px solid #dfdfdf;
+    border-radius: 2px;
+    padding: 10px;
+    padding-right: 0;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    overflow-x: auto;
+}
+
+.status-card {
+    background: #fff;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+    /* flex: 0 0 auto; */
+}
+
+.status-pic {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    padding: 3px;
+    background: linear-gradient(45deg, rgb(255, 230, 0), rgb(255, 0, 128) 80%);
+}
+
+.status-pic img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    border-radius: 2px solid #fff;
+}
+
+.status-name {
+    width: 100%;
+    font-size: 11px;
+    text-align: center;
+    margin-top: 5px;
+    background: #fff;
+}
+
+.post {
+    width: 100%;
+    height: auto;
+    background: #fff;
+    border: 1px solid #dfdfdf;
+    margin-top: 40px;
+}
+
+.post-info {
+    width: 80%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: #fff;
+}
+
+.post-info .user {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+}
+
+.post-info .profile-pic {
+    padding: 0;
+    background: none;
+}
+
+.post-info .profile-pic img {
+    border: none;
+    border-radius: 50%;
+    width: 100%;
+    height: 35px;
+    width: 35px;
+    object-fit: cover;
+}
+
+.post-info .username {
+    width: auto;
+    font-weight: bold;
+    font-size: 14px;
+    margin-left: 15px;
+    background-color: #fff;
+}
+
+.post-info .options {
+    height: 10px;
+    cursor: pointer;
+    margin-left: 430px; /* find another way!!! */
+    background-color: #fff;
+}
+
+.post-image {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+
+.post-content {
+    width: 80%;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.likes-count {
+    font-weight: bold;
+    font-size: 15px;
+    background-color: #fff;
+}
+
+.description {
+    margin: 10px 0;
+    font-size: 16px;
+    line-height: 20px;
+    background-color: #fff;
+}
+
+.description span {
+    font-weight: bold;
+    margin-right: 10px;
+    background-color: #fff;
+}
+
+.post-time {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 11px;
+    background-color: #fff;
+}
+
+.reaction-wrapper {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    margin-top: -20px;
+    background-color: #fff;
+}
+
+.reaction-wrapper .r-icon {
+    height: 25px;
+    margin: 0;
+    margin-right: 15px;
+    background-color: #fff;
+}
+
+.comment-wrapper {
+    width: 100%;
+    height: 50px;
+    border: 1px solid #dfdfdf;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+}
+
+.comment-wrapper .smile-icon {
+    height: 30px;
+    margin: 0 10px;
+    background-color: #fff;
+}
+
+.comment-box {
+    width: 80%;
+    height: 95%;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    background-color: #fff;
+}
+
+.comment-btn {
+    width: 70px;
+    height: 100%;
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: royalblue; /*change opacity when activated*/
+    cursor: pointer;
+}
+
+.right-col {
+    padding: 20px;
+}
+
+.profile-card {
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.profile-card .card-pic {
+    /* flex: 0 0 auto; */
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+}
+
+.profile-card .card-pic img {
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 50%;
+}
+
+.profile-card .username {
+    font-weight: 450;
+    font-size: 16px;
+}
+
+.sub-text {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 13px;
+    font-weight: 450;
+    margin-top: -13px;
+}
+
+.suggestion {
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: 600;
+    margin: 30px 0 5px 0;
+}
+
+.suggestion-profile .suggestion-pic {
+    /* flex: 0 0 auto; */
+    /* padding: 0;
+    background: none; */
+    margin-right: 10px;
+    display: flex;
+}
+
+.suggestion-pic img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.suggestion-name {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: -10px;
+}
+
+.suggestion-text {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 13px;
+}
+
+.follow-btn {
+    color: royalblue;
+    border: none;
+    font-size: 13px;
+}
+
+.suggestion-profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 250px;
+    margin-bottom: -10px;
+}
+
+.suggestion-wrapper:first-child {
+    flex-grow: 1;
+}
+
+.suggestion-wrapper:nth-child(2) {
+    flex-grow: 1;
+}

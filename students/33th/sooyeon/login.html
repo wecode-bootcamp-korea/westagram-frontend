@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Westagram</title>
+    <link rel="stylesheet" href="style/login.css" />
+    <link rel="stylesheet" href="style/common.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,100&display=swap" rel="stylesheet" />
+    <link rel="icon" href="img/instagram.png" type="image/icon type">
+  </head>
+  <body>
+    <div class="login-container">
+      <h1>Westagram</h1>
+      <form>
+        <input type="text" placeholder="Phone number, username or email address" class="login-input" id="id">
+        <input type="password" placeholder="Password" class="login-input" id="pw" onkeydown="activateBtn()">
+        <button class="login-btn">Log In</button>
+      </form>
+      <div class="divider">OR</div>
+      <div class="fb-wrapper">
+        <div class="fb">
+          <a href="https://facebook.com"><img src="img/facebook.png">
+            Log in with Facebook
+          </a>
+        </div>
+      </div>
+      <div class="forgot-wrapper">
+        <div class="forgot">
+          <a href="https://www.instagram.com/accounts/password/reset/">Forgotten your password?</a>
+        </div>
+      </div>
+    </div>
+    <div class="sign-up">
+      <p>Don't have an account? <a href="https://www.instagram.com/accounts/emailsignup/">Sign up</a></p>
+    </div>
+
+    <script src="js/login.js"></script>
+  </body>
+</html>
+
