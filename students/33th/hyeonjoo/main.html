@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/common.css">
+    <link rel="preconnect" href="https: //fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/14f7212bcc.js" crossorigin="anonymous"></script>
+    <script defer src="js/index.js"></script>
+    <title>Westagram - main</title>
+</head>
+<body>
+    <div class="westagram">
+        <nav>
+            <div class="logo-container">
+                <i class="fa-brands fa-instagram"></i>
+                <span class="logo">Westagram</span>
+            </div>
+            <div class="searchBar-container">
+                <input type="text" class="searchBar" placeholder="검색">
+                <div class="searchPopup"></div>
+                <div class="searchPopup Pointer"></div>
+            </div>
+            <div class="userinfo-container">
+                <i class="fa-regular fa-compass"></i>
+                <i class="fa-regular fa-heart"></i>
+                <button class="profileMenuBtn">
+                    <div class="profileImg-container">
+                        <img src="images/profile02.jpeg" alt="profile image">
+                    </div>
+                    <div class="profilePopup">
+                        <div class="menu-profile">
+                            <i class="fa-regular fa-user"></i>
+                            <p>프로필</p>
+                        </div>
+                        <div class="menu-bookmark">
+                            <i class="fa-regular fa-bookmark"></i>
+                            <p>저장됨</p>
+                        </div>
+                        <div class="menu-settings">
+                            <i class="fa-solid fa-gear"></i>
+                            <p>설정</p>
+                        </div>
+                        <div class="menu-logout">
+                            <p>로그아웃</p>
+                        </div>
+                    </div>
+                    <div class="profilePopup Pointer"></div>
+                </button>
+            </div>
+        </nav>
+        <main>
+            <div class="feeds">
+                <div class="user-profile">
+                    <div>
+                        <div class="profileImg-container">
+                            <img src="images/profile01.jpeg" alt="writer profile">
+                        </div>
+                        <span class="user-id">wecode</span>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-ellipsis"></i>
+                    </div>
+                </div>
+                <article class="main-content">
+                    <div class="contentImg-container">
+                        <img src="images/content01.jpeg" alt="content image">
+                    </div>
+                    <div class="btn-container">
+                        <div>
+                            <i class="fa-solid fa-heart"></i>
+                            <i class="fa-regular fa-comment"></i>
+                            <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                        </div> 
+                        <i class="fa-regular fa-bookmark"></i>
+                    </div>
+                    <div class="content-text">
+                        <p><span>hj_kim</span>님이 좋아합니다.</p>
+                        <p><span>wecode</span> 맥주 다시 개시합니다 :)</p>
+                    </div>
+                </article>
+                <div class="replies">
+                    <input type="text" class="reply-input" placeholder="댓글 달기...">
+                    <button disabled>게시</button>
+                </div>
+            </div>
+            <div class="main-right">
+                <div class="user-id">
+                    <div class="profileImg-container">
+                        <img src="images/profile02.jpeg" alt="profile image">
+                    </div>
+                    <ul>
+                        <li>hj_kim</li>
+                        <li>wecode | 위코드</li>
+                    </ul>
+                </div>
+                <div class="sub-section">
+                    <div class="sub-title">
+                        <span>스토리</span>
+                        <span>모두 보기</span>
+                    </div>
+                    <ul>
+                        <li>
+                            <div class="profileImg-container">
+                                <img src="images/profile01.jpeg" alt="">
+                            </div>
+                            <span>hj_lee</span>
+                        </li>
+                        <li>
+                            <div class="profileImg-container">
+                                <img src="images/profile01.jpeg" alt="">
+                            </div>
+                            <span>hj_park</span>
+                        </li>
+                        <li>
+                            <div class="profileImg-container">
+                                <img src="images/profile01.jpeg" alt="">
+                            </div>
+                            <span>hj_choi</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="sub-section">
+                    <div class="sub-title">
+                        <span>회원님을 위한 추천</span>
+                        <span>모두 보기</span>
+                    </div>
+                    <ul>
+                        <li>
+                            <div class="profileImg-container">
+                                <img src="images/profile01.jpeg" alt="">
+                            </div>
+                            <span>aaaaaaaaaa</span>
+                            <span>팔로우</span>
+                        </li>
+                        <li>
+                            <div class="profileImg-container">
+                                <img src="images/profile01.jpeg" alt="">
+                            </div>
+                            <span>bbbbbbbbbb</span>
+                            <span>팔로우</span>
+                        </li>
+                        <li>
+                            <div class="profileImg-container">
+                                <img src="images/profile01.jpeg" alt="">
+                            </div>
+                            <span>cccccccccc</span>
+                            <span>팔로우</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
