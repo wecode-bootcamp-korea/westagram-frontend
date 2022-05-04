@@ -1,0 +1,426 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    max-width: 1200px;
+    margin: auto;
+}
+.westargram{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    display: none;
+}
+.loginContainer{
+    border: 1px solid lightgray;
+    text-align: center;
+    padding: 20px;
+}
+
+.title{
+    font-family: 'Lobster', cursive;
+    font-weight: lighter;
+    font-size: 80px;
+}
+
+.inputBox{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+}
+.inputBox input{
+    line-height: 40px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    outline: none;
+}
+.inputBox input:focus{
+    border: 1px solid gray;
+}
+.btn{
+    width: 80%;
+    margin: auto;
+    height: 40px;
+    margin-bottom: 80px;
+    margin-top: 10px;
+    border: none;
+    background-color: #b2dffc;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+}
+
+.btnOn{
+    background : #1995f6; 
+    cursor: pointer
+}
+.btnOn:active{
+    background: #b2dffc;
+}
+
+a{
+    text-decoration: none;
+    color: #385185;
+}
+.emailCheck{
+    margin-top: 0;
+    font-size: 13px;
+    color: #b9b9b9;
+
+}
+
+
+
+
+/* ----------------------- */
+
+.mainContainer{
+    text-align: center;
+}
+.navBox{
+    border-bottom: 1px solid #b9b9b9;
+    position: fixed;
+    background-color: white;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+nav{
+    width: 80%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    margin: auto;
+}
+
+.flex1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 2;
+}
+.flex1 img{
+    border-radius: 5px;
+}
+.flex2{
+    flex: 6;
+}
+.flex3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 2;
+}
+
+nav img{
+    width: 30px;
+    height: 30px;
+    margin: 0px 15px;
+    cursor: pointer;
+}
+nav .mainTitle{
+    font-size: 30px;
+    font-family: 'Lobster', cursive;
+    cursor: default;
+}
+.fa-compass{
+    margin-left: 20%;
+}
+nav i{
+    font-size: 30px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+nav .mainInput{
+    width: 250px;
+    height: 30px;
+    border-radius: 5px;
+    border: solid 1px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    opacity: 1;
+    margin: auto;
+    background-color: #eee;
+}
+nav .mainInput input{
+    width: 200px;
+    border: none;
+    text-align: center;
+    overflow: auto;
+    font-size: 15px;
+    background-color: #eee;
+}
+nav .mainInput input:focus{
+    outline: none;
+}
+nav .mainInput i{
+    font-size: 15px;
+    color: #817e7e;
+    margin: 0;
+    cursor: pointer;
+}
+
+
+main{
+    max-width: 80%;
+    display: flex;
+    margin: auto;
+    margin-top: 70px;
+}
+
+main .feeds{
+    flex: 7;
+    margin: 50px 0;
+}
+article{
+    border: 1px solid rgba(180, 180, 180, 0.933);
+    border-radius: 5px;
+}
+
+main .mainRight{
+    flex: 4;
+    margin-top: 50px;
+
+}
+
+.articleHeader{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.articleImg{
+    flex: 1;
+}
+.articleHeader img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid black;
+    cursor: pointer;
+}
+.articleHeader .feedsTitle{
+    flex: 8;
+    text-align: left;
+}
+.articleHeader i{
+    flex: 1;
+}
+.feedsTitle p{
+    font-weight: 100;
+    font-size: 13px;
+    margin: 0;
+    cursor: default;
+}
+.feedsTitle span{
+    font-weight: bold;
+    cursor: pointer;
+}
+.articleHeader i:hover{
+    cursor: pointer;
+}
+.mainImg{
+    height: 70vh;
+}
+
+.mainImg img{
+    width: 100%;
+    height: 70vh;
+}
+
+.iconBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+.iconBox i{
+    font-size: 25px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+.iconBox .fa-heart{
+ margin-left: 15px;
+} 
+.iconBox .fa-bookmark{
+    flex: 1;
+    text-align: right;
+    margin-right: 15px;
+}
+.feedsContent{
+    text-align: left;
+    margin-left: 12px;
+}
+.comment{
+    margin-bottom: 0;
+}
+.time{
+    margin-top: 5px;
+    margin-right: 5px;
+    font-weight: 300;
+    font-size: 12px;
+}
+.mainComment{
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    border-top: 1px solid rgba(180, 180, 180, 0.933);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.commentInput{
+    width: 90%;
+    line-height: 40px;
+    border: none;
+    outline: none;
+}
+.mainComment button{
+    border: none;
+    width: 40px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #b2dffc;
+    background-color: white;
+    font-size: 14px;
+}
+
+.goodBox{
+    display: flex;
+}
+.goodBox i{
+    margin: 0 5px 0 10px;
+    font-size: 12px;
+    margin-top: 5px;
+}
+.heart:hover{
+    color: red;
+    cursor: pointer;
+}
+.fa-delete-left:hover{
+    color: #1995f6;
+    cursor: pointer;
+}
+
+.heartUp{
+    margin-top: 5px;
+    font-weight: 300;
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+
+
+/* ---------------- */
+
+.mainRight{
+    margin-left: 50px;
+}
+
+.mainRightTitle{
+    display: flex;
+    text-align: left;
+    align-items: center;
+}
+.mainRightImg{
+    margin-right: 15px;
+}
+
+.mainRight img{
+    width: 60px;
+    height: 60px;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+
+.mainRightStory{
+    width: 90%;
+    border: 1px solid rgba(180, 180, 180, 0.933);
+    border-radius: 5px;
+    margin: 20px 0;
+}
+.storyTitle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 10px;
+    border-bottom: 1px solid rgba(180, 180, 180, 0.933);
+}
+.storyTitle p{
+    color: rgb(115, 114, 114);
+}
+.storyProfile{
+    text-align: left;
+}
+.storyProfiles{
+    display: flex;
+    margin: 10px 0 10px 10px;
+    align-items: center;
+}
+.storyProfiles img{
+    width: 40px;
+    height: 40px;
+    border: 2px solid #c536a4;
+    cursor: pointer;
+}
+.storyProfiles p{
+    margin-top: 5px;
+    font-size: 11px;
+}
+.recomendImg img{
+    border: 2px solid black;
+    margin: 0;
+}
+.recomendImg{
+    margin-right: 10px;
+}
+.recommend{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.recommend p{
+    font-weight: 100;
+    font-size: 13px;
+    margin: 0;
+    cursor: default;
+}
+.recommend span{
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.follow{
+    margin-left: 50px;
+    cursor: pointer;
+    color: #1995f6;
+}
+.storyTitle span{
+    cursor: pointer;
+}
+
+.nickname{
+    font-weight: bold;
+}
+
+
+/* .mainContainer{
+    display: none;
+} */
+
+@media screen and (max-width:1100px) {
+    .mainRight{
+        display: none;
+    }
+    .flex2{
+        display: none;
+    }
+}

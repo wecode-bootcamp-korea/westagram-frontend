@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="style.css" rel="stylesheet">
+    <script src="login.js" defer></script>
+    <title>Westargram</title>
+</head>
+
+<body>
+    <div class="westargram">
+        <div class="loginContainer">
+            <h1 class="title">Westargram</h1>
+            <div class="inputBox">
+                <input type="text" class="id" placeholder="전화번호, 사용자 이름 또는 이메일">
+                <input type="password" class="password" placeholder="비밀번호">
+                <p class="emailCheck">id : '@', '.' 포함 / pw : 5글자 이상</p>
+            </div>
+            <button class="btn">로그인</button>
+            <div class="serviceBox">
+                <a href="#">비밀번호를 잊으셨나요?</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="mainContainer">
+        <div class="navBox">
+            <nav>
+                <div class="flex1">
+                    <img src="instagram_empty.png">
+                    <p class="mainTitle">Westargram</p>
+                </div>
+                <div class="flex2">
+                    <div class="mainInput">
+                        <input type="text" placeholder="검색">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                </div>
+                <div class="flex3">
+                    <i class="fa-regular fa-compass"></i>
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-regular fa-user"></i>
+                </div>
+            </nav>
+        </div>
+
+        <main>
+            <div class="feeds">
+                <article>
+                    <div class="articleHeader">
+                        <div class="articleImg">
+                            <img src="dinosaur.png">
+                        </div>
+                        <div class="feedsTitle">
+                            <span>wecode_bootcamp</span>
+                            <p>woCode - 위코드</p>
+                        </div>
+                        <i class="fa-solid fa-ellipsis"></i>
+                    </div>
+                    <div class="mainImg">
+                        <img src="mainImg2.avif">
+                    </div>
+                    <div class="iconBox">
+                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-regular fa-comment"></i>
+                        <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                        <i class="fa-regular fa-bookmark"></i>
+                    </div>
+                    <div class="feedsContent">
+                        <p class="like"><img><span style="font-weight: bold;">hengxi</span>님 외 <span>4</span>명이 좋아합니다.
+                        </p>
+                        <div class="commentBox">
+                            <span class="nickname">hengxi</span>
+                            <span class="comment">Good</span>
+                            <div class="goodBox">
+                                <p class="time">1분전</p>
+                                <i class="fa-regular fa-heart heart"></i>
+                                <i class="fa-solid fa-delete-left"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mainComment">
+                        <input class="commentInput" type="text" placeholder="댓글달기...">
+                        <button class="commentPost">게시</button>
+                    </div>
+                </article>
+            </div>
+
+            <div class="mainRight">
+                <div class="mainRightTitle">
+                    <div class="mainRightImg">
+                        <img src="dinosaur.png">
+                    </div>
+                    <div class="feedsTitle">
+                        <span>wecode_bootcamp</span>
+                        <p>woCode | 위코드</p>
+                    </div>
+                </div>
+                <div class="mainRightStory">
+                    <div class="storyTitle">
+                        <p>스토리</p>
+                        <span>모두 보기</span>
+                    </div>
+                    <div class="storyProfile">
+
+                        <div class="storyProfiles">
+                            <div class="mainRightImg">
+                                <img src="dinosaur.png">
+                            </div>
+                            <div class="feedsTitle">
+                                <span>dinosaur</span>
+                                <p>1시간 전</p>
+                            </div>
+                        </div>
+                        <div class="storyProfiles">
+                            <div class="mainRightImg">
+                                <img src="dinosaur.png">
+                            </div>
+                            <div class="feedsTitle">
+                                <span>dinosaur</span>
+                                <p>1시간 전</p>
+                            </div>
+                        </div>
+                        <div class="storyProfiles">
+                            <div class="mainRightImg">
+                                <img src="dinosaur.png">
+                            </div>
+                            <div class="feedsTitle">
+                                <span>dinosaur</span>
+                                <p>1시간 전</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="mainRightStory">
+                    <div class="storyTitle">
+                        <p>회원님을 위한 추천</p>
+                        <span>모두 보기</span>
+                    </div>
+                    <div class="storyProfile">
+
+                        <div class="storyProfiles">
+                            <div class="recomendImg">
+                                <img src="dinosaur.png">
+                            </div>
+                            <div class="recommend">
+                                <div>
+                                    <span>dinosaur</span>
+                                    <p>회원님을 팔로우합니다.</p>
+                                </div>
+                                <span class="follow">팔로우</span>
+                            </div>
+                        </div>
+                        <div class="storyProfiles">
+                            <div class="recomendImg">
+                                <img src="dinosaur.png">
+                            </div>
+                            <div class="recommend">
+                                <div>
+                                    <span>dinosaur</span>
+                                    <p>회원님을 팔로우합니다.</p>
+                                </div>
+                                <span class="follow">팔로우</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+</body>
+
+</html>
