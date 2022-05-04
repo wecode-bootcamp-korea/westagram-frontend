@@ -9,22 +9,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/14f7212bcc.js" crossorigin="anonymous"></script>
-    <script defer src="js/index.js"></script>
+    <script defer src="js/main.js"></script>
     <title>Westagram - main</title>
 </head>
 <body>
-    <div class="westagram">
+    <section class="westagram">
         <nav>
-            <div class="logo-container">
+            <div class="logo-section">
                 <i class="fa-brands fa-instagram"></i>
                 <span class="logo">Westagram</span>
             </div>
-            <div class="searchBar-container">
+            <div class="search-section">
                 <input type="text" class="searchBar" placeholder="검색">
                 <div class="searchPopup"></div>
                 <div class="searchPopup Pointer"></div>
             </div>
-            <div class="userinfo-container">
+            <div class="userMenu-section">
                 <i class="fa-regular fa-compass"></i>
                 <i class="fa-regular fa-heart"></i>
                 <button class="profileMenuBtn">
@@ -53,23 +53,21 @@
             </div>
         </nav>
         <main>
-            <div class="feeds">
-                <div class="user-profile">
+            <section class="feeds">
+                <div class="writer-profile">
                     <div>
                         <div class="profileImg-container">
                             <img src="images/profile01.jpeg" alt="writer profile">
                         </div>
-                        <span class="user-id">wecode</span>
+                        <span>wecode</span>
                     </div>
-                    <div>
-                        <i class="fa-solid fa-ellipsis"></i>
-                    </div>
+                    <i class="fa-solid fa-ellipsis"></i>
                 </div>
                 <article class="main-content">
                     <div class="contentImg-container">
                         <img src="images/content01.jpeg" alt="content image">
                     </div>
-                    <div class="btn-container">
+                    <div class="button-section">
                         <div>
                             <i class="fa-solid fa-heart"></i>
                             <i class="fa-regular fa-comment"></i>
@@ -77,17 +75,17 @@
                         </div> 
                         <i class="fa-regular fa-bookmark"></i>
                     </div>
-                    <div class="content-text">
-                        <p><span>hj_kim</span>님이 좋아합니다.</p>
-                        <p><span>wecode</span> 맥주 다시 개시합니다 :)</p>
+                    <div class="text-section">
+                        <p><span class="user-id">hj_kim</span>님이 좋아합니다.</p>
+                        <p><span class="user-id">wecode</span> 맥주 다시 개시합니다 :)</p>
                     </div>
                 </article>
-                <div class="replies">
-                    <input type="text" class="reply-input" placeholder="댓글 달기...">
+                <div class="reply-section">
+                    <input type="text" class="reply" placeholder=" 댓글 달기...">
                     <button disabled>게시</button>
                 </div>
-            </div>
-            <div class="main-right">
+            </section>
+            <section class="main-right">
                 <div class="user-id">
                     <div class="profileImg-container">
                         <img src="images/profile02.jpeg" alt="profile image">
@@ -152,8 +150,8 @@
                         </li>
                     </ul>
                 </div>
-            </div>
+            </section>
         </main>
-    </div>
+    </section>
 </body>
 </html>
