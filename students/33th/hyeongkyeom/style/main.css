@@ -1,7 +1,9 @@
-/* MainNav */
+
 body {
     background-color: #FAFAFA;
 }
+
+/* MainNav */
 
 .mainNav {
     z-index: 1;
@@ -111,7 +113,7 @@ body {
 }
 
 /* menubar */
-.profile_menubar {
+.profileMenubar {
     position: absolute;
     right: 10px;
     top: 60px;
@@ -121,7 +123,7 @@ body {
     border-radius: 5px;
 }
 
-.profile_menubar:after {
+.profileMenubar:after {
     border-top: 0px solid transparent;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
@@ -134,7 +136,7 @@ body {
 
 
 
-.profile_menubar li {
+.profileMenubar li {
     display: flex;
     align-items: center;
     list-style: none;
@@ -150,11 +152,11 @@ body {
     border-top: 1px solid #DBDBDB;
 }
 
-.profile_menubar li:hover {
+.profileMenubar li:hover {
     background-color: #FAFAFA;
 }
 
-.profile_menubar i {
+.profileMenubar i {
     margin: 10px;
 }
 
@@ -170,6 +172,8 @@ body {
     align-items: center;
     padding-right: 250px;
 }
+
+/* feeds */
 
 .mainFeed {
     border: 1px solid #DBDBDB;
@@ -191,7 +195,7 @@ body {
     border-bottom: 1px solid #DBDBDB;
 }
 
-.feedProfile_name {
+.feedProfileName {
     position: absolute;
     padding-left: 55px;
     padding-top: 5px;
@@ -200,29 +204,30 @@ body {
     flex-direction: column;
 }
 
-.feedProfile_img {
+.feedProfileImg {
     border-radius: 100%;
     width: 40px;
     height: 40px;
 }
 
-.feedProfile_name p {
+.feedProfileId{
     margin: 0;
 }
 
-.profile_location {
+.feedProfileLocation {
     color: #8e8e8e;
     font-size: 12px;
+    margin: 0;
 }
 
-.feedProfile i {
+#feedProfileMore {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-right: 20px;
 }
 
-.feedImg img{
+.yeonTan{
     width: 100%;
     height: 100%;
 }
@@ -232,11 +237,6 @@ body {
     display: flex;
     justify-content: space-between;
     border-bottom : 1px solid #EFEFEF;
-}
-
-#feed_likeBtn {
-    cursor: pointer;
-    transition: 0.3s;
 }
 
 .feedComment {
@@ -265,70 +265,74 @@ body {
     text-indent: 1.5em;
 }
 
-.feedBottom_likeIcon {
+.feedBottomLikesIcon {
     display: flex;
     justify-content: space-between;
     margin: auto 15px;
 }
 
-.feedBottom_likeIcon i {
+.feedBottomLikesIcon i {
     font-size: 25px;
     padding: 6px;
-
 }
 
-.feedBottom_likeWho {
+#feedHeartBtn {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.feedBottomWhoLikes {
     display: flex;
     align-items: center;
     margin: 10px 20px;
 }
 
-.like_profile {
+.WhoLikesProfile {
     border-radius: 100%;
     width: 30px;
     height: 30px;
     margin-right: 10px;
 }
 
-.feedBottom_desc {
+.feedBottomDesc {
     display: flex;
     align-items: center;
     margin: 5px 20px 10px 20px;
 }
 
-.feedBottom_comment {
+.feedBottomComment {
     display: flex;
     flex-direction: column;
     margin: 5px 20px 10px 20px;
 }
 
-.comment_desc {
+.commentDesc {
     position: relative;
     display: flex;
     flex-direction: row;
 }
 
-.comment_nickname {
+.descNickname {
     margin-right: 5px;
 }
 
-.comment_txt {
+.commentTxt {
     margin: 0;
 }
 
-.comment_Btn {
+.commentBtn {
     position: absolute;
     right: 0;
 }
 
-#comment_like {
+#commentLike {
     font-size: 12px;
     cursor: pointer;
     transition: 0.3s;
 }
 
 
-.comment_delete{
+.commentDelete{
     background-color: white;
     border: none;
     font-size: 12px;
@@ -337,13 +341,13 @@ body {
     transition: 0.3s;
 }
 
-.comment_delete:hover {
+.commentDelete:hover {
     opacity: 1;
 }
 
 
 
-.main_right {
+.mainRight {
     position: fixed;
     right: 80px;
     top: 90px;
@@ -354,13 +358,13 @@ body {
     display: flex;
 }
 
-.mainProfile_img {
+.mainProfileImg {
     border-radius: 100%;
     width: 60px;
     height: 60px;
 }
 
-.mainProfile_name {
+.mainProfileName {
     position: absolute;
     padding-left: 70px;
     padding-top: 13px;
@@ -369,7 +373,7 @@ body {
     flex-direction: column;
 }
 
-.mainProfile_name p {
+.mainProfileName p {
     margin: 0;
     color: #8e8e8e;
     font-size: 12px;
@@ -399,7 +403,7 @@ body {
     border-radius: 5px;
 }
 
-.storyBorder_title {
+.storyBorderTitle {
     display: flex;
     justify-content: space-between;
     margin: 13px;
@@ -413,7 +417,7 @@ body {
     overflow: auto;
 }
 
-.story_img {
+.storyImg {
     border-radius: 100%;
     width: 45px;
     height: 45px;
@@ -427,17 +431,17 @@ body {
 
 }
 
-.storyProfile_one {
+.storyProfileOne {
     display: flex;
     margin-bottom: 20px;
 }
 
-.storyProfile_one p {
+.storyProfileOne p {
     margin: 0;
     color: #8e8e8e;
 }
 
-.storyProfile_name {
+.storyProfileName {
     margin-top: 3px;
 }
 
@@ -449,18 +453,18 @@ body {
     overflow: auto;
 }
 
-.recommendBorder_title {
+.recommendBorderTitle {
     display: flex;
     justify-content: space-between;
     margin: 13px;
 }
 
-.recommendProfile_one {
+.recommendProfileOne {
     display: flex;
     margin-bottom: 20px;
 }
 
-.recommend_img {
+.recommendImg {
     border-radius: 100%;
     width: 45px;
     height: 45px;
@@ -468,21 +472,21 @@ body {
     cursor: pointer;
 }
 
-.recommendProfile_name {
+.recommendProfileName {
     margin-top: 3px;
 }
 
-.recommendProfile_name b:hover{
+.recommendProfileName b:hover{
     text-decoration-line: underline;
     cursor: pointer;
 }
 
-.recommendProfile_one p {
+.recommendProfileOne p {
     margin: 0;
     color: #8e8e8e;
 }
 
-.recommendProfile_followBtn {
+.recommendProfileFollowBtn {
     background-color: white;
     font-size: 17px;
     color: #3B99EF;
@@ -493,3 +497,8 @@ body {
     cursor: pointer;
 }
 
+@media (max-width: 800px) {
+    .main_right {
+        display: none;
+    }
+}

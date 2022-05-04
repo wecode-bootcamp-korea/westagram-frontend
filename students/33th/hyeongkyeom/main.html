@@ -21,23 +21,14 @@
             <i id="nav_searchIcon" class="fa-solid fa-magnifying-glass"></i><input class="navSearch" type="search" name="q" placeholder="검색">
         </div>
         <div class="searchBar" style="display: none;">
-            <li>
-                <img class="searchImg" src="img/profile/pro1.jpeg">
-                <div class="searchUser">
-                    <span class="searchId">hang_ke_mi</span>
-                    <p class="searchName">김형겸</p>
-                </div>
-                
-            </li>
         </div>
         <div class="mainNavicon">
-            
             <img src="img/nav/explore.png" alt="explore">
             <img src="img/nav/heart.png" alt="heart">
             <img src="img/nav/profile.png" alt="profile">
             <img class="navProfile" src="img/main/mainProfile.jpeg">
         </div>
-        <div class="profile_menubar" style="display: none;">
+        <div class="profileMenubar" style="display: none;">
                 <li><i class="fa-regular fa-circle-user"></i><p>프로필</p></li>
                 <li><i class="fa-regular fa-bookmark"></i><p>저장됨</p></li>
                 <li><i class="fa-solid fa-gear"></i><p>설정</p></li>
@@ -51,37 +42,37 @@
         <div class="feeds">
             <article class="mainFeed">
                 <div class="feedProfile">
-                    <img class="feedProfile_img" src="img/main/mainProfile.jpeg">
-                    <div class="feedProfile_name">
-                        <p><b>hang_ke_mi</b></p>
-                        <p class="profile_location">WeCode - 위코드</p>  
+                    <img class="feedProfileImg" src="img/main/mainProfile.jpeg">
+                    <div class="feedProfileName">
+                        <p class="feedProfileId"><b>hang_ke_mi</b></p>
+                        <p class="feedProfileLocation">WeCode - 위코드</p>  
                     </div>
-                    <i class="fa-solid fa-ellipsis"></i>
+                    <i id="feedProfileMore" class="fa-solid fa-ellipsis"></i>
                 </div>
-                <div class="feedImg">
-                    <img src="img/main/feedImage.jpeg">
+                <div class="feedmainImg">
+                    <img class="yeonTan" src="img/main/feedImage.jpeg">
                 </div>
                 <div class="feedBottom">
-                    <div class="feedBottom_like">
-                        <div class="feedBottom_likeIcon">
-                            <div class="icon_left">
-                                <i id="feed_likeBtn" onclick=feedLikeBtn() class="fa-regular fa-heart"></i>
+                    <div class="feedBottomLikes">
+                        <div class="feedBottomLikesIcon">
+                            <div class="feedBottomLikesIconLeft">
+                                <i id="feedHeartBtn" onclick=feedLikeBtn() class="fa-regular fa-heart"></i>
                                 <i class="fa-regular fa-comment"></i>
                                 <i class="fa-solid fa-arrow-up-from-bracket"></i>
                             </div>
-                            <div class="icon_right">
+                            <div class="feedBottomLkesIconRight">
                                 <i class="fa-regular fa-bookmark"></i>
                             </div>    
                         </div>
-                        <div class="feedBottom_likeWho">
-                            <img class="like_profile" src="img/main/wecode.png"> <span class="like_txt"><b>wecode_bootcamp</b>님 <b>외 여러 명</b>이 좋아합니다</span>
+                        <div class="feedBottomWhoLikes">
+                            <img class="WhoLikesProfile" src="img/main/wecode.png"> <span class="like_txt"><b>wecode_bootcamp</b>님 <b>외 여러 명</b>이 좋아합니다</span>
                         </div>
                         
                     </div> 
-                    <div class="feedBottom_desc">
-                        <span class="comment_nickname"><b>hang_ke_mi</b></span><span class="comment_txt">연탄이 커여웡! 🥰</span>
+                    <div class="feedBottomDesc">
+                        <span class="descNickname"><b>hang_ke_mi</b></span><span class="descTxt">연탄이 커여웡! 🥰</span>
                     </div>
-                    <div class="feedBottom_comment">                    
+                    <div class="feedBottomComment">                    
                     </div>
                 </div>
             </article>
@@ -89,50 +80,50 @@
                     <input class="inputComment" type="text" placeholder="댓글 달기..."><button class="addComment" disabled>게시</button>
                 </div>
         </div>
-        <div class="main_right">
+        <div class="mainRight">
             <div class="mainProfile">
-                <img class="mainProfile_img" src="img/main/mainProfile.jpeg">
-                <div class="mainProfile_name">
+                <img class="mainProfileImg" src="img/main/mainProfile.jpeg">
+                <div class="mainProfileName">
                     <span><b>hang_ke_mi</b></span>
                     <p>김형겸</p>
                 </div>
             </div>
             <div class="mainStory">
                 <section class="storyBorder">
-                    <div class="storyBorder_title">
+                    <div class="storyBorderTitle">
                         <span>스토리</span> <span><b>모두 보기</b></span>
                     </div>
                     <div class="storyProfile">
-                        <div class="storyProfile_one">
-                            <img class="story_img" src="img/profile/pro1.jpeg">
-                            <div class="storyProfile_name">
+                        <div class="storyProfileOne">
+                            <img class="storyImg" src="img/profile/pro1.jpeg">
+                            <div class="storyProfileName">
                                 <span><b>all.about.seoul.trip</b></span>
                                 <p>5분 전</p>
                             </div>
                         </div>
-                        <div class="storyProfile_one">
-                            <img class="story_img" src="img/profile/pro2.jpeg">
-                            <div class="storyProfile_name">
+                        <div class="storyProfileOne">
+                            <img class="storyImg" src="img/profile/pro2.jpeg">
+                            <div class="storyProfileName">
                                 <span><b>kangnam11</b></span>
                                 <p>30분 전</p>
                             </div>
                         </div>
-                        <div class="storyProfile_one">
-                            <img class="story_img" src="img/profile/pro3.jpeg">
-                            <div class="storyProfile_name">
+                        <div class="storyProfileOne">
+                            <img class="storyImg" src="img/profile/pro3.jpeg">
+                            <div class="storyProfileName">
                                 <span><b>nyamnyamang</b></span>
                                 <p>1시간 전</p>
                             </div>
                         </div>
-                        <div class="storyProfile_one">
-                            <img class="story_img" src="img/profile/pro3.jpeg">
-                            <div class="storyProfile_name">
+                        <div class="storyProfileOne">
+                            <img class="storyImg" src="img/profile/pro3.jpeg">
+                            <div class="storyProfileName">
                                 <span><b>nyamnyamang</b></span>
                                 <p>1시간 전</p>
                             </div>
-                        </div><div class="storyProfile_one">
-                            <img class="story_img" src="img/profile/pro3.jpeg">
-                            <div class="storyProfile_name">
+                        </div><div class="storyProfileOne">
+                            <img class="storyImg" src="img/profile/pro3.jpeg">
+                            <div class="storyProfileName">
                                 <span><b>nyamnyamang</b></span>
                                 <p>1시간 전</p>
                             </div>
@@ -142,68 +133,68 @@
             </div>
             <div class="mainRecommend">
                 <section class="recommendBorder">
-                    <div class="recommendBorder_title">
+                    <div class="recommendBorderTitle">
                         <span>회원님을 위한 추천</span> <span><b>모두 보기</b></span>
                     </div>
                     
                     <div class="recommendProfile">
-                        <div class="recommendProfile_one">
-                            <img class="recommend_img" src="img/profile/pro4.jpeg">
-                            <div class="recommendProfile_name">
+                        <div class="recommendProfileOne">
+                            <img class="recommendImg" src="img/profile/pro4.jpeg">
+                            <div class="recommendProfileName">
                                 <span><b>insight.co.kr</b></span>
                                 <p>회원님을 팔로우합니다</p>
                             </div>
-                            <div class="recommendProfile_follow">
-                                <button class="recommendProfile_followBtn">팔로우</button>
+                            <div class="recommendProfileFollow">
+                                <button class="recommendProfileFollowBtn">팔로우</button>
                             </div>
                         </div>
                         
-                        <div class="recommendProfile_one">
-                            <img class="recommend_img" src="img/profile/pro5.jpeg">
-                            <div class="recommendProfile_name">
+                        <div class="recommendProfileOne">
+                            <img class="recommendImg" src="img/profile/pro5.jpeg">
+                            <div class="recommendProfileName">
                                 <span><b>greedeat</b></span>
                                 <p>회원님을 팔로우합니다</p>
                             </div>
-                            <div class="recommendProfile_follow">
-                                <button class="recommendProfile_followBtn">팔로우</button>
+                            <div class="recommendProfileFollow">
+                                <button class="recommendProfileFollowBtn">팔로우</button>
                             </div>
                         </div>
-                        <div class="recommendProfile_one">
-                            <img class="recommend_img" src="img/profile/pro6.jpeg">
-                            <div class="recommendProfile_name">
+                        <div class="recommendProfileOne">
+                            <img class="recommendImg" src="img/profile/pro6.jpeg">
+                            <div class="recommendProfileName">
                                 <span><b>jmt_zero</b></span>
                                 <p>회원님을 팔로우합니다</p>
                             </div>
-                            <div class="recommendProfile_follow">
-                                <button class="recommendProfile_followBtn">팔로우</button>
+                            <div class="recommendProfileFollow">
+                                <button class="recommendProfileFollowBtn">팔로우</button>
                             </div>
                         </div>
-                        <div class="recommendProfile_one">
-                            <img class="recommend_img" src="img/profile/pro6.jpeg">
-                            <div class="recommendProfile_name">
+                        <div class="recommendProfileOne">
+                            <img class="recommendImg" src="img/profile/pro6.jpeg">
+                            <div class="recommendProfileName">
                                 <span><b>jmt_zero</b></span>
                                 <p>회원님을 팔로우합니다</p>
                             </div>
-                            <div class="recommendProfile_follow">
-                                <button class="recommendProfile_followBtn">팔로우</button>
+                            <div class="recommendProfileFollow">
+                                <button class="recommendProfileFollowBtn">팔로우</button>
                             </div>
-                        </div><div class="recommendProfile_one">
-                            <img class="recommend_img" src="img/profile/pro6.jpeg">
-                            <div class="recommendProfile_name">
+                        </div><div class="recommendProfileOne">
+                            <img class="recommendImg" src="img/profile/pro6.jpeg">
+                            <div class="recommendProfileName">
                                 <span><b>jmt_zero</b></span>
                                 <p>회원님을 팔로우합니다</p>
                             </div>
-                            <div class="recommendProfile_follow">
-                                <button class="recommendProfile_followBtn">팔로우</button>
+                            <div class="recommendProfileFollow">
+                                <button class="recommendProfileFollowBtn">팔로우</button>
                             </div>
-                        </div><div class="recommendProfile_one">
-                            <img class="recommend_img" src="img/profile/pro6.jpeg">
-                            <div class="recommendProfile_name">
+                        </div><div class="recommendProfileOne">
+                            <img class="recommendImg" src="img/profile/pro6.jpeg">
+                            <div class="recommendProfileName">
                                 <span><b>jmt_zero</b></span>
                                 <p>회원님을 팔로우합니다</p>
                             </div>
-                            <div class="recommendProfile_follow">
-                                <button class="recommendProfile_followBtn">팔로우</button>
+                            <div class="recommendProfileFollow">
+                                <button class="recommendProfileFollowBtn">팔로우</button>
                             </div>
                         </div>
                     </div>

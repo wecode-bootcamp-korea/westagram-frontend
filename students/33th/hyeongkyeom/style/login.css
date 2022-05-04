@@ -4,14 +4,17 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    height: 100vh;
+    height: 100%;
+    margin: 20px auto;
 }
 
+/* mainBorder */
+
 .mainBorder {
-    padding: 20px;
+    padding: 2rem;
     border: 1px solid #EBEBEB;
-    width: 600px;
-    margin: 10px auto;
+    width: 37.5rem;
+    margin: 1rem auto;
 }
 
 .mainLogo {
@@ -30,9 +33,9 @@
 }
 
 .mainLogin input {
-    width: 400px;
+    width: 25rem;
     height: 50px;
-    margin: 5px;
+    margin: 0.5rem;
     border: 1px solid #F3F3F3;
     border-radius: 5px;
     background-color: #FAFAFA;
@@ -45,16 +48,16 @@
 
 
 .facebookLogin {
-    margin: 15px;
+    margin: 0.5rem;
     font-size: 18px;
     color: #1C4877;
     cursor: pointer;
 }
 
 .loginBtn {
-    width: 400px;
-    height: 40px;
-    margin: 5px;
+    width: 25rem;
+    height: 2.5rem;
+    margin: 0.5rem;
     border: none;
     border-radius: 5px;
     color: white;
@@ -71,31 +74,28 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px;
+    margin: 0.5rem;
 }
 
-.askPwd a{
+.forgetPwd {
+    padding-top: 15px;
     text-decoration-line: none;
-    color: #1C4877;
-    font-weight: bold;
+    text-decoration-color: rgba(var(--fe0,0,55,107),1);;
 }
+
+/* signBorder */
 
 .signBorder {
     padding: 20px;
     border: 1px solid #EBEBEB;
-    width: 600px;
-    margin: 10px auto;
+    width: 37.5rem;
+    margin: 0.5rem auto;
 }
 
-.signBorder a {
+.signUplink{
+    text-decoration-line: none;
     color: #289DF7;
+    font-weight: bold;
     cursor: pointer;
 }
 
-.comment_delete {
-    opacity: 0;
-}
-
-.comment_delete:hover {
-    opacity: 1;
-}

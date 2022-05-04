@@ -1,10 +1,10 @@
 const commentTxt = document.querySelector('.inputComment');
 const commentBtn = document.querySelector('.addComment');
-const commentList = document.querySelector('.feedBottom_comment');
-const commentDelete = document.querySelector('.comment_delete');
-const commentLike = document.querySelector('#comment_like');
-const feedLike = document.querySelector('#feed_likeBtn');
-const navMenubar = document.querySelector('.profile_menubar');
+const commentList = document.querySelector('.feedBottomComment');
+const commentDelete = document.querySelector('.commentDelete');
+const commentLike = document.querySelector('#commentLike');
+const feedLike = document.querySelector('#feedHeartBtn');
+const navMenubar = document.querySelector('.profileMenubar');
 const navProfile = document.querySelector('.navProfile');
 const navSearch = document.querySelector('.navSearch');
 const searchBar = document.querySelector('.searchBar');
@@ -29,13 +29,13 @@ const addComment = () => {
     const like = document.createElement('i');
     const deleteBtn = document.createElement('button');
 
-    comment.classList.add('comment_desc');
-    nickname.classList.add('comment_nickname');
-    mainText.classList.add('comment_txt');
-    btn.classList.add('comment_Btn');
+    comment.classList.add('commentDesc');
+    nickname.classList.add('commentNickname');
+    mainText.classList.add('commentTxt');
+    btn.classList.add('commentBtn');
     like.setAttribute('class', 'fa-regular fa-heart');
-    like.setAttribute('id', 'comment_like');
-    deleteBtn.classList.add('comment_delete');
+    like.setAttribute('id', 'commentLike');
+    deleteBtn.classList.add('commentDelete');
 
     nickname.innerHTML = 'hang_ke_mi';
     mainText.innerText = commentTxt.value;
@@ -90,6 +90,8 @@ const feedLikeBtn = () => {
         feedLike.style.color = "black";
     }
 }
+
+
     
 const openMenubar = () => {
     if (navMenubar.style.display === 'none') {
@@ -106,6 +108,7 @@ navProfile.addEventListener('click', () => {
 const showSearchBar = () => {
     if(!(navSearch.value)) {
         searchBar.style.display = 'none';
+        
     } else {
         searchBar.style.display = 'block';
     }
@@ -120,37 +123,37 @@ const users = [
         id:0,
         userName: "ee._.vv",
         descName: "김은정",
-        img: "img/search_profile/spro1.jepg"
+        img: "img/search_profile/spro1.jpeg"
     },
     {
         id:1,
-        userName: "ee._.vv",
-        descName: "김은정",
-        img: "img/search_profile/spro1.jepg"
+        userName: "gudrua0531",
+        descName: "김정준",
+        img: "img/search_profile/spro2.jpeg"
     },
     {
         id:2,
-        userName: "ee._.vv",
-        descName: "김은정",
-        img: "img/search_profile/spro1.jepg"
+        userName: "kyeom1997",
+        descName: "신윤지",
+        img: "img/search_profile/spro3.jpeg"
     },
     {
         id:3,
-        userName: "ee._.vv",
-        descName: "김은정",
-        img: "img/search_profile/spro1.jepg"
+        userName: "goww1357",
+        descName: "장수연",
+        img: "img/search_profile/spro4.jpeg"
     },
     {
         id:4,
-        userName: "ee._.vv",
-        descName: "김은정",
-        img: "img/search_profile/spro1.jepg"
+        userName: "wecode_bootcamp",
+        descName: "위코드",
+        img: "img/search_profile/spro5.jpeg"
     },
 ];
 
 console.log(navSearch.value);
 
-const searchWesta = (e) => {
+navSearch.addEventListener('keyup', function(e) {
     const searchList = document.createElement('li');
     const searchImg = document.createElement('img');
     const searchId = document.createElement('span');
@@ -158,9 +161,10 @@ const searchWesta = (e) => {
     const searchUser = document.createElement('div');
 
     for (i=0; i < users.length; i++) {
-        if((e.target.value).includes(users[i].userName || users[i].descName)) {
+        if((users[i].userName || users[i].descName).includes(e.target.value)) {
             searchList;
             searchImg.setAttribute('src', users[i].img);
+            searchImg.classList.add('searchImg')
             searchId.classList.add('searchId');
             searchId.innerHTML = users[i].userName;
             searchName.classList.add('searchName');
@@ -173,12 +177,9 @@ const searchWesta = (e) => {
             searchList.append(searchUser);
             searchBar.append(searchList);
         }
-    }   
-}
-
-navSearch.addEventListener('input', function() {
-    searchWesta();
+    }
+    
+    console.log(e.target.value);
 })
 
 console.log(users[1].userName);
-console.log(e.target.value);
