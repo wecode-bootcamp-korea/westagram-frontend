@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background : rgb(247, 245, 245);
+    width : 100%;
+    height : 100%;
+}
+input,button,a {
+    display : block;
+}
+a:visited {
+    color:#58595b;
+    text-decoration: none;
+}
+.container {
+    max-width : 350px;
+    height : 500px;
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    margin : 5vh auto;
+}
+.loginPage {
+    width : 95%;
+    height : 95%;
+    border : 1px solid #dbdbdb;
+    border-radius: 1px;
+    background: white;
+}
+.mainLogo {
+    font-size : 3rem;
+    width : 100%;
+    height : 15vh;
+    padding : 5%;
+    text-align: center;
+    margin-top : 40px;
+}
+.inputId, .inputPassword, .loginBtn {
+    width : 80%;
+    height : 30px;
+    margin : 0 auto 10px auto;
+}
+.inputId, .inputPassword {
+    background-color: #FAFAFA;
+    border-radius: 2px;
+    border : 1px solid #DBDBDB;
+    font-size : 12px;
+    padding-left : 5px;
+}
+
+.loginBtn {
+    background : #0095f6;
+    border-radius : 2px;
+    color : white;
+    font-weight: bold;
+    cursor : not-allowed;
+    opacity : 0.6;
+    transition: 0.3s;
+}
+.passwordFind {
+    width : 80%;
+    height : 30px;
+    text-decoration: none;
+    text-align:center;
+    margin-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size : 14px;
+}
+.activate {
+    opacity : 1;
+    cursor : pointer;
+}
