@@ -32,50 +32,44 @@
 
     <div class="mainPage">
         <nav>
-            <!-- <div class="navBox"> -->
-                <div class="flex1">
-                    <img src="instagram_empty.png">
-                    <p class="mainTitle">Westargram</p>
-                </div>
-                <div class="flex2">
-                    <div class="mainInput">
-                        <input class="searchInput" type="text" placeholder="검색">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-
-                        <div class="idFindBox">
-                            <div class="idFindContent">
-                                <img class="searchImg" src="dinosaur.png">
-                                <span class="searchText">dinosaur</span>
-                            </div>
+            <div class="navImgTitle">
+                <img alt="instargramImg" class="navImg" src="instagram_empty.png">
+                <p class="navTitle">Westargram</p>
+            </div>
+            <div class="navInputFlex">
+                <div class="navInputBox">
+                    <input class="navInput" type="text" placeholder="검색">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <!-- <div class="idFindBox">
+                        <div class="idFindContent">
+                            <img class="searchImg" src="dinosaur.png">
+                            <span class="searchText">dinosaur</span>
                         </div>
-
-                    </div>
+                    </div> -->
                 </div>
-                <div class="flex3">
-                    <i class="fa-regular fa-compass"></i>
-                    <i class="fa-regular fa-heart"></i>
-                    <i class="fa-regular fa-user"></i>
-                </div>
-            <!-- </div> -->
+            </div>
+            <div class="navIconFlex">
+                <i class="fa-regular fa-compass navIcon"></i>
+                <i class="fa-regular fa-heart navIcon"></i>
+                <i class="fa-regular fa-user navIcon"></i>
+            </div>
         </nav>
 
 
         <main>
-            <div class="feeds">
+            <section>
                 <article>
                     <div class="articleHeader">
-                        <div class="articleImg">
-                            <img src="dinosaur.png">
+                        <img alt="profile" class="articleProfileImg" src="dinosaur.png">
+                        <div class="articleProfileTitle">
+                            <span class="articleNickname">wecode_bootcamp</span>
+                            <p class="articlePlace">woCode - 위코드</p>
                         </div>
-                        <div class="feedsTitle">
-                            <span>wecode_bootcamp</span>
-                            <p>woCode - 위코드</p>
-                        </div>
-                        <i class="fa-solid fa-ellipsis"></i>
+                        <i class="fa-solid fa-ellipsis articleIcon"></i>
                     </div>
-                    <div class="mainImg">
-                        <img src="mainImg2.avif">
-                    </div>
+                    <!-- <div class="mainImg"> -->
+                        <img alt="article image" class="articleImg" src="mainImg2.avif">
+                    <!-- </div> -->
                     <div class="iconBox">
                         <i class="fa-regular fa-heart"></i>
                         <i class="fa-regular fa-comment"></i>
@@ -100,7 +94,7 @@
                         <button class="commentPost">게시</button>
                     </div>
                 </article>
-            </div>
+            </section>
 
             <div class="mainRight">
                 <div class="mainRightTitle">
@@ -186,6 +180,7 @@
                 </div>
             </div>
         </main>
+
     </div>
 
 </body>
