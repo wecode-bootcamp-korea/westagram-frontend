@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>westagram__main</title>
+    <link rel="stylesheet" href="/style/common.css">
+    <link rel="stylesheet" href="/style/main.css">
+    <!-- reset.css 순서에 유의하자 -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/6c0b3ad7d7.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+        <div class="icon--left">
+            <div class="icon--left__img">
+                <img src="/img/instagram.png" alt="인스타로고">
+            </div>
+            <span>Westagram</span>
+        </div>
+        <div class="search">
+            <i class="fas fa-search"></i>
+            <span>검색</span>
+        </div>
+        <div class="icon--right">
+            <img src="/img/explore.png" alt="">
+            <img src="/img/heart.png" alt="">
+            <img src="/img/profile.png" alt="">
+        </div>
+    </nav>
+    <main>
+        <section class="feeds">
+            <article>
+                <div class="user">
+                    <div class="profile__container">
+                        <div class="myprofile">
+                            <img src="/img/face.jpg" alt="신윤지">
+                        </div>
+                        <span>Yoonji</span>
+                    </div>
+                    <div class="user__icon">
+                        <i class="fas fa-ellipsis-h"></i>
+                    </div>
+                </div>
+                <div class="photo">
+                    <img src="/img/snake.jpg" alt="신복순">
+                </div>
+                <div class="reaction__container">
+                <div class="reaction">
+                    <div class="reaction__left">
+                        <i class="fas fa-heart"></i>
+                        <i class="far fa-comment"></i>
+                        <i class="far fa-share-square"></i>
+                    </div>
+                    <div class="reaction__right">
+                        <i class="fas fa-bookmark"></i>
+                    </div>
+                </div>
+                    <div class="like">
+                        <div class="like__profile">
+                            <img src="/img/like__profile.jpg" alt="박계영">
+                        </div>
+                        <p class="like__text"><span>Sally</span>님 <span>외 10명</span>이 좋아합니다</p>
+                    </div>
+                    <!-- 리플 추가할 div -->
+                    <div class="reply"></div>
+                    <div class="time">42분 전</div>
+                </div>
+                <div class="reply__input">
+                    <input class="reply__input__text" type="text" placeholder="댓글 달기...">
+                    <button class="reply__input__btn">게시</button>
+                </div>
+            </article>
+        </section>
+        <aside class="main-right">
+            <div class="myId"></div>
+            <div class="story"></div>
+            <div class="recommendation"></div>
+            <div class="category"></div>
+            <div class="copyright"></div>
+        </aside>
+    </main>
+</body>
+</html>
