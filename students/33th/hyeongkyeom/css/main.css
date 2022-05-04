@@ -1,0 +1,495 @@
+/* MainNav */
+body {
+    background-color: #FAFAFA;
+}
+
+.mainNav {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #DBDBDB;
+    width: 100%;
+    height: 60px;
+    background-color: white;
+    font-size: 25px;
+}
+
+.mainNavLogo {
+    margin-left: 40px;
+    cursor: pointer;
+}
+
+.mainNav_text {
+    font-family: 'Lobster';
+}
+
+.mainNavSearch i {
+    position: absolute;
+    margin: 12px;
+    padding-left: 5px;
+    font-size: 15px;
+    color: #8e8e8e
+}
+
+.navSearch {
+    width: 300px;
+    height: 40px;
+    background-color: #efefef;
+    border-radius: 5px;
+    border-style: none;
+    text-indent: 3em;
+}
+
+.navSearch::placeholder {
+    color: #C5C5C5;
+}
+
+.mainNavicon {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-right: 40px;
+    cursor: pointer;
+}
+
+.mainNavicon img {
+    width: 24px;
+    height: 24px;
+    margin: 10px;
+    border-radius: 100%;
+}
+
+/* SearchBar */
+
+.searchBar {
+    position: absolute;
+    top: 50px;
+    left: 500px;
+    background-color: white;
+    border: 1px solid #EFEFEF;
+    border-radius: 5px;
+    width: 400px;
+    height: 300px;
+    overflow: auto;
+}
+
+.searchBar li {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    cursor: pointer;
+    height: 70px;
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+.searchBar li:hover {
+    background-color: #FAFAFA;
+}
+
+.searchImg {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    margin-right: 10px;
+}
+
+.searchId {
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.searchName {
+    margin: 0;
+    font-size: 13px;
+    color: #C5C5C5
+}
+
+/* menubar */
+.profile_menubar {
+    position: absolute;
+    right: 10px;
+    top: 60px;
+    width: 200px;
+    background-color: white;
+    border: 1px solid #EFEFEF;
+    border-radius: 5px;
+}
+
+.profile_menubar:after {
+    border-top: 0px solid transparent;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid white;
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 200px;
+}
+
+
+
+.profile_menubar li {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding-left: 0;
+    font-size: 15px;
+    width: 100%;
+    height: 50px;
+    cursor: pointer;
+}
+
+.logout {
+    text-indent: 0.5em;
+    border-top: 1px solid #DBDBDB;
+}
+
+.profile_menubar li:hover {
+    background-color: #FAFAFA;
+}
+
+.profile_menubar i {
+    margin: 10px;
+}
+
+
+/* mainWrapper */
+
+.mainWrapper {
+    width: 100%;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-right: 250px;
+}
+
+.mainFeed {
+    border: 1px solid #DBDBDB;
+    border-bottom: 1px solid #DBDBDB;
+}
+
+.feeds {
+    margin: 70px auto;
+    width: 616px;
+    background-color: white;
+}
+
+.feedProfile {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    padding: 15px;
+    border-bottom: 1px solid #DBDBDB;
+}
+
+.feedProfile_name {
+    position: absolute;
+    padding-left: 55px;
+    padding-top: 5px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.feedProfile_img {
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+}
+
+.feedProfile_name p {
+    margin: 0;
+}
+
+.profile_location {
+    color: #8e8e8e;
+    font-size: 12px;
+}
+
+.feedProfile i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.feedImg img{
+    width: 100%;
+    height: 100%;
+}
+
+.feedBottom {
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+    border-bottom : 1px solid #EFEFEF;
+}
+
+#feed_likeBtn {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.feedComment {
+    border: 1px solid #DBDBDB;
+    border-top: none;
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+}
+
+.addComment {
+    border: none;
+    background-color: white;
+    color:#3B99EF;
+    cursor: pointer;
+}
+
+.addComment:disabled {
+    color:#8e8e8e;
+    cursor: auto;
+}
+
+.inputComment {
+    border: none;
+    width: 570px;
+    text-indent: 1.5em;
+}
+
+.feedBottom_likeIcon {
+    display: flex;
+    justify-content: space-between;
+    margin: auto 15px;
+}
+
+.feedBottom_likeIcon i {
+    font-size: 25px;
+    padding: 6px;
+
+}
+
+.feedBottom_likeWho {
+    display: flex;
+    align-items: center;
+    margin: 10px 20px;
+}
+
+.like_profile {
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.feedBottom_desc {
+    display: flex;
+    align-items: center;
+    margin: 5px 20px 10px 20px;
+}
+
+.feedBottom_comment {
+    display: flex;
+    flex-direction: column;
+    margin: 5px 20px 10px 20px;
+}
+
+.comment_desc {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+.comment_nickname {
+    margin-right: 5px;
+}
+
+.comment_txt {
+    margin: 0;
+}
+
+.comment_Btn {
+    position: absolute;
+    right: 0;
+}
+
+#comment_like {
+    font-size: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+.comment_delete{
+    background-color: white;
+    border: none;
+    font-size: 12px;
+    cursor: pointer;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.comment_delete:hover {
+    opacity: 1;
+}
+
+
+
+.main_right {
+    position: fixed;
+    right: 80px;
+    top: 90px;
+    width: 350px;
+}
+
+.mainProfile {
+    display: flex;
+}
+
+.mainProfile_img {
+    border-radius: 100%;
+    width: 60px;
+    height: 60px;
+}
+
+.mainProfile_name {
+    position: absolute;
+    padding-left: 70px;
+    padding-top: 13px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.mainProfile_name p {
+    margin: 0;
+    color: #8e8e8e;
+    font-size: 12px;
+}
+
+.mainStory {
+    display: flex;
+}
+
+.storyBorder {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 10px auto;
+    border: 1px solid #efefef;
+    border-radius: 5px;
+}
+
+.recommendBorder {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 10px auto;
+    border: 1px solid #efefef;
+    border-radius: 5px;
+}
+
+.storyBorder_title {
+    display: flex;
+    justify-content: space-between;
+    margin: 13px;
+}
+
+.storyProfile {
+    display: flex;
+    flex-direction: column;
+    margin: 13px;
+    height: 200px;
+    overflow: auto;
+}
+
+.story_img {
+    border-radius: 100%;
+    width: 45px;
+    height: 45px;
+    margin-right: 20px;
+    border: 2px solid transparent;
+    background-image: linear-gradient(#fff, #fff), 
+    linear-gradient(to right, red 0%,  orange 100%);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    cursor: pointer;
+
+}
+
+.storyProfile_one {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.storyProfile_one p {
+    margin: 0;
+    color: #8e8e8e;
+}
+
+.storyProfile_name {
+    margin-top: 3px;
+}
+
+.recommendProfile {
+    display: flex;
+    flex-direction: column;
+    margin: 13px;
+    height: 200px;
+    overflow: auto;
+}
+
+.recommendBorder_title {
+    display: flex;
+    justify-content: space-between;
+    margin: 13px;
+}
+
+.recommendProfile_one {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.recommend_img {
+    border-radius: 100%;
+    width: 45px;
+    height: 45px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.recommendProfile_name {
+    margin-top: 3px;
+}
+
+.recommendProfile_name b:hover{
+    text-decoration-line: underline;
+    cursor: pointer;
+}
+
+.recommendProfile_one p {
+    margin: 0;
+    color: #8e8e8e;
+}
+
+.recommendProfile_followBtn {
+    background-color: white;
+    font-size: 17px;
+    color: #3B99EF;
+    border: none;
+    margin-left: 40px;
+    margin-top: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+

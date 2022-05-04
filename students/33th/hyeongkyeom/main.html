@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/common.css">
+    <link rel="stylesheet" href="style/main.css">
+    <script src="https://kit.fontawesome.com/7a3a0b9aa8.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <title>Westagram</title>
+</head>
+<body>
+    <section class="mainNav">
+        <div class="mainNavLogo" onclick="location.href='main.html'">
+            <i class="fa-brands fa-instagram"></i> | <span class="mainNav_text">Westagram</span>
+        </div>
+        <div class="mainNavSearch">
+            <i id="nav_searchIcon" class="fa-solid fa-magnifying-glass"></i><input class="navSearch" type="search" name="q" placeholder="검색">
+        </div>
+        <div class="searchBar" style="display: none;">
+            <li>
+                <img class="searchImg" src="img/profile/pro1.jpeg">
+                <div class="searchUser">
+                    <span class="searchId">hang_ke_mi</span>
+                    <p class="searchName">김형겸</p>
+                </div>
+                
+            </li>
+        </div>
+        <div class="mainNavicon">
+            
+            <img src="img/nav/explore.png" alt="explore">
+            <img src="img/nav/heart.png" alt="heart">
+            <img src="img/nav/profile.png" alt="profile">
+            <img class="navProfile" src="img/main/mainProfile.jpeg">
+        </div>
+        <div class="profile_menubar" style="display: none;">
+                <li><i class="fa-regular fa-circle-user"></i><p>프로필</p></li>
+                <li><i class="fa-regular fa-bookmark"></i><p>저장됨</p></li>
+                <li><i class="fa-solid fa-gear"></i><p>설정</p></li>
+                <li><i class="fa-solid fa-arrow-right-arrow-left"></i><p>계정 전환</p></li>
+                <div class="logout" onclick="location.href='login.html'">
+                    <li>로그아웃</li>
+                </div>
+        </div>      
+    </section>
+    <section class="mainWrapper">
+        <div class="feeds">
+            <article class="mainFeed">
+                <div class="feedProfile">
+                    <img class="feedProfile_img" src="img/main/mainProfile.jpeg">
+                    <div class="feedProfile_name">
+                        <p><b>hang_ke_mi</b></p>
+                        <p class="profile_location">WeCode - 위코드</p>  
+                    </div>
+                    <i class="fa-solid fa-ellipsis"></i>
+                </div>
+                <div class="feedImg">
+                    <img src="img/main/feedImage.jpeg">
+                </div>
+                <div class="feedBottom">
+                    <div class="feedBottom_like">
+                        <div class="feedBottom_likeIcon">
+                            <div class="icon_left">
+                                <i id="feed_likeBtn" onclick=feedLikeBtn() class="fa-regular fa-heart"></i>
+                                <i class="fa-regular fa-comment"></i>
+                                <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                            </div>
+                            <div class="icon_right">
+                                <i class="fa-regular fa-bookmark"></i>
+                            </div>    
+                        </div>
+                        <div class="feedBottom_likeWho">
+                            <img class="like_profile" src="img/main/wecode.png"> <span class="like_txt"><b>wecode_bootcamp</b>님 <b>외 여러 명</b>이 좋아합니다</span>
+                        </div>
+                        
+                    </div> 
+                    <div class="feedBottom_desc">
+                        <span class="comment_nickname"><b>hang_ke_mi</b></span><span class="comment_txt">연탄이 커여웡! 🥰</span>
+                    </div>
+                    <div class="feedBottom_comment">                    
+                    </div>
+                </div>
+            </article>
+                <div class="feedComment">
+                    <input class="inputComment" type="text" placeholder="댓글 달기..."><button class="addComment" disabled>게시</button>
+                </div>
+        </div>
+        <div class="main_right">
+            <div class="mainProfile">
+                <img class="mainProfile_img" src="img/main/mainProfile.jpeg">
+                <div class="mainProfile_name">
+                    <span><b>hang_ke_mi</b></span>
+                    <p>김형겸</p>
+                </div>
+            </div>
+            <div class="mainStory">
+                <section class="storyBorder">
+                    <div class="storyBorder_title">
+                        <span>스토리</span> <span><b>모두 보기</b></span>
+                    </div>
+                    <div class="storyProfile">
+                        <div class="storyProfile_one">
+                            <img class="story_img" src="img/profile/pro1.jpeg">
+                            <div class="storyProfile_name">
+                                <span><b>all.about.seoul.trip</b></span>
+                                <p>5분 전</p>
+                            </div>
+                        </div>
+                        <div class="storyProfile_one">
+                            <img class="story_img" src="img/profile/pro2.jpeg">
+                            <div class="storyProfile_name">
+                                <span><b>kangnam11</b></span>
+                                <p>30분 전</p>
+                            </div>
+                        </div>
+                        <div class="storyProfile_one">
+                            <img class="story_img" src="img/profile/pro3.jpeg">
+                            <div class="storyProfile_name">
+                                <span><b>nyamnyamang</b></span>
+                                <p>1시간 전</p>
+                            </div>
+                        </div>
+                        <div class="storyProfile_one">
+                            <img class="story_img" src="img/profile/pro3.jpeg">
+                            <div class="storyProfile_name">
+                                <span><b>nyamnyamang</b></span>
+                                <p>1시간 전</p>
+                            </div>
+                        </div><div class="storyProfile_one">
+                            <img class="story_img" src="img/profile/pro3.jpeg">
+                            <div class="storyProfile_name">
+                                <span><b>nyamnyamang</b></span>
+                                <p>1시간 전</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="mainRecommend">
+                <section class="recommendBorder">
+                    <div class="recommendBorder_title">
+                        <span>회원님을 위한 추천</span> <span><b>모두 보기</b></span>
+                    </div>
+                    
+                    <div class="recommendProfile">
+                        <div class="recommendProfile_one">
+                            <img class="recommend_img" src="img/profile/pro4.jpeg">
+                            <div class="recommendProfile_name">
+                                <span><b>insight.co.kr</b></span>
+                                <p>회원님을 팔로우합니다</p>
+                            </div>
+                            <div class="recommendProfile_follow">
+                                <button class="recommendProfile_followBtn">팔로우</button>
+                            </div>
+                        </div>
+                        
+                        <div class="recommendProfile_one">
+                            <img class="recommend_img" src="img/profile/pro5.jpeg">
+                            <div class="recommendProfile_name">
+                                <span><b>greedeat</b></span>
+                                <p>회원님을 팔로우합니다</p>
+                            </div>
+                            <div class="recommendProfile_follow">
+                                <button class="recommendProfile_followBtn">팔로우</button>
+                            </div>
+                        </div>
+                        <div class="recommendProfile_one">
+                            <img class="recommend_img" src="img/profile/pro6.jpeg">
+                            <div class="recommendProfile_name">
+                                <span><b>jmt_zero</b></span>
+                                <p>회원님을 팔로우합니다</p>
+                            </div>
+                            <div class="recommendProfile_follow">
+                                <button class="recommendProfile_followBtn">팔로우</button>
+                            </div>
+                        </div>
+                        <div class="recommendProfile_one">
+                            <img class="recommend_img" src="img/profile/pro6.jpeg">
+                            <div class="recommendProfile_name">
+                                <span><b>jmt_zero</b></span>
+                                <p>회원님을 팔로우합니다</p>
+                            </div>
+                            <div class="recommendProfile_follow">
+                                <button class="recommendProfile_followBtn">팔로우</button>
+                            </div>
+                        </div><div class="recommendProfile_one">
+                            <img class="recommend_img" src="img/profile/pro6.jpeg">
+                            <div class="recommendProfile_name">
+                                <span><b>jmt_zero</b></span>
+                                <p>회원님을 팔로우합니다</p>
+                            </div>
+                            <div class="recommendProfile_follow">
+                                <button class="recommendProfile_followBtn">팔로우</button>
+                            </div>
+                        </div><div class="recommendProfile_one">
+                            <img class="recommend_img" src="img/profile/pro6.jpeg">
+                            <div class="recommendProfile_name">
+                                <span><b>jmt_zero</b></span>
+                                <p>회원님을 팔로우합니다</p>
+                            </div>
+                            <div class="recommendProfile_follow">
+                                <button class="recommendProfile_followBtn">팔로우</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </section>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
