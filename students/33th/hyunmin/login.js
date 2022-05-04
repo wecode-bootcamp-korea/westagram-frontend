@@ -1,21 +1,27 @@
 const id = document.getElementById('id');
 const password = document.getElementById('password');
-const loginBtn = document.getElementsByClassName('loginBtn');
+const loginBtn = document.getElementsByClassName('loginBtn')[0];
 
+id.addEventListener('keyup', activateLogin);
+password.addEventListener('keyup', activateLogin);
+loginBtn.addEventListener('click', successLogin);
+
+// ID, PW 길이에 따른 로그인버튼
 const activateLogin = () => {
     let idValue = id.value;
     let pwValue = password.value;
 
     if(idValue.length >= 1 && pwValue.length >= 1) {
-        // document.querySelector('.loginBtn').style.backgroundColor = '#0095F6';
-        document.getElementsByClassName('loginBtn')[0].style.backgroundColor = '#0095F6';
-        document.getElementsByClassName('loginBtn')[0].style.cursor = 'pointer';
+        loginBtn.disabled = false;
+        loginBtn.style.backgroundColor = '#0095F6';
+        loginBtn.style.cursor = 'pointer';
     } else {
-        // document.querySelector('.loginBtn').style.backgroundColor = '#C0DFFD';
-        document.getElementsByClassName('loginBtn')[0].style.backgroundColor = '#C0DFFD';
-        document.getElementsByClassName('loginBtn')[0].style.cursor = 'default';
+        loginBtn.disabled = true;
+        loginBtn.style.backgroundColor = '#C0DFFD';
+        loginBtn.style.cursor = 'default';
     }
 }
 
-password.addEventListener('keyup', activateLogin);
-id.addEventListener('keyup', activateLogin);
+const successLogin = () => {
+    alert('로그인 성공!');
+}
