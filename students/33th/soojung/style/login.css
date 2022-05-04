@@ -1,0 +1,78 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@font-face {
+    src: url('/font/Lobster-Regular.ttf');
+    font-family: 'Lobster-Regular';
+}
+
+.login-container {
+    position: relative;
+    width: 540px;
+    height: 540px;
+    padding: 20px;
+    border: 2px solid rgb(228, 227, 227);
+    border-radius: 3px;
+}
+
+.title {
+    margin: 20px 0;
+    font-family: 'Lobster-Regular';
+    font-size: 60px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.login-area {
+    width: 370px;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+
+input {
+    width: 100%;
+    padding: 13px 10px;
+    margin-bottom: 10px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    outline: none;
+    font-size: 17px;
+    background-color: rgb(252, 252, 252);
+}
+
+input::placeholder {
+    font-size: 15px;
+}
+
+button {
+    width: 100%;
+    padding: 13px;
+    background-color:  rgba(var(--d69,0,149,246),1);
+    opacity: 0.3;
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.btn-active {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.find-psw{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.find-psw a{
+    text-decoration: none;
+    color: rgb(27, 53, 113);
+}
