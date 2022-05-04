@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/common.css">
+    <link rel="stylesheet" href="./style/main.css">
+    <link rel="icon" href="./image/instagram.png">
+    <script src="https://kit.fontawesome.com/25b41d6433.js" crossorigin="anonymous"></script>
+    <title>Westagram</title>
+</head>
+
+<body>
+    <!-- 네비바 -->
+    <section class="nav_bar position_relative flex center">
+        <nav class="nav_bar_inner flex space_around position_fixed">
+            <h2 class="logo">Westagram</h2>
+            <div class="position_relative">
+                <i class="fa-solid fa-magnifying-glass position_absolute glass"></i>
+                <input class="nav_bar_input" type="text" placeholder="검색">
+            </div>
+            <div class="nav_bar_item flex space_around">
+                <a href="#"><img src="./image/home.png" alt=""></a>
+                <a href="#"><img src="./image/send.png" alt=""></a>
+                <a href="#"><img src="./image/more.png" alt=""></a>
+                <a href="#"><img src="./image/compass.png" alt=""></a>
+                <a href="#"><img src="./image/heart.png" alt=""></a>
+                <a href="#"><img class="img_circle_32px" src="./image/person_pic5.jpg" alt=""></a>
+            </div>
+
+        </nav>
+    </section>
+    <!-- 메인 섹션 -->
+    <section class="main_content flex">
+        <div class="left_content flex flex_direction_column">
+            <!-- 새로운 스토리 -->
+            <article class="left_content_new_story flex space_between">
+                <div class="new_story_inner_box position_relative flex center flex_direction_column margin_left">
+                    <img class="img_circle_56px" src="./image/circle.png" alt="">
+                    <img class="new_story_user_img position_absolute img_circle_46px" src="./image/person_pic.jpg"
+                        alt="">
+                    <span>peter_2</span>
+                </div>
+                <div class="new_story_inner_box position_relative flex center flex_direction_column margin_left">
+                    <img class="img_circle_56px" src="./image/circle.png" alt="">
+                    <img class="new_story_user_img position_absolute img_circle_46px" src="./image/pserson_pic1.jpg"
+                        alt="">
+                    <span>harry_po</span>
+                </div>
+                <div class="new_story_inner_box position_relative flex center flex_direction_column margin_left">
+                    <img class="img_circle_56px" src="./image/circle.png" alt="">
+                    <img class="new_story_user_img position_absolute img_circle_46px" src="./image/person_pic2.jpg"
+                        alt="">
+                    <span>malfoy_ee</span>
+                </div>
+                <div class="new_story_inner_box position_relative flex center flex_direction_column margin_left">
+                    <img class="img_circle_56px" src="./image/circle.png" alt="">
+                    <img class="new_story_user_img position_absolute img_circle_46px" src="./image/person_pic3.jpg"
+                        alt="">
+                    <span>lee_j</span>
+                </div>
+                <div class="new_story_inner_box position_relative flex center flex_direction_column margin_left">
+                    <img class="img_circle_56px" src="./image/circle.png" alt="">
+                    <img class="new_story_user_img position_absolute img_circle_46px" src="./image/person_pic4.jpg"
+                        alt="">
+                    <span>min_jj</span>
+                </div>
+                <div class="new_story_inner_box position_relative flex center flex_direction_column margin_left">
+                    <img class="img_circle_56px" src="./image/circle.png" alt="">
+                    <img class="new_story_user_img position_absolute img_circle_46px" src="./image/person_pic5.jpg"
+                        alt="">
+                    <span>ghost_shell</span>
+                </div>
+                <div class="new_story_inner_box position_relative flex center flex_direction_column margin_left">
+                    <img class="img_circle_56px" src="./image/circle.png" alt="">
+                    <img class="new_story_user_img position_absolute img_circle_46px" src="./image/person_pic6.jpg"
+                        alt="">
+                    <span>wecode_</span>
+                </div>
+                <div class="new_story_inner_box position_relative flex center flex_direction_column margin_left">
+                    <img class="img_circle_56px" src="./image/circle.png" alt="">
+                    <img class="new_story_user_img position_absolute img_circle_46px" src="./image/person_pic7.jpg"
+                        alt="">
+                    <span>rider_kim</span>
+                </div>
+                <div class="new_story_inner_box position_relative flex center flex_direction_column margin_left">
+                    <img class="img_circle_56px" src="./image/circle.png" alt="">
+                    <img class="new_story_user_img position_absolute img_circle_46px" src="./image/person_pic8.jpg"
+                        alt="">
+                    <span>broom_stick</span>
+                </div>
+            </article>
+            <!-- 피드 박스 -->
+            <article class="left_content_feed_box flex flex_direction_column">
+                <!-- 피드 타이틀 -->
+                <div class="feed_box_title flex flex_start">
+                    <img class="user_title_img margin_left" src="./image/person_pic6.jpg" alt="유저 프로필 사진">
+                    <p class="user_text margin_left">new_0_person</p>
+                </div>
+                <!-- 피드 이미지 -->
+                <img class="feed_box_img" src="./image/racoon1.jpg" alt="피드 사진">
+                <!-- 좋아요 댓글마크 저장 등 -->
+                <div class="feed_items flex flex_start center">
+                    <img id="feed_heart" style="color: black;" class="margin_left" src="./image/heart.png" alt="좋아요">
+                    <img class="margin_left" src="./image/chat.png" alt="댓글 말풍선">
+                    <img class="margin_left" src="./image/send.png" alt="다이렉트 메세지">
+                    <div class="feed_inner_items flex margin_right">
+                        <img src="./image/mark.png" alt="">
+                    </div>
+                </div>
+                <!-- ~외 좋아요 몇 명 -->
+                <div class="flex flex_start">
+                    <img class="img_circle_17px margin_left" src="./image/person_pic4.jpg" alt="좋아요 누른 사람">
+                    <img class="img_circle_17px" src="./image/person_pic6.jpg" alt="좋아요 누른 사람">
+                    <img class="img_circle_17px" src="./image/person_pic8.jpg" alt="좋아요 누른 사람">
+                    <p class="user_text margin_left">harry_0님 외 <span id="count" class="user_text">60</span>명이 좋아합니다.</p>
+                </div>
+                <!-- 피드 주인 및 내용 -->
+                <div class="margin_top">
+                    <p class="margin_left font_size_14px">new_0_person <span class="margin_left font_size_12px">라쿤
+                            귀여워~</span></p>
+                </div>
+                <!-- 댓글 창 -->
+                <div id="comment-content" class="feed_comment">
+
+                </div>
+                <!-- 1일 전 -->
+                <div class="feed_day flex flex_start">
+                    <p class="margin_left">1일전</p>
+                </div>
+                <!-- 댓글 달기 스마일 이모지 댓글 게시 -->
+                <form class="feed_input flex space_between">
+                    <img class="margin_left" src="./image/smile.png" alt="">
+                    <input id="comment-input" class="margin_left feed_input_input" type="text" placeholder="댓글 달기">
+                    <button id="comment-button" type="submit" class="font_size_14px">게시</button>
+                </form>
+            </article>
+        </div>
+        <!-- 추천친구 -->
+        <article class="right_content position_relative margin_left">
+            <!-- 오른쪽 컨텐츠 -->
+            <div class="right_content_wrapper position_fixed flex flex_direction_column">
+                <div class="flex flex_start">
+                    <img class="img_circle_56px margin_left" src="./image/person_pic5.jpg" alt="">
+                    <div class="flex flex_direction_column margin_left">
+                        <p class="margin_left right_content_user_name">wan_0_kim</p>
+                        <p class="margin_left font_size_12px">완영</p>
+                    </div>
+                </div>
+                <div class="right_content_user_recommend flex space_between margin_top margin_left">
+                    <p class="font_size_14px">회원님을 위함 추천</p>
+                    <p>모두보기</p>
+                </div>
+                <ul class="recommend_user_list">
+                    <li class="recommedn_user_list_li flex space_between">
+                        <div class="flex">
+                            <img class="img_circle_32px" src="./image/person_pic2.jpg" alt="">
+                            <div class="flex flex_direction_column margin_left">
+                                <p class="right_content_user_name">tree_angel</p>
+                                <p class="right_content_user_name_desc">leejinse0k님 외 12명이 팔로우합니다</p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <p class="recommend_user_list_follow">팔로우</p>
+                        </div>
+                    </li>
+                    <li class="recommedn_user_list_li flex space_between">
+                        <div class="flex">
+                            <img class="img_circle_32px" src="./image/person_pic3.jpg" alt="">
+                            <div class="flex flex_direction_column margin_left">
+                                <p class="right_content_user_name">wecode_2</p>
+                                <p class="right_content_user_name_desc">neter_ee님 외 8명이 팔루우합니다</p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <p class="recommend_user_list_follow">팔로우</p>
+                        </div>
+                    </li>
+                    <li class="recommedn_user_list_li flex space_between">
+                        <div class="flex">
+                            <img class="img_circle_32px" src="./image/person_pic4.jpg" alt="">
+                            <div class="flex flex_direction_column margin_left">
+                                <p class="right_content_user_name">suban__0_0</p>
+                                <p class="right_content_user_name_desc">peter_k님이 팔로우합니다</p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <p class="recommend_user_list_follow">팔로우</p>
+                        </div>
+                    </li>
+                    <li class="recommedn_user_list_li flex space_between">
+                        <div class="flex">
+                            <img class="img_circle_32px" src="./image/person_pic5.jpg" alt="">
+                            <div class="flex flex_direction_column margin_left">
+                                <p class="right_content_user_name">koko_a</p>
+                                <p class="right_content_user_name_desc">lee_a_jung님 외 7명이 팔로우합니다</p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <p class="recommend_user_list_follow">팔로우</p>
+                        </div>
+                    </li>
+                    <li class="recommedn_user_list_li flex space_between">
+                        <div class="flex">
+                            <img class="img_circle_32px" src="./image/person_pic6.jpg" alt="">
+                            <div class="flex flex_direction_column margin_left">
+                                <p class="right_content_user_name">mina_park</p>
+                                <p class="right_content_user_name_desc">jong_ho님이 팔로우합니다</p>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <p class="recommend_user_list_follow">팔로우</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </article>
+    </section>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>

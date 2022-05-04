@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../instagram.png">
+    <link rel="stylesheet" href="./style/login.css">
+    <link rel="stylesheet" href="./style/common.css">
+    <link rel="icon" href="./image/instagram.png">
+    <title>Login</title>
+</head>
+
+<body class="flex center height_100vh flex_direction_column">
+    <section class="login_box flex flex_direction_column">
+        <form class=" login_box_form flex space_around flex_direction_column">
+            <h2 class="login_box_logo">Westagram</h2>
+            <div class="login_input_wrapper flex flex_direction_column space_between">
+                <input id="user_id" class="login_box_input" type="text" placeholder="전화번호, 사용자 이름 또는 이메일">
+                <input id="user_passwd" class="login_box_input" type="password" placeholder="비밀번호">
+                <button id="submit_btn" class="login_box_btn disabled" disabled>로그인</button>
+            </div>
+        </form>
+        <div class="login_box_line flex center">
+            <hr class="login_box_hr">
+            <span class="login_box_or">또는</span>
+            <hr class="login_box_hr">
+        </div>
+        <div class=" login_box_input_bottom flex space_around flex_direction_column">
+            <button class="btn_style_none type=" button"">
+                <img src="./image/facebook.png" alt="">
+                <span class="facebook_text">Facebook으로 로그인</span>
+            </button>
+            <a class="forgot_passwd" href="#">비밀번호를 잊으셨나요?</a>
+        </div>
+    </section>
+    <section class="login_box_bottom flex center margin_top">
+        <p class="forgot_passwd">계정이 없으신가요?</p>
+        <button class="btn_style_none login_box_bottom_text margin_left">가입하기</button>
+    </section>
+    <script src="./js/login.js"></script>
+</body>
+
+</html>
