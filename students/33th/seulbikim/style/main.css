@@ -1,0 +1,402 @@
+body {
+  background-color: rgb(250, 250, 250);
+}
+
+p span {
+  font-weight: 700;
+}
+
+li {
+  list-style: none;
+}
+
+p,
+span {
+  font-size: 14px;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  height: 59px;
+  width: 100%;
+  border-bottom: 1px solid rgb(219, 219, 219);
+  background-color: #fff;
+}
+
+.nav__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 930px;
+  margin: 0 20px;
+}
+
+.nav__logo {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.nav__logo-text {
+  font-family: 'Lobster', cursive;
+  font-size: 28px;
+}
+
+.nav__search {
+  margin: 10px;
+}
+
+.nav__search input {
+  width: 240px;
+  height: 35px;
+  padding: 6px 10px 3px 38px;
+  border: none;
+  border-radius: 6px;
+  color: rgb(120, 120, 120);
+  background-color: rgb(239, 239, 239);
+  background-image: url('../img/search.png');
+  background-repeat: no-repeat;
+  background-size: 20px;
+  background-position: 5%;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.nav__search input::placeholder {
+  color: rgb(188, 188, 188);
+  position: center;
+}
+
+.nav__icons img {
+  height: 23px;
+  margin: 0 8px;
+  cursor: pointer;
+}
+
+/* main */
+main {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 1000px;
+  margin-top: 30px;
+}
+main img {
+  /* 삭제 */
+  width: 100px;
+}
+
+.main__container {
+  display: flex;
+  max-width: 930px;
+}
+
+.feeds {
+  display: flex;
+  flex-direction: column;
+  padding-right: 20px;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(219, 219, 219);
+  background-color: white;
+}
+
+article header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 0 20px;
+}
+
+.article__header__profile {
+  display: flex;
+  align-items: center;
+}
+
+.article__header__profile-img {
+  width: 32px;
+  height: 32px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.article__header__profile-name {
+  font-weight: 600;
+}
+
+.article__header__more .fa-ellipsis {
+  color: rgb(63, 63, 63);
+  cursor: pointer;
+}
+
+.article__header__more img {
+  width: 23px;
+  color: rgb(55, 55, 55);
+}
+
+article .article__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* article__data */
+.article-data {
+  display: flex;
+  flex-direction: column;
+  padding: 15px 15px 0 15px;
+}
+
+.article-data__icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.article-data__icons-left {
+  display: flex;
+  align-items: center;
+}
+.article-data__icons-left img,
+.article-data__icons-right {
+  width: 23px;
+  height: 23px;
+  cursor: pointer;
+  margin-right: 17px;
+}
+
+.article-data__icons-right {
+  margin-right: 0;
+}
+
+.article-data__reaction {
+  margin-top: 10px;
+}
+
+.reaction__liked {
+  margin-top: 8px;
+  font-weight: 600;
+}
+
+.reaction__author-post {
+  margin-top: 10px;
+}
+
+/* comments */
+.reaction__comments {
+  display: flex;
+  flex-direction: column;
+}
+
+.reaction__comments ul li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.reaction__comments ul li .comments__commented {
+  width: 100%;
+  margin-top: 5px;
+}
+
+.reaction__comments ul li .comments__btns {
+  display: flex;
+}
+
+.reaction__comments ul li .comments__btns i {
+  margin-right: 10px;
+  color: rgb(76, 159, 255);
+  cursor: pointer;
+}
+
+.reaction__comments ul li img {
+  width: 15px;
+  cursor: pointer;
+}
+
+.reaction__comments ul li img:last-child {
+  width: 14px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.reaction__comments .date {
+  margin: 8px 0;
+  color: rgb(180, 180, 180);
+}
+
+.reaction__comments .date span {
+  font-size: 12px;
+}
+
+/* comments form */
+.comment-form {
+  display: flex;
+  align-items: center;
+  height: 55px;
+  border-top: 1px solid rgb(219, 219, 219);
+}
+
+.comment-form img {
+  width: 23px;
+  height: 23px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.comment-form input {
+  flex: 8;
+  height: 20px;
+  border: 0;
+}
+
+.comment-form input:focus {
+  outline: none;
+}
+
+.comment-form button {
+  width: 50px;
+  border: none;
+  color: rgb(117, 190, 235);
+  background-color: transparent;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: end;
+}
+
+/* main-right */
+.main-right {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+}
+
+.main-right__profile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-right__profile__left {
+  display: flex;
+  align-items: center;
+}
+
+.main-right__profile__left__img {
+  width: 56px;
+  height: 56px;
+  margin-right: 10px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.main-right__profile__left__id-data {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-right__profile__left__id-data span:first-child {
+  font-weight: 600;
+}
+.main-right__profile__left__id-data span:last-child {
+  margin-top: 2px;
+  color: gray;
+}
+
+.main-right__profile__id-switch {
+  color: rgb(11, 161, 255);
+  font-size: 14px;
+}
+
+.main-right__recommend {
+  margin-top: 25px;
+}
+
+.main-right__recommend__title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main-right__recommend__title span {
+  color: gray;
+  font-weight: 600;
+}
+
+.main-right__recommend__title a {
+  color: black;
+  font-size: 12px;
+}
+
+.main-right__recommend__list {
+  margin-top: 15px;
+}
+
+.main-right__recommend__list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.main-right__recommend__list-left {
+  display: flex;
+}
+
+.recommend__list__img {
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.recommend__list__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.recommend__list__info-id {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.recommend__list__info-follow {
+  color: gray;
+  font-size: 12px;
+}
+
+.recommend__list__follow-btn {
+  font-size: 12px;
+  font-weight: 600;
+  color: rgb(11, 161, 255);
+  cursor: pointer;
+}
+
+.main-right__footer {
+  margin-top: 40px;
+}
+
+.main-right__footer ul {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 12px;
+  color: rgb(180, 180, 180);
+}
+
+.main-right__footer li {
+  position: relative;
+  margin-right: 10px;
+}

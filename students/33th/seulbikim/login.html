@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style/common.css" />
+    <link rel="stylesheet" href="./style/login.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script src="./js/login.js" defer></script>
+    <title>Instagram</title>
+  </head>
+  <body>
+    <div class="login">
+      <div class="login__container">
+        <div class="login__logo">westagram</div>
+        <form class="login__form" action="./main.html">
+          <input
+            type="text"
+            class="login__input-id"
+            placeholder="전화번호, 사용자 이름 또는 이메일"
+          />
+          <input
+            type="password"
+            class="login__input-pw"
+            placeholder="비밀번호"
+          />
+          <button class="login__btn" disabled>로그인</button>
+        </form>
+        <div class="message">
+          <a href="#">비밀번호를 잊으셨나요?</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
