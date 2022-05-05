@@ -1,3 +1,9 @@
+@media screen and(max-width: 1000px){
+    aside{
+        display: none;
+    }
+}
+
 ul{
     list-style: none;
 }
@@ -37,7 +43,7 @@ div button{
 }
 
 .nav_bar_inner{
-    width: 60vw;
+    width: 70vw;
 }
 
 .logo{
@@ -233,4 +239,48 @@ div button{
 .recommend_user_list_follow{
     font-size: 1.5rem;
     color: #0095f6;
+}
+.hidden_nav_bar{
+    border-radius: 1rem;
+    left: 13rem;
+    top: 5rem;
+    background-color: #fff;
+    width: 20rem;
+    height: 20rem;
+    box-shadow:1px 1px 1px 1px rgba(223, 223, 210, 1.0);
+}
+.hidden_nav_img_wrapper{
+    width: 19rem;
+    height: 3rem;
+}
+.hidden_nav_img_wrapper:hover{
+    background-color: #d7d7d7;
+}
+.hidden_nav_item{
+    height: 15rem;
+}
+.hidden_nav_bar_img{
+    width: 2.4rem;
+    height: 2.4rem;
+}
+.search_user_result{
+    top: 5rem;
+    z-index: 200;
+    position: absolute;
+    width: 25rem;
+    height: 30rem;
+    background-color: #fff;
+    border-radius: 1rem;
+    max-height: 30rem;
+    overflow: auto;
+}
+.search_result{
+    width: 25rem;
+}
+.search_result:hover{
+    background-color: #d7d7d7;
+}
+
+.search_result div p{
+    font-size: 1.5rem;
 }

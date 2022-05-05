@@ -5,6 +5,7 @@ const USER_ID = "wan_0_kim";
 
 const comment_box = document.querySelector("#comment_box");
 const myHeart = document.querySelector("#feed_heart");
+const body = document.querySelector("body");
 
 function add_comment(e) {
     e.preventDefault();
@@ -35,20 +36,27 @@ function add_comment(e) {
     delete_btn.addEventListener("click", () => comment_div.remove());
 }
 comment.addEventListener("click", add_comment);
+
 //navbar user클릭시 환경설정 리스트 나오는 곳
-// const user_profile_btn = document.querySelector("#user_info_profile");
-// const user_navbar = document.querySelector("#user-nav");
+const user_profile_btn = document.querySelector("#user_profile");
+const user_navbar = document.querySelector(".hidden_nav_bar");
 
-// function isclick() {
-//     if (user_navbar.style.visibility === "hidden") {
-//         user_navbar.style.visibility = "visible";
-//     } else {
-//         user_navbar.style.visibility = "hidden";
-//     }
-// }
+function isclick() {
+    if (user_navbar.style.visibility === "hidden") {
+        user_navbar.style.visibility = "visible";
+    } else {
+        user_navbar.style.visibility = "hidden";
+    }
+}
 
-// user_profile_btn.addEventListener("click", isclick);
-const count = document.getElementById('count');
+user_profile_btn.addEventListener("click", isclick);
+body.addEventListener("click", (e) => {
+    if (e.target.id !== "user_profile") {
+        user_navbar.style.visibility = "hidden";
+    }
+});
+
+const count = document.getElementById("count");
 function heartClick() {
     if (myHeart.style.color === "black") {
         myHeart.src = "./image/heart_red.png";
@@ -62,79 +70,82 @@ function heartClick() {
 }
 
 myHeart.addEventListener("click", heartClick);
-// const userArr = [
-//     // "malfoy_2", "wattson_12", "sherlock_98", "0_0_min", "wecode_"
-//     {
-//         id: 0,
-//         name: "malfoy_2",
-//         descName: "말포이",
-//         img: "../image/person_pic.jpg",
-//     },
-//     {
-//         id: 1,
-//         name: "wattson_12",
-//         descName: "왓슨",
-//         img: "../image/person_pic5.jpg",
-//     },
-//     {
-//         id: 2,
-//         name: "sherlock_98",
-//         descName: "셜록",
-//         img: "../image/person_pic2.jpg",
-//     },
-//     {
-//         id: 3,
-//         name: "0_0_min",
-//         descName: "으잉",
-//         img: "../image/person_pic3.jpg",
-//     },
-//     {
-//         id: 4,
-//         name: "wecode_",
-//         descName: "위코드",
-//         img: "../image/person_pic4.jpg",
-//     },
-// ];
+const userArr = [
+    // "malfoy_2", "wattson_12", "sherlock_98", "0_0_min", "wecode_"
+    {
+        id: 0,
+        name: "malfoy_2",
+        descName: "말포이",
+        img: "../image/person_pic.jpg",
+    },
+    {
+        id: 1,
+        name: "wattson_12",
+        descName: "왓슨",
+        img: "../image/person_pic5.jpg",
+    },
+    {
+        id: 2,
+        name: "sherlock_98",
+        descName: "셜록",
+        img: "../image/person_pic2.jpg",
+    },
+    {
+        id: 3,
+        name: "0_0_min",
+        descName: "으잉",
+        img: "../image/person_pic3.jpg",
+    },
+    {
+        id: 4,
+        name: "wecode_",
+        descName: "위코드",
+        img: "../image/person_pic4.jpg",
+    },
+];
 
-// const search_user = document.querySelector("#search_user");
-// const nav_input = document.querySelector("#nav_input");
-// let newArr = [];
-// nav_input.addEventListener("input", (e) => {
-//     search_user.className = "";
-//     userArr.filter((x) => {
-//         if (e.target.value === "") {
-//             search_user.className = "visibility";
-//             while(search_user.hasChildNodes()){
-//               search_user.removeChild(search_user.firstChild);
-//             }
-            
-//             return;
-//         }
-//         if (x["name"].includes(e.target.value)) {
-//             const search_user__flexbox = document.createElement("div");
-//             const search_user__flexbox__imgDiv = document.createElement("div");
-//             const search_user__flexbox__img = document.createElement("img");
-//             const search_user__nameDiv = document.createElement("div");
-//             const search_user__enName = document.createElement("p");
-//             const search_user__korName = document.createElement("span");
-//             search_user__flexbox__img.className = "search_user__flexbox__img";
-//             search_user__flexbox__img.src = x["img"];
-//             search_user__flexbox.className = [
-//                 "padding",
-//                 "border_bottom",
-//                 "flex",
-//                 "flex-start",
-//                 "search_user__result",
-//             ].join(" ");
-//             search_user__nameDiv.className = "margin-left";
-//             search_user__enName.innerText = x["name"];
-//             search_user__korName.innerText = x["descName"];
-//             search_user__nameDiv.appendChild(search_user__enName);
-//             search_user__nameDiv.appendChild(search_user__korName);
-//             search_user__flexbox__imgDiv.appendChild(search_user__flexbox__img);
-//             search_user__flexbox.appendChild(search_user__flexbox__imgDiv);
-//             search_user__flexbox.appendChild(search_user__nameDiv);
-//             search_user.appendChild(search_user__flexbox);
-//         }
-//     });
-// });
+const search_user = document.querySelector(".search_user_result");
+const nav_input = document.querySelector(".nav_bar_input");
+let newArr = [];
+nav_input.addEventListener("input", (e) => {
+    while(search_user.childElementCount >= 1){
+        search_user.removeChild(search_user.lastChild);
+    }
+    userArr.filter((x) => {
+        if (e.target.value === "") {
+            search_user.classList.add("hidden");
+            while (search_user.hasChildNodes()) {
+                search_user.removeChild(search_user.firstChild);
+            }
+            return;
+        }
+        if (x["name"].includes(e.target.value)) {
+            search_user.classList.remove("hidden");
+            const search_user__flexbox = document.createElement("div");
+            const search_user__flexbox__imgDiv = document.createElement("div");
+            const search_user__flexbox__img = document.createElement("img");
+            const search_user__nameDiv = document.createElement("div");
+            const search_user__enName = document.createElement("p");
+            const search_user__korName = document.createElement("span");
+            search_user__flexbox__img.className = "img_circle_32px";
+            search_user__flexbox__img.src = x["img"];
+            search_user__flexbox.className = [
+                "padding",
+                "border_bottom",
+                "flex",
+                "flex_start",
+                "search_result",
+            ].join(" ");
+            search_user__nameDiv.className = "margin_left";
+            search_user__enName.innerText = x["name"];
+            search_user__korName.innerText = x["descName"];
+            search_user__nameDiv.appendChild(search_user__enName);
+            search_user__nameDiv.appendChild(search_user__korName);
+            search_user__flexbox__imgDiv.appendChild(search_user__flexbox__img);
+            search_user__flexbox.appendChild(search_user__flexbox__imgDiv);
+            search_user__flexbox.appendChild(search_user__nameDiv);
+            search_user.appendChild(search_user__flexbox);
+        }
+    });
+    
+});

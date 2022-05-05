@@ -19,17 +19,43 @@
             <h2 class="logo">Westagram</h2>
             <div class="position_relative">
                 <i class="fa-solid fa-magnifying-glass position_absolute glass"></i>
-                <input class="nav_bar_input" type="text" placeholder="검색">
+                <input class="nav_bar_input" type="text" placeholder="검색" maxlength="14">
+                <div class="search_user_result flex flex_direction_column flex_start hidden">
+                    <!-- 검색 했을 때 일치하는 유저 -->
+
+                </div>
             </div>
-            <div class="nav_bar_item flex space_around">
+            <div class="nav_bar_item flex space_around position_relative">
                 <a href="#"><img src="./image/home.png" alt=""></a>
                 <a href="#"><img src="./image/send.png" alt=""></a>
                 <a href="#"><img src="./image/more.png" alt=""></a>
                 <a href="#"><img src="./image/compass.png" alt=""></a>
                 <a href="#"><img src="./image/heart.png" alt=""></a>
-                <a href="#"><img class="img_circle_32px" src="./image/person_pic5.jpg" alt=""></a>
+                <a href="#"><img id="user_profile" class="img_circle_32px" src="./image/person_pic5.jpg" alt=""></a>
+                <div class="hidden_nav_bar flex flex_direction_column space_around position_absolute hidden">
+                    <div class="flex flex_direction_column space_around hidden_nav_item">
+                        <div class="hidden_nav_img_wrapper margin_left flex flex_start">
+                            <img class="hidden_nav_bar_img" src="./image/feed_user.png" alt="">
+                            <p class="font_size_14px">프로필</p>
+                        </div>
+                        <div class="hidden_nav_img_wrapper margin_left flex flex_start">
+                            <img class="hidden_nav_bar_img" src="./image/mark.png" alt="">
+                            <p class="font_size_14px">저장됨</p>
+                        </div>
+                        <div class="hidden_nav_img_wrapper margin_left flex flex_start">
+                            <img class="hidden_nav_bar_img" src="./image/feed_user.png" alt="">
+                            <p class="font_size_14px">설정</p>
+                        </div>
+                        <div class="hidden_nav_img_wrapper margin_left flex flex_start">
+                            <img class="hidden_nav_bar_img" src="./image/feed_user.png" alt="">
+                            <p class="font_size_14px">계정전환</p>
+                        </div>
+                    </div>
+                    <div class="hidden_nav_img_wrapper margin_left flex flex_start">
+                        <p class="font_size_14px">로그아웃</p>
+                    </div>
+                </div>
             </div>
-
         </nav>
     </section>
     <!-- 메인 섹션 -->
@@ -115,7 +141,8 @@
                     <img class="img_circle_17px margin_left" src="./image/person_pic4.jpg" alt="좋아요 누른 사람">
                     <img class="img_circle_17px" src="./image/person_pic6.jpg" alt="좋아요 누른 사람">
                     <img class="img_circle_17px" src="./image/person_pic8.jpg" alt="좋아요 누른 사람">
-                    <p class="user_text margin_left">harry_0님 외 <span id="count" class="user_text">60</span>명이 좋아합니다.</p>
+                    <p class="user_text margin_left">harry_0님 외 <span id="count" class="user_text">60</span>명이 좋아합니다.
+                    </p>
                 </div>
                 <!-- 피드 주인 및 내용 -->
                 <div class="margin_top">
@@ -137,21 +164,112 @@
                     <button id="comment-button" type="submit" class="font_size_14px">게시</button>
                 </form>
             </article>
+            <!-- 피드 박스 -->
+            <article class="left_content_feed_box flex flex_direction_column">
+                <!-- 피드 타이틀 -->
+                <div class="feed_box_title flex flex_start">
+                    <img class="user_title_img margin_left" src="./image/person_pic8.jpg" alt="유저 프로필 사진">
+                    <p class="user_text margin_left">old_man</p>
+                </div>
+                <!-- 피드 이미지 -->
+                <img class="feed_box_img" src="./image/racoon2.jpg" alt="피드 사진">
+                <!-- 좋아요 댓글마크 저장 등 -->
+                <div class="feed_items flex flex_start center">
+                    <img id="feed_heart" style="color: black;" class="margin_left" src="./image/heart.png" alt="좋아요">
+                    <img class="margin_left" src="./image/chat.png" alt="댓글 말풍선">
+                    <img class="margin_left" src="./image/send.png" alt="다이렉트 메세지">
+                    <div class="feed_inner_items flex margin_right">
+                        <img src="./image/mark.png" alt="">
+                    </div>
+                </div>
+                <!-- ~외 좋아요 몇 명 -->
+                <div class="flex flex_start">
+                    <img class="img_circle_17px margin_left" src="./image/person_pic4.jpg" alt="좋아요 누른 사람">
+                    <img class="img_circle_17px" src="./image/person_pic6.jpg" alt="좋아요 누른 사람">
+                    <img class="img_circle_17px" src="./image/person_pic8.jpg" alt="좋아요 누른 사람">
+                    <p class="user_text margin_left">sara_98 외 <span id="count" class="user_text">39</span>명이 좋아합니다.</p>
+                </div>
+                <!-- 피드 주인 및 내용 -->
+                <div class="margin_top">
+                    <p class="margin_left font_size_14px">old_man <span class="margin_left font_size_12px">라쿤
+                            귀여워~</span></p>
+                </div>
+                <!-- 댓글 창 -->
+                <div id="comment-content" class="feed_comment">
+
+                </div>
+                <!-- 1일 전 -->
+                <div class="feed_day flex flex_start">
+                    <p class="margin_left">1일전</p>
+                </div>
+                <!-- 댓글 달기 스마일 이모지 댓글 게시 -->
+                <form class="feed_input flex space_between">
+                    <img class="margin_left" src="./image/smile.png" alt="">
+                    <input id="comment-input" class="margin_left feed_input_input" type="text" placeholder="댓글 달기">
+                    <button id="comment-button" type="submit" class="font_size_14px">게시</button>
+                </form>
+            </article>
+            <!-- 피드 박스 -->
+            <article class="left_content_feed_box flex flex_direction_column">
+                <!-- 피드 타이틀 -->
+                <div class="feed_box_title flex flex_start">
+                    <img class="user_title_img margin_left" src="./image/person_pic7.jpg" alt="유저 프로필 사진">
+                    <p class="user_text margin_left">hello_world</p>
+                </div>
+                <!-- 피드 이미지 -->
+                <img class="feed_box_img" src="./image/racoon3.jpg" alt="피드 사진">
+                <!-- 좋아요 댓글마크 저장 등 -->
+                <div class="feed_items flex flex_start center">
+                    <img id="feed_heart" style="color: black;" class="margin_left" src="./image/heart.png" alt="좋아요">
+                    <img class="margin_left" src="./image/chat.png" alt="댓글 말풍선">
+                    <img class="margin_left" src="./image/send.png" alt="다이렉트 메세지">
+                    <div class="feed_inner_items flex margin_right">
+                        <img src="./image/mark.png" alt="">
+                    </div>
+                </div>
+                <!-- ~외 좋아요 몇 명 -->
+                <div class="flex flex_start">
+                    <img class="img_circle_17px margin_left" src="./image/person_pic4.jpg" alt="좋아요 누른 사람">
+                    <img class="img_circle_17px" src="./image/person_pic6.jpg" alt="좋아요 누른 사람">
+                    <img class="img_circle_17px" src="./image/person_pic8.jpg" alt="좋아요 누른 사람">
+                    <p class="user_text margin_left">peter_lee님 외 <span id="count" class="user_text">23</span>명이 좋아합니다.
+                    </p>
+                </div>
+                <!-- 피드 주인 및 내용 -->
+                <div class="margin_top">
+                    <p class="margin_left font_size_14px">hello_world <span
+                            class="margin_left font_size_12px">라쿤이다.</span></p>
+                </div>
+                <!-- 댓글 창 -->
+                <div id="comment-content" class="feed_comment">
+
+                </div>
+                <!-- 1일 전 -->
+                <div class="feed_day flex flex_start">
+                    <p class="margin_left">3일전</p>
+                </div>
+                <!-- 댓글 달기 스마일 이모지 댓글 게시 -->
+                <form class="feed_input flex space_between">
+                    <img class="margin_left" src="./image/smile.png" alt="">
+                    <input id="comment-input" class="margin_left feed_input_input" type="text" placeholder="댓글 달기">
+                    <button id="comment-button" type="submit" class="font_size_14px">게시</button>
+                </form>
+            </article>
         </div>
         <!-- 추천친구 -->
-        <article class="right_content position_relative margin_left">
+        <aside class="right_content position_relative margin_left">
             <!-- 오른쪽 컨텐츠 -->
             <div class="right_content_wrapper position_fixed flex flex_direction_column">
-                <div class="flex flex_start">
+                <div class="flex flex_start margin_left_20px">
                     <img class="img_circle_56px margin_left" src="./image/person_pic5.jpg" alt="">
                     <div class="flex flex_direction_column margin_left">
                         <p class="margin_left right_content_user_name">wan_0_kim</p>
                         <p class="margin_left font_size_12px">완영</p>
                     </div>
                 </div>
-                <div class="right_content_user_recommend flex space_between margin_top margin_left">
-                    <p class="font_size_14px">회원님을 위함 추천</p>
-                    <p>모두보기</p>
+                <div class="right_content_user_recommend flex space_between margin_top margin_left_20px">
+                    <p class="font_size_14px margin_left">회원님을 위함 추천</p>
+                    <p class="margin_left_20px">모두보기</p>
                 </div>
                 <ul class="recommend_user_list">
                     <li class="recommedn_user_list_li flex space_between">
@@ -216,7 +334,7 @@
                     </li>
                 </ul>
             </div>
-        </article>
+        </aside>
     </section>
     <script src="./js/main.js"></script>
 </body>
