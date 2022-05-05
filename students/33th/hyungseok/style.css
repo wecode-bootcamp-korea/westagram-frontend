@@ -203,7 +203,7 @@ article{
 }
 
 .articleHeader{
-    padding: 10px;
+    padding: 13px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -452,31 +452,37 @@ aside{
 
 
 
-/* -------------------------------- */
+/* --------------아이디 검색 기능--------------- */
 
-/* .idFindBox{
+.searchId{
     background-color: white;
-    width: 350px;
+    width: 300px;
     height: 250px;
     position: absolute;
-    top: 45px;
+    top: 55px;
     border: 1px solid #eee;
     text-align: left;
     overflow: auto;
+    display: none;
 }
 
-.idFindBox::-webkit-scrollbar {
+.searchId::-webkit-scrollbar {
     width: 5px;
 }
-.idFindBox::-webkit-scrollbar-thumb {
-    background-color: #2f3542;
+.searchId::-webkit-scrollbar-thumb {
+    background-color: lightgrey;
+    height: 17%;
+    border-radius: 20px
 }
-.idFindBox::-webkit-scrollbar-track {
-    background-color: grey;
-    box-shadow: inset 0px 0px 5px white;
+.searchId::-webkit-scrollbar-track {
+    background-color: white;
 }
 
-.idFindContent{
+.searchIdInfo{
+    margin-left: 20px;
+}
+
+.searchBox{
     margin: 20px 10px;
     display: flex;
     align-items: center;
@@ -485,11 +491,17 @@ aside{
 .searchImg{
     width: 40px;
     height: 40px;
+    border-radius: 50%;
 }
 .searchText{
-    font-size: 20px;
+    font-size: 16px;
+    margin-left: 10px;
 }
 
-.idFindBox{
+.searchIdToggle{
+    display: block;
+}
+
+/* .idFindBox{
     display: none;
 } */
