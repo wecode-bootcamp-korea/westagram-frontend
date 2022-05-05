@@ -4,7 +4,7 @@ body{
     background-color: #fafafa;
 }
 
-/* 네비바 영역입니다. */
+/* **********NAV BAR********** */
 
 .headWrapper {
     position: fixed;
@@ -62,7 +62,7 @@ body{
     list-style: none;
 }
 
-/* 본문 영역입니다. */
+/* ********** MAIN ********** */
 .wrapper {
     display: flex;
     justify-content: center;
@@ -73,7 +73,6 @@ body{
 .main {
     display: flex;
     width: 70%;
-    margin: 0 100px;
 }
 
 /* feed 영역 */
@@ -132,15 +131,14 @@ body{
 .bottom > * {
     /* display: inline-block;
     vertical-align: middle; */
-    padding: 0 16px;
-    margin: 5px 0px;
+    padding-left: 16px;
+    margin-top: 5px;
 }
 
 .convenience {
     display: flex;
     align-items: center;
-    height: 54px;
-    text-align: center;
+    height: 40px;
 }
 
 .convenience span:nth-child(1) {
@@ -158,25 +156,57 @@ body{
 .convenience span:nth-child(4) {
     flex: 8;
     text-align: right;
-    margin-right: 10px;
+    margin-right: 15px;
 }
 
 .like {
     height: 18px;
+    font-weight: bold;
 }
 
-.commentBox {
-    height: 44px;
+.userCommentBox {
+    position: relative;
+    padding-bottom: 5px;
 }
 
-.userName, .userComment {
+.userName {
     display: inline-block;
-    margin-right: 10px;
+    margin-right: 5px;
+    font-weight: bold;
 }
+
+.userComment {
+    display: inline-block;
+}
+
+.userHeart {
+    display: inline-block;
+    position: absolute;
+    right: 40px;
+}
+
+.delete {
+    display: inline-block;
+    position: absolute;
+    right: 15px;
+}
+
+/* .userComment {
+    flex: 9;
+}
+
+.userHeart {
+    flex: 1;
+}
+
+.delete {
+    flex: 1;
+} */
 
 .dateAgo {
     height: 18px;
     font-size: 12px;
+    color: #DBDBDB;
 }
 
 .addCommentBox {
@@ -189,7 +219,6 @@ body{
 .addCommentBox input {
     /* border: none; */
     flex: 9;
-    margin-top: 5px;
     padding: 10px;
     border: none;
     outline: none;
@@ -197,12 +226,11 @@ body{
 
 .addCommentBox button {
     flex: 1;
-    margin-top: 5px;
-    text-align: center;
     border: none;
     background-color: #FFFFFF;
     color: #BFE0FD;
     font-size: 15px;
+    text-align: left;
 }
 
 
