@@ -1,9 +1,9 @@
-const loginBtn = document.getElementById('login-btn');
-const userId = document.getElementById('id');
-const userPw = document.getElementById('password');
-const linkToMain = document.getElementsByTagName('a')[0];
+const loginBtn = document.getElementById("login-btn");
+const userId = document.getElementById("id");
+const userPw = document.getElementById("password");
+const linkToMain = document.getElementsByTagName("a")[0];
 
-function activedLogin () {
+function activedLogin() {
     if (userId.value && userPw.value) {
         loginBtn.disabled = false;
         linkToMain.href = "/Users/seop/Desktop/wecode/westagram-frontend/students/33th/younseop/main.html";
@@ -13,5 +13,5 @@ function activedLogin () {
     }
 }
 
-userId.addEventListener('keyup', activedLogin);
-userPw.addEventListener('keyup', activedLogin);
+userId.addEventListener("keyup", activedLogin);
+userPw.addEventListener("keyup", activedLogin);
