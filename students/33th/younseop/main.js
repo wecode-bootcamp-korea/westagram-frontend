@@ -64,14 +64,14 @@ function checkUserId(value) {
 }
 
 //리스트 생성
-function showCheckedId(id) {
+function showCheckedId(value) {
     searchResultBox.style.display = "flex";
     const checkedUser = document.createElement('li');
     
     checkedUser.innerHTML = `
         <div class="searched-user-wrapper">
-            <span class="searched-user-id">${id.id}</span>
-            <span class="searched-user-nickname">${id.nickname}</span>
+            <span class="searched-user-id">${value.id}</span>
+            <span class="searched-user-nickname">${value.nickname}</span>
         </div>
     `; 
 
