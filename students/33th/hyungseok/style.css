@@ -170,6 +170,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .navIcon{
@@ -447,12 +448,7 @@ aside{
 }
 
 
-
-
-
-
-
-/* --------------아이디 검색 기능--------------- */
+/* 아이디 검색 기능 */
 
 .searchId{
     background-color: white;
@@ -502,6 +498,27 @@ aside{
     display: block;
 }
 
-/* .idFindBox{
+/* nav 메뉴 박스 */
+
+.navMenu{
+    width: 250px;
+    height: 200px;
+    background-color: white;
+    position: fixed;
+    top: 50px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding: 20px;
     display: none;
-} */
+}
+
+.navMenuIcon{
+    font-size: 25px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.navMenuToggle{
+    display: block;
+}

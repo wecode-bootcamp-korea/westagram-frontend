@@ -103,7 +103,6 @@ commentInput.addEventListener("input", () => {
 
 
 // 검색기능
- 
 
 let products = [
   { id : 0, name : "wecode", img : "profile.jpg"},
@@ -112,42 +111,52 @@ let products = [
   { id : 3, name : "weegle", img : "profile.jpg"},
   { id : 4, name : "story", img : "profile.jpg"}
 ];
+
   const searchInput = document.querySelector(".navInput");
   const searchId = document.querySelector(".searchId");
   const searchBox = document.querySelector(".searchBox");
 
+  searchInput.addEventListener('click',()=>{
+    searchId.classList.toggle('searchIdToggle')
+})
 
 searchInput.addEventListener("input", () => {
-
-  searchId.innerHTML = ''
-  
+  searchId.innerHTML = '';
   let newProducts = products.filter((a)=>{
     return a.name.includes(searchInput.value)
   });
-  
   for( let i = 0; i < newProducts.length; i++){
-    console.log(newProducts.length)
     let tempHtml = 
         `<div class="searchBox">
           <img alt="profile image" class="searchImg" src="${newProducts[i].img}">
           <span class="searchText">${newProducts[i].name}</span>
         </div>`;
     searchId.innerHTML = searchId.innerHTML + tempHtml;
-  }
-
+  };
   if( searchInput.value === '' ){
     searchId.innerHTML = '<p class="searchIdInfo">아이디를 입력해주세요</p>'
-  }
+  };
 });
 //   newProducts.forEach((a, i)=>{
-
 //     searchId.innerHTML = 
 //         `<div class="searchBox">
 //           <img alt="profile image" class="searchImg" src="${newProducts[i].img}">
 //           <span class="searchText">${newProducts[i].name}</span>
 //         </div>`;
 //       })
+// });
 
-searchInput.addEventListener('click',()=>{
-    searchId.classList.toggle('searchIdToggle')
+
+
+//nav menu
+
+const navMenu = document.querySelector(".navMenu");
+const navMenuOn = document.querySelector('.fa-user')
+
+mainPage.addEventListener('click',(e)=>{
+  navMenu.classList.toggle('navMenuToggle')
+  if(e.target != navMenuOn){
+    navMenu.classList.remove('navMenuToggle')
+  }
 })
+
