@@ -15,15 +15,18 @@
     height: 100vh;
 }
 
+/* nav */
+
 nav {
     width: 100%;
     height: 60px;
     border-bottom: 1px solid #dbdbdb;
+    position: fixed;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    position: fixed;
     background-color: white;
+    z-index: 1;
 }
 
 .right_nav {
@@ -68,6 +71,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .search {
@@ -79,6 +83,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .left_nav {
@@ -102,34 +107,49 @@ nav {
     font-size: 22px;
 }
 
-/* 피드 */
+/* main */
+/* feed */
 
 main {
     width: 100%;
-    height: 100vh;
     background-color: #fafafa;
+    /* position: absolute;
+    right: 70px; */
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    padding-top: 50px;
+    padding-top: 130px;
+    padding-left: 130px;
+    padding-bottom: 100px;
+}
+
+/* 컨테이너 왜 이 모양이냐 이러지마 제발 */
+
+.container {
+    width: 100%;
 }
 
 .feeds {
-    width: 550px;
-    height: 100%;
+    width: 50%;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 article {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* padding-right: 40px; */
+}
+
+.feed_box {
     width: 500px;
-    height: 680px;
+    height: 100%;
     background-color: white;
     border: 1px solid #dbdbdb;
 }
 
 .top_feed {
-    width: 100%;
+    width: 500px;
     height: 50px;
     border-bottom: 1px solid #dbdbdb;
     display: flex;
@@ -138,12 +158,12 @@ article {
 }
 
 .id_box {
-    width: 150px;
     height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    padding-left: 15px;
 }
 
 .profile_pic {
@@ -157,6 +177,7 @@ article {
 .insta_id {
     font-weight: bold;
     font-size: 15px;
+    padding-left: 10px;
 }
 
 .more {
@@ -167,16 +188,17 @@ article {
     align-items: center;
 }
 
-.main_feed {
+.mid_feed {
     width: 100%;
     height: 500px;
     background-image: url(../img/IMG_8851.jpg);
     background-size: cover;
+    /* border-right: 1px solid #dbdbdb; */
 }
 
 .icon_bottom {
     width: 100%;
-    height: 35px;
+    height: 40px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -219,34 +241,54 @@ article {
 .like_bottom {
     width: 100%;
     height: 30px;
-    background-color: green;
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
 .like_box {
-    width: 220px;
     height: 100%;
-    background-color: yellow;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-left: 10px;
 }
 
 .like_pic {
     width: 22px;
     height: 22px;
-    background-color: pink;
+    background-image: url(../img/IMG_9480.jpg);
+    background-size: cover;
     border-radius: 50%;
 }
 
 .like10 {
     font-size: 13px;
+    padding-left: 7px;
 }
 
-/* 스토리, 추천 */
+.comment_box {
+    width: 100%;
+    /* height: 100%; */
+    /* padding-top: 5px; */
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+
+/* main-right */
 
 .main_right {
+    width: 40%;
+    height: 100%;
+    position: fixed;
+    right: 0;
+}
+
+.right_box {
     width: 300px;
-    height: 480px;
+    height: 550px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -254,15 +296,83 @@ article {
 
 .myid {
     width: 100%;
-    height: 70px;
-    background-color: pink;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.mypic {
+    width: 50px;
+    height: 50px;
+    background-image: url(../img/IMG_9480.jpg);
+    background-size: cover;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.myid_name {
+    font-size: 15px;
+}
+
+.myid_box {
+    display: flex;
+    flex-direction: column;
+}
+
+.myid_info {
+    font-size: 12px;
+    color: gray;
 }
 
 .story {
     width: 100%;
-    height: 230px;
+    height: 220px;
     background-color: white;
     border: 1px solid #dbdbdb;
+    overflow: scroll;
+}
+
+.top_story {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 15px;
+    padding-left: 15px;
+    font-size: 15px;
+}
+
+.story_text {
+    color: gray;
+}
+
+.story_box {
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 15px;
+}
+
+.story_pic {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: orange;
+}
+
+.story_info {
+    padding-left: 10px;
+}
+
+.story_id {
+    font-size: 15px;
+}
+
+.story_time {
+    font-size: 13px;
+    color: gray;
 }
 
 .recommand {
@@ -270,4 +380,56 @@ article {
     height: 150px;
     background-color: white;
     border: 1px solid #dbdbdb;
+    overflow: scroll;
+}
+
+.re_box {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 15px;
+}
+
+.re_id_box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.re_pic {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: orange;
+}
+
+.re_info {
+    padding-left: 10px;
+}
+
+.re_id {
+    font-size: 15px;
+}
+
+.re_friends {
+    font-size: 13px;
+    color: gray;
+}
+
+
+.insta_info {
+    font-size: 13px;
+    color: gray;
+    padding-top: 5px;
+}
+
+.follow {
+    font-size: 15px;
+    color: #3797F0;
+    font-weight: bold;
+    padding-right: 10px;
 }
