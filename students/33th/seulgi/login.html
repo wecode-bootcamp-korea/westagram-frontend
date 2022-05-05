@@ -8,14 +8,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Rancho&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/students/33th/seulgi/style/common.css">
 <link rel="stylesheet" href="/students/33th/seulgi/style/login.css">
+<script src="/students/33th/seulgi/js/login.js"></script>
 </head>
 <body>
     <div class="wrapper">
         <div>
             <h1>westagram</h1>
-            <input type="text" id="name" placeholder="전화번호, 사용자 이름 또는 이메일"><br>
-            <input type="password" id="password" placeholder="비밀번호"><br>
-            <button>로그인</button>
+            <input type="id" id="id" placeholder="전화번호, 사용자 이름 또는 이메일" onkeyup="isEmpty()"><br>
+            <input type="password" id="password" placeholder="비밀번호" onkeyup="isEmpty()"><br>
+            <button id="btn" disabled>로그인</button>
             <h5>비밀번호를 잊으셨나요?</h5>
         </div>
         
