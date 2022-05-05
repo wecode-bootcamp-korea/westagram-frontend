@@ -129,7 +129,7 @@ body{
     font-size: 14px;
 }
 
-.bottom section {
+.bottom > * {
     /* display: inline-block;
     vertical-align: middle; */
     padding: 0 16px;
@@ -165,8 +165,13 @@ body{
     height: 18px;
 }
 
-.bulletin {
+.commentBox {
     height: 44px;
+}
+
+.userName, .userComment {
+    display: inline-block;
+    margin-right: 10px;
 }
 
 .dateAgo {
@@ -174,14 +179,14 @@ body{
     font-size: 12px;
 }
 
-.comment {
+.addCommentBox {
     display: flex;
     align-items: center;
     height: 53px;
     border-top: solid 1px #DBDBDB;
 }
 
-.comment input {
+.addCommentBox input {
     /* border: none; */
     flex: 9;
     margin-top: 5px;
@@ -190,7 +195,7 @@ body{
     outline: none;
 }
 
-.comment button {
+.addCommentBox button {
     flex: 1;
     margin-top: 5px;
     text-align: center;

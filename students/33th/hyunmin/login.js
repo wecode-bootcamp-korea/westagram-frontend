@@ -2,10 +2,6 @@ const id = document.getElementById('id');
 const password = document.getElementById('password');
 const loginBtn = document.getElementsByClassName('loginBtn')[0];
 
-id.addEventListener('keyup', activateLogin);
-password.addEventListener('keyup', activateLogin);
-loginBtn.addEventListener('click', successLogin);
-
 // ID, PW 길이에 따른 로그인버튼
 const activateLogin = () => {
     let idValue = id.value;
@@ -25,3 +21,7 @@ const activateLogin = () => {
 const successLogin = () => {
     alert('로그인 성공!');
 }
+
+id.addEventListener('keyup', activateLogin);
+password.addEventListener('keyup', activateLogin);
+loginBtn.addEventListener('click', successLogin);
