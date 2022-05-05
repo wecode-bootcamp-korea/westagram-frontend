@@ -2,7 +2,6 @@
     box-sizing: border-box;
 }
 body{
-    max-width: 1200px;
     margin: auto;
 }
 
@@ -16,9 +15,10 @@ body{
     height: 100vh;
     display: none;
 }
-.mainPage{
-    /* display: none; */
-}
+
+/* .mainPage{
+    display: none;
+} */
 
 .loginContainer{
     border: 1px solid lightgray;
@@ -42,7 +42,6 @@ body{
 .loginInputBox input{
     line-height: 40px;
     margin-bottom: 10px;
-    border-radius: 5px;
     border: 1px solid lightgray;
     outline: none;
 }
@@ -59,7 +58,6 @@ body{
     margin-top: 10px;
     border: none;
     background-color: #b2dffc;
-    border-radius: 5px;
     color: white;
     font-size: 16px;
 }
@@ -89,37 +87,41 @@ a{
 /* mainPage */
 
 .mainPage{
+    background-color: #fafafa;
     text-align: center;
-    position: relative;
 }
 
 /* nav */
 
 nav{
     position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     top: 0;
-    left: 10%;
-    width: 80%;
+    width: 100%;
     height: 60px;
     background-color: white;
     border-bottom: 1px solid #b9b9b9;
 }
 
+.navBack{
+    justify-content: center;
+    margin: auto;
+    top: 0;
+    display: flex;
+    align-items: center;
+    height: 60px;
+}
+
+
 .navImgTitle{
     display: flex;
     align-items: center;
     justify-content: center;
-    flex: 2;
 }
 .navImg{
     width: 30px;
     height: 30px;
     margin: 0px 15px;
     cursor: pointer;
-    border-radius: 5px;
 }
 
 .navTitle{
@@ -129,31 +131,31 @@ nav{
 }
 
 .navInputFlex{
-    flex: 6;
+    width: 650px;
 }
 
 .navInputBox{
     width: 250px;
-    height: 30px;
-    border-radius: 5px;
-    border: solid 1px rgba(0, 0, 0, 0.3);
+    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1;
     opacity: 1;
     margin: auto;
-    background-color: #eee;
+    background-color: #f0eeee;
+    border-radius: 10px;
 }
+
 .navInput{
     width: 200px;
     border: none;
     text-align: center;
     overflow: auto;
     font-size: 15px;
-    background-color: #eee;
+    background-color: #f0eeee;
     outline: none;
-
+    line-height: 40px;
 }
 
 .fa-magnifying-glass{
@@ -166,7 +168,6 @@ nav{
     display: flex;
     align-items: center;
     justify-content: center;
-    flex: 2;
 }
 
 .navIcon{
@@ -179,24 +180,24 @@ nav{
 /* main */
 
 main{
-    max-width: 80%;
     display: flex;
+    justify-content: center;
     margin: auto;
-    margin-top: 70px;
+    margin-top: 60px;
 }
 
 
 /* section, article */
 
 section{
-    width: 100%;
+    width: 670px;
     margin: 50px 0;
 }
 
 article{
     border: 1px solid rgba(180, 180, 180, 0.933);
-    border-radius: 5px;
-    margin-bottom: 30px;
+    background-color: white;
+    border-radius: 3px;
 }
 
 .articleHeader{
@@ -211,11 +212,10 @@ article{
 }
 
 .articleProfileImg{
+    border: 2px solid #c536a4;
+    border-radius: 50%;
     width: 40px;
     height: 40px;
-    border-radius: 50%;
-    border: 2px solid black;
-    cursor: pointer;
 }
 
 .articleProfileTitle{
@@ -290,12 +290,10 @@ article{
 
 .articleInputBox{
     width: 100%;
-    border-radius: 5px;
     border: none;
     border-top: 1px solid rgba(180, 180, 180, 0.933);
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
 }
+
 .articleInput{
     width: 90%;
     line-height: 40px;
@@ -307,7 +305,6 @@ article{
     width: 40px;
     height: 30px;
     cursor: pointer;
-    border-radius: 5px;
     color: #b2dffc;
     background-color: white;
     font-size: 14px;
@@ -317,126 +314,156 @@ article{
 
 
 
+
+/* 여기부터 리팩토링 */
+
 /* aside */
 
-main .mainRight{
-    margin-top: 50px;
+aside{
+    margin-top: 30px;
+    width: 300px;
+    margin-left: 30px;
 }
 
-.mainRight{
-    margin-left: 50px;
+.asideFixed{
+    position: fixed;
 }
 
-.mainRightTitle{
+.asideProfile{
     display: flex;
     text-align: left;
     align-items: center;
 }
-.mainRightImg{
+
+.aisdeProfileBox{
+    border: 1px solid #cfcccc;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-right: 15px;
 }
 
-.mainRight img{
+.aisdeProfileImg{
     width: 60px;
     height: 60px;
-    border: 2px solid black;
     border-radius: 50%;
 }
 
-.mainRightStory{
-    width: 90%;
-    border: 1px solid rgba(180, 180, 180, 0.933);
-    border-radius: 5px;
-    margin: 20px 0;
+.asideProfileIdBox{
+    margin-top: 15px;
 }
-.storyTitle{
+
+.aisdeProfileId{
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+.aisdeProfileName{
+    margin-top: 0;
+    color: gray;
+    font-size: 14px;
+}
+
+.asideStory{
+    width: 300px;
+    border: 1px solid rgba(180, 180, 180, 0.933);
+    margin: 20px 0;
+    border-radius: 3px;
+}
+
+.storyTitleBox{
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 0 10px;
-    border-bottom: 1px solid rgba(180, 180, 180, 0.933);
 }
-.storyTitle p{
-    color: rgb(115, 114, 114);
+
+.storyTitle{
+    color: gray;
 }
+
+.storyTitleContent{
+    font-size: 12px;
+    font-weight: bold;
+}
+
 .storyProfile{
     text-align: left;
 }
+
 .storyProfiles{
     display: flex;
     margin: 10px 0 10px 10px;
-    align-items: center;
-}
-.storyProfiles img{
-    width: 40px;
-    height: 40px;
-    border: 2px solid #c536a4;
-    cursor: pointer;
-}
-.storyProfiles p{
-    margin-top: 5px;
-    font-size: 11px;
-}
-.recomendImg img{
-    border: 2px solid black;
-    margin: 0;
-}
-.recomendImg{
-    margin-right: 10px;
-}
-.recommend{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 
-.recommend p{
-    font-weight: 100;
-    font-size: 13px;
-    margin: 0;
-    cursor: default;
-}
-.recommend span{
-    font-weight: bold;
+.storyProfilesImgBox{
+    border-radius: 50%;
+    border: 2px solid #c536a4;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
+    margin-right: 10px;
+}
+.storyProfilesImg{
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+}
+
+.storyProfileId{
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+.storyProfileTime{
+    margin-top: 0;
+    font-size: 13px;
+    color: gray;
+}
+
+.recomendBox{
+    margin-left: 10px;
 }
 
 .follow{
-    margin-left: 50px;
+    font-size: 12px;
     cursor: pointer;
     color: #1995f6;
-}
-.storyTitle span{
-    cursor: pointer;
-}
-
-.nickname{
     font-weight: bold;
+    margin-left: 10px;
 }
-
 
 @media screen and (max-width:1000px) {
-    .mainRight{
-        display: none;
-    }
-    
-}
-@media screen and (max-width:800px) {
-    .navInputFlex{
+    aside{
         display: none;
     }
 }
+@media screen and (max-width:700px) {
+    .navInputBox{
+        display: none;
+    }
+}
+
+
+
+
+
 
 
 /* -------------------------------- */
 
-.idFindBox{
+/* .idFindBox{
     background-color: white;
     width: 350px;
     height: 250px;
     position: absolute;
     top: 45px;
-    border-radius: 5px;
     border: 1px solid #eee;
     text-align: left;
     overflow: auto;
@@ -445,13 +472,11 @@ main .mainRight{
 .idFindBox::-webkit-scrollbar {
     width: 5px;
 }
-  .idFindBox::-webkit-scrollbar-thumb {
+.idFindBox::-webkit-scrollbar-thumb {
     background-color: #2f3542;
-    border-radius: 5px;
 }
-  .idFindBox::-webkit-scrollbar-track {
+.idFindBox::-webkit-scrollbar-track {
     background-color: grey;
-    border-radius: 5px;
     box-shadow: inset 0px 0px 5px white;
 }
 
@@ -471,4 +496,4 @@ main .mainRight{
 
 .idFindBox{
     display: none;
-}
+} */
