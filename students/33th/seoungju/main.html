@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Westagrm</title>
+    <title>Westagrm_main</title>
     <link rel="stylesheet" href="main.css">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
@@ -14,8 +14,8 @@
         <a id="westagram_icon" href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8Pr624NjLfwcX8__wXYeM2khAokpjlnkAWA&usqp=CAU" width="35px" height="35px"></a>
         <span id="westagram_logo">Westagram</span>
         <form class="searchForm">
-            <input id="searchBar" placeholder="검색">
-            <button class="fa-solid fa-magnifying-glass"></button>
+            <input id="searchBar" placeholder="&#128270;검색">
+            
         </form>
         <div class="icon">
             <a  id="search_icon" href="#"><img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png"></a>
@@ -32,7 +32,7 @@
                     <span class="feeds_user_name">WeCode - 위코드</span>
                     <button class="fa-solid fa-ellipsis" id="artice_for_update_button"></button>
                 </div>
-                <img id="feeds_user_image" src="https://images.unsplash.com/photo-1650282101540-cc4f4077f0f5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDU0fHRvd0paRnNrcEdnfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" width="720px" height="620px">
+                <img id="feeds_user_image" src="https://images.unsplash.com/photo-1650282101540-cc4f4077f0f5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDU0fHRvd0paRnNrcEdnfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" width="100%" height="620px">
                 <div class="feeds_middle">
                     <div class="feeds_icon">
                         <a id="feeds_icon_heart" href="#"><img src="https://cdn-icons-png.flaticon.com/128/2107/2107845.png" width="35px" height="35px"></a>
@@ -45,9 +45,12 @@
                 </div>
                 <div class="summary_comment">
                     <img id="friends" src="https://images.unsplash.com/photo-1650859089873-8bea20f6408d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDMxfHRvd0paRnNrcEdnfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" width="50" height="50">
-                    <span class="how_many_likes"><b>AhnSeoung_Ju</b>님 <b>외 4명</b>이 좋아합니다.</span>
+                    <p class="how_many_likes"><b>AhnSeoung_Ju</b>님 <b>외 4명</b>이 좋아합니다.</p>
                 </div>
-                <input class="comment_input" type="text" placeholder="&#128512; 댓글 달기...">
+                <section class="total_comment">
+                    <input class="comment_input" type="text" placeholder="&#128512; 댓글 달기...">
+                    <button class="comment_button">게시</button>
+                </section>
             </article>
         </div>
         <div class="main_right">
@@ -85,8 +88,9 @@
                 <span class="recommend_follow_text" id="follow_text3">회원님을 팔로우합니다</span>
                 <a class="follow" id="follow_3" href="#">팔로우</a>  
             </div>
-            <a class="information" href="#">소개.도움말.홍보 센터.API.채용 정보. 개인정보처리방침.약관.위치.인기 계정.해시태그.<br>언어</a>
+            <a class="information" href="#">소개.도움말.홍보 센터.API.채용 정보. 개인정보처리방침.약관.위치.인기 계정.해시태그.언어</a>
         </div>
     </main>
+    <script src="main.js"></script>
 </body>
 </html>
