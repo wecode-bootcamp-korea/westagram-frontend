@@ -20,10 +20,12 @@ a {
 }
 
 nav {
+  position: sticky;
   display: flex;
   justify-content: center;
   height: 59px;
   width: 100%;
+  top: 0;
   border-bottom: 1px solid rgb(219, 219, 219);
   background-color: #fff;
 }
@@ -34,13 +36,12 @@ nav {
   align-items: center;
   width: 100%;
   max-width: 930px;
-  margin: 0 20px;
 }
 
 .nav__logo {
+  position: relative;
   display: flex;
   align-items: center;
-  position: relative;
 }
 
 .nav__logo-text {
@@ -70,7 +71,9 @@ nav {
 
 .nav__search input::placeholder {
   color: rgb(188, 188, 188);
-  position: center;
+}
+.nav__search input:focus {
+  outline: none;
 }
 
 .nav__icons img {
@@ -83,13 +86,7 @@ nav {
 main {
   display: flex;
   justify-content: center;
-  width: 100%;
-  height: 1000px;
   margin-top: 30px;
-}
-main img {
-  /* 삭제 */
-  width: 100px;
 }
 
 .main__container {
@@ -100,12 +97,13 @@ main img {
 .feeds {
   display: flex;
   flex-direction: column;
-  padding-right: 20px;
+  margin-bottom: 20px;
 }
 
 article {
   display: flex;
   flex-direction: column;
+  max-width: 614px;
   border: 1px solid rgb(219, 219, 219);
   background-color: white;
 }
@@ -126,9 +124,9 @@ article header {
 .article__header__profile-img {
   width: 32px;
   height: 32px;
-  object-fit: cover;
-  border-radius: 50%;
   margin-right: 15px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .article__header__profile-name {
@@ -145,7 +143,7 @@ article header {
   color: rgb(55, 55, 55);
 }
 
-article .article__img img {
+.article__img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -168,12 +166,18 @@ article .article__img img {
   display: flex;
   align-items: center;
 }
+
+.article-data__icons-heart.material-icons {
+  margin-right: 0px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
 .article-data__icons-left img,
 .article-data__icons-right {
-  width: 23px;
   height: 23px;
+  margin-left: 15px;
   cursor: pointer;
-  margin-right: 17px;
 }
 
 .article-data__icons-right {
@@ -202,36 +206,31 @@ article .article__img img {
 .reaction__comments ul li {
   position: relative;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 
 .reaction__comments ul li .comments__commented {
-  width: 100%;
+  flex: 1;
   margin-top: 5px;
 }
 
-.reaction__comments ul li .comments__btns {
-  display: flex;
+li .article-data__icons-heart.material-icons {
+  cursor: pointer;
+  font-size: 20px;
 }
 
-.reaction__comments ul li .comments__btns i {
-  margin-right: 10px;
-  color: rgb(76, 159, 255);
-  cursor: pointer;
+.fill {
+  color: rgb(255, 63, 63);
 }
 
 .reaction__comments ul li img {
   width: 15px;
-  cursor: pointer;
-}
-
-.reaction__comments ul li img:last-child {
-  width: 14px;
-  cursor: pointer;
   margin-left: 10px;
+  cursor: pointer;
 }
 
+/* comments date */
 .reaction__comments .date {
   margin: 8px 0;
   color: rgb(180, 180, 180);
@@ -244,6 +243,7 @@ article .article__img img {
 /* comments form */
 .comment-form {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   height: 55px;
   border-top: 1px solid rgb(219, 219, 219);
@@ -273,12 +273,22 @@ article .article__img img {
   background-color: transparent;
   font-size: 14px;
   font-weight: 600;
-  cursor: pointer;
   text-align: end;
+  cursor: pointer;
+}
+
+.comment-form button.active {
+  color: rgb(30, 151, 226);
 }
 
 /* main-right */
+.main-right__container {
+  width: 300px;
+  margin-left: 20px;
+}
+
 .main-right {
+  position: fixed;
   display: flex;
   flex-direction: column;
   width: 300px;
@@ -379,9 +389,9 @@ article .article__img img {
 }
 
 .recommend__list__follow-btn {
+  color: rgb(11, 161, 255);
   font-size: 12px;
   font-weight: 600;
-  color: rgb(11, 161, 255);
   cursor: pointer;
 }
 
@@ -392,8 +402,8 @@ article .article__img img {
 .main-right__footer ul {
   display: flex;
   flex-wrap: wrap;
-  font-size: 12px;
   color: rgb(180, 180, 180);
+  font-size: 12px;
 }
 
 .main-right__footer li {

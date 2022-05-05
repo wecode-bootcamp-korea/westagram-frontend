@@ -1,7 +1,8 @@
 const commentForm = document.querySelector('.comment-form');
 const commentInput = document.querySelector('.comment-input');
-const likeBtn = document.querySelector('.article-data__icons-heart');
-
+const likeBtn = document.querySelector(
+  '.article-data__icons-heart.material-icons'
+);
 let COMMENT = 'comment';
 let comments = [];
 
@@ -17,11 +18,16 @@ const commentRemove = (e) => {
 };
 
 const likeColorHandler = (e) => {
-  const emptyHeart = 'http://127.0.0.1:5500/img/heart.png';
-  const filledHeart = 'http://127.0.0.1:5500/img/liked-heart.png';
-  if (e.target.src === emptyHeart) {
-    e.target.src = filledHeart;
-  } else e.target.src = emptyHeart;
+  const emptyHeart = 'favorite_border';
+  const filledHeart = 'favorite';
+
+  if (e.target.innerText === emptyHeart) {
+    e.target.innerText = filledHeart;
+    e.target.classList.add('fill');
+  } else {
+    e.target.innerText = emptyHeart;
+    e.target.classList.remove('fill');
+  }
 };
 
 const commentPrint = (commentObj) => {
@@ -31,8 +37,12 @@ const commentPrint = (commentObj) => {
   li.id = commentObj.id;
   ul.appendChild(li);
 
-  const commentLikeBtn = document.createElement('img');
-  commentLikeBtn.src = './img/heart.png';
+  const commentLikeBtn = document.createElement('span');
+  commentLikeBtn.innerHTML = 'favorite_border';
+  commentLikeBtn.setAttribute(
+    'class',
+    'article-data__icons-heart material-icons'
+  );
   li.appendChild(commentLikeBtn);
   commentLikeBtn.addEventListener('click', likeColorHandler);
 
@@ -42,10 +52,17 @@ const commentPrint = (commentObj) => {
   removeBtn.addEventListener('click', commentRemove);
 };
 
+const commentMaker = (comment) => {
+  return `<div class="comments__commented">
+            <p><span>test</span> ${comment}</p>
+          </div>`;
+};
+
 const commentHandler = (e) => {
   e.preventDefault();
   if (commentInput.value === '') return;
   const comment = commentInput.value;
+
   commentInput.value = '';
   commentInput.focus();
   const commentObj = {
@@ -57,10 +74,13 @@ const commentHandler = (e) => {
   commentSave();
 };
 
-const commentMaker = (comment) => {
-  return `<div class="comments__commented">
-            <p><span>test</span> ${comment}</p>
-          </div>`;
+const commentBtnHandler = () => {
+  const commentBtn = document.querySelector('.comment-btn');
+  if (commentInput.value !== '') {
+    commentBtn.classList.add('active');
+  } else {
+    commentBtn.classList.remove('active');
+  }
 };
 
 const savedComment = localStorage.getItem(COMMENT);
@@ -72,3 +92,4 @@ if (savedComment !== null) {
 
 likeBtn.addEventListener('click', likeColorHandler);
 commentForm.addEventListener('submit', commentHandler);
+commentForm.addEventListener('keyup', commentBtnHandler);
