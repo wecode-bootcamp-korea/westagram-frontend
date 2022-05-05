@@ -1,11 +1,14 @@
 const postingBtn = document.querySelector('.posting-btn');
-const commentInput = document.querySelector('.comment-text');
+const commentInput = document.querySelector('.posting-input');
 const commentContainer = document.querySelector('.comment-container');
-const nextBtn = document.querySelector('.fa-circle-chevron-right');
+const nextBtn = document.querySelector('.next-btn');
 const storyContainer = document.querySelector('.story-container');
 const beforeBtn = document.querySelector('.before-btn');
 const heartBtn = document.querySelector('.fa-heart');
 
+postingBtn.addEventListener('click',()=>{
+    console.log(ddd)
+})
 
 const character = [
     {
@@ -53,16 +56,16 @@ const character = [
 character.forEach((item)=>{
     const storyItem = document.createElement('div');
     storyItem.setAttribute('class','story-item');
-    storyItem.innerHTML = `<img src="image/${item.imageName}.jpg" alt="">  
+    storyItem.innerHTML = `<img src="image/${item.imageName}.jpg" alt="cat">  
                            <div>${item.nickName}</div>`
     storyContainer.appendChild(storyItem);
 });
 
 nextBtn.addEventListener('click',()=>{
-    storyContainer.style.transform = `translateX(-200px)`;
+    storyContainer.style.transform = `translateX(-230px)`;
     nextBtn.style.display = 'none';
     beforeBtn.style.display = 'block';
-})
+});
 
 beforeBtn.addEventListener('click',()=>{
     storyContainer.style.transform = `translateX(0px)`;
@@ -70,9 +73,8 @@ beforeBtn.addEventListener('click',()=>{
     beforeBtn.style.display = 'none';
 });
 
-
-
 commentInput.addEventListener('keyup',()=>{
+    console.log('ddd')
     activateBtn();
 });
 
@@ -96,13 +98,13 @@ commentInput.addEventListener('keyup',(e)=>{
 
 function activateBtn(){
     if(commentInput.value.length > 0){
-        postingBtn.classList.add('button-active');
+        postingBtn.classList.add('button-activate');
         postingBtn.disabled = false;
     }else{
-        postingBtn.classList.remove('button-active');
+        postingBtn.classList.remove('button-activate');
         postingBtn.disabled = true;
     }
-}
+};
 
 let id = 0;
 function createElement(){
@@ -120,12 +122,12 @@ function createElement(){
                             </div>`
     id++;
     return newComment;
-}
+};
 
 function onAdd(item){
     commentContainer.appendChild(item);
     commentInput.value = '';
-}
+};
 
 let heartClicked = false;
 commentContainer.addEventListener('click',(e)=>{

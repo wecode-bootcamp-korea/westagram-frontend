@@ -11,52 +11,49 @@
     <script defer src="js/main.js"></script>
 </head>
 <body>
-
-    <div class="nav-container">
-        <nav class="nav">
-            <span>
+    <nav class="nav-container">
+        <ul class="nav-list">
+            <li>
                 <i class="fa-brands fa-instagram"></i>
-                <span class="logo-font-style">| Westagram</span>
-            </span>
-            
-            <input type="text" placeholder="검색" class="nav-input">
-            <div class="nav-icon-area">
+                <span class="nav-logo-letter">| Westagram</span>
+            </li>
+            <li><input class="nav-input" type="text" placeholder="검색"></li>
+            <li class="nav-icon-area">
                 <img src="image/explore.png" alt="explore">
                 <img src="image/heart.png" alt="heart">
-                <img src="image/profile.png" alt="profile">
-            </div>    
-        </nav>    
-    </div>
+                <img src="image/profile.png" alt="">
+            </li>
+        </ul>
+    </nav>
     
-    <div class="main-container">
-        <main class="feeds-right-container">
-            <div class="feeds">
-                <div class="story-area">
-                    <button class="next-btn">
-                        <i class="fa-solid fa-circle-chevron-right"></i>
-                    </button>
-                    <button class="before-btn">
-                        <i class="fa-solid fa-circle-chevron-left"></i>
-                    </button>
-                    <div class="story-container">
-                    </div>
-                    
-
+    
+    <main class="feeds-right-container">
+        <div class="story-feeds">
+            <div class="story-area">
+                <button class="before-btn">
+                    <i class="fa-solid fa-circle-chevron-left"></i>
+                </button>
+                <button class="next-btn">
+                    <i class="fa-solid fa-circle-chevron-right"></i>
+                </button>
+                <div class="story-container">
                 </div>
+            </div>
+            <div class="feeds">
                 <article class="feed-article">
                     <header class="feed-header">
-                        <div class="feed-header-title">
-                            <img src="image/karina-vorozheeva-rW-I87aPY5Y-unsplash.jpg" alt="header-profile-img">
-                            <div>Hello_World</div>
+                        <div class="feed-header-left">
+                            <img src="image/karina-vorozheeva-rW-I87aPY5Y-unsplash.jpg" alt="">
+                            <span>Hello_World</span>
                         </div>
-                        <div class="feed-header-menu">
+                        <div class="feed-header-right">
                             <i class="fa-solid fa-ellipsis"></i>
                         </div>
                     </header>
-                    <section class="feed-content">
+                    <div class="feed-content">
                         <img src="image/karina-vorozheeva-rW-I87aPY5Y-unsplash.jpg" alt="">
-                    </section>
-                    <section class="button-area">
+                    </div>
+                    <div class="feed-btn-area">
                         <span>
                             <i class="fa-regular fa-heart"></i>
                             <i class="fa-regular fa-comment"></i>
@@ -65,82 +62,82 @@
                         <span>
                             <i class="fa-regular fa-bookmark"></i>
                         </span>
-                    </section>
-                    <section class="heart-number-area">
-                        <span class="heart-number-comment">좋아요 2150개</span>
-                    </section>
-                    <section class="letter-comment-area">
-                        <div class="post-writing">
-                            <a href="#">Hello_World</a> 
+                    </div>
+                    <div class="heart-number">
+                        좋아요 2150개
+                    </div>
+                    <div class="letter-comment-area">
+                        <div class="posting-letter">
+                            <a href="#">Hello_World</a>
                             <span>나비가 내 코에 앉았어오</span>
                         </div>
-                        <span class="comment-area">댓글5개 모두보기</span>
+                        <div class="comment-show">
+                            댓글 5개 모두보기
+                        </div>
                         <div class="comment-container">
                         </div>
-                    </section>
-                    <div class="date">1일전</div>
-                    <section class="post-comment">
-                        <div class="post-comment-box">
+                    </div>
+                    <div class="date-before">1일전</div>
+                    <footer class="footer">
+                        <div class="posting-comment-area">
                             <i class="fa-regular fa-face-grin"></i>
-                            <input name="post-comment" class="comment-text" placeholder="댓글달기..."></input>
+                            <input class="posting-input" type="text" placeholder="댓글달기...">
                             <button disabled class="posting-btn">게시</button>
                         </div>
-                    </section>
+                    </footer>
                 </article>
-            </div> 
-            <div class="main-right">
-                <div class="profile">
-                    <img class="profile-img" src="image/karina-vorozheeva-rW-I87aPY5Y-unsplash.jpg" alt="profile-img">
-                    <span class="nickname">Hello_World</span>
+            </div>
+        </div>
+        <div class="main-right">
+            <div class="right-profile">
+                <img src="image/karina-vorozheeva-rW-I87aPY5Y-unsplash.jpg" alt="">
+                <span>Hello_World</span>
+            </div>
+            <section class="recommend">
+                <div class="recommend-title">
+                    <span>회원님을 위한 추천</span>
+                    <a href="#">모두보기</a>
                 </div>
-                <div class="recommend">
-                    <div class="recommend-title">
-                        <span>회원님을 위한 추천</span>
-                        <a href="#">모두보기</a>
+                <div class="recommend-list">
+                    <div class="recommend-list-item">
+                        <div class="list-profile">
+                            <img src="image/cat0.jpg" alt="">
+                            <span>I'm_sham</span>
+                        </div>
+                        <span class="follow">팔로우</span>
                     </div>
-                    <div class="recommend-list">
-                        <div class="recommend-list-item">
-                            <div class="list-profile">
-                                <img src="image/cat0.jpg">
-                                <span>I'm_sham</span>    
-                            </div>
-                            <span class="follow">팔로우</span>
+                    <div class="recommend-list-item">
+                        <div class="list-profile">
+                            <img src="image/cat1.jpg" alt="">
+                            <span>good_day</span>
                         </div>
-                        <div class="recommend-list-item">
-                            <div class="list-profile">
-                                <img src="image/cat1.jpg">
-                                <span>good_day</span>    
-                            </div>
-                            <span class="follow">팔로우</span>
+                        <span class="follow">팔로우</span>
+                    </div>
+                    <div class="recommend-list-item">
+                        <div class="list-profile">
+                            <img src="image/cat2.jpg" alt="">
+                            <span>Samsek's_day</span>
                         </div>
-                        <div class="recommend-list-item">
-                            <div class="list-profile">
-                                <img src="image/cat2.jpg">
-                                <span>Samsek's_day</span>    
-                            </div>
-                            <span class="follow">팔로우</span>
+                        <span class="follow">팔로우</span>
+                    </div>
+                    <div class="recommend-list-item">
+                        <div class="list-profile">
+                            <img src="image/cat3.jpg" alt="">
+                            <span>Cat_lover</span>
                         </div>
-                        <div class="recommend-list-item">
-                            <div class="list-profile">
-                                <img src="image/cat3.jpg">
-                                <span>cat_lover</span>    
-                            </div>
-                            <span class="follow">팔로우</span>
+                        <span class="follow">팔로우</span>
+                    </div>
+                    <div class="recommend-list-item">
+                        <div class="list-profile">
+                            <img src="image/cat4.jpg" alt="">
+                            <span>I_love_cats</span>
                         </div>
-                        <div class="recommend-list-item">
-                            <div class="list-profile">
-                                <img src="image/cat4.jpg">
-                                <span>I_love_cats</span>    
-                            </div>
-                            <span class="follow">팔로우</span>
-                        </div>
+                        <span class="follow">팔로우</span>
                     </div>
                 </div>
-            </div>   
-        </main>    
-    </div>
-    
-        
+            </section>
+        </div>
+    </main>
     
 
 </body>
