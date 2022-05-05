@@ -1,6 +1,7 @@
 let inputComment = document.getElementsByClassName("inputComment")[0];
 let submitCommentBtn = document.getElementsByClassName("submitCommentBtn")[0];
 
+//comment 구현
 function submitComment() {
     const newUserComment = document.getElementsByClassName("commentBox")[0];
 
@@ -20,6 +21,9 @@ function submitComment() {
     comment.innerText = inputComment.value;
     heart.innerHTML = '<i class="fa-solid fa-heart commentIcon"></i>';
     deleteComment.innerHTML = '<i class="fa-solid fa-trash commentIcon"></i>';
+    deleteComment.addEventListener('click', () => {
+        newUserComment.removeChild(commentDiv);
+    })
 
     commentDiv.appendChild(userName);
     commentDiv.appendChild(comment);
@@ -33,3 +37,6 @@ submitCommentBtn.addEventListener("click", (e) => {
     submitComment();
     inputComment.value = "";
 });
+
+
+
