@@ -5,9 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style/main.css">
-  <!-- <link rel="stylesheet" href="style/common.css"> -->
+  <link rel="stylesheet" href="style/common.css">
   <title>Westagram</title>
-  <link rel="shortcut icon" href="img/instaLogo.png">
+  <link alt="shortcut icon" href="img/instaLogo.png">
   <script src="https://kit.fontawesome.com/a46ca8b5ac.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -16,7 +16,7 @@
       <nav>
         <div class="webstaNav">
           <div class="logo">
-            <a href="main.html"><img rel="instagram black logo" src="img/instaLogoBlack.png" width="20px">
+            <a href="main.html"><img alt="instagram black logo" src="img/instaLogoBlack.png" width="20px">
             <span class="navInsata">westagram</span>
             </a>
           </div>
@@ -25,9 +25,9 @@
             <input type="text" placeholder="검색">
           </div>
           <div class="navRight">
-            <a href="#"><img rel="explore" src="img/explore.png" width="24px"></a>
-            <a href="#"><img rel="heart" src="img/heart.png" width="24px"></a>
-            <a href="#"><img rel=profile" src="img/profile.png" width="24px"></a>
+            <a href="#"><img alt="explore" src="img/explore.png" width="24px"></a>
+            <a href="#"><img alt="heart" src="img/heart.png" width="24px"></a>
+            <a href="#"><img alt=profile" src="img/profile.png" width="24px"></a>
           </div>
         </div>
       </nav>
@@ -37,26 +37,209 @@
     <div class="feeds">
       <article>
         <div class="feedHeader">
-          <a href="#">
-            <img rel="header profile" src="img/websta_circle.png" width="32px">
-          </a>
-          <a href="#"><p>hey.yong44</p></a>
-          
-          <i class="fa-solid fa-ellipsis"></i>
+          <div class="feedHeaderStart">
+            <a href="#">
+              <img alt="header profile" src="img/websta_circle.png" width="32px">
+            </a>
+            <a href="#"><p>hey.yong44</p></a>
+          </div>
+          <div class="feedHeaderEnd">
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
         </div>
         <div class="mainFeed">
-          <img rel="main feed picture" src="img/article1.jpg">
+          <img alt="main feed picture" src="img/article1.jpg">
         </div>
         <div class="articleCommu">
-          <img rel="heart" src="img/heart.png">
-          <img rel="speech bubble" src-="img/speechbubble.png">
-          <i class="fa-solid fa-arrow-up-from-bracket"></i>
+          <div class="commuStart">
+            <i class="fa-regular fa-heart fa-xl"></i>
+            <i class="fa-regular fa-comment fa-xl"></i>
+            <i class="fa-solid fa-arrow-up-from-bracket fa-xl"></i>
+          </div>
+          <div class="commuEnd">
+            <i class="fa-regular fa-bookmark fa-xl"></i>
+          </div>
         </div>
+        <div class="likeart">
+          <img alt="pro picture" src="img/changsik-circle.png" width="20px">
+          <a href="#"><p>changsik_kim</p></a>
+          <span>님 외 <a href="#">여러명</a>이 좋아합니다</span>
+        </div>
+        <div class="commentArt">
+          <div class="myFeed">
+            <a href="#">hey.yong44</a>
+            <p>저녁엔 피맥 한잔~</p>
+            <span>더 보기</span>
+          </div>
+          <div class="yourComment">
+            <a href="#">changsik_kim</a>
+            <p>맛있어보이네요</p>
+          </div>
+        </div>
+        <div class="ago">
+          <p>42 분전</p>
+        </div>
+        <section>
+        <div class="commentSection">
+          <div class="comment">
+            <i class="fa-regular fa-face-smile fa-lg"></i>
+             <input type="text" placeholder="댓글 달기...">
+             <button type="button">게시</button>
+            </div>
+          </div>
+        </section>
+      </article>
+      <article>
+        <div class="feedHeader">
+          <div class="feedHeaderStart">
+            <a href="#">
+              <img alt="header profile" src="img/websta_circle.png" width="32px">
+            </a>
+            <a href="#"><p>hey.yong44</p></a>
+          </div>
+          <div class="feedHeaderEnd">
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
+        </div>
+        <div class="mainFeed">
+          <img alt="main feed picture" src="img/JjangAh.jpg">
+        </div>
+        <div class="articleCommu">
+          <div class="commuStart">
+            <i class="fa-regular fa-heart fa-xl"></i>
+            <i class="fa-regular fa-comment fa-xl"></i>
+            <i class="fa-solid fa-arrow-up-from-bracket fa-xl"></i>
+          </div>
+          <div class="commuEnd">
+            <i class="fa-regular fa-bookmark fa-xl"></i>
+          </div>
+        </div>
+        <div class="likeart">
+          <img alt="pro picture" src="img/changsik-circle.png" width="20px">
+          <a href="#"><p>changsik_kim</p></a>
+          <span>님 외 <a href="#">여러명</a>이 좋아합니다</span>
+        </div>
+        <div class="commentArt">
+          <div class="myFeed">
+            <a href="#">hey.yong44</a>
+            <p>잘자는 댕댕이 짱아</p>
+            <span>더 보기</span>
+          </div>
+          <div class="yourComment">
+            <a href="#">changsik_kim</a>
+            <p>귀엽네요~</p>
+          </div>
+        </div>
+        <div class="ago">
+          <p>3 일전</p>
+        </div>
+        <section>
+        <div class="commentSection">
+          <div class="comment">
+            <i class="fa-regular fa-face-smile fa-lg"></i>
+             <input type="text" placeholder="댓글 달기...">
+             <button type="button">게시</button>
+            </div>
+          </div>
+        </section>
+      </article>
+      <article>
+        <div class="feedHeader">
+          <div class="feedHeaderStart">
+            <a href="#">
+              <img alt="header profile" src="img/websta_circle.png" width="32px">
+            </a>
+            <a href="#"><p>hey.yong44</p></a>
+          </div>
+          <div class="feedHeaderEnd">
+            <i class="fa-solid fa-ellipsis"></i>
+          </div>
+        </div>
+        <div class="mainFeed">
+          <img alt="main feed picture" src="img/cherry_blossom.jpg">
+        </div>
+        <div class="articleCommu">
+          <div class="commuStart">
+            <i class="fa-regular fa-heart fa-xl"></i>
+            <i class="fa-regular fa-comment fa-xl"></i>
+            <i class="fa-solid fa-arrow-up-from-bracket fa-xl"></i>
+          </div>
+          <div class="commuEnd">
+            <i class="fa-regular fa-bookmark fa-xl"></i>
+          </div>
+        </div>
+        <div class="likeart">
+          <img alt="pro picture" src="img/changsik-circle.png" width="20px">
+          <a href="#"><p>changsik_kim</p></a>
+          <span>님 외 <a href="#">여러명</a>이 좋아합니다</span>
+        </div>
+        <div class="commentArt">
+          <div class="myFeed">
+            <a href="#">hey.yong44</a>
+            <p>봄에는 역시 벚꽃 구경</p>
+            <span>더 보기</span>
+          </div>
+          <div class="yourComment">
+            <a href="#">changsik_kim</a>
+            <p>저도 벚꽃 좋아하는데...</p>
+          </div>
+        </div>
+        <div class="ago">
+          <p>1 달전</p>
+        </div>
+        <section>
+        <div class="commentSection">
+          <div class="comment">
+            <i class="fa-regular fa-face-smile fa-lg"></i>
+             <input type="text" placeholder="댓글 달기...">
+             <button type="button">게시</button>
+            </div>
+          </div>
+        </section>
       </article>
       </div>
       <div class="main-right">
-     
-        
+        <div>
+          <div class="rightMyProfile">            
+             <a href="#"><img alt="profile picture" src="img/websta_circle.png" width="56px"></a>
+              <div>
+                <a href="#"><span>hey.yong44</span></a>              
+                <div class="profileDescription">
+                  <span>HaeYong</span>
+                </div>
+            </div>
+          </div>
+          <div class="rightStory">
+            <div class="storyAll">
+              <p>스토리</p>
+              <a href="#">모두보기</a>
+            </div>
+            <div class="storyPeople">
+              <img alt="profile picture" src="img/websta_circle.png" width="32px">
+                <div class="inStory">
+                  <a href="#"><span>hey.yong44</span></a>              
+                  <span>1 시간전</span>
+                </div>
+            </div>
+          </div>
+          <div class="rightRecommendForYou">
+            <div class="recommendAll">
+              <p>회원님을 위한 추천</p>
+              <a href="#">모두보기</a>
+            </div>
+            <div class="recommendPeople">
+                <img alt="profile picture" src="img/websta_circle.png" width="32px">
+              <div class="recommend">
+                <a href="#"><span>hey.yong44</span></a>              
+                <span>회원님을 팔로우합니다.</span>
+              </div>
+            </div>
+          </div>
+          <div class="likeFooter">
+            <p>Instagram 정보 . 지원 . 홍보 센터 . API . 채용정보 . 개인정보처리방침 . 약관 . 디렉터리 . 프로필 . 해시태그 . 언어</p>
+            <p>© 2022 INSTAGRAM FROM META</p>
+          </div>
+        </div>
       </div>
   </main> 
 </body>
