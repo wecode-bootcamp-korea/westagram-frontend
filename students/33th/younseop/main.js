@@ -2,8 +2,6 @@
 
 const commnentWriteArea = document.getElementsByClassName("write-area")[0]; 
 const commentSubmitBtn = document.getElementById("submit"); 
-const commentFeed = document.getElementsByClassName("comments-wrapper")[0]; 
-const commentListItem = document.createElement("li");
 
 function actvieSubmitBtn() {
     if (commnentWriteArea.value) {
@@ -12,7 +10,9 @@ function actvieSubmitBtn() {
 }
 
 function generateCommentList() {
-
+    const commentFeed = document.getElementsByClassName("comments-wrapper")[0]; 
+    const commentListItem = document.createElement("li");
+    
     commentListItem.innerHTML = `
         <div>
             <span class="comment-user">userName</span>
