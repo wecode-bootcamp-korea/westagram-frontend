@@ -4,6 +4,7 @@ const commentInput = document.querySelector('.comment_wrap input');
 const commentUl = document.querySelector('.coment_new');
 
 
+
 function paintCommnet(newComment){
     const li = document.createElement("li");
     const p = document.createElement("p");
@@ -19,10 +20,12 @@ function paintCommnet(newComment){
     li.appendChild(btn);
     btn.appendChild(img);
     img.setAttribute('src', 'images/heart.png');
+    img.style.color = 'black';
     
     p.innerText = newComment;
     
     commentUl.appendChild(li);
+    img.addEventListener('click', haertToggle);
 }
 
 commentForm.addEventListener('submit', (event) => {
@@ -31,3 +34,18 @@ commentForm.addEventListener('submit', (event) => {
     commentInput.value = "";
     paintCommnet(newCommentValue)
 })
+
+
+function haertToggle(e){
+    const heart = e.target;
+    console.log(e.target);
+    
+    if(heart.style.color === 'black'){
+        console.log(heart);
+        heart.src = "images/heartfull.png";
+        heart.style.color = 'red';
+    } else {
+        heart.src = "images/heart.png";
+        heart.style.color = 'black';
+    }
+}
