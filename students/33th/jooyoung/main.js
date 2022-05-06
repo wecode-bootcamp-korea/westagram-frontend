@@ -11,21 +11,26 @@ function paintCommnet(newComment){
     const btn = document.createElement("button");
     const img = document.createElement('img');
     const strong = document.createElement('strong');
+    const span = document.createElement('span');
     
     li.classList.add("coment_new_box")
     li.appendChild(strong);
     strong.innerText = "p__jooyoung";
     li.appendChild(p);
-
+    p.innerText = newComment;
+    
     li.appendChild(btn);
     btn.appendChild(img);
     img.setAttribute('src', 'images/heart.png');
     img.style.color = 'black';
     
-    p.innerText = newComment;
+    li.appendChild(span);
+    span.innerText = "삭제";
+    
     
     commentUl.appendChild(li);
     img.addEventListener('click', haertToggle);
+    span.addEventListener('click', deleteComment);
 }
 
 commentForm.addEventListener('submit', (event) => {
@@ -48,4 +53,9 @@ function haertToggle(e){
         heart.src = "images/heart.png";
         heart.style.color = 'black';
     }
+}
+
+function deleteComment(e){
+    const li = e.target.parentElement;
+    li.remove();
 }
