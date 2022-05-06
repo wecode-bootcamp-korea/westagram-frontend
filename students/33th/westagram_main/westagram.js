@@ -31,23 +31,14 @@ function render() {
         resultHTML += `<div class="comment_board">
             <div class="comment">${commentList[i].commentContent}</div>
             <div class="comment_icon">
-            <i class="fa-regular fa-heart ft_log"></i>
+            <i class="fa-regular fa-heart ft_log likeBtn"></i>
             <i class="fa-solid fa-trash-can"></i>
             </div>
         </div>`
     }
 
     document.querySelector('.comment_up').innerHTML = resultHTML;
-//     const commentBoard = document.querySelector('.comment_up')
-//     const newComment = document.createElement('li')
-//     newComment.innerHTML=`<div class="comment_board">
-//     <div class="comment">댓글달리는 곳입니다</div>
-//     <div class="comment_icon">
-//       <i class="fa-regular fa-heart ft_log"></i>
-//       <i class="fa-solid fa-trash-can"></i>
-//     </div>
-//   </div> `
-//   commentBoard.appendChild(newComment)
+
 }
 
 
