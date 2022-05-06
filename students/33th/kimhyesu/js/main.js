@@ -1,28 +1,19 @@
 const toDoForm = document.querySelector("#todo-form");
-// const toDoInput = toDoForm.querySelector("input");
-const toDoInput = document.querySelector("#todo-form input");
 const toDoList = document.getElementById("todo-list");
-
-function paintToDo(newTodo) {
-  const li = document.createElement("li")
-  const span = document.createElement("span");
-  li.appendChild(span);
-  span.innerText = newTodo;
-  toDoList.appendChild(li);
-  
-  toDoList.innerHTML = `
-  <b>USER</b>
-  <span>${todo-list.value}</span>`
-}
-
+const commentList = document.querySelector('.commentList')
+const todoInput = document.querySelector('.todoInput')
 
 
 function handleToDoSubmit(event) {
   event.preventDefault(); 
-  const newTodo = toDoInput.value;
-  toDoInput.value = "";
-  paintToDo(newTodo);
-
+  const newTodo = todoInput.value;
+  todoInput.value = "";
+  const li = document.createElement("div")
+  li.setAttribute('class','user_desc')
+  li.innerHTML=`<b>followers</b>
+  <span>${newTodo}</span>`
+  
+  commentList.appendChild(li)
 }
 
 
