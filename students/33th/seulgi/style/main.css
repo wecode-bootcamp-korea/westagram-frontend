@@ -11,6 +11,8 @@ header {
     z-index: 1;
 }
 
+
+
 .nav {
     background-color: white;
     border-bottom: 1px solid var(--border-color);
@@ -77,10 +79,10 @@ header {
     height: 24px;
     border-radius: 50%;
     background-color: black;
-    
+    overflow: hidden;
 }
 
-.nav_right_icon img {
+.nav_right_icon span img {
     width: 24px;
 }
 
@@ -142,7 +144,9 @@ input {
 
 .story_button {
     background-color: white;
-    border: 2px solid purple;
+    border: 2px solid transparent;
+    background-image: linear-gradient(white, white), linear-gradient(#c13584, #f77737,#fcaf45); background-origin: border-box; background-clip: content-box, border-box;
+
     border-radius: 50%;
     width: 66px;
     height: 66px;
@@ -158,6 +162,12 @@ input {
     background-color: black;
     display: block;
     border-radius: 50%;
+    overflow: hidden;
+}
+
+.story_button span img {
+    width: 100%;
+    height: auto;
 }
 
 .article_profile {
@@ -193,7 +203,13 @@ input {
     background-color: black;
     display: block;
     border-radius: 50%;
+    overflow: hidden;
 }
+
+.article_header_button span img{
+    /* width: 100%; */
+    width: 32px;
+}    
 
 .article_header_id {
     margin: 0 0 0 12px;
@@ -290,6 +306,11 @@ input {
     height: 56px;
     border-radius: 50%;
     background-color: black;
+    overflow: hidden;
+}
+
+.main_right_profile span img {
+    width: 56px;
 }
 
 .main_right_profile .info {
@@ -347,6 +368,13 @@ input {
     height: 32px;
     border-radius: 50%;
     background-color: black;
+    overflow: hidden;
+}
+
+.recommend_imgBox_profile img {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
 }
 
 .recommend_content_left {
