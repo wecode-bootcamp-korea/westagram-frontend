@@ -5,13 +5,6 @@ const commentBtn = commentForm.querySelector('button');
 
 const myUserId = document.querySelector('.profile-id');
 
-function deleteComment(event) {
-    // To look into the directory of each button clicked -> console.dir(event.target), and look into the parentElement.
-    // event.target.parentElement
-    const li = event.target.parentElement;
-    li.remove();
-}
-
 function addComment(newComment) {
     const li = document.createElement('li');
     const spanId = document.createElement('span');
@@ -25,7 +18,13 @@ function addComment(newComment) {
     li.appendChild(span);
     li.appendChild(button);
     commentList.appendChild(li);
+}
 
+function deleteComment(event) {
+    // To look into the directory of each button clicked -> console.dir(event.target), and look into the parentElement.
+    // event.target.parentElement
+    const li = event.target.parentElement;
+    li.remove();
 }
 
 function handleCommentSubmit(event) {
