@@ -55,7 +55,7 @@ function uploadBtn(e) {
     document.querySelector('.upload').click();
   }
 }
-
+ 
 function enterPost() {
   if(commentInput.value) {
     const newUser = document.createElement('span');
