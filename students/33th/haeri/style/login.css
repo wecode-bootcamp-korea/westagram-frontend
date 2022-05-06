@@ -8,6 +8,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #fafafa;
 }
 
 .container {
@@ -16,7 +17,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fafafa;
 }
 
 .line_box {
@@ -61,7 +61,7 @@
     align-items: center;
 }
 
-.id_input {
+.input1 {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -77,12 +77,6 @@
 
 .id:focus {
     outline: 1px solid gray;
-}
-
-.pw_input {
-    width: 100%;
-    display: flex;
-    justify-content: center;
 }
 
 .pw {
@@ -108,12 +102,16 @@
 .login_btn {
     width: 250px;
     height: 35px;
-    background-color: rgba(0,149,246,.3);
     color: white;
     font-weight: bold;
     border: 0.5px solid #fafafa;
     border-radius: 5px;
     cursor: pointer;
+    background-color: #0095F6;
+}
+
+.login_btn:disabled {
+    background-color: rgb(168, 202, 244); /* 흐린 색상의 배경 적용 */
 }
 
 .find_box {
