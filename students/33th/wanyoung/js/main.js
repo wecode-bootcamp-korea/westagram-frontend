@@ -1,12 +1,10 @@
 const comment = document.querySelector("#comment-button");
 const user_comment = document.querySelector("#comment-content");
 const comment_value = document.querySelector("#comment-input");
-const USER_ID = "wan_0_kim";
-
 const comment_box = document.querySelector("#comment_box");
 const myHeart = document.querySelector("#feed_heart");
 const body = document.querySelector("body");
-
+const USER_ID = "wan_0_kim";
 function add_comment(e) {
     e.preventDefault();
     const comment_div = document.createElement("div");
@@ -38,11 +36,8 @@ function add_comment(e) {
     delete_btn.addEventListener("click", () => comment_div.remove());
 }
 comment.addEventListener("click", add_comment);
-
-//navbar user클릭시 환경설정 리스트 나오는 곳
 const user_profile_btn = document.querySelector("#user_profile");
 const user_navbar = document.querySelector(".hidden_nav_bar");
-
 function isclick() {
     if (user_navbar.style.visibility === "hidden") {
         user_navbar.style.visibility = "visible";
@@ -50,14 +45,12 @@ function isclick() {
         user_navbar.style.visibility = "hidden";
     }
 }
-
 user_profile_btn.addEventListener("click", isclick);
 body.addEventListener("click", (e) => {
     if (e.target.id !== "user_profile") {
         user_navbar.style.visibility = "hidden";
     }
 });
-
 const count = document.getElementById("count");
 function heartClick() {
     if (myHeart.style.color === "black") {
@@ -70,7 +63,6 @@ function heartClick() {
         myHeart.style.color = "black";
     }
 }
-
 myHeart.addEventListener("click", heartClick);
 const userArr = [
     // "malfoy_2", "wattson_12", "sherlock_98", "0_0_min", "wecode_"
@@ -129,7 +121,6 @@ const userArr = [
         img: "../image/pserson_pic1.jpg",
     },
 ];
-
 const search_user = document.querySelector(".search_user_result");
 const nav_input = document.querySelector(".nav_bar_input");
 let newArr = [];
@@ -145,44 +136,23 @@ nav_input.addEventListener("input", (e) => {
             }
             return;
         }
-        /* 
-        
-        */
-        if (x["name"].includes(e.target.value) && (x['name'][0] === e.target.value[0])) {
+        if (
+            x["name"].includes(e.target.value) &&
+            x["name"][0] === e.target.value[0]
+        ) {
             search_user.classList.remove("hidden");
             const search_user__flexbox = document.createElement("div");
-            const search_user__flexbox__imgDiv = document.createElement("div");
-            const search_user__flexbox__img = document.createElement("img");
-            const search_user__nameDiv = document.createElement("div");
-            const search_user__enName = document.createElement("p");
-            const search_user__korName = document.createElement("span");
-            search_user__flexbox__img.className = "img_circle_32px";
-            search_user__flexbox__img.src = x["img"];
-            search_user__flexbox.className = [
-                "padding",
-                "border_bottom",
-                "flex",
-                "flex_start",
-                "search_result",
-            ].join(" ");
-            search_user__nameDiv.className = "margin_left";
-            search_user__enName.innerText = x["name"];
-            search_user__korName.innerText = x["descName"];
-            search_user__nameDiv.appendChild(search_user__enName);
-            search_user__nameDiv.appendChild(search_user__korName);
-            search_user__flexbox__imgDiv.appendChild(search_user__flexbox__img);
-            search_user__flexbox.appendChild(search_user__flexbox__imgDiv);
-            search_user__flexbox.appendChild(search_user__nameDiv);
+            search_user__flexbox.innerHTML = `
+             <div class="padding border_bottom flex flex_start search_result">
+                 <img class = "img_circle_32px" src="${x["img"]}"/>
+                 <div class="margin_left">
+                     <p>${x["name"]}</p>
+                     <span>${x["descName"]}</span>
+                 </div>
+             </div>
+             `;
+
             search_user.appendChild(search_user__flexbox);
-            // search_user.innerHTML = `
-            // <div class="padding border_bottom flex flex_start search_result">
-            //     <img class = "img_circle_32px" src="${x["img"]}"/>
-            //     <div class="margin_left">
-            //         <p>${x["name"]}</p>
-            //         <span>${x["descName"]}</span>
-            //     </div>
-            // </div>
-            // `;
         }
     });
 });
