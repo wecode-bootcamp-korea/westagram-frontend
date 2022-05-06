@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>westagram__main</title>
-    <link rel="stylesheet" href="/style/common.css">
-    <link rel="stylesheet" href="/style/main.css">
+    <link rel="stylesheet" href="style/common.css">
+    <link rel="stylesheet" href="style/main.css">
     <!-- reset.css 순서에 유의하자 -->
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
@@ -16,7 +16,7 @@
     <nav>
         <div class="icon--left">
             <div class="icon--left__img">
-                <img src="/img/instagram.png" alt="인스타로고">
+                <img src="img/instagram.png" alt="인스타로고">
             </div>
             <span>Westagram</span>
         </div>
@@ -25,9 +25,9 @@
             <span>검색</span>
         </div>
         <div class="icon--right">
-            <img src="/img/explore.png" alt="">
-            <img src="/img/heart.png" alt="">
-            <img src="/img/profile.png" alt="">
+            <img src="img/explore.png" alt="">
+            <img src="img/heart.png" alt="">
+            <img src="img/profile.png" alt="">
         </div>
     </nav>
     <main>
@@ -36,7 +36,7 @@
                 <div class="user">
                     <div class="profile__container">
                         <div class="myprofile">
-                            <img src="/img/face.jpg" alt="신윤지">
+                            <img src="img/face.jpg" alt="신윤지">
                         </div>
                         <span>Yoonji</span>
                     </div>
@@ -45,7 +45,7 @@
                     </div>
                 </div>
                 <div class="photo">
-                    <img src="/img/snake.jpg" alt="신복순">
+                    <img src="img/snake.jpg" alt="신복순">
                 </div>
                 <div class="reaction__container">
                 <div class="reaction">
@@ -55,14 +55,17 @@
                         <i class="far fa-share-square"></i>
                     </div>
                     <div class="reaction__right">
-                        <i class="fas fa-bookmark"></i>
+                        <i class="far fa-bookmark"></i>
                     </div>
                 </div>
                     <div class="like">
                         <div class="like__profile">
-                            <img src="/img/like__profile.jpg" alt="박계영">
+                            <img src="img/like__profile.jpg" alt="박계영">
                         </div>
                         <p class="like__text"><span>Sally</span>님 <span>외 10명</span>이 좋아합니다</p>
+                    </div>
+                    <div class="feeds__text">
+                        <span>syj3367</span> 복순이가 탈출해서 이불에 들어옴
                     </div>
                     <!-- 리플 추가할 div -->
                     <div class="reply"></div>
@@ -75,11 +78,113 @@
             </article>
         </section>
         <aside class="main-right">
-            <div class="myId"></div>
-            <div class="story"></div>
-            <div class="recommendation"></div>
-            <div class="category"></div>
-            <div class="copyright"></div>
+            
+            <div class="yourId">
+                <div class="yourId__profile">
+                    <img src="img/wecodeLogo.png" alt="">
+                </div>
+                <div class="yourId__name">
+                    <div class="yourId__id">wecode_bootcamp</div>
+                    <div class="yourId__place">WeCode | 위코드</div>
+                </div>
+            </div>
+            <div class="story__container">
+            <div class="story">
+                <div class="stroy__subject">
+                    <div class="story__name">
+                        스토리
+                    </div>
+                    <div class="story__view">
+                        모두 보기
+                    </div>
+                </div>
+                
+                    <div class="story__profile">
+                        <div class="story__profile__avartar">
+                            <img src="img/yumyum.png" alt="">
+                        </div>
+                        <div class="story__profile__container">
+                            <div class="story__profile__id">yumyum</div>
+                            <div class="story__profile__time">3시간 전</div>
+                        </div>
+                    </div>
+                    <div class="story__profile">
+                        <div class="story__profile__avartar">
+                            <img src="img/yumyum.png" alt="">
+                        </div>
+                        <div class="story__profile__container">
+                            <div class="story__profile__id">yumyum</div>
+                            <div class="story__profile__time">3시간 전</div>
+                        </div>
+                    </div>
+                    <div class="story__profile">
+                        <div class="story__profile__avartar">
+                            <img src="img/yumyum.png" alt="">
+                        </div>
+                        <div class="story__profile__container">
+                            <div class="story__profile__id">yumyum</div>
+                            <div class="story__profile__time">3시간 전</div>
+                        </div>
+                    </div>
+                    <div class="story__profile">
+                        <div class="story__profile__avartar">
+                            <img src="img/yumyum.png" alt="">
+                        </div>
+                        <div class="story__profile__container">
+                            <div class="story__profile__id">yumyum</div>
+                            <div class="story__profile__time">3시간 전</div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="recommendation">
+                <div class="story">
+                    <div class="stroy__subject">
+                        <div class="story__name">
+                            회원님을 위한 추천
+                        </div>
+                        <div class="story__view">
+                            모두 보기
+                        </div>
+                    </div>
+                    
+                        <div class="story__profile" class="recommendation__container" >
+                            <div class="story__profile__avartar">
+                                <img class="recommendation__img" src="//source.unsplash.com/random/1" alt="">
+                            </div>
+                            <div class="story__profile__container recommendation__profile__container">
+                                <div class="story__profile__id">yumyum</div>
+                                <div class="story__profile__time">apple님 외 2명이...</div>
+                            </div>
+                            <div class="recommendation__follow">팔로우</div>
+                        </div>
+                        <div class="story__profile" class="recommendation__container">
+                            <div class="story__profile__avartar">
+                                <img class="recommendation__img" src="//source.unsplash.com/random/2" alt="">
+                            </div>
+                            <div class="story__profile__container recommendation__profile__container">
+                                <div class="story__profile__id">yumyum</div>
+                                <div class="story__profile__time">ramb님 외 12명이..</div>
+                            </div>
+                            <div class="recommendation__follow">팔로우</div>
+                        </div>
+                        <div class="story__profile" class="recommendation__container">
+                            <div class="story__profile__avartar">
+                                <img class="recommendation__img" src="//source.unsplash.com/random/3" alt="">
+                            </div>
+                            <div class="story__profile__container recommendation__profile__container">
+                                <div class="story__profile__id">yumyum</div>
+                                <div class="story__profile__time">solar님 외 11명이...</div>
+                            </div>
+                            <div class="recommendation__follow">팔로우</div>
+                        </div>
+                    </div>
+            </div>
+            <div class="tags">
+                Westagram 정보·지원·홍보 센터·API·채용 정보·개인정보처리방침·약관·디렉터리·프로필·해시태그·언어
+            </div>
+            <div class="copyright">ⓒ 2022 INSTAGRAM</div>
         </aside>
     </main>
 </body>
