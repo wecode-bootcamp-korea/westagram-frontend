@@ -1,7 +1,7 @@
 @import 'reset.css';
 
 @media screen and (max-width: 1200px) {
-    section.main-right {
+    section.mainRight {
         display: none;
     }
     section.feeds {
@@ -39,13 +39,13 @@ nav {
     font-size: 30px;
 }
 
-.logo-section {
+.logoSection {
     flex: 2;
     display: flex;
     justify-content: center;
 }
 
-.logo-section > i {
+.logoSection > i {
     padding-right: 10px;
 }
 
@@ -55,7 +55,7 @@ span.logo {
     font-family: 'Lobster', cursive;
 }
 
-.search-section {
+.searchSection {
     flex: 6;
     position: relative;
     display: flex;
@@ -108,17 +108,17 @@ input.searchBar::placeholder {
     font-weight: bold;
 }
 
-.userMenu-section {
+.userMenuSection {
     flex: 2;
     display: flex;
     justify-content: space-evenly;
 }
 
-.userMenu-section > i {
+.userMenuSection > i {
     color: rgb(92, 92, 92);
 }
 
-.userMenu-section > button {
+.userMenuSection > button {
     position: relative;
     padding: 0;
     border: none;
@@ -128,7 +128,7 @@ input.searchBar::placeholder {
     
 }
 
-.userMenu-section .profileImg-container {
+.userMenuSection .profileImgContainer {
     width: 30px;
     height: 30px;
     margin: 0;
@@ -191,7 +191,7 @@ main {
     margin-top: 2%;
 }
 
-.writer-profile {
+.writerProfile {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -199,18 +199,18 @@ main {
     background-color: white;
 }
 
-.writer-profile > div {
+.writerProfile > div {
     display: flex;
     justify-content: center;
     align-items: center;
     font-weight: bold;
 }
 
-.writer-profile > i {
+.writerProfile > i {
     margin-right: 10px;
 }
 
-.profileImg-container {
+.profileImgContainer {
     width: 36px;
     height: 36px;
     border: 1px solid rgb(219, 219, 219);
@@ -219,96 +219,96 @@ main {
     margin: 0 10px;
 }
 
-.profileImg-container > img {
+.profileImgContainer > img {
     width: 100%;
 }
 
-.main-content {
+.mainContent {
     height: 80%;
     border-bottom: 1px solid rgb(219, 219, 219);
     background-color: white;
 }
 
-.contentImg-container {
+.contentImgContainer {
     width: 100%;
     height: 75%;
     overflow: hidden;
 }
 
-.contentImg-container > img {
+.contentImgContainer > img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.main-content .button-section {
+.mainContent .buttonSection {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 8%;
 }
 
-.button-section i {
+.buttonSection i {
     color:rgb(92, 92, 92);
     font-size: 24px;
     margin: 0 5px;
 }
 
-.text-section {
+.textSection {
     height: 17%;
     overflow-y: scroll;
 }
 
-.text-section > p {
+.textSection > p {
     padding: 5px;
     color: black;
     font-weight: normal;
 }
 
-.text-section .user-id {
+.textSection .user-id {
     color: black;
     font-weight: bold;
 }
 
-.text-section > div {
+.textSection > div {
     height: 20px;
     margin: 5px 0 0 10px;
 }
 
-.text-section > div > span:first-child {
+.textSection > div > span:first-child {
     font-weight: bold;
     margin: 0 5px;
 }
 
-.text-section button {
+.textSection button {
     border: none;
     background-color: white;
     color: rgb(92, 92, 92);
 }
 
-.reply-section {
+.replySection {
     display: flex;
     justify-content: center;
     height: 10%;
     background-color: white;
 }
 
-.reply-section > input {
+.replySection > input {
     flex: 9;
     border: none;
 }
 
-.reply-section > input:focus {
+.replySection > input:focus {
     outline: none;
 }
 
-.reply-section > input::placeholder {
+.replySection > input::placeholder {
     color: rgb(219, 219, 219);
     font-size: 16px;
     font-weight: bold;
 }
 
-.reply-section > button {
+.replySection > button {
     flex: 1;
     border: none;
     background-color: white;
@@ -318,12 +318,12 @@ main {
     cursor: pointer;
 }
 
-.reply-section > button:disabled {
+.replySection > button:disabled {
     color:rgb(209, 230, 252);
     cursor: auto;
 }
 
-.main-right {
+.mainRight {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -332,27 +332,27 @@ main {
     margin: 0 10px;
 }
 
-.main-right > .user-id {
+.mainRight > .userId {
     display: flex;
     align-items: center;
     height: 15%;
 }
 
-.main-right > .user-id > .profileImg-container {
+.mainRight > .userId > .profileImgContainer {
     width: 48px;
     height: 48px;
 }
 
-.main-right > .user-id > ul {
+.mainRight > .userId > ul {
     font-size: 20px;
     font-weight: bold;
 }
 
-.main-right > .user-id > ul > li:last-child {
+.mainRight > .userId > ul > li:last-child {
     color: rgb(179, 179, 179);
 }
 
-.sub-section {
+.subSection {
     height: 190px;
     border: 1px solid rgb(219, 219, 219);
     border-radius: 5px;
@@ -360,38 +360,38 @@ main {
     background-color: white;
 }
 
-.sub-title {
+.subTitle {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 40px;
 }
 
-.sub-title > span {
+.subTitle > span {
     margin: 0 10px;
     font-weight: bold;
 }
 
-.sub-title > span:first-child {
+.subTitle > span:first-child {
     color: rgb(179, 179, 179);
 }
 
-.sub-section li {
+.subSection li {
     display: flex;
     align-items: center;
     height: 50px;
     font-weight: bold;
 }
 
-.sub-section .profileImg-container{
+.subSection .profileImgContainer{
     border: 2px solid red;
 }
 
-.sub-section:last-child .profileImg-container {
+.subSection:last-child .profileImgContainer {
     border: none;
 }
 
-.sub-section:last-child > ul > li > span:last-child{
+.subSection:last-child > ul > li > span:last-child{
     color: rgb(94, 169, 243);
     margin: 0 10px 0 auto;
 }

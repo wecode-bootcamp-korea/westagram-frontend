@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const $replyText = document.querySelector(".reply");
-    const $replyBtn = document.querySelector(".reply-section > button");
-    const $reply = document.querySelector(".text-section");
+    const $replyBtn = document.querySelector(".replySection > button");
+    const $reply = document.querySelector(".textSection");
 
     // ***** 신규 코드와 비교를 위해 남김 *****
     // ***** 신규 코드가 더 효율적이라고 판단되면 아래 코드 삭제 예정 ***
@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 신규 코드
     $reply.addEventListener('click', (event) => {
-        if(!![...document.querySelectorAll('.text-section > div')].length
+        if(!![...document.querySelectorAll('.textSection > div')].length
         && [...event.path][1].className === 'btnRemove'){
             removeReply([...event.path][2].getAttribute('data-key'));
         }
@@ -121,7 +121,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 신규 코드
     $reply.addEventListener('click', (event) => {
-        if(!![...document.querySelectorAll('.text-section > div')].length
+        if(!![...document.querySelectorAll('.textSection > div')].length
         && [...event.path][1].className === 'btnLike'){
             likeReply([...event.path][2].getAttribute('data-key'));
         }
@@ -139,9 +139,9 @@ document.addEventListener("DOMContentLoaded", () => {
         const $profileImg = document.createElement("img");
         const $divUserId = document.createElement("div");
 
-        $divImgContainer.className = "profileImg-container";
+        $divImgContainer.className = "profileImgContainer";
         $profileImg.setAttribute("src", "images/profile02.jpeg");
-        $divUserId.className = "user-id";
+        $divUserId.className = "userId";
         $divUserId.textContent = $searchBar.value;
 
         $divImgContainer.appendChild($profileImg);

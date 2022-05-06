@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const $username = document.querySelector('.username');
     const $password = document.querySelector('.password');
-    const $loginBtn = document.querySelector('.login-btn');
+    const $loginBtn = document.querySelector('.loginBtn');
 
     document.addEventListener('keyup', () => {
         $loginBtn.disabled = ($username.value.length !== 0 
