@@ -8,25 +8,24 @@
     <link rel="stylesheet" href="./css/default.css">
     <link rel="stylesheet" href="./css/page.css">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/959c640d06.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="container">
         <nav class="global-nav">
             <i class="fa-brands fa-instagram"></i>
             <div class="line"></div>
-            <p class="navLogo">Westagram</p>
+            <p class="navLogo">Westsagram</p>
             <input type="text" class="searchBar" placeholder="검색">
-            <img class="arrow" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png" alt="nav">
-            <img class="like" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" alt="like">
-            <img class="profile" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png" alt="profile">
+            <img class="navImg arrow" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png" alt="nav">
+            <img class="navImg like" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" alt="like">
+            <img class="navImg profile" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png" alt="profile">
         </nav>
         <div class="pageContainer">
             <div class="mainPage">
                 <div class="instaId">
-                    <img src="./image/adrien-stachowiak-XRQRiX-tKyo-unsplash.jpg" alt="profile" class="profileImg"></img>
-                    <p class="instaNickname">alrbnb</p>
-                    <i class="fa-solid fa-ellipsis"></i>
+                    <img class="idDetail profileImg" src="./image/adrien-stachowiak-XRQRiX-tKyo-unsplash.jpg" alt="profile"></img>
+                    <p class="idDetail instaNickname">alrbnb</p>
+                    <i class="idDetail fa-solid fa-ellipsis"></i>
                 </div>
                 <img class="contentsImg" src="./image/colin-meg-r-AGe5t-u-Y-unsplash.jpg" alt="contentsImg">
                 <div class="contentsBottom">
@@ -35,15 +34,13 @@
                     <i class="bottomIcons fa-solid fa-share-from-square"></i>
                     <i class="bottomIcons fa-regular fa-bookmark"></i>
                 </div>
-                <div class="replyFirst">
-                    <div class="uploadedMsg-container">
-                        <img src="./image/adrien-stachowiak-XRQRiX-tKyo-unsplash.jpg" alt="profile" class="profileImg2"></img>
-                        <p class="uploadedMsg"><strong>alrbnb</strong>님 <strong>외 4명</strong>이 좋아합니다.</p>
-                    </div>
-                    <p class="uploadedReply"><strong>alrbnb</strong> 여기는 정말로다가 가고 싶게 생겼구나!</p>
+                <div class="uploadedMsg-container">
+                    <img class="uploadedMsgInfo profileImg2" src="./image/adrien-stachowiak-XRQRiX-tKyo-unsplash.jpg" alt="profile"></img>
+                    <p class="uploadedMsgInfo uploadedMsg"><b>alrbnb</b>님 <b>외 4명</b>이 좋아합니다.</p>
                 </div>
+                <p class="uploadedReply"><b>alrbnb</b> 여기는 정말로다가 가고 싶게 생겼구나!</p>
                 <div class="reply-section">
-                    <ul class="replySecond">
+                    <ul class="replyBox">
                         
                     </ul>
                     <div class="reply-container">
@@ -54,8 +51,8 @@
             </div>
             <div class="main-right">
                 <div class="profileRightContainer">
-                    <img class="profileRightImg" src="./image/colin-meg-r-AGe5t-u-Y-unsplash.jpg" alt="profileimg">
-                    <p class="profileRightText"><b>wecode_bootcamp</b><br><span class="profileRightBottom">Wecode | 위코드</span></p>
+                    <img class="profileRightInfo profileRightImg" src="./image/colin-meg-r-AGe5t-u-Y-unsplash.jpg" alt="profileimg">
+                    <p class="profileRightInfo profileRightText"><b>wecode_bootcamp</b><br><span class="profileRightBottom">Wecode | 위코드</span></p>
                 </div>
                 <div class="storyRightContainer">
                     <div class="storyTextBox" >
@@ -115,5 +112,6 @@
         </div>
     </div>
     <script src="./js/page.js"></script>
+    <script src="https://kit.fontawesome.com/959c640d06.js" crossorigin="anonymous"></script>
 </body>
 </html>

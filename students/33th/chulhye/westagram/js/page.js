@@ -1,5 +1,5 @@
 (() => {
-    const replySecond = document.querySelector('.replySecond'); //들어갈 공간.
+    const replyBox = document.querySelector('.replyBox'); //들어갈 공간.
     const mainReply = document.querySelector('.mainReply'); //input.
     const replyBtn = document.querySelector('.replyBtn'); // 게시 버튼
 
@@ -20,14 +20,14 @@
 
         const replyDel = document.createElement('button');
         replyDel.setAttribute('class', 'replyDel');
-        replyDel.innerHTML = 'x';
+        replyDel.innerHTML = '<b>Del</b>';
         replyDel.addEventListener('click', () => {
-            replySecond.removeChild(commentList);
+            replyBox.removeChild(commentList);
         });
 
         commentList.appendChild(commentText);
         commentList.appendChild(replyDel);
-        replySecond.appendChild(commentList);
+        replyBox.appendChild(commentList);
         mainReply.value = "" ;
         mainReply.focus();
 
