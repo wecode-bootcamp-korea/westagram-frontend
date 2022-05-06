@@ -13,7 +13,7 @@ const loginBtnActive = () => {
 mainId.addEventListener("keyup", loginBtnActive);
 mainPwd.addEventListener("keyup", loginBtnActive);
 mainPwd.addEventListener("keydown", (e) => {
-    if((e.keyCode == 13) && (mainId.value.includes('@') && mainPwd.value.length >= 5)) {
+    if((e.key == 'Enter') && (mainId.value.includes('@') && mainPwd.value.length >= 5)) {
         location.href='main.html'
     }
 })

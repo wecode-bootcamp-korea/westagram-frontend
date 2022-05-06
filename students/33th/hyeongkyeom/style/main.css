@@ -178,6 +178,7 @@ body {
 .mainFeed {
     border: 1px solid #DBDBDB;
     border-bottom: 1px solid #DBDBDB;
+    border-radius: 5px;
 }
 
 .feeds {
@@ -316,6 +317,10 @@ body {
     margin-right: 5px;
 }
 
+.commentNickname {
+    margin-right: 5px;
+}
+
 .commentTxt {
     margin: 0;
 }
@@ -350,24 +355,25 @@ body {
 .mainRight {
     position: fixed;
     right: 80px;
-    top: 90px;
+    top: 110px;
     width: 350px;
 }
 
 .mainProfile {
     display: flex;
+    margin-left: 15px;
 }
 
 .mainProfileImg {
     border-radius: 100%;
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
 }
 
 .mainProfileName {
     position: absolute;
-    padding-left: 70px;
-    padding-top: 13px;
+    padding-top: 17px;
+    padding-left: 90px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -381,6 +387,7 @@ body {
 
 .mainStory {
     display: flex;
+    background-color: #FAFAFA;
 }
 
 .storyBorder {
@@ -389,17 +396,15 @@ body {
     flex-direction: column;
     width: 100%;
     margin: 10px auto;
-    border: 1px solid #efefef;
+    border: 1px solid #DBDBDB;
     border-radius: 5px;
 }
 
 .recommendBorder {
-    background-color: white;
     display: flex;
     flex-direction: column;
     width: 100%;
     margin: 10px auto;
-    border: 1px solid #efefef;
     border-radius: 5px;
 }
 
@@ -411,17 +416,14 @@ body {
 
 .storyProfile {
     display: flex;
-    flex-direction: column;
-    margin: 13px;
-    height: 200px;
+    flex-direction: row;
     overflow: auto;
 }
 
 .storyImg {
     border-radius: 100%;
-    width: 45px;
-    height: 45px;
-    margin-right: 20px;
+    width: 60px;
+    height: 60px;
     border: 2px solid transparent;
     background-image: linear-gradient(#fff, #fff), 
     linear-gradient(to right, red 0%,  orange 100%);
@@ -433,8 +435,10 @@ body {
 
 .storyProfileOne {
     display: flex;
-    margin-bottom: 20px;
-}
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;}
 
 .storyProfileOne p {
     margin: 0;
@@ -442,7 +446,8 @@ body {
 }
 
 .storyProfileName {
-    margin-top: 3px;
+    margin-top: 10px;
+    font-size: 12px;
 }
 
 .recommendProfile {
@@ -450,13 +455,13 @@ body {
     flex-direction: column;
     margin: 13px;
     height: 200px;
-    overflow: auto;
 }
 
 .recommendBorderTitle {
     display: flex;
     justify-content: space-between;
-    margin: 13px;
+    margin: 15px;
+    margin-right: 30px;
 }
 
 .recommendProfileOne {
@@ -473,7 +478,8 @@ body {
 }
 
 .recommendProfileName {
-    margin-top: 3px;
+    margin-top: 7px;
+    font-size: 13px;
 }
 
 .recommendProfileName b:hover{
@@ -487,7 +493,7 @@ body {
 }
 
 .recommendProfileFollowBtn {
-    background-color: white;
+    background-color: #FAFAFA;
     font-size: 17px;
     color: #3B99EF;
     border: none;
@@ -498,7 +504,7 @@ body {
 }
 
 @media (max-width: 800px) {
-    .main_right {
+    .mainRight {
         display: none;
     }
 }

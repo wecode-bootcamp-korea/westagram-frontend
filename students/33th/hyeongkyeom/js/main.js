@@ -161,7 +161,7 @@ navSearch.addEventListener('keyup', function(e) {
     const searchUser = document.createElement('div');
 
     for (i=0; i < users.length; i++) {
-        if((users[i].userName || users[i].descName).includes(e.target.value)) {
+        if((users[i].userName || users[i].descName).indexOf(e.target.value)) {
             searchList;
             searchImg.setAttribute('src', users[i].img);
             searchImg.classList.add('searchImg')
