@@ -1,11 +1,6 @@
 * {
     box-sizing: border-box;
 }
-body {
-        -ms-overflow-style: none;
-        
-}
-body::-webkit-scrollbar { display: none; }
 
 /* Navigation */
 nav {
@@ -256,6 +251,9 @@ article {
     overflow-y: scroll;
     padding: 20px;
     margin-bottom: 20px;
+}
+.story__container::-webkit-scrollbar {
+    display: none;
 }
 .story__profile {
     display: flex;
