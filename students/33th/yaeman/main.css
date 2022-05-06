@@ -204,27 +204,33 @@ header{
     width: 80%;
     height: 100%;
     border: none;
-
+}
+.upload-form > input:focus {
+    outline:none;
 }
 .comment-upload {
     padding-left: 10px;
     width: 10%;
 }
+.comment-upload > .upload {
+    color: #99d2f8;
+}
 .main-right {
-    width: 400px;
+    width: 20%;
     position: fixed;
     display: flex;
     flex-direction: column;
     margin-top: 20px;
     right: 10%;
-    background-color: green;
+    /* background-color: green; */
     /* padding: 0; */
     /* height: 100vh; */
+    font-size: 10px;
 }
 .my-profile {
     display: flex;
     align-items: center;
-    background-color: blue;
+    /* background-color: blue; */
     margin: 18px 0 10px 0;
 }
 .my-profile .my-picture {
@@ -239,20 +245,32 @@ header{
 }
 .my-profile .my-change {
     width: 10%;
+    color: #0095f6;
 }
 
 .another-profile {
     display: flex;
     flex-direction: column;
-    background-color: red;
+    /* background-color: red; */
+    margin: 0 0 12px 0;
 }
-.another-profile .recommend-wrap {
+.recommend-wrap {
     display: flex;
+    justify-content: space-between;
+    padding: 4px 0;
+}
+.another-recommend {
+    /* width: 80%; */
+}
+.all-view {
+    /* width: 20%; */
+    color: #0095f6;
 }
 
 .follow-wrap {
     display: flex;
     align-items: center;
+    padding: 8px 0;
 }
 .follow-wrap .follow-picture {
     width: 10%;
@@ -266,8 +284,17 @@ header{
 }
 .follow-wrap .follow-change {
     width: 10%;
+    color: #0095f6;
 }
 
 .license {
-    background-color: yellow;
+    padding: 0 0 38px 0;
+    /* background-color: yellow; */
+}
+.license p {
+    margin-bottom: 20px;
+    color: #c7c7c7;
+}
+.license span {
+    color: #c7c7c7;
 }
