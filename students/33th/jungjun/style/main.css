@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+/* font-family: 'Shadows Into Light', cursive; */
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+/*---------- nav ----------*/
+nav{
+    display : flex;
+}
+nav img{ /* nav 아이콘들 크기 조절*/
+    height : 3vh; 
+}
+
+nav img:nth-child(1){ /* 인스타그램 아이콘 오른쪽 테두리*/
+    border-right : 1px solid rgb(179, 172, 172);
+    padding-right : 5px;
+    margin-right : 5px;
+}
+
+nav span{ /* Westagram 글꼴 */
+    font-family: 'Shadows Into Light', cursive;
+}
+
+nav input::placeholder{ /* input */
+    text-align : center;
+    /*background-image: ;*/ /* 검색 왼쪽 돋보기 그림*/ 
+}
+
+/* ---------- main ----------*/
+.main{
+    display: flex;
+    
+}
+
+
+
+.article img{
+    height : 40vh;
+}
