@@ -91,17 +91,20 @@ a{
 .mainPage{
     background-color: #fafafa;
     text-align: center;
+    position: relative;
 }
 
 /* nav */
 
 nav{
+    position: absolute;
     position: fixed;
     top: 0;
     width: 100%;
     height: 60px;
     background-color: white;
     border-bottom: 1px solid #b9b9b9;
+    z-index: 10;
 }
 
 .navBack{
@@ -123,6 +126,7 @@ nav{
     width: 30px;
     height: 30px;
     margin: 0px 15px;
+    border-radius: 5px;
     cursor: pointer;
 }
 
@@ -142,7 +146,6 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1;
     opacity: 1;
     margin: auto;
     background-color: #f0eeee;
@@ -512,13 +515,20 @@ aside{
     padding: 20px;
     display: none;
 }
+.navMenus{
+    cursor: pointer;
+}
 
 .navMenuIcon{
     font-size: 25px;
     margin-bottom: 20px;
-    cursor: pointer;
+    margin-right: 10px;
 }
 
 .navMenuToggle{
     display: block;
+}
+
+.navMenuLogout{
+    cursor: pointer;
 }
