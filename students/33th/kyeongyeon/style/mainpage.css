@@ -1,3 +1,4 @@
+/* 내비게이션 시작 */
 nav{
     width: 100%;
     height: 60px;
@@ -9,7 +10,6 @@ nav{
     justify-content: center;
     top:0;
 }
-
 
 .nav_box{
     display: flex;
@@ -55,7 +55,7 @@ nav{
     border: 2px solid #dbdbdb;
     background-color: #f0f0f0;
     border-radius: 2px;
-    font-color: #a5a5a5;
+    color: #a5a5a5;
     font-size: 15px;
     text-align: center;
 }
@@ -90,14 +90,13 @@ input::placeholder{
 /*메인피드 정렬*/
 .feed_aside_container{
     width: 100%;
-    height: 100%;
+    height: auto;
     background-color: #fafafa;
     margin-top: 150px;
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
-
 
 .feed{
     width: 614px;
@@ -107,8 +106,6 @@ input::placeholder{
     flex-direction: column;
     align-items: flex-start;
 }
-
-
 
 .feed_img{
     vertical-align: bottom;
@@ -165,8 +162,13 @@ input::placeholder{
     border: 1px solid #a5a5a5;
     margin-right: 10px;
 }
+.like_feed span{
+    background-color: white;
+}
+
 .bold_font{
     font-weight: bold;
+    background-color: white;
 }
 
 .article_text{
@@ -178,17 +180,28 @@ input::placeholder{
     background-color: white;
 }
 
+.like_feed_username{
+    font-weight: bold;
+    background-color: white;
+}
+
+/*댓글 창*/
+
 .comments{
     width: 614px;
+    height: 30px;
     border: 1px solid #a5a5a5;
     background-color: white;
 }
 
-
-
+input{
+    width: 600px;
+    height: auto;
+    border: none;
+    background-color: white;
+}
 
 /*친구 게시글 피드 이미지랑 아이디 나오는 피드 상단 부분*/
-
 .neighborhood_profile{
     width: 614px;
     height: 50px;
@@ -214,14 +227,188 @@ input::placeholder{
     margin-left: 440px;
 }
 
+/*여기서부터 aisde시작*/
 .main_right{
     width: 293px;
-    min-height: 897px;
-    background-color: pink;
+    height: auto;
     position: fixed;
+    right: 100px;
+}
+
+/*스토리 위에 상단 내 아이디값 보여지는 부분*/
+.my_id_img{
     display: flex;
-    flex-direction: column;
-    right: 50px;
+    align-items: center;
+    margin-bottom: -30px;
+}
+
+.my_profile{
+    border-radius: 40px;
+}
+
+.my_story p{
+    margin-left: 10px;
+}
+
+.profile_info{
+    padding-left: 40px;
+    color:#9b9b9b
+}
+
+/*스토리 보여지는 부분*/
+.story_box{
+    width: 293px;
+    height: 300px;
+    background-color: white;
+    border: 1px solid #e6e6e6;
+    overflow-y: scroll;
+    margin-bottom: 20px;
+}
+.story_box_top{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.story_box span {
+    font-size: 15px;
+}
+
+.story_box_top span:first-child{
+    color: #9b9b9b;
+    padding-left: 20px;
+    background-color: white;
+}
+
+.story_box_top span:last-child{
+    padding-right: 20px;
+    background-color: white;
+}
+
+.story_neighbor_info{
+    background-color: white;
+}
+
+.story_neighbor_list{
+    list-style: none;
+    margin-left: -20px;
+    background-color: white;
+}
+
+.story_id_img{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    margin-bottom: -10px;
+}
+
+.story_neighborhood{
+    width: 30px;
+    border-radius: 30px;
+}
+
+.story_id_img span{
+    margin-left: 10px;
+    background-color: white;
+}
+
+.ago_minute_font{
+    font-size: 13px;
+    color: #a5a5a5;
+    padding-left: 40px;
+    background-color: white;
+}
+
+/*회원님을 위한 추천 부분*/
+.box_recommend{
+    width: 293px;
+    height: 200px;
+    background-color: white;
+    border: 1px solid #e6e6e6;
+    overflow-y: scroll;
+    margin-bottom: 20px;
+}
+
+.box_recommened_text{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.box_recommened_text span{
+    font-size: 15px;
+}
+.box_recommened_text span:first-child{
+    padding-left: 20px;
+    background-color: white;
+    color: #9b9b9b;
+}
+
+.box_recommened_text span:last-child{
+    padding-right: 20px;
+    background-color: white;
+}
+
+.recommend_people{
+    background-color: white;
+}
+
+.recommend_people_info{
+    background-color: white;
+}
+
+.recommend_people_list{
+    list-style: none;
+    margin-left: -20px;
+    background-color: white;
+    margin-bottom: 10px;
+}
+
+.recommned_id_img{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: white;
+    margin-bottom: -5px;
+}
+
+.recommend_neighbor{
+    border-radius: 20px;
+    background-color: white;
+}
+
+.neighbor_id{
+    padding-left: 10px;
+    background-color: white;
+}
+
+.recommned_id_img span{
+    margin-left: 10px;
+    background-color: white;
+}
+
+.blue_font{
+    font-size: 13px;
+    font-weight: bold;
+    color: #3e99ed;
+    padding-left: 40px;
+    padding-bottom: 10px;
+    background-color: white;
+}
+
+.little_font{
+    color: #a5a5a5;
+    font-size: 13px;
+    background-color: white;
+    padding-left: 40px;
+}
+
+/* footer시작 */
+footer{
+    color: #c7c7c7;
+    font-size: 13px;
 }
 
 /*반응형 웹사이트*/

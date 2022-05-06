@@ -3,9 +3,9 @@
     <head>
         <meta charset="UTF-8">
         <title>westagram_main</title>
+        <script src="mainpage.js"></script>
         <link rel="stylesheet" href="style/common.css">
         <link rel="stylesheet" href="style/mainpage.css">
-        <script type="text/javascript" href ="main.js"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -37,12 +37,9 @@
                        <img class = "neighbor_img" src="./image/yuntrollpark.png" alt="neighborhood_img">
                        <span></span>yeoo_on</span>
                        <span class="neighbor_dots">•••</span>
-                    </div>
-                    
-                        <img class = "feed_img" src="./image/yky.jpeg" alt="feed_img" width="614px">
-                    
-                   
-                   <div class = "check_img">
+                </div>
+                    <img class = "feed_img" src="./image/yky.jpeg" alt="feed_img" width="614px">
+                    <div class = "check_img">
                        <div class="check_img_left">
                         <img class="feed_heart" src="./image/heart.png" alt="heart">
                         <img class="feed_balloon_word" src="./image/talk balloon .jpeg" alt="balloon word">
@@ -55,50 +52,125 @@
                         <img class = small_profile src="./image/kong2.png" alt="profile_img">
                         <span><mark class = bold_font>aineworld</mark>님 <mark class = bold_font>외 10명이</mark>좋아합니다.</span>
                        </div>
-                       <div class = "article_text"><p class = "what_text">Yuntroll  오늘도 열심히 살았다 키킼</p></div>
+                       <div class = "article_text">
+                           <p class = "what_text"><mark class="like_feed_username">Yuntroll</mark>  오늘도 열심히 살았다 키킼</p>
+                        </div>
                    </div>
-                   <div class="comments">yeoo_on 윤경연집가자</div>
-                 <ul class="comments_box">
-                     <li></li>
-                 </ul>
+                   <form class="comments">
+                    <input type="text" placeholder="댓글입력">
+                    <ul class="comments_box">
+                    </ul>
+                   </form>
                 </article>
                 </div>
         
 
            <aside class="main_right">
                <div class = my_story>
-                   <img class="my_profile">
-                   <p>yeoo_on</p>
-                   <p>Yeoo_on</p>
+                   <div class="my_id_img">
+                    <img class="my_profile" src="./image/meme.png" alt="내프로필" width="40px" height="40px">
+                    <p>yeoo_on</p>
+                   </div>
+                   <p class="profile_info">Yeoo_on |  Happy day!!!</p>
                </div>
                <div class = story_box>
-                   <span class = "little_font">스토리</span><span class = "bold_font">모두보기</span>
+                   <div class="story_box_top">
+                    <span class = "little_font">스토리</span><span class = "bold_font">모두보기</span>
+                   </div>
                    <div class = "story_neighbor">
-                       <ul>
-                           <list>
-                               <img class ="story_neighborhood" src="" alt="story_neighborhood">
-                               <p class = "neighbot_story_font">_yum_s</p>
+                       <ul class="story_neighbor_info">
+                           <li class="story_neighbor_list">
+                               <div class="story_id_img">
+                                <img class ="story_neighborhood" src="./image/beauty_1610026942161.png" alt="story_neighborhood">
+                                <span class = "neighbot_story_font">_yum_s</span>
+                               </div>
                                <p class = "ago_minute_font">16분전</p>
-                           </list>
+                           </li>
+                           <li class="story_neighbor_list">
+                            <div class="story_id_img">
+                             <img class ="story_neighborhood" src="./image/beauty_1610679063570.png" alt="story_neighborhood">
+                             <span class = "neighbot_story_font">happy_troll</span>
+                            </div>
+                            <p class = "ago_minute_font">30분전</p>
+                        </li>
+                        <li class="story_neighbor_list">
+                            <div class="story_id_img">
+                             <img class ="story_neighborhood" src="./image/beauty_1614418013201.png" alt="story_neighborhood">
+                             <span class = "neighbot_story_font">sunshine_xoxo</span>
+                            </div>
+                            <p class = "ago_minute_font">45분전</p>
+                        </li>
+                        <li class="story_neighbor_list">
+                            <div class="story_id_img">
+                             <img class ="story_neighborhood" src="./image/IMG_4986.jpeg" alt="story_neighborhood">
+                             <span class = "neighbot_story_font">ye_ah_go</span>
+                            </div>
+                            <p class = "ago_minute_font">16분전</p>
+                        </li>
+                        <li class="story_neighbor_list">
+                            <div class="story_id_img">
+                             <img class ="story_neighborhood" src="./image/IMG_4987.jpeg" alt="story_neighborhood">
+                             <span class = "neighbot_story_font">rrr_gogo</span>
+                            </div>
+                            <p class = "ago_minute_font">16분전</p>
+                        </li>
                        </ul>
                    </div>
                </div>
                <div class = "box_recommend">
-                   <span class = "little_font">회원님을 위한 추천</span><span class = "bold_font">모두보기</span>
-                   <div class = recommend_people>
-                       <ul>
-                           <li>
-                               <img class = recommend_neighbor src="">
-                               <p class = neighbor_id>hello_wordl!</p>
-                               <p class = "little_font">_legend_a님 외 2명이...</p><span class = "blue_font">팔로우</span>
+                   <div class="box_recommened_text">
+                    <span class = "little_font">회원님을 위한 추천</span>
+                    <span class = "bold_font">모두보기</span>
+                   </div>
+                   <div class = "recommend_people">
+                       <ul class="recommend_people_info">
+                           <li class="recommend_people_list">
+                               <div class="recommned_id_img">
+                                <img class = "recommend_neighbor" src="./image/kkkkkkkkk.png" alt="추천이웃 프로필 이미지" width="20px" height="20px">
+                                <span class = "neighbor_id">hello_wordl!</span>
+                                <span class = "blue_font">팔로우</span>
+                               </div>
+                               <span class = "little_font">legend_kyeongyeon님 외 2명이...</span>
                            </li>
+                           <li class="recommend_people_list">
+                            <div class="recommned_id_img">
+                             <img class = "recommend_neighbor" src="./image/kkkkkkkkk.png" alt="추천이웃 프로필 이미지" width="20px" height="20px">
+                             <span class = "neighbor_id">hello_wordl!</span>
+                             <span class = "blue_font">팔로우</span>
+                            </div>
+                            <span class = "little_font">legend_kyeongyeon님 외 2명이...</span>
+                        </li>
+                        <li class="recommend_people_list">
+                            <div class="recommned_id_img">
+                             <img class = "recommend_neighbor" src="./image/kkkkkkkkk.png" alt="추천이웃 프로필 이미지" width="20px" height="20px">
+                             <span class = "neighbor_id">hello_wordl!</span>
+                             <span class = "blue_font">팔로우</span>
+                            </div>
+                            <span class = "little_font">legend_kyeongyeon님 외 2명이...</span>
+                        </li>
+                        <li class="recommend_people_list">
+                            <div class="recommned_id_img">
+                             <img class = "recommend_neighbor" src="./image/kkkkkkkkk.png" alt="추천이웃 프로필 이미지" width="20px" height="20px">
+                             <span class = "neighbor_id">hello_wordl!</span>
+                             <span class = "blue_font">팔로우</span>
+                            </div>
+                            <span class = "little_font">legend_kyeongyeon님 외 2명이...</span>
+                        </li>
+                        <li class="recommend_people_list">
+                            <div class="recommned_id_img">
+                             <img class = "recommend_neighbor" src="./image/kkkkkkkkk.png" alt="추천이웃 프로필 이미지" width="20px" height="20px">
+                             <span class = "neighbor_id">hello_wordl!</span>
+                             <span class = "blue_font">팔로우</span>
+                            </div>
+                            <span class = "little_font">legend_kyeongyeon님 외 2명이...</span>
+                        </li>
                        </ul>
                    </div>
-                   <footer>
+                </div>
+                <footer>
                     <span>Instagram 정보 ∙ 지원 ∙ 홍보 센터 ∙ API ∙<br>채용정보 ∙ 개인정보처리방침 ∙ 약관 ∙<br>디렉터리 ∙ 프로필 ∙ 해시태그 ∙ 언어<br><br>© 2019 INSTAGRAM</span>
                     © 2019 INSTAGRAM
                 </footer>
-                </div>
            </aside>
         
        </main>
