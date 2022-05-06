@@ -2,10 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const $replyText = document.querySelector(".reply");
     const $replyBtn = document.querySelector(".reply-section > button");
     const $reply = document.querySelector(".text-section");
-    let replyKeyNumber = 0;
 
-
-        // ***** 신규 코드와 비교를 위해 남김 *****
+    // ***** 신규 코드와 비교를 위해 남김 *****
     // ***** 신규 코드가 더 효율적이라고 판단되면 아래 코드 삭제 예정 ***
 
     // function replyHandler(){
@@ -15,10 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
     //     const $btnLike = document.createElement('button');
     //     const $btnRemove = document.createElement('button');
 
-    //     let key = replyKeyNumber;
-    //     replyKeyNumber += 1;
-
-    //     $replyContainer.setAttribute('data-key', key);
     //     $spanId.textContent = 'hj_kim';
     //     $spanReply.textContent = $replyText.value;
     //     $btnLike.innerHTML = '<i class="fa-solid fa-heart"></i>';
@@ -39,14 +33,9 @@ document.addEventListener("DOMContentLoaded", () => {
     //     })
 
     //     $btnRemove.addEventListener('click', () => {
-    //         removeReply(key);
+    //         $reply.removeChild($replyContainer);
     //     })
     // }
-
-    //   function removeReply(key) {
-    //     const $targetDiv = document.querySelector(`[data-key = '${key}']`);
-    //     $reply.removeChild($targetDiv);
-    //   }
 
     //   $replyText.addEventListener("keyup", (event) => {
     //     $replyBtn.disabled = $replyText.value.length !== 0 ? false : true;
@@ -66,6 +55,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // ***** 신규 코드 *****
     // 기존 replyHandler() 함수를 기능별로 세가지 함수로 나눔 (addReply, removeReply, likeReply)
 
+    let replyKeyNumber = 0;
     function addReply() {
         const $replyContainer = document.createElement("div");
         const $spanId = document.createElement("span");
