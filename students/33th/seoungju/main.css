@@ -6,6 +6,11 @@ body {
     margin: 0;
 }
 
+a {
+    text-decoration: none;
+}
+
+/* nav bar section */
 nav {
     background-color: white;
     height: 100px;
@@ -19,23 +24,19 @@ nav {
     z-index: 10;
 }
 
-a {
-    text-decoration: none;
-}
-
-#westagram_icon {
+.westagram_icon {
     margin-left: -2%;
     border-right: 3px solid #E6E6E6;
     width: 70px;
 }
 
-#westagram_logo {
+.westagram_logo {
     margin-left: 30px;
     font-size: 30px;
     font-family: 'Lobster', cursive;
 }
 
-#searchBar {
+.searchBar {
     margin-left: 500px;
     width: 300px;
     height: 40px;
@@ -44,29 +45,15 @@ a {
     border: 2px solid #E6E6E6;
 }
 
-.searchForm {
-    position: relative;
-}
-
-.searchForm button {
-    position: absolute;
-    right: 22%;
-    top: 30%;
-    border: 1px;
-    cursor: pointer;
-    background-color: white;
-}
-
-.icon {
+.nav_icon {
     margin-left: 400px;
 }
 
-.icon img {
-    width: 35px;
-    height: 35px;
+.nav_icon img {
     margin-left: 60px;
 }
 
+/* main page section */
 main {
     height: 114vh;
     display: flex;
@@ -78,16 +65,7 @@ main {
     width: 850px;
     margin-left: 15%;
     position: relative;
-    margin-top: 6.3%;
-}
-
-.main_right {
-    border: 1px solid #E6E6E6;
-    height: 75vh;
-    width: 500px;
-    right: 4%;
-    top: 13%;
-    position: fixed;
+    margin-top: 5.7%;
 }
 
 article {
@@ -99,7 +77,7 @@ article {
     top: 1%;
 }
 
-.feeds_user_icon {
+.feeds_top_user_icon {
     border-radius: 50%;
     position: absolute;
     left: 3%;
@@ -107,7 +85,7 @@ article {
     object-fit: cover;
 }
 
-#artice_for_update_button {
+#feeds_top_update_button {
     height: 30px;
     width: 30px;
     border-radius: 50%;
@@ -119,17 +97,26 @@ article {
     background-color: white;
 }
 
-.feeds_user_id {
+.feeds_top_user_id, .feeds_top_user_name {
     position: absolute;
     left: 11%;
-    font-weight: bold;
     top: 0.7%;
 }
 
-.feeds_user_name {
+.feeds_top_user_name {
+    top: 2.4%;
+}
+
+#feeds_top_update_button {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border: 1px;
+    cursor: pointer;
     position: absolute;
-    left: 11%;
-    top: 2%;
+    right: 2%;
+    top: 1%;
+    background-color: white;
 }
 
 .feeds_top {
@@ -137,7 +124,7 @@ article {
     margin-bottom: 10px;
 }
 
-#feeds_user_image {
+.feeds_user_image {
     position: absolute;
     top: 6%;
     object-fit: cover;
@@ -152,11 +139,11 @@ article {
     top: 63%;
 }
 
-#feeds_icon_comment, #feeds_icon_share {
+.feeds_middle_icon_comment, .feeds_middle_icon_share {
     margin-left: 20px;
 }
 
-.summary_comment {
+.feeds_like_wrapper {
     position: absolute;
     top: 67.5%;
     left: 3%;
@@ -164,25 +151,20 @@ article {
     height: 400px;
 }
 
-#friends {
+.friends_one {
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 10px;
 }
 
-.how_many_likes {
+.feeds_how_many_likes {
     position: absolute;
     top: -1%;
     left: 8%;
 }
 
-.comment_real_time {
-    position: absolute;
-    top: 43.3%;
-    left: 10.5%;
-}
 
-.comment_input {
+.feeds_comment_input {
     position: absolute;
     top: 85%;
     left: 1%;
@@ -190,24 +172,33 @@ article {
     height: 70px;
     font-size: 17px;
     border: 1px solid #E6E6E6;
-    
 }
 
-.comment_button {
+.feeds_comment_button {
     position: absolute;
     top: 87%;
     right: 5%;
     opacity: .3;
 }
 
-.main_right_top {
+/* main_side section*/
+.main_side {
+    border: 1px solid #E6E6E6;
+    height: 75vh;
+    width: 500px;
+    right: 4%;
+    top: 13%;
+    position: fixed;
+}
+
+.main_side_top {
     margin-top: 30px;
     position: relative;
     height: 100px;
     width: 500px;
 }
 
-.side_user_icon {
+.side_top_user_icon {
     position: absolute;
     left: 10%;
     top: 22%;
@@ -215,21 +206,18 @@ article {
     object-fit: cover;
 }
 
-.side_user_name {
+.side_top_user_name, .side_top_user_id {
     position: absolute;
     left: 25%;
     top: 50%;
-    color: gray;
 }
 
-.side_user_id {
-    position: absolute;
-    font-weight: bold;
-    left: 25%;
+.side_top_user_id {
     top: 22%;
 }
 
-.main_right_story {
+/* main_side_story section */
+.main_side_story_wrapper {
     margin-top: 20px;
     border-top: 1px solid #E6E6E6;
     border-bottom: 1px solid #E6E6E6;
@@ -238,7 +226,7 @@ article {
     position: relative;
 }
 
-#story {
+.main_side_story_title {
     position: absolute;
     left: 5%;
     font-size: 18px;
@@ -247,7 +235,7 @@ article {
     top: -2%;
 }
 
-#showAll {
+.main_side_story_showAll {
     position: absolute;
     right: 5%;
     font-weight: bold;
@@ -257,24 +245,19 @@ article {
     border-radius: 50%;
     position: absolute;
     left: 5%;
+    object-fit: cover;
 }
 
 #story_user1 {
-    position: absolute;
     top: 20%;
-    object-fit: cover;
 }
 
 #story_user2 {
-    position: absolute;
     top: 45%;
-    object-fit: cover;
 }
 
 #story_user3 {
-    position: absolute;
     top: 70%;
-    object-fit: cover;
 }
 
 .stroy_user_name {
@@ -282,6 +265,18 @@ article {
     position: absolute;
     left: 16%;
     display: block;
+}
+
+#story_user_name1 {
+    top: 20%;
+}
+
+#story_user_name2 {
+    top: 45%;
+}
+
+#story_user_name3 {
+    top: 70%;
 }
 
 .story_user_time {
@@ -292,44 +287,28 @@ article {
     font-size: 13px;
 }
 
-#story_user_name1 {
-    position: absolute;
-    top: 20%;
-}
-
-#story_user_name2 {
-    position: absolute;
-    top: 45%;
-}
-
-#story_user_name3 {
-    position: absolute;
-    top: 70%;
-}
-
 #story_user_time1 {
-    position: absolute;
+
     top: 30%;
 }
 
 #story_user_time2 {
-    position: absolute;
     top: 55%;
 }
 
 #story_user_time3 {
-    position: absolute;
     top: 80%;
 }
 
-.main_right_recommend {
+/* main_side_recommend_section */
+.main_side_recommend_wrapper {
     margin-top: 32px;
     height: 260px;
     width: 500px;
     position: relative;
 }
 
-#recommend_for_user {
+.main_side_recommend_title {
     color: gray;
     font-weight: bold;
     font-size: 18px;
@@ -338,7 +317,7 @@ article {
     top: -10%;
 }
 
-#recommend_showAll {
+.main_side_recommend_showAll {
     position: absolute;
     right: 5%;
     font-weight: bold;
@@ -349,6 +328,19 @@ article {
     border-radius: 50%;
     position: absolute;
     left: 5%;
+    object-fit: cover;
+}
+
+#recommend_user1 {
+    top: 20%;
+}
+
+#recommend_user2 {
+    top: 45%;
+}
+
+#recommend_user3 {
+    top: 70%;
 }
 
 .recommend_user_name {
@@ -361,36 +353,15 @@ article {
     text-decoration: underline;
 }
 
-#recommend_user1 {
-    position: absolute;
-    top: 20%;
-    object-fit: cover;
-}
-
-#recommend_user2 {
-    position: absolute;
-    top: 45%;
-    object-fit: cover;
-}
-
-#recommend_user3 {
-    position: absolute;
-    top: 70%;
-    object-fit: cover;
-}
-
-#recommend_user_name1 {
-    position: absolute;
+#recommend_user1_name {
     top: 20%;
 }
 
-#recommend_user_name2 {
-    position: absolute;
+#recommend_user2_name {
     top: 45%;
 }
 
-#recommend_user_name3 {
-    position: absolute;
+#recommend_user3_name {
     top: 70%;
 }
 
@@ -401,17 +372,14 @@ article {
 }
 
 #follow_text1 {
-    position: absolute;
     top: 30%;
 }
 
 #follow_text2 {
-    position: absolute;
     top: 55%;
 }
 
 #follow_text3 {
-    position: absolute;
     top: 80%;
 }
 
@@ -422,17 +390,14 @@ article {
 }
 
 #follow_1 {
-    position: absolute;
     top: 20%;
 }
 
 #follow_2 {
-    position: absolute;
     top: 45%;
 }
 
 #follow_3 {
-    position: absolute;
     top: 70%;
 }
 
@@ -443,4 +408,3 @@ article {
     font-weight: bold;
     font-size: 13px;
 }
-

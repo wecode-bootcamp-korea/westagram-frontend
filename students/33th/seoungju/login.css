@@ -5,61 +5,63 @@
 main {
     display: flex;
     justify-content: center;
-    height: 90vh;
     align-items: center;
+    height: 90vh;
 }
 
 .login_wrapper {
     width: 37.5em;
     height:50em;
-    border: 2px solid #E6E6E6;
+    border: 0.13em solid #E6E6E6;
     text-align: center;
 }
 
 .login_wrapper p {
+    margin-top: 7%;
     font-family: 'Lobster', cursive;
     font-size: 5.625em;
-    margin-top: 7%;
 }
 
 .login_wrapper input {
+    display: block;
     width: 25em;
     height: 3.438em;
-    display: block;
     margin-left: 16%;
-    font-size: 1.063em;
-    font-weight: bold;
-    border: 2px solid #E6E6E6;
     margin-bottom: 0.625em;
     padding: 0.625em;
-    border-radius: 7px;
+    border: 0.13em solid #E6E6E6;
+    border-radius: 0.44em;
     font-family: 'Nanum Gothic', sans-serif;
+    font-size: 1.063em;
+    font-weight: bold;
 }
 
 .login_button {
-    margin-top: 0.625em;
     width: 20em;
     height: 3em;
-    border-radius: 8px;
+    margin-top: 0.625em;
+    margin-left: 3%;
+    color: white;
     background-color: #0095F6;
     border: none;
-    color: white;
-    font-weight: bold;
+    border-radius: 0.5em;
     font-size: 1.25em;
-    cursor: pointer;
-    margin-left: 3%;
+    font-weight: bold;
     opacity: .3;
+    cursor: pointer;
 }
+
 .login_button_active {
     opacity: 1;
 }
-.login_wrapper a {
+
+#password_forget {
     display: block;
     margin-top: 50%;
-    text-decoration: none;
     color: #365F89;
+    text-decoration: none;
+    font-family: 'Nanum Gothic', sans-serif;
     font-weight: bold;
     font-size: 1.25em;
-    font-family: 'Nanum Gothic', sans-serif;
 }
 

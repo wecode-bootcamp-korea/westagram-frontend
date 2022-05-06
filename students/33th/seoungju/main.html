@@ -11,84 +11,83 @@
 </head>
 <body>
     <nav>
-        <a id="westagram_icon" href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8Pr624NjLfwcX8__wXYeM2khAokpjlnkAWA&usqp=CAU" width="35px" height="35px"></a>
-        <span id="westagram_logo">Westagram</span>
-        <form class="searchForm">
-            <input id="searchBar" placeholder="&#128270;검색">
-            
+        <a href="#" class="westagram_icon"><img src="westagram_icon.png" width="35" height="35"></a>
+        <span class="westagram_logo">Westagram</span>
+        <form>
+            <input class="searchBar" placeholder="&#128270;검색">
         </form>
-        <div class="icon">
-            <a  id="search_icon" href="#"><img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png"></a>
-            <a  id="heart_icon" href="#"><img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"></a>
-            <a  id="mypage_icno"href="#"><img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png"></a>
+        <div class="nav_icon">
+            <a href="#" id="search_icon"><img src="1.png" width="35" height="35"></a>
+            <a href="#" id="heart_icon"><img src="2.png" width="35" height="35"></a>
+            <a href="#" id="mypage_icno"><img src="3.png" width="35" height="35"></a>
         </div>
     </nav>
     <main>
         <div class="feeds">
             <article>
                 <div class="feeds_top">
-                    <img class="feeds_user_icon" src="https://images.unsplash.com/photo-1650282101540-cc4f4077f0f5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDU0fHRvd0paRnNrcEdnfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" width="53" height="53">
-                    <span class="feeds_user_id">wecode_bootcamp</span>
-                    <span class="feeds_user_name">WeCode - 위코드</span>
-                    <button class="fa-solid fa-ellipsis" id="artice_for_update_button"></button>
+                    <img src="myphoto.webp" width="53" height="53" class="feeds_top_user_icon">
+                    <span class="feeds_top_user_id"><b>wecode_bootcamp</b></span>
+                    <span class="feeds_top_user_name">WeCode - 위코드</span>
+                    <button id="feeds_top_update_button" class="fa-solid fa-ellipsis"></button>
                 </div>
-                <img id="feeds_user_image" src="https://images.unsplash.com/photo-1650282101540-cc4f4077f0f5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDU0fHRvd0paRnNrcEdnfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" width="100%" height="620px">
+                <img src="myphoto.webp" width="100%" height="620" class="feeds_user_image">
                 <div class="feeds_middle">
-                    <div class="feeds_icon">
-                        <a id="feeds_icon_heart" href="#"><img src="https://cdn-icons-png.flaticon.com/128/2107/2107845.png" width="35px" height="35px"></a>
-                        <a id="feeds_icon_comment" href="#"><img src="https://cdn-icons-png.flaticon.com/128/2462/2462719.png" width="35px" height="35px"></a>
-                        <a id="feeds_icon_share" href="#"><img src="https://cdn-icons-png.flaticon.com/128/786/786205.png" width="35px" height="35px"></a>
+                    <div class="feeds_middle_icon">
+                        <a href="#" class="feeds_middle_icon_heart"><img src="heart.png" width="35" height="35"></a>
+                        <a href="#" class="feeds_middle_icon_comment"><img src="comment.png" width="35" height="35"></a>
+                        <a href="#" class="feeds_middle_icon_share"><img src="share.png" width="35" height="35"></a>
                     </div>
-                    <div class="feeds_save_icon_wrapper">
-                        <a id="feeds_icon_save" href="#"><img src="https://cdn-icons-png.flaticon.com/128/25/25667.png" width="35px" height="35px"></a>
+                    <div>
+                        <a href="#" class="feeds_middle_icon_save"><img src="shave.png" width="35" height="35"></a>
                     </div>
                 </div>
-                <div class="summary_comment">
-                    <img id="friends" src="https://images.unsplash.com/photo-1650859089873-8bea20f6408d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDMxfHRvd0paRnNrcEdnfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" width="50" height="50">
-                    <p class="how_many_likes"><b>AhnSeoung_Ju</b>님 <b>외 4명</b>이 좋아합니다.</p>
+                <div class="feeds_like_wrapper">
+                    <img src="friends_1.webp" width="50" height="50" class="friends_one">
+                    <p class="feeds_how_many_likes"><b>AhnSeoung_Ju</b>님 <b>외 4명</b>이 좋아합니다.</p>
                 </div>
-                <section class="total_comment">
-                    <input class="comment_input" type="text" placeholder="&#128512; 댓글 달기...">
-                    <button class="comment_button">게시</button>
+                <section class="feeds_comment_wrapper">
+                    <input type="text" class="feeds_comment_input" placeholder="&#128512; 댓글 달기...">
+                    <button class="feeds_comment_button">게시</button>
                 </section>
             </article>
         </div>
-        <div class="main_right">
-            <div class="main_right_top">
-                <img class="side_user_icon" src="https://images.unsplash.com/photo-1650282101540-cc4f4077f0f5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDU0fHRvd0paRnNrcEdnfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" width="57" height="57">
-                <span class="side_user_id">wecode_bootcamp</span>
-                <span class="side_user_name">WeCode | 위코드</span>
+        <div class="main_side">
+            <div class="main_side_top">
+                <img src="myphoto.webp" width="57" height="57" class="side_top_user_icon">
+                <span class="side_top_user_id"><b>wecode_bootcamp</b></span>
+                <span class="side_top_user_name">WeCode | 위코드</span>
             </div>
-            <div class="main_right_story">
-                <p id="story">스토리</p>
-                <p id="showAll"><a href="#">모두 보기</a></p>
-                <img class="story_user_icon" id="story_user1" src="https://images.unsplash.com/photo-1650484543914-e4378649fdb9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDE1fHRvd0paRnNrcEdnfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" width="45" height="45">
-                <span class="stroy_user_name" id="story_user_name1">Jiminee_star</span> 
-                <span class="story_user_time" id="story_user_time1">2시간전</span>
-                <img class="story_user_icon" id="story_user2" src="https://images.unsplash.com/photo-1650638701470-e860a3dbc723?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDF8dG93SlpGc2twR2d8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60" width="45" height="45">
-                <span class="stroy_user_name" id="story_user_name2">0-in_trash</span> 
-                <span class="story_user_time" id="story_user_time2">1시간전</span>
-                <img class="story_user_icon" id="story_user3" src="https://images.unsplash.com/photo-1650689957192-3fbad48cfe7f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDV8dG93SlpGc2twR2d8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60" width="45" height="45">
-                <span class="stroy_user_name" id="story_user_name3">Mikeleral_javascript</span> 
-                <span class="story_user_time" id="story_user_time3">15분전</span>
+            <div class="main_side_story_wrapper">
+                <p class="main_side_story_title">스토리</p>
+                <p class="main_side_story_showAll"><a href="#">모두 보기</a></p>
+                <img src="friends_2.webp" width="45" height="45" id="story_user1" class="story_user_icon">
+                <span id="story_user_name1" class="stroy_user_name">Jiminee_star</span> 
+                <span id="story_user_time1" class="story_user_time">2시간전</span>
+                <img src="friends_3.webp" width="45" height="45" id="story_user2" class="story_user_icon">
+                <span id="story_user_name2" class="stroy_user_name">0-in_trash</span> 
+                <span id="story_user_time2" class="story_user_time">1시간전</span>
+                <img src="friends_4.webp" width="45" height="45" id="story_user3" class="story_user_icon" >
+                <span id="story_user_name3" class="stroy_user_name">Mikeleral_javascript</span> 
+                <span id="story_user_time3" class="story_user_time">15분전</span>
             </div>
-            <div class="main_right_recommend">
-                <p id="recommend_for_user">회원님을 위한 추천</p>
-                <p id="recommend_showAll"><a href="#">모두 보기</a></p>
-                <img class="recommend_user_icon" id="recommend_user1" src="https://images.unsplash.com/photo-1650784422954-9e522e77f473?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDQwfHRvd0paRnNrcEdnfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" width="45" height="45">
-                <a class="recommend_user_name" id="recommend_user_name1" href="#">Son_Star</a>
-                <span class="recommend_follow_text" id="follow_text1">회원님을 팔로우합니다</span>
-                <a class="follow" id="follow_1" href="#">팔로우</a> 
-                <img class="recommend_user_icon" id="recommend_user2" src="https://images.unsplash.com/photo-1650602356313-79daae307eaf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDQyfHRvd0paRnNrcEdnfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" width="45" height="45">
-                <a class="recommend_user_name" id="recommend_user_name2" href="#">GiSak_male</a> 
-                <span class="recommend_follow_text" id="follow_text2">회원님을 팔로우합니다</span>
-                <a class="follow" id="follow_2" href="#">팔로우</a> 
-                <img class="recommend_user_icon" id="recommend_user3" src="https://images.unsplash.com/photo-1649977370494-b27a71603ffa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDYzfHRvd0paRnNrcEdnfHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" width="45" height="45">
-                <a class="recommend_user_name" id="recommend_user_name3" href="#">Robinson_France</a>
-                <span class="recommend_follow_text" id="follow_text3">회원님을 팔로우합니다</span>
-                <a class="follow" id="follow_3" href="#">팔로우</a>  
+            <div class="main_side_recommend_wrapper">
+                <p class="main_side_recommend_title">회원님을 위한 추천</p>
+                <p class="main_side_recommend_showAll"><a href="#">모두 보기</a></p>
+                <img src="friends_5.webp" width="45" height="45" id="recommend_user1" class="recommend_user_icon">
+                <a id="recommend_user1_name" class="recommend_user_name" href="#">Son_Star</a>
+                <span id="follow_text1" class="recommend_follow_text">회원님을 팔로우합니다</span>
+                <a href="#" id="follow_1" class="follow">팔로우</a> 
+                <img src="friends_6.webp" width="45" height="45" id="recommend_user2" class="recommend_user_icon">
+                <a href="#" id="recommend_user2_name" class="recommend_user_name">GiSak_male</a> 
+                <span id="follow_text2" class="recommend_follow_text">회원님을 팔로우합니다</span>
+                <a href="#" id="follow_2" class="follow">팔로우</a> 
+                <img src="friends_7.webp" width="45" height="45" id="recommend_user3" class="recommend_user_icon">
+                <a href="#" id="recommend_user3_name" class="recommend_user_name">Robinson_France</a>
+                <span id="follow_text3" class="recommend_follow_text">회원님을 팔로우합니다</span>
+                <a href="#" id="follow_3" class="follow">팔로우</a>  
             </div>
-            <a class="information" href="#">소개.도움말.홍보 센터.API.채용 정보. 개인정보처리방침.약관.위치.인기 계정.해시태그.언어</a>
+            <a href="#" class="information">소개.도움말.홍보 센터.API.채용 정보. 개인정보처리방침.약관.위치.인기 계정.해시태그.언어</a>
         </div>
     </main>
     <script src="main.js"></script>
