@@ -16,6 +16,8 @@ function add_comment(e) {
     delete_btn.innerText = "삭제";
     heart_img.src = "./image/heart.png";
     heart_img.style.color = "black";
+    heart_img.style.width = "1.4rem";
+    heart_img.style.height = "1.4rem";
     comment_div.classList.add("flex");
     comment_div.classList.add("space_between");
     liTag.innerText = `${USER_ID} ${comment_value.value}`;
@@ -102,13 +104,37 @@ const userArr = [
         descName: "위코드",
         img: "../image/person_pic4.jpg",
     },
+    {
+        id: 5,
+        name: "we_",
+        descName: "우리_",
+        img: "../image/person_pic6.jpg",
+    },
+    {
+        id: 6,
+        name: "peter_ee",
+        descName: "김피터",
+        img: "../image/person_pic7.jpg",
+    },
+    {
+        id: 7,
+        name: "hello_world",
+        descName: "헬로월드",
+        img: "../image/person_pic8.jpg",
+    },
+    {
+        id: 8,
+        name: "lorem_ipsum",
+        descName: "로렘입섬",
+        img: "../image/pserson_pic1.jpg",
+    },
 ];
 
 const search_user = document.querySelector(".search_user_result");
 const nav_input = document.querySelector(".nav_bar_input");
 let newArr = [];
 nav_input.addEventListener("input", (e) => {
-    while(search_user.childElementCount >= 1){
+    while (search_user.childElementCount >= 1) {
         search_user.removeChild(search_user.lastChild);
     }
     userArr.filter((x) => {
@@ -119,7 +145,10 @@ nav_input.addEventListener("input", (e) => {
             }
             return;
         }
-        if (x["name"].includes(e.target.value)) {
+        /* 
+        
+        */
+        if (x["name"].includes(e.target.value) && (x['name'][0] === e.target.value[0])) {
             search_user.classList.remove("hidden");
             const search_user__flexbox = document.createElement("div");
             const search_user__flexbox__imgDiv = document.createElement("div");
@@ -145,7 +174,15 @@ nav_input.addEventListener("input", (e) => {
             search_user__flexbox.appendChild(search_user__flexbox__imgDiv);
             search_user__flexbox.appendChild(search_user__nameDiv);
             search_user.appendChild(search_user__flexbox);
+            // search_user.innerHTML = `
+            // <div class="padding border_bottom flex flex_start search_result">
+            //     <img class = "img_circle_32px" src="${x["img"]}"/>
+            //     <div class="margin_left">
+            //         <p>${x["name"]}</p>
+            //         <span>${x["descName"]}</span>
+            //     </div>
+            // </div>
+            // `;
         }
     });
-    
 });

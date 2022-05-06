@@ -10,6 +10,13 @@
     <link rel="icon" href="./image/instagram.png">
     <script src="https://kit.fontawesome.com/25b41d6433.js" crossorigin="anonymous"></script>
     <title>Westagram</title>
+    <style>
+        @media screen and (max-width: 800px) {
+            aside {
+                display: none;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -32,7 +39,8 @@
                 <a href="#"><img src="./image/compass.png" alt=""></a>
                 <a href="#"><img src="./image/heart.png" alt=""></a>
                 <a href="#"><img id="user_profile" class="img_circle_32px" src="./image/person_pic5.jpg" alt=""></a>
-                <div class="hidden_nav_bar flex flex_direction_column space_around position_absolute hidden">
+                <div id="hidden_nav"
+                    class="hidden_nav_bar flex flex_direction_column space_around position_absolute hidden">
                     <div class="flex flex_direction_column space_around hidden_nav_item">
                         <div class="hidden_nav_img_wrapper margin_left flex flex_start">
                             <img class="hidden_nav_bar_img" src="./image/feed_user.png" alt="">
