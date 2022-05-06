@@ -36,7 +36,7 @@ nav {
 
 
 .left img {
-  margin-top: 10px;
+  margin-top: 5px;
   width: 20px;
   height: 20px;
   margin-right: 10px;
@@ -48,10 +48,6 @@ nav {
   font-size: 1.15rem;
   text-align: center;
   margin-right: 20px;
-}
-
-
-input {
   width: 200px;
   height: 30px;
   border: 1px solid #bbb;
@@ -60,6 +56,7 @@ input {
   border: none;
   background-color: rgb(251, 245, 245);
 }
+
 
 .right img{
   width: 20px;
@@ -72,24 +69,28 @@ main {
   height: 800px;
   background-color: white;
   display: flex;
-  /* flex-direction: row; */
   justify-content: center;
 }
 
 
 .main-header {
   margin-top: 50px;
-  width: 700px;
+  width: 600px;
   height: 100px;
-  border: 1px solid black;
+  border: 1px solid rgb(223, 214, 214);
   display: flex;
   flex-direction: column;
 }
 
 .story-id {
-  margin-left: 23px;
+  margin-left: 25px;
+  font-size: 0.85rem;
 }
 
+.main-left {
+  width: 600px;
+  height: 800px;
+}
 
 .main-header img {
   width: 60px;
@@ -100,27 +101,51 @@ main {
 }
 
 .main-content {
-  width: 700px;
-
-  border: 1px solid black;
+  width: 600px;
+  
+  border: 1px solid rgb(223, 214, 214);
   margin-top: 25px;
   display: flex;
   flex-direction: column;
 }
 
+
 .main-content-header {
   display: flex;
   justify-content: space-between;
-  margin: 20px;
-
+  align-items: center;
+  margin: 8px;
 }
 
-.main-content-header img {
+.main-content-profile {
+  display: flex;
+  align-items: center;
+}
+
+.main-content-profile img {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-
+  left: 70px;
+  margin-right: 10px;
 }
+
+.fa-heart {
+  margin-right: 10px;
+}
+
+.fa-comment {
+  margin-right: 10px;
+}
+
+.fa-arrow-up-from-bracket {
+  margin-right: 10px;
+}
+
+.fa-bookmark {
+  margin-right: 10px;
+}
+
 
 .main-content-photo img{
   width: 100%;
@@ -130,41 +155,143 @@ main {
 .group-like-time {
   display: flex;
   flex-direction: column;
+  margin-bottom: 10px;
 }
+
 .main-content-like-area {
-  font-size: 25px;
-}
-
-.main-content-like-area :nth-child(4){
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  font-size: 25px;
+  margin-bottom: 15px;
 }
 
-.main-content-text-area p{
-  font-size: 17px;
-  margin-bottom: 0;
-}
-
-.time-box {
-  font-size: 0.7rem;
-}
-
-.comment-box {
-  border-top: 1px solid black;
-  margin-top: 10px;
-}
-
-.comment-box p {
+.main-content-wrapper {
   margin-left: 10px;
+  padding: 5px;
+  
 }
 
-.comment-box p .fa-face-smile {
-  font-size: 20px;
-} 
-.main-right-content {
+.main-content-text-area span{
+  font-size: 15px;
+  margin-top: 0;
+  margin-left: 5px;
+}
+
+.post_comment_input {
+  width: 90%;
+  height: 30px;
+}
+
+.comment-area {
+  display: flex;
+  justify-content: space-between;
+}
+
+.commentList{
+  list-style:none;
+  margin-left:10px;
+  margin-top: 0;
+  padding-left: 0;
+}
+
+li {
+  list-style:none;
+}
+
+form input{
+  margin-top: 10px;
+  width: 100%;
+  height: 30px;
+}
+
+
+.fa-bookmark {
+  margin-top: 8px;
+  margin-right: 20px;
+}
+
+
+.main-right-content-1 {
+  position: fixed;
   margin-top: 50px;
   width: 300px;
   height: 400px;
-  border: 1px solid black;
+  border: none;
+  justify-content: space-between;
+  flex-direction: column;
+}
 
+.main-right-content-2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main-right-profile-2 {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.main-right-profile-2 img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.main-right-id-2 {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.main-right-change-2 {
+  margin-top: 8px;
+  color: rgb(115, 179, 236);
+}
+
+.main-right-content-3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.main-right-profile-3 {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.main-right-id-3 {
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.main-right-change-3 {
+  margin-top: 8px;
+  color: rgb(115, 179, 236);
+}
+
+.main-right-profile-3 img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.main-rignt-bottom-textbox {
+  margin-top: 30px;
+  margin-left: 20px;
+}
+
+.main-right-bottom-area span{
+  font-size: 0.73rem;
+  color:#bbb;
+}
+
+.main-rignt-bottom-textbox p {
+  margin-top: 5px;
 }
