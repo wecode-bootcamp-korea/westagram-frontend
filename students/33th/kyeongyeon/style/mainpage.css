@@ -88,10 +88,17 @@ input::placeholder{
 /*여기서 부터 하단 피드 CSS*/
 
 /*메인피드 정렬*/
+body{
+    background-color: #fafafa;
+}
+article{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
 .feed_aside_container{
     width: 100%;
-    height: auto;
-    background-color: #fafafa;
     margin-top: 150px;
     display: flex;
     flex-direction: row;
@@ -186,21 +193,29 @@ input::placeholder{
 }
 
 /*댓글 창*/
-
+.comment_background{
+    background-color: white;
+    display: flex;
+}
 .comments{
     width: 614px;
-    height: 30px;
-    border: 1px solid #a5a5a5;
     background-color: white;
 }
 
 input{
-    width: 600px;
-    height: auto;
+    width: 614px;
+    height: 30px;
     border: none;
+    border: 1px solid #a5a5a5;
     background-color: white;
 }
-
+li{
+    list-style: none;
+    background-color: white;
+}
+.comments_box{
+    background-color: white;
+}
 /*친구 게시글 피드 이미지랑 아이디 나오는 피드 상단 부분*/
 .neighborhood_profile{
     width: 614px;

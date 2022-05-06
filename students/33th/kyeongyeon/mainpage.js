@@ -1,17 +1,16 @@
-const commentBox = document.querySelector(".comments"), //input 창, querySelector는 우리가 필요한걸 HTML에서 얻어옴
-commentInput = commentBox.querySelector("input"),
-commentList = document.querySelector(".comments_box");
+const commentBox = document.querySelector(".comments");//input 창, querySelector는 우리가 필요한걸 HTML에서 얻어옴
+const commentInput = commentBox.querySelector(".comments input");
+const commentList = document.querySelector(".comments_box");
 
 const COMMENTS_LS = 'writeComments';
 
 function paintComment(text){
     const li = document.createElement("li"); //html에 li창 만들기
-    const delBtn  = document.createElement("button");
-    delBtn.innerHTML = "❌";
+    
     const span = document.createElement("span");
     span.innerText = text;   //submit function에서 가지고 온 값
     li.appendChild(span);  //부모 Element 값을 넣음, span을 li에 넣고
-    li.appendChild(delBtn); //버튼을 li에 넣고
+     //버튼을 li에 넣고
     commentList.appendChild(li);
 }
 
