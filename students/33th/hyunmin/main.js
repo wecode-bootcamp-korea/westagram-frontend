@@ -1,5 +1,14 @@
 let inputComment = document.getElementsByClassName("inputComment")[0];
 let submitCommentBtn = document.getElementsByClassName("submitCommentBtn")[0];
+let heart = document.querySelector('.commentHeart');
+
+// comment 게시 작동 조건
+const checkInput = () => {
+    if(!inputComment.value.length) {
+        return;
+    }
+    submitComment();
+}
 
 //comment 구현
 function submitComment() {
@@ -19,11 +28,17 @@ function submitComment() {
 
     userName.innerHTML = "happyhappy"; // *** 임시 닉네임 ***
     comment.innerText = inputComment.value;
-    heart.innerHTML = '<i class="fa-solid fa-heart commentIcon"></i>';
+    heart.innerHTML = '<i class="fa-solid fa-heart commentIcon commentHeart"></i>';
+    heart.addEventListener('click', (e) => {
+        e.target.classList.toggle('fa-heart-circle-check');
+    })
+
     deleteComment.innerHTML = '<i class="fa-solid fa-trash commentIcon"></i>';
     deleteComment.addEventListener('click', () => {
         newUserComment.removeChild(commentDiv);
     })
+
+    console.log(commentDiv);
 
     commentDiv.appendChild(userName);
     commentDiv.appendChild(comment);
@@ -34,9 +49,10 @@ function submitComment() {
 }
 
 submitCommentBtn.addEventListener("click", (e) => {
-    submitComment();
+    checkInput();
     inputComment.value = "";
 });
 
-
-
+heart.addEventListener("click", (e) => {
+    e.target.classList.toggle('fa-heart-circle-check');
+});
