@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>westagram</title>
+    <link href="main.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" type="image/png" href="imgs/favicon.png" />
+    <script src="https://kit.fontawesome.com/684e97b7f2.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <nav class = "navbar">
+        <div class="nav-wrapper">
+            <img src="인스타그램로고.png"alt=""class=logo-img>
+            <h4>
+            <span class="westagram-text">westagram</span>
+            </h4>
+            <input type="text" class="search-bar" placeholder="검색">
+            <div class="nav-items">
+                <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png"alt=""class="icon">
+                <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"alt=""class="icon">
+                <img src=https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png alt=""class="icon">
+            </div>
+        </div>
+    </nav>
+    <!-- 인스타그램 피드 / 스토리  -->
+    <article>
+        <!-- 인스타그램 피드 -->
+        <section class="leftfeed">
+            <!--left의 헤더부분 -->
+            <div class="top">
+                <div class="toplogo">
+                    <div class="topimg">
+                        <a><img src="profile.jpeg" alt=""></a>
+                    </div>
+                    <h4 class="mynickname"><a>wecode_jungnaldo</a></h4>
+                </div>
+                <a><i class="fas fa-ellipsis-h"></i></a>
+
+            </div>
+            <!-- 피드이미지 -->
+            <div class="feed-img"></div>
+            <!-- 이미지 아래 부분 -->
+            <div class="peed-undericons">
+                <div class="underleft">
+                    <a><i class="fas fa-heart"></i></a>
+                    <a><i class="far fa-comment"></i></a>
+                    <a><i class="fas fa-external-link-alt"></i></a>
+                </div>
+                <div class="underight">
+                    <a><i class="far fa-bookmark"></i></a>
+                </div>
+            </div>
+            <!-- 피드 아이콘 아래 좋아합니다 부분 -->
+            <div class="peedunderlikes">
+                <div class="likesleft">
+                    <a><img src="https://search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMjA0MDRfNiAg%2FMDAxNjQ4OTk4MjY0MTcw.tnWYq4R6XOHge1C5r1jDv9qILlYoZR2RlxA_qmXniB8g.pcdcmy5HiDQ9j4GzYzRP26SOgZBBVqqq4EZCtWjJB5Ag.PNG.sungwon5413%2FFFFFFFFFFFFDDDDDDDDDDDDDDDD.PNG&type=a340" alt=""></a>
+                    <p><a href="#">christiano ronaldo</a>님 외<a href="#"> 4명이</a> &nbsp;좋아합니다</p>
+                </div>
+            </div>
+            <!-- 피드 아래 텍스트 부분 -->
+            <div class="peedtext">
+                <p class="canon"><a href="#">wecode_jungnaldo</a> 화이팅!<a> 더 보기</a></p>
+                <div class="id2flexbox">
+                    <p class="id2"><a href="#">christiano ronaldo</a>화이팅^^</p>
+                    <a><i class="far fa-heart"></i></a>
+                </div>
+                <span class="minit">
+                    <p><a href="#">30분 전</a></p>
+                </span>
+                <ul id="commentLists">
+                    <li></li>
+                </ul>
+            </div>
+            <!-- 피드아래 댓글 다는 부분 + 자바스크립트 코드 연동해야하는 부분 -->
+            <div class="comment">
+                <input id="name" class="names" type="text" placeholder="댓글 달기...">
+                <button class="upload" id="submit">게시</button>
+            </div>
+
+        </section>
+        <script type="text/javascript" src="main.js"></script>
+</body>
+</html>
