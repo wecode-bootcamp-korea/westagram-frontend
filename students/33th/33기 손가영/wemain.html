@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-    <title>westgram</title>
+    <title>Westagram</title>
   </head>
   <body>
     <script
@@ -27,8 +27,8 @@
         <h1 class="westagram_head">Westagram</h1>
       </div>
       <div class="westa_search">
+        <input type="text" placeholder="검색" class="searchbar_westa" maxlength="10"/>
         <i class="fa-solid fa-magnifying-glass"></i>
-        <input type="text" placeholder="검색" class="searchbar_westa" />
         <div class="container_nav2"></div>
       </div>
       <div class="container_nav2">
@@ -59,9 +59,12 @@
                 class="user_info_img"
               />
               <span class="name">Camille</span>
+              
+            </div>
+            <div class="more_icon">
               <i class="fa-solid fa-ellipsis"></i>
             </div>
-          </header>
+            </header>
           <div class="feeds_image">
             <img
               class="feeds_img"
@@ -70,12 +73,12 @@
           </div>
           <div class="icon_reaction">
             <div class="reaction_left">
-              <i class="fa-regular fa-heart"></i>
-              <i class="fa-regular fa-comment"></i>
-              <i class="fa-regular fa-paper-plane"></i>
+              <i class="fa-regular fa-heart fa-lg"></i>
+              <i class="fa-regular fa-comment fa-lg"></i>
+              <i class="fa-regular fa-paper-plane fa-lg"></i>
             </div>
-            <div class="reaction_rigntk">
-              <i class="fa-regular fa-bookmark"></i>
+            <div class="reaction_right">
+              <i class="fa-regular fa-bookmark fa-lg"></i>
             </div>
           </div>
           <!--article text data-->
@@ -88,12 +91,12 @@
               <p><span class="point-span">heyhey</span>님 <span class="point-span">외 200명</span>이 좋아합니다</p>
             </div>
             <div class="infomation">
-              <p><span class="like_id">ka0</span><span class="at-tag">@wkorea @gucci</span>😍</p></p>
+              <p><span class="like_id">ka_doggy</span><span class="at-tag">I'm gonna be going to start...</span><span class="like_more">더 보기</span></span></p></p>
             </div>
             <div class="comment_section">
               <ul class="comments">
                 <li>
-                  <span><span class="point-span userID">justin</span>푸하하하</span>
+                  <span><span class="point-span userID">justin_beboy</span>푸하하하</span>
                   <img class="comment-heart" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" alt="하트">
                 </li>
                 <!-- input 값 여기에 추가 -->
@@ -101,6 +104,11 @@
               <div class="time_log">
                 <span>20분 전</span>
               </div>
+              <div class="comentLoad"></div>
+              <form class="making_coment">
+                <input type="text" class="makeComment" placeholder="댓글 달기...">
+                <button type="submit" class="comment_upload" >게시</button>
+              </form>
           </div>
         </article>
       </div>
@@ -109,10 +117,12 @@
         <!-- main-right -->
       <div class="main-right">
         <div class="myProfile">
-          <img class="pic" src="https://images.unsplash.com/photo-1651384262338-f977f9dee268?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1936&q=80" alt="whatever님의 프로필 사진">
-          <div>
-            <span class="user_id_span">whatever</span>
-            <span class="sub_span">JIHYUNG LEE</span>  
+          <img class="pic" src="https://i.pinimg.com/564x/a9/e3/6d/a9e36da99a46d46dbbb209a562c7e673.jpg" alt="whatever님의 프로필 사진">
+          <div class="users">
+            <span class="user_id_span">whatever_4ever</span>
+            <span class="sub_span">LEELEE | HI
+              
+            </span>  
           </div>
         </div>
          <!-- story section -->
@@ -142,16 +152,16 @@
             </li>
             <li>
               <div class="gradient-wrap">
-                <img class="story_image" src="https://scontent-gmp1-1.cdninstagram.com/v/t51.2885-19/s320x320/83054317_174958120526515_9120446663184351232_n.jpg?_nc_ht=scontent-gmp1-1.cdninstagram.com&_nc_ohc=tYlvJUCoTKEAX_gZZa2&oh=a65657b48898f84fd25762a9a51a70d7&oe=5F6A8C65" alt="foeveryoung님의 프로필 사진">
+                <img class="story_image" src="https://i.pinimg.com/564x/af/28/6e/af286e38dfa0d08641aa1074ee84e48b.jpg" alt="foeveryoung님의 프로필 사진">
               </div>
-              <div class="profile-text">
+              <div class="profile_text">
                 <span class="user_id_span">foeveryoung</span>
                 <span class="sub_span">42분 전</span>  
               </div>
             </li>
             <li>
               <div class="gradient-wrap">
-                <img class="story_imag" src="https://images.unsplash.com/photo-1651326058982-b69e54101907?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=626&q=80" alt="iwannabe님의 프로필 사진">
+                <img class="story_image" src="https://images.unsplash.com/photo-1651326058982-b69e54101907?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=626&q=80" alt="iwannabe님의 프로필 사진">
               </div>
               <div class="profile_text">
                 <span class="user_id_span">iwannabe</span>
@@ -172,7 +182,7 @@
                 <img class="profile_image" src=https://images.unsplash.com/photo-1651535603013-fe0472dfdbe0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="balckpink님의 프로필 사진">
                 <div class="profile_text">
                   <span class="user_id_span">balckpink</span>
-                  <span class="sub_span">heoyck님 외 2명이 팔로우합니다</span>
+                  <span class="sub_span">suhjman님이 팔로우...</span>
                 </div>
               </div>
               <span class="btn_follow">팔로우</span>
@@ -182,7 +192,7 @@
                 <img class="profile_image" src="https://images.unsplash.com/photo-1651535602931-74144887e487?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="hyuns2님의 프로필 사진">
                 <div class="profile_text">
                   <span class="user_id_span">hyuns2</span>
-                  <span class="sub_span">bushman님이 팔로우합니다</span>  
+                  <span class="sub_span">bushman님이 팔로우...</span>  
                 </div>
               </div>
               <span class="btn_follow">팔로우</span>
@@ -192,7 +202,7 @@
                 <img class="profile_image" src="https://images.unsplash.com/photo-1651436005721-d57a96a0a8df?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=686&q=80" alt="bitcoinmillionair님의 프로필 사진">
                 <div class="profile_text">
                   <span class="user_id_span">bitcoinmillionair</span>
-                  <span class="sub_span">jennyways님 외 5명이 팔로우합...</span>  
+                  <span class="sub_span">jennyways님 외 5명이...</span>  
                 </div>
               </div>
               <span class="btn_follow">팔로우</span>
@@ -204,7 +214,7 @@
     </aside>
     <footer>
       <p class="script">
-        소개 ∙ 도움말 ∙ 홍보 센터 ∙ API ∙ 채용 정보 ∙ 개인정보처리방침 ∙ <br>약관 ∙ 위치 ∙ 인기계정 ∙ 해시태그 ∙ 언어
+        소개 ∙ 도움말 ∙ 홍보 센터 ∙ API ∙ 채용 정보 ∙ 개인정보처리방침 ∙약관 ∙ 위치 ∙ 인기계정 ∙ 해시태그 ∙ 언어
         <br><br>
         © 2022 WESTAGRAM 
       </p>
