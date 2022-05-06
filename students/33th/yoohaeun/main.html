@@ -28,7 +28,7 @@
     <nav>
       <div class="logoContainer">
         <div class="logo">
-          <img src="./img/instagram.png" alt="Westargram logo" />
+          <img alt="Westargram logo" src="./img/instagram.png" />
           <span>Westargram</span>
         </div>
 
@@ -96,17 +96,20 @@
               </div>
               <div class="commentBox">
                 <p class="commentTime">42분 전</p>
-                <ul id="commentList">
+                <ul class="commentList">
                   <li>
                     <strong>d.ddablue</strong>
-                    <span>우와 초콜렛이다</span>
+                    <div class="commentText">
+                      <span>우와 초콜렛이다</span>
+                      <button>ⅹ</button>
+                    </div>
                   </li>
                 </ul>
               </div>
             </div>
             <form class="commentInput">
               <input type="text" placeholder="댓글 달기..." />
-              <button class="commentBtn">게시</button>
+              <button class="commentBtn" disabled>게시</button>
             </form>
           </article>
         </div>

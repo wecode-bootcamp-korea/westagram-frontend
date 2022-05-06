@@ -1,3 +1,7 @@
+body {
+  background-color: #fafafa;
+}
+
 /* Navbar */
 nav {
   display: flex;
@@ -187,6 +191,24 @@ main .commentTime {
   margin-bottom: 10px;
 }
 
+main .commentList li {
+  display: flex;
+}
+
+main .commentList li strong {
+  margin-right: 5px;
+}
+
+main .commentList li .commentText {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+main .commentList li .commentText button {
+  width: 20px;
+}
+
 main .commentInput {
   display: flex;
   justify-content: space-between;
@@ -197,9 +219,9 @@ main .commentInput {
   background-color: white;
 }
 
-/* main .commentInput input {
+main .commentInput input {
   width: 100%;
-} */
+}
 
 input::-webkit-input-placeholder {
   color: #909090;
