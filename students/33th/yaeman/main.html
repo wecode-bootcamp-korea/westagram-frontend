@@ -118,13 +118,14 @@
                             </a>
                             <span>hi</span>
                         </div>
-                        <ul class="comment-list">
+                        <ul id="commentLists">
                             <li>
                                 <div class="user-board">
                                     <a href="">aa</a>
                                     <span>ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ</span>
                                 </div>
                                 <button><i class="fa-regular fa-heart"></i></button>
+                                <span class="delete">x</span>
                             </li>
                             <li>
                                 <div class="user-board">
@@ -132,6 +133,7 @@
                                     <span>....</span>
                                 </div>
                                 <button><i class="fa-regular fa-heart"></i></button>
+                                <span class="delete">x</span>
                             </li>
                         </ul>
                         <div class="days">
@@ -145,9 +147,9 @@
                                     <div class="emotion">
                                         <i class="fa-regular fa-face-grin"></i>
                                     </div>
-                                    <input id="comment-write" type="text" placeholder="댓글달기..." >
+                                    <input id="commentInput" type="text" placeholder="댓글달기..." >
                                     <div class="comment-upload">
-                                        <span class="upload">게시</span>
+                                        <button id="submit">게시</button>
                                     </div>
                                 </form>
                             </div>
@@ -248,7 +250,7 @@
             </div>
         </main>
     </div>
-    <script src="main.js"></script>
+    <script type="text/javascript" src="main.js"></script>
 </body>
 
 </html>

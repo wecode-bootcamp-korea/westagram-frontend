@@ -18,23 +18,25 @@
                 <p>westagram</p>
             </div>
             <div class="login-content">
-                <form id="login-form" method="">
-                    <div class="login">
-                        <div class="id">
-                            <input id="login-id" type="text" placeholder="전화번호, 사용자 이름 또는 이메일">
+                <form class="loginForm" method="">
+                    <div class="login-wrap">
+                        <div class="loginId">
+                            <input id="id" type="text" placeholder="전화번호, 사용자 이름 또는 이메일">
+                            <span class="idErrorMs"></span>
                         </div>
-                        <div class="pw">
-                            <input id="login-pw" type="password" placeholder="비밀번호">
+                        <div class="loginPw">
+                            <input id="pw" type="password" placeholder="비밀번호" autocomplete="off">
+                            <span class="pwErrorMs"></span>
                         </div>
                         <div class="btn">
-                            <button class="login-btn">로그인</button>
+                            <button id="loginBtn" type="button" disabled>로그인</button>
                         </div>
-                        <a href="">비밀번호를 잊으셨나요?</a>
+                        <a href="/">비밀번호를 잊으셨나요?</a>
                     </div>
                 </form>
             </div>
         </div>
     </div>
-    <script src="login.js"></script>
+    <script type="text/javascript" src="login.js"></script>
 </body>
 </html>
