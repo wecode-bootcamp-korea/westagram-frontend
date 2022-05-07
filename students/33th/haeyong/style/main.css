@@ -166,6 +166,32 @@ article {
   margin-left: 7px;
 }
 
+#todo-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+#todo-list > li {
+  display: flex;
+}
+
+#todo-list > li > span:nth-child(1) {  
+  flex-grow: 0.3;
+  font-weight: bold;
+}
+
+#todo-list > li > span:nth-child(2) {  
+  flex-grow: 10;
+}
+
+#todo-list > li > button {
+  color: gray;
+  background-color: white;  
+  border: none;
+  flex-grow: 0.1;
+}
+
 .myFeed > span {
   font-size: 0.75rem;
   color: lightgray;
@@ -187,23 +213,23 @@ article {
   width: 100%;  
 }
 
-.comment {    
+#comment {    
   display: flex;
   align-items: center;    
   justify-content: space-around;
   margin: auto;
 }
 
-.comment > i {
+#comment > i {
   margin: 0 0.25rem;
 }
 
-.comment > input {
+#comment > input {
   width: 30rem;
   border: none;
 }
 
-.comment > button {
+#comment > button {
   border: none;
   background-color: white; 
   width: 2.75rem;

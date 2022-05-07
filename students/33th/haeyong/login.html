@@ -18,12 +18,12 @@
         </div>
         <div class="westsaLogin">
           <div class="inputID">
-            <input type="email" class="westaID" placeholder="전화번호, 사용자 이름 또는 이메일" required>
+            <input type="text" class="westaID" name="userID" placeholder="전화번호, 사용자 이름 또는 이메일" required>
           </div>
           <div class="inputPW">
-            <input type="password" class="westaPW" placeholder="비밀번호" required>
+            <input type="password" name="userPassword" class="westaPW" placeholder="비밀번호" required>
         </div>
-          <button class="buttonLogin">로그인</button>
+          <button type="button" onclick="location='./main.html'" class="buttonLogin" disabled>로그인</button>
           <div class="orStick">
             <div class="stick">
               <hr>
@@ -35,11 +35,12 @@
           </div>
           <div class="fbLogin">
             <a class="facebookLogin" href="#"><img src="img/facebookLogo.png" width="14px" alt="facebook logo"> Facebook으로 로그인</a>
-          </div>        
+          </div>
           <a class="forgetPW" href="#">비밀번호를 잊으셨나요?</a>    
         </div>
       </div>      
     </div>
-  </section>
+  </section>  
+  <script src="js/login.js"></script>
 </body>
 </html>
