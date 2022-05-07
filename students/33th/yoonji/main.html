@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/6c0b3ad7d7.js" crossorigin="anonymous"></script>
+    <script src="js/main.js" defer></script>
 </head>
 <body>
     <nav>
@@ -67,14 +68,16 @@
                     <div class="feeds__text">
                         <span>syj3367</span> 복순이가 탈출해서 이불에 들어옴
                     </div>
-                    <!-- 리플 추가할 div -->
-                    <div class="reply"></div>
+                    <!-- 리플 추가할 ul -->
+                    <ul class="reply">
+                        <span class="font--bold hidden">I.like.U </span>
+                    </ul>
                     <div class="time">42분 전</div>
                 </div>
-                <div class="reply__input">
-                    <input class="reply__input__text" type="text" placeholder="댓글 달기...">
+                <form class="reply__input">
+                    <input class="reply__input__text" type="text" placeholder="댓글 달기..." required>
                     <button class="reply__input__btn">게시</button>
-                </div>
+                </form>
             </article>
         </section>
         <aside class="main-right">
