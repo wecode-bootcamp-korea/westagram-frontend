@@ -12,8 +12,11 @@ const loginBtnActive = () => {
 
 mainId.addEventListener("keyup", loginBtnActive);
 mainPwd.addEventListener("keyup", loginBtnActive);
-mainPwd.addEventListener("keydown", (e) => {
+mainPwd.addEventListener("keyup", (e) => {
     if((e.key == 'Enter') && (mainId.value.includes('@') && mainPwd.value.length >= 5)) {
         location.href='main.html'
     }
 })
+
+
+

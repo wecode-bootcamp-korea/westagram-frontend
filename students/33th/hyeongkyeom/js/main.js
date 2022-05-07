@@ -8,6 +8,7 @@ const navMenubar = document.querySelector('.profileMenubar');
 const navProfile = document.querySelector('.navProfile');
 const navSearch = document.querySelector('.navSearch');
 const searchBar = document.querySelector('.searchBar');
+const recommendFollow = document.querySelector('.recommendProfileFollowBtn');
 
 const commentBtnActive = () => {
     if (!(commentTxt.value)) {
@@ -183,3 +184,17 @@ navSearch.addEventListener('keyup', function(e) {
 })
 
 console.log(users[1].userName);
+
+const recoFollow = () => {
+    if (recommendFollow.style.color = '#3B99EF') {
+        recommendFollow.style.color = 'gray';
+        recommendFollow.innerText = '팔로잉';
+    } else if (!(recommendFollow.style.color = '#3B99EF')) {
+        recommendFollow.style.color = '#3B99EF';
+        recommendFollow.innerText = '팔로우';
+    }
+};
+
+recommendFollow.addEventListener('click', () => {
+    recoFollow();
+})
