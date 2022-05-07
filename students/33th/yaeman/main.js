@@ -14,6 +14,8 @@ const checkInput = (e) => {
 const registerComment = (value) => { //댓글등록
   const commentLists = document.getElementById("commentLists");
   const newCommentList = document.createElement("li");
+
+  const heartList = document.querySelectorAll(".fa-heart");
   // const newComment = `
   //   <span class="name">yaeman</span>
   //   <span>${value}</span>
@@ -49,6 +51,7 @@ const registerComment = (value) => { //댓글등록
 
   // console.log(newCommentList);
   makeDeleteEvent(newCommentList);
+  makeHeartEvent(newCommentList);
   commentLists.appendChild(newCommentList);
 
   input.value = ""; //clear시켜주는 부분
@@ -61,6 +64,15 @@ const makeDeleteEvent = (newCommentList) => {
 
 const deleteComment = (newCommentList) => {
   newCommentList.remove();
+};
+
+const makeHeartEvent = (newCommentList) => {
+  const heartBtns = newCommentList.querySelectorAll('.fa-heart'); 
+  heartBtns.forEach(function(btns){ 
+      btns.addEventListener ("click", function() { 
+          btns.classList.toggle('fas')
+      });
+  })
 };
 
 const init = () => {
