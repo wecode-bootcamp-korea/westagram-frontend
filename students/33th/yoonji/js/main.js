@@ -5,8 +5,11 @@ const replyForm = document.querySelector(".reply__input");
 function paintReply(newRe) {
     const li = document.createElement("li");
     const span = document.createElement("span");
+    const strong = document.createElement("strong");
+    li.appendChild(strong);
     li.appendChild(span);
-    span.innerHTML = `<strong>I.like.U </strong>${newRe}`;
+    strong.innerText = "I.like.U ";
+    span.innerText = newRe;
     replyContainer.appendChild(li);
     // nameId.classList.remove("hidden");
 }
