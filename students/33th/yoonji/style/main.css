@@ -2,6 +2,15 @@
     box-sizing: border-box;
 }
 
+button {
+    border: none;
+    background-color: transparent;
+}
+.btn__right {
+    position: absolute;
+    right: 5px;
+    cursor: pointer;
+}
 /* Navigation */
 nav {
     display: flex;
@@ -168,6 +177,7 @@ article {
 .reply {
     width: 100%;
     padding-left: 10px;
+    ;position: relative;
 }
 /* .font--bold {
     font-weight: bold;
@@ -175,6 +185,9 @@ article {
 /* .hidden {
     display: none;
 } */
+.reply li {
+    margin-bottom: 10px;
+}
 
 /* Reply__input */
 .reply__input {
