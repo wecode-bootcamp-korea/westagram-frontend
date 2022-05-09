@@ -15,6 +15,7 @@ function paintReply(newRe) {
     button.innerText = "❌";
     button.classList.add("btn__right");
     li.appendChild(b);
+    b.classList.add("bold");
     li.appendChild(span);
     li.appendChild(button);
     button.addEventListener("click", deleteReply);
