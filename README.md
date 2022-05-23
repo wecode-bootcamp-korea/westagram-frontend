@@ -33,7 +33,7 @@
 <br />
 
 ## 추가 구현 항목
-> 추가 구현 항목들은 필수 구현 완료 후에 추가로 구현해볼만한 기능들입니다. 마찬가지로 미션의 순서에 따라 진행해주세요. 추가 구현 항목은 [Issues](https://github.com/wecode-bootcamp-korea/westagram-frontend/issues/74) 에서 모두 확인 가능합니다.
+> 추가 구현 항목들은 필수 구현 완료 후에 추가로 구현해볼만한 기능들입니다. 마찬가지로 미션의 순서에 따라 진행해주세요. 추가 구현 항목은 [Issues](https://github.com/wecode-bootcamp-korea/westagram-frontend/issues/5) 에서 모두 확인 가능합니다.
 
 - Mission 5 | ID, PW validation
 - Mission 6 | 댓글 좋아요 / 삭제 기능
