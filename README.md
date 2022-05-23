@@ -25,10 +25,10 @@
 ## 필수 구현 항목
 > 필수 구현 항목은 westagram 프로젝트 진행 시 필수적으로 구현해야 하는 항목들입니다. 미션의 순서에 따라 진행해주세요. 필수 구현 항목은 [Issues](https://github.com/wecode-bootcamp-korea/westagram-frontend/issues) 에서 모두 확인 가능합니다.
 
-- [[Mission1] 로그인 페이지 레이아웃](https://github.com/wecode-bootcamp-korea/westagram-frontend/issues/26#issue-650745073)
-- [[Mission2] id, pw 입력 시 로그인 버튼 활성화 기능](https://github.com/wecode-bootcamp-korea/westagram-frontend/issues/33)
-- [[Mission3] 메인 페이지 레이아웃](https://github.com/wecode-bootcamp-korea/westagram-frontend/issues/34)
-- [[Mission4] 댓글 내용 입력 후 Enter press, 혹은 게시 버튼 클릭 시 댓글 추가 기능](https://github.com/wecode-bootcamp-korea/westagram-frontend/issues/35)
+- [[Mission1] 로그인 페이지 레이아웃](https://github.com/wecode-bootcamp-korea/westagram-frontend/issues/1)
+- [[Mission2] id, pw 입력 시 로그인 버튼 활성화 기능](https://github.com/wecode-bootcamp-korea/westagram-frontend/issues/2)
+- [[Mission3] 메인 페이지 레이아웃](https://github.com/wecode-bootcamp-korea/westagram-frontend/issues/3)
+- [[Mission4] 댓글 내용 입력 후 Enter press, 혹은 게시 버튼 클릭 시 댓글 추가 기능](https://github.com/wecode-bootcamp-korea/westagram-frontend/issues/4)
 
 <br />
 
