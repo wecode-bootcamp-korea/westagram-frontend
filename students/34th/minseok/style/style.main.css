@@ -8,11 +8,11 @@ html {
 
 /* 버튼 공통 스타일링 */
 .commonButton {
+  margin-left: auto;
+  border: none;
+  background-color: #ffffff;
   outline: 0;
   cursor: pointer;
-  border: none;
-  margin-left: auto;
-  background-color: #ffffff;
 }
 
 .twoDividedArea {
@@ -24,10 +24,10 @@ html {
 
 /* header */
 .topArea {
+  grid-area: top;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  grid-area: top;
   position: fixed;
   width: 100%;
   height: 10vh;
@@ -51,12 +51,12 @@ html {
 .logo a {
   display: flex;
   justify-content: center;
+  width: 10rem;
+  margin-left: 1rem;
+  border-left: .2rem solid;
   text-decoration: none;
   font-size: 2rem;
   font-family: 'Lobster', cursive;
-  width: 10rem;
-  border-left: .2rem solid;
-  margin-left: 1rem;
 }
 
 .logo a:link {
@@ -68,10 +68,10 @@ html {
 }
 
 .topArea [type=search] {
-  text-align: center;
-  opacity: .5;
   width: 20%;
   height: 70%;
+  text-align: center;
+  opacity: .5;
 }
 
 /* header nav(icon) */
@@ -113,8 +113,8 @@ html {
 .posting_profile {
   display: flex;
   align-items: center;
-  border: .1rem solid #E9E9E9;
   padding: 1rem;
+  border: .1rem solid #E9E9E9;
   background-color: #ffffff;
 }
 
@@ -155,10 +155,10 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 1rem;
   border-right: .1rem solid #E9E9E9;
   border-bottom: .1rem solid #E9E9E9;
   border-left: .1rem solid #E9E9E9;
-  padding: 1rem;
   background-color: #ffffff;
 }
 
@@ -186,11 +186,11 @@ html {
 }
 
 .posting_othersComment {
-  font-size: 1.3rem;
+  padding: 1rem;
   border-right: .1rem solid #E9E9E9;
   border-left: .1rem solid #E9E9E9;
-  padding: 1rem;
   background-color: #ffffff;
+  font-size: 1.3rem;
 }
 
 .posting_othersComment_representative {
@@ -204,11 +204,11 @@ html {
 .posting_addComment {
   display: flex;
   align-items: center;
+  padding: 1rem;
   border: .1rem solid #E9E9E9;
   border-right: .1rem solid #E9E9E9;
   border-bottom: .1rem solid #E9E9E9;
   border-left: .1rem solid #E9E9E9;
-  padding: 1rem;
   background-color: #ffffff;
 }
 
@@ -219,10 +219,10 @@ html {
 }
 
 .posting_addComment_button {
-  font-size: 1.6rem;
-  color: #53A5F2;
   width: 5rem;
   height: 3rem;
+  color: #53A5F2;
+  font-size: 1.6rem;
 }
 
 /* sidebar */
@@ -256,17 +256,17 @@ html {
 }
 
 .sideBar_host_id_description {
+  margin-top: .5rem;
+  opacity: .3;
   font-weight: 700;
   font-size: 1.6rem;
-  opacity: .3;
-  margin-top: .5rem;
 }
 
 /* user history */
 .sideBar_history {
   margin-bottom: 1rem;
-  border: .1rem solid #E9E9E9;
   padding: 1rem;
+  border: .1rem solid #E9E9E9;
   background-color: #ffffff;
 }
 
@@ -276,15 +276,15 @@ html {
 }
 
 .sideBar_history_title h1 {
+  opacity: .3;
   font-size: 1.6rem;
   font-weight: 700;
-  opacity: .3;
 }
 
 .sideBar_history_title .commonButton {
+  margin-left: auto;
   font-size: 1.3rem;
   font-weight: 700;
-  margin-left: auto;
 }
 
 .sideBar_history_user {
@@ -306,9 +306,9 @@ html {
 .sideBar_history_user_list_image {
   width: 3rem;
   height: 3rem;
+  padding: .1rem;
   border: .2rem solid #ff0000;
   border-radius: 50%;
-  padding: .1rem;
 }
 
 .sideBar_history_user_list_id {
@@ -321,16 +321,16 @@ html {
 }
 
 .sideBar_history_user_list_id_time {
+  margin-top: .5rem;
+  opacity: .3;
   font-size: 1.3rem;
   font-weight: 700;
-  opacity: .3;
-  margin-top: .5rem;
 }
 
 .sideBar_recommendation {
-  border: .1rem solid #E9E9E9;
   margin-bottom: 1rem;
   padding: 1rem;
+  border: .1rem solid #E9E9E9;
   background-color: #ffffff;
 }
 
@@ -340,15 +340,15 @@ html {
 }
 
 .sideBar_recommendation_title h1 {
+  opacity: .3;
   font-size: 1.6rem;
   font-weight: 700;
-  opacity: .3;
 }
 
 .sideBar_recommendation_title .commonButton {
+  margin-left: auto;
   font-size: 1.3rem;
   font-weight: 700;
-  margin-left: auto;
 }
 
 .sideBar_recommendation_user {
@@ -370,9 +370,9 @@ html {
 .sideBar_recommendation_user_list_image {
   width: 3rem;
   height: 3rem;
+  padding: .1rem;
   border: none;
   border-radius: 50%;
-  padding: .1rem;
 }
 
 .sideBar_recommendation_user_list_id {
@@ -385,10 +385,10 @@ html {
 }
 
 .sideBar_recommendation_user_list_id_time {
+  margin-top: .5rem;
+  opacity: .3;
   font-size: 1.3rem;
   font-weight: 700;
-  opacity: .3;
-  margin-top: .5rem;
 }
 
 .sideBar_recommendation_user_list_Fallow {
@@ -403,9 +403,9 @@ html {
 }
 
 .footer_information {
+  opacity: .3;
   font-weight: 700;
   font-size: 1.3rem;
-  opacity: .3;
 }
 
 .footer_makeYear {
