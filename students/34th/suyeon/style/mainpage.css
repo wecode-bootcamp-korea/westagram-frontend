@@ -1,0 +1,347 @@
+.navigationBox {
+  border-bottom : 1px solid #dbdbdb;
+  background-color: #ffffff;
+  width : 100%;
+  height : 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 935px;
+  height: 60px;
+}
+.westaLogo a {
+  font-family: 'Lobster', cursive;
+  color: black;
+  font-size: 29px;
+  padding-left: 10px;
+}
+.westaLogo i {
+  border-right: 1px solid black;
+  padding-right: 15px;
+  font-size: 29px;
+}
+.searchBar {
+  background-color: #efefef;
+  width: 268px;
+  height: 36px;
+  padding: 0px 16px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+}
+.searchBar i {
+  flex: 1;
+  color: #9d9d9d;
+  font-size: 15px;
+}
+.searchBar input {
+  flex: 9;
+  height: 25px;
+  padding: 0px;
+  color: #9d9d9d;
+  border: none;
+  background-color: transparent;
+  font-size: 15px;
+}
+input:focus {
+  outline: none;
+}
+.emoji i {
+  font-size: 24px;
+  padding-left: 24px;
+}
+main {
+  width: 821px;
+  margin: 0 auto;
+  position: relative;
+}
+.feeds {
+  width: 470px;
+  height: auto;
+  background-color: #ffffff;
+  border: 1px solid #dbdbdb;
+  border-radius: 8px;
+  position: absolute;
+  top: 120px;
+}
+.feeds img:nth-child(2) {
+  width: 100%;
+  height: 485px;
+}
+.mainRight {
+  width: 319px;
+  height: 500px;
+  position: fixed;
+  top: 120px;
+  right: 50%;
+  margin-right: -410.5px;
+}
+.profile {
+  height: 56px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.profile i {
+  font-size: 24px;
+  margin-right: 12px;
+}
+header {
+  display: flex;
+  align-items: center;
+  margin: 8px 12px;
+}
+header img {
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+}
+header span {
+  font-weight: bold;
+  font-size: 18px;
+  margin-left: 10px;
+}
+.feedButton {
+  position:relative;
+  display: flex;
+  align-items: center;
+  height: 46px;
+}
+.feedButton button:last-child {
+  position: absolute;
+  right: 12px;
+}
+.feedButton button {
+  border: none;
+  background-color: transparent;
+  font-size: 24px;
+  padding: 0 0 0 12px;
+}
+.replyBox {
+  display: flex;
+  align-items: center;
+  margin: 0 12px 8px 12px;
+}
+.replyBox img {
+  width: 18px;
+  height: 18px;
+  border-radius: 9px;
+  margin-right: 5px;
+}
+.replyBox p {
+  font-size: 12px;
+}
+.replyBox span {
+  font-weight: bold;
+}
+.myPost {
+  display: flex;
+  align-items: center;
+  margin: 0 12px;
+  font-size: 12px;
+}
+.myPost span, .usercomment span {
+  font-weight: bold;
+  margin-right: 5px;
+}
+.myPost a {
+  color: #a5a6a8;
+  font-weight: bold;
+  margin-left: 5px;
+}
+.usercomment {
+  margin: 0;
+  padding: 0;
+}
+.eachUserComment {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  margin: 0 0 4px 12px;
+  font-size: 12px;
+}
+.eachUserComment button{
+  position: absolute;
+  right: 12px;
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+}
+.eachUserComment i {
+  font-size: 12px;
+  color: #a5a6a8;
+}
+.writingTime {
+  margin-left: 12px;
+  margin-bottom: 5px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #a5a6a8;
+}
+.myComment form{
+  height: 49px;
+  width: 100%;
+  border-top : 1px solid #dbdbdb;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 12px;
+}
+.myComment input {
+  flex: 9;
+  border: 0;
+  height: 20px;
+  font-size: 12px;
+}
+
+.myComment button {
+  flex: 1;
+  border: 0;
+  padding: 0;
+  height: 20px;
+  font-size: 12px;
+  text-align: right;
+  font-weight: bolder;
+  color: #c1e2f8;
+  background-color: #ffffff;
+}
+.myWestaInfo{
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.myWestaInfo img {
+  width: 56px;
+  border-radius: 50%;
+  margin: 0 10px;
+}
+.myWestaInfoUser {
+  display: flex;
+  flex-direction: column;
+}
+.myWestaInfoUser a {
+  color: black;
+  font-weight: bold;
+}
+.myWestaInfoUser span {
+  color: #a5a6a8;
+  font-weight: bold;
+  font-size: 15px;
+}
+.story {
+  width: 100%;
+  height: 230px;
+  padding: 12px 12px 0px 12px;
+  background-color: #ffffff;
+  border: 1px solid #dbdbdb;
+  border-radius: 8px;
+}
+.storyInText , .recommendInText {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+.storyInText span , .recommendInText span {
+  color: #a5a6a8;
+}
+.storyInText a , .recommendInText a{
+  color: black;
+}
+.storyInUsers {
+  height: 192px;
+  margin: 8px 0;
+  padding: 0;
+  /* 넘치는 부분 스크롤바 생성하기 */
+  overflow: auto;
+}
+.storyInUsers::-webkit-scrollbar {
+  /* 스크롤 기능은 살리되 스크롤 없애기 */
+  display: none;
+}
+.storyInUsers img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  background-image: linear-gradient(#fff, #fff), 
+  linear-gradient(to right, red 0%,  orange 100%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+.mainRight li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.allListInDiv {
+  display: flex;
+  flex-direction: column;
+}
+.mainRightUserId {
+  color: black;
+  font-weight: bold;
+}
+.mainRightGrayText {
+  color: #a5a6a8;
+}
+.recommendForMe {
+  width: 100%;
+  height: 200px;
+  padding: 12px 12px 0px 12px;
+  margin: 16px 0;
+  background-color: #ffffff;
+  border: 1px solid #dbdbdb;
+  border-radius: 8px;
+}
+.recommendInUsers {
+  padding: 0;
+}
+.recommendInUsers li {
+  position: relative;
+}
+.recommendInUsers a {
+  position: absolute;
+  right: 0;
+  color: #0195f7;
+  font-weight: bold;
+}
+.recommendInUsers img {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  color: #d7d7d7;
+  font-size: 14px;
+  font-weight: bold;
+}
+.footerInfoLink {
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+.footerInfoLink a {
+  color: #d7d7d7;
+  font-weight: bold;
+}
+.footerInfoLink span {
+  font-weight: bold;
+  margin: 0 1.5px;
+}
