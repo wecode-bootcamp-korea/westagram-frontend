@@ -13,6 +13,7 @@ const idInput = document.querySelector(".login_id");
 const pwInput = document.querySelector(".login_pw");
 const loginBtn = document.querySelector(".login_btn");
 
+// 로그인창 색 변화 구현 V2
 const changeColor = () => {
   // idInput.value && pwInput.value
   //   ? (loginBtn.style.backgroundColor = "#0989f1")
@@ -35,7 +36,11 @@ const toMainPage = () => {
   if (idInput.value !== idInput.value) {
     // loginBtn.preventDefault();
     loginBtn.disabled = true;
-  } else if ((idInput.value > 0 && pwInput.value > 0) && (idInput.value === pwInput.value)) {
+  } else if (
+    idInput.value.length > 0 &&
+    pwInput.value.length > 0 &&
+    idInput.value === pwInput.value
+  ) {
     location.href = "./main.html";
   }
 };
