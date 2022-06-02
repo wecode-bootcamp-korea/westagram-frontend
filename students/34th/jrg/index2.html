@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="style2.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <div class="header_instagram">
+            <img src="/Users/jang/Desktop/wecode/westagram-frontend/students/34th/jangrg/logos/instagram.png" alt="logo" class="logo_instagram">
+            <span class="title">Instagram</span>
+        </div>
+        <input type="text" class="header_input" placeholder="&#128269; 검 색 ">
+        <div class="header_logos">
+            <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png" alt="compass" class="logo_header">
+            <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" alt="like" class="logo_header">
+            <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png" alt="friends" class="logo_header">
+        </div>
+    </header>
+
+    <section>
+        <div class="left_div">
+            <article>
+                <div class="profile_head">
+                    <div class="profile_collect">
+                        <img src="https://cdne-totv8-prod.azureedge.net/media/40824/firstteam_heungminson_2021_22.png?anchor=center&mode=crop&quality=100&width=500" alt="profile" class="profile_normal">
+                        <div class="profile_text">
+                            <p class="profile_name">_yum_s</p>
+                        </div>
+                    </div>
+                    <div class="logo_right">
+                        <img src="https://cdn-icons-png.flaticon.com/128/512/512142.png" alt="logo_more" class="logo_feed">
+                    </div>
+                </div>
+                <div class="img_box">
+                    <img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80" alt="feed" class="feed_image">
+                </div>
+                    <div class="feed_bar">
+                    <div class="logo_left">
+                        <img src="https://cdn-icons-png.flaticon.com/128/833/833472.png" alt="like" class="logo_feed">
+                        <img src="https://ifh.cc/g/Z7NpAO.png" alt="comment" class="logo_feed">
+                        <img src="https://cdn-icons-png.flaticon.com/128/3580/3580382.png" alt="share" class="logo_feed">
+                    </div>
+                    <div class="logo_right">
+                        <img src="https://ifh.cc/g/M7Hcft.png" alt="tag" class="logo_feed">
+                    </div>
+                </div>
+                <div class="profile_like">
+                    <img src="https://cdne-totv8-prod.azureedge.net/media/40824/firstteam_heungminson_2021_22.png?anchor=center&mode=crop&quality=100&width=500" alt="profile" class="profile_small">
+                    <div class="profile_text">
+                        <p class="profile_name">_yum_s</p>
+                    </div>
+                    <span>님 외 10명이 좋아합니다.</span>
+                </div>
+                <div class="comments">
+                    <div class="comment_example">
+                        <span class="profile_name">canon mj</span>
+                        <span>위워크에서 진행한 베이킹 클래스..</span>
+                        <a href="" class="profile_desc">더 보기</a>
+                    </div>
+                    <div class="comment_personal">
+                        <div>
+                            <span class="profile_name">neceosecius</span>
+                            <span>거봐 좋았잖아~~~~~!!</span>
+                        </div>
+                        <img alt="like" src="https://ifh.cc/g/b41PGW.png" class="comment_size">
+                    </div>
+                </div>
+
+                <span class="comment_personal profile_desc">42분 전</span>
+
+
+                <div class="input_comment">
+                    <input type="text" placeholder="댓글 달기..." class="comment_box" onkeyup="enterkey()">
+                    <button class="upload_btn">게시</button>
+                </div>
+            </article>
+        </div>
+
+        <div class="right_div">
+            <div class="profile_collect">
+                <img src="https://image.rocketpunch.com/company/99609/wecode_logo_1590553949.jpg?s=400x400&t=inside" alt="profile" class="profile_activate">
+                <div class="profile_text">
+                    <p class="profile_name">wecode_bootcamp</p>
+                    <p class="profile_desc">WeCode | 위코드</p>
+                </div>
+            </div>
+            <div class="right_first_box">
+                <div class="box_title">
+                    <span class="profile_desc">스토리</span>
+                    <span class="profile_name">모두 보기</span>
+                </div>
+                <div class="profile_collect">
+                    <img src="https://cdne-totv8-prod.azureedge.net/media/40824/firstteam_heungminson_2021_22.png?anchor=center&mode=crop&quality=100&width=500" alt="profile" class="profile_activate">
+                    <div class="profile_text">
+                        <p class="profile_name">_yum_s</p>
+                        <p class="profile_desc">16분 전</p>
+                    </div>
+                </div>
+                <div class="profile_collect">
+                    <img src="https://cdne-totv8-prod.azureedge.net/media/40873/firstteam_harrykane_2021_22.png?anchor=center&mode=crop&quality=100&width=500" alt="profile" class="profile_activate">
+                    <div class="profile_text">
+                        <p class="profile_name">drink_eat_drink</p>
+                        <p class="profile_desc">3시간 전</p>
+                    </div>
+                </div>
+                <div class="profile_collect">
+                    <img src="https://cdne-totv8-prod.azureedge.net/media/40818/firstteam_cristianromero_2021_22.png?anchor=center&mode=crop&quality=100&width=500" alt="profile" class="profile_activate">
+                    <div class="profile_text">
+                        <p class="profile_name">hyukyc</p>
+                        <p class="profile_desc">20시간 전</p>
+                    </div>
+                </div>
+                <div class="profile_collect">
+                    <img src="https://cdne-totv8-prod.azureedge.net/media/40821/firstteam_ericdier_2021_22.png?anchor=center&mode=crop&quality=100&width=500" alt="profile" class="profile_activate">
+                    <div class="profile_text">
+                        <p class="profile_name">jminkeek</p>
+                        <p class="profile_desc">2일 전</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="right_second_box">
+                <div class="box_title">
+                    <span class="profile_desc">회원님을 위한 추천</span>
+                    <span class="profile_name">모두 보기</span>
+                </div>
+                <div class="follow_line">
+                    <div class="profile_collect">
+                        <img src="https://cdne-totv8-prod.azureedge.net/media/45652/dejan-kulusevski-head-min.png?anchor=center&mode=crop&quality=100&width=750" alt="profile" class="profile_normal">
+                        <div class="profile_text">
+                            <p class="profile_name">joaaaaaahey</p>
+                            <p class="profile_desc">_legend_a님 외 2명이 ...</p>
+                        </div>
+                    </div>
+                    <span class="follow_btn">팔로우</span>
+                </div>
+                <div class="follow_line">
+                    <div class="profile_collect">
+                        <img src="https://cdne-totv8-prod.azureedge.net/media/40828/firstteam_lucasmoura_2021_22.png?anchor=center&mode=crop&quality=100&width=500" alt="profile" class="profile_normal">
+                        <div class="profile_text">
+                            <p class="profile_name">rampart81</p>
+                            <p class="profile_desc">ringo.in.seoul님 외 12...</p>
+                        </div>
+                    </div>
+                    <span class="follow_btn">팔로우</span>
+                </div>
+                <div class="follow_line">
+                    <div class="profile_collect">
+                        <img src="https://cdne-totv8-prod.azureedge.net/media/40831/firstteam_oliverskipp_2021_22.png?anchor=center&mode=crop&quality=100&width=500" alt="profile" class="profile_normal">
+                        <div class="profile_text">
+                            <p class="profile_name">shawnjjoo</p>
+                            <p class="profile_desc">jimmylee1220님 외 1...</p>
+                        </div>
+                    </div>
+                    <span class="follow_btn">팔로우</span>
+                </div>
+
+            </div>
+            <p class="p_tag">Instagram 정보 · 지우너홍보 센터 · API · 채용 정보개인정보처리방침 · 약관 · 디렉터리 · 프로필 · 해시태그 · 언어</p>
+            <p class="p_tag">ⓒ 2019 INSTAGRAM</p>
+        </div>
+
+    </section>
+    <script src="add2.js"></script>
+    
+</body>
+</html>
