@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+}
+
+#wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+#loginContainer {
+  width: 350px;
+  height: 400px;
+  border: 1px solid lightgray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.logo {
+  font-family: "Lobster", cursive;
+  font-size: 50px;
+  position: absolute;
+  top: 30px;
+}
+
+form input {
+  border: 1px solid #ddd;
+  display: block;
+  width: 268px;
+  height: 38px;
+  padding: 9px 0px 7px 8px;
+  margin-bottom: 10px;
+  background-color: #fafafa;
+  border-radius: 5px;
+}
+
+form input:focus {
+  border: 1px solid blue;
+}
+
+form {
+  position: absolute;
+  top: 140px;
+}
+
+form button {
+  width: 270px;
+  height: 35px;
+  border: none;
+  border-radius: 10px;
+  background-color: #c0dffd;
+  color: white;
+  margin-top: 12px;
+}
+
+.forgot {
+  color: darkblue;
+  font-weight: 500;
+  position: absolute;
+  bottom: 20px;
+}

@@ -1,0 +1,347 @@
+* {
+  box-sizing: border-box;
+}
+
+nav {
+  z-index: 1;
+  position: fixed;
+  width: 100%;
+  height: 80px;
+  padding: 30px 350px;
+  display: flex;
+  justify-content: space-between;
+  background-color: antiquewhite;
+}
+
+ul {
+  width: 300px;
+}
+
+/* 왼쪽 nav */
+#leftNav {
+  display: flex;
+}
+
+.logo {
+  width: 50px;
+  padding-right: 20px;
+  border-right: 2px solid black;
+  margin-right: 20px;
+}
+
+.westagram {
+  font-family: "Lobster", cursive;
+  font-size: 28px;
+}
+
+/* 중간 nav */
+#middleNav {
+  display: flex;
+  justify-content: center;
+}
+
+#middleNav input {
+  width: 268px;
+  height: 36px;
+  /* padding: 16px 5px; */
+  border: none;
+  border-radius: 10px;
+
+  background-color: #efefef;
+}
+
+#middleNav input::placeholder {
+  text-align: center;
+  color: gray;
+}
+
+#middleNav input:focus {
+  outline: none;
+}
+
+/* 오른쪽 nav */
+#rightNav {
+  display: flex;
+  display: flex;
+  justify-content: end;
+}
+
+#rightNav li {
+  margin-left: 20px;
+}
+
+#rightNav li img {
+  width: 25px;
+}
+
+/* 3. <프로필 클릭시, 메뉴박스> */
+.profileBtn {
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+}
+
+#menuBox {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 10px;
+  background-color: whitesmoke;
+  width: 200px;
+  height: 250px;
+  position: absolute;
+  top: 62px;
+  right: 350px;
+  z-index: 2;
+}
+
+.hidden {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+#menuBox button {
+  display: block;
+  width: 100%;
+  height: 20%;
+  border-radius: 10px;
+  border: none;
+  background-color: inherit;
+  text-align: left;
+  padding-left: 20px;
+  cursor: pointer;
+}
+
+#menuBox button:last-child {
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-top: 1px solid gray;
+}
+
+/* 2. <main> */
+main {
+  width: 60%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+#feedWrapper {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+}
+
+.feeds {
+  width: 500px;
+  margin-bottom: 20px;
+  border: 2px solid gray;
+  border-radius: 5px;
+}
+
+.feedTop {
+  display: flex;
+  height: 60px;
+  position: relative;
+  width: 100%;
+}
+
+.feedTop li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.feedTop li:nth-child(1) img {
+  border-radius: 50%;
+  width: 50px;
+  margin: 0 10px;
+}
+
+.feedTop li:nth-child(2) {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.feedTop li:nth-child(3) {
+  position: absolute;
+  right: 10px;
+  top: 22px;
+}
+
+.giraffe {
+  width: 500px;
+  height: 600px;
+}
+
+#feedBottomContents {
+  padding: 0 10px;
+}
+
+.imgIcons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 9px;
+}
+
+.imgIcons ul {
+  display: flex;
+}
+
+.imgIcons ul li {
+  margin-right: 10px;
+}
+
+.bookMark {
+  position: relative;
+  right: 10px;
+}
+
+.likeMessage {
+  display: flex;
+  align-items: center;
+  margin: 5px 0 15px 0;
+}
+
+.likeMessage img {
+  border-radius: 50%;
+  width: 20px;
+  margin-right: 10px;
+}
+
+.thick {
+  font-weight: 900;
+}
+
+.user {
+  font-weight: 800;
+  display: inline-block;
+  width: 45px;
+}
+
+.gray {
+  color: rgb(163, 160, 160);
+}
+.feedText {
+  margin-bottom: 5px;
+}
+
+/* 댓글 렌더되는 영역 */
+#comments {
+  margin-top: 10px;
+  padding: 0 10px;
+  width: 100%;
+}
+
+#comments li {
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#comments li button {
+  background-color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* 댓글 입력창 영역 */
+form {
+  border-top: 1px solid gray;
+}
+
+section form {
+  display: flex;
+}
+
+section form input {
+  width: 90%;
+  height: 20px;
+  margin: 10px 0 10px 10px;
+  outline: none;
+  border: none;
+  resize: none;
+}
+
+section form input::placeholder {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+section form button {
+  width: 10%;
+  border: none;
+  background-color: white;
+  color: blue;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* 오른쪽 피드 */
+#mainRightWrapper {
+  width: 40%;
+  height: 100vh;
+  position: fixed;
+  top: 80px;
+  right: 0;
+}
+
+.mainRight {
+  width: 350px;
+  height: 650px;
+  margin-top: 20px;
+  padding-left: 30px;
+  border: 1px solid red;
+}
+
+.userTemplate {
+  width: 100%;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.userTemplate p img {
+  width: 60px;
+  border-radius: 50%;
+  margin: 0 10px;
+}
+
+.userTemplate li {
+  height: 20px;
+  line-height: 30px;
+}
+
+.userTemplate li:first-child {
+  font-weight: 900;
+  font-size: 18px;
+}
+
+.userTemplate li:last-child {
+  color: gray;
+  font-weight: bold;
+}
+
+/* ???? 스토리 부분 다시! */
+#story {
+  border: 1px solid gray;
+}
+
+#story p {
+  padding: 10px 10px 0 10px;
+}
+
+#storyUser {
+  border: 2px solid rosybrown;
+  height: 300px;
+  overflow: scroll;
+}
+
+.storyTitle {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
