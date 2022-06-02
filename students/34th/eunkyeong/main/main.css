@@ -1,0 +1,503 @@
+/* common */
+* {
+  box-sizing: border-box;
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+body {
+  background-color: #fafafa;
+}
+
+.story {
+  border: 3px solid transparent;
+  background-image: linear-gradient(#fff, #fff), 
+  linear-gradient(to right, red 0%,  orange 100%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  border-radius: 50%;
+}
+
+.loadallbtn {
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+
+
+/* 상단 내비게이션 */
+nav {
+  width: 100vw;
+  height: 70px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid rgb(212, 206, 206);
+  position: fixed;
+  top: 0;
+  z-index: 2;
+}
+
+/* nav의 왼쪽 영역 */
+.gohome {
+  width: 25vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gohome>a{
+  text-decoration: none;
+}
+
+.logo_box {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.logo_box>img {
+  width: 30px;
+  height: 30px;
+}
+
+.logo_box .border {
+  width: 1.5px;
+  height: 30px;
+  background-color: gray;
+  margin: 0 20px;
+}
+
+.logo_box .logotext {
+  font-size: 25px;
+  font-family: 'Lobster', cursive;
+  color: black;
+}
+
+/* nav의 가운데 영역 */
+.search {
+  width: 40vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search>input {
+  width: 40%;
+  height: 35%;
+  border-radius: 3px;
+  border: 1px solid rgb(212, 206, 206);
+  background-color: rgb(250, 250, 250);
+  background-image: url("../images/magnifyingglass.png");
+  background-position: 35% center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.search>input:focus {
+  background-image: none;
+  text-align: start;
+}
+
+/* nav의 오른쪽 영역 */
+.social_icons {
+  width: 25vw;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.social_icons .icons img {
+  width: 25px;
+  height: 25px;
+  margin-right: 20px;
+}
+
+
+
+/* 메인영역 */
+main {
+  width: 100%;
+  height: 1000px;
+  margin-top: 70px;
+}
+
+.feeds {
+  width: 40%;
+  height: 80%;
+  position: relative; 
+  top: 30px;
+  left: 250px;
+}
+
+/* 스토리 */
+.stories {
+  width: 100%;
+  height: 110px;
+  background-color: white;
+  border: 1px solid rgb(212, 206, 206);
+  border-radius: 3px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.stories .story{
+  width: 70px;
+  height: 70px;
+  background-image: url('../images/avocado.jpg'), 
+  linear-gradient(to right, red 0%,  orange 100%);
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* 피드 */
+.article1 {
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+  border: 1px solid rgb(212, 206, 206);
+  border-radius: 3px;
+  background-color: white;
+}
+
+.user_profile {
+  width: 100%;
+  height: 50px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user_photo {
+  width: 110px;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.user_photo .user_id {
+  font-weight: bold;
+}
+
+.user_photo>img{
+  width: 30px;
+  height: 30px;
+  border: 1px solid gray;
+  border-radius: 50%;
+}
+
+.seemore_btn{
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.seemore_btn>img{
+  width: 20px;
+  height: 20px;
+}
+
+.feed_image {
+  width: 100%;
+  height: auto;
+}
+
+.feed_image>img {
+  width: 100%;
+}
+
+/* 반응 아이콘들 */
+.feed_contents {
+  width: 100%;
+  height: auto;
+  padding: 10px;
+}
+
+.response_icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icons_left,.icons_right {
+  font-size: 25px;
+}
+
+.icons_left button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 25px;
+  padding: 0;
+}
+
+/* 원래 아이콘 반전효과 */
+.icons_left .fa-comment {
+  transform: rotateY(180deg);
+}
+
+.likes_figure {
+  width: 100%;
+  height: auto;
+  margin-top: 8px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+/* 내가 업로드한 피드 글 */
+.user_comment {
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+
+.my_comment,.friends_comment {
+  font-weight: lighter;
+  margin-left: 10px;
+}
+
+
+/* 댓글이 쌓이는 곳 */
+.my_id,.friends_id {
+  font-weight: bold;
+}
+
+.registerd_reply  {
+  margin: 5px 0; 
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.reply_like{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  right: 5px;
+}
+
+.reply_like .fa-heart{
+  color: gray;
+}
+
+.fa-heart.red{
+  color: red;
+}
+
+.upload_date {
+  color: gray;
+  font-size: 13px; 
+  margin-top: 3px;
+}
+
+
+/* 댓글 작성하는 곳 */
+.article1 .reply {
+  width: 100%;
+  height: auto;
+  position: relative;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+#replylist {
+  width: 80%;
+  height: auto;
+  margin: 5px 0px 10px 10px;
+}
+
+.replybox {
+  width: 100%;
+  height: 50px;
+  border: none;
+  border-top: 1px solid rgb(212, 206, 206);
+}
+
+.replybox:focus {
+  outline: none;
+}
+
+.submitbtn {
+  position: absolute;
+  right: 5px;
+  bottom: 18px;
+  background-color: transparent;
+  border: none;
+  color: #84b2ee;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+
+/* 메인 오른쪽 영역 */
+/* fixed는 뷰포트 기준 */
+.main-right{
+  width: 20%;
+  height: 65%;
+  position: fixed;
+  right: 300px;
+  top: 100px;
+}
+
+/* 내 프로필 */
+.user_self {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.user_self_photo{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.user_self_photo>img{
+  width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.user_self_info{
+  margin-left: 10px;
+}
+
+.user_self_id{
+  font-weight: bold;
+}
+
+.user_self_description{
+  color: gray;
+  font-size: small;
+  padding: 2px;
+}
+
+/* 사이드에 스토리 몰아보기 */
+.story_collection {
+  width: 100%;
+  height: 50%;
+  background-color: white;
+  border: 1px solid rgb(212, 206, 206);
+  border-radius: 3px;
+}
+
+.story_inner,.recommendation_inner {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.story_list {
+  width: 100%;
+  height: 83%;
+  float: left;
+  overflow-y: scroll;
+}
+
+.story_inner>span {
+  font-size: 13px;
+}
+
+/* 스크롤바 안보이게 웹킷 사용했음 */
+.story_list::-webkit-scrollbar {
+  display: none;
+}
+
+.storybox {
+  display: flex;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.story_id {
+  margin-left: 5px;
+}
+
+.story_id>p {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.story_id>span {
+  color: gray;
+  font-size: 3px;
+}
+
+.storybox .story {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  background-image: url("../images/noodle.jpg"), 
+  linear-gradient(to right, red 0%,  orange 100%);
+  overflow: hidden;
+  background-size: contain;
+}
+
+/* 회원님을 위한 추천 */
+.recommendation {
+  width: 100%;
+  height: 38%;
+  margin-top: 30px;
+  background-color: white;
+  border: 1px solid rgb(212, 206, 206);
+  border-radius: 3px;
+}
+
+.recommendation_inner>span {
+  font-size: 13px;
+}
+
+.recommend_list {
+  padding: 0 15px 15px;
+}
+
+.friends_list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.friends_list .story {
+  width: 38px;
+  height: 38px;
+  background-image: none;
+  margin: 0 10px 5px 0;
+  background-image: url("../images/food.jpg");
+  background-size: contain;
+}
+
+.friends_list p {
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.friends_list button {
+  position: absolute;
+  right: 10px;
+  background-color: transparent;
+  border: none;
+  font-weight: 700;
+  font-size: 13px;
+  color: #3897f0;
+  cursor: pointer;
+}

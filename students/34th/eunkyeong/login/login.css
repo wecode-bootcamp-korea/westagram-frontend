@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.container {
+  width: 25vw;
+  height: 65%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: 1px solid #e6e6e6;
+  border-radius: 3px;
+}
+header {
+  width: 90%;
+  height: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .titlelogo{
+  font-family: 'Lobster', cursive;
+  font-weight: 50;
+  font-size: 50px;
+}
+main {
+  width: 90%;
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main .loginput {
+  width: 80%;
+  height: 20%;
+  margin-bottom: 5px;
+  color: #c3c3c3;
+  background-color: #fafafa;
+  border: 1px solid #f6f6f6;
+  border-radius: 3px;
+}
+main .loginbtn {
+  width: 80%;
+  height: 20%;
+  margin-top: 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: #c4e1fb;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+footer {
+  width: 90%;
+  height: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;  
+}
+footer .forgotpw {
+  height: 20px;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #184877;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-decoration: none;
+}
