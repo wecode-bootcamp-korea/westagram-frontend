@@ -1,4 +1,6 @@
+const feedNewComment = document.querySelectorAll('.new-comment');
 const feedCommentInput = document.querySelectorAll('.comment-input');
+const feedCommentButton = document.querySelectorAll('.comment-button');
 const feedCommentList = document.querySelectorAll('.feed-comments');
 const feedLikeButton = document.querySelectorAll('.feed-like');
 const feedCommentLikeButton = document.querySelectorAll('.feed-comment-like');
@@ -16,9 +18,13 @@ const handleDeleteButtonClick = (ev) => {
 };
 
 const handleCommentInputAdd = (ev, feedCommentList) => {
-  if (ev.keyCode !== 13 || ev.target.value === '') return;
-  const comment = ev.target.value;
-  ev.target.value = '';
+  const comment = ev.target[0].value;
+  if (comment.length < 2) {
+    alert('댓글을 2자 이상 입력해주세요.');
+    return;
+  }
+
+  ev.target[0].value = '';
 
   const newComment = document.createElement('li');
   const newCommentUser = document.createElement('span');
@@ -45,9 +51,18 @@ const handleCommentInputAdd = (ev, feedCommentList) => {
   feedCommentList.appendChild(newComment);
 };
 
-for (let i = 0; i < feedCommentInput.length; i++) {
-  feedCommentInput[i].addEventListener('keypress', (ev) => {
+for (let i = 0; i < feedNewComment.length; i++) {
+  feedNewComment[i].addEventListener('submit', (ev) => {
+    ev.preventDefault();
     handleCommentInputAdd(ev, feedCommentList[i]);
+  });
+
+  feedCommentInput[i].addEventListener('keyup', (ev) => {
+    if (ev.target.value) {
+      feedCommentButton[i].disabled = false;
+    } else {
+      feedCommentButton[i].disabled = true;
+    }
   });
 }
 
