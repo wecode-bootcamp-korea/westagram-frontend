@@ -4,7 +4,7 @@ const commentList = document.getElementsByClassName('comments')[0];
 const heartIcon = document.getElementsByClassName('comment-heart')[0];
 var count = 0;
 commentInput.addEventListener('keyup',function(e){
-    console.log(e);
+    // console.log(e);
     if(commentInput.value){
         if(e.which === 13){
             var newComment = document.createElement('li');
@@ -72,6 +72,7 @@ submit.addEventListener('click',function(){
 
 
         commentList.appendChild(newComment);
+        console.log(newComment.value);
         commentInput.value = '';
     }
 });
@@ -99,8 +100,21 @@ heartIcon.addEventListener('click',function(){
 //     idName.remove();
 //     console.log('작동')
 // });
-
-
+var likeNumber = document.getElementById('like_number');
+const mainHeart = document.getElementById('mainHeart');
+likeNumber.innerHTML = Number(2122944);
+mainHeart.addEventListener('click',function(){
+    if(count === 0){
+    mainHeart.src ='image/heart.png';
+    likeNumber.innerHTML++;
+    count++;
+    }
+    else if(count === 1){    
+    mainHeart.src = 'image/firstHeart.png';
+    likeNumber.innerHTML--;
+    count--;
+    }
+});
 
 
 

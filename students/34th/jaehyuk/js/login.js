@@ -3,10 +3,10 @@ const inputPassword = document.querySelector('#password');
 const button = document.querySelector('.btn');
 
 function loginBtn(){
-    let idValu = inputId.value;
+    let idValue = inputId.value;
     let passwordValue = inputPassword.value;
 
-    if(idValu.length > 0 && passwordValue.length > 0) {
+    if(idValue.includes('@') && passwordValue.length > 5) {
         button.disabled = false;
         button.style.cursor = 'pointer';
         button.style.backgroundColor = '#1c7ed6';
