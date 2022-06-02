@@ -7,116 +7,94 @@ html {
 }
 
 
-.backgroundContainer {
-  min-width: 70rem;
-  min-height: 70rem;
-  width: 100vw;
+.boundaryLine {
+  min-width: 50rem;
+  min-height: 50rem;
+  width: 50%;
   height: 100vh;
-  overflow-x: hidden;
-}
-
-.threeEqualContainer {
-  width: 100%;
-  height: 100%;
-  display: flex;
-}
-
-.leftAlignContainer {
-  width: 30%;
-}
-
-.centerAlignContainer {
-  width: 30%;
-  padding: 3rem;
-}
-
-.boundaryContainer {
-  width: 100%;
-  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5rem 8rem 2rem 8rem;
   border: .2rem solid #E3E3E3;
   border-radius: .3rem;
-  padding: 5rem 8rem 2rem 8rem;
 }
 
-.contentContainer {
+.loginArea {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 100%;
   height: 100%;
-  text-align: center;
   padding: 3rem;
+  text-align: center;
 }
 
-.loginTitle {
+.loginArea_loginTitle {
   font-size: 8rem;
   font-family: 'Lobster', cursive;
 }
 
-.userInterface {
+.loginArea_userInterface {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.userInterface input {
-  display: block;
+.loginArea_userInterface input {
   width: 100%;
-  height: 100%;
   padding: 1.8rem;
-  font-size: 2rem;
   border: #E3E3E3 solid;
   border-radius: .3rem;
+  font-size: 2rem;
 }
 
-.userInterface input:nth-child(1) {
+.loginArea_userInterface_userName {
   margin-bottom: 1rem;
 }
 
-.userInterface input:nth-child(2) {
+.loginArea_userInterface_userPassword {
   margin-bottom: 2rem;
 }
 
-.userInterface button {
-  display: block;
+.loginArea_userInterface_loginButton {
   width: 100%;
-  height: 100%;
   padding: 1.5rem;
-  font-size: 2rem;
-  color: white;
-  background-color: #0084FB;
   border: none;
   border-radius: 1rem;
+  color: white;
+  background-color: #0084FB;
+  font-size: 2rem;
 }
 
-.loginButton:disabled {
+.loginArea_userInterface_loginButton:disabled {
   opacity: .5;
 }
 
-.loginButton:enabled {
+.loginArea_userInterface_loginButton:enabled {
   cursor: pointer;
 }
 
-.forgetPassword {
-  font-size: 1.8rem;
+.loginArea_passwordGuide {
   text-decoration: none;
+  font-size: 1.8rem;
 }
 
-.forgetPassword:link {
+.loginArea_passwordGuide:link {
   color: #004378;
 }
 
-.forgetPassword:visited {
+.loginArea_passwordGuide:visited {
   color: #004378;
 }
 
-.rightAlignContainer {
-  width: 30%;
+@media screen and (max-width: 1200px) {
+  .loginArea_loginTitle {
+    font-size: 6rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
-  .loginTitle {
-    font-size: 7rem;
+  .loginArea_loginTitle {
+    font-size: 6rem;
   }
 }

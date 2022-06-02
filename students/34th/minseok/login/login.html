@@ -14,28 +14,17 @@
 </head>
 <body>
 
-  <div class="backgroundContainer">
-    
-    <!-- 전체를 3등분하는 컨테이너 (자식요소로 left,center,right -- AlignContainer) -->
-    <div class="threeEqualContainer">
-      <div class="leftAlignContainer"></div>
-      <div class="ceterAlignContainer">
-        <div class="boundaryContainer">
-
-          <!-- 로그인 페이지 컨텐츠 컨테이너 -->
-          <section class="contentContainer">
-            <h1 class="loginTitle">Westagram</h1>
-            <article class="userInterface">
-                <input class="userName" type="text" placeholder="전화번호, 사용자 이름 또는 이메일">
-                <input class="userPassword" type="password" placeholder="비밀번호">
-                <button class="loginButton" submit="#" disabled>로그인</button>
-            </article>
-            <a class="forgetPassword" href="#">비밀번호를 잊으셨나요?</a>
-          </section>
-        </div>
-      </div>
-      <div class="rightAlignContainer"></div>
+    <div class="boundaryLine">
+      <section class="loginArea">
+        <h1 class="loginArea_loginTitle">Westagram</h1>
+        <article class="loginArea_userInterface">
+            <input class="loginArea_userInterface_userName" type="text" placeholder="전화번호, 사용자 이름 또는 이메일" />
+            <input class="loginArea_userInterface_userPassword" type="password" placeholder="비밀번호" />
+            <button class="loginArea_userInterface_loginButton" submit="#" disabled>로그인</button>
+        </article>
+        <a class="loginArea_passwordGuide" href="#">비밀번호를 잊으셨나요?</a>
+      </section>
     </div>
-  </div>
+
 </body>
 </html>
