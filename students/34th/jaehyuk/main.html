@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Instagram</title>
+    <link href="style/common.css" rel="stylesheet" type="text/css" />
+    <link href="style/main.css" rel="stylesheet" type="text/css" />
+    <!-- favicon -->
+    <link rel="icon" href="img/favicon.png">
+    <link rel="instagram-icon" href="img/favicon.png">
+  </head>
+  <body>
+    <!-- navigation -->
+    <nav>
+      <div class="nav-container">
+        <div class="nav-1">
+            <img class="logo_instagram_txt" src="image/instagram.png" alt="instagram_logo">
+        </div>
+        <input id="searchInput" type="search" class="input-search" placeholder="검색">
+        <div class="nav-2"></div>
+          <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png" alt="탐색">
+          <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" alt="하트">
+          <img class="pic" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png" alt="마이페이지">
+        </div>
+      </div>
+    </nav>
+    <!-- main -->
+    <main>
+      <div class="feeds">
+        <!-- article -->
+        <article>
+          <header>
+            <div class="profile-of-article">
+              <img class="img-profile pic" src="image/신세경_프로필.jpg" alt="sjkuksee님의 프로필 사진">
+              <span class="userID main-id point-span">sjkuksee</span>
+            </div>
+            <img class="icon-react icon-more" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/more.png" alt="more">
+          </header>
+          <div class="main-image">
+            <img src="image/신세경_프로필.jpg" alt="sjkuksee님의 피드 사진" class="mainPic">
+          </div>
+          <div class="icons-react">
+            <div class="icons-left">
+              <img class="icon-react" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" alt="하트">
+              <img class="icon-react" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/comment.png" alt="말풍선">
+              <img class="icon-react" src="image/dm.png" alt="DM">  
+            </div>
+            <img class="icon-react" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/bookmark.png" alt="북마크">
+          </div>
+          <!-- article text data -->
+          <div class="reaction">
+            <div class="liked-people">
+              <img class="pic" src="image/신세경_프로필.jpg" alt="sjkuksee님의 프로필 사진">
+              <p><span class="point-span">_hyyyyyk</span>님 <span class="point-span">외 2,982,751명</span>이 좋아합니다</p>
+            </div>
+            <div class="description">
+              <p><span class="point-span userID">sjkuksee</span><span class="at-tag">@dr.forhair_official @unove</span> 🌱</p>
+            </div>
+            <div class="comment-section">
+              <ul class="comments">
+                <li>
+                  <span><span class="point-span userID">vogue_official</span>화보 잘 나왔네요!!</span>
+                  <img class="comment-heart" src="image/firstHeart.png" alt="하트">
+                </li>
+                <!-- input 값 여기에 추가 -->
+              </ul>
+              <div class="time-log">
+                <span>50분 전</span>
+              </div>
+            </div>
+          </div>
+          <div class="hl"></div>
+          <div class="comment">
+            <input id="input-comment" class="input-comment" type="text" placeholder="댓글 달기..." >
+            <button type="submit" class="submit-comment" disabled>게시</button>
+          </div>
+        </article>
+      </div>
+      <!-- main-right -->
+      <div class="main-right">
+        <div class="myProfile">
+          <img class="pic" src="image/me.jpg" alt="_hyyyyyk님의 프로필 사진">
+          <div>
+            <span class="userID point-span">_hyyyyyk</span>
+            <span class="sub-span">JAE HYUK CHOI</span>  
+          </div>
+        </div>
+        <!-- story section -->
+        <div class="section-story">
+          <div class="menu-title">
+            <span class="sub-title">스토리</span>
+            <span class="find-more">모두 보기</span>
+          </div>
+          <ul class="story-list">
+            <li>
+              <div class="gradient-wrap">
+                <img class="img-profile story" src="image/wecode.jpg" alt="wecode_bootcamp님의 프로필 사진">
+              </div>
+              <div class="profile-text">
+                <span class="userID point-span">wecode_bootcamp</span>
+                <span class="sub-span">12분 전</span>  
+              </div>
+            </li>
+            <li>
+              <div class="gradient-wrap">
+                <img class="img-profile story" src="https://scontent-gmp1-1.cdninstagram.com/v/t51.2885-19/s320x320/47581322_331313240788424_7580673034705436672_n.jpg?_nc_ht=scontent-gmp1-1.cdninstagram.com&_nc_ohc=fkWaVb4rpLMAX_mkCR5&oh=822f6068b6e28481ccd3fd7820061df1&oe=5F6A82C6" alt="han_ye_seul님의 프로필 사진">
+              </div>
+              <div class="profile-text">
+                <span class="userID point-span">han_ye_seul</span>
+                <span class="sub-span">28분 전</span>  
+              </div>
+            </li>
+            <li>
+              <div class="gradient-wrap">
+                <img class="img-profile story" src="https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-19/277243129_363731902297957_2783277757864714150_n.jpg?stp=dst-jpg_s320x320&_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=1&_nc_ohc=BkpA8Roj-BsAX8islPd&edm=ABfd0MgBAAAA&ccb=7-5&oh=00_AT_GkmKpdfkUW8SJfdNe4ajcZoIP83sRxmKkuN-bxQWOJQ&oe=629DA0F9&_nc_sid=7bff83" alt="dntlrdl님의 프로필 사진">
+              </div>
+              <div class="profile-text">
+                <span class="userID point-span">dntlrdl</span>
+                <span class="sub-span">40분 전</span>  
+              </div>
+            </li>
+            <li>
+              <div class="gradient-wrap">
+                <img class="img-profile story" src="https://scontent-gmp1-1.cdninstagram.com/v/t51.2885-19/s320x320/104003354_716384015830603_8920819290329712932_n.jpg?_nc_ht=scontent-gmp1-1.cdninstagram.com&_nc_ohc=98qm88VYcqoAX_OFQ6W&oh=0000cab3adec26de3231e7dcfd4022b2&oe=5F6BC859" alt="i_icaruswalks님의 프로필 사진">
+              </div>
+              <div class="profile-text">
+                <span class="userID point-span">i_icaruswalks</span>
+                <span class="sub-span">56분 전</span>  
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- recommendation section -->
+        <div class="section-recommend">
+          <div class="menu-title">
+            <span class="sub-title">회원님을 위한 추천</span>
+            <span class="find-more">모두 보기</span>
+          </div>
+          <ul class="recommend-list">
+            <li>
+              <div class="recommend-friend-profile">
+                <img class="img-profile" src="https://scontent-gmp1-1.cdninstagram.com/v/t51.2885-19/s320x320/69067759_957976681207922_446652332218777600_n.jpg?_nc_ht=scontent-gmp1-1.cdninstagram.com&_nc_ohc=pFcXhsPcINYAX-G9HiY&oh=4c1ac17f73340c512ae70d383c468b5a&oe=5F6A4AF8" alt="renebaebae님의 프로필 사진">
+                <div class="profile-text">
+                  <span class="userID point-span">renebaebae</span>
+                  <span class="sub-span">hi_sseulgi님 외 2명이 팔로우합니다</span>
+                </div>
+              </div>
+              <span class="btn-follow">팔로우</span>
+            </li>
+            <li>
+              <div class="recommend-friend-profile">
+                <img class="img-profile" src="https://scontent-gmp1-1.cdninstagram.com/v/t51.2885-19/s320x320/88655311_532875984007590_3393720833305214976_n.jpg?_nc_ht=scontent-gmp1-1.cdninstagram.com&_nc_ohc=QsdbsVQx8IsAX9_Fftk&oh=a6515b76d63f7ca3609c211624c1cd60&oe=5F6A4263" alt="_jeongjaehyun님의 프로필 사진">
+                <div class="profile-text">
+                  <span class="userID point-span">_jeongjaehyun</span>
+                  <span class="sub-span">_hyyyyyk님이 팔로우합니다</span>  
+                </div>
+              </div>
+              <span class="btn-follow">팔로우</span>
+            </li>
+            <li>
+              <div class="recommend-friend-profile">
+                <img class="img-profile" src="https://scontent-gmp1-1.cdninstagram.com/v/t51.2885-19/s320x320/111281038_926213341219564_1940619922197712205_n.jpg?_nc_ht=scontent-gmp1-1.cdninstagram.com&_nc_ohc=ITcRMERk0UYAX8KwJyW&oh=54d4847a6cb863301315313b83cf1551&oe=5F6BC0E9" alt="leehi_hi님의 프로필 사진">
+                <div class="profile-text">
+                  <span class="userID point-span">leehi_hi</span>
+                  <span class="sub-span">dwdqaadf님 외 5명이 팔로우합...</span>  
+                </div>
+              </div>
+              <span class="btn-follow">팔로우</span>
+            </li>
+          </ul>
+        </div>
+        <footer>
+          <p class="insta-sccript">
+            소개 ∙ 도움말 ∙ 홍보 센터 ∙ API ∙ 채용 정보 ∙ 개인정보처리방침 ∙ <br>약관 ∙ 위치 ∙ 인기계정 ∙ 해시태그 ∙ 언어
+            <br><br>
+            © 2022 INSTAGRAM FROM FACEBOOK
+          </p>
+        </footer>
+      </div>
+    </main>
+    <script src="js/main.js"></script>
+  </body>
+</html>
