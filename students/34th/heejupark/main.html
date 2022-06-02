@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/ad1ca13373.js" crossorigin="anonymous" defer></script>
+    <link rel="stylesheet" href="./style/main.css">
+    <link rel="stylesheet" href="./style/common.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="./js/main.js" defer></script>
+    <title>Westagram</title>
+</head>
+<body>
+    <!-- 페이지 상단 navbar구현 -->
+    <nav class="navbar">
+        <div class="westa">
+            <span class="westa_logo"><i class="fa-brands fa-instagram"></i></span>
+            <span class="westa_title">Westagram</span>
+        </div>
+        <label class="search_bar">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="검색">
+        </label>
+        <div class="navbar_icons">
+            <ul>
+                <li><img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png" alt="compass"></li>
+                <li><img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" alt="heart"></li>
+                <li><img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png" alt="my info"></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- 전체 페이지 레이아웃 -->
+    <main class="main_page">
+        <!-- 피드 구역 -->
+        <section class="feeds">
+            <article class="feeds_contents">
+                <header class="account">
+                    <div class="mini_photo">
+                        <img src="./img/618A000834.jpg" alt="">
+                    </div>
+                    <span class="name">hjpark625</span>
+                    <span class="more_btn"><i class="fa-solid fa-ellipsis"></i></span>
+                </header>
+                <div class="feeds_img">
+                    <img src="https://images.unsplash.com/photo-1527549993586-dff825b37782?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="">
+                </div>
+                <div class="icons_bundle">
+                    <div class="icons_wrapper">
+                        <i class="fa-regular fa-heart"></i>
+                        <i class="fa-regular fa-comment"></i>
+                        <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                    </div>
+                    <i class="fa-regular fa-bookmark"></i>
+                </div>
+                <footer class="explanation">
+                    <div class="who_likes">
+                        <img src="./img/618A000834.jpg" alt="">
+                        <span class="likes_text">hjpark625님 외 10명이 좋아합니다.</span>
+                    </div>
+                    <div class="exp_contents">
+                        <div class="comment"><b>canon_mj</b> 산이다 산... <span class="more_contents"><a href="#">더 보기</a></span></div>
+                        <div class="comment"><b>neceosecius</b> 거봐 산이 멋지잖아! 🙆‍♂️<i class="fa-regular fa-heart"></i></div>
+                        <div class="comment_box">
+
+                        </div>
+                        <div class="post_time">42분 전</div>
+                    </div>
+                </footer>
+                <div class="comment_box">
+                    <input class="main_comment_box" type="text" placeholder="댓글 달기..." oninput="buttonColor()">
+                    <button class="main_comment_btn">게시</button>
+                </div>
+            </article>
+        </section>
+        <!-- 스토리 및 추천창 구현 -->
+        <section class="main_right">
+            <div class="right_profile">
+                <div class="right_img"><img src="https://images.unsplash.com/photo-1611604548018-d56bbd85d681?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt=""></div>
+                <div class="right_name">
+                    <div class="name_id">Lego_bootcamp</div>
+                    <div class="name_info">Lego | 레고</div>
+                </div>
+            </div>
+            <div class="right_stories">
+                <div class="stories_tab">
+                    <div class="tab_name">스토리</div>
+                    <div class="tab_more"><a href="#">모두 보기</a></div>
+                </div>
+                <div class="other_stories">
+                    <div class="stories_first">
+                        <div class="first_img"><img src="https://images.unsplash.com/photo-1606878323177-265211499dd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80" alt=""></div>
+                        <div class="first_name">
+                            <div class="name_id">Alpha_bootcamp</div>
+                            <div class="name_info">16분 전</div>
+                        </div>
+                    </div>
+                    <div class="stories_second">
+                        <div class="second_img"><img src="https://images.unsplash.com/photo-1642101566158-5c2d5dfed57c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=705&q=80" alt=""></div>
+                        <div class="second_name">
+                            <div class="name_id">Bravo_bootcamp</div>
+                            <div class="name_info">3시간 전</div>
+                        </div>
+                    </div>
+                    <div class="stories_third">
+                        <div class="third_img"><img src="https://images.unsplash.com/photo-1524009901480-a6fa1c0c8ab5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt=""></div>
+                        <div class="third_name">
+                            <div class="name_id">Charlie_bootcamp</div>
+                            <div class="name_info">20시간 전</div>
+                        </div>
+                    </div>
+                    <div class="stories_third">
+                        <div class="third_img"><img src="https://images.unsplash.com/photo-1538603644737-89b694ec9214?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1409&q=80" alt=""></div>
+                        <div class="third_name">
+                            <div class="name_id">Delta_bootcamp</div>
+                            <div class="name_info">1시간 전</div>
+                        </div>
+                    </div>
+                    <div class="stories_third">
+                        <div class="third_img"><img src="https://images.unsplash.com/photo-1501605623075-d5715e4637ab?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt=""></div>
+                        <div class="third_name">
+                            <div class="name_id">Echo_bootcamp</div>
+                            <div class="name_info">12시간 전</div>
+                        </div>
+                    </div>
+                    <div class="stories_third">
+                        <div class="third_img"><img src="https://images.unsplash.com/photo-1462953491269-9aff00919695?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt=""></div>
+                        <div class="third_name">
+                            <div class="name_id">Foxtrot_bootcamp</div>
+                            <div class="name_info">15분 전</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="right_recommends">
+                <div class="recommends_tab">
+                    <div class="tab_name">회원님을 위한 추천</div>
+                    <div class="tab_more"><a href="#">모두 보기</a></div>
+                </div>
+                <div class="recommends_contents">
+                    <div class="recommends_first">
+                        <div class="wrapper">
+                            <div class="first"><img src="https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt=""></div>
+                            <div class="first_name">
+                                <div class="name_id">Golf_bootcamp</div>
+                                <div class="name_info">Alpha님 외 2명이 ...</div>
+                            </div>
+                        </div>
+                        <div class="follow_btn">
+                            <button>팔로우</button>
+                        </div>
+                    </div>
+                    <div class="recommends_second">
+                        <div class="wrapper">
+                            <div class="second"><img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt=""></div>
+                            <div class="second_name">
+                                <div class="name_id">Hotel_bootcamp</div>
+                                <div class="name_info">Bravo님 외 10명이 ...</div>
+                            </div>
+                        </div>
+                        <div class="follow_btn">
+                            <button>팔로우</button>
+                        </div>
+                    </div>
+                    <div class="recommends_third">
+                        <div class="wrapper">
+                            <div class="third"><img src="https://images.unsplash.com/photo-1524492412937-b28074a5d7da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80" alt=""></div>
+                            <div class="third_name">
+                                <div class="name_id">India_bootcamp</div>
+                                <div class="name_info">Charli님 외 12명이 ...</div>
+                            </div>
+                        </div>
+                        <div class="follow_btn">
+                            <button>팔로우</button>
+                        </div>
+                    </div>
+                    <div class="recommends_third">
+                        <div class="wrapper">
+                            <div class="third"><img src="https://images.unsplash.com/photo-1620476963747-3a235f6fef0d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80" alt=""></div>
+                            <div class="third_name">
+                                <div class="name_id">Juliet_bootcamp</div>
+                                <div class="name_info">Delta님 외 4명이 ...</div>
+                            </div>
+                        </div>
+                        <div class="follow_btn">
+                            <button>팔로우</button>
+                        </div>
+                    </div>
+                    <div class="recommends_third">
+                        <div class="wrapper">
+                            <div class="third"><img src="https://images.unsplash.com/photo-1627225316329-70af8308db14?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1473&q=80" alt=""></div>
+                            <div class="third_name">
+                                <div class="name_id">Kilo_bootcamp</div>
+                                <div class="name_info">Echo님 외 5명이 ...</div>
+                            </div>
+                        </div>
+                        <div class="follow_btn">
+                            <button>팔로우</button>
+                        </div>
+                    </div>
+                    <div class="recommends_third">
+                        <div class="wrapper">
+                            <div class="third"><img src="https://images.unsplash.com/photo-1577587230708-187fdbef4d91?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80" alt=""></div>
+                            <div class="third_name">
+                                <div class="name_id">Lima_bootcamp</div>
+                                <div class="name_info">Foxtrot님 외 20명이 ...</div>
+                            </div>
+                        </div>
+                        <div class="follow_btn">
+                            <button>팔로우</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="info">
+                <a href="#">Instagram 정보 ·</a>
+                <a href="#">지원 ·</a>
+                <a href="#">홍보센터 ·</a>
+                <a href="#">API ·</a>
+                <a href="#">채용 정보 ·</a>
+                <a href="#">개인정보처리방침 ·</a>
+                <a href="#">약관 ·</a>
+                <a href="#">디렉터리 ·</a>
+                <a href="#">프로필 ·</a>
+                <a href="#">해시태그 ·</a>
+                <a href="#">언어</a>
+                <p><i class="fa-regular fa-copyright"></i>&nbsp;2019 INSTAGRAM</p>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

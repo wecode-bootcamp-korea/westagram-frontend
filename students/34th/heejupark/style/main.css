@@ -1,0 +1,385 @@
+body {
+    margin: 0;
+}
+.navbar {
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+    border-bottom: 1px solid #eeeeee;
+    background-color: white;
+    padding-bottom: 10px;
+    z-index: 10;
+}
+.westa_logo {
+    font-size: 30px;
+    border-right: 1px solid black;
+    padding-right: 20px;
+}
+.westa_title {
+    font-family: 'Lobster', cursive;
+    font-size: 30px;
+    padding-left: 15px;
+}
+.search_bar {
+    position: relative;
+}
+.search_bar input {
+    width: 200px;
+    height: 23px;
+    text-align: center;
+    border: 1px solid #dbdada;
+    border-radius: 4px;
+    background-color: #faf9f9;
+}
+.search_bar input::placeholder {
+    color: #b9b8b8;
+}
+.search_bar i {
+    position: absolute;
+    color: #b9b8b8;
+    font-size: 10px;
+    top: 30%;
+    left: 38%;
+}
+.navbar_icons ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    padding: 0;
+}
+.navbar_icons li {
+    padding-inline: 15px;
+}
+.navbar_icons li img {
+    width: 30px;
+    height: 30px;
+}
+
+.main_page {
+    display: flex;
+    justify-content: center;
+}
+.feeds_contents {
+    width: 900px;
+    height: auto;
+    border: 1px solid #e5e5e5;
+    background-color: white;
+    margin-top: 130px;
+    margin-right: 15px;
+    margin-bottom: 100px;
+    border-radius: 5px;
+}
+.account {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+}
+.name {
+    position: relative;
+    right: 39%;
+    font-size: 18px;
+    padding-bottom: 4px;
+}
+.mini_photo {
+    position: relative;
+    left: 2%
+}
+.mini_photo img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border-color: #e5e5e5;
+}
+.more_btn {
+    position: relative;
+    font-size: 25px;
+    right: 3%;
+}
+
+.icons_bundle {
+    display: flex;
+    align-items: center;
+}
+.icons_bundle i {
+    font-size: 30px;
+    padding-inline: 6px;
+}
+.fa-bookmark {
+    position: relative;
+    margin-top: 10px;
+    left: 80%
+}
+.icons_wrapper {
+    position: relative;
+    margin-top: 10px;
+    left: 1%;
+}
+
+.feeds_img img{
+    max-width: 900px;
+    max-height: 700px;
+    width: 100%;
+    height: 100%;
+}
+
+.who_likes {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
+.who_likes img {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border-color: #e5e5e5;
+    padding-left: 20px;
+}
+
+.likes_text {
+    margin-left: 15px;
+}
+
+.more_contents a {
+    text-decoration: none;
+    color: #adadad;
+}
+
+.exp_contents {
+    margin-top: 20px;
+    padding-left: 20px;
+    border-bottom: 1px solid #e1e1e1;
+    padding-bottom: 10px;
+}
+
+.post_time {
+    color: #adadad;
+    margin-top: 2px;
+}
+
+.comment {
+    position: relative;
+    max-width: 900px;
+}
+.comment i {
+    position: absolute;
+    font-size: 13px;
+    margin-top: 10px;
+    left: 95.4%;
+}
+
+.comment_box {
+    position: relative;
+    max-width: 900px;
+}
+.comment_box input{
+    width: 799px;
+    height: 40px;
+    border-style: none;
+    padding-left: 20px;
+    padding-right: 80px;
+    color: #9b9b9b;
+    font-size: 15px;
+}
+.comment_box input:focus {
+    outline: none;
+}
+
+.comment_box button {
+    position: absolute;
+    left: 92.5%;
+    bottom: 1.5px;
+    margin-top: 1px;
+    width: 65px;
+    height: 40px;
+    font-size: 15px;
+    border-style: none;
+    background-color: white;
+    border-radius: 5px;
+    color: #bbdbf9;
+    cursor: pointer;
+}
+
+.main_right {
+    width: 450px;
+    height: 600px;
+    padding-top: 10px;
+    margin-top: 130px;
+    margin-left: 15px;
+}
+.right_profile {
+    display: flex;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+.right_img img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.right_name {
+    margin-left: 14px;
+    margin-top: 12px;
+    font-size: 14px;
+}
+.name_id {
+    font-weight: bolder;
+}
+.name_info {
+    color: #a4a4a4;
+}
+
+.right_stories {
+    max-width: 448px;
+    max-height: 250px;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    background-color: white;
+    overflow-y: scroll;
+}
+.right_stories::-webkit-scrollbar {
+    display: none;
+}
+
+.other_stories {
+    padding-left: 15px;
+}
+
+.right_recommends {
+    max-width: 448px;
+    max-height: 150px;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #e5e5e5;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    background-color: white;
+    overflow-y: scroll;
+}
+.right_recommends::-webkit-scrollbar {
+    display: none;
+}
+
+.stories_tab {
+    max-width: 416px;
+    width: 100%;
+    max-height: 20px;
+    height: 100%;
+    display: flex;
+    position: sticky;
+    top: 0;
+    padding: 15px;
+    background-color: white;
+}
+.recommends_tab {
+    max-width: 416px;
+    width: 100%;
+    max-height: 20px;
+    height: 100%;
+    display: flex;
+    position: sticky;
+    top: 0;
+    padding: 15px;
+    background-color: white;
+}
+
+.tab_name {
+    color: #ababab;
+}
+.tab_more {
+    font-weight: bolder;
+    position: absolute;
+    left: 85%;
+}
+.tab_more a{
+    text-decoration: none;
+    color: black;
+}
+
+.first_img,
+.second_img,
+.third_img {
+    display: inline-block;
+}
+
+
+
+.first_img img,
+.second_img img,
+.third_img img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    background-image: linear-gradient(#fff, #fff),
+    linear-gradient(to right, red 0%, orange 100%);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+.first img,
+.second img,
+.third img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.first_name,
+.second_name,
+.third_name {
+    padding-left: 15px;
+}
+
+
+.stories_first,
+.stories_second,
+.stories_third {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.recommends_first,
+.recommends_second,
+.recommends_third {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    justify-content: space-between;
+}
+.wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.recommends_contents {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.info p {
+    font-weight: bolder;
+    color: #bfbfbf;
+}
+.info a {
+    text-decoration: none;
+    color: #bfbfbf;
+}
+
+.follow_btn button{
+    border-style: none;
+    background-color: white;
+    color: #1684e9;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1380px) {
+    .main_right {
+        display: none;
+    }
+}
