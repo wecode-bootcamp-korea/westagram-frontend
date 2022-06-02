@@ -1,0 +1,73 @@
+body {
+  box-sizing: border-box;
+  margin: 0px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.westarBox {
+  width: 600px;
+  height: 600px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid gray 1px;
+  opacity: 0.3;
+}
+
+.loginBox {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#text {
+  font-size: 80px;
+  font-family: "Lobster", cursive;
+  position: absolute;
+  top: 10%;
+}
+
+.ID {
+  width: 350px;
+  height: 50px;
+  border: solid gray 1px;
+  border-radius: 5px;
+  font-size: 18px;
+}
+
+.PW {
+  width: 350px;
+  height: 50px;
+  border: solid gray 1px;
+  border-radius: 5px;
+  margin-top: 15px;
+  font-size: 18px;
+}
+
+button {
+  width: 350px;
+  height: 50px;
+  color: white;
+  background-color: skyblue;
+  border: 0;
+  position: absolute;
+  bottom: 30%;
+  opacity: 0.3;
+}
+
+/* opacity => 백그라운드 rgba 로 변경. */
+
+#forget {
+  position: absolute;
+  bottom: 15%;
+  opacity: 1;
+  font-size: 18px;
+  text-decoration: none;
+}
