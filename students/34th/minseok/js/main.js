@@ -1,16 +1,16 @@
-// HTML addCommentText : input tag
+// HTML posting_addComment_text : input tag
 // HTML addCommentButton : button tag
 // HTML feedPostOthersComment : div tage
 
-const ADD_COMMENT_TEXT = document.querySelector('#addCommentText');
-const ADD_COMMENT_BUTTON = document.querySelector('#addCommentButton');
-const FEED_POST_OTHERS_COMMENT = document.querySelector('.feedPostOthersComment');
+const ADD_COMMENT_TEXT = document.querySelector('.posting_addComment_text');
+const ADD_COMMENT_BUTTON = document.querySelector('.posting_addComment_button');
+const FEED_POST_OTHERS_COMMENT = document.querySelector('.posting_othersComment');
 
 const onAdd = () => {
   const INPUT = ADD_COMMENT_TEXT.value;
 
   const TEXT = document.createElement('p');
-  TEXT.setAttribute('class', 'comment');
+  TEXT.setAttribute('class', 'posting_othersComment_comment');
   TEXT.innerHTML = INPUT;
 
   FEED_POST_OTHERS_COMMENT.appendChild(TEXT);

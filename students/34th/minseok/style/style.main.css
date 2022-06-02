@@ -15,7 +15,7 @@ html {
   background-color: #ffffff;
 }
 
-.allBackgroundContainer {
+.twoDividedArea {
   display: grid;
   grid: 
     "top" 1fr
@@ -23,7 +23,7 @@ html {
 }
 
 /* header */
-.header {
+.topArea {
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -36,19 +36,19 @@ html {
 }
 
 /* header nav(logo) */
-.logoContainer {
+.logo {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 20%;
 }
 
-.logoContainer img {
+.logo img {
   width: 3rem;
   height: 3rem;
 }
 
-.logoContainer a {
+.logo a {
   display: flex;
   justify-content: center;
   text-decoration: none;
@@ -59,15 +59,15 @@ html {
   margin-left: 1rem;
 }
 
-.logoContainer a:link {
+.logo a:link {
   color: #000;
 }
 
-.logoContainer a:visited {
+.logo a:visited {
   color: #000;
 }
 
-.header [type=search] {
+.topArea [type=search] {
   text-align: center;
   opacity: .5;
   width: 20%;
@@ -75,19 +75,19 @@ html {
 }
 
 /* header nav(icon) */
-.iconContainer {
+.icon {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   width: 20%;
 }
 
-.iconContainer img {
+.icon img {
   width: 3rem;
   height: 3rem;
 }
 
-.bottomBackgroundContainer {
+.bottomArea {
   grid-area: bottom;
   height: 90vh;
   padding-top: 3rem;
@@ -96,7 +96,7 @@ html {
 }
 
 /* main */
-.mainArea {
+.main {
   display: grid;
   grid: 
     ". article aside ." 2fr
@@ -106,11 +106,11 @@ html {
 }
 
 /* main article */
-.feedPost {
+.posting {
   grid-area: article;
 }
 
-.feedPostProfile {
+.posting_profile {
   display: flex;
   align-items: center;
   border: .1rem solid #E9E9E9;
@@ -118,26 +118,26 @@ html {
   background-color: #ffffff;
 }
 
-.feedPostProfileImage {
+.posting_profile_image {
   width: 3rem;
   height: 3rem;
   border: none;
   border-radius: 50%;
 }
 
-.feedPostProfile p {
+.posting_profile p {
   font-weight: 700;
   font-size: 1.6rem;
   margin-left: 1rem;
 }
 
-.feedPostProfileDetails {
+.posting_profile_details {
   width: 3rem;
   height: 3rem;
   margin-left: auto;
 }
 
-.feedPostImage {
+.posting_image {
   width: 100%;
   height: 60%;
   border-right: .1rem solid #E9E9E9;
@@ -146,12 +146,12 @@ html {
   background-color: #ffffff;
 }
 
-.feedPostImage img {
+.posting_image img {
   width: 100%;
   height: 100%;
 }
 
-.feedPostIcon {
+.posting_icon {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -162,30 +162,30 @@ html {
   background-color: #ffffff;
 }
 
-.feedPostIconHeart {
+.posting_icon_heart {
   width: 3rem;
   height: 3rem;
 }
 
-.feedPostIconSayBallon {
-  width: 3rem;
-  height: 3rem;
-  margin-left: 1rem;
-}
-
-.feedPostIconShare {
+.posting_icon_sayBallon {
   width: 3rem;
   height: 3rem;
   margin-left: 1rem;
 }
 
-.feedPostIconBookMark {
+.posting_icon_share {
+  width: 3rem;
+  height: 3rem;
+  margin-left: 1rem;
+}
+
+.posting_icon_bookMark {
   width: 3rem;
   height: 3rem;
   margin-left: auto;
 }
 
-.feedPostOthersComment {
+.posting_othersComment {
   font-size: 1.3rem;
   border-right: .1rem solid #E9E9E9;
   border-left: .1rem solid #E9E9E9;
@@ -193,15 +193,15 @@ html {
   background-color: #ffffff;
 }
 
-.feedPostOthersCommentRepresentative {
+.posting_othersComment_representative {
   margin-bottom: 1rem;
 }
 
-.feedPostOthersComment .comment {
+.posting_othersComment_comment {
   margin-top: .5rem;
 }
 
-.feedPostAddComment {
+.posting_addComment {
   display: flex;
   align-items: center;
   border: .1rem solid #E9E9E9;
@@ -212,13 +212,13 @@ html {
   background-color: #ffffff;
 }
 
-.feedPostAddComment input {
+.posting_addComment_text {
   width: 50rem;
   height: 3rem;
   border: none;
 }
 
-.feedPostAddComment .commonButton {
+.posting_addComment_button {
   font-size: 1.6rem;
   color: #53A5F2;
   width: 5rem;
@@ -226,36 +226,36 @@ html {
 }
 
 /* sidebar */
-.feedSidebar {
+.sideBar {
   grid-area: aside;
 }
 
-.feedSidebarHost {
+.sideBar_host {
   display: flex;
   align-items: center;
   margin-bottom: 1rem;
 }
 
-.feedSidebarHostImage {
+.sideBar_host_image {
   width: 5rem;
   height: 5rem;
   border: none;
   border-radius: 50%;
 }
 
-.feedSidebarHostId {
+.sideBar_host_id {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-left: 1rem;
 }
 
-.feedSidebarHostIdName {
+.sideBar_host_id_name {
   font-weight: 700;
   font-size: 1.5rem;
 }
 
-.feedSidebarHostIdDescription {
+.sideBar_host_id_description {
   font-weight: 700;
   font-size: 1.6rem;
   opacity: .3;
@@ -263,7 +263,7 @@ html {
 }
 
 /* user history */
-.feedSidebarStory {
+.sideBar_history {
   margin-bottom: 1rem;
   overflow: scroll;
   height: 40%;
@@ -272,40 +272,40 @@ html {
   background-color: #ffffff;
 }
 
-.feedSidebarStoryTitle {
+.sideBar_history_title {
   display: flex;
   margin-bottom: 1rem;
 }
 
-.feedSidebarStoryTitle h1 {
+.sideBar_history_title h1 {
   font-size: 1.6rem;
   font-weight: 700;
   opacity: .3;
 }
 
-.feedSidebarStoryTitle .commonButton {
+.sideBar_history_title .commonButton {
   font-size: 1.3rem;
   font-weight: 700;
   margin-left: auto;
 }
 
-.feedSidebarStoryUser {
+.sideBar_history_user {
   display: flex;
   flex-direction: column;
 }
 
 
-.feedSidebarStoryUser li:last-child {
+.sideBar_history_user li:last-child {
   margin-bottom: 0;
 }
 
-.feedSidebarStoryUserList {
+.sideBar_history_user_list {
   display: flex;
   align-items: center;
   margin-bottom: 1rem;
 }
 
-.feedSidebarStoryUserImage {
+.sideBar_history_user_list_image {
   width: 3rem;
   height: 3rem;
   border: .2rem solid #ff0000;
@@ -313,23 +313,23 @@ html {
   padding: .1rem;
 }
 
-.feedSidebarStoryUserId {
+.sideBar_history_user_list_id {
   margin-left: 1rem;
 }
 
-.feedSidebarStoryUserIdName {
+.sideBar_history_user_list_id_name {
   font-size: 1.3rem;
   font-weight: 700;
 }
 
-.feedSidebarStoryUserIdTime {
+.sideBar_history_user_list_id_time {
   font-size: 1.3rem;
   font-weight: 700;
   opacity: .3;
   margin-top: .5rem;
 }
 
-.feedSidebarRecommendation {
+.sideBar_recommendation {
   height: 40%;
   border: .1rem solid #E9E9E9;
   margin-bottom: 1rem;
@@ -337,40 +337,40 @@ html {
   background-color: #ffffff;
 }
 
-.feedSidebarRecommendationTitle {
+.sideBar_recommendation_title {
   display: flex;
   margin-bottom: 1rem;
 }
 
-.feedSidebarRecommendationTitle h1 {
+.sideBar_recommendation_title h1 {
   font-size: 1.6rem;
   font-weight: 700;
   opacity: .3;
 }
 
-.feedSidebarRecommendationTitle .commonButton {
+.sideBar_recommendation_title .commonButton {
   font-size: 1.3rem;
   font-weight: 700;
   margin-left: auto;
 }
 
-.feedSidebarRecommendationUser {
+.sideBar_recommendation_user {
   display: flex;
   flex-direction: column;
 }
 
 
-.feedSidebarRecommendationUser li:last-child {
+.sideBar_recommendation_user li:last-child {
   margin-bottom: 0;
 }
 
-.feedSidebarRecommendationUserList {
+.sideBar_recommendation_user_list {
   display: flex;
   align-items: center;
   margin-bottom: 1rem;
 }
 
-.feedSidebarRecommendationUserImage {
+.sideBar_recommendation_user_list_image {
   width: 3rem;
   height: 3rem;
   border: none;
@@ -378,39 +378,39 @@ html {
   padding: .1rem;
 }
 
-.feedSidebarRecommendationUserId {
+.sideBar_recommendation_user_list_id {
   margin-left: 1rem;
 }
 
-.feedSidebarRecommendationUserIdName {
+.sideBar_recommendation_user_list_id_name {
   font-size: 1.3rem;
   font-weight: 700;
 }
 
-.feedSidebarRecommendationUserIdTime {
+.sideBar_recommendation_user_list_id_time {
   font-size: 1.3rem;
   font-weight: 700;
   opacity: .3;
   margin-top: .5rem;
 }
 
-.feedSidebarRecommendationUserFallow {
+.sideBar_recommendation_user_list_Fallow {
   color: #53A5F2;
   font-weight: 700;
   font-size: 1.4rem;
 }
 
 /* footer */
-.westargramfooter {
+.footer {
   grid-area: footer;
 }
 
-.westargramfooter p {
+.footer_information {
   font-weight: 700;
   font-size: 1.3rem;
   opacity: .3;
 }
 
-.westargramMakeYear {
+.footer_makeYear {
   margin-top: 1rem;
 }
