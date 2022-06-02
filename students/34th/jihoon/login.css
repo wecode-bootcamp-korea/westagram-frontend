@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+* {
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 530px;
+  height: 600px;
+  border: 1px solid rgb(214, 214, 214);
+}
+
+.main {
+  width: 400px;
+  height: 450px;
+}
+
+.mainLogo {
+  padding-top: 30px;
+  font-size: 60px;
+  text-align: center;
+  font-family: 'Lobster', cursive;
+}
+
+
+.mainInput {
+  display: flex;
+  flex-direction: column;
+  padding-top: 70px;
+}
+
+.mainInput input {
+  height: 50px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  border-radius: 5px;
+  border: 0.5px solid rgb(217, 217, 217);
+  outline-style: none;
+  background-color: #f6f6f6;
+}
+
+.mainInput input::placeholder {
+  color: rgb(160, 159, 159);
+}
+
+.mainBtn {
+  width: 400px;
+  padding: 10px;
+  margin-top: 5px;
+  border-style: none;
+  border-radius: 5px;
+  background-color: #429dda;
+  color: #eeeeee;
+  font-size: 18px;
+  opacity: 0.5;
+}
+
+.cursorPointer {
+  cursor: pointer;
+}
+
+.passwordFind {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 400px;
+  height: 100px;
+  color: #00376B;
+}
