@@ -33,10 +33,3 @@ window.addEventListener('keyup',function(event){
         goMain();
     }
 })
-
-// window.keypress('keydown', function(e){
-
-//     if(e.keyCode === 'enter'){
-//         goMain();
-//     }
-// })
