@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <link rel="stylesheet" href="style_main.css">
+     <!-- 폰트 연결 -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <p class = "logo">Westagram</p>
+        <div class = "searchBox">
+            <img src="images/loupe.png" class="searchGlasses">
+            <input type="text" placeholder="검색" id="searchBar">
+        </div>
+            <div class="images">
+            <img src="images/explore.png" class = "icons">
+            <img src="images/heart.png" class="icons">
+            <img src="images/profile.png" class="icons">
+        </div>
+    </nav>
+
+    <main>
+        <div class="empty"></div>
+        <div class=feeds>
+            <articles class="articles">
+                <div class= "top-bar">
+                    <div class="account">
+                        <img src="images/profile-img.jpg" class="profileimg">
+                        <p class="nickname">admin</p>
+                    </div>
+                    <img class="option" src="images/options.png">
+                </div>
+                <img src = "images/dumi.jpg" class="feed-img">
+                <div class="buttons">
+                    <button type="button" id="likeButton"><img src="images/heart.png" class="button"></button>
+                    <button type="button" id="commentButton"><img src="images/comment.png" class="button"></button>
+                    <button type="button" id="shareButton"><img class = "button" src="images/share.png"></button>
+                </div>
+                <div class="howManyLikes"><span class="who" style>kiki</span>님 외 <span class="howManyLikes">108명</span>이 좋아합니다</div>
+                <div class="caption">캡션캡션캡션</div>
+                <div class="postedComment"></div>
+                <div class="commentBox">
+                    <input type="text" placeholder="댓글 달기" class="comment"> 
+                    <button class="postButton">게시</button>
+                </div>
+            </articles>
+        </div>
+        <div class="main-right">
+
+        </div>
+    </main>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+</html>

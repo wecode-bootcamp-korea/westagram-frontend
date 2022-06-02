@@ -1,0 +1,144 @@
+/* nav */
+body {
+    height: 100vh;
+}
+nav {
+    position: fixed;
+    display: flex;
+    width: 100%;
+    height: 80px;
+    border-bottom: 1px solid black;
+    background-color: white;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.logo {
+    font-family: 'Lobster', cursive;
+    font-size: 30px;
+    /* margin: 0 0 0 10px; */
+}
+.searchBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 300px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #EFEFEF;
+}
+
+.searchGlasses {
+    width: 15px;
+    height: 15px;
+
+}
+#searchBar {
+    width: 80%;
+    border: none;  
+    background-color: #EFEFEF;
+}
+#searchBar:focus {
+    outline: none;
+}
+.images {
+    margin-right: 0;
+    display: flex;
+    flex-direction: row;
+    float: right;
+}
+.icons {
+    width: 30px;
+    height: 30px;
+    margin: 8px;
+}
+
+/* main - feeds */
+main {
+    display: flex;
+    flex-direction: row;
+    height: 500px;
+    padding-top: 100px;
+}
+.empty {
+    /* border: 1px solid black; */
+    width: 15%;
+    height: 100vh;
+}
+.feeds {
+    width: 500px;
+    height: 100vh;
+
+}
+.articles {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 850px;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+
+.top-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.account {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 10px;
+}
+.profileimg {
+    width: 50px;
+    height: 50px;
+    border: 0.5px solid gray;
+    border-radius: 70px;
+    margin-left: 10px;
+}
+.nickname {
+    font-size: 17px;
+    margin-left: 5px;
+}
+.option {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+.feed-img {
+    width: 100%;
+}
+.buttons {
+    display: inline;
+}
+.button {
+    width: 25px;
+    height: 25px;
+}
+button {
+    border: none;
+    background-color: white;
+}
+/* .postedComment {
+    height: 30px;
+} */
+.commentBox {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.comment{
+    width: 80%;
+    border: none;  
+}
+/* main-right */
+.main-right {
+    /* border: 1px solid black; */
+    width: 35%;
+    height: 100vh;
+}
