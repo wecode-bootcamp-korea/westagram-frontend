@@ -1,6 +1,6 @@
 *{
-    box-sizing: border-box;
     margin: 0;
+    box-sizing: border-box;   
 }
 /* bottom-up 방식으로 구현해야함 (vh같은 경우 높이가 정해져있기 때문에 feeds가 늘어나면 넘쳐버린다! 그래서 height를 지우고
     margin-bottom을 줘보자!
@@ -13,15 +13,13 @@ main{
 }
 
 nav{
-    background-color :white;
     position : fixed;
     display : flex;
-    justify-content: space-between;
-    align-items : center;
     width : 100%;
     height : 10vh;
-    
-    
+    background-color :white;
+    justify-content: space-between;
+    align-items : center;
 }
 
 .nav_left{
@@ -39,7 +37,7 @@ nav{
 
 .nav_middle span{
     position : absolute;
-    }
+}
 
 .nav_logo{
     font-family: 'Bebas Neue', cursive;
@@ -47,8 +45,8 @@ nav{
 }
 
 .flex_container{
-    height : 500vh;
     display : flex;
+    height : 500vh;
     justify-content: center;
 }
 
@@ -58,15 +56,13 @@ nav{
 }
 
 article{
-    background-color : #EFEFEF;
     height : 500vh; 
+    background-color : #EFEFEF;
 }
 
 .article_title{
-   
-    background-color : white;
     margin-top : 60px;
-    
+    background-color : white; 
 }
 
 /*중복코드*/
@@ -86,8 +82,8 @@ article{
 }
 
 .dots_right{
-    margin-right : 10px;
     float : right;
+    margin-right : 10px;
 }
 
 .article_like{
@@ -95,9 +91,9 @@ article{
 }
 
 .article_image img{
+    width : 100%;
     height : 100%;
     border-bottom: 1px solid white;
-    width : 100%;
 }
 
 .comments{
@@ -137,11 +133,10 @@ article{
 }
 
 .main_right{
-    
-    margin-top : 60px;
-    margin-left: 30px;
     width : 20%;
     height : 200vh;
+    margin-top : 60px;
+    margin-left: 30px;
 }
 
 .right_user_image{
@@ -151,22 +146,21 @@ article{
 }
 
 .right_story{
-    background-color : white;
-    width : 100%;
     height : 120px;
+    background-color : white;
     margin-bottom: 20px;
 }
 /*중복코드*/
 .right_story span,.right_story p{
     margin: 8px;
-    font-size : 7px;
+    font-size : 6px;
 }
-
+.right_user,.right_recommend div div{
+    font-size : 10px;
+}
 .right_recommend{
-    background-color : white;
-    width : 100%;
     height : 100px;
-    
+    background-color : white;
 }
 
 .right_recommend span{
@@ -183,10 +177,6 @@ article{
     border-radius: 7.5px;
 }
 
-.right_recommend p{
-    color : #1DA0F6;
-}
-
 .right_story_banner,.right_recommend_banner{
     display : flex;
     justify-content: space-between;
@@ -197,7 +187,7 @@ article{
 }
 
 .right_recommend_banner span{
-    font-size : 6px;
+    font-size : 5px;
 }
 
 .right_recommend_follow{
