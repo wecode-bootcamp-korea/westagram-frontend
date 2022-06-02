@@ -2,25 +2,30 @@
 
 const text = document.querySelector("textarea");
 const btn = document.querySelector(".comment_post");
-const postdiv = document.querySelector("div");
+const postdiv = document.querySelector(".feeds_ul");
+const img = document.createElement("img");
+
+
 
 
 function addComment() {
+    const comment = document.createElement("li");
    if(text.value !== "" ) {
-       const comment = document.createElement("span");
-       comment.innerHTML = `bbbb_0221 ${text.value}  `;
-       postdiv.appendChild(comment);
+       comment.innerHTML = '<span><strong>bbbb_0221</strong>'+ text.value+ '</span>';
+        postdiv.appendChild(comment);
+        img.src = './image/heart.png';
+    postdiv.appendChild(img);
        text.value="";
    }
 }
 btn.addEventListener("click", addComment);
 
 function enterkey() {
+    const comment = document.createElement("span");
     if (window.event.keyCode == 13) {
          if(text.value !== "" ) {
-       const comment = document.createElement("span");
-       comment.innerHTML = `bbbb_0221 ${text.value} ${button} `;
-       postdiv.appendChild(comment);
+       comment.innerHTML ='<span><strong>bbbb_0221</strong>'+ text.value+ '</span>';
+        postdiv.appendChild(comment);
        text.value="";
     }
 }
@@ -31,7 +36,7 @@ function btnStyle() {
     if(text.value !=="" ) {
         btn.style.color = "#0c9af6";
         btn.disabled = false;
-    } else {
+    } else if(text.value === ""){
         btn.style.color = "skyblue";
         btn.disabled = true;
     }
