@@ -1,4 +1,6 @@
 "use strict";
+
+// 댓글 기능 구현
 let commentInput = document.getElementsByClassName("main_comment_box")[0];
 let submitBtn = document.getElementsByClassName("main_comment_btn")[0];
 
@@ -7,14 +9,14 @@ const submit = () => {
   const comments = document.createElement("div");
   const username = document.createElement("span");
   const mainText = document.createElement("p");
-  const mainIcon = document.createElement("img");
-  mainIcon.src =
-    "https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png";
+  const mainIcon = document.createElement("i");
 
   comments.classList.add("comment_box");
   username.classList.add("username");
   mainText.classList.add("comment");
-  mainIcon.classList.add("like_heart");
+  // mainIcon.classList.add("fa-regular");
+  // mainIcon.classList.add("fa-heart");
+  mainIcon.className = "fa-regular fa-heart like";
 
   username.innerHTML = " hjpark625 ";
   mainText.innerText = commentInput.value;
@@ -24,6 +26,17 @@ const submit = () => {
   comments.appendChild(mainIcon);
 
   commentBox.appendChild(comments);
+
+  // 좋아요 기능 구현
+  mainIcon.addEventListener("click", () => {
+    if (mainIcon.className === "fa-regular fa-heart like") {
+      mainIcon.className = "fa-solid fa-heart like";
+      mainIcon.style.color = "red";
+    } else {
+      mainIcon.className = "fa-regular fa-heart like";
+      mainIcon.style.color = "black";
+    }
+  });
 };
 
 submitBtn.addEventListener("click", (e) => {
