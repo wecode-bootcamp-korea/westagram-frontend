@@ -4,12 +4,37 @@ const commentList = document.getElementsByClassName('comments')[0];
 const heartIcon = document.getElementsByClassName('comment-heart')[0];
 var count = 0;
 commentInput.addEventListener('keyup',function(e){
+    console.log(e);
     if(commentInput.value){
         if(e.which === 13){
             var newComment = document.createElement('li');
-            newComment.setAttribute('id',`id${count}`);
-            count++;
-            newComment.innerHTML = '<span><span class="point-span userID">_hyyyyyk</span>'+ commentInput.value + '</span><span><img class="comment-heart" src=" image/firstHeart.png" alt="하트"'+ '      ' +'<button class="deleteButton" type="submit">삭제</button></span>'
+            newComment.innerHTML = '<span><span class="point-span userID">_hyyyyyk</span>'+ commentInput.value + '</span>'
+            //heart 생성
+            
+            var heart = document.createElement('img');
+            heart.src = 'image/firstHeart.png';
+            heart.className = 'comment-heart';
+            heart.addEventListener('click',function(){
+                if(count === 0){
+                heart.src ='image/heart.png';
+                count++;
+                }
+                else if(count === 1){    
+                heart.src = 'image/firstHeart.png';
+                count--;
+                }
+            });
+
+            //delete_button 생성
+            var deleteButton = document.createElement('button');
+            newComment.appendChild(heart);
+            newComment.appendChild(deleteButton);
+        
+            deleteButton.addEventListener('click',function(){
+                newComment.remove();
+            });
+
+
             commentList.appendChild(newComment);
             commentInput.value = '';
         }
@@ -19,9 +44,33 @@ commentInput.addEventListener('keyup',function(e){
 submit.addEventListener('click',function(){
     if(commentInput.value){
         var newComment = document.createElement('li');
-        newComment.setAttribute('id',`id${count}`);
-        count++;
-        newComment.innerHTML = '<span><span class="point-span userID">_hyyyyyk</span>'+ commentInput.value + '</span><img class="comment-heart" src="image/firstHeart.png" alt="하트">'
+        newComment.innerHTML = '<span><span class="point-span userID">_hyyyyyk</span>'+ commentInput.value + '</span>'
+        //heart 생성
+        
+        var heart = document.createElement('img');
+        heart.src = 'image/firstHeart.png';
+        heart.className = 'comment-heart';
+        heart.addEventListener('click',function(){
+            if(count === 0){
+            heart.src ='image/heart.png';
+            count++;
+            }
+            else if(count === 1){    
+            heart.src = 'image/firstHeart.png';
+            count--;
+            }
+        });
+
+        //delete_button 생성
+        var deleteButton = document.createElement('button');
+        newComment.appendChild(heart);
+        newComment.appendChild(deleteButton);
+    
+        deleteButton.addEventListener('click',function(){
+            newComment.remove();
+        });
+
+
         commentList.appendChild(newComment);
         commentInput.value = '';
     }
@@ -44,12 +93,12 @@ heartIcon.addEventListener('click',function(){
     count--;
     }
 });
-const deleteButton = document.getElementsByClassName('deleteButton')[0];
-deleteButton.addEventListener('click',function(){
-    const idName = document.getElementById(`id${count}`);
-    idName.remove();
-    console.log('작동')
-});
+// const deleteButton = document.getElementsByClassName('deleteButton')[0];
+// deleteButton.addEventListener('click',function(){
+//     const idName = document.getElementById(`id${count}`);
+//     idName.remove();
+//     console.log('작동')
+// });
 
 
 
