@@ -1,0 +1,91 @@
+.wrap {position:relative; padding-top:60px; padding-bottom:100px;}
+
+.header {position:fixed; top:0; left:0; width:100%; height:60px; background:#fff; z-index:10;}
+.header:after {content:""; position:absolute; bottom:0; left:0; width:100%; height:1px; background:#ddd;}
+.header .inner {display:flex; justify-content:space-between; align-items:center; max-width:970px; height:60px; margin:0 auto;}
+.header .inner .logo a {display:inline-block; position:relative; padding-left:55px; text-decoration:none; font-family: 'Lobster', cursive; line-height:1.4em; font-size:35px; color:#000;}
+.header .inner .logo a:before {content:""; position:absolute; top:50%; left:0; margin-top:-15px; width:30px; height:30px; background:url('../img/instagram.png') 0 0 no-repeat; background-size:100% 100%;}
+.header .inner .logo a:after {content:""; position:absolute; top:50%; left:42px; width:2px; height:30px; background:#000; margin-top:-15px;}
+.header .top-search {position:relative; width:265px; height:36px; margin:0 auto;}
+.header .top-search .input {display:block; width:100%; height:36px; background:#eee; border:0; border-radius:8px; padding:0 15px 0 45px;}
+.header .top-search .btn {position:absolute; top:50%; left:5px; margin-top:-13px; background:none; border:0; border-radius:0; height:26px;}
+.header .top-search .btn svg {height:26px;}
+.header .util ul {display:flex;}
+.header .util ul li {margin-left:22px;}
+.header .util ul li a {display:block;}
+.header .util ul li a img {height:24px;}
+
+.main {position:relative; max-width:821px; padding-top:20px; margin:0 auto;}
+.main .feeds-wrap {max-width:470px;}
+.main .story-wrap {width:100%; margin-bottom:16px; border:1px solid #ddd; background:#fff; padding:16px 5px; border-radius:8px; overflow:hidden;}
+.main .story-wrap .items {display:flex;}
+.main .story-wrap .item {width:66px; margin:0 6px;}
+.main .story-wrap .item .img {position:relative; width:66px; height:66px; margin:10px 0 5px; border:3px solid transparent; border-radius:50%; background-image:linear-gradient(#fff, #fff), linear-gradient(to right, red 0%,  orange 100%); background-origin:border-box; background-clip:content-box, border-box; overflow:hidden;}
+.main .story-wrap .item .img:after {content:""; position:absolute; top:0; left:0; width:calc(100% - 6px); height:calc(100% - 6px); border:3px solid #fff; border-radius:100%;}
+.main .story-wrap .item .img img {width:100%;}
+.main .story-wrap .item .name {display:block; max-width: 64px; font-size:14px; line-height:1.4em; color:#aaa; overflow:hidden; text-align:center; text-overflow:ellipsis; white-space:nowrap;}
+
+.main .feeds {position:relative;}
+.main .feeds article {border:1px solid #ddd; background:#fff; margin-bottom:16px; border-radius:8px;}
+.main .feeds article:last-child {margin-bottom:0;}
+.main .feeds article .nickname {position:relative; border-bottom:1px solid #ddd; padding:8px 30px 8px 15px;}
+.main .feeds article .nickname .in {display:flex; align-items:center;} 
+.main .feeds article .nickname .pic {position: relative; width: 46px; height: 46px; border: 3px solid transparent; border-radius: 50%; background-image: linear-gradient(#fff, #fff), linear-gradient(to right, red 0%,  orange 100%); background-origin: border-box; background-clip: content-box, border-box; overflow:hidden;}
+.main .feeds article .nickname .pic:after {content:""; position:absolute; top:0; left:0; width:calc(100% - 6px); height:calc(100% - 6px); border:3px solid #fff; border-radius:100%;}
+.main .feeds article .nickname .pic img {width:100%;}
+.main .feeds article .nickname .txt {margin-left:15px; font-size:16px; line-height:1.4em; color:#262626;}
+.main .feeds article .nickname .more {position:absolute; top:50%; right:15px; margin-top:-12px;}
+.main .feeds article .photo {width:100%; height:auto; line-height:0;}
+.main .feeds article .photo img {width:100%;}
+.main .feeds article .info {margin:6px 0; position:relative; padding-right:50px;}
+.main .feeds article .info .icons ul {display:flex; align-items:center;}
+.main .feeds article .info .icons ul li a {display:block; padding:8px;}
+.main .feeds article .info .i-save {position:absolute; top:8px; right:6px;}
+.main .feeds article .info .i-save a {display:block;}
+.main .feeds article .like-txt {padding:0 8px; margin-bottom:15px; font-size:14px; line-height:1.4em; color:#262626; font-weight:bold;}
+.main .feeds article .cnt {padding:0 8px; margin-bottom:15px; font-size:14px; line-height:1.4em;}
+.main .feeds article .cnt .cnt-nick {display:inline-block; margin-right:5px; font-weight:bold; color:#262626;}
+.main .feeds article .cnt .in-txt {display:inline-block; color:#262626;}
+.main .feeds article .cnt .more-txt {display:inline-block; font-weight:bold; margin-left:5px; color:#262626;}
+.main .feeds article .comment-more {padding:0 8px; margin-bottom:15px;}
+.main .feeds article .comment-more a {display:inline-block; font-size:14px; line-height:1.4em; color:#8e8e8e;}
+.main .feeds article .comment-wrap {padding:0 8px;}
+.main .feeds article .comment-wrap .comment-cnt {margin-bottom:15px;}
+.main .feeds article .comment-wrap .comment-cnt ul li {position:relative; margin-bottom:5px; font-size:14px; line-height:1.4em; color:#262626; padding-right:15px;}
+.main .feeds article .comment-wrap .comment-cnt ul li .comm-nick {display:inline-block; font-weight:bold; vertical-align:top; margin-right:5px; color:#262626;}
+.main .feeds article .comment-wrap .comment-cnt ul li .i-heart {position:absolute; top:0; right:0; height:15px;}
+.main .feeds article .comment-wrap .comment-cnt ul li span {display:inline-block; max-width:60%; vertical-align:top; text-overflow: ellipsis; white-space: nowrap; overflow:hidden;}
+.main .feeds article .comment-wrap .time {margin-bottom:15px; font-size:10px; line-height:1.3em; color:#8e8e8e;}
+.main .feeds article .comment-wrap .comment-input {position:relative; border-top:1px solid #ddd; padding:8px 0 8px 45px; margin:0 -8px;}
+.main .feeds article .comment-wrap .comment-input .comm-icon {position:absolute; top:50%; left:8px; margin-top:-12px; height:24px;}
+.main .feeds article .comment-wrap .comment-input form {display:block;}
+.main .feeds article .comment-wrap .comment-input .comm-input {display:block; width:100%; height:45px; border:0; background:#fff; padding:0 30px 0 12px; font-size:14px;}
+.main .feeds article .comment-wrap .comment-input .comm-btn {position:absolute; top:8px; right:8px; height:45px; font-size:15px; line-height:45px; color:rgba(0,149,246,.3); border:0; border-radius:0; background:#fff; z-index:1;}
+
+.main .main-right {position:fixed; top:80px; right:50%; margin-right:-410.5px; width:320px;}
+.main .main-right .user-info {position:relative; display:flex; align-items:center; padding-top:16px; padding-right:50px; margin-bottom:20px;}
+.main .main-right .user-info .pic {width:56px; height:56px; border:1px solid #eee; border-radius:100%; margin-right:15px; overflow:hidden;}
+.main .main-right .user-info .pic img {width:100%;}
+.main .main-right .user-info .info .user-id a {display:block; font-size:16px; line-height:1.3em; font-weight:bold; color:#262626;}
+.main .main-right .user-info .info span {display:inline-block; font-size:14px; line-height:1.3em; color:#8e8e8e;}
+.main .main-right .user-info .more {position:absolute; top:50%; right:8px; margin-top:-10px;}
+.main .main-right .user-info .more a {display:block; font-size:14px; line-height:20px; color:#0095f6; font-weight:bold;}
+
+.main .main-right .recommend-wrap {position:relative; margin-bottom:15px;}
+.main .main-right .recommend-wrap .title {margin-bottom:8px; font-size:14px; line-height:1.4em; color:#8e8e8e; font-weight:bold;}
+.main .main-right .recommend-wrap ul li {display:flex; position:relative; padding:8px 30px 8px 8px;}
+.main .main-right .recommend-wrap ul li .img {width:34px; height:34px; border-radius:100%; overflow:hidden; margin-right:15px;}
+.main .main-right .recommend-wrap ul li .img img {width:100%;}
+.main .main-right .recommend-wrap ul li .txt .tt {font-size:16px; line-height:1.3em; font-weight:bold; color:#262626;}
+.main .main-right .recommend-wrap ul li .txt p {display:inline-block; font-size:14px; line-height:1.3em; color:#8e8e8e;}
+.main .main-right .recommend-wrap ul li .follow-bt {position:absolute; top:50%; right:8px; margin-top:-10px;}
+.main .main-right .recommend-wrap ul li .follow-bt a {display:block; font-size:14px; line-height:20px; color:#0095f6; font-weight:bold;}
+.main .main-right .recommend-wrap .more {position:absolute; top:0; right:8px;}
+.main .main-right .recommend-wrap .more a {display:block; font-size:14px; line-height:20px; color:#0095f6; font-weight:bold;}
+.main .main-right .addr-box .quick-link {margin-bottom:15px;}
+.main .main-right .addr-box .quick-link ul {display:flex; flex-wrap:wrap;}
+.main .main-right .addr-box .quick-link ul li {position:relative; font-size:12px; line-height:16px;}
+.main .main-right .addr-box .quick-link ul li:after {content: '\00B7'; margin: 0 0.25em 0 0.25em;}
+.main .main-right .addr-box .quick-link ul li:last-child:after {display:none;}
+.main .main-right .addr-box .quick-link ul li a {display:inline-block; color:#c7c7c7;}
+.main .main-right .addr-box address {display:block; font-size:12px; line-height:1.4em; color:#c7c7c7;}
