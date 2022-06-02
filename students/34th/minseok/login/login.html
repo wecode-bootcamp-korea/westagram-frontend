@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>westagram login page</title>
+  <script async src="/guide/js/login.js"></script>
+  <link rel="stylesheet" href="/guide/style/common.css">
+  <link rel="stylesheet" href="/guide/style/login.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="backgroundContainer">
+    
+    <!-- 전체를 3등분하는 컨테이너 (자식요소로 left,center,right -- AlignContainer) -->
+    <div class="threeEqualContainer">
+      <div class="leftAlignContainer"></div>
+      <div class="ceterAlignContainer">
+        <div class="boundaryContainer">
+
+          <!-- 로그인 페이지 컨텐츠 컨테이너 -->
+          <section class="contentContainer">
+            <h1 class="loginTitle">Westagram</h1>
+            <article class="userInterface">
+                <input class="userName" type="text" placeholder="전화번호, 사용자 이름 또는 이메일">
+                <input class="userPassword" type="password" placeholder="비밀번호">
+                <button class="loginButton" submit="#" disabled>로그인</button>
+            </article>
+            <a class="forgetPassword" href="#">비밀번호를 잊으셨나요?</a>
+          </section>
+        </div>
+      </div>
+      <div class="rightAlignContainer"></div>
+    </div>
+  </div>
+</body>
+</html>

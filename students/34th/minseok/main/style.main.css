@@ -1,0 +1,416 @@
+html {
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* 버튼 공통 스타일링 */
+.commonButton {
+  outline: 0;
+  cursor: pointer;
+  border: none;
+  margin-left: auto;
+  background-color: #ffffff;
+}
+
+.allBackgroundContainer {
+  display: grid;
+  grid: 
+    "top" 1fr
+    "bottom" 9fr;
+}
+
+/* header */
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  grid-area: top;
+  position: fixed;
+  width: 100%;
+  height: 10vh;
+  padding: 1rem 0;
+  background-color: #ffffff;
+}
+
+/* header nav(logo) */
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+}
+
+.logoContainer img {
+  width: 3rem;
+  height: 3rem;
+}
+
+.logoContainer a {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 2rem;
+  font-family: 'Lobster', cursive;
+  width: 10rem;
+  border-left: .2rem solid;
+  margin-left: 1rem;
+}
+
+.logoContainer a:link {
+  color: #000;
+}
+
+.logoContainer a:visited {
+  color: #000;
+}
+
+.header [type=search] {
+  text-align: center;
+  opacity: .5;
+  width: 20%;
+  height: 70%;
+}
+
+/* header nav(icon) */
+.iconContainer {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 20%;
+}
+
+.iconContainer img {
+  width: 3rem;
+  height: 3rem;
+}
+
+.bottomBackgroundContainer {
+  grid-area: bottom;
+  height: 90vh;
+  padding-top: 3rem;
+  background-color: #f0f8ff;
+  overflow: scroll;
+}
+
+/* main */
+.mainArea {
+  display: grid;
+  grid: 
+    ". article aside ." 2fr
+    ". article footer ." 1fr
+    / 1fr 5fr 3fr 1fr;
+  gap: 3rem;
+}
+
+/* main article */
+.feedPost {
+  grid-area: article;
+}
+
+.feedPostProfile {
+  display: flex;
+  align-items: center;
+  border: .1rem solid #E9E9E9;
+  padding: 1rem;
+  background-color: #ffffff;
+}
+
+.feedPostProfileImage {
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  border-radius: 50%;
+}
+
+.feedPostProfile p {
+  font-weight: 700;
+  font-size: 1.6rem;
+  margin-left: 1rem;
+}
+
+.feedPostProfileDetails {
+  width: 3rem;
+  height: 3rem;
+  margin-left: auto;
+}
+
+.feedPostImage {
+  width: 100%;
+  height: 60%;
+  border-right: .1rem solid #E9E9E9;
+  border-bottom: .1rem solid #E9E9E9;
+  border-left: .1rem solid #E9E9E9;
+  background-color: #ffffff;
+}
+
+.feedPostImage img {
+  width: 100%;
+  height: 100%;
+}
+
+.feedPostIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: .1rem solid #E9E9E9;
+  border-bottom: .1rem solid #E9E9E9;
+  border-left: .1rem solid #E9E9E9;
+  padding: 1rem;
+  background-color: #ffffff;
+}
+
+.feedPostIconHeart {
+  width: 3rem;
+  height: 3rem;
+}
+
+.feedPostIconSayBallon {
+  width: 3rem;
+  height: 3rem;
+  margin-left: 1rem;
+}
+
+.feedPostIconShare {
+  width: 3rem;
+  height: 3rem;
+  margin-left: 1rem;
+}
+
+.feedPostIconBookMark {
+  width: 3rem;
+  height: 3rem;
+  margin-left: auto;
+}
+
+.feedPostOthersComment {
+  font-size: 1.3rem;
+  border-right: .1rem solid #E9E9E9;
+  border-left: .1rem solid #E9E9E9;
+  padding: 1rem;
+  background-color: #ffffff;
+}
+
+.feedPostOthersCommentRepresentative {
+  margin-bottom: 1rem;
+}
+
+.feedPostOthersComment .comment {
+  margin-top: .5rem;
+}
+
+.feedPostAddComment {
+  display: flex;
+  align-items: center;
+  border: .1rem solid #E9E9E9;
+  border-right: .1rem solid #E9E9E9;
+  border-bottom: .1rem solid #E9E9E9;
+  border-left: .1rem solid #E9E9E9;
+  padding: 1rem;
+  background-color: #ffffff;
+}
+
+.feedPostAddComment input {
+  width: 50rem;
+  height: 3rem;
+  border: none;
+}
+
+.feedPostAddComment .commonButton {
+  font-size: 1.6rem;
+  color: #53A5F2;
+  width: 5rem;
+  height: 3rem;
+}
+
+/* sidebar */
+.feedSidebar {
+  grid-area: aside;
+}
+
+.feedSidebarHost {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.feedSidebarHostImage {
+  width: 5rem;
+  height: 5rem;
+  border: none;
+  border-radius: 50%;
+}
+
+.feedSidebarHostId {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 1rem;
+}
+
+.feedSidebarHostIdName {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.feedSidebarHostIdDescription {
+  font-weight: 700;
+  font-size: 1.6rem;
+  opacity: .3;
+  margin-top: .5rem;
+}
+
+/* user history */
+.feedSidebarStory {
+  margin-bottom: 1rem;
+  overflow: scroll;
+  height: 40%;
+  border: .1rem solid #E9E9E9;
+  padding: 1rem;
+  background-color: #ffffff;
+}
+
+.feedSidebarStoryTitle {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.feedSidebarStoryTitle h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  opacity: .3;
+}
+
+.feedSidebarStoryTitle .commonButton {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-left: auto;
+}
+
+.feedSidebarStoryUser {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.feedSidebarStoryUser li:last-child {
+  margin-bottom: 0;
+}
+
+.feedSidebarStoryUserList {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.feedSidebarStoryUserImage {
+  width: 3rem;
+  height: 3rem;
+  border: .2rem solid #ff0000;
+  border-radius: 50%;
+  padding: .1rem;
+}
+
+.feedSidebarStoryUserId {
+  margin-left: 1rem;
+}
+
+.feedSidebarStoryUserIdName {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.feedSidebarStoryUserIdTime {
+  font-size: 1.3rem;
+  font-weight: 700;
+  opacity: .3;
+  margin-top: .5rem;
+}
+
+.feedSidebarRecommendation {
+  height: 40%;
+  border: .1rem solid #E9E9E9;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: #ffffff;
+}
+
+.feedSidebarRecommendationTitle {
+  display: flex;
+  margin-bottom: 1rem;
+}
+
+.feedSidebarRecommendationTitle h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  opacity: .3;
+}
+
+.feedSidebarRecommendationTitle .commonButton {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-left: auto;
+}
+
+.feedSidebarRecommendationUser {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.feedSidebarRecommendationUser li:last-child {
+  margin-bottom: 0;
+}
+
+.feedSidebarRecommendationUserList {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.feedSidebarRecommendationUserImage {
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  border-radius: 50%;
+  padding: .1rem;
+}
+
+.feedSidebarRecommendationUserId {
+  margin-left: 1rem;
+}
+
+.feedSidebarRecommendationUserIdName {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.feedSidebarRecommendationUserIdTime {
+  font-size: 1.3rem;
+  font-weight: 700;
+  opacity: .3;
+  margin-top: .5rem;
+}
+
+.feedSidebarRecommendationUserFallow {
+  color: #53A5F2;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+/* footer */
+.westargramfooter {
+  grid-area: footer;
+}
+
+.westargramfooter p {
+  font-weight: 700;
+  font-size: 1.3rem;
+  opacity: .3;
+}
+
+.westargramMakeYear {
+  margin-top: 1rem;
+}

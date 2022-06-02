@@ -1,0 +1,122 @@
+html {
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+.backgroundContainer {
+  min-width: 70rem;
+  min-height: 70rem;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.threeEqualContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.leftAlignContainer {
+  width: 30%;
+}
+
+.centerAlignContainer {
+  width: 30%;
+  padding: 3rem;
+}
+
+.boundaryContainer {
+  width: 100%;
+  height: 100%;
+  border: .2rem solid #E3E3E3;
+  border-radius: .3rem;
+  padding: 5rem 8rem 2rem 8rem;
+}
+
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  padding: 3rem;
+}
+
+.loginTitle {
+  font-size: 8rem;
+  font-family: 'Lobster', cursive;
+}
+
+.userInterface {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.userInterface input {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 1.8rem;
+  font-size: 2rem;
+  border: #E3E3E3 solid;
+  border-radius: .3rem;
+}
+
+.userInterface input:nth-child(1) {
+  margin-bottom: 1rem;
+}
+
+.userInterface input:nth-child(2) {
+  margin-bottom: 2rem;
+}
+
+.userInterface button {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 1.5rem;
+  font-size: 2rem;
+  color: white;
+  background-color: #0084FB;
+  border: none;
+  border-radius: 1rem;
+}
+
+.loginButton:disabled {
+  opacity: .5;
+}
+
+.loginButton:enabled {
+  cursor: pointer;
+}
+
+.forgetPassword {
+  font-size: 1.8rem;
+  text-decoration: none;
+}
+
+.forgetPassword:link {
+  color: #004378;
+}
+
+.forgetPassword:visited {
+  color: #004378;
+}
+
+.rightAlignContainer {
+  width: 30%;
+}
+
+@media screen and (max-width: 768px) {
+  .loginTitle {
+    font-size: 7rem;
+  }
+}
