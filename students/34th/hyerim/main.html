@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>westagram_main</title>
+
+    <link rel="stylesheet" href="./style/common.css">
+    <link rel="stylesheet" href="./style/main.css">
+
+    <script defer src="./js/main.js"></script>
+    <script src="https://kit.fontawesome.com/4e5b2f86bb.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="wrap">
+    <nav class="nav">
+      <div class="nav_left">
+        <i class="fa-brands fa-instagram logo_icon"></i>
+        <h1>Westagram</h1>  
+      </div><!--/nav_left-->
+      <div class="nav_center">  
+        <input type="text" placeholder="검색">
+      </div><!--/nav_center-->
+      <div class="nav_right">
+          <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png" alt="search">
+          <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" alt="heart">
+          <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png" alt="mypage">
+      </div><!--/nav_right-->
+    </nav>  
+  
+  <section id="main">
+    <div class="feeds">
+      <article class="feed_in">
+        <div class="profile">
+          <img src="./image/profile2.jpg" alt="profile">
+          <p>w_oo_o_</p>
+          <i class="fa-solid fa-ellipsis"></i> 
+        </div><!--/profile-->
+
+        <div class="feed_img">
+          <img src="./image/feed.jpg" alt="feed">  
+        </div><!--/feed_img-->
+
+        <div class="feed_icon">
+            <div class="icon_l">
+              <i class="fa-solid fa-heart heart"></i>
+              <i class="fa-regular fa-comment comment"></i>
+              <i class="fa-solid fa-arrow-up-from-bracket arrow"></i>
+            </div>
+            <i class="fa-regular fa-bookmark bookmark"></i>
+        </div><!--/feed_icon-->
+
+        <div class="feed_like">
+          <div class="like_who">
+            <img src="./image/gong.jpg" alt="img">
+            <p><span class="name">gongyoo</span>님 외 10명이 좋아합니다</p>
+         </div><!--/like_who-->
+         <div class="like_me">
+            <p><span class="name">w_oo_o_</span> #행궁동 #EEEm</p>
+         </div><!--/like_me-->
+         <div class="like_comment">
+    
+          <!--<button class="btn_heart"><i class="fa-regular fa-heart like_heart"></i></button> -->       
+         </div><!--/like_comment-->
+         <div class="feed_time">30분 전</div>
+        </div><!--/feed_like-->
+        <div class="feed_comment">
+          <ul class="comment_box">
+            <li>
+              <input type="text" class="comment" placeholder="댓글 달기..."/>
+            </li>
+          </ul>
+          <button type="button" class="btn">게시</button>
+        </div><!--/feed_comment-->
+      </article><!--/feed_in-->  
+    </div><!--/feeds-->  
+
+    <div class="main-right">
+      <div class="right_profile">
+        <img src="./image/profile2.jpg" alt="profile">
+        <p>w_oo_o_<br><span class="profile_name">Hyerim</span></p>
+      </div><!--/right_profile-->
+
+      <div class="right_story">
+        <p class="title">스토리<span class="more"><a href="#">모두 보기</a></span></p>
+        <ul class="story_list">
+          <li>
+            <img src="./image/profile.jpg" alt="profile1">
+            <p>_yum_s<br><span>16분 전</span></p>
+          </li>
+          <li>
+            <img src="./image/story1.jpg" alt="profile1">
+            <p>mozzi_sson<br><span>3시간 전</span></p>
+          </li>
+          <li>
+            <img src="./image/story2.jpg" alt="profile1">
+            <p>jjung_irang<br><span>20시간 전</span></p>
+          </li>
+          <li>
+            <img src="./image/profile.jpg" alt="profile1">
+            <p>woooo<br><span>하루 전</span></p>
+          </li>
+        </ul>
+      </div><!--/right_story-->
+
+      <div class="right_recommend">
+        <p class="title">회원님을 위한 추천<span class="more"><a href="#">모두 보기</a></span></p>
+          <div class="recommend_box">
+            <p class="re_name">
+            <img src="./image/recommend.jpg" alt="recommend">
+            joaaaaahye<br><span>_legend_a님 외 2명이 팔로우하고 있습니다.</span></p>
+            <p class="re_follow"><a href="#">팔로우</a></p>          
+          </div><!--/recommend_box-->
+          <div class="recommend_box">
+            <p class="re_name">
+            <img src="./image/recommend1.jpg" alt="recommend">
+            sonane_cake<br><span>jjung_irang님 외 12명이 팔로우하고 있습니다.</span></p>
+            <p class="re_follow"><a href="#">팔로우</a></p>          
+          </div><!--/recommend_box-->
+          <div class="recommend_box">
+            <p class="re_name">
+            <img src="./image/gong.jpg" alt="recommend">
+            gongyoo<br><span>mozzi_sson님 외 5명이 팔로우하고 있습니다.</span></p>
+            <p class="re_follow"><a href="#">팔로우</a></p>          
+          </div><!--/recommend_box-->
+      </div><!--/right_recommend-->
+
+      <footer>
+        <div class="main_footer">
+          <a href="#">소개</a>
+          <a href="#">도움말</a>
+          <a href="#">홍보 센터</a>
+          <a href="#">API</a>
+          <a href="#">채용 정보</a>
+          <a href="#">약관</a>
+          <a href="#">위치</a>
+          <a href="#">언어</a>
+        </div><!--/main_footer-->
+        <p class="foot_copy">&copy; 2022 INSTAGRAM FROM META</p>
+      </footer>
+    </div><!--/main-right-->  
+  </section>
+  </div><!--/wrap-->
+</body>
+</html>
