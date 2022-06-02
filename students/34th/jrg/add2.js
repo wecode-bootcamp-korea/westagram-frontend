@@ -3,13 +3,8 @@ const uploadBtn = document.querySelector('.upload_btn');
 
 const commentAddBox = document.querySelector('.comments');
 
-// const deleteBtn = document.querySelector();
-
-
-
-uploadBtn.addEventListener("click", comment_upload);
-
 function comment_upload(event) {
+
     let commentValue = comment.value;
     let div = document.createElement('div')
     div.setAttribute('class','comment_personal')
@@ -22,47 +17,56 @@ function comment_upload(event) {
 
     span2.innerHTML = ` ${commentValue}`;
     
-    // 검색한 후에 내용 없애야함
-    commentValue="";
-
     let img = document.createElement('img');
     img.setAttribute('src','https://ifh.cc/g/b41PGW.png')
     img.setAttribute('class', 'comment_size');
 
-    // let button = document.createElement('button');
-    // button.innerHTML = 'X'
-    
+    img.addEventListener("click",clickLike)
 
-//                         <div class="comment_personal">
-//     <div>
-//     <span class="profile_name">neceosecius</span>
-//     <span>거봐 좋았잖아~~~~~!!</span>
-// </div>
-// <img alt="like" src="https://ifh.cc/g/b41PGW.png" class="comment_size">
-// </div>
+    let span3 = document.createElement('button');
+    span3.setAttribute('class','del_comment')
+    span3.innerHTML = 'X'
 
+    span3.addEventListener("click", deleteComment);
 
     div.appendChild(div2);
     div2.appendChild(span);
     div2.appendChild(span2);
     div.appendChild(img);
+    div2.appendChild(span3);
 
     commentAddBox.appendChild(div);
-    const likeBtn = document.querySelector('.comment_size');
-    console.log(likeBtn);
+
+    console.log(commentValue);
+
+    commentValue=null;
+
+};
+
+
+function deleteComment(e) {
+    let commentPick = e.target.parentNode.parentNode;
+    commentPick.remove();
 }
 
-// likeBtn.addEventListener('onclick',clickLike)
+function clickLike(e) {
+    let img = e.target;
+    let heart = "https://ifh.cc/g/L7KsFY.png";
+    let noHeart = "https://ifh.cc/g/b41PGW.png"
 
-function clickLike(event) {
-    console.log(event.target);
-    likeBtn.setAttribute('src','https://ifh.cc/g/L7KsFY.png')
-    console.log("click")
+    img.src = (img.src === heart)? noHeart:heart;
 }
+
+
 
 function enterkey() {
     if(window.event.keyCode == 13 ) {
         //엔터키 눌렸을때
         comment_upload()
+        comment.value=null;
     }
 }
+
+
+uploadBtn.addEventListener("click", comment_upload);
+
