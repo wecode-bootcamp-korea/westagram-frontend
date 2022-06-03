@@ -1,14 +1,13 @@
 .log_wrap {
     display: flex;
+    min-height: 100vh;
     justify-content: center;
     align-items:center;
-    min-height: 100vh;
 }
+
 .content {
-    /* margin: 0 auto; */
     width: 700px;
     height: 760px;
-    
     border: 1px solid #e6e6e6;
 }
 
@@ -16,71 +15,63 @@
     padding-top: 65px;
     padding-bottom: 75px;
 }
+
 .content .title h1 {
     font-family: 'Lobster', cursive;
     font-size: 50px;
     text-align: center;
 }
 
-
-.content .log { 
-    margin-bottom: 200px;
-    
+form fieldset {
+    text-align: center;
 }
 
-.content .log .group_id {
-    display: flex;
-    justify-content: center;
+form fieldset input {}
+
+form fieldset #login_id {
+    width: 535px;
+    height: 75px;
+    padding-left: 20px;
     margin-bottom: 12px;
-}
-.content .log .group_id input {
-    width: 535px;
-    height: 75px;
-    font-size: 20px;
-    padding-left: 20px;
     border-radius: 6px;
     border: 1px solid #efefef;
+    font-size: 20px;
     background-color: #fafafa;
-    
-    
 }
-.content .log .group_pwd {
-    display: flex;
-    justify-content: center;
+
+form fieldset #login_pwd {
+    width: 535px;
+    height: 75px;
+    padding-left: 20px;
     margin-bottom: 30px;
-}
-.content .log .group_pwd input {
-    width: 535px;
-    height: 75px;
-    font-size: 20px;
-    padding-left: 20px;
-    color: #999999;
     border-radius: 6px;
     border: 1px solid #efefef;
+    font-size: 20px;
     background-color: #fafafa;
 }
-.content .log .group_submit {
-    display: flex;
-    justify-content: center;
-}
-.content .log .group_submit input {
+
+button {
     width: 535px;
     height: 75px;
-    font-size: 20px;
     padding-left: 20px;
+    margin-bottom: 200px;
     color: #ffffff;
     border-radius: 6px;
     border: 1px solid #efefef;
     background-color: #c5e1fa;
-    cursor: pointer;
+    font-size: 20px;
+    cursor: not-allowed;
 }
 
-.content .find {}
-.content .find .pwd_forget {}
+.login_input {
+    background-color: #002c52;
+    cursor:pointer;
+}  
+
 .content .find .pwd_forget p {
     text-align: center;
-
 }
+
 .content .find .pwd_forget p a{
     text-decoration: none;
     color: #043667;
