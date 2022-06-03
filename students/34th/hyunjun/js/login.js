@@ -43,8 +43,13 @@ thisIsButton.addEventListener("click", function () {
 });
 thisIsPw.addEventListener("keypress", function (e) {
   if (e.keyCode === 13) {
-    console.log(thisIsLogin());
-  } else console.log(11111);
+    thisIsLogin();
+  }
+});
+thisIsId.addEventListener("keypress", function (e) {
+  if (e.keyCode === 13) {
+    thisIsLogin();
+  }
 });
 
 const opacityControl = function () {
