@@ -235,21 +235,45 @@ main {
   align-items: center;
 }
 
-.icons_left,.icons_right {
-  font-size: 25px;
-}
-
 .icons_left button {
   background-color: transparent;
   border: none;
   cursor: pointer;
-  font-size: 25px;
+  font-size: 20px;
   padding: 0;
 }
 
-/* 원래 아이콘 반전효과 */
-.icons_left .fa-comment {
-  transform: rotateY(180deg);
+.icons_left .heartbtn{
+  width: 27px;
+  height: 27px;
+  background-image: url("../images/like.png");
+  background-size: contain;
+}
+
+.icons_left .heartbtn.red{
+  width: 27px;
+  height: 27px;
+  background-image: url("../images/heart.png");
+  background-size: contain;
+}
+
+.icons_left .commentbtn {
+  width: 27px;
+  height: 27px;
+  margin: 0 5px;
+  background-image: url("../images/comment.png");
+  background-size: contain;
+}
+
+.icons_left .directmessagebtn {
+  width: 27px;
+  height: 27px;
+  background-image: url("../images/send.png");
+  background-size: contain;
+}
+
+.icons_right {
+  font-size: 25px;
 }
 
 .likes_figure {

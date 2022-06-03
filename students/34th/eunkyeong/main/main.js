@@ -1,5 +1,13 @@
 //게시글 좋아요
+const feedBtn = document.querySelector('.heartbtn');
 
+feedBtn.addEventListener("click", ()=> {
+  if(feedBtn.classList.contains('red')){
+    feedBtn.classList.remove('red')
+  }else {
+    feedBtn.classList.add('red')
+  }
+})
 
 
 
@@ -36,3 +44,5 @@ const loveitBtn = document.querySelector(".reply_like");
     }
   };
 
+//댓글삭제하기 해보기
+//innerHTML 사용하기
