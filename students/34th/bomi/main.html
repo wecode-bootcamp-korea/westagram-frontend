@@ -19,8 +19,9 @@
 <body>
 
     <nav>
-        <img Id="instagram" style="width: 103px; height: 29px; margin-top: 5px; cursor: pointer;"
-            src="img/instagramLogo.png">
+        <header class = "logo" style= "font-size: 25px; margin-top: 5px; cursor: pointer;">
+            westagram
+        </header>
         <input Id="searchBar" type="text" placeholder="검색">
         <button type="button"> <img class="topmenu" src="img/navHome.png"> </button>
         <button type="button"> <img class="topmenu" src="img/navShare.webp"> </button>
@@ -58,14 +59,25 @@
             <p class="storyId">storyID</p>
         </div>
 
-        <button Id="storyNext">
-            <img Id="storyNextImg" src="img/storyNext.webp"></button>
-
         <div class="story">
             <img class="circle" src="img/feed-profile-1.jpeg">
             <p class="storyId">storyID</p>
         </div>
 
+        <div class="story">
+            <img class="circle" src="img/story1.jpeg">
+            <p class="storyId">storyID</p>
+        </div>
+
+        <div class="story">
+            <img class="circle" src="img/story2.JPG">
+            <p class="storyId">storyID</p>
+        </div>
+
+        <div class="story">
+            <img class="circle" src="img/story3.JPG">
+            <p class="storyId">storyID</p>
+        </div>
 
     </section>
 
@@ -82,8 +94,8 @@
             </div>
 
             <div class="barWrapper">
-                <button style="left: 10px" id="heart"> <img class="buttonOpacity"
-                        style="width: 25px; margin-top: 1px; margin-left: -5px;" src="img/navHeart.jpeg"> </button>
+                <button style="left: 10px" id="heart"> <img id = "heartImg" class="buttonOpacity"
+                        style="width: 25px; margin-top: 1px; margin-left: -5px;" src= 'img/navHeart.jpeg'> </button>
                 <button style="left: 50px" id="comment"> <img class="buttonOpacity"
                         style="width: 28px; margin-top: -1px; margin-left: -6px;" src="img/comment.png"></button>
                 <button style="left: 90px" id="share"> <img class="buttonOpacity"
@@ -180,7 +192,7 @@
     <div class = popup>
         <button class = "popupElement" style = "border-top: none; color: red"> 신고 </button>
         <button Id = "deleteComment" class = "popupElement" style = "color: red"> 삭제 </button> 
-        <button class = "popupElement" style = "border-bottom: none; color: black"> 취소 </button>
+        <button Id = "cancelPopup" class = "popupElement" style = "border-bottom: none; color: black"> 취소 </button>
     </div>
 
 

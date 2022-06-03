@@ -12,11 +12,20 @@ Array.from(bars).map(bar => bar.addEventListener("keyup", () => {
 
   if (id.includes('@') && pw.length > 5) {
     button.style.backgroundColor = "#0095F6"
+    button.style.cursor = "pointer";
     button.disabled = false;
   } else {
     button.style.backgroundColor = "#C0DFFD"
     button.disabled = true;
+    button.style.cursor = "default";
   }
 }))
 
+// instead of keycode 
+if (window.event.code === "Enter") {
+  success();
+}
 
+const success =() => {
+  location.href = "http://localhost:8080/students/34th/bomi/main.html"
+}

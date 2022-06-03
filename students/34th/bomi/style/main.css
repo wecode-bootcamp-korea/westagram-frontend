@@ -10,7 +10,7 @@ nav {
     background-color: white;
     z-index: 20;
     border-bottom: 1px solid #DBDBDB;
-    padding-left: 200px;
+    padding-left: 230px;
     padding-top: 10px;
     padding-bottom: 10px;
     display: flex;
@@ -25,9 +25,10 @@ nav {
     border-radius: 7px;
     padding-left: 15px;
     top: 0px;
-    margin-left: 300px;
+    margin-left: 230px;
     margin-right: 70px;
 }
+
 
 .topmenu {
     height: 25px;
@@ -46,7 +47,7 @@ nav {
     flex-flow: row;
     padding-left: 7px;
     padding-top: 10px;
-    overflow: hidden;
+    overflow: scroll;
     position: relative;
     top: 80px;
     left: 250px;
@@ -58,6 +59,7 @@ nav {
     padding-right: 10px;
     padding-left: 13px;
     padding-top: 10px;
+   
 
 
 }
@@ -70,18 +72,7 @@ nav {
 
 }
 
-#storyNext {
-    position: absolute;
-    right: 10px;
-    top: 43px;
-}
 
-#storyNextImg {
-    width: 25px;
-    height: 25px;
-    background-color: white;
-    border-radius: 50%;
-}
 
 .div_feeds {
     width: 490px;
@@ -280,17 +271,18 @@ input {
 }
 
 .popup {
+    position: fixed;
     height: 144px;
     width: 400px;
-    position:relative;
-    bottom: 100px;
+    top: 300px;
+    left: 500px;
     border-radius: 10px;
     border: 1px solid #DBDBDB;
     background-color: white;
-    left: 500px;
     bottom: 1200px;
     z-index: 20;
     visibility: hidden;
+
 }
 
 .popupElement {
