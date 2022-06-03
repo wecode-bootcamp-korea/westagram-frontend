@@ -1,5 +1,21 @@
 "use strict";
 
+// 피드 좋아요버튼 기능 구현
+const like = () => {
+  let heart = document.getElementsByClassName("fa-heart")[0];
+
+  heart.addEventListener("click", () => {
+    if (heart.className === "fa-regular fa-heart") {
+      heart.className = "fa-solid fa-heart";
+      heart.style.color = "red";
+    } else {
+      heart.className = "fa-regular fa-heart";
+      heart.style.color = "black";
+    }
+  });
+};
+like();
+
 // 댓글 기능 구현
 let commentInput = document.getElementsByClassName("main_comment_box")[0];
 let submitBtn = document.getElementsByClassName("main_comment_btn")[0];
@@ -51,6 +67,7 @@ commentInput.addEventListener("keydown", (e) => {
   }
 });
 
+// 게시글 버튼 글자 색상 / 활성화 및 비활성화 조건 구현
 function buttonColor() {
   let commentBx = document.querySelector(".main_comment_box");
   let commentBtn = document.querySelector(".main_comment_btn");
