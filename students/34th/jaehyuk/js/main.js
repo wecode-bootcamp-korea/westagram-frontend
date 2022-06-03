@@ -3,6 +3,7 @@ const submit = document.getElementsByClassName('submit-comment')[0];
 const commentList = document.getElementsByClassName('comments')[0];
 const heartIcon = document.getElementsByClassName('comment-heart')[0];
 var count = 0;
+
 commentInput.addEventListener('keyup',function(e){
     // console.log(e);
     if(commentInput.value){
@@ -26,14 +27,16 @@ commentInput.addEventListener('keyup',function(e){
             });
 
             //delete_button 생성
-            var deleteButton = document.createElement('button');
-            newComment.appendChild(heart);
-            newComment.appendChild(deleteButton);
-        
+            var deleteButton = document.createElement('button'); 
+            deleteButton.className="deleteButton";
+            deleteButton.innerHTML = "X";       
             deleteButton.addEventListener('click',function(){
                 newComment.remove();
             });
-
+            const newSpan = document.createElement('span');
+            newComment.appendChild(newSpan);
+            newSpan.appendChild(heart);
+            newSpan.appendChild(deleteButton);
 
             commentList.appendChild(newComment);
             commentInput.value = '';
@@ -63,13 +66,15 @@ submit.addEventListener('click',function(){
 
         //delete_button 생성
         var deleteButton = document.createElement('button');
-        newComment.appendChild(heart);
-        newComment.appendChild(deleteButton);
-    
+        deleteButton.className="deleteButton";
+        deleteButton.innerHTML = "X";
         deleteButton.addEventListener('click',function(){
             newComment.remove();
         });
-
+        const newSpan = document.createElement('span');
+        newComment.appendChild(newSpan);
+        newSpan.appendChild(heart);
+        newSpan.appendChild(deleteButton);
 
         commentList.appendChild(newComment);
         console.log(newComment.value);
