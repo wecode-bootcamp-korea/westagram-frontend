@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>westragram.it</title>
+    <link href="style/main.css" rel="stylesheet" type="text/css" />
+    <link href="style/common.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <nav>
+        <img Id="instagram" style="width: 103px; height: 29px; margin-top: 5px; cursor: pointer;"
+            src="img/instagramLogo.png">
+        <input Id="searchBar" type="text" placeholder="검색">
+        <button type="button"> <img class="topmenu" src="img/navHome.png"> </button>
+        <button type="button"> <img class="topmenu" src="img/navShare.webp"> </button>
+        <button type="button"> <img class="topmenu" src="img/navAdd.png"> </button>
+        <button type="button"> <img class="topmenu" src="img/navNav.png"> </button>
+        <button type="button"> <img class="topmenu" src="img/navHeart.jpeg"> </button>
+        <button type="button"> <img style="width: 25px; height: 25px; padding-left: 5px; padding-right: 5px;"
+                class="circle" src="img/IMG_8665.jpg"></button>
+    </nav>
+
+    <section class="div_upper">
+
+        <div class="story">
+            <img class="circle" src="img/story1.jpeg">
+            <p class="storyId">storyID</p>
+        </div>
+
+        <div class="story">
+            <img class="circle" src="img/story2.JPG">
+            <p class="storyId">storyID</p>
+        </div>
+
+        <div class="story">
+            <img class="circle" src="img/story3.JPG">
+            <p class="storyId">storyID</p>
+        </div>
+
+        <div class="story">
+            <img class="circle" src="img/story4.jpg">
+            <p class="storyId">storyID</p>
+        </div>
+
+        <div class="story">
+            <img class="circle" src="img/story5.JPG">
+            <p class="storyId">storyID</p>
+        </div>
+
+        <button Id="storyNext">
+            <img Id="storyNextImg" src="img/storyNext.webp"></button>
+
+        <div class="story">
+            <img class="circle" src="img/feed-profile-1.jpeg">
+            <p class="storyId">storyID</p>
+        </div>
+
+
+    </section>
+
+
+    <section class="div_feeds">
+
+        <article class="article">
+            <div class="feedProfile">
+                <img class="profilePic" src="img/feed-profile-1.jpeg">
+                <span style="position: absolute; left: 53px; top: 20px; font-weight: 500;">do0_nct</span>
+            </div>
+            <div class="imageWrapper">
+                <img style="width:470px; height:587.5px;" src="img/feed.png">
+            </div>
+
+            <div class="barWrapper">
+                <button style="left: 10px" id="heart"> <img class="buttonOpacity"
+                        style="width: 25px; margin-top: 1px; margin-left: -5px;" src="img/navHeart.jpeg"> </button>
+                <button style="left: 50px" id="comment"> <img class="buttonOpacity"
+                        style="width: 28px; margin-top: -1px; margin-left: -6px;" src="img/comment.png"></button>
+                <button style="left: 90px" id="share"> <img class="buttonOpacity"
+                        style="width: 24px; margin-top: 2px; margin-left: -5px;" src="img/navShare.webp"> </button>
+                <button style="right: 10px" id="save"> <img class="buttonOpacity" style="width: 26px;"
+                        src="img/save.webp"> </button>
+            </div>
+
+            <div class="reaction">
+                <p> <span>abcd_123</span>님 <span>여러 명</span>이 좋아합니다</p>
+                <p> <span> do0_nct </span> This is feed </p>
+                <p style="cursor: pointer; color: #8E8E8E; height: 10px;"> 댓글 10,068개 모두 보기 </p>
+                <div class="commentSection">
+                        
+                </div>
+                <p style="font-size: 10px; color: #8E8E8E">1일 전</p>
+            </div>
+
+            <div class="comment">
+                <img style="width: 28px; height: 30px;" src="img/smiley.png">
+                <input Id="commentInput" type="text" placeholder="댓글 달기...">
+                <button Id="publish" style="font-size: 14px; color: #BFE0FD">게시</button>
+            </div>
+
+        </article>
+
+
+
+    </section>
+
+
+    <section class="div_main_right">
+
+        <div class="sideProfile">
+            <img class="circle" style="position: absolute; top: 1px;" src="img/IMG_8665.jpg">
+            <span Id="sideProfileId"> user_id</span>
+            <p Id="sideProfileName"> user_name </p>
+            <button class="blueButton"> 전환 </button>
+        </div>
+
+        <p Id="rec"> 회원님을 위한 추천</p>
+        <button style="position: absolute; top: 70px; right: 10px;">모두 보기</button>
+
+
+        <div style="top: 10px;" class="recboxWrapper">
+
+            <img class="recboxImg" src="img/rec2.png">
+            <span class="recboxId"> user_id </span>
+            <p class="recboxName"> user_name </p>
+            <button class="follow"> 팔로우 </button>
+
+        </div>
+
+        <div style="top: 60px;" class="recboxWrapper">
+
+            <img class="recboxImg" src="img/rec3.png">
+            <span class="recboxId"> user_id </span>
+            <p class="recboxName"> user_name </p>
+            <button class="follow"> 팔로우 </button>
+
+        </div>
+
+        <div style="top: 110px;" class="recboxWrapper">
+
+            <img class="recboxImg" src="img/rec4.png">
+            <span class="recboxId"> user_id </span>
+            <p class="recboxName"> user_name </p>
+            <button class="follow"> 팔로우 </button>
+
+        </div>
+
+
+        <div style="top: 160px;" class="recboxWrapper">
+
+            <img class="recboxImg" src="img/rec5.png">
+            <span class="recboxId"> user_id </span>
+            <p class="recboxName"> user_name </p>
+            <button class="follow"> 팔로우 </button>
+
+        </div>
+
+        <div style="top: 210px;" class="recboxWrapper">
+
+            <img class="recboxImg" src="img/rec1.png">
+            <span class="recboxId"> user_id </span>
+            <p class="recboxName"> user_name </p>
+            <button class="follow"> 팔로우 </button>
+
+        </div>
+
+
+    </section>
+
+    <div class = popup>
+        <button class = "popupElement" style = "border-top: none; color: red"> 신고 </button>
+        <button Id = "deleteComment" class = "popupElement" style = "color: red"> 삭제 </button> 
+        <button class = "popupElement" style = "border-bottom: none; color: black"> 취소 </button>
+    </div>
+
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,300 @@
+/* main.css */
+
+
+
+nav {
+    position: fixed;
+    top: 0px;
+    width: 1440px;
+    height: 40px;
+    background-color: white;
+    z-index: 20;
+    border-bottom: 1px solid #DBDBDB;
+    padding-left: 200px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+
+}
+
+
+#searchBar {
+    width: 253px;
+    height: 36px;
+    background-color: #EFEFEF;
+    border-radius: 7px;
+    padding-left: 15px;
+    top: 0px;
+    margin-left: 300px;
+    margin-right: 70px;
+}
+
+.topmenu {
+    height: 25px;
+    width: 25px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.div_upper {
+    width: 460px;
+    height: 110px;
+    margin: 0px 10px;
+    border-radius: 10px;
+    border: 1px solid #DBDBDB;
+    display: flex;
+    flex-flow: row;
+    padding-left: 7px;
+    padding-top: 10px;
+    overflow: hidden;
+    position: relative;
+    top: 80px;
+    left: 250px;
+
+
+}
+
+.story {
+    padding-right: 10px;
+    padding-left: 13px;
+    padding-top: 10px;
+
+
+}
+
+.storyId {
+    font-size: 12px;
+    margin-top: 8px;
+    margin-left: 7px;
+    cursor: pointer;
+
+}
+
+#storyNext {
+    position: absolute;
+    right: 10px;
+    top: 43px;
+}
+
+#storyNextImg {
+    width: 25px;
+    height: 25px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.div_feeds {
+    width: 490px;
+    height: 900px;
+    position: relative;
+    left: 250px;
+    top: 80px;
+}
+
+.article {
+    width: 470px;
+    position: relative;
+    border-radius: 10px;
+    border: 1px solid #DBDBDB;
+    left: 8px;
+    top: 20px;
+}
+
+.feedProfile {
+    height: 58px;
+    width: 470px;
+    position: absolute;
+    top: 0px;
+}
+
+.circle {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+.profilePic {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    position: absolute;
+    left: 10px;
+    top: 13px;
+    cursor: pointer;
+}
+
+.imageWrapper {
+    position: absolute;
+    top: 58px;
+}
+
+.barWrapper {
+    width: 470px;
+    height: 46px;
+    position: absolute;
+    top: 643.5px;
+}
+
+span {
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+
+}
+
+#heart,
+#comment,
+#share,
+#save {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 8px;
+    z-index: 10;
+}
+
+.buttonOpacity:hover {
+    opacity: 0.25;
+}
+
+
+
+p {
+    font-size: 14px;
+    height: 10px;
+
+}
+
+.reaction {
+    width: 446px;
+    top: 683px;
+    padding: 0px 12px;
+    margin-top: 690px;
+}
+
+.comment {
+    display: flex;
+    width: 446px;
+    height: 41px;
+    top: 805px;
+    padding: 4px 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #DBDBDB;
+}
+
+input {
+    width: 360px;
+    border: none;
+}
+
+
+
+.div_main_right {
+    width: 319px;
+    height: 443px;
+    position: relative;
+    top: -930px;
+    left: 780px;
+}
+
+.sideProfile {
+    width: 319px;
+    height: 56px;
+}
+
+#sideProfileId {
+    width: 78px;
+    height: 18px;
+    position: absolute;
+    top: 13px;
+    left: 70px;
+    cursor: pointer;
+}
+
+#sideProfileName {
+    width: 78px;
+    height: 18px;
+    position: absolute;
+    top: 17px;
+    left: 70px;
+    color: #8E8E8E
+}
+
+.blueButton {
+    position: absolute;
+    right: 5px;
+    top: 19px;
+    color: #0095F6;
+}
+
+#rec {
+    color: #828282;
+    font-weight: 600;
+    width: 274px;
+    left: 5px;
+    top: 55px;
+}
+
+.recboxWrapper {
+    width: 319px;
+    position: relative;
+
+}
+
+.recboxImg {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    left: 5px;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.recboxId {
+    position: absolute;
+    left: 50px;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.recboxName {
+    position: absolute;
+    font-size: 12px;
+    color: #828282;
+    left: 50px;
+    top: 5px;
+    z-index: 10;
+}
+
+.follow {
+    position: absolute;
+    right: 5px;
+    margin-top: 15px;
+    z-index: 10;
+}
+
+.popup {
+    height: 144px;
+    width: 400px;
+    position:relative;
+    bottom: 100px;
+    border-radius: 10px;
+    border: 1px solid #DBDBDB;
+    background-color: white;
+    left: 500px;
+    bottom: 1200px;
+    z-index: 20;
+    visibility: hidden;
+}
+
+.popupElement {
+    width: 400px; 
+    height: 48px;
+    border-bottom: 1px solid #DBDBDB;
+}
