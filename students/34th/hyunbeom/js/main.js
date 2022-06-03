@@ -1,6 +1,12 @@
 const chatForm = document.querySelector(".feeds-chating");
 const likeBtn = document.querySelector("button");
-const likeHeart = likeBtn.querySelector("i");
+const heartBtn = likeBtn.querySelectorAll("i")[1];
+const likeDelete = likeBtn.querySelectorAll("i")[0];
+const bigHeartIcon = document.querySelector(".big-heart");
+
+bigHeartIcon.addEventListener("click", (e) => {
+  e.target.classList.toggle("fa-solid");
+});
 
 function handleChatSubmit(event) {
   event.preventDefault();
@@ -15,16 +21,24 @@ function handleChatSubmit(event) {
   );
   chat.innerText = newChat;
   chatScreen.appendChild(copyChat);
-  const copyChatIcon = copyChat.querySelector("i");
-  copyChatIcon.addEventListener("click", heartLike);
+  const copyChatHeartIcon = copyChat.querySelectorAll("i")[1];
+  copyChatHeartIcon.addEventListener("click", heartLike);
+  const copyChatDeleteIcon = copyChat.querySelectorAll("i")[0];
+  copyChatDeleteIcon.classList.remove("hidden");
+  copyChatDeleteIcon.addEventListener("click", deleteChat);
 }
 
 chatForm.addEventListener("submit", handleChatSubmit);
 
 function heartLike(event) {
-  event.preventDefault();
   let btn = event.target;
   btn.classList.toggle("fa-solid");
 }
 
-likeHeart.addEventListener("click", heartLike);
+heartBtn.addEventListener("click", heartLike);
+
+function deleteChat(event) {
+  let deleteBtn = event.target.parentElement.parentElement.parentElement;
+  deleteBtn.remove();
+}
+likeDelete.addEventListener("click", deleteChat);
