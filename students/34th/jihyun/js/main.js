@@ -84,3 +84,9 @@ profileBtn.addEventListener("click", () => {
   menuBoxEl.classList.toggle("hidden");
   menuBoxEl.classList.toggle("show");
 });
+
+const inputEl = document.querySelector("#test");
+inputEl.addEventListener("change", (e) => {
+  console.log(e);
+  console.log(inputEl.value);
+});

@@ -31,20 +31,22 @@ formEl.addEventListener("submit", (e) => {
     return;
   }
 
+  // 아이디 유효성
   if (userId.value.length < 4 || !userId.value.includes("@")) {
     userId.value = "";
     userId.placeholder = "@포함 4글자 이상 입력하세요";
     userId.style.borderColor = "red";
   }
 
+  // 비번 유효성
   if (userPw.value.length < 4) {
     userPw.value = "";
     userPw.placeholder = "비밀번호 4글자 이상 입력하세요";
     userPw.style.borderColor = "red";
   }
 
+  // 버튼 누르면 main창 연동
   if (userPw.value.length >= 4 && userId.value.length >= 4) {
-    // 버튼 누르면 main창 연동
     location.href = "main.html";
   }
 });

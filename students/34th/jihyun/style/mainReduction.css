@@ -3,7 +3,7 @@
 }
 
 body {
-  background-color: rgb(212, 212, 212, 0.3);
+  background-color: skyblue;
 }
 
 nav {
@@ -19,7 +19,7 @@ nav {
 #navUls {
   display: flex;
   justify-content: space-between;
-  width: 850px;
+  width: 80%;
   margin: 0 auto;
   position: relative;
 }
@@ -138,11 +138,12 @@ nav ul li {
 
 /* 2. <main> */
 main {
-  width: 55%;
+  width: 100%;
   display: flex;
-  justify-content: end;
+  justify-content: center;
   align-items: center;
   padding-top: 150px;
+  background-color: beige;
 }
 
 #feedWrapper {
@@ -301,119 +302,5 @@ section form button {
 
 /* 오른쪽 피드 */
 #mainRightWrapper {
-  width: 45%;
-  height: 100vh;
-  position: fixed;
-  top: 140px;
-  right: 0;
-}
-
-.mainRight {
-  width: 350px;
-  margin-top: 20px;
-  padding-left: 30px;
-}
-
-.userTemplate {
-  width: 100%;
-  height: 45px;
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.userTemplate p {
-  line-height: 45px;
-}
-
-.userTemplate p img {
-  width: 40px;
-  border-radius: 50%;
-  margin: 0 5px;
-}
-
-.userIcon {
-  font-size: 40px;
-  color: #dbdbdb;
-}
-
-.userTemplate ul {
-  width: 155px;
-}
-
-.userTemplate li {
-  height: 20px;
-  line-height: 20px;
-}
-
-.userTemplate li:first-child {
-  font-weight: 900;
-  font-size: 18px;
-}
-
-.userTemplate li:last-child {
-  color: gray;
-  font-weight: bold;
-}
-
-#story {
-  background-color: #ffffff;
-  border: 1px solid lightgray;
-  border-radius: 5px;
-  margin-bottom: 20px;
-}
-
-#story p {
-  padding: 10px 10px 0 10px;
-}
-
-#storyUsers {
-  height: 190px;
-  overflow: scroll;
-  scrollbar-width: none;
-}
-
-#storyUsers::-webkit-scrollbar {
   display: none;
 }
-
-.storyTitle {
-  display: flex;
-  justify-content: space-between;
-  margin: 5px 10px 15px 0;
-}
-
-.recommend {
-  height: 210px;
-}
-
-.blue {
-  color: rgb(9, 174, 239);
-  font-weight: bold;
-  margin-left: 30px;
-}
-
-/* 카피라이트 */
-#copyRight {
-  color: gray;
-}
-
-#copyRight li {
-  margin-bottom: 8px;
-}
-
-#copyRight p {
-  margin-top: 20px;
-}
-/* 
-@media screen and (min-width: 1050px) {
-  body {
-    background-color: pink;
-  }
-}
-
-@media screen and (max-width: 1049px) {
-  body {
-    background-color: skyblue;
-  }
-} */
