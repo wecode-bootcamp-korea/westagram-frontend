@@ -9,10 +9,6 @@ formEl.addEventListener("input", (e) => {
   // 1) 로그인 버튼 활성화
   if (userId.value && userPw.value) {
     btnEl.style.backgroundColor = "#0095f6";
-    // 버튼 누르면 main창 연동
-    btnEl.addEventListener("click", () => {
-      location.href = "main.html";
-    });
   } else {
     btnEl.style.backgroundColor = "#c0dffd";
   }
@@ -35,15 +31,20 @@ formEl.addEventListener("submit", (e) => {
     return;
   }
 
-  if (userId.value.length < 4) {
+  if (userId.value.length < 4 || !userId.value.includes("@")) {
     userId.value = "";
-    userId.placeholder = "아이디 4글자 이상 입력하세요!";
+    userId.placeholder = "@포함 4글자 이상 입력하세요";
     userId.style.borderColor = "red";
   }
 
   if (userPw.value.length < 4) {
     userPw.value = "";
-    userPw.placeholder = "비밀번호 4글자 이상 입력하세요!";
+    userPw.placeholder = "비밀번호 4글자 이상 입력하세요";
     userPw.style.borderColor = "red";
+  }
+
+  if (userPw.value.length >= 4 && userId.value.length >= 4) {
+    // 버튼 누르면 main창 연동
+    location.href = "main.html";
   }
 });
