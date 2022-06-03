@@ -7,21 +7,21 @@
     <title>Document</title>
     <link rel="stylesheet" href="style/login.css" />
     <link rel="stylesheet" href="style/common.css" />
-    <script src="js/login.js"></script>
   </head>
   <body>
     <div class="centerbox">
-      <div class="logo"><p>westagram</p></div>
-      <div id="login">
+      <div class="logo"><a href="login.html">westagram</a></div>
+      <form id="login">
         <input
           class="box inputId"
           type="text"
           placeholder="전화번호,사용자 이름 또는 이메일"
         />
         <input class="box inputPw" type="password" placeholder="비밀번호" />
-        <button type="button" class="box btn" disabled>로그인</button>
-      </div>
-      <p><a href="#">비밀번호를 잊으셨나요?</a></p>
+        <button type="submit" class="box btn" disabled>로그인</button>
+      </form>
+      <div class="lostPw"><a href="#">비밀번호를 잊으셨나요?</a></div>
     </div>
+    <script src="js/login.js"></script>
   </body>
 </html>
