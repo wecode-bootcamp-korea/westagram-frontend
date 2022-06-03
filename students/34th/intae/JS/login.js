@@ -5,7 +5,7 @@ const inputPw = document.querySelector('.account_pw');
 
 
 function login() {
-   location.href ="/main.html";
+   location.href ="main.html";
 }
 function accountCheck(){
    if(inputId.value.length >= 1 && inputPw.value.length>0){

@@ -5,8 +5,11 @@ const commentUl = document.querySelector(".comments");
 function addToInput(inputValue) {
   const li = document.createElement("li");
   const span = document.createElement("span");
+  const em = document.createElement("em");
+  li.appendChild(em)
   li.appendChild(span);
   span.innerText = inputValue;
+  em.innerText = "kit";
   commentUl.appendChild(li);
 }
 function addComment(event) {
