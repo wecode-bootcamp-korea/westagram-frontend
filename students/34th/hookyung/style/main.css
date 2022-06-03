@@ -1,0 +1,334 @@
+
+.header{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    border-bottom: 1px solid #DBDBDB;
+    background-color: white;
+}
+.menu{
+    width: 975px;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+   
+    
+}
+.westargram-logo{  
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.fa-instagram{
+    font-size: 24px;
+}
+.logo{
+    font-size: 24px;
+    font-family: 'Lobster', cursive;
+    margin-left: 10px;
+}
+.header-nav{
+    display: flex;
+}
+.searchBar {
+    position: relative;
+}
+.searchBar input{ 
+    width: 268px;
+    height: 36px;
+    background-color: #efefef;
+    border: none;
+    border-radius: 6px;
+    padding-left:36px;
+}
+.searchBar .fa-solid{
+    color:#808080;
+    position: absolute;
+    top: 10px;
+    right: 240px;
+}
+
+.header-nav li {
+    display: flex;
+    align-items: center;
+}
+.header-nav li img{   
+    cursor:pointer;
+    width: 26px;
+    margin-left: 13px;
+    align-items: center;
+}
+.header-nav li img:nth-child(0){
+    margin-left: 0;
+}
+/* 헤더 끝 */
+/* 섹션부분 시작 */
+section{
+  
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.section-wrapper{
+    
+    padding: 40px 20px 0px 20px;
+    width: 975px;
+    display: flex;
+    justify-content: row;
+    
+}
+/* 피드 부분 시작 */
+.feeds{
+    width:100%;
+    
+}
+.article{
+    width: 96%;
+    border: 1px solid #DBDBDB;
+    background-color: white;
+
+}
+.article__header{
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0px 20px;
+    
+}
+.header__userInfo{
+    display: flex;
+    align-items: center;
+}
+
+.article__header img{
+    width: 30px;
+    border-radius: 15px;
+    margin-right: 20px;
+    border: 1px sold #DBDBDB;
+   
+}
+
+.article__header span {
+    font-weight: 900;
+    font-size: 14px;
+}
+.article__header .fa-ellipsis{
+    color:#575757;
+}
+.article__image{
+    width: 100%;
+}
+.article__image img{
+    width: 100%;
+}
+.article__icon{
+    padding: 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+   
+
+}
+.icon__left{
+    display: flex;  
+    align-items: center;
+    
+}
+.icon__left svg{
+    margin-right: 16px;
+}
+.icon__right  {
+    display: flex;  
+    align-items: center;
+}
+
+.feedLike{
+    display: flex;
+    align-items: center;
+    padding: 0px 20px;
+}
+.feedLike img{
+    width: 20px;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+.feedLike p{
+    font-size: 14px;
+}
+
+.comments{
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 14px;
+}
+.commentView{
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding-bottom: 4px;
+  
+}
+.comment__userId{
+    font-weight: 900;
+    padding-right: 10px;
+}
+.commentLike{
+    font-size: 18px;
+    align-self: flex-end;
+    cursor: pointer;
+    position:absolute;
+    left: 97%;
+}
+
+.comment__time{
+    font-size: 12px;
+    color: #808080;
+}
+.commentWrite {
+    padding-top: 10px;
+    width: 100%;
+    position: relative;
+}
+.commentWrite input{
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-top: 1px solid #DBDBDB;
+    outline: none;
+    padding: 0 20px;
+}
+.commentWrite button{
+    background-color: white;
+    border: none;
+    color:#0095F6;
+    position: absolute;
+    right: 10px;
+    top: 45%;
+    cursor: pointer;
+
+}
+/* 오른쪽 부분  */
+.main-right{
+    width:350px;
+   
+}
+.user-infos{
+    
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 14px;
+}
+
+.user-thumnail {
+    width:48px; 
+}
+.user-thumnail img{
+    width: 100%;
+    border-radius: 50%;
+    
+}
+.user-info{
+    padding-left:10px;
+    display: flex;
+    flex-direction: column;
+}
+.user-info__Id{
+    font-weight: 900;
+}
+.user-info__IdSub{
+    padding-top: 2px;;
+    color: #9C9C9C;
+}
+
+.user-stories-section, .recommendSection{
+    background-color: #FAFAFA;
+    border: 1px solid #DBDBDB;
+    margin-bottom: 10px;
+}
+.stories-header, .recommendHeader{
+    display: flex;
+    padding: 12px 10px;
+    justify-content: space-between;
+}
+
+.stories-header span:first-child, .recommendHeader span:first-child{
+    color: #9C9C9C; 
+}
+.stories-header span:last-child, .recommendHeader span:last-child{
+    color: #2c2c2c; 
+    cursor: pointer;
+}
+.stories, .recommends{
+    padding-bottom: 10px;
+}
+.story, .recommend{
+    display: flex;
+    padding:5px 8px ;
+}
+.story-thumnail{
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    background-image: linear-gradient(#fff, #fff), 
+    linear-gradient(to bottom, #962fbf , #d62976, #fa7e1e , #feda75);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.story-thumnail img{
+    width:28px;
+    border-radius: 50%;
+}
+.story-thumnail__info{
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.storyId,.recommendID{
+    font-weight: 900;
+}
+.storyTime, .recommendCount{
+    font-size: 12px;
+    color: #808080;
+}
+
+.recommend{
+    justify-content: space-between;
+    align-items: center;
+}
+.recommendInfo{
+    display: flex;
+    align-items: center;
+}
+.recommend-thumnail__info{
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.recommend-thumnail img{
+    width:28px;
+    border-radius: 50%;
+}
+.recommendFollow{
+    font-size: 12px;
+    color: #0095F6;
+}
+footer p{
+    letter-spacing: -0.4px;
+    font-size: 12px;
+    color: #9C9C9C;
+    margin-bottom: 6px;
+}
