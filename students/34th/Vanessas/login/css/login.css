@@ -4,23 +4,36 @@
 .wrapper {
     text-align: center;
     margin: 0 auto;
-
 }
 
 .logo {
+    margin: 30px;
     font-family: 'Lobster', cursive;
-    font-size: 80px;
+    font-size: 60px;
 }
 
-.wrapper .header .top {
+.wrapper .header {
+    position: relative;
+    width: 700px;
+    height: 500px;
+    align-self: center;
     border: 1px solid silver;
 }
 
 .form {
+    position: relative;
     display: flex;
     flex-direction: column;
+    margin: 20px;
 }
-
+.inputID {
+    border: 1px solid silver;
+    border-radius: 5px;
+}
+.inputPW {
+    border: 1px solid silver;
+    border-radius: 5px;
+}
 .header {
     margin: 50px 200px;
 }
@@ -33,9 +46,13 @@ input {
 
 button {
     align-self: center;
-    width: 80px;
-    height: 20px;
-    background-color: rgb(161, 161, 161); 
+    width: 400px;
+    height: 35px;
+    margin: 5px;
+    background-color: rgb(161, 161, 161);
     opacity: 0.8;
     border-radius: 5px;
+}
+.forgot {
+    margin-top: 100px;
 }
