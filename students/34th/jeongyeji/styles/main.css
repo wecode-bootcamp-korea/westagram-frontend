@@ -54,6 +54,9 @@
 .main .feeds article .comment-wrap .comment-cnt ul li {position:relative; margin-bottom:5px; font-size:14px; line-height:1.4em; color:#262626; padding-right:15px;}
 .main .feeds article .comment-wrap .comment-cnt ul li .comm-nick {display:inline-block; font-weight:bold; vertical-align:top; margin-right:5px; color:#262626;}
 .main .feeds article .comment-wrap .comment-cnt ul li .i-heart {position:absolute; top:0; right:0; height:15px;}
+.main .feeds article .comment-wrap .comment-cnt ul li .i-cancel {position:absolute; top:0; right:25px; width:15px; height:15px; font-size:0; line-height:0; text-indent:-9999px;}
+.main .feeds article .comment-wrap .comment-cnt ul li .i-cancel:before {content:""; position:absolute; top:0; left:0; width:1px; height:100%; transform:rotate(45deg); background:#222;}
+.main .feeds article .comment-wrap .comment-cnt ul li .i-cancel:after {content:""; position:absolute; top:0; left:0; width:1px; height:100%; transform:rotate(-45deg); background:#222;}
 .main .feeds article .comment-wrap .comment-cnt ul li span {display:inline-block; max-width:60%; vertical-align:top; text-overflow: ellipsis; white-space: nowrap; overflow:hidden;}
 .main .feeds article .comment-wrap .time {margin-bottom:15px; font-size:10px; line-height:1.3em; color:#8e8e8e;}
 .main .feeds article .comment-wrap .comment-input {position:relative; border-top:1px solid #ddd; padding:8px 0 8px 45px; margin:0 -8px;}
@@ -82,6 +85,7 @@
 .main .main-right .recommend-wrap ul li .follow-bt a {display:block; font-size:14px; line-height:20px; color:#0095f6; font-weight:bold;}
 .main .main-right .recommend-wrap .more {position:absolute; top:0; right:8px;}
 .main .main-right .recommend-wrap .more a {display:block; font-size:14px; line-height:20px; color:#0095f6; font-weight:bold;}
+
 .main .main-right .addr-box .quick-link {margin-bottom:15px;}
 .main .main-right .addr-box .quick-link ul {display:flex; flex-wrap:wrap;}
 .main .main-right .addr-box .quick-link ul li {position:relative; font-size:12px; line-height:16px;}
