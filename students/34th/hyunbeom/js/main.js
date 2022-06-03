@@ -1,30 +1,30 @@
 const chatForm = document.querySelector(".feeds-chating");
-const chatInput = document.querySelector(".feeds-chating-input");
+const likeBtn = document.querySelector("button");
+const likeHeart = likeBtn.querySelector("i");
 
 function handleChatSubmit(event) {
   event.preventDefault();
   const chatScreen = document.querySelector(".feeds-like__chat-screen");
+  const chatInput = document.querySelector(".feeds-chating-input");
   const chatFriends = document.querySelector(".feeds-like__chat-friends");
   const newChat = chatInput.value;
   chatInput.value = "";
-  const test = chatFriends.cloneNode(true);
-  const chat = test.querySelector(
+  const copyChat = chatFriends.cloneNode(true);
+  const chat = copyChat.querySelector(
     ".feeds-like__chat-friends-left span:last-child"
   );
   chat.innerText = newChat;
-  chatScreen.appendChild(test);
+  chatScreen.appendChild(copyChat);
+  const copyChatIcon = copyChat.querySelector("i");
+  copyChatIcon.addEventListener("click", heartLike);
 }
 
 chatForm.addEventListener("submit", handleChatSubmit);
 
-const likeBtn = document.querySelectorAll(".like-button")[0];
-const likeBtn2 = document.querySelectorAll(".like-button")[1];
-
-function likeBtnHandler(event) {
+function heartLike(event) {
   event.preventDefault();
-
-  likeBtn.classList.add("hidden");
-  likeBtn2.classList.remove("hidden");
+  let btn = event.target;
+  btn.classList.toggle("fa-solid");
 }
 
-likeBtn.addEventListener("click", likeBtnHandler);
+likeHeart.addEventListener("click", heartLike);
