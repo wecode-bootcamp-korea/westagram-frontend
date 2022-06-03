@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 /* menu bar */
-.menu {   
+.menu {
     display: flex;
+    position: relative;
     width: 100%;
     margin-top: 5px;
     justify-content: space-between;
@@ -10,9 +11,28 @@
     border-bottom: 1px solid silver;
 }
 .logo-box {
-    font-size: 25px;
     font-family: 'Lobster', cursive;
+    font-size: 25px;
 }
+.search {
+    position: relative
+    border: 1px solid rgb(209, 255, 109);
+}
+.fa-brands {
+    position: absolute;
+    margin-right: 30px;
+}
+.vertical {
+    position: absolute;
+    margin-left: 40px;
+    height: 20px;
+    border: 1px solid rgb(192, 188, 188);
+}
+.input::placeholder {
+    text-align: center;
+    line-height: 50px;
+}
+
 .navigate {
     display: flex;
     justify-content: space-around;
@@ -26,23 +46,27 @@
 }
 .mainbody {
     display: flex;
-    border: 2px dotted black;
     margin-top: 25px;
 }
 .feeds {
-    margin-top: 5px;
     display: flex;
+    margin-top: 5px;
     margin-left: 30px;
     width: 470px;
-    border: 2px solid black;
 }
 .article {
     margin: 30px 5px 15px 5px;
     width: 450px;
     border: 1px solid silver;
+    border-radius: 10px;
 }
 .user_whole {
     display: flex;
+    margin: 5px;
+}
+.user_info {
+    font-family: sans-serif;
+    font-weight: 300;
 }
 .circle_maintop {
     border-radius: 50%;
@@ -58,14 +82,19 @@
     
 }
 .dropdown {
-    margin-left: 330px;
+    margin-left: 320px;
     margin-top: 15px;
-
+    opacity: 50%;
+}
+.main_img {
+    margin: 5px 0px 5px 0px;
 }
 
 /* buttons below image */
 .buttons_whole {
     display: flex;
+    margin-left: 5px;
+    margin-right: 10px;
 }
 .buttons_left {
     display: flex;
@@ -90,7 +119,7 @@
     border-radius: 50%;
     width: 30px;
     height: 30px;
-    margin: 5px 0px 5px 5px;
+    margin: 0px 0px 5px 5px;
 }
 .like_counts {
     margin: 10px 20px 0px 10px;
@@ -100,12 +129,13 @@
 }
 .descriptions {
     display: flex;
-    margin: 0px 200px 0px 5px;
+    margin: 5px 200px 0px 5px;
     width: 420px;
     font-family: sans-serif;
     font-size: 13px;
     text-align: justify;
 }
+
 .caption {
     margin-left: 10px;
 }
@@ -114,7 +144,7 @@
 .friendComment_whole {
     display: flex;
     width: 440px;
-    margin: 0px 200px 0px 5px;
+    margin: 10px 200px 0px 5px;
 }
 .friendComment_user {
     display: flex;
@@ -127,15 +157,26 @@
 
 }
 .friendComment_heart {
-    margin: 13px 0px 0px 100px;
+    margin: 0px 0px 10px 100px;
 }
 
 /* comments window */
+.newCommentBox {
+    margin: 10px 200px 0px 5px;
+    font-family: sans-serif;
+    font-size: 13px;
+}
 .comments_whole {
     display: flex;
     justify-content: space-between;
     box-sizing: border-box;
     width: 450px;
+}
+
+.newCommentUser {
+    font-family: sans-serif;
+    font-size: 13px;
+    font-weight: 30px;
 }
 .comments_box {
     margin: 0px 15px 5px 5px;
@@ -147,9 +188,9 @@
     border: 1px solid white;
     width: 350px;
     height: 22px;
-    
 }
-.comment-box:focus {
+
+#comments-box:focus {
     outline: none;
 }
 
