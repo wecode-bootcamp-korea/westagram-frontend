@@ -1,6 +1,6 @@
 "use strict";
 
-// 피드 좋아요버튼 기능 구현
+// 피드 좋아요 버튼 기능 구현
 const like = () => {
   let heart = document.getElementsByClassName("fa-heart")[0];
 
@@ -41,7 +41,7 @@ const submit = () => {
 
   commentBox.appendChild(comments);
 
-  // 댓글 좋아요 기능 구현
+  // Mission 6. 댓글 좋아요 기능 구현(삭제기능 미구현)
   mainIcon.addEventListener("click", () => {
     if (mainIcon.className === "fa-regular fa-heart like") {
       mainIcon.className = "fa-solid fa-heart like";
