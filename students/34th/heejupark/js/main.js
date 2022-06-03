@@ -30,8 +30,6 @@ const submit = () => {
   comments.classList.add("comment_box");
   username.classList.add("username");
   mainText.classList.add("comment");
-  // mainIcon.classList.add("fa-regular");
-  // mainIcon.classList.add("fa-heart");
   mainIcon.className = "fa-regular fa-heart like";
 
   username.innerHTML = " hjpark625 ";
@@ -56,13 +54,23 @@ const submit = () => {
 };
 
 submitBtn.addEventListener("click", (e) => {
-  submit();
+  // 댓글 내용이 있을 때만 활성화
+  if (commentInput.value.length === 0) {
+    submitBtn.disabled = true;
+  } else {
+    submit();
+  }
   commentInput.value = "";
 });
 
 commentInput.addEventListener("keydown", (e) => {
+  // 댓글 내용이 있을 때만 활성화
   if (e.code === "Enter") {
-    submit();
+    if (commentInput.value.length === 0) {
+      submitBtn.disabled = true;
+    } else {
+      submit();
+    }
     commentInput.value = "";
   }
 });
@@ -71,7 +79,7 @@ commentInput.addEventListener("keydown", (e) => {
 function buttonColor() {
   let commentBx = document.querySelector(".main_comment_box");
   let commentBtn = document.querySelector(".main_comment_btn");
-  if (commentBx.value === "") {
+  if (commentBx.value.length === 0) {
     commentBtn.style.color = "#bddbf9";
     commentBtn.disabled = true;
   } else {
