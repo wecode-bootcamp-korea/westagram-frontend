@@ -1,20 +1,20 @@
 body {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   box-sizing: border-box;
   margin: 0px;
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
 }
 
 .westarBox {
-  width: 600px;
-  height: 600px;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 600px;
+  height: 600px;
   border: solid gray 1px;
   opacity: 0.3;
 }
@@ -28,10 +28,10 @@ body {
 }
 
 #text {
-  font-size: 80px;
-  font-family: "Lobster", cursive;
   position: absolute;
   top: 10%;
+  font-size: 80px;
+  font-family: "Lobster", cursive;
 }
 
 .ID {
@@ -45,20 +45,20 @@ body {
 .PW {
   width: 350px;
   height: 50px;
+  margin-top: 15px;
   border: solid gray 1px;
   border-radius: 5px;
-  margin-top: 15px;
   font-size: 18px;
 }
 
 button {
+  position: absolute;
+  bottom: 30%;
   width: 350px;
   height: 50px;
   color: white;
   background-color: skyblue;
   border: 0;
-  position: absolute;
-  bottom: 30%;
   opacity: 0.3;
 }
 
@@ -67,7 +67,7 @@ button {
 #forget {
   position: absolute;
   bottom: 15%;
-  opacity: 1;
   font-size: 18px;
   text-decoration: none;
+  opacity: 1;
 }

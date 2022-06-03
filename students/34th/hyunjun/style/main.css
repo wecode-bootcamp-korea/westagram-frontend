@@ -1,17 +1,17 @@
 html {
-  height: 100%;
   position: relative;
+  height: 100%;
 }
 
 body {
-  box-sizing: border-box;
   display: flex;
+  position: relative;
+  box-sizing: border-box;
   align-items: center;
   justify-content: center;
-  position: relative;
-  margin-bottom: 50px;
   height: 100%;
   background-color: #fafafa;
+  margin-bottom: 50px;
 }
 
 .text {
@@ -26,16 +26,16 @@ body {
 }
 
 nav {
-  top: 0;
-  height: 100px;
-  width: 1200px;
-  z-index: 1;
   position: absolute;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  top: 0;
+  height: 100px;
+  width: 1200px;
   border-bottom: 2px solid rgb(235, 242, 244);
   background-color: white;
+  z-index: 1;
 }
 
 .navLeft {
@@ -79,28 +79,28 @@ nav {
 
 .searchInput {
   text-align: center;
-  border-radius: 5px;
   width: 200px;
   height: 30px;
   font-size: 15px;
+  border-radius: 5px;
 }
 
 section {
   display: flex;
+  position: absolute;
   justify-content: center;
+  top: 100px;
   width: 100%;
   min-height: 100%;
-  top: 100px;
-  position: absolute;
   margin-bottom: 5%;
 }
 
 content {
-  border: solid 2px rgb(235, 242, 244);
   width: 600px;
   height: auto;
   min-height: 600px;
   margin-top: 3%;
+  border: solid 2px rgb(235, 242, 244);
   background-color: white;
 }
 
@@ -184,8 +184,8 @@ p img {
 }
 
 .commentInputBox {
-  width: 600px;
   position: relative;
+  width: 600px;
   margin-bottom: 50px;
 }
 
@@ -223,8 +223,8 @@ sidebar {
 }
 
 .nameBundle p {
-  font-size: 15px;
   margin: 0;
+  font-size: 15px;
 }
 
 span {
@@ -232,10 +232,10 @@ span {
 }
 
 .storyBox {
-  border: solid 2px rgb(235, 242, 244);
-  margin: 10px;
   width: 300px;
   height: 300px;
+  margin: 10px;
+  border: solid 2px rgb(235, 242, 244);
   background-color: white;
 }
 .sideBarNav .textRightSide {
@@ -255,11 +255,11 @@ span {
 }
 
 .recommendBox {
-  border: solid 2px rgb(235, 242, 244);
   width: 300px;
   height: 300px;
   margin-top: 10px;
   margin: 10px;
+  border: solid 2px rgb(235, 242, 244);
   background-color: white;
 }
 .needFollow {
@@ -272,12 +272,12 @@ span {
 .smallImg {
   width: 40px;
   height: 40px;
-  border-radius: 50%;
   margin-right: 10px;
+  border-radius: 50%;
 }
 .source {
-  margin: 10px;
   width: 300px;
+  margin: 10px;
 }
 .source p {
   margin: 0 20;
@@ -292,13 +292,13 @@ span {
 }
 
 .commentLike {
+  vertical-align: middle;
+  float: right;
   width: 15px;
   height: 15px;
-  vertical-align: middle;
   margin-bottom: 2px;
-  float: right;
 }
-#inputCommentBox p {
+#commentBox p {
   padding-right: 20px;
 }
 /*

@@ -1,6 +1,6 @@
 const thisIsButton = document.querySelector("button");
 const rightid = "wjd2676@gmail.com";
-const rightpw = "1111";
+const rightpw = "111111";
 const thisIsId = document.querySelector(".ID");
 const thisIsPw = document.querySelector(".PW");
 
@@ -15,6 +15,15 @@ const thisIsLogin = function () {
     alert("아이디를 입력해주세요!");
     return;
   }
+
+  if (!id.includes("@")) {
+    alert("아이디를 이메일형식으로 입력해주세요.");
+    return;
+  }
+  if (password.length < 5) {
+    alert("비밀번호를 5글자 이상 입력해주세요");
+    return;
+  }
   if (id !== rightid) {
     alert("아이디를 확인해주세요!");
     return;
@@ -23,15 +32,19 @@ const thisIsLogin = function () {
     alert("비밀번호를 확인해주세요!");
     return;
   }
+
   if (password == rightpw && id == rightid) {
     window.location.href = "main.html";
   }
 };
 
-thisIsButton.addEventListener("click", thisIsLogin());
-
+thisIsButton.addEventListener("click", function () {
+  thisIsLogin();
+});
 thisIsPw.addEventListener("keypress", function (e) {
-  if (e.keyCode === 13) thisIsLogin();
+  if (e.keyCode === 13) {
+    console.log(thisIsLogin());
+  } else console.log(11111);
 });
 
 const opacityControl = function () {
