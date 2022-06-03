@@ -1,16 +1,17 @@
 .navigationBox {
-  border-bottom : 1px solid #dbdbdb;
-  background-color: #ffffff;
-  width : 100%;
-  height : 60px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: fixed;
   top: 0;
   left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #dbdbdb;
   z-index: 10;
 }
+
 .navBar {
   display: flex;
   justify-content: space-between;
@@ -18,83 +19,97 @@
   width: 935px;
   height: 60px;
 }
+
 .westaLogo a {
-  font-family: 'Lobster', cursive;
+  padding-left: 10px;
   color: black;
   font-size: 29px;
-  padding-left: 10px;
+  font-family: "Lobster", cursive;
 }
+
 .westaLogo i {
-  border-right: 1px solid black;
   padding-right: 15px;
+  border-right: 1px solid black;
   font-size: 29px;
 }
+
 .searchBar {
-  background-color: #efefef;
+  display: flex;
+  align-items: center;
   width: 268px;
   height: 36px;
   padding: 0px 16px;
+  background-color: #efefef;
   border-radius: 8px;
-  display: flex;
-  align-items: center;
 }
+
 .searchBar i {
   flex: 1;
   color: #9d9d9d;
   font-size: 15px;
 }
+
 .searchBar input {
   flex: 9;
   height: 25px;
   padding: 0px;
   color: #9d9d9d;
-  border: none;
   background-color: transparent;
+  border: none;
   font-size: 15px;
 }
+
 input:focus {
   outline: none;
 }
+
 .emoji i {
-  font-size: 24px;
   padding-left: 24px;
+  font-size: 24px;
 }
+
 main {
+  position: relative;
   width: 821px;
   margin: 0 auto;
-  position: relative;
 }
+
 .feeds {
+  position: absolute;
+  top: 120px;
   width: 470px;
   height: auto;
   background-color: #ffffff;
   border: 1px solid #dbdbdb;
   border-radius: 8px;
-  position: absolute;
-  top: 120px;
 }
+
 .feeds img:nth-child(2) {
   width: 100%;
   height: 485px;
 }
+
 .mainRight {
-  width: 319px;
-  height: 500px;
   position: fixed;
   top: 120px;
   right: 50%;
+  width: 319px;
+  height: 500px;
   margin-right: -410.5px;
 }
+
 .profile {
-  height: 56px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 56px;
 }
+
 .profile i {
-  font-size: 24px;
   margin-right: 12px;
+  font-size: 24px;
 }
+
 header {
   display: flex;
   align-items: center;
@@ -106,12 +121,12 @@ header img {
   border-radius: 16px;
 }
 header span {
-  font-weight: bold;
-  font-size: 18px;
   margin-left: 10px;
+  font-size: 18px;
+  font-weight: bold;
 }
 .feedButton {
-  position:relative;
+  position: relative;
   display: flex;
   align-items: center;
   height: 46px;
@@ -121,10 +136,10 @@ header span {
   right: 12px;
 }
 .feedButton button {
-  border: none;
-  background-color: transparent;
-  font-size: 24px;
   padding: 0 0 0 12px;
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
 }
 .replyBox {
   display: flex;
@@ -134,8 +149,8 @@ header span {
 .replyBox img {
   width: 18px;
   height: 18px;
-  border-radius: 9px;
   margin-right: 5px;
+  border-radius: 9px;
 }
 .replyBox p {
   font-size: 12px;
@@ -149,81 +164,82 @@ header span {
   margin: 0 12px;
   font-size: 12px;
 }
-.myPost span, .usercomment span {
-  font-weight: bold;
+.myPost span,
+.usercomment span {
   margin-right: 5px;
+  font-weight: bold;
 }
 .myPost a {
+  margin-left: 5px;
   color: #a5a6a8;
   font-weight: bold;
-  margin-left: 5px;
 }
 .usercomment {
   margin: 0;
   padding: 0;
 }
 .eachUserComment {
+  position: relative;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  position: relative;
   margin: 0 0 4px 12px;
   font-size: 12px;
 }
-.eachUserComment button{
+.eachUserComment button {
   position: absolute;
   right: 12px;
-  border: 0;
   padding: 0;
   background-color: transparent;
+  border: 0;
 }
 .eachUserComment i {
-  font-size: 12px;
   color: #a5a6a8;
+  font-size: 12px;
 }
 .writingTime {
   margin-left: 12px;
   margin-bottom: 5px;
+  color: #a5a6a8;
   font-size: 12px;
   font-weight: bold;
-  color: #a5a6a8;
 }
-.myComment form{
-  height: 49px;
-  width: 100%;
-  border-top : 1px solid #dbdbdb;
+.myComment form {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  height: 49px;
   padding: 0px 12px;
+  border-top: 1px solid #dbdbdb;
 }
 .myComment input {
   flex: 9;
-  border: 0;
   height: 20px;
+  border: 0;
   font-size: 12px;
 }
 
 .myComment button {
   flex: 1;
-  border: 0;
-  padding: 0;
   height: 20px;
+  padding: 0;
+  color: #c1e2f8;
+  background-color: #ffffff;
+  border: 0;
   font-size: 12px;
   text-align: right;
   font-weight: bolder;
-  color: #c1e2f8;
-  background-color: #ffffff;
 }
-.myWestaInfo{
+.myWestaInfo {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
 }
 .myWestaInfo img {
   width: 56px;
-  border-radius: 50%;
   margin: 0 10px;
+  border-radius: 50%;
 }
 .myWestaInfoUser {
   display: flex;
@@ -235,8 +251,8 @@ header span {
 }
 .myWestaInfoUser span {
   color: #a5a6a8;
-  font-weight: bold;
   font-size: 15px;
+  font-weight: bold;
 }
 .story {
   width: 100%;
@@ -246,17 +262,20 @@ header span {
   border: 1px solid #dbdbdb;
   border-radius: 8px;
 }
-.storyInText , .recommendInText {
+.storyInText,
+.recommendInText {
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 12px;
   font-weight: bold;
 }
-.storyInText span , .recommendInText span {
+.storyInText span,
+.recommendInText span {
   color: #a5a6a8;
 }
-.storyInText a , .recommendInText a{
+.storyInText a,
+.recommendInText a {
   color: black;
 }
 .storyInUsers {
@@ -274,12 +293,12 @@ header span {
   width: 50px;
   height: 50px;
   margin-right: 10px;
-  border-radius: 50%;
-  border: 3px solid transparent;
-  background-image: linear-gradient(#fff, #fff), 
-  linear-gradient(to right, red 0%,  orange 100%);
+  background-image: linear-gradient(#fff, #fff),
+    linear-gradient(to right, red 0%, orange 100%);
   background-origin: border-box;
   background-clip: content-box, border-box;
+  border: 3px solid transparent;
+  border-radius: 50%;
 }
 .mainRight li {
   display: flex;
@@ -301,8 +320,8 @@ header span {
 .recommendForMe {
   width: 100%;
   height: 200px;
-  padding: 12px 12px 0px 12px;
   margin: 16px 0;
+  padding: 12px 12px 0px 12px;
   background-color: #ffffff;
   border: 1px solid #dbdbdb;
   border-radius: 8px;
@@ -334,14 +353,14 @@ footer {
   font-weight: bold;
 }
 .footerInfoLink {
-  font-size: 14px;
   margin-bottom: 16px;
+  font-size: 14px;
 }
 .footerInfoLink a {
   color: #d7d7d7;
   font-weight: bold;
 }
 .footerInfoLink span {
-  font-weight: bold;
   margin: 0 1.5px;
+  font-weight: bold;
 }
