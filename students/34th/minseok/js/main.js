@@ -18,4 +18,12 @@ const onAdd = () => {
   ADD_COMMENT_INPUT.focus();
 }
 
+const onAddEnter = (e) => {
+  if (e.key === 'Enter') {
+    onAdd();
+  }
+};
+
+ADD_COMMENT_INPUT.addEventListener('keypress', onAddEnter);
 ADD_COMMENT_BUTTON.addEventListener('click', onAdd);
+
