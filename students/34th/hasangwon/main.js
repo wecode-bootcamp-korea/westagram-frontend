@@ -1,3 +1,5 @@
+"use strict";
+
 const submit = document.querySelector(".submit");
 const commentBox = document.querySelector(".comment");
 const heart = document.querySelector("#heart");

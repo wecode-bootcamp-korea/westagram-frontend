@@ -1,3 +1,5 @@
+"use strict";
+
 const realID = "hasang0.0";
 const realPW = "1234";
 

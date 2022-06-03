@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>westagram</title>
     <link href="login.css" rel="stylesheet" type="text/css" />
-    <script src="login.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com"> 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
@@ -14,12 +13,14 @@
 <body>
     <div class="wrapper">
         <span class="loginTitle">westagram</span>
-        <input type="text" class="idBox" placeholder="전화번호, 사용자 이름 또는 이메일">
-        <input type="password" class="pwBox" placeholder="비밀번호">
+        <input type="text" class="idBox" placeholder="전화번호, 사용자 이름 또는 이메일"/>
+        <input type="password" class="pwBox" placeholder="비밀번호"/>
         <button id="logins" class="login" onclick="goMain()" disabled>로그인</button>
         <a href="#" class="forget">비밀번호를 잊으셨나요?</a>
     </div>
-
+    <script src="login.js"></script>
 </body>
 </html>
 
+<!-- input tag 감싸는 태그는 form 태그 이용
+ -->
