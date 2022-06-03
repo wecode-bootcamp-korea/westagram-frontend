@@ -19,7 +19,7 @@ like();
 // 댓글 기능 구현
 let commentInput = document.getElementsByClassName("main_comment_box")[0];
 let submitBtn = document.getElementsByClassName("main_comment_btn")[0];
-
+// 댓글 기능 구현(함수)
 const submit = () => {
   const commentBox = document.getElementsByClassName("exp_contents")[0];
   const comments = document.createElement("div");
@@ -41,7 +41,7 @@ const submit = () => {
 
   commentBox.appendChild(comments);
 
-  // 좋아요 기능 구현
+  // 댓글 좋아요 기능 구현
   mainIcon.addEventListener("click", () => {
     if (mainIcon.className === "fa-regular fa-heart like") {
       mainIcon.className = "fa-solid fa-heart like";
@@ -81,9 +81,7 @@ function buttonColor() {
   let commentBtn = document.querySelector(".main_comment_btn");
   if (commentBx.value.length === 0) {
     commentBtn.style.color = "#bddbf9";
-    commentBtn.disabled = true;
   } else {
     commentBtn.style.color = "#0989f1";
-    commentBtn.disabled = false;
   }
 }
