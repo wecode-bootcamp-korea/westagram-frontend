@@ -1,5 +1,5 @@
-const id = document.querySelector("#id");
-const password = document.querySelector("#password");
+const id = document.querySelector(".id");
+const password = document.querySelector(".password");
 const btn = document.querySelector(".btn");
 const inputBox = document.querySelector(".input_box");
 
@@ -12,6 +12,7 @@ inputBox.addEventListener("keyup", () => {
     btn.style.backgroundColor = "#C4E0FC";
   }
 });
+
 // const inputEl = document.querySelector(".inputEl");
 // inputEl.addEventListener("keyup",(e)=>{
 //     console.log(e);

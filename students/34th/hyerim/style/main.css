@@ -53,9 +53,8 @@
 /*------------------------nav----------------------*/
 section {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   width: 1000px;
-  height: 900px;
   margin: 0 auto;
   background: #fafafa;
 }
@@ -64,14 +63,14 @@ section {
   display: flex;
   justify-content: center;
   width: 550px;
-  height: 800px;
+  height: auto;
   margin-left: 5%;
 }
 
 .feed_in {
   align-self: flex-end;
   width: 550px;
-  height: 750px;
+  height: auto;
   border: 1px solid #e6e6e6;
   background-color: #fff;
 }
@@ -101,12 +100,12 @@ section {
 }
 
 .feed_img {
-  height: 500px;
+  height: 600px;
 }
 
 .feed_img img {
   width: 550px;
-  height: 500px;
+  height: 600px;
 }
 
 .feed_icon {
@@ -128,21 +127,13 @@ section {
   transform: rotateY(180deg);
 }
 
-.feed_icon .bookmark {
-  font-weight: lighter;
-}
-
 .feed_like {
-  height: 100px;
   padding: 0 12px;
 }
 
 .feed_like .name {
+  margin-right: 10px;
   font-weight: bold;
-}
-
-.feed_like > div {
-  width: 525px;
 }
 
 .like_who {
@@ -159,34 +150,34 @@ section {
   border: 1px solid #e6e6e6;
 }
 
-/* .like_comment{
-    display: flex;
-    justify-content: space-between;
+.comment_addBoxtitle {
+  display: flex;
+  justify-content: space-between;
 }
 
-.like_heart{
-    color: #ccc;
+.comment_add .name {
+  margin-right: 12px;
+  font-weight: bold;
 }
 
-.btn_heart{
-    border: none;
-    background: none;
-} */
+.comment_add .like_heart {
+  color: #ccc;
+  padding-right: 20px;
+}
 
 .feed_time {
   margin-top: 10px;
   color: #ccc;
+  font-size: 14px;
 }
 
 .feed_comment {
-  display: flex;
-  justify-content: space-between;
-  height: 50px;
+  position: relative;
+  padding: 10px;
   border-top: 1px solid #e6e6e6;
-  padding: 12px;
 }
 
-.feed_comment .comment {
+.feed_comment .comment_in {
   width: 90%;
   border: none;
   outline: none;
@@ -194,13 +185,16 @@ section {
 
 .feed_comment .comment::placeholder {
   color: #ccc;
-  font-size: 15px;
+  font-size: 13px;
 }
 
 .feed_comment .btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
   color: lightskyblue;
-  border: none;
   background: none;
+  border: none;
   font-size: 15px;
 }
 /*------------------------feed----------------------*/
