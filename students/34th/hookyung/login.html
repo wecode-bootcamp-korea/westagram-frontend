@@ -1,37 +1,49 @@
 <!DOCTYPE html>
 <html lang="ko-8">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Westargram</title>
-    <link rel="stylesheet" type="text/css" href="./style/login.css">
-    <link rel="stylesheet" type="text/css" href="./style/commos.css"/>
-    <script src="https://kit.fontawesome.com/4ecc981717.js" crossorigin="anonymous"></script>
-</head>
-<body>
-    <div class="login-wrapper wrapper">
-        
-            <section class="login-box">
-                
-                <h1 class="login-box__logo">Westargram</h1>
-                <div class="login-form">
-                    <input class="loginID" type="text" placeholder="전화번호, 사용자 이름 또는 이메일">
-                    <input class="loginPW" type="password" placeholder="비밀번호">
-                    <button class="loginButton" disabled  onclick="pageMove()" >로그인</button>
-                    <div class="devideLine">
-                        <div class="devideLine__line"></div>
-                        <span class="devideLine__text">또는</span>
-                        <div class="devideLine__line"></div>
-                    </div>
-                    <div class="facebookLogin">
-                        <i class="fa-brands fa-facebook-square"></i> <span class="facebookLoginMove">Facebook으로 로그인</span>
-                    </div>
-                    <a class="forgot_password" src="www.">비밀번호를 잊으셨나요?</a>
-                </div>
-            </section>
-            
-        
-<script src="./js/login.js"></script>
-</body>
+    <link rel="stylesheet" type="text/css" href="./style/login.css" />
+    <link rel="stylesheet" type="text/css" href="./style/commos.css" />
+    <script
+      src="https://kit.fontawesome.com/4ecc981717.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <main class="login-wrapper wrapper">
+      <div class="login-box">
+        <h1 class="login-box__logo">Westargram</h1>
+        <form class="login-form">
+          <input
+            class="loginID"
+            type="text"
+            placeholder="전화번호, 사용자 이름 또는 이메일"
+          />
+          <input class="loginPW" type="password" placeholder="비밀번호" />
+          <button
+            class="loginButton"
+            type="button"
+            disabled
+            onclick="pageMove()"
+          >
+            로그인
+          </button>
+          <div class="devideLine">
+            <div class="devideLine__line"></div>
+            <span class="devideLine__text">또는</span>
+            <div class="devideLine__line"></div>
+          </div>
+          <div class="facebookLogin">
+            <i class="fa-brands fa-facebook-square"></i>
+            <span class="facebookLoginMove">Facebook으로 로그인</span>
+          </div>
+          <a class="forgot_password" src="www.">비밀번호를 잊으셨나요?</a>
+        </form>
+      </div>
+    </main>
+    <script src="./js/login.js" type="text/javascript" defer></script>
+  </body>
 </html>

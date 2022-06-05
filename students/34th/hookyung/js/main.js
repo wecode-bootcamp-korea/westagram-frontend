@@ -45,10 +45,16 @@ const AddNewComment = () => {
   newCommentLike.innerHTML = commentLike;
   newCommentLike.className = "commentLike";
 
+  // 새로운 삭제버튼
+  const deleteButton = document.createElement("span");
+  deleteButton.innerHTML = "x";
+  deleteButton.className = "commentDelete";
+
   NewcommentView.append(newCommentId);
   NewcommentView.append(newCommentContents);
   NewcommentView.append(newCommentLike);
-
+  NewcommentView.append(deleteButton);
+  makeDeleteEvent(NewcommentView);
   CommentInputReset(commentContentsValue);
 };
 // 댓글 input 내용 삭제 **********  인풋 창 value 갯수
@@ -59,3 +65,15 @@ const CommentInputReset = (commentContentsValue) => {
     return (commentContents.value = null);
   }
 };
+
+function makeDeleteEvent(NewcommentView) {
+  const deleteBtn = NewcommentView.querySelector(".commentDelete");
+  deleteBtn.addEventListener("click", () => {
+    deleteComment(deleteBtn, NewcommentView);
+  });
+}
+
+function deleteComment(deleteBtn, NewcommentView) {
+  deleteBtn.removeEventListener("click", deleteComment);
+  NewcommentView.remove();
+}
