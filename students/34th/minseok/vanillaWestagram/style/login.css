@@ -1,0 +1,99 @@
+html {
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+.boundaryLine {
+  min-width: 50rem;
+  min-height: 50rem;
+  width: 50%;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 5rem 8rem 2rem 8rem;
+  border: .2rem solid #E3E3E3;
+  border-radius: .3rem;
+}
+
+.loginArea {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 3rem;
+  text-align: center;
+}
+
+.loginArea_loginTitle {
+  font-size: 8rem;
+  font-family: 'Lobster', cursive;
+}
+
+.loginArea_userInterface {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginArea_userInterface input {
+  width: 100%;
+  padding: 1.8rem;
+  border: #E3E3E3 solid;
+  border-radius: .3rem;
+  font-size: 2rem;
+}
+
+.loginArea_userInterface_userName {
+  margin-bottom: 1rem;
+}
+
+.loginArea_userInterface_userPassword {
+  margin-bottom: 2rem;
+}
+
+.loginArea_userInterface_loginButton {
+  width: 100%;
+  padding: 1.5rem;
+  border: none;
+  border-radius: 1rem;
+  color: white;
+  background-color: #0084FB;
+  font-size: 2rem;
+}
+
+.loginArea_userInterface_loginButton:disabled {
+  opacity: .5;
+}
+
+.loginArea_userInterface_loginButton:enabled {
+  cursor: pointer;
+}
+
+.loginArea_passwordGuide {
+  text-decoration: none;
+  font-size: 1.8rem;
+}
+
+.loginArea_passwordGuide:link {
+  color: #004378;
+}
+
+.loginArea_passwordGuide:visited {
+  color: #004378;
+}
+
+@media screen and (max-width: 1200px) {
+  .loginArea_loginTitle {
+    font-size: 6rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .loginArea_loginTitle {
+    font-size: 6rem;
+  }
+}
