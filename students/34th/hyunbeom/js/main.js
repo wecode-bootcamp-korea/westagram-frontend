@@ -4,10 +4,12 @@ const heartBtn = likeBtn.querySelectorAll("i")[1];
 const likeDelete = likeBtn.querySelectorAll("i")[0];
 const bigHeartIcon = document.querySelector(".big-heart");
 
+// 피드 좋아요
 bigHeartIcon.addEventListener("click", (e) => {
   e.target.classList.toggle("fa-solid");
 });
 
+// 댓글 작성 / 댓글 좋아요 / 댓글 삭제
 function handleChatSubmit(event) {
   event.preventDefault();
   const chatScreen = document.querySelector(".feeds-like__chat-screen");
@@ -30,6 +32,7 @@ function handleChatSubmit(event) {
 
 chatForm.addEventListener("submit", handleChatSubmit);
 
+// 댓글 좋아요
 function heartLike(event) {
   let btn = event.target;
   btn.classList.toggle("fa-solid");
@@ -37,6 +40,7 @@ function heartLike(event) {
 
 heartBtn.addEventListener("click", heartLike);
 
+// 댓글 삭제
 function deleteChat(event) {
   let deleteBtn = event.target.parentElement.parentElement.parentElement;
   deleteBtn.remove();
