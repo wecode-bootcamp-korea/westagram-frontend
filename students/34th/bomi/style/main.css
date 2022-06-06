@@ -55,13 +55,56 @@ nav {
 
 }
 
+.searchBox {
+    width: 375px;
+    height: 450px;
+    z-index: 15;
+    position: absolute;
+    left: 520px;
+    top: 60px;
+    overflow: scroll;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    background-color: white;
+    border-radius: 5px;
+    display: none;
+}
+
+.searchList {
+    padding-left: 15px;
+}
+
+.searchImg {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    cursor: pointer;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    vertical-align: middle;
+    margin-top: 13px;
+}
+
+.searchNickname {
+    font-weight: normal;
+    color: #828282;
+}
+
+.searchContainer {
+    display: inline;
+    margin-left: 10px;
+    width: 280px;
+    height: 18px;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+
+
 .story {
     padding-right: 10px;
     padding-left: 13px;
     padding-top: 10px;
-   
-
-
 }
 
 .storyId {
@@ -71,7 +114,6 @@ nav {
     cursor: pointer;
 
 }
-
 
 
 .div_feeds {
@@ -96,6 +138,7 @@ nav {
     width: 470px;
     position: absolute;
     top: 0px;
+    padding-top: 50px;
 }
 
 .circle {
@@ -104,7 +147,6 @@ nav {
     border-radius: 50%;
     cursor: pointer;
 }
-
 
 .profilePic {
     width: 32px;

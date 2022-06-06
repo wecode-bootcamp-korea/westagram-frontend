@@ -21,11 +21,3 @@ Array.from(bars).map(bar => bar.addEventListener("keyup", () => {
   }
 }))
 
-// instead of keycode 
-if (window.event.code === "Enter") {
-  success();
-}
-
-const success =() => {
-  location.href = "http://localhost:8080/students/34th/bomi/main.html"
-}

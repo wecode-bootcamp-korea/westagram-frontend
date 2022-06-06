@@ -4,6 +4,41 @@ const button = document.getElementById('publish');
 const pop = document.getElementsByClassName('popup')[0];
 const deletepop = document.getElementById('deleteComment');
 const heart = document.getElementById('heartImg');
+const searchBar = document.getElementById('searchBar');
+const searchBox = document.getElementsByClassName('searchBox')[0];
+const searchList = document.getElementsByClassName('searchList')[0]; 
+
+// 계정 데이터 배열
+const userArray = [
+    {id: "ncit_kimjw",
+    nickname: "jungwoo",
+    image: 'img/rec1.png'},
+
+    {id: "ncit_juoohyung",
+    nickname: "juhyun",
+    image: 'img/rec1.png'},
+    
+    {id: "bommikim",
+    nickname: "bomi",
+    image: 'img/rec2.png'},
+
+    {id: "bommively",
+    nickname: "wendy",
+    image: 'img/rec2.png'},
+    
+    {id: "fullsin_ncit",
+    nickname: "Haechan",
+    image: 'img/rec3.png'},
+
+    {id: "_jeongjaehyun",
+    nickname: "Jay",
+    image: 'img/rec4.png'},
+    
+    {id: "jeonghyun_lee",
+    nickname: "jeonghyun",
+    image: 'img/rec5.png'}
+    ]   
+
 
 button.disabled = true;
 
@@ -25,7 +60,10 @@ const createComment = () => {
     like.setAttribute("style", "height: 15px; width: 15px");
     like.style.float = 'right';
     // creating element and append it
-    element.innerHTML = userId + "  " + comment;
+    
+    element.innerHTML = "<span>userID  </span>" + comment;
+    //element.innerHTML = newComment;
+    //element.innerHTML = userId + "  " + comment;
     whereToAdd.appendChild(element);
     element.append(like);
 }
@@ -41,6 +79,45 @@ const publishActive = () => {
         button.disabled = true;
     }
 }
+
+// return if in the searchId
+const matchSearch = (idArray)  => {
+    const searchID = searchBar.value;
+    return idArray.indexOf(searchID) != -1;
+}
+
+const showFilteredId = (account) => {
+    searchBox.style.display = 'block';
+    const filteredUser = document.createElement('li');
+    filteredUser.style.listStyle = 'none';
+
+    filteredUser.innerHTML = `<img class = "searchImg" src=${account.image} alt=${account.id} 사진 />
+    <div class="searchContainer">
+      <span>${account.id}</span>
+      <span class="searchNickname">${account.nickname}</span>
+    </div>`;
+
+    searchList.appendChild(filteredUser);
+}
+
+
+searchBar.addEventListener("focusout", () => {
+    searchBox.style.display = "none";
+  });
+
+
+searchBar.addEventListener('keyup', function() {
+    searchList.innerHTML = '';
+    searchBox.style.display = "none";
+    if(searchBar.value) {
+        const filteredId = userArray.filter( x => matchSearch(x.id)) 
+        if (filteredId) {
+            filteredId.forEach(function(e) {
+                showFilteredId(e);
+            })
+        }
+    }
+})
 
 textbox.addEventListener('keypress', function (e) {
     if (e.key === 'Enter') {
