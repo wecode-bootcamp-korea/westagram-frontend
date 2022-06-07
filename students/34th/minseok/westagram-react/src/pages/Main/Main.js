@@ -1,3 +1,4 @@
+import '../../styles/reset.css';
 import './Main.css';
 
 function Main() {

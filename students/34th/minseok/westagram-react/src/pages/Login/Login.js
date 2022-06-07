@@ -1,3 +1,4 @@
+import '../../styles/reset.css';
 import './Login.css';
 
 function Login() {
