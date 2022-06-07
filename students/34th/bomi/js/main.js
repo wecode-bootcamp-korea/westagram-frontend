@@ -86,6 +86,7 @@ const matchSearch = (idArray)  => {
     return idArray.indexOf(searchID) != -1;
 }
 
+// show filtered ID in the right format and by appending it to searchList (wheretoinsert)
 const showFilteredId = (account) => {
     searchBox.style.display = 'block';
     const filteredUser = document.createElement('li');
@@ -100,12 +101,7 @@ const showFilteredId = (account) => {
     searchList.appendChild(filteredUser);
 }
 
-
-searchBar.addEventListener("focusout", () => {
-    searchBox.style.display = "none";
-  });
-
-
+// when searchbar has keyup, use array.filter and forEach to show only filtered ones
 searchBar.addEventListener('keyup', function() {
     searchList.innerHTML = '';
     searchBox.style.display = "none";
@@ -118,6 +114,12 @@ searchBar.addEventListener('keyup', function() {
         }
     }
 })
+
+
+searchBar.addEventListener("focusout", () => {
+    searchBox.style.display = "none";
+  });
+
 
 textbox.addEventListener('keypress', function (e) {
     if (e.key === 'Enter') {

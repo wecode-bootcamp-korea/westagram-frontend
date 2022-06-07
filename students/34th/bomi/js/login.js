@@ -14,6 +14,7 @@ Array.from(bars).map(bar => bar.addEventListener("keyup", () => {
     button.style.backgroundColor = "#0095F6"
     button.style.cursor = "pointer";
     button.disabled = false;
+    button.addEventListener('click', success);
   } else {
     button.style.backgroundColor = "#C0DFFD"
     button.disabled = true;
@@ -21,3 +22,6 @@ Array.from(bars).map(bar => bar.addEventListener("keyup", () => {
   }
 }))
 
+const success = () => {
+  location.href="http://localhost:8080/main.html";
+}
