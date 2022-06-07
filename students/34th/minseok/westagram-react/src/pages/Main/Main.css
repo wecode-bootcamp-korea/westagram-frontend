@@ -35,7 +35,6 @@ html {
   background-color: #ffffff;
 }
 
-/* header nav(logo) */
 .logo {
   display: flex;
   justify-content: center;
@@ -75,7 +74,6 @@ html {
   opacity: 0.5;
 }
 
-/* header nav(icon) */
 .icon {
   display: flex;
   justify-content: space-evenly;
@@ -96,7 +94,6 @@ html {
   overflow: scroll;
 }
 
-/* main */
 .main {
   display: grid;
   grid:
@@ -111,7 +108,7 @@ html {
   grid-area: article;
 }
 
-.posting_profile {
+.writerProfile {
   display: flex;
   align-items: center;
   padding: 1rem;
@@ -119,26 +116,26 @@ html {
   background-color: #ffffff;
 }
 
-.posting_profile_image {
+.writerProfileImage {
   width: 3rem;
   height: 3rem;
   border: none;
   border-radius: 50%;
 }
 
-.posting_profile p {
+.writerProfile p {
   font-weight: 700;
   font-size: 1.6rem;
   margin-left: 1rem;
 }
 
-.posting_profile_details {
+.writerProfileDetails {
   width: 3rem;
   height: 3rem;
   margin-left: auto;
 }
 
-.posting_image {
+.postingImage {
   width: 100%;
   height: 60%;
   border-right: 0.1rem solid #e9e9e9;
@@ -147,12 +144,12 @@ html {
   background-color: #ffffff;
 }
 
-.posting_image img {
+.postingImage img {
   width: 100%;
   height: 100%;
 }
 
-.posting_icon {
+.postingIcon {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -163,30 +160,30 @@ html {
   background-color: #ffffff;
 }
 
-.posting_icon_heart {
+.postingIconHeart {
   width: 3rem;
   height: 3rem;
 }
 
-.posting_icon_sayBallon {
-  width: 3rem;
-  height: 3rem;
-  margin-left: 1rem;
-}
-
-.posting_icon_share {
+.postingIconSayballon {
   width: 3rem;
   height: 3rem;
   margin-left: 1rem;
 }
 
-.posting_icon_bookMark {
+.postingIconShare {
+  width: 3rem;
+  height: 3rem;
+  margin-left: 1rem;
+}
+
+.postingIconBookmark {
   width: 3rem;
   height: 3rem;
   margin-left: auto;
 }
 
-.posting_othersComment {
+.postingComment {
   padding: 1rem;
   border-right: 0.1rem solid #e9e9e9;
   border-left: 0.1rem solid #e9e9e9;
@@ -194,15 +191,15 @@ html {
   font-size: 1.3rem;
 }
 
-.posting_othersComment_representative {
+.RepresentativeUser {
   margin-bottom: 1rem;
 }
 
-.posting_othersComment_comment {
+.userComment {
   margin-top: 0.5rem;
 }
 
-.posting_addComment {
+.addComment {
   display: flex;
   align-items: center;
   padding: 1rem;
@@ -213,50 +210,49 @@ html {
   background-color: #ffffff;
 }
 
-.posting_addComment_text {
+.addCommentText {
   width: 50rem;
   height: 3rem;
   border: none;
 }
 
-.posting_addComment_button {
+.addCommentButton {
   width: 5rem;
   height: 3rem;
   color: #53a5f2;
   font-size: 1.6rem;
 }
 
-/* sidebar */
-.sideBar {
+.sidebar {
   grid-area: aside;
 }
 
-.sideBar_host {
+.sidebarHost {
   display: flex;
   align-items: center;
   margin-bottom: 1rem;
 }
 
-.sideBar_host_image {
+.sidebarHostImage {
   width: 5rem;
   height: 5rem;
   border: none;
   border-radius: 50%;
 }
 
-.sideBar_host_id {
+.sidebarHostId {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-left: 1rem;
 }
 
-.sideBar_host_id_name {
+.sidebarHostIdName {
   font-weight: 700;
   font-size: 1.5rem;
 }
 
-.sideBar_host_id_description {
+.sidebarHostIdDescription {
   margin-top: 0.5rem;
   opacity: 0.3;
   font-weight: 700;
@@ -264,46 +260,46 @@ html {
 }
 
 /* user history */
-.sideBar_history {
+.sidebarHistory {
   margin-bottom: 1rem;
   padding: 1rem;
   border: 0.1rem solid #e9e9e9;
   background-color: #ffffff;
 }
 
-.sideBar_history_title {
+.sidebarHistoryTitle {
   display: flex;
   margin-bottom: 1rem;
 }
 
-.sideBar_history_title h1 {
+.sidebarHistoryTitle h1 {
   opacity: 0.3;
   font-size: 1.6rem;
   font-weight: 700;
 }
 
-.sideBar_history_title .commonButton {
+.sidebarHistoryTitle .commonButton {
   margin-left: auto;
   font-size: 1.3rem;
   font-weight: 700;
 }
 
-.sideBar_history_user {
+.sidebarHistoryUser {
   display: flex;
   flex-direction: column;
 }
 
-.sideBar_history_user li:last-child {
+.sidebarHistoryUser li:last-child {
   margin-bottom: 0;
 }
 
-.sideBar_history_user_list {
+.sidebarHistoryUserList {
   display: flex;
   align-items: center;
   margin-bottom: 1rem;
 }
 
-.sideBar_history_user_list_image {
+.sidebarHistoryUserListImage {
   width: 3rem;
   height: 3rem;
   padding: 0.1rem;
@@ -311,62 +307,62 @@ html {
   border-radius: 50%;
 }
 
-.sideBar_history_user_list_id {
+.sidebarHistoryUserListId {
   margin-left: 1rem;
 }
 
-.sideBar_history_user_list_id_name {
+.sidebarHistoryUserListIdName {
   font-size: 1.3rem;
   font-weight: 700;
 }
 
-.sideBar_history_user_list_id_time {
+.sidebarHistoryUserListIdTime {
   margin-top: 0.5rem;
   opacity: 0.3;
   font-size: 1.3rem;
   font-weight: 700;
 }
 
-.sideBar_recommendation {
+.sidebarFallow {
   margin-bottom: 1rem;
   padding: 1rem;
   border: 0.1rem solid #e9e9e9;
   background-color: #ffffff;
 }
 
-.sideBar_recommendation_title {
+.sidebarFallowTitle {
   display: flex;
   margin-bottom: 1rem;
 }
 
-.sideBar_recommendation_title h1 {
+.sidebarFallowTitle h1 {
   opacity: 0.3;
   font-size: 1.6rem;
   font-weight: 700;
 }
 
-.sideBar_recommendation_title .commonButton {
+.sidebarFallowTitle .commonButton {
   margin-left: auto;
   font-size: 1.3rem;
   font-weight: 700;
 }
 
-.sideBar_recommendation_user {
+.sidebarFallowUser {
   display: flex;
   flex-direction: column;
 }
 
-.sideBar_recommendation_user li:last-child {
+.sidebarFallowUser li:last-child {
   margin-bottom: 0;
 }
 
-.sideBar_recommendation_user_list {
+.sidebarFallowUserList {
   display: flex;
   align-items: center;
   margin-bottom: 1rem;
 }
 
-.sideBar_recommendation_user_list_image {
+.sidebarFallowUserListImage {
   width: 3rem;
   height: 3rem;
   padding: 0.1rem;
@@ -374,23 +370,23 @@ html {
   border-radius: 50%;
 }
 
-.sideBar_recommendation_user_list_id {
+.sidebarFallowUserListId {
   margin-left: 1rem;
 }
 
-.sideBar_recommendation_user_list_id_name {
+.sidebarFallowUserListIdName {
   font-size: 1.3rem;
   font-weight: 700;
 }
 
-.sideBar_recommendation_user_list_id_time {
+.sidebarFallowUserListIdTime {
   margin-top: 0.5rem;
   opacity: 0.3;
   font-size: 1.3rem;
   font-weight: 700;
 }
 
-.sideBar_recommendation_user_list_Fallow {
+.sidebarFallowUserListButton {
   color: #53a5f2;
   font-weight: 700;
   font-size: 1.4rem;
@@ -401,12 +397,12 @@ html {
   grid-area: footer;
 }
 
-.footer_information {
+.footerInformation {
   opacity: 0.3;
   font-weight: 700;
   font-size: 1.3rem;
 }
 
-.footer_makeYear {
+.footerMakeYear {
   margin-top: 1rem;
 }
