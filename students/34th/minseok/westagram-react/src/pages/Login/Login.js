@@ -4,28 +4,24 @@ import './Login.css';
 function Login() {
   return (
     <div className='boundaryLine'>
-      <section className='loginArea'>
-        <h1 className='loginArea_loginTitle'>Westagram</h1>
-        <article className='loginArea_userInterface'>
+      <section className='sectionWrapper'>
+        <h1 className='loginTitle'>Westagram</h1>
+        <article className='userInterface'>
           <input
-            className='loginArea_userInterface_userName'
+            className='userName'
             type='text'
             placeholder='전화번호, 사용자 이름 또는 이메일'
           />
           <input
-            className='loginArea_userInterface_userPassword'
+            className='userPassword'
             type='password'
             placeholder='비밀번호'
           />
-          <button
-            className='loginArea_userInterface_loginButton'
-            submit='#'
-            disabled
-          >
+          <button className='loginButton' submit='#' disabled>
             로그인
           </button>
         </article>
-        <span className='loginArea_passwordGuide'>비밀번호를 잊으셨나요?</span>
+        <span className='passwordGuide'>비밀번호를 잊으셨나요?</span>
       </section>
     </div>
   );
