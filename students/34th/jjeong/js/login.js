@@ -1,6 +1,6 @@
 const idd = document.getElementById("login_id");  //DOM에 접근
 const pwdd = document.getElementById("login_pwd");
-const btnBtn = document.getElementsByClassName("login_btn")[0];
+const btnBtn = document.getElementsByClassName("login_btn")[0];//elements 복수형이라 배열 형태로 되어 있기때문에 [0] 으로 접근해야함
 
 const activeLogin = () => {
     let id = idd.value;

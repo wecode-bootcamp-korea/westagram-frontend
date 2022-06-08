@@ -1,0 +1,413 @@
+*{
+    text-decoration: none;
+    color:inherit;
+}
+.main_wrap {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.container {background-color: #fafafa;}
+
+header {
+    height: 100px;
+    width: 100%;
+    margin-bottom: 80px;
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+    border-bottom: 2px solid #e6e6e6;
+}
+
+header nav {
+width: 1292px;
+margin: 0 auto;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+header nav .logo {
+    display: flex;
+    align-items: center;
+}
+
+header nav .logo a .fab fa-instagram{
+    
+}
+
+header nav .logo .logo_txt .we a{
+    margin-left: 10px;
+    font-size: 25px;
+    font-family: 'Lobster', cursive;
+}
+
+header nav .searchbar {
+    
+}
+
+header nav .searchbar input {
+    width: 290px;
+    height: 40px;
+    margin-right: 6px;
+    /* border:none; */
+    border: 3px solid #e6e6e6;
+    border-radius: 6px;
+    resize: none;
+    outline: none;
+    font-size: 20px;
+}
+
+header nav .searchbar input::placeholder {
+    text-align: center;
+    color: #aeaeae;
+}
+
+header nav .icon {}
+header nav .icon  ul{
+    display: flex;
+}
+
+header nav .icon  ul li {
+    margin-left:35px;
+}
+
+header nav .icon  ul li img {
+    width: 32px;
+    height: 32px;
+}
+
+
+/* ------------- 인스타그램 피드 & 스토리 ------------- */
+
+.main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.main .feeds {
+    width: 822px;
+    margin-right: 35px;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #ffffff;
+}
+
+article {}
+
+article .f_top {
+    height: 83px;
+    padding: 20px 20px 0px 20px;
+}
+
+article .f_top .feed_profile {
+    display: flex;
+}
+
+article .f_top .feed_profile .por_icon {
+    height: 50px;
+    width: 50px;
+    background-image: url(../images/profile2.jpg);
+    background-size: cover;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+article .f_top .feed_profile .por_icon a {}
+article .f_top .feed_profile .por_icon a img {}
+
+article .f_top .feed_profile .por_txt {
+    font-size: 25px;
+    transform: translate(0%,15%);
+}
+/* ------------- 프로필 top ------------- */
+
+article .peed_cont {}
+
+article .peed_cont .peed_img {
+    width: 820px;
+}
+/* ------------- 피드이미지 -------------*/
+article .peed_cont .commu{
+    display: flex;
+}
+
+article .peed_cont .commu .commu_left {
+    height: 55px;
+    width: 780px;
+    font-size: 30px;
+}
+
+article .peed_cont .commu .commu_left a{
+    padding-right: 10px;
+}
+
+article .peed_cont .commu .commu_left a:nth-child(1){
+    padding-left: 15px;
+}
+
+article .peed_cont .commu .commu_left a i {
+    transform: translate(0%,35%);
+}
+
+article .peed_cont .commu .commu_right {
+    font-size: 30px;
+}
+
+article .peed_cont .commu .commu_right a i{
+    transform: translate(0%,35%);
+}
+
+/* ------------- 피드 아래 아이콘 ------------- */
+
+article .peed_cont .peed_like {
+    height: 42px;
+}
+
+article .peed_cont .peed_like .like_info {
+    display: flex;
+}
+
+article .peed_cont .peed_like .like_info span {
+    height: 33px;
+    width: 33px;
+    background-image: url(../images/profile1.jpg);
+    background-size: cover;
+    border: 1px solid rgb(112, 112, 112);
+    border-radius: 50%;
+    margin: 5px 15px 0 15px;
+}
+
+article .peed_cont .peed_like .like_info p {
+    font-size: 18px;
+    transform: translate(0%,-25%);
+}
+
+article .peed_cont .peed_like .like_info p strong {
+    font-weight: bold;
+}
+
+article .peed_cont .peed_contt {
+    height: 88px;
+}
+
+article .peed_cont .peed_contt p {
+    padding-left: 15px;
+}
+
+article .peed_cont .peed_contt p strong {
+    font-weight: bold;
+}
+
+article .peed_cont .peed_contt p span {
+    color: rgb(105, 105, 105);
+    cursor: pointer;
+}
+
+article .peed_cont .comment {
+    height: 60px;
+    border: 1px solid #eee;
+}
+
+article .peed_cont .comment .comm_posting {
+    display: flex;
+    }
+
+article .peed_cont .comment .comm_posting .comment_emotion { 
+    height: 40px;
+    width: 40px;
+    background-image: url(../images/profile2.jpg);
+    background-size: cover;
+    border-radius: 50%;
+    margin: 0 10px 0 20px;
+    transform: translate(0%,25%);
+}
+
+article .peed_cont .comment .comm_posting input {
+    width: 680px;
+    border:none;
+    resize: none;
+    outline: none;
+    font-size: 20px;
+    margin-right: 6px;
+}
+
+article .peed_cont .comment .comm_posting input::placeholder {
+    font-family: 'Nanum Gothic Coding', monospace;
+    transform: translate(0%,40%);
+    
+}
+
+article .peed_cont .comment .comm_posting button {
+    cursor: pointer;
+    border: 0;
+    outline: 0;
+    box-shadow: none;
+    background-color: transparent;
+    color:skyblue;
+    font-size:20px;
+    font-weight: bold;
+    transform: translate(0%,20%);
+}
+
+
+/* ------------- 프로필 cont ------------- */
+/* --------------------------인스타그램 오른쪽--------------------------  */
+.main_right {
+    width: 387px;
+    height: 795px;
+}
+
+.main_right .mine {
+    width: 387px;
+    height: 67px;
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.mine .mine_profile {
+    height: 70px;
+    width: 70px;
+    background-color: rgb(0, 0, 0);
+    background-size: cover;
+    border-radius: 50%;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    margin-right: 15px;
+}
+
+.mine .mine_profile_txt {}
+
+.mine .mine_profile_txt p:nth-child(2) {
+    transform: translate(0%,-65%);
+    color:#a0a0a0;
+}
+
+
+/* --------------------------스토리목록--------------------------  */
+
+.main_right .story {
+    width: 387px;
+    height: 303px;
+    border: 1px solid #e6e6e6;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    padding: 5px 15px 0 15px;
+    background-color: #ffffff;
+}
+
+.main_right .story .story_top {
+    
+    display: flex;
+}
+
+.main_right .story .story_top p:nth-child(1) {
+    color:#a0a0a0;
+}
+
+.main_right .story .story_top p:nth-child(2) {
+    font-weight: bold;
+    margin-left: 235px;
+}
+
+.main_right .story .story_user {
+    width: 350px;
+    height: 250px;
+    padding: 0;
+}
+
+.main_right .story .story_user li{
+    display: flex;
+    background-color: #fff;
+    margin-bottom: 15px;
+}
+
+.main_right .story .story_user .story_update {
+    height: 45px;
+    width: 45px;
+    background-image: url(../images/profile2.jpg);
+    background-size: cover;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+.main_right .story .story_user .story_txt {
+    width: 100px;
+    height: 45px;
+    font-size: 23px;
+    transform: translate(0%,-5%);
+}
+
+.main_right .story .story_user .story_txt .user_name {
+    margin-bottom: 3px;
+}
+
+.main_right .story .story_user .story_txt .user_time {
+    font-size: 20px;
+    color: #a0a0a0;
+}
+
+.main_right .add {
+    width: 387px;
+    height: 264px;
+    padding: 5px 15px 0 15px;
+    border: 1px solid #e6e6e6;
+    border-radius: 6px;
+    background-color: #ffffff;
+}
+
+.main_right .add .add_top {
+    
+    display: flex;
+}
+
+.main_right .add .add_top p:nth-child(1) {
+    color:#a0a0a0;
+}
+
+.main_right .add .add_top p:nth-child(2) {
+    font-weight: bold;
+    margin-left: 145px;
+}
+
+/* ----- */
+.main_right .add .add_user {
+    padding: 0;
+}
+
+.main_right .add .add_user li{
+    display: flex;
+    background-color: #fff;
+    margin-bottom: 15px;
+    
+}
+
+.main_right .add .add_user .add_update {
+    height: 45px;
+    width: 45px;
+    background-image: url(../images/profile2.jpg);
+    background-size: cover;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+.main_right .add .add_user .add_txt {
+    width: 100px;
+    height: 45px;
+    font-size: 23px;
+    transform: translate(0%,-5%);
+}
+
+.main_right .add .add_user .add_txt .add_name {
+    margin-bottom: 3px;
+}
+
+.main_right .add .add_user .add_txt .add_time {
+    font-size: 20px;
+    color: #a0a0a0;
+}
+
+.main_right >p {color: #a0a0a0; line-height: 1.3;}

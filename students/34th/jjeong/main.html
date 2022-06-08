@@ -5,8 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Westagrem main</title>
-    <link rel="stylesheet" href="/css/main.css">
-    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Nanum+Gothic+Coding:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/main.js" defer></script>
     <script src="https://kit.fontawesome.com/684e97b7f2.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -16,11 +23,11 @@
                 <nav>
                     <div class="logo">
                         <div onClick="location.href='#'">
-                            <a><i class="fab fa-instagram"></i></a>
+                            <a><i class="fab fa-instagram fa-2x"></i></a>
                         </div>
-                    <div class="logo_txt">
-                        <h3 class="we"><a>WESTAGRAM</a></h3> 
-                    </div>
+                        <div class="logo_txt">
+                            <h3 class="we"><a>| WESTAGRAM</a></h3> 
+                        </div>
                     </div>
                     <!------------------------- logo --------------------------->
                     <div class="searchbar">
@@ -28,28 +35,147 @@
                     </div>
                     <!-------------------------- search -------------------------->
                     <div class="icon">
-                        
+                        <ul>
+                            <li><a href=""><img src="./images/explore.png" alt=""></a></li>
+                            <li><a href=""><img src="./images/heart.png" alt=""></a></li>
+                            <li><a href=""><img src="./images/profile.png" alt=""></a></li>
+                        </ul>
                     </div>
                     <!-------------------------- icon -------------------------->
                 </nav>
             </header>
+            <!-- -------------인스타그램 피드 & 스토리 ------------- -->
             <div class="main">
                 <div class="feeds">
                     <article>
                         <div class="f_top">
-                            <div class="profile">
-                                <div class="por_icon"></div>
-                                
+                            <div class="feed_profile">
+                                <span class="por_icon">
+                                    <a href="#"></a>
+                                </span>
+                                <span class="por_txt"><a href="">eu'-'uj</a></span>
+                                <span class="por_more"></span>
                             </div>
                         </div>
+                        <!-- --------------------------프로필 top-------------------------- -->
+                        <div class="peed_cont">
+                            <div class="peed_img">
+                                <img src="./images/peed.JPG" alt="피드이미지">
+                            </div>
+                            <!-- --------------------------피드이미지-------------------------- -->
+                            <div class="commu">
+                                <div class="commu_left">
+                                    <a><i class="fas fa-heart"></i></a>
+                                    <a><i class="far fa-comment"></i></a>
+                                    <a><i class="fas fa-external-link-alt"></i></a>
+                                </div>
+                                <div class="commu_right">
+                                    <a><i class="far fa-bookmark"></i></a>
+                                </div>
+                            </div>
+                            <!-- --------------------------피드 아래 아이콘 ---------------------------->
+                            <div class="peed_like">
+                                <div class="like_info">
+                                    <span><a href="#"></a></span>
+                                    <p><a href="#"><strong>hang_ke_mi</strong></a>님 외<a href="#"> <strong>52명</strong>이</a> &nbsp;좋아합니다</p>
+                                </div>
+                            </div>
+                            <div class="peed_contt">
+                                <p><strong>eu'-'uj</strong> &nbsp;골댕이 사랑둥잉💛 너무...&nbsp;<span>더 보기</span></p>
+                                <p> <strong>hang_ke_mi</strong> &nbsp;너무 예쁘다💚</p>
+                            </div>
+                            <div class="comment">
+                                <form class="comm_posting" method="POST">
+                                    <div class="comment_emotion"></div>
+                                    <input type="text" name="write" placeholder="댓글달기..." >
+                                    <button class="posting">게시</button>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- --------------------------프로필 cont-------------------------- -->
                     </article>
                 </div>
-                <div class="main-right"></div>
-                <div class="peedimg"></div>
-                <div class="commu">
-                    <div class="commu_left"></div>
-                    <div class="commu_right"></div>
+                <!-- --------------------------인스타그램 오른쪽--------------------------  -->
+                <div class="main_right">
+                    <div class="mine">
+                        <div class="mine_profile">>wecode</div>
+                        <div class="mine_profile_txt">
+                            <p>wecode_bootcamp</p>
+                            <p>WeCode | 위코드</p>
+                        </div>
+                    </div>
+                    <!-- --------------------------내 프로필 ---------------------------->
+                    <div class="story">
+                        <div class="story_top">
+                            <p>스토리</p>
+                            <p>모두 보기</p>
+                        </div>
+                        <ul class="story_user">
+                            <li>
+                                <div class="story_update"></div>
+                                <div class="story_txt">
+                                    <div class="user_name">user1</div>
+                                    <div class="user_time">16분전</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="story_update"></div>
+                                <div class="story_txt">
+                                    <div class="user_name">user2</div>
+                                    <div class="user_time">4시간전</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="story_update"></div>
+                                <div class="story_txt">
+                                    <div class="user_name">user3</div>
+                                    <div class="user_time">13시간전</div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="story_update"></div>
+                                <div class="story_txt">
+                                    <div class="user_name">user4</div>
+                                    <div class="user_time">20시간전</div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- --------------------------스토리목록-------------------------- -->
+                    <div class="add">
+                        <div class="add_top">
+                            <p>회원님을 위한 추천</p>
+                            <p>모두 보기</p>
+                        </div>
+                            <ul class="add_user">
+                                <li>
+                                    <div class="add_update"></div>
+                                    <div class="add_txt">
+                                        <div class="add_name">user1</div>
+                                        <div class="add_time">16분전</div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="add_update"></div>
+                                    <div class="add_txt">
+                                        <div class="add_name">user2</div>
+                                        <div class="add_time">4시간전</div>
+                                    </div>
+
+                                </li>
+                                <li>
+                                    <div class="add_update"></div>
+                                    <div class="add_txt">
+                                        <div class="add_name">user3</div>
+                                        <div class="add_time">13시간전</div>
+                                    </div>
+                                </li>
+                            </ul>
+                    </div>
+                    <!-- --------------------------추천친구-------------------------- -->
+                    <p>Westagram 정보 ㆍ지원ㆍ홍보 센터ㆍAPI<br>채용 정보ㆍ개인정보처리방침ㆍ약관ㆍ<br>디렉터리ㆍ프로필ㆍ해시태그ㆍ언어<br><br>ⓒ2022 WESTAGRAM</p>
                 </div>
+                <!-- --------------------------오른쪽 끝-------------------------- -->
             </div>
         </div>
     </div>
