@@ -1,5 +1,5 @@
-import '../../styles/reset.css';
-import './Login.css';
+import '../../styles/reset.scss';
+import './Login.scss';
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 

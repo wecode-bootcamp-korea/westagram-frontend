@@ -1,0 +1,94 @@
+html {
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.boundaryLine {
+  min-width: 50rem;
+  min-height: 50rem;
+  width: 50%;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 5rem 8rem 2rem 8rem;
+  border: 0.2rem solid #e3e3e3;
+  border-radius: 0.3rem;
+
+  .sectionWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 3rem;
+    text-align: center;
+
+    .loginTitle {
+      font-family: 'Lobster', cursive;
+      text-align: center;
+    }
+    .userInterface {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      input {
+        width: 100%;
+        padding: 1.8rem;
+        border: #e3e3e3 solid;
+        border-radius: 0.3rem;
+        font-size: 2rem;
+      }
+
+      .userName {
+        margin-bottom: 1rem;
+      }
+
+      .userPassword {
+        margin-bottom: 2rem;
+      }
+
+      .loginButton {
+        width: 100%;
+        padding: 1.5rem;
+        border: none;
+        border-radius: 1rem;
+        color: white;
+        background-color: #0084fb;
+        font-size: 2rem;
+      }
+
+      .loginButton:disabled {
+        opacity: 0.5;
+      }
+
+      .loginButton:enabled {
+        cursor: pointer;
+      }
+    }
+
+    .passwordGuide {
+      text-decoration: none;
+      font-size: 1.8rem;
+    }
+  }
+}
+@media screen and (max-width: 2000px) {
+  .loginTitle {
+    font-size: 8rem;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .loginTitle {
+    font-size: 7rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .loginTitle {
+    font-size: 5rem;
+  }
+}
