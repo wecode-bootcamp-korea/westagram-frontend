@@ -29,7 +29,11 @@ function Main() {
         <main className='main'>
           <article className='posting'>
             <div className='writerProfile'>
-              <img className='writerProfileImage' src='/' alt='프로필이미지' />
+              <img
+                className='writerProfileImage'
+                src='/images/penguin-img.png'
+                alt='프로필이미지'
+              />
               <p>cannon_mj</p>
               <img
                 className='writerProfileDetails'
