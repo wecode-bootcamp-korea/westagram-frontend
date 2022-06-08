@@ -1,0 +1,392 @@
+html {
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* 버튼 공통 스타일링 */
+.commonButton {
+  margin-left: auto;
+  border: none;
+  background-color: #ffffff;
+  outline: 0;
+  cursor: pointer;
+}
+
+.twoDividedArea {
+  display: grid;
+  grid:
+    'top' 1fr
+    'bottom' 9fr;
+  /* header */
+  .topArea {
+    grid-area: top;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 10vh;
+    padding: 1rem 0;
+    background-color: #ffffff;
+
+    .logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 20%;
+
+      img {
+        width: 3rem;
+        height: 3rem;
+      }
+
+      span {
+        display: flex;
+        justify-content: center;
+        width: 10rem;
+        margin-left: 1rem;
+        border-left: 0.2rem solid;
+        text-decoration: none;
+        font-size: 2rem;
+        font-family: 'Lobster', cursive;
+      }
+    }
+
+    [type='search'] {
+      width: 20%;
+      height: 70%;
+      text-align: center;
+      opacity: 0.5;
+    }
+
+    .icon {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 20%;
+
+      img {
+        width: 3rem;
+        height: 3rem;
+      }
+    }
+  }
+  .bottomArea {
+    grid-area: bottom;
+    height: 90vh;
+    padding-top: 3rem;
+    background-color: #f0f8ff;
+    overflow: scroll;
+
+    .main {
+      display: grid;
+      grid:
+        '. article aside .' 2fr
+        '. article footer .' 1fr
+        / 1fr 5fr 3fr 1fr;
+      gap: 3rem;
+
+      /* main article */
+      .posting {
+        grid-area: article;
+
+        .writerProfile {
+          display: flex;
+          align-items: center;
+          padding: 1rem;
+          border: 0.1rem solid #e9e9e9;
+          background-color: #ffffff;
+
+          .writerProfileImage {
+            width: 3rem;
+            height: 3rem;
+            border: none;
+            border-radius: 50%;
+          }
+
+          p {
+            font-weight: 700;
+            font-size: 1.6rem;
+            margin-left: 1rem;
+          }
+
+          .writerProfileDetails {
+            width: 3rem;
+            height: 3rem;
+            margin-left: auto;
+          }
+        }
+        .postingImage {
+          width: 100%;
+          height: 60%;
+          border-right: 0.1rem solid #e9e9e9;
+          border-bottom: 0.1rem solid #e9e9e9;
+          border-left: 0.1rem solid #e9e9e9;
+          background-color: #ffffff;
+
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .postingIcon {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 1rem;
+          border-right: 0.1rem solid #e9e9e9;
+          border-bottom: 0.1rem solid #e9e9e9;
+          border-left: 0.1rem solid #e9e9e9;
+          background-color: #ffffff;
+
+          .postingIconHeart {
+            width: 3rem;
+            height: 3rem;
+          }
+
+          .postingIconSayballon {
+            width: 3rem;
+            height: 3rem;
+            margin-left: 1rem;
+          }
+
+          .postingIconShare {
+            width: 3rem;
+            height: 3rem;
+            margin-left: 1rem;
+          }
+
+          .postingIconBookmark {
+            width: 3rem;
+            height: 3rem;
+            margin-left: auto;
+          }
+        }
+        .postingComment {
+          padding: 1rem;
+          border-right: 0.1rem solid #e9e9e9;
+          border-left: 0.1rem solid #e9e9e9;
+          background-color: #ffffff;
+          font-size: 1.3rem;
+
+          .RepresentativeUser {
+            margin-bottom: 1rem;
+          }
+
+          .userComment {
+            margin-top: 0.5rem;
+          }
+        }
+
+        .addComment {
+          display: flex;
+          align-items: center;
+          padding: 1rem;
+          border: 0.1rem solid #e9e9e9;
+          border-right: 0.1rem solid #e9e9e9;
+          border-bottom: 0.1rem solid #e9e9e9;
+          border-left: 0.1rem solid #e9e9e9;
+          background-color: #ffffff;
+
+          .addCommentText {
+            width: 50rem;
+            height: 3rem;
+            border: none;
+          }
+
+          .addCommentButton {
+            width: 5rem;
+            height: 3rem;
+            color: #53a5f2;
+            font-size: 1.6rem;
+          }
+        }
+      }
+
+      .sidebar {
+        grid-area: aside;
+
+        .sidebarHost {
+          display: flex;
+          align-items: center;
+          margin-bottom: 1rem;
+
+          .sidebarHostImage {
+            width: 5rem;
+            height: 5rem;
+            border: none;
+            border-radius: 50%;
+          }
+
+          .sidebarHostId {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-left: 1rem;
+
+            .sidebarHostIdName {
+              font-weight: 700;
+              font-size: 1.5rem;
+            }
+
+            .sidebarHostIdDescription {
+              margin-top: 0.5rem;
+              opacity: 0.3;
+              font-weight: 700;
+              font-size: 1.6rem;
+            }
+          }
+        }
+        /* user history */
+        .sidebarHistory {
+          margin-bottom: 1rem;
+          padding: 1rem;
+          border: 0.1rem solid #e9e9e9;
+          background-color: #ffffff;
+
+          .sidebarHistoryTitle {
+            display: flex;
+            margin-bottom: 1rem;
+
+            h1 {
+              opacity: 0.3;
+              font-size: 1.6rem;
+              font-weight: 700;
+            }
+
+            button {
+              margin-left: auto;
+              font-size: 1.3rem;
+              font-weight: 700;
+            }
+          }
+
+          .sidebarHistoryUser {
+            display: flex;
+            flex-direction: column;
+
+            li:last-child {
+              margin-bottom: 0;
+            }
+
+            .sidebarHistoryUserList {
+              display: flex;
+              align-items: center;
+              margin-bottom: 1rem;
+
+              .sidebarHistoryUserListImage {
+                width: 3rem;
+                height: 3rem;
+                padding: 0.1rem;
+                border: 0.2rem solid #ff0000;
+                border-radius: 50%;
+              }
+              .sidebarHistoryUserListId {
+                margin-left: 1rem;
+
+                .sidebarHistoryUserListIdName {
+                  font-size: 1.3rem;
+                  font-weight: 700;
+                }
+
+                .sidebarHistoryUserListIdTime {
+                  margin-top: 0.5rem;
+                  opacity: 0.3;
+                  font-size: 1.3rem;
+                  font-weight: 700;
+                }
+              }
+            }
+          }
+        }
+
+        .sidebarFallow {
+          margin-bottom: 1rem;
+          padding: 1rem;
+          border: 0.1rem solid #e9e9e9;
+          background-color: #ffffff;
+
+          .sidebarFallowTitle {
+            display: flex;
+            margin-bottom: 1rem;
+
+            h1 {
+              opacity: 0.3;
+              font-size: 1.6rem;
+              font-weight: 700;
+            }
+
+            button {
+              margin-left: auto;
+              font-size: 1.3rem;
+              font-weight: 700;
+            }
+          }
+
+          .sidebarFallowUser {
+            display: flex;
+            flex-direction: column;
+
+            li:last-child {
+              margin-bottom: 0;
+            }
+
+            .sidebarFallowUserList {
+              display: flex;
+              align-items: center;
+              margin-bottom: 1rem;
+
+              .sidebarFallowUserListImage {
+                width: 3rem;
+                height: 3rem;
+                padding: 0.1rem;
+                border: none;
+                border-radius: 50%;
+              }
+
+              .sidebarFallowUserListId {
+                margin-left: 1rem;
+
+                .sidebarFallowUserListIdName {
+                  font-size: 1.3rem;
+                  font-weight: 700;
+                }
+
+                .sidebarFallowUserListIdTime {
+                  margin-top: 0.5rem;
+                  opacity: 0.3;
+                  font-size: 1.3rem;
+                  font-weight: 700;
+                }
+              }
+
+              .sidebarFallowUserListButton {
+                color: #53a5f2;
+                font-weight: 700;
+                font-size: 1.4rem;
+              }
+            }
+          }
+        }
+      }
+
+      /* footer */
+      .footer {
+        grid-area: footer;
+
+        .footerInformation {
+          opacity: 0.3;
+          font-weight: 700;
+          font-size: 1.3rem;
+        }
+
+        .footerMakeYear {
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+}

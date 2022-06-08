@@ -1,5 +1,5 @@
 import '../../styles/reset.scss';
-import './Main.css';
+import './Main.scss';
 
 function Main() {
   return (
@@ -152,6 +152,54 @@ function Main() {
                 <button className='commonButton'>모두 보기</button>
               </div>
               <ul className='sidebarFallowUser'>
+                <li className='sidebarFallowUserList'>
+                  <img
+                    className='sidebarFallowUserListImage'
+                    src='/images/penguin-img.png'
+                    alt='유저이미지'
+                  />
+                  <div className='sidebarFallowUserListId'>
+                    <p className='sidebarFallowUserListIdName'>김다람</p>
+                    <p className='sidebarFallowUserListIdTime'>
+                      ...외 2명이 추천누름
+                    </p>
+                  </div>
+                  <button className='sidebarFallowUserListButton commonButton'>
+                    팔로우
+                  </button>
+                </li>
+                <li className='sidebarFallowUserList'>
+                  <img
+                    className='sidebarFallowUserListImage'
+                    src='/images/penguin-img.png'
+                    alt='유저이미지'
+                  />
+                  <div className='sidebarFallowUserListId'>
+                    <p className='sidebarFallowUserListIdName'>김다람</p>
+                    <p className='sidebarFallowUserListIdTime'>
+                      ...외 2명이 추천누름
+                    </p>
+                  </div>
+                  <button className='sidebarFallowUserListButton commonButton'>
+                    팔로우
+                  </button>
+                </li>
+                <li className='sidebarFallowUserList'>
+                  <img
+                    className='sidebarFallowUserListImage'
+                    src='/images/penguin-img.png'
+                    alt='유저이미지'
+                  />
+                  <div className='sidebarFallowUserListId'>
+                    <p className='sidebarFallowUserListIdName'>김다람</p>
+                    <p className='sidebarFallowUserListIdTime'>
+                      ...외 2명이 추천누름
+                    </p>
+                  </div>
+                  <button className='sidebarFallowUserListButton commonButton'>
+                    팔로우
+                  </button>
+                </li>
                 <li className='sidebarFallowUserList'>
                   <img
                     className='sidebarFallowUserListImage'
