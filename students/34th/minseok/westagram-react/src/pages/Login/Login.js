@@ -7,24 +7,23 @@ function Login() {
   // main page move
   const navigate = useNavigate();
   const goToMain = () => {
-    true ? navigate('/Main') : alert('다시 입력하세요');
+    !enabled ? navigate('/Main') : alert('아무것도 입력되지 않았어요');
   };
 
-  // input
-  const [userId, setUserId] = useState();
-  const idLength = event => {
-    setUserId(event.target.value.length);
+  const [userInfo, setUserInfo] = useState({
+    userId: '',
+    userPw: '',
+  });
+
+  const valueHandler = event => {
+    setUserInfo(value => {
+      return { ...value, [event.target.name]: event.target.value };
+    });
   };
 
-  const [userPw, setUserPw] = useState();
-  const pwLength = event => {
-    setUserPw(event.target.value.length);
-  };
-
-  const [enabled, setEnabled] = useState(true);
-  const compare = value => {
-    userId > 0 && userPw > 0 ? setEnabled(!value) : setEnabled(value);
-  };
+  let enabled = !Boolean(
+    userInfo.userId && userInfo.userPw && userInfo.userId.includes('@')
+  );
 
   return (
     <div className='boundaryLine'>
@@ -32,15 +31,15 @@ function Login() {
         <h1 className='loginTitle'>Westagram</h1>
         <article className='userInterface'>
           <input
-            onChange={idLength}
-            onKeyUp={compare}
+            onChange={valueHandler}
+            name='userId'
             className='userName'
             type='text'
             placeholder='전화번호, 사용자 이름 또는 이메일'
           />
           <input
-            onChange={pwLength}
-            onKeyUp={compare}
+            onChange={valueHandler}
+            name='userPw'
             className='userPassword'
             type='password'
             placeholder='비밀번호'
