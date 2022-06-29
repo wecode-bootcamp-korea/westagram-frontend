@@ -1,0 +1,70 @@
+
+
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);  /* 이렇게하면 화면의 중앙에 박스를 위치시킬 수 있다.*/
+    border: 1px solid lightgray;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: 350px;
+    height: 500px;
+    
+}
+
+h2{
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    font-size: 45px;
+    font-weight: 600;
+    margin-top: 40px;
+   }
+
+
+.inputbox{
+width: 250px;
+margin:0 auto;
+  
+}
+.inputbox  input {
+    width: 100%;
+    height: 35px;
+    background-color: #FAFAFA;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    padding-left: 10px;
+    margin-top: 60px;
+    color: rgba(var(--i1d,38,38,38),1);
+    font-size: 12px;
+}
+.inputbox  input:nth-child(2){
+    margin-top: 10px;
+}
+
+.inputbox  [type='submit']{
+    width: 100%;
+    height: 30px;
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: #0095f6;
+    border: none;  
+    color: white;
+}
+
+.inputbox  [type='submit']:disabled {
+    background-color:#cbddf7;
+}
+.text{
+    text-align: center;
+    color: rgba(var(--fe0,0,55,107),1);
+    font-size: 12px;
+    margin-top:150px;
+  
+
+}
+
+
