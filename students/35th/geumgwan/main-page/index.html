@@ -1,116 +1,247 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Westagram main</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css" />
-    <script src="https://kit.fontawesome.com/a4e900b42b.js" crossorigin="anonymous"></script>
-    <script defer src="./insta.js"></script>
-  </head>
-  <body>
-      <nav>
-        <div class="nav-space">
-          <span class="leftSide">
-            <img src="/img/instagram.png" alt="로고"> 
-            <span class="logoStyle"> Westagram</span>
-          </span>
-          <input class="Search" type="text" id="search" placeholder="검색">
-          <span class="rightSide">
-          <img src="/img/explore.png">
-          <img src="/img/heart.png">
-          <img src="/img/profile.png">
-          </span>
-          </div>
-       </nav>
-      <main>
-        <section>
-          <div class="feeds">
-            <article class="article1">
-              <div class="article-nav">
-                <img class="article-profileImg" src="/img/pro.png"> 
-                <span class="article-profileText"> gc__eric</span>
-                <i class="fa-solid fa-ellipsis"></i>
-              </div>
-              <div>
-                <img class="article-feedImg" src="/img/sam.png">
-              </div>
-              <div class="article-iconsFlex">
-                <i class="fa-solid fa-heart"></i>
-                <i class="fa-regular fa-comment"></i>
-                <i class="fa-regular fa-paper-plane"></i>
-                <i class="fa-regular fa-bookmark"></i>
-              </div>
-              <div class="article-undercontainer">
-              <div class="article-like">
-                <img src="/img/pro.png">
-                <span> <span class="textbold">WeCode</span>님 외 <span class="textbold">705명</span>이 좋아합니다</span>
-              </div>
-              <div>
-                <span class="textbold">gc__eric </span> 위코드 35기 화이팅~~~... 더보기 
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Westagram main</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossorigin="crossorigin">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="./style.css"/>
+        <script src="https://kit.fontawesome.com/a4e900b42b.js" crossorigin="anonymous"></script>
+        <script defer="defer" src="./insta.js"></script>
+    </head>
+    <body>
+        <nav>
+            <div class="nav-space">
+                <span class="leftSide">
+                    <img src="../img/instagram.png" alt="로고">
+                    <span class="logoStyle">
+                        Westagram</span>
+                </span>
+                <input class="Search" type="text" id="search" placeholder="검색">
+                <span class="rightSide">
+                    <img src="../img/explore.png">
+                    <img src="../img/heart.png">
+                    <img src="../img/profile.png">
+                </span>
+            </div>
+        </nav>
+        <main>
+            <section>
+                <div class="feeds">
+                    <article class="article1">
+                        <div class="article-nav">
+                            <img class="article-profileImg" src="../img/pro.png">
+                            <span class="article-profileText">
+                                gc__eric</span>
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </div>
+                        <div class="article-feedover">
+                            <img class="article-feedImg" src="../img/ggo.png">
+                        </div>
+                        <div class="article-iconsFlex">
+                            <i class="fa-solid fa-heart"></i>
+                            <i class="fa-regular fa-comment"></i>
+                            <i class="fa-regular fa-paper-plane"></i>
+                            <i class="fa-regular fa-bookmark"></i>
+                        </div>
+                        <div class="article-undercontainer">
+                            <div class="article-like">
+                                <img src="../img/pro.png">
+                                <span><span class="textbold">WeCode</span>님 외
+                                    <span class="textbold">705명</span>이 좋아합니다</span>
+                            </div>
+                            <div class="article-discription">
+                                <span class="textbold">gc__eric
+                                </span>
+                                위코드 35기 화이팅~~~...
+                                <span class="textlight">더보기
+                                </span>
+                                <div class="comment">
+                                    <span class="textbold">Wecode_bootcamp
+                                    </span>
+                                    화이팅~~
+                                    <img class="comment-heart" src="../img/heart.png">
+                                </div>
+                            </div>
+                            <div class="article-time">
+                                55분 전
+                            </div>
+                        </div>
+                        <form class="comment-write">
+                            <input id="comment" type="text" placeholder="댓글 달기...">
+                            <button
+                                type="submit"
+                                id="submit"
+                                onclick="location.href='' "
+                                disabled="disabled">게시</button>
+                        </form>
+                    </article>
+                    <!-- 두번쨰 article -->
+                    <article class="article1">
+                        <div class="article-nav">
+                            <img class="article-profileImg" src="../img/pro.png">
+                            <span class="article-profileText">
+                                gc__eric</span>
+                            <i class="fa-solid fa-ellipsis"></i>
+                        </div>
+                        <div>
+                            <img class="article-feedImg" src="../img/sam.png">
+                        </div>
+                        <div class="article-iconsFlex">
+                            <i class="fa-solid fa-heart"></i>
+                            <i class="fa-regular fa-comment"></i>
+                            <i class="fa-regular fa-paper-plane"></i>
+                            <i class="fa-regular fa-bookmark"></i>
+                        </div>
+                        <div class="article-undercontainer">
+                            <div class="article-like">
+                                <img src="../img/pro.png">
+                                <span><span class="textbold">WeCode</span>님 외
+                                    <span class="textbold">705명</span>이 좋아합니다</span>
+                            </div>
+                            <div class="article-discription">
+                                <span class="textbold">gc__eric
+                                </span>
+                                위코드 35기 화이팅~~~...
+                                <span class="textlight">더보기
+                                </span>
+                                <div class="comment">
+                                    <span class="textbold">Wecode_bootcamp
+                                    </span>
+                                    화이팅~~
+                                    <img class="comment-heart" src="../img/heart.png">
+                                </div>
+                            </div>
+                            <div class="article-time">
+                                55분 전
+                            </div>
+                        </div>
+                        <form class="comment-write">
+                            <input id="comment" type="text" placeholder="댓글 달기...">
+                            <button
+                                type="submit"
+                                id="submit"
+                                onclick="location.href='' "
+                                disabled="disabled">게시</button>
+                        </form>
+                    </article>
                 </div>
-            
-              <div class="comment">
-                Wecode_bootcamp 화이팅~~ <img class="comment-heart" src="/img/heart.png">
-              </div>
-              <div class="article-time">
-                55분 전
-              </div>
-              <div class="comment-write">
-                <span class="comment-writetext">댓글 달기</span>
-                <span class="comment-upload">게시</span>
-              </div>
-              </div>
-              <!-- 두번째 article -->
-            </article>
-            <article class="article1">
-              <div class="article-nav">
-                <img class="article-profileImg" src="/img/pro.png"> 
-                <span class="article-profileText"> gc__eric</span>
-                <i class="fa-solid fa-ellipsis"></i>
-              </div>
-              <div>
-                <img class="article-feedImg" src="/img/sam.png">
-              </div>
-              <div class="article-iconsFlex">
-                <i class="fa-solid fa-heart"></i>
-                <i class="fa-regular fa-comment"></i>
-                <i class="fa-regular fa-paper-plane"></i>
-                <i class="fa-regular fa-bookmark"></i>
-              </div>
-              <div class="article-like">
-                <img class="article-profileImg" src="/img/pro.png">
-                <span> WeCode님 외 705명이 좋아합니다</span>
-              </div>
-                gc__eric 위코드 35기 화이팅~~~... 더보기
-              <div class="comment">
-                Wecode_bootcamp 화이팅~~ <img class="comment-heart" src="/img/heart.png">
-              </div>
-              <div class="article-time">
-                55분 전
-              </div>
-              <div class="comment-write">
-                <span class="comment-writetext">댓글 달기</span>
-                <span class="comment-upload">게시</span>
-              </div>
-            </article>
+            </section>
+            <section>
+                <div class="main-right">
+                    <div class="right-nav">
+                        <img src="../img/wecode.png" alt="profile">
+                        <div class="right-navtext">
+                            <div class="textbold">wecode_bootcamp</div>
+                            <div class="textlight">WeCodeㅣ위코드</div>
+                        </div>
+                    </div>
+                    <div class="right-storybox">
+                        <div class="right-storyboxnav">
+                            <div class="textlight">스토리</div>
+                            <div class="textbold">모두 보기</div>
+                        </div>
+                        <div class="storiesall">
+                            <div class="story">
+                                <img src="../img/wecode.png" alt="">
+                                <div class="storyInside">
+                                    <div class="textbold">wecode_bootcamp</div>
+                                    <div class="textlight">3분전</div>
+                                </div>
+                            </div>
+                            <div class="story">
+                                <img src="../img/wecode.png" alt="">
+                                <div class="storyInside">
+                                    <div class="textbold">wecode_bootcamp</div>
+                                    <div class="textlight">10분전</div>
+                                </div>
+                            </div>
+                            <div class="story">
+                                <img src="../img/wecode.png" alt="">
+                                <div class="storyInside">
+                                    <div class="textbold">wecode_bootcamp</div>
+                                    <div class="textlight">20분전</div>
+                                </div>
+                            </div>
+                            <div class="story">
+                                <img src="../img/wecode.png" alt="">
+                                <div class="storyInside">
+                                    <div class="textbold">wecode_bootcamp</div>
+                                    <div class="textlight">30분전</div>
+                                </div>
+                            </div>
+                            <div class="story">
+                                <img src="../img/wecode.png" alt="">
+                                <div class="storyInside">
+                                    <div class="textbold">wecode_bootcamp</div>
+                                    <div class="textlight">50분전</div>
+                                </div>
+                            </div>
+                            <div class="story">
+                                <img src="../img/wecode.png" alt="">
+                                <div class="storyInside">
+                                    <div class="textbold">wecode_bootcamp</div>
+                                    <div class="textlight">1시간전</div>
+                                </div>
+                            </div>
+                            <div class="story">
+                                <img src="../img/wecode.png" alt="">
+                                <div class="storyInside">
+                                    <div class="textbold">wecode_bootcamp</div>
+                                    <div class="textlight">2시간전</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-          </div>
+                    <div class="recommendation-box">
+                        <div class="right-storyboxnav">
+                            <div class="textlight">회원님을 위한 추천</div>
+                            <div class="textbold">모두 보기</div>
+                        </div>
+                        <div class="reco-boxline">
+                            <img src="../img/bts.png" alt="bts">
+                            <div class="reco-boxIdMutual">
+                                <div class="textbold">BTS_Official</div>
+                                <div class="textlight">gold_en님 외 2명이 팔로우합니다</div>
+                            </div>
+                            <div class="followbutton">
+                                팔로우</div>
+                        </div>
+                        <div class="reco-boxline">
+                          <img src="../img/bts.png" alt="bts">
+                          <div class="reco-boxIdMutual">
+                              <div class="textbold">BTS_Official</div>
+                              <div class="textlight">gold_en님 외 2명이 팔로우합니다</div>
+                          </div>
+                          <div class="followbutton">
+                              팔로우</div>
+                      </div>
+                      <div class="reco-boxline">
+                        <img src="../img/bts.png" alt="bts">
+                        <div class="reco-boxIdMutual">
+                            <div class="textbold">BTS_Official</div>
+                            <div class="textlight">gold_en님 외 2명이 팔로우합니다</div>
+                        </div>
+                        <div class="followbutton">
+                            팔로우</div>
+                    </div>
+                        <div class="footer"></div>
 
-
-
-
-
-        </section>
-        <section>
-          <div class="main-right">
-            dadadadawadadadadwdadawdawdawdadaddawdawdadadadawdadw
-          </div>
-        </section>
-
-      </main>
-  </body>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section></section>
+</main>
+</body>

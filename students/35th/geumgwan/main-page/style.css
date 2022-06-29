@@ -1,18 +1,18 @@
 * {
     box-sizing: border-box;
-  }
+}
 
-nav  {
-    display:flex;
+nav {
+    display: flex;
     justify-content: center;
     border-bottom: 1px solid #EAEAEA;
 }
 
 nav img {
-    width: 24px;    
+    width: 24px;
     font-weight: bold;
 }
- 
+
 .nav-space {
     display: flex;
     justify-content: space-between;
@@ -30,7 +30,6 @@ nav img {
     font-size: 29px;
 }
 
-
 .logoStyle {
     border-left: 1px solid black;
     font-family: 'Lobster', cursive;
@@ -38,8 +37,8 @@ nav img {
     padding-left: 10px;
 }
 
-input {
-    background-image: url(https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-256.png);
+nav input {
+    background-image: url("https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-256.png");
     background-position: 10px center;
     background-size: 30px;
     background-repeat: no-repeat;
@@ -50,23 +49,22 @@ input {
     height: 36px;
     border-radius: 8px;
     font-size: var(--system-16-font-size);
-    
+
 }
-input:focus {
+nav input:focus {
     background-image: none;
     background-position: -10px center;
-    text-indent: 0;    
+    text-indent: 0;
 }
 
 .rightSide {
     display: flex;
     width: 150px;
-    justify-content: space-around;    
+    justify-content: space-around;
     font-weight: 100px;
 }
 
 /* nav */
-
 
 main {
     display: flex;
@@ -80,7 +78,7 @@ main {
     flex-direction: column;
     width: 500px;
     margin-top: 50px;
-    
+
 }
 
 article {
@@ -88,7 +86,7 @@ article {
     background-color: white;
     margin-bottom: 20px;
     border-radius: 10px;
-    box-shadow:  rgba(0, 0, 0, 0.3);
+    box-shadow: rgba(0, 0, 0, 0.3);
     width: 95%;
     height: 100%;
 }
@@ -99,6 +97,11 @@ article {
     display: flex;
 }
 
+.article-feedover {
+    height: 600px;
+    overflow: hidden;
+}
+
 .article-profileImg {
     width: 20px;
     margin-left: 20px;
@@ -107,9 +110,9 @@ article {
 }
 
 .article-profileText {
-    font-weight: bold; 
+    font-weight: bold;
     margin-left: 10px;
-    flex:1;
+    flex: 1;
 }
 
 .article-nav i {
@@ -121,24 +124,26 @@ article {
 .article-feedImg {
     width: 100%;
     margin-top: 20px;
+
 }
 
 .article-iconsFlex {
     margin: 10px;
     font-size: 20px;
+    display: flex;
+    align-items: center;
 }
 
-.article-iconsFlex i {
+.article-iconsFlex i:not(.fa-bookmark) {
     margin-left: 8px;
-}
 
+}
 
 .fa-bookmark {
-    position: relative;
-    left: 320px;
+    margin-left: auto;
 }
 
-.fa-heart{
+.fa-heart {
     color: red;
 }
 
@@ -156,6 +161,10 @@ article {
     font-weight: bold;
 }
 
+.textlight {
+    color: #8e8e8e;
+}
+
 .article-like {
     display: flex;
     align-items: center;
@@ -167,11 +176,150 @@ article {
     margin-right: 10px;
 }
 .article-discription {
+    font-size: 14px;
+}
+
+.comment {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+.comment img {
+    width: 13px;
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+.article-time {
+    font-size: 12px;
+    margin: 10px 0;
+    color: #8e8e8e;
+}
+
+.comment-write {
+    position: relative;
+}
+
+.comment-write input {
+    width: 100%;
+    border: 0 solid;
+    border-top: 1px solid #EAEAEA;
+    padding: 10px;
+}
+
+button {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 12px;
+    border: 0 solid;
+    background-color: white;
+    color: rgba(65,171,248,0.5);
 }
 
 .main-right {
     display: flex;
     flex-direction: column;
-    border: 1px solid yellow;
+    min-width: 300px;
+    position: sticky;
+    top: 100px;
     
+}
+
+.right-nav {
+    display: flex;
+    align-items: center;
+
+}
+
+.right-nav img {
+    width: 80px;
+}
+
+.right-navtext {
+    margin-left: 20px;
+}
+
+.right-storybox {
+    border: 1px solid #EAEAEA;
+    background-color: white;
+    border-radius: 3px;
+    height: 200px;
+    overflow: auto;
+    margin-top: 20px;
+}
+
+.right-storyboxnav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    font-size: 15px;
+}
+
+.storiesall {
+    font: 14px;
+    margin-left: 8px;
+}
+
+
+.story {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.story .textlight {
+    font-size: 12px;
+}
+
+.storyInside {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+}
+
+.storiesall img {
+    width: 40px;
+    border-radius: 50%;
+}
+
+
+
+.recommendation-box {
+    border: 1px solid #EAEAEA;
+    background-color: white;
+    border-radius: 3px;
+    margin-top: 10px;
+}
+
+.reco-boxline img {
+    width: 40px;
+}
+
+.reco-boxline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin: 10px 10px;
+}
+
+.reco-boxIdMutual {
+    position: absolute;
+    left: 45px;
+    
+}
+
+.reco-boxIdMutual .textlight {
+    font-size: 12px;
+}
+
+.reco-boxIdMutual .textbold {
+    font-size: 14px;
+}
+
+.followbutton {
+    margin-right: 4px;
+    color: #3EA8F7;
+    font-size: 14px;
 }
