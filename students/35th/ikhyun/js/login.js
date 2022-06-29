@@ -1,4 +1,3 @@
-
 const loginButton = document.querySelector('.login-button')
 
 const loginId = document.querySelector('.login-id');

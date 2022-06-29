@@ -5,6 +5,7 @@
 
 body {
     background-color: #fafafa;
+    max-width: 100%;
 }
 .navigation-bar {
     position: sticky;
@@ -60,40 +61,21 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 .navigation-bar .nav-icons .nav-icon_underdot {
     display: flex;
     flex-direction: column;
+    position: relative;
 }
-.navigation-bar .nav-icons .nav-icon_underdot .displayoff,
-.navigation-bar .nav-icons .nav-icon_underdot1 .displayoff {
-    text-align: center;
-    font-size: 30px;
-    color: red;
-    opacity: 0;
-    height: 15px;
-}
-.navigation-bar .nav-icons .nav-icon_underdot .displayon {
-    opacity: 1;
-    text-align: center;
-    font-size: 30px;
-    color: red;
-    height: 5px;
-    padding-bottom: 10px;
-}
-.navigation-bar .nav-icons .nav-icon_underdot img,
-.navigation-bar .nav-icons .nav-icon_underdot1 img {
+.navigation-bar .nav-icons .nav-icon_underdot img {
     width: 40px;
     height: 40px;
     margin: 0 20px;
     cursor: pointer;
 }
-.navigation-bar .nav-icons .nav-icon_underdot1 {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-}
-.navigation-bar .nav-icons .nav-icon_underdot1 .user-info {
+
+.navigation-bar .nav-icons .nav-icon_underdot .user-info {
     z-index: 10;
     position: absolute;
     border: 1px solid rgb(209, 209, 209);
@@ -153,10 +135,11 @@ main {
     display: flex;
     justify-content: center;
 }
+
 .feeds .article {
     border: 1px solid #dbdbdb;
     width: 500px;
-    margin: 20px 20px;
+    margin: 20px;
     background-color: #fff;
 }
 .feeds .article .article-top {
@@ -283,7 +266,7 @@ main {
     display: flex;
     align-items: center;
     width: 300px;
-    
+
 }
 .main-right .wecode-top .wecode-logo {
     width: 50px;
@@ -407,4 +390,64 @@ main {
 }
 .create-comment:hover .delete-heart {
     display: block;
+}
+.nav-footer {
+    display: none;
+}
+
+@media screen and (max-width:850px) {
+    * {
+        max-width: 100%;
+    }
+    .main-right {
+        display: none;
+    }
+    .navigation-bar .nav-search {
+        display: none;
+    }
+    .navigation-bar .logo-title .insta-icon,
+    .navigation-bar .logo-title .nav-title span {
+        display: none;
+    }
+    .feeds .article {
+        width: 390px;
+    }
+    .feeds {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .feeds .article .article-main-imgbox {
+        width: 390px;
+        height: 450px;
+    }
+    .feeds .article {
+        margin: 0 0 30px;
+    }
+    .navigation-bar .nav-icons .nav-icon_underdot .user-info {
+        opacity: 0;
+    }
+    .navigation-bar .nav-icons {
+        display: none;
+    }
+    .navigation-bar .nav-fix {
+        justify-content: center;
+    }
+    .nav-footer {
+        display: flex;
+        bottom: 0;
+        position: sticky;
+        top: 0;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+        height: 60px;
+        border-top: 1px solid rgb(185, 184, 184);
+        z-index: 10;
+        background-color: #fafafa;
+        font-size: 30px;
+    }
+    .nav-footer i:hover {
+        color:rgb(0, 115, 255);
+    }
 }

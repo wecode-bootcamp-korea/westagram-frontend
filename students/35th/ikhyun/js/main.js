@@ -38,7 +38,7 @@ function createComment() {
     deleteIcon.className = 'fa-solid fa-trash';
     createIconDiv.appendChild(deleteIcon)
 
-    comment.value = ""
+    comment.value = "";
     commentTime.innerHTML = "방금전";
     heartIcon.addEventListener ('click',function() {
         heartIcon.style.color === 'red' ? (
