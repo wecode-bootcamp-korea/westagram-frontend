@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>westagram</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <script defer src="../js/login.js"></script>
+</head>
+
+<body>
+    <main class="loginPage">
+        <div class="loginBox">
+            <div class="inputBox">
+                <h1 class="logo">westagram</h1>
+                <form class="inputIdPw">
+                    <input id="id" type="id" placeholder="전화번호, 사용자 이름 또는 이메일" autofocus>
+                    <input id="pw" type="password" placeholder="비밀번호">
+                    <button id="submit" role="button" type="submit" disabled="false" >로그인</button>
+                    <div class="orLine">
+                        <div class="line"></div>
+                        <div class="or">또는</div>
+                        <div class="line"></div>
+                    </div>
+                    <div class="facebookLogin">
+                        <div><img class="facebookicon" src="../image/fb_icon.png" alt="facebookicon"></div>
+                        <div class="facebookLoginText">Facebook으로 로그인</div>
+                    </div>
+                    <a class="lostPw" href="#">비밀번호를 잊으셨나요?</a>
+                </form>
+            </div>
+            <div class="findId">
+                <form class="findPw">계정이 없으신가요? <a href="#">가입하기</a></form>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
