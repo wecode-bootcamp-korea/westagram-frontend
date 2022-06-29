@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
+html,
+body {
+  height: 100%;
+  display: flex;
+  justify-content: center; /*X축*/
+  align-items: center; /*Y축*/
+}
+
+.parentBox {
+  border: 1px solid rgb(192, 189, 189);
+  height: 550px;
+  width: 400px;
+
+  /* padding: 150px; */
+}
+
+.westagram {
+  font-family: "Lobster", cursive;
+  font-size: 50px;
+  text-align: center;
+  padding: 20px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  margin: 10px;
+  border: 1px solid RGB(200, 200, 200);
+  outline: none;
+}
+
+button {
+  background-color: RGB(1, 149, 247);
+  color: white;
+  opacity: 0.3;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  height: 30px;
+  margin-bottom: 160px;
+}
+
+#loginId,
+#loginPw {
+  height: 30px;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.login-box {
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+.findPW {
+  padding: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  color: rgb(24, 24, 151);
+}
