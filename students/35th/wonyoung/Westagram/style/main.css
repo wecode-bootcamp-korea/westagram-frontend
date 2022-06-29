@@ -82,7 +82,7 @@ nav{
 
 main {
     width: 100vw;
-    height: 100vh;
+    height: 130vh;
     background-color: #FAFAFA;
 }
 
@@ -221,7 +221,6 @@ main {
 #more-icon {
     width: 16px;
     height: 16px;
-    opacity: 0.8;
 }
 
 .feed-container {
@@ -233,4 +232,164 @@ main {
 #feed-image {
     width: 470px;
     height: 587.5px;
+}
+
+.feed-icon{
+    display: flex;
+}
+
+.first-icon-section {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    flex: 2;
+}
+
+.first-icon-section > span {
+    width: 30px;
+    height: 30px;
+    padding: 8px;
+}
+
+#like {
+    background-image: url(../image/insta.png);
+    background-position: -26px 101px;
+}
+
+#reply {
+    background-image: url(../image/insta.png);
+    background-position: -58px 100px;
+}
+
+#dm {
+    background-image: url(../image/insta.png);
+    background-position: -89px 101px;
+}
+
+.second-icon-section {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex: 6;
+}
+
+#save {
+    width: 30px;
+    height: 30px;
+    padding: 8px;
+    margin-right: 10px;
+    background-image: url(../image/insta.png);
+    background-position: -120px 101px;
+}
+
+.feed-like {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;}
+
+.feed-like-profile>img{
+    width: 24px;
+    height: 24px;
+    margin: 5px 5px 5px 15px;
+}
+
+.feed-like-text{
+    font-size: 14px;
+}
+
+.userOfFeed {
+    font-weight: 650;
+    padding-right: 5px;
+}
+
+#inlike{
+    padding-right: 0;
+}
+
+.feed-contents-section{
+    font-size: 14px;
+    padding-left: 15px;
+}
+
+.feed-contents-container{
+    display
+}
+
+#more{
+    color: #8E8E8E;
+}
+
+.userOfFeed {
+    font-size: 14px;
+}
+
+.feed-comment {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 14px;
+    padding-left: 15px;
+
+}
+
+.feed-time {
+    width: 100%;
+    height: 30px;
+    padding-left: 15px;
+    font-size: 10px;
+    color: #8E8E8E;
+
+}
+
+.feed-comment-box-section{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    border-top: 0.5px solid #DBDBDB;
+}
+
+.emoji-icon-container{
+    width: 50px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.emoji-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.comment-box {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.comment-enter-button {
+    width: 50px;
+    height: 35px;
+    border: none;
+    background-color: white;
+    border-radius: 60%;
+    color: #0095F6;
+}
+
+.comment-box:focus{
+    outline: none;
+}
+
+.comment-enter-button:hover:enabled {
+    cursor: pointer;
+}
+
+.comment-enter-button:disabled {
+    opacity: 0.5;
 }

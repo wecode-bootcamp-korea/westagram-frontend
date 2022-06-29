@@ -7,7 +7,7 @@ function activateLoginButton (){
    let idValueLength = loginId.value.length;
    let pwValueLength = loginPw.value.length;
 
-   (idValueLength >0 && pwValueLength>0) ? 
+   (idValueLength>0 && pwValueLength>0) ? 
    (loginButton.disabled = false) :
    (loginButton.disabled = true)   
 }
