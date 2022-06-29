@@ -1,0 +1,334 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Lobster", sans-serif;
+  /* 이 아래로 폰트 적용 시키고 싶지 않을 때마다 font-family: none;을 해야하는지 */
+}
+
+body {
+  height: 750px;
+  width: 700px;
+}
+
+main {
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: row;
+  background-color: #f1f1f1;
+}
+
+.feeds {
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+nav {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid black;
+}
+
+.navLogo {
+  display: flex;
+  flex-direction: row;
+}
+
+.fa-brands,
+.vertical,
+.logoHead {
+  margin-right: 8px;
+}
+
+.fa-brands {
+  padding-top: 7px;
+  font-size: 120%;
+}
+
+.navLogo h1 {
+  font-size: 1.3em;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 2px;
+}
+
+.navExplore,
+.navHeart,
+.navPerson {
+  height: 20px;
+  margin-right: 15px;
+  /* 여기 height를 왜 %로 주면 안 되는지 */
+}
+
+.search {
+  position: relative;
+  display: flex;
+}
+
+.fa-magnifying-glass {
+  position: absolute;
+  font-size: 70%;
+  margin-top: 2%;
+  left: 30%;
+  top: 10%;
+  color: #cacacc;
+}
+
+.searchBlank {
+  text-align: center;
+  background-color: #f1f1f1;
+  color: #cacacc;
+  border-color: #cacacc;
+  border: 1px solid #cacacc;
+}
+
+.thumbnailUploader {
+  height: 30px;
+  border-radius: 70%;
+}
+
+article {
+  padding: 0;
+  border: 1px solid #cacacc;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: white;
+  position: relative;
+  /* 여기서 main에 백그라운드 칼라를 주면 왜 아티클까지 칼라가 부여되는지 */
+}
+
+.articleTop {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.articleTop .dots {
+  height: 15px;
+  position: relative;
+  right: 5px;
+  top: 10px;
+}
+
+.articleTopLeft {
+  display: flex;
+  flex-direction: row;
+  margin-left: 10px;
+}
+
+.idLocation {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.idLocation span {
+  font-size: 15px;
+}
+
+.idLocation strong,
+span {
+  font-family: none;
+}
+
+.mainPicture {
+  height: 450px;
+}
+
+.articleBottom1 {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.articleBottomIconLeft {
+  position: relative;
+  left: 10px;
+}
+
+.like,
+.speechBubble {
+  height: 17px;
+  margin-right: 8px;
+}
+
+.fa-arrow-up-from-bracket {
+  position: relative;
+  bottom: 2px;
+}
+
+.fa-bookmark {
+  position: relative;
+  right: 10px;
+}
+
+.likePeople {
+  display: flex;
+  align-items: center;
+}
+
+.likePeople strong,
+span {
+  font-family: none;
+}
+
+.flower {
+  height: 17px;
+  border-radius: 70%;
+}
+.idContent {
+  font-family: none;
+  font-size: 15px;
+  margin: 5px 5px;
+}
+
+.main-right {
+  margin-top: 25px;
+  margin-left: 10px;
+}
+
+.id-right {
+  display: flex;
+  flex-direction: row;
+  margin-left: 10px;
+}
+
+.thumbnailUploaderRight {
+  height: 30px;
+  border-radius: 70%;
+}
+
+.idLocationRight {
+  font-family: none;
+  margin-left: 10px;
+}
+
+.idLocationRight span {
+  font-size: 15px;
+}
+
+.story,
+.recommend {
+  border-radius: 5px;
+  background-color: white;
+  padding: 10px;
+  margin: 10px auto;
+}
+
+.storyword,
+.recomword {
+  display: flex;
+  justify-content: space-between;
+}
+
+.storyword strong,
+.storyword span,
+.recomword strong,
+.recomword span {
+  font-size: 13px;
+}
+
+.storyflower {
+  height: 30px;
+  border-radius: 70%;
+  margin: 3px;
+}
+
+.recomflower {
+  height: 30px;
+  border-radius: 70%;
+  margin: 3px;
+}
+
+.story-1,
+.recom1 {
+  display: flex;
+  flex-direction: row;
+}
+
+.storyword,
+.recomword {
+  margin-bottom: 5px;
+}
+
+.story-1word,
+.recom1word {
+  font-family: none;
+  display: flex;
+  flex-direction: column;
+  margin-left: 5px;
+}
+
+.story-1word strong,
+.recom1 strong {
+  font-size: 12px;
+}
+
+.jobspan {
+  font-size: 10px;
+  color: #cacacc;
+}
+
+.customerSupport {
+  max-width: 100%;
+  /* 이거필요한건가 */
+}
+
+.customerSupport p {
+  font-family: none;
+  font-size: 12.8px;
+  color: #cacacc;
+  margin-bottom: 10px;
+}
+
+.followbtn {
+  font-size: 13px;
+  color: #5494ac;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  position: relative;
+  left: 30px;
+}
+
+.replyContent {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-top: 1px solid #cacacc;
+  margin-top: 5px;
+  padding-top: 8px;
+}
+
+.replyBtn {
+  border: 0;
+  background-color: transparent;
+  color: #5494ac;
+  position: absolute;
+  right: 10px;
+  bottom: 8px;
+}
+
+.commentPlus button {
+  border: none;
+  background-color: transparent;
+  color: red;
+  position: absolute;
+  right: 10px;
+}
+
+.commentplus {
+  width: 100%;
+  position: relative;
+}
+
+.commentPlus .commentMsg {
+  margin-left: 5px;
+}

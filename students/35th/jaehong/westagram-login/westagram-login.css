@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Lobster", sans-serif;
+}
+
+body {
+  height: 750px;
+  width: 700px;
+}
+
+.wholePage {
+  height: 100%;
+  /* height값이 없으면 내부 컨텐츠의 크기에 따라간다 */
+}
+
+.loginBox {
+  height: 95%;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  position: relative;
+  border: 1px solid black;
+  border-radius: 1px;
+}
+
+.logoBox {
+  height: 175px;
+  flex: 0 0 auto;
+  justify-content: center;
+  display: flex;
+  margin-bottom: 95px;
+}
+
+.loginElement {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+h1 {
+  justify-content: center;
+  font-size: 80px;
+}
+
+.id {
+  height: 75px;
+  width: 530px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+.password {
+  height: 75px;
+  width: 530px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+}
+
+.inputBlank {
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  background-color: #c4e1f7;
+  color: white;
+  border: none;
+  height: 60px;
+  width: 530px;
+  border-radius: 10px;
+}
+
+.id,
+.password {
+  position: relative;
+  padding-left: 3%;
+  font-size: 20px;
+}
+
+.wholePage p {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  bottom: 10%;
+  color: #325a85;
+}
