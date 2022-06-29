@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Westagram</title>
         <link rel="stylesheet" href="./style/reply.css"/>
-        <script src="./js/reply.js"></script>
+        <script defer="defer" src="./js/reply.js"></script>
         <link href="./imgs/instagram.png" rel="shortcut icon" type="image/x-icon"/>
         <script src="https://kit.fontawesome.com/7b9b875084.js" crossorigin="anonymous"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -64,7 +64,32 @@
 
                 </div>
             </div>
-            <div class="reply__list"></div>
+
+            <ul class="reply__window">
+                <li class="reply__list">
+                    <!-- <div class="my__img smaller__border"></div>
+                    <div class="my__content">
+
+                        <div class="my__info">
+                            <span class="my__id">kangchullee</span>
+                            <span class="my__talk"> hi</span>
+                        </div>
+                        <div class="my__status">
+                            <span class="my__likes">좋아요 <span class="likes__count--up">0</span>개</span>
+                            <span>답글달기</span>
+                        </div>
+
+                    </div>
+                    
+                    <div class="hearts">
+                        <i class="fa-regular fa-heart heart__likes"></i>
+                        <i class="fa-solid fa-heart heart__likes--active" style="display:none;" ></i>
+                    </div> -->
+
+                </li>
+<hitm></hitm> 
+            </ul>
+
             <div class="horizontal__line"></div>
             <div class="function__bar">
                 <div class="functions">
@@ -78,15 +103,15 @@
                         <i class="fa-regular fa-bookmark"></i>
                     </div>
                 </div>
-                <div class="likes_count">좋아요 2개</div>
+                <div class="likes__count">좋아요 2개</div>
                 <div class="date">오늘 날짜</div>
             </div>
             <div class="horizontal__line"></div>
-            <div class="reply__input">
+            <form class="reply__form">
                 <i class="fa-regular fa-face-angry"></i>
                 <input type="text" placeholder="댓글 달기...">
                 <button>게시</button>
-            </div>
+            </form>
 
         </section>
     </div>

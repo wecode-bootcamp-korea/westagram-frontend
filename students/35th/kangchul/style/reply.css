@@ -11,6 +11,7 @@ body {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
+
 }
 
 .container {
@@ -62,10 +63,70 @@ body {
     margin-top: 10px;
 }
 
-.reply__list {
-    background-color: aquamarine;
+.reply__window {
+
     height: 65%;
 }
+
+/* for adding reply  */
+
+.reply__list {
+    padding: 10px 30px 20px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.my__img {
+    border-radius: 50%;
+    background: center/cover no-repeat url("../imgs/user.jpeg");
+    cursor: pointer;
+    margin-right: 15px;
+}
+
+.my__content {
+    width: 80%;
+}
+
+.my__info {
+    display: flex;
+    margin-bottom: 20px;
+    font-size: var(--normalsize);
+}
+
+.my__id {
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.my__status {
+    display: flex;
+    font-size: var(--replysize);
+    color: gray;
+}
+
+.my__likes {
+    margin-right: 20px;
+}
+
+.heart__likes {
+    font-size: 13px;
+    height: 100%;
+    transform: translateY(10px);
+}
+
+.heart__likes--active {
+    font-size: 13px;
+    height: 100%;
+    transform: translateY(10px);
+    color: red;
+    
+}
+
+
+
+
+/*  */
 
 .functions {
     display: flex;
@@ -75,9 +136,10 @@ body {
 .functions i {
     font-size: 20px;
     margin: 10px 7px;
+    cursor: pointer;
 }
 
-.likes_count {
+.likes__count {
     font-size : var(--replysize);
     font-weight: bold;
     margin : 5px 10px;
@@ -89,7 +151,7 @@ body {
     color: gray;
 }
 
-.reply__input {
+.reply__form {
     display: flex;
     justify-content: space-between;
 
@@ -97,20 +159,26 @@ body {
     height: 53px;
     align-items: center;
 }
-.reply__input i {
+.reply__form i {
     margin: 10px;
     color: #696969;
+    cursor: pointer;
 }
 
-.reply__input input {
+.reply__form input {
     width: 80%;
     border: none;
 }
 
-.reply__input button {
+.reply__form input:focus {
+    outline: none;
+}
+
+
+.reply__form button {
     width: 40px;
     border: none;
     background-color: transparent;
     color: #696969;
-
+    cursor: pointer;
 }
