@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>westagram</title>
+
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- css -->
+  <link rel="stylesheet" href="./style/main.css">
+  <link rel="stylesheet" href="./style/common.css">
+</head>
+
+<body>
+
+<!-- nav -->
+  <nav>
+    <div class="nav_bar">
+      <div class="left_menu">
+        <img class="instagram" src="./img/instagram.png" alt="instagram">
+        <span id="westagram">westagram</span>
+      </div>
+
+      <div class="center_menu">
+        <input type="text" placeholder="&nbsp;&nbsp;&nbsp;&nbsp;검색">
+        <span class="magnify"><i class="fa-solid fa-magnifying-glass"></i></span>
+      </div>
+
+      <div class="right_menu">
+        <ul class="menu">
+          <li>
+            <img src="./img/explore.png" alt="explore">
+          </li>
+          <li class="li2">
+            <img src="./img/heart.png" alt="heart">
+            <span>.</span>
+          </li>
+          <li>
+            <img src="./img/profile.png" alt="profile">
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<!-- main  -->
+  <main>
+    <div class="feeds">
+      <article class="main_feed">
+        <div class="main_feed__bar">
+          <img src="./img/img1.jpeg" alt="circleimg">
+          <span class="bold">jeongeuni___</span>
+          <i class="fa-solid fa-ellipsis"></i>
+        </div>
+        <div class="main_feed__img">
+          <img src="./img/img2.jpeg" alt="mainfeedimg">
+        </div>
+        <div class="main_feed__contents">
+          <div class="contents__icons">
+            <span class="contents_icons__left">
+              <i class="fa-solid fa-heart"></i>
+              <i class="fa-regular fa-comment"></i>
+              <i class="fa-solid fa-arrow-up-from-bracket"></i>
+            </span>
+            <span class="contents_icons__right">
+              <i class="fa-regular fa-bookmark"></i>
+            </span>
+          </div>
+          <div class="contents__comments">
+            <div class="like">
+              <img src="./img/img3.jpeg" alt="">
+              <span><span class="bold">&nbsp;duck</span>님 외 <span class="bold">1000명</span>이 좋아합니다</span>
+            </div>
+            <div class="myComment">
+              <span class="bold">jeongeuni___</span>&nbsp;&nbsp;나의 사랑 다콩이 드디어 접선...<span class="weight">&nbsp;더
+                보기</span> 
+            </div>              
+            <div class="yourComment">
+              <span class="comment1"><span class="bold">abcd</span>&nbsp;&nbsp;다콩이 너무 귀엽다ㅠㅠ</p></span>
+              <span class="smallheart"><i class="fa-regular fa-heart"></i></span>
+              <!-- <i id="redheart" class="fa-solid fa-heart"></i> -->
+            </div>
+            <!-- <div class="yourComment">
+              <span class="comment1"><span class="bold">abcd</span>&nbsp;&nbsp;다콩이 너무 귀엽다ㅠㅠ</p></span>
+              <span class="smallheart"><i class="fa-regular fa-heart"></i></span>
+            </div> -->
+            
+
+            
+          </div>
+          <div class="clockFlow">
+            <span class="weight">1시간 전</span>
+          </div>
+          
+        </div>        
+      </article>
+
+      <div class="main_feed__comment">
+        <input class="input__comment" type="text" placeholder="댓글 달기...">
+        <input class="input__submit" type="submit" value="게시">
+      </div>
+      
+    </div>
+    <div class="main-right">
+      <div class="myInsta">
+        <img src="./img/myInsta.jpeg" alt="myInsta">
+        <div class="myId">
+          <p class="bold">jeongeuni__</p>
+          <p class="weight">노정은</p>
+        </div>
+      </div>
+
+
+      <div class="storyBox">
+        <div class="storys_var">
+          <span class="weight">스토리</span>
+          <span class="bold">모두 보기</span>
+        </div>
+        <div class="storys">
+
+          <div class="story">
+            <img src="./img/right1.jpeg" alt="myInsta">
+            <div class="storyId">
+              <p class="bold">jeongeuni__</p>
+              <p class="weight">노정은</p>
+            </div>
+          </div>
+          <div class="story">
+            <img src="./img/right2.jpeg" alt="myInsta">
+            <div class="storyId">
+              <p class="bold">jeongeuni__</p>
+              <p class="weight">노정은</p>
+            </div>
+          </div>
+          <div class="story">
+            <img src="./img/right3.jpeg" alt="myInsta">
+            <div class="storyId">
+              <p class="bold">jeongeuni__</p>
+              <p class="weight">노정은</p>
+            </div>
+          </div>
+          <div class="story">
+            <img src="./img/right4.jpeg" alt="myInsta">
+            <div class="storyId">
+              <p class="bold">jeongeuni__</p>
+              <p class="weight">노정은</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="freindRecommendBox">
+        <div class="recommend_var">
+          <span class="weight">회원님을 위한 추천</span>
+          <span class="bold">모두 보기</span>
+        </div>
+
+        <div class="recommend_peopel">
+          <img src="./img/right5.jpeg" alt="myInsta">
+          <div class="recommendId">
+            <p class="bold">jeongeuni__</p>
+            <p class="weight">_legend_a님 외 2명이...</p>
+          </div>
+          <span class="follow bold">팔로우</span>
+        </div>
+        <div class="recommend_peopel">
+          <img src="./img/right6.jpeg" alt="myInsta">
+          <div class="recommendId">
+            <p class="bold">jeongeuni__</p>
+            <p class="weight">ringo.in.seoul님 외 12...</p>
+          </div>
+          <span class="follow bold">팔로우</span>
+        </div>
+        <div class="recommend_peopel">
+          <img src="./img/right7.jpeg" alt="myInsta">
+          <div class="recommendId">
+            <p class="bold">jeongeuni__</p>
+            <p class="weight">jimmtlee1220님 외 1...</p>
+          </div>
+          <span class="follow bold">팔로우</span>
+        </div>
+
+
+      </div>
+      <div class="footer">
+        <p>instagram 정보 ・ 지원 ・ 홍보 센터 ・ API ・ </p>
+        <p>채용 정보 ・ 개인정보처리방침 ・ 약관 ・ </p>
+        <p>디렉터리 ・ 프로필 ・ 해시태그 ・ 언어 </p>
+        </br>
+        <p>© 2019 INSTAGRAM</p>
+      </div>
+
+    </div>
+  </main>
+
+
+  <script src="./js/main.js"></script>
+</body>
+
+</html>
