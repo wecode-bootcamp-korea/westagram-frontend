@@ -1,0 +1,475 @@
+
+.wrap {
+    width: 100%;
+}
+/* 상단 시작 */
+nav {
+    width: 100%;
+    height: 100px;
+    border-bottom: 1px solid rgb(230, 230, 230);
+}
+nav .nav_container {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+ 
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.nav_container .logo_box {
+
+
+   
+
+}
+.nav_container .logo_box i {
+    font-size: 30px;
+    margin-right: 10px;
+}
+.nav_container .logo_box span {
+    font-size: 30px;
+   
+    border-left: 1px solid black;
+    padding-left: 10px;
+
+}
+.nav_container .search {
+
+    width: 300px;
+    height: 30px;
+   
+    position: relative;
+}
+.nav_container .search input {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #eee;
+    text-align: center;
+  
+}
+.nav_container .search i{
+    position: absolute;    
+    left: calc(50% - 30px ); 
+    top:50%;
+    transform: translate(-50%,-50%);
+
+}
+.nav_container .my_info {
+    
+ 
+  
+
+}
+
+.nav_container .my_info i {
+    font-size: 30px;
+    margin-left: 5px;
+}
+/*상단 끝*/
+
+/*메인 시작*/
+.main_container {
+    width: 100%;
+    max-width: 1300px;
+ 
+  
+    margin: 0 auto;
+}
+/*메인 왼쪽 시작*/
+.main_container .feeds {
+    width: 900px;
+
+    float: left;
+   
+}
+.main_container .feeds .article {
+    width: calc(100% );
+    padding: 0px 0px;
+    border: 1px solid rgb(230, 230, 230);
+
+    margin-top: 50px;
+}
+.main_container .feeds .article .feed_head {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+ 
+}
+.main_container .feeds .article .feed_head .my_photo {
+    width:50px;
+    height: 50px;
+    border-radius: 50px;
+   
+    overflow: hidden;
+    float: left;
+    margin-left: 20px;
+}
+
+.main_container .feeds .article .feed_head .my_name {
+    float: left;   
+    margin-left: 10px;
+    
+}
+.main_container .feeds .article .feed_head .my_name p:nth-child(1) {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 28px;
+}
+.main_container .feeds .article .feed_head .my_name p:nth-child(2) {
+    
+    font-size: 17px;
+    line-height: 17px;
+}
+
+
+.main_container .feeds .article .feed_img {
+    width: 100%;
+    height: 700px;
+    position: relative;
+}
+.main_container .feeds .article .feed_img img {
+   position: absolute;
+   top:-50%
+}
+.main_container .feeds .article .feed_foot {
+    width: 100%;
+
+    
+}
+.main_container .feeds .article .feed_foot .icon_box {
+    width: 100%;
+    height: 50px;
+   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.main_container .feeds .article .feed_foot .icon_box .icon_left {
+    font-size: 25px;
+    margin-left: 20px;
+}
+.main_container .feeds .article .feed_foot .icon_box .icon_left i {
+    margin-right: 10px;
+ }
+
+.main_container .feeds .article .feed_foot .icon_box > .fa-bookmark {
+    font-size: 25px;
+    margin-right: 20px;
+}
+.main_container .feeds .article .feed_foot .foot_like {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    padding-left: 20px;
+  
+}
+.main_container .feeds .article .feed_foot .foot_like img {
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+   
+
+}
+.main_container .feeds .article .feed_foot .foot_like p {
+    margin-left: 15px; font-size: 20px;
+}
+.main_container .feeds .article .feed_foot .foot_text {
+    padding: 15px 25px 20px 25px ;
+    line-height: 30px;
+}
+.main_container .feeds .article .feed_foot .foot_text strong {
+    font-size: 19px; 
+    font-weight: 700;
+    padding-right: 15px;
+}
+
+.main_container .feeds .article .feed_foot .comment_box {
+    width: 100%;
+    height: 50px;
+    position: relative;
+    border-top: 1px solid rgb(230, 230, 230);
+   
+}
+.main_container .feeds .article .feed_foot .comment_box input{
+    width: 100%;
+    height: 50px;
+    font-size: 20px;
+    border: 1px solid rgb(230, 230, 230);
+    border-top: none;
+    padding-left: 40px;
+   
+}
+.main_container .feeds .article .feed_foot .comment_box span{
+    position: absolute;
+    right: 10px;
+    top:50%;
+    transform: translate(-50%, -50%);
+    color: rgb(44, 47, 226) ;
+   
+}
+.main_container .feeds .article .feed_foot .comment_box > span:hover {
+    cursor: pointer;
+    color: rgb(84, 84, 84);
+}
+
+
+/*리플 생성*/
+.main_container .feeds .article .feed_foot .reple_box {
+    width: 100%;
+    
+
+
+}
+.main_container .feeds .article .feed_foot .reple_box p{
+    font-size: 16px ;
+    
+    padding: 10px 25px;
+}
+.main_container .feeds .article .feed_foot .reple_box strong {
+    padding-right: 10px;
+    font-weight: 800;
+    font-size: 18px;
+}
+
+
+
+
+
+/*메인 왼쪽 끝*/
+
+
+
+
+/*메인 오른쪽 시작*/
+.main_container .main_right {
+    width: calc(100% - 950px);
+   
+   
+    float:right;
+}
+.main_container .main_right .right_article {
+    width:100%;
+}
+
+.main_container .main_right .right_article:nth-child(1) {
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+.main_container .main_right .right_article:nth-child(1) .my_photo {
+    width: 70px;
+    height: 70px;
+    border-radius: 70px;
+    background-color: red;
+    overflow: hidden;
+    float: left;
+    
+}
+.main_container .main_right .right_article:nth-child(1) .my_name{
+    float: left;
+    margin-left: 10px;
+}
+.main_container .main_right .right_article:nth-child(1) p:nth-child(1) {
+    font-size: 23px;
+    line-height: 40px;
+    font-weight: 800;
+}
+.main_container .main_right .right_article:nth-child(1) p:nth-child(2) {
+    font-size: 17px;
+    line-height: 30px;
+    
+}
+.main_container .main_right .right_article:nth-child(2) {
+   
+ 
+    
+    border:1px solid rgb(230, 230, 230);
+ 
+    
+}
+
+
+
+.main_container .main_right .right_article:nth-child(2) .article_more {
+      
+        
+        width: 100%;
+        height: 50px;
+        
+        padding-left: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid rgb(230, 230, 230);
+
+
+}
+
+.main_container .main_right .right_article:nth-child(2) .article_more span {
+    font-size: 20px;
+}
+.main_container .main_right .right_article:nth-child(2) .article_more a {
+    margin-right: 10px;
+    font-size: 12px;
+}
+
+
+.main_container .main_right .right_article:nth-child(2) .article_wrap {
+    width: 100%;
+  
+    
+
+}
+.main_container .main_right .right_article:nth-child(2) .article_wrap .article_container{
+
+    overflow-y: scroll;
+    width: 100%;
+    height: 250px;
+
+}.main_container .main_right .right_article:nth-child(2) .article_wrap .article_container::-webkit-scrollbar {
+    display: none;
+}
+.main_container .main_right .right_article:nth-child(2) .article_wrap .small_article {
+    width: 100%;
+    padding-left: 25px;
+   
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+.main_container .main_right .right_article:nth-child(2) .article_wrap .small_article  .my_photo{
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+ 
+    background-color: gold;
+    float: left;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    background-image: linear-gradient(#fff, #fff), 
+    linear-gradient(to right, red 0%,  orange 100%);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+.main_container .main_right .right_article:nth-child(2) .article_wrap .small_article .my_name {
+    float: left;
+    margin-left: 15px;
+
+
+}
+.main_container .main_right .right_article:nth-child(2) .article_wrap .small_article .my_name p:nth-child(1){
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: bold;
+
+}
+.main_container .main_right .right_article:nth-child(2) .article_wrap .small_article .my_name p:nth-child(2){
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    color: gray;
+    
+
+}
+
+
+
+
+.main_container .main_right .right_article:nth-child(3) {
+    
+    height: 250px;
+    margin-top: 20px;
+    border: 1px solid rgb(230, 230, 230);
+}
+
+.main_container .main_right .right_article:nth-child(3) .article_more {
+      
+        
+    width: 100%;
+    height: 50px;
+    
+    padding-left: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgb(230, 230, 230);
+
+
+}
+
+.main_container .main_right .right_article:nth-child(3) .article_more span {
+    font-size: 20px;
+
+}
+.main_container .main_right .right_article:nth-child(3) .article_more a {
+    margin-right: 10px;
+    font-size: 12px;
+}
+
+
+.main_container .main_right .right_article:nth-child(3)  .small_article {
+    width: 100%;
+    padding-left: 25px;
+   
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+.main_container .main_right .right_article:nth-child(3)  .small_article  .my_photo{
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+ 
+    background-color: gold;
+    float: left;
+    border-radius: 50%;
+    border: 2px solid transparent;    
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+.main_container .main_right .right_article:nth-child(3)  .small_article .my_name {
+    float: left;
+    margin-left: 15px;
+
+
+}
+.main_container .main_right .right_article:nth-child(3) .small_article .my_name p:nth-child(1){
+    font-size: 18px;
+    line-height: 25px;
+    font-weight: bold;
+
+}
+.main_container .main_right .right_article:nth-child(3) .small_article .my_name p:nth-child(2){
+    font-size: 12px;
+    line-height: 15px;
+ 
+    color: gray;
+    
+
+}
+
+/*메인 왼쪽 끝*/
+
+
+
+/*아이콘 반응*/
+
+.red  {
+    
+    color:red
+}
+.blue {
+    color: rgb(0, 132, 255);
+}
+
+
+.more_active {
+    overflow-y:none !important;
+    height: auto !important;
+}
