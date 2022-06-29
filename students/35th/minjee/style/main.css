@@ -87,6 +87,168 @@
     border-radius: 50%;
 }
 
+/* main */
 main {
     padding-top: 70px;
+    justify-content: center;
+}
+
+.feeds {
+    flex-direction: column;
+}
+
+.article {
+    margin-top: 20px;
+    flex-direction: column;
+    width: 470px;
+    border: 1px solid var(--border-color);
+    background-color: var(--inner-background-color);
+    border-radius: 8px;
+}
+
+/* top */
+.user-img {
+    width: 58px;
+    height: 58px;
+    justify-content: center;
+}
+
+.user-img img{
+    width: 32px;
+    height: 32px;
+    border: 2px solid #ff442f;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.top {
+    width: 100%;
+    height: 58px;
+    position: relative;
+} 
+
+.user-id {
+    font-weight: 600;
+}
+
+.more {
+    position: absolute;
+    right: 20;
+    bottom: 20;
+    font-size: 25px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* middle */
+.middle img {
+    width: 100%;
+    height: 470px;
+}
+
+/* bottom */
+.bottom {
+    width: 100%;
+    padding: 11px 11px 0 11px;
+    font-size: 15px;
+}
+
+/* .img-bottom-icons */
+.img-bottom-icons {
+    justify-content: space-between;
+}
+
+.img-bottom-icons img:nth-child(n):hover {
+    opacity: .5;
+    cursor: pointer;
+}
+
+.left-icons {
+    width: 91px;
+    justify-content: space-between;
+}
+
+.left-icons img,
+.right-icons img {
+    width: 24px;
+    height: 24px;
+}
+
+/* likes */
+.likes {
+    height: 45px;
+}
+
+.who-likes {
+    margin-left: 5px;
+}
+
+/* contents, comments */
+
+.contents,
+.comments {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.details {
+    margin-left: 7px;
+}
+
+/* time-ago */
+.time-ago {
+    font-size: 11px;
+    color: gray;
+    margin: 15px 0;
+}
+
+/* input-comments */
+.input-comments{
+    border-top: 1px solid var(--border-color);
+    width: 100%;
+    height: 49px;
+    justify-content: space-between;
+}
+
+.input-comments img {
+    width: 24px;
+}
+
+.input-comments input {
+    width: 381px;
+    margin: 0;
+    border: none;
+    margin: 0 5px;
+}
+
+.input-comments input:focus {
+    outline: none;
+}
+
+/* .input-comments textarea {
+    width: 381px;
+    margin: 0;
+    border: none;
+    resize: none;
+    margin: 0 5px;
+    overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.input-comments textarea:focus {
+    outline: none;
+} */
+
+.input-comments button {
+    background: none;
+    border: none;
+    color: #0095f6;
+    font-weight: 600;
+    opacity: .5;
+}
+
+.active {
+    opacity: 1;
+    cursor: pointer;
 }

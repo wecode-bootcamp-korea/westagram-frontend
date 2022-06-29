@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./img/instagram.png">
     <link rel="stylesheet" href="../style/common.css">
+    <link rel="stylesheet" href="../style/main.css">
     <title>Westagram</title>
 </head>
 <body>
@@ -30,54 +31,61 @@
                     <a><img src="./img/like.png"></a>
                     <a>
                         <span class="profile">
-                            <img src="./img/profile.JPG">
+                            <img alt="profile image" src="./img/profile.JPG">
                         </span>
                     </a>
                 </div>
             </div>
         </nav>
-        <main>
+        <main class="flex">
             <div class="feeds">
-                <article>
-                    <div class="top">
-                        <div class="user-img"></div>
-                        <div class="user-id"></div>
-                        <div class="more"></div>
+                <article class="article flex">
+                    <div class="top flex">
+                        <div class="user-img flex">
+                            <img alt="profile image" src="./img/profile.JPG">
+                        </div>
+                        <div class="user-id">m.minzzy</div>
+                        <button class="more flex">
+                            <span>.</span>
+                            <span>.</span>
+                            <span>.</span>
+                        </button>
                     </div>
                     <div class="middle">
-                        <div class="img-wrap">
-                            <img>
-                        </div>
+                        <img alt="Photo by mj, on Nov 17, 2021. Standing in front of brick wall. Feed sample image 1." src="./img/feed-image.jpg">
                     </div>
                     <div class="bottom">
-                        <div class="img-botttom-icon">
-                            <div class="left-icons">
-                                <div>하트</div>
-                                <div>댓글</div>
-                                <div>공유</div>
+                        <div class="img-bottom-icons flex">
+                            <div class="left-icons flex">
+                                <img alt="likes-heart" src="./img/like.png">
+                                <img alt="comments" src="./img/chat.png">
+                                <img alt="share" src="./img/send.png">
                             </div>
-                            <div class="right-icons">저장</div>
+                            <div class="right-icons">
+                                <img alt="bookmark" src="./img/bookmark.png">
+                            </div>
                         </div>
-                        <div class="likes">
-                            <div class="user-img">
-                                
+                        <div class="likes flex">
+                            <div class="profile">
+                                <img alt="user image of likes" src="./img/profile.JPG" />
                             </div>
                             <div class="who-likes">
-                                *님 외 n명이 좋아합니다.
+                                <b>m.minzzy</b>님 외 <b>100명</b>이 좋아합니다.
                             </div>
                         </div>
-                        <div class="contents">
-                            <div class="user-id"></div>
-                            <div class="contents-details"></div>
+                        <div class="contents flex">
+                            <div class="user-id">m.minzzy</div>
+                            <div class="details">저때가 좋았지.....^___^</div>
                         </div>
-                        <div class="comments">
-                            <div class="user-id"></div>
-                            <div class="comments-details"></div>
+                        <div class="comments flex">
+                            <div class="user-id">Yelihi</div>
+                            <div class="details">대박이군요~!</div>
                         </div>
                         <div class="time-ago">
-                            n분 전
+                            1분 전
                         </div>
-                        <div class="input-comments">
+                        <div class="input-comments flex">
+                            <img alt="comments imoji" src="./img/smile.png">
                             <input type="text" placeholder="댓글 달기...">
                             <button>게시</button>
                         </div>
