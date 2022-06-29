@@ -1,0 +1,302 @@
+/* nav-bar */
+.nav{
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  background-color: white;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.nav-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 950px;
+  padding: 0 20px;
+}
+
+.nav-container__logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-right: 40px;
+}
+
+#instagram{
+  margin-top: 5px;
+  font-size: 34px;
+}
+
+.nav-logo{
+  font-family: var(--logo-font);
+  font-size: 30px;
+}
+
+.nav-logo__separate{
+  width: 1px;
+  height: 30px;
+  background-color: black;
+}
+
+.nav-container__search{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 280px;
+  height: fit-content;
+}
+
+.search-input__input{
+  width: 260px;
+  height: 35px;
+  border: none;
+  border-radius: .6rem;
+  background-color: rgba(157, 151, 151, 0.1);
+  padding: .8rem;
+}
+
+.search-input__input[placeholder]{
+  font-size: 15px;
+  font-weight: 300;
+  padding-left: 45px;
+}
+
+.search-input__input:focus{
+  outline: none;
+}
+
+.search-input{
+  position: relative;
+}
+
+#search{
+  position: absolute;
+  top: 8px;
+  left: 15px;
+  font-size: 20px;
+  color: rgba(0,0,0,0.3);
+}
+
+#exit{
+  display: none;
+  position: absolute;
+  font-size: 16px;
+  top: 9px;
+  right: 15px;
+  color: rgba(0,0,0,0.3);
+}
+
+
+.nav-container__icon{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: auto;
+  gap: .9rem;
+}
+
+.nav-icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+}
+
+.nav-icon > a > i{
+  font-size: 28px;
+}
+
+/* javascript */
+
+.hidden{
+  display: none;
+}
+
+.search-input__input[placeholder].focus{
+  padding-left: 25px;
+}
+
+/* main section */
+
+.section-container{
+  display: flex;
+  justify-content: center;
+}
+
+.main-container{
+  width: 500px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+  padding: 0 15px;
+}
+
+.top-article{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  width: 100%;
+  height: 120px;
+  background-color: white;
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: .4rem;
+  margin-top: 15px;
+}
+
+.top-article__container{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  height: auto;
+}
+
+.top-article__info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: .4rem;
+  width: fit-content;
+  height: inherit;
+}
+
+.info-image{
+  width: 66px;
+  height: 66px;
+  border: 2px solid orange;
+  border-radius: 50%;
+}
+
+.info-image > img{
+  width: 62px;
+  height: 62px;
+  border-radius: inherit;
+  object-fit: cover;
+  object-position: center;
+  padding: .1rem;
+}
+
+.info-content{
+  font-size: 13px;
+}
+
+/* main article */
+.main-article{
+  width: 100%;
+  height: 500px;
+  background-color: white;
+  margin: 15px 0;
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: .4rem;
+}
+
+.main-article__nav{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 10px;
+}
+
+.nav-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+  width: auto;
+  height: auto;
+  padding: 0px;
+}
+
+
+.nav-image{
+  width: 46px;
+  height: 46px;
+  border: 2px solid orange;
+  border-radius: 50%;
+}
+
+.nav-image > img{
+  width: 42px;
+  height: 42px;
+  border-radius: inherit;
+  object-fit: cover;
+  object-position: center;
+  padding: .1rem;
+}
+
+.nav-title{
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 23px;
+}
+
+.nav-subtitle{
+  font-size: 13.5px;
+  color: rgba(0,0,0,0.9);
+}
+
+
+.main-right{
+  position: sticky;
+  top: 70px;
+  width: 360px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+  padding: 0 10px;
+}
+
+.profile-container{
+  width: 100%;
+  height: 70px;
+  background-color: white;
+  margin-top: 15px;
+}
+
+.profile-container__separate{
+  width: 100%;
+  height: 20px;
+  background-color: white;
+  margin-top: 15px;
+}
+
+.friends-container{
+  width: 100%;
+  height: auto;
+  background-color: white;
+  margin-top: 15px;
+}
+
+.friends{
+  width: 100%;
+  height: 60px;
+  padding: 5px;
+  background-color: white;
+}
+
+.description{
+  width: 100%;
+  height: auto;
+  background-color: white;
+  margin-top: 15px;
+}
+
+.copyright{
+  width: 100%;
+  height: auto;
+  background-color: white;
+  margin-top: 15px;
+}
