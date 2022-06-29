@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Westagram</title>
+    <link rel="stylesheet" href="./style/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/56e5929559.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav class="navigation-bar">
+      <div class="logo-title">
+        <a href="main.html"
+          ><img
+            class="insta-icon"
+            src="https://cdn-icons-png.flaticon.com/512/1384/1384031.png"
+            alt=""
+          />
+        </a>
+        <p class="nav-title"><span>|</span>Westagram</p>
+      </div>
+      <div class="nav-search">
+        <input type="text" placeholder="🔍 검색" />
+      </div>
+      <div class="nav-icons">
+        <div class="nav-icon_underdot">
+          <img
+            class="compass-icon"
+            src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png"
+            alt=""
+          />
+          <span class="displayoff">·</span>
+        </div>
+        <div class="nav-icon_underdot">
+          <img
+            class="heart-icon"
+            src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"
+            alt=""
+          />
+          <span class="displayon">·</span>
+        </div>
+        <div class="nav-icon_underdot1">
+          <img
+            class="user-icon"
+            src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png"
+            alt=""
+          />
+          <div class="user-info">
+            <p class="info-profile">
+              <i class="fa-regular fa-circle-user"></i><span>프로필</span>
+            </p>
+            <p class="info-saved">
+              <i class="fa-regular fa-bookmark"></i><span>저장됨</span>
+            </p>
+            <p class="info-settings">
+              <i class="fa-solid fa-gear"></i><span>설정</span>
+            </p>
+            <p class="info-logout"><span class="logout">로그아웃</span></p>
+          </div>
+          <span class="displayoff">·</span>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <div class="feeds">
+        <article class="article">
+          <div class="article-top">
+            <div class="logo-and-name">
+              <div class="article-logobox">
+                <img src="./guide/tobe/1.JPG" />
+              </div>
+              <p>ik_hyun2</p>
+            </div>
+            <i id="article-more" class="fa-solid fa-ellipsis"></i>
+          </div>
+          <div class="article-main-imgbox">
+            <img src="./guide/tobe/IMG_3572.JPG" alt="" />
+          </div>
+          <div class="article-icon-bar">
+            <div class="article-icon">
+              <i class="fa-solid fa-heart" style="color: red"></i>
+              <i class="fa-regular fa-comment"></i>
+              <i class="fa-solid fa-arrow-up-from-bracket"></i>
+            </div>
+            <i class="fa-regular fa-bookmark"></i>
+          </div>
+          <div class="article-comment">
+            <div class="article-comment-like">
+              <div class="article-imgbox">
+                <img src="./guide/tobe/commet1.jpg" alt="" />
+              </div>
+              <p>
+                <strong>aineworld</strong>님 <strong>외 10명</strong>이
+                좋아합니다
+              </p>
+            </div>
+            <div class="comment-id-comment">
+              <p style="font-weight: bold" class="user-id1">canon_mj</p>
+              <p class="user-commnet">위워크에서 진행한 베이킹 클래스...</p>
+              <p class="more-info" style="color: gray">더 보기</p>
+            </div>
+            <div class="include-heart">
+              <div class="comment-id-comment">
+                <p style="font-weight: bold" class="user-id2">neceosecius</p>
+                <p class="user-commnet">거봐 좋았잖아~~~~~🙆🏻‍♀️</p>
+              </div>
+            </div>
+            <div class="create-comment-div">
+              <div class="new-comment"></div>
+              <div class="delete-heart"></div>
+            </div>
+            <span class="comment-time" style="color: gray">42분 전</span>
+          </div>
+          <div class="comment-submit">
+            <input class="comment" type="text" placeholder="댓글 달기..." />
+            <input class="submit" type="submit" value="게시" />
+          </div>
+        </article>
+      </div>
+      <div class="main-right">
+        <div class="wecode-top">
+          <div class="wecode-logo">
+            <img src="./guide/tobe/3.png" alt="" />
+          </div>
+          <div class="wecode-name">
+            <p class="wecode-bootcamp">wecode bootcamp</p>
+            <p class="wecode-tag">WeCode | 위코드</p>
+          </div>
+        </div>
+        <div class="main-right-story">
+          <div class="story-main">
+            <div class="story-top">
+              <p class="story-top-gray">스토리</p>
+              <p class="story-top-black">모두 보기</p>
+            </div>
+            <div class="storyimg-and-name">
+              <div class="storyimg-box">
+                <img src="./guide/tobe/storty1.jpg" alt="" />
+              </div>
+              <div class="story-name">
+                <p style="font-weight: bold">_yum_s</p>
+                <p style="color: gray">16분전</p>
+              </div>
+            </div>
+            <div class="storyimg-and-name">
+              <div class="storyimg-box">
+                <img src="./guide/tobe/story2.jpg" alt="" />
+              </div>
+              <div class="story-name">
+                <p style="font-weight: bold">drink_eat_drink</p>
+                <p style="color: gray">3시간전</p>
+              </div>
+            </div>
+            <div class="storyimg-and-name">
+              <div class="storyimg-box">
+                <img src="./guide/tobe/story3.jpg" alt="" />
+              </div>
+              <div class="story-name">
+                <p style="font-weight: bold">hyukyc</p>
+                <p style="color: gray">20시간전</p>
+              </div>
+            </div>
+            <div class="storyimg-and-name">
+              <div class="storyimg-box">
+                <img src="./guide/tobe/story4.jpg" alt="" />
+              </div>
+              <div class="story-name">
+                <p style="font-weight: bold">jminkeek</p>
+                <p style="color: gray">1일전</p>
+              </div>
+            </div>
+            <div class="storyimg-and-name">
+              <div class="storyimg-box">
+                <img src="./guide/tobe/story5.jpg" alt="" />
+              </div>
+              <div class="story-name">
+                <p class="story-blackname" style="font-weight: bold">_yum_s</p>
+                <p style="color: gray">2일전</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="recommend">
+          <div class="recommend-top">
+            <p class="recommend-top-gray">회원님을 위한 추천</p>
+            <p class="recommend-top-black">모두 보기</p>
+          </div>
+          <div class="recommendimg-and-name">
+            <div class="recommend-imgbox">
+              <img src="./guide/tobe/recommend1.jpg" alt="" />
+            </div>
+            <div class="recommend-name">
+              <p style="font-weight: bold">joaaaaaahye</p>
+              <p style="color: gray">_legend_a님 외 2명이 ...</p>
+            </div>
+            <div style="color: rgba(34, 112, 214, 0.871)">팔로우</div>
+          </div>
+          <div class="recommendimg-and-name">
+            <div class="recommend-imgbox">
+              <img src="./guide/tobe/recommend2.jpg" alt="" />
+            </div>
+            <div class="recommend-name">
+              <p style="font-weight: bold">rampart81</p>
+              <p style="color: gray">ringo.in.seoul님 외 12...</p>
+            </div>
+            <div style="color: rgba(34, 112, 214, 0.871)">팔로우</div>
+          </div>
+          <div class="recommendimg-and-name">
+            <div class="recommend-imgbox">
+              <img src="./guide/tobe/recommend3.jpg" alt="" />
+            </div>
+            <div class="recommend-name">
+              <p style="font-weight: bold">shawnjjoo</p>
+              <p style="color: gray">jimmylee1220님 외 1...</p>
+            </div>
+            <div style="color: rgba(34, 112, 214, 0.871)">팔로우</div>
+          </div>
+        </div>
+        <p class="westagram-info">
+          Westagram 정보 . 지원 . 홍보 센터 . API . <br />
+          채용정보 . 개인정보처리방침 . 약관 . <br />
+          디렉터리 . 프로필 . 해시태그 . 언어 <br /><br />
+          @ 2022 WESTAGRAM
+        </p>
+      </div>
+    </main>
+    <script src="./js/main.js"></script>
+    <script src="./js/menu.js"></script>
+  </body>
+</html>
