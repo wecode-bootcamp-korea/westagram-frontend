@@ -41,7 +41,13 @@ function createComment() {
     comment.value = ""
     commentTime.innerHTML = "방금전";
     heartIcon.addEventListener ('click',function() {
-        heartIcon.style.color === 'red' ? heartIcon.style.color= "" :heartIcon.style.color= "red"
+        heartIcon.style.color === 'red' ? (
+            heartIcon.style.color= "",
+            heartIcon.className ="fa-regular fa-heart"
+        ) : (
+            heartIcon.style.color= "red",
+            heartIcon.className = 'fa-solid fa-heart'
+        )
     })
     deleteIcon.addEventListener('click',function() {
         createCommentDiv.remove();
@@ -50,7 +56,7 @@ function createComment() {
     }
 }
 function createCommentByEnter(event){
-    if(event.key === 'Enter' && comment.value){
+    if(event.key === 'Enter'){
         createComment()
     }
 }
