@@ -18,7 +18,7 @@
 
 .mainfeed {width: 100%; background-color: #f8f8f8; border-top: 1px solid #ddd; display: flex;}
 .main {width: 830px; max-width:100%; margin: 0 auto; display: flex; justify-content: center;}
-.feeds {width: 550px; margin-top:20px;}
+.feeds {width: 550px; margin:20px 0;}
 
 .art { width:100%; background-color: #fff; padding: 20px;}
 .fedtop{height: 50px; display: flex; margin: 10px 0;}
@@ -34,7 +34,7 @@
 .checkicon ul{width: 100px; display: flex; justify-content: space-between;}
 .checkicon ul li {font-size: 20px;}
 
-.fedtext {width: 100%; height: 200px; overflow: hidden;}
+.fedtext {width: 100%; overflow: hidden;}
 .like {display: flex;}
 .like img {width: 30px; height: 30px; border-radius: 50%;}
 .like p {margin: 10px;}
@@ -44,10 +44,13 @@
 .tcon p span {font-weight: 700; margin-right: 10px;}
 .tcon p a {color:#aeaeae;}
 .time {margin-top: 10px; color:#aeaeae;}
-.tcon p:nth-child(3) {margin-top: 20px;}
+
+.comment {position: relative; top:0; left: 0;}
+.commtext {width: 100%; height: 60px; border:1px solid #f0f0f0; border-radius: 5px; margin-top: 20px; padding-left: 10px;}
+.commbtn {position: absolute; bottom:0; right: 0; width: 80px; height: 60px; border:1px solid #f0f0f0; color:#0388fc; background-color: #fff;}
 
 .rightm{width:300px; height: 400px; padding-left: 30px; margin-top: 20px;}
-.feedright{width: 100%; background-color: #fff; padding: 10px;}
+.feedright{width: 100%;}
 .rtop{display: flex; height:50px; margin:20px 0;}
 .rtop img {width: 50px; height: 50px; border-radius: 50%;}
 .myname {margin: 10px 20px;}
@@ -55,17 +58,25 @@
 .myname p:nth-child(1) {font-weight: 700;}
 .myname p:nth-child(2) {font-size: 12px;}
 
-.news {display: flex; height: 250px; border: 1px solid #ddd; overflow: hidden;}
+.storyall {border: 1px solid #ddd; height: 260px; overflow: hidden; background-color: #fff;}
 .storybox {height: 50px; border-bottom: 1px solid #ddd;}
-.storybox p {line-height: 50px; margin-left: 15px;}
+.storybox p {font-size: 14px; line-height: 50px; margin-left: 15px;}
 .storybox p span {font-size: 12px; font-weight: 700; margin-left: 130px;}
 
-.friend ul {width: 100%; margin-left: 15px;}
+.friend ul {width: 100%; height: 140px; margin-left: 15px;}
 .friend ul li{padding: 15px 0px; display: flex; align-items:center;}
 .friend ul li img {width: 50px; height: 50px; border-radius: 50%;}
 .friend ul li p {margin-left: 10px; font-weight: 700; line-height: 20px;}
-.friend ul li p span {font-weight: 400; font-size: 14px;}
+.friend ul li p span {font-weight: 400; font-size: 12px; color:#686868;}
 
-.chucheon{width:300px; height: 400px; padding-left: 30px; margin-top: 20px;}
-.chall{width: 100%; background-color: #fff; padding: 10px;}
+.chall{margin-top: 30px; border: 1px solid #ddd; height: 260px; overflow: hidden; background-color: #fff;}
+.chubox{height: 50px; border-bottom: 1px solid #ddd;}
+.chubox p {display: flex; font-size: 14px; line-height: 50px; margin-left: 15px;}
+.chubox p span {font-size: 14px; font-weight: 700; margin-left: 60px;}
 
+.follow ul {width: 100%; margin-left: 15px;}
+.follow ul li{padding: 15px 0px; display: flex; align-items:center;}
+.follow ul li img {width: 50px; height: 50px; border-radius: 50%;}
+.follow ul li p {margin-left: 10px; font-weight: 700; line-height: 20px;}
+.follow ul li p:last-child {margin-left: 12px; font-size: 12px; color:#0388fc;}
+.follow ul li p span {font-weight: 400; font-size: 12px; color:#686868;}

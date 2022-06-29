@@ -6,15 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>mainpage</title>
   <script src="https://kit.fontawesome.com/156c552cfb.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="main.css">
-  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
   <div class="wrap">
     <header class="nav">
       <ul>
         <li>
-          <img src="instagram.png" alt="#">
+          <img src="../images/instagram.png" alt="#">
           <a href="#"><hr>Instagram</a>
         </li>
         <li class="search">
@@ -35,14 +35,14 @@
         <div class="feeds">
           <div class="art">
             <div class="fedtop">
-              <img src="round.jpeg" alt="동그라미 이미지">
+              <img src="../images/round.jpeg" alt="동그라미 이미지">
               <div class="textbox">
                 <p>wecode_bootcamp</p>
                 <p>weCode - 위코드</p>
               </div>
             </div>
             <div class="fedimg">
-              <img src="feedbig.jpeg" alt="피드 이미지">
+              <img src="../images/feedbig.jpeg" alt="피드 이미지">
             </div>
             <div class="checkicon">
               <ul>
@@ -53,13 +53,17 @@
             </div>
             <div class="fedtext">
               <div class="like">
-                <img src="round.jpeg" alt="동그라미 이미지">
+                <img src="../images/round.jpeg" alt="동그라미 이미지">
                 <p><span>dpqls</span>님 외 <span>4명</span>이 좋아합니다.</p>
               </div>
               <div class="tcon">
                 <p><span>wecode_bootcamp</span>"위코드는 단순 교육업체가 아닌 개발자 커뮤니티입니다." wecode에서 배우고 저는 총 5개 회사에서 오퍼를 받았습니다. -wecode졸업생 <a href="#">더보기</a></p>
                 <p class="time">5분전</p>
-               <p>댓글달기</p>
+              </div>
+              <div id="name"><p></p></div>
+              <div class="comment">
+                <input type="text" class="commtext" placeholder="댓글달기...">
+                <button type="button" class="commbtn">게시</button>
               </div>
             </div>
           </div>
@@ -67,7 +71,7 @@
         <div class="rightm">
           <div class="feedright">
             <div class="rtop">
-              <img src="round.jpeg" alt="동그라미 이미지">
+              <img src="../images/round.jpeg" alt="동그라미 이미지">
               <div class="myname">
                 <p>wecode-bootcamp</p>
                 <p>weCode | 위코드</p>
@@ -80,13 +84,13 @@
                 </div>
                 <div class="friend">
                   <ul>
-                    <li><img src="story1.jpeg" alt="">
+                    <li><img src="../images/story1.jpeg" alt="">
                       <p>AAA<br><span>2시간전</span></p>
                     </li>
-                    <li><img src="story2.jpeg" alt="">
+                    <li><img src="../images/story2.jpeg" alt="">
                       <p>BBB<br><span>1시간전</span></p>
                     </li>
-                    <li><img src="story3.jpeg" alt="">
+                    <li><img src="../images/story3.jpeg" alt="">
                       <p>CCC<br><span>13분전</span></p>
                     </li>
                   </ul>
@@ -94,19 +98,22 @@
               </div>
               <div class="chucheon">
                 <div class="chall">
-                  <div class="storybox">
-                    <p>스토리<span>모두보기</span></p>
+                  <div class="chubox">
+                    <p>회원님을 위한 추천<span>모두보기</span></p>
                   </div>
-                  <div class="friend">
+                  <div class="follow">
                     <ul>
-                      <li><img src="story1.jpeg" alt="">
-                        <p>AAA<br><span>2시간전</span></p>
+                      <li><img src="../images/story1.jpeg" alt="">
+                        <p>AAA<br><span>회원님을 팔로우합니다</span></p>
+                        <p>팔로우</p>
                       </li>
-                      <li><img src="story2.jpeg" alt="">
-                        <p>BBB<br><span>1시간전</span></p>
+                      <li><img src="../images/story2.jpeg" alt="">
+                        <p>BBB<br><span>회원님을 팔로우합니다</span></p>
+                        <p>팔로우</p>
                       </li>
-                      <li><img src="story3.jpeg" alt="">
-                        <p>CCC<br><span>13분전</span></p>
+                      <li><img src="../images/story3.jpeg" alt="">
+                        <p>CCC<br><span>회원님을 팔로우합니다</span></p>
+                        <p>팔로우</p>
                       </li>
                     </ul>
                   </div>
@@ -117,6 +124,6 @@
       </div>
     </div>
   </div>
-  <!-- <script src="main.js"></script> -->
+  <script src="../js/main.js"></script>
 </body>
 </html>
