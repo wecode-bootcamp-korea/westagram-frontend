@@ -1,0 +1,177 @@
+* {
+    box-sizing: border-box;
+  }
+
+nav  {
+    display:flex;
+    justify-content: center;
+    border-bottom: 1px solid #EAEAEA;
+}
+
+nav img {
+    width: 24px;    
+    font-weight: bold;
+}
+ 
+.nav-space {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 975px;
+    flex: 1;
+    height: 60px;
+    padding: 0 20px;
+    margin-top: -7px;
+}
+
+.leftSide {
+    display: flex;
+    align-items: center;
+    font-size: 29px;
+}
+
+
+.logoStyle {
+    border-left: 1px solid black;
+    font-family: 'Lobster', cursive;
+    margin-left: 10px;
+    padding-left: 10px;
+}
+
+input {
+    background-image: url(https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-256.png);
+    background-position: 10px center;
+    background-size: 30px;
+    background-repeat: no-repeat;
+    background-color: #efefef;
+    border: 1px solid rgb(var(--ig-primary-text));
+    text-indent: 40px;
+    width: 268px;
+    height: 36px;
+    border-radius: 8px;
+    font-size: var(--system-16-font-size);
+    
+}
+input:focus {
+    background-image: none;
+    background-position: -10px center;
+    text-indent: 0;    
+}
+
+.rightSide {
+    display: flex;
+    width: 150px;
+    justify-content: space-around;    
+    font-weight: 100px;
+}
+
+/* nav */
+
+
+main {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(250, 250, 250);
+    min-height: calc(100vh - 61px);
+}
+
+.feeds {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    margin-top: 50px;
+    
+}
+
+article {
+    border: 1px solid #EAEAEA;
+    background-color: white;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow:  rgba(0, 0, 0, 0.3);
+    width: 95%;
+    height: 100%;
+}
+
+.article-nav {
+    margin-top: 20px;
+    align-items: center;
+    display: flex;
+}
+
+.article-profileImg {
+    width: 20px;
+    margin-left: 20px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.article-profileText {
+    font-weight: bold; 
+    margin-left: 10px;
+    flex:1;
+}
+
+.article-nav i {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
+
+.article-feedImg {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.article-iconsFlex {
+    margin: 10px;
+    font-size: 20px;
+}
+
+.article-iconsFlex i {
+    margin-left: 8px;
+}
+
+
+.fa-bookmark {
+    position: relative;
+    left: 320px;
+}
+
+.fa-heart{
+    color: red;
+}
+
+.fa-comment {
+    transform: scaleX(-1);
+}
+
+.article-undercontainer {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.textbold {
+    font-weight: bold;
+}
+
+.article-like {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.article-like img {
+    width: 20px;
+    margin-right: 10px;
+}
+.article-discription {
+}
+
+.main-right {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid yellow;
+    
+}
