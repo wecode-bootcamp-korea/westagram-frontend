@@ -17,11 +17,6 @@ body {
   display: none;
 }
 
-#redheart {
-  font-size: 13px;
-  color: red;
-}
-
 
 /* nav */
 
@@ -238,9 +233,22 @@ main {
   height: 20px;
 }
 
-.contents__comments .yourComment .comment1 {}
+.contents__comments .yourComment .comment1 .realComment {
+  padding: 0 5px;
+}
 
-.contents__comments .yourComment .smallheart i {
+.contents__comments .yourComment .smallheart_delete {
+  display: flex;
+}
+
+
+.contents__comments .yourComment .smallheart {
+  font-size: 13px;
+  padding: 5px 0;
+}
+
+
+.contents__comments .yourComment .delete {
   font-size: 13px;
   
 }
