@@ -1,0 +1,226 @@
+.header-parents {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #efefef;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.header {
+  width: 70%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+}
+
+.logo p {
+  font-size: 30px;
+  font-family: "Lobster", cursive;
+}
+
+.search input {
+  width: 300px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  background-color: #efefef;
+  padding: 0px 20px;
+  outline: none;
+}
+
+.icon span {
+  font-size: 30px;
+  margin: 0px 5px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin-top: 120px;
+}
+
+.left-parents {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border-light);
+}
+
+.feed-title {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px 10px;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+}
+
+.user__avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 30px;
+  margin-right: 20px;
+  object-fit: cover;
+}
+
+.user-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-text span:last-child {
+  font-size: 13px;
+  opacity: 0.4;
+}
+
+.article {
+  height: 600px;
+  border: 1px solid #efefef;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1)),
+    url(https://source.unsplash.com/category/nature/1600x900);
+  background-size: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.feed-comment {
+  position: relative;
+  margin-top: 5px;
+  height: 180px;
+  background-color: #ffffff;
+}
+
+.comment-i {
+  display: flex;
+  justify-content: space-between;
+}
+
+.comment-i span {
+  font-size: 30px;
+  margin: 0px 5px;
+}
+
+.comment-i div {
+  margin: 0px 20px;
+}
+
+.bookmark {
+  margin: 0px 20px;
+}
+
+.comment {
+  margin-top: 5px;
+  height: 70px;
+  overflow: scroll;
+}
+
+.comment li p {
+  font-size: 12px;
+  margin: 5px 0px;
+}
+
+.comment-text {
+  width: 100%;
+  border-top: 1px solid #efefef;
+  position: absolute;
+  bottom: 0;
+}
+
+.comment-text form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.comment-text input {
+  margin: 0px 20px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+.comment-text button {
+  border: none;
+  background: inherit;
+  cursor: pointer;
+}
+
+.comment-input {
+  outline: none;
+  border: none;
+  padding: 13px 0px;
+}
+
+ul {
+  margin-left: 10px;
+}
+
+.right-parents {
+  height: 100%;
+  margin-left: 25px;
+}
+
+.right .user__avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.right .user-text {
+  font-size: 20px;
+}
+
+.right-story {
+  margin-top: 10px;
+  width: 320px;
+  height: 300px;
+  border: 1px solid var(--border-light);
+  overflow: auto;
+  border-radius: 5px;
+}
+
+.right-story__text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+}
+
+.right-recommend {
+  width: 320px;
+  margin-top: 15px;
+  border: 1px solid var(--border-light);
+  border-radius: 5px;
+}
+
+li {
+  position: relative;
+}
+.user-follow-btn {
+  position: absolute;
+  right: 20px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--light-blue);
+}

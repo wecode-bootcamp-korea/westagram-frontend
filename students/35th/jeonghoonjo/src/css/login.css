@@ -1,0 +1,240 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner-box {
+  border: 1px solid var(--border-light);
+  background-color: var(--inner-white);
+}
+
+.phone-parents {
+  position: relative;
+}
+
+.phone__frame {
+  width: 380px;
+  height: 590px;
+}
+
+.phone__inner {
+  width: 240px;
+  height: 530px;
+  position: absolute;
+  top: 30px;
+  left: 70px;
+}
+
+.login-parents {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.login-box {
+  height: 375px;
+  padding: 0px 30px;
+}
+
+.login__box__logo {
+  margin: 35px auto;
+  font-family: "Lobster", cursive;
+  font-size: 35px;
+  font-weight: 100;
+  text-align: center;
+}
+
+.login__box__form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.login__box__form input {
+  height: 35px;
+  width: 260px;
+  margin-bottom: 10px;
+  border-radius: 2px;
+  background-color: var(--back-white);
+  border: 1px solid var(--border-light);
+  outline: none;
+}
+
+.login__box__form button {
+  height: 35px;
+  width: 260px;
+  margin-bottom: 10px;
+  border-radius: 2px;
+  background-color: var(--light-blue);
+  color: var(--inner-white);
+  opacity: 0.7;
+  border: 1px solid var(--border-light);
+  outline: none;
+}
+
+.login__box__form input:last-child {
+  color: var(--inner-white);
+  background-color: var(--light-blue);
+  opacity: 0.6;
+}
+
+.login__box__form__label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.login__box__form__label label {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 13px;
+  color: gray;
+}
+
+@keyframes labelUp {
+  from {
+    transform: translate(0, 0) scaleY(1);
+  }
+  to {
+    transform: translate(-10px, -10px) scaleY(0.95);
+  }
+}
+
+@keyframes labelDown {
+  from {
+    transform: translate(-10px, -10px) scaleY(0.95);
+  }
+  to {
+    transform: translate(0, 0) scaleY(1);
+  }
+}
+
+.label-up {
+  animation: labelUp 0.1s ease-in-out forwards;
+  opacity: 0.8;
+}
+
+.label-down {
+  animation: labelDown 0.1s ease-in-out forwards;
+  opacity: 1;
+}
+
+.login__text {
+  display: flex;
+  align-items: center;
+  margin: 10px 0px;
+  font-size: 13px;
+}
+
+.login__text::before {
+  content: "";
+  height: 1px;
+  flex-grow: 1;
+  margin-right: 18px;
+  background: var(--border-light);
+}
+
+.login__text::after {
+  content: "";
+  height: 1px;
+  flex-grow: 1;
+  margin-left: 18px;
+  background: var(--border-light);
+}
+
+.login__link {
+  display: block;
+  margin-top: 30px;
+  text-align: center;
+  text-decoration: none;
+  color: #385185;
+}
+
+.login__link i {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.login__link:last-child {
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+.signup__box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 10px auto;
+  padding: 20px 0px;
+  font-size: 13px;
+  text-align: center;
+}
+
+.signup__box a {
+  text-decoration: none;
+  color: #2da8f8;
+}
+
+.download-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.download-box p {
+  margin-top: 15px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.download-box__s {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.download-box__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.download-box__link div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+  background-color: black;
+  border-radius: 5px;
+  color: var(--inner-white);
+}
+
+.download-box__link__store i {
+  font-size: 20px;
+}
+
+.store-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 13px;
+  font-weight: 400;
+}
