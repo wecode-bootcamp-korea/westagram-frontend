@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="shortcut icon" href="./img/instagram.png">
+    <link rel="stylesheet" href="../style/common.css">
+    <title>로그인 · Westagram</title>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <h1>Westagram</h1>
+        </div>
+        <form id="loginForm" class="login">
+            <input id="loginId" class="login-id" type="text" placeholder="전화번호, 사용자 이름 또는 이메일">
+            <input id="loginPW" class="login-pw" type="password" placeholder="비밀번호" >
+            <button id="loginSubmit" class="login-submit" type="button" onclick="moveMain()" disabled>로그인</button>
+        </form>
+        <div class="forget-pw">
+            <a href="login.html">비밀번호를 잊으셨나요?</a>
+        </div>
+    </div>
+<script src="./js/login.js"></script>
+</body>
+</html>
