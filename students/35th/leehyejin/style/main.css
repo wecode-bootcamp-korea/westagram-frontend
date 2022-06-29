@@ -1,0 +1,459 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans&display=swap");
+
+body{
+    display: block; /*inline:화면에 표시되는 영역만큼 차지, block: 혼자 한 줄을 차지 요소 너비 100%*/
+    justify-content: center; /*가로축을 기준으로 정렬*/
+    align-items: center;    /*세로축을 기준으로 정렬*/
+    width:100vw;
+    height:100vh;
+    overflow-x:hidden;
+    background-color: #fafafa;
+  }
+
+  .main{
+    display:flex;
+    flex-direction: column; /*flex 방향 설정*/
+    align-items:stretch; /*콘텐츠 아이템의 내부 상하관계 정렬 상태 설정*/
+    position:relative;
+    border:0 solid black;   /*요소를 일반적인 문서 흐름에 따라 배치하고, 자기 자신을 기준으로 top, right, bottom, left의 값에 따라 오프셋을 적용*/
+    
+}
+
+  .navTop{
+    vertical-align: baseline; /*vertical-align 인라인 요소의 수직정렬 baseline: 부모요소의 기준선(baseline)에 맞춤ㄴ */
+    align-items:stretch;
+    display: flex;
+    flex-direction: column;
+    position:sticky;
+    top:0;
+    height:55px;
+    width:100%;
+    border: 1px solid #dbdbdb;
+    background-color: white;
+    z-index: 999;
+  }
+
+  .topContainer{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    vertical-align:baseline;
+    height:100%;
+    padding: 0 20px;
+    width:100%;
+    /* padding:12px; */
+  }
+ 
+  .logo{
+    font-family: "Lobster", cursive;
+    position: relative;
+    justify-content: flex-start;
+    display: flex;
+    /* flex:0 0 auto; */
+    align-items: stretch;
+    align-content: stretch;
+    /* flex: 1 0 127px; */
+    font-size: 25px;
+    /* margin: 0;
+    padding: 0; */
+    vertical-align: baseline;
+    /* padding:12px; */
+    margin:0 230px;
+}
+.searchBar{
+    position:relative;
+    display:flex;
+    flex: 0 1 auto;
+    align-items:center;
+    background-color: #efefef;
+    border:none;
+    border-radius:8px;
+    width:268px;
+    min-width:200px;
+    height:36px;
+}
+.magnify{
+    margin-left:12px;
+}
+.searchTxt{
+    background-color: #efefef;
+    border: 0;
+    border-radius: 8px;
+    padding:3px 11px;
+    outline:none;
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+    color:#7d8080;
+}
+
+.iconContainer{
+    display:flex;
+    flex-direction:row;
+    flex: 1 0 127px;
+    flex-wrap:wrap;
+    min-width: 650px;
+    justify-content: center;
+    position:relative;
+    align-content:center;
+    align-items:center;
+    /* font-size:100%; */
+}
+.homeIcon{
+    display:block;
+    position:relative;
+    font-size:100%;
+    
+}
+.homeIcon:hover{
+    cursor: pointer;
+}
+
+.dmIcon{
+    display:flex;
+    position:relative;
+    margin-left:22px;
+    
+}
+.dmIcon:hover{
+    cursor: pointer;
+}
+
+.addIcon{
+    display:flex;
+    position:relative;
+    margin-left:22px;
+}
+.addIcon:hover{
+    cursor: pointer;
+}
+
+.findIcon{
+    display:flex;
+    position:relative;
+    margin-left:22px;
+}
+.findIcon:hover{
+    cursor: pointer;
+}
+
+.heartIcon{
+    display:flex;
+    position:relative;
+    margin-left:22px;
+    
+}
+.heartIcon:hover{
+    cursor: pointer;
+   
+}
+
+
+.mainUser{
+    height:24px;
+    width:24px;
+    border-radius: 70%;
+    margin-left:22px;
+}
+
+.userProfile{
+    display:flex;
+    position:relative;
+    height:24;
+    width:24;
+    margin-left:22px;
+}
+.userProfile:hover{
+    cursor: pointer;
+}
+
+.storyContainer{
+    display:flex;
+    position:relative;
+    /*flex-direction: column;*/ 
+    /* justify-content: center;  */
+    margin: 0 auto;
+    width:60%;
+    min-width: 470px;
+    height:695px;
+}
+.stories{
+    display:flex;
+    position:relative;
+    width:520px;
+    min-width: 520px;
+    height:105px;
+    border: 1px solid #dbdbdb;
+    border-radius: 8px;
+    /*margin: 16px 0 0 20%;*/
+    margin:26px 0 0 6px;
+    background-color: white;
+    
+} 
+.storyWrapper{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position:relative;
+    align-items: center;    
+    align-content:center;
+    width:100%;
+    height:80%;
+}
+.strbox{
+    vertical-align: top;
+    display: inline-block;
+    text-align: center;
+    width:50px;
+    height:50px;
+}
+
+
+.id1{
+    display:block;
+    font-weight: 200;
+    font-size: 8px;
+    text-align: center;
+}
+
+.feed{
+    position:absolute;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: stretch;
+    align-content: stretch;
+    width:520px;
+    height: 800px;
+    border: 1px solid #dbdbdb;
+    border-radius: 8px;
+    margin-top:150px;
+    margin-left:7px;
+    background-color: white;
+}
+.feedHeader{
+    width:100%;
+    height:52px;
+    margin-top:0;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.feedContainer{
+    width:500px;
+    height:40px;
+    margin:6px auto;
+    vertical-align: middle;
+}
+
+.feedHeaderImg{
+    position:relative;
+    width:40px;
+    height:40px;
+    border:1px solid #F35369;
+    border-radius: 70%;
+}
+.feedHeaderImg span{
+   
+}
+.feedUser{
+    display: inline-block;
+    position:absolute;
+    top: 2%;
+    margin-left:10px;
+    font-size: 14px;
+    font-weight:600;
+}
+
+.moreIcon{
+    /*display: block;
+    position: relative;*/
+    position:absolute;
+    justify-content: center;
+    right:10px;
+    top:2%;
+}
+
+.feedImg{
+    height:500px;
+}
+
+.footerIcon{
+    display: flex;
+    width:100px;
+    margin:2% 0 2px 9px;
+    justify-content:space-between;
+}
+
+.footerIcon2{
+    position:absolute;
+    right:15px;
+    width:24px;
+    height:24px;
+}
+
+.cmtLikeContainer{
+    width:490px;
+    height:30px; 
+    line-height:30px; /*text를 세로 중앙 배치하려면, height 값을 매기고 line-height값을 설정하면 된다.*/
+    margin-left:10px;
+   
+}
+
+.cmtContainer{
+    width:490px;
+    height:80px;
+    margin-top:10px;
+    margin-left:10px;
+
+}
+
+.cmtTime{
+    position: relative;
+    top:-2px;
+    font-size:10px;
+    color:grey;
+}
+
+.addCmt{
+    position:absolute;
+    bottom:4px;
+    width:500px;
+    height:55px;
+    border-top: 1px solid #dbdbdb;
+}
+
+.cmtInput{
+    height:45px;
+    margin-top: 2%;
+}
+.emojiIcon{
+    position:relative;
+    bottom:15px;
+}
+
+.cmtAdd{
+    width:400px;
+    height:45px;
+    margin-left: 5px;
+    line-height: 35px;
+    font-size: 14px;
+    border: none;
+    resize: none; /*크기 조절 없애기*/
+    overflow:hidden;
+}
+.cmtAdd:focus{  /*클릭 시 테두리 없애기*/
+  outline: none;
+}
+
+.cmtBtn{
+    position:relative;
+    bottom: 22px;
+    width:50px;
+    height:24px;
+    background-color: white;
+    border: none;
+    color: #b3dffc;
+    font-size: 14px;
+    font-weight: bold;
+}
+.cmtBtn:hover{
+    cursor: pointer;
+}
+
+/*                  mainRight                   */
+
+.mainRight{
+    position:fixed;
+    display: flex;
+    width: 350px;
+    height:350px;
+    margin-top:24px;
+    margin-left:550px;
+    
+}
+
+.mainRightTop{
+    position: relative;
+    display: flex;
+    width:100%;
+    height: 70px;
+   
+}
+
+.mainProfile{
+    display: flex;;
+}
+
+.mainProfileImg{
+ width:50px;
+ height:50px;
+ border-radius: 70%;
+ margin:2%;
+}
+
+.user{
+    display: flex;
+    justify-content: center;/* spanㅌㅐㄱㅡ ㅅㅜㅈㅣㄱ ㅈㅓㅇㄹㅕㄹ*/
+    flex-direction: column;
+}
+.username{
+    font-weight: lighter;
+    font-size: 12px;
+    color:grey;
+}
+.btnContainer{
+    display: flex;
+    width:165px;
+    height:100%;
+    justify-content: flex-end;
+    vertical-align: middle;
+    align-items: center; /*display flex 일때 align-items center하면 수직 정렬됨*/
+   
+}
+
+.userChange{
+    background-color: transparent;
+    color:blue;
+    width: 40px;
+    height:30px;
+    border: none;
+    /*background-color: transparent;*/
+}
+
+.userChange:hover{
+    cursor: pointer;
+}
+
+.userRecommend{
+    position:absolute;
+    left: 0;
+    bottom:0;
+    display: inline-block;
+    width: 100%;
+    height:280px;
+    border: 1px solid #dbdbdb;
+    
+}
+.recommendTitle{
+    width: 50%;
+    font-size:14px;
+    font-weight: 600;
+    color:rgb(142,142,142);
+}
+.recommendDetail{
+    font-size: 12px;
+    font-weight: 600;
+    margin-left: 150px;
+}
+.info{
+    position:absolute;
+    bottom:-100px;
+    width: 100%;
+    height:100px;
+}
+
+.recommendList{
+    display: flex;
+    flex-direction: column;
+}

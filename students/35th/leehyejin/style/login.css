@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans&display=swap");
+
+
+
+body{
+  justify-content: center;
+  align-items: center;
+  width:100vw;
+  height:100vh;
+}
+
+.wrapper{
+    width:100%;
+    height:100%;
+    overflow: hidden;
+    position:absolute;
+    background-color:#fafafa;
+}
+
+.container{
+    background-color:#fff;
+    display:flex;
+    width:450px;
+    height:590px;
+    border: 1px solid #dbdbdb;
+    margin:50px auto;
+    display: flex;
+  align-items: center;
+  flex-direction: column;
+    
+}
+
+.logo{
+    width:100%;
+    height: 20%;
+    font-family: "Lobster", cursive;
+    font-size:55px;
+    text-align:center;
+    vertical-align: middle;
+    /* background-color: yellow; */
+    margin:36px 50% 0 50%;
+    
+    font-size:70px;
+}
+
+.input{
+  flex-direction: column;
+  justify-content: space-around;
+  /* margin-top:36px; */
+  width:100%;
+  margin:24px 0 40px 6px;
+  
+}
+.idInput{
+    position:relative;
+    display:flex;
+    flex-direction:row;
+    background: #fafafa;
+    border:1px solid #dbdbdb;
+    border-radius:3px;
+    width:80%;
+    height:45px;
+    margin-left:10%;
+    padding: 9px 0 7px 8px;
+    font-size: 16px;
+    
+}
+.idInput:focus{
+    border: 1px solid #787777;
+    outline: none;
+}
+.pwInput{
+    position:relative;
+    background: #fafafa;
+    border:1px solid #dbdbdb;
+    border-radius:3px;
+    width:80%;
+    height:45px;
+    margin:2% 0 0 10%;
+    padding: 9px 0 7px 8px;
+    font-size: 16px;
+    
+}
+.pwInput:focus{
+    border: 1px solid #787777;
+    outline: none;
+}
+.loginBtn{
+    display: flex;
+    position:relative;
+    background: #b2dffc;
+    color:white;
+    border:1px solid transparent; /*transparant: border에 투명도 적용*/
+    border-radius:3px;
+    width:80%;
+    height:45px;
+    /* margin: 0px 38px 8px 40px; */
+    /* margin-top:8px; */
+    margin-left:8px;
+    padding: 7px 0 8px 8px;
+    font-size: 22px;
+    font-weight: bold; /*글씨체 두껍게*/
+    text-align: center;
+    /* font:inherit;  inherit은 부모 요소를 따른다는 것. font-size를 변경해도 바뀌지 않아 inherit을 지웠더니 크기 조절이 가능했다*/
+    opacity: 1;
+    flex: 0 0 auto;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+}
+.loginBtn:hover{
+    background: #0095f6;
+    cursor: pointer;
+    font-weight: bold;
+}
+a{
+    text-decoration: none;
+    color: #4c6caf;
+    font-weight: bold;
+}
+
+.footer{
+    width:100%;
+   position: relative;   /*relative는 정상위치에 대해서 상대적으로 위치한다.*/
+   top:170px;
+    text-align: center;
+}
+/* .mainLogo {
+    font-family: "Lobster", cursive;
+    font-size: 40px;
+    margin-top: 20px;
+  } */

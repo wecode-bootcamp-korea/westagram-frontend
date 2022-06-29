@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width"> 
+        <link href="../style/common.css" rel="stylesheet" type="text/css" />
+        <link href="../style/login.css" rel="stylesheet"  type="text/css" />
+        <link rel="preconnect" href="https://fonts.gstatic.com"> 
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto+Mono&display=swap" rel="stylesheet">
+        <title>westagram</title>
+    </head>
+    <body>
+        <div class="wrapper">
+        <div class="container">
+            <span class="logo">Westagram</span>
+            <div class="input">
+                <input class="idInput" type="text" placeholder="전화번호, 사용자 이름 또는 이메일"> 
+                <input class="pwInput" type="text" placeholder="비밀번호"> 
+            </div>
+            <button class="loginBtn" disabled="disabled">로그인</button>
+            <div class="footer"><a href="/accounts/password/reset">비밀번호를 잊으셨나요?</a></div>   
+            <!-- span과 div의 차이. span의 display 속성은 block이 아닌 inline이다. div는 줄바꿈이 되지만 span은 되지 않는다. -->
+          
+            </div>
+        </div>
+    <script src="../js/login.js"></script>    
+    </body>
+</html>
