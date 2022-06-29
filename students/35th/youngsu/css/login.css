@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  display: felx;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  font-family: "Lobster", cursive;
+  font-size: 10vh;
+  font-weight: lighter;
+  margin: 5vh;
+}
+
+.guideLine {
+  margin: 3vh;
+  border: 0.3vh solid rgb(219, 219, 219);
+  text-shadow: 10px;
+  height: 900px;
+}
+
+.login-id {
+  font-size: 1.5vh;
+  border-radius: 5px;
+  border: 1px solid #bbb;
+  width: 400px;
+  margin: 10px;
+  padding: 15px;
+  outline: none;
+}
+
+.login-pwd {
+  font-size: 1.5vh;
+  border-radius: 5px;
+  border: 1px solid #bbb;
+  width: 400px;
+  margin: 10px;
+  padding: 15px;
+  outline: none;
+}
+.login-btn {
+  font-size: 2vh;
+  text-align: center;
+  color: white;
+  background-color: rgba(71, 71, 201, 0.74);
+  border-radius: 15px;
+  width: 400px;
+  margin: 10px;
+  padding: 15px;
+  border: white;
+  opacity: 1;
+}
+
+.login-btn:disabled {
+  font-size: 2vh;
+  text-align: center;
+  color: white;
+  background-color: rgba(71, 71, 201, 0.74);
+  border-radius: 15px;
+  width: 400px;
+  margin: 10px;
+  padding: 15px;
+  border: white;
+  opacity: 0.35;
+}
+
+.login-btn:hover {
+  cursor: pointer;
+}
+
+.login-btn:disabled:hover {
+  cursor: default;
+}
+
+section {
+  text-align: center;
+}
+
+header {
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  margin: 50px;
+}
+a {
+  text-decoration: none;
+}

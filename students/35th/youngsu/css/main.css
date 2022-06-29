@@ -1,0 +1,288 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+nav {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  /* flex-wrap: nowrap;
+  flex-direction: row; */
+  position: fixed;
+  top: 0;
+  /* width: 100% */
+  left: 0;
+  right: 0;
+  z-index: 1;
+  border-bottom: 1px solid grey;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-family: "Lobster", cursive;
+  font-size: 30px;
+}
+
+nav img {
+  height: 30px;
+  margin: 10px;
+}
+
+/* div input {
+  width: 300px;
+  height: 30px;
+  border-radius: 5px;
+} */
+
+.dot img {
+  width: 10px;
+  height: 10px;
+}
+
+.search-bar {
+  width: 400px;
+  height: 27px;
+  border-radius: 5px;
+  border: solid 1px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search-bar__input {
+  width: 10px;
+  border: none;
+  text-align: center;
+  margin-left: 10px;
+  overflow: auto;
+  font-size: 15px;
+  outline: none;
+}
+
+.search-bar__input:focus {
+  outline: none;
+  width: 300px;
+  text-align: left;
+}
+
+.main {
+  position: relative;
+  /* border: 1px solid black; */
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: right;
+  padding: 5px 10px 0 0;
+  background-color: #e6dcdcb2;
+}
+
+.feeds {
+  position: relative;
+  right: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  border: 1px solid #bbb;
+  width: 400px;
+  margin: 60px 50px 50px 50px;
+  height: 100%;
+  padding-bottom: 10%;
+  background: white;
+  border-radius: 15px;
+}
+
+.nameTag {
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+
+.nameTag p {
+  line-height: 140%;
+  margin-top: 20px;
+  font-weight: bolder;
+  font-size: 15px;
+}
+
+.nameTag p span {
+  color: rgba(128, 128, 128, 0.863);
+}
+
+.article {
+  width: 80%;
+  height: 600px;
+  margin-top: 10px;
+  border: 1px solid #bbb;
+  text-align: center;
+  border-radius: 15px;
+}
+
+.article img {
+  width: 90%;
+  height: 50%;
+  margin: 10px 0px 0px 10px;
+}
+
+.nameTag img {
+  margin: -10px 10px 10px 20px;
+  width: 60px;
+  float: left;
+  border-radius: 50%;
+}
+.article-foot {
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  width: 90%;
+  height: 30px;
+}
+
+.article-foot-iconbar img {
+  /* text-align: center; */
+  width: 20px;
+  height: 20px;
+  margin: 2px 1px 1px 5px;
+}
+.article-foot-iconbar {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  width: 90%;
+  height: 30px;
+  /* border: 1px solid black; */
+}
+.heart {
+  display: flex;
+  margin: 0 auto;
+  width: 90%;
+  height: 30px;
+  font-size: 11px;
+  padding: 5px 0px 0px 10px;
+}
+
+.comment {
+  text-align: left;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  height: 15%;
+  border: 1px solid rgb(233, 225, 225);
+  word-break: break-all;
+  padding: 4px;
+}
+
+.main-right {
+  position: fixed;
+  margin: 50px;
+  right: 30px;
+  width: 25%;
+  height: 600px;
+  z-index: 8;
+  margin-top: 80px;
+  border-radius: 15px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.comment-insert {
+  margin: 0 auto;
+  width: 90%;
+  border: 1px solid rgb(235, 225, 225);
+  height: 8%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.comment-insert :hover {
+  cursor: pointer;
+}
+
+.insert {
+  /* margin: 10px; */
+  padding: 0 auto;
+  width: 50px;
+  height: 20px;
+  text-align: center;
+  line-height: 1;
+  font-weight: 600;
+  color: blue;
+  background-color: white;
+  border: none;
+  opacity: 0.7;
+}
+
+.comment-content {
+  border: none;
+  outline: none;
+}
+.line {
+  margin: 3px 0 10px 5px;
+  color: rgb(177, 171, 171);
+  font-weight: bolder;
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.story {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  border: 2px solid #bbb;
+  margin-bottom: 30px;
+  border-radius: 3px;
+  background-color: white;
+  text-align: left;
+  overflow: scroll;
+  scrollbar-width: none;
+  z-index: 0;
+  word-break: break-all;
+}
+
+.story::-webkit-scrollbar {
+  display: none;
+}
+
+.recommend {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100px;
+  border: 2px solid #bbb;
+  border-radius: 3px;
+  background-color: white;
+}
+
+.main-right .nameTag img {
+  margin: 10px 10px 10px 20px;
+  width: 60px;
+  float: left;
+  border-radius: 50%;
+}
+
+.story-peoples {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.story-p {
+  margin-top: 20px;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: white;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      button {
+        width: 100px;
+        height: 100px;
+        background: white;
+        background-image: url("images/instagram2.png");
+        background-size: 40px;
+        background-repeat: no-repeat;
+        border: none;
+        object-fit: cover;
+      }
+      button:hover {
+        cursor: pointer;
+      }
+      div {
+        width: 300px;
+        height: 300px;
+        border: 1px solid black;
+        word-break: break-all;
+      }
+    </style>
+  </head>
+  <body>
+    <body id="colorCont">
+      <button id="a">색상 변경</button>
+    </body>
+
+    <script>
+      const btn = document.getElementById("a");
+      function colorChange() {
+        var color = [
+          "#FC5C7D",
+          "#6A82FB",
+          "#38ef7d",
+          "#fffbd5",
+          "#b20a2c",
+          "#CAC531",
+        ];
+
+        var num = Math.floor(Math.random() * color.length);
+        var bodyTag = document.getElementById("colorCont");
+        bodyTag.style.backgroundColor = color[num];
+      }
+    </script>
+  </body>
+</html>
