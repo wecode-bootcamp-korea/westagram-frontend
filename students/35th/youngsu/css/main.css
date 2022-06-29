@@ -167,13 +167,19 @@ nav img {
 .comment {
   text-align: left;
   margin: 0 auto;
-  display: flex;
+  /* display: flex; */
   flex-wrap: wrap;
   width: 90%;
   height: 15%;
   border: 1px solid rgb(233, 225, 225);
   word-break: break-all;
   padding: 4px;
+  overflow: scroll;
+  outline: none;
+}
+
+.comment::-webkit-scrollbar {
+  display: none;
 }
 
 .main-right {
@@ -204,6 +210,14 @@ nav img {
   cursor: pointer;
 }
 
+.like-number {
+  display: flex;
+  margin: 0 auto;
+  width: 90%;
+  height: 30px;
+  font-size: 11px;
+  padding: 5px 0px 0px 10px;
+}
 .insert {
   /* margin: 10px; */
   padding: 0 auto;
