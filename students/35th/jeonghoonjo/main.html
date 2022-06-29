@@ -68,18 +68,28 @@
                 bookmark_border
               </span>
             </div>
-            <span class="test">123123123123</span>
+            <div class="like-box">
+              <div class="user">
+                <div class="user__avatar">
+                  <img
+                    src="https://mblogthumb-phinf.pstatic.net/MjAxNjEyMTlfNiAg/MDAxNDgyMTUyNzMwODYx.XSR2nB_SRaIbqUsgsBTnS_DtEYjw-pkHkWBbBeNkllIg.D4gGQAE0UBzCpgBIIccLzYRBBQImUic7C_vsFHs3yRMg.PNG.jinmichu/05.png?type=w800"
+                    class="user__avatar smaill"
+                  />
+                </div>
+                <p>Test_ tesT 님외 10명이 좋아합니다</p>
+              </div>
+            </div>
             <div class="comment">
-              <ul class="comment">
-                <li>
-                  <p>테스트 댓글</p>
-                  <p>테스트 댓글</p>
-                  <p>테스트 댓글</p>
-                  <p>테스트 댓글</p>
-                  <p>테스트 댓글</p>
-                  <p>테스트 댓글</p>
-                </li>
-              </ul>
+              <form class="comment-modify">
+                <ul class="comment-ul">
+                  <li>
+                    <div>
+                      <p>테스트용</p>
+                      <button class="del-comment-btn" type="button">X</button>
+                    </div>
+                  </li>
+                </ul>
+              </form>
             </div>
             <div class="comment-text">
               <form class="comment-form">
@@ -88,7 +98,7 @@
                   class="comment-input"
                   placeholder="댓글달기"
                 />
-                <button type="submit" class="comment-submit">
+                <button type="submit" class="comment-submit" disabled>
                   <span>게시</span>
                 </button>
               </form>

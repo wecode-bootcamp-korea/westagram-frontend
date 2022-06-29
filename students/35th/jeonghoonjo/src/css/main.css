@@ -65,7 +65,7 @@
 }
 
 .feed-title {
-  height: 60px;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -83,6 +83,15 @@
   border-radius: 30px;
   margin-right: 20px;
   object-fit: cover;
+  display: flex;
+  align-items: center;
+  margin: 5px;
+}
+
+.user__avatar .smaill {
+  width: 30px;
+  height: 30px;
+  font-size: 500px;
 }
 
 .user-text {
@@ -108,7 +117,7 @@
 .feed-comment {
   position: relative;
   margin-top: 5px;
-  height: 180px;
+  height: 250px;
   background-color: #ffffff;
 }
 
@@ -130,15 +139,35 @@
   margin: 0px 20px;
 }
 
+.like-box {
+  display: flex;
+  align-items: center;
+}
+
 .comment {
   margin-top: 5px;
-  height: 70px;
+  height: 90px;
   overflow: scroll;
 }
 
 .comment li p {
   font-size: 12px;
   margin: 5px 0px;
+}
+
+.comment ul li div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+}
+
+.comment ul li div button {
+  margin-right: 20px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: red;
 }
 
 .comment-text {
