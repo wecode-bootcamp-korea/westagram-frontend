@@ -1,0 +1,94 @@
+@import "reset.css";
+@import "common.css";
+@import "main_header.css";
+@import "main_navbar.css";
+@import "main_main.css";
+@import "profile_img.css";
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+
+}
+
+body {
+    background-color: #fafafa;
+    font-family: 'Lobster', cursive;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+@media (max-width: 750px) {
+
+    .profile__img--border {
+        width: 130px;
+        height: 130px;
+        margin-right: 50px;
+        background: linear-gradient(45deg, Violet, Orange);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .profile__img--borderinside {
+        width: 120px;
+        height: 120px;
+        background-color: white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .profile__img {
+        width: 112px;
+        height: 112px;
+        border-radius: 50%;
+        background: center/cover no-repeat url("../imgs/profile.jpeg");
+    }
+
+    .user__id {
+        margin-bottom: 20px;
+    }
+    .post {
+        margin: 3px;
+    }
+    .user__box {
+        display: block;
+    }
+
+    .user__id {
+        text-overflow: ellipsis;
+    }
+    .user__capacity {
+        display: none;
+    }
+
+    .user__capacity--query {
+        display: flex;
+        justify-content: center;
+        margin: 10px 0;
+
+    }
+
+    .user__capacity--list span {
+        font-size: 13px;
+        display: block;
+        margin: 4px 61px;
+        text-align: center;
+
+    }
+
+    .user__capacity--list span:first-child {
+        color: gray;
+    }
+}
+
+@media (max-width: 720px) {
+
+    .search__bar {
+        display: none;
+    }
+
+}

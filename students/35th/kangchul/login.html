@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Westagram</title>
+        <link href="./style/login.css" rel="stylesheet"/>
+        <script src="./js/login.js" defer></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossorigin="crossorigin">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lobster&family=Nanum+Gothic&display=swap"
+            rel="stylesheet">
+        <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossorigin="crossorigin"/>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+            rel="stylesheet"/>
+        <script src="https://kit.fontawesome.com/7b9b875084.js" crossorigin="anonymous"></script>
+        <link href="./imgs/instagram.png" rel="shortcut icon" type="image/x-icon"/>
+    </head>
+    <body>
+        <main>
+            <section class="main__section">
+                <section class="left__section">
+                    <div class="imgs__back"></div>
+                    <div class="img__copy1 hidden"></div>
+                    <div class="img__copy2"></div>
+                    <div class="imgs"></div>
+                </section>
+
+                <section class="right__section">
+                    <div class="login__container">
+                        <div class="logo">Instagram</div>
+
+                        <form class="login_form">
+                            <input type="text" class="id__input" placeholder="전화번호, 사용자 이름 또는 이메일"/>
+                            <input type="password" class="pwd__input" placeholder="비밀번호"/>
+                            <button type="button" class="login_btn" onclick="location.href='main.html'">로그인</button>
+                        </form>
+
+                        <div class="bar">
+                            <hr color="#fafafa"></hr>
+                            <span>또는</span>
+                            <hr color="#fafafa"></hr>
+                        </div>
+                        <div class="login__option">
+                            <div class="facebook__login">
+                                <i class="fa-brands fa-facebook-square"></i>
+                                Facebook으로 로그인</div>
+                            <div class="forget__password">비밀번호를 잊으셨나요?</div>
+                        </div>
+                    </div>
+
+                    <div class="signin__box">
+                        계정이 없으신가요?
+                        <a href="https://www.instagram.com/accounts/emailsignup/">가입하기
+                        </a>
+                    </div>
+
+                    <div class="download__box">
+                        <span>앱을 다운로드 하세요</span>
+
+                        <div class="download__twoboxes">
+                            <div class="apple__download">
+                                <i class="fa-brands fa-apple"></i>
+                                Apple 다운로드</div>
+                            <div class="android__download">
+                                <i class="fa-brands fa-google-play"></i>
+                                Androi 다운로드</div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </main>
+
+        <footer>
+            <div class="information">
+                <div class="line__first">
+                    <span>Meta</span>
+                    <span>소개</span>
+                    <span>블로그</span>
+                    <span>채용 정보</span>
+                    <span>도움말</span><span>API</span>
+                    <span>개인정보처리방침</span>
+                    <span>약관</span>
+                </div>
+                <div class="line__second">
+                    <span>댄스</span><span>식음료</span><span>음악</span>
+                    <span>시각예쑬</span><span>오예~</span>
+                </div>
+            </div>
+            <div class="line__last">
+                <span class="language">한국어
+                    <i class="fa-solid fa-angle-down"></i >
+                </span>
+                <span class="copyrights">
+                    @ 2022 westa! in wecode</span>
+            </div>
+        </footer>
+    </body>
+</html>

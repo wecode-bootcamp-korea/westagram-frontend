@@ -1,0 +1,89 @@
+
+/* header */
+
+header {
+    padding :30px 0;
+    display: flex;
+    justify-content: center;
+    background-color: var(--gray);
+}
+
+.user__box {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.user__id {
+    font-size: 26px;
+}
+.user__id i {
+    font-size: 15px;
+    color: var(--blue);
+    margin-right: 20px;
+}
+
+.function__boxes {
+    display: flex;
+    align-items: center;
+
+}
+.function__boxes div
+{
+    width: 120px;
+    height: 33px;
+    border: var(--border);
+    margin-right: 10px;
+    text-align: center;
+    line-height: 32px;
+    border-radius: 5px;
+    font-size: var(--normalsize);
+    cursor: pointer;
+}
+
+.function__boxes .follow {
+    background-color: var(--blue);
+    color: white;
+    font-weight: bold;
+}
+
+.function__boxes .check {
+    width: 40px;
+    background-color: var(--blue);
+    color: white;
+}
+
+.function__boxes .fa-ellipsis {
+    font-size: 23px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+
+.user__capacity {
+    margin-bottom: 30px;
+  
+}
+
+.user__capacity span {
+    margin-right: 30px;
+    font-size:var(--normalsize);
+    font-weight: bold;
+    color: #212121;
+}
+
+.user__description span{
+    display: block;
+}
+
+.user__description span:first-child {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+
+.horizontal__line {
+    margin: auto;
+    border-bottom: var(--border);
+    width: 90%;
+    max-width: 900px;
+}
