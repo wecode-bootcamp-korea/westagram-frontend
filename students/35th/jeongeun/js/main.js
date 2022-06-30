@@ -8,6 +8,8 @@ const submit = document.querySelector('.input__submit');
 // .classList.remove('삭제할 클래스명1','삭제할 클래스명2')
 
 const commentParent = document.querySelector('.contents__comments')
+// const smallheartIcon = document.querySelector('.smallheart')
+// const deleteIcon = document.querySelector('.delete')
 
 
 function isEnter() {
@@ -43,29 +45,36 @@ function isEnter() {
 
   // console.log(div)
   input.value = ''
+
+  // smallheartI를 누르면 하트가 빨간색으로 채워지게 하고 싶은데.. 
+  // smallheartI는 댓글을 추가해야 생기는 얘인데 얘를 어떻게 가져와? 아 생겼으니까 일단 가져오면 되나?
+  // 안되는뎅.. main.js:68 Uncaught TypeError: Cannot read properties of null (reading 'addEventListener')이거 떠..
+  // 우왕.... 전역변수였다....
+  smallheartI.addEventListener('click', () => {
+    smallheartI.classList.replace('fa-regular', 'fa-solid')
+    smallheartI.style.color = "red"
+  })
+
+  //.remove()
+  deleteI.addEventListener('click', () => {
+    div.remove()
+
+
+  })
+
 }
 
 
+
+
 input.addEventListener('keyup', (e) => {
-  if(e.code === 'Enter' && input.value !== '') {
+  if (e.code === 'Enter' && input.value !== '') {
     isEnter()
   }
 })
 
 submit.addEventListener('click', (e) => {
-  if(input.value !== '') {
+  if (input.value !== '') {
     isEnter()
   }
 })
-
-
-
-
-
-
-
-
-
-
-
-
