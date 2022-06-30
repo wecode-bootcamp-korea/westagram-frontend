@@ -60,6 +60,5 @@ loginBtn.addEventListener("click", (e) => {
     } else {
         location.href='main.html'
     }
-
 })
 

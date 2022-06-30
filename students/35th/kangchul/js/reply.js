@@ -1,3 +1,20 @@
+
+
+
+// 창 바깥화면 클릭시 뒤로 가기 
+
+const body = document.querySelector("body");
+
+body.addEventListener("click", (e) => {
+    if( e.target.nodeName === "BODY") {
+    window.history.back()
+    }
+})
+
+
+
+// 댓글 입력
+
 const replyForm = document.querySelector(".reply__form");
 const replyInput = replyForm.querySelector("input")
 const replyWindow = document.querySelector(".reply__window")
@@ -35,7 +52,7 @@ replyForm.addEventListener("submit", (event) => {
     replyInput.value = "";
 })
 
-// 좋아요
+// 좋아요 - 하트개수 , 좋아요개수
 
 const listWindow = document.querySelector(".reply__window");
 
