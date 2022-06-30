@@ -22,7 +22,7 @@ const $inputPW = document.querySelector('.login-input__PW');
 const $button = document.querySelector('.login-button');
 const $form = document.querySelector('.login-input');
 
-$form.addEventListener('keyup', () => {
+/*$form.addEventListener('keyup', () => {
   if($inputID.value && $inputPW.value){
     $button.disabled = false;
     $button.classList.add('focus');
@@ -30,6 +30,11 @@ $form.addEventListener('keyup', () => {
     $button.disabled = true;
     $button.classList.remove('focus');
   }
+})*/
+
+$form.addEventListener('keyup', () => {
+  const able = ($inputID.value && $inputPW.value) ? $button.disabled = false : $button.disabled = true;
+  const focus = ($inputID.value && $inputPW.value) ? $button.classList.add('focus') : $button.classList.remove('focus');
 })
 
 

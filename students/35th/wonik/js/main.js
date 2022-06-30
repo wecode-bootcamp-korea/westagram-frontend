@@ -33,7 +33,7 @@ const createComment = (e) => {
   container.className = 'description-comment';
   userName.className = 'user-name';
   userComment.className = 'user-comment';
-  userName.textContent = 'test1';
+  userName.textContent = 'Yelihi';
   userComment.textContent = value;
   container.appendChild(userName);
   container.appendChild(userComment);
