@@ -27,7 +27,7 @@ const isSubmitValue = (idValue, passwordValue) => {
   }
 };
 
-const checkInputValue = (event) => {
+const checkAccountValue = (event) => {
   const idValue = document.querySelector(".login__box__form__id");
   const passwordValue = document.querySelector(".login__box__form__pw");
 
@@ -58,8 +58,4 @@ const checkInputValue = (event) => {
   isSubmitValue(idValue.value, passwordValue.value);
 };
 
-loginForm.addEventListener("keyup", checkInputValue);
-loginFormSubmit.addEventListener("keypress", (event) => {
-  event.preventDefault();
-  console.log("123");
-});
+loginForm.addEventListener("keyup", checkAccountValue);

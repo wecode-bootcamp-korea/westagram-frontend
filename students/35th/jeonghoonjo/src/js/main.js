@@ -42,7 +42,7 @@ const delCommentEvent = (event) => {
 const handleLikeCheckEvent = () => {
   const p = document.querySelector(".like-count");
   LikeBtn.classList.toggle("is-like");
-  LikeBtn.classList.value == "like-btn" ? (likecount -= 1) : (likecount += 1);
+  LikeBtn.classList.value === "like-btn" ? (likecount -= 1) : (likecount += 1);
   p.innerHTML = `${likecount}`;
 };
 
@@ -50,8 +50,13 @@ const openModal = () => {
   modal.style.display = "flex";
 };
 
-const closeModal = () => {
-  modal.style.display = "none";
+const closeModal = (event) => {
+  if (
+    event.target.classList.value === "modal-overlay" ||
+    event.target.classList.value === "close-area"
+  ) {
+    modal.style.display = "none";
+  }
 };
 
 commentForm.addEventListener("keyup", isCommentEvent);
