@@ -1,0 +1,300 @@
+/********** nav **********/
+nav {
+   height:60px;
+   border-bottom: 1px solid rgb(219,219,219);
+   background-color: #fff;
+   position:fixed;
+   top:0;
+   width:100%;
+   z-index: 10;
+}
+nav .nav-wrap {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   max-width: calc(935px + 40px);
+   padding: 0 20px;
+   width:100%;
+   z-index: 10;
+   margin:0 auto;
+}
+nav .nav-wrap .nav-logo {
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+   height: 60px;
+   flex: 1 0 127px;
+}
+nav .nav-wrap .nav-logo #logo {
+   margin:0;
+   font-size:24px;
+}
+nav .nav-wrap .nav-search {
+   height:36px;
+   min-width: 125px;
+   position: relative;
+}
+nav .nav-wrap .nav-search .search-icon {
+   position: absolute;
+   width: 16px;
+   height: 16px;
+   top: 10px;
+   left: 16px;
+}
+nav .nav-wrap .nav-search {
+   width:268px;
+   min-width: 125px;
+}
+nav .nav-wrap .nav-search input {
+   background-color: rgb(239,239,239);
+   padding:3px 16px 3px 44px;
+   border:0;
+   height:100%;
+   border-radius: 8px;
+   width: 100%;
+}
+nav .nav-wrap .util {
+   display:flex;
+   align-items: center;
+   justify-content: flex-end;
+   flex: 1 0 127px;
+}
+nav .nav-wrap .util a {
+   width:100%;
+   height:100%;
+   display:inline-block;
+   vertical-align: -webkit-baseline-middle;
+}
+nav .nav-wrap .util img {
+   width: 20px;
+   height: 20px;
+   margin-left:22px;
+}
+/********** main **********/
+main {
+   background-color: rgb(250,250,250);
+   margin-top: 60px;
+}
+main .feeds-wrap {
+   margin:0 auto;
+   display: flex;
+   flex-direction: column;
+   max-width: calc(470px + 320px + 32px);
+   width:100%;
+}
+main .feeds {
+   max-width: 470px;
+   margin-right: 32px;
+}
+main .feeds .stories {
+   border-radius: 8px;
+   background-color: #fff;
+   margin:28px 0 16px;
+   padding: 16px 0 16px 16px;
+   border:1px solid #c7c7c7;
+}
+main .feeds .stories img {
+   border-radius: 50%;
+   border:1px solid #c7c7c7;
+   margin: 4px 0 8px;
+}
+main .feeds .stories .story-name {
+   overflow: hidden;
+   text-align: center;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   display: block;
+   padding: 0 2px;
+   max-width: 74px;
+   color: #262626;
+   font-size:12px;
+   line-height: 1.4;
+}
+main .feeds .stories .swiper-button-prev,
+main .feeds .stories .swiper-button-next {
+   color:#262626;
+}
+main .feeds .stories .swiper-button-prev:after,
+main .feeds .stories .swiper-button-next:after {
+   font-size: 12px;
+   background-color: #fff;
+   border-radius: 50%;
+   padding: 6px 10px;
+   border: 1px solid #eee;
+   box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+}
+main .feeds .stories .swiper-button-disabled {
+   display: none;
+}
+main article {
+   min-height: 80vh;
+   background-color: #fff;
+   margin-bottom:12px;
+   border-radius: 8px;
+   border:1px solid #dbdbdb;
+}
+main article .feed-wrap {
+
+}
+main article .feed-wrap .feed-header {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   border-bottom:1px solid #efefef;
+}
+main article .feed-wrap .feed-header .feed-profile {
+   display: flex;
+   align-items: center;
+   margin:8px 4px 8px 12px;
+   max-width: calc(100% - 48px)
+}
+main article .feed-wrap .feed-header .feed-profile .pf-text {
+   min-height: 40px;
+   margin-left: 10px;
+}
+main article .feed-wrap .feed-img {
+   width:100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   object-fit: cover;
+   max-height: ;
+}
+main article .feed-wrap .feed-img img {
+   width:100%;
+}
+
+
+/********** sidebar **********/
+main .main-right {
+   position: fixed;
+   height:100vh;
+   top: 88px;
+   left: 55.271vw;
+   width:320px;
+   display:flex;
+   align-items: stretch;
+   flex-direction: column;
+}
+main .main-right .profile {
+   display:flex;
+   align-items: center;
+   margin: 16px 0 10px;
+   position: relative;
+}
+main .main-right .profile.my-profile {
+   height:66px;
+}
+main .main-right .profile .pf-img {
+   width:56px;
+   height:56px;
+   margin-right:12px;
+}
+main .main-right .profile .pf-img img {
+   width:100%;
+   height:100%;
+   border-radius: 50%;
+   border:1px solid #c7c7c7;
+}
+main .main-right .profile .pf-text {
+   /* margin-left:12px; */
+}
+main .main-right .profile .follow a {
+   position: absolute;
+   right: 0;
+   top: 10px;
+   font-weight: 600;
+   font-size: 12px;
+   color: #0095f6;
+}
+main .main-right .profile  .pf-id {
+   color: #262626;
+   font-weight: 600;
+   font-size: 14px;
+}
+main .main-right .profile  .pf-name {
+   color:#8e8e8e;
+   font-weight:14px;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   white-space: nowrap;
+   line-height: 1.4;
+}
+main .main-right .recommand .reco-text {
+   padding:4px 0;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   color:#262626;
+   font-size:12px;
+}
+main .main-right .recommand .reco-text  .main-txt {
+   color:#8e8e8e;
+   font-weight: bold;
+   font-size:14px;
+}
+main .main-right .recommand .reco-text a {
+   font-weight:bold;
+   color:#262626;
+}
+main .main-right .recommand .reco-list {
+   padding: 8px 0;
+   margin-bottom:12px;
+}
+main .main-right .recommand .reco-list .pf-img {
+   width:32px;
+   height:32px;
+}
+main .main-right .recommand .reco-list .pf-id {
+   font-size: 14px;
+}
+main .main-right .recommand .reco-list .pf-name {
+   font-size:12px;
+   line-height: 1.6;
+}
+
+main .main-right .footer {
+   color:#c7c7c7;
+}
+main .main-right .footer .footer-link {
+   margin-bottom:16px;
+   display: flex;
+   flex-wrap: wrap;
+   align-items: center;
+   font-size: 12px;
+}
+main .main-right .footer .footer-link li {
+   position: relative;
+   word-break: keep-all;
+   margin-right:12px;
+   line-height: 1.5;
+}
+main .main-right .footer .footer-link li:after {
+   display: inline-block;
+   content: '';
+   width: 1.5px;
+   height: 1.5px;
+   background-color: #c7c7c7;
+   position: absolute;
+   top: 8px;
+   right: -7px;
+}
+main .main-right .footer .footer-link li:last-child:after {
+   display: none;
+}
+main .main-right .footer a,
+main .main-right .footer .copy {
+   color:#c7c7c7;
+   font-size:12px;
+}
+main .main-right .footer .footer-link #change-lang {
+   cursor:pointer;
+}
+main .main-right .footer .footer-link #lang {
+   position: absolute;
+   top: 15px;
+   left: 0;
+}
+main .main-right .footer .footer-link #lang.none {
+   display:none;
+}

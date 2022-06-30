@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- favicon -->
+   <link rel="apple-touch-icon" sizes="60x60" href="/img/apple-icon-60x60.png">
+   <link rel="icon" type="image/png" sizes="36x36"  href="/android-icon-36x36.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-32x32.png">
+   <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+   <meta name="msapplication-TileImage" content="/img/ms-icon-70x70.png">
+   <!-- css -->
+   <link rel="stylesheet" href="/style/common.css">
+   <link rel="stylesheet" href="/style/main.css">
+   <link  rel="stylesheet"  href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+   <!-- js -->
+   <script src="/js/main.js" defer></script>
+   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+   <title>Westagram</title>
+</head>
+<body>
+   <nav>
+      <div class="nav-wrap">
+         <div class="nav-logo">
+            <p id="logo">Westagram</p>
+         </div>
+         <div class="nav-search">
+            <img class="search-icon" src="/img/search.png" alt="search">
+            <input type="text" placeholder="검색">
+         </div>
+         <div class="util">
+            <span><a href=""><img src="/img/home.png" alt="home"></a></span>
+            <span><a href=""><img src="/img/dm.png" alt="direct-message"></a></span>
+            <span><a href=""><img src="/img/plus.png" alt="upload"></a></span>
+            <span><a href=""><img src="/img/explore.png" alt="explore"></a></span>
+            <span><a href=""><img src="/img/heart.png" alt="like"></a></span>
+            <span><a href=""><img src="/img/profile.png" alt="my-profile"></a></span>
+         </div>
+      </div>
+   </nav>
+   <main>
+      <div class="feeds-wrap">
+         <div class="feeds">
+            <section class="stories swiper">
+               <ul class="swiper-wrapper">
+                  <li class="swiper-slide"><img src="https://placeimg.com/56/56/any"><span class="story-name">kim-coding</span></li>
+                  <li class="swiper-slide"><img src="https://placeimg.com/56/56/architecture"><span class="story-name">hyunmin-kill</span></li>
+                  <li class="swiper-slide"><img src="https://placeimg.com/56/56/nature"><span class="story-name">geumkwan-lee</span></li>
+                  <li class="swiper-slide"><img src="https://placeimg.com/56/56/people"><span class="story-name">wecode</span></li>
+                  <li class="swiper-slide"><img src="https://placeimg.com/56/56/any"><span class="story-name">Ju-wonyoung</span></li>
+                  <li class="swiper-slide"><img src="https://placeimg.com/56/56/grayscale"><span class="story-name">kim-gyuyeon</span></li>
+                  <li class="swiper-slide"><img src="https://placeimg.com/56/56/sepia"><span class="story-name">Park-seoyun</span></li>
+                  <li class="swiper-slide"><img src="https://placeimg.com/56/56/tech"><span class="story-name">Ryu-seungyeon</span></li>
+                  <li class="swiper-slide"><img src="https://placeimg.com/56/56/animals"><span class="story-name">Ahn-sanghyun</span></li>
+                  <li class="swiper-slide"><img src="https://placeimg.com/56/56/any"><span class="story-name">um-sunghoon</span></li>
+               </ul>
+               <div class="swiper-button-prev"></div>
+               <div class="swiper-button-next"></div>
+            </section>
+            <article>
+               <div class="feed-wrap">
+                  <div class="feed-header">
+                     <div class="feed-profile">
+                        <div class="pf-img">
+                           <img src="https://placeimg.com/32/32/any">
+                        </div>
+                        <div class="pf-text">
+                           <p class="pf-id">wecode_together</p>
+                           <p class="pf-name">선정릉</p>
+                        </div>
+                     </div>
+                     <div class="feed-more">
+                        <button><img src="/img/more.png" alt=""></button>
+                     </div>
+                  </div>
+                  <div class="feed-img">
+                     <ul class="swiper-wrapper">
+                        <li class="swiper-slide"><img src="https://placeimg.com/470/587/any"></li>
+                     </ul>
+                     <div class="swiper-button-prev"></div>
+                     <div class="swiper-button-next"></div>
+                  </div>
+                  <div class="feed-bot"></div>
+               </div>
+            </article>
+         </div>
+      </div>
+      <div class="main-right">
+         <div class="profile my-profile">
+            <div class="pf-img">
+               <img src="https://placeimg.com/56/56/any">
+            </div>
+            <div class="pf-text">
+               <p class="pf-id">wecode</p>
+               <p class="pf-name">함께해서 위코드</p>
+            </div>
+         </div>
+         <div class="recommand">
+            <div class="reco-text">
+               <span class="main-txt">회원님을 위한 추천</span>
+               <span class="sub-txt"><a href="#">모두 보기</a></span>
+            </div>
+            <div class="reco-list">
+               <div class="profile">
+                  <div class="pf-img">
+                     <img src="https://placeimg.com/56/56/nature">
+                  </div>
+                  <div class="pf-text">
+                     <p class="pf-id">wecode</p>
+                     <p class="pf-name">회원님을 팔로우합니다.</p>
+                  </div>
+                  <p class="follow"><a href="#">팔로우</a></p>
+               </div>
+               <div class="profile">
+                  <div class="pf-img">
+                     <img src="https://placeimg.com/56/56/people">
+                  </div>
+                  <div class="pf-text">
+                     <p class="pf-id">gaebal</p>
+                     <p class="pf-name">회원님을 팔로우합니다.</p>
+                  </div>
+                  <p class="follow"><a href="#">팔로우</a>
+               </div>
+               <div class="profile">
+                  <div class="pf-img">
+                     <img src="https://placeimg.com/56/56/tech">
+                  </div>
+                  <div class="pf-text">
+                     <p class="pf-id">saebal</p>
+                     <p class="pf-name">회원님을 팔로우합니다.</p>
+                  </div>
+                  <p class="follow"><a href="#">팔로우</a>
+               </div>
+               <div class="profile">
+                  <div class="pf-img">
+                     <img src="https://placeimg.com/56/56/animals">
+                  </div>
+                  <div class="pf-text">
+                     <p class="pf-id">sorryforpartyrocking</p>
+                     <p class="pf-name">wonyoung-Ju님이 팔로우합니다.</p>
+                  </div>
+                  <p class="follow"><a href="#">팔로우</a>
+               </div>
+               <div class="profile">
+                  <div class="pf-img">
+                     <img src="https://placeimg.com/56/56/architecture">
+                  </div>
+                  <div class="pf-text">
+                     <p class="pf-id">HaveAgoodDay</p>
+                     <p class="pf-name">geumkwan-Lee님이 팔로우합니다.</p>
+                  </div>
+                  <p class="follow"><a href="#">팔로우</a>
+               </div>
+            </div>
+         </div>
+         <div class="footer">
+            <ul class="footer-link">
+               <li><a href="https://about.instagram.com/">소개</a></li>
+               <li><a href="https://help.instagram.com/">도움말</a></li>
+               <li><a href="https://about.instagram.com/blog/">홍보 센터</a></li>
+               <li><a href="https://developers.facebook.com/docs/instagram">API</a></li>
+               <li><a href="https://www.instagram.com/about/jobs/">채용 정보</a></li>
+               <li><a href="https://www.instagram.com/legal/privacy/">개인정보처리방침</a></li>
+               <li><a href="https://www.instagram.com/legal/terms/">약관</a></li>
+               <li><a href="https://www.instagram.com/explore/locations/">위치</a></li>
+               <li>
+                  <span id="change-lang">언어</span>
+                  <select name="language" id="lang" class="none">
+                     <option value="ko">한국어</option>
+                     <option value="en">영어</option>
+                  </select>
+               </li>
+            </ul>
+            <span class="copy">&copy; 2022 INSTAGRAM FROM META</span>
+      </div>
+   </main>
+</body>
+</html>
