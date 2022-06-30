@@ -23,7 +23,7 @@
 .art { width:100%; background-color: #fff; padding: 20px;}
 .fedtop{height: 50px; display: flex; margin: 10px 0;}
 .fedtop > img {width: 50px; height: 50px; border-radius: 50%;}
-.fedimg{width: 100%; height: 430px; overflow: hidden;}
+.fedimg{width: 100%;}
 .fedimg > img {width: 100%;} 
 .textbox {margin: 10px 20px;}
 .textbox p {line-height: 18px;}
@@ -53,7 +53,7 @@
 .commtext {width: 100%; height: 60px; border:1px solid #f0f0f0; border-radius: 5px; margin-top: 20px; padding-left: 10px;}
 .commbtn {position: absolute; bottom:0; right: 0; width: 80px; height: 60px; border:1px solid #f0f0f0; color:#0388fc; background-color: #fff;}
 
-.rightm{width:300px; height: 400px; padding-left: 30px; margin-top: 20px;}
+.rightm{width:330px; height: 400px; padding-left: 30px; margin-top: 20px;}
 .rtop{display: flex; height:50px; margin:20px 0;}
 .rtop img {width: 50px; height: 50px; border-radius: 50%;}
 .myname {margin: 10px 20px;}
@@ -64,8 +64,9 @@
 
 .storyall {border: 1px solid #ddd; height: 260px; overflow-y: scroll; background-color: #fff;}
 .storybox {height: 50px; border-bottom: 1px solid #ddd;}
-.storybox p {font-size: 14px; line-height: 50px; margin-left: 15px;}
-.storybox p span {font-size: 12px; font-weight: 700; margin-left: 140px;}
+.storybox p {position: relative; padding-left: 20px; font-size: 14px; line-height: 50px;}
+.storybox a {position: absolute;top: 0; right: 20px;}
+.storybox p span {font-size: 12px; font-weight: 700;}
 
 .friend ul {width: 100%; height: 140px;}
 .friend ul li{padding: 15px; display: flex; align-items:center;}
@@ -75,11 +76,12 @@
 
 .chall{margin-top: 30px; border: 1px solid #ddd; height: 260px; overflow-y: scroll; background-color: #fff;}
 .chubox{height: 50px; border-bottom: 1px solid #ddd;}
-.chubox p {font-size: 14px; line-height: 50px; margin-left: 15px;}
+.chubox p {position: relative; padding-left: 20px; font-size: 14px; line-height: 50px;}
+.chubox p a {position:absolute; top:0; right: 20px;}
 .chubox p span {font-size: 12px; font-weight: 700; padding-left: 72px;}
 
 .follow ul li{padding: 15px; display: flex; align-items:center;}
 .follow ul li img {width: 50px; height: 50px; border-radius: 50%;}
-.follow ul li p {margin-left: 10px; font-weight: 700; line-height: 20px;}
+.follow ul li p {font-weight: 700; line-height: 20px; padding-left: 10px;}
 .follow ul li p:last-child {margin-left: 18px; font-size: 12px; color:#0388fc;}
 .follow ul li p span {font-weight: 400; font-size: 12px; color:#686868;}

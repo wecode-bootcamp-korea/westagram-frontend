@@ -1,14 +1,14 @@
-let id = document.getElementsByClassName("userId")[0];
-let pw = document.getElementsByClassName("userpw")[0];
-let login = document.getElementsByClassName("btn")[0];
-let ff = document.querySelector("form");
+const myId = document.getElementsByClassName('userId')[0];
+const myPw = document.getElementsByClassName('userpw')[0];
+const loginBtn = document.getElementsByClassName('btn')[0]
+const myLogin = document.getElementsByClassName('my')[0];
 
-ff.addEventListener('keyup', function(){
-  let idv = id.value.length;
-  let pwv = pw.value.length;
+myLogin.addEventListener('keyup' , () => {
+  let idLength = myId.value.length;
+  let pwLength = myPw.value.length;
 
-  (idv && pwv) ?
-  login.classList.add("on") : login.classList.remove("on");
+  (idLength && pwLength) ? //id값과 비밀번호 값이 같니?
+  loginBtn.classList.add('on') : myLogin.classList.remove('on'); //참이면 on class 명을 맨 뒤에 넣어준다 : 거짓이면 on clas 명을 없애준다.
 });
 
 
