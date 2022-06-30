@@ -47,6 +47,7 @@ nav {
   padding-left: 10px;
   font-family: 'Lobster', cursive;
   font-size: 20px;
+  padding-bottom: 8px;
 }
 
 .centerMenu {
@@ -398,3 +399,25 @@ main {
   font-size: 13px;
 }
 
+@media screen and (max-width: 840px) {
+  .centerMenu {
+    display: none;
+  }
+
+  .main {
+    margin: 0;
+  }
+
+  .mainRight {
+    display: none;
+  }
+
+  body {
+    max-width: 100%;
+  }
+  
+  .feeds {
+    margin-right: 0;
+  }
+
+}
