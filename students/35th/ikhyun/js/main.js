@@ -1,64 +1,69 @@
 
-let comment = document.querySelector('.comment')
-let submit = document.querySelector('.submit')
-let commentTime = document.querySelector('.comment-time')
-let newCommentParents = document.querySelector('.create-comment-div')
-let deleteAndHeart = document.querySelector('.delete-heart')
+let comment = document.querySelectorAll('.comment')
+let submit = document.querySelectorAll('.submit')
+let commentTime = document.querySelectorAll('.comment-time')
+let newCommentParents = document.querySelectorAll('.create-comment-div')
 
+let idArr = ['Wework','Wecode','HTML','CSS','JavaScript']
 
-function createComment() {
-    if(comment.value){
-    let createCommentDiv =  document.createElement('div')
-    createCommentDiv.className = 'create-comment';
-    newCommentParents.appendChild(createCommentDiv)
-
-    let createNewCommentDiv =  document.createElement('div')
-    createNewCommentDiv.className = 'new-comment';
-    createCommentDiv.appendChild(createNewCommentDiv)
-
-    let createIconDiv =  document.createElement('div')
-    createIconDiv.className = 'delete-heart';
-    createCommentDiv.appendChild(createIconDiv)
-
-    let newUserId = document.createElement('span')
-    newUserId.className = 'user-id';
-    newUserId.innerHTML = 'userID'
-    createNewCommentDiv.appendChild(newUserId);
-
-    let newComment = document.createElement('span')
-    newComment.className = 'user-comment';
-    newComment.innerHTML = comment.value;
-    createNewCommentDiv.appendChild(newComment);
-
-    let heartIcon = document.createElement('i')
-    heartIcon.className = 'fa-regular fa-heart';
-    createIconDiv.appendChild(heartIcon)
-
-    let deleteIcon = document.createElement('i')
-    deleteIcon.className = 'fa-solid fa-trash';
-    createIconDiv.appendChild(deleteIcon)
-
-    comment.value = "";
-    commentTime.innerHTML = "방금전";
-    heartIcon.addEventListener ('click',function() {
-        heartIcon.style.color === 'red' ? (
-            heartIcon.style.color= "",
-            heartIcon.className ="fa-regular fa-heart"
-        ) : (
-            heartIcon.style.color= "red",
-            heartIcon.className = 'fa-solid fa-heart'
-        )
-    })
-    deleteIcon.addEventListener('click',function() {
-        createCommentDiv.remove();
-        commentTime.innerHTML = "";
-    })
+for(let i=0; i<comment.length; i++) {
+    function createComment() {
+        if(comment[i].value){
+        let createCommentDiv =  document.createElement('div')
+        createCommentDiv.className = 'create-comment';
+        newCommentParents[i].appendChild(createCommentDiv)
+    
+        let createNewCommentDiv =  document.createElement('div')
+        createNewCommentDiv.className = 'new-comment';
+        createCommentDiv.appendChild(createNewCommentDiv)
+    
+        let createIconDiv =  document.createElement('div')
+        createIconDiv.className = 'delete-heart';
+        createCommentDiv.appendChild(createIconDiv)
+        
+        let randomNumber = Math.floor(Math.random()*5);
+    
+        let newUserId = document.createElement('span')
+        newUserId.className = 'user-id';
+        newUserId.innerHTML = idArr[randomNumber]
+        createNewCommentDiv.appendChild(newUserId);
+    
+        let newComment = document.createElement('span')
+        newComment.className = 'user-comment';
+        newComment.innerHTML = comment[i].value;
+        createNewCommentDiv.appendChild(newComment);
+    
+        let heartIcon = document.createElement('i')
+        heartIcon.className = 'fa-regular fa-heart';
+        createIconDiv.appendChild(heartIcon)
+    
+        let deleteIcon = document.createElement('i')
+        deleteIcon.className = 'fa-solid fa-trash';
+        createIconDiv.appendChild(deleteIcon)
+    
+        comment[i].value = "";
+        commentTime[i].innerHTML = "방금전";
+        heartIcon.addEventListener ('click',function() {
+            heartIcon.style.color === 'red' ? (
+                heartIcon.style.color= "",
+                heartIcon.className ="fa-regular fa-heart"
+            ) : (
+                heartIcon.style.color= "red",
+                heartIcon.className = 'fa-solid fa-heart'
+            )
+        })
+        deleteIcon.addEventListener('click',function() {
+            createCommentDiv.remove();
+            commentTime[i].innerHTML = "";
+        })
+        }
     }
-}
-function createCommentByEnter(event){
-    if(event.key === 'Enter'){
-        createComment()
+    function createCommentByEnter(event){
+        if(event.key === 'Enter'){
+            createComment()
+        }
     }
+
+    comment[i].addEventListener('keyup',createCommentByEnter)
+    submit[i].addEventListener('click',createComment)
 }
-submit.addEventListener('click',createComment)
-comment.addEventListener('keyup',createCommentByEnter)
