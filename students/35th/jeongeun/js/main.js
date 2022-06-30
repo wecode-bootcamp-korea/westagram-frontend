@@ -58,3 +58,36 @@ submit.addEventListener('click', (e) => {
     isEnter()
   }
 })
+
+// 실제 인스타 nav 검색창에 아이디를 입력 시 검색 기능이 실행됩니다.
+// 아이디 데이터를 담고 있는 배열을 선언해주세요.
+// 검색 창에 텍스트 입력 시 배열의 요소 중 해당 텍스트에 일치하는 아이디만 보일 수 있도록 구현해주세요.
+// for 문이 아닌 다른 array method를 사용해 구현해주세요.
+
+const centerMenuInput = document.querySelector('.centerMenuInput')
+
+function isThisId() {
+
+  const idsArray = ['wjddms4107', 'tmdwns1922', 'rhdms0099']
+
+  let searchId = idsArray.filter(element => element === centerMenuInput.value)
+  console.log(searchId)
+  console.log(centerMenuInput.value)
+
+  if(searchId[0] === centerMenuInput.value) {
+    centerMenuInput.style.color = 'red'
+  }
+
+}
+
+
+centerMenuInput.addEventListener('keyup', (e) => {
+
+  if (e.code === 'Enter' && centerMenuInput.value !== '') {
+    isThisId()
+  }
+  // console.log(centerMenuInput)
+  // console.dir(centerMenuInput)
+  
+
+} )
