@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      button {
+        width: 30px;
+        height: 30px;
+        border: none;
+        background-color: #fff;
+        cursor: pointer;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <img class="heart" src="img/heart.png" />
+
+    <script>
+      const heart = document.querySelector(".heart");
+      // const count = 불린값?
+
+      let count = 0;
+      const change = () => {
+        if (count === 0) {
+          heart.src = "img/heart2.png";
+          return count++;
+        } else {
+          heart.src = "img/heart.png";
+          return (count = 0);
+        }
+      };
+
+      heart.addEventListener("click", change);
+    </script>
+  </body>
+</html>
