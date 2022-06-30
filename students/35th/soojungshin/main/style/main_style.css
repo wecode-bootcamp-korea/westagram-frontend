@@ -10,142 +10,8 @@ body {
   font-family: 'Gothic A1', sans-serif;
   width: 100vw;
   background-color: rgb(249, 249, 249);
-  ;
+  color: #333;
 }
-
-.loginPage {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.loginBox {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(249, 249, 249);
-}
-
-.inputBox {
-  width: 400px;
-  height: 500px;
-  border: 1px solid #e1e1e1;
-  background-color: rgb(255, 255, 255);
-
-}
-
-
-.logo {
-  color: black;
-  text-align: center;
-  font-family: 'Berkshire Swash', cursive, serif;
-  font-size: 3.2em;
-  padding-top: 40px;
-}
-
-.inputIdPw {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 50px;
-}
-
-#id,
-#pw {
-  width: 280px;
-  height: 48px;
-  margin-bottom: 10px;
-  border: #e1e1e1 1px solid;
-  border-radius: 3px;
-  background-color: rgb(249, 249, 249);
-  padding-left: 10px;
-  font-size: 0.9em;
-}
-
-#submit {
-  width: 295px;
-  height: 40px;
-  margin-bottom: 10px;
-  border: #e1e1e1 1px solid;
-  border-radius: 3px;
-  color: #fff;
-  background-color: rgb(173, 217, 251);
-}
-
-
-.orLine {
-  margin-top: 20px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 290px;
-}
-
-.or {
-  font-size: 0.8em;
-  color: rgb(145, 145, 145);
-  display: flex;
-  margin: 0 10px;
-
-}
-
-.line {
-  height: 1px;
-  flex-grow: 1;
-  background-color: rgb(193, 193, 193);
-}
-
-.facebookLogin {
-  display: flex;
-  justify-content: center;
-  margin-top: 40px;
-}
-
-.facebookicon {
-  width: 17px;
-  margin-right: 5px;
-}
-
-.facebookLoginText {
-  color: rgb(62, 79, 129);
-  font-weight: 600;
-  font-size: 0.9em;
-}
-
-.lostPw {
-  font-size: 0.85em;
-  color: rgb(62, 79, 129);
-  margin-top: 15px;
-  text-decoration: none;
-}
-
-.findId {
-  margin-top: 10px;
-  width: 400px;
-  height: 80px;
-  border: 1px solid #e1e1e1;
-  text-align: center;
-  background-color: #fff;
-  position: relative;
-}
-
-.findPw {
-  position: absolute;
-  top: 30px;
-  left: 110px;
-  color: #1d1d1d;
-  font-size: 0.85em;
-}
-
-.findPw>a {
-  color: rgb(52, 148, 221);
-  font-weight: 600;
-}
-
-/*login end*/
 
 
 /*main start*/
@@ -157,18 +23,16 @@ body {
 }
 
 .homeNavBox {
-  width: 975px;
-  height: 80px;
   display: flex;
-  /* justify-content: center; */
   align-items: center;
+  height: 80px;
 }
 
 .logoSmall {
+  margin: 0 250px 0 40px;
   color: black;
   font-family: 'Berkshire Swash', cursive, serif;
   font-size: 1.7em;
-  margin: 0 250px 0 40px;
 }
 
 .searchBar {
@@ -179,10 +43,10 @@ body {
 .inputSearch {
   width: 200px;
   height: 30px;
+  padding-left: 30px;
+  background-color: rgb(249, 249, 249);
   border-radius: 5px;
   border: 1px solid #eee;
-  background-color: rgb(249, 249, 249);
-  padding-left: 30px;
 }
 
 .searchIcon {
@@ -211,7 +75,6 @@ body {
 
 }
 
-
 .mainContainer {
   display: flex;
   justify-content: center;
@@ -219,27 +82,23 @@ body {
   border-top: 1px solid #e1e1e1;
 }
 
-.feeds {
-  display: flex;
-  justify-content: center;
-  margin-top: 40px;
-}
-
 .feed {
   display: flex;
   flex-direction: column;
+  margin-top: 40px;
+  margin-right: 30px;
+  width: 480px;
   background-color: #fff;
   border: 1px solid #e1e1e1;
   border-radius: 10px;
-  margin-right: 30px;
-  width: 480px;
+
 }
 
 .feedNav {
   display: flex;
   align-items: center;
-  height: 55px;
   position: relative;
+  margin: 10px;
 }
 
 .feedNav>img {
@@ -250,13 +109,19 @@ body {
   width: 30px;
   border-radius: 50%;
   border: 2px solid #e1e1e1;
-  margin: 10px;
+}
+
+.feedNavIconName {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
 .feedProfileName {
   font-size: 16px;
   font-weight: 600;
+  margin-left: 5px;
 }
 
 .feedProfileSubName {
@@ -270,10 +135,14 @@ body {
   height: 500px;
   overflow: hidden;
   border-top: 1px solid #e1e1e1;
+  position: relative;
 }
 
 #feedImg {
   width: 480px;
+  position: absolute;
+  height: auto;
+  transform: translate(0%, -20%);
 }
 
 .feedImageResponse {
@@ -282,7 +151,7 @@ body {
   margin: 10px;
 }
 
-.feedImageResponse1 {
+.feedImageResponseInner {
   display: flex;
 }
 
@@ -302,11 +171,11 @@ span {
   font-weight: 600;
 }
 
-.commentsNew {
+.commentBox {
   border-top: 1px solid #e1e1e1;
 }
 
-.commentBox {
+.inputCommentsBox{
   margin: 20px 0 20px 10px;
   font-size: 0.8em;
   padding-left: 2px;
@@ -319,21 +188,46 @@ span {
   outline: none;
 }
 
+#comment::placeholder {
+  font-size: 1.2em;
+}
+
+#commentSubmit {
+  background: inherit;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+  overflow: visible;
+  cursor: pointer;
+  border: 0;
+  font-weight: 600;
+  font-size: 1.2em;
+  color: #e1e1e1;
+}
+
 /*main end*/
 
 /* aside start */
 
-.mainRight {
+.UserRecommendBox {
   width: 320px;
-  margin-top: 60px;
 }
 
-.mainRightMyProfile {
+.asideMyProfileBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 60px;
+  margin-bottom: 10px;
+}
+
+.asideMyProfile {
   display: flex;
   align-items: center;
 }
 
-.myProfile {
+.myProfileImg {
   margin-right: 10px;
 }
 
@@ -345,13 +239,28 @@ span {
 
 .recommandList {
   display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 
-.IdRetrun, .followPeople{
-  font-size: 0.8em;
-  font-weight: 600;
+.asideIdRetrun,
+.followPeople {
+  font-size: 0.9em;
   color: #6eacf5;
+}
+
+.recommandBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+#recommendProfileIcon {
+  width: 35px;
+  border-radius: 50%;
+  border: 2px solid #e1e1e1;
 }
 
 /*aside end*/

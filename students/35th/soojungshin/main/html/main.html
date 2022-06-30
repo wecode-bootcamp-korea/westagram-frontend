@@ -2,158 +2,161 @@
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>westagram</title>
-    <link rel="stylesheet" href="../style/style.css">
-    <script defer src="../js/login.js"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>westagram</title>
+  <link rel="stylesheet" href="../style/main_style.css">
+  <script defer src="../js/comment.js"></script>
 </head>
 
 <body>
-    <!--위스타그램 상단바-->
-    <nav class="homeNav">
-        <div class="homeNavBox">
-            <h2 class="logoSmall">westagram</h2>
-            <div class="searchBar">
-                <img class="searchIcon" src="../image/search.png" alt="searchIcon">
-                <input class="inputSearch" type="text" placeholder="검색">
+  <!--위스타그램 상단바 start-->
+  <nav class="homeNav">
+    <div class="homeNavBox">
+      <h2 class="logoSmall">westagram</h2>
+      <div class="searchBar">
+        <img class="searchIcon" src="../image/search.png" alt="searchIcon">
+        <input class="inputSearch" type="text" placeholder="검색">
+      </div>
+      <div class="navIcon">
+        <div><img alt="newFeedIcon" src="../image/newFeed.jpg" id="icon"></div>
+        <div><img alt="homeIcon" src="../image/home.jpg" id="icon"></div>
+        <div><img alt="dmIcon" src="../image/dm.jpg" id="icon"></div>
+        <div><img alt="exploreIcon" src="../image/explore.jpg" id="icon"></div>
+        <div><img alt="heartIcon" src="../image/heart.jpg" id="icon"></div>
+        <div><img alt="myProfileIcon" src="../image/myprofile.png" id="profileIcon"></div>
+      </div>
+    </div>
+    </div>
+  </nav>
+  <!--위스타그램 상단바 end-->
+
+  <!--위스타그램 메인 start-->
+  <main class="mainContainer">
+    <!--      피드 이미지 영역 start         -->
+    <section class="feedScrollArea">
+      <article class="feed">
+        <div class="feedNav">
+          <div class="feedNavIconName">
+            <img src="../image/myprofile.png" alt="myProfile" id="feedProfileIcon">
+            <div class="feedProfileName">doublejs1226</div>
+          </div>
+          <img src="../image/dot.png" alt="feedNavDot" id="icon">
+        </div>
+        <div class="feedImageSection">
+          <img src="../image/feed_img1.jpg" alt="feedimg1" id="feedImg">
+        </div>
+        <div class="feedImageResponse">
+          <div class="feedImageResponseInner">
+            <div class="heartBeatIcon"><img src="../image/heartbeat.jpg" alt="heartBeatIcon" id="icon">
             </div>
-            <div class="navIcon">
-                <div><img src="../image/newFeed.jpg" alt="newFeedIcon" id="icon"></div>
-                <div><img src="../image/home.jpg" alt="homeIcon" id="icon"></div>
-                <div><img src="../image/dm.jpg" alt="dmIcon" id="icon"></div>
-                <div><img src="../image/explore.jpg" alt="exploreIcon" id="icon"></div>
-                <div><img src="../image/heart.jpg" alt="heartIcon" id="icon"></div>
-                <div><img src="../image/myprofile.png" alt="myProfile" id="profileIcon"></div>
+            <div class="commentIcon"><img src="../image/comment.jpg" alt="commentIcon" id="icon"></div>
+            <div class="dmIcon"><img src="../image/dm.jpg" alt="dmIcon" id="icon"></div>
+          </div>
+          <div class="clipingIcon"><img src="../image/cliping.jpg" alt="clipingIcon" id="icon"></div>
+        </div>
+        <article class="commentArea">
+          <div class="heartBeatPeople">
+            <p><span>doublejs1226</span>님 <span>여러 명</span>이 좋아합니다.</p>
+          </div>
+          <div class="commentPeople">
+            <!-- 댓글 생성 영역 -->
+            <p class="newComment"></p>
+          </div>
+        </article>
+        <div class="commentBox">
+          <form class="inputCommentsBox">
+            <input id="comment" type="text" placeholder="댓글 달기...">
+            <button id="commentSubmit" type="submit">게시</button>
+          </form>
+        </div>
+      </article>
+    </section>
+    <!--      피드 이미지 영역 end         -->
+    <!--    사용자별 회원추천 start         -->
+    <aside class="UserRecommendBox">
+      <ul>
+        <li class="asideMyProfileBox">
+          <div class="asideMyProfile">
+            <div class="myProfileImg">
+              <img src="../image/myprofile.png" alt="myProfile" id="profileIconBig">
             </div>
-        </div>
-        </div>
-    </nav>
-    <!--위스타그램 메인-->
-    <main>
-        <!--이미지영역-->
-        <div class="mainContainer">
-            <div class="feeds">
-                <article class="feed">
-                    <div class="feedNav">
-                        <div class="feedNavIconName">
-                            <img src="../image/myprofile.png" alt="myProfile" id="feedProfileIcon">
-                            <div class="feedProfileName">doublejs1226</div>
-                        </div>
-                        <img src="../image/dot.png" alt="feedNavDot" id="icon">
-                    </div>
-                    <div class="feedImageSection">
-                        <img src="../image/feed_img1.jpg" alt="feedimg1" id="feedImg">
-                    </div>
-                    <div class="feedImageResponse">
-                        <div class="feedImageResponse1">
-                            <div class="heartBeatIcon"><img src="../image/heartbeat.jpg" alt="heartBeatIcon" id="icon">
-                            </div>
-                            <div class="commentIcon"><img src="../image/comment.jpg" alt="commentIcon" id="icon"></div>
-                            <div class="dmIcon"><img src="../image/dm.jpg" alt="dmIcon" id="icon"></div>
-                        </div>
-                        <div class="clipingIcon"><img src="../image/cliping.jpg" alt="clipingIcon" id="icon"></div>
-                    </div>
-                    <section class="commentArea">
-                        <div class="heartBeatPeople">
-                            <p><span>doublejs1226</span>님 <span>여러 명</span>이 좋아합니다.</p>
-                        </div>
-                        <div class="commentPeople">
-                            <p><span class="commentPersonName">doublesj1234</span> 이쁘네요. 어디인가요?</p>
-                        </div>
-                    </section>
-                    <div class="commentsNew">
-                        <div class="commentBox">
-                            <input id="comment" type="text" placeholder="댓글 달기...">
-                            <button class="commentSubmit" type="submit">게시</button>
-                        </div>
-                    </div>
+            <div class="feedProfileName">doublejs1226 <div class="feedProfileSubName">수정</div>
             </div>
-            </article>
-            <!--사용자별 회원추천-->
-            <aside class="mainRight">
-                <ul>
-                    <li>
-                        <div class="asideMyProfileBox">
-                            <div class="asideMyProfile">
-                                <div class="myProfile">
-                                    <img src="../image/myprofile.png" alt="myProfile" id="profileIconBig">
-                                </div>
-                                <div class="feedProfileName">doublejs1226 <div class="feedProfileSubName">수정</div>
-                                </div>
-                            </div>
-                            <div class="IdRetrun">전환</div>
-                        </div>
-                    </li>
-                    <li class="recommandList">
-                        <div style="opacity: 0.6;">회원님을 위한 추천</div>
-                        <div>모두 보기</div>
-                    </li>
-                    <li>
-                        <div class="recommandBox">
-                            <div class="asideMyProfile">
-                                <div class="myProfile">
-                                    <img src="../image/myprofile.png" alt="myProfile" id="recommendProfileIcon">
-                                </div>
-                                <div class="feedProfileName">doublejs1226 <div class="feedProfileSubName">수정</div>
-                                </div>
-                            </div>
-                            <div class="followPeople">팔로잉</div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="recommandBox">
-                            <div class="asideMyProfile">
-                                <div class="myProfile">
-                                    <img src="../image/myprofile.png" alt="myProfile" id="recommendProfileIcon">
-                                </div>
-                                <div class="feedProfileName">doublejs1226 <div class="feedProfileSubName">수정</div>
-                                </div>
-                            </div>
-                            <div class="followPeople">팔로잉</div>
-                        </div>
-                    </li>                    <li>
-                        <div class="recommandBox">
-                            <div class="asideMyProfile">
-                                <div class="myProfile">
-                                    <img src="../image/myprofile.png" alt="myProfile" id="recommendProfileIcon">
-                                </div>
-                                <div class="feedProfileName">doublejs1226 <div class="feedProfileSubName">수정</div>
-                                </div>
-                            </div>
-                            <div class="followPeople">팔로잉</div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="recommandBox">
-                            <div class="asideMyProfile">
-                                <div class="myProfile">
-                                    <img src="../image/myprofile.png" alt="myProfile" id="recommendProfileIcon">
-                                </div>
-                                <div class="feedProfileName">doublejs1226 <div class="feedProfileSubName">수정</div>
-                                </div>
-                            </div>
-                            <div class="followPeople">팔로잉</div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="recommandBox">
-                            <div class="asideMyProfile">
-                                <div class="myProfile">
-                                    <img src="../image/myprofile.png" alt="myProfile" id="recommendProfileIcon">
-                                </div>
-                                <div class="feedProfileName">doublejs1226 <div class="feedProfileSubName">수정</div>
-                                </div>
-                            </div>
-                            <div class="followPeople">팔로잉</div>
-                        </div>
-                    </li>
-                </ul>
-            </aside>
-        </div>
-        </div>
-    </main>
+          </div>
+          <div class="asideIdRetrun">전환</div>
+        </li>
+        <li class="recommandList">
+          <div style="opacity: 0.6;">회원님을 위한 추천</div>
+          <div>모두 보기</div>
+        </li>
+        <li>
+          <div class="recommandBox">
+            <div class="asideMyProfile">
+              <div class="myProfileImg">
+                <img src="../image/myprofile.png" alt="myProfile" id="recommendProfileIcon">
+              </div>
+              <div class="feedProfileName">doublejs1226 <div class="feedProfileSubName">수정</div>
+              </div>
+            </div>
+            <div class="followPeople">팔로잉</div>
+          </div>
+        </li>
+        <li>
+          <div class="recommandBox">
+            <div class="asideMyProfile">
+              <div class="myProfileImg">
+                <img src="../image/myprofile.png" alt="myProfile" id="recommendProfileIcon">
+              </div>
+              <div class="feedProfileName">doublejs1226 <div class="feedProfileSubName">수정</div>
+              </div>
+            </div>
+            <div class="followPeople">팔로잉</div>
+          </div>
+        </li>
+        <li>
+          <div class="recommandBox">
+            <div class="asideMyProfile">
+              <div class="myProfileImg">
+                <img src="../image/myprofile.png" alt="myProfile" id="recommendProfileIcon">
+              </div>
+              <div class="feedProfileName">doublejs1226 <div class="feedProfileSubName">수정</div>
+              </div>
+            </div>
+            <div class="followPeople">팔로잉</div>
+          </div>
+        </li>
+        <li>
+          <div class="recommandBox">
+            <div class="asideMyProfile">
+              <div class="myProfileImg">
+                <img src="../image/myprofile.png" alt="myProfile" id="recommendProfileIcon">
+              </div>
+              <div class="feedProfileName">doublejs1226 <div class="feedProfileSubName">수정</div>
+              </div>
+            </div>
+            <div class="followPeople">팔로잉</div>
+          </div>
+        </li>
+        <li>
+          <div class="recommandBox">
+            <div class="asideMyProfile">
+              <div class="myProfileImg">
+                <img src="../image/myprofile.png" alt="myProfile" id="recommendProfileIcon">
+              </div>
+              <div class="feedProfileName">doublejs1226 <div class="feedProfileSubName">수정</div>
+              </div>
+            </div>
+            <div class="followPeople">팔로잉</div>
+          </div>
+        </li>
+      </ul>
+    </aside>
+    <!--    사용자별 회원추천 end         -->
+  </main>
+  <!--위스타그램 메인 end-->
+
 </body>
 
 </html>

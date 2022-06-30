@@ -1,22 +1,21 @@
 "use strict";
 
-const id = document.getElementById('id');
-const pw = document.getElementById('pw');
 
-const btn=document.getElementById('submit');
+const loginId = document.getElementById("loginId")
+const loginPw = document.getElementById("loginPw")
+
+const loginConfirm = document.getElementById("loginConfirm")
 
 
 function checkIdPw() {
-    if (id.include("@") && pw.length >= 6) {
-        return alert "로그인한다";
-    else    //서브밋 버튼의 컬러를 바꿔줄거야..를 뭐라고 작성해야함?
-    }
-};
+  if (loginId.value.includes("@") && loginPw.value.length >= 6) {
+    return loginConfirm.style.backgroundColor = "#3e89ee"
+  } else if (!(loginId.value.includes("@")) || loginPw.value.length < 6) {
+    //loginId값에 @가 빠지거나, loginPw의 length가 6자리 이하일 경우 버튼이 원래대로 돌아오는 코드 추가
+    return loginConfirm.style.backgroundColor = ""
+    //백그라운드 컬러 값 원복
+  }
+}
 
-// 사용자가 작성을 작했을 때를 캐치해야함.. 이부분도이해 못함
-id.addEventListener('keyup', checkIdPw);
-pw.addEventListener('keyup', checkIdPw);
-
-// const checkIdPw = () => {
-//     id.value.includes("@")
-// }
+loginId.addEventListener("keyup", checkIdPw)
+loginPw.addEventListener("keyup", checkIdPw)

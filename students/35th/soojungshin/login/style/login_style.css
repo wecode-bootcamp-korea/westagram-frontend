@@ -1,0 +1,147 @@
+@charset "utf-8";
+@import 'common.css';
+
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Gothic+A1:wght@400;600;900&display=swap');
+
+/*login start*/
+
+
+body {
+  width: 100vw;
+  font-family: 'Gothic A1', sans-serif;
+  background-color: rgb(249, 249, 249);
+  color: #333;
+}
+
+.loginPage {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginBox {
+  background-color: rgb(249, 249, 249);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.inputBox {
+  width: 400px;
+  height: 500px;
+  border: 1px solid #e1e1e1;
+  background-color: rgb(255, 255, 255);
+
+}
+
+
+.logo {
+  color: black;
+  text-align: center;
+  font-family: 'Berkshire Swash', cursive, serif;
+  font-size: 3.2em;
+  padding-top: 40px;
+}
+
+.inputIdPw {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+#loginId,
+#loginPw {
+  width: 280px;
+  height: 48px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+  background-color: rgb(249, 249, 249);
+  border: #e1e1e1 1px solid;
+  border-radius: 3px;
+  font-size: 0.9em;
+}
+
+#loginConfirm {
+  width: 295px;
+  height: 40px;
+  margin-bottom: 10px;
+  background-color: rgb(173, 217, 251);
+  border: #e1e1e1 1px solid;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 1em;
+  text-align: center;
+}
+
+
+.orLine {
+  width: 290px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.or {
+  display: flex;
+  font-size: 0.8em;
+  color: rgb(145, 145, 145);
+  margin: 0 10px;
+}
+
+.line {
+  height: 1px;
+  flex-grow: 1;
+  background-color: rgb(193, 193, 193);
+}
+
+.facebookLogin {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.facebookicon {
+  width: 17px;
+  margin-right: 5px;
+}
+
+.facebookLoginText {
+  color: rgb(62, 79, 129);
+  font-weight: 600;
+  font-size: 0.9em;
+}
+
+.findPw {
+  font-size: 0.85em;
+  color: rgb(62, 79, 129);
+  text-decoration: none;
+  margin-top: 15px;
+}
+
+.joinMember {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  width: 400px;
+  height: 80px;
+  border: 1px solid #e1e1e1;
+  text-align: center;
+  background-color: #fff;
+}
+
+.goMembershipJoin {
+  color: #1d1d1d;
+  font-size: 0.85em;
+}
+
+.goMembershipJoin>a {
+  color: rgb(52, 148, 221);
+  font-weight: 600;
+}
+
+/*login end*/
