@@ -33,7 +33,116 @@ main {
   justify-content: space-between;
   width: 800px;
 }
+.navigation-bar .nav-fix .nav-search {
+  position: relative;
+  display: flex;
+}
 
+.navigation-bar .nav-fix .nav-search .search-info {
+  position: absolute;
+  top: 80px;
+  width: 250px;
+  height: 270px;
+  z-index: 10;
+  border: 1px solid rgb(209, 209, 209);
+  background-color: #fff;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: none;
+}
+
+.navigation-bar .nav-fix .nav-search .search-info:after {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  border-width: 0 15px 15px;
+  border-color: #ffffff transparent;
+  display: block;
+  width: 0;
+  z-index: 1;
+  top: -15px;
+  left: 110px;
+}
+
+.navigation-bar .nav-fix .nav-search .search-info:before {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  border-width: 0 16px 16px;
+  border-color: rgb(209, 209, 209) transparent;
+  display: block;
+  width: 0;
+  z-index: 0;
+  top: -16px;
+  left: 109px;
+}
+.navigation-bar .nav-fix .nav-search .search-info .info-box {
+  display: flex;
+  align-items: center;
+  height: 90px;
+}
+
+.navigation-bar
+  .nav-fix
+  .nav-search
+  .search-info
+  .info-box
+  .search-info-imgbox {
+  width: 30px;
+  height: 30px;
+  margin: 0 10px;
+}
+
+.navigation-bar
+  .nav-fix
+  .nav-search
+  .search-info
+  .info-box
+  .search-info-imgbox
+  img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.navigation-bar
+  .nav-fix
+  .nav-search
+  .search-info
+  .info-box
+  .search-info-idandnick {
+  display: flex;
+  flex-direction: column;
+}
+
+.navigation-bar
+  .nav-fix
+  .nav-search
+  .search-info
+  .search-info-idandnick
+  .search-info-first {
+  font-size: 17px;
+}
+
+.navigation-bar
+  .nav-fix
+  .nav-search
+  .search-info
+  .search-info-idandnick
+  .search-info-id {
+  font-weight: bold;
+}
+
+.navigation-bar
+  .nav-fix
+  .nav-search
+  .search-info
+  .search-info-idandnick
+  .search-info-nickname {
+  color: gray;
+}
 .navigation-bar .logo-title {
   display: flex;
   align-items: center;
@@ -69,7 +178,6 @@ main {
   border: 2px solid rgb(185, 184, 184);
   border-radius: 4px;
   font-size: 15px;
-  color: gray;
 }
 
 .navigation-bar .nav-icons {
@@ -476,9 +584,10 @@ main {
   .main-right {
     display: none;
   }
-  .navigation-bar .nav-search {
+  .navigation-bar .nav-fix .nav-search {
     display: none;
   }
+
   .navigation-bar .logo-title .insta-icon,
   .navigation-bar .logo-title .nav-title span {
     display: none;
@@ -511,7 +620,6 @@ main {
     display: flex;
     bottom: 0;
     position: sticky;
-    top: 0;
     width: 100%;
     justify-content: space-around;
     align-items: center;
