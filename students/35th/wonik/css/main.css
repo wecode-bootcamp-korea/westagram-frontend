@@ -342,12 +342,36 @@
 
 .description-comment{
   display: flex;
-  gap: .3rem;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 3px;
+}
+
+.comment-left{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: .3rem;
 }
 
 .user-name{
   font-weight: 600;
+}
+
+.comment-right{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: .3rem;
+}
+
+.comment-right > i{
+  color: rgba(0,0,0,0.5);
+}
+
+.comment-right > i:hover{
+  cursor: pointer;
+  color: #000;
 }
 
 /* time line */

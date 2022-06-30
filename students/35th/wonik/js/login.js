@@ -15,26 +15,22 @@ const onChangeImage = setInterval(() => {
   }
 }, 5000);
 
-// 로그인 입력값 생성시 버튼 활성화
+// 로그인 입력값 생성시 버튼 활성화(추가기능 구현)
 
 const $inputID = document.querySelector('.login-input__ID');
 const $inputPW = document.querySelector('.login-input__PW');
 const $button = document.querySelector('.login-button');
 const $form = document.querySelector('.login-input');
 
-/*$form.addEventListener('keyup', () => {
-  if($inputID.value && $inputPW.value){
-    $button.disabled = false;
-    $button.classList.add('focus');
-  }else{
-    $button.disabled = true;
-    $button.classList.remove('focus');
-  }
-})*/
 
 $form.addEventListener('keyup', () => {
-  const able = ($inputID.value && $inputPW.value) ? $button.disabled = false : $button.disabled = true;
-  const focus = ($inputID.value && $inputPW.value) ? $button.classList.add('focus') : $button.classList.remove('focus');
+  const able = ($inputID.value && $inputPW.value && $inputID.value.includes('@') && ($inputPW.value.length > 5)) ? (
+    $button.disabled = false,
+    $button.classList.add('focus')
+  ) : (
+    $button.disabled = true,
+    $button.classList.remove('focus')
+  )
 })
 
 
