@@ -5,6 +5,7 @@
 
 /* nav */
 .navwrap {
+    z-index: 50;
     width: 100%;
     height: 60px;
     position: fixed;
@@ -89,8 +90,10 @@
 
 /* main */
 main {
-    padding-top: 70px;
+    padding-top: 100px;
     justify-content: center;
+    display: flex;
+    position: relative;
 }
 
 .feeds {
@@ -98,12 +101,13 @@ main {
 }
 
 .article {
-    margin-top: 20px;
     flex-direction: column;
+    margin-bottom: 20px;
     width: 470px;
     border: 1px solid var(--border-color);
     background-color: var(--inner-background-color);
     border-radius: 8px;
+
 }
 
 /* top */
@@ -129,6 +133,7 @@ main {
 
 .user-id {
     font-weight: 600;
+    padding-bottom: 5px;
 }
 
 .more {
@@ -251,4 +256,123 @@ main {
 .active {
     opacity: 1;
     cursor: pointer;
+}
+
+/* main-right */
+
+.main-right {
+    width: 319px;
+    height: 700px;
+    flex-direction: column;
+    margin-left: 20px;
+    position: sticky;
+    top: 100px;
+}
+
+/* user */
+.user {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.user :nth-child(n) {
+    margin-left: 5px;
+}
+
+.user-img-big img{
+    width: 56px;
+    height: 56px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.user-info {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.location {
+    color: gray;
+    font-size: 14px;
+}
+
+/* right-container */
+.right-container {
+    width: 319px;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+/* header  */
+.header {
+    width: 100%;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.header :nth-child(1){
+    color: gray;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.header :nth-child(2){
+    font-weight: 600;
+    font-size: 10px;
+}
+
+/* followlist */
+.followlist {
+    width: 100%;
+    flex-direction: column;
+    height: 300px;
+    overflow-y: scroll;
+}
+
+.followlist::-webkit-scrollbar {
+    display: none;
+}
+
+.users {
+    width: 100%;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.user-details {
+    font-size: 12px;
+    color: gray;
+}
+
+.follow {
+    position: absolute;
+    right: 10px;
+    font-weight: 600;
+    color: #0095f6;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+/* gray-text */
+
+.footer {
+    padding: 0 10px;
+}
+
+.gray-text li {
+    color: lightgray;
+    font-size: 12px;
+    display: inline-block;
+    width: fit-content;
+    margin-bottom: 3px;
+}
+
+.gray-text {
+    margin-bottom: 10px;
+}
+
+.footer span {
+    color: lightgray;
+    font-size: 12px;
 }

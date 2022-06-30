@@ -37,8 +37,60 @@
                 </div>
             </div>
         </nav>
-        <main class="flex">
-            <div class="feeds">
+        <main>
+            <div class="feeds flex">
+                <article class="article flex">
+                    <div class="top flex">
+                        <div class="user-img flex">
+                            <img alt="profile image" src="./img/profile.JPG">
+                        </div>
+                        <div class="user-id">m.minzzy</div>
+                        <button class="more flex">
+                            <span>.</span>
+                            <span>.</span>
+                            <span>.</span>
+                        </button>
+                    </div>
+                    <div class="middle">
+                        <img alt="Photo by mj, on Nov 17, 2021. Standing in front of brick wall. Feed sample image 1." src="./img/feed-image.jpg">
+                    </div>
+                    <div class="bottom">
+                        <div class="img-bottom-icons flex">
+                            <div class="left-icons flex">
+                                <img alt="likes-heart" src="./img/like.png">
+                                <img alt="comments" src="./img/chat.png">
+                                <img alt="share" src="./img/send.png">
+                            </div>
+                            <div class="right-icons">
+                                <img alt="bookmark" src="./img/bookmark.png">
+                            </div>
+                        </div>
+                        <div class="likes flex">
+                            <div class="profile">
+                                <img alt="user image of likes" src="./img/profile.JPG" />
+                            </div>
+                            <div class="who-likes">
+                                <b>m.minzzy</b>님 외 <b>100명</b>이 좋아합니다.
+                            </div>
+                        </div>
+                        <div class="contents flex">
+                            <div class="user-id">m.minzzy</div>
+                            <div class="details">저때가 좋았지.....^___^</div>
+                        </div>
+                        <div class="comments flex">
+                            <div class="user-id">Yelihi</div>
+                            <div class="details">대박이군요~!</div>
+                        </div>
+                        <div class="time-ago">
+                            1분 전
+                        </div>
+                        <div class="input-comments flex">
+                            <img alt="comments imoji" src="./img/smile.png">
+                            <input type="text" placeholder="댓글 달기...">
+                            <button>게시</button>
+                        </div>
+                    </div>
+                </article>
                 <article class="article flex">
                     <div class="top flex">
                         <div class="user-img flex">
@@ -92,56 +144,102 @@
                     </div>
                 </article>
             </div>
-            <!-- <div class="main-right">
-                <div class="user">
-                    <div class="user-img"></div>
-                    <div>
-                        <div class="user-id"></div>
-                        <div class="user-datails"></div>
+            
+            <div class="main-right">
+                <div class="user flex">
+                    <div class="user-img-big">
+                        <img alt="profile image" src="./img/profile.JPG" />
+                    </div>
+                    <div class="user-info flex">
+                        <div class="user-id">m.minzzy</div>
+                        <div class="location">WeCode | 위코드</div>
                     </div>
                 </div>
-                <div class="right-container">
-                    <div class="header">
-                        <div>스토리</div>
-                        <div>모두 보기</div>
-                    </div>
-                    <div class="users">
-                        <div class="user-img"></div>
-                        <div>
-                            <div class="user-id"></div>
-                            <div class="user-datails"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="right-container">
-                    <div class="header">
+                <div class="right-container flex">
+                    <div class="header flex">
                         <div>회원님을 위한 추천</div>
                         <div>모두 보기</div>
                     </div>
-                    <div class="users">
-                        <div class="user-img"></div>
-                        <div>
-                            <div class="user-id"></div>
-                            <div class="user-datails"></div>
+                    <div class="followlist flex">
+                        <div class="users flex">
+                            <div class="user-img flex">
+                                <img alt="profile image" src="./img/profile.JPG" />
+                            </div>
+                            <div>
+                                <div class="user-id">wecode_bootcamp</div>
+                                <div class="user-details">m.minzzy님 외 40명이 팔로우 합니다</div>
+                            </div>
+                            <div class="follow">팔로우</div>
                         </div>
-                        <div>팔로우</div>
+                        <div class="users flex">
+                            <div class="user-img flex">
+                                <img alt="profile image" src="./img/profile.JPG" />
+                            </div>
+                            <div>
+                                <div class="user-id">hjlee</div>
+                                <div class="user-details">m.minzzy님이 팔로우 합니다</div>
+                            </div> 
+                            <div class="follow">팔로우</div>
+                        </div>
+                        <div class="users flex">
+                            <div class="user-img flex">
+                                <img alt="profile image" src="./img/profile.JPG" />
+                            </div>
+                            <div>
+                                <div class="user-id">junghoon_lee</div>
+                                <div class="user-details">instagram 신규 가입</div>
+                            </div>
+                            <div class="follow">팔로우</div>
+                        </div>
+                        <div class="users flex">
+                            <div class="user-img flex">
+                                <img alt="profile image" src="./img/profile.JPG" />
+                            </div>
+                            <div>
+                                <div class="user-id">w_wonjae</div>
+                                <div class="user-details">m.minzzy님 외 2명이 팔로우 합니다</div>
+                            </div>
+                            <div class="follow">팔로우</div>
+                        </div>
+                        <div class="users flex">
+                            <div class="user-img flex">
+                                <img alt="profile image" src="./img/profile.JPG" />
+                            </div>
+                            <div>
+                                <div class="user-id">gyu_chanback</div>
+                                <div class="user-details">알 수도 있는 친구</div>
+                            </div>
+                            <div class="follow">팔로우</div>
+                        </div>
+                        <div class="users flex">
+                            <div class="user-img flex">
+                                <img alt="profile image" src="./img/profile.JPG" />
+                            </div>
+                            <div>
+                                <div class="user-id">i.iiiikhyeon</div>
+                                <div class="user-details">gyu_chanback님 외 5명이 팔로우 합니다</div>
+                            </div>
+                            <div class="follow">팔로우</div>
+                        </div>
                     </div>
                 </div>
-                <ul class="gray-text">
-                    <li>Instagram 정보</li>
-                    <li>지원</li>
-                    <li>홍보센터</li>
-                    <li>API</li>
-                    <li>채용 정보</li>
-                    <li>개인정보처리방침</li>
-                    <li>약관</li>
-                    <li>디렉터리</li>
-                    <li>프로필</li>
-                    <li>해시태그</li>
-                    <li>언어</li>
-                </ul>
-                <span>ⓒ 2022 INSTAGRAM</span>
-            </div> -->
+                <div class="footer">
+                    <ul class="gray-text">
+                        <li>Instagram 정보</li>
+                        <li>지원﹒</li>
+                        <li>홍보센터﹒</li>
+                        <li>API﹒</li>
+                        <li>채용 정보﹒</li>
+                        <li>개인정보처리방침﹒</li>
+                        <li>약관﹒</li>
+                        <li>디렉터리﹒</li>
+                        <li>프로필﹒</li>
+                        <li>해시태그﹒</li>
+                        <li>언어</li>
+                    </ul>
+                    <span>ⓒ 2022 INSTAGRAM FROM META</span>
+                </div>
+            </div>
         </main>
     </div>
 </body>
