@@ -28,7 +28,7 @@
 .textbox {margin: 10px 20px;}
 .textbox p {line-height: 18px;}
 .textbox p:nth-child(1) {font-weight: 700;}
-.textbox p:nth-child(2) {font-size: 12px;}
+.textbox strong {font-size: 12px;}
 
 .checkicon {width: 100%; margin:20px 0;}
 .checkicon ul{width: 100px; display: flex; justify-content: space-between;}
@@ -38,45 +38,48 @@
 .like {display: flex;}
 .like img {width: 30px; height: 30px; border-radius: 50%;}
 .like p {margin: 10px;}
-.like p span {font-weight: 700;}
+.like p strong{font-weight: 700;}
 .tcon {margin-top: 10px;}
 .tcon p {line-height: 22px;}
 .tcon p span {font-weight: 700; margin-right: 10px;}
-.tcon p a {color:#aeaeae;}
-.time {margin-top: 10px; color:#aeaeae;}
+.tcon p a {color:#aeaeae; font-size: 12px;}
+.time {margin-top: 10px; color:#aeaeae; font-size: 12px;}
+
+#name {margin-top: 20px;}
+#name p {line-height: 30px; font-size: 14px;}
+#name p strong {font-weight: 600; color:#0388fc;}
 
 .comment {position: relative; top:0; left: 0;}
 .commtext {width: 100%; height: 60px; border:1px solid #f0f0f0; border-radius: 5px; margin-top: 20px; padding-left: 10px;}
 .commbtn {position: absolute; bottom:0; right: 0; width: 80px; height: 60px; border:1px solid #f0f0f0; color:#0388fc; background-color: #fff;}
 
 .rightm{width:300px; height: 400px; padding-left: 30px; margin-top: 20px;}
-.feedright{width: 100%;}
 .rtop{display: flex; height:50px; margin:20px 0;}
 .rtop img {width: 50px; height: 50px; border-radius: 50%;}
 .myname {margin: 10px 20px;}
 .myname p {line-height: 18px;}
+.myname p strong{font-size: 12px;}
 .myname p:nth-child(1) {font-weight: 700;}
 .myname p:nth-child(2) {font-size: 12px;}
 
-.storyall {border: 1px solid #ddd; height: 260px; overflow: hidden; background-color: #fff;}
+.storyall {border: 1px solid #ddd; height: 260px; overflow-y: scroll; background-color: #fff;}
 .storybox {height: 50px; border-bottom: 1px solid #ddd;}
 .storybox p {font-size: 14px; line-height: 50px; margin-left: 15px;}
-.storybox p span {font-size: 12px; font-weight: 700; margin-left: 130px;}
+.storybox p span {font-size: 12px; font-weight: 700; margin-left: 140px;}
 
-.friend ul {width: 100%; height: 140px; margin-left: 15px;}
-.friend ul li{padding: 15px 0px; display: flex; align-items:center;}
+.friend ul {width: 100%; height: 140px;}
+.friend ul li{padding: 15px; display: flex; align-items:center;}
 .friend ul li img {width: 50px; height: 50px; border-radius: 50%;}
 .friend ul li p {margin-left: 10px; font-weight: 700; line-height: 20px;}
 .friend ul li p span {font-weight: 400; font-size: 12px; color:#686868;}
 
-.chall{margin-top: 30px; border: 1px solid #ddd; height: 260px; overflow: hidden; background-color: #fff;}
+.chall{margin-top: 30px; border: 1px solid #ddd; height: 260px; overflow-y: scroll; background-color: #fff;}
 .chubox{height: 50px; border-bottom: 1px solid #ddd;}
-.chubox p {display: flex; font-size: 14px; line-height: 50px; margin-left: 15px;}
-.chubox p span {font-size: 14px; font-weight: 700; margin-left: 60px;}
+.chubox p {font-size: 14px; line-height: 50px; margin-left: 15px;}
+.chubox p span {font-size: 12px; font-weight: 700; padding-left: 72px;}
 
-.follow ul {width: 100%; margin-left: 15px;}
-.follow ul li{padding: 15px 0px; display: flex; align-items:center;}
+.follow ul li{padding: 15px; display: flex; align-items:center;}
 .follow ul li img {width: 50px; height: 50px; border-radius: 50%;}
 .follow ul li p {margin-left: 10px; font-weight: 700; line-height: 20px;}
-.follow ul li p:last-child {margin-left: 12px; font-size: 12px; color:#0388fc;}
+.follow ul li p:last-child {margin-left: 18px; font-size: 12px; color:#0388fc;}
 .follow ul li p span {font-weight: 400; font-size: 12px; color:#686868;}
