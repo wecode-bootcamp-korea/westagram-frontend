@@ -44,3 +44,22 @@ function inputOpacity() {
         loginBtn.style="opacity :0.5"
     )
 }
+
+
+//로그인 이메일, 비밀번호 유효성 검사
+
+const regEx_email = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*.[a-zA-Z]{2,3}$/i;
+
+loginBtn.addEventListener("click", (e) => {
+    if (!regEx_email.test(inputId.value)) {
+        alert("이메일 형식이 잘못되었습니다.")
+        
+    } else if (inputPwd.value.length < 5) {
+    alert("비밀번호는 5글자 이상입니다.")
+    
+    } else {
+        location.href='main.html'
+    }
+
+})
+
