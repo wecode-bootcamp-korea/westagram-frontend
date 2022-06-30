@@ -6,6 +6,7 @@
   width: 50%;
   margin-top: 50px;
 }
+
 .goToMain {
   font-family: "Lobster", cursive;
   font-size: 30px;
@@ -14,14 +15,17 @@
   text-decoration: none;
   color: black;
 }
+
 .icon-bar {
   display: flex;
   align-items: center;
 }
+
 .icon-image {
   height: 25px;
-  margin: 5px;
+  margin: 12px;
 }
+
 .profie-image {
   height: 30px;
   margin: 10px;
@@ -29,13 +33,19 @@
 }
 
 .img-xl {
-  height: 55px;
+  height: 50px;
   margin-right: 20px;
 }
 
-.photo-feed {
-  border: 1px solid rgb(192, 189, 189);
+.reaction-wrap {
+  margin-left: 10px;
 }
+
+.photo-feed {
+  border: 1px solid rgb(234, 232, 232);
+  border-radius: 10px;
+}
+
 main {
   display: flex;
   justify-content: center; /*X축*/
@@ -46,13 +56,14 @@ a {
   text-decoration: solid none;
   color: black;
   font-weight: bold;
+  font-size: 18px;
 }
 
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
-  border: 1px solid rgb(192, 189, 189);
+  border: 1px solid rgb(234, 232, 232);
   padding: 15px;
 }
 
@@ -62,50 +73,58 @@ article {
   flex-direction: column;
   margin-right: 50px;
 }
+
 .likes {
   display: flex;
   align-items: center;
   margin: 0;
   font-family: "Noto Sans KR", sans-serif;
 }
+
 .content {
   margin: 16px;
   font-family: "Noto Sans KR", sans-serif;
 }
 
 .search-box {
-  border: 1px solid rgb(192, 189, 189);
+  border: 1px solid rgb(234, 232, 232);
+  border-radius: 10px;
   width: 250px;
   height: 30px;
 }
+
 .feed01-img {
   width: 500px;
 }
+
 .story {
   border: 1px solid rgb(192, 189, 189);
   justify-content: space-between;
   margin-bottom: 30px;
   margin-top: 30px;
 }
+
 .parent-comment-box {
-  border: 1px solid rgb(234, 232, 232);
+  /* border: 1px solid rgb(234, 232, 232);
+  border-radius: 10px; */
   padding: 5px;
   margin-top: 30px;
   display: flex;
   justify-content: space-between;
 }
-input {
+
+.comment-box {
   border: none;
+  width: 430px;
+  height: 30px;
 }
+
 .comment-up {
   border: none;
   color: RGB(1, 149, 247);
   background-color: inherit;
 }
 
-.recommandation {
-  border: 1px solid rgb(192, 189, 189);
-}
 .user-header {
   display: flex;
   align-items: center;
@@ -113,17 +132,21 @@ input {
   margin: 5px;
   font-size: 20px;
 }
+
 .user-info {
   display: flex;
   align-items: center;
 }
+
 .main-right {
   width: 350px;
 }
+
 .main-right-user-profile {
   display: flex;
   align-items: center;
 }
+
 .main-right-profile {
   text-decoration: solid none;
   color: black;
@@ -134,6 +157,10 @@ input {
   color: rgb(192, 189, 189);
   font-size: small;
 }
+.story {
+  border: 1px solid rgb(234, 232, 232);
+  border-radius: 10px;
+}
 
 .story-hearder {
   display: flex;
@@ -143,21 +170,25 @@ input {
   color: rgb(192, 189, 189);
   font-weight: bold;
 }
+
 .story-user-box {
   display: flex;
   align-items: center;
   margin: 10px;
 }
 
-.uerID-img {
-  display: flex;
+.userID-img {
+  margin-right: 35px;
 }
 
 .userId {
   color: black;
   font-weight: bold;
 }
-
+.recommandation {
+  border: 1px solid rgb(234, 232, 232);
+  border-radius: 10px;
+}
 .re-hearder {
   display: flex;
   justify-content: space-between;
@@ -171,13 +202,15 @@ input {
   display: flex;
   align-items: center;
 }
+
 .action-btn-all {
   border: none;
   color: black;
   font-weight: bold;
-  font-size: medium;
+  font-size: 15px;
   background-color: inherit;
 }
+
 .action-btn {
   border: none;
   color: RGB(1, 149, 247);

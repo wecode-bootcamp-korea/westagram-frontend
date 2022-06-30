@@ -16,10 +16,11 @@
         <img class="icon-image" alt="home icon" src="./img/home.png" /><img
           class="icon-image"
           src="./img/send.png"
-        /><img class="icon-image" alt="add image icon" src="./img/add.png" /><img
+        /><img
           class="icon-image"
-          alt="love icon"src="./img/love.png"
-        />
+          alt="add image icon"
+          src="./img/add.png"
+        /><img class="icon-image" alt="love icon" src="./img/love.png" />
         <img class="profie-image" src="./img/profile.jpg" />
       </div>
     </nav>
@@ -48,15 +49,18 @@
             </div>
             <p class="likes">
               <img class="profie-image" src="./img/user2.jpg" />
-              <a>jin_uk_lee</a>님 외 723명이 좋아합니다.</p>
+              <a>jin_uk_lee</a>님 외 723명이 좋아합니다.
+            </p>
             <div class="content"><a>good_ani</a> About Time_</div>
             <div class="parent-comment-box">
-              <input
-                class="comment-box"
-                type="text"
-                placeholder="댓글 달기..."
-              />
-              <button class="comment-up" type="button">게시</button>
+              <form id="id" class="comment-form">
+                <input
+                  class="comment-box"
+                  type="text"
+                  placeholder="댓글 달기..."
+                />
+                <button class="comment-up" type="button" disabled>게시</button>
+              </form>
             </div>
           </div>
         </article>
@@ -150,6 +154,9 @@
                     </div>
                     <button class="action-btn">팔로우</button>
                   </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="copyright">
             <p class="copyright">
@@ -162,5 +169,6 @@
         </div>
       </div>
     </main>
+    <script src="./js/main.js"></script>
   </body>
 </html>
