@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Westagram</title>
+    <link rel="stylesheet" href="style/main.css" />
+    <link rel="stylesheet" href="style/common.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <!-- nav -->
+  <body>
+    <nav class="nav">
+      <div class="left_nav">
+        <p>
+          <img src="https://cdn-icons-png.flaticon.com/512/1384/1384031.png" />
+          Westagram
+        </p>
+      </div>
+      <div class="center_nav">
+        <img src="https://cdn-icons-png.flaticon.com/512/71/71403.png" />
+        <input type="text" placeholder="검색" />
+      </div>
+      <div class="right_nav">
+        <img
+          src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png"
+        />
+        <img
+          src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"
+        />
+        <img
+          src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png"
+        />
+      </div>
+    </nav>
+
+    <!-- main feed left -->
+    <div class="main">
+      <div class="feeds">
+        <div class="article">
+          <!-- profile description -->
+          <div class="metadata">
+            <img src="img/profile.jpg" />
+            <p class="id">1eoee</p>
+            <div class="myProfile"></div>
+          </div>
+          <!-- westagram main img-->
+          <div class="udimg"><img src="img/img.jpg" /></div>
+          <div class="icon">
+            <img
+              id="heart"
+              src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"
+            />
+            <img
+              src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png"
+            />
+            <img
+              src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png"
+            />
+          </div>
+          <div class="like">
+            <img src="img/profile.jpg" />
+            <div class="font">
+              <span>wecode</span>
+              님 외
+              <span>여러 명</span>
+              이 좋아합니다.
+            </div>
+          </div>
+          <div id="contents" class="contents">
+            <span class="bold">1eoe</span>
+            <span class="text">
+              시냇물은 졸졸졸졸 고기들은 왔다갔다 버들가지 한들한들 꾀꼬리는
+              꾀꼴꾀꼴 금빛 옷을 차려입고 여름 아씨 마중 왔다 곱게 곱게 차려입고
+              시냇가에 빨래왔다 시냇물은 졸졸졸졸 고기들은 왔다갔다 버들가지
+              한들한들 꾀꼬리는 꾀꼴꾀꼴 금빛 옷을 차려입고 여름 아씨 마중 왔다
+              곱게 곱게 차려입고 시냇가에 빨래왔다
+            </span>
+            <button id="btn" class="button">더 보기</button>
+          </div>
+          <div class="comment">
+            <span id="userID"></span>
+            <span id="userWrite"></span>
+            <input
+              type="text"
+              id="comment"
+              style="border: 0 solid black"
+              placeholder="댓글을 입력해 주세요."
+            />
+          </div>
+          <div></div>
+        </div>
+      </div>
+
+      <!-- main feed right -->
+
+      <!-- <div class="main-right">
+        <div class="myId"></div>
+        <div class="story">
+          <ul>
+            <li>스토리1</li>
+            <li>스토리2</li>
+            <li>스토리3</li>
+          </ul>
+        </div>
+        <div class="info"><p>instagram 정보 샬라샬라</p></div>
+      </div> -->
+    </div>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Westagram</title>
+    <link rel="stylesheet" href="style/common.css" />
+    <link rel="stylesheet" href="style/login.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="westagram">
+      <div class="wrap">
+        <div class="logo">
+          <p>Westagram</p>
+        </div>
+        <div class="login">
+          <input
+            type="text"
+            id="userId"
+            placeholder="전화번호, 사용자 또는 이메일"
+          />
+          <input type="password" id="userPw" placeholder="비밀번호" />
+          <button id="btn" class="btn focus" disabled="disabled">로그인</button>
+          <div class="lostPw">
+            <p>
+              <a href="https://www.instagram.com/accounts/password/reset/"
+                >비밀번호를 잊으셨나요?</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="wrap_box">
+        <p>
+          계정이 없으신가요?
+          <a href="https://www.instagram.com/accounts/emailsignup/">가입하기</a>
+        </p>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="js/login.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>
