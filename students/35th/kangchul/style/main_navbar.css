@@ -43,6 +43,57 @@ nav {
     border: none;
     outline: none;
 }
+
+
+
+.search__list--container {
+    width: 100%;
+    position: absolute;
+    top: 70px;
+    left: 10px;
+    
+}
+
+
+.search__bar--list {
+
+    display: flex;
+    width: 250px;
+    height: 210px;
+    margin: auto;
+    flex-direction: column;
+    overflow-y: auto;
+
+    
+}
+
+.search__img {
+    background: center/cover no-repeat url("../imgs/nameless.png");
+    margin-right: 10px;
+}
+
+.search__list {
+    width: 230px;
+    display: flex;
+    align-items: center;
+    padding: 15px 0px 15px 15px;
+    border: var(--border);
+    background-color: var(--gray);   
+    font-size: 13px;
+}
+
+.search__id {
+display: block;
+margin-bottom: 10px;
+
+}
+
+.search__content {
+cursor:default;
+}
+
+
+
 /* 검색 포커스 없어졌다 나왔다  */
 
 .search__focus {
@@ -52,8 +103,6 @@ nav {
     font-size: 14px;
     color: gray;
     display: none;
-
-
 }
 
 .search:focus ~ .fa-magnifying-glass {

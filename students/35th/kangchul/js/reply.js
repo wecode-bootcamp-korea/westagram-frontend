@@ -37,7 +37,7 @@ replyForm.addEventListener("submit", (event) => {
         <i class="fa-solid fa-xmark xmark"></i>
         `;
     replyList.setAttribute("class", "reply__list");
-    replyWindow.appendChild(replyList);
+    replyWindow.prepend(replyList);
     replyInput.value = "";
 })
 
