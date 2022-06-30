@@ -1,7 +1,8 @@
 const loginForm = document.querySelector(".login__box__form");
 const loginFormSubmit = document.querySelector(".login__box__form__submit");
+const loginBtn = document.querySelector(".login__box__form__submit");
 
-const phoneChangeImg = () => {
+const changePhoneImg = () => {
   const phone = document.querySelector(".phone__inner");
   const imgArr = [
     "./img/phone_inner_img_1.png",
@@ -13,49 +14,57 @@ const phoneChangeImg = () => {
   phone.src = imgArr[randomIndex];
 };
 
-setInterval(phoneChangeImg, 3000);
+setInterval(changePhoneImg, 3000);
 
-const isSubmitValue = (idValue, passwordValue) => {
-  if (idValue && passwordValue) {
+const validationAccount = (id, password) => {
+  if (id && password) {
     loginFormSubmit.disabled = false;
     loginFormSubmit.style.opacity = 1;
   }
 
-  if (!idValue && passwordValue) {
+  if (!id && password) {
     loginFormSubmit.disabled = true;
     loginFormSubmit.style.opacity = 0.6;
   }
 };
 
-const checkAccountValue = (event) => {
-  const idValue = document.querySelector(".login__box__form__id");
-  const passwordValue = document.querySelector(".login__box__form__pw");
+const checkInput = (event) => {
+  const targetName = event.target.name;
+
+  const getId = document.querySelector(".login__box__form__id");
+  const getPassword = document.querySelector(".login__box__form__pw");
 
   const idLabel = document.querySelectorAll("label")[0];
   const passwordLabel = document.querySelectorAll("label")[1];
 
-  if (event.target.name === "id") {
-    if (idValue.value) {
+  if (targetName === "id") {
+    if (getId.value) {
       idLabel.classList.remove("label-down");
       idLabel.classList.add("label-up");
     }
-    if (!idValue.value) {
+    if (!getId.value) {
       idLabel.classList.remove("label-up");
       idLabel.classList.add("label-down");
     }
   }
 
-  if (event.target.name === "password") {
-    if (passwordValue.value) {
+  if (targetName === "password") {
+    if (getPassword.value) {
       passwordLabel.classList.remove("label-down");
       passwordLabel.classList.add("label-up");
     }
-    if (!passwordValue.value) {
+    if (!getPassword.value) {
       passwordLabel.classList.remove("label-up");
       passwordLabel.classList.add("label-down");
     }
   }
-  isSubmitValue(idValue.value, passwordValue.value);
+  validationAccount(getId.value, getPassword.value);
 };
 
-loginForm.addEventListener("keyup", checkAccountValue);
+const login = (event) => {
+  event.preventDefault();
+  location.href = "./main.html";
+};
+
+loginForm.addEventListener("keyup", checkInput);
+loginForm.addEventListener("submit", login);
