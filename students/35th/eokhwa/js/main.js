@@ -75,4 +75,18 @@ iconIndex[0].addEventListener('click', ()=>{
 })
 
 
+//마이인포 sub메뉴 생성//
+
+const clickOn = ()=>{
+    let clickIcon = document.querySelector('.arrow')
+    let checkClass = document.querySelector('.arrow').classList.contains('on')
+    if(checkClass) {
+        clickIcon.classList.remove('on')
+    }else{
+        clickIcon.classList.add('on')
+    }
+}
+
+
+
 

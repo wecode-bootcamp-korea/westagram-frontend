@@ -70,16 +70,82 @@ nav .nav_container {
 
 }
 .nav_container .my_info {
-    
- 
-  
-
+    display: flex;
+    position: relative;
 }
 
 .nav_container .my_info i {
     font-size: 30px;
     margin-left: 5px;
 }
+
+.sub_menu {
+    position: absolute;
+}
+
+.nav_container .my_info .arrow {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 194px;
+    left: -10px;
+    display: none;
+}
+.nav_container .my_info .arrow.on {
+    display: block;
+}
+
+.nav_container .my_info .arrow .bubble {
+    position: relative;
+    width: 250px;
+    padding: 0px;
+    background: #FFFFFF;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    border: #7F7F7F solid 1px;
+}
+
+.nav_container .my_info .arrow .bubble:after {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 0 15px 20px;
+    border-color: #FFFFFF transparent;
+    display: block;
+    width: 0;
+    z-index: 1;
+    margin-left: -15px;
+    top: -20px;
+    left: 89%;
+}
+
+.nav_container .my_info .bubble:before {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 0 15px 20px;
+    border-color: #7F7F7F transparent;
+    display: block;
+    width: 0;
+    z-index: 0;
+    margin-left: -15px;
+    top: -21px;
+    left: 89%;
+}
+.nav_container .my_info .bubble p {
+    line-height: 30px;
+    font-size: 17px;
+    padding: 10px;
+
+}
+.nav_container .my_info .bubble p:hover {
+    background-color: rgb(219, 219, 219);
+}
+.nav_container .my_info .bubble p:last-child{
+   border-top:1px solid rgb(219, 219, 219)
+
+}
+
 /*상단 끝*/
 
 /*메인 시작*/
@@ -132,8 +198,7 @@ nav .nav_container {
     font-weight: 700;
     line-height: 28px;
 }
-.main_container .feeds .article .feed_head .my_name p:nth-child(2) {
-    
+.main_container .feeds .article .feed_head .my_name p:nth-child(2) {    
     font-size: 17px;
     line-height: 17px;
 }
@@ -142,18 +207,16 @@ nav .nav_container {
 .main_container .feeds .article .feed_img {
     width: 100%;
     height: 700px;
-
     padding: 0px 5px;
 }
-.main_container .feeds .article .feed_img img {
- 
+.main_container .feeds .article .feed_img img { 
 width: 100%; height: 100%;
 }
-.main_container .feeds .article .feed_foot {
-    width: 100%;
 
-    
+.main_container .feeds .article .feed_foot {
+    width: 100%;    
 }
+
 .main_container .feeds .article .feed_foot .icon_box {
     width: 100%;
     height: 50px;
@@ -193,10 +256,12 @@ width: 100%; height: 100%;
 .main_container .feeds .article .feed_foot .foot_like p {
     margin-left: 15px; font-size: 20px;
 }
+
 .main_container .feeds .article .feed_foot .foot_text {
     padding: 15px 25px 20px 25px ;
     line-height: 30px;
 }
+
 .main_container .feeds .article .feed_foot .foot_text strong {
     font-size: 19px; 
     font-weight: 700;
@@ -236,15 +301,13 @@ width: 100%; height: 100%;
 /*리플 생성*/
 .main_container .feeds .article .feed_foot .reple_box {
     width: 100%;
-    
-
-
 }
+
 .main_container .feeds .article .feed_foot .reple_box p{
-    font-size: 16px ;
-    
+    font-size: 16px ;    
     padding: 10px 25px;
 }
+
 .main_container .feeds .article .feed_foot .reple_box strong {
     padding-right: 10px;
     font-weight: 800;
@@ -263,10 +326,9 @@ width: 100%; height: 100%;
 /*메인 오른쪽 시작*/
 .main_container .main_right {
     width: calc(100% - 950px);
-   
-   
     float:right;
 }
+
 .main_container .main_right .right_article {
     width:100%;
 }
@@ -276,6 +338,7 @@ width: 100%; height: 100%;
     display: flex;
     align-items: center;
 }
+
 .main_container .main_right .right_article:nth-child(1) .my_photo {
     width: 70px;
     height: 70px;
@@ -285,46 +348,42 @@ width: 100%; height: 100%;
     float: left;
     
 }
+
 .main_container .main_right .right_article:nth-child(1) .my_name{
     float: left;
     margin-left: 10px;
 }
+
 .main_container .main_right .right_article:nth-child(1) p:nth-child(1) {
     font-size: 23px;
     line-height: 40px;
     font-weight: 800;
 }
+
 .main_container .main_right .right_article:nth-child(1) p:nth-child(2) {
     font-size: 17px;
     line-height: 30px;
-    
 }
+
 .main_container .main_right .right_article:nth-child(2) {   
     box-shadow: 2px 2px 2px #eee;    
     border:1px solid rgb(230, 230, 230);
-    
 }
 
-
-
 .main_container .main_right .right_article:nth-child(2) .article_more {
-      
-        
         width: 100%;
         height: 50px;
-        
         padding-left: 30px;
         display: flex;
         justify-content: space-between;
         align-items: center;
         border-bottom: 1px solid rgb(230, 230, 230);
-
-
 }
 
 .main_container .main_right .right_article:nth-child(2) .article_more span {
     font-size: 20px;
 }
+
 .main_container .main_right .right_article:nth-child(2) .article_more a {
     margin-right: 10px;
     font-size: 12px;
@@ -333,32 +392,29 @@ width: 100%; height: 100%;
 
 .main_container .main_right .right_article:nth-child(2) .article_wrap {
     width: 100%;
-  
-    
-
 }
-.main_container .main_right .right_article:nth-child(2) .article_wrap .article_container{
 
+.main_container .main_right .right_article:nth-child(2) .article_wrap .article_container{
     overflow-y: scroll;
     width: 100%;
     height: 250px;
-
-}.main_container .main_right .right_article:nth-child(2) .article_wrap .article_container::-webkit-scrollbar {
+}
+.main_container .main_right .right_article:nth-child(2) .article_wrap .article_container::-webkit-scrollbar {
     display: none;
 }
+
 .main_container .main_right .right_article:nth-child(2) .article_wrap .small_article {
     width: 100%;
-    padding-left: 25px;
-   
+    padding-left: 25px;   
     height: 70px;
     display: flex;
     align-items: center;
 }
+
 .main_container .main_right .right_article:nth-child(2) .article_wrap .small_article  .my_photo{
     width: 40px;
     height: 40px;
-    overflow: hidden;
- 
+    overflow: hidden; 
     background-color: gold;
     float: left;
     border-radius: 50%;
@@ -368,32 +424,30 @@ width: 100%; height: 100%;
     background-origin: border-box;
     background-clip: content-box, border-box;
 }
+
 .main_container .main_right .right_article:nth-child(2) .article_wrap .small_article .my_name {
     float: left;
     margin-left: 15px;
 
-
 }
+
 .main_container .main_right .right_article:nth-child(2) .article_wrap .small_article .my_name p:nth-child(1){
     font-size: 18px;
     line-height: 25px;
     font-weight: bold;
-
 }
+
 .main_container .main_right .right_article:nth-child(2) .article_wrap .small_article .my_name p:nth-child(2){
     font-size: 12px;
     line-height: 15px;
     text-align: center;
     color: gray;
-    
-
 }
 
 
 
 
 .main_container .main_right .right_article:nth-child(3) {
-    
     height: 250px;
     margin-top: 20px;
     border: 1px solid rgb(230, 230, 230);
@@ -401,8 +455,7 @@ width: 100%; height: 100%;
 }
 
 .main_container .main_right .right_article:nth-child(3) .article_more {
-      
-        
+     
     width: 100%;
     height: 50px;
     
