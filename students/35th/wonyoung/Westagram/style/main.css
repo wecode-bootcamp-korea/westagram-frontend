@@ -310,13 +310,10 @@ main {
     color: #8E8E8E;
 }
 
-.userOfFeed {
-    font-size: 14px;
-}
+
 
 .feed-comment {
-    width: 100%;
-    height: 30px;
+    height: auto;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -325,10 +322,34 @@ main {
 
 }
 
+.userOfComment-container {
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    font-weight: 650;
+}
+
+.userOfComment{
+    padding: 5px 5px 0 0; 
+}
+
+.commentOfUser-container {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.commentOfUser{
+    padding-top: 5px;
+
+}
+
+
 .feed-time {
     width: 100%;
     height: 30px;
-    padding-left: 15px;
+    margin-top: 10px;
+    padding: 15px;
     font-size: 10px;
     color: #8E8E8E;
 
@@ -383,10 +404,13 @@ main {
 }
 
 .aside-container {
-    display: flex;
+    position: sticky;
     flex-direction: column;
     justify-content: flex-start;
-    margin: 30px 0 0 30px;
+    display: flex;
+    top: 90px;
+    margin: 30px 0 0 20px;
+    height: 500px;
 }
 
 .aside-header {
@@ -531,8 +555,14 @@ main {
 }
 
 .aside-footer{
-    width: 100%;    
     margin-top: 15px;
     font-size: 12px;
+    margin-left: 10px;
     color:#CECECE;
+}
+
+.blank-container {
+    width: 320px;
+    height: 425px;
+    margin: 30px 0 0 20px;
 }
