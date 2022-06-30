@@ -48,7 +48,7 @@ nav input {
     width: 268px;
     height: 36px;
     border-radius: 8px;
-    font-size: var(--system-16-font-size);
+    font-size: 15px;
 
 }
 nav input:focus {
@@ -179,6 +179,27 @@ article {
     font-size: 14px;
 }
 
+.comment .textbold {
+    margin-right: 5px;
+}
+
+#comments {
+    margin-left: 20px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+#comments .textbold {
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+#comments img {
+    width: 13px;
+    position: absolute;
+    right: 10px;
+}
+
 .comment {
     display: flex;
     align-items: center;
@@ -214,6 +235,10 @@ button {
     font-size: 12px;
     border: 0 solid;
     background-color: white;
+    color: rgba(65,171,248,1);
+}
+
+button:disabled {
     color: rgba(65,171,248,0.5);
 }
 
