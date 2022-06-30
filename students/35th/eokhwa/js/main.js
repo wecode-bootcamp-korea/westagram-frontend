@@ -6,27 +6,40 @@ let index = 0;
 //뎃글 입력여부//
 const addComment = ()=>{
     let repleVelue = document.getElementById('reple_input');        
-    let repleLength = repleVelue.value.length;    
+    let repleLength = repleVelue.value.length;  
+
     (repleLength !== 0)? commntUp() : alert("댓글을 입력하세요");   
 }
 
 //댓글 생성//
-const commntUp = ()=>{
-    let createEl =document.createElement("p")
-    let newRepleTag =newReple.querySelectorAll("p");   
-    let repleVelue = document.getElementById('reple_input');
-    newReple.appendChild(createEl);   
-    newRepleTag[index].innerHTML = `<strong>Wecode</strong>${repleVelue.value}`;
-    index ++;
-    repleVelue.value ="";
 
+const commntUp = ()=>{
+    let createEl =document.createElement("p");
+    let repleVelue = document.getElementById('reple_input');
+    let commentsNumber =newReple.children.length;
+    let write_comment = newReple.appendChild(createEl);
+     
+
+    write_comment.innerHTML = `
+                                <strong>Wecode</strong>${repleVelue.value} 
+                                <span class="pl15 del_button" style="cursor:pointer;padding:20px">삭제</span>
+                                `;
+    createEl.classList.add("comments");  
+    repleVelue.value ="";
+    newReple.querySelector(".count_comment").innerText = `댓글 ${commentsNumber} 개`
 }
+
+
+
+
+
 
 
 //오른쪽 더보기//
 const moreList = ()=>{
     let story = document.querySelector('.article_container')
     let checkClass = document.querySelector('.article_container').classList.contains('more_active')
+
     if(checkClass) {
         story.classList.remove('more_active')
     }else{
@@ -56,9 +69,9 @@ let iconIndex =  iconBox.querySelectorAll("span");
 let likeCount = 45;
 let viewCount = document.querySelector(".count")
 
-iconIndex[0].addEventListener('click', ()=>{
-    
+iconIndex[0].addEventListener('click', ()=>{    
     let checkIconOn = iconIndex[0].classList.contains('on')
+
     if(checkIconOn) {
         iconIndex[0].classList.remove('on')
         viewCount.innerHTML =`WeCode님 외 ${likeCount}명이 좋아합니다.`
@@ -80,13 +93,13 @@ iconIndex[0].addEventListener('click', ()=>{
 const clickOn = ()=>{
     let clickIcon = document.querySelector('.arrow')
     let checkClass = document.querySelector('.arrow').classList.contains('on')
+    
     if(checkClass) {
         clickIcon.classList.remove('on')
     }else{
         clickIcon.classList.add('on')
     }
 }
-
 
 
 

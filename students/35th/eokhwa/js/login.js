@@ -11,6 +11,7 @@ let inputAll = document.querySelectorAll("input_box")
 const isCheckIdAndPass = ()=>{
     let idValue =idInput.value.length;
     let passValue = passInput.value.length;
+
     (idValue && passValue)   ? isTure() : isFalse()
   
 
@@ -35,6 +36,7 @@ const isFalse = ()=>{
 const isCheckLogin = ()=>{
     let idValue =idInput.value
     let passValue = passInput.value
+    
     if(idValue === "jung3117" && passValue === "asdf1234"){
        goToMain();
     }else{

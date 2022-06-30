@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Westargram</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"/>
     <script src="https://kit.fontawesome.com/7090c5b7dd.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./style/common.css">
+    <link rel="stylesheet" href="./style/common.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="./style/main.css">
+    <link rel="stylesheet" href="./style/main.css"/>
     <script defer src="./js/main.js"></script>
   
 </head>
@@ -22,7 +22,7 @@
                 <span>Westargram</span>
             </div>
             <div class="search">
-                <input type="text" placeholder="검색" class="search_input">
+                <input type="text" placeholder="검색" class="search_input"/>
                 <i class="fa-solid fa-magnifying-glass"></i>
             </div>
             <div class="my_info">
@@ -35,35 +35,28 @@
                         <p>저장됨</p>
                         <p>설정됨</p>
                         <p>계정 전환</p>
-                        <p> 로그아웃</p>
-
+                        <p>로그아웃</p>
                     </div>
-                </div>
-                          
+                </div>            
                                
             </div>
         </div>
     </nav>
-    <main>
-    
+    <main>    
         <div class="main_container">
             <div class="feeds">
-                <div class="article">
+                <article>
                     <div class="feed_head">
                         <div class="my_photo">
-                            <img src="./img/img02.png" alt="" width="100%">
+                            <img src="./img/img02.png" alt="썸네일" width="100%">
                         </div>
                         <div class="my_name">
                             <p>wecode_bootcamp</p>
                             <p>WeCode - 위코드</p>
-                        </div>
-
-                    
-                        
-                       
+                        </div>            
                     </div>
                     <div class="feed_img" style="overflow: hidden;">
-                        <img src="./img/img01.png" width="100%">
+                        <img src="./img/img01.png" width="100%" alt="피드이미지">
                     </div>
                     <div class="feed_foot">
                         <div class="icon_box">
@@ -78,7 +71,7 @@
                             
                         </div>
                         <div class="foot_like">
-                            <img src="./img/img02.png" alt="" width="100%">
+                            <img src="./img/img02.png" alt="썸네일" width="100%">
                             <p class="count">WeCode님 외 44명이 좋아합니다.</p>
                             
                         </div>
@@ -86,25 +79,26 @@
                             <p><strong>wecode_bootcamp</strong> 위코드는 단순한 교육업체가 아닌 개발자 커뮤니티 입니다. 위코드는 단순한 교육업체가 아닌 개발자 커뮤니티 입니다. 위코드는 단순한 교육업체가 아닌 개발자 커뮤니티 입니다.</p>
                         </div>
                        <div class="reple_box">
-                          <p></p>
+                         <div class="count_comment"></div>
+                       
 
                         </div>
                         
                         <div class="comment_box">
-                            <input id="reple_input" type="text" placeholder="댓글 달기.." style="outline:none;">
+                            <input id="reple_input" type="text" placeholder="댓글 달기.." style="outline:none;"/>
                             <span class="write_reple"  href="javascript:void(0);" onclick="addComment()"  >게시</span>
 
                         </div>
                     </div>
 
-                </div>
+                </>
             </div>
             
             <div class="main_right">
 
                 <div class="right_article">
                     <div class="my_photo">
-                         <img src="./img/img02.png" alt="" width="100%">
+                         <img src="./img/img02.png" alt="내사진" width="100%">
                     </div>
                     <div class="my_name">
                         <p>wecode_bootcamp</p>
@@ -122,7 +116,25 @@
                         <div class="article_container">
                             <div class="small_article">
                                 <div class="my_photo">
-                                     <img src="./img/img02.png" alt="" width="100%">
+                                     <img src="./img/some01.png" alt="썸네일" width="100%">
+                                </div>
+                                <div class="my_name">
+                                    <p>wecode_bootcamp</p>
+                                    <p>방금전</p>
+                                </div>
+                            </div>
+                            <div class="small_article">
+                                <div class="my_photo">
+                                     <img src="./img/some04.png" alt="썸네일" width="100%">
+                                </div>
+                                <div class="my_name">
+                                    <p>wecode_bootcamp</p>
+                                    <p>45분전</p>
+                                </div>
+                            </div>
+                            <div class="small_article">
+                                <div class="my_photo">
+                                     <img src="./img/some03.png" alt="썸네일" width="100%">
                                 </div>
                                 <div class="my_name">
                                     <p>wecode_bootcamp</p>
@@ -131,47 +143,29 @@
                             </div>
                             <div class="small_article">
                                 <div class="my_photo">
-                                     <img src="./img/img02.png" alt="" width="100%">
+                                     <img src="./img/some05.png" alt="썸네일" width="100%">
                                 </div>
                                 <div class="my_name">
                                     <p>wecode_bootcamp</p>
-                                    <p>1시간전</p>
+                                    <p>2시간전</p>
                                 </div>
                             </div>
                             <div class="small_article">
                                 <div class="my_photo">
-                                     <img src="./img/img02.png" alt="" width="100%">
+                                     <img src="./img/some02.png" alt="썸네일" width="100%">
                                 </div>
                                 <div class="my_name">
                                     <p>wecode_bootcamp</p>
-                                    <p>1시간전</p>
+                                    <p>2시간전</p>
                                 </div>
                             </div>
                             <div class="small_article">
                                 <div class="my_photo">
-                                     <img src="./img/img02.png" alt="" width="100%">
+                                     <img src="./img/some04.png" alt="썸네일" width="100%">
                                 </div>
                                 <div class="my_name">
                                     <p>wecode_bootcamp</p>
-                                    <p>1시간전</p>
-                                </div>
-                            </div>
-                            <div class="small_article">
-                                <div class="my_photo">
-                                     <img src="./img/img02.png" alt="" width="100%">
-                                </div>
-                                <div class="my_name">
-                                    <p>wecode_bootcamp</p>
-                                    <p>1시간전</p>
-                                </div>
-                            </div>
-                            <div class="small_article">
-                                <div class="my_photo">
-                                     <img src="./img/img02.png" alt="" width="100%">
-                                </div>
-                                <div class="my_name">
-                                    <p>wecode_bootcamp</p>
-                                    <p>1시간전</p>
+                                    <p>4시간전</p>
                                 </div>
                             </div>
                             
@@ -188,7 +182,7 @@
                     </div>
                     <div class="small_article">
                         <div class="my_photo">
-                             <img src="./img/img02.png" alt="" width="100%">
+                             <img src="./img/some05.png" alt="썸네일" width="100%">
                         </div>
                         <div class="my_name">
                             <p>wecode_bootcamp</p>
@@ -197,7 +191,7 @@
                     </div>
                     <div class="small_article">
                         <div class="my_photo">
-                             <img src="./img/img02.png" alt="" width="100%">
+                             <img src="./img/some01.png" alt="썸네일" width="100%">
                         </div>
                         <div class="my_name">
                             <p>wecode_bootcamp</p>
@@ -206,7 +200,7 @@
                     </div>
                     <div class="small_article">
                         <div class="my_photo">
-                             <img src="./img/img02.png" alt="" width="100%">
+                             <img src="./img/some04.png" alt="썸네일" width="100%">
                         </div>
                         <div class="my_name">
                             <p>wecode_bootcamp</p>
