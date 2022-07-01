@@ -1,4 +1,5 @@
 "use strict";
+
 // 이미지 눌렀을 때, 해당 이미지 바뀌는 것
 
 const heart = document.querySelector("#heart");
@@ -39,7 +40,6 @@ heart.addEventListener("click", change);
 
 //let clickBtn = document.getElementsByClassName("userWriteComment")
 
-
 // 댓글 창 첫 번째 방법
 // const submit = () => {
 //   const box = document.getElementsByClassName("userWriteComment");
@@ -67,24 +67,40 @@ heart.addEventListener("click", change);
 //   }
 // });
 
-
 //댓글 만들기
+// 부모박스 여기 밑에 댓글이 들어가야한다
+const commentBox = document.querySelector(".userWriteComment");
+// 이 친구는 인풋이다
+const commentInput = document.getElementById("comment");
+// 이 친구는 버튼이다
+const submitBtn = document.getElementById("submit-btn");
 
-const commentInput=document.getElementById('contents');
-
-let submit =  (e) => {
+// 아래 클릭 이벤트를 누르면 실행해주세요
+const handleForm = (e) => {
+  //submit 속성은 새로고침이 자동으로되므로 e로 막아줘야한다/
   e.preventDefault();
-  //form 사용 시 적용해야 한다
+  // 사용자가 인풋에 적는 값들
   let comment = commentInput.value;
-  let newComment = document.querySelector('.userWriteComment')
+  // 그 값이 적히는지 콘솔로 찍어보자
+  // console.log(comment);
 
   if (commentInput.value.length > 0) {
-    let commentText.innerHTML = `<div class="comment-text>
+    // 콘솔로 수시로 확인해보자
+    console.log(comment);
+    // 새로운 부모 div를 만들었음
+    let newCommentText = document.createElement("div");
+    // 그 새로운 부모 div안에 아래 내용을 그대로 넣어주세요/
+    newCommentText.innerHTML = `<div class="comment-text">
     <span class="aricle-bold">user</span>
-    ${comment}</span></span></div>`;
-
-    newComment.appendChild(commentText);
-    commentInput='';
+    <span>${comment}</span></div>`;
+    // 그대로 넣은 값이 보이는지 콘솔로 찍어보자
+    console.log(newCommentText);
+    // 그래서 최종으로 만든 div부모 박스안에 맨뒤에 newComentTExt를 넣었따.
+    commentBox.appendChild(newCommentText);
+    // 다 실행되고 나면 빈값으로 초기화 끝 근데 왜 변수명으로 넣으면 실행이 안 되는 거지?
+    commentInput.value = "";
   }
 };
-commentSubmit.addEventListener('click', handleForm);
+
+// 버튼에. 이벤트 리스너를 실행해주세요. 클릭과 / 실행함수
+submitBtn.addEventListener("click", handleForm);

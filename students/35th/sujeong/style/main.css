@@ -73,12 +73,7 @@
   display: flex;
   margin: 8px 20px;
 }
-.icon button {
-  border: none;
-  background-color: #fff;
-  cursor: pointer;
-}
-.icon img {
+.icon .heart .icon img {
   width: 30px;
   margin-left: 20px;
 }
@@ -134,18 +129,13 @@ ul {
 .font span {
   font-weight: bold;
 }
-
-.contents .bold {
-  font-weight: bold;
-}
-
-.contents {
+#contents {
   display: flex;
   margin-left: 30px;
   margin-top: 10px;
 }
 
-.contents .text {
+#contents .text {
   margin-left: 10px;
   width: 580px;
   display: -webkit-box;
@@ -153,6 +143,16 @@ ul {
   -webkit-line-clamp: 2;
   overflow: hidden;
 }
+
+#contents .bold {
+  font-weight: bold;
+  margin-left: 10px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
 .button {
   color: #ddd;
   background-color: #fff;
@@ -175,9 +175,28 @@ ul {
   margin-top: 20px;
 }
 
-.comment input {
-  width: 700px;
+.commentBox input {
+  width: 600px;
   height: 30px;
   margin-top: 5px;
-  margin-left: 20px;
+  margin-left: 50px;
+}
+
+#submit-btn {
+  border: none;
+  background-color: #fff;
+  color: #0095f6;
+}
+
+.comment-text {
+  margin-left: 40px;
+  width: 580px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.comment-text .aricle-bold {
+  font-weight: bold;
 }
