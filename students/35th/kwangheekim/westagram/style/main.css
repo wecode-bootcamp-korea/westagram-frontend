@@ -3,88 +3,118 @@
 }
 
 #screen {
-  display:block;
-  position: relative;
   width: 1200px;
-  height: 1400px;
   border: 3px solid rgb(231,231,231);
-  margin: 0px auto;
   background-color: rgb(250,250,250);
+
+  display: block;
+  position: relative;
+  margin: 0px auto;
+
 }
 
+nav {
+  width: 1194px;
+  height: 50px;
+  border-bottom: 3px solid rgb(231,231,231);
+  background-color: rgb(255,255,255);
 
+  position: fixed;
+  display: flex;
+  top: 0;
+  justify-content: space-around;
+  padding-top: 40px;
+  padding-bottom: 70px;
+  z-index: 1;
+}
 
 .navLogo {
-  position: relative;
   width: 30px;
   height: 30px;
+
+  position: relative;
 }
 
+h2 {
+  border-left: 1px solid rgb(0,0,0);
+
+  position: relative;
+  bottom: 5px;
+  margin: 0 0 0 10px;
+  padding-left: 10px;
+}
 
 .navIcon {
-  position: relative;
   width: 30px;
   height: 30px;
+
+  position: relative;
   margin: 0 0 0 20px;
+  cursor: pointer;
 }
-
-
-
-.postTop {
-  position: relative;
-  width: 100%;
-  height: 70px;
-  padding: 20px;
-}
-
-.postFrofile {
-  position: relative;
-  width: 30px;
-  height: 30px;
-  margin: 0 0 0 0px;
-  border-radius: 70%;
-  overflow: hidden;
-  border: 1px solid black;
-}
-
-.commentFrofile {
-  position: relative;
-  width: 20px;
-  height: 20px;
-  margin: 3px;
-  border-radius: 70%;
-  overflow: hidden;
-  border: 1px solid black;
-  bottom: -6px;
-}
-
-.postmore {
-  position: relative;
-  width: 30px;
-  height: 30px;
-  margin: 0 0 0 390px;
-}
-
 
 .searchIcon {
-  position: relative;
   width: 15px;
   height: 15px;
-  left: 85px;
+
+  position: relative;
   top: 3px;
+  left: 85px;
   z-index: 1;
 }
 
 .mainSearch {
   height: 40px;
   width: 200px;
+  background-color: rgb(250,250,250);
+  border: 3px solid rgb(231,231,231);
+
   text-align: center;
   position: relative;
-  background-color: rgb(250,250,250);
-  border: 3px solid rgb(231,231,231);;
 }
 
+#main {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  padding-top: 130px;
+}
 
+.feeds {
+  flex: 6.5;
+  border: 3px solid rgb(231,231,231);
+  background-color: white;
+
+  margin: 10px 10px 10px 150px;
+}
+
+.postTop {
+  width: 100%;
+  height: 70px;
+
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.postFrofile {
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+  border-radius: 70%;
+  overflow: hidden;
+
+  position: relative;
+  margin: 0;
+}
+
+.postmore {
+  width: 30px;
+  height: 30px;
+
+  position: relative;
+}
 
 .postTop span {
   position: relative;
@@ -93,107 +123,116 @@
   font-size: 18px;
 }
 
-nav {
-  display: flex;
-  justify-content: space-around;
-  height: 50px;
-  margin: 0 0 50px 0;
-  padding: 40px 0 70px 0;
-  border-bottom: 3px solid rgb(231,231,231);
-  background-color: white;
-}
+.postMid {
+  width: 100%;
 
-.navSpan {
-  font-size: 30px;
-  font-family: 'Lobster', cursive;
   position: relative;
-  bottom: 5px;
-  margin-left: 10px;
-  padding-left: 10px;
-  border-left: 1px solid black;
 }
 
+.postMid img {
+  width: 100%;
 
-#main {
+  position: relative;
+}
+
+.postBot {
+  width: 100%;
+  border-bottom: 3px solid rgb(231,231,231);
+
+  position: relative;
+  padding: 10px;
+}
+
+.postIconDiv {
+  position: relative;
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-.feeds {
-  flex: 6.5;
+.botIcon {
+  width: 30px;
+  height: 30px;
 
-  border: 3px solid rgb(231,231,231);
-  margin: 10px 10px 10px 150px;
+  position: relative;
+  margin: 3px;
+}
+
+.commentFrofile {
+  width: 20px;
+  height: 20px;
+  border: 1px solid black;
+  border-radius: 70%;
+  overflow: hidden;
+
+  position: relative;
+  margin: 3px;
+  bottom: -6px;
+}
+
+.commentlist {
+  width: 100%;
+  position: relative;
+
+}
+
+.heart {
+  width: 15px;
+  height: 15px;
+
+  position: relative;
+  margin-left: 10px;
+}
+
+.redheart {
+  width: 15px;
+  height: 15px;
+
+  position: relative;
+  margin-left: 10px;
+}
+
+#comment {
+  width: 90%;
+  height: 40px;
+
+  border: 0;
+  padding: 2px 10px;
+}
+
+#writeBtn {
+  width: 50px;
+
+  border: 0;
+  color: rgb(0, 149, 246);
   background-color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.deleteBtn {
+margin-left: 10px;
+
+  border: 0;
+  color: rgb(0, 149, 246);
+  background-color: white;
+  font-weight: bold;
 }
 
 .rightside {
   flex: 3.5;
-  height: 900px;
+
   margin: 10px 100px 10px 10px;
 }
 
-
-
-.postMid {
-  position: relative;
-  width: 100%;
-}
-
-.postBot {
-  position: relative;
-  width: 100%;
-  padding: 10px;
-  border-bottom: 3px solid rgb(231,231,231);
-}
-
-img {
-  position: relative;
-  width: 100%;
-}
-
-.postIcon {
-  position: relative;
-  width: 30px;
-  height: 30px;
-  margin: 2px 2px 2px 5px;
-}
-
-
-.postRightIcon {
-  position: relative;
-  width: 30px;
-  height: 30px;
-  margin: 2px 2px 2px 415px;
-}
-
-p {
-  margin: 2px;
-}
-
-#comment {
-  border: 0;
-  width: 100%;
-  padding: 2px 10px;
-  height: 40px;
-}
-
-.commentHeart {
-  position: relative;
-  width: 15px;
-  height: 15px;
-  margin: 2px 2px 2px 310px;
-}
-
-
 .sideFrofile {
-  position: relative;
   width: 70px;
   height: 70px;
-  margin: 5px 5px 5px 10px;
+  border: 1px solid black;
   border-radius: 70%;
   overflow: hidden;
-  border: 1px solid black;
+
+  position: relative;
+  margin: 5px 5px 5px 10px;
 }
 
 .rightside p {
@@ -204,29 +243,10 @@ p {
 }
 
 .story {
-  height: 270px;
-  border: 3px solid rgb(231,231,231);
-  margin-top: 10px;
   background-color: white;
-  overflow: hidden;
-}
+  border: 3px solid rgb(231,231,231);
 
-
-.storyFrofile {
-  position: relative;
-  width: 35px;
-  height: 35px;
-  margin: 5px 0px 5px 20px;
-  border-radius: 70%;
-  overflow: hidden;
-  border: 1px solid black;
-}
-
-.story p {
-  display: inline-block;
-  position: relative;
-  left: 5px;
-  top: -5px;
+  margin-top: 10px;
 }
 
 .storyTop {
@@ -240,59 +260,136 @@ p {
   margin: 0 0 10px 0;
 }
 
+.storyFrofile {
+  width: 35px;
+  height: 35px;
+  border: 1px solid black;
+  border-radius: 70%;
+  overflow: hidden;
+
+  position: relative;
+  margin: 5px 0px 5px 20px;
+}
+
+.story p {
+  display: inline-block;
+  position: relative;
+  left: 5px;
+  top: -5px;
+}
+
 .recommend {
   border: 3px solid rgb(231,231,231);
-  margin-top: 20px;
   background-color: white;
+
+  margin-top: 20px;
 }
 
 .recommendTop {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
-  padding-bottom: 10px;
+  padding: 20px 20px 10px 20px;
 }
 
-
 .recommendFrofile {
-  position: relative;
   width: 35px;
   height: 35px;
-  margin: 5px 0px 5px 20px;
+  border: 1px solid black;
   border-radius: 70%;
   overflow: hidden;
-  border: 1px solid black;
+
+  position: relative;
+  margin: 5px 0px 5px 20px;
+}
+
+.recommendMid {
+  width:100%;
+
+  position: relative;
+  margin: 0 0 10px 0;
 }
 
 .recommendMid p {
+  width: 170px;
+
   display: inline-block;
   position: relative;
-  width: 170px;
   left: 5px;
   top: -5px;
 }
 
-.recommendMid {
+.follow {
   position: relative;
-  margin: 0 0 10px 0;
-  width:100%
+  left: 5px;
+  bottom: 15px;
 }
 
 .info {
   margin-top: 10px;
 }
 
-a {
-  text-decoration: none;
-  font-weight: bold;
-}
-a:link { color: RGB(0, 149, 246); }
-a:visited { color: RGB(0, 149, 246); }
-a:hover { color: RGB(0, 149, 246); }
-a:active { color: RGB(0, 149, 246); }
+a:link { color: rgb(0, 149, 246); }
+a:visited { color: rgb(0, 149, 246); }
+a:hover { color: rgb(0, 149, 246); }
+a:active { color: rgb(0, 149, 246); }
 
-.follow {
+
+.hide {
+  display: none !important;
+}
+
+.rel_search {
   position: relative;
-  left: 5px;
-  bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border: 3px solid rgb(231,231,231);
+  background-color: white;
+  height: 100px;
+  overflow: scroll;
+  -ms-overflow-style: none;
+}
+
+.rel_search::-webkit-scrollbar{
+  display:none;
+}
+
+.pop_rel_keywords {
+  list-style: none;
+  padding: 0px;
+}
+
+.pop_rel_keywords li {
+  position: relative;
+  right: 0px;
+  width: 100%;
+  line-height : 250%;
+
+}
+
+.navProfileMenu {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  border: 3px solid rgb(231,231,231);
+  background-color: white;
+  height: 120px;
+  z-index: 1;
+}
+
+
+@media only screen and (max-width: 1000px) {
+  .rightside {
+    display: none;
+  }
+  #screen {
+    width: 100vh;
+  }
+   nav {
+    width: 99vh;
+  }
+  .feeds {
+    margin: 10px 30px;
+  }
 }

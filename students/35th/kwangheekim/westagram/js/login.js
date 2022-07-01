@@ -5,7 +5,7 @@ document.addEventListener('keyup', function(event) {
   const password = document.getElementById('userPassword');
   localStorage.setItem('userid', name.value);
 
-  (name.value&&password.value) ? (
+  (name.value.includes('@')&&password.value.length>=5) ? (
     loginBtn.classList.remove('disabled'),
     loginBtn.disabled = false,
     event.key === 'Enter' ? window.location.href = 'main.html' : false
