@@ -8,7 +8,7 @@ const addComment = ()=>{
     let repleVelue = document.getElementById('reple_input');        
     let repleLength = repleVelue.value.length;  
 
-    (repleLength !== 0)? commntUp() : alert("댓글을 입력하세요");   
+    (repleLength)? commntUp() : alert("댓글을 입력하세요");   
 }
 
 //댓글 생성//
@@ -52,7 +52,7 @@ const moreList = ()=>{
 
 
 //엔터입력 확인//
-inputbox.addEventListener('keyup', (event)=>{
+inputbox.addEventListener('keydown', (event)=>{
    
     if(event.code === "NumpadEnter" || event.code === "Enter") {
         addComment()
@@ -100,6 +100,58 @@ const clickOn = ()=>{
         clickIcon.classList.add('on')
     }
 }
+
+let memberArr = [
+    { name: "김정은", imgUrl: "./img/some01.png" },
+    { name: "윤석렬", imgUrl: "./img/some02.png" },
+    { name: "문재인", imgUrl: "./img/some03.png" },
+    { name: "박근혜", imgUrl: "./img/some04.png" },
+    { name: "트럼프", imgUrl: "./img/some02.png" },
+    { name: "오바마", imgUrl: "./img/some01.png" },
+     
+  ];
+  
+
+const a = document.querySelector('.search_input');
+
+
+a.addEventListener('keyup', () => {
+    let searchVelue = document.querySelector(".search_input").value;
+    let searchTargets = document.querySelector(".search_target"); 
+
+
+// console.log(searchVelue)
+
+      for (let idx in memberArr) {
+        const objInName = memberArr[idx].name;
+        const objInImg = memberArr[idx].imgUrl;
+       
+      
+        if (objInName.indexOf(searchVelue) === 0) {
+            searchTargets.innerHTML = `
+            <div class="search_article">
+                <div class='my_photo'>
+                    <img src='${objInImg}'>
+                </div>
+                <div class='my_name'>${memberArr[idx].name}</div>
+            </div>`
+            
+           
+            
+        } else {
+
+            console.log("없음")
+        }
+      }
+
+
+
+
+
+});
+
+
+
 
 
 
