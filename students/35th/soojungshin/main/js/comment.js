@@ -1,10 +1,60 @@
-// "use strict";
+"use strict";
+
+
+//다시 작성
+
+const commentInput = document.getElementById("commentInput")
+//input에 아이디 가져옴
+const commentSubmit = document.getElementById("commentSubmit")
+//버튼의 아이디를 가져옴
+
+
+const newCommentAdd = (e) => {
+  e.preventDefault();
+  const newComments = commentInput.value
+  //commentInput에 입력되는 값을 newComments라고 할거에요.
+  if (commentInput.value.length > 0) {
+    //  commentInput 입력된 값의 길이가 0보다 크다면?
+    const newComment = document.querySelector(".newComment")
+    // 댓글을 생성할 부모영역을 가져오고
+    const commentText = document.createElement("p");
+    // 새로운 p를 만들거야!
+    commentText.innerHTML = `<span class="userName">user name</span> <span>${newComments}</span>`;
+    // p태그 안에 저 문장을 그대로 넣어주세요.
+    newComment.appendChild(commentText);
+    // newComment의 자식요소로 p태그를 생성되게 할거에요
+    commentInput.value = "";
+    // 입력된 후 값을 빈 값으로 원복해주세요.
+  }
+
+}
+
+const commentSubmitBtn = (e) => {
+  if (commentInput.value.length > 0) {
+    return commentSubmit.style.color = "#6eacf5"
+    // commentSubmit의 컬러를 하늘색으로 바꿔줄게요. 
+  } else if (commentInput.value.length === 0) {
+    commentSubmit.style.color = ""
+    // commentSubmit의 컬러 원복 해주세요.
+
+  }
+}
+
+
+commentSubmit.addEventListener("click", newCommentAdd)
+commentInput.addEventListener("keyup", commentSubmitBtn)
+
+
+
+
+
+
+
+
 
 // const comment = document.getElementById("comment")
 // const commentSubmit = document.getElementById("commentSubmit")
 // const commentBox = document.querySelector(".newComment")
-
-
 
 // function newCommentBtn (e) {
 //   // console.log(e)
@@ -29,47 +79,3 @@
 // commentSubmit.addEventListener("click",newComments)
 // commentSubmit.addEventListener("click",newCommentBtn)
 
-// 댓글생성영역 newComment / 입력 commentInput / 게시 commentSubmit
-
-// const commentInput = document.getElementById("commentInput")
-
-// const newComment = document.querySelector(".newComment")
-
-//input에 아이디 가져옴
-const commentInput = document.getElementById("commentInput")
-//버튼의 아이디를 가져옴
-const commentSubmit = document.getElementById("commentSubmit")
-//댓글을 생성할 부모영역을 가져옴
-const newComment = document.querySelector(".newComment")
-
-
-let newCommentAdd = (e) => {
-  e.preventDefault();
-  let newComments = commentInput.value
-  //commentInput에 입력되는 값을 newComments라고 할거에요.
-  console.log(newComments)
-  // commentInput 입력된 값의 길이가 0보다 크다면?
-  if (commentInput.value.length > 0) {
-    // commentSubmit의 컬러를 하늘색으로 바꿔줄게요. 
-    commentSubmit.style.color = "#6eacf5"
-    // console.log(commentText)
-    commentSubmit.addEventListener("click",()=>{
-    let commentText = document.createElement("p");
-      commentText.innerHTML = `${newComments}`; 
-      newComment.appendChild(commentText);
-    }) 
-    //  if(commentSubmit.addEventListener("click",commentText)) {
-    // }
-    //   //돔에 p태그를 만들어요.${newComments}이 값이 담긴
-    //   //어디에? newComment(댓글생성영역으로 지정한 클래스 안에 자식요소로)
-  }
-  //  commentInput.value = "";
-  // 생성한 이후에는 commentInput의 값을 원복
-  // } else if (commentInput.value.length === 0) {
-  //   // commentInput 입력된 값의 길이가 0이면?
-  //   commentInput.value = "";//placeholder상태
-  //   commentSubmit.style.color = "";//이전 컬러 상태
-  // }
-}
-commentInput.addEventListener("keyup", newCommentAdd)
-commentSubmit.addEventListener("click", newCommentAdd)
