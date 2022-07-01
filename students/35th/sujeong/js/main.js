@@ -89,13 +89,13 @@ const handleForm = (e) => {
     console.log(comment);
     // 새로운 부모 div를 만들었음
     let newCommentText = document.createElement("div");
-    // 그 새로운 부모 div안에 아래 내용을 그대로 넣어주세요/
+    // 그 새로운 부모 div안에 아래 내용을 그대로 넣어주세요.
     newCommentText.innerHTML = `<div class="comment-text">
     <span class="aricle-bold">user</span>
     <span>${comment}</span></div>`;
     // 그대로 넣은 값이 보이는지 콘솔로 찍어보자
     console.log(newCommentText);
-    // 그래서 최종으로 만든 div부모 박스안에 맨뒤에 newComentTExt를 넣었따.
+    // 그래서 최종으로 만든 div부모 박스안에 맨뒤에 newComentTExt를 넣었다.
     commentBox.appendChild(newCommentText);
     // 다 실행되고 나면 빈값으로 초기화 끝 근데 왜 변수명으로 넣으면 실행이 안 되는 거지?
     commentInput.value = "";
