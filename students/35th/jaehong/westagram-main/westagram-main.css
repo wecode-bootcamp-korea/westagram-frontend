@@ -23,6 +23,7 @@ main {
 .feeds {
   padding-top: 40px;
   padding-bottom: 20px;
+  max-width: 430px;
 }
 
 nav {
@@ -81,11 +82,15 @@ nav {
 }
 
 .searchBlank {
-  text-align: center;
   background-color: #f1f1f1;
-  color: #cacacc;
   border-color: #cacacc;
   border: 1px solid #cacacc;
+  text-align: center;
+  outline: none;
+}
+
+.searchBlank ::placeholder {
+  color: #cacacc;
 }
 
 .thumbnailUploader {
@@ -175,7 +180,8 @@ span {
 }
 
 .likePeople strong,
-span {
+span,
+p {
   font-family: none;
 }
 
@@ -218,7 +224,7 @@ span {
 .recommend {
   border-radius: 5px;
   background-color: white;
-  padding: 10px;
+  padding: 10px 10px 10px 5px;
   margin: 10px auto;
 }
 
@@ -309,19 +315,29 @@ span {
 
 .replyBtn {
   border: 0;
-  background-color: transparent;
+  background-color: white;
   color: #5494ac;
   position: absolute;
   right: 10px;
   bottom: 8px;
 }
 
-.commentPlus button {
+.likeDelete {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.commentPlus .likeBtn {
+  height: 10px;
+  margin-right: 2px;
+  order: -1;
+}
+
+.commentPlus .deleteBtn {
   border: none;
   background-color: transparent;
   color: red;
-  position: absolute;
-  right: 10px;
 }
 
 .commentplus {
@@ -329,6 +345,16 @@ span {
   position: relative;
 }
 
-.commentPlus .commentMsg {
-  margin-left: 5px;
+.replyUserDiv {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.userComment {
+  max-width: 80%;
+}
+
+.userComment p {
+  display: inline;
 }
