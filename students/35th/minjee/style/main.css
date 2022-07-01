@@ -101,6 +101,7 @@ main {
 
 .article {
     flex-direction: column;
+    max-width: 470px;
     margin-bottom: 20px;
     background-color: var(--inner-background-color);
     border: 1px solid var(--border-color);
@@ -222,7 +223,7 @@ main {
 }
 
 .do-input {
-    width: 381px;
+    width: 100%;
     margin: 0 5px;
     border: none;
 }
@@ -232,6 +233,7 @@ main {
 }
 
 .input-button {
+    width: 30px;
     background: none;
     color: #0095f6;
     border: none;
@@ -250,7 +252,6 @@ main {
     flex-direction: column;
     position: sticky;
     top: 100px;
-    width: 319px;
     height: 700px;
     margin-left: 20px;
 }
@@ -379,7 +380,7 @@ main {
 }
 
 /* 피드 반응형 - 모바일 */
-@media screen and (max-width: 470px) {
+@media screen and (max-width: 401px) {
     .article {
         width: 100vw;
     }
