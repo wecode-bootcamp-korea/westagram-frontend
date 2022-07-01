@@ -53,7 +53,6 @@ nav input {
 }
 nav input:focus {
     background-image: none;
-    background-position: -10px center;
     text-indent: 0;
 }
 
@@ -143,7 +142,7 @@ article {
     margin-left: auto;
 }
 
-.fa-heart {
+.article-iconsFlex .fa-heart {
     color: red;
 }
 
@@ -184,36 +183,45 @@ article {
 }
 
 #comments {
-    margin-left: 20px;
-    margin-bottom: 10px;
+    margin-top: 5px;
     position: relative;
+    margin-bottom: 10px;
 }
 
 #comments .textbold {
     font-size: 14px;
-    margin-right: 10px;
 }
 
-#comments img {
-    width: 13px;
+#comments .fa-heart {
     position: absolute;
-    right: 10px;
+    right: 13px;
+    font-size: 16px;
+}
+
+#comments .Red {
+    color: red;
+}
+
+.newcomment {
+    margin-bottom: 5px;
+    overflow: hidden;
 }
 
 .comment {
     display: flex;
     align-items: center;
     margin-top: 10px;
+    
 }
-.comment img {
-    width: 13px;
+.comment .fa-heart {
+    font-size: 16px;
     margin-left: auto;
-    margin-right: 10px;
+    margin-right: 13px;
 }
 
 .article-time {
     font-size: 12px;
-    margin: 10px 0;
+    margin: 5px 0;
     color: #8e8e8e;
 }
 
@@ -258,7 +266,9 @@ button:disabled {
 }
 
 .right-nav img {
-    width: 80px;
+    width: 90px;
+    border-radius: 50%;
+    overflow: hidden;
 }
 
 .right-navtext {
