@@ -18,53 +18,54 @@ $input.onblur = () => {
 
 // 댓글 창 달기
 
-const commentInput = document.querySelector('.comment-input');
-const commentBtn = document.querySelector('.comment-btn');
+const commentInput = document.querySelectorAll('.comment-input');
+const commentBtn = document.querySelectorAll('.comment-btn');
 
-const commentSubmit = document.querySelector('.comment-submit');
-const decription = document.querySelector('.main-article__description');
+const commentSubmit = document.querySelectorAll('.comment-submit');
+const decription = document.querySelectorAll('.main-article__description');
 
-const createComment = (e) => {
-  e.preventDefault();
-  const container = document.createElement('div');
-  const leftContainer = document.createElement('div');
-  const rightContainer = document.createElement('div');
-  const userName = document.createElement('div');
-  const userComment = document.createElement('span');
-  const heartIcon = document.createElement('i');
-  const deleteIcon = document.createElement('i');
-  let value = commentInput.value;
-  container.className = 'description-comment';
-  leftContainer.className = 'comment-left';
-  rightContainer.className = 'comment-right';
-  userName.className = 'user-name';
-  userComment.className = 'user-comment';
-  userName.textContent = 'Yelihi';
-  userComment.textContent = value;
-  heartIcon.className = 'bx bx-heart';
-  deleteIcon.className = 'bx bx-x-circle';
-  leftContainer.appendChild(userName);
-  leftContainer.appendChild(userComment);
-  rightContainer.appendChild(heartIcon);
-  rightContainer.appendChild(deleteIcon);
-  container.appendChild(leftContainer);
-  container.appendChild(rightContainer);
-  decription.appendChild(container);
-  commentInput.value = '';
-  heartIcon.addEventListener('click', changeLike);
-  deleteIcon.addEventListener('click', addDelete);
-  commentBtn.disabled = true;
-}
-
-commentSubmit.addEventListener('keyup', (e) => {
-  if(e.target.value){
-    commentBtn.disabled = false;
+for(let i = 0; i < commentInput.length; i++){
+  const createComment = (e) => {
+    e.preventDefault();
+    const container = document.createElement('div');
+    const leftContainer = document.createElement('div');
+    const rightContainer = document.createElement('div');
+    const userName = document.createElement('div');
+    const userComment = document.createElement('span');
+    const heartIcon = document.createElement('i');
+    const deleteIcon = document.createElement('i');
+    let value = commentInput[i].value;
+    container.className = 'description-comment';
+    leftContainer.className = 'comment-left';
+    rightContainer.className = 'comment-right';
+    userName.className = 'user-name';
+    userComment.className = 'user-comment';
+    userName.textContent = 'Yelihi';
+    userComment.textContent = value;
+    heartIcon.className = 'bx bx-heart';
+    deleteIcon.className = 'bx bx-x-circle';
+    leftContainer.appendChild(userName);
+    leftContainer.appendChild(userComment);
+    rightContainer.appendChild(heartIcon);
+    rightContainer.appendChild(deleteIcon);
+    container.appendChild(leftContainer);
+    container.appendChild(rightContainer);
+    decription[i].appendChild(container);
+    commentInput[i].value = '';
+    heartIcon.addEventListener('click', changeLike);
+    deleteIcon.addEventListener('click', addDelete);
+    commentBtn[i].disabled = true;
   }
-})
-
-commentSubmit.addEventListener('submit' , createComment);
-
-// 댓글 창 좋아요 및 삭제
+  
+  commentSubmit[i].addEventListener('keyup', (e) => {
+    if(e.target.value){
+      commentBtn[i].disabled = false;
+    }
+  })
+  
+  commentSubmit[i].addEventListener('submit' , createComment);
+};
+ 
 
 //예시부분 댓글 좋아요 변화
 function like(){
