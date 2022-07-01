@@ -54,6 +54,10 @@ nav{
     
 }
 
+.search-bar:focus{
+    outline: none;
+}
+
 #mgnifying-glass {
     position: absolute;
     left: 15px;
@@ -78,6 +82,33 @@ nav{
 
 .profile {
     border-radius: 70%;
+}
+
+.hidden-container{
+    display: flex;
+    flex-direction: column;
+    border: none;
+    background-color: white;
+    visibility: hidden;
+}
+
+.search-content-container{
+    display: flex;
+    justify-content: center;
+}
+
+.search-profile-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.search-profile-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 5;
 }
 
 main {
@@ -348,7 +379,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     flex: 0.5;
 }
 
@@ -366,7 +397,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     flex: 0.5;
 }
 

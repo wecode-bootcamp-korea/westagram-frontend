@@ -1,3 +1,5 @@
+"use strict";
+
 const cmntBox = document.getElementsByClassName('comment-box')[0];
 const user = document.getElementsByClassName('userOfComment-container')[0];
 const cmnt = document.getElementsByClassName('commentOfUser-container')[0];
