@@ -1,62 +1,299 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Main</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Open+Sans:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style/main.css" />
-    <link rel="stylesheet" href="style/common.css" />
-    <script defer src="js/main.js"></script>
-  </head>
-  <body>
-    <div class="container">
-      <div class="nav">
-        <div class="nav-insta-logo">
-          <img src="image/instagram.png" alt="instagram-logo" />
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Main</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Open+Sans:wght@400;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
+        />
+        <link rel="stylesheet" href="style/main.css" />
+        <link rel="stylesheet" href="style/common.css" />
+        <script defer src="js/main.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="nav">
+                <div class="nav-insta-logo">
+                    <img src="image/instagram.png" alt="instagram-logo" />
 
-          <span>Westagram</span>
-        </div>
-        <div class="search">
-          <input type="text" placeholder="검색" />
+                    <span>Westagram</span>
+                </div>
+                <div class="search">
+                    <input type="text" placeholder="검색" />
 
-          <img src="image/search-interface-symbol.png" alt="search-icon" />
-        </div>
-        <div class="nav-icon">
-          <img
-            src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png"
-            alt="navigation"
-          />
-          <img
-            src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"
-            alt="heart"
-          />
-          <img
-            src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png"
-            alt="mypage"
-          />
-        </div>
-      </div>
-      <div class="main">
-        <div class="feeds">
-          <div class="article">
-            <div class="article-top">
-              <div class="profile">
-                <img src="" alt="profile-photo" />
-                <span>joo_ooj</span>
-              </div>
-              <div class="article-top-icon"></div>
+                    <img
+                        src="image/search-interface-symbol.png"
+                        alt="search-icon"
+                    />
+                </div>
+                <div class="nav-icon">
+                    <img
+                        src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png"
+                        alt="navigation"
+                    />
+                    <img
+                        src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"
+                        alt="heart"
+                    />
+                    <img
+                        src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png"
+                        alt="mypage"
+                    />
+                </div>
             </div>
-          </div>
+            <div class="main">
+                <div class="feeds-wrap">
+                    <div class="feeds">
+                        <div class="article">
+                            <div class="article-top">
+                                <div class="profile">
+                                    <img
+                                        src="image/IMG_9840.jpg"
+                                        alt="profile-photo"
+                                    />
+                                    <span>joo__ooj</span>
+                                </div>
+                                <div class="article-top-icon">
+                                    <img src="image/more.png" alt="dots-icon" />
+                                </div>
+                            </div>
+                            <div class="article-image">
+                                <img
+                                    src="image/IMG_3774.jpg"
+                                    alt="article-image"
+                                />
+                            </div>
+                            <!--  -->
+                            <div class="article-bottom">
+                                <div class="article-bottom-icons">
+                                    <div class="article-bottom-icons-left">
+                                        <i class="far fa-heart"></i>
+                                        <i class="far fa-comment"></i>
+                                        <i class="fas fa-share-square"></i>
+                                    </div>
+                                    <div class="article-bottom-icons-right">
+                                        <i class="far fa-bookmark"></i>
+                                    </div>
+                                </div>
+                                <div class="article-bottom-like">
+                                    <div class="article-bottom-like-image">
+                                        <img src="image/IMG_9840.jpg" alt="image">
+                                    </div>
+                                    <div class="article-bottom-like-comments">
+                                        <strong>hyunjooo33</strong>님 외
+                                        <strong>100명</strong>이 좋아합니다.
+                                    </div>
+                                </div>
+                                <div class="article-bottom-comments">
+                                    <div class="article-bottom-comments-first">
+                                        <span class="article-bottom-comments-id"
+                                            ><strong>pkhy5678</strong></span
+                                        >
+                                        <span
+                                            class="article-bottom-comments-right"
+                                            >Barbeque</span
+                                        >
+                                    </div>
+                                    <div
+                                        class="article-bottom-comments-second"
+                                    >
+                                    <span class="article-bottom-comments-id"
+                                        ><strong>saes_saeee</strong></span
+                                    >
+                                    <span class="article-bottom-comments-right"
+                                        >로코스 비비큐</span
+                                    >
+                                </div>
+                                <div class="article-bottom-comments-time">45초 전</div>
+                            </div>
+                            <div class="article-bottom-write-commnets">
+                              <form>
+                                <div class="emotion"><i class="far fa-smile"></i></div>
+                                <textarea
+                                  id="comments-id"
+                                  placeholder="댓글 달기"
+                                  
+                                ></textarea>
+                                <button id="comments-submit" type="submit">
+                                  게시
+                                </button>
+                              </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ㅇㄹㅇㄹㅇㄹ -->
+                <div class="main-right">
+                    <!--  -->
+                    <div class="main-right-top">
+                        <div class="main-right-top-image">
+                            <img src="image/IMG_0999.JPG" alt="image" />
+                        </div>
+                        <div class="main-right-top-user">
+                            <span class="main-right-top-user-id">joooo12</span>
+                            <span class="main-right-top-user-location"
+                                >Gangnam</span
+                            >
+                        </div>
+                    </div>
+                    <!--  -->
+                    <div class="main-rignt-middle">
+                        <!--  -->
+                        <div class="main-rignt-middle-story">
+                            <div class="main-rignt-middle-story-left">
+                                스토리
+                            </div>
+                            <div class="main-rignt-middle-story-right">
+                                모두 보기
+                            </div>
+                        </div>
+                        <!--  -->
+                        <div class="main-rignt-middle-view">
+                            <div class="main-rignt-middle-view-image">
+                                <img src="image/IMG_0999.JPG" alt="image" />
+                            </div>
+                            <div class="main-rignt-middle-view-id">
+                                <span class="main-rignt-middle-view-id-user"
+                                    >_yum_s</span
+                                >
+                                <span class="main-rignt-middle-view-id-time"
+                                    >16분 전</span
+                                >
+                            </div>
+                        </div>
+                        <!--  -->
+                        <div class="main-rignt-middle-view">
+                            <div class="main-rignt-middle-view-image">
+                                <img src="image/IMG_0999.JPG" alt="image" />
+                            </div>
+                            <div class="main-rignt-middle-view-id">
+                                <span class="main-rignt-middle-view-id-user"
+                                    >drink_eat_drink</span
+                                >
+                                <span class="main-rignt-middle-view-id-time"
+                                    >3시간 전</span
+                                >
+                            </div>
+                        </div>
+                        <!--  -->
+                        <div class="main-rignt-middle-view">
+                            <div class="main-rignt-middle-view-image">
+                                <img src="image/IMG_0999.JPG" alt="image" />
+                            </div>
+                            <div class="main-rignt-middle-view-id">
+                                <span class="main-rignt-middle-view-id-user"
+                                    >hyukyc</span
+                                >
+                                <span class="main-rignt-middle-view-id-time"
+                                    >20시간 전</span
+                                >
+                            </div>
+                        </div>
+                        <!--  -->
+                        <div class="main-rignt-middle-view">
+                            <div class="main-rignt-middle-view-image">
+                                <img src="image/IMG_0999.JPG" alt="image" />
+                            </div>
+                            <div class="main-rignt-middle-view-id">
+                                <span class="main-rignt-middle-view-id-user"
+                                    >jminkeek</span
+                                >
+                                <span class="main-rignt-middle-view-id-time"
+                                    >1시간 전</span
+                                >
+                            </div>
+                        </div>
+                        <!--  -->
+                        <div class="main-rignt-middle-view">
+                            <div class="main-rignt-middle-view-image">
+                                <img src="image/IMG_0999.JPG" alt="image" />
+                            </div>
+                            <div class="main-rignt-middle-view-id">
+                                <span class="main-rignt-middle-view-id-user"
+                                    >minky406</span
+                                >
+                                <span class="main-rignt-middle-view-id-time"
+                                    >20분 전</span
+                                >
+                            </div>
+                        </div>
+                        <!--  -->
+                    </div>
+                    <!--  -->
+                    <div class="main-right-bottom">
+                        <div class="main-rignt-bottom-recommend">
+                            <div class="main-rignt-bottom-recommend-left">
+                                회원님을 위한 추천
+                            </div>
+                            <div class="main-rignt-bottom-recommend-right">
+                                모두 보기
+                            </div>
+                        </div>
+                        <!--  -->
+                        <div class="main-rignt-bottom-view">
+                            <div class="main-rignt-bottom-view-image">
+                                <img src="image/IMG_0999.JPG" alt="image" />
+                            </div>
+                            <div class="main-rignt-bottom-view-id">
+                                <span class="main-rignt-bottom-view-id-user"
+                                    >jooaahyee</span
+                                >
+                                <span class="main-rignt-bottom-view-id-like"
+                                    >_joo_326님 외 2명이 팔로우합니다.</span
+                                >
+                            </div>
+                            <div class="main-rignt-bottom-view-follow">
+                                <a href="#">팔로우</a>
+                            </div>
+                        </div>
+                        <!--  -->
+                        <div class="main-rignt-bottom-view">
+                            <div class="main-rignt-bottom-view-image">
+                                <img src="image/IMG_0999.JPG" alt="image" />
+                            </div>
+                            <div class="main-rignt-bottom-view-id">
+                                <span class="main-rignt-bottom-view-id-user"
+                                    >kjy008</span
+                                >
+                                <span class="main-rignt-bottom-view-id-like"
+                                    >hjhjuu님 외 12명이 팔로우합니다.</span
+                                >
+                            </div>
+                            <div class="main-rignt-bottom-view-follow">
+                                <a href="#">팔로우</a>
+                            </div>
+                        </div>
+                        <!--  -->
+                        <div class="main-rignt-bottom-view">
+                            <div class="main-rignt-bottom-view-image">
+                                <img src="image/IMG_0999.JPG" alt="image" />
+                            </div>
+                            <div class="main-rignt-bottom-view-id">
+                                <span class="main-rignt-bottom-view-id-user"
+                                    >seeul__</span
+                                >
+                                <span class="main-rignt-bottom-view-id-like"
+                                    >tmdrb0572님 외 100명이 팔로우합니다.</span
+                                >
+                            </div>
+                            <div class="main-rignt-bottom-view-follow">
+                                <a href="#">팔로우</a>
+                            </div>
+                        </div>
+                        <!--  -->
+                    </div>
+                </div>
+                <!--  -->
+            </div>
         </div>
-        <div class="main-right"></div>
-      </div>
-    </div>
-  </body>
+    </body>
 </html>
