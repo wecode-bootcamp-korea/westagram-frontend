@@ -335,7 +335,7 @@ main {
 .commentOfUser-container {
     display: flex;
     flex-direction: column;
-    flex: 10;
+    flex: 8;
 
 }
 
@@ -349,17 +349,36 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex: 1;
+    flex: 0.5;
 }
 
 .comment-like {
     width: 12px;
     height: 12px;
-    margin: 5px;
+    margin: 5px 0;
 }
 
 .comment-like:hover {
     cursor: pointer;
+}
+
+.comment-delete-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 0.5;
+}
+
+.comment-delete {
+    width: 12px;
+    height: 12px;
+    margin: 5px 0;
+}
+
+.comment-delete:hover {
+    cursor: pointer;
+
 }
 
 .feed-time {

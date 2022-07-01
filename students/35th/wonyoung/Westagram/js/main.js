@@ -2,14 +2,15 @@ const cmntBox = document.getElementsByClassName('comment-box')[0];
 const user = document.getElementsByClassName('userOfComment-container')[0];
 const cmnt = document.getElementsByClassName('commentOfUser-container')[0];
 const cmntLike = document.getElementsByClassName('comment-like-container')[0];
+const cmntDelete = document.getElementsByClassName('comment-delete-container')[0];
 const cmntPost = document.getElementsByClassName('comment-enter-button')[0];
-const cmntLikeButton = document.getElementsByClassName('like');
 
 class Comment {
     constructor() {
         this.likeState = 0;
         this.create();
         this.liked();
+        this.deleted();
     }
 
     create(){
@@ -32,6 +33,13 @@ class Comment {
         this.like.src = 'image/love.png';
         this.like.alt = '댓글-좋아요';
         cmntLike.appendChild(this.like);
+
+        this.delete = document.createElement('img');
+        this.delete.className = 'comment-delete';
+        this.delete.src = 'image/delete.png';
+        this.delete.alt = '댓글-삭제';
+        cmntDelete.appendChild(this.delete);
+
         cmntBox.value = '';
     }
 
@@ -45,6 +53,18 @@ class Comment {
                 this.like.src = 'image/love.png';
                 this.likeState = 0;                
             }
+        })
+    }
+
+    deleted (){
+        this.delete.addEventListener('click', ()=>{
+                
+            this.myId.remove();
+            this.newcmnt.remove();
+            this.like.remove();
+            this.delete.remove();
+
+
         })
     }
 }
