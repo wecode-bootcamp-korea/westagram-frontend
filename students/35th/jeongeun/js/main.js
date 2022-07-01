@@ -66,28 +66,24 @@ submit.addEventListener('click', (e) => {
 
 const centerMenuInput = document.querySelector('.centerMenuInput')
 
-function isThisId() {
+// function isThisId() {
 
-  const idsArray = ['wjddms4107', 'tmdwns1922', 'rhdms0099']
+//   const searchIdArray = ['wjddms4107', 'tmdwns1922', 'rhdms0099']
 
-  let searchId = idsArray.filter(element => element === centerMenuInput.value)
-  console.log(searchId)
-  console.log(centerMenuInput.value)
-
-  if(searchId[0] === centerMenuInput.value) {
-    centerMenuInput.style.color = 'red'
-  }
-
-}
+//   let searchId = searchIdArray.filter(element => element === centerMenuInput.value)
+//   console.log(searchId)
+//   console.log(centerMenuInput.value)
+//   if (searchId[0] === centerMenuInput.value) {
+//     centerMenuInput.style.color = 'red'
+//   }
+// }
 
 
 centerMenuInput.addEventListener('keyup', (e) => {
 
   if (e.code === 'Enter' && centerMenuInput.value !== '') {
+
     isThisId()
   }
-  // console.log(centerMenuInput)
-  // console.dir(centerMenuInput)
-  
 
-} )
+})

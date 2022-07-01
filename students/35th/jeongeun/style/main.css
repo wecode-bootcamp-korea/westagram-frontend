@@ -69,6 +69,45 @@ nav {
   font-size: 10px;
 }
 
+.centerMenuInput {
+  position: relative;
+}
+
+.centerMenuSearchBar {
+  position: absolute;
+  top: 43px;
+  background-color: #f709e7;
+  width: 200px;
+  /* height: 200px; */
+  z-index: 99;
+  border: 2px solid;
+}
+
+.searchUser {
+  width: 100%;
+  height: 60px;
+  background-color: #3a3c3d;
+  border-bottom: 2px solid;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  
+}
+
+.searchUser .fa-solid.fa-face-smile {
+  font-size: 30px;
+}
+
+.searchUser .searchUserId {
+  padding-left: 10px ;
+}
+
+.searchUser .searchUserId p {
+  margin: 0;
+
+}
+
+
 .menu {
   list-style: none;
   display: flex;
@@ -400,9 +439,9 @@ main {
 }
 
 @media screen and (max-width: 840px) {
-  .centerMenu {
+  /* .centerMenu {
     display: none;
-  }
+  } */
 
   .main {
     margin: 0;
