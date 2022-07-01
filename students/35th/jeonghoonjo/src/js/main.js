@@ -51,10 +51,8 @@ const openModal = () => {
 };
 
 const closeModal = (event) => {
-  if (
-    event.target.classList.value === "modal-overlay" ||
-    event.target.classList.value === "close-area"
-  ) {
+  const targetClass = event.target.classList.value;
+  if (targetClass === "modal-overlay" || targetClass === "close-area") {
     modal.style.display = "none";
   }
 };

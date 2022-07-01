@@ -15,29 +15,34 @@ const changePhoneImg = () => {
 };
 
 const switchingLabel = (value, label) => {
+  const labelClass = label.classList;
   if (value) {
-    label.classList.remove("label-down");
-    label.classList.add("label-up");
+    labelClass.remove("label-down");
+    labelClass.add("label-up");
   }
 
   if (!value) {
-    label.classList.remove("label-up");
-    label.classList.add("label-down");
+    labelClass.remove("label-up");
+    labelClass.add("label-down");
   }
 };
 
 setInterval(changePhoneImg, 3000);
 
-const validationAccount = (id, password) => {
-  if (id && password) {
+const disabledForm = (value) => {
+  if (value) {
     loginFormSubmit.disabled = false;
     loginFormSubmit.style.opacity = 1;
   }
 
-  if (!id && password) {
+  if (!value) {
     loginFormSubmit.disabled = true;
     loginFormSubmit.style.opacity = 0.6;
   }
+};
+
+const validationAccount = (id, password) => {
+  disabledForm(id && password);
 };
 
 const checkInput = (event) => {
