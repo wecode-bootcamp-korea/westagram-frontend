@@ -54,6 +54,11 @@ let objectOfSearch = {
     nickname: "최원익 (Choi Won Ik)",
     img: '<img src="./guide/tobe/yelihi19.png" alt="" />',
   },
+  "och.changhoon": {
+    id: "och.changhoon",
+    nickname: "오창훈 (Oh Chang Hoon)",
+    img: '<img src="./guide/tobe/och.changhoon.png" alt="" />',
+  },
 };
 // 객체에 이미지 정보랑 아이디랑 닉네임을 모아두었음.
 
@@ -133,11 +138,20 @@ function checkValue() {
     // 텍스트를 검색어를 입력해주세요로 수정
   }
 }
-
+function closeSearchBar() {
+  if ((searchBarInfo.style.display = "flex")) {
+    searchBarInfo.style.display = "";
+  }
+}
 searchBar.addEventListener("click", function () {
   // 검색창을 클릭했을떄
-  searchBarInfo.style.display = "flex";
+  searchBarInfo.style.display === "flex"
+    ? (searchBarInfo.style.display = "")
+    : (searchBarInfo.style.display = "flex");
+
   // 검색 말풍선이 나오도록 설정
   searchBar.addEventListener("keyup", checkValue);
   // 검색창에 키를 입력했을떄 상단에 정의한 함수 실행
 });
+
+body.addEventListener("click", closeSearchBar);
