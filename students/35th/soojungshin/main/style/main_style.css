@@ -19,12 +19,16 @@ body {
 .homeNav {
   display: flex;
   justify-content: center;
+  position: fixed;
+  top: 0;
   background-color: #fff;
+  z-index: 1;
 }
 
 .homeNavBox {
   display: flex;
   align-items: center;
+  width: 100vw;
   height: 80px;
 }
 
@@ -78,8 +82,14 @@ body {
 .mainContainer {
   display: flex;
   justify-content: center;
+  margin-top: 80px;
   background-color: rgb(249, 249, 249);
   border-top: 1px solid #e1e1e1;
+}
+
+.feedScrollArea {
+  display: flex;
+  flex-direction: column;
 }
 
 .feed {
@@ -163,7 +173,7 @@ body {
   margin-bottom: 5px;
 }
 
-.commentPeople {
+.newComment {
   margin-bottom: 10px;
 }
 
@@ -175,20 +185,20 @@ span {
   border-top: 1px solid #e1e1e1;
 }
 
-.inputCommentsBox{
+.inputCommentsBox {
   margin: 20px 0 20px 10px;
   font-size: 0.8em;
   padding-left: 2px;
 }
 
-#comment {
+#commentInput {
   width: 400px;
   padding: 5px 0 5px 5px;
   border: 0px solid;
   outline: none;
 }
 
-#comment::placeholder {
+#commentInput::placeholder {
   font-size: 1.2em;
 }
 
@@ -198,7 +208,7 @@ span {
   box-shadow: none;
   border-radius: 0;
   padding: 0;
-  overflow: visible;
+  /* overflow: visible; */
   cursor: pointer;
   border: 0;
   font-weight: 600;
