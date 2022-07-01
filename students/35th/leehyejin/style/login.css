@@ -37,20 +37,18 @@ body{
     font-size:55px;
     text-align:center;
     vertical-align: middle;
-    /* background-color: yellow; */
     margin:36px 50% 0 50%;
-    
     font-size:70px;
 }
 
 .input{
   flex-direction: column;
   justify-content: space-around;
-  /* margin-top:36px; */
   width:100%;
   margin:24px 0 40px 6px;
   
 }
+
 .idInput{
     position:relative;
     display:flex;
@@ -63,11 +61,12 @@ body{
     margin-left:10%;
     padding: 9px 0 7px 8px;
     font-size: 16px;
-    
 }
+
 .idInput:focus{
     border: 1px solid #787777;
     outline: none;
+    
 }
 .pwInput{
     position:relative;
@@ -76,7 +75,7 @@ body{
     border-radius:3px;
     width:80%;
     height:45px;
-    margin:2% 0 0 10%;
+    margin:4% 0 0 10%;
     padding: 9px 0 7px 8px;
     font-size: 16px;
     
@@ -85,7 +84,7 @@ body{
     border: 1px solid #787777;
     outline: none;
 }
-.loginBtn{
+.btnSubmit{
     display: flex;
     position:relative;
     background: #b2dffc;
@@ -94,9 +93,7 @@ body{
     border-radius:3px;
     width:80%;
     height:45px;
-    /* margin: 0px 38px 8px 40px; */
-    /* margin-top:8px; */
-    margin-left:8px;
+    margin: 20% 0 0 10%;
     padding: 7px 0 8px 8px;
     font-size: 22px;
     font-weight: bold; /*글씨체 두껍게*/
@@ -109,10 +106,9 @@ body{
     align-items: stretch;
     align-content: stretch;
 }
-.loginBtn:hover{
+
+.btnSubmit.on{
     background: #0095f6;
-    cursor: pointer;
-    font-weight: bold;
 }
 a{
     text-decoration: none;
@@ -123,11 +119,5 @@ a{
 .footer{
     width:100%;
    position: relative;   /*relative는 정상위치에 대해서 상대적으로 위치한다.*/
-   top:170px;
     text-align: center;
 }
-/* .mainLogo {
-    font-family: "Lobster", cursive;
-    font-size: 40px;
-    margin-top: 20px;
-  } */

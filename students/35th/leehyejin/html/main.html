@@ -7,7 +7,9 @@
         <link href="../style/main.css" rel="stylesheet"  type="text/css" />
         <link rel="preconnect" href="https://fonts.gstatic.com"> 
         <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto+Mono&display=swap" rel="stylesheet">
-        <title>westagram</title>
+        <!----------------- title에 로고 넣기 --------------->
+        <link data-default-icon="https://static.cdninstagram.com/rsrc.php/yS/r/f_5NUHW7AZC.ico" rel="shortcut icon" type="image/x-icon" href="https://static.cdninstagram.com/rsrc.php/yS/r/f_5NUHW7AZC.ico">
+        <title>Westagram</title>
     </head>
     <body>
         <div class="wrapper">
@@ -77,16 +79,36 @@
                 </div>
                 <div class="recommendList">
                     <div class="recommendInfo">
-                        <img class="recommendUser" src="">
+                        <img class="recommendUser" src="../images/mouse.jpg">
+                        <div class="acntDetail">
+                            <span class="userAcnt">hamtory</span>
+                            <span class="userAcntDetail">Instagram 신규 가입</span>
+                        </div>
+                        <span class="acntFollow">팔로우</span>
                     </div>
                     <div class="recommendInfo">
-
+                        <img class="recommendUser" src="../images/blackat.jpg">
+                        <div class="acntDetail">
+                            <span class="userAcnt">blackCat</span>
+                            <span class="userAcntDetail">cat_is_best님이 팔로우 합니다</span>
+                        </div>
+                        <span class="acntFollow">팔로우</span>
                     </div>
                     <div class="recommendInfo">
-
+                        <img class="recommendUser" src="../images/meme.jpg">
+                        <div class="acntDetail">
+                            <span class="userAcnt">develooper</span>
+                            <span class="userAcntDetail">Instagram 신규 가입</span>
+                        </div>
+                        <span class="acntFollow">팔로우</span>
                     </div>
                     <div class="recommendInfo">
-
+                        <img class="recommendUser" src="../images/htmlBaby.jpg">
+                        <div class="acntDetail">
+                            <span class="userAcnt">htmlBaby</span>
+                            <span class="userAcntDetail">Jerry님이 팔로우 합니다</span>
+                        </div>
+                        <span class="acntFollow">팔로우</span>
                     </div>
                 </div>
             </div>
@@ -127,19 +149,18 @@
                 cat_is_best님 외 10명이 좋아합니다
             </span>
             <div class="cmtContainer">
-                <div class="cmt">
-                    <span class="cmtUser">Jerry</span>
-                    <span class="cmtUserCmt">비상 비상 비상 비상 비상 비상</span>
-                </div>
-                <div class="cmt">
-                    <span class="cmtUser">Corinne</span>
-                    <span class="cmtUserCmt">주말 안녕...</span>
-                </div>
+                <ul class="cmt">
+                    <li class="cmtList">
+                        <span class="cmtUser">Jerry</span>
+                        <span class="cmtUserCmt">비상 비상 비상 비상 비상 비상</span>
+                    </li>
+                </ul>
+           
                 <time class="cmtTime" datetime="2022-06-28T09:54:09000" title="6월 28, 2022">3시간 전</time>
                 <div class="addCmt">
                     <form class="cmtInput" method="post">
                         <svg aria-label="이모티콘" class="emojiIcon" color="#262626" fill="#262626" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M15.83 10.997a1.167 1.167 0 101.167 1.167 1.167 1.167 0 00-1.167-1.167zm-6.5 1.167a1.167 1.167 0 10-1.166 1.167 1.167 1.167 0 001.166-1.167zm5.163 3.24a3.406 3.406 0 01-4.982.007 1 1 0 10-1.557 1.256 5.397 5.397 0 008.09 0 1 1 0 00-1.55-1.263zM12 .503a11.5 11.5 0 1011.5 11.5A11.513 11.513 0 0012 .503zm0 21a9.5 9.5 0 119.5-9.5 9.51 9.51 0 01-9.5 9.5z"></path></svg>
-                        <textarea class="cmtAdd" placeholder="댓글 달기"></textarea>
+                        <textarea class="cmtAdd" type="text" placeholder="댓글 달기"></textarea>
                         <button class="cmtBtn" type="submit">
                             <div class="cmtBtnText">게시</div></button>
                     </form>
