@@ -1,38 +1,31 @@
 @charset "utf-8";
 @import 'common.css';
 
-/* 전체영역 */
 .wrap {
-  height: 100vh;
   background-color: #fafafa;
-  width: 1600px;
   margin: 0 auto;
 }
 
-/* 네비게이션 영역 */
-
 .main-navigation {
-  /* position: fixed; */
+  position: fixed;
   width: 100%;
   border-bottom: 1px solid #e6e6e6;
-  background-color: wheat;
+  background-color: #fff;
   font-family: ‘Noto Sans KR’, sans-serif, ’dotum’, ’돋움’,
     ’Apple SD Gothic Neo’;
 }
 
 .main-navigation .nav-box {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   width: 1000px;
   height: 50px;
   margin: 0 auto;
-  background-color: #ffffff;
 }
 
 .main-navigation .nav-box .logo {
   display: flex;
-  background-color: brown;
 }
 
 .main-navigation .nav-box .logo i {
@@ -45,7 +38,6 @@
 }
 
 .main-navigation .nav-box .search-box {
-  background-color: aqua;
 }
 
 .main-navigation .nav-box .search-box form label input {
@@ -58,7 +50,6 @@
 }
 
 .main-navigation .nav-icons {
-  background-color: aqua;
 }
 
 .main-navigation .nav-icons a {
@@ -73,66 +64,69 @@
   width: 25px;
 }
 
-/* main */
 main {
   width: 1000px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  padding-top: 50px;
+  padding-top: 100px;
 }
 
 .feeds {
   width: 600px;
-  height: 700px;
-  background-color: #ffffff;
-  border: 1px solid #e6e6e6;
+  height: auto;
+  background-color: #fff;
+  border: 1.5px solid #e6e6e6;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-/* article */
 article {
-  width: 550px;
-  height: 700px;
-  background-color: darkred;
+  width: 600px;
+  height: auto;
 }
 
 article .article-header {
-  background-color: gray;
 }
 
 article .article-header .profiles {
   display: flex;
   align-items: center;
-  background-color: brown;
-  padding: 10px;
+  padding: 15px 18px;
 }
 
 article .article-header .profiles .profiles-img {
-  /* flex: 0; */
-  background-color: coral;
   margin-right: 10px;
+  font-weight: bold;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+article .article-header .profiles .profiles-img a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 article .article-header .profiles .id-text {
-  /* flex: 0; */
-  background-color: yellow;
+  font-weight: bold;
 }
 
 article .article-header .profiles .article-header-menu {
   margin-left: auto;
-  background-color: yellowgreen;
 }
 
 article .contents {
   width: 100%;
+  margin: 0 auto;
   height: 500px;
   overflow: hidden;
-  /* border-top: 1.5px solid #efefef; */
-  /* border-bottom: 1.5px solid #efefef; */
+  border: 1px solid #e6e6e6;
+  outline: 1px solid #e6e6e6;
 }
 
 article .contents img {
@@ -143,13 +137,11 @@ article .contents img {
 
 article .article-bottom {
   width: 100%;
-  background-color: #e6e6e6;
 }
 
 article .article-bottom .article-links {
   display: flex;
   justify-content: space-between;
-  background-color: aquamarine;
   width: 100%;
   padding: 10px;
 }
@@ -176,18 +168,23 @@ article .article-bottom .article-links-right i {
 article .article-bottom .article-bottom-like {
   width: 100%;
   padding: 10px;
-  background-color: teal;
+}
+
+article .article-bottom .article-bottom-like .like-profile .article-bold {
+  font-weight: bold;
 }
 
 article .article-bottom .article-bottom-texts {
   padding: 10px;
   width: 100%;
-  background-color: tomato;
 }
 
 article .article-bottom .article-bottom-texts > div {
   margin-bottom: 5px;
-  background-color: darkkhaki;
+}
+
+article .article-bottom .article-bottom-texts .article-bold {
+  font-weight: bold;
 }
 
 article .article-bottom .article-bottom-texts .upload-time span {
@@ -196,8 +193,8 @@ article .article-bottom .article-bottom-texts .upload-time span {
 
 article .article-bottom .article-bottom-comments {
   width: 100%;
-  background-color: thistle;
   padding: 10px;
+  border: 1px solid #dbdbdb;
 }
 
 article .article-bottom .article-bottom-comments form {
@@ -208,13 +205,10 @@ article .article-bottom .article-bottom-comments form {
 article .article-bottom .article-bottom-comments form .emotion {
   width: 5%;
   height: 20px;
-  background-color: skyblue;
 }
 
 article .article-bottom .article-bottom-comments form .emotion i {
   font-size: 20px;
-  /* width: 20px; */
-  /* height: 20px; */
 }
 
 article .article-bottom .article-bottom-comments form textarea {
@@ -247,7 +241,7 @@ aside {
 }
 
 aside .story-section {
-  background-color: aquamarine;
+  /* background-color: aquamarine; */
   width: 100%;
   height: auto;
 }
@@ -255,22 +249,25 @@ aside .story-section {
 aside .story-section .profiles {
   display: flex;
   align-items: center;
-  background-color: brown;
   padding: 10px;
-  background-color: blueviolet;
 }
 
 aside .story-section .profiles .profiles-img {
-  background-color: coral;
   margin-right: 10px;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 2px solid yellow;
 }
 
-aside .story-section .story {
-  background-color: chocolate;
+aside .story-section .profiles .profiles-img a img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 aside .story-section .profiles .id-text {
-  background-color: #0095f6;
 }
 
 aside .story-section .profiles button {
@@ -281,22 +278,30 @@ aside .story-section .profiles button {
 }
 
 aside .story-section .story {
-  padding: 10px;
+  padding: 15px;
+  border: 2px solid #e6e6e6;
+  background-color: #fff;
+  margin-bottom: 15px;
 }
 aside .story-section .story .story-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: slateblue;
+}
+
+aside .story-section .story .story-header .story-header-title span {
+  font-weight: bold;
+  color: #c6c6c6;
 }
 
 aside .story-section .story .story-header button {
   outline: none;
   border: none;
+  background-color: #fff;
+  font-weight: bold;
 }
 
 aside .story-section .story .story-profiles {
-  background-color: tomato;
 }
 
 aside .story-section .story .story-profiles .sotry-profiles-inner {
@@ -312,6 +317,26 @@ aside
   .sotry-profiles-inner
   .story-profiles-img {
   margin-right: 10px;
+  overflow: hidden;
+  width: 40px;
+  height: 40px;
+  background-color: #0095f6;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid red;
+}
+
+aside
+  .story-section
+  .story
+  .story-profiles
+  .sotry-profiles-inner
+  .story-profiles-img
+  a
+  img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 aside
@@ -331,8 +356,9 @@ aside
   .sotry-profiles-inner
   .story-profiles-text
   span.story-profiles-id {
+  font-size: 16px;
   font-weight: bold;
-  background-color: burlywood;
+  margin-bottom: 5px;
 }
 
 aside
@@ -344,28 +370,33 @@ aside
   span.story-profiles-time {
   font-size: 12px;
   color: #adadad;
-  background-color: springgreen;
 }
 
 aside .story-section .story-recommand {
-  padding: 10px;
-  background-color: #0095f6;
+  padding: 15px;
+  border: 2px solid #e6e6e6;
+  background-color: #fff;
 }
 
 aside .story-section .story-recommand .story-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: slateblue;
+}
+
+aside .story-section .story-recommand .story-header .story-header-title span {
+  font-weight: bold;
+  color: #c6c6c6;
 }
 
 aside .story-section .story-recommand .story-header button {
   outline: none;
   border: none;
+  background-color: #fff;
+  font-weight: bold;
 }
 
 aside .story-section .story-recommand .story-profiles {
-  background-color: violet;
 }
 
 aside .story-section .story-recommand .story-profiles .sotry-profiles-inner {
@@ -380,7 +411,26 @@ aside
   .story-profiles
   .sotry-profiles-inner
   .story-profiles-img {
+  width: 40px;
+  height: 40px;
   margin-right: 10px;
+  background-color: #0095f6;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid blue;
+}
+
+aside
+  .story-section
+  .story-recommand
+  .story-profiles
+  .sotry-profiles-inner
+  .story-profiles-img
+  a
+  img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 aside
@@ -398,10 +448,19 @@ aside
   .story-recommand
   .story-profiles
   .sotry-profiles-inner
+  .story-profiles-text {
+}
+
+aside
+  .story-section
+  .story-recommand
+  .story-profiles
+  .sotry-profiles-inner
   .story-profiles-text
   span.story-profiles-id {
+  font-size: 16px;
   font-weight: bold;
-  background-color: thistle;
+  margin-bottom: 5px;
 }
 
 aside
@@ -413,11 +472,18 @@ aside
   span.story-profiles-time {
   font-size: 12px;
   color: #adadad;
-  background-color: #0095f6;
 }
 
 aside
   .story-section
   .story-recommand
   .story-profiles
-  .sotry-profiles-inner button
+  .sotry-profiles-inner
+  button {
+  margin-left: auto;
+  outline: none;
+  border: none;
+  background-color: #fff;
+  color: #5394e8;
+  font-weight: bold;
+}
