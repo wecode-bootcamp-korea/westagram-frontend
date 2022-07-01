@@ -12,7 +12,7 @@ postings.addEventListener("click" , (e) => {
 })
 
 
-// search bar 화면 작아지면 Display None 추가하기. 
+// search bar 검색구현
 
 const searchContainer = document.querySelector(".search__list--container");
 const searchInput = document.querySelector(".search");
@@ -38,7 +38,7 @@ searchInput.addEventListener("focusout", ()=>{
 
 
 
-searchInput.addEventListener("keydown", () => {
+searchInput.addEventListener("input", () => {
     
    searchWordDelete(); 
     const inputValue = searchInput.value;

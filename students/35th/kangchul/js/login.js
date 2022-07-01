@@ -27,18 +27,16 @@ const loginBtn = document.querySelector(".login_btn");
 const inputId = document.querySelector(".id__input");
 const inputPwd = document.querySelector(".pwd__input");
 
-inputId.addEventListener("keydown", ()=>{
+inputId.addEventListener("input", ()=>{
     inputOpacity()
 })
-
-inputPwd.addEventListener("keydown", () => {
+inputPwd.addEventListener("input", () => {
     inputOpacity()
 });
 
 
 function inputOpacity() {
     if (inputId.value.length>0 && inputPwd.value.length >0) {
-
         loginBtn.style="opacity :1"
     } else (
         loginBtn.style="opacity :0.5"

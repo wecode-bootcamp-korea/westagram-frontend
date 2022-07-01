@@ -18,8 +18,9 @@ const replyWindow = document.querySelector(".reply__window")
 
 replyForm.addEventListener("submit", (event) => {
     event.preventDefault();
-    const replyList = document.createElement("li");
     const inputValue = replyInput.value;
+    replyInput.value = "";
+    const replyList = document.createElement("li");
     replyList.innerHTML = `
     <div class="my__img smaller__border"></div>
     <div class="my__content">
@@ -38,10 +39,9 @@ replyForm.addEventListener("submit", (event) => {
         `;
     replyList.setAttribute("class", "reply__list");
     replyWindow.prepend(replyList);
-    replyInput.value = "";
 })
 
-// 좋아요 - 하트개수 , 좋아요개수
+// 하트 아이콘 클릭 - 하트 색깔 , 좋아요개수
 
 const listWindow = document.querySelector(".reply__window");
 const likesCount = document.querySelector(".likes__count--up");
