@@ -1,26 +1,26 @@
-
 .container {
-    background-color: var(--inner-background-color);
     display: flex;
     flex-direction: column;
+    align-items: center;
     width: 525px;
     height: 700px;
-    align-items: center;
     margin: 100px auto;
+    background-color: var(--inner-background-color);
     border: 1px solid var(--border-color);
     border-radius: 1px;
 }
 
-.logo > h1 {
-    font-family: 'Lobster', cursive;
+.logo h1 {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
     width: 525px;
     height: 200px;
     text-align: center;
     font-size: 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    font-family: 'Lobster', cursive;
 }
+
 .login {
     display: flex;
     flex-direction: column;
@@ -34,11 +34,11 @@
 .login-pw {
     width: 380px;
     height: 55px;
+    margin-bottom: 20px;
+    padding-left: 10px;
     background-color: var(--background-color);
     border: 1px solid var(--border-color);
     border-radius: 5px;
-    margin-bottom: 20px;
-    padding-left: 10px;
     font-size: 17px;
     font-weight: 200;
 }
@@ -48,16 +48,16 @@
     outline: 1px solid #a4a4a4;
 }
 
-.login-submit {
+.login-button {
     width: 380px;
     height: 45px;
+    margin: 20px 0;
     background-color: #0095f6;
     color: white;
-    font-size: 20px;
-    font-weight: bold;
     border: none;
     border-radius: 7px;
-    margin: 20px 0;
+    font-size: 20px;
+    font-weight: bold;
     opacity: .5;
 }
 
@@ -66,9 +66,9 @@
     cursor: pointer;
 }
 
-.forget-pw > a {
+.forget-pw a {
     height: 100px;
+    color: #01376b;
     text-align: center;
     text-decoration: none;
-    color: #01376b;
 }
