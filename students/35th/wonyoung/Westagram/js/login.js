@@ -7,10 +7,13 @@ function activateLoginButton (){
    let idValueLength = loginId.value.length;
    let pwValueLength = loginPw.value.length;
 
-   (idValueLength>0 && pwValueLength>0) ? 
-   (loginButton.disabled = false) :
-   (loginButton.disabled = true)   
+      (loginId.value.includes('@') && pwValueLength>5) ? 
+      (loginButton.disabled = false) :
+      (loginButton.disabled = true)   
 }
 
 loginId.addEventListener('keyup', activateLoginButton);
 loginPw.addEventListener('keyup', activateLoginButton);
+loginButton.addEventListener('click', () => {
+   window.location.href = '../main.html';
+})
