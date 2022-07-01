@@ -16,7 +16,7 @@ const addComment = ()=>{
 const commntUp = ()=>{
     let createEl =document.createElement("p");
     let repleVelue = document.getElementById('reple_input');
-    let commentsNumber =newReple.children.length;
+   
     let write_comment = newReple.appendChild(createEl);
      
 
@@ -25,15 +25,28 @@ const commntUp = ()=>{
                                 <span class="pl15 del_button" style="cursor:pointer;padding:20px">삭제</span>
                                 `;
     createEl.classList.add("comments");  
+    makeDeleteEvent(createEl);
     repleVelue.value ="";
-    newReple.querySelector(".count_comment").innerText = `댓글 ${commentsNumber} 개`
+    countReples();
+    
 }
+//삭제 //
+const makeDeleteEvent = (createEl) => {
+    const deleteBtn = createEl.querySelector(".del_button");
+    deleteBtn.addEventListener("click", () => deleteComment(createEl));
+};
+  
+const deleteComment = (createEl) => {
+    createEl.remove();
+    countReples();
+};
 
+//뎃글 카운트 //
+function countReples (){
+    let commentsNumber =newReple.querySelectorAll(".comments").length;
+    newReple.querySelector(".count_comment").innerText = `댓글 ${commentsNumber} 개`;
 
-
-
-
-
+}
 
 //오른쪽 더보기//
 const moreList = ()=>{
@@ -108,50 +121,61 @@ let memberArr = [
     { name: "박근혜", imgUrl: "./img/some04.png" },
     { name: "트럼프", imgUrl: "./img/some02.png" },
     { name: "오바마", imgUrl: "./img/some01.png" },
+    { name: "윤석렬", imgUrl: "./img/some02.png" },
+    { name: "문재인", imgUrl: "./img/some03.png" },
+    { name: "박근혜1", imgUrl: "./img/some04.png" },
+    { name: "트럼프1", imgUrl: "./img/some02.png" },
+    { name: "오바마1", imgUrl: "./img/some01.png" },
+    { name: "김정은1", imgUrl: "./img/some01.png" },
+    { name: "윤석렬1", imgUrl: "./img/some02.png" },
+    { name: "문재인1", imgUrl: "./img/some03.png" },
+    { name: "박근혜2", imgUrl: "./img/some04.png" },
+    { name: "트럼프2", imgUrl: "./img/some02.png" },
+    { name: "오바마2", imgUrl: "./img/some01.png" },
+    { name: "윤석렬2", imgUrl: "./img/some02.png" },
+    { name: "문재인2", imgUrl: "./img/some03.png" },
+    { name: "박근혜3", imgUrl: "./img/some04.png" },
+    { name: "트럼프3", imgUrl: "./img/some02.png" },
+    { name: "오바마4", imgUrl: "./img/some01.png" },
      
   ];
   
-
-const a = document.querySelector('.search_input');
-
-
-a.addEventListener('keyup', () => {
-    let searchVelue = document.querySelector(".search_input").value;
-    let searchTargets = document.querySelector(".search_target"); 
+  const a = document.querySelector('.search_input');
+  const b = document.querySelector('.search_target')
 
 
-// console.log(searchVelue)
 
-      for (let idx in memberArr) {
-        const objInName = memberArr[idx].name;
-        const objInImg = memberArr[idx].imgUrl;
-       
-      
-        if (objInName.indexOf(searchVelue) === 0) {
-            searchTargets.innerHTML = `
-            <div class="search_article">
-                <div class='my_photo'>
-                    <img src='${objInImg}'>
+  a.addEventListener('keyup', () => {
+    let enterKey =a.value;
+    
+    for (let idx in memberArr) {
+        let objInImg = memberArr[idx].imgUrl;     
+        let objInName = memberArr[idx].name;
+        let newSearchTag = document.createElement("div");
+        let removeTarget =b.querySelector(".searchs");
+   
+
+   
+        if (objInName.search(enterKey) === 0) {
+            b.innerHTML +=`
+            <div class='searchs'>
+                <div class="my_photo">
+                    <img src="${objInImg}" alt="썸네일" width="100%">
                 </div>
-                <div class='my_name'>${memberArr[idx].name}</div>
-            </div>`
-            
+                <div class="my_name">
+                    <p>${objInName}</p>
+                
+                </div>
+            </div>    
+                `
            
             
-        } else {
 
-            console.log("없음")
+
+        } else {
+          
+            
         }
       }
-
-
-
-
-
-});
-
-
-
-
-
-
+   
+  });  

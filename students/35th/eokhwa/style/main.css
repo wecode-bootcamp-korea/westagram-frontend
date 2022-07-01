@@ -72,9 +72,33 @@ nav .nav_container {
     top: 0;
     left: 0;
     width: 100%;
-    height: 20px;
-    background: red;
+    height: auto;
+    background-color: antiquewhite;
 }
+.nav_container .search .search_target .searchs {
+    width: 100%;
+    padding-left: 25px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+.nav_container .search .search_target .searchs .my_photo {
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    background-color: gold;
+    float: left;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    background-image: linear-gradient(#fff, #fff), linear-gradient(to right, red 0%, orange 100%);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+.nav_container .search .search_target .searchs .my_name {
+    float: left;
+    margin-left: 15px;
+}
+
 
 .nav_container .my_info {
     display: flex;
