@@ -91,7 +91,7 @@ commentInput.addEventListener("keypress", (event) => {
   }
 });
 
-//상단 검색바에 대한 함수
+//상단 검색바에 대한 변수 선언
 const searchBar = document.getElementsByClassName("searchBlank")[0];
 const search = document.getElementsByClassName("search")[0];
 const searchInput = document.getElementsByClassName("searchBlank")[0];
@@ -103,7 +103,6 @@ searchBar.addEventListener("focusin", (event) => {
     "fa-magnifying-glass"
   )[0];
   search.removeChild(searchBarMagni);
-  //   searchInput.removeChild(searchPlaceholder);
 });
 //상단 검색바에서 포커스 아웃되면 돋보기 모양 아이콘 생겨남
 searchBar.addEventListener("focusout", (event) => {
@@ -112,9 +111,8 @@ searchBar.addEventListener("focusout", (event) => {
   searchBarIcon.classList.add("fa-magnifying-glass");
   searchBarIcon.classList.add("fa-solid");
   search.appendChild(searchBarIcon);
-  //   document.createElement(searchPlaceholder);
 });
-
+//상단 검색바에서 포커스인 될 때/포커스아웃 될 때 플레이스홀더 생겨나고 사라짐
 searchBar.addEventListener("focusin", (event) => {
   searchInput.setAttribute("placeholder", "");
 });
