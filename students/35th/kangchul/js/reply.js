@@ -1,12 +1,13 @@
+'use strict';
 
-
-
-// 창 바깥화면 클릭시 뒤로 가기 
+// 창 바깥화면 클릭시 뒤로 가기
 
 const body = document.querySelector("body");
 body.addEventListener("click", (e) => {
-    if( e.target.nodeName === "BODY") {
-    window.history.back()
+    if (e.target.nodeName === "BODY") {
+        window
+            .history
+            .back()
     }
 })
 
@@ -20,13 +21,25 @@ replyForm.addEventListener("submit", (event) => {
     event.preventDefault();
     const inputValue = replyInput.value;
     replyInput.value = "";
-    const replyList = document.createElement("li");
-    replyList.innerHTML = `
-    <div class="my__img smaller__border"></div>
+
+    const newList = new lists(inputValue);
+    newList.display();
+
+})
+
+class lists {
+    constructor(inputValue) {
+        this.inputValue = inputValue;
+    }
+    display = () => {
+        const replyList = document.createElement("li");
+        replyList.innerHTML = `
+            <div class="my__img smaller__border"></div>
     <div class="my__content">
         <div class="my__info">
             <span class="my__id">kangchullee</span>
-            <span class="my__talk"> ${inputValue}</span>
+            <span class="my__talk"> ${this
+            .inputValue}</span>
         </div>
         <div class="my__status">
             <span class="my__likes">좋아요 <span class="likes__count--up">0</span>개</span>
@@ -35,11 +48,14 @@ replyForm.addEventListener("submit", (event) => {
     </div>
         <i class="fa-regular fa-heart heart__likes"></i>
         <i class="fa-solid fa-heart heart__likes--active" style="display:none;" ></i>
-        <i class="fa-solid fa-xmark xmark"></i>
-        `;
-    replyList.setAttribute("class", "reply__list");
-    replyWindow.prepend(replyList);
-})
+        <i class="fa-solid fa-xmark xmark"></i>`
+
+            replyList
+            .setAttribute("class", "reply__list");
+        replyWindow.prepend(replyList)
+    }
+
+}
 
 // 하트 아이콘 클릭 - 하트 색깔 , 좋아요개수
 
@@ -55,16 +71,19 @@ listWindow.addEventListener("click", (e) => {
         heartToRed(target);
     } else if (target.classList.contains("heart__likes--active")) {
         heartToBlack(target)
-        
+
         //삭제버튼
 
     } else if (e.target.classList.contains("xmark")) {
-        target.parentElement.remove();
+        target
+            .parentElement
+            .remove();
     }
 })
 
 function heartToRed(target) {
     target.style.display = "none";
+
     target
         .parentElement
         .children[3]
@@ -94,5 +113,3 @@ function heartToBlack(target) {
         .children[0]
         .innerHTML = 0;
 }
-
-

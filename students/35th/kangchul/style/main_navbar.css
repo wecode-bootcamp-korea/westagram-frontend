@@ -6,16 +6,15 @@ nav {
     border-bottom: var(--border);
 }
 
-.logo {font-family: "Lobster", cursive;
+.logo {
+    font-family: "Lobster", cursive;
     cursor: pointer;
 }
-
 
 .insta__logos {
     display: flex;
     font-size: 30px;
 }
-
 
 .search__bar {
     position: relative;
@@ -38,22 +37,18 @@ nav {
     top: 12px;
 }
 
-
 .search:focus {
     border: none;
     outline: none;
 }
-
-
 
 .search__list--container {
     width: 100%;
     position: absolute;
     top: 70px;
     left: 10px;
-    
-}
 
+}
 
 .search__bar--list {
 
@@ -74,50 +69,47 @@ nav {
     width: 230px;
     display: flex;
     align-items: center;
-    padding: 15px 0px 15px 15px;
+    padding: 15px 0 15px 15px;
     border: var(--border);
-    background-color: var(--gray);   
+    background-color: var(--gray);
     font-size: 13px;
 }
 
 .search__id {
-display: block;
-margin-bottom: 10px;
+    display: block;
+    margin-bottom: 10px;
 
 }
 
 .search__content {
-cursor:default;
+    cursor: default;
 }
-
-
 
 /* 검색 포커스 없어졌다 나왔다  */
 
 .search__focus {
     display: flex;
     justify-content: space-between;
-    padding: 0px 10px;
+    padding: 0 10px;
     font-size: 14px;
     color: gray;
     display: none;
 }
 
 .search:focus ~ .fa-magnifying-glass {
-    display:none;
-  }
+    display: none;
+}
 
-  .search:focus ~ .search__focus {
+.search:focus ~ .search__focus {
     display: flex;
     justify-content: space-between;
-    padding: 0px 8px;
+    padding: 0 8px;
     font-size: 15px;
     color: gray;
     position: absolute;
     top: 10px;
 
-  }
-
+}
 
 .nav__icons {
     display: flex;
@@ -129,17 +121,16 @@ cursor:default;
 .nav__icons i {
     cursor: pointer;
 }
-.nav__icons .heart{
-    margin: 0px 20px;
+.nav__icons .heart {
+    margin: 0 20px;
     cursor: pointer;
 }
 
 .heart div {
     width: 3px;
     height: 3px;
-    margin: auto;
-    margin-top: 3px;
+    margin: 3px auto auto;
     background-color: red;
     border-radius: 50%;
- 
+
 }
