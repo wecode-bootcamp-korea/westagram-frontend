@@ -47,12 +47,14 @@ const pwd = document.querySelector(".login-pwd");
 const btn = document.querySelector(".login-btn");
 const input = document.querySelector("section");
 
-const loginActive = () => {
+const loginActive = (event) => {
   // if (id.value.length > 0 && pwd.value.length > 0) {
   //   return (btn.disabled = false);
   // } else return;
-
   id.value.length > 0 && pwd.value.length > 0 ? (btn.disabled = false) : 1;
+  if (event.keyCode == 13) {
+    pageMove();
+  }
 };
 
 const pageMove = () => {

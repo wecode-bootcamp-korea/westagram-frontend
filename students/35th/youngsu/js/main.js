@@ -3,7 +3,6 @@ const heart = document.getElementById("heart");
 const likeNumber = document.querySelector(".like-number");
 const comment = document.querySelector(".comment-content");
 const commentContent = document.querySelector(".comment");
-
 const btnComment = document.querySelector(".insert");
 
 let count = 0;
@@ -22,13 +21,30 @@ const heartColorChange = () => {
 };
 
 let arr = [];
-const commentBrower = () => {
+
+// const commentBrower = () => {
+//   //댓글 함수
+//   commentContent.innerHTML +=
+//     "user" + (arr.length + 1) + " : " + comment.value + "<div></div>";
+//   arr.push(commentContent.innerHTML);
+//   console.log(arr);
+//   return (comment.value = "");
+// };
+
+function commentBrower() {
+  //댓글 함수
   commentContent.innerHTML +=
-    "user" + (arr.length + 1) + " : " + comment.value + "<div></div>";
+    "user" + (arr.length + 1) + " : " + comment.value + "<br>";
   arr.push(commentContent.innerHTML);
   console.log(arr);
   return (comment.value = "");
-};
+}
+function commentBrowerEnter(e) {
+  //댓글 함수
+  console.log("1");
+  if (e.keyCode == 13) return commentBrower();
+}
 
 btnheart.addEventListener("click", heartColorChange); // 하트 누를 시 하트 색 변경
 btnComment.addEventListener("click", commentBrower);
+comment.addEventListener("keyup", commentBrowerEnter);
