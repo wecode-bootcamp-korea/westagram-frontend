@@ -1,40 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Westagram</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Open+Sans:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style/common.css" />
-    <link rel="stylesheet" href="style/login.css" />
-    <script defer src="/westagram/js/login.js"></script>
-  </head>
-  <body>
-    <div class="container">
-      <header>
-        <h2 class="logo">Westagram</h2>
-      </header>
-      <main>
-        <div class="inputbox">
-          <input
-            id="id"
-            type="text"
-            placeholder="전화번호, 사용자 이름 또는 이메일"
-            value
-          />
-          <input id="pw" type="password" placeholder="비밀번호" value />
-          <button id="click" type="submit" disabled="true">로그인</button>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Westagram</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Open+Sans:wght@400;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style/common.css" />
+        <link rel="stylesheet" href="style/login.css" />
+        <script defer src="js/login.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h2 class="logo">Westagram</h2>
+            </header>
+            <main>
+                <div class="inputbox">
+                    <input
+                        id="id"
+                        type="text"
+                        placeholder="전화번호, 사용자 이름 또는 이메일"
+                        value
+                    />
+                    <input
+                        id="pw"
+                        type="password"
+                        placeholder="비밀번호"
+                        value
+                    />
+                    <button id="click" type="submit" disabled="true">
+                        로그인
+                    </button>
+                </div>
+            </main>
+            <footer>
+                <div class="text">비밀번호를 잊으셨나요?</div>
+            </footer>
         </div>
-      </main>
-      <footer>
-        <div class="text">비밀번호를 잊으셨나요?</div>
-      </footer>
-    </div>
-  </body>
+    </body>
 </html>
