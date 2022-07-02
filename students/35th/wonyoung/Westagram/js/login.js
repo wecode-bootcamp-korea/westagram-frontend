@@ -12,14 +12,11 @@ const checkValue = () => {
 
 }
 
-
 const lgnBttnHandler = () => {
 
    loginButton.disabled = checkValue();
 
 }
-
-
 
 const init = () => {
 
@@ -30,6 +27,7 @@ const init = () => {
   loginButton.addEventListener('click', () => {
    window.location.href = '../main.html';
 })
+
 };
 
 init();

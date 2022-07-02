@@ -16,33 +16,36 @@ class Comment {
     }
 
     create(){
-        let cmntValue = cmntBox.value;
 
-        this.cmntValue = cmntValue;
-        
-        this.myId = document.createElement('span');
-        this.myId.className = 'userOfComment';
-        this.myId.innerHTML = 'ore.zeno';
-        user.appendChild(this.myId);
+        if(checkValue()){
+            let cmntValue = cmntBox.value;
 
-        this.newcmnt = document.createElement('span');
-        this.newcmnt.className = 'commentOfUser';
-        this.newcmnt.innerHTML = this.cmntValue;
-        cmnt.appendChild(this.newcmnt);
+            this.cmntValue = cmntValue;
+            
+            this.myId = document.createElement('span');
+            this.myId.className = 'userOfComment';
+            this.myId.innerHTML = 'ore.zeno';
+            user.appendChild(this.myId);
 
-        this.like = document.createElement('img');
-        this.like.className = 'comment-like';
-        this.like.src = 'image/love.png';
-        this.like.alt = '댓글-좋아요';
-        cmntLike.appendChild(this.like);
+            this.newcmnt = document.createElement('span');
+            this.newcmnt.className = 'commentOfUser';
+            this.newcmnt.innerHTML = this.cmntValue;
+            cmnt.appendChild(this.newcmnt);
 
-        this.delete = document.createElement('img');
-        this.delete.className = 'comment-delete';
-        this.delete.src = 'image/delete.png';
-        this.delete.alt = '댓글-삭제';
-        cmntDelete.appendChild(this.delete);
+            this.like = document.createElement('img');
+            this.like.className = 'comment-like';
+            this.like.src = 'image/love.png';
+            this.like.alt = '댓글-좋아요';
+            cmntLike.appendChild(this.like);
 
-        cmntBox.value = '';
+            this.delete = document.createElement('img');
+            this.delete.className = 'comment-delete';
+            this.delete.src = 'image/delete.png';
+            this.delete.alt = '댓글-삭제';
+            cmntDelete.appendChild(this.delete);
+
+            cmntBox.value = '';
+        }
     }
 
     liked(){
@@ -71,25 +74,28 @@ class Comment {
     }
 }
 
-function activatePostButton() {
+const checkValue = () => {
     let cmntValue = cmntBox.value;
-    let cmntLength = cmntValue.length;
-
-    (cmntLength > 0) ? 
-    (cmntPost.disabled = false) :
-    (cmntPost.disabled = true)
-
+    return (cmntValue.length > 0 && !!(cmntValue.trim()))
 }
 
-cmntBox.addEventListener('keydown', activatePostButton);
+const activatePostButton = () => {
+    cmntPost.disabled = !checkValue();
+}
 
-cmntPost.addEventListener('click', function () {
-    new Comment();
-})
-
-cmntBox.addEventListener('keypress', e => {
-    if (e.key == 'Enter'){
+const init = () => {
+    cmntBox.addEventListener('input', activatePostButton);
+    cmntBox.addEventListener('keyup', activatePostButton);
+    cmntPost.addEventListener('click', function () {
         new Comment();
-    }
-})
+    })
+    cmntBox.addEventListener('keypress', e => {
+        if (e.key == 'Enter'){
+            new Comment();
+        }
+    })    
+}
+
+init();
+
 
