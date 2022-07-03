@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WestagramMain</title>
+    <link rel="stylesheet" href="./style/main.css" />
+    <script
+      defer
+      src="https://kit.fontawesome.com/b3f0d3ce61.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/main.js"></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <nav class="main-navigation">
+        <div class="nav-box">
+          <div class="logo">
+            <i class="fab fa-instagram"></i>
+            <h1>Westagram</h1>
+          </div>
+
+          <div class="search-box">
+            <form action="/">
+              <label for="">
+                <!-- <span>테스트입니다</span> -->
+                <input type="text" placeholder="테스트입니다" />
+              </label>
+            </form>
+          </div>
+
+          <div class="nav-icons">
+            <a href="#"
+              ><img
+                src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png"
+                alt="compass"
+                class="nav-imgs"
+            /></a>
+            <a href="#"
+              ><img
+                src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"
+                alt="heart"
+                class="nav-imgs"
+            /></a>
+            <a href="#"
+              ><img
+                src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png"
+                alt="my-page"
+                class="nav-imgs"
+            /></a>
+          </div>
+        </div>
+      </nav>
+
+      <main>
+        <section class="feeds">
+          <article>
+            <div class="article-header">
+              <div class="profiles">
+                <div class="profiles-img">
+                  <a href="#">
+                    <span>Wecode</span>
+                  </a>
+                </div>
+                <div class="id-text">
+                  <span>Wecode_bootcamp</span>
+                  <span>Wecode - 위코드</span>
+                </div>
+
+                <div class="article-header-menu">
+                  <a href="#"><i class="fas fa-ellipsis-h"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="contents">
+              <img src="/img/1.jpg" alt="feedsimg" />
+            </div>
+
+            <div class="article-bottom">
+              <div class="article-links">
+                <div class="article-links-left">
+                  <i class="far fa-heart"></i>
+                  <i class="far fa-comment"></i>
+                  <i class="fas fa-share-square"></i>
+                </div>
+                <div class="article-links-right">
+                  <i class="far fa-bookmark"></i>
+                </div>
+              </div>
+              <div class="article-bottom-like">
+                <div class="like-profile">
+                  <span>wecoedworld님 외 10명이 좋아합니다.</span>
+                </div>
+              </div>
+              <div class="article-bottom-texts">
+                <div>
+                  <span>canon_mj 위워크에서 진행한 베이킹 클래스...</span>
+                </div>
+                <div>
+                  <span>nececsoeis 거봐 좋았잖아~~</span>
+                </div>
+                <div class="upload-time"><span>42분 전</span></div>
+              </div>
+              <div class="article-bottom-comments">
+                <form>
+                  <div class="emotion"><i class="far fa-smile"></i></div>
+                  <textarea
+                    id="comments-id"
+                    placeholder="댓글 달기..."
+                    autocomplete="off"
+                    autocorrect="off"
+                  ></textarea>
+                  <button id="comments-submit" type="submit" disabled="true">
+                    게시
+                  </button>
+                </form>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <aside>
+          <div class="story-section">
+            <div class="profiles">
+              <a href="#" class="profiles-img">
+                <span>Wecode</span>
+              </a>
+              <div class="id-text">
+                <span>Wecode_bootcamp</span>
+                <span>Wecode - 위코드</span>
+              </div>
+              <button>전환</button>
+            </div>
+
+            <div class="story">
+              <div class="story-header">
+                <div class="story-header-title"><span>스토리</span></div>
+                <button>모두 보기</button>
+              </div>
+
+              <div class="story-profiles">
+                <div class="sotry-profiles-inner">
+                  <div class="story-profiles-img">
+                    <a href="#"><img src="profiles-img" alt="" />d</a>
+                  </div>
+                  <div class="story-profiles-text">
+                    <span class="story-profiles-id">_ims_ee</span>
+                    <span class="story-profiles-time">2시간 전</span>
+                  </div>
+                </div>
+
+                <div class="sotry-profiles-inner">
+                  <div class="story-profiles-img">
+                    <a href="#"><img src="profiles-img" alt="" />d</a>
+                  </div>
+                  <div class="story-profiles-text">
+                    <span class="story-profiles-id">_qwe_ee</span>
+                    <span class="story-profiles-time">3시간 전</span>
+                  </div>
+                </div>
+
+                <div class="sotry-profiles-inner">
+                  <div class="story-profiles-img">
+                    <a href="#"><img src="" alt="" />d</a>
+                  </div>
+                  <div class="story-profiles-text">
+                    <span class="story-profiles-id">_vwv_ee</span>
+                    <span class="story-profiles-time">4시간 전</span>
+                  </div>
+                </div>
+
+                <div class="sotry-profiles-inner">
+                  <div class="story-profiles-img">
+                    <a href="#"><img src="" alt="" />d</a>
+                  </div>
+                  <div class="story-profiles-text">
+                    <span class="story-profiles-id">_grg_ee</span>
+                    <span class="story-profiles-time">6시간 전</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="story-recommand">
+              <div class="story-header">
+                <div class="story-header-title"><span>스토리</span></div>
+                <button>모두 보기</button>
+              </div>
+
+              <div class="story-profiles">
+                <div class="sotry-profiles-inner">
+                  <div class="story-profiles-img">
+                    <a href="#"><img src="" alt="" />d</a>
+                  </div>
+                  <div class="story-profiles-text">
+                    <span class="story-profiles-id">_ims_ee</span>
+                    <span class="story-profiles-time">2시간 전</span>
+                  </div>
+                  <button>dfd</button>
+                </div>
+
+                <div class="sotry-profiles-inner">
+                  <div class="story-profiles-img">
+                    <a href="#"><img src="" alt="" />d</a>
+                  </div>
+                  <div class="story-profiles-text">
+                    <span class="story-profiles-id">_qwe_ee</span>
+                    <span class="story-profiles-time">3시간 전</span>
+                  </div>
+                  <button>dfd</button>
+                </div>
+
+                <div class="sotry-profiles-inner">
+                  <div class="story-profiles-img">
+                    <a href="#"><img src="" alt="" />d</a>
+                  </div>
+                  <div class="story-profiles-text">
+                    <span class="story-profiles-id">_vwv_ee</span>
+                    <span class="story-profiles-time">4시간 전</span>
+                  </div>
+                  <button>dfd</button>
+                </div>
+
+                <div class="sotry-profiles-inner">
+                  <div class="story-profiles-img">
+                    <a href="#"><img src="" alt="" />d</a>
+                  </div>
+                  <div class="story-profiles-text">
+                    <span class="story-profiles-id">_grg_ee</span>
+                    <span class="story-profiles-time">6시간 전</span>
+                  </div>
+                  <button>dfd</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </main>
+    </div>
+  </body>
+</html>

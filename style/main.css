@@ -1,0 +1,227 @@
+body {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    background-color: #FAFAFA;
+}
+
+nav {
+    position: fixed;
+    width: 100%;
+    height: 55px;
+    z-index: 10;
+    background-color: #FAFAFA;
+    border-bottom: 1px lightgray solid;
+}
+
+#navContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 955px;
+    height: 55px;
+}
+
+#logo {
+    justify-self: left;
+}
+#search {
+    justify-self: center;
+}
+
+input {
+    width: 200px;
+    height: 13px;
+    padding: 7px;
+    border: 1px #DBDBDB solid;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+input::placeholder {
+    background-color: #FAFAFA;
+    color: gray;
+    text-align: center;
+    padding: 3px;
+    font-weight: lighter;
+  }
+
+#icons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+
+main {
+    display: flex;
+    width: 955px;
+    margin: 0 auto;
+    padding-top: 85px;
+}
+
+.feeds {
+    border: 1px lightgray solid;
+    border-radius: 3px;
+    width: 615px;
+    margin-right: 30px;
+
+}
+
+#feeds01 {
+    border-bottom: 1px lightgray solid;
+    height: 60px;
+    display: grid;
+    grid-template-columns: 32px 510px 24px;
+    align-items: center;
+    padding: 0 20px;
+    grid-gap: 15px;
+}
+
+#feeds02 {
+    border-bottom: 1px lightgray solid;
+}
+
+#feeds03 {
+    border-bottom: 1px lightgray solid;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: grid;
+    grid-template-columns: 25px 25px 535px;
+    align-items: center;
+    grid-gap: 10px;
+}
+#heart, #comment{
+    margin-left: 15px;
+}
+#save {
+    justify-self: right;
+}
+
+#feeds04 {
+
+}
+#likes {
+    margin-top: 10px;
+    margin-left: 15px;
+    font-weight: bold;
+    font-size: 13px;
+}
+#content {
+    margin-top: 15px;
+}
+#id {
+    font-weight: bold;
+    margin-left: 15px;
+}
+#hashtag {
+    margin-left: 15px;
+    margin-bottom: 15px;
+    color: #00376B;
+}
+#time {
+    color: gray;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    margin-left: 15px;
+    font-size: 11px;
+}
+
+#mainRightContainer {
+    position: fixed;
+    width: 295px;
+}
+
+#inputBox {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    border-top: 1px lightgray solid;
+    font-size: 13px;
+    color: gray;
+    font-weight: bold;
+}
+#inputBox input {
+    border: none;
+    width: 530px;
+}
+
+#inputBox input::placeholder {
+    text-align: left;
+  }
+
+#submit {
+    cursor: pointer;
+    margin-left: 15px;
+    color: #B2DFFC;
+    /* 게시 가능 칼라 : #0095F6 */
+    /* 게시 블가능 칼라 : #B2DFFC */
+}
+
+.myProfile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+.profileBox {
+    margin-left: 15px;
+}
+
+.story {
+    height: 220px;
+    margin-top: 15px;
+    border: 1px lightgray solid;
+    border-radius: 3px;
+}
+.storyMenu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+#storyList {
+    height: 165px;
+    overflow:auto;
+}
+.storyText01 {
+    padding: 15px 0 15px 15px;
+    color: gray;
+    font-size: 14px;
+    font-weight: bold;
+    justify-self: left;
+}
+.storyText02 {
+    padding: 15px 15px 15px 0;
+    font-weight: bold;
+    justify-self: right;
+}
+#storyProfile {
+    margin-left: 15px;
+}
+
+#follow{
+    width: 80px;
+    text-align: right;
+    font-weight: bold;
+    color: #0095F6;
+}
+
+#commentBox div {
+    margin-left: 15px;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: lightgray;
+    border-radius: 50px;
+  }
