@@ -1,69 +1,93 @@
 "use strict";
 
 const cmntBox = document.getElementsByClassName('comment-box')[0];
-const user = document.getElementsByClassName('userOfComment-container')[0];
-const cmnt = document.getElementsByClassName('commentOfUser-container')[0];
-const cmntLike = document.getElementsByClassName('comment-like-container')[0];
-const cmntDelete = document.getElementsByClassName('comment-delete-container')[0];
+// const user = document.getElementsByClassName('userOfComment-container')[0];
+const cmnt = document.getElementsByClassName('feed-comment')[0];
+// const cmntLike = document.getElementsByClassName('comment-like-container')[0];
+// const cmntDelete = document.getElementsByClassName('comment-delete-container')[0];
 const cmntPost = document.getElementsByClassName('comment-enter-button')[0];
 let likeState = 0;
+let cmntArr = [];
 
 
 const create = () => {
 
     if(checkValue()){
         let cmntValue = cmntBox.value;
-        let cmntArr = [];
+        cmntArr = [];
 
-        let myId = document.createElement('span');
-        myId.className = 'userOfComment';
-        myId.innerHTML = 'ore-zeno';
-        user.appendChild(myId);
-        cmntArr.push(myId);
+        // let myId = document.createElement('span');
+        // myId.className = 'userOfComment';
+        // myId.innerHTML = 'ore.zeno';
+        // cmnt.appendChild(myId);
+        createCmnt('userOfComment', 'ore.zeno');
 
-        let newcmnt = document.createElement('span');
-        newcmnt.className = 'commentOfUser';
-        newcmnt.innerHTML = cmntValue;
-        cmnt.appendChild(newcmnt);
-        cmntArr.push(newcmnt);
+        // let newcmnt = document.createElement('span');
+        // newcmnt.className = 'commentOfUser';
+        // newcmnt.innerHTML = cmntValue;
+        // cmnt.appendChild(newcmnt);
+        createCmnt('commentOfUser', cmntValue);
 
-        let likeIcn = document.createElement('img');
-        likeIcn.className = 'comment-like';
-        likeIcn.src = 'image/love.png';
-        likeIcn.alt = '댓글-좋아요';
-        cmntLike.appendChild(likeIcn);
-        cmntArr.push(likeIcn);
+        // let likeIcn = document.createElement('span');
+        // likeIcn.className = 'comment-like';
+        // likeIcn.style.backgroundImage = "url('image/love.png')";
+        // cmnt.appendChild(likeIcn);
+        // cmntArr.push(likeIcn);
+        createIcon('comment-like', "url('image/love.png')");
 
-        liked(likeIcn);
+        // liked(likeIcn);
 
-        let deleteIcn = document.createElement('img');
-        deleteIcn.className = 'comment-delete';
-        deleteIcn.src = 'image/delete.png';
-        deleteIcn.alt = '댓글-삭제';
-        cmntDelete.appendChild(deleteIcn);
-        cmntArr.push(deleteIcn);
+        // let deleteIcn = document.createElement('span');
+        // deleteIcn.className = 'comment-delete';
+        // deleteIcn.style.backgroundImage = "url('image/delete.png')";
+        // cmnt.appendChild(deleteIcn);
+        // cmntArr.push(deleteIcn);
+        createIcon('comment-delete', "url('image/delete.png')");
 
-        deleted(deleteIcn, cmntArr);
+        // deleted(deleteIcn, cmntArr);
 
         cmntBox.value = '';
         
     }
 }
 
-const liked = (likeIcn) => {
+const createCmnt = (cl, ine) => {
+    var target = document.createElement('span');
+    target.className = cl;
+    target.innerHTML = ine;
+    cmnt.appendChild(target);
+    cmntArr.push(target);
+}
+
+const createIcon = (cl, imgUrl) => {
+    let target = document.createElement('span');
+    target.className = cl;
+    target.style.backgroundImage = imgUrl;
+    cmnt.appendChild(target);
+    cmntArr.push(target);
+
+    if(cl == 'comment-like'){
+        likeHandler(target);
+    }
+    else if(cl == 'comment-delete'){
+        deleteHandler(target, cmntArr);
+    }
+}
+
+const likeHandler = (likeIcn) => {
     likeIcn.addEventListener('click', ()=>{
         if(likeState == 0){
-            likeIcn.src = 'image/liked.png';
+            likeIcn.style.backgroundImage = "url('image/liked.png')";
             likeState = 1;
             }
         else {
-            likeIcn.src = 'image/love.png';
+            likeIcn.style.backgroundImage = "url('image/love.png')";
             likeState = 0;                
          }
      })
  }
 
- const deleted = (deleteIcn, Arr) => {
+ const deleteHandler = (deleteIcn, Arr) => {
     deleteIcn.addEventListener('click', ()=>{
         deleteAll(Arr)
     })   

@@ -334,21 +334,21 @@ main {
     padding-left: 15px;
 }
 
-.feed-contents-container{
-}
 
 #more {
     color: #8E8E8E;
 }
 
 .feed-comment {
+    width: 470px;
     height: auto;
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
     font-size: 14px;
     padding-left: 15px;
-
+    margin-top: 8px;
 }
 
 .userOfComment-container {
@@ -359,18 +359,19 @@ main {
 }
 
 .userOfComment{
-    padding: 5px 5px 0 0; 
+    font-size: 14px;
+    font-weight: 650;
+    padding: 0 5px 5px 0; 
 }
 
 .commentOfUser-container {
     display: flex;
     flex-direction: column;
-    flex: 8;
-
 }
 
 .commentOfUser{
-    padding-top: 5px;
+    width: 353px;
+    padding: 0 5px 5px 0; 
 
 }
 
@@ -385,7 +386,8 @@ main {
 .comment-like {
     width: 12px;
     height: 12px;
-    margin: 5px 0;
+    margin: 2px;
+    background-size: cover;
 }
 
 .comment-like:hover {
@@ -403,7 +405,8 @@ main {
 .comment-delete {
     width: 12px;
     height: 12px;
-    margin: 5px 0;
+    margin: 2px;
+    background-size: cover;
 }
 
 .comment-delete:hover {
