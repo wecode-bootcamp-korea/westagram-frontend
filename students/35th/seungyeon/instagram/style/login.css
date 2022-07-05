@@ -1,12 +1,119 @@
 body {background-color: rgb(250, 250, 250); margin:0;}
 
 
-.container {width:100%; height:100vh; display:flex; align-items: center; justify-content: center; }
-.login-wrap { display:flex; flex-direction:column; align-items: center; justify-content: center; border:1px solid  rgb(219, 219, 219); background-color: #fff; margin:32px auto 0; max-width:350px; padding: 0 40px 36px; text-align: center; min-height: 60vh;}
+.container {
+   width:100%; 
+   height:100vh;  
+   display:flex; 
+   align-items: center; 
+   justify-content: center;
+   flex-direction: column;
+}
+.container .main-area {
+   display:flex; 
+   align-items: center; 
+   justify-content: center;
+   margin: 32px auto 0;
+   padding-bottom: 32px;
+}
+.left-area {
+   background-image: url(/img/iphoneMockup.png);
+   background-size: 468px 634px;
+   background-position: -46px 0;
+   margin: 0 32px 12px 0;
+   width: 380px;
+   height: 580px;
+
+}
+.login-wrap { display:flex; flex-direction:column; align-items: center; justify-content: center; border:1px solid rgb(219, 219, 219); background-color: #fff; margin:32px auto 10px; max-width:350px; padding: 0 40px 36px; text-align: center;}
 #logo {margin: 36px 0; font-size: 36px;}
 input {background-color: #fafafa; padding:9px 0 7px 8px; border:1px solid rgb(219, 219, 219); border-radius: 3px; width:100%; position: relative; margin-bottom: 6px; text-overflow: ellipsis; overflow:hidden;}
 input::placeholder {color:#8e8e8e; font-size:13px;}
 
 #login-btn {background-color: rgb(0, 149, 246); opacity: 0.3; width:100%; border:0; color:#fff; height:30px; border-radius: 4px; margin:8px 0; font-weight:bold; font-size:15px;}
 #login-btn.active {opacity: 1;}
-.forgot-pw {font-size:13px; margin-top: 72px; display: block; color:#00376b;}
+.text-or {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   margin: 10px 40px 18px;
+   width: 100%;
+}
+.line {
+   background-color: #dbdbdb;
+   height: 1px;
+   flex-grow: 1;
+}
+.text-or .or {
+   font-size: 13px;
+   color: #8e8e8e;
+   margin: 0 18px;
+   font-weight: 600;
+}
+.login-fb {
+   color:#385185;
+   font-weight: 600;
+   display: inline-flex;
+   align-items: center;
+   margin: 8px 0;
+}
+.login-fb i {
+   font-size: 20px;
+   padding-right: 8px;
+}
+.forgot-pw {font-size:13px; margin-top: 12px; display: block; color:#00376b;}
+
+.join-wrap {
+   background-color: #fff;
+   border:1px solid rgb(219, 219, 219);
+   border-radius: 1px;
+   margin: 0 0 10px;
+   padding: 10px 0;
+   text-align: center;
+}
+.join-wrap .no-account {
+   margin: 15px 0;
+   font-size: 14px;
+   color: #262626;
+}
+.join-wrap .no-account strong {
+   color:#0095f6;
+   font-weight: 600;
+}
+
+.download-text {
+   text-align: center;
+   color: #262626;
+   font-size: 14px;
+   margin: 10px 20px 10px 20px;
+   line-height: 18px;
+}
+.download-wrap {
+   text-align: center;
+   margin: 10px 0;
+}
+.download-wrap a:first-child {margin-right: 8px;}
+.download-wrap img {
+   height: 40px;
+}
+
+footer {
+   margin: 0 auto;
+   text-align: center;
+   font-size: 12px;
+   color: #8e8e8e;
+}
+footer ul {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+   max-width: 900px;
+   margin: 24px auto 0;
+}
+footer ul li {
+   margin: 0 8px 12px 8px;
+}
+footer ul li a {
+   color: #8e8e8e;
+}

@@ -127,7 +127,6 @@ main .feeds .stories .swiper-button-disabled {
    display: none;
 }
 main article {
-   min-height: 80vh;
    background-color: #fff;
    margin-bottom:12px;
    border-radius: 8px;
@@ -148,9 +147,36 @@ main article .feed-wrap .feed-header .feed-profile {
    margin:8px 4px 8px 12px;
    max-width: calc(100% - 48px)
 }
+main article .feed-wrap .feed-header .feed-profile .pf-img img {
+   border:1px solid #c7c7c7;
+   border-radius: 50%;
+   vertical-align: top;
+}
 main article .feed-wrap .feed-header .feed-profile .pf-text {
    min-height: 40px;
    margin-left: 10px;
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+}
+main article .feed-wrap .feed-header .feed-profile .pf-text .pf-id {
+   font-size: 14px;
+   color: #262626;
+   font-weight: bold;
+}
+main article .feed-wrap .feed-header .feed-profile .pf-text .pf-name {
+   font-size: 12px;
+   color: #00376b;
+   padding: 2px;
+}
+main article .feed-wrap .feed-header .feed-more button {
+   border: 0;
+   background-color: #fff;
+   padding: 16px;
+   cursor: pointer;
+}
+main article .feed-wrap .feed-header .feed-more img {
+   width:16px;
 }
 main article .feed-wrap .feed-img {
    width:100%;
@@ -162,6 +188,60 @@ main article .feed-wrap .feed-img {
 }
 main article .feed-wrap .feed-img img {
    width:100%;
+}
+main article .feed-wrap .feed-bot .icons-wrap {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+main article .feed-wrap .feed-bot .icons-wrap img {
+   height: 24px;
+   margin: 8px;
+}
+main article .feed-wrap .feed-bot .icons-wrap a {
+
+}
+main article .feed-wrap .feed-bot .like {
+   padding: 0 12px 8px 12px;
+   font-weight: 600;
+   font-size: 16px;
+}
+main article .feed-wrap .feed-bot .contents {
+   padding: 0 12px;
+   margin-bottom: 12px;
+}
+main article .feed-wrap .feed-bot .contents .writer {
+   font-weight: 600;
+}
+main article .feed-wrap .feed-bot .comment {
+   border-top: 1px solid #dbdbdb;
+   padding: 4px 12px;
+   display: flex;
+}
+main article .feed-wrap .feed-bot .comment form {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   width: 100%;
+   padding: 8px 0 8px 12px;
+}
+main article .feed-wrap .feed-bot .comment textarea {
+   border: none;
+   display: flex;
+   flex-grow: 1;
+   max-height: 80px;
+   outline: none;
+   padding: 0;
+   resize: none;
+   line-height: 18px;
+   font-size: 14px;
+   height: 18px;
+}
+main article .feed-wrap .feed-bot .comment button {
+   background: transparent;
+   color: #0095f6;
+   opacity: .3;
+   border: none;
 }
 
 
