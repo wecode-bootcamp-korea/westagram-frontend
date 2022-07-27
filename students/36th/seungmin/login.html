@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>westagram login</title>
+    <link href="style/common.css" rel="stylesheet" type="text/css" />
+    <link href="style/login.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="loginSignIn-container">
+      <div class="login-container">
+        <header class="logo">westagram</header>
+        <div class="loginInput-container">
+          <input
+            type="text"
+            id="idInput"
+            placeholder="전화번호, 사용자 이름 또는 이메일"
+          />
+          <input type="password" id="pwInput" placeholder="비밀번호" />
+        </div>
+        <button class="loginSubmit" disabled="true" onclick="goToMain()">
+          로그인
+        </button>
+        <div class="questionPartition">
+          <div class="grayLine"></div>
+          <div class="or">또는</div>
+          <div class="grayLine"></div>
+        </div>
+        <div class="question">비밀번호를 잊으셨나요?</div>
+      </div>
+      <div class="signIn-container">
+        <div class="signInText">계정이 없으신가요?</div>
+        <div class="signIn">가입하기</div>
+      </div>
+    </div>
+    <footer>
+      <div class="hashContainer">
+        <div class="hashTag">
+          <div class="hashItem">Meta</div>
+          <div class="hashItem">소개</div>
+          <div class="hashItem">블로그</div>
+          <div class="hashItem">채용 정보</div>
+          <div class="hashItem">도움말</div>
+          <div class="hashItem">API</div>
+          <div class="hashItem">개인정보처리방침</div>
+          <div class="hashItem">약관</div>
+          <div class="hashItem">인기계정</div>
+          <div class="hashItem">해시태그</div>
+          <div class="hashItem">위치</div>
+        </div>
+        <div class="hashTag">
+          <div class="hashItem">Instagram Lite</div>
+          <div class="hashItem">연락처 업로드 & 비사용자</div>
+        </div>
+        <div class="hashTag">
+          <div class="hashItem">댄스</div>
+          <div class="hashItem">식음료</div>
+          <div class="hashItem">집 및 정원</div>
+          <div class="hashItem">음악</div>
+          <div class="hashItem">시각 예술</div>
+        </div>
+        <div class="hashTag">
+          <div class="hashItem">한국어</div>
+          <div class="hashItem">© 2022 Instagram from Meta</div>
+        </div>
+      </div>
+    </footer>
+    <script src="js/login.js"></script>
+  </body>
+</html>
