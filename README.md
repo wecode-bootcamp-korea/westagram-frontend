@@ -13,7 +13,7 @@
 - 해당 폴더에 기존에 작업했던 `img`, `js`, `styles` 폴더, 그리고 `html`파일들을 생성해서 코드를 복사 붙여넣기 해주세요.
 - (불필요한 폴더 및 파일은 가져올 필요 없습니다.)
 - 이렇게 폴더 및 파일 구조 세팅이 완료되면 작업을 진행합니다.
-- 작업 중간 중간 commit 잘 남기고, 완료 시 origin master로 push 후 PR 까지 완료해주세요.
+- 작업 중간 중간 commit 잘 남기고, 완료 시 origin feature/본인이름로 push 후 PR 까지 완료해주세요.
 - [참고) Commit Message Guidelines](https://www.notion.so/wecode/Commit-Message-Guidelines-eb3d8ebc0d014c26848ee628934ae430)
 - PR template 양식에 맞게 잘 작성해주세요. 양식에 맞지 않는 경우 리뷰를 하지 않습니다.
 - PR label 부착 신경써주세요. PR 진행 상황에 대한 공유가 반드시 필요합니다.
