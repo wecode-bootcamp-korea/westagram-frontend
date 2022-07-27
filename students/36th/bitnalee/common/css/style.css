@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+.article{
+  margin: 32px auto 0;
+  border: 1px solid rgb(211, 206, 206);
+  box-sizing: border-box;
+  padding-bottom: 30px;
+  max-width: 350px;
+}
+
+.logo {
+  font-family: 'lobster';
+  cursor: pointer;
+  margin: 36px 0;
+  text-align: center;
+  font-size: 50px;
+}
+
+.inputBox {
+  margin-bottom: 100px;
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  margin-bottom: 2%;
+}
+
+input[type="text"], input[type="password"] {
+  padding-left: 10px;
+  border: solid 1px rgb(151, 148, 148);
+  border-radius: 3px;
+  display: flex;
+  position: relative;
+  vertical-align: baseline;
+  padding: 9px 0 7px 8px;
+}
+
+button[type="button"] {
+  cursor: pointer;
+  border: none;
+  background-color: rgba(0, 149, 246, .3);
+  border-radius: 4px;
+  color: white;
+  margin-top: 8px;
+  font-size: 14px;
+  padding: 5px 0;
+}
+
+
+input[type="text"]::placeholder {
+  color: rgb(199, 192, 192);
+}
+
+input[type="password"]::placeholder {
+  color: rgb(199, 192, 192);
+}
+
+.forget{
+  text-align: center;
+  opacity: 0.5;
+  color:rgb(0,55,107);
+  font-size: 12px;
+ 
+}
+
+/* @media(max-width: 450px){
+  .article {
+    display: none;
+  }
+} */

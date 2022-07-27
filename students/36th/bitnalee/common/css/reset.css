@@ -1,0 +1,34 @@
+@charset "utf-8";
+
+/* font */
+
+  @font-face {
+    font-family: "lobster";
+    src:url("../fonts/Lobster-Regular.ttf")
+  }
+
+
+/* 아래 리셋 css 속성들은 브라우저마다 css를 보여주는 속성이 다르기 때문에 일관되도록 설정해줌 */
+/* reset */
+html{overflow-y:auto;height:100%}
+body{margin:0;padding:0;height:100%;font-size:15px;line-height:1.4;font-family:'Noto Sans Korean', dotum, sans-serif}
+html, h1, h2, h3, h4, h5, h6, form, fieldset, img{margin:0;padding:0;border:0}
+h1, h2, h3, h4, h5, h6{font-size:15px;font-family:'Noto Sans Korean', dotum, sans-serif}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section{display:block}
+ul, dl,dt,dd{margin:0;padding:0;list-style:none}
+legend{position:absolute;margin:0;padding:0;font-size:0;line-height:0;text-indent:-9999px;overflow:hidden}
+label, input, button, select, img{vertical-align:middle;font-size:15px}
+input, button{margin:0;padding:0;font-family:'Noto Sans Korean', dotum, sans-serif;font-size:15px;font-weight:bold}
+input[type="submit"]{cursor:pointer}
+button{cursor:pointer}
+textarea, select{font-family:'Noto Sans Korean', dotum, sans-serif;font-size:15px}
+select{margin:0}
+p{margin:0;padding:0;word-break:break-all;font-weight:bold}
+hr{display:none}
+pre{overflow-x:scroll}
+a{text-decoration:none;font-weight:bold;color:#333}
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
