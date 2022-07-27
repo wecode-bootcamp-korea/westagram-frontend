@@ -1,0 +1,189 @@
+* {
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid black;
+    top:0;
+    position: sticky;
+    margin-top:0;
+}
+
+
+.second-container{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding-left: 0px;
+}
+
+.nav{
+    width: 975px;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: space-around;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 0 20px;
+    width: 100%;
+}
+
+
+
+/* box1 */
+.insta_logo_left {
+    flex-grow:1;
+    display: flex;
+    justify-content: start;
+}
+
+
+
+.insta_logo_left img {
+    width:102px;
+    height:30px;
+}
+
+.insta_logo_left i {
+    width:30px;
+    height:30px;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+/* box2 */
+.search {
+    align-items: center;
+    display: flex;
+    flex: 0 1 auto;
+    flex-direction: row;
+    justify-content: center;
+    height: 36px;
+    width: 286px;
+    flex-grow: 1;
+}
+
+
+.outline {
+    width : 268px;
+    height: 36px;
+    /* border: 1px; rgb(38, 38, 38); */
+    /* border-radius: 2px; */
+    background-color: rgb(226 226 226);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 18px;
+    /* opacity: 0.2; */
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    text-align: start;
+}
+
+
+.outline input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 25px;
+    position: relative;
+    /* justify-content: start; */
+    padding-top: 3px;
+    padding-left:10px;
+    border: none;
+    background: transparent;
+    
+}
+
+.outline input:focus {
+    outline: none;
+}
+
+
+.outline input::placeholder {
+    text-align: center;
+}
+
+
+.outline i {
+    /* position :absolute; */
+    padding-top : 4px;
+    margin-left : 16px;
+    align-items: start;
+    
+    
+    
+}
+
+
+
+/* box3 */
+.insta_logo {
+    flex-grow: 1;
+}
+
+
+.insta_logo_right{
+    align-items: stretch;
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 0;
+    position: relative;
+    /* vertical-align: baseline; */
+    white-space: wrap;
+    justify-content: center;
+    /* width: 278px;
+    height: 24px; */
+    
+    
+}
+
+.heart, .compass, .person {
+    padding-left: 24px;
+}
+
+
+.compass {
+    left: 30%;
+}
+
+
+
+.insta_logo_right img{
+    width: 24px;
+    height: 24px;
+}
+
+
+
+.second-container-right{
+    display : column;
+}
+
+
+
+
+
+.main{
+    width : 470px;
+    height: 500px;
+    display: flex;
+    flex-direction: column-reverse;
+    border: 1px solid black;
+    margin-top: 50px;
+    mar
+    
+    
+}
