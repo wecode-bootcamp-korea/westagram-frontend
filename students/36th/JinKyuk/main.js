@@ -1,18 +1,19 @@
 const commentInput = document.getElementById("comment-input");
 const commentUl = document.getElementById("comment-list");
 const uploadButton = document.getElementById("upload-button");
-/* console.log(commentInput); */
 
-// 현재 이벤트가 일어나는 input 콘솔 찍어보기
-function inputConsole(event) {
+function uploadComment(event) {
   const createLi = document.createElement("li");
+  let inputValue = commentInput.value;
   const userId = "wecode bootcamp";
-  if (event.key == "Enter" || event.target == uploadButton) {
+  const keypressOrClick = event.key == "Enter" || event.target == uploadButton;
+
+  if (keypressOrClick && inputValue.length > 0) {
     commentUl.appendChild(createLi);
-    createLi.innerText = `${userId} ${commentInput.value}`;
+    createLi.innerText = `${userId} ${inputValue}`;
     commentInput.value = "";
   }
 }
 
-commentInput.addEventListener("keypress", inputConsole);
-uploadButton.addEventListener("click", inputConsole);
+commentInput.addEventListener("keypress", uploadComment);
+uploadButton.addEventListener("click", uploadComment);
