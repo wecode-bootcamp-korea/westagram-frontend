@@ -1,0 +1,319 @@
+body{
+	background-color: #FAFAFA;
+}
+
+p{
+	font-size: 12px;
+}
+
+/* top bar */
+
+.topBar{
+	position: fixed;
+	display: flex;
+	justify-content: space-around;
+	background-color: white;
+	align-items: center;
+	width: 100%;
+	height: 60px;
+	align-items: center;
+	top: 0;
+	z-index: 2;
+}
+
+.imgAndLogo{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 150px;
+	/* cursor: pointer; */
+}
+
+.logo{
+	font-family: 'Nanum Pen Script', cursive;
+}
+
+img{
+	width: 20px;
+	height: 20px;
+}
+
+.line{
+	background-color: black;
+	height: 25px;
+	width: 2px;
+}
+
+.searchBar{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 2px solid #EFEFEF;
+	border-radius: 20px;
+	background-color: #EFEFEF;
+	width: 300px;
+	padding: 5px;
+}
+
+.searchBar input{
+	width: 250px;
+	border: none;
+	outline: none;
+	background-color: #EFEFEF;
+}
+
+.iconCollect{
+	display: flex;
+	width: 200px;
+	justify-content: center;
+}
+
+.iconCollect img{
+	margin: 0 10px;
+}
+
+/* main */
+
+.main{
+	display: flex;
+	justify-content: center;
+	position: relative;
+	background-color: #F5F5F5;
+	margin-top: 60px;
+	min-height: 1000px;
+	min-width: 1000px;
+}
+
+
+/* centerFrame */
+
+.centerFrame{
+	width: 470px;
+	margin: 15px 15px 15px;
+	align-items: center;
+	justify-content: center;
+	min-width: auto;
+}
+
+.feedHeader{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 50px;
+	padding: 0 15px;
+}
+
+.feedsBody{
+	width: 100%;
+	height: 400px;
+}
+
+.feedIconsLeft img{
+	margin : 0 5px;
+}
+
+.userNickname{
+	display: flex;
+	align-items: center;
+}
+
+.userNickname img{
+	margin-right: 10px;
+	border-radius: 50%;
+	width: 30px;
+	height: 30px;
+}
+
+.userNickname p {
+	font-size: 13px;
+}
+
+.feedIcons{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 45px;
+	padding: 0 15px;
+}
+
+.feeds{
+	margin-bottom: 20px;
+	background-color: white;
+	border-radius: 10px;
+	border : 1px solid #DBDBDB;
+}
+
+.feedContant{
+	display: flex;
+	align-items: center;
+	padding: 0 15px;
+	font-size: 12px;
+}
+
+.feedGood{
+	display: flex;
+	align-items: center;
+	padding: 5px;
+	margin: 10px;
+}
+
+.feedGood img{
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	margin-right: 10px;
+}
+
+.feedGood span{
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.createdAt{
+	color: #8b8b8b;
+	font-weight: bold;
+	font-size: 15px;
+	margin: 0 15px 10px;
+}
+
+.comment{
+	display: flex;
+	margin: 0 10px;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.commentName{
+	font-size: 12px;
+	font-weight: bold;
+	margin-right: 10px;
+}
+
+.commentHead{
+	display: flex;
+}
+
+.commentsIcon img{
+	width: 15px;
+	height: 15px;
+}
+
+.commentContent{
+	display: flex;
+	flex-direction: column;
+	padding:6px;
+}
+
+.commentUpload{
+	display: flex;
+	padding: 5px 15px;
+	border-top:1px solid #DBDBDB;
+}
+
+.commentUpload input{
+	border: none;
+	outline: none;
+	width: 100%;
+}
+
+.commentUpload button{
+	width: 50px;
+	cursor: pointer;
+	color: blue;
+	background-color: white;
+	border:none
+}
+
+.feedName{
+	font-size: 15px;
+	font-weight: bold;
+	margin-right: 8px;
+}
+
+/* rightFrame */
+
+.rightFrame{
+	min-width: 260px;
+	border-radius: 20px;
+	margin-top: 15px;
+	margin-left: 5px;
+	display: flex;
+	justify-content: left;
+	flex-direction: column;
+}
+
+.rightFrameBody{
+	margin: 10px 0;
+	background-color: white;
+	border : 1px solid #DBDBDB;
+	border-radius: 10px;
+	max-height: 200px;
+	overflow-y: scroll;
+}
+
+.rightFrameBodyHeader{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 0 15px;
+	height: 30px;
+}
+
+.loginUserInfoImg{
+	display: flex;
+	align-items: center;
+}
+
+.loginUserInfoImg img{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	margin-right: 15px;
+}
+
+.userBox{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin: 0 10px;
+	padding: 7px;
+}
+
+.userBox img{
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	margin-right: 15px;
+}
+
+.userInfo{
+	display: flex;
+	flex-direction: column;
+}
+
+.userBox span{
+	color: blue;
+	font-size: 13px;
+	cursor: pointer;
+}
+
+.user{
+	display: flex;
+	align-items: center;
+}
+
+.info{
+	font-size: 8px;
+	color: #8b8b8b;
+	margin-top: 5px;
+}
+
+.loginInfo {
+	font-size: 13px;
+	color: #8b8b8b;
+	margin-top: 5px;
+}
+
+.rightFrameFooter{
+	color: #8b8b8b
+}

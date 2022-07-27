@@ -1,0 +1,64 @@
+.container{
+  position: absolute;
+  border : 1px solid #DBDBDB;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 500px;
+  width: 500px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.logo{
+	font-family: 'Nanum Pen Script', cursive;
+	max-height: 100%;
+	max-width: 100%;
+	font-size: 100px;
+}
+
+.inputBox{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+/* .inputBox input{
+	border : 1px solid #DBDBDB;
+	padding: 5px;
+} */
+
+.loginBtn{
+	border : 1px solid #DBDBDB;
+	color :white;
+	background-color: rgba(0,149,246,.3);
+	width: 300px;
+	height: 35px;
+	margin-top: 20px;
+	cursor: pointer;
+}
+
+.loginBtnActive{
+	background-color: #0095f6;
+	cursor: pointer;
+}
+
+.loginBtnActive:active{
+	background-color: rgba(0,149,246,.3);;
+}
+
+input{
+	width: 300px;
+	height: 35px;
+}
+
+.password{
+	margin-top: 5px;
+}
+
+p{
+	font-size: 15px;
+	color: darkblue;
+}
