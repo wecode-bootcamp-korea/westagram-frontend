@@ -9,7 +9,7 @@
   </head>
   <body>
     <div class="loginSignIn-container">
-      <div class="login-container">
+      <section class="login-container">
         <header class="logo">westagram</header>
         <div class="loginInput-container">
           <input
@@ -19,7 +19,12 @@
           />
           <input type="password" id="pwInput" placeholder="비밀번호" />
         </div>
-        <button class="loginSubmit" disabled="true" onclick="goToMain()">
+        <button
+          type="submit"
+          class="loginSubmit"
+          disabled="true"
+          onclick="goToMain()"
+        >
           로그인
         </button>
         <div class="questionPartition">
@@ -28,7 +33,7 @@
           <div class="grayLine"></div>
         </div>
         <div class="question">비밀번호를 잊으셨나요?</div>
-      </div>
+      </section>
       <div class="signIn-container">
         <div class="signInText">계정이 없으신가요?</div>
         <div class="signIn">가입하기</div>
