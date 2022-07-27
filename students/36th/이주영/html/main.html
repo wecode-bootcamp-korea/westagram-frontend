@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../style/common.css">
+  <link rel="stylesheet" href="../style/main.css">
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <div class="first__box flex">
+      <i class="uil uil-instagram icon"></i>
+      <h1>Westagram</h1>
+      </div>
+      
+      <div class="second__box flex">
+          <input type="text" placeholder="검색"/>
+          <i class="uil uil-search input_search"></i>
+      </div>
+      
+        <!-- 검색을 어떤식으로 넣으면 좋을지?  -->
+       <!-- 1. placeholder (?) 2. 태그 (?) 3. span으로 4. ::placeholder 5.  -->
+      
+      <div class="third__box flex">
+        <i class="uil uil-heart-alt icon"></i>
+        <i class="uil uil-compass icon"></i>
+        <i class="uil uil-user icon"></i>
+      </div>
+    </nav>
+
+    <main>
+      <div class="feeds">피드
+        <article>아티클</article>
+      </div>
+      <div class="main-right">
+        <div class="profile">
+          <div class="test">
+            <img class="img__round" src="../프3.jpeg" alt="nope">
+            <!-- <div class="profile__text">
+              <div class="pt__up">dev_codyman0</div>
+              <div class="pt__down">에러 해결자</div>
+            </div>
+            <div class="transition">전환</div> -->
+          </div>
+        </div>
+        <div class="story">
+        1
+        </div>
+        <div class="recommendation">
+        1
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/login.js"></script>
+</body>
+</html>
+
+
+ <!-- 문제1) 그리드 2:1 비율이 오른쪽에 요소를 추가할때마다 침범된다.. -->
+            <!-- 해결 -> flex의 justify-content -->
+            <!-- 해결 안됨... 동일하게 펴져도 왼쪽 자리를 침범한다. -->
+            다 지우고 숫자를 치는데 오른쪽의 1fr 부분이 사용이 불가하다.

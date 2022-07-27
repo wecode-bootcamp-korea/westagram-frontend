@@ -1,0 +1,135 @@
+
+
+.flex {
+  display: flex;
+}
+/* flex를 많이 해주는 것 같아서 따로 위로 뺴놓음 */
+
+
+body { 
+  /* 조금더 포괄적인 것 추가하기 */
+  border: 1px black solid;
+  width: 95vw;
+  height: 100vh;
+  margin: 10px auto;
+}
+
+.icon {
+  font-size: 2rem;
+}
+/* 아이콘 사이즈 통일 class 명인 icon을 i의 클래스로 추가해주면서 사이즈 동일하게 한다. */
+
+.container { 
+  width: 65%;
+  height: 100%;
+  margin: 0 auto;
+  border: 1px black solid;
+}
+
+nav { 
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+/* 일일이 패딩과 마진을 주면 responsive이 안될 것 같아서 박스를 만들어줘서 상위 요소에 display:flex를 해줘서 자식 요소에서 space around 사용 */
+/* 그래서 html에 nav 안에 3개의 div가 있는 이유 */
+.first__box {
+  width: 25%;
+  justify-content: space-evenly;
+}
+
+.first__box > h1 { 
+  border-left: 1px lightgray solid;
+  padding-left: 15px;
+}
+
+.second__box {
+position: relative;
+}
+
+.input_search {
+  position: absolute;
+  left: 50px;
+}
+
+
+.second__box > input {
+  text-align: center;
+  border-radius: 1px;
+}
+/* placeholder도 텍스트로 취급이 뒤는구나.. 갓잇 아니였다!! */
+
+.third__box{
+  width: 15%;
+  justify-content: space-between;
+
+}
+h1 { 
+  font-family: 'Lobster', cursive;
+}
+
+
+/* main */
+main{
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-areas:
+  "left left right"
+  "left left right";
+}
+/* 이렇게 계속 100퍼센트로 부모 요소의 크기를 봐가면서 하는게 효율적인건지..? */
+
+.feeds{
+  grid-area: left;
+  height: 100%;
+  border: 1px black solid;
+}
+
+article {
+  height: 75%;
+  border: 1px black solid;
+  margin: 50px 10px 0px 10px
+}
+
+.main-right{
+  grid-area: right;
+  border: 1px black solid;
+}
+
+.profile{
+  border: 1px black solid;
+  display: flex;
+
+  height: 70px;
+  border: 1px black solid;
+}
+
+img {
+  margin-left: 10px;
+}
+
+/* .profile__text{
+  width:
+} */
+
+/* .transition {
+  display: flex;
+
+} */
+
+/* 알게된 것 여기서 국한된 것일 수도 해상도가 차이난다 tag로 넣는거라 css로 넣는거랑ㅇ */
+
+/* 2fr : 1fr 그리드 사용시 width를 주는데... 오른쪽으로 커지는게 아니라 왼쪽으로 커진다.  */
+/* 실수.. 구역을 재 지정해주면 왼쪽으로 커져서 침범해서 그냥 flex의 justify-content로 벌려주었따. */
+/* -> template-areas를 정확히 찾아봐야겠다. */
+
+.story {
+  border: 1px black solid;
+}
+
+.recommendation {
+  border: 1px black solid;
+}
