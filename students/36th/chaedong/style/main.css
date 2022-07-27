@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Source+Sans+Pro:wght@300;400&display=swap');
+@import 'common.css';
+
+body {
+  background-color: #fafafa;
+}
+
+.navLogo {
+  font-family: 'Lobster', cursive;
+  font-size: 2rem;
+}
+
+.navLogo img {
+  width: 1.5rem;
+}
+
+.container {
+  margin: 5px 0px;
+}
+
+nav {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  height: 4rem;
+  background-color: white;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.1rem 2rem;
+}
+
+nav input {
+  width: 18rem;
+  height: 2rem;
+  background-color: #fafafa;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.navInput {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+}
+
+.navInput span {
+  color: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  display: flex;
+  align-items: center;
+
+  justify-content: center;
+}
+
+.navIcons {
+  display: flex;
+  justify-content: space-around;
+  width: 10rem;
+}
+
+.navIcons img {
+  width: 1.5rem;
+}
+
+main {
+  padding-top: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+section {
+  width: 500px;
+  min-height: 700px;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-right: 20px;
+  border-radius: 1%;
+}
+
+article {
+  width: 500px;
+  min-height: 550px;
+  font-size: 0.75rem;
+}
+
+.articleNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 3rem;
+  padding: 0 1rem;
+}
+
+.articleNavUserInfo {
+  display: flex;
+  align-items: center;
+}
+
+.articleNavUserInfo img {
+  object-fit: contain;
+  width: 2rem;
+  height: 2rem;
+  border: 1px solid white;
+  border-radius: 100%;
+  margin-right: 0.5rem;
+}
+
+.articleImg {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+article img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.articleImojis {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  opacity: 0.5;
+}
+
+.colorRed {
+  color: red;
+}
+
+.articleImojis div {
+  height: 2rem;
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.articleImojis div i {
+  margin-left: 0.3rem;
+}
+
+.articleImojis div:last-child {
+  width: 5%;
+  margin-right: 1rem;
+}
+
+.articleLiked {
+  height: 1rem;
+  padding: 0 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.articleComments {
+  padding: 0 0.5rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.articleComment {
+  margin-bottom: 0.2rem;
+}
+
+.articleCommentTime {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.userId {
+  font-weight: bold;
+}
+.articleInputComment {
+  margin: auto auto;
+  height: 2rem;
+  display: flex;
+  padding: 0 0.5rem;
+}
+
+.articleInputComment input {
+  border: 0;
+  margin: auto 0;
+  width: 100%;
+  padding: 0;
+}
+
+.articleInputComment button {
+  border: 0;
+  color: #c4e1fb;
+  background: none;
+  width: 3rem;
+}
+
+/* * Main-right */
+.main-right {
+  width: 250px;
+  height: 600px;
+}
+
+.main-right__nav,
+.main-right__story,
+.main-right__recommend {
+  width: 100%;
+  height: 100px;
+  font-size: 0.75rem;
+}
+
+.main-right__nav {
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.userDescription {
+  opacity: 0.5;
+}
+
+.main-rigth__userInfo {
+  width: 80%;
+}
+
+.main-right__nav img {
+  object-fit: contain;
+  width: 2.2rem;
+  height: 2.2rem;
+  border: 1px solid white;
+  border-radius: 100%;
+  margin-right: 0.5rem;
+}
+
+/* .main-right__recommend {
+  height: 200px;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+} */
+
+.main-right__box {
+  height: 170px;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0 0.75rem;
+  font-size: 0.75rem;
+}
+
+.storyBox {
+  height: 200px;
+}
+
+.storyiesBox {
+  overflow: scroll;
+}
+
+.storyNav {
+  width: 100%;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+}
+
+.storyNavLeft p {
+  opacity: 0.6;
+}
+
+.storyNavRight p {
+  font-weight: bold;
+}
+.storyiesBox {
+}
+
+.followButton {
+  color: #51a4f1;
+  font-weight: bold;
+  width: 3rem;
+}
