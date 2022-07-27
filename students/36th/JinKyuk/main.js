@@ -4,6 +4,7 @@ const uploadButton = document.getElementById("upload-button");
 
 function uploadComment(event) {
   const createLi = document.createElement("li");
+  createLi.id = "comment-li";
   let inputValue = commentInput.value;
   const userId = "wecode bootcamp";
   const keypressOrClick = event.key == "Enter" || event.target == uploadButton;
