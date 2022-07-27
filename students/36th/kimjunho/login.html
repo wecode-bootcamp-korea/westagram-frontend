@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" type="image/x-icon" href="img/Instar.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <title>Instagram</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/login.css">
+<body>
+    <section class="section">
+        <article class="loginImgCenter">
+            <div class="loginFont">WeStagram</div>
+        </article>
+        <article class="loginBox">
+            <form id="facebookForm" method="get">
+                <div class="idInput">
+                    <input class="idInputStyle" type="text" placeholder="전화번호,사용자 이름 또는 이메일">
+                </div>
+                <div class="pwdInput">
+                    <input class="pwdInputStyle"type="text" placeholder="비밀번호">
+                </div>
+                <div class="loginBtn">
+                    <button class="login">로그인</button>
+                </div>
+                <div class="midLine">
+                    <div class="borderLine"></div>
+                    <div class="or">또는</div>
+                    <div class="borderLine"></div>
+                </div>
+                <div class="facebookLogin">
+                    <img class="facebook" src="./img/Facebook.jpg" alt="facebook">
+                    <span class="btnSpan">Facebook으로 로그인</span>
+                </div>
+                <a class="pwdFind" href="https://www.instagram.com/accounts/password/reset/" tabindex="0">비밀번호를 잊으셨나요?</a>
+            </form>
+        </article>
+    </section>
+    <script src="js/login.js"></script>
+</body>
+</html>

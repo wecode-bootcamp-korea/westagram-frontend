@@ -1,0 +1,303 @@
+body {
+    background-color: #FAFAFA;
+    box-sizing: border-box;   
+    line-height: 18px;
+    font-size: 14px;
+}
+.basic {
+    background-color: #FFFFFF;
+}
+.topLine {
+    border-bottom: 1px solid #DBDBDBDB;  
+    width: 100%;
+    height: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+}
+.westarFont{  
+    font-size: 45px;
+    text-align: center;    
+    font-family: 'Lobster', cursive;
+    margin-top: 5px;
+    font-size: 24px;
+}
+.icon {
+    display: grid;
+    grid-template-columns: 50px 50px 50px 50px 50px 50px;
+}
+.icon :nth-child(1) {
+    height: 28px;
+    width: 28px;
+    background-image: url("../img/home.png");
+    background-size: cover;
+}
+.icon :nth-child(2) {
+    height: 30px;
+    width: 30px;
+    background-image: url("../img/airplane.png");
+    background-size: cover;
+}
+.icon :nth-child(3) {
+    height: 28px;
+    width: 28px;
+    background-image: url("../img/plus.png");
+    background-size: cover;
+}
+.icon :nth-child(4) {
+    height: 28px;
+    width: 28px;
+    background-image: url("https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png");
+    background-size: cover;
+}
+.icon :nth-child(5) {
+    height: 28px;
+    width: 30px;
+    background-image: url("https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png");
+    background-size: cover;
+}
+.icon :nth-child(6) {
+    height: 28px;
+    width: 28px;
+    background-image: url("https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png");
+    background-size: cover;
+}
+.location{
+    margin-left: 100px;
+}
+.pos{
+    position: relative;
+}
+.search {
+    box-sizing: border-box;
+    padding-left: 25px;
+    height: 30px;
+    width: 260px;
+    border-radius: 3px;
+    border: 0;
+    background-color: #EFEFEF;
+}
+.searchIcon {
+    position: absolute;
+    top: 8px;
+    left: 5px;
+    height: 15px;
+}
+.top {
+    border: 1px solid #DBDBDBDB;
+    margin: 20px auto;
+    height: 60px;
+    width: 400px;
+    border-radius: 8px;    
+}
+.topPropil :nth-child(n) {
+    height: 50px;
+    margin: auto 3px;
+    border: 4px solid transparent;
+    border-radius: 25px;
+    background-image:linear-gradient(#fff, #fff),
+    linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+
+.feedBox {
+    position: relative;
+    margin: 20px auto;
+    height: 585px;
+    width: 400px;
+    border: 1px solid #DBDBDBDB;
+    border-radius: 8px;
+}
+.feedImg {
+    height: 430px;
+    width: 400px;
+}
+.feedtop {
+    width: 400px;
+    height: 55px;
+    border-bottom: 1px solid #DBDBDBDB;
+}
+.feedtop :nth-child(1) {
+    height: 40px;
+    margin: 8px;
+}
+.feedtop span {
+    position: absolute;
+    top: 16px;
+    left: 62px;
+    width: 150px;
+    height: 25px;
+}
+.feedUnder :nth-child(1){
+    position: absolute;
+    height: 24px;
+    top: 495px;
+    left: 8px;
+}
+.img2{
+    position: absolute;
+    height: 24px;
+    top: 495px;
+    left: 40px;
+}
+.feedUnder :nth-child(3){
+    position: absolute;
+    height: 30px;
+    top: 492px;
+    left: 72px;
+}
+.feedUnder span {
+    position: absolute;
+    top: 498px;
+    left: 313px;
+    font-weight: 600;
+}
+.chatting .input {
+    position: absolute;
+    left: 50%;
+    top:557px;
+    margin-left: -200px;
+    width: 367px;
+    height: 23px;
+    border: 0;
+    border-top: 1px solid #DBDBDBDB;
+    padding-left: 30px;
+}
+input:focus{outline: none;}
+.inputImg{
+    position: absolute;
+    height: 20px;
+    top: 560px;
+    left: 5px;
+}
+.submit{
+    position: absolute;
+    height: 20px;
+    top: 561px;
+    left: 358px;
+    border: 0;
+    color: skyblue;
+    background-color: #FFFFFF;
+}
+.chatting .event {
+    position: absolute;
+    top: 526px;
+    left: 15px;
+    height: 17px;
+    width: 360px;
+    border: 1px solid #DBDBDBDB;
+    resize: none;
+}
+textarea:focus {outline: none;}
+.layout {
+    display: grid;
+    grid-template-columns: 1.2fr 3fr 2fr 0.8fr;
+}
+aside{
+    position: relative;
+}
+.member{
+    position: absolute;
+    top: 40px;
+    height: 50px;
+    width: 50px;
+    border: 4px solid transparent;
+    border-radius: 25px;
+    background-image:linear-gradient(#fff, #fff),
+    linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+}
+.young{
+    position: absolute;
+    top: 43px;
+    left: 80px;
+    font-weight: 1000;
+}
+.name{
+    position: absolute;
+    top: 67px;
+    left: 80px;
+}
+.suggestion {
+    position: absolute;
+    top: 97px;
+    color: gray;
+}
+.allShow {
+    position: absolute;
+    top: 97px;
+    left: 200px;
+    font-weight: 700;
+}
+.suggestionLs {
+    position: absolute;
+    top: 130px;
+    margin: 5px;
+}
+.suggestionLs_1 {
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    margin: 5px;
+    background-image: url(../img/suggestion1.jpg);
+    background-size: cover;
+    font-weight: 700;
+}
+.suggestionLs_2 {
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    margin: 5px;
+    background-image: url(../img/suggestion2.jpg);
+    background-size: cover;
+    font-weight: 700;
+}
+.suggestionLs_3 {
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    margin: 5px;
+    background-image: url(../img/suggestion3.jpg);
+    background-size: cover;
+    font-weight: 700;
+}
+.suggestionLs_4 {
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    margin: 5px;
+    background-image: url(../img/suggestion4.jpg);
+    background-size: cover;
+    font-weight: 700;
+}
+.suggestionLs_5 {
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+    margin: 5px;
+    background-image: url(../img/suggestion5.jpg);
+    background-size: cover;
+    font-weight: 700;
+}
+.suggestionLs_1 > span, .suggestionLs_2 > span, 
+.suggestionLs_3 > span, .suggestionLs_4 > span, 
+.suggestionLs_5 > span{
+    margin-left: 45px;
+}
+.event:hover {
+    width: 400px;
+    height: auto;
+}
+
+.hidden {
+    position: fixed;
+    bottom: 0;
+    left: 22%;
+}
+.hidden a {
+    color: gray;
+    text-decoration: none;
+    margin-left: 5px;
+}

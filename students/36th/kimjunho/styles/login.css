@@ -1,0 +1,136 @@
+body {
+    background-color: #FAFAFA;
+    box-sizing: border-box;   
+    line-height: 18px;
+    font-size: 14px;
+}
+.section {
+    width: 350px;
+    height: 396px;
+    background-color: #FFFFFF;
+    margin: 10% auto;
+    position: relative;
+    border: 1px solid #DBDBDBDB;  
+}
+.loginBox {
+    position: absolute;
+    top: 34%;
+    width: 350px;
+    height: 374px;
+}
+.loginImgCenter {
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}
+.loginFont{  
+    font-size: 45px;
+    text-align: center;    
+    font-family: 'Lobster', cursive;
+    margin-top: 10px;
+}
+
+.loginBox {
+    display: flex;
+    flex-direction: column;
+    
+}
+.idInput, .pwdInput, .loginBtn, .midLine, .facebookLogin {
+    position: relative;
+    width: 350px;
+    height: 35px;
+}
+input {
+    margin: 0;
+    padding: 0;
+    width: 258px;
+    height: 36px;
+}
+.idInputStyle {
+    position: absolute;
+    left: 50%;
+    margin-left: -128px;
+    width: 256px;
+    height: 28px;
+    font-size: 12px;
+    background-color: #f9f7f7;
+    border: 0.1px solid #beb9b9;
+    border-radius: 3px;
+    box-sizing : border-box;
+    padding-left: 8px;
+}
+.pwdInputStyle {
+    position: absolute;
+    left: 50%;
+    margin-left: -128px;
+    width: 256px;
+    height: 28px;
+    font-size: 12px;
+    background-color: #f9f7f7;
+    border: 0.1px solid #beb9b9;
+    border-radius: 3px;
+    box-sizing : border-box;
+    padding-left: 8px;    
+}
+.login {
+    width: 256px;
+    height: 25px;
+    position: absolute;
+    left: 50%;
+    margin-left: -128px;
+    background-color: rgba(var(--d69,0,149,246),.3);
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #fff;
+    color: rgba(var(--eca,255,255,255),1);
+    position: relative;
+    margin-top: 5px;
+}
+.midLine {
+    margin: 0 auto;
+    width: 285px;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+.or {
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 15px;
+    color: rgba(var(--f52,142,142,142),1);
+    
+}
+.borderLine {
+    width: 104px;    
+    background-color: rgba(var(--b38,219,219,219),1);
+    height: 1px;
+    position: relative;
+    top: 0.45em;
+}
+.facebookLogin{
+    margin-top: 5px;
+}
+.facebookbtn{
+    position: absolute;
+    left: 20%;
+    width: 200px;
+    height: 30px;
+}
+.facebook {
+    height: 16px;
+    position: absolute;
+    left: 28%;
+}
+.btnSpan{
+    position: absolute;
+    left: 34%;
+}
+.pwdFind{
+    display: block;
+    color: rgba(var(--fe0,0,55,107),1);
+    font-size: 12px;
+    line-height: 16px;
+    margin-top: 12px;
+    text-align: center;
+    text-decoration: none;
+}
