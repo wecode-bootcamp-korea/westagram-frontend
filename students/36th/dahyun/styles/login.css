@@ -1,0 +1,76 @@
+@import url('./normallize.css');
+@import url('./reset.css');
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 400px;
+  border-radius: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  padding: 40px;
+}
+
+.logo {
+  font-family: 'Lobster', cursive;
+  text-align: center;
+  font-size: 44px;
+}
+
+.login {
+  padding: 20px 10px;
+}
+
+.loginCtl {
+  margin-bottom: 10px;
+}
+
+.loginCtl input {
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.login button {
+  font-size: 16px;
+  color: #fff;
+  width: 100%;
+  display: block;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #0095f6;
+  border: 1px solid #0095f6;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.midLine {
+  display: flex;
+  margin: 10px 0;
+}
+
+.line {
+  flex: 1;
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.or {
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.3);
+  margin: 0 18px;
+  line-height: 1px;
+}
+
+.pwdFind {
+  display: block;
+  text-align: center;
+  color: #00376b;
+  margin-top: 40px;
+}
