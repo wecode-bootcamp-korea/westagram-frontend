@@ -5,12 +5,11 @@
   width: 100%;
   height: 50px;
   overflow: hidden;
-
 }
 
-
 .nav .inner{
-max-width: 700px;
+max-width: 800px;
+min-width: 650px;
 margin: 0 auto;
 display: flex;
 flex-flow: row nowrap;
@@ -42,7 +41,6 @@ width: 100%;
   width: 1px;
   height: 24px;
   background-color: #000;
-
 }
 
 .nav .search{
@@ -69,22 +67,202 @@ width: 100%;
   margin-left: 12px;
   margin: 0;
   margin-left: 10px;
- 
-}
-
-
-
-.nav .utility .utilityBox {
-  padding-left: 24px;
 }
 
 .nav .utility .utilityBox .utilityicon{
-
-margin-right: 8px;
+  margin-right: 8px;
 }
 
 .nav .utility .utilityBox .utilityicon  img{
   width: 30px;
 }
+
+.main {
+  padding: 20px;
+  background: rgb(250, 250, 250);
+}
+.main .wrap{
+  margin: 0 auto;
+  width: 800px;
+}
+.main .wrap::after{
+  content: '';
+  display: block;
+  clear: both;
+}
+.main .wrap .feeds{
+  float: left;
+  width: 500px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* profileBox */
+.main .profileBox {
+  float: left;
+  padding: 10px 10px;
+}
+.main .profileBox > img{
+  float: left;
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+}
+.main .profileBox .info{
+  float: left;
+  padding-left: 10px;
+}
+
+.main .profileBox .info .title{
+  font-weight: bold;
+}
+
+.main .profileBox .info .text{
+  font-weight: normal;
+}
+
+.main .wrap .contentTop {
+  overflow: hidden;
+  position: relative;
+  border-bottom: 1px solid #ccc;
+}
+
+.main .wrap .contentTop .rightButton{
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  text-align: center;
+  background: none;
+  border: none;
+  width: 50px;
+  height: 30px;
+}
+
+.main .wrap .contentTop .rightButton > span{
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: #ccc;
+}
+
+.main .wrap .feeds .article{
+  background: #fff;
+}
+
+.main .wrap .feeds .article > img{
+  width: 100%;
+}
+
+.main .contentBottom {
+  margin-top: 10px;
+
+}
+
+.main .contentBottom .contentIcon {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between
+}
+
+.main .contentBottom .contentIcon .iconBox {
+  width: 120px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly
+}
+
+.main .contentBottom .contentIcon button {
+  width: 30px;
+  border: none;
+  background: none;
+}
+.main .contentBottom .contentIcon button img {
+  width: 100%;
+}
+
+.main .contentBottom .userBox {
+  margin-top: 20px;
+  padding: 0 10px;
+}
+.main .contentBottom .userBox img{
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+}
+.main .contentBottom .userBox .text {
+  padding-left: 10px;
+}
+
+.main .contentBottom .contentIcon .link {
+  margin-right: 8px;
+  padding: 3px;
+}
+
+.main .commentBox {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-top: 1px solid #ccc;
+}
+
+.main .commentBox .commentInput {
+  width: 100%;
+  padding: 0 10px;
+  border: none;
+  outline: none;
+  height: 50px;
+  
+}
+
+.main .commentBox .commnetButton {
+  border: none;
+  width: 50px;
+  height: 50px;
+  background: none;
+  color: royalblue;
+}
+
+.main .wrap .main-right{
+  float: right;
+  width: 270px;
+  height: 600px;
+}
+
+.main .wrap .main-right .myProfile {
+  overflow: hidden;
+}
+
+.main .wrap .main-right .storyCommand,
+.main .wrap .main-right .followCommand {
+  overflow: hidden;
+  padding: 10px 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+  background: #fff;
+  border-radius: 5px;
+}
+
+.main .wrap .main-right .moreTitle{
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between
+}
+
+.main .wrap .main-right .moreTitle .text{
+  font-weight: bold;
+}
+
+.main .wrap .main-right .moreTitle button{
+  color: #999;
+  background: none;
+  border: none;
+}
+
 
 
