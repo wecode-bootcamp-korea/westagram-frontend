@@ -1,0 +1,315 @@
+*{
+    margin: 0;
+}
+/* 네비 */
+nav{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    border: 1px solid #EEEEEE;
+    background-color: white;
+    
+}
+/* 메인로고 */
+#mainLogo{
+    display: flex;
+    align-items: center;
+}
+
+h1{
+    font-family: 'Lobster', cursive;
+    font-size: 25px;
+}
+
+.fa-instagram{
+    font-size: 30px;
+    width: 30px;
+    height: 30px;
+}
+
+.logoLine{
+    height: 40px;
+    border-left: 2px solid black;
+    margin: 0 20px;
+}
+
+
+/* 검색창 */
+.search{
+    /* text-align: center; */
+    width: 228px;
+    height: 36px;
+    border-radius: 8px;
+    background-color: #EFEFEF;
+    border: none;
+    outline: none;
+    padding: 0 20px;
+}
+/* 메뉴 */
+#mainMenu{
+    display: flex;
+}
+
+.menuImg{
+    width: 30px;
+    margin: 0 10px;
+}
+
+
+
+/* 메인 */
+main{
+    height: 100vh;
+    background-color: #FAFAFA;
+    display: flex;
+    justify-content: center;
+    padding-top: 150px;
+}
+
+/* 피드 */
+.feeds{
+    width: 470px;
+    height: auto;
+    /* background-color:aquamarine; */
+    margin-right: 80px;
+
+}
+/* 피드-본문*/
+article{
+    width: 470px;
+    height: auto;
+    background-color: white;
+    border-radius: 8px;
+    border: 1px solid #EEEEEE;
+}
+/* 피드-본문- 프로필바 */
+.proBar{
+    width: auto;
+    height: 56px;
+    border-bottom: 1px solid #EEEEEE;
+    display: flex;
+    justify-content:space-between;
+}
+
+.proInfo{
+    display: flex;
+    align-items: center;
+    margin: auto 10px;
+}
+.proImg{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right:20px ;
+}
+.proName{
+    font-weight: bold;
+}
+.fa-ellipsis{
+    margin: auto 10px;
+}
+/* 피드-본문- 사진 */
+.feedImg{
+    width: 470px;
+    height: 470px;
+}
+/* 피드-본문- 설명 */
+.mainInfo{
+    display: flex;
+    flex-direction: column;
+    width: 436px;
+    margin: 0 auto;
+}
+/* 피드-본문-설명-좋아요 */
+.like{
+    display: flex;
+    justify-content: space-between;
+    height: 46px;
+    /* background-color: antiquewhite; */
+    align-items: center;
+}
+.likeMenu3{
+    margin: 0 5px;
+    font-size: 25px;
+}
+.redHeart{
+    color: red;
+}
+.fa-bookmark{
+    font-size: 25px;
+}
+/* 피드-본문-설명-좋아요수 */
+.likeNum{
+    display: flex;
+    align-items: center;
+    height: 25px;
+}
+.likeImg{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-right:10px;
+}
+.likeNumText{
+    font-size: 14px;
+}
+/* 피드-본문-설명-글 */
+.feedText{
+    display: flex;
+    align-items: center;
+    height: 25px;
+}
+.userId{
+    font-weight: bold;
+    margin-right: 5px;
+    font-size: 15px;
+}
+.userText{
+    font-size: 14px;
+}
+/* 피드-본문-설명-시간 */
+.feedTime{
+    height: 20px;
+    font-size: 12px;
+    color: rgb(63, 63, 63);
+}
+.feedTime p{
+    margin-top:3px;
+    margin-left: 5px;
+}
+
+/* 피드-본문-설명-댓글입력 */
+.addComment{
+    display: flex;
+    justify-self:end;
+    height: 45px;
+    border-top:1px  solid #EEEEEE ;
+    
+}
+.commentInput{
+    width: 90%;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    margin:0 10px ;
+}
+.commentBtn{
+    width: 10%;
+    border: none;
+    background-color: white;
+    border-radius: 8px;
+    color:#0095F6 ;
+    
+}
+/* 피드-본문-설명-댓글추가 */
+.comments{
+    height: auto;
+}
+.commentText{
+    height: auto;
+    padding: 0;
+}
+.comments li{
+    
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+.commentUserId{
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 15px;
+}
+.commentUserText{
+    font-size: 14px;
+}
+
+
+/* 피드-우측 */
+.mainRight{
+    width: 250px;
+    height: auto;
+    /* background-color:blanchedalmond; */
+}
+/* 피드-우측-내정보 */
+.myProfile{
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+.myImg{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.myId{
+    font-size: 14px;
+    font-weight: bold;
+}
+.myName{
+    font-size: 14.5px;
+    color: gray;
+}
+/* 피드-우측-박스상단 */
+.side{
+    height: auto;
+    background-color:white;
+    border-radius: 3px;
+    border: 1px solid #EEEEEE;
+    margin: 15px 0;
+}
+.sideBox{
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.sideBoxName{
+    color: gray;
+    font-size: 13px;
+    margin: auto 10px;
+}
+.sideBoxMore{
+    font-size: 14px;
+    font-weight: 500;
+    margin: auto 10px;
+}
+/* 피드-우측-박스 */
+.userList{
+    margin:0 10px;
+}
+.user{
+    display: flex;
+    align-items: center;
+    margin: 8px 0;
+}
+.userImg{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.userId{
+    font-size: 12px;
+    font-weight: 900;
+}
+.userInfo{
+    font-size: 12px;
+    color: gray;
+}
+/* 피드-우측-스토리 */
+
+
+/* 피드-우측-추천 */
+
+
+/* 피드-우측-하단정보 */
+footer{
+    font-size: 13px;
+    color: rgb(178, 178, 178);
+}
+
