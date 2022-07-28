@@ -3,21 +3,21 @@
 }
 
 .container{
-    display: flex;
     width: 100%;
     height: 60px;
-    border-bottom: 1px solid black;
-    top:0;
+    display: flex;
     position: sticky;
+    top:0;
     margin-top:0;
+    border-bottom: 1px solid black;
     background-color: white;
 }
 
 
 .second-container{
+    width: 100%;
     display: flex;
     flex-direction: row;
-    width: 100%;
     justify-content: center;
     padding-left: 0px;
 }
@@ -30,21 +30,19 @@
     height: 60px;
     display: flex;
     flex-direction: row;
-    flex-grow: 1;
     justify-content: space-around;
-    /* justify-content: center; */
     align-items: center;
+    flex-grow: 1;
     padding: 0 20px;
-    width: 100%;
 }
 
 
 
 /* box1 */
 .insta_logo_left {
-    flex-grow:1;
     display: flex;
     justify-content: start;
+    flex-grow:1;
 }
 
 
@@ -65,13 +63,12 @@
 
 /* box2 */
 .search {
-    align-items: center;
+    width: 286px;
+    height: 36px;
     display: flex;
-    flex: 0 1 auto;
     flex-direction: row;
     justify-content: center;
-    height: 36px;
-    width: 286px;
+    align-items: center;
     flex-grow: 1;
 }
 
@@ -79,32 +76,27 @@
 .outline {
     width : 268px;
     height: 36px;
-    /* border: 1px; rgb(38, 38, 38); */
-    /* border-radius: 2px; */
+    display: flex;
+    align-items: center;
+    text-align: start;
     background-color: rgb(226 226 226);
-    border-top-left-radius: 8px;
     border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
     border-bottom-right-radius: 8px;
     border-bottom-left-radius: 8px;
     box-sizing: border-box;
     font-size: 14px;
     line-height: 18px;
-    /* opacity: 0.2; */
-    display: flex;
-    align-items: center;
-    /* justify-content: center; */
-    text-align: start;
 }
 
 
 .outline input{
+    width: 200px;
+    height: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 200px;
-    height: 25px;
     position: relative;
-    /* justify-content: start; */
     padding-top: 3px;
     padding-left:10px;
     border: none;
@@ -123,11 +115,9 @@
 
 
 .outline i {
-    /* position :absolute; */
+    align-items : start;
     padding-top : 4px;
     margin-left : 16px;
-    align-items: start;
-    
 }
 
 
@@ -139,28 +129,21 @@
 
 
 .insta_logo_right{
-    align-items: stretch;
     display: flex;
     flex-direction: row;
-    flex-shrink: 0;
     position: relative;
-    /* vertical-align: baseline; */
-    white-space: wrap;
     justify-content: center;
-    /* width: 278px;
-    height: 24px; */
-    
-    
 }
+
 
 .heart, .compass, .person {
     padding-left: 24px;
 }
 
-
+/* 
 .compass {
     left: 30%;
-}
+} */
 
 
 
@@ -184,7 +167,6 @@
 
 .main-right {
     width: 320px;
-    /* background-color: beige; */
     margin-top: 50px;
     margin-left : 20px;
 }
@@ -581,7 +563,6 @@
     display: flex;
     flex-direction: column;
     margin-top: 0;
-    /* background:burlywood; */
 }
 
 
@@ -589,7 +570,6 @@
     height: 30px;
     display: flex;
     margin : 13px 13px 13px 13px;
-    /* flex-direction: row; */
     justify-content : space-between;
 }
 
@@ -695,7 +675,6 @@
     flex-direction: row;
     text-align: center;
     padding-left: 20px;
-    /* padding-bottom: 10px; */
     justify-content : space-between;
 }
 
@@ -750,7 +729,6 @@
     flex-direction: row;
     text-align: center;
     padding-left: 20px;
-    /* padding-bottom: 10px; */
     justify-content : space-between;
 }
 

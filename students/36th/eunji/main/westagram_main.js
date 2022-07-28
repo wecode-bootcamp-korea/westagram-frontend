@@ -19,10 +19,10 @@ function addComment(event) {
     const span = document.createElement("span");
 
 
-    commentUserId.innerText = "eunji12"; 
+    commentUserId.innerHTML = "<strong>eunji12</strong> ";
     commentUserId.classList.add('commentUser');
 
-    span.innerText = input.value;
+    span.innerHTML = input.value;
 
     commentList.appendChild(li);
     li.appendChild(commentUserId); 
@@ -35,7 +35,7 @@ function addComment(event) {
 
 function sendBtn() {
     const bong = input.value;
-    
+
     if (bong) {
         btn.classList.remove('commentBtn');
         bong = "";
@@ -49,3 +49,5 @@ function sendBtn() {
 input.addEventListener("keyup", sendBtn); 
 btn.addEventListener("click", addComment);
 btn.addEventListener("click", sendBtn);	 
+
+
