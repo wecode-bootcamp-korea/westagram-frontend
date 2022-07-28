@@ -1,0 +1,417 @@
+/*header*/
+
+.nav_bar_container {
+    width: 100%;
+    height: 60px;
+    margin: 0;
+    background-color: white;
+    border: 1px solid lightgrey;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.nav_left_side_logo_wrapper {
+    display: flex;
+    align-items: center;
+    margin-left: 40px;
+}
+
+.logo {
+    font-size: 25px;
+}
+
+.logo_link {
+    text-decoration: none;
+    color: black;
+}
+
+/*search bar in Nav bar*/
+
+.second_nav_child {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+}
+
+.main_search {
+    width: 13vw;
+    border: 1px solid lightgrey; 
+    background-color: #fafafa;
+}
+
+.main_search::placeholder {  
+    text-align: center;
+}
+
+.search_img{
+    position: absolute;
+    width: 10px;
+    right: 60%;
+}
+
+/*icons(navigation/ like / personal info) in Nav bar*/
+
+.third_nav_child {
+    width: 130px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 40px;
+}
+
+/*main div - layout for the main part*/
+
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 80%;
+    height: 90vh;
+    margin: 0 auto;
+    background-color: #fafafa;
+    padding: 30px;
+}
+
+.div_feed {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* align-items: center; */
+    width: 50%;
+    height: 100%;
+    margin: 0px 0;
+    background-color: #fafafa;
+    /* border: 2px solid blue; */
+}
+
+.div_main_right {
+    max-width: 25%;
+    height: 100%;
+    background-color: #fafafa;
+    /* border: 2px solid green; */
+}
+
+/*left content : profile pictur, userID, like comments share desc*/
+.article {
+    width: 90%;
+    height: 100%;
+    position: relative;
+}
+
+/* .article {
+    width: 90%;
+    height: 100%;
+    position: relative;
+} */
+
+/*content info who uploaded- top*/
+
+.profile_pic_id_bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 45px;
+}
+
+.profile_pic_id_front {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.profile_pic_img {
+    border-radius: 100px;
+    margin-left: 10px;
+}
+
+.id {
+    margin-left: 10px;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.profile_pic_id_back {
+    width: 15px;
+    border-top: 3px dotted grey;
+    margin-right: 12px;
+    border-radius: 0;
+}
+
+/*content - middle : uploaded content*/
+
+.uploaded_pic {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+}
+
+.all_feed_icons {
+    display: flex;
+    flex-direction: row;
+}
+
+.main_feed_icons {
+    display: flex;
+    width: 22%;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 6px auto 6px 5px;
+}
+
+.save {
+    margin: 6px 10px 6px 5px;
+}
+/*liked bar - who likes, how many*/
+
+.liked_users_bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.liked_user_img {
+    margin-left: 13px;
+    border-radius: 100px;
+    border: 1px solid lightgray;
+}
+
+.liked_info {
+    margin-left: 8px;
+    font-size: 14px;
+}
+
+/*content - bottom : comments*/
+
+.comments {
+    margin: 0 0 0 6px;
+    font-size: 14px;
+    position: relative;
+}
+
+.comments_flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.comment_like_btn {
+    position: absolute;
+    right: 10px;
+    z-index: 1;
+    border: 0;
+    width: 10px;
+}
+
+.more {
+    color: grey;
+}
+
+.overflow {
+    overflow: auto;
+    height: 40px;
+    padding-left: 8px;
+    margin: 1px;
+    width: 100%;
+   
+
+}
+
+
+.comment_js {
+    font-size: 14px;
+    width: 100px;
+}
+
+.btn_js {
+    border: 0;
+    width: 10px;
+    height: 10px;
+    margin-right: 20px;
+    position: absolute;
+    right: 2px
+
+}
+
+.abc {
+    width: 100%;
+    position:relative
+}
+
+.input_comments {
+    width: 100%;
+    height: 40px;
+    padding-left: 10px;
+    position: absolute;
+    bottom: 0;
+    border-top: 1px solid silver;
+    border-right: none;
+    border-left: none;
+    border-bottom: none;
+}
+
+.input_comments::placeholder {  
+    text-align: left;
+    padding: 10px;
+}
+
+.post {
+    height: 40px;
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+    color: #C4E1FB;
+    border: none;
+    background: none;
+}
+
+/* .post {
+    display: inline-block;
+    width: 50px;
+    font-weight: bold;
+    color: #C4E1FB;
+    font-size: 14px;
+    position: absolute;
+    top: 13px;
+    left: auto;
+    bottom: auto;
+    right: 10px;
+    background-color: white;
+    border: none;
+    z-index: 2;
+    border: 2px solid red;
+} */
+
+/*right content part : user info, stroy, recommendation*/
+
+.side_feed_top {
+    height: 8%;
+    display: flex;
+    align-items: center;
+    background-color: #fafafa;
+}
+
+.userIdwithInfo {
+    background-color: #fafafa;
+}
+
+.userProfilePic {
+    border-radius: 100px;
+    width: 40px;
+    height: 40px;
+}
+
+.userId {
+    font-size: 13px;
+    margin: 0;
+    padding-left: 12px;
+    background-color: #fafafa;
+}
+
+span.userId {
+    color: rgba(128, 128, 128, 0.634);
+    font-weight: 530;
+    background-color: #fafafa;
+}
+
+/*side : story & recommendation*/
+
+.story, .recommendation{
+    border: 1px solid lightgrey;
+    margin-top: 10px;
+    padding-left: 5px;
+}
+.story_top, .recommendation_top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 10px 4px 10px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.story_overflow { 
+    overflow: scroll;
+    height: 145px;
+}
+
+.friendsStory {
+    padding: 0 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 40px;
+    overflow: scroll;
+}
+.friendsProfilePic {
+    border-radius: 100px;
+    border: 1.5px solid #F806CC;
+    width: 30px;
+    height: 30px;
+    padding: 1px;
+}
+
+.recommendation_for_you_profile_pic {
+    border-radius: 100px;
+    width: 30px;
+    height: 30px;
+    padding: 1px;
+}
+
+.friendsStoryInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.friendsId, .lastUpdated {
+    margin: 0;
+    font-size: 12px;
+    padding: 0 0 0 5px;
+}
+
+.lastUpdated {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 120px;
+    white-space: nowrap;
+}
+
+.lastUpdated,.story_font,.recommendation_font {
+    color: grey;
+}
+
+.follow {
+    display: inline-block;
+    margin-right: 10px;
+    color: #0095F6;
+    font-weight: bold;
+}
+
+.pic_recommendedId {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.seeAll {
+    font-weight: bold;
+    font-size: 12px;
+}
+
+/*copywriter*/
+
+.copywriter_wrapper {
+    background-color: #fafafa;
+}
+
+.copywriter {
+    font-size: 13px;
+    color: rgb(190, 188, 188);
+    margin-top: 15px;
+    background-color: #fafafa;
+}
