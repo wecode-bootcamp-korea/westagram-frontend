@@ -120,27 +120,36 @@ function createComment(value,commentContent) {
 searchInput.addEventListener('keyup',()=>{
 		modal.classList.add('modal')
 		modal.classList.remove('modalOff')
-		const searchID = searchInput.value;
-		for (const i in accountArray) {
-			// console.log(searchID.indexOf(accountArray[i].id))
-			// console.log(accountArray[i].id)
-			// console.log(accountArray[i])
+			if (searchInput.value) {
+        const filteredID = accountArray.filter( x => matchSearch(x.id))
+        if (filteredID) {
+            filteredID.forEach(function(e) {
+                showFilteredID(e)
+            })
+        }
+    }
+});
 
-			modal.innerHTML = 
+function matchSearch(value) {
+	const searchID = searchInput.value;
+	return value.indexOf(searchID) != -1;
+}
+
+function showFilteredID(id) {
+				modal.innerHTML = 
 			`             
 			<div class = "userBox">
 				<div class = "user">
-					<img src = ${accountArray[i].img} alt = "userImg">
+					<img src = ${id.img} alt = "userImg">
 					<div class = "userInfo">
-						<p class = "userNickname"> ${accountArray[i].id}</p>
-						<p class = "info"> ${accountArray[i].nickname} </p>
+						<p class = "userNickname"> ${id.id}</p>
+						<p class = "info"> ${id.nickname} </p>
 					</div>
 				</div>
 			</div>
 			<p class = "line2"></p>
 			`
-		}
-});
+}
 
 document.addEventListener("click",(e) =>{
 		if (!e.target.closest(".modal")) {
