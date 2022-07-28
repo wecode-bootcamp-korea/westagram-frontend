@@ -13,6 +13,7 @@ loginBtn.addEventListener("click", async()=>{
 		userId.focus()
 	}
 	else if (!password.value.length){
+
 		alert("password를 입력해주세요")
     password.focus()
 	}

@@ -31,13 +31,7 @@ emptyHeartImg.forEach((e) => e.addEventListener("click", ()=>{
 		const filledHeartImg = document.createElement('img');
 		filledHeartImg.classList.add('filledHeartImg');
 		filledHeartImg.setAttribute("src", "./img/heart (1).png");
-
-		// const deleteImg = document.createElement('img');
-		// deleteImg.classList.add('deleteImg');
-		// deleteImg.setAttribute("src", "./img/delete.png")
-
 		e.appendChild(filledHeartImg);
-		// e.appendChild(deleteImg);
 
 	}));
 }));
@@ -57,45 +51,10 @@ function createComment(value,commentContent) {
 	
   const newCommentDiv = document.createElement('div');
 	newCommentDiv.classList.add('comment');
-
-	// const newCommentHead = document.createElement('div');
-	// newCommentHead.classList.add('commentHead');
-
-	// const commentNickname = document.createElement('div');
-	// commentNickname.classList.add('commentName');
-
-	// const commentP = document.createElement('p');
-	// const commentValue = document.createTextNode(value);
-
-	// const commentsIcon = document.createElement('div');
-	// commentsIcon.classList.add('commentsIcon');
-
-	// const emptyHeartImg = document.createElement('img');
-	// emptyHeartImg.classList.add('emptyHeartImg');
-	// emptyHeartImg.setAttribute("src", "./img/heart.png");
-	
-	// const seeMoreImg = document.createElement('img');
-	// seeMoreImg.classList.add('seeMoreImg');
-	// seeMoreImg.setAttribute("src", "./img/See_More.png");
-
-
-	// newCommentDiv.appendChild(newCommentHead)
-	// newCommentDiv.appendChild(commentsIcon);
-
-	// commentNickname.appendChild(document.createTextNode("닉네임"));
-  // newCommentHead.appendChild(commentNickname);
-
-	// commentsIcon.appendChild(emptyHeartImg);
-	// commentsIcon.appendChild(seeMoreImg);
-
-	// commentP.appendChild(commentValue);
-	// newCommentHead.appendChild(commentP);
-
 	
   commentContent.appendChild(newCommentDiv);
 
 	const deleteComment = document.querySelectorAll('.comment');
-	const newComment = document.querySelectorAll('.newComment');
 
 	deleteComment.forEach((e) => e.addEventListener("click", ()=>{
 		e.remove();
