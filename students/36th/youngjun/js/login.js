@@ -1,9 +1,11 @@
 const loginBtn = document.querySelector(".loginBtn")
 const userId = document.querySelector(".userId")
 const password = document.querySelector(".password")
+const form = document.querySelector(".inputBox")
 
+// userId.addEventListener('keyup', loginVali);
+// password.addEventListener('keyup', loginVali);
 userId.addEventListener('keyup', loginVali);
-password.addEventListener('keyup', loginVali);
 
 
 
@@ -16,9 +18,6 @@ loginBtn.addEventListener("click", async()=>{
 
 		alert("password를 입력해주세요")
     password.focus()
-	}
-	else{
-		location.href = "./main.html"
 	}
 });
 

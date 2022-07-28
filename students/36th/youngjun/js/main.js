@@ -12,6 +12,7 @@ const modal = document.querySelector(".modalOff")
 const searchInput = document.querySelector(".searchInput")
 
 //go to login page
+
 logoImg.addEventListener('click', ()=>{
 	location.href = "./login.html"
 });
@@ -67,9 +68,9 @@ function createComment(value,commentContent) {
 		<p>${value}</p>
 	</div>
 	<div class = commentsIcon>
-	<img class = "emptyHeartImg" src = "img/heart.png" alt = "emptyHeartImg">
-	<img class = "deleteImg" src = "img/delete.png" alt = "deleteImg">
-</div>
+		<img class = "emptyHeartImg" src = "img/heart.png" alt = "emptyHeartImg">
+		<img class = "deleteImg" src = "img/delete.png" alt = "deleteImg">
+	</div>
 	`
 
 }
