@@ -327,14 +327,31 @@
 }
 
 .comment {
+  display: flex;
+  justify-content: space-between;
   margin-top: 10px;
   background-color: var(--color-light-wt);
   font-size: 16px;
 }
 
+.comment-container {
+  display: flex;
+  justify-content: start;
+  background-color: var(--color-light-wt);
+}
+
 .comment span {
   font-weight: bold;
   margin-right: 10px;
+  background-color: var(--color-light-wt);
+}
+
+.commentLike {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  background-color: var(--color-light-wt);
 }
 
 .feedAddComment {

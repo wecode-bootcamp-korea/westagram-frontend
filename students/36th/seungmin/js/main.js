@@ -54,23 +54,42 @@ const feedCommetns = document.querySelector(".feedComments");
 // 댓글 게시 버튼을 누르면 Input창에 입력한 Value를 받아서 createElement로 생성된 div의 innerHTML 값으로 사용.
 // 백틱을 이용해서 댓글 게시자의 아이디도 같이 출력.
 // 댓글을 게시하면 Input의 Value를 초기화.
-commentButton.addEventListener("click", () => {
+
+const appendComment = () => {
   let newComment = document.createElement("div");
-  newComment.innerHTML = `<span>me</span>${commentInput.value}`;
+  newComment.innerHTML = `<div class="comment-container"><span>me</span>${commentInput.value}</div><div class="commentLike"><i class="fa-regular fa-heart fa-xs commentLikeFunctoin"></i></div>`;
   newComment.className = "comment";
   feedCommetns.appendChild(newComment);
   commentInput.value = "";
-});
+};
+
+commentButton.addEventListener("click", appendComment);
 
 // 댓글 게시 기능을 keydown이벤트와 e.key를 통해서 입력한 키의 값이 "Enter"라면 댓글을 게시
 // 중복 게시를 예방하기 위해서 Input창의 Value가 공란인지 검증하는 코드 추가.
 commentInput.addEventListener("keydown", (e) => {
-  let newComment = document.createElement("div");
-  console.log(e.key);
   if (e.key == "Enter" && commentInput.value.length > 1) {
-    newComment.innerHTML = `<span>me</span>${commentInput.value}`;
-    newComment.className = "comment";
-    feedCommetns.appendChild(newComment);
-    commentInput.value = "";
+    appendComment();
+  }
+});
+
+// 댓글의 좋아요 아이콘이 활성화 되었는지를 판별하여 반대상태로 바꿔주는 기능.
+// 같은 조건으로 생성된 같은 클래스를 공유하는 버튼을 e.target을 사용하여 기능을 독립적으로 구현함.
+window.addEventListener("click", (e) => {
+  if (
+    e.target.className.indexOf("commentLikeFunctoin") !== -1 &&
+    e.target.className.indexOf("fa-regular") !== -1
+  ) {
+    console.log(e.target.style.color);
+    e.target.classList.remove("fa-regular");
+    e.target.classList.add("fa-solid");
+    e.target.style.color = "red";
+  } else if (
+    e.target.className.indexOf("commentLikeFunctoin") !== -1 &&
+    e.target.className.indexOf("fa-regular") === -1
+  ) {
+    e.target.classList.remove("fa-solid");
+    e.target.classList.add("fa-regular");
+    e.target.style.color = "black";
   }
 });
