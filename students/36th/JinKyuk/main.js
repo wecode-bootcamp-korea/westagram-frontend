@@ -31,6 +31,8 @@ function paintLi(newLi) {
   const span = document.createElement("span");
   span.innerText = newLi.text;
 
+  const buttonDiv = document.createElement("div");
+
   const deleteButton = document.createElement("button");
   deleteButton.id = "delete-button";
   deleteButton.innerText = "X";
@@ -42,8 +44,9 @@ function paintLi(newLi) {
   likeButton.addEventListener("click", likeLi);
 
   li.appendChild(span);
-  li.appendChild(deleteButton);
-  li.appendChild(likeButton);
+  li.appendChild(buttonDiv);
+  buttonDiv.appendChild(deleteButton);
+  buttonDiv.appendChild(likeButton);
   commentUl.appendChild(li);
 }
 
@@ -51,7 +54,6 @@ function handleLiForm(event) {
   event.preventDefault();
   const newLi = commentInput.value;
   const userId = "WECODE BOOTCAMP";
-  commentInput.value = "";
 
   const newLiObj = {
     text: `${userId} ${newLi}`,
