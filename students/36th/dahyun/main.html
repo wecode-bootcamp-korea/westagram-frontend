@@ -18,15 +18,15 @@
     <link rel="stylesheet" href="styles/main.css" />
   </head>
   <body>
-    <header>
-      <nav>
+    <header class="header-logo">
+      <nav class="nav-logo">
         <div class="logo">
           <a href="#">
             <i class="fa-brands fa-instagram"></i>
           </a>
-          <h3 class="logo-title">
+          <h1 class="logo-title">
             <a href="#">Instagram</a>
-          </h3>
+          </h1>
         </div>
         <div class="search">
           <i class="fa-solid fa-magnifying-glass"></i>
@@ -45,8 +45,69 @@
         </div>
       </nav>
     </header>
-    <main></main>
-    <aside></aside>
-    <footer></footer>
+    <div class="container">
+      <main>
+        <section class="timeline">
+          <ol>
+            <li>
+              <article class="post-1">
+                <header class="header-post">
+                  <div class="author-img"></div>
+                  <h2>Pulan</h2>
+                  <button type="button">
+                    <i class="fa-solid fa-ellipsis"></i>
+                  </button>
+                </header>
+                <div class="post1-img"></div>
+                <footer class="footer-post">
+                  <div class="feed-btns">
+                    <div class="btns-likes">
+                      <i class="likeMenu3 fa-regular fa-heart"></i>
+                      <i class="likeMenu3 fa-regular fa-comment"></i>
+                      <i class="likeMenu3 fa-regular fa-share-from-square"></i>
+                    </div>
+                    <i class="fa-regular fa-bookmark"></i>
+                  </div>
+                  <div class="feed-likes">
+                    <span>------</span>
+                    <p class="likeNumText">xxx님외 n명이 좋아합니다.</p>
+                  </div>
+                  <ol class="feed-comments">
+                    <li class="comment">
+                      <span class="userId">Pulan</span>
+                      <span class="content">정말 멋있는 사진이에요~</span>
+                    </li>
+                    <li class="comment">
+                      <span class="userId">Pulan</span>
+                      <span class="content">정말 멋있는 사진이에요~</span>
+                    </li>
+                    <li class="comment">
+                      <span class="userId">Pulan</span>
+                      <span class="content">정말 멋있는 사진이에요~</span>
+                    </li>
+                  </ol>
+                  <form class="comment-form">
+                    <input
+                      class="comment-input"
+                      type="text"
+                      placeholder="댓글 달기..."
+                    />
+                    <button class="comment-btn" type="submit">게시</button>
+                  </form>
+                </footer>
+              </article>
+            </li>
+          </ol>
+        </section>
+      </main>
+      <aside>
+        <header>
+          <h2></h2>
+        </header>
+        <section></section>
+        <section></section>
+        <footer class="footer"></footer>
+      </aside>
+    </div>
   </body>
 </html>

@@ -5,13 +5,22 @@ body {
   background-color: rgb(245, 245, 245);
 }
 
-header {
+.container {
+  display: flex;
+  max-width: 1024px;
+  margin: 40px auto 0;
+  padding: 0 30px;
+}
+
+/** Logo **/
+
+.header-logo {
   height: 70px;
   background-color: #ffffff;
   border-bottom: 1px solid rgb(235, 235, 235);
 }
 
-nav {
+.nav-logo {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -25,18 +34,19 @@ nav {
   display: flex;
   align-items: center;
   position: relative;
-  font-size: 20px;
+  font-size: 24px;
 }
 
 .logo-title {
   margin-left: 20px;
+  font-size: 20px;
 }
 
 .logo-title::before {
   content: '|';
   position: absolute;
   bottom: 2px;
-  left: 23px;
+  left: 28px;
   font-weight: 200;
 }
 
@@ -72,4 +82,99 @@ nav {
 .navbar a:nth-child(2),
 .navbar a:nth-child(3) {
   margin-left: 20px;
+}
+
+/** Main **/
+main {
+  flex: 3;
+  height: auto;
+  /* background-color: rgba(0, 0, 0, 0.24); */
+}
+
+.timeline {
+  border: 1px solid rgb(235, 235, 235);
+  background-color: #ffffff;
+}
+
+.header-post {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  padding: 0 20px;
+}
+
+.author-img {
+  width: 30px;
+  height: 30px;
+  background: url('../img/author-img.png') no-repeat center;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.header-post h2 {
+  flex: 1;
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+.header-post button {
+  background-color: transparent;
+  border: 0;
+}
+
+.post1-img {
+  height: 600px;
+  background: url('../img/post1-img.jpg') no-repeat center;
+  background-size: cover;
+}
+
+.footer-post {
+  padding: 0 20px;
+}
+
+.feed-btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  font-size: 24px;
+  color: rgb(155, 155, 155);
+}
+
+.feed-likes {
+  display: flex;
+}
+
+.comment {
+  padding-bottom: 10px;
+}
+
+.comment-form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  border-top: 1px solid rgb(235, 235, 235);
+}
+
+.comment-input {
+  border: none;
+}
+
+.comment-btn {
+  border: none;
+  background-color: transparent;
+  color: rgba(113, 147, 238, 0.747);
+}
+/** Aside **/
+
+aside {
+  flex: 1.6;
+  height: 300px;
+  /* background-color: rgba(0, 0, 255, 0.349); */
+}
+
+.footer {
+  /* height: 300px; */
+  /* background-color: rgba(0, 0, 255, 0.349); */
 }
