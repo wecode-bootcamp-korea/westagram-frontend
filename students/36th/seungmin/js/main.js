@@ -1,7 +1,7 @@
 const commentUl = document.querySelector('.commentText');
 const commentInput = document.querySelector('.commentInput');
 const commentBtn = document.querySelector('.commentBtn');
-
+//댓글등록-버튼클릭
 commentBtn.addEventListener('click',()=>{
     const commentLi = document.createElement('li')
     const commentId = document.createElement('p')
@@ -13,11 +13,11 @@ commentBtn.addEventListener('click',()=>{
     commentLi.appendChild(commentId)
     commentLi.appendChild(commentText)
 
-    
     commentId.innerHTML="forest_xox"
     commentText.innerHTML=commentInput.value;
     commentInput.value=""
 })
+//댓글등록-엔터
 commentInput.addEventListener('keyup',(e)=>{
     if(e.code==="Enter"){
     const commentLi = document.createElement('li')
@@ -29,14 +29,14 @@ commentInput.addEventListener('keyup',(e)=>{
     commentUl.appendChild(commentLi)
     commentLi.appendChild(commentId)
     commentLi.appendChild(commentText)
-    
+
     commentId.innerHTML="forest_xox"
     commentText.innerHTML=commentInput.value;
     commentInput.value=""
     
     }
 })
-
+// 하트추가
 const heart = document.querySelector('.fa-heart');
 const redHeart = document.querySelector('#redHeart');
 let heartVal = 0;

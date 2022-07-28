@@ -1,42 +1,26 @@
-const loginBtn = document.getElementById('loginBtn');
-const id = document.getElementById('id');
-const pw = document.getElementById('pw');
+const loginBtn = document.getElementsByClassName('loginBtn')[0];
+const id = document.getElementsByClassName('id')[0];
+const pw = document.getElementsByClassName('pw')[0];
 
-//btn 활성화
 id.addEventListener('keyup',()=>{
-    const idValue = document.getElementById('id').value;
-    const pwValue = document.getElementById('pw').value;
+    (id.value.length>=5 && pw.value.length>0) ?
+    (loginBtn.disabled = false) :
+    (id.value.length<5 || pw.value.length===0) ?
+    (loginBtn.disabled = true) : false
+});
 
-    if(idValue.length>0 && pwValue.length>0){
-        console.log(idValue.length);
-        return loginBtn.disabled = false;
-        
-    }
-    if(idValue.length===0 || pwValue.length===0){
-        console.log(idValue.length);
-        return loginBtn.disabled = true;
-    }
-})
 pw.addEventListener('keyup',()=>{
-    const idValue = document.getElementById('id').value;
-    const pwValue = document.getElementById('pw').value;
-
-    if(idValue.length>0 && pwValue.length>0){
-        return loginBtn.disabled = false;
-    }
-    if(idValue.length ===0 || pwValue.length===0){
-        return loginBtn.disabled = true;
-    }
-})
+    (id.value.length>=5 && pw.value.length>0) ?
+    (loginBtn.disabled = false) :
+    (id.value.length<5 || pw.value.length===0) ?
+    (loginBtn.disabled = true) : false
+});
 
 //Login 확인
 loginBtn.addEventListener('click',()=>{
-    const idValue = document.getElementById('id').value;
-    const pwValue = document.getElementById('pw').value;
-
-    if(idValue==="1q2w3e4r"&&pwValue==="1q2w3e4r"){
+    if(id.value==="1q2w3e4r"&&pw.value==="1q2w3e4r"){
         console.log("okay");
         return window.location.href = 'main.html';
-
+        
     }
 })
