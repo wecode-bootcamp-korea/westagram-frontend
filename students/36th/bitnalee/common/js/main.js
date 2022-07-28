@@ -3,12 +3,11 @@
 //   1-2. 댓글 입력 후 input 창 초기화
 //    1-3. 포커스가 input 창에 올 수 있도록
 
-
 const input = document.querySelector('.commentInput');
 //댓글창 셀렉트
 const button = document.querySelector('#commentButton');
 //버튼창
-const addul = document.querySelector('.addul');
+const addUl = document.querySelector('.addUl');
 //댓글 ul 공간 
 
 const onAdd = function () {
@@ -30,12 +29,11 @@ const onAdd = function () {
 
   item.appendChild(itemText);
   // li뒤에 텍스트를 담은 span넣기.
-  addul.appendChild(item);
+  addUl.appendChild(item);
   // ul뒤에 해당 li를 넣기. 각각 li 로 ul 안에 추가 됨. 
   input.value = '';
   input.focus();
 }
-
 
 button.addEventListener('click', function () {
   onAdd();
