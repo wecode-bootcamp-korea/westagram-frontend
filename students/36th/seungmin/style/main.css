@@ -1,33 +1,49 @@
+:root {
+  --color-dark-wt: #fafafa;
+  --color-dark-bl: #00376b;
+  --color-dark-gr: #262626;
+  --color-dark-li: #828282;
+  --color-light-wt: #ffffff;
+  --color-blue-bt: #0095f6;
+  --color-blue-dbt: 0, 149, 246, 0.3;
+  --color-dark-gr: 142, 142, 142;
+  --color-dark-wg: #a8a8a8;
+  --color-gray-gr: 219, 219, 219;
+  --color-gray-dk: #8e8e8e;
+  --color-gray-li: #efefef;
+  --color-gray-wg: #d4d4d4;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  background-color: #fafafa;
+  background-color: var(--color-dark-wt);
 }
 
 .navbar {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #ffffff;
   width: 100%;
   height: 60px;
-  border-bottom: 1px solid rgb(219, 219, 219);
+  background-color: var(--color-light-wt);
+  border-bottom: 1px solid rgb(var(--color-gray-gr));
 }
 
 .navLogo {
   width: 268px;
   height: 40px;
-  background-color: #ffffff;
   margin-right: 65px;
+  background-color: var(--color-light-wt);
 }
 
 .logo {
   width: 120px;
   height: 46px;
+  background-image: url("https://fontmeme.com/images/instagram-new-logo.png");
   background-size: 120px 45px;
   background-repeat: no-repeat;
-  background-image: url("https://fontmeme.com/images/instagram-new-logo.png");
 }
 
 .navSearch {
@@ -38,21 +54,20 @@
 .navSearch-input {
   width: 100%;
   height: 100%;
-  background-color: #efefef;
+  padding-left: 50px;
+  background-color: var(--color-gray-li);
   background-image: url(https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-256.png);
   background-size: 30px;
   background-position: 5px 3px;
   background-repeat: no-repeat;
-  outline: none;
   border: 0;
   border-radius: 8px;
-  padding-left: 50px;
+  outline: none;
 }
 
 .navSearch-input::placeholder {
-  color: #828282;
+  color: var(--color-dark-li);
   font-size: 16px;
-  text-indent: 0;
 }
 
 .navSearch-input:focus {
@@ -67,16 +82,16 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #ffffff;
   width: 280px;
   height: 36px;
   margin-left: 60px;
+  background-color: var(--color-light-wt);
 }
 
 .navMenu-items:nth-child(5) {
-  background-image: url("https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png");
   width: 28px;
   height: 28px;
+  background-image: url("https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png");
   background-size: 28px;
   background-repeat: no-repeat;
   background-position: 0px 0px;
@@ -85,13 +100,13 @@
 .navMenu-items:nth-child(6) {
   width: 28px;
   height: 28px;
+  margin-bottom: 2px;
+  border: 2px solid black;
+  border-radius: 20px;
   background-image: url("https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png");
   background-size: 28px;
   background-repeat: no-repeat;
   background-position: -2px 0px;
-  border: 2px solid black;
-  border-radius: 20px;
-  margin-bottom: 2px;
 }
 
 .feedRec-container {
@@ -107,10 +122,10 @@
   align-items: center;
   width: 470px;
   height: 120px;
-  border: 1px solid rgb(219, 219, 219);
-  border-radius: 8px;
-  background-color: #ffffff;
   margin-top: 26px;
+  background-color: var(--color-light-wt);
+  border: 1px solid rgb(var(--color-gray-gr));
+  border-radius: 8px;
 }
 
 .newPostProfileId-container {
@@ -121,17 +136,17 @@
   width: 75px;
   height: 100px;
   margin-left: 20px;
-  background-color: #ffffff;
+  background-color: var(--color-light-wt);
 }
 
 .newPostProfile {
-  background-color: #ffffff;
+  width: 70px;
+  height: 70px;
+  background-color: var(--color-light-wt);
   background-image: url("https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1331&q=80");
   background-size: 180px;
   background-repeat: no-repeat;
   background-position: -55px -15px;
-  width: 70px;
-  height: 70px;
   border-radius: 37.5px;
 }
 
@@ -139,19 +154,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #ffffff;
   width: 75px;
   height: 30px;
+  background-color: var(--color-light-wt);
   font-size: 16px;
   font-weight: 500;
 }
 
 .feed {
   width: 470px;
-  border: 1px solid rgb(219, 219, 219);
   border-radius: 8px;
-  background-color: #ffffff;
   margin-top: 15px;
+  border: 1px solid rgb(var(--color-gray-gr));
+  background-color: var(--color-light-wt);
 }
 
 .feedHeader-container {
@@ -160,7 +175,7 @@
   align-items: center;
   width: 100%;
   height: 56px;
-  background-color: #ffffff;
+  background-color: var(--color-light-wt);
   border-radius: 8px 8px 0 0;
 }
 
@@ -170,7 +185,7 @@
   align-items: center;
   width: 420px;
   height: 100%;
-  background-color: #ffffff;
+  background-color: var(--color-light-wt);
   border-radius: 8px 0 0 0;
 }
 
@@ -186,12 +201,12 @@
 
 .feedHeaderId {
   width: 370px;
-  background-color: #ffffff;
+  padding-top: 5px;
+  padding-left: 10px;
+  background-color: var(--color-light-wt);
   font-size: 16px;
   font-weight: bold;
   letter-spacing: 0.1px;
-  padding-top: 5px;
-  padding-left: 10px;
 }
 
 .feedHeaderFunction {
@@ -200,38 +215,33 @@
   align-items: center;
   width: 50px;
   height: 56px;
+  background-color: var(--color-light-wt);
   border-radius: 0 8px 0 0;
-  background-color: #ffffff;
 }
 
 .feedImage {
   width: 100%;
   height: 300px;
-  background-repeat: no-repeat;
   background-image: url("https://images.unsplash.com/photo-1515879218367-8466d910aaa4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80");
   background-size: 470px;
-}
-
-.feedFunction-container {
-  width: 100%;
+  background-repeat: no-repeat;
 }
 
 .feedFunction {
   display: flex;
   justify-content: space-between;
-  width: 100%;
 }
 
 .feedFunction:nth-child(1) {
-  background-color: #ffffff;
   height: 40px;
+  background-color: var(--color-light-wt);
 }
 
 .ff-container {
-  background-color: #ffffff;
   display: flex;
   width: 168px;
   height: 40px;
+  background-color: var(--color-light-wt);
 }
 
 .Heart {
@@ -271,22 +281,22 @@
 }
 
 .feedLike {
-  background-color: #ffffff;
   display: flex;
-  padding-left: 8px;
   align-items: center;
+  margin-top: 10px;
+  padding-left: 8px;
+  background-color: var(--color-light-wt);
   font-size: 14px;
   font-weight: bold;
-  margin-top: 10px;
 }
 
 .feedContents {
-  background-color: #ffffff;
   margin: 10px 0 0 8px;
+  background-color: var(--color-light-wt);
 }
 
 .feedContents span {
-  background-color: #ffffff;
+  background-color: var(--color-light-wt);
 }
 
 .feedContents span:nth-child(1) {
@@ -299,28 +309,27 @@
 
 .feedTimeStamp {
   display: flex;
-  width: 100%;
   align-items: center;
+  width: 100%;
   height: 50px;
-  background-color: #ffffff;
   padding-left: 8px;
-  color: #828282;
+  color: var(--color-dark-li);
+  background-color: var(--color-light-wt);
+  border-bottom: 1px solid rgb(var(--color-gray-gr));
   font-size: 12px;
-  border-bottom: 1px solid rgb(219, 219, 219);
 }
 
 .feedComments {
   display: flex;
   flex-direction: column;
-  width: 100%;
   padding-left: 8px;
-  background-color: #ffffff;
+  background-color: var(--color-light-wt);
 }
 
 .comment {
-  background-color: #ffffff;
-  font-size: 16px;
   margin-top: 10px;
+  background-color: var(--color-light-wt);
+  font-size: 16px;
 }
 
 .comment span {
@@ -332,35 +341,35 @@
   display: flex;
   width: 100%;
   height: 50px;
-  background-color: #ffffff;
+  background-color: var(--color-light-wt);
   border-radius: 0 0 8px 8px;
 }
 
 .feedAddComment input {
-  outline: none;
-  border: 0;
   width: 90%;
   height: 100%;
-  background-color: #ffffff;
+  border: 0;
+  background-color: var(--color-light-wt);
   border-radius: 0 0 0 8px;
+  outline: none;
 }
 
 .feedAddComment button {
   width: 10%;
-  background-color: #ffffff;
-  outline: none;
+  color: rgb(var(--color-blue-dbt));
+  background-color: var(--color-light-wt);
   border: 0;
   border-radius: 0 0 8px 0;
   font-size: 15px;
-  color: rgb(175, 210, 234);
+  outline: none;
 }
 
 .feedAddComment input::placeholder {
   padding-left: 10px;
+  color: var(--color-gray-dk);
+  background-color: var(--color-light-wt);
   font-size: 15px;
-  background-color: #ffffff;
   font-weight: bold;
-  color: #a7a7a7;
 }
 
 .recommend {
@@ -386,9 +395,9 @@
   height: 56px;
   background-image: url("https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png");
   background-size: 50px;
+  background-position: 0 2px;
   border: 3px solid black;
   border-radius: 28px;
-  background-position: 0 2px;
 }
 
 .myId {
@@ -396,18 +405,18 @@
 }
 
 .myProfileSwich {
+  color: var(--color-blue-bt);
   font-size: 12px;
-  color: rgb(0, 149, 246);
   font-weight: bolder;
 }
 
 .myId p:nth-child(1) {
-  font-weight: bolder;
   margin-bottom: 5px;
+  font-weight: bolder;
 }
 
 .myId p:nth-child(2) {
-  color: #a7a7a7;
+  color: var(--color-dark-wg);
   font-weight: bold;
 }
 .recommendForMe {
@@ -417,12 +426,11 @@
 }
 
 .recommendForMe span:nth-child(1) {
-  color: #828282;
+  color: var(--color-dark-li);
   font-weight: bolder;
 }
 
 .recommendForMe span:nth-child(2) {
-  color: black;
   font-weight: bold;
 }
 
@@ -444,12 +452,12 @@
 .recommendedIcon {
   width: 36px;
   height: 36px;
+  margin-left: 5px;
   background-image: url("https://images.unsplash.com/photo-1531891437562-4301cf35b7e4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80");
   background-size: 70px;
   background-repeat: no-repeat;
   background-position: -13px -25px;
   border-radius: 18px;
-  margin-left: 5px;
 }
 
 .recommendedId {
@@ -462,15 +470,15 @@
 }
 
 .recommendedId p:nth-child(2) {
+  margin-top: 5px;
+  color: var(--color-dark-wg);
   font-size: 12px;
   font-weight: bold;
-  color: #a7a7a7;
-  margin-top: 5px;
 }
 
 .recommendFollow {
   font-size: 14px;
-  color: rgb(0, 149, 246);
+  color: var(--color-blue-bt);
   font-weight: bolder;
 }
 
@@ -488,17 +496,17 @@
 }
 
 .recommend-footer ul li {
-  font-size: 14px;
-  color: #d4d4d4;
-  font-weight: bold;
   height: 15px;
   margin: 0 3px;
+  color: var(--color-gray-wg);
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .footer-corp {
-  font-size: 14px;
-  color: #d4d4d4;
-  font-weight: bold;
   height: 15px;
   margin: 20px 3px;
+  color: var(--color-gray-wg);
+  font-size: 14px;
+  font-weight: bold;
 }

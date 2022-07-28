@@ -1,12 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 
+:root {
+  --color-dark-wt: #fafafa;
+  --color-dark-bl: #00376b;
+  --color-dark-gr: #262626;
+  --color-light-wt: #ffffff;
+  --color-blue-bt: #0095f6;
+  --color-blue-dbt: 0, 149, 246, 0.3;
+  --color-dark-gr: 142, 142, 142;
+  --color-dark-gr: #a8a8a8;
+  --color-gray-gr: 219, 219, 219;
+  --color-gray-dk: #8e8e8e;
+}
+
 body {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #fafafa;
+  background-color: var(--color-dark-wt);
 }
 
 .loginSignIn-container {
@@ -27,8 +40,8 @@ body {
   align-items: center;
   justify-content: center;
   width: 350px;
-  background-color: #ffffff;
-  border: 1px solid rgb(219, 219, 219);
+  background-color: var(--color-light-wt);
+  border: 1px solid rgb(var(--color-gray-gr));
 }
 
 .loginInput-container {
@@ -49,7 +62,7 @@ body {
 .grayLine {
   width: 100%;
   height: 1px;
-  background-color: #dbdbdb;
+  background-color: rgb(var(--color-gray-gr));
 }
 
 .grayLine:nth-child(1) {
@@ -62,7 +75,7 @@ body {
 
 .or {
   margin: 0 18px;
-  color: rgb(142, 142, 142);
+  color: rgb(var(--color-dark-gr));
   font-size: 13px;
   font-weight: 600;
   line-height: 15px;
@@ -74,11 +87,11 @@ input {
   height: 38px;
   margin-bottom: 6px;
   border: none;
-  background-color: #fafafa;
+  background-color: var(--color-dark-wt);
 }
 
 input:focus {
-  border: 1px solid #a8a8a8;
+  border: 1px solid var(--color-dark-gr);
   border-radius: 3px;
   outline: none;
 }
@@ -87,22 +100,22 @@ input:focus {
   width: 268px;
   height: 30px;
   margin: 8px 40px;
-  color: #fff;
+  color: var(--color-light-wt);
+  background-color: rgba(var(--color-blue-dbt));
   border: 1px solid transparent;
   border-radius: 4px;
-  background-color: rgba(0, 149, 246, 0.3);
   font-size: 14px;
   font-weight: bold;
 }
 
 .loginAble {
-  background-color: #0095f6;
+  background-color: var(--color-blue-bt);
 }
 
 .question {
   margin-top: 12px;
   margin-bottom: 20px;
-  color: #00376b;
+  color: var(--color-dark-bl);
   text-align: center;
   line-height: 16px;
   font-size: 12px;
@@ -115,11 +128,11 @@ input:focus {
   width: 350px;
   margin: 15px 0px;
   padding: 10px 0px;
-  color: #262626;
-  text-align: center;
-  background-color: #ffffff;
-  border: 1px solid rgb(219, 219, 219);
+  color: var(--color-dark-gr);
+  background-color: var(--color-light-wt);
+  border: 1px solid rgb(var(--color-gray-gr));
   font-size: 14px;
+  text-align: center;
 }
 
 .signInText {
@@ -128,7 +141,7 @@ input:focus {
 
 .signIn {
   margin-left: 5px;
-  color: #0095f6;
+  color: var(--color-blue-bt);
   font-weight: bold;
 }
 
@@ -156,7 +169,7 @@ footer {
   bottom: 0;
   margin: 0px 8px 12px 8px;
   padding: 0;
-  color: #8e8e8e;
+  color: var(--color-gray-dk);
   line-height: 16px;
   font-size: 12px;
 }
