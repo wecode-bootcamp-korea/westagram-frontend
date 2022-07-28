@@ -1,0 +1,94 @@
+.navigation-bar {
+  width: 100vw;
+  height: 70px;
+  padding: 0 20%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 99;
+}
+
+.navigation-bar__column {
+  width: 33.3%;
+}
+
+.navigation-bar__column:first-child {
+  display: flex;
+  align-items: center;
+}
+
+.fa-instagram {
+  font-size: 25px;
+}
+
+.navigation-bar__divider {
+  width: 1.5px;
+  height: 30px;
+  background-color: black;
+  margin: 0 10px;
+}
+
+.navigation-bar__title {
+  font-size: 25px;
+  font-family: Lobster;
+}
+
+.navigation-bar__column:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.fa-search {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  left: 70px;
+}
+
+.navigation-bar__search {
+  width: 200px;
+  height: 25px;
+  background-color: whitesmoke;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+.navigation-bar__search::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.navigation-bar__search:focus {
+  outline: none;
+  z-index: 1;
+}
+
+.navigation-bar__column:last-child {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+}
+
+.navigation-bar__column:last-child img {
+  width: 30px;
+  opacity: 0.8;
+}
+
+.navigation-bar__column:last-child img:nth-child(2) {
+  margin: 0 30px;
+}
+
+.red-dot {
+  width: 4px;
+  height: 4px;
+  background-color: red;
+  border-radius: 50%;
+  position: absolute;
+  right: 73px;
+  bottom: -8px;
+}

@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css/main.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Westagram</title>
+  </head>
+  <body>
+    <nav class="navigation-bar">
+      <div class="navigation-bar__column">
+        <i class="fab fa-instagram"></i>
+        <div class="navigation-bar__divider"></div>
+        <span class="navigation-bar__title">Westagram</span>
+      </div>
+      <div class="navigation-bar__column">
+        <i class="fas fa-search"></i>
+        <input class="navigation-bar__search" type="text" placeholder="검색" />
+      </div>
+      <div class="navigation-bar__column">
+        <img alt="나침반" src="img/explore.png" />
+        <img alt="하트" src="img/heart.png" />
+        <img alt="내정보" src="img/profile.png" />
+        <div class="red-dot"></div>
+      </div>
+    </nav>
+
+    <main>
+      <div class="feeds">
+        <article class="feed__container">
+          <div class="feed__header">
+            <div class="feed__user-info">
+              <img
+                class="profile-img"
+                src="img/profile/JORDY.jpeg"
+                alt="죠르디"
+              />
+              <span class="user-ID feed_user-ID">JORDY</span>
+            </div>
+            <i class="fas fa-ellipsis-h"></i>
+          </div>
+          <div class="feed__img">
+            <img alt="남극" src="img/JORDY_hometown.jpg" />
+          </div>
+          <div class="feed__btns">
+            <div class="feed__btns--box">
+              <i id="red-heart" class="fas fa-heart"></i>
+              <i class="far fa-comment"></i>
+              <i class="far fa-paper-plane"></i>
+            </div>
+            <i class="far fa-bookmark"></i>
+          </div>
+          <div class="feed__content">
+            <div class="feed__likes">
+              <img alt="JMJ프로필" src="img/profile/JMJ_profile.webp" />
+              <span
+                ><span class="user-ID">JMJ</span>님 외
+                <span class="user-ID">7명</span>이 좋아합니다</span
+              >
+            </div>
+            <div class="feed__info">
+              <span class="user-ID">JORDY</span>
+              <span class="feed__text">본가 가고 싶어...</span>
+              <button>더 보기</button>
+            </div>
+            <ul class="feed__comments">
+              <li class="feed__comment">
+                <div class="feed__comment--content">
+                  <div>
+                    <span class="user-ID">RYAN</span>
+                    <span class="feed__text">위코드 좋긴한데</span>
+                  </div>
+                  <button><i class="far fa-heart"></i></button>
+                </div>
+                <span class="time-stamp">1분 전</span>
+              </li>
+              <li class="feed__comment">
+                <div class="feed__comment--content">
+                  <div>
+                    <span class="user-ID">NEO</span>
+                    <span class="feed__text">영혼 갈려나가는 중</span>
+                  </div>
+                  <button><i class="far fa-heart"></i></button>
+                </div>
+                <span class="time-stamp">3분 전</span>
+              </li>
+            </ul>
+          </div>
+          <form class="comment-form">
+            <input
+              class="comment-form__input"
+              type="text"
+              placeholder="댓글 달기..."
+            />
+            <input
+              class="comment-form__submit submit-disabled"
+              type="submit"
+              disabled="disabled"
+              value="게시"
+            />
+          </form>
+        </article>
+      </div>
+
+      <aside class="main-right">
+        <div class="user">
+          <img alt="니니즈패밀리" src="img/profile/niniz.png" />
+          <div class="user__info">
+            <span class="user-ID">NINIZ</span>
+            <span class="user__name">세계최고 니니즈 패밀리</span>
+          </div>
+        </div>
+        <div class="main-right__container stories__container">
+          <div class="container__header">
+            <span>스토리</span>
+            <button>모두 보기</button>
+          </div>
+          <ul class="stories__list">
+            <li class="stories__story">
+              <div class="story__profile-img-ring">
+                <img
+                  class="profile-img"
+                  alt="라이언"
+                  src="img/profile/RYAN.jpeg"
+                />
+              </div>
+              <div class="story__user-info">
+                <span class="user-ID">RYAN</span>
+                <span class="time-stamp">3분 전</span>
+              </div>
+            </li>
+            <li class="stories__story">
+              <div class="story__profile-img-ring">
+                <img
+                  class="profile-img"
+                  alt="프로도"
+                  src="img/profile/FRODO.jpeg"
+                />
+              </div>
+              <div class="story__user-info">
+                <span class="user-ID">FRODO</span>
+                <span class="time-stamp">4분 전</span>
+              </div>
+            </li>
+            <li class="stories__story">
+              <div class="story__profile-img-ring">
+                <img
+                  class="profile-img"
+                  alt="스카피"
+                  src="img/profile/SCAPPY.jpeg"
+                />
+              </div>
+              <div class="story__user-info">
+                <span class="user-ID">SCAPPY</span>
+                <span class="time-stamp">5분 전</span>
+              </div>
+            </li>
+            <li class="stories__story">
+              <div class="story__profile-img-ring">
+                <img
+                  class="profile-img"
+                  alt="앙몬드"
+                  src="img/profile/ANGMOND.jpeg"
+                />
+              </div>
+              <div class="story__user-info">
+                <span class="user-ID">ANGMOND</span>
+                <span class="time-stamp">6분 전</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="main-right__container">
+          <div class="container__header">
+            <span>회원님을 위한 추천</span>
+            <button>모두 보기</button>
+          </div>
+          <ul class="recommendation__list">
+            <li class="recommendation__user">
+              <div class="recommendation__info">
+                <img
+                  class="recommendation__user-img profile-img"
+                  alt="어피치"
+                  src="img/profile/APEACH.jpeg"
+                />
+                <div class="recommendation__user-info">
+                  <span class="user-ID">APEACH</span>
+                  <span class="recommendation__users"
+                    >RYAN님 외 1명이 추천합니다</span
+                  >
+                </div>
+              </div>
+              <button class="recommendation__user-follow">팔로우</button>
+            </li>
+            <li class="recommendation__user">
+              <div class="recommendation__info">
+                <img
+                  class="recommendation__user-im profile-img"
+                  alt="튜브"
+                  src="img/profile/TUBE.png"
+                />
+                <div class="recommendation__user-info">
+                  <span class="user-ID">TUBE</span>
+                  <span class="recommendation__users"
+                    >SCAPPY님 외 1명이 추천합니다</span
+                  >
+                </div>
+              </div>
+              <button class="recommendation__user-follow">팔로우</button>
+            </li>
+            <li class="recommendation__user">
+              <div class="recommendation__info">
+                <img
+                  class="recommendation__user-img profile-img"
+                  alt="제이지"
+                  src="img/profile/JAY-G.jpeg"
+                />
+                <div class="recommendation__user-info">
+                  <span class="user-ID">JAY-G</span>
+                  <span class="recommendation__users"
+                    >FRODO님 외 1명이 추천합니다</span
+                  >
+                </div>
+              </div>
+              <button class="recommendation__user-follow">팔로우</button>
+            </li>
+          </ul>
+        </div>
+        <footer>
+          <p>
+            Westagram 정보 • 지원 • 홍보 센터 • API • <br />
+            채용 정보 • 개인정보처리방침 • 약관 • <br />
+            디렉터리 • 프로필 • 해시태그 • 언어
+          </p>
+          <span>@ 2022 WESTAGRAM</span>
+        </footer>
+      </aside>
+    </main>
+
+    <script
+      src="https://kit.fontawesome.com/493cc16663.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,73 @@
+@import "common.css";
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  width: 400px;
+  height: 500px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+#title {
+  font-family: Lobster;
+  font-size: 50px;
+  margin: 50px 0;
+}
+
+#login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#login-form input {
+  width: 300px;
+  background-color: whitesmoke;
+  font-size: 16px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  padding: 15px 10px;
+  margin-bottom: 5px;
+}
+
+#login-form input::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+
+#login-form input:focus {
+  outline: none;
+  border-color: rgba(0, 0, 0, 0.4);
+}
+
+#login_btn {
+  width: 300px;
+  font-size: 17px;
+  color: white;
+  background-color: blue;
+  border-radius: 5px;
+  padding: 8px 0;
+  margin-top: 10px;
+}
+
+.login_btn-disabled {
+  opacity: 0.1;
+}
+
+.login_btn-abled {
+  opacity: 1;
+}
+
+#login-form a {
+  color: #385e87;
+  margin-top: 150px;
+}
