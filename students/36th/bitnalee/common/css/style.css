@@ -40,18 +40,16 @@ input[type="text"], input[type="password"] {
 button[type="button"] {
   cursor: pointer;
   border: none;
-  background-color: rgba(0, 149, 246, .3);
   border-radius: 4px;
   color: white;
   margin-top: 8px;
   font-size: 14px;
   padding: 5px 0;
+  background-color:mediumturquoise;
 }
 
-button[type="button"].loginActive {
-
-  background-color: rgba(138, 25, 167, 0.3);
-
+button[type="button"]:disabled {
+  background-color: #ccc;
 }
 
 input[type="text"]::placeholder {

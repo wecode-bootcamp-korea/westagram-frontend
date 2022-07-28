@@ -9,7 +9,8 @@ const button = document.querySelector('#button');
 const active = function () {
   let idValue = id.value;
   let pwValue = pw.value;
-  (idValue.length >= 5) && (pwValue.length >= 5) ? button.classList.add('loginActive') : button.classList.remove('loginActive');
+  // (idValue.length >= 5) && (pwValue.length >= 5) ? button.classList.add('loginActive') : button.classList.remove('loginActive');
+  (idValue.length >= 5) && (pwValue.length >= 5) ? button.disabled = false : button.disabled = true;
 }
 //아이디, 비밀번호 각 5글자 이상시 로그인 버튼 활성화, 다시 지웠을때 로그인 버튼 비활성화. (삼항연산자)
 
