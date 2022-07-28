@@ -1,48 +1,19 @@
-// <댓글 추가 기능>
-// 1-1. input 창에 댓글 입력후 게시 클릭하거나 enter를 치면 댓글 입력
-//   1-2. 댓글 입력 후 input 창 초기화
-//    1-3. 포커스가 input 창에 올 수 있도록
+// 1. 5글자 이상 입력시 로그인 버튼 활성화, 지웠을시 비활성화
 
+const id = document.querySelector('#id');
+const pw = document.querySelector('#pw');
+const button = document.querySelector('#button');
 
-const input = document.querySelector('.commentInput');
-//댓글창 셀렉트
-const button = document.querySelector('#commentButton');
-//버튼창
-const addul = document.querySelector('.addul');
-//댓글 ul 공간 
+// id, ps, button 각 차례로 변수 담기
 
-const onAdd = function () {
-  const text = input.value;
-
-  // text에 댓글창 vaule값 담기
-
-  const str = 'bitnalee ';
-  const res = str.bold();
-
-  const item = document.createElement('li');
-  item.setAttribute('class', 'item');
-  //li 와 해당 클래스 생성
-  const itemText = document.createElement('span');
-  itemText.setAttribute('class', 'itemText');
-  itemText.innerHTML = res + text;
-  //span과 해당 클래스 생성
-  // 댓글창에 있는 텍스트를 해당 span에 담기
-
-  item.appendChild(itemText);
-  // li뒤에 텍스트를 담은 span넣기.
-  addul.appendChild(item);
-  // ul뒤에 해당 li를 넣기. 각각 li 로 ul 안에 추가 됨. 
-  input.value = '';
-  input.focus();
+const active = function () {
+  let idValue = id.value;
+  let pwValue = pw.value;
+  (idValue.length >= 5) && (pwValue.length >= 5) ? button.classList.add('loginActive') : button.classList.remove('loginActive');
 }
+//아이디, 비밀번호 각 5글자 이상시 로그인 버튼 활성화, 다시 지웠을때 로그인 버튼 비활성화. (삼항연산자)
 
+id.addEventListener('keyup', active);
+pw.addEventListener('keyup', active);
 
-button.addEventListener('click', function () {
-  onAdd();
-})
-
-input.addEventListener('keypress', function (e) {
-  if (e.key === 'Enter') {
-    onAdd();
-  }
-});
+//각 아이디,패스워드 값에 keyup 이벤트 활성화시 해당 함수 실행.
