@@ -29,3 +29,4 @@ function enterComment(event) {
         commentInput.value="";
     }
 }
+console.log('hi');
