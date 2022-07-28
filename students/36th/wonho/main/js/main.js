@@ -1,12 +1,18 @@
-const commentInput = document.querySelector("comment-box");
-const commentBtn = document.querySelector("comment-btn");
-const commentPost = document.querySelector("comment-post");
+const commentInput = document.getElementsByClassName("comment-box")[0];
+const commentBtn = document.getElementsByClassName("comment-btn")[0];
+const commentPost = document.getElementsByClassName("comment-post")[0];
+console.log(commentInput);
+console.log(commentBtn);
+console.log(commentPost);
 
 function postComment() {
 
     const comments = document.createElement("div");
     const mainText = document.createElement("p");
     const username = document.createElement("span");
+
+    comments.classList.add("comments-div")
+    username.classList.add("bold")
 
     username.innerHTML = "c_wonho"
     mainText.innerHTML = commentInput.value;
@@ -29,4 +35,3 @@ function enterComment(event) {
         commentInput.value="";
     }
 }
-console.log('hi');
