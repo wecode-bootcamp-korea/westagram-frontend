@@ -5,9 +5,15 @@ const commentLi = document.getElementById("comment-li");
 const commentForm = document.querySelector(".comment-input-wrap");
 let newLis = [];
 
-function deleteList(event) {
+function deleteLi(event) {
   const li = event.target.parentElement;
   li.remove();
+}
+
+function likeLi(event) {
+  const button = event.target;
+  button.innerText = "❤";
+  button.style.cssText = "color: red; font-size: 14px;";
 }
 
 function paintLi(newLi) {
@@ -15,12 +21,18 @@ function paintLi(newLi) {
   li.id = newLi.id;
   const span = document.createElement("span");
   span.innerText = newLi.text;
-  const button = document.createElement("button");
-  button.id = "submit-button";
-  button.innerText = "X";
-  button.addEventListener("click", deleteList);
+  const deleteButton = document.createElement("button");
+  deleteButton.id = "delete-button";
+  deleteButton.innerText = "X";
+  deleteButton.addEventListener("click", deleteLi);
+  const likeButton = document.createElement("button");
+  likeButton.id = "like-button";
+  likeButton.innerText = "🤍";
+  likeButton.addEventListener("click", likeLi);
+
   li.appendChild(span);
-  li.appendChild(button);
+  li.appendChild(deleteButton);
+  li.appendChild(likeButton);
   commentUl.appendChild(li);
 }
 
@@ -32,7 +44,7 @@ function handleLiForm(event) {
 
   const newLiObj = {
     text: `${userId} ${newLi}`,
-    id: new Date(),
+    id: new Date().getMinutes(),
   };
 
   newLis.push(newLiObj);
