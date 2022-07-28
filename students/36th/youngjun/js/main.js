@@ -1,84 +1,59 @@
-const comment = document.querySelector(".comment")
+const comment = document.querySelectorAll('.comment');
 const submit = document.querySelector(".submitCommentBtn")
 const commentInput = document.querySelector(".commentInput");
 const commentContent = document.querySelector(".commentContent");
 const logoImg = document.querySelector("#logoImg");
-const emptyHeartImg = document.getElementsByClassName('emptyHeartImg')
-const commentsIcon = document.querySelector('.commentsIcon')
-const seeMoreImg = document.querySelector('.seeMoreImg')
+const emptyHeartImg = document.querySelectorAll('.emptyHeartImg');
+const filledHeartImg = document.querySelectorAll('.filledHeartImg');
+const deleteImg = document.querySelectorAll('.deleteImg');
+const commentsIcon = document.querySelectorAll('.commentsIcon')
 
+const modal = document.querySelector(".modalOff")
+const searchInput = document.querySelector(".searchInput")
+
+//go to login page
 logoImg.addEventListener('click', ()=>{
 	location.href = "./login.html"
 });
 
-Array.from(emptyHeartImg).forEach(function(emptyHeartImg) {
-	emptyHeartImg.addEventListener('click', ()=>{
-		emptyHeartImg.remove();
-		commentsIcon.innerHTML=
-		`              
-		<img id = "filledHeartImg" src = "img/heart (1).png" alt = "filledHeartImg">
-		<img src = "img/See_More.png" alt = "seeMoreImg">
-		`
-	});
-})
+//comment, heart 
+deleteImg.forEach((e) => e.addEventListener("click", ()=>{
+	comment.forEach((e) => e.addEventListener("click", ()=>{
+		e.remove();
+	}));
+}))
 
-// for (const i in emptyHeartImg) {
-// 	// if (Object.hasOwnProperty.call(emptyHeartImg, key)) {
-// 	// 	const element = emptyHeartImg[key];
-// 	// 	console.log(element)
-// 	// }
+emptyHeartImg.forEach((e) => e.addEventListener("click", ()=>{
+	commentsIcon.forEach((e) => e.addEventListener("click", ()=>{
+		const a = document.createElement('div');
+		a.classList.add('commentsIcon');
 
-// 		emptyHeartImg.addEventListener('click', ()=>{
-// 		emptyHeartImg.remove();
-// 		commentsIcon.innerHTML=
-// 		`              
-// 		<img id = "filledHeartImg" src = "img/heart (1).png" alt = "filledHeartImg">
-// 		<img src = "img/See_More.png" alt = "seeMoreImg">
-// 		`
-// 	});
-// }
+		const filledHeartImg = document.createElement('img');
+		filledHeartImg.classList.add('filledHeartImg');
+		filledHeartImg.setAttribute("src", "./img/heart (1).png");
 
-// for(var i=0; i < emptyHeartImg.length; i++){
-// 	emptyHeartImg[i].addEventListener("click",function(){
-// 			console.log(i);
-// });
-// }
+		// const deleteImg = document.createElement('img');
+		// deleteImg.classList.add('deleteImg');
+		// deleteImg.setAttribute("src", "./img/delete.png")
 
-// Array.from(commentInput).forEach(function(commentInput) {
-// 	Array.from(commentContent).forEach(function(commentContent) {
-// 		commentInput.addEventListener('keypress', (e)=>{
-// 			if(e.key === 'Enter'){
-// 				createDiv(commentInput.value,commentContent);
-// 			}
-// 		});
-// 	});
-// });
+		e.appendChild(filledHeartImg);
+		// e.appendChild(deleteImg);
 
-// Array.from(commentInput).forEach(function(commentInput) {
-// 	Array.from(commentContent).forEach(function(commentContent) {
-// 		submit.addEventListener('click', ()=>{
-// 			createDiv(commentInput.value,commentContent);
-// 		});
-// 	});
-// });
+	}));
+}));
 
 submit.addEventListener('click', ()=>{
-	createDiv(commentInput.value,commentContent);
+	createComment(commentInput.value,commentContent);
 });
 
 commentInput.addEventListener('keypress', (e)=>{
 	if(e.key === 'Enter'){
-		createDiv(commentInput.value,commentContent);
+		createComment(commentInput.value,commentContent,comment);
 		commentInput.value = ""
 	}
 });
 
-seeMoreImg.addEventListener('click', ()=>{
-	comment.remove();
-});
-
-
-function createDiv(value,commentContent) {
+function createComment(value,commentContent) {
 	
   const newCommentDiv = document.createElement('div');
 	newCommentDiv.classList.add('comment');
@@ -92,13 +67,39 @@ function createDiv(value,commentContent) {
 	// const commentP = document.createElement('p');
 	// const commentValue = document.createTextNode(value);
 
+	// const commentsIcon = document.createElement('div');
+	// commentsIcon.classList.add('commentsIcon');
+
+	// const emptyHeartImg = document.createElement('img');
+	// emptyHeartImg.classList.add('emptyHeartImg');
+	// emptyHeartImg.setAttribute("src", "./img/heart.png");
+	
+	// const seeMoreImg = document.createElement('img');
+	// seeMoreImg.classList.add('seeMoreImg');
+	// seeMoreImg.setAttribute("src", "./img/See_More.png");
+
+
 	// newCommentDiv.appendChild(newCommentHead)
+	// newCommentDiv.appendChild(commentsIcon);
+
 	// commentNickname.appendChild(document.createTextNode("닉네임"));
   // newCommentHead.appendChild(commentNickname);
-  commentContent.appendChild(newCommentDiv);
+
+	// commentsIcon.appendChild(emptyHeartImg);
+	// commentsIcon.appendChild(seeMoreImg);
 
 	// commentP.appendChild(commentValue);
 	// newCommentHead.appendChild(commentP);
+
+	
+  commentContent.appendChild(newCommentDiv);
+
+	const deleteComment = document.querySelectorAll('.comment');
+	const newComment = document.querySelectorAll('.newComment');
+
+	deleteComment.forEach((e) => e.addEventListener("click", ()=>{
+		e.remove();
+	}));
 
 	newCommentDiv.innerHTML = 
 	`             
@@ -107,9 +108,67 @@ function createDiv(value,commentContent) {
 		<p>${value}</p>
 	</div>
 	<div class = commentsIcon>
-		<img class = "emptyHeartImg" src = "img/heart.png" alt = "emptyHeartImg">
-		<img src = "img/See_More.png" alt = "seeMoreImg">
-	</div>
+	<img class = "emptyHeartImg" src = "img/heart.png" alt = "emptyHeartImg">
+	<img class = "deleteImg" src = "img/delete.png" alt = "deleteImg">
+</div>
 	`
 
 }
+
+// modal
+
+searchInput.addEventListener('keyup',()=>{
+		modal.classList.add('modal')
+		modal.classList.remove('modalOff')
+		const searchID = searchInput.value;
+		for (const i in accountArray) {
+			// console.log(searchID.indexOf(accountArray[i].id))
+			// console.log(accountArray[i].id)
+			// console.log(accountArray[i])
+
+			modal.innerHTML = 
+			`             
+			<div class = "userBox">
+				<div class = "user">
+					<img src = ${accountArray[i].img} alt = "userImg">
+					<div class = "userInfo">
+						<p class = "userNickname"> ${accountArray[i].id}</p>
+						<p class = "info"> ${accountArray[i].nickname} </p>
+					</div>
+				</div>
+			</div>
+			<p class = "line2"></p>
+			`
+		}
+});
+
+document.addEventListener("click",(e) =>{
+		if (!e.target.closest(".modal")) {
+			modal.classList.remove('modal')
+			modal.classList.add('modalOff')
+		}
+	}
+);
+
+const accountArray = [
+	{
+		id: "wecode_bootcamp",
+		nickname: ">wecode | 위코드",
+		img: "./img/bookmark-white.png",
+	},
+	{
+		id: "selP",
+		nickname: ">wecode | 권영준",
+    img: "./img/bookmark-white.png",
+	},
+	{
+		id: "wecode",
+		nickname: ">gg",
+		img: "./img/delete.png",
+	},
+	{
+		id: "hi",
+		nickname: "hello",
+    img: "./img/heart.png",
+	}
+]   

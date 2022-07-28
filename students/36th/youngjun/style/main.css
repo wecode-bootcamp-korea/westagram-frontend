@@ -12,12 +12,11 @@ p{
 	position: fixed;
 	display: flex;
 	justify-content: space-around;
-	background-color: white;
 	align-items: center;
 	width: 100%;
 	height: 60px;
-	align-items: center;
 	top: 0;
+	background-color: white;
 	z-index: 2;
 }
 
@@ -26,7 +25,6 @@ p{
 	justify-content: space-around;
 	align-items: center;
 	width: 150px;
-	/* cursor: pointer; */
 }
 
 .logo{
@@ -44,15 +42,21 @@ img{
 	width: 2px;
 }
 
+.line2{
+	background-color: #DBDBDB;
+	height: 1px;
+	width: 100%;
+}
+
 .searchBar{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	width: 300px;
+	padding: 5px;
 	border: 2px solid #EFEFEF;
 	border-radius: 20px;
 	background-color: #EFEFEF;
-	width: 300px;
-	padding: 5px;
 }
 
 .searchBar input{
@@ -62,10 +66,24 @@ img{
 	background-color: #EFEFEF;
 }
 
+.modal {
+	position: absolute;
+	top: 60px;
+	width: 300px;
+	height: 200px;
+	background-color: white;
+	border-radius: 20px;
+	overflow-y: auto;
+}
+
+.modalOff{
+	display: none;
+}
+
 .iconCollect{
 	display: flex;
-	width: 200px;
 	justify-content: center;
+	width: 200px;
 }
 
 .iconCollect img{
@@ -76,8 +94,8 @@ img{
 
 .main{
 	display: flex;
-	justify-content: center;
 	position: relative;
+	justify-content: center;
 	background-color: #F5F5F5;
 	margin-top: 60px;
 	min-height: 1000px;
@@ -88,11 +106,11 @@ img{
 /* centerFrame */
 
 .centerFrame{
-	width: 470px;
-	margin: 15px 15px 15px;
 	align-items: center;
 	justify-content: center;
 	min-width: auto;
+	width: 470px;
+	margin: 15px 15px 15px;
 }
 
 .feedHeader{
