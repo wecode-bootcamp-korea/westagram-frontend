@@ -1,7 +1,6 @@
 const inputForm = document.querySelector(".inputForm");
 const passwordInput = document.getElementById("pw-input");
 const loginButton = document.getElementById("login-button");
-/* console.log(inputForm[0]); */
 
 function activateLogin() {
   const idValue = inputForm[0].value;

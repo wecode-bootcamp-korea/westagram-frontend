@@ -13,7 +13,7 @@ function deleteLi(event) {
 function likeLi(event) {
   const button = event.target;
   const currentColor = button.style.color;
-  console.log(currentColor);
+
   if (currentColor == "") {
     button.innerText = "🧡";
     button.style.cssText = "color: red; font-size: 17px;";
@@ -26,12 +26,16 @@ function likeLi(event) {
 function paintLi(newLi) {
   const li = document.createElement("li");
   li.id = newLi.id;
+  li.className = newLi.class;
+
   const span = document.createElement("span");
   span.innerText = newLi.text;
+
   const deleteButton = document.createElement("button");
   deleteButton.id = "delete-button";
   deleteButton.innerText = "X";
   deleteButton.addEventListener("click", deleteLi);
+
   const likeButton = document.createElement("button");
   likeButton.className = "like-button";
   likeButton.innerText = "🤍";
@@ -52,6 +56,7 @@ function handleLiForm(event) {
   const newLiObj = {
     text: `${userId} ${newLi}`,
     id: new Date().getMinutes(),
+    class: "new-li",
   };
 
   newLis.push(newLiObj);
