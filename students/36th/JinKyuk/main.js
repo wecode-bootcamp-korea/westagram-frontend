@@ -6,8 +6,9 @@ const commentForm = document.querySelector(".comment-input-wrap");
 let newLis = [];
 
 function deleteLi(event) {
-  const li = event.target.parentElement;
-  li.remove();
+  const deleteButtonDiv = event.target.parentElement;
+  const li = deleteButtonDiv.parentElement;
+  li.remove(deleteButtonDiv);
 }
 
 function likeLi(event) {
@@ -54,6 +55,7 @@ function handleLiForm(event) {
   event.preventDefault();
   const newLi = commentInput.value;
   const userId = "WECODE BOOTCAMP";
+  commentInput.value = "";
 
   const newLiObj = {
     text: `${userId} ${newLi}`,
