@@ -14,8 +14,9 @@
     />
     <title>westargram</title>
   </head>
+
   <body>
-    <div class="nav">
+    <nav class="nav">
       <div class="navleft">
         <img src="./img/instagram.png" />
         <img src="./img/line.png" />
@@ -29,7 +30,8 @@
         <img class="heart" src="./img/heart.png" />
         <img class="profile" src="./img/profile.png" />
       </div>
-    </div>
+    </nav>
+
     <div class="main">
       <div class="feedsmain">
         <div class="feeds">
@@ -66,13 +68,15 @@
               class="imog"
               src="./img/1000_F_336983767_dpzS1kFcCW7zyzCc38hru592ayaYhozB.jpeg"
             />
-            <p class="gray">45분 전</p>
           </div>
-          <div class="articleReply">
-            <input class="reply" type="text" placeholder="댓글달기..." />
-            <button class="replyButton">게시</button>
+          <div class="commentbox">
+            <div class="commentList"></div>
+            <form id="comment" class="articleReply">
+              <input class="reply" type="text" placeholder="댓글달기..." />
+              <button class="replyButton">게시</button>
+            </form>
           </div>
-          <div class="feeds">
+          <!-- <div class="feeds">
             <div class="imgtop">
               <img
                 class="porfile"
@@ -106,15 +110,21 @@
                 class="imog"
                 src="./img/1000_F_336983767_dpzS1kFcCW7zyzCc38hru592ayaYhozB.jpeg"
               />
-              <p class="gray">45분 전</p>
             </div>
+            <p class="gray">45분 전</p>
             <div class="articleReply">
-              <input class="reply" type="text" placeholder="댓글달기..." />
-              <button class="replyButton">게시</button>
+              <input
+                id="comment"
+                class="reply"
+                type="text"
+                placeholder="댓글달기..."
+              />
+              <button id="btn" class="replyButton">게시</button>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
+
       <div class="feedsRight">
         <div class="rightTop">
           <img class="wecode" src="./img/wecode.png" />

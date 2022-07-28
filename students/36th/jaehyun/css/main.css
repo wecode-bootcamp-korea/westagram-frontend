@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 body {
-  background-color: #fafafa;
+  background-color: #none;
 }
 
 .nav {
@@ -108,11 +108,12 @@ img {
   height: 45px;
   width: 400px;
   padding-left: 15px;
+  margin-top: 6px;
 }
 .replyButton {
   position: absolute;
   right: 20px;
-  top: 15px;
+  top: 25px;
   border: 0;
   outline: none;
   background: none;
@@ -250,4 +251,21 @@ img {
   margin-left: 9px;
   font-size: small;
   color: #c1c0c0;
+}
+.newDiv {
+  display: flex;
+  align-items: center;
+  padding-left: 7px;
+  position: relative;
+  font-size: 14px;
+}
+.newImg {
+  position: absolute;
+  right: 7px;
+  width: 18px;
+  height: 18px;
+}
+.commentList {
+  overflow: auto;
+  height: 50px;
 }
