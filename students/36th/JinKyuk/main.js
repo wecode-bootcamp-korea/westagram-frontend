@@ -12,8 +12,15 @@ function deleteLi(event) {
 
 function likeLi(event) {
   const button = event.target;
-  button.innerText = "❤";
-  button.style.cssText = "color: red; font-size: 14px;";
+  const currentColor = button.style.color;
+  console.log(currentColor);
+  if (currentColor == "") {
+    button.innerText = "🧡";
+    button.style.cssText = "color: red; font-size: 17px;";
+  } else {
+    button.innerText = "🤍";
+    button.style.cssText = "";
+  }
 }
 
 function paintLi(newLi) {
@@ -26,7 +33,7 @@ function paintLi(newLi) {
   deleteButton.innerText = "X";
   deleteButton.addEventListener("click", deleteLi);
   const likeButton = document.createElement("button");
-  likeButton.id = "like-button";
+  likeButton.className = "like-button";
   likeButton.innerText = "🤍";
   likeButton.addEventListener("click", likeLi);
 
