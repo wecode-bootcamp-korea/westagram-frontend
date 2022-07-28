@@ -1,13 +1,11 @@
 // Comment
 const comments = document.querySelector('.articleComments');
+const commentForm = document.querySelector('.articleInputComment');
 const inputComment = document.querySelector('.articleInputComment input');
-const submitComment = document.querySelector('.articleInputComment button');
 const userId = 'chaedong';
 
 function addComment(e) {
-  if (e.isComposing || !(e.code === 'Enter' || e.code === 'NumpadEnter') || e.target.value === '') {
-    return;
-  }
+  e.preventDefault();
   const comment = document.querySelector('.articleComment');
   const commentTime = document.querySelector('.articleCommentTime');
   const newComment = comment.cloneNode(true);
@@ -18,8 +16,7 @@ function addComment(e) {
 }
 
 // Comment EventListener
-inputComment.addEventListener('keydown', addComment);
-submitComment.addEventListener('click', addComment);
+commentForm.addEventListener('submit', (e) => addComment(e));
 
 // Like
 const commentHeart = document.querySelectorAll('.articleComment i');
