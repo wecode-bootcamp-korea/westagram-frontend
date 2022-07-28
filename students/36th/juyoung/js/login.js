@@ -4,10 +4,7 @@ const button = document.querySelector(".btn");
 
 function loginBtn() {
     let idValue = inputId.value;
-    console.log(idValue.length);
     let passwordValue = inputPassword.value;
-    console.log(passwordValue.length)
-
 
     if(idValue.length > 0 && passwordValue.length > 0) {
         button.disabled = false;
