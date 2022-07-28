@@ -2,7 +2,7 @@ const inputId = document.querySelector("#id");
 const inputPassword = document.querySelector("#password");
 const button = document.querySelector(".btn");
 
-function loginButton() {
+function loginBtn() {
     let idValue = inputId.value;
     console.log(idValue.length);
     let passwordValue = inputPassword.value;
@@ -20,7 +20,7 @@ function loginButton() {
 };
 
 
-inputId.addEventListener('keyup', loginButton);
-inputPassword.addEventListener('keyup', loginButton)
+inputId.addEventListener('keyup', loginBtn);
+inputPassword.addEventListener('keyup', loginBtn)
 
 //keyup과 Keydown 정확히 알기. -> OKAY

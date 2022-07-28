@@ -27,6 +27,8 @@
   right: 0;
 }
 
+
+
 /* from here */
 
 .flex {
@@ -43,7 +45,7 @@
 
 body { 
   /* 조금더 포괄적인 것 추가하기 */
-  border: 1px black solid;
+  /* border: 1px black solid DBDBDB; */
   width: 95vw;
   height: 100vh;
   margin: 10px auto;
@@ -51,7 +53,8 @@ body {
 
 .icon {
   font-size: 1.5rem;
-  margin-right: 20px;
+  margin-right: 15px;
+  ;
 }
 /* 아이콘 사이즈 통일 class 명인 icon을 i의 클래스로 추가해주면서 사이즈 동일하게 한다. */
 
@@ -68,6 +71,8 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid #FAEAEA;
+  margin-bottom: 10px;
 }
 /* 일일이 패딩과 마진을 주면 responsive이 안될 것 같아서 박스를 만들어줘서 상위 요소에 display:flex를 해줘서 자식 요소에서 space around 사용 */
 /* 그래서 html에 nav 안에 3개의 div가 있는 이유 */
@@ -106,6 +111,7 @@ padding-left: 100px;
   padding-left: 100px;
 }
 
+
 h1 { 
   font-family: 'Lobster', cursive;
 }
@@ -125,14 +131,15 @@ main {
   grid-row: 1/3;
   padding: 10px;
   display: flex;
-  justify-content: center;
+  justify-content:center;
   position: relative;
   border: 1px solid #DBDBDB;
   border-radius: 6px;
+  width: 96.5%
 }
 
 .feeds__story{
-margin: auto 10px;
+margin-right: 10px;
 
 }
 
@@ -142,16 +149,17 @@ margin: auto 10px;
   padding: 5px 8px;
   border-radius: 10px;
   font-weight: 500;
-  top: -5px;
+  top: -10px;
   right: 80px;
-
 }
 
 .feeds{
   grid-row: 3/6;
   height: 100%;
-  border: 1px black solid;
-  margin-top: 30px;
+  margin: 20px 20px 0 0;
+  border: 1px solid #DBDBDB;
+  border-radius: 6px;
+  
 }
 
 .feeds__name {
@@ -161,11 +169,16 @@ margin: auto 10px;
 
 article {
   height: 75%;
-  border: 1px black solid;
-  margin: 1px 10px 0px 10px;
+  border: 1px solid #DBDBDB;
+
 }
 .article__img{
 height: 100%;
+}
+
+.push__icon{
+  margin: 10px 0px 3px 10px;
+  position: relative;
 }
 
 .main-right{
@@ -209,7 +222,9 @@ color: #6FBBF7;
 
 .story__names {
   display: flex;
+  font-weight: 700;
   justify-content: space-between;
+  margin-top: 10px;
 }
 /* .profile__text{
   width:
@@ -227,14 +242,15 @@ color: #6FBBF7;
 /* -> template-areas를 정확히 찾아봐야겠다. */
 
 .story {
-  border: 1px black solid;
+
   width: 100%;
   height: 240px;
 }
 
 .recommendation {
-  border: 1px black solid;
+
   width: 100%;
   height: 240px;
+  color: #D4D4D4;
   
 }
