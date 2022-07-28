@@ -63,8 +63,10 @@ function handleLiForm(event) {
     class: "new-li",
   };
 
-  newLis.push(newLiObj);
-  paintLi(newLiObj);
+  if (newLi.length !== 0) {
+    newLis.push(newLiObj);
+    paintLi(newLiObj);
+  }
 }
 
 commentForm.addEventListener("submit", handleLiForm);
