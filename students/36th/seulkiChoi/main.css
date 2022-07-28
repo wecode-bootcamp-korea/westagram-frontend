@@ -27,22 +27,20 @@
     color: black;
 }
 
-/*search bar in Nav bar*/
-
-.second_nav_child {
+.nav_center_search_wrapper {
     display: flex;
     flex-direction: row;
     align-items: center;
     position: relative;
 }
 
-.main_search {
+.nav_search {
     width: 13vw;
     border: 1px solid lightgrey; 
     background-color: #fafafa;
 }
 
-.main_search::placeholder {  
+.nav_search::placeholder {  
     text-align: center;
 }
 
@@ -52,9 +50,7 @@
     right: 60%;
 }
 
-/*icons(navigation/ like / personal info) in Nav bar*/
-
-.third_nav_child {
+.nav_right_side_icons_wrapper {
     width: 130px;
     display: flex;
     flex-direction: row;
@@ -62,100 +58,79 @@
     margin-right: 40px;
 }
 
-/*main div - layout for the main part*/
+/*main layout*/
 
-.main {
+.main_container {
     display: flex;
     flex-direction: row;
     justify-content: center;
     width: 80%;
-    height: 90vh;
+    height: 84vh;
     margin: 0 auto;
-    background-color: #fafafa;
     padding: 30px;
+    background-color: #fafafa;
 }
 
-.div_feed {
+.main_left_side_container {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    /* align-items: center; */
     width: 50%;
-    height: 100%;
-    margin: 0px 0;
     background-color: #fafafa;
-    /* border: 2px solid blue; */
 }
 
-.div_main_right {
-    max-width: 25%;
+.main_right_container {
+    max-width: 23%;
     height: 100%;
     background-color: #fafafa;
-    /* border: 2px solid green; */
 }
 
-/*left content : profile pictur, userID, like comments share desc*/
-.article {
+.article_wrapper {
     width: 90%;
-    height: 100%;
     position: relative;
 }
 
-/* .article {
-    width: 90%;
-    height: 100%;
-    position: relative;
-} */
-
-/*content info who uploaded- top*/
-
-.profile_pic_id_bar {
+.article_top {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     height: 45px;
+    padding-left: 10px;
 }
 
-.profile_pic_id_front {
+.article_left {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.profile_pic_img {
-    border-radius: 100px;
-    margin-left: 10px;
-}
-
-.id {
+.writer_id {
     margin-left: 10px;
     font-family: sans-serif;
     font-weight: bold;
     font-size: 13px;
 }
 
-.profile_pic_id_back {
+.article_right {
     width: 15px;
     border-top: 3px dotted grey;
     margin-right: 12px;
     border-radius: 0;
 }
 
-/*content - middle : uploaded content*/
-
-.uploaded_pic {
+.article_pic {
     width: 100%;
-    height: 50vh;
+    height: 47vh;
     object-fit: cover;
 }
 
-.all_feed_icons {
+.article_middle_icon_wrapper {
     display: flex;
     flex-direction: row;
 }
 
-.main_feed_icons {
+.article_icons {
     display: flex;
     width: 22%;
     flex-direction: row;
@@ -164,12 +139,13 @@
     margin: 6px auto 6px 5px;
 }
 
-.save {
+.save_icon {
     margin: 6px 10px 6px 5px;
+    width: 25px;
+    height: 25px;
 }
-/*liked bar - who likes, how many*/
 
-.liked_users_bar {
+.liked_users_wrapper {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -177,76 +153,67 @@
 }
 
 .liked_user_img {
-    margin-left: 13px;
+    margin-left: 10px;
     border-radius: 100px;
     border: 1px solid lightgray;
 }
 
-.liked_info {
-    margin-left: 8px;
+.liked_user_info {
+    margin-left: 7px;
     font-size: 14px;
 }
 
-/*content - bottom : comments*/
+.article_comments {
+    margin: 0 0 0 6px;
+    font-size: 14px;
+}
 
-.comments {
+.article_comments_span {
     margin: 0 0 0 6px;
     font-size: 14px;
     position: relative;
 }
 
-.comments_flex {
-    display: flex;
-    flex-direction: column;
-}
-
-.comment_like_btn {
+.comment_like_mini_btn {
     position: absolute;
-    right: 10px;
-    z-index: 1;
     border: 0;
-    width: 10px;
+    width: 11px;
+    height: 11px;
+    top: 4px;
+    right: -320px;
 }
 
-.more {
-    color: grey;
-}
-
-.overflow {
+.inputted_new_comment_overflow_js {
     overflow: auto;
-    height: 40px;
-    padding-left: 8px;
+    height: 2.3vh;
+    padding-left: 5px;
     margin: 1px;
     width: 100%;
-   
-
 }
 
+.new_comment_wrapper {
+    width: 100%;
+    position:relative;
+}
 
-.comment_js {
+.new_comment_content_js {
     font-size: 14px;
     width: 100px;
 }
 
-.btn_js {
+.new_comment_like_btn_js {
     border: 0;
-    width: 10px;
-    height: 10px;
+    width: 11px;
+    height: 11px;
     margin-right: 20px;
     position: absolute;
-    right: 2px
-
-}
-
-.abc {
-    width: 100%;
-    position:relative
+    right: 6px;
 }
 
 .input_comments {
     width: 100%;
     height: 40px;
-    padding-left: 10px;
+    padding-left: 20px;
     position: absolute;
     bottom: 0;
     border-top: 1px solid silver;
@@ -257,10 +224,9 @@
 
 .input_comments::placeholder {  
     text-align: left;
-    padding: 10px;
 }
 
-.post {
+.post_button {
     height: 40px;
     position: absolute;
     bottom: 0;
@@ -270,33 +236,10 @@
     background: none;
 }
 
-/* .post {
-    display: inline-block;
-    width: 50px;
-    font-weight: bold;
-    color: #C4E1FB;
-    font-size: 14px;
-    position: absolute;
-    top: 13px;
-    left: auto;
-    bottom: auto;
-    right: 10px;
-    background-color: white;
-    border: none;
-    z-index: 2;
-    border: 2px solid red;
-} */
-
-/*right content part : user info, stroy, recommendation*/
-
 .side_feed_top {
     height: 8%;
     display: flex;
     align-items: center;
-    background-color: #fafafa;
-}
-
-.userIdwithInfo {
     background-color: #fafafa;
 }
 
@@ -306,22 +249,14 @@
     height: 40px;
 }
 
-.userId {
+.userId_bio {
     font-size: 13px;
     margin: 0;
     padding-left: 12px;
     background-color: #fafafa;
 }
 
-span.userId {
-    color: rgba(128, 128, 128, 0.634);
-    font-weight: 530;
-    background-color: #fafafa;
-}
-
-/*side : story & recommendation*/
-
-.story, .recommendation{
+.story_wrapper, .recommendation_wrapper {
     border: 1px solid lightgrey;
     margin-top: 10px;
     padding-left: 5px;
@@ -335,32 +270,27 @@ span.userId {
     font-weight: bold;
 }
 
+.seeAll_right_button {
+    font-weight: bold;
+    font-size: 12px;
+    padding-right: 5px;
+}
+
 .story_overflow { 
     overflow: scroll;
     height: 145px;
 }
 
-.friendsStory {
+.friendsInfo_wrapper {
     padding: 0 8px;
     display: flex;
     flex-direction: row;
     align-items: center;
     height: 40px;
-    overflow: scroll;
-}
-.friendsProfilePic {
-    border-radius: 100px;
-    border: 1.5px solid #F806CC;
-    width: 30px;
-    height: 30px;
-    padding: 1px;
 }
 
-.recommendation_for_you_profile_pic {
-    border-radius: 100px;
-    width: 30px;
-    height: 30px;
-    padding: 1px;
+.gotStory_profile_pic {
+    border: 1.5px solid #F806CC;
 }
 
 .friendsStoryInfo {
@@ -381,29 +311,18 @@ span.userId {
     white-space: nowrap;
 }
 
-.lastUpdated,.story_font,.recommendation_font {
-    color: grey;
-}
-
-.follow {
-    display: inline-block;
-    margin-right: 10px;
-    color: #0095F6;
-    font-weight: bold;
-}
-
-.pic_recommendedId {
+.recommendation_frame {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.seeAll {
+.follow_button {
+    display: inline-block;
+    margin-right: 14px;
+    color: #0095F6;
     font-weight: bold;
-    font-size: 12px;
 }
-
-/*copywriter*/
 
 .copywriter_wrapper {
     background-color: #fafafa;
@@ -411,7 +330,6 @@ span.userId {
 
 .copywriter {
     font-size: 13px;
-    color: rgb(190, 188, 188);
     margin-top: 15px;
     background-color: #fafafa;
 }
