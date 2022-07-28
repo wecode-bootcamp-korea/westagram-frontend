@@ -196,36 +196,21 @@ article img {
   width: 3rem;
 }
 
-/* * Main-right */
-.main-right {
+/* * aside */
+.aside {
   width: 250px;
   height: 600px;
 }
 
-.main-right__nav,
-.main-right__story,
-.main-right__recommend {
-  width: 100%;
-  height: 100px;
-  font-size: 0.75rem;
-}
-
-.main-right__nav {
-  height: 3rem;
+.asideNav {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 3rem;
+  font-size: 0.75rem;
 }
 
-.userDescription {
-  opacity: 0.5;
-}
-
-.main-rigth__userInfo {
-  width: 80%;
-}
-
-.main-right__nav img {
+.asideNav img {
   object-fit: contain;
   width: 2.2rem;
   height: 2.2rem;
@@ -234,13 +219,15 @@ article img {
   margin-right: 0.5rem;
 }
 
-/* .main-right__recommend {
-  height: 200px;
-  background-color: white;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-} */
+.userDescription {
+  opacity: 0.5;
+}
 
-.main-right__box {
+.asideUserInfo {
+  width: 80%;
+}
+
+.asideBox {
   height: 170px;
   background-color: white;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -275,8 +262,6 @@ article img {
 
 .storyNavRight p {
   font-weight: bold;
-}
-.storyiesBox {
 }
 
 .followButton {
