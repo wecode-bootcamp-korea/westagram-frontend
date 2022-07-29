@@ -1,3 +1,4 @@
+"user strict";
 const btn = document.querySelector(".replyButton");
 
 function addComment(event) {
