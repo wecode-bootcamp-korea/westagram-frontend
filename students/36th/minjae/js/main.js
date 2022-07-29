@@ -22,7 +22,7 @@ const addComment = () => {
   commentText.classList.add("user-ID");
   commentText.innerHTML = "JMJ";
   const commentNew = document.createElement("span");
-  commentNew.classList.add("feed__text");
+  commentNew.classList.add("comment__text");
   commentNew.innerText = commentInput.value;
   const commentTimestamp = document.createElement("span");
   commentTimestamp.classList.add("time-stamp");
@@ -33,7 +33,7 @@ const addComment = () => {
   commentContent.appendChild(commentInfo);
   commentList.appendChild(commentContent);
   commentList.appendChild(commentTimestamp);
-  document.querySelector(".feed__comments").appendChild(commentList);
+  document.querySelector(".feed__comment-list").appendChild(commentList);
 };
 
 const handleCommentSubmit = (event) => {

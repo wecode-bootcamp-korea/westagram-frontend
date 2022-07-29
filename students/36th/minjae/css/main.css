@@ -54,7 +54,7 @@ button:hover {
   padding: 15px 15px;
 }
 
-.feed__user-info {
+.feed__user {
   display: flex;
   align-items: center;
 }
@@ -80,8 +80,10 @@ button:hover {
   padding: 8px 15px;
 }
 
-.feed__content {
-  padding: 0 15px;
+.feed__btns--box {
+  width: 120px;
+  display: flex;
+  justify-content: space-between;
 }
 
 .feed__btns i {
@@ -89,10 +91,12 @@ button:hover {
   color: rgba(0, 0, 0, 0.7);
 }
 
-.feed__btns--box {
-  width: 120px;
-  display: flex;
-  justify-content: space-between;
+#red-heart {
+  color: red;
+}
+
+.feed__contents {
+  padding: 0 15px;
 }
 
 .feed__likes {
@@ -110,11 +114,10 @@ button:hover {
 
 .feed__likes span {
   font-size: 13px;
-  vertical-align: center;
 }
 
-#red-heart {
-  color: red;
+.user-number {
+  font-weight: bold;
 }
 
 .feed__info {
@@ -141,6 +144,11 @@ button:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.comment__text {
+  font-size: 14px;
+  margin: 0 10px;
 }
 
 .time-stamp {
@@ -196,7 +204,7 @@ button:hover {
   margin-left: 15px;
 }
 
-.user__name {
+.user__text {
   font-size: 14px;
   color: rgba(0, 0, 0, 0.5);
 }
@@ -224,10 +232,6 @@ button:hover {
   color: rgba(0, 0, 0, 0.5);
 }
 
-.stories__container {
-  height: 250px;
-}
-
 .stories__story {
   display: flex;
   align-items: center;
@@ -237,7 +241,7 @@ button:hover {
 .story__profile-img-ring {
   width: 40px;
   height: 40px;
-  background-color: white;
+  background: transparent;
   border: 2px solid orangered;
   border-radius: 50%;
   display: flex;
