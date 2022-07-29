@@ -17,22 +17,25 @@ logoImg.addEventListener('click', ()=>{
 	location.href = "./login.html"
 });
 
-//comment, heart 
-deleteImg.forEach((e) => e.addEventListener("click", ()=>{
-	comment.forEach((e) => e.addEventListener("click", ()=>{
+
+// comment, heart 
+
+comment.forEach((e) => e.addEventListener("click", ()=>{
+	deleteImg.forEach((x) => x.addEventListener("click", ()=>{
 		e.remove();
 	}));
 }))
 
 emptyHeartImg.forEach((e) => e.addEventListener("click", ()=>{
-	commentsIcon.forEach((e) => e.addEventListener("click", ()=>{
+	commentsIcon.forEach((x) => x.addEventListener("click", ()=>{
 		const a = document.createElement('div');
 		a.classList.add('commentsIcon');
 
 		const filledHeartImg = document.createElement('img');
 		filledHeartImg.classList.add('filledHeartImg');
 		filledHeartImg.setAttribute("src", "./img/heart (1).png");
-		e.appendChild(filledHeartImg);
+		x.appendChild(filledHeartImg);
+		e.remove();
 
 	}));
 }));
@@ -83,9 +86,9 @@ searchInput.addEventListener('keyup',()=>{
 			if (searchInput.value) {
         const filteredID = accountArray.filter( x => matchSearch(x.id))
         if (filteredID) {
-            filteredID.forEach(function(e) {
-                showFilteredID(e)
-            })
+					filteredID.forEach(function(e) {
+						showFilteredID(e)
+					})
         }
     }
 });
@@ -96,28 +99,27 @@ function matchSearch(value) {
 }
 
 function showFilteredID(id) {
-				modal.innerHTML = 
-			`             
-			<div class = "userBox">
-				<div class = "user">
-					<img src = ${id.img} alt = "userImg">
-					<div class = "userInfo">
-						<p class = "userNickname"> ${id.id}</p>
-						<p class = "info"> ${id.nickname} </p>
-					</div>
+	modal.innerHTML = 
+	`             
+		<div class = "userBox">
+			<div class = "user">
+				<img src = ${id.img} alt = "userImg">
+				<div class = "userInfo">
+					<p class = "userNickname"> ${id.id}</p>
+					<p class = "info"> ${id.nickname} </p>
 				</div>
 			</div>
-			<p class = "line2"></p>
-			`
+		</div>
+		<p class = "line2"></p>
+	`
 }
 
 document.addEventListener("click",(e) =>{
-		if (!e.target.closest(".modal")) {
-			modal.classList.remove('modal')
-			modal.classList.add('modalOff')
-		}
+	if (!e.target.closest(".modal")) {
+		modal.classList.remove('modal')
+		modal.classList.add('modalOff')
 	}
-);
+});
 
 const accountArray = [
 	{
@@ -141,3 +143,32 @@ const accountArray = [
     img: "./img/heart.png",
 	}
 ]   
+
+// user Modal
+
+const userImg = document.querySelector(".userImg")
+const userModal = document.querySelector(".hideModal")
+
+// userImg.addEventListener('click',()=>{
+// 	(userModal.className === "userModal hideModal") ?
+// 		userModal.classList.remove("hideModal"):
+// 		userModal.classList.add("hideModal")
+// })
+
+
+document.addEventListener("click",(e) =>{
+	if(userModal.className === "userModal"){
+		userModal.addEventListener("click",()=>{
+			if(!e.target.closest(".hideModal")) {
+				userModal.classList.add("hideModal")
+			}
+		})
+	}
+});
+
+
+userImg.addEventListener('click',()=>{
+	(userModal.className === "userModal hideModal") ?
+		userModal.classList.remove("hideModal"):
+		userModal.classList.add("hideModal")
+})
