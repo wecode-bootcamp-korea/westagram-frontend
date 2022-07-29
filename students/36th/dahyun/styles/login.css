@@ -11,7 +11,7 @@ body {
 .container {
   width: 400px;
   padding: 40px;
-  border: 1px solid rgba(0, 0, 0, 0.3);
+  border: 1px solid rgb(235, 235, 235);
   border-radius: 5px;
 }
 
@@ -32,9 +32,13 @@ body {
 .loginCtl input {
   width: 100%;
   padding: 10px;
-  border: 1px solid rgba(0, 0, 0, 0.3);
+  border: 1px solid rgb(235, 235, 235);
   border-radius: 5px;
   font-size: 14px;
+}
+
+.loginCtl input:focus {
+  border-color: rgb(175, 175, 175);
 }
 
 .loginForm button {
@@ -63,7 +67,7 @@ body {
 .line {
   flex: 1;
   height: 1px;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgb(235, 235, 235);
 }
 
 .or {
