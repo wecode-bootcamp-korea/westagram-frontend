@@ -7,7 +7,7 @@
   overflow: hidden;
 }
 
-.nav .inner{
+.inner{
 max-width: 800px;
 min-width: 650px;
 margin: 0 auto;
@@ -18,22 +18,22 @@ align-items: center;
 width: 100%;
 }
 
-.nav .logo{
+.logo{
   font-family: 'lobster';
   text-decoration: none;
 }
 
-.nav .logo img{
+.logo img{
   width: 25px;
 }
 
-.nav .logo a{
+.logo a{
   position: relative;
   margin-left: 28px;
   font-size: 30px;  
 }
 
-.nav .logo a::before{
+.logo a::before{
   content: '';
   position: absolute;
   top: 12px;
@@ -43,7 +43,7 @@ width: 100%;
   background-color: #000;
 }
 
-.nav .search{
+.search{
     position: relative;
     width: 300px;   
 }
@@ -69,11 +69,11 @@ width: 100%;
   margin-left: 10px;
 }
 
-.nav .utility .utilityBox .utilityicon{
+.utilityicon{
   margin-right: 8px;
 }
 
-.nav .utility .utilityBox .utilityicon  img{
+.utilityicon  img{
   width: 30px;
 }
 
@@ -81,16 +81,19 @@ width: 100%;
   padding: 20px;
   background: rgb(250, 250, 250);
 }
-.main .wrap{
+
+.wrap{
   margin: 0 auto;
   width: 800px;
 }
-.main .wrap::after{
+
+.wrap::after{
   content: '';
   display: block;
   clear: both;
 }
-.main .wrap .feeds{
+
+.feeds{
   float: left;
   width: 500px;
   border: 1px solid #ccc;
@@ -98,11 +101,12 @@ width: 100%;
 }
 
 /* profileBox */
-.main .profileBox {
+.profileBox {
   float: left;
   padding: 10px 10px;
 }
-.main .profileBox > img{
+
+.profileBox > img{
   float: left;
   display: block;
   width: 50px;
@@ -110,26 +114,27 @@ width: 100%;
   border-radius: 50%;
   border: 1px solid #ccc;
 }
-.main .profileBox .info{
+
+.info{
   float: left;
   padding-left: 10px;
 }
 
-.main .profileBox .info .title{
+.title{
   font-weight: bold;
 }
 
-.main .profileBox .info .text{
+.text{
   font-weight: normal;
 }
 
-.main .wrap .contentTop {
+.contentTop {
   overflow: hidden;
   position: relative;
   border-bottom: 1px solid #ccc;
 }
 
-.main .wrap .contentTop .rightButton{
+.rightButton{
   position: absolute;
   top: 20px;
   right: 10px;
@@ -140,7 +145,7 @@ width: 100%;
   height: 30px;
 }
 
-.main .wrap .contentTop .rightButton > span{
+.rightButton > span{
   width: 5px;
   height: 5px;
   border-radius: 50%;
@@ -148,61 +153,64 @@ width: 100%;
   background-color: #ccc;
 }
 
-.main .wrap .feeds .article{
+.article{
   background: #fff;
 }
 
-.main .wrap .feeds .article > img{
+.article > img{
   width: 100%;
 }
 
-.main .contentBottom {
+.contentBottom {
   margin-top: 10px;
 
 }
 
-.main .contentBottom .contentIcon {
+.contentIcon {
   display: flex;
   flex-direction: row;
   justify-content: space-between
 }
 
-.main .contentBottom .contentIcon .iconBox {
+ .iconBox {
   width: 120px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly
 }
 
-.main .contentBottom .contentIcon button {
+.contentIcon button {
   width: 30px;
   border: none;
   background: none;
 }
-.main .contentBottom .contentIcon button img {
+
+.contentIcon button img {
   width: 100%;
 }
 
-.main .contentBottom .userBox {
+ .userBox {
   margin-top: 20px;
   padding: 0 10px;
 }
-.main .contentBottom .userBox img{
+
+ .userBox img{
   width: 30px;
   height: 30px;
   border: 1px solid #ccc;
   border-radius: 50%;
 }
-.main .contentBottom .userBox .text {
+
+ .text {
   padding-left: 10px;
 }
 
-.main .contentBottom .contentIcon .link {
+ .link {
   margin-right: 8px;
   padding: 3px;
 }
 
-.main .commentBox {
+.commentBox {
   margin-top: 10px;
   display: flex;
   flex-direction: row;
@@ -210,16 +218,15 @@ width: 100%;
   border-top: 1px solid #ccc;
 }
 
-.main .commentBox .commentInput {
+.commentInput {
   width: 100%;
   padding: 0 10px;
   border: none;
   outline: none;
-  height: 50px;
-  
+  height: 50px; 
 }
 
-.main .commentBox .commnetButton {
+ .commnetButton {
   border: none;
   width: 50px;
   height: 50px;
@@ -227,18 +234,18 @@ width: 100%;
   color: royalblue;
 }
 
-.main .wrap .main-right{
+.main-right{
   float: right;
   width: 270px;
   height: 600px;
 }
 
-.main .wrap .main-right .myProfile {
+.myProfile {
   overflow: hidden;
 }
 
-.main .wrap .main-right .storyCommand,
-.main .wrap .main-right .followCommand {
+.storyCommand,
+.followCommand {
   overflow: hidden;
   padding: 10px 5px;
   border: 1px solid #ccc;
@@ -247,26 +254,26 @@ width: 100%;
   border-radius: 5px;
 }
 
-.main .wrap .main-right .moreTitle{
+.moreTitle{
   padding: 5px;
   display: flex;
   flex-direction: row;
   justify-content: space-between
 }
 
-.main .wrap .main-right .moreTitle .text{
+.text{
   font-weight: bold;
 }
 
-.main .wrap .main-right .moreTitle button{
+ .moreTitle button{
   color: #999;
   background: none;
   border: none;
 }
 
-.main .contentBottom .userBox .addUl {
+.addUl {
   margin-top: 10px;
 }
-.main .contentBottom .userBox .addUl .item {
+.item {
   padding: 7px 5px 0;
 }
