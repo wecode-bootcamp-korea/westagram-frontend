@@ -1,68 +1,341 @@
-body{
+/* --------------------네비게이션 바-------------------- */
+.navbar{
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-around;
+    height:60px;
+    position:fixed;
+    width: 100%;
+    align-items: center;
+    border-bottom: 1px solid #E6E6E6;
+}
+
+.leftLogo{
+    font-family: 'Lobster', cursive;
+    font-size:31px;
+    margin-bottom: 5px;
+}
+
+.leftLogo img{
+    height:20px;
+}
+
+.navbar input{
+    background-image: url(../img/search.png);
+    background-repeat: no-repeat;
+    background-position: 35%;
+    background-size: 15px;
+    background-color: #FAFAFA;
+    text-align: center;
+    width:200px;
+    height: 30px;
+    border:1.5px solid #E6E6E6;
+    border-radius: 3px;
+}
+
+.rigthMenu img{
+    width:30px;
+    margin-right: 23px;
+}
+
+/* --------------------피드_컨테이너-------------------- */
+
+.mainContainer{
+    padding-top: 45px;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
     background-color: #FAFAFA;
 }
 
-.loginContainer{
-    position:absolute;
-    top:50%;
-    left:50%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 2px solid #E9E9E9;
+
+/* --------------------피드_박스(칸)------------------- */
+.feedBox{
+    margin:50px 30px 0px 0px;
+    border: 1px solid #E6E6E6;
+    width: 500px;
     background-color: #ffffff;
-    height: 520px;
-    width: 480px;
-    transform: translate(-50%,-50%)
 }
 
-.loginTitle{
-    font-family: 'Lobster', cursive;
-    margin-top:30px;
-    font-size: 50px;
+.feedBox:nth-last-of-type(1){
     margin-bottom: 30px;
 }
+/* --------------------피드_상단-------------------- */
 
-.loginBox{
+.feedTop{
     display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    justify-content: space-between;
+    align-items: center;
 }
 
-#id, #password {
-    width:300px;
-    background-color: #FAFAFA;
-    border-radius: 5px;
-    padding:10px;
-    margin-top:10px;
-    border:1px solid #EFEFEF;
+
+.feedTopLeft{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+
 }
 
-#loginButton{
-    width:300px;
-    background-color: #C4E1FB;
-    border:none;
-    height:40px;
-    border-radius: 5px;
-    color:#ffffff;
+.feedTopLeft img{
+    margin:10px;
+    border-radius: 70%;
+    overflow: hidden;
+    height: 30px;
+    width: 30px;
 }
 
-.question{
-    margin-top:180px; 
-    text-decoration: none;
-    color:#577296;
+.feedTopRight{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.loginButtonHover{
+.feedTopRight img{
+    margin:10px;
+    height: 25px;
+}
+
+/* --------------------피드_미들(이미지)-------------------- */
+
+.feedMiddleImg{
+    width:498px;
+    height:498px;
+}
+
+.feedMiddleImg img{
+    width:100%;
+    height:100%;
+}
+
+/* --------------------피드_바텀(좋아요 및 댓글 박스)-------------------- */
+
+.bottomMenu{
+    display: flex;
+    justify-content: space-between;
+    height: 35px;
+    padding:0 10px;
+}
+
+.bottomMenu img{
+    height: 20px;
+    margin-bottom: 15px;
+}
+
+.like{
+    font-size: 13px;
+    padding:5px 10px;
+    display: flex;
+    align-items: center;
+}
+
+.like img{
+    width:20px;
+    height: 20px;
+    border-radius: 70%;
+    overflow: hidden;
+    margin-right:5px;
+}
+
+.commentBox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 20px;
+}
+
+.comment{
+    font-size: 13px;
+    padding:0 10px;
+}
+
+.commentImgBox{
+    display: flex;
+    align-items: center;
+}
+
+.commentClose{
+    height: 8px;
+    width:8px;
+    margin-right:6px;
+    opacity: 0.4;
+}
+
+.commentClose:hover{
     cursor: pointer;
 }
 
-#error{
-    position:absolute;
-    top:60%;
-    text-align: center;
+.commentHeart{
+    width:13px;
+    margin-right:13px;
+}
+
+.commentHeart:hover{
+    cursor: pointer;
+}
+
+.commentRedHeart{
+    content:url('../img/redHeart.png')
+}
+
+.commentInputBox{
     width:100%;
-    color:#D1565B;
-    font-size: 15px;
+    height: 40px;
+    border-top:1px solid #E6E6E6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 10px;
+    margin-top: 10px;
+}
+
+.commentInput{
+    border: 0;
+    outline: 0;
+    width:85%
+}
+
+.commentButton{
+    border:0;
+    outline:0;
+    background-color: transparent;
+    color: #C4E1FB;
+    cursor: pointer;
+}
+
+/* --------------------어사이드_본인-------------------- */
+
+.asideFeed{
+    width: 300px;
+    margin-top:50px;
+}
+
+.meBox{
+    display: flex;
+    align-items: center;
+    height: 60px;
+}
+.meBox img{
+    width:45px;
+    height: 45px;
+    border-radius: 70%;
+    margin:10px;
+}
+.meEngName{
+    font-size:15px;
+    padding:2px;
+    font-weight: bold;
+}
+.meName{
+    font-size:15px;
+    padding:2px;
+    color: #9E9E9E;
+}
+
+/* --------------------어사이드_스토리-------------------- */
+
+.storyBox{
+    border: 1.5px solid #E6E6E6;
+    background-color: #ffffff;
+    border-radius: 4px;
+    height: 220px;
+    overflow: hidden;
+}
+.asideBoxTop{
+    display: flex;
+    justify-content: space-between;
+    font-size:13px;
+    padding:10px 15px;
+    font-weight: bold;
+}
+.storyEvery{
+    color: #9E9E9E;
+}
+.asideUserSpace{
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+.asideUserSpace img{
+    width:40px;
+    height: 40px;
+    border-radius: 70%;
+    margin: 0px 15px;
+}
+.asideUser{
+    font-size:13px;
+}
+.userName{
+    font-weight: bold;
+    padding:1px
+}
+.comment .userName{
+    padding-right:4px;
+}
+.asideUserTime{
+    color: #9E9E9E;
+    padding:1px
+}
+
+/* --------------------어사이드_추천-------------------- */
+
+.recommendBox{
+    border: 1.5px solid #E6E6E6;
+    background-color: #ffffff;
+    border-radius: 4px;
+    height: 200px;
+    overflow: hidden;
+    margin-top:11px;
+}
+
+.recommendTop{
+    display: flex;
+    justify-content: space-between;
+    font-size:13px;
+    padding:10px;
+    font-weight: bold;
+}
+
+.grayFont{
+    color: #9E9E9E;
+}
+
+.asideUserFriend{
+    display: inline-block;
+    color: #9E9E9E;
+    padding:1px;
+    width:167px;
+    white-space : nowrap;
+    overflow: hidden;
+    text-overflow : ellipsis 
+}
+
+.followButton{
+    border:0;
+    outline:0;
+    background-color: transparent;
+    color:#0095F6
+}
+
+.noticeBox{
+    width:80%;
+    color:#DCDCDC;
+    font-size:15px;
+}
+
+.noticeInfo{
+    margin:13px 0px 15px 0px;
+}
+
+.commentMore{
+    font-size: 12px;
+    font-weight: bold;
+    color: #9E9E9E;
+    padding: 0 10px;
+}
+
+.commentTime{
+    font-size: 8px;
+    color: #9E9E9E;
+    padding: 5px 12px 0px 12px;
 }
