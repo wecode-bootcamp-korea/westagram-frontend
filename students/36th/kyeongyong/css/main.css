@@ -19,21 +19,23 @@ h5 {
 ul {
   list-style: none;
 }
+
 a {
   text-decoration: none;
   color: #222;
 }
+
 body {
   background-color: #fafafa;
   font-size: 14px;
   color: #222;
 }
+
 img {
   vertical-align: top;
   border: none;
 }
 
-/* nav */
 nav {
   width: 100%;
   height: 76px;
@@ -43,26 +45,27 @@ nav {
   top: 0;
   left: 0;
 }
+
 nav #gnb {
   width: 937px;
   margin: auto;
   padding-top: 25px;
 }
+
 nav #gnb ul {
   display: flex;
   justify-content: space-between;
 }
+
 nav #gnb ul li {
   float: left;
-}
-
-nav #gnb ul .logo {
 }
 
 nav #gnb ul .logo h1 {
   float: left;
   position: relative;
 }
+
 nav #gnb ul .logo h1:first-child a {
   display: block;
   width: 24px;
@@ -72,6 +75,7 @@ nav #gnb ul .logo h1:first-child a {
   background-image: url(https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/logo.png);
   background-size: cover;
 }
+
 nav #gnb ul .logo h1:first-child a:after {
   display: block;
   content: "";
@@ -82,6 +86,7 @@ nav #gnb ul .logo h1:first-child a:after {
   top: 0;
   left: 40px;
 }
+
 nav #gnb ul .logo h1:last-child a {
   display: block;
   width: 100px;
@@ -104,15 +109,18 @@ nav #gnb ul li input {
   border: 1px solid #ccc;
   border-radius: 2px;
 }
+
 nav #gnb ul li ul {
   width: 131px;
   display: flex;
   justify-content: space-between;
 }
+
 nav #gnb ul li ul li {
   width: 24px;
   height: 24px;
 }
+
 nav #gnb ul li ul li a {
   display: block;
   width: 100%;
@@ -120,27 +128,29 @@ nav #gnb ul li ul li a {
   text-indent: -9999px;
   background-size: contain;
 }
+
 nav #gnb ul li .mypage li:nth-child(1) a {
   background-image: url(https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png);
 }
+
 nav #gnb ul li .mypage li:nth-child(2) a {
   background-image: url(https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png);
 }
+
 nav #gnb ul li .mypage li:nth-child(3) a {
   background-image: url(https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png);
 }
 
-/* main */
 main {
   width: 937px;
   margin: 134px auto 0;
 }
 
-/* feeds */
 main .feeds {
   width: 616px;
   float: left;
 }
+
 main .feeds article {
   width: 100%;
   border: 1px solid #d2cec9;
@@ -148,6 +158,7 @@ main .feeds article {
   background-color: #fff;
   box-sizing: border-box;
 }
+
 main .feeds article #top {
   width: 100%;
   height: 60px;
@@ -155,29 +166,35 @@ main .feeds article #top {
   border-bottom: 1px solid #dedad6;
   box-sizing: border-box;
 }
+
 main .feeds article .pad {
   padding: 10px 10px 0 10px;
 }
+
 main .feeds article #top ul li {
   width: 32px;
   height: 32px;
   float: left;
   margin-right: 10px;
 }
+
 main .feeds article #top ul .picture a img {
   width: 32px;
   height: 32px;
   border-radius: 50%;
 }
+
 main .feeds article #top ul .userId a:first-child {
   font-size: 14px;
   font-weight: bold;
   line-height: 14px;
 }
+
 main .feeds article #top ul .userId a:last-child {
   font-size: 12px;
   line-height: 12px;
 }
+
 main .feeds article #top ul .more {
   float: right;
   margin-right: 0;
@@ -192,13 +209,11 @@ main .feeds article #img img {
   height: 615px;
 }
 
-main .feeds article #text {
-}
-
 main .feeds article #text #icon {
   width: 100%;
   height: 24px;
 }
+
 main .feeds article #text #icon ul li {
   float: left;
   margin-right: 10px;
@@ -206,20 +221,25 @@ main .feeds article #text #icon ul li {
   height: 24px;
   cursor: pointer;
 }
+
 main .feeds article #text #icon ul li:last-child {
   float: right;
   margin-right: 0;
 }
+
 main .feeds article #text #icon ul li img {
   width: 24px;
   height: 24px;
 }
+
 main .feeds article #text .txt {
   margin: 10px 0;
 }
+
 main .feeds article #text .txt p {
   margin-bottom: 10px;
 }
+
 main .feeds article #text .txt p span {
   font-weight: bold;
 }
@@ -230,13 +250,16 @@ main .feeds article #text .like p img {
   border: 1px solid #fafafa;
   border-radius: 50%;
 }
+
 main .feeds article #text .inside p span {
   margin-right: 10px;
 }
+
 main .feeds article #text .inside p.time {
   font-size: 11px;
   color: #aaa;
 }
+
 main .feeds article #text .inside .com_txt_block p {
   margin-bottom: 3px;
 }
@@ -251,6 +274,7 @@ main .feeds article .comment {
   height: 60px;
   border-top: 1px solid #dedad6;
 }
+
 main .feeds article .comment input {
   width: 90%;
   height: inherit;
@@ -259,49 +283,51 @@ main .feeds article .comment input {
   text-indent: 10px;
   font-size: 14px;
 }
+
 main .feeds article .comment button {
   border: none;
   font-size: 14px;
   color: #c4e1fc;
 }
 
-/*  ----main right----    */
-
 main .main-right {
   width: 292px;
   height: 100vh;
   float: right;
 }
-/* right profile */
 
 main .main-right .right-profile {
   width: 100%;
   height: 50px;
   margin-bottom: 14px;
 }
+
 main .main-right .right-profile div {
   float: left;
 }
+
 main .main-right .right-profile .pro_img img {
   width: 50px;
   height: 50px;
   border-radius: 50%;
 }
+
 main .main-right .right-profile .pro_txt {
   margin: 10px 0 0 14px;
 }
+
 main .main-right .right-profile .pro_txt div {
   float: none;
   font-size: 16px;
   line-height: 20px;
   font-weight: bold;
 }
+
 main .main-right .right-profile .pro_txt div:last-child {
   font-size: 12px;
   color: #aaa;
 }
 
-/* right story,push 공통 */
 main .main-right .right-wrap {
   width: 100%;
   padding: 0 15px;
@@ -311,6 +337,7 @@ main .main-right .right-wrap {
   background-color: #fff;
   box-sizing: border-box;
 }
+
 main .main-right .right-wrap .right-top {
   width: 100%;
   height: 40px;
@@ -318,30 +345,34 @@ main .main-right .right-wrap .right-top {
   display: flex;
   justify-content: space-between;
 }
+
 main .main-right .right-wrap .right-top p {
   color: rgb(159, 159, 159);
 }
+
 main .main-right .right-wrap .story-scroll {
   width: 100%;
   height: 181px;
   overflow-y: scroll;
 }
 
-/* right story */
 main .main-right .story {
   height: 223px;
 }
+
 main .main-right .right-wrap .story-in {
   width: 100%;
   height: 44px;
   margin-bottom: 10px;
 }
+
 main .main-right .right-wrap .story-in .story-play .story-img {
   float: left;
   padding: 2px;
   border: 2px solid #ccc;
   border-radius: 50%;
 }
+
 main .main-right .right-wrap .story-in .story-play .story-img a {
   display: block;
   width: 30px;
@@ -350,45 +381,53 @@ main .main-right .right-wrap .story-in .story-play .story-img a {
   border-radius: 50%;
   box-sizing: border-box;
 }
+
 main .main-right .right-wrap .story-in .story-play .story-img a img {
   width: 100%;
   height: 100%;
   border-radius: 50%;
 }
+
 main .main-right .right-wrap .story-in .story-txt {
   float: left;
   margin-left: 14px;
 }
+
 main .main-right .right-wrap .story-in .story-txt ul {
   margin-top: 7px;
 }
+
 main .main-right .right-wrap .story-in .story-txt ul li a {
   display: block;
   line-height: 14px;
   font-size: 15px;
   font-weight: bold;
 }
+
 main .main-right .right-wrap .story-in .story-txt ul li span {
   font-size: 10px;
   line-height: 10px;
 }
 
-/* right push */
 main .main-right .push {
   height: 200px;
 }
+
 main .main-right .right-wrap .push-wrap {
   width: 100%;
   height: 200px;
 }
+
 main .main-right .right-wrap .push-wrap .push-in {
   width: 100%;
   height: 44px;
   margin-bottom: 10px;
 }
+
 main .main-right .right-wrap .push-wrap .push-in .push-img {
   float: left;
 }
+
 main .main-right .right-wrap .push-wrap .push-in .push-img a {
   display: block;
   width: 30px;
@@ -397,6 +436,7 @@ main .main-right .right-wrap .push-wrap .push-in .push-img a {
   border-radius: 50%;
   box-sizing: border-box;
 }
+
 main .main-right .right-wrap .push-wrap .push-in .push-img a img {
   width: 100%;
   height: 100%;
@@ -408,12 +448,15 @@ main .main-right .right-wrap .push-wrap .push-in .push-txt {
   width: 80%;
   margin-left: 14px;
 }
+
 main .main-right .right-wrap .push-wrap .push-in .push-txt ul {
   float: left;
 }
+
 main .main-right .right-wrap .push-wrap .push-in .push-txt ul li {
   width: 150px;
 }
+
 main .main-right .right-wrap .push-wrap .push-in .push-txt ul li a {
   display: block;
   width: 100%;
@@ -421,6 +464,7 @@ main .main-right .right-wrap .push-wrap .push-in .push-txt ul li a {
   font-size: 15px;
   font-weight: bold;
 }
+
 main .main-right .right-wrap .push-wrap .push-in .push-txt ul li:last-child {
   font-size: 12px;
   line-height: 13px;
@@ -428,6 +472,7 @@ main .main-right .right-wrap .push-wrap .push-in .push-txt ul li:last-child {
   white-space: nowrap;
   overflow: hidden;
 }
+
 main .main-right .right-wrap .push-wrap .push-in .push-txt > a {
   float: right;
   border: none;
@@ -436,11 +481,10 @@ main .main-right .right-wrap .push-wrap .push-in .push-txt > a {
   color: #6cb1f1;
 }
 
-/* right footer */
-
 main .main-right .footer {
   width: 100%;
 }
+
 main .main-right .footer div {
   width: 100%;
   height: 50px;
@@ -458,12 +502,15 @@ main .main-right .footer div ul li a {
   font-size: 12px;
   color: #ccc;
 }
+
 main .main-right .footer div ul li a span {
   margin-left: 5px;
 }
+
 main .main-right .footer div ul li:last-child a span {
   display: none;
 }
+
 main .main-right .footer div p {
   font-size: 12px;
   color: #ccc;

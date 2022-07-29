@@ -11,6 +11,7 @@ function a() {
     btnColor.style.color = "#5197e9";
   }
 }
+
 function b() {
   const commentB = commentA.value;
   const tagDiv = document.querySelector(".com_txt_block");
@@ -25,6 +26,7 @@ function b() {
   console.log(tagDiv);
   commentA.value = "";
 }
+
 function c() {
   if (event.keyCode == 13) {
     b();
