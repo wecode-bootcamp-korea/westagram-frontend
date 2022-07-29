@@ -1,0 +1,87 @@
+.headerContainer{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    border-bottom : 1px solid rgba(var(--b6a,219,219,219),1);
+    height : 54px;
+    padding : 30px;
+}
+.headerContents{
+    display : flex;
+    justify-content: space-evenly;
+    width : 100%;
+    align-items : center;
+    padding : 0 90px;
+}
+.WestagramTag{
+    display : flex;
+}
+.WestagramTag a{
+    text-decoration: none;
+    font-size : 30px;
+    color : black;
+    font-weight: bold;
+    font-family : "Lobster", cursive;
+}
+.headerSearchBar{
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    border : 1px solid rgba(var(--b6a,219,219,219),1);
+    padding : 5px 5px 5px 5px;
+}
+input{
+    border : none;
+    width : 230px;
+    padding : 5px;
+}
+.headerRightImage{
+    font-size : 30px;
+}
+.headerRightImage a{
+    color :black;  
+}
+.size{
+    height: 25px;
+}
+main{
+    margin: auto;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1.7fr 1.3fr;
+    grid-template-rows: 60px 30px 300px 240px;
+    width: 60%;
+}
+.story{
+    grid-column: 1/2;
+    grid-row: 1/3;
+}
+.feeds{
+    grid-column: 1/2;
+    grid-row: 3/4;
+    text-align: center;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.feed_size{    
+    width: 80%;
+    height: 90%;
+}
+
+.main_right{
+    grid-column: 2/3;
+    grid-row: 3/4;
+}
+.profile{
+    grid-column: 2/3;
+    grid-row: 1/2;
+
+}
+.recommend{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    font-size: 15px;
+    justify-content: space-between;
+}
