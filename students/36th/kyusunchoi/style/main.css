@@ -1,0 +1,444 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+    background-color: #FAFAFA;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+a {
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    font-size: 1px;
+}
+
+
+
+
+
+nav {
+    height: 50px;
+    margin-bottom: 5%;
+    border-bottom: 1px solid #DBDBDB;
+    background-color: white;
+   
+
+}
+
+
+.topLayerFeatures {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 5px;
+}
+
+.topLayerFeatures li:first-child {
+    font-family: 'Lobster', cursive;
+    font-size: 30px;
+}
+
+
+
+.nav2 {
+    height: 30px;
+    width: 237px;
+    background-color: #FAFAFA;
+    border: 1px solid #DBDBDB;
+    border-radius: 5px;
+
+}
+
+.nav2 img {
+    position: relative;
+    top: 25%;
+    left: 35%;
+    width: 10px;
+    z-index: 1;
+
+}
+
+
+.nav2 .search {
+    position: relative;
+    top: 25%;
+    width: 200px;
+    border: none;
+    background-color: #FAFAFA;
+    text-align: center;
+
+}
+
+.nav3 img {
+
+    width: 20px;
+    border: 1px solid #DBDBDB;
+    border-radius: 50%;
+    padding: 5px;
+    margin-top: 5px;
+    background-color: #FAFAFA;
+
+}
+
+
+
+
+section {
+    display: flex;
+    flex-direction: row;
+}
+
+.feedContent {
+    height: 825px;
+}
+
+
+
+.feeds {
+    box-sizing: border-box;
+    width: 40%;
+    margin-left: 15%;
+}
+
+
+
+.feeder {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    height: 56px;
+    padding-left: 10px;
+    border: 1px solid #DBDBDB;
+    border-bottom: none;
+    border-radius: 5px 5px 0 0;
+    background-color: white;
+
+
+}
+
+.feeder img {
+    width: 20px;
+    border: 1px solid #DBDBDB;
+    border-radius: 50%;
+    padding: 5px;
+    margin-top: 5px;
+    background-color: #FAFAFA;
+}
+
+
+.feedImage {
+ aspect-ratio: 1/1;
+}
+
+.feedImage img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+
+
+}
+
+
+.feeder p {
+    margin-left: 10px;
+}
+
+.feedBottom{
+    border: 1px solid #DBDBDB;
+}
+
+.iconList {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding-bottom: 5px;
+    background-color: white;
+}
+
+.iconList img {
+    width: 24px;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+.iconList img:last-child {
+    margin-left: 64%
+}
+
+.whoLikes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 40px;
+    padding-bottom: 5px;
+    background-color: white;
+}
+
+.whoLikes img {
+    width: 20px;
+    border: 1px solid #DBDBDB;
+    border-radius: 50%;
+    padding: 5px;
+    margin-top: 5px;
+    margin-left: 10px;
+    background-color: #FAFAFA;
+}
+
+.whoLikes p {
+    margin-left: 5px;
+}
+
+.commeent {
+    background-color: white;
+}
+
+.comment p {
+    margin-left: 10px;
+    background-color: white;
+}
+
+.time {
+    margin-left: 10px;
+    padding-top : 10px;
+    padding-bottom : 10px;
+    font-size: 12px;
+}
+
+.addComment {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    box-sizing: border-box;
+    height: 40px;
+    padding: 1px;
+    border-top: 1px solid #DBDBDB;
+    background-color: white;
+
+  
+}
+
+.addComment input {
+
+    height: 96%;
+    width: 83%;
+    border: none;
+    padding-left: 20px;
+    background-color: white;
+
+}
+
+.postButton {
+    margin-right : 3%;
+    white-space: nowrap;
+    color : #1596f6;
+    opacity: 30%;
+
+}
+
+.postButton:hover {
+    cursor: pointer;
+}
+
+.main-right {
+    width: 30%;
+    margin-right: 15%;
+
+}
+
+.main-right .user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 94%;
+    height: 56px;
+    border-bottom: none;
+    border-radius: 5px;
+    padding-left: 20px;
+}
+
+.main-right .user img {
+    width: 40px;
+    border: 1px solid #DBDBDB;
+    border-radius: 50%;
+    padding: 5px;
+    margin-top: 5px;
+    background-color: #FAFAFA;
+}
+
+.main-right .user div {
+    margin-left: 10px;
+}
+
+.useId {
+    font-weight: 800;
+    margin-bottom: 3px;
+}
+
+.main-right .userList {
+    padding-left: 5px;
+}
+
+.userList{
+    margin: 10px 0 0 10px;
+    border : 1px solid #DBDBDB;
+    border-radius: 5px;
+    background-color : white;
+    
+}
+
+.userList p, .userlist ul li {
+    margin-left: 20px;
+}
+
+.userList p {
+    margin-top : 10px;
+    margin-bottom: 10px;
+}
+
+.friendUser1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 1px 0 1px 20px;
+}
+
+.friendUser1 img {
+    width: 20px;
+    border: 1px solid #DBDBDB;
+    border-radius: 50%;
+    padding: 5px;
+    margin-top: 5px;
+    background-color: #FAFAFA;
+}

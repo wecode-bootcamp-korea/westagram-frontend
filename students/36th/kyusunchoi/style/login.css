@@ -1,0 +1,121 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+ 
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* *{
+    box-sizing: border-box;
+} */
+
+body {
+    text-align: center;
+    position: fixed;
+    top: 30%;
+}
+
+.objectTranslate{
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%);
+    border: 1px solid #DBDBDB;
+    padding: 30px 30px 15px 30px;
+}
+
+
+header {
+    width : 180px;
+    /* font-family: "billabong", sans-serif; */
+    font-family: 'Lobster', cursive;
+    font-size: 40px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    margin-bottom: 30px;
+
+}
+
+.login {
+    display: flex;
+    flex-direction: column;
+    width: 288px;
+  
+
+
+}
+
+.userName, .passwordInput {
+    height: 36px;
+    margin-bottom: 5px;
+    background-color: #FAFAFA;
+    border: 1px solid #DBDBDB;
+    text-indent: 5px;
+    border-radius: 3px;
+    
+}
+
+
+button{
+    height: 30px;
+    margin-top: 10px;
+    margin-bottom:  15px;
+    color: white;
+    font-weight: 800;
+    background-color: #C0DFFD;
+    border: none;
+    border-radius: 3px;
+        
+}
+
+.forgotPassword {
+    font-size: 12px;
+    color: #557498;
+    margin-top: 80px;
+}
+
+
