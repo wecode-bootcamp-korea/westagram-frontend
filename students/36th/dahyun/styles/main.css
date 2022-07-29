@@ -170,8 +170,111 @@ main {
 
 aside {
   flex: 1.6;
-  height: 300px;
-  /* background-color: rgba(0, 0, 255, 0.349); */
+  margin-left: 30px;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  height: 60px;
+}
+
+.profile-img {
+  width: 40px;
+  height: 40px;
+  background: url('../img/author-img.png') no-repeat center;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.profile-info {
+  margin-left: 10px;
+}
+
+.profile-info h2 {
+  font-size: 16px;
+}
+
+.profile-info p {
+  color: rgb(175, 175, 175);
+}
+
+.story {
+  height: 200px;
+  margin-bottom: 20px;
+  border: 1px solid rgb(235, 235, 235);
+  background-color: #ffffff;
+  overflow-y: scroll;
+}
+
+.header-story {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+}
+
+.header-story h2 {
+  font-size: 16px;
+  color: rgb(175, 175, 175);
+}
+
+.header-story button {
+  border: none;
+  background-color: transparent;
+  font-weight: 500;
+}
+
+.updated-users {
+  display: flex;
+  padding: 6px 10px;
+}
+
+.updated-user__img {
+  width: 30px;
+  height: 30px;
+  background: url('../img/author-img.png') no-repeat center;
+  background-size: cover;
+  border-radius: 50%;
+}
+
+.updated-user__info {
+  margin-left: 10px;
+}
+
+.updated-user__info h2 {
+  font-size: 14px;
+}
+
+.updated-user__info span {
+  font-size: 13px;
+  font-weight: 500;
+  color: rgb(175, 175, 175);
+}
+
+.suggestion {
+  height: 180px;
+  margin-bottom: 20px;
+  border: 1px solid rgb(235, 235, 235);
+  background-color: #ffffff;
+}
+
+.header-suggestion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+}
+
+.header-suggestion h2 {
+  font-size: 16px;
+  color: rgb(175, 175, 175);
+}
+
+.header-suggestion button {
+  border: none;
+  background-color: transparent;
+  font-weight: 500;
 }
 
 .footer {
