@@ -1,4 +1,5 @@
 const postBtn = document.querySelector(".button-style")
+console.log(postBtn);
 const postInput = document.querySelector(".feed__input")
 const replyTarget = document.querySelector(".repl-section");
 
@@ -13,7 +14,7 @@ function appendDiv() {
     replyTarget.scrollTop = replyTarget.scrollHeight;
 };
 
-const inputResetAndPush = (event) => {
+const inputReset = (event) => {
     event.preventDefault()
     appendDiv();
     // console.log(event)
@@ -22,7 +23,9 @@ const inputResetAndPush = (event) => {
 
 
 
-postBtn.addEventListener('click', inputResetAndPush);
+postBtn.addEventListener('click', inputReset);
+
+// 멘토님이 작성한 방식
 
 //지우고 html에 Form만 추가했는데 동일한 기능 구현됨,
 
