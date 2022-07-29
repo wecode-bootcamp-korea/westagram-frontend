@@ -1,9 +1,6 @@
 const commentInput = document.getElementsByClassName("comment-box")[0];
 const commentBtn = document.getElementsByClassName("comment-btn")[0];
 const commentPost = document.getElementsByClassName("comment-post")[0];
-console.log(commentInput);
-console.log(commentBtn);
-console.log(commentPost);
 
 function postComment() {
 
