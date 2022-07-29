@@ -1,3 +1,5 @@
+"use-strict";
+
 const commentInput = document.getElementById("comment-input");
 const commentUl = document.getElementById("comment-list");
 const uploadButton = document.getElementById("upload-button");

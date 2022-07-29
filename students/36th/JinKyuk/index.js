@@ -1,3 +1,5 @@
+"use-strict";
+
 const inputForm = document.querySelector(".inputForm");
 const passwordInput = document.getElementById("pw-input");
 const loginButton = document.getElementById("login-button");
