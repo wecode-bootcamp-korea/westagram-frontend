@@ -207,6 +207,10 @@ aside {
   overflow-y: scroll;
 }
 
+.story::-webkit-scrollbar {
+  display: none;
+}
+
 .header-story {
   display: flex;
   justify-content: space-between;
@@ -215,19 +219,31 @@ aside {
 }
 
 .header-story h2 {
-  font-size: 16px;
+  font-size: 14px;
   color: rgb(175, 175, 175);
 }
 
 .header-story button {
   border: none;
   background-color: transparent;
+  font-size: 14px;
   font-weight: 500;
 }
 
 .updated-users {
   display: flex;
+  justify-content: space-between;
   padding: 6px 10px;
+}
+
+.updated-users button {
+  border: none;
+  background-color: transparent;
+  color: #0095f6;
+}
+
+.updated-user {
+  display: flex;
 }
 
 .updated-user__img {
@@ -267,17 +283,26 @@ aside {
 }
 
 .header-suggestion h2 {
-  font-size: 16px;
+  font-size: 14px;
   color: rgb(175, 175, 175);
 }
 
 .header-suggestion button {
   border: none;
   background-color: transparent;
+  font-size: 14px;
   font-weight: 500;
 }
 
 .footer {
-  /* height: 300px; */
-  /* background-color: rgba(0, 0, 255, 0.349); */
+}
+
+.footer a {
+  font-size: 14px;
+  color: rgb(175, 175, 175);
+}
+
+.footer a:not(:last-of-type)::after {
+  content: '\00B7';
+  margin: 0 4px;
 }
