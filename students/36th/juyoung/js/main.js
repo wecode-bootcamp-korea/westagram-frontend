@@ -1,43 +1,44 @@
-const postBtn = document.querySelector(".button-style")
-console.log(postBtn);
-const postInput = document.querySelector(".feed__input")
-const replyTarget = document.querySelector(".repl-section");
 
-function appendDiv() {
-    let postInputValue = postInput.value;
-    let newDiv = document.createElement("div");
-    let newContent = document.createTextNode(postInputValue);
 
-    newDiv.appendChild(newContent);
-    newDiv.className += "repl-setting";
-    replyTarget.appendChild( newDiv );
-    replyTarget.scrollTop = replyTarget.scrollHeight;
+const Btn = document.querySelector(".button-style")
+const Input = document.querySelector(".feed__input")
+
+
+function registerComment() {
+    let InputValue = Input.value;
+    let commentLists = document.getElementById("repl-section");
+    let newCommentList = document.createElement("li");
+    // console.log("commentLists:", commentLists)
+    let newUserId = document.createElement("span");
+
+
+    newUserId.className = "name1";
+    newUserId.innerText = "wecode36";
+
+    let commentValue = document.createElement("span");
+    commentValue.innerText = InputValue
+
+
+    // newSpan.appendChild(newContent);
+    // newSpan.className += "repl-setting";
+    // reply.appendChild(newSpan);
+    newCommentList.appendChild(newUserId);
+    newCommentList.appendChild(commentValue);
+    commentLists.appendChild(newCommentList);
+    
+    commentLists.scrollTop = commentLists.scrollHeight;
 };
 
 const inputReset = (event) => {
-    event.preventDefault()
-    appendDiv();
+    event.preventDefault();
+    registerComment();
     // console.log(event)
-    postInput.value = "";
+    Input.value = "";
 }
 
 
 
-postBtn.addEventListener('click', inputReset);
+Btn.addEventListener('click', inputReset);
 
 // 멘토님이 작성한 방식
-
-//지우고 html에 Form만 추가했는데 동일한 기능 구현됨,
-
-
-
-// const inputResetAndPushWithEnter = (event) => {
-//     event.preventDefault();
-//     appendDivWithEnter();
-//     postInput.value = "";
-// }
-
-
-// postInput.addEventListener('keypress',appendDivWithEnter)
-
-
+//refactoring

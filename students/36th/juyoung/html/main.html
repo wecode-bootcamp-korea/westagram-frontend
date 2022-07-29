@@ -27,16 +27,14 @@
        <!-- 1. placeholder (?) 2. 태그 (?) 3. span으로 4. ::placeholder 5.  -->
       
       <div class="third__box flex">
-        <i class="uil uil-heart-alt icon">
-        </i>
-
+        <i class="uil uil-heart-alt icon"></i>
         <i class="uil uil-compass icon"></i>
         <i class="uil uil-user icon"></i>
-
         <img class="img__round-small" src="../img/프로필_사진.jpeg" alt="nope">
       </div>
     </nav>
-<!-- 위에까지는 네브 -->
+
+	<!-- 위에까지는 네브 -->
     <main>
       <div class="feeds__stories">
         <div class="feeds__story">
@@ -68,10 +66,8 @@
         <div class="pt__down">이름</div>
         </div>
         <div class="new-feed pt__up">새 게시물</div>
-        
+ 	  </div>
 
-
-      </div>
       <div class="feeds">
         <div class="feeds__name story__profile">
           <img class="img__round-small" src="../img/프3.jpeg" alt="nope">
@@ -81,29 +77,38 @@
           </div>
           <i class="uil uil-ellipsis-h icon icon-absolute"></i>
         </div>
+
+
         <article>
           <img class="article__img" src="../img/피드.jpg"  width="100%" alt="nope">
         </article>
+
+
         <div class="push__icon">
           <i class="uil uil-heart-alt icon"></i>
           <i class="uil uil-comment icon"></i>
           <i class="uil uil-user icon"></i>
           <i class="uil uil-bookmark-full icon icon-absolute"></i>
         </div>
-        <div class="repl-section">
-          <div class="repl pt__up">좋아요 272개</div>
-          <div class="repl pt__up">게시 글 소개 <spa class="pt__down">안녕하세요! 과연 댓글을 어떻게 구현할 수 있을까 고민좀 해볼게요!</span></div>
-          <div class="repl pt__down">댓글 2개 다시보기</div>
-        </div>
+        
+		<!-- 리팩토링 -->  
 
-        <div class="feeds__input">
-          <form action="#" method="post">
-          <i class="uil uil-smile icon"></i>
-          
-            <input class="feed__input" type="text" placeholder="댓글 달기..."/>
-            <input class="button-style" type="submit"/>
+		<ul id="repl-section">
+          <li class="repl pt__up">
+			<span class="repl pt__up">juyoung님 외 3명이 좋아합니다</span>
+			<span class="name">dev_codyman0</span>
+			<span class="pt__down">안녕하세요! 댓글 기능</span>
+			<button class="pt__down" type="submit">더 보기</button>
+			<span class="repl pt__down">댓글 2개 다시보기</span>
+		  </li>
+		</ul>
+
+          <form class="feeds__input" action="#">
+          	<i class="uil uil-smile icon"></i>
+          	<input class="feed__input" type="text" placeholder="댓글 달기..."/>
+            <input class="button-style" type="submit" value="게시"></input>  
           </form>
-        </div>
+
 
         </div>
       <div class="main-right">
