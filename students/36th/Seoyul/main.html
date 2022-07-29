@@ -1,260 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style/main.css" />
-    <link rel="stylesheet" href="style/common.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
-      rel="stylesheet"
-    />
-    <title>main</title>
-  </head>
 
-  <body>
-    <header>
-      <div class="inner">
-        <div class="header_left">
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/1384/1384031.png"
-            alt="logo"
-          />
-          <img
-            src="https://cdn-icons-png.flaticon.com/512/7500/7500298.png"
-            alt=""
-          />
-          <h1>Westagram</h1>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style/main.css" />
+  <link rel="stylesheet" href="style/common.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet" />
+  <title>main</title>
+</head>
 
-        <div class="header_center">
-          <input class="header_search" type="text" placeholder="검색" />
-        </div>
-
-        <div class="header_right">
-          <img
-            class="rightop"
-            src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png"
-            alt=""
-          />
-          <img
-            class="rightop"
-            src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"
-            alt=""
-          />
-          <img
-            class="rightop"
-            src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png"
-            alt=""
-          />
-        </div>
+<body>
+  <header class="flex">
+    <div class="inner flex">
+      <div class="header_left flex">
+        <img src="https://cdn-icons-png.flaticon.com/512/1384/1384031.png" alt="logo" />
+        <img src="https://cdn-icons-png.flaticon.com/512/7500/7500298.png" alt="" />
+        <h1>Westagram</h1>
       </div>
-    </header>
 
-    <main>
-      <div class="maininner">
-        <section class="section_left">
-          <div class="feedhead">
-            <img
-              class="profile_img"
-              src="https://images.unsplash.com/photo-1658681342224-a7a0332cf4a8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
-              alt=""
-            />
-            <h1 class="profile_name">erin_ha_seoyul</h1>
-            <img
-              class="dropdownmenu_img"
-              src="https://cdn-icons.flaticon.com/png/512/3018/premium/3018442.png?token=exp=1658886381~hmac=170fd7d9a28db59c6974873cba76759a"
-              alt=""
-            />
-          </div>
+      <div>
+        <input class="header_search" type="text" placeholder="검색" />
+      </div>
 
-          <img
-            class="feedimg"
-            src="https://images.unsplash.com/photo-1658728942183-013fb53281da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
-            alt=""
-          />
+      <div class="header_right">
+        <img class="rightop_icon" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png" alt="" />
+        <img class="rightop_icon" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" alt="" />
+        <img class="rightop_icon" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png" alt="" />
+      </div>
+    </div>
+  </header>
 
-          <div class="reaction_icon">
-            <img
-              class="reactionicons"
-              src="https://cdn-icons-png.flaticon.com/512/2107/2107845.png"
-              alt=""
-            />
-            <img class="reactionicons" src="image/reply.png" alt="" />
-            <img
-              class="reactionicons"
-              src="https://cdn-icons-png.flaticon.com/512/3580/3580382.png"
-              alt=""
-            />
-            <img
-              class="reactionicons saveicon"
-              src="https://cdn-icons-png.flaticon.com/512/84/84510.png"
-              alt=""
-            />
-          </div>
+  <main class="flex">
+    <div class="maininner">
+      <aside class="aside_left">
+        <div class="feedhead flex">
+          <img class="profile_img"
+            src="https://images.unsplash.com/photo-1658681342224-a7a0332cf4a8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+            alt="" />
+          <h1 class="profile_name">erin_ha_seoyul</h1>
+          <img class="dropdownmenu_img"
+            src="https://cdn-icons.flaticon.com/png/512/3018/premium/3018442.png?token=exp=1658886381~hmac=170fd7d9a28db59c6974873cba76759a"
+            alt="" />
+        </div>
 
-          <div class="show_like">
-            <img
-              class="friendProfile_img"
-              src="https://images.unsplash.com/photo-1658468851594-6f6bbeb68d3e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
-              alt=""
-            />
-            <p>
-              <strong>abc_234</strong>님 <strong>외 10명</strong>이 좋아합니다
-            </p>
-          </div>
+        <img class="feedimg"
+          src="https://images.unsplash.com/photo-1658728942183-013fb53281da?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+          alt="" />
 
-          <div class="feed_discription">
-            <p class="discription">
-              <strong>erin_ha_seoyul</strong> &nbsp; 배고프다....배고프다ㅏㅏ
-            </p>
-          </div>
+        <div class="reaction_icon flex">
+          <img class="reactionicons" src="https://cdn-icons-png.flaticon.com/512/2107/2107845.png" alt="" />
+          <img class="reactionicons" src="image/reply.png" alt="" />
+          <img class="reactionicons" src="https://cdn-icons-png.flaticon.com/512/3580/3580382.png" alt="" />
+          <img class="reactionicons saveicon" src="https://cdn-icons-png.flaticon.com/512/84/84510.png" alt="" />
+        </div>
 
-          <div class="comment_list">
-            <div class="discription">
-              <!-- <strong>abc_9223</strong> <span> &nbsp; 점심뭐먹지</span> -->
-              <!-- <img
+        <div class="show_like flex">
+          <img class="friendProfile_img"
+            src="https://images.unsplash.com/photo-1658468851594-6f6bbeb68d3e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+            alt="" />
+          <p>
+            <strong>abc_234</strong>님 <strong>외 10명</strong>이 좋아합니다
+          </p>
+        </div>
+
+        <div class="feed_discription">
+          <p class="discription">
+            <strong>erin_ha_seoyul</strong> &nbsp; 배고프다....배고프다ㅏㅏ
+          </p>
+        </div>
+
+        <div class="comment_list">
+          <!-- <div class="discription"> -->
+            <!-- <strong>abc_9223</strong> <span> &nbsp; 점심뭐먹지</span> -->
+            <!-- <img
                 class="joayo"
                 src="https://as2.ftcdn.net/v2/jpg/01/25/83/03/1000_F_125830316_m9Grtzjlt2I5Gp4qpDQq5G5BSXR5d9ZF.jpg"
                 alt=""
               /> -->
-            </div>
-            <p class="timecount">42분전</p>
-          </div>
-          <form class="addcomment">
-            <input
-              class="commentinputbox"
-              type="text"
-              placeholder="댓글 달기..."
-            />
-            <button class="submit">게시</button>
-          </form>
-        </section>
+          <!-- </div> -->
+          <p class="timecount">42분전</p>
+        </div>
+        <form class="addcomment">
+          <input class="commentinputbox" type="text" placeholder="댓글 달기..." />
+          <button class="submit">게시</button>
+           </form>
+      </aside>
 
-        <section class="section_right">
-          <div class="wecode">
-            <img
-              class="wecode_logo"
-              src="https://velog.velcdn.com/images/inyong_pang/post/f0ea605d-c2d9-460c-aedc-a0ec77e6759f/wecode.png"
-              alt=""
-            />
+      <aside class="aside_right">
+        <div class="wecode flex">
+          <img class="wecode_logo"
+            src="https://velog.velcdn.com/images/inyong_pang/post/f0ea605d-c2d9-460c-aedc-a0ec77e6759f/wecode.png"
+            alt="" />
+          <p>
+            <strong>wecode_bootcamp</strong><br /><span style="color: #9d9d9d">WeCode | 위코드</span>
+          </p>
+        </div>
+        <div class="story">
+          <div class="top_title">
+            <p>스토리</p>
+            <p>모두보기</p>
+          </div>
+          <div class="instagralist flex">
+            <img class="insta_logo"
+              src="https://images.unsplash.com/photo-1517849845537-4d257902454a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80"
+              alt="" />
             <p>
-              <strong>wecode_bootcamp</strong><br /><span style="color: #9d9d9d"
-                >WeCode | 위코드</span
-              >
+              <strong>abab_12345</strong><br /><span style="color: #9d9d9d">16분 전</span>
             </p>
           </div>
-          <div class="story">
-            <div class="top_title">
-              <p>스토리</p>
-              <p>모두보기</p>
-            </div>
-            <div class="instagralist">
-              <img
-                class="insta_logo"
-                src="https://images.unsplash.com/photo-1517849845537-4d257902454a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80"
-                alt=""
-              />
-              <p>
-                <strong>abab_12345</strong><br /><span style="color: #9d9d9d"
-                  >16분 전</span
-                >
-              </p>
-            </div>
-            <div class="instagralist">
-              <img
-                class="insta_logo"
-                src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
-                alt=""
-              />
-              <p>
-                <strong>weCode_1992</strong><br /><span style="color: #9d9d9d"
-                  >3시간 전</span
-                >
-              </p>
-            </div>
-            <div class="instagralist">
-              <img
-                class="insta_logo"
-                src="https://images.unsplash.com/photo-1537151625747-768eb6cf92b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=685&q=80"
-                alt=""
-              />
-              <p>
-                <strong>bootcamp_WECode</strong><br /><span
-                  style="color: #9d9d9d"
-                  >20시간 전</span
-                >
-              </p>
-            </div>
-          </div>
-          <div class="recommandation">
-            <div class="top_title">
-              <p>회원님을 위한 추천</p>
-              <p>모두보기</p>
-            </div>
-            <div class="instagralist">
-              <img
-                class="insta_logo"
-                src="https://images.unsplash.com/photo-1588943211346-0908a1fb0b01?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80"
-                alt=""
-              />
-              <p>
-                <strong>seoyul_0203</strong><br /><span
-                  class="whofollow"
-                  style="color: #9d9d9d"
-                  >abcabc_님 외 2명이 팔로우 합니다</span
-                >
-              </p>
-              <button class="follow">팔로우</button>
-            </div>
-            <div class="instagralist">
-              <img
-                class="insta_logo"
-                src="https://images.unsplash.com/photo-1533738363-b7f9aef128ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80"
-                alt=""
-              />
-              <p>
-                <strong>annyeongHa__</strong><br /><span
-                  class="whofollow"
-                  style="color: #9d9d9d"
-                  >wecodewecode님 외 3명이 팔로우 합니다.</span
-                >
-              </p>
-              <button class="follow">팔로우</button>
-            </div>
-            <div class="instagralist">
-              <img
-                class="insta_logo"
-                src="https://media.istockphoto.com/photos/cute-terrier-dog-wearing-sunglasses-picture-id1387035098?b=1&k=20&m=1387035098&s=170667a&w=0&h=UFbN7aJy-n3QWxlgL7V1h5vzoadNDiF3wkKWqYH5mf8="
-                alt=""
-              />
-              <p>
-                <strong>dahaetda_WECode</strong><br /><span
-                  class="whofollow"
-                  style="color: #9d9d9d"
-                  >hihiwecode__ 외 5명이 팔로우 합니다.</span
-                >
-              </p>
-              <button class="follow">팔로우</button>
-            </div>
-          </div>
-          <div class="instainfo">
+          <div class="instagralist">
+            <img class="insta_logo"
+              src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
+              alt="" />
             <p>
-              Instagram 정보 &middot; 지원 &middot; 홍보 &middot; 센터 &middot;
-              API &middot; 채용정보 &middot; 개인정보처리방침 &middot; 약관
-              &middot; 디렉터리 &middot; 프로필 &middot; 해시태그 &middot; 언어
-              <br />
-              <br />
-              © 2019 INSTAGRAM
+              <strong>weCode_1992</strong><br /><span style="color: #9d9d9d">3시간 전</span>
             </p>
           </div>
-        </section>
+          <div class="instagralist">
+            <img class="insta_logo"
+              src="https://images.unsplash.com/photo-1537151625747-768eb6cf92b2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=685&q=80"
+              alt="" />
+            <p>
+              <strong>bootcamp_WECode</strong><br /><span style="color: #9d9d9d">20시간 전</span>
+            </p>
+          </div>
+    </div>
+    <div class="recommandation">
+      <div class="top_title">
+        <p>회원님을 위한 추천</p>
+        <p>모두보기</p>
       </div>
-    </main>
+      <div class="instagralist">
+        <img class="insta_logo"
+          src="https://images.unsplash.com/photo-1588943211346-0908a1fb0b01?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80"
+          alt="" />
+        <p>
+          <strong>seoyul_0203</strong><br /><span class="whofollow" style="color: #9d9d9d">abcabc_님 외 2명이 팔로우
+            합니다</span>
+        </p>
+        <button class="follow">팔로우</button>
+      </div>
+      <div class="instagralist">
+        <img class="insta_logo"
+          src="https://images.unsplash.com/photo-1533738363-b7f9aef128ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=735&q=80"
+          alt="" />
+        <p>
+          <strong>annyeongHa__</strong><br /><span class="whofollow" style="color: #9d9d9d">wecodewecode님 외 3명이
+            팔로우 합니다.</span>
+        </p>
+        <button class="follow">팔로우</button>
+      </div>
+      <div class="instagralist">
+        <img class="insta_logo"
+          src="https://media.istockphoto.com/photos/cute-terrier-dog-wearing-sunglasses-picture-id1387035098?b=1&k=20&m=1387035098&s=170667a&w=0&h=UFbN7aJy-n3QWxlgL7V1h5vzoadNDiF3wkKWqYH5mf8="
+          alt="" />
+        <p>
+          <strong>dahaetda_WECode</strong><br /><span class="whofollow" style="color: #9d9d9d">hihiwecode__ 외 5명이
+            팔로우 합니다.</span>
+        </p>
+        <button class="follow">팔로우</button>
+      </div>
+    </div>
+    <div class="instainfo">
+      <p>
+        Instagram 정보 &middot; 지원 &middot; 홍보 &middot; 센터 &middot;
+        API &middot; 채용정보 &middot; 개인정보처리방침 &middot; 약관
+        &middot; 디렉터리 &middot; 프로필 &middot; 해시태그 &middot; 언어
+        <br />
+        <br />
+        © 2019 INSTAGRAM
+      </p>
+    </div>
+    </aside>
+    </div>
+  </main>
 
-    <script src="JS/main.js"></script>
-  </body>
+  <script src="JS/main.js"></script>
+</body>
+
 </html>

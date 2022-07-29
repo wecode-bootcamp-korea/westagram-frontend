@@ -20,7 +20,7 @@ function addComment(e) {
   let newstrong = document.createElement("strong");
   let newspan = document.createElement("span");
 
-  newstrong.innerHTML = "ID ";
+  newstrong.innerText = "ID ";
   newspan.innerHTML = `&nbsp${inputbox.value}`;
 
   divv.appendChild(newdiv);

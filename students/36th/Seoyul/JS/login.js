@@ -14,3 +14,10 @@ if(id.length > 0 && pw.length>0){
   btn.style.background= '#C4E1FB'
 }
 }
+
+
+
+ document.getElementsByClassName('loginbtn')[0].addEventListener('click', () => {
+  if(id.length > 0 && pw.length>0){
+    window.location.href = 'main.html' }
+ })

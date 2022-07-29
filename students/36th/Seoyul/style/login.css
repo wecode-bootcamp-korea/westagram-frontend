@@ -1,21 +1,16 @@
 
 body {
-  display: flex;
   justify-content: center;
-  align-items: center;
-  text-align: center;
-  height: 100vh;
-}
-
+  text-align: center;}
 
 .mainlogo {
   font-family: 'Lobster', cursive;
-  font-size: 40px;
+  font-size: 30px;
 }
 
 .mainBox {
-  height: 792px;
-  width: 732px;
+  height: 450px;
+  width: 450px;
   border: 1px solid #CFD7DE;
   box-shadow: 5px 3px 5px 3px #F5F8FA;
   background-color: #FFFFFF;;
@@ -24,12 +19,13 @@ body {
   justify-content: space-around;
 }
 
-form{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 40%;
+input::placeholder{
+  font-size: 15px;
+}
 
+form{
+  flex-direction: column;
+  height: 40%;
 }
 
 input{
@@ -42,11 +38,12 @@ input{
 }
 
 button{
-  height:20%;
+  height:25%;
   margin-top:15px;
   background-color:#C4E1FB;
   border: 1px solid white;
-  color: white
+  color: white;
+  font-size: 20px;
 }
 
 input, button{
@@ -56,7 +53,8 @@ input, button{
   padding-left: 15px
 }
 
-a{
+.atag{
   text-decoration: none;
-  font-size: larger;
+  font-size: 15px;
 }
+
