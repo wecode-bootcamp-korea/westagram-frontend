@@ -3,8 +3,6 @@
 }
 
 body {
-    width: 100vh;
-    height: 100vh;
     display : flex;
     flex-direction: column;
     justify-items: center;
@@ -45,6 +43,7 @@ body {
     flex-direction: column;
     align-items : center;
     padding-top : 24px;
+    justify-content: center;
     
 }
 
@@ -52,6 +51,7 @@ body {
 .put{
     display : flex;
     flex-direction: column;
+    justify-content:space-between;
 }
 
 
@@ -62,6 +62,7 @@ body {
     border: 1px solid rgba(var(--ca6,219,219,219),1);
     border-radius: 2px;
     padding : 9px 0 7px 8px;
+    margin-bottom: 10px;
 }
 
 
@@ -88,7 +89,6 @@ button {
     border: 0;
     border-radius: 4px;
     background-color: rgba(var(--d69,0,149,246),.3);
-    opacity: 1;
     color:#fafafa;
     font-weight: bold;
 }
