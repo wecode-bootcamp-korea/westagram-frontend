@@ -1,3 +1,5 @@
+"use strict";
+
 const commentForm = document.querySelector(".comment-form");
 const commentInput = document.querySelector(".comment-form__input");
 const commentPost = document.querySelector(".comment-form__submit");
