@@ -4,7 +4,7 @@ const commentForm = document.querySelector(".comment-form");
 const commentInput = document.querySelector(".comment-form__input");
 const commentPost = document.querySelector(".comment-form__submit");
 
-commentInput.addEventListener("keyup", () => {
+commentInput.addEventListener("input", () => {
   if (commentInput.value.length > 0) {
     commentPost.classList.remove("submit-disabled");
     commentPost.classList.add("submit-abled");
