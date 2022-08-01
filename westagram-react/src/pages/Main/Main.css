@@ -1,0 +1,770 @@
+* {
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    position: sticky;
+    top:0;
+    margin-top:0;
+    border-bottom: 1px solid black;
+    background-color: white;
+}
+
+
+.second-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-left: 0px;
+}
+
+
+
+
+.nav{
+    width: 975px;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-grow: 1;
+    padding: 0 20px;
+}
+
+
+
+/* box1 */
+.insta_logo_left {
+    display: flex;
+    justify-content: start;
+    flex-grow:1;
+}
+
+
+
+.insta_logo_left img {
+    width:102px;
+    height:30px;
+}
+
+.insta_logo_left i {
+    width:30px;
+    height:30px;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+/* box2 */
+.search {
+    width: 286px;
+    height: 36px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+
+.outline {
+    width : 268px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    text-align: start;
+    background-color: rgb(226 226 226);
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+
+.outline input{
+    width: 200px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding-top: 3px;
+    padding-left:10px;
+    border: none;
+    background: transparent;
+    
+}
+
+.outline input:focus {
+    outline: none;
+}
+
+
+.outline input::placeholder {
+    text-align: center;
+}
+
+
+.outline i {
+    align-items : start;
+    padding-top : 4px;
+    margin-left : 16px;
+}
+
+
+
+/* box3 */
+.insta_logo {
+    flex-grow: 1;
+}
+
+
+.insta_logo_right{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    justify-content: center;
+}
+
+
+.heart, .compass, .person {
+    padding-left: 24px;
+}
+
+
+.insta_logo_right img{
+    width: 24px;
+    height: 24px;
+}
+
+
+
+.main{
+    width : 470px;
+    height: 1000px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    margin-top: 50px;
+}
+
+
+.main-right {
+    width: 320px;
+    margin-top: 50px;
+    margin-left : 20px;
+}
+
+
+
+.main-head {
+    width: 100%;
+    height: 48px;
+    border-bottom: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+}
+
+
+.main-head-img {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 6px 4px 4px 4px; 
+}
+
+
+
+.main-head-img img {
+    width:32px;
+    height: 32px;
+    border-radius: 70%;
+} 
+
+.main-head-text{
+    width :368px;
+    height: 40px;
+    margin-left:5px ;
+}
+
+
+.main-head-profile{
+    display: flex;
+    flex-direction: row;
+    margin-left: 2px;
+}
+
+
+.main-head-share {
+    height: 47px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    
+}
+
+.main-head-share i {
+    position : absolute;
+    width: 24px;
+    height: 24px;
+    margin-top:10px;
+    left :25px;
+    
+}
+
+.main-head-three {
+    display: flex;
+    align-content: center;
+}
+
+.main img{
+    display: flex;
+    flex-direction: column;
+}
+
+.main-img img {
+    width: 468px;
+    height: 468px;
+    top:0;
+    
+}
+
+
+.main-bottom {
+    height: 130px;
+}
+
+.main-bottom-like-box{
+    display: flex;
+    margin-left: 10px;
+}
+
+.main-bottom-icon{
+    width: 100%;
+    display: flex;
+    height: 30px;
+    text-align: center;
+}
+
+.main-bottom-icon i {
+    width: 20px;
+    height: 20px;
+    padding: 0 0 12px 6px;
+    margin-top: 10px;
+}
+
+.main-bottom-icon-heart {
+    width: 30px;
+    height: 30px;
+}
+
+.main-bottom-icon-comment {
+    width: 30px;
+    height: 30px;
+}
+
+.main-bottom-icon-share {
+    width: 30px;
+    height: 30px;
+}
+
+
+.main-bottom-icon-bookmark-zone {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+
+
+.main-bottom-icon-bookmark {
+    width: 30px;
+    height: 30px;
+}
+
+.main-bottom-like{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.main-bottom-like-in img{
+    width: 20px;
+    height: 20px;
+    border-radius: 70%;
+}
+
+.main-bottom-like-realtext{
+    display: flex;
+    text-align: center;
+    margin-left: 10px;
+    font-size : 14px;
+}
+
+.main-bottom-like-realtext-name {
+    font-weight: bold;
+}
+
+.show-comment{
+    height: 30px;
+    width: 100%;
+    font-size: 14px;
+    
+}
+
+.commentBox{
+    width: 100%;
+}
+
+
+
+
+.commentlist{
+    list-style: none;
+}
+
+
+
+.show-comment span{
+    margin-left: 10px;
+}
+
+
+
+.comment-in {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 40px;
+    border-top : 1px solid black;
+    border-bottom : 1px solid black;
+}
+
+
+.comment-in input {
+    width: 300px;    
+    height: 30px;
+    margin-left:10px;
+    border: none;
+}
+
+
+.comment-in button {
+    display: flex;
+    position: absolute;
+    left: 52%;
+    border: none;
+    color : skyblue;
+    font-weight: bold;
+    background: none;
+    opacity: 0.7;
+}
+
+.main-right-firstBox {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+.main-right-firstBox-box{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+.main-right-firstBox-img img{
+    width: 48px;
+    height: 48px;
+    border-radius: 70%;
+}
+
+
+.main-right-firstBox-text{
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+    font-size: 13px;
+}
+
+
+.firstBox-text-bold {
+    font-weight: bold;
+}
+
+.firstBox-text-normal{
+    color : gray;
+}
+
+
+.main-right-secondBox {
+    height: 250px;
+    border: 1px solid black;
+    border-radius: 3px;
+    margin-top: 10px;
+}
+
+
+.main-right-secondBox-header{
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content : space-between;
+    padding : 20px;
+    font-size: 14px;
+}
+
+
+.secondBox-header-normal{
+    display: flex;
+    color : gray;
+    font-weight: bold;
+}
+
+.secondBox-header-bold{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    font-weight: bold;
+}
+
+
+.main-right-secondBox-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.firstman {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
+
+.firstman-img img {
+    width: 40px;
+    height: 40px;
+    border-radius: 70%;
+}
+
+.firstman-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 13px;
+    font-size: 13px;
+}
+
+.firstman-text-bold{
+    font-weight: bold;
+}
+
+.firstman-text-normal{
+    color : gray;
+    text-align: start;
+}
+
+
+
+.secondman {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    padding-left: 20px;
+    padding-bottom: 10px;
+    
+}
+
+.secondman-img img {
+    width: 40px;
+    height: 40px;
+    border-radius: 70%;
+}
+
+.secondman-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 10px;
+    font-size: 13px;
+}
+
+.secondman-text-bold{
+    font-weight: bold;
+}
+
+.secondman-text-normal{
+    color : gray;
+    text-align: start;
+}
+
+
+.thirdman {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
+
+.thirdman-img img {
+    width: 40px;
+    height: 40px;
+    border-radius: 70%;
+}
+
+.thirdman-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: start;
+    margin-left: 13px;
+    font-size: 13px;
+}
+
+
+.thirdman-text-bold{
+    font-weight: bold;
+}
+
+
+.thirdman-text-normal{
+    color : gray;
+}
+
+
+.main-right-thirdBox-box {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+}
+
+
+.main-right-thirdBox-header {
+    height: 30px;
+    display: flex;
+    justify-content : space-between;
+    margin : 13px 13px 13px 13px;
+}
+
+.main-right-thirdBox-header-textbox{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content : space-between;
+    padding-left:5px;
+    padding-right: 5px;
+}
+
+
+
+.main-right-thirdBox {
+    width:100%;
+    height:200px;
+    border: 1px solid black;
+    border-radius: 3px;
+    margin-top : 15px;
+}
+
+
+
+.thirdBox-thirdman-header-text {
+    display: flex;
+    flex-direction: row;
+    justify-content : space-between;
+    padding: 0 10px 0 10px;
+    top : 0;
+}
+
+
+.thirdBox-normal{
+    font-weight: bold;
+    color: gray;
+    font-size: 14px;
+}
+
+
+.thirdBox-bold{
+    font-weight: bold;
+    font-size: 14px;
+}
+
+
+.thirdBox-firstman {
+    display: flex;
+    flex-direction: row;
+    justify-content : space-between;
+    text-align: center;
+    padding-left: 20px;
+}
+
+
+
+.thirdBox-firstman-img-text{
+    display: flex;
+    flex-direction: row;
+    text-align: start;
+    margin: 0;
+}
+
+.thirdBox-firstman-img img {
+    width: 40px;
+    height: 40px;
+    border-radius: 70%;
+    margin-top:3px;
+}
+
+.thirdBox-firstman-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 13px;
+    margin-left: 20px;
+}
+
+
+.thirdBox-firstman-text-bold{
+    font-weight: bold;
+}
+
+.thirdBox-firstman-text-normal{
+    color : gray;
+    text-align: start;
+}
+
+.thirdBox-firstman-follow {
+    display: flex;
+    align-items: center;
+    margin-right: 14px;
+    font-size: 14px;
+    font-weight: bold;
+    color: lightblue;
+}
+
+
+
+.thirdBox-secondman {
+    display: flex;
+    flex-direction: row;
+    justify-content : space-between;
+    text-align: center;
+    padding-left: 20px;
+}
+
+
+
+.thirdBox-secondman-img-text{
+    display: flex;
+    flex-direction: row;
+    text-align: start;
+    margin: 0;
+}
+
+.thirdBox-secondman-img img {
+    width: 40px;
+    height: 40px;
+    border-radius: 70%;
+    margin-top:3px;
+}
+
+.thirdBox-secondman-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 20px;
+    font-size: 13px;
+}
+
+.thirdBox-secondman-text-bold{
+    font-weight: bold;
+}
+
+
+.thirdBox-secondman-text-normal{
+    color : gray;
+    text-align: start;
+}
+
+
+.thirdBox-secondman-follow {
+    display: flex;
+    align-items: center;
+    color: lightblue;
+    margin-right: 14px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+
+.thirdBox-thirdman {
+    display: flex;
+    flex-direction: row;
+    justify-content : space-between;
+    text-align: center;
+    padding-left: 20px;
+}
+
+
+.thirdBox-thirdman-img-text{
+    display: flex;
+    flex-direction: row;
+    text-align: start;
+    margin: 0;
+}
+
+
+.thirdBox-thirdman-img img {
+    width: 40px;
+    height: 40px;
+    border-radius: 70%;
+    margin-top:3px;
+}
+
+
+.thirdBox-thirdman-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 13px;
+    margin-left: 20px;
+}
+
+
+.thirdBox-thirdman-text-bold{
+    font-weight: bold;
+}
+
+
+.thirdBox-thirdman-text-normal{
+    text-align: start;
+    color : gray;
+}
+
+.thirdBox-thirdman-follow {
+    display: flex;
+    align-items: center;
+    color: lightblue;
+    margin-right: 14px;
+    font-size: 14px;
+    font-weight: bold;
+}
