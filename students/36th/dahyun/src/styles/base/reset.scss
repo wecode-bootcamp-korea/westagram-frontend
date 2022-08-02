@@ -12,6 +12,11 @@ body {
   font-family: 'Noto Sans KR', sans-serif;
 }
 
+#root {
+  width: 100vw;
+  min-height: 100vh;
+}
+
 h1 {
   margin: 0;
 }
@@ -21,12 +26,17 @@ a {
   text-decoration: none;
 }
 
-button:focus,
-input:focus,
-select:focus,
-textarea:focus {
-  outline: none;
-  box-shadow: none;
+button,
+input,
+select,
+textarea {
+  background-color: transparent;
+  border: 0;
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
 }
 
 a,

@@ -1,0 +1,346 @@
+@import '../mixins/flexbox';
+@import '../mixins/scrollbar';
+
+.mainApp {
+  background-color: rgb(245, 245, 245);
+
+  /** Logo **/
+  .header-logo {
+    height: 70px;
+    background-color: #ffffff;
+    border-bottom: 1px solid rgb(235, 235, 235);
+
+    .nav-logo {
+      @include flexbox(space-between, center);
+      max-width: 1024px;
+      height: 100%;
+      margin: 0 auto;
+      padding: 0 20px;
+
+      .logo {
+        @include flexbox(none, center);
+        position: relative;
+        font-size: 24px;
+
+        .logo-title {
+          margin-left: 20px;
+          font-size: 20px;
+
+          &::before {
+            content: '|';
+            position: absolute;
+            bottom: 2px;
+            left: 28px;
+            font-weight: 200;
+          }
+        }
+      }
+
+      .search {
+        position: relative;
+        color: rgb(205, 205, 205);
+
+        .fa-magnifying-glass {
+          position: absolute;
+          top: 50%;
+          left: 38%;
+          transform: translate(-50%, -50%);
+        }
+
+        .searchBar {
+          padding: 5px 20px;
+          border: {
+            width: 2px;
+            style: solid;
+            color: rgb(235, 235, 235);
+            radius: 4px;
+          }
+          background-color: rgba(245, 245, 245, 0.8);
+          text-align: center;
+
+          &::placeholder {
+            color: rgb(205, 205, 205);
+            font-weight: 500;
+          }
+        }
+      }
+
+      .navbar {
+        img {
+          width: 35px;
+        }
+
+        a:nth-child(2),
+        a:nth-child(3) {
+          margin-left: 20px;
+        }
+      }
+    }
+  }
+
+  /** Main **/
+  .main-container {
+    @include flexbox(none, none);
+    max-width: 1024px;
+    margin: 40px auto 0;
+    padding: 0 30px;
+
+    main {
+      flex: 3;
+      height: auto;
+
+      .timeline {
+        border: 1px solid rgb(235, 235, 235);
+        background-color: #ffffff;
+        .header-post {
+          @include flexbox(none, center);
+          height: 60px;
+          padding: 0 20px;
+        }
+
+        .header-post {
+          .author-img {
+            width: 30px;
+            height: 30px;
+            background: url('../../../public/images/author-img.png') no-repeat
+              center;
+            background-size: cover;
+            border-radius: 50%;
+          }
+
+          h2 {
+            flex: 1;
+            margin-left: 10px;
+            font-size: 16px;
+          }
+
+          button {
+            background-color: transparent;
+            border: 0;
+          }
+        }
+
+        .post1-img {
+          height: 600px;
+          background: url('../../../public/images/post1-img.jpg') no-repeat
+            center;
+          background-size: cover;
+        }
+
+        .footer-post {
+          padding: 0 20px;
+
+          .feed-btns {
+            @include flexbox(space-between, center);
+            height: 40px;
+            font-size: 24px;
+            color: rgb(155, 155, 155);
+
+            .btns-likes {
+              width: 15%;
+              @include flexbox(space-between, none);
+            }
+          }
+
+          .feed-likes {
+            @include flexbox(none, none);
+          }
+
+          .comment {
+            padding-bottom: 10px;
+          }
+
+          .comment-form {
+            @include flexbox(space-between, center);
+            height: 60px;
+            border-top: 1px solid rgb(235, 235, 235);
+
+            .comment-input {
+              border: none;
+            }
+
+            .comment-btn {
+              border: none;
+              background-color: transparent;
+              color: rgba(113, 147, 238, 0.747);
+            }
+          }
+        }
+      }
+    }
+
+    /** Aside **/
+
+    aside {
+      flex: 1.6;
+      margin-left: 30px;
+
+      .user-profile {
+        @include flexbox(none, center);
+        height: 60px;
+
+        .profile-img {
+          width: 40px;
+          height: 40px;
+          background: url('../../../public/images/author-img.png') no-repeat
+            center;
+          background-size: cover;
+          border-radius: 50%;
+        }
+
+        .profile-info {
+          margin-left: 10px;
+        }
+
+        .profile-info {
+          h2 {
+            font-size: 16px;
+          }
+
+          p {
+            color: rgb(175, 175, 175);
+          }
+        }
+      }
+
+      .story {
+        height: 200px;
+        margin-bottom: 20px;
+        border: 1px solid rgb(235, 235, 235);
+        background-color: #ffffff;
+        overflow-y: scroll;
+
+        @include no-scrollbar();
+
+        .header-story {
+          @include flexbox(space-between, center);
+          padding: 5px 10px;
+
+          h2 {
+            font-size: 14px;
+            color: rgb(175, 175, 175);
+          }
+
+          button {
+            border: none;
+            background-color: transparent;
+            font-size: 14px;
+            font-weight: 500;
+          }
+        }
+
+        .updated-users {
+          display: flex;
+          justify-content: space-between;
+          padding: 6px 10px;
+
+          // button {
+          //   border: none;
+          //   background-color: transparent;
+          //   color: #0095f6;
+          // }
+        }
+
+        .updated-user {
+          display: flex;
+        }
+
+        .updated-user__img {
+          width: 30px;
+          height: 30px;
+          background: url('../../../public/images/author-img.png') no-repeat
+            center;
+          background-size: cover;
+          border-radius: 50%;
+        }
+
+        .updated-user__info {
+          margin-left: 10px;
+
+          h2 {
+            font-size: 14px;
+          }
+
+          span {
+            font-size: 13px;
+            font-weight: 500;
+            color: rgb(175, 175, 175);
+          }
+        }
+      }
+
+      .suggestion {
+        height: 180px;
+        margin-bottom: 20px;
+        border: {
+          width: 1px;
+          style: solid;
+          color: rgb(235, 235, 235);
+        }
+        background-color: #ffffff;
+
+        h2 {
+          font-size: 14px;
+        }
+
+        .updated-users {
+          @include flexbox(space-between, none);
+          padding: 6px 10px;
+        }
+
+        .updated-user {
+          @include flexbox(none, none);
+        }
+
+        .updated-user__img {
+          width: 30px;
+          height: 30px;
+          background: url('../../../public/images/author-img.png') no-repeat
+            center;
+          background-size: cover;
+          border: {
+            radius: 50%;
+          }
+        }
+
+        .updated-user__info {
+          margin-left: 10px;
+
+          h2 {
+            font-size: 14px;
+          }
+
+          span {
+            font-size: 13px;
+            font-weight: 500;
+            color: rgb(175, 175, 175);
+          }
+        }
+      }
+
+      .header-suggestion {
+        @include flexbox(space-between, center);
+        padding: 5px 10px;
+
+        button {
+          border: none;
+          background-color: transparent;
+          font: {
+            size: 14px;
+            weight: 500;
+          }
+        }
+      }
+
+      .footer a {
+        font-size: 14px;
+        color: rgb(175, 175, 175);
+
+        &:not(:last-of-type)::after {
+          content: '\00B7';
+          margin: 0 4px;
+        }
+      }
+    }
+  }
+}

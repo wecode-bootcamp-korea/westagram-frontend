@@ -1,0 +1,69 @@
+.header-logo {
+  height: 70px;
+  background-color: #ffffff;
+  border-bottom: 1px solid rgb(235, 235, 235);
+}
+
+.nav-logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1024px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-size: 24px;
+}
+
+.logo-title {
+  margin-left: 20px;
+  font-size: 20px;
+}
+
+.logo-title::before {
+  content: '|';
+  position: absolute;
+  bottom: 2px;
+  left: 28px;
+  font-weight: 200;
+}
+
+.search {
+  position: relative;
+  color: rgb(205, 205, 205);
+}
+
+.fa-magnifying-glass {
+  position: absolute;
+  top: 50%;
+  left: 38%;
+  transform: translate(-50%, -50%);
+}
+
+.searchBar {
+  padding: 5px 20px;
+  border: 2px solid rgb(235, 235, 235);
+  border-radius: 4px;
+  background-color: rgba(245, 245, 245, 0.8);
+  text-align: center;
+}
+
+.searchBar::placeholder {
+  color: rgb(205, 205, 205);
+  font-weight: 500;
+}
+
+.navbar img {
+  width: 35px;
+}
+
+.navbar a:nth-child(2),
+.navbar a:nth-child(3) {
+  margin-left: 20px;
+}
