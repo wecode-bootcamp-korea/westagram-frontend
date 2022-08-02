@@ -2,26 +2,24 @@ import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 
 export const Login = () => {
-  // const [id, setId] = useState('');
-  // const [pw, setPw] = useState('');
-  // const [btn, setBtn] = useState(true);
+  const [loginDate, setLoginDate] = useState({
+    id: '',
+    password: '',
+  });
 
-  // const saveUserId = e => {
-  //   e.target.value.includes('@') && pw.length >= 5
-  //     ? setBtn(true)
-  //     : setBtn(false);
-  //   setId(e.target.value);
-  // };
+  const loginDateSave = ({ target }) => {
+    const { name, value } = target;
+    setLoginDate({ ...loginDate, [name]: value });
+  };
 
-  // const saveUserPw = e => {
-  //   id.indexOf('@') !== -1 && pw.length >= 5 ? setBtn(true) : setBtn(false);
-  //   setPw(e.target.value);
-  // };
+  const { id, password } = loginDate;
 
-  // const navigate = useNavigate();
-  // const goToMain = () => {
-  //   navigate('/main');
-  // };
+  const isActive = id.includes('@') && password.length >= 5;
+
+  const navigate = useNavigate();
+  const goToMain = () => {
+    navigate('/main');
+  };
 
   return (
     <div className="loginApp">
@@ -31,29 +29,29 @@ export const Login = () => {
           <div className="loginCtl">
             <input
               type="text"
+              name="id"
               className="id"
               placeholder="전화번호, 사용자 이름또는 이메일"
-              // onChange={saveUserId}
+              onChange={loginDateSave}
             />
           </div>
           <div className="loginCtl">
             <input
               type="password"
+              name="password"
               className="password"
               placeholder="비밀번호"
-              // onChange={saveUserPw}
+              onChange={loginDateSave}
             />
           </div>
-          <Link to="/main">
-            <button
-              type="submit"
-              className="loginBtn"
-              // disabled={btn}
-              // onClick={goToMain}
-            >
-              로그인
-            </button>
-          </Link>
+          <button
+            type="submit"
+            className="loginBtn"
+            disabled={!isActive}
+            onClick={goToMain}
+          >
+            로그인
+          </button>
         </form>
         <div className="midLine">
           <div className="line"></div>
