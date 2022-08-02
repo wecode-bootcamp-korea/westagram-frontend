@@ -12,7 +12,13 @@ const createElem = () => {
       </li>
     `;
   };
-  $commentList.insertAdjacentHTML('beforeend', template(inputValue));
+  $commentList.innerHTML = `
+      <li class="comment">
+        <span class="userId">Pulan</span>
+        <span class="content">Hello World!</span>
+      </li>
+    `;
+  // $commentList.insertAdjacentHTML('beforeend', template(inputValue));
   $commentInput.value = '';
 };
 
