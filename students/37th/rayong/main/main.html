@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Westagram_main</title>
+    <link rel="stylesheet" href="default.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e33fffde44.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="header">
+        <div class="wrapper">
+            <div class="header-box">
+                <div class="logo-box">
+                    <img class="icon" src="images/logo.png" alt="westagram-logo">
+                    <p>Westagram</p>
+                </div>
+                <div class="input-box">
+                    <input type="text" placeholder="검색" >
+                    <img class="small-icon" src="images/search.png" alt="">
+                </div>
+                <div class="icon-box">
+                    <img class="icon-explore icon" src="images/explore.png" alt="탐색">
+                    <img class="icon-favorite icon" src="images/favorite.png" alt="좋아요">
+                    <img class="icon-profile icon" src="images/person.png" alt="프로필">
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="contents">
+        <div class="wrapper">
+            <div class="contents-box">
+                <div class="feeds">
+                    <article class="feeds-box">
+                        <div class="feeds-profile">
+                            <div class="box">
+                                <div class="user">
+                                    <img src="https://velog.velcdn.com/images/rayong/profile/df592861-ea43-432c-aea2-a1f79730300b/image.png" alt="프로필이미지">
+                                    <p>wecode_dd</p>
+                                </div>
+                                <img class="icon" src="images/more.png" alt="">
+                            </div>
+                        </div>
+                        <div class="feeds-img" style="background-image:url(https://images.unsplash.com/photo-1595925079336-631bfdf96ee0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1974&q=80)"></div>
+                        <div class="feeds-icons" >
+                            <div class="box">
+                                <div class="left">
+                                    <img class="icon" src="images/favorite.png" alt="">
+                                    <img class="icon" src="images/explore.png" alt="">
+                                    <img class="icon" src="images/person.png" alt="">
+                                </div>
+                                <div class="right">
+                                    <img class="icon" src="images/bookmark.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feeds-likes">
+                            <div class="box">
+                                <img src="https://velog.velcdn.com/images/rayong/profile/df592861-ea43-432c-aea2-a1f79730300b/image.png" alt="">
+                                <p><strong>wecod</strong>님 외 <strong>10명</strong>이 좋아합니다.</p>
+                            </div>
+                        </div>
+                        <ul id="feedsList" class="feeds-list"></ul>
+                        <form id="feedsForm" class="feeds-input">
+                            <input id="feedsInput" type="text" placeholder="댓글 달기..">
+                            <button id="feedsBtn">게시</button>
+                        </form>
+                    </article>
+                </div>
+                <div class="main-right">
+                        <div class="right-profile">
+                            <div class="box">
+                                <img class="big-icon" src="https://velog.velcdn.com/images/rayong/profile/df592861-ea43-432c-aea2-a1f79730300b/image.png" alt="">
+                                <p><strong>WECODE_FIRE</strong><br>wecode is forever</p>
+                            </div>
+                        </div>
+                        <div class="right-story">
+                            <div class="box">
+                                <div class="right-story-top">
+                                    <p>스토리</p>
+                                    <p><strong>모두 보기</strong></p>
+                                </div>
+                                <ul class="list">
+                                    <li>
+                                        <img class="right-story-img" src="https://velog.velcdn.com/images/rayong/profile/df592861-ea43-432c-aea2-a1f79730300b/image.png" alt="">
+                                        <p><strong>rayong</strong><br>12시간 전</p>
+                                    </li>
+                                    <li>
+                                        <img class="right-story-img" src="https://velog.velcdn.com/images/rayong/profile/df592861-ea43-432c-aea2-a1f79730300b/image.png" alt="">
+                                        <p><strong>rayong</strong><br>12시간 전</p>
+                                    </li>
+                                    <li>
+                                        <img class="right-story-img" src="https://velog.velcdn.com/images/rayong/profile/df592861-ea43-432c-aea2-a1f79730300b/image.png" alt="">
+                                        <p><strong>rayong</strong><br>12시간 전</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="right-suggest">
+                            <div class="box">
+                                <div class="right-suggest-top">
+                                    <p>회원님을 위한 추천</p>
+                                    <p><strong>모두 보기</strong></p>
+                                </div>
+                                <ul class="list">
+                                    <li>
+                                        <div>
+                                            <img class="right-suggest-img" src="https://velog.velcdn.com/images/rayong/profile/df592861-ea43-432c-aea2-a1f79730300b/image.png" alt="">
+                                            <p><strong>rayong</strong><br>12시간 전</p>
+                                        </div>
+                                        <p>팔로우</p>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <img class="right-suggest-img" src="https://velog.velcdn.com/images/rayong/profile/df592861-ea43-432c-aea2-a1f79730300b/image.png" alt="">
+                                            <p><strong>rayong</strong><br>12시간 전</p>
+                                        </div>
+                                        <p>팔로우</p>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <img class="right-suggest-img" src="https://velog.velcdn.com/images/rayong/profile/df592861-ea43-432c-aea2-a1f79730300b/image.png" alt="">
+                                            <p><strong>rayong</strong><br>12시간 전</p>
+                                        </div>
+                                        <p>팔로우</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <p class="right-subtext">instagram 정보, 지원, 홍보센터, API, 채용 정보, 개인정보처리방침, 약관, 디렉터리, 프로필, 해시태그, 언어</p>
+                        <p class="right-cc">@ 2019 INSTARGRAM</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>

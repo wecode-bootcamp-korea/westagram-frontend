@@ -1,0 +1,267 @@
+/* layouts */
+
+.wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.header .wrapper {
+    padding: 30px 0 20px;
+}
+
+.contents-box {
+    padding: 60px 0;
+    display: flex;
+}
+
+.feeds {
+    margin-right: 25px;
+    flex: 2;
+}
+
+.main-right {
+    flex: 1;
+    margin-bottom: 15px;
+}
+
+/* components */
+
+body {
+    background-color: #efefef;
+}
+
+.header {
+    background-color: white;
+}
+
+.small-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.icon {
+    width: 30px;
+    height: 30px;
+}
+
+.big-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.header-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-box .logo-box {
+    display: flex;
+    align-items: center;
+}
+
+.header-box .logo-box p {
+    font-family: 'Lobster', cursive;
+    font-size: 28px;
+    margin-left: 10px;
+}
+
+.header-box .logo-box p::before {
+    content: "  ";
+    display: inline-block;
+    width: 1px;
+    height: 20px;
+    background-color: #333;
+    margin-right: 10px;
+}
+
+.header-box .input-box {
+    position: relative;
+}
+
+.header-box .input-box img {
+    position: absolute;
+    opacity: 0.2;
+    left: 74px;
+    top: 4px;
+}
+
+.header-box .input-box input {
+    width: 200px;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+}
+
+.header-box .icon-box img {
+    margin-left: 10px;
+}
+
+.feeds-box {
+    background-color: white;
+    border-radius: 8px;
+}
+
+.feeds-profile .box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.feeds-profile .box .user {
+    display: flex;
+    align-items: center;
+
+}
+.feeds-profile .box .user p {
+    font-weight: bold;
+}
+
+.feeds-profile img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.feeds-img {
+    padding-bottom: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.feeds-icons .box {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    padding: 15px 15px 5px;
+}
+
+.feeds-likes .box {
+    display: flex;
+    align-items: center;
+    padding: 5px 15px;
+}
+
+.feeds-likes img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.feeds-list {
+    padding: 15px 15px 0;
+}
+
+.feeds-list li {
+    margin-bottom: 10px;
+}
+
+.feeds-input {
+    padding: 5px 15px 25px;
+    display: flex;
+}
+
+.feeds-input input {
+    font-size: 16px;
+    border: 0px;
+    flex: 1;
+}
+
+.feeds-input button {
+    font-size: 14px;
+    font-weight: bold;
+    color: gray;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.right-profile .box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.right-profile img {
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+.right-profile p {
+    font-size: 14px;
+    color: #888;
+}
+
+.right-profile .box strong {
+    color: #111;
+}
+
+.right-story, .right-suggest {
+    background-color: white;
+    padding: 15px 10px 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.right-story-top, .right-suggest-top {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.right-story-img, .right-suggest-img {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.right-story li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.right-story p {
+    font-size: 14px;
+    color: gray;
+}
+
+.right-story p strong {
+    color: #333;
+}
+
+.right-suggest p {
+    font-size: 14px;
+    color: gray;
+}
+
+.right-suggest p strong {
+    color: #333;
+}
+
+.right-suggest .list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.right-suggest .list div {
+    display: flex;
+    align-items: center;
+}
+
+.right-subtext, .right-cc {
+    font-size: 14px;
+    font-weight: 600;
+    color: #aaa;
+    line-height: 1.4;
+}
+
+.right-subtext {
+    margin: 5px 0 15px;
+}
