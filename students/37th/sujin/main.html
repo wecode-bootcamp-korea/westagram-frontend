@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/common.css">
+    <link rel="stylesheet" href="/style/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet"><!-- 구글폰트 cdn -->
+    <script src="https://kit.fontawesome.com/4e5b2f86bb.js" crossorigin="anonymous"></script><!-- 폰트어썸 cdn -->
+    <title>westagram</title>
+</head>
+<body>
+    <header>
+        <div class="wrap">
+            <h1 class="logo">Westagram</h1>
+            <input class="search" type="text" placeholder="검색">
+            <ul class="icon-wrap">
+                <li><i class="fa-regular fa-compass"></i></li>
+                <li><i class="fa-regular fa-heart"></i></li>
+                <li><i class="fa-regular fa-user"></i></li>
+            </ul>
+        </div>
+    </header>
+    <main class="container">
+        <section class="feeds">
+            <article>
+                <div class="profile">
+                    <div class="profile-box">
+                        <img class="profile-image" src="/img/feed01.jpg" alt="프로필사진">
+                        <span class="id">sujiny_829</span>
+                    </div>
+                    <button><i class="fa-solid fa-ellipsis"></i></button>
+                </div>
+                <div class="picture-area"><img src="/img/feed01.jpg" alt="피드"></div>
+                <div class="info-area">
+                    <div class="icon-wrap">
+                        <!-- <button><i class="fa-regular fa-heart"></i></button> -->
+                        <button><i class="fa-solid fa-heart on"></i></button>
+                        <button><i class="fa-regular fa-comment"></i></button>
+                        <button><i class="fa-solid fa-arrow-up-from-bracket"></i></button>
+                        <button><i class="fa-regular fa-bookmark"></i></button>
+                    </div>
+                    <p class="like-number"><img class="profile-image small" src="/img/feed01.jpg" alt="프로필사진"><span class="id">abc1234</span>님 외 <span>10명</span>이 좋아합니다.</p>
+                    <div class="post-box">
+                        <p class="post hide"><span class="id">sujiny_829</span>강아지 귀엽다.강아지 귀엽다.강아지 귀엽다.강아지 귀엽다.강아지 귀엽다.강아지 귀엽다.강아지 귀엽다.</p> 
+                        <button class="btn-more">더보기</button>
+                    </div>
+                </div>
+                <div class="comment-area">
+                    <ul class="comment-list">
+                        <li><span class="id">abc1234</span>
+                            댓글 입니다 댓글 입니다 댓글 입니다 댓글 입니다 댓글 입니다 댓글 입니다 댓글 입니다 댓글 입니다 댓글 입니다 
+                            댓글 입니다 댓글 입니다 댓글 입니다 댓글 입니다 댓글 입니다 댓글 입니다
+                            <buttonb class="btn-like"><i class="fa-regular fa-heart"></i></button>
+                        </li>
+                    </ul>
+                    <form>
+                        <div class="input-area">
+                            <input type="text" placeholder="댓글달기">
+                            <button class="btn-push" disabled>게시</button>
+                        </div>
+                    </form>
+                </div>
+            </article>
+        </section>
+        <section class="etc">
+            <div class="profile">
+                <img class="profile-image large" src="/img/feed01.jpg" alt="프로필사진">
+                <div class="profile-box">
+                    <p class="id">sujiny_829</p>
+                    <p class="name">안수진</p>
+                </div>
+            </div>
+            <div class="etc-box scroll">
+                <div class="title-wrap">
+                    <p class="title">스토리</p>
+                    <button class="btn-all">모두 보기</button>
+                </div>
+                <ul class="other-user">
+                    <li>
+                        <div class="profile small">
+                            <img class="profile-image story" src="/img/feed01.jpg" alt="프로필사진">
+                            <div class="profile-box">
+                                <p class="id">sujiny_829</p>
+                                <p class="time">16분 전</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="profile small">
+                            <img class="profile-image story" src="/img/feed01.jpg" alt="프로필사진">
+                            <div class="profile-box">
+                                <p class="id">sujiny_829</p>
+                                <p class="time">16분 전</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="profile small">
+                            <img class="profile-image story" src="/img/feed01.jpg" alt="프로필사진">
+                            <div class="profile-box">
+                                <p class="id">sujiny_829</p>
+                                <p class="time">16분 전</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="profile small">
+                            <img class="profile-image story" src="/img/feed01.jpg" alt="프로필사진">
+                            <div class="profile-box">
+                                <p class="id">sujiny_829</p>
+                                <p class="time">16분 전</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="profile small">
+                            <img class="profile-image story" src="/img/feed01.jpg" alt="프로필사진">
+                            <div class="profile-box">
+                                <p class="id">sujiny_829</p>
+                                <p class="time">16분 전</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="etc-box">
+                <div class="title-wrap">
+                    <p class="title">회원님을 위한 추천</p>
+                    <button class="btn-all">모두 보기</button>
+                </div>
+                <ul class="other-user">
+                    <li>
+                        <div class="profile small">
+                            <img class="profile-image" src="/img/feed01.jpg" alt="프로필사진">
+                            <div class="profile-box">
+                                <p class="id">abc_1234</p>
+                                <p class="friend">sjdnk_859님 외 3명이 알고 있습니다다따다다다다</p>
+                            </div>
+                        </div>
+                        <button class="btn-push">팔로우</button>
+                    </li>
+                    <li>
+                        <div class="profile small">
+                            <img class="profile-image" src="/img/feed01.jpg" alt="프로필사진">
+                            <div class="profile-box">
+                                <p class="id">abc_1234</p>
+                                <p class="friend">sjdnk_859님 외 3명이 알고 있습니다다따다다다다</p>
+                            </div>
+                        </div>
+                        <button class="btn-push">팔로우</button>
+                    </li>
+                    <li>
+                        <div class="profile small">
+                            <img class="profile-image" src="/img/feed01.jpg" alt="프로필사진">
+                            <div class="profile-box">
+                                <p class="id">abc_1234</p>
+                                <p class="friend">sjdnk_859님 외 3명이 알고 있습니다다따다다다다</p>
+                            </div>
+                        </div>
+                        <button class="btn-push">팔로우</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer">
+                <div class="text">westagram<a href="#">소개</a><a href="#">도움말</a><a href="#">홍보 센터</a><a href="#">API </a><a href="#">채용 정보</a><a href="#">개인정보처리방침</a><a href="#">약관</a><a href="#">위치</a><a href="#">언어</a></div>
+                <p class="text">© 2022 INSTAGRAM FROM META</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- script -->
+    <script src="/js/main.js"></script>
+</body>
+</html>

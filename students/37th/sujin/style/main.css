@@ -1,0 +1,321 @@
+/* ======= header ===================================== */
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    border-bottom: 1px solid #dbdbdb;
+    z-index: 10;
+}
+header > .wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 975px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+header .logo{
+    font-size: 30px;
+}
+header .logo::before{
+    content:'\f16d';
+    display: inline-block;
+    font-family: "FontAwesome";
+    margin-right: 10px;
+}
+header .search{
+    width: 250px;
+    padding: 5px 20px;
+    background-color: #fafafa;
+    background-image: url(/images/magnifying-glass-solid.svg);
+    background-repeat: no-repeat;
+    background-position: 5px center;
+    background-size: 10px 10px;
+    border: 1px solid #dbdbdb;
+}
+header .search:focus{
+    background-image: none;
+}
+header .search::placeholder{
+    color: #999;
+    padding-left: 5px;
+}
+header .search:focus::placeholder{
+    padding-left: 0;
+}
+header .icon-wrap{
+    display: flex;
+}
+header .icon-wrap > li{
+    padding: 0 10px;
+    font-size: 22px;
+}
+
+/* ======= main ===================================== */
+main{
+    display: flex;
+    width: 975px;
+    padding: 100px 40px;
+    margin: 0 auto;
+}
+.feeds{
+    width: 570px;
+    margin-right: 20px;
+}
+.etc{
+    width: calc(100% - 590px); 
+}
+
+/* ======= feeds ===================================== */
+/* common */
+.id{
+    display:inline-block;
+    margin-right:3px;
+    font-size: 14px;
+    font-weight: 700;
+}
+.profile-image{
+    display: inline-block;
+    vertical-align: middle;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.profile-image.story{
+    border: 2px solid transparent;
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    background-image: linear-gradient(#833ab4, #833ab4, #833ab4), linear-gradient(to right, #833ab4, #fd1d1d, #fcb045);
+}
+.profile-image.small{
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+}
+.profile-image.large{
+    width: 60px;
+    height: 60px;
+}
+.btn-push{
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    transform: translateY(-50%);
+    color: #0095f6;
+    font-weight: 700;
+}
+.btn-push:disabled{
+    opacity: 0.5;
+}
+.btn-all{
+    font-weight: 700;
+}
+
+.feeds > article{
+    border: 1px solid #dbdbdb;
+    background: #fff;
+    margin-bottom: 50px;
+}
+.feeds > article:last-of-type{
+    margin-bottom: 0;
+}
+.feeds .profile{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.profile .profile-box > .id{
+    vertical-align: middle;
+    margin-left: 10px;
+}
+.feeds .picture-area {
+    position: relative;
+    overflow: hidden;
+    height: 570px;
+    max-height: 670px;
+}
+.feeds .picture-area > img{
+    position: absolute;
+    top:0;
+    left:50%;
+    transform: translateX(-50%);;
+    width: 100%;
+    height: auto;
+}
+.feeds .info-area{
+    padding: 10px;
+}
+.info-area .icon-wrap{
+    margin-bottom: 10px;
+}
+.info-area .icon-wrap > button:last-of-type{
+    float:right;
+}
+.info-area .icon-wrap > button > i {
+    font-size: 20px;
+}
+.info-area .icon-wrap > button > i.fa-solid.on{
+    color: red;
+}
+.info-area .like-number{
+    margin-bottom: 10px;
+}
+.info-area .post-box .post{
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 20px;
+}
+.info-area .post-box .post.hide{
+    width: 80%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.info-area .post-box .post > .id{
+    margin-right: 5px;
+}
+.info-area .post-box .btn-more{
+    display: inline-block;
+    vertical-align: bottom;
+    margin-left: -5px;
+    color: #999;
+    font-size: 12px;
+    line-height: 20px;
+}
+.comment-area .comment-list li{
+    position: relative;
+    padding: 5px 40px 0 10px;
+    line-height: 18px;
+    font-size: 15px;
+}
+.comment-list li .btn-like {
+    position: absolute;
+    top: 40%;
+    right: 21px;
+    transform: translateY(-50%);
+}
+.comment-list li .btn-like > .fa-regular.fa-heart{
+    color: #999;
+}
+.comment-list li .btn-like > .fa-solid.fa-heart{
+    color: red;
+}
+
+.comment-area .input-area{
+    position: relative;
+    margin-top: 10px;
+    padding: 0px 0px;
+    border-top: 1px solid #dbdbdb;
+}
+.comment-area .input-area > input{
+    width: 100%;
+    padding:20px 10px;
+    border: none;
+}
+
+/* ======= etc ===================================== */
+.etc .profile{
+    display: flex;
+    align-items: center;
+}
+.etc .profile .profile-box{
+    min-width: 0;
+}
+.etc .profile .profile-box .name,
+.etc .profile .profile-box .time,
+.etc .profile .profile-box .friend{
+    margin: 3px 0 0 10px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #999;
+}
+.etc .profile .profile-box .friend{
+    width: 70%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.etc .etc-box{
+    margin-top: 15px;
+    padding: 15px 10px;
+    background: #fff;
+    border: 1px solid #dbdbdb;
+}
+.etc .etc-box .other-user > li{
+    position: relative;
+    padding: 5px 0;
+}
+.etc .etc-box .title-wrap{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.etc .etc-box .title-wrap .title{
+    color: #999;
+    font-size: 13px;
+}
+.etc .etc-box.scroll{
+    padding-bottom: 0;
+}
+.etc .etc-box.scroll .other-user{
+    max-height: 170px;
+    overflow-y: auto;
+}
+.etc .etc-box.scroll .other-user > li:last-of-type{
+    padding-bottom: 10px;
+}
+
+.footer{
+    margin-top: 15px;
+}
+.footer .text{
+    margin-bottom: 10px;
+    font-size:14px;
+    color: #999;
+}
+.footer a {
+    padding: 0 5px 0 0;
+    line-height: 20px;
+    color: #999;
+    text-decoration: none;
+}
+.footer a:first-child{
+    padding-left: 5px;
+}
+.footer a::after{
+    content:'';
+    display: inline-block;
+    vertical-align: middle;
+    width: 3px;
+    height: 3px;
+    margin-left: 5px;
+    background: #999;
+    border-radius: 50%;
+}
+.footer a:last-of-type::after{
+    display: none;
+}
+.footer a:hover{
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
