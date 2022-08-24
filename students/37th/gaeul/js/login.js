@@ -2,11 +2,12 @@ const nameEmail = document.querySelector(".nameEmail");
 const passWord = document.querySelector(".passWord");
 const loginBtn = document.querySelector(".login-btn");
 
-function loginActive() {
-  let idValue = nameEmail.value;
-  let pwValue = passWord.value;
 
-  if(idValue && pwValue) {
+function loginActive() {
+  const idValue = nameEmail.value;
+  const pwValue = passWord.value;
+
+  if(idValue.includes('@') && (pwValue.length >= 5)) {
     loginBtn.disabled = false;
     loginBtn.style.backgroundColor = '#0095f6';
     loginBtn.style.cursor = 'pointer';
