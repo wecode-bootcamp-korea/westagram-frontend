@@ -30,7 +30,7 @@ input {
     margin-bottom: 10px;
 }
 
-#loginwrapper {
+#loginWrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -41,10 +41,8 @@ input {
     background-color: white;
 }
 
-.loginbutton {
-    background: inherit; 
+.loginButton {
     border:none; 
-    box-shadow:none;
     border-radius: 5px;
     width: 80%;
     font-weight: bold;
@@ -53,4 +51,8 @@ input {
     color: white;
     background-color: #c0dcfb;
     font-size: 20px;
+}
+
+.loginButton:disabled {
+    background-color: #0e71e1;
 }
