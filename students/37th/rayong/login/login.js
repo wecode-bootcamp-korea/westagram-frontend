@@ -3,10 +3,11 @@ const inputId = document.querySelector('#inputId');
 const inputPw = document.querySelector('#inputPassword');
 
 function activateButton() {
-    if (inputId.value && inputPw.value) {
+    if (inputPw.value.length >= 5 && inputId.value.indexOf('@') !== -1) {
         loginBtn.classList.remove('blue');
+    } else {
+        loginBtn.classList.add('blue')
     }
-    return;
 }
 
 inputBox.addEventListener('keyup', activateButton);

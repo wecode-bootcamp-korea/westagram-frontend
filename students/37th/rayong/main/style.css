@@ -1,12 +1,13 @@
 /* layouts */
 
 .wrapper {
-    max-width: 900px;
+    max-width: 700px;
     margin: 0 auto;
+    padding: 0 10px;
 }
 
 .header .wrapper {
-    padding: 30px 0 20px;
+    padding: 30px 10px 20px;
 }
 
 .contents-box {
@@ -158,6 +159,22 @@ body {
 
 .feeds-list li {
     margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.feeds-list li div {
+    display: flex;
+}
+
+.icon-red {
+    color: red;
+}
+
+.feeds-list li div p {
+    font-size: 18px;
+    margin-left: 5px;
+    cursor: pointer;
 }
 
 .feeds-input {
