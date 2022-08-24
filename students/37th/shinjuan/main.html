@@ -8,7 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700&display=swap" rel="stylesheet
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
   <body>
@@ -58,6 +58,8 @@
                 <ul class="article_content">
                     <li class="article_profile_id">neceosecius</li>
                     <li class="article_content_p">거봐 좋았잖아~~~🙆🏻‍♀️</li>
+                    <i class="fa-solid fa-delete-left"></i>
+                    <i class="fa-regular fa-heart reple_heart"></i>
                 </ul>
              </div>
             <div class="article_time">
@@ -65,9 +67,11 @@
             </div>
         </div>
             <div class="article_reple">
-                <input class="reple_input"type="text" placeholder="댓글 달기...">
-                    <button class="reple_btn"type="submit">게시</button>
-                </input>
+                <form onsubmit="return false;">
+                    <input class="reple_input"type="text" placeholder="댓글 달기...">
+                        <button class="reple_btn"type="submit">게시</button>
+                    </input>
+                </form>
             </div>
           </div>
         </div>

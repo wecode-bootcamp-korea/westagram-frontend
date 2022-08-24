@@ -146,11 +146,16 @@ main {
 }
 .article_content {
   display: flex;
+  position: relative;
   align-items: center;
 }
 .article_content_p {
   margin-left: 5px;
   display: inline;
+}
+.article_content i:nth-child(4) {
+  position: absolute;
+  right: 0;
 }
 .like_count {
   font-weight: bolder;

@@ -4,16 +4,17 @@ const repleBtn = document.querySelector(".reple_btn");
 const repleSubmit = () => {
   const repleContainer = document.querySelector(".article_reple_other");
   const newRepleDiv = document.createElement("div");
-  newRepleDiv.className = "article_content";
-  repleContainer.appendChild(newRepleDiv);
   const newIdP = document.createElement("li");
-  newIdP.className = "article_profile_id";
-  newIdP.innerText = localStorage.getItem("id");
-  newRepleDiv.appendChild(newIdP);
   const newContentP = document.createElement("li");
+  const localUserId = localStorage.getItem("id");
+  newRepleDiv.className = "article_content";
+  newIdP.className = "article_profile_id";
   newContentP.className = "article_content_p";
-  newRepleDiv.appendChild(newContentP);
+  newIdP.innerText = localUserId.split("@")[0];
   newContentP.innerText = inputReple.value;
+  repleContainer.appendChild(newRepleDiv);
+  newRepleDiv.appendChild(newIdP);
+  newRepleDiv.appendChild(newContentP);
   inputReple.value = "";
 };
 
@@ -21,7 +22,8 @@ repleBtn.addEventListener("click", repleSubmit);
 
 inputReple.addEventListener("keydown", (e) => {
   if (e.code === "Enter") {
-    repleSubmit();
+    repleSubmit;
+    console.log("s");
   }
 });
 
@@ -45,3 +47,7 @@ const getCountLike = () => {
 };
 
 likeHeart.addEventListener("click", getCountLike);
+
+const repleHeart = document.querySelector(".reple_heart");
+
+repleHeart.addEventListener("click", console.log("heart"));
