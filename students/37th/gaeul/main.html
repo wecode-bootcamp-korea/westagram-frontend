@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="style/reset.css" rel="stylesheet">
+  <link rel="stylesheet" href="style/common.css">
+  <link href="style/main.css" rel="stylesheet">
+  <!-- font -->
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <script src="https://kit.fontawesome.com/28185af34f.js" crossorigin="anonymous"></script>
+  <title>Westagram - main</title>
+</head>
+
+<body>
+  <header>
+    <div class="header-wrap">
+      <div class="logo-wrap">
+        <img class="insta-logo" src="image/instagram.png">
+        <div class="logo-line"></div>
+        <div class="logo-text">Westagram</div>
+      </div>
+
+      <div class="search-wrap">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" class="search" placeholder="검색">
+      </div>
+
+      <div class="icons">
+        <button>
+          <img id="icon-explore" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png">
+        </button>
+        <button>
+          <img id="icon-heart" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png">
+        </button>
+        <button>
+          <img id="icon-mypage"src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png">
+        </button>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- main -->
+  <section class="main">
+    <div class="feeds">
+      <div class="article-wrap">
+        <div class="user-bar">
+          <div class="user">
+            <div class="user-image"></div>
+            <p class="user-id">galee326</p>
+          </div>
+
+          <button id="dot"><i class="fa-solid fa-ellipsis"></i></button>
+
+        </div>
+
+        <div class="article-img"></div>
+
+        <div class="article-icons">
+          <div class="article-three-icons">
+            <button><i class="fa-regular fa-heart"></i></button>
+            <button><i class="fa-regular fa-comment"></i></button>
+            <button><i class="fa-solid fa-arrow-up-from-bracket"></i></button>
+          </div>
+          <button id="bookmark"><i class="fa-regular fa-bookmark"></i></button>
+        </div>
+
+        <div class="like-user">
+          <div class="like-user-img"></div>
+            <p><b>everyone_woo</b>님 외 <b>12명</b>이 좋아합니다</p>
+          </div>
+            
+          <ul id="comments-up"></ul>
+
+        <form class="lets-comment">
+          <input id="comment-input" type="text" placeholder="댓글 달기...">
+          <button>게시</button>
+        </form>
+
+      </div>
+    </div>
+
+  <!-- main-right -->
+    <div class="main-right">
+      <div class="id-info-box">
+        <div id="my-image"></div>
+        <div class="my-info">
+          <p id="my-id">wecode_bootcamp</p>
+          <p id="my-id-text">WeCode | 위코드</p>
+        </div>
+      </div>
+      
+      <div class="story">
+        <div class="story-bar">
+          <h5>스토리</h5>
+          <a href="#">모두 보기</a>
+        </div>
+
+        <div class="story-user">
+          <div class="user-image"></div>
+          <div class="user-info">
+            <p class="user-id">user_1</p>
+            <p class="timeline">16분 전</p>
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="recommend">
+        <div class="story-bar">
+          <h5>회원님을 위한 추천</h5>
+          <a href="#">모두 보기</a>
+        </div>
+
+        <div class="story-recommend-user">
+          <div class="user-image"></div>
+          <div class="user-info">
+            <p class="user-id">user_2</p>
+            <p class="recommend-text">canon_mj님 외 2명이 팔로우</p>
+          </div>
+          
+        <a class="follow" href="#">팔로우</a>
+        </div>
+
+      </div>
+
+      <footer>
+        <p>소개 · 도움말 · 홍보 센터 · API · 채용 정보 · 개인정보처리방침 · 약관 · 위치 · 언어</p>
+
+        <p>© 2022 INSTAGRAM FROM META</p>
+      </footer>
+    </div>
+    
+  </section>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
