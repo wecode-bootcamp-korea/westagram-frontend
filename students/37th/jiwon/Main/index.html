@@ -7,6 +7,7 @@
     <title>Westa-main</title>
     <link href="style.css" type="text/css" rel="stylesheet" />
     <link href="../common.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
     <!-- <div class="container"> -->
@@ -35,8 +36,10 @@
           class="icon"
           src=" https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png"
         />
+        <img class="icon" id="nav-profile" src="https://images.unsplash.com/photo-1660144767359-56a53fe44310?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=985&q=80" style="border-radius: 12px;"/>
       </div>
     </nav>
+    
     <main>
       <div class="feeds">
         <article>
@@ -95,14 +98,17 @@
               ></li>
         
             <ul class="feed-comments-text">
-              <li>
-                <span class="commenter-id">gdragon</span
-                ><span class="commenter-saying">언제 다녀오셨어요?</span>
+              <li class="comment-set">
+                <div class="comment-set-left">
+                <span class="commenter-id">gdragon</span>
+                <span class="commenter-saying">언제 다녀오셨어요?</span>
+              </div>
+               <div class="comment-set-right">
+                <i class="fa-regular fa-heart"></i>
+                <i class="fa-regular fa-x"></i>
+              </div>
               </li>
-              <li>
-                <span class="commenter-id">jennie</span
-                ><span class="commenter-saying">나두 가고싶다</span>
-              </li>
+          
             </ul>
             <p class="comment-time-passed">0초전</span>
           </div>
@@ -214,8 +220,26 @@
           <p>&copy;2022 INSTAGRAM</p>
         </div>
       </div>
+
+
     </main>
-    <!-- </div> -->
-    <script src="script.js"></script>
+
+    <div class="profile-menu-view">
+      <div class="profile-menu">
+      <div class="profile-menu-item"><i class="fa-regular fa-user"></i> 프로필</div>
+      <div class="profile-menu-item"><i class="fa-regular fa-bookmark"></i> 저장됨</div>
+      <div class="profile-menu-item"><i class="fa-solid fa-gear"></i>설정</div>
+      <div class="profile-menu-item">로그아웃</div>
+      </div>
+    </div>
+
+
+    
+
+    <script src="comment.js"></script>
+    <script src="profile.js"></script>
+    <script src="https://kit.fontawesome.com/ed0677e737.js" crossorigin="anonymous"></script>
   </body>
+
+
 </html>

@@ -5,9 +5,12 @@ const loginBtn = document.getElementById("login-button");
 console.log(id.value);
 
 const activeLoginBtn = () => {
-  if (id.value.length >= 1 && pw.value.length >= 1) {
+  if (id.value.includes("@") && pw.value.length >= 5) {
     loginBtn.style.backgroundColor = "#0095F6";
-  } else loginBtn.style.backgroundColor = "#c4e1fb";
+  } else {
+    loginBtn.style.backgroundColor = "#c4e1fb";
+    loginBtn.setAttribute("disabled", false);
+  }
 };
 
 id.addEventListener("keyup", activeLoginBtn);
