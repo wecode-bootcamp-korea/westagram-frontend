@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Westa-main</title>
+    <link href="style.css" type="text/css" rel="stylesheet" />
+    <link href="../common.css" type="text/css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- <div class="container"> -->
+    <nav>
+      <div class="nav-logo">
+        <img
+          class="icon"
+          src="https://cdn-icons-png.flaticon.com/512/87/87390.png"
+        />
+        <span>|</span> <span id="logo">Westagram</span>
+      </div>
+      <div class="nav-input">
+        <input placeholder="검색" />
+        <img src="https://cdn-icons-png.flaticon.com/512/622/622669.png" />
+      </div>
+      <div class="nav-action">
+        <img
+          class="icon"
+          src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png"
+        />
+        <img
+          class="icon"
+          src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"
+        />
+        <img
+          class="icon"
+          src=" https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png"
+        />
+      </div>
+    </nav>
+    <main>
+      <div class="feeds">
+        <article>
+          <div class="writer-info">
+            <div class="writer-info-left">
+              <img
+                src="https://images.unsplash.com/photo-1660296422801-6b585af5df9d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHx0b3BpYy1mZWVkfDV8SnBnNktpZGwtSGt8fGVufDB8fHx8&auto=format&fit=crop&w=1600&q=60"
+              />
+              <span>jiwony933</span>
+            </div>
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/512/512142.png"
+              width="14px"
+              height="14px"
+            />
+          </div>
+          <img
+            src="https://images.unsplash.com/photo-1660811136321-c73f03714c81?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1287&q=80"
+            width="400px"
+            height="400px"
+          />
+          <div class="feed-icons">
+            <div class="feed-icons-left">
+              <img
+                class="icon"
+                src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"
+              />
+              <img
+                class="icon"
+                src="https://cdn-icons-png.flaticon.com/512/7205/7205744.png"
+              />
+              <img
+                class="icon"
+                src="https://cdn-icons.flaticon.com/png/512/2990/premium/2990295.png?token=exp=1661218798~hmac=e203b03a58c80cdda656d0e10a30a0b2"
+              />
+            </div>
+            <div class="feed-icons-right">
+              <img
+                class="icon"
+                src="https://cdn-icons.flaticon.com/png/512/5662/premium/5662990.png?token=exp=1661218860~hmac=08e3458966c3f6e9c882fb858250ddca"
+              />
+            </div>
+          </div>
+          <div class="feed-comments">
+            <div class="feed-comments-howmanylikes">
+              <img
+                src="https://images.unsplash.com/photo-1659340180582-e3149b9e12b7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80"
+              />
+              <span>zzomi 외 100명이 좋아합니다.</span>
+            </div>
+            <ul class="feed-comments-text">
+              <li>
+              <span class="commenter-id">jiwony933</span
+              ><span class="commenter-saying"
+                >여행갔을 때 찍은 사진 올려요~ ...더보기</span
+              ></li>
+        
+            <ul class="feed-comments-text">
+              <li>
+                <span class="commenter-id">gdragon</span
+                ><span class="commenter-saying">언제 다녀오셨어요?</span>
+              </li>
+              <li>
+                <span class="commenter-id">jennie</span
+                ><span class="commenter-saying">나두 가고싶다</span>
+              </li>
+            </ul>
+            <p class="comment-time-passed">0초전</span>
+          </div>
+          <form class="comment-input-container">
+            <input id="comment-input" placeholder="댓글 달기..." />
+            <button id="comment-upload-button">게시</button>
+          </form>
+        </article>
+      </div>
+      <div class="main-right">
+        <div class="my-profile">
+          <img
+            src="https://images.unsplash.com/photo-1660144767359-56a53fe44310?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=985&q=80"
+          />
+          <div class="my-profile-text">
+            <span>jiwon.kim</span>
+            <span>김지원 | 안녕하세요</span>
+          </div>
+        </div>
+        <div class="main-right-box" id="story-upload-users">
+          <div class="main-right-box-title">
+            <span>스토리</span><span>모두보기</span>
+          </div>
+          <div class="upload-users">
+            <div class="upload-user">
+              <img
+                src="https://images.unsplash.com/photo-1514993805013-c428d7f63ad4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
+              />
+              <div class="upload-user-info">
+                <span>jiwonyyyyyy</span>
+                <span>1분 전</span>
+              </div>
+            </div>
+            <div class="upload-user">
+              <img
+                src="https://images.unsplash.com/photo-1514993805013-c428d7f63ad4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
+              />
+              <div class="upload-user-info">
+                <span>jiwonyyyyyy</span>
+                <span>1분 전</span>
+              </div>
+            </div>
+            <div class="upload-user">
+              <img
+                src="https://images.unsplash.com/photo-1514993805013-c428d7f63ad4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
+              />
+              <div class="upload-user-info">
+                <span>jiwonyyyyyy</span>
+                <span>1분 전</span>
+              </div>
+            </div>
+            <div class="upload-user">
+              <img
+                src="https://images.unsplash.com/photo-1514993805013-c428d7f63ad4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
+              />
+              <div class="upload-user-info">
+                <span>jiwonyyyyyy</span>
+                <span>1분 전</span>
+              </div>
+            </div>
+            <div class="upload-user">
+              <img
+                src="https://images.unsplash.com/photo-1514993805013-c428d7f63ad4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
+              />
+              <div class="upload-user-info">
+                <span>jiwonyyyyyy</span>
+                <span>1분 전</span>
+              </div>
+            </div>
+            <div class="upload-user">
+              <img
+                src="https://images.unsplash.com/photo-1514993805013-c428d7f63ad4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
+              />
+              <div class="upload-user-info">
+                <span>jiwonyyyyyy</span>
+                <span>1분 전</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main-right-box" id="recommended-users">
+          <div class="main-right-box-title">
+            <span>회원님을 위한 추천</span><span>모두보기</span>
+          </div>
+          <div class="recommended-user">
+            <div class="recommended-user-info">
+              <img
+                src="https://images.unsplash.com/photo-1514993805013-c428d7f63ad4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
+              />
+              <div class="recommended-user-info-text">
+                <span>jiwonyyyyyy</span>
+                <span>jiwon님 외 2명이...</span>
+              </div>
+            </div>
+            <div class="recommended-user-follow">팔로우</div>
+          </div>
+        </div>
+        <div class="footer">
+          <span>Instagram 정보</span>
+          <span>・ 지원</span>
+          <span>・ 홍보 센터</span>
+          <span>・ 채용정보</span>
+          <span>・ 개인정보처리방침</span>
+          <span>・ 약관</span>
+          <span>・ 디렉터리</span>
+          <span>・ 프로필</span>
+          <span>・ 해시태그</span>
+          <span>・ 언어</span>
+          <p>&copy;2022 INSTAGRAM</p>
+        </div>
+      </div>
+    </main>
+    <!-- </div> -->
+    <script src="script.js"></script>
+  </body>
+</html>
