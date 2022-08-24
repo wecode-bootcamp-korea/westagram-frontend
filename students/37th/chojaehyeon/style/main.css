@@ -1,0 +1,328 @@
+@import url("https://fonts.googleapis.com/css2?family=DynaPuff&family=Lobster&family=Nanum+Pen+Script&display=swap");
+
+body {
+  width: 100%;
+  background-color: #fafafa;
+}
+
+.idText {
+  font-family: "DynaPuff", cursive;
+}
+
+.container {
+  /* border: 1px solid black; */
+  width: 100%;
+  height: 100%; /**/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nav {
+  /* border: 1px solid red; */
+  min-width: 975px;
+  /* max로 바꿔라 */
+  height: 70px;
+  display: flex;
+  justify-content: flex-end;
+  background-color: white;
+}
+.nav-menu {
+  width: 890px;
+  /* border: 1px solid black; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-menu span {
+  font-family: "Lobster", cursive;
+  font-weight: 900;
+  font-size: 30px;
+}
+.nav-center input {
+  width: 190px;
+  border: 1px solid rgb(208, 207, 207);
+  text-align: center;
+  font-size: 15px;
+}
+/* <=========nav right========>*/
+.nav-right i {
+  margin-right: 10px;
+  font-size: 30px;
+}
+
+.nav-right {
+  position: relative;
+}
+.drop-box {
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+  display: none;
+  margin-top: 20px;
+  background-color: white;
+  padding: 5px 10px 5px 10px;
+  border-radius: 5px;
+  border: 1px solid rgb(198, 191, 191);
+  box-shadow: 2px 2px rgb(201, 193, 193);
+}
+.show-dropdown {
+  display: block;
+}
+.nav-right > div div {
+  margin-top: 10px;
+}
+
+.nav-right > div div:last-child {
+  border-top: 1px solid black;
+  padding-top: 10px;
+}
+.main {
+  /* border: 1px solid blue; */
+  width: 975px;
+  /* max로 바꿔라 */
+  min-height: 90%; /**/
+  display: flex;
+  justify-content: flex-end;
+  background-color: #fafafa;
+  margin-top: 10px;
+}
+.nav-left {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.nav-left span {
+  padding-left: 15px;
+}
+.insta-logo {
+  font-size: 30px;
+  border-right: 2px solid black;
+  padding-right: 15px;
+}
+
+.main .feeds {
+  margin-top: 20px;
+  border: 1px solid rgb(214, 209, 209);
+  width: 60%;
+  height: 100%;
+  position: relative; /*댓글 인풋 밑에 붙이려고*/
+}
+
+/*우측 추천 박스 전체 구역*/
+.main-right {
+  margin-left: 10px;
+  margin-top: 20px;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-right-top {
+  width: 100%;
+  height: 60px;
+  display: flex;
+}
+.main-right-top div:first-child {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(70deg, blue, pink);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-right-top div:first-child img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+.main-right-top div:nth-child(2) {
+  margin-left: 5px;
+  padding-top: 12px;
+}
+
+/*<=============== main right mid =================>*/
+.main-right-mid {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  border: 0px;
+  margin-top: 15px;
+  padding: 10px 10px 0px 10px;
+  border: 1px solid rgb(214, 209, 209);
+}
+.main-right-mid div:first-child {
+  display: flex;
+  justify-content: space-between;
+  height: 10%;
+  align-items: center;
+}
+.recom-list {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 10px;
+}
+.img-box {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(70deg, blue, pink);
+}
+.recom-list div img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+.profile {
+  display: flex;
+  align-items: center;
+}
+.profile div:first-child {
+  height: 40px;
+  width: 40px;
+  background-image: url("./profile.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  margin-right: 10px;
+  border-radius: 50%;
+  border: 2px;
+  position: relative;
+}
+
+.feed-title {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.feed-title div {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.feed-title i {
+  font-size: 25px;
+}
+.feed-image {
+  background-color: black;
+  height: 450px;
+}
+article img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /*사진비율 원본*/
+}
+.feed-footer i {
+  margin-right: 10px;
+  font-size: 20px;
+}
+.feed-footer {
+  padding: 10px 10px 0px 10px;
+  min-height: 200px;
+}
+.feed-footer div:first-child {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  align-items: center;
+}
+.feed-footer div:nth-child(2) {
+  margin-bottom: 5px;
+}
+.feed-footer div:nth-child(3) {
+  margin-bottom: 5px;
+  margin-top: 15px;
+}
+
+.comment-box {
+  /* position: absolute; */
+  bottom: 30px;
+  width: 100%;
+  height: 40px;
+  border-top: 1px solid gray;
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-around;
+}
+.comment-input {
+  width: 70%;
+  height: 100%;
+  border: 0px;
+}
+.comment-box button {
+  margin-top: 10px;
+  background-color: white;
+  color: skyblue;
+  border: none;
+}
+.comment-input:focus {
+  outline: none;
+}
+.main-right-bot {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  border: 1px solid rgb(214, 209, 209);
+  margin-top: 10px;
+}
+
+.more {
+  min-height: 330px;
+  overflow: scroll;
+}
+#moremore:hover {
+  cursor: pointer;
+}
+.bot-title {
+  width: 100%;
+  overflow: hidden;
+  border: 0px;
+  margin-top: 15px;
+  padding: 10px 10px 0px 10px;
+
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.bot-pic {
+  width: 100%;
+  height: 60px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.bot-pic div:first-child {
+  background: linear-gradient(70deg, blue, pink);
+  width: 60px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.bot-pic div:last-child {
+  margin-left: 10px;
+}
+
+.bot-pic div img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 3px solid white;
+}
+
+.info {
+  margin: 20px 0 10px 0;
+  color: gray;
+}
+
+.commentID {
+  font-family: "DynaPuff", cursive;
+}
+
+.comment {
+  display: flex;
+  justify-content: space-between;
+}

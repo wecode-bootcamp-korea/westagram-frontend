@@ -1,0 +1,107 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  margin-top: 12px;
+  max-width: 350px;
+  max-height: 394px;
+  border: 1px solid gray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 30px 0px 30px;
+}
+
+.logo-box {
+  font-family: "Lobster", cursive;
+  font-size: 40px;
+  padding: 30px 30px 25px 30px;
+}
+.login-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.login-box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+input:focus {
+  outline: 0.5px solid black;
+}
+.id-input {
+  margin-left: 10px;
+}
+.login-box input {
+  font-size: 12px;
+  width: 100%;
+  height: 30px;
+  padding-left: 5px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+
+.login-box button {
+  font-size: 16px;
+  width: 100%;
+  height: 30px;
+  margin-top: 15px;
+  color: white;
+  font-weight: 700;
+  border: 0px;
+  border-radius: 5px;
+}
+.divide-box {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.divide-line1 {
+  border-top: 1px solid black;
+  width: 100px;
+  position: relative;
+  top: 8px;
+  margin-right: 10px;
+}
+.divide-line2 {
+  border-top: 1px solid black;
+  width: 100px;
+  position: relative;
+  top: 8px;
+  margin-left: 10px;
+}
+.footer {
+  margin-top: 30px;
+  color: #385185;
+}
+.search-password {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  font-size: 15px;
+}
+.footer a {
+  color: black;
+}
+a {
+  text-decoration: none;
+}
+.off-button {
+  background-color: #c1dffc;
+}
+
+.on-button {
+  cursor: pointer;
+  background-color: #2f95f6;
+}
+.off-link {
+  pointer-events: none;
+}
+.on-link {
+  pointer-events: "";
+}

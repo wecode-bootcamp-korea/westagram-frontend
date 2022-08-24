@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Westagram</title>
+
+    <link rel="stylesheet" href="./style/common.css" />
+    <link rel="stylesheet" href="./style/login.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="login-section">
+        <div class="logo-box">Westagram</div>
+        <div class="login-box">
+          <input
+            id="id-input"
+            type="text"
+            placeholder="전화번호, 사용자 이름 또는 이메일"
+          />
+
+          <input id="pw-input" type="password" placeholder="비밀번호" />
+          <a id="login-link" class="off-link" href="./main.html"
+            ><button id="login-button" class="off-button">로그인</button></a
+          >
+        </div>
+        <div class="divide-box">
+          <div class="divide-line1"></div>
+          <div>또는</div>
+          <div class="divide-line2"></div>
+        </div>
+        <div class="footer">
+          <div class="facebook-login">
+            <a href="#"
+              ><i class="fa-brands fa-square-facebook"></i> Fakebook으로
+              로그인</a
+            >
+          </div>
+          <div class="search-password">
+            <a href="#">비밀번호를 잊으셨나요?</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/a7cc0644de.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/login.js"></script>
+  </body>
+</html>
