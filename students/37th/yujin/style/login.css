@@ -1,0 +1,61 @@
+@import "reset.css";
+/*font 모아두기*/
+/* :root {
+    font-family: 'Noto Sans KR', sans-serif;
+} */
+.wrapper {
+    margin: 0 auto;
+    
+    padding: 25px 35px;
+    width: 450px;
+    border: 1px solid rgb(223,223,223);
+}
+.logo {
+    font-family: 'Lobster', cursive;
+    font-size: 50px;
+    text-align: center;
+}
+.inputContainer {
+    margin-top: 40px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+.login-btn {
+    background-color: rgb(197,225,252);
+    border-style: none;
+    color: white;
+    margin-top: 10px;
+    
+}
+div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;   
+}
+input, 
+button, 
+.forgotPw{
+    font-size: 1em;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 3px;
+    text-align: center;
+    color: rgb(22,68,116);
+}
+input {
+    margin-bottom: 10px;
+    background-color: rgb(240, 240, 240);
+    color: rgb(176,176,176);
+    border-color: rgb(240,240,240);
+
+}
+
+/* 로그인버튼 활성화 */
+.active {
+    background-color: midnightblue;
+}
+
+/* a태그 밑줄 없애기 */
