@@ -1,0 +1,292 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+button {
+    background: inherit; 
+    border:none; 
+    box-shadow:none;
+}
+
+input:focus {
+    outline: none;
+}
+
+h4 {
+    font-weight: 900;
+    font-size: 18px;
+}
+
+img {
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: white;
+}
+
+#wrapper {
+    width: 100vw;
+    height: 100vh;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    background-color: rgb(249, 249, 249);
+    
+}
+
+/* navbar */
+
+#navbar {
+    position: fixed;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    background-color: white;
+    width: 100%;
+    top: 0;
+    height: 80px;
+    font-size: 32px;
+    min-width: 1200px;
+}
+
+.nav_left > i {
+    position: absolute;
+    margin-top: 2px;
+}
+
+nav > div > p {
+    font-family: 'Lobster', cursive;
+    border-left: 3px solid lightgray;
+    padding: 0 10px 0 10px;
+    margin-left: 50px;
+}
+
+.nav_search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.nav_search > i {
+    font-size: 16px;
+    position: absolute;
+    padding-right: 40px;
+}
+
+.nav_serachbar {
+    text-align: center;
+    height: 30px;
+    padding: 20px 50px;
+    z-index: 1;
+    opacity: 0.8;
+}
+
+.nav_right > img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+/* main */
+#main {
+    display: flex;
+    justify-content: center;
+    width: 1200px;
+    margin: auto;
+}
+
+.feeds {
+    
+    width: 100%;
+}
+
+/* article */
+.article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    padding-top: 20px;
+    border-radius: 5px;
+    border: 2px solid lightgray;
+    background-color: white;
+}
+
+.article_header {
+    display: flex;
+    align-items: center;
+    margin: 0 550px 10px 0;
+}
+
+.article_header_text {
+    margin-left: 20px;
+}
+
+.img_container {
+    background-image: url(/westargram/img/joe-yong-4Vvc5deWL2s-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 700px;
+}
+
+.img_icon {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 10px 50px 0 50px;
+    font-size: 32px;
+}
+
+.right_top_menu {
+    display: flex;
+    text-align: center;
+}
+
+.riple_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.riple_content :nth-child(4) {
+    width: 100%;
+    height: 50px;
+    text-align: left;
+    font-size: 16px;
+    border: 0;
+}
+
+.riple_header {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding: 10px;
+}
+
+.riple_header :nth-child(1) {
+    width: 30px;
+    margin-right: 10px;
+}
+
+.riple_header :nth-child(2) {
+    font-size: 18px
+}
+
+.reple_container {
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    margin: 10px 0 15px 0;
+    background-color: yellow;
+    overflow: scroll;
+}
+
+.newreple {
+    color: red;
+}
+
+.reple_input {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.reple_input :first-child {
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    opacity: 0.8;
+    padding-left: 10px;
+}
+
+.reple_input_container {
+    position: absolute;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.reple_input :last-child {
+    margin-right: 10px;
+    color: blue;
+    font-size: 16px;
+    z-index: 3;
+}
+
+/* right */
+#right_wrapper {
+    display: flex;
+    flex-direction:column;
+    margin-top: 100px;
+}
+
+.right_menu {
+    position: relative;
+    margin: 0 10px 10px 10px;
+}
+
+.right_menu_container {
+    display: flex;
+    align-items: center;
+}
+
+.right_menu :last-child {
+    margin-right: 10px;
+}
+
+.right_top {
+    border: 2px solid lightgray;
+    border-radius: 5px;
+    margin: 0 10px 10px 10px;
+    width: 300px;
+    height: 250px;
+    overflow: scroll;
+    background-color: white;
+}
+
+.right_top_text {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 10px 0 10px;
+}
+
+.right_container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 10px;
+}
+
+.right_container :last-child {
+    margin-right: 10px;
+}
+
+.right_bottom {
+    border: 2px solid lightgray;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    background-color: white;
+}
+
+.right_bottom_text {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.right_bottom_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+
+.right_bottom_container :nth-child(2) {
+    margin-right: 30px;
+}
