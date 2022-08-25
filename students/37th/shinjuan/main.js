@@ -19,11 +19,11 @@ const repleSubmit = () => {
   newIdP.innerText = localUserId.split("@")[0];
   newContentP.innerText = inputReple.value;
 
-  repleContainer.appendChild(newRepleLi);
-  newRepleLi.appendChild(newIdP);
-  newRepleLi.appendChild(newContentP);
-  newRepleLi.appendChild(deleteBtn);
-  newRepleLi.appendChild(heartBtnRepl);
+  repleContainer.prepend(newRepleLi);
+  newRepleLi.prepend(heartBtnRepl);
+  newRepleLi.prepend(deleteBtn);
+  newRepleLi.prepend(newContentP);
+  newRepleLi.prepend(newIdP);
 
   inputReple.value = "";
 };
@@ -77,6 +77,7 @@ deleteBtn.addEventListener("click", (e) => {
   parentElement.remove();
 });
 
+//////////////////////////////////////////////////////////////////////////////////////
 const userMenu = document.querySelector(".user_menu");
 const profileIcon = document.querySelector(".profile_img");
 

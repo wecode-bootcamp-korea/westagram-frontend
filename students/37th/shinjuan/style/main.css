@@ -70,11 +70,11 @@ header {
 .user_menu {
   position: absolute;
   right: 0;
-  top: 59px;
+  top: 60px;
   display: flex;
   justify-content: center;
+  z-index: 1;
   width: 200px;
-  height: 200px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-top: none;
   border-radius: 5px;
@@ -85,11 +85,15 @@ header {
   display: flex;
   align-items: center;
   width: 200px;
-  height: 25%;
-  padding: 5px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 12px;
 }
 
+.user_menu li:last-child {
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+.user_menu li i {
+  margin-right: 10px;
+}
 .visible {
   visibility: visible;
 }
