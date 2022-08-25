@@ -1,14 +1,25 @@
 const inputArea = document.querySelector('.input-area');
 const input = inputArea.querySelector('input');
+const commentList = document.querySelector('.comment-list');
+
+const dimLayer = document.querySelector('.dim-layer');
+const dimLayerBg = document.querySelector('.dim-bg');
+
 const pushButton = document.querySelector('.btn-push');
 const moreButton = document.querySelector('.btn-more');
 const likeButton = document.querySelector('.btn-like');
 const deleteButton = document.querySelector('.btn-delete');
-const commentList = document.querySelector('.comment-list');
+const profileButton = document.querySelector('button.profile-box');
 
 input.addEventListener('keyup', activeButton);
 pushButton.addEventListener('click', createComment);
 moreButton.addEventListener('click', showAllPost);
+profileButton.addEventListener('click', () => {
+    dimLayer.classList.add('on');
+});
+dimLayerBg.addEventListener('click', () => {
+    dimLayer.classList.remove('on');
+});
 
 function activeButton(){
     const inputValue = input.value;
@@ -19,6 +30,7 @@ function activeButton(){
         pushButton.disabled = false
     }
 }
+
 function showAllPost(){
     const post = document.querySelector('.post');
 
