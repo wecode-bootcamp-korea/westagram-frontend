@@ -66,6 +66,33 @@ header {
   height: 25px;
   margin-left: 5px;
 }
+
+.user_menu {
+  position: absolute;
+  right: 0;
+  top: 59px;
+  display: flex;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-top: none;
+  border-radius: 5px;
+  background-color: white;
+  visibility: hidden;
+}
+.user_menu li {
+  display: flex;
+  align-items: center;
+  width: 200px;
+  height: 25%;
+  padding: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.visible {
+  visibility: visible;
+}
 /* ////////////////////////////////////////////////////////////////// */
 
 main {
@@ -139,6 +166,10 @@ main {
   position: absolute;
   right: 0;
 }
+.delete_button {
+  position: absolute;
+  left: 90%;
+}
 .article_like {
   display: flex;
   align-items: center;
@@ -160,7 +191,10 @@ main {
 .like_count {
   font-weight: bolder;
 }
-
+.reple_heart {
+  border: none;
+  background: none;
+}
 .article_time p {
   color: rgba(0, 0, 0, 0.5);
   margin-top: 5px;
