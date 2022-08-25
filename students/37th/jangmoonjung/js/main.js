@@ -1,8 +1,6 @@
 const inputReply = document.querySelector('.feeds__reply__input');
 const inputPost = document.querySelector('.feeds__reply__text');
 
-let index = 0;
-
 inputReply.addEventListener('keyup', (e) => {
   if (inputReply.value.length > 0) {
     inputPost.classList.add('feeds__reply__active');
@@ -47,16 +45,12 @@ function newReply() {
 inputPost.addEventListener('click', () => {
   newReply();
   inputReply.value = '';
-  // changeHeart();
-  deleteReply();
 });
 
 inputReply.addEventListener('keypress', (e) => {
   if (e.code === 'Enter') {
     newReply();
     inputReply.value = '';
-    // changeHeart();
-    deleteReply();
   }
 });
 
@@ -64,39 +58,25 @@ const replyArea = document.querySelector('.newReply');
 replyArea.addEventListener('click', (e) => {
   if (e.target.className === 'feeds__texts__heart fa-regular fa-heart') {
     e.target.classList.add('fa-solid');
+  } else if (
+    e.target.className === 'feeds__texts__remove fa-regular fa-trash-can'
+  ) {
+    e.target.parentNode.parentNode.remove();
   } else {
     e.target.classList.remove('fa-solid');
   }
 });
 
-// function changeHeart() {
-//   const heart = document.querySelectorAll('.feeds__texts__heart');
+const headerHeart = document.querySelector('.nav__icon__heart');
+const feedsHeart = document.querySelector('.feeds__icon__heart');
 
-//   let heartArr = [];
-//   makeArr(heart, heartArr);
+colorHeart(headerHeart);
+colorHeart(feedsHeart);
 
-//   heartArr.forEach((element) => {
-//     element.addEventListener('click', () => {
-//       element.classList.toggle('fa-solid');
-//     });
-//   });
-// }
-
-function deleteReply() {
-  const remove = document.querySelectorAll('.feeds__texts__remove');
-
-  let removetArr = [];
-  makeArr(remove, removetArr);
-
-  removetArr.forEach((element) => {
-    element.addEventListener('click', () => {
-      element.parentNode.parentNode.remove();
-    });
+function colorHeart(element) {
+  element.addEventListener('click', () => {
+    element.classList.toggle('fa-solid');
   });
 }
 
-function makeArr(array, newArray) {
-  for (let i = 0; i < array.length; i++) {
-    newArray.push(array[i]);
-  }
-}
+console.log(window.screen);

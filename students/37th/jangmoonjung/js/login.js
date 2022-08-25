@@ -4,7 +4,7 @@ const loginBtn = document.querySelector('.login__btn');
 
 const validation = document.querySelector('.validation');
 
-loginPw.addEventListener('keyup', () => {
+function validationTest() {
   const id = loginId.value;
   const pw = loginPw.value;
   if (id.includes('@') && pw.length > 4) {
@@ -14,4 +14,8 @@ loginPw.addEventListener('keyup', () => {
     loginBtn.classList.remove('btn__active');
     validation.innerHTML = `사용자의 이름과 비밀번호를 확인하고<br>다시 시도하세요.`;
   }
+}
+
+loginPw.addEventListener('keyup', () => {
+  validationTest();
 });
