@@ -79,4 +79,15 @@ function colorHeart(element) {
   });
 }
 
-console.log(window.screen);
+const myImg = document.querySelector('.nav__profile__img');
+const menuBox = document.querySelector('.nav__menubox');
+
+myImg.addEventListener('click', (e) => {
+  menuBox.style.display = 'block';
+});
+
+window.addEventListener('click', (e) => {
+  if (e.target !== myImg) {
+    menuBox.style.display = 'none';
+  }
+});

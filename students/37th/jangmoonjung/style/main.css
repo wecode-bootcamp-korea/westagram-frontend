@@ -30,16 +30,18 @@ body {
   height: 60px;
   border-bottom: 1px solid #e6e6e6;
   background-color: #ffffff;
+  z-index: 1;
 }
 
 .nav__container {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: inherit;
   max-width: 940px;
   min-width: 500px;
-  padding: 0 20px 7px;
+  padding: 0 32px 7px;
   margin: 0 auto;
 }
 
@@ -50,8 +52,7 @@ body {
 
 .nav__logo__img,
 .nav__icon__explore,
-.nav__icon__heart,
-.nav__icon__profile {
+.nav__icon__heart {
   font-size: 22px;
 }
 
@@ -94,8 +95,85 @@ body {
   color: #a5a5a5;
 }
 
+.nav__icons {
+  display: flex;
+  align-items: center;
+}
+
+.nav__icon__explore,
+.nav__icon__heart {
+  display: block;
+}
+
 .nav__icon__heart {
   margin: 0 15px;
+}
+
+.nav__profile__img {
+  display: block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+.nav__profile__clicked {
+  border: 2px solid transparent;
+  background-image: linear-gradient(#fff, #fff),
+    linear-gradient(to right, red 0%, orange 100%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+/* menubox */
+
+.nav__menubox {
+  /* display: none; */
+  position: absolute;
+  top: 100%;
+  right: 1%;
+  width: 200px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  box-shadow: 3px 2px 10px 2px rgba(0, 0, 0, 0.15);
+  z-index: 2;
+}
+
+.menubox__triangle {
+  position: absolute;
+  top: -44px;
+  right: 20px;
+  width: 0;
+  height: 0;
+  border-bottom: 22px solid #ffffff;
+  border-top: 22px solid transparent;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+}
+
+.menubox__profile,
+.menubox__save,
+.menubox__settings,
+.menubox__logout {
+  display: flex;
+  align-items: center;
+  padding: 13px 20px;
+  font-size: 13px;
+}
+
+.menubox__profile:hover,
+.menubox__save:hover,
+.menubox__settings:hover,
+.menubox__logout:hover {
+  background-color: #f9f9f9;
+  cursor: pointer;
+}
+
+.menubox__icon {
+  margin-right: 8px;
+}
+
+.menubox__logout {
+  border-top: 1px solid #c7c7c7;
 }
 
 /* main */
