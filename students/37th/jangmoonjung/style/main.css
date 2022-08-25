@@ -1,5 +1,6 @@
 body {
   margin-top: 100px;
+  min-width: 500px;
 }
 
 /* common */
@@ -36,7 +37,8 @@ body {
   justify-content: space-between;
   align-items: center;
   height: inherit;
-  width: 920px;
+  max-width: 940px;
+  min-width: 500px;
   padding: 0 20px 7px;
   margin: 0 auto;
 }
@@ -381,11 +383,19 @@ body {
 
 /* Responsive */
 @media screen and (max-width: 980px) {
-  .main__container {
-    justify-content: center;
+  .feeds {
+    position: absolute;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-235px);
   }
 
   .main-right {
+    display: none;
+  }
+}
+@media screen and (max-width: 640px) {
+  .nav__find {
     display: none;
   }
 }
