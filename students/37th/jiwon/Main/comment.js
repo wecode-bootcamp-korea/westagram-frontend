@@ -60,8 +60,6 @@ const uploadComment = (e) => {
 
 comment.addEventListener("submit", uploadComment);
 
-/* 댓글 삭제 기능 */
-
 /* '게시' 버튼 활성화 기능 */
 
 const uploadBtn = document.getElementById("comment-upload-button");

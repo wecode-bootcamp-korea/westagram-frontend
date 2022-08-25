@@ -24,3 +24,5 @@ const handleProfileClick = () => {
 
 profile.addEventListener("click", handleProfileClick);
 // body.addEventListener("click", handleBodyClick);
+
+//토글 방식 사용
