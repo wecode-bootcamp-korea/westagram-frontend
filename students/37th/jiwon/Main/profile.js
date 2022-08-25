@@ -1,11 +1,26 @@
+const body = document.getElementsByTagName("body")[0];
+
 const profile = document.getElementById("nav-profile");
 const profileMenu = document.getElementsByClassName("profile-menu")[0];
 
-const viewState = profileMenu.style;
+// const profileMenu.style = profileMenu.style;
 
 const handleProfileClick = () => {
-  if (viewState.display === "block") {
-    viewState.display = "none";
-  } else viewState.display = "block";
+  console.log("hello");
+  console.log(profileMenu.style);
+  const css = getComputedStyle(profileMenu);
+  const display = css.getPropertyValue("display");
+
+  if (css.display === "none") {
+    profileMenu.style.display = "block";
+  } else {
+    profileMenu.style.display = "none";
+  }
 };
+
+// const handleBodyClick = () => {
+//   profileMenu.style.display = "none";
+// };
+
 profile.addEventListener("click", handleProfileClick);
+// body.addEventListener("click", handleBodyClick);

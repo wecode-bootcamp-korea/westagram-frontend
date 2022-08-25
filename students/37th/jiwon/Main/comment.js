@@ -1,3 +1,5 @@
+// comment 댓글 추가 기능 (하트, 삭제 표시 )
+
 const comment = document.getElementsByClassName("comment-input-container")[0];
 const commentContent = document.getElementById("comment-input");
 const commentUploadBtn = document.getElementById("comment-upload-button");
@@ -7,6 +9,7 @@ const newCommentPlace =
 
 const uploadComment = (e) => {
   e.preventDefault();
+
   const newCommentBox = document.createElement("li");
   const newCommentSetLeft = document.createElement("div");
   const newCommenterId = document.createElement("span");
@@ -22,7 +25,8 @@ const uploadComment = (e) => {
   newCommenterSaying.innerHTML = commentContent.value;
 
   newCommentHeart.className = "fa-regular fa-heart";
-  newCommentX.className = "fa-regular fa-x";
+  newCommentX.className = "del";
+  newCommentX.innerHTML = "X";
 
   newCommentSetLeft.appendChild(newCommenterId);
   newCommentSetLeft.appendChild(newCommenterSaying);
@@ -36,9 +40,29 @@ const uploadComment = (e) => {
   newCommentPlace.appendChild(newCommentBox);
 
   commentContent.value = "";
+
+  const handleXClick = () => {
+    newCommentBox.remove(this.parentNode);
+  };
+
+  newCommentX.addEventListener("click", handleXClick);
+
+  const handleHeartClick = () => {
+    if ((newCommentHeart.classList = "fa-regular fa-heart")) {
+      newCommentHeart.classList = "fa-solid fa-heart";
+    } else {
+      newCommentHeart.classList = "fa-regular fa-heart";
+    }
+  };
+
+  newCommentHeart.addEventListener("click", handleHeartClick);
 };
 
 comment.addEventListener("submit", uploadComment);
+
+/* 댓글 삭제 기능 */
+
+/* '게시' 버튼 활성화 기능 */
 
 const uploadBtn = document.getElementById("comment-upload-button");
 

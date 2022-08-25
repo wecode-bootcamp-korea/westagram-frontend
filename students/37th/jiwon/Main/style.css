@@ -1,6 +1,7 @@
 /* 젤 위에 네비게이터 부분 */
 body {
   position: relative;
+  /* z-index: 1; */
 }
 
 nav {
@@ -154,10 +155,15 @@ main {
   position: relative;
 }
 
+.comment-set-left {
+  max-width: 300px;
+}
+
 .comment-set-right {
   font-size: 1em;
   color: gray;
   position: absolute;
+
   right: 10px;
   display: flex;
   gap: 10px;
