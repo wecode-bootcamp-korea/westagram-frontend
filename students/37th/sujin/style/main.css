@@ -29,7 +29,7 @@ header .search{
     width: 250px;
     padding: 5px 20px;
     background-color: #fafafa;
-    background-image: url(/images/magnifying-glass-solid.svg);
+    background-image: url(/img/magnifying-glass-solid.svg);
     background-repeat: no-repeat;
     background-position: 5px center;
     background-size: 10px 10px;
@@ -75,6 +75,9 @@ main{
     margin-right:3px;
     font-size: 14px;
     font-weight: 700;
+}
+.comment-text{
+    display: inline;
 }
 .profile-image{
     display: inline-block;
@@ -193,7 +196,13 @@ main{
 .comment-list li .btn-like {
     position: absolute;
     top: 40%;
-    right: 21px;
+    right: 15px;
+    transform: translateY(-50%);
+}
+.comment-list li .btn-delete {
+    position: absolute;
+    top: 40%;
+    right: 40px;
     transform: translateY(-50%);
 }
 .comment-list li .btn-like > .fa-regular.fa-heart{
@@ -201,6 +210,9 @@ main{
 }
 .comment-list li .btn-like > .fa-solid.fa-heart{
     color: red;
+}
+.comment-list li .btn-delete > .fa-trash-can{
+    color: #999;
 }
 
 .comment-area .input-area{
