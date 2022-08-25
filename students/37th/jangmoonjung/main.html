@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Westagram</title>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/dfb9b0d513.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- css -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
+    />
+    <link rel="stylesheet" href="style/common.css" />
+    <link rel="stylesheet" href="style/main.css" />
+    <!-- js -->
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <!-- nav -->
+    <nav class="nav">
+      <div class="nav__container">
+        <div class="nav__logo">
+          <i class="nav__logo__img fa-brands fa-instagram"></i>
+          <span class="nav__logo__divider"></span>
+          <span class="nav__logo__title">Westagram</span>
+        </div>
+        <div class="nav__find">
+          <input class="nav__input" type="text" placeholder="검색" />
+          <i class="nav__find__icon fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div class="nav__icons">
+          <i class="nav__icon__explore fa-regular fa-compass"></i>
+          <i class="nav__icon__heart fa-regular fa-heart"></i>
+          <i class="nav__icon__profile fa-regular fa-user"></i>
+        </div>
+        <!-- <div class="nav__status"></div> -->
+      </div>
+    </nav>
+
+    <!-- main -->
+    <main class="main">
+      <div class="main__container">
+        <!-- 피드 -->
+        <div class="feeds">
+          <article class="feeds__container">
+            <div class="feeds__header">
+              <div class="feeds__profile">
+                <img
+                  class="feeds__profile__img"
+                  src="images/feeds__profile.jpg"
+                  alt="feeds__profile__img"
+                />
+                <div class="id">canon_mj</div>
+              </div>
+              <div class="feeds__more">
+                <i class="feeds__more__icon fas fa-ellipsis-h"></i>
+              </div>
+            </div>
+
+            <img
+              class="feeds__img"
+              src="images/feeds__img.jpg"
+              alt="feeds__img"
+            />
+            <div class="feeds__contents">
+              <div class="feeds__icons">
+                <div class="feeds__icons__left">
+                  <i class="feeds__icon__heart far fa-heart"></i>
+                  <i class="feeds__icon__comment fa-regular fa-comment"></i>
+                  <i class="feeds__icon__plane fa-regular fa-paper-plane"></i>
+                </div>
+                <div class="feeds__icon__right">
+                  <i class="feeds__icon__bookmark fa-regular fa-bookmark"></i>
+                </div>
+              </div>
+              <div class="feeds__likes">
+                <div class="feeds__likes__image">
+                  <img
+                    class="feeds__likes__img"
+                    src="images/likes__profile.jpg"
+                    alt="feeds__likes__img"
+                  />
+                </div>
+                <div class="feeds__likes__text">
+                  <span class="id feeds__id">aineworld</span>님
+                  <span class="feeds__people">외 10명</span>이 좋아합니다
+                </div>
+              </div>
+              <div class="feeds__texts">
+                <div class="feeds__texts__content">
+                  <div class="id">canon_mj</div>
+                  <div class="feeds__text"></div>
+                  위워크에서 진행한 베이킹 클래스...
+                </div>
+                <div class="more__gray">더보기</div>
+              </div>
+              <!-- 댓글 -->
+              <div class="newReply">
+                <div class="feeds__texts__reply">
+                  <div class="feeds__texts__reply__left">
+                    <div class="id">neceosecius</div>
+                    <div class="feeds__text">거봐 좋았잖아~~~~😛</div>
+                  </div>
+                  <div class="feeds__texts__reply__right">
+                    <i class="feeds__texts__heart fa-regular fa-heart"></i>
+                    <i class="feeds__texts__remove fa-regular fa-trash-can"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="feeds__time">
+                <span class="more__gray time__before">42분전</span>
+              </div>
+            </div>
+            <div class="feeds__reply">
+              <input
+                class="feeds__reply__input"
+                type="text"
+                placeholder="댓글 달기...."
+              />
+              <span class="feeds__reply__text">게시</span>
+            </div>
+          </article>
+        </div>
+        <!-- main-right -->
+        <div class="main-right">
+          <div class="main-right__container">
+            <div class="right__profile">
+              <div class="right__profile__image">
+                <img
+                  class="right__profile__img"
+                  src="images/right__profile.jpg"
+                  alt="right__profile__img"
+                />
+              </div>
+              <div class="right__profile__id">
+                <div id="userID" class="id" data-id="wecode_bootcamp">
+                  wecode_bootcamp
+                </div>
+                <div class="more__gray">WeCode | 위코드</div>
+              </div>
+            </div>
+            <div class="right__story">
+              <div class="right__title">
+                <div class="more__gray">스토리</div>
+                <div class="right__more">모두 보기</div>
+              </div>
+              <!-- story profiles -->
+              <div class="right__story__profile">
+                <div class="right__story__image">
+                  <img
+                    class="right__story__img"
+                    src="images/story__profile_01.jpg"
+                    alt="right__profile__img"
+                  />
+                </div>
+                <div class="right__story__id">
+                  <div class="id">_yum_s</div>
+                  <div class="more__gray time__before">16분전</div>
+                </div>
+              </div>
+              <div class="right__story__profile">
+                <div class="right__story__image">
+                  <img
+                    class="right__story__img"
+                    src="images/story__profile_02.jpg"
+                    alt="right__profile__img"
+                  />
+                </div>
+                <div class="right__story__id">
+                  <div class="id">drink_eat_drink</div>
+                  <div class="more__gray time__before">3시간 전</div>
+                </div>
+              </div>
+              <div class="right__story__profile">
+                <div class="right__story__image">
+                  <img
+                    class="right__story__img"
+                    src="images/story__profile_03.jpg"
+                    alt="right__profile__img"
+                  />
+                </div>
+                <div class="right__story__id">
+                  <div class="id">hyukyc</div>
+                  <div class="more__gray time__before">20시간 전</div>
+                </div>
+              </div>
+              <div class="right__story__profile">
+                <div class="right__story__image">
+                  <img
+                    class="right__story__img"
+                    src="images/story__profile_04.jpg"
+                    alt="right__profile__img"
+                  />
+                </div>
+                <div class="right__story__id">
+                  <div class="id">jminkeek</div>
+                  <div class="more__gray time__before">26시간전</div>
+                </div>
+              </div>
+            </div>
+            <div class="right__recommendation">
+              <div class="right__title">
+                <div class="more__gray">회원님을 위한 추천</div>
+                <div class="right__more">모두 보기</div>
+              </div>
+              <!-- recommendation profiles -->
+              <div class="right__recommendation__profile">
+                <div class="right__recommendation__left">
+                  <div class="right__recommendation__image">
+                    <img
+                      class="right__recommendation__img"
+                      src="images/recommendation__profile_01.jpg"
+                      alt="right__profile__img"
+                    />
+                  </div>
+                  <div class="right__recommendation__id">
+                    <div class="id">joaaaaaaahye</div>
+                    <div class="more__gray">_legend_a님 외 2명이...</div>
+                  </div>
+                </div>
+                <div class="right__follow">팔로우</div>
+              </div>
+              <div class="right__recommendation__profile">
+                <div class="right__recommendation__left">
+                  <div class="right__recommendation__image">
+                    <img
+                      class="right__recommendation__img"
+                      src="images/recommendation__profile_02.jpg"
+                      alt="right__profile__img"
+                    />
+                  </div>
+                  <div class="right__recommendation__id">
+                    <div class="id">rampart81</div>
+                    <div class="more__gray">ringo,in,seoul님 외 12명...</div>
+                  </div>
+                </div>
+                <div class="right__follow">팔로우</div>
+              </div>
+              <div class="right__recommendation__profile">
+                <div class="right__recommendation__left">
+                  <div class="right__recommendation__image">
+                    <img
+                      class="right__recommendation__img"
+                      src="images/recommendation__profile_03.jpg"
+                      alt="right__profile__img"
+                    />
+                  </div>
+                  <div class="right__recommendation__id">
+                    <div class="id">shawnjjoo</div>
+                    <div class="more__gray">jimmylee1220님 외 1...</div>
+                  </div>
+                </div>
+                <div class="right__follow">팔로우</div>
+              </div>
+            </div>
+          </div>
+          <!-- footer -->
+          <footer class="footer">
+            <div class="footer__menu">
+              <a href="#">소개</a>· <a href="#">도움말</a>·
+              <a href="#">홍보 센터</a>· <a href="#">API</a>·
+              <a href="#">채용 정보</a>· <a href="#">개인정보처리방침</a>·
+              <a href="#">약관</a>· <a href="#">위치</a>·
+              <a href="#">언어</a>
+            </div>
+            <div class="footer__copyright">© 2022 INSTAGRAM FROM META</div>
+          </footer>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
