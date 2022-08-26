@@ -1,0 +1,436 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+
+body {
+    height: 98vh;
+    background-color: rgb(244, 244, 244);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    height: 10vh;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid rgb(216, 216, 216);
+    margin: 0;
+    background-color: white;
+}
+
+.headerIcon{
+    position: relative;
+}
+
+#logo {
+    font-family: 'Lobster', cursive;
+    font-size: 30px;
+}
+
+#logo i {
+    vertical-align: middle;
+}
+
+header .headerIcon i {
+    padding: 10px;
+    font-size: 25px;
+}
+
+.search {
+    text-align: center;
+    width: 250px;
+    height: 23px;
+    background-color: rgb(244, 244, 244);
+    border: 1px solid rgb(216, 216, 216);
+}
+
+.search::placeholder {
+    color: darkgray;
+}
+
+.replyFavorite img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+.userName {
+    font-size: 30px;
+    padding-left: 20px;
+}
+
+
+.replyFavorite {
+    display: flex;
+    align-items: center;
+    width: 850px;
+    background-color: white;
+    border-left: 1px solid rgb(216, 216, 216);
+    border-right: 1px solid rgb(216, 216, 216);
+}
+
+.replyName {
+    font-size: 15px;
+    padding-left: 10px;
+}
+
+
+.reply {
+    position: relative;
+}
+
+.replyBtn {
+    position: absolute;
+    right: 1px;
+    bottom: 1px;
+    width: 80px;
+    height: 50px;
+    background-color: white;
+    border: none;
+    color: rgb(188, 226, 255);
+    font-size: 20px;
+}
+
+li {
+    list-style: none;
+    font-size: 13px;
+    position: relative;
+}
+
+input:focus {
+    outline: none;
+}
+
+footer {
+    width: 100%;
+    height: 15%;
+    color: rgb(181, 181, 181);
+}
+
+
+.deleteBtn {
+    position: absolute;
+    background-color: white;
+    border: none;
+    color: gray;
+    right: 20px;
+}
+
+
+.hoon {
+    display: flex;
+}
+
+.like {
+    background-color: white;
+    border: none;
+    position: absolute;
+    right: 100px;
+}
+
+.like i {
+    text-shadow: -1px 0 red, 0 1px red, 1px 0 red, 0 -1px red;
+    color: white;
+}
+
+a { text-decoration: none; color: black; }
+
+/* ---------------------------------------modal------------------------------------------------ */
+.modalMom{
+    position: relative;
+}
+
+.modal {
+    position: absolute;
+    width: 258px;
+    height: 170px;
+    background-color: white;
+    overflow-y: scroll;
+    border: 1px solid rgb(216, 216, 216);
+    font-size: 20px;
+    display: none;
+    flex-direction: column;
+}
+
+.profile {
+    position: absolute;
+    width: 140px;
+    height: 200px;
+    display: none;
+    flex-direction: column;
+    border: 1px solid gainsboro;
+}
+.profile div{
+    width: 100%;
+    height: 20%;
+    background-color: white;
+    text-align: center;
+}
+.profileUnit{
+    position: relative;
+    font-size: 20px;
+    bottom:12px;
+}
+
+.friends img{
+width: 45px;
+height: 45px;
+border-radius: 50%;
+margin-left: 20px;
+}
+
+.friends{
+    display: flex;
+    align-items: center;
+}
+
+.friends div{
+   margin-left: 10px;
+}
+
+/* ------------------------------------------main----------------------------------------------------- */
+main {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 100%;
+    align-items: flex-end;
+    margin-right: 20px;
+}
+
+.mainFooter {
+    display: flex;
+    height: 93vh;
+    margin-top: 70px;
+    justify-content: center;
+    padding-left: 200px;
+}
+
+.mainFavorite div i {
+    padding: 10px;
+    font-size: 25px;
+}
+
+.mainFavorite div .fa-solid {
+    color: red;
+}
+
+.mainReply p {
+    padding-left: 40px;
+    color: darkgray;
+}
+
+.mainReplyCreate {
+    width: 808px;
+    height: 50px;
+    border: 1px solid rgb(216, 216, 216);
+    background-color: white;
+    padding-left: 40px;
+}
+
+.mainReplyCreate::placeholder {
+    color: darkgray;
+    padding-left: 10px;
+}
+
+.mainUser {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+}
+
+.mainUser img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+.mainUserint {
+    margin-top: 20px;
+    padding-right: 30px;
+    font-size: 30px;
+    color: darkgray;
+}
+
+.mainTop {
+    display: flex;
+    width: 850px;
+    height: 60px;
+    justify-content: space-between;
+    background-color: white;
+    border: 1px solid rgb(216, 216, 216);
+    padding: 15px 0px;
+}
+
+.mainPhoto {
+    display: flex;
+    border: 1px solid rgb(216, 216, 216);
+
+}
+
+.mainPhotoSize {
+    height: 700px;
+    width: 850px;
+}
+
+.mainFavorite {
+    display: flex;
+    width: 850px;
+    justify-content: space-between;
+    background-color: white;
+    border-left: 1px solid rgb(216, 216, 216);
+    border-right: 1px solid rgb(216, 216, 216);
+}
+
+.mainReply {
+    width: 850px;
+    background-color: white;
+    border-left: 1px solid rgb(216, 216, 216);
+    border-right: 1px solid rgb(216, 216, 216);
+}
+
+/* ------------------------------------------main----------------------------------------------------- */
+/* ------------------------------------------side----------------------------------------------------- */
+
+.sideStoryUser {
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+}
+
+.sideStoryUser div {
+    padding-left: 10px;
+    font-size: 15px;
+}
+
+.sideStoryUser p {
+    position: relative;
+    background: linear-gradient(to bottom, yellow, red, orange);
+    border-radius: 50%;
+    padding: 0;
+    margin: 0;
+    width: 55px;
+}
+
+.sideUser img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.sideStoryUser p img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: relative;
+    top: 2px;
+    left: 2px;
+}
+
+.sideStoryName {
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+.sideName {
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+.sideStoryNameBottom {
+    padding-left: 10px;
+}
+
+.sideStoryBottom {
+    overflow-y: scroll;
+}
+.sideUser {
+    display: flex;
+    align-items: center;
+}
+
+.sideNameBottom {
+    padding-left: 10px;
+}
+.sideStory {
+    border: 1px solid rgb(216, 216, 216);
+    height: 47%;
+    margin-top: 20px;
+    background-color: white;
+}
+
+.sideMembers {
+    margin-top: 20px;
+    border: 1px solid rgb(216, 216, 216);
+    background-color: white;
+    height: 35%;
+}
+
+.sideFriendUserimg {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.sideFriendUser {
+    display: flex;
+    align-items: center;
+    padding-left: 25px;
+
+}
+
+.sideFriendBottomMember {
+    width: 100%;
+}
+
+.sideFollow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sideBetween {
+    padding-left: 15px;
+}
+
+
+.sideFooter {
+    width: 30%;
+    height: 75%;
+    margin-left: 10px;
+    margin-right: 90px;
+}
+
+aside {
+    width: 100%;
+    height: 85%;
+}
+
+.sideStoryTop {
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.sideFriendTop {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    margin-bottom: 10px;
+
+}
+
+.sideFriendBottom {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5px;
+    padding-right: 15px;
+}
+/* ------------------------------------------side----------------------------------------------------- */

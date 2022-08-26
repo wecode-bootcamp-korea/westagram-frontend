@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="westagram.css">
+    <script src="https://kit.fontawesome.com/de3b41bf28.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <header id ="header">
+        <div id="logo"><i class="fa-brands fa-instagram"></i>| <span> <a href="css.html"> westagram</a></span></div>
+        <div class="modalMom"><input type="text" placeholder="검색" class="search" onkeyup="filter()">
+            <div class="modal">
+                <div class="friends ">
+                    <img src="사진2.webp" alt="">
+                    <div>
+                        <div class="friendsName"> <b>super_man</b></div>
+                        <div class="friendsWecode">wecode-37기</div>
+                    </div>
+                </div>
+                <div class="friends">
+                    <img src="사진3.webp" alt="">
+                    <div>
+                        <div class="friendsName"> <b>bet_man</b></div>
+                        <div class="friendsWecode">wecode-37기</div>
+                    </div>
+                </div>
+                <div class="friends">
+                    <img src="사진4.webp" alt="">
+                    <div>
+                        <div class="friendsName"> <b>spider_man</b></div>
+                        <div class="friendsWecode">wecode-37기</div>
+                    </div>
+                </div>
+                <div class="friends">
+                    <img src="사진5.webp" alt="">
+                    <div>
+                        <div class="friendsName"> <b>abctotoro2</b></div>
+                        <div class="friendsWecode">wecode-37기</div>
+                    </div>
+                </div>
+                <div class="friends">
+                    <img src="사진0.jpeg" alt="">
+                    <div>
+                        <div class="friendsName"> <b>mmqkwodw</b></div>
+                        <div class="friendsWecode">wecode-37기</div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="headerIcon"><i class="fa-regular fa-compass"></i><i class="fa-regular fa-heart"></i><i
+                class="fa-regular fa-user" id="modalBtn"></i>
+            <div class="profile">
+                <div>
+                    <p class="profileUnit">프로필</p>
+                </div>
+                <div>
+                    <p class="profileUnit">저장됨</p>
+                </div>
+                <div>
+                    <p class="profileUnit">설정</p>
+                </div>
+                <div>
+                    <p class="profileUnit">계정 전환</p>
+                </div>
+                <div>
+                    <p class="profileUnit">로그아웃</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="mainFooter">
+        <main>
+            <div class="mainTop">
+                <div class="mainUser">
+                    <img src="사진1.webp" alt="">
+                    <span class="userName"> jie_yoon</span>
+                </div>
+                <div class="mainUserint"><i class="fa-solid fa-ellipsis"></i></div>
+            </div>
+            <div class="mainPhoto"><img src="사진0.jpeg" alt="" class="mainPhotoSize"></div>
+
+            <div class="mainFavorite">
+                <div><i class="fa-solid fa-heart"></i><i class="fa-regular fa-comment" style="color:gray;"></i><i
+                        class="fa-solid fa-arrow-up-from-bracket" style="color:gray;"></i>
+                </div>
+                <div><i class="fa-regular fa-bookmark" style="color:gray;"></i></div>
+            </div>
+            <div class="replyFavorite">
+                <img src="사진2.webp" alt="">
+                <span class="replyName"> <b>ha_yoon</b>님<b>외 10명</b>이 좋아합니다.</span>
+            </div>
+            <div class="mainReply">
+                <ul class="mainReplyUl">
+                    <li class="replyList"><b>ha_yoon</b> 우와<button class="like" onclick="liked(event)"><i
+                                class="fa-solid fa-heart"></i></button><button class="deleteBtn"
+                            onclick="deleteBtnHandler(event)">삭제하기</button></li>
+                    <li class="replyList"><b>tae_yoon</b> ??<button class="like" onclick="liked(event)"><i
+                                class="fa-solid fa-heart"></i></button><button class="deleteBtn"
+                            onclick="deleteBtnHandler(event)">삭제하기</button></li>
+                </ul>
+                <p>42분 전</p>
+            </div>
+            <form class="reply">
+                <div class="inputLeft">
+                    <input class="mainReplyCreate" type="text" placeholder="댓글달기..."><button type="submit"
+                        class="replyBtn">게시</button>
+                </div>
+            </form>
+        </main>
+        <div class="sideFooter">
+            <aside>
+                <div class="sideUser">
+                    <img src="사진6.webp" alt="">
+                    <div>
+                        <div class="sideName"> <b>jie_yoon</b></div>
+                        <div class="sideNameBottom">wecode-37기</div>
+                    </div>
+                </div>
+                <div class="sideStory">
+                    <div class="sideStoryTop">
+                        <div style="color:darkgray ;">스토리</div>
+                        <div><b>모두보기</b></div>
+                    </div>
+                    <div class="sideStoryBottom">
+                        <div class="sideStoryUser">
+                            <p><img src="사진4.webp" alt=""></p>
+                            <div>
+                                <div class="sideUserName"> <b>jang_darem</b></div>
+                                <div class="sideUserNameBottom" style="color:darkgray ;">35분 전</div>
+                            </div>
+                        </div>
+                        <div class="sideStoryUser">
+                            <p><img src="사진5.webp" alt=""></p>
+                            <div>
+                                <div class="sideUserName"> <b>monmon</b></div>
+                                <div class="sideUserNameBottom" style="color:darkgray ;">43분 전</div>
+                            </div>
+                        </div>
+                        <div class="sideStoryUser">
+                            <p><img src="사진6.webp" alt=""></p>
+                            <div>
+                                <div class="sideUserName"> <b>Kim_along</b></div>
+                                <div class="sideUserNameBottom" style="color:darkgray ;">57분 전</div>
+                            </div>
+                        </div>
+                        <div class="sideStoryUser">
+                            <p><img src="다운로드.png" alt=""></p>
+                            <div>
+                                <div class="sideUserName"> <b>shin_janggun</b></div>
+                                <div class="sideUserNameBottom" style="color:darkgray ;">57분 전</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="sideMembers">
+                    <div class="sideFriendTop">
+                        <div style="color: darkgray">회원님을 위한 추천</div>
+                        <div><b>모두보기</b></div>
+                    </div>
+                    <div class="sideFriendBottom">
+                        <div class="sideFriendBottomMember">
+                            <div class="sideFollow">
+                                <div class="sideFriendUser">
+                                    <img src="사진7.webp" alt="" class="sideFriendUserimg">
+                                    <div class="sideBetween">
+                                        <div class="sideUserName"> <b>Kim_along</b></div>
+                                        <div class="sideUserNameBottom" style="color:darkgray ;">57분 전</div>
+                                    </div>
+
+                                </div>
+                                <div class="sideFriendBottomFollow" style="color:rgb(0, 149, 255) ;"><b>팔로우</b></div>
+                            </div>
+                            <div class="sideFollow">
+                                <div class="sideFriendUser">
+                                    <img src="사진8.webp" alt="" class="sideFriendUserimg">
+                                    <div class="sideBetween">
+                                        <div class="sideUserName"> <b>Kim_along</b></div>
+                                        <div class="sideUserNameBottom" style="color:darkgray ;">57분 전</div>
+                                    </div>
+
+                                </div>
+                                <div class="sideFriendBottomFollow" style="color:rgb(0, 149, 255) ;"><b>팔로우</b></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </aside>
+            <footer>
+                westagram 정보 . 지원 . 홍보 센터 . API<br> . 채용정보 . 개인정보처리방침 . 약관<br> . 디렉터리 .프로필 .해시태그 .언어<br><br>
+                2022 westagram
+            </footer>
+        </div>
+    </div>
+    <script src="westagram.js"></script>
+</body>
+
+</html>
