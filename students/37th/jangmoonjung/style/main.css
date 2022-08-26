@@ -211,7 +211,9 @@ body {
 }
 
 .findbox__content {
-  padding: 3px 0 0 0;
+  display: flex;
+  align-items: center;
+  padding: 15px;
 }
 
 .findbox__content:hover {
@@ -343,6 +345,7 @@ body {
 }
 
 .feeds__text {
+  max-width: 260px;
   margin-left: 5px;
 }
 
@@ -387,16 +390,13 @@ body {
 }
 
 .feeds__reply__input {
-  width: 100%;
+  width: 90%;
   padding: 15px;
   outline-style: none;
   border: none;
 }
 
 .feeds__reply__text {
-  position: absolute;
-  top: 15px;
-  right: 20px;
   color: #0095f6;
   font-size: 14px;
   font-weight: 600;

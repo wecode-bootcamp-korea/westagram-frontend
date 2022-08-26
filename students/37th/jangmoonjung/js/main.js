@@ -3,14 +3,16 @@
 const inputReply = document.querySelector('.feeds__reply__input');
 const inputPost = document.querySelector('.feeds__reply__text');
 
-inputReply.addEventListener('keyup', (e) => {
+function btnActive() {
   if (inputReply.value.length > 0) {
     inputPost.classList.add('feeds__reply__active');
     inputPost.style.cursur = 'pointer';
+    return true;
   } else {
     inputPost.classList.remove('feeds__reply__active');
+    return false;
   }
-});
+}
 
 function newReply() {
   const feedContent = document.querySelector('.newReply');
@@ -50,7 +52,8 @@ inputPost.addEventListener('click', () => {
 });
 
 inputReply.addEventListener('keypress', (e) => {
-  if (e.code === 'Enter') {
+  const postActive = btnActive();
+  if (postActive && e.code === 'Enter') {
     newReply();
     inputReply.value = '';
   }
@@ -109,15 +112,55 @@ findInput.addEventListener('click', () => {
   findBox.style.display = 'block';
 });
 
-const findId = [
-  'wecode_bootcamp',
-  '_yum_s',
-  'drink_eat_drink',
-  'hyukyc',
-  'jminkeek',
-  'joaaaaaaahye',
-  'rampart81',
-  'shawnjjoo',
-  'aineworld',
-  'canon_mj',
-];
+function filterId(array, inputValue) {
+  let filtered = [];
+  filtered = array.filter((value) => {
+    return value.includes(inputValue);
+  });
+  return filtered;
+}
+
+const findProfile = {
+  wecode_bootcamp: '>wedoce | 위코드',
+  wecode_founder: '송은우(Eun Woo Song)',
+  wecode_korea: '위코드 코리아',
+  Wecode: '강남구 테헤란로 427, 서울',
+  _yum_s: '사는게 즐거워',
+  drink_eat_drink: '비오는날엔 막걸리',
+  hyukyc: '치맥먹고싶다',
+  jminkeek: '퇴근마렵다..',
+  joaaaaaaahye: '월화수목금금금',
+  rampart81: '헤이즐럿라떼 존맛탱',
+  shawnjjoo: '프로 다이어터',
+  aineworld: '웹툰그리는 개발자',
+  canon_mj: '코딩하는 헬스트레이너',
+};
+
+function appendId(id, staus) {
+  const findBoxContents = document.querySelector('.findbox__contents');
+  const findBoxContent = document.createElement('div');
+  findBoxContent.setAttribute('class', 'findbox__content');
+  findBoxContent.innerHTML = `
+    <div class="findbox__image">
+      <img
+        class="findbox__img"
+        src="images/story__profile_01.jpg"
+        alt="findbox__img"
+      />
+    </div>
+    <div class="findbox__id">
+      <div class="id">${id}</div>
+      <div class="more__gray">${staus}</div>
+    </div>
+  `;
+  findBoxContents.appendChild(findBoxContent);
+}
+
+findInput.addEventListener('input', () => {
+  const findInputValue = findInput.value;
+  const findId = Object.keys(findProfile);
+  let filterIds = filterId(findId, findInputValue);
+  filterIds.map((item) => {
+    appendId(item, findProfile.item);
+  });
+});
