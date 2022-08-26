@@ -61,52 +61,52 @@ const idData = [
   {
     userId: "apple_01",
     userName: "새콤달콤",
-    userImg: "../src/img/profile/apple.jpg",
+    userImg: "src/img/profile/apple.jpg",
   },
   {
     userId: "applepie0101",
     userName: "파이는3.14",
-    userImg: "../src/img/profile/applepie.jpg",
+    userImg: "src/img/profile/applepie.jpg",
   },
   {
     userId: "peach_01",
     userName: "어피치가되고싶어",
-    userImg: "../src/img/profile/peach.jpg",
+    userImg: "src/img/profile/peach.jpg",
   },
   {
     userId: "peachcookie123",
     userName: "스윗복숭",
-    userImg: "../src/img/profile/peach_2.jpg",
+    userImg: "src/img/profile/peach_2.jpg",
   },
   {
     userId: "watermelon_03",
     userName: "수박수박수",
-    userImg: "../src/img/profile/watermelon.jpg",
+    userImg: "src/img/profile/watermelon.jpg",
   },
   {
     userId: "water33",
     userName: "삼다수",
-    userImg: "../src/img/profile/water.jpg",
+    userImg: "src/img/profile/water.jpg",
   },
   {
     userId: "lemon_04",
     userName: "레몽몽",
-    userImg: "../src/img/profile/lemon.jpg",
+    userImg: "src/img/profile/lemon.jpg",
   },
   {
     userId: "lemonpie4040",
     userName: "레몬파이",
-    userImg: "../src/img/profile/lemon.jpg",
+    userImg: "src/img/profile/lemon.jpg",
   },
   {
     userId: "candy_0426",
     userName: "사탕해",
-    userImg: "../src/img/profile/candy.jpg",
+    userImg: "src/img/profile/candy.jpg",
   },
   {
     userId: "cake2626",
     userName: "생일이다",
-    userImg: "../src/img/profile/cake.jpg",
+    userImg: "src/img/profile/cake.jpg",
   },
 ];
 
