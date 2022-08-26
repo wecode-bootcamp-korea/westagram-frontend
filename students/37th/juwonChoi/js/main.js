@@ -13,7 +13,7 @@ const makeComment = () => {
         const newDiv = document.createElement('div');
         const $commentBox = document.querySelector('.commentBox');
         newDiv.className = "commentInner";
-        newDiv.innerHTML = `<span class='commentId'>nerdcloud___</span> <span class='comment'>${$inputValue}</span><img class="commentDelete" src="/style/images/close.png"><img class="commentHeart" src="/style/images/heart.png">`
+        newDiv.innerHTML = `<span class='commentId'>nerdcloud___</span> <span class='comment'>${$inputValue}</span><img class="commentDelete" src="style/images/close.png"><img class="commentHeart" src="style/images/heart.png">`
         $commentBox.appendChild(newDiv);
         document.querySelector('.commentInput').value ='';
         $commentBtn.style.opacity = '50%'
@@ -65,10 +65,10 @@ $commentBox.addEventListener('click', (e)=>{
     const clickedNode = e.target
     let isItColor = clickedNode.getAttribute("src")
     
-    if (isItColor === "/style/images/heart.png"){
-        clickedNode.setAttribute("src","/style/images/heartColor.png")
-        } else if(isItColor === "/style/images/heartColor.png"){
-        clickedNode.setAttribute("src","/style/images/heart.png")
+    if (isItColor === "style/images/heart.png"){
+        clickedNode.setAttribute("src","style/images/heartColor.png")
+        } else if(isItColor === "style/images/heartColor.png"){
+        clickedNode.setAttribute("src","style/images/heart.png")
     };
     
     if (clickedNode.className === "commentDelete"){
@@ -82,16 +82,16 @@ $feedBtnBox.addEventListener('click', (e)=>{
     const clickedNode = e.target
     let isItColor = clickedNode.getAttribute("src")
     
-    if (isItColor === "/style/images/heart.png"){
-        clickedNode.setAttribute("src","/style/images/heartColor.png")
-        } else if(isItColor === "/style/images/heartColor.png"){
-        clickedNode.setAttribute("src","/style/images/heart.png")
+    if (isItColor === "style/images/heart.png"){
+        clickedNode.setAttribute("src","style/images/heartColor.png")
+        } else if(isItColor === "style/images/heartColor.png"){
+        clickedNode.setAttribute("src","style/images/heart.png")
     };
     
-    if (isItColor === "/style/images/bookmark.png"){
-        clickedNode.setAttribute("src","/style/images/bookmarkColor.png")
-    } else if(isItColor === "/style/images/bookmarkColor.png") {
-        clickedNode.setAttribute("src","/style/images/bookmark.png")
+    if (isItColor === "style/images/bookmark.png"){
+        clickedNode.setAttribute("src","style/images/bookmarkColor.png")
+    } else if(isItColor === "style/images/bookmarkColor.png") {
+        clickedNode.setAttribute("src","style/images/bookmark.png")
     }
 })
 
@@ -126,7 +126,7 @@ $searchInput.addEventListener('focus',()=>{
 })
 
 $searchInput.addEventListener('focusout',()=>{
-    $searchInput.style.backgroundImage = "url(/style/images/search-interface-symbol.png)";
+    $searchInput.style.backgroundImage = "url(style/images/search-interface-symbol.png)";
     $searchInput.placeholder ="       Search"
     $searchInput.value = ''
     recentSearch.style.display = "none";
@@ -189,20 +189,26 @@ document.addEventListener('click', (e)=>{
     if(target === navProfilePic) {
         if(display === 'none'){
             navMenuBox.style.display = 'flex';
-            homeBtn.setAttribute('src', '/style/images/homeEmpty.png')
+            homeBtn.setAttribute('src', 'style/images/homeEmpty.png')
         } else {
             navMenuBox.style.display = 'none';
-            homeBtn.setAttribute('src', '/style/images/home (1).png')
+            homeBtn.setAttribute('src', 'style/images/home (1).png')
         }
     
     } else {
         navMenuBox.style.display = 'none';
-        homeBtn.setAttribute('src', '/style/images/home (1).png')
+        homeBtn.setAttribute('src', 'style/images/home (1).png')
     }
 })
 
 
-//댓글 버튼 활성화
+
+
+//스토리 만들기
+
+
+const story = document.querySelectorAll('.storyImage');
+story.forEach(x => x.addEventListener('click', ()=> {location.href="http://127.0.0.1:5500/students/37th/juwonChoi/story.html"}))
 
 
     

@@ -1,0 +1,141 @@
+* {
+    box-sizing: border-box;
+}
+
+    body {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: #1A1A1A;
+        overflow: scroll;
+    }
+
+
+        .instagramLogo {
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            background-color: white;
+            font-family: 'Dokdo', cursive;
+            font-weight: 550;
+            font-size:25px;
+            color:white;
+            background-color: #1A1A1A;
+            margin:0;
+        }
+
+            .instagramLogo:hover{
+                cursor: pointer;
+            }
+
+        .storyWrapper {
+            width: 450px;
+            height: 600px;
+            display: flex;
+            justify-content: center;
+            background-color: #1A1A1A;
+            font-family: 'proxima-nova', sans-serif;
+        }
+
+            .storyBox {
+                border:none;
+                width: 342px;
+                height: 100%;
+                background-image: url(images/storyPic1.jpeg);
+                background-size: 100%;
+                background-repeat: auto;
+                border-radius: 7px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+                .topBox {
+                    display: flex;
+                    border-top:2px solid white;
+                    justify-content:space-between;
+                    width: 90%;
+                    margin-top:20px;
+                }
+
+                    .profileBox{
+                        display: flex;
+                        align-items: center;
+                    }
+
+                        .profileBox img{
+                            width: 30px;
+                            height: 30px;
+                            border: 1px solid #DBDBDB;
+                            border-radius: 100%;
+                        }
+
+                        .nickName {
+                            color:white;
+                            margin:6px;
+                            font-size:14px;
+                        }
+
+                        .hour {
+                            font-size: 15px;
+                            color:#8E8E8E;
+                        }
+
+                    .menuBox {
+                        display: flex;
+                        align-items: center;
+                    }
+                        .menuBox img{
+                            width: 15px;
+                            margin: 10px;
+                        }
+
+                .bottomBox {
+                    width: 90%;
+                    display: flex;
+                    justify-content:space-between;
+                }
+
+                    .directInputBox {
+                        width: 100px;
+                        
+                    }
+
+                        .directionInputBox input{
+                            width:100%;
+                            border:none;
+                            background: transparent;
+                        }
+
+                    .iconBox {
+                        display:flex;
+                        align-items: center;
+                    
+                    }
+
+                        .iconBox img{
+                            width: 20px;
+                        }
+
+
+
+
+
+
+
+
+        .closeBtn img{
+            width: 20px;
+            position: absolute;
+            top:26px;
+            right:26px;
+        }
+
+            .closeBtn:hover{
+                cursor: pointer;
+            }
+
+
+
