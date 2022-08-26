@@ -89,6 +89,7 @@ body {
   border-radius: 3px;
   text-align: center;
   background-color: #fafafa;
+  padding: 0 10px;
 }
 
 .nav__input::placeholder {
@@ -127,7 +128,7 @@ body {
 /* menubox */
 
 .nav__menubox {
-  /* display: none; */
+  display: none;
   position: absolute;
   top: 100%;
   right: 1%;
@@ -174,6 +175,64 @@ body {
 
 .menubox__logout {
   border-top: 1px solid #c7c7c7;
+}
+
+/* findbox */
+
+.nav__findbox {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 50%;
+  transform: translateX(175px);
+  z-index: 2;
+}
+
+.findbox__triangle {
+  position: absolute;
+  top: -36px;
+  left: 50%;
+  transform: translateX(-13px);
+  width: 0;
+  height: 0;
+  border-bottom: 18px solid #ffffff;
+  border-top: 18px solid transparent;
+  border-left: 13px solid transparent;
+  border-right: 13px solid transparent;
+}
+
+.findbox__contents {
+  width: 300px;
+  height: 330px;
+  border-radius: 5px;
+  background-color: #ffffff;
+  overflow-y: scroll;
+  box-shadow: 3px 2px 10px 2px rgba(0, 0, 0, 0.15);
+}
+
+.findbox__content {
+  padding: 3px 0 0 0;
+}
+
+.findbox__content:hover {
+  background-color: #f9f9f9;
+  cursor: pointer;
+}
+
+.findbox__image {
+  width: 60px;
+}
+
+.findbox__img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.findbox__profile {
+  display: flex;
+  align-items: center;
+  padding: 8px 16px;
 }
 
 /* main */
@@ -473,7 +532,8 @@ body {
   }
 }
 @media screen and (max-width: 640px) {
-  .nav__find {
+  .nav__find,
+  .nav__findbox {
     display: none;
   }
 }

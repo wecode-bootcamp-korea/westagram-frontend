@@ -1,3 +1,5 @@
+'use strict';
+
 const inputReply = document.querySelector('.feeds__reply__input');
 const inputPost = document.querySelector('.feeds__reply__text');
 
@@ -82,6 +84,10 @@ function colorHeart(element) {
 const myImg = document.querySelector('.nav__profile__img');
 const menuBox = document.querySelector('.nav__menubox');
 
+const findBox = document.querySelector('.nav__findbox');
+const findInput = document.querySelector('.nav__input');
+const findIcon = document.querySelector('.nav__find__icon');
+
 myImg.addEventListener('click', (e) => {
   menuBox.style.display = 'block';
 });
@@ -90,4 +96,28 @@ window.addEventListener('click', (e) => {
   if (e.target !== myImg) {
     menuBox.style.display = 'none';
   }
+  if (e.target !== findInput) {
+    findBox.style.display = 'none';
+    findInput.style.textAlign = 'center';
+    findIcon.style.display = 'block';
+  }
 });
+
+findInput.addEventListener('click', () => {
+  findInput.style.textAlign = 'left';
+  findIcon.style.display = 'none';
+  findBox.style.display = 'block';
+});
+
+const findId = [
+  'wecode_bootcamp',
+  '_yum_s',
+  'drink_eat_drink',
+  'hyukyc',
+  'jminkeek',
+  'joaaaaaaahye',
+  'rampart81',
+  'shawnjjoo',
+  'aineworld',
+  'canon_mj',
+];
