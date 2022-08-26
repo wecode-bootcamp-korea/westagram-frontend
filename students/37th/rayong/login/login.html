@@ -8,25 +8,27 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="default.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="wrapper">
-        <section class="logo-text">
-            Westagram
-        </section>
-        <form>
-            <div id="inputBox" class="input-box">
-                <input id="inputId" type="text" placeholder="@가 포함된 이메일 주소를 입력하세요!">
-                <input id="inputPassword" type="password" placeholder="비밀번호는 다섯글자 이상입니다.">
-            </div>
-            <div class="btn-box">
-                <button id="loginBtn" class="blue" >로그인</button>
-            </div>
-        </form>
-        <p class="info"><a href="#">비밀번호를 잊으셨나요?</a></p>
-    </div>
+    <main>
+        <div class="wrapper">
+            <section class="logo-text">
+                Westagram
+            </section>
+            <form>
+                <div id="inputBox" class="input-box">
+                    <input id="inputId" type="text" placeholder="@가 포함된 이메일 주소를 입력하세요!">
+                    <input id="inputPw" type="password" placeholder="비밀번호는 다섯글자 이상입니다.">
+                </div>
+                <div class="btn-box">
+                    <button disabled id="loginBtn">로그인</button>
+                </div>
+            </form>
+            <p class="info"><a href="#">비밀번호를 잊으셨나요?</a></p>
+        </div>
+    </main>
     <script src="login.js"></script>
 </body>
 </html>
