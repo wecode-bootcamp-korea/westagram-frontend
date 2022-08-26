@@ -1,0 +1,54 @@
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+a:link { color: blue; text-decoration: none;}
+a:visited { color: black; text-decoration: none;}
+a:hover { color: blue; text-decoration: underline;}
+
+.loginContainer {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px #dbdbdb solid;
+    width: 400px;
+    height: 450px;
+    margin: auto auto;
+}
+
+.loginContainer .loginTitle {
+    font-family: 'Lobster', cursive;
+    font-size: 50px;
+}
+
+.loginContainer .inputBox{
+    display: flex;
+    flex-direction: column;
+    width: 240px;
+}
+.loginContainer input {
+    margin-top: 5px;
+    height: 35px;
+    background-color: #fafafa;
+    border: 1px solid rgba(var(--ca6,219,219,219),1);
+    border-radius: 3px;
+}
+
+.loginContainer button {
+    margin-top: 15px;
+    height: 30px;
+    border: 0;
+    border-radius: 3px;
+    background-color: #bae1fc;
+    color: white;
+}
+
+
+
+.blank {
+    flex: 0.1;
+}

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/common.css">
+    <link rel="stylesheet" href="style/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/61d7427009.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <div class="navContainer">
+            <div class="navLeft">
+                <img class="instagramImg" src="instagram.png" alt="인스타그램그림">
+                <h1 class="title">Hoonstagram</h1>
+            </div>
+            <div class="navCenter">
+                <img class="searchImg" src="search.png" alt="돋보기">
+                <input id="navInput" class="navInput" type="text" placeholder="검색">
+            </div>
+            <div class="navRight">
+                <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png" alt="탐색">
+                <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" alt="하트">
+                <img class="modal" id="profileIcon" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png" alt="">
+            </div>
+            <div class="profileBox_hidden" id="profileBox">
+                <div class="profileBox_triangle">
+
+                </div>
+                <div class="profileBox_content modal">
+                    <div class="profile modal"><img class="modal" src="user.png" alt=""><div class="text modal">프로필</div></div>
+                    <div class="saved modal"><img class="modal" src="save.png" alt=""><div class="text modal">저장됨</div></div>
+                    <div class="setting modal"><img class="modal" src="setting.png" alt=""><div class="text modal">설정</div></div>
+                    <div class="container modal"><div class="logout modal">로그아웃</div></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div class="searchBox" id="searchBox">
+            <div class="searchTriangle" id="searchTriangle"></div>
+            <div class="searchList" id="searchList"></div>
+        </div>
+        <div class="feeds">
+            <div class="article" id="article0">
+                <div class="article_header">
+                    <img src="profile.JPG" alt="프로필사진">
+                    <div class="identifier">noon_noo_nan_na</div>
+                </div>
+                <div class="article_body">
+                    <img src="body.JPG" alt="">
+                </div>   
+                <div class="article_footer">
+                    <div class="article_footer_left">
+                        <img src="heart.png" alt="">
+                        <img src="chat.png" alt="">
+                        <img src="upload.png" alt="">
+                    </div>
+                    <div class="article_footer_right">
+                        <img src="save.png" alt="">
+                    </div>
+            
+                </div>
+                <div class="article_like">
+                    <img src="univ.jpeg" alt="">
+                    <div class="article_like_comment"><span class="id">hoon</span>님 외 <span class="number">10명</span>이 좋아합니다</div>
+                </div>
+                <div class="article_comment" id="article_comment">
+                </div>
+                <div class="article_comment_input">
+                    <form id="article_comment_input">
+                        <input type="text" placeholder="댓글 달기..">
+                    </form>
+                    <div class="article_comment_gesi" id="article_comment_gesi">게시</div>
+                </div>
+            </div>
+        </div>
+        <div class="main-right">
+            <div class="main-right_header">
+                <img src="wecode.png" alt="위코드이미지">
+                <div class="main-right_header_comment">
+                    <div class="main-right_header_comment_top">
+                        wecode_bootcamp
+                    </div>
+                    <div class="main-right_header_comment_bottom">
+                        <div class="main-right_header_comment_bottom_Eng">Wecode</div>
+                        <div class="main-right_header_comment_bottom_Kor">위코드</div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-right_story">
+                <div class="main-right_story_header">
+                    <div class="main-right_story_title">
+                        스토리
+                    </div>
+                    <div class="main-right_story_viewAll">
+                        모두 보기
+                    </div>
+                </div>
+                <div class="main-right_story_body">
+                    <div class="userInfo">
+                        <img src="userImg/user0.JPG" alt="user1Img">
+                        <div class="content">
+                            <div class="ID">nanBabo</div>
+                            <div class="time">16분 전</div>
+                        </div>
+                    </div>
+                    <div class="userInfo">
+                        <img src="userImg/user1.JPG" alt="user1Img">
+                        <div class="content">
+                            <div class="ID">seungHoon</div>
+                            <div class="time">26분 전</div>
+                        </div>
+                    </div>
+                    <div class="userInfo">
+                        <img src="userImg/user2.JPG" alt="user1Img">
+                        <div class="content">
+                            <div class="ID">handsomeGuy</div>
+                            <div class="time">36분 전</div>
+                        </div>
+                    </div>
+                    <div class="userInfo">
+                        <img src="userImg/user3.JPG" alt="user1Img">
+                        <div class="content">
+                            <div class="ID">uglyBoy</div>
+                            <div class="time">46분 전</div>
+                        </div>
+                    </div>
+                    <div class="userInfo">
+                        <img src="userImg/user4.JPG" alt="user1Img">
+                        <div class="content">
+                            <div class="ID">baegopa</div>
+                            <div class="time">56분 전</div>
+                        </div>
+                    </div>
+                    <div class="userInfo">
+                        <img src="userImg/user5.JPG" alt="user1Img">
+                        <div class="content">
+                            <div class="ID">kalgookSoo</div>
+                            <div class="time">1시간 전</div>
+                        </div>
+                    </div>
+                    <div class="userInfo">
+                        <img src="userImg/user6.JPG" alt="user1Img">
+                        <div class="content">
+                            <div class="ID">ppp_aasdw</div>
+                            <div class="time">2시간 전</div>
+                        </div>
+                    </div>
+                    <div class="userInfo">
+                        <img src="userImg/user7.JPG" alt="user1Img">
+                        <div class="content">
+                            <div class="ID">noon_noo_nan_na</div>
+                            <div class="time">3시간 전</div>
+                        </div>
+                    </div>
+                    <div class="userInfo">
+                        <img src="userImg/user8.JPG" alt="user1Img">
+                        <div class="content">
+                            <div class="ID">kakakakao</div>
+                            <div class="time">4시간 전</div>
+                        </div>
+                    </div>
+                    <div class="userInfo">
+                        <img src="userImg/user9.JPG" alt="user1Img">
+                        <div class="content">
+                            <div class="ID">toss_wannabe</div>
+                            <div class="time">5시간 전</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-right_recommand">
+                <div class="main-right_recommand_header">
+                    <div class="main-right_recommand_title">
+                        회원님을 위한 추천
+                    </div>
+                    <div class="main-right_recommand_viewAll">
+                        모두 보기
+                    </div>
+                </div>
+                <div class="main-right_recommand_body">
+                    <div class="userInfo">
+                        <img src="userImg/user9.JPG" alt="user1Img">
+                        <div class="content">
+                            <div class="ID">hello_imHoon</div>
+                            <div class="commant">babong님 외 2명이 팔로우 하지롱</div>
+                        </div>
+                    </div>
+                    <div class="userInfo">
+                        <img src="userImg/user8.JPG" alt="user1Img">
+                        <div class="content">
+                            <div class="ID">wannaGo_toss</div>
+                            <div class="commant">boba님 외 4명이 팔로우 하지롱</div>
+                        </div>
+                    </div>
+                    <div class="userInfo">
+                        <img src="userImg/user7.JPG" alt="user1Img">
+                        <div class="content">
+                            <div class="ID">handsomeGuy</div>
+                            <div class="commant">anbabo님 외 2명이 팔로우 하지롱</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-right_text">
+                <div class="main-right_text_info">
+                    Instagram 정보 ⚬ 지원 ⚬ 홍보 센터 ⚬ API ⚬ 채용정보 ⚬ 개인정보처리방침 ⚬ 약관 ⚬ 디렉터리 ⚬ 프로필 ⚬ 해시태그 ⚬ 언어
+                </div>
+                <div class="main-right_text_brand">
+                    © 2022 INSTAGRAM FROM META
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="js/main.js"></script>
+</html>
