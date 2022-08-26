@@ -39,8 +39,8 @@ function handleSubmit (e) {
     const comments = commentsInput.value;
     paintComments(comments)
     commentsInput.value = "";
+    var test = "리커밋용";
 }
-
 
 
 commentsForm.addEventListener('submit', handleSubmit);
