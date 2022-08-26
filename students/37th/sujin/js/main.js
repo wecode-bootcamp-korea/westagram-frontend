@@ -1,9 +1,14 @@
+const search = document.querySelector('.search');
 const inputArea = document.querySelector('.input-area');
 const input = inputArea.querySelector('input');
 const commentList = document.querySelector('.comment-list');
 
-const dimLayer = document.querySelector('.dim-layer');
-const dimLayerBg = document.querySelector('.dim-bg');
+const dimMyPageLayer = document.querySelector('.dim-layer.mypage ');
+const dimMyPageLayerBg = dimMyPageLayer.querySelector('.dim-bg');
+
+const dimSearchLayer = document.querySelector('.dim-layer.search-results');
+const dimSearchLayerBg = dimSearchLayer.querySelector('.dim-bg');
+const searchListBox = dimSearchLayer.querySelector('.modal');
 
 const pushButton = document.querySelector('.btn-push');
 const moreButton = document.querySelector('.btn-more');
@@ -14,12 +19,20 @@ const profileButton = document.querySelector('button.profile-box');
 input.addEventListener('keyup', activeButton);
 pushButton.addEventListener('click', createComment);
 moreButton.addEventListener('click', showAllPost);
+
 profileButton.addEventListener('click', () => {
-    dimLayer.classList.add('on');
+    dimMyPageLayer.classList.add('on');
 });
-dimLayerBg.addEventListener('click', () => {
-    dimLayer.classList.remove('on');
+dimMyPageLayerBg.addEventListener('click', () => {
+    dimMyPageLayer.classList.remove('on');
 });
+
+search.addEventListener('click', () => {
+    dimSearchLayer.classList.add('on');
+})
+dimSearchLayerBg.addEventListener('click', () => {
+    dimSearchLayer.classList.remove('on');
+})
 
 function activeButton(){
     const inputValue = input.value;
@@ -74,5 +87,60 @@ function deleteComment(e) {
     deleteButton.parentNode.parentNode.remove();
 }
 
+const dummyArray = [
+    {
+        id: 'apple',
+        name: '사과',
+        url: '../img/feed01.jpg'
+    },
+    {
+        id: 'abc',
+        name: '라랄',
+        url: '../img/feed01.jpg'
+    },
+    {
+        id: 'all',
+        name: '배',
+        url: '../img/feed01.jpg'
+    },
+    {
+        id: 'ass',
+        name: '포도',
+        url: '../img/feed01.jpg'
+    },
+    {
+        id: 'akkkkk',
+        name: '파인애플',
+        url: '../img/feed01.jpg'
+    }
+]
+search.addEventListener('keyup', () => {
+     searchListBox.innerHTML = '';
+
+    if(search.value){
+        const filterID = dummyArray.filter( el => matchSearch(el.id))
+        if (filterID){
+            filterID.forEach((el)=> {
+                showList(el)
+            })
+        }
+    } 
+});
+function matchSearch(val){
+    const searchID = search.value;
+    return val.indexOf(searchID) != -1;
+}
+function showList(id){
+    const searchNameList = document.createElement('li');
+    searchNameList.classList.add('result');
+    searchListBox.appendChild(searchNameList);
+    searchNameList.innerHTML = `
+        <img src="${id.url}" alt="강아지">
+        <p>
+            <span class="nickname">${id.id}</span>
+            <span class="myname">${id.name}</span>
+        </p>
+    `;
+}
 
 

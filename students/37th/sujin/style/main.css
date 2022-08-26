@@ -336,23 +336,19 @@ main{
     height: 100%;
     background: transparent;
 }
-.modal{
+.dim-layer .modal{
     position: absolute;
     top: 78px;
-    right: calc((100% - 962px) / 2);
-    width: 200px;
-    padding: 5px 0px;
     border: 1px solid #dbdbdb;
     border-radius: 5px;
     background: #fff;
     box-shadow: 2px 1px 12px rgb(0 0 0 / 20%);
     z-index: 101;
 }
-.modal::before{
+.dim-layer .modal::before{
     content: "";
     position: absolute;
     top: -8px;
-    right: 20px;
     display: block;
     width: 18px;
     height: 18px;
@@ -364,8 +360,15 @@ main{
     -o-transform: rotate( 45deg );
     -webkit-transform: rotate( 135deg );  
 }
-
-.modal > a{
+.dim-layer.mypage .modal{
+    right: calc((100% - 962px) / 2);
+    width: 200px;
+    padding: 5px 0px;
+}
+.dim-layer.mypage .modal::before{
+    right: 20px;
+}
+.mypage .modal > a{
     display: block;
     padding: 8px 10px ;
     text-decoration: none;
@@ -373,14 +376,14 @@ main{
     font-weight: 500;
     color: #333;
 }
-.modal > a.setting{
+.mypage .modal > a.setting{
     padding-bottom: 10px;
 }
-.modal > a.logout{
+.mypage .modal > a.logout{
     border-top: 1px solid #dbdbdb;
     padding-top: 15px;
 }
-.modal > a::before{
+.mypage .modal > a::before{
     content:'';
     display: inline-block;
     vertical-align: middle;
@@ -388,23 +391,49 @@ main{
     font-size: 18px;
     margin-right: 10px;
 }
-.modal > a.my-profile::before{
+.mypage .modal > a.my-profile::before{
     content:'\f2bd';
 }
-.modal > a.save-list::before{
+.mypage .modal > a.save-list::before{
     content:'\f02e';
     margin: 0 13px 0 2px;
     font-size: 17px;
 }
-.modal > a.setting::before{
+.mypage .modal > a.setting::before{
     content:'\f013';
 }
-.modal > a.logout::before{
+.mypage .modal > a.logout::before{
     display: none;
 }
-
-
-
+.dim-layer.search-results .modal{
+    left: 49%;
+    transform: translateX(-50%);
+    width: 290px;
+    padding: 20px 15px;
+}
+.dim-layer.search-results .modal::before{
+    left: 50%;
+}
+.dim-layer.search-results .modal .result{
+    display: flex;
+    align-items: center;
+}
+.dim-layer.search-results .modal .result > img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.dim-layer.search-results .modal .result .nickname{
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+.dim-layer.search-results .modal .result .myname{
+    display: block;
+    font-size: 14px;
+    color: #999;
+}
 
 
 
