@@ -72,11 +72,18 @@
                             border-radius: 100%;
                         }
 
+                            .profileBox img:hover {
+                                cursor: pointer;
+                            }
+
                         .nickName {
                             color:white;
                             margin:6px;
                             font-size:14px;
                         }
+                            .nickName:hover{
+                                cursor: pointer;
+                            }
 
                         .hour {
                             font-size: 15px;
@@ -92,36 +99,74 @@
                             margin: 10px;
                         }
 
+                        .menuBox img:hover{
+                            cursor: pointer;
+                        }
+
                 .bottomBox {
                     width: 90%;
                     display: flex;
                     justify-content:space-between;
+                    margin-bottom: 15px;
+                    z-index: 2;
                 }
 
                     .directInputBox {
-                        width: 100px;
+                        width: 208px;
+                        height: 44px;
+                        border: 1px solid white;
+                        border-radius: 20px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        transition: width 0.1s ease-in-out;
                         
                     }
 
-                        .directionInputBox input{
-                            width:100%;
+                        .directInputBox input{
+                            width:85%;
                             border:none;
-                            background: transparent;
+                            background-color: transparent;
                         }
+
+                            .directInputBox input:focus {
+                                outline:none;
+                                color:white;
+                            }
+
+                            .directInputBox input::placeholder {
+                                color:white;
+                            }
 
                     .iconBox {
                         display:flex;
+                        justify-content: space-around;
                         align-items: center;
                     
                     }
 
                         .iconBox img{
-                            width: 20px;
+                            width: 25px;
+                            margin: 10px;
                         }
 
+                            .iconBox img:hover {
+                                cursor: pointer;
+                                opacity: 50%;
+                            }
 
-
-
+        .thisIsForDirect {
+            background-color: black;
+            opacity: 40%;
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%, -50%);
+            width: 342px;
+            height: 100%;
+            border-radius: 7px;
+            z-index: -1;
+        }
 
 
 
@@ -138,4 +183,6 @@
             }
 
 
+
+            
 
