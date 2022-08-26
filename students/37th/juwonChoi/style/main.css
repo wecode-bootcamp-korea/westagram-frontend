@@ -1,0 +1,769 @@
+* {
+    box-sizing: border-box;
+}
+    body {
+        position: relative;
+        display:flex;
+        justify-content: center;
+        background-color: #FAFAFA;
+    }
+
+
+/* 탑박스(nav 박스) */
+
+        .topBox {
+            width: 100%;
+            height: 60px;
+            border-bottom: 1px solid #DBDBDB;
+            background-color: white;
+            position: fixed;
+            top:0px;
+            left: 0px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            z-index: 10;
+        }
+            
+            .westagram {
+                max-width: calc(270px);
+                width: 100%;
+                font-family: 'Dokdo', cursive;
+                font-size : 23px;
+                font-weight : bold;
+                margin-left : 33px;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+            }
+
+                .arrow {
+                    width: 9px;
+                    height: 9px;
+                    margin-left :8px;
+                }
+
+                .arrow:hover {
+                    cursor: pointer;
+                }
+
+            .searchInputBox {
+                border: 1px solid white;
+                border-radius: 8px;
+                width:270px;
+                height: 38px;
+                background-color:#EFEFEF;
+                display:flex;
+                align-items: center;
+                padding-left:10px;
+                padding-right:10px;
+                margin-left: 10px;
+                
+            }
+                .searchInput{
+                    border: none;
+                    background-color: #EFEFEF;
+                    width: 270px;
+                    height: 25px;
+                    font-size: 16px;  
+                    background-image: url(/style/images/search-interface-symbol.png);
+                    background-repeat: no-repeat; 
+                    background-size: 15px;
+                    background-position-y: center;
+                    background-position-x: 6px;
+                    font-family: 'proxima-nova', sans-serif;
+                }
+
+                    .searchInput::placeholder{
+                        color:#8E8E8E;
+                        font-weight: lighter;
+                    }
+                
+                    .searchInput:focus{
+                        outline: none;
+                    }
+        
+            .nav {
+                display: flex;
+                align-items: center;
+                margin-right: 25px;
+            }
+
+                .nav img {
+                    width: 22px;
+                    height: 22px;
+                    margin:12px;
+                }
+
+                .nav img:hover {
+                    cursor: pointer;
+                }
+                    
+                #profile {
+                    width: 22px;
+                    height: 22px;
+                    border-radius: 100%;
+                }
+
+                .navBtnBorder {
+                    width: 26px;
+                    height: 26px;
+                    background-color: white;
+                    border-radius: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-self: center;
+                }
+
+                .navBtnBorder img {
+                    width: 22px;
+                    height: 22px;
+                    
+                }
+
+                .navBtnBorder img:hover {
+                    cursor: pointer;
+                }
+
+            @media screen and (max-width:650px) {
+                .searchInputBox{
+                    display:none;
+                }
+            }    
+        
+            
+
+/* 검색창 팝업 */
+
+        .recentSearch {
+            position: fixed;
+            top: 59px;
+            display: none;
+            flex-direction: column;
+            z-index: 10;
+            background-color: white;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            border-radius: 6px;
+            font-family: 'proxima-nova', sans-serif;
+        }
+            
+            .recentTextBox {
+                width:360px;
+                height:48px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding:0px 15px;
+                padding-top:5px;
+                
+            }
+                .recentText {
+                    font-size:16px;
+                    font-weight: bold;
+                    color: #292929;
+                }
+
+                .clearAll {
+                    font-size: 15px;
+                    font-weight: 500;
+                    color: #0095F6;
+                }
+
+            .recentProfile {
+                width:360px;
+                height:60px;
+                display:flex;
+                align-items: center;
+            }
+
+                .recentProfilePic {
+                    width: 45px;
+                    height: 45px;
+                    border: 1px solid #DBDBDB;
+                    border-radius: 100%;
+                    margin-left: 15px;
+                }
+
+                .recentNickBox {
+                    margin-left: 12px;
+                    display:flex;
+                    flex-direction: column;
+                    justify-content: center;
+                }
+
+                    .recentNickName {
+                        color:#292929;
+                        font-weight: bold;
+                        font-size: 14px;;
+                    }
+
+                    .recentName {
+                        color:#8E8E8E;
+                        font-size:14px;
+                        margin-top:3px;
+                    }
+
+                .closeBtn {
+                    width: 13px;
+                    height: 13px;
+                    position: absolute;
+                    right: 25px;
+                }
+
+
+
+/* 프로필메뉴 팝업 */
+
+        .navMenuBox {
+            display: none;
+            flex-direction: column;
+            position: absolute;
+            top:58px;
+            right:30px;
+            border-radius: 8px;
+            background-color: white;
+            z-index: 10;
+            font-family: 'proxima-nova', sans-serif;
+            color: #292929;
+            font-size: 14px;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        }
+
+            .navMenuInnerBox {
+                display:flex;
+                align-items: center;
+                width: 230px;
+                height: 39px;
+                border: none;    
+            }
+
+                .MenuIcon {
+                    width:16px;
+                    margin-left: 12px;
+                }
+
+                .navMenuInnerBox p{
+                    margin:0px;
+                    margin-top: 4px;
+                    margin-left:12px;
+                    margin-bottom:4px;
+                }
+
+                    .navMenuInnerBox:hover{
+                        background-color: #FAFAFA;
+                        cursor: pointer;
+                    }
+
+                #logout {
+                    border-top: 1px solid #DBDBDB;
+                    height:41px;
+                    margin:2px;
+                }
+
+
+
+
+/* 본문 */
+
+
+        .outerBox {
+            width: 822px;
+            height: 1500px;
+            border: none;
+            position:absolute;
+            top:74px;
+            display:flex;
+            flex-direction: row;
+            justify-content: center;
+            font-family: 'proxima-nova', sans-serif;
+
+        }
+
+
+/* 왼쪽박스        */
+
+            .innerLeftBox {
+                display:flex;
+                flex-direction: column;
+                align-items: center;
+                width: 470px;
+            }
+
+                .leftTopBox {
+                    width: 470px;
+                    height: 119px;
+                    border: 1px solid #DBDBDB;
+                    background-color: white;
+                    border-radius: 7.5px;
+                    display: flex;
+                    align-items: center;
+                    padding-left: 16px;
+                }
+                    
+                    .storyBox {
+                        display:flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        padding:none;
+                        margin:7px;
+                    }
+
+                        .storyBox:hover {
+                            cursor: pointer;
+                        }
+
+                        .storyImage {
+                            width: 61px;
+                            height: 61px;
+                            margin-bottom:5px;
+                            border: 2px solid transparent;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border-radius: 100%;
+                            background-image:linear-gradient(#fff, #fff), 
+                            linear-gradient(to right, red 0%,  orange 100%);
+                            background-origin: border-box;
+                            background-clip: content-box, border-box;   
+                        }
+
+                            .storyImage img{
+                                width: 55px;
+                                height: 55px;
+                                border-radius: 100%;
+                                border:1px solid #DBDBDB;
+                            }
+                         
+                        .storyNick {
+                            font-weight:normal;
+                            font-size: 12px;
+                            color:#262626;
+                        }    
+
+                .leftBottomBox {
+                    margin-top: 16px;
+                    width: 470px;
+                    border: 1px solid #DBDBDB;
+                    background-color: white;
+                    border-radius: 7.5px;
+                }
+
+                    .bottomTopBox {
+                        width: 470px;
+                        height:58.5px;
+                        border-bottom:0.5px solid #DBDBDB;
+                        border-radius: 7.5px;
+                        display:flex;
+                        align-items: center;
+                        padding-left:7px;
+                        position: relative;
+                    }
+
+                        .feedPofileIcon {
+                            width :33px;
+                            height: 33px;
+                            border-radius: 100%;
+                            border: 1px solid #DBDBDB;
+                            margin: 5px;
+                        }
+
+                            .feedPofileIcon:hover {
+                                cursor: pointer;
+                            }
+
+                        .feedNick {
+                            margin: 5px;
+                            font-size: 12.5px;
+                            font-weight: bold;
+                        }
+
+                            .feedNick:hover {
+                                cursor: pointer;
+                            }
+
+                        .feedMenuIcon {
+                            width: 17px;
+                            position:absolute;
+                            right:0;
+                            margin-right:16px;
+                        }
+
+                            .feedMenuIcon:hover {
+                                cursor: pointer;
+                            }
+
+                    .bottomMiddleBox {
+                        width: 469px;
+                        height: 586.5px;
+                        background-image: url(./images/KakaoTalk_Photo_2022-08-22-22-44-50.jpeg);
+                        background-size: 100%;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                    }
+
+                
+
+                    .bottomBottomBox {
+                        width: 469px;
+                        border: none;
+                        position: relative;
+                    }
+
+                        .feedBtnBox {
+                            width:469px;
+                            height: 46px;
+                            display: flex;
+                            align-items: center;
+                        }
+                        
+                            .feedBtn {
+                                width: 22px;
+                                margin: 9px;
+                            }
+
+                                .feedBtn:hover {
+                                    cursor: pointer;
+                                    opacity: 50%;
+                                }
+
+                            #saveBtn {
+                                position: absolute;
+                                right:0px;
+                            }
+
+                        .likeCountBox {
+                            width: 469px;
+                            height: 20px;
+                            display: flex;
+                            align-items: center;
+                            margin-top: 5px;
+                            margin-left: 10px;
+                            color: #262626;
+                            font-weight:normal;
+                            font-size: 14px;
+                        }
+
+                            .likingIcon {
+                                width:23px;
+                                height:23px;
+                                border-radius: 100%;
+                                border:1px solid #DBDBDB;
+                                margin: 3px;
+                            }
+
+                                .likingIcon:hover {
+                                    cursor: pointer;
+                                    }
+                            
+                            .likeCountBox span{
+                                font-weight:bold;
+                            }
+                        
+                                .likeCountBox:hover {
+                                    cursor: pointer;
+                                }
+
+
+                        .commentBox {
+                            width: 469px;
+                            font-weight:normal;
+                            font-size:14px;
+                            color:#262626;
+                            display: flex;
+                            flex-direction: column;
+                            padding:10px;
+                        }
+                            
+                            .commentInner {
+                                margin-bottom:5px;
+                                display: flex;
+                                align-items: center;
+                            }
+
+                                .commentInner:hover > .commentDelete {
+                                    opacity:100%
+                                }
+
+                            .commentId {
+                                font-weight: bold;
+                            }
+
+                                .commentId:hover {
+                                    cursor: pointer;
+                                }
+
+                            .commentHeart {
+                                position:absolute;
+                                right:11px;
+                                width:11px;
+                            }
+                                
+                                .commentHeart:hover {
+                                    cursor: pointer;
+                                    opacity: 50%;
+                                }
+                            
+                            .commentDelete {
+                                position:absolute;
+                                right:30px;
+                                width:9px;
+                                opacity: 0%;
+                                transition: opacity 0.2s ease-in-out;
+                            }
+
+                                .commentDelete:hover {
+                                    cursor: pointer;
+                                }
+
+                        .hourAgoBox {
+                            width:469px;
+                            height: 18px;
+                            margin-bottom: 5px;
+                            padding-left: 10px;
+                        }
+                            #agoText {
+                                font-size:11px;
+                                color :#8E8E8E;
+                            }
+
+                                #agoText:hover {
+                                    cursor: pointer;
+                                }
+
+                            #translation {
+                                font-size: 12px;
+                                font-weight: bold;
+                                color :#292929;
+                            }
+
+                                #translation {
+                                    cursor: pointer;
+                                }
+
+                        .commentInputBox {
+                            width:469px;
+                            height:49px;
+                            bottom:0px;
+                            border-top:1px solid #DBDBDB;
+                            margin-top:30px;
+                            display: flex;
+                            align-items: center;
+                            padding-left: 10px;
+                        }
+
+                            .emoticon {
+                                width: 22px;
+                                margin-right: 10px;
+                            }
+                                .emoticon:hover{
+                                    cursor: pointer;
+                                    opacity: 50%;
+                                }
+
+                            .commentInput {
+                                width:360px;
+                                border:none;
+                                font-size:14px;
+                                color:#292929;
+                            }
+
+                                .commentInput:focus {
+                                    outline: none;
+                                }
+
+                                .commentInput::placeholder {
+                                    color:#828282
+                                }
+
+                            
+
+                            .commentPost {
+                                font-size:14px;
+                                font-weight:bold;
+                                color:#0095F6;
+                                position:absolute;
+                                right: 30px;
+                                opacity: 50%;
+                            }
+
+                                .commentPost:hover {
+                                    cursor: pointer;
+                                    opacity: 50%;
+                                }
+
+
+/* 오른쪽박스 */
+
+            .innerRightBox {
+                width: 360px;
+                height: 638px;
+                border: none;
+                display: flex;
+                flex-direction: column;
+                align-items:end;
+            }
+
+            @media screen and (max-width: 999px) {
+                .innerRightBox  {
+                    display:none;
+                }
+            }
+                
+                .rightTopBox {
+                    width: 319px;
+                    height:66px;
+                    display: flex;
+                    align-items: center;
+                    border: none;
+                    margin-top:6px;
+                    margin-bottom:10px;
+                }                    
+                        
+                    .bigProfileImg {
+                        width:55px;
+                        height:55px;
+                        border-radius: 100%;
+                        border:1px solid #DBDBDB;
+                        margin-right:17px;
+                    }
+
+                        .bigProfileImg:hover {
+                            cursor: pointer;
+                        }
+
+                    .myNickName {
+                        font-weight:bold;
+                        font-size:13px;
+                    }
+
+                        .myNickName:hover {
+                            cursor: pointer;
+                        }
+
+                    .switchBtn {
+                        font-size:12px;
+                        font-weight:bold;
+                        color:#0095F6;
+                        position:absolute;
+                        right:0;
+                    }
+                        
+                        .switchBtn:hover {
+                            cursor: pointer;
+                        }
+
+                .rightMiddleBox{
+                    width: 319px;
+                    height: 279px;
+                    border: none;
+                    display: flex;
+                    flex-direction: column;
+                }
+                    
+                    .suggestion {
+                        display:flex;
+                        justify-content: space-between;
+                        align-items: center;
+                    }
+                        
+                        #suggestion {
+                            color:#8E8E8E;
+                            font-size:14px;
+                            font-weight:bold;
+                        }
+
+                        #seeAll {
+                            font-size:12px;
+                            font-weight:bold;
+                        }
+
+                            #seeAll:hover {
+                                cursor: pointer;
+                            }
+
+                    .suggestionList {
+                        display: flex;
+                        flex-direction: column;
+                        margin-top: 8px;
+                    }
+
+                        .suggestions {
+                            display: flex;
+                            flex-direction: row;
+                            height: 48px;
+                            align-items: center;
+                        }
+                            .suIconBox{
+                                padding-top:7px;
+                            }
+                            .suIcon {
+                                width:33px;
+                                height: 33px;
+                                border-radius: 100%;
+                                border:1px solid #DBDBDB;
+                                margin:5px;
+                            }
+
+                                .suIcon:hover{
+                                    cursor: pointer;
+                                }
+
+                            .suNickBox {
+                                margin-left:5px;
+                            }
+                                
+                                .suNick {
+                                    margin-bottom: 3px;
+                                    color:#262626;
+                                    font-size: 14px;
+                                    font-weight:bold;
+                                }
+
+                                    .suNick:hover {
+                                        cursor: pointer;
+                                    }
+
+                                .suText {
+                                    font-size:12px;
+                                    color:#8E8E8E
+                                }
+
+                            .followBox {
+                                font-size:12px;
+                                font-weight:bold;
+                                color:#0095F6;
+                                position:absolute;
+                                right:0;
+                            }
+
+                                .followBox:hover {
+                                    cursor: pointer;
+                                }
+
+                .rightBottomBox{
+                    width:319px;
+                    height:112.5px;
+                    border:none;
+                }
+
+                    .links {
+                        font-size: 12.5px;
+                        color: #C7C7C7;
+                        width:319px;
+                        height:40px;
+                        margin-top: 15px;
+                    }
+
+                        .links a:hover {
+                            cursor: pointer;
+                            text-decoration: underline;
+                        }
+
+                    .company {
+                        font-size:12.5px;
+                        color: #C7C7C7;
+                        margin-top:12px;
+                    }
+
+
