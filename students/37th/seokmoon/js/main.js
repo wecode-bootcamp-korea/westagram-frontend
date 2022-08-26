@@ -1,8 +1,36 @@
 const commentInput = document.getElementsByClassName('input-comment')[0];
 const inputButton = document.getElementsByClassName('input-button')[0];
-const heartImage = document.getElementsByClassName('heartImage')[0];
+const heartImage = document.querySelector('.comment-input-box');
+const deleteIcon = document.querySelector('.comment-input-box');
+
+const profileButton = document.querySelectorAll('.profileButton')[0];
+const profilePopup = document.querySelectorAll('.profilePopup');
+let isOpenProfile = false;
+
+document.body.addEventListener('click', (event) => {
+  console.log(document)
+  if(isOpenProfile){
+    profilePopup[0].style.display = 'none';
+    profilePopup[0].style.display = 'none';
+    isOpenProfile = false;    
+  }
+});
+
+profileButton.addEventListener('click', (event) => {
+  event.stopPropagation();
+  if(!isOpenProfile){
+    profilePopup[0].style.display = 'block';
+    profilePopup[0].style.display = 'block';
+    isOpenProfile = true;
+  }else {
+    profilePopup[0].style.display = 'none';
+    profilePopup[0].style.display = 'none';
+    isOpenProfile = false;
+  }
+});
 
 
+  
 
 function submit(){
   const inputBox = document.getElementsByClassName('comment-input-box')[0];
@@ -29,7 +57,6 @@ function submit(){
   userName.innerHTML = "tjrans9248"
   mainText.innerText = commentInput.value;
 
-
   comments.appendChild(contentsBox);
   comments.appendChild(iconBox);
   contentsBox.appendChild(userName);
@@ -38,7 +65,20 @@ function submit(){
   iconBox.appendChild(deleteIcon);
 
   inputBox.appendChild(comments);
+
+  heartIcon.addEventListener('click', (e) => {
+    e.target.classList.toggle('heartImage-toggle');
+  });
+
+
+  deleteIcon.addEventListener('click', () => {
+    while (comments.hasChildNodes()) {
+      comments.removeChild(comments.firstChild);
+    }
+  });
 }
+
+
 
 inputButton.addEventListener("click", (event) => {
 
@@ -52,11 +92,4 @@ commentInput.addEventListener("keypress", (event) => {
     submit()
     commentInput.value = "";
   }
-})
-
-heartImage.addEventListener("click",(event) => {
-  if(event.code === 'click'){
-    heartImage.style.color = "red"
-
-  }
-})
+});

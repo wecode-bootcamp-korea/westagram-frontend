@@ -2,25 +2,79 @@ main{
   background-color: #fafafa;
 }
 
+@media all and (max-width : 1500px) {
+
+}
 
 .nav-bar{
-  /* border: 1px solid grey; */
   display: flex;
-  justify-content: center;  
+  justify-content: space-evenly;  
   align-items: center;
   height: 90px;
 }
 
 .nav-space{
-  position: relative;
-  padding-right: 200px;
+  margin-left: 180px;
 }
+
+.nav-space-right{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.main-image-box-right{
+  width: 30px;
+  height: 30px;
+  border-radius: 70%;
+  overflow: hidden;
+  margin-left: 15px;
+}
+
+li{
+  width: 200px;
+  height: 50px;
+}
+.profile-icon{
+  font-size: 25px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 10px; 
+}
+
+.profilePopup{
+  border: 1px solid #fafafa;
+  position: absolute;
+  z-index: 1;
+  top: 90px;
+  left: 20px;
+  background-color: #fafafa;
+  box-shadow: 1px 1px 10px lightgray;
+  border-radius: 8px;
+}
+
+.log-out-box{
+  display: flex;
+  justify-content: center;
+}
+
+
+.log-out-letter{
+  border-top:1px solid lightgrey;
+  text-align: center;
+  font-size: 16px;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 30px;
+}
+
 .logo-letter{
   font-size: 20px;
   font-family: 'Lobster', cursive;
-  /* padding-right: 10px; */
-  
 }
+
+
 
 .i-logo{
   font-size: 30px;
@@ -184,7 +238,7 @@ input::placeholder{
 }
 
 
-/* main-right */
+/* <------------------------ main-right ------------------------> */
 
 .main-right{
   margin-top: 50px;
@@ -200,7 +254,7 @@ input::placeholder{
 
 .right-recommendation{
   /* border: 1px solid red; */
-  width: 400px;
+  width: 378px;
   height: 60px;
   display: flex;
   justify-content: space-between;
@@ -214,8 +268,16 @@ input::placeholder{
   padding-top: 20px;
 }
 
+.main-image-box-right-bottom{
+  width: 60px;
+  height: 60px;
+  border-radius: 70%;
+  overflow: hidden;
+  margin-left: 15px;
+  margin-top: 3px;
+}
+
 .main-image-box-right{
-  
   width: 50px;
   height: 50px;
   border-radius: 70%;
@@ -232,21 +294,21 @@ input::placeholder{
 
 .right-box-name{
   position: relative;
-  left: 25px;
-  bottom: 35px;
+  left: 35px;
+  bottom: 45px;
 }
 
 .right-box-letter{
   color: rgb(0, 225, 255);
   font-weight: bold;
   position: relative;
-  bottom: 20px;
+  bottom: 30px;
   left: 55px;
 }
 
 .right-id{
   position: relative;
-  right: 45px;
+  right: 30px;
   top: 15px;
 }
 
@@ -255,7 +317,7 @@ input::placeholder{
   font-weight: bold;
   position: relative;
   top: 25px;
-  right: 30px;
+  right: 50px;
 }
 
 .story-box{
@@ -277,15 +339,35 @@ input::placeholder{
 
 .recommendation-bottom-box{
   border: 1px solid lightgrey;
-
 }
+
+.information-list{
+  position: relative;
+  top: 250px;
+}
+
+.information-list a{
+  font-size: 20px;
+  text-decoration: none;
+  color: lightgrey;
+}
+
+.company-info a{
+  position: relative;
+  top: 270px;
+  font-size: 20px;
+  text-decoration: none;
+  color: lightgrey;
+}
+
+
 
 
 
 .userName{
   font-weight: bold;
-  
 }
+
 .mainComments{
   display: flex;
   justify-content: space-between;
@@ -297,15 +379,20 @@ input::placeholder{
 }
 
 .heartImage{
-  color: lightgrey;
+  color: blue;
   font-size: 15px;
   position: relative; 
 }
 
+.heartImage-toggle{
+  color: red;
+}
 .deleteIcon{
   color: lightgrey;
   font-size: 15px;
   padding-left: 10px;
 }
+
+
 
 
