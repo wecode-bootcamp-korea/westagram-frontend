@@ -18,17 +18,69 @@
             <div class="insta-logo"><i class="fa-brands fa-instagram"></i></div>
             <span>Westagram</span>
           </div>
-          <div class="nav-center"><input type="text" placeholder="검색" /></div>
+          <!--검색창검색창검색창검색창검색창검색창-->
+          <div class="nav-center">
+            <input class="search" type="text" placeholder="검색" />
+            <div class="rectangular hide"></div>
+            <!--화살표-->
+            <div class="search-list hide">
+              <ul>
+                <li class="search-item">
+                  <img
+                    src="https://images.unsplash.com/photo-1661367596997-22261c7f922d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1528&q=80"
+                  />
+                  &nbsp<span class="name" style="font-size: 20px"
+                    ><a href="#" class="search-text">Wecode</a></span
+                  >
+                </li>
+                <li class="search-item">
+                  <img
+                    src="https://images.unsplash.com/photo-1661367596997-22261c7f922d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1528&q=80"
+                  />&nbsp<span class="name" style="font-size: 20px"
+                    ><a href="#" class="search-text">Apple</a></span
+                  >
+                </li>
+                <li class="search-item">
+                  <img
+                    src="https://images.unsplash.com/photo-1661367596997-22261c7f922d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1528&q=80"
+                  />&nbsp<span class="name" style="font-size: 20px"
+                    ><a href="#" class="search-text">JaeHyeon_wecode</a></span
+                  >
+                </li>
+                <li class="search-item">
+                  <img
+                    src="https://images.unsplash.com/photo-1661367596997-22261c7f922d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1528&q=80"
+                  />&nbsp<span class="name" style="font-size: 20px"
+                    ><a href="#" class="search-text">withSoju_wecode</a></span
+                  >
+                </li>
+
+                <li class="search-item">
+                  <img
+                    src="https://images.unsplash.com/photo-1661367596997-22261c7f922d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1528&q=80"
+                  />&nbsp<span class="name" style="font-size: 20px"
+                    ><a href="#" class="search-text">withBeer_wecode</a></span
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
           <div class="nav-right">
             <i class="fa-regular fa-compass"></i
             ><i class="fa-regular fa-heart"></i
             ><i class="fa-solid fa-user-large profile-logo"></i>
-            <div class="drop-box">
-              <div>프로필</div>
-              <div>저장됨</div>
-              <div>설정</div>
-              <div>로그아웃</div>
-            </div>
+            <!-- <div class="drop-box">
+              <div class="drop-list"><a href="#">프로필</a></div>
+              <div class="drop-list"><a href="#">저장됨</a></div>
+              <div class="drop-list"><a href="#">설정</a></div>
+              <div class="drop-list"><a href="#">로그아웃</a></div>
+            </div> -->
+            <ul class="drop-box">
+              <li class="drop-list">프로필</li>
+              <li class="drop-list">저장됨</li>
+              <li class="drop-list">설정</li>
+              <li class="drop-list">로그아웃</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -58,7 +110,7 @@
             <div><span class="idText">Ronnie</span> 님 외 1명이 좋아합니다</div>
             <div class="ccc">
               <ul class="comments">
-                <li class="comment">
+                <li class="comment" id="hide">
                   <div class="commentText"><span>코멘트리스트</span></div>
                   <div class="commentHeart">
                     <i class="fa-regular fa-heart"></i

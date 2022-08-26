@@ -4,7 +4,10 @@ body {
   width: 100%;
   background-color: #fafafa;
 }
-
+a {
+  text-decoration: none;
+  color: black;
+}
 .idText {
   font-family: "DynaPuff", cursive;
 }
@@ -12,15 +15,15 @@ body {
 .container {
   /* border: 1px solid black; */
   width: 100%;
-  height: 100%; /**/
+  /* height: 1000px; 25일 수정 원래 100% */
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 .nav {
   /* border: 1px solid red; */
-  min-width: 975px;
-  /* max로 바꿔라 */
+  max-width: 100%;
+  /*25일 수정 max로 바꿔라 */
   height: 70px;
   display: flex;
   justify-content: flex-end;
@@ -32,18 +35,75 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-left: 50px;
 }
 .nav-menu span {
   font-family: "Lobster", cursive;
   font-weight: 900;
   font-size: 30px;
 }
-.nav-center input {
-  width: 190px;
-  border: 1px solid rgb(208, 207, 207);
-  text-align: center;
-  font-size: 15px;
+
+.nav-center {
+  width: 210px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  border: 1px solid rgb(167, 164, 164);
+  box-shadow: 1px 1px gray;
+  align-items: center;
+  border-radius: 5px;
 }
+.nav-center input {
+  width: 200px;
+  height: 20px;
+  border: 1px solid rgb(208, 207, 207);
+  font-size: 15px;
+  border: 0px;
+}
+
+.rectangular {
+  width: 20px;
+  height: 20px;
+  background-color: rgb(232, 219, 219);
+  position: absolute;
+  z-index: 0;
+  top: 60px;
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.search-list {
+  background-color: rgb(255, 255, 255);
+  width: 250px;
+  position: absolute;
+  top: 60px;
+  z-index: 1;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 2px 2px gray;
+  border: 1px solid gray;
+}
+
+.nav-center input:focus {
+  outline: none;
+}
+.search-item {
+  height: 50px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.search-item:hover {
+  background-color: rgb(192, 184, 184);
+  border-radius: 10px;
+}
+.search-item img {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
 /* <=========nav right========>*/
 .nav-right i {
   margin-right: 10px;
@@ -65,6 +125,13 @@ body {
   border: 1px solid rgb(198, 191, 191);
   box-shadow: 2px 2px rgb(201, 193, 193);
 }
+
+.drop-list {
+  padding: 10px;
+}
+.profile-logo:hover {
+  cursor: pointer;
+}
 .show-dropdown {
   display: block;
 }
@@ -78,9 +145,11 @@ body {
 }
 .main {
   /* border: 1px solid blue; */
-  width: 975px;
-  /* max로 바꿔라 */
-  min-height: 90%; /**/
+  max-width: 975px;
+  min-width: 500px;
+  /*25일 수정 ""Height->max, minW 추가했음.*/
+
+  min-height: 600px; /*25일 수정 원래 90%*/
   display: flex;
   justify-content: flex-end;
   background-color: #fafafa;
@@ -221,6 +290,10 @@ article img {
   padding: 10px 10px 0px 10px;
   min-height: 200px;
 }
+.ccc {
+  width: 100%;
+  overflow: hidden;
+}
 .feed-footer div:first-child {
   display: flex;
   justify-content: space-between;
@@ -287,7 +360,7 @@ article img {
 }
 .bot-pic {
   width: 100%;
-  height: 60px;
+  height: 70px;
   background-color: white;
   display: flex;
   align-items: center;
@@ -296,7 +369,7 @@ article img {
 .bot-pic div:first-child {
   background: linear-gradient(70deg, blue, pink);
   width: 60px;
-  height: 100%;
+  height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -307,10 +380,10 @@ article img {
 }
 
 .bot-pic div img {
-  width: 50px;
-  height: 50px;
+  width: 55px;
+  height: 55px;
   border-radius: 50%;
-  border: 3px solid white;
+  border: 2px solid white;
 }
 
 .info {
@@ -325,4 +398,34 @@ article img {
 .comment {
   display: flex;
   justify-content: space-between;
+}
+
+#hide {
+  display: none;
+}
+.hide {
+  display: none;
+}
+li .fa-solid {
+  color: red;
+}
+@media screen and (max-width: 600px) {
+  .nav-center,
+  .main-right {
+    display: none;
+  }
+  .nav {
+    width: 100%;
+  }
+  .nav-menu {
+    width: 100%;
+    margin-left: 0px;
+  }
+  .main .feeds {
+    justify-content: center;
+    width: 90%;
+  }
+  .main {
+    justify-content: center;
+  }
 }
