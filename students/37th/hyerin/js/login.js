@@ -54,6 +54,7 @@ const submitLogin = function (e) {
   if (checkId === true && checkPw === true) {
     $inputId.value = "";
     $inputPw.value = "";
+    location.href = "./main.html";
   }
 };
 
