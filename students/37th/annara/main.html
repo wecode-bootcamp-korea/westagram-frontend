@@ -58,23 +58,22 @@
                     <span class="feed_text">
                         <div class="feed_text01">
                             <span class="user_name">nariiiii</span>
-                            <p>여행 가고 싶다 🥲</p>
+                            <p class="comment_style">여행 가고 싶다 🥲</p>
                         </div>
-                        <button class="more_btn">더보기</button>
+                        <button class="more_btn grey">더보기</button>
                     </span>
-                    <span class="feed_comment">
-                        <div class="feed_comment01">
-                            <p class="user_name">minions</p>
-                            <p class="comment_text">부트캠프 끝나고 가자...</p>
-                        </div>
-                        <button type="button" class="comment_like"><i class="fa-regular fa-heart"></i></button>
-                    </span>
-                    <div class="post_date"></div>
+                    <div id="new_comment_location">
+                        <!-- <li>
+                            <button><i class="fa-regular fa-heart"></i></button>
+                            <button id="delete_btn"><i class="fa-regular fa-trash-can"></i></button>
+                        </li> -->
+                    </div>
+                    <p class="time">42분 전</p>
                 </div>
-                <div class="comment_write">
+                <form id="comment_write">
                     <input type="text" class="comment_input" placeholder="댓글달기...">
-                    <button class="blue" type="button">게시</button>
-                </div>
+                    <input id="comment_btn" type="button" value="게시"></input>
+                </form>
             </article>
         </div>
         <!--사이드바-->
@@ -82,8 +81,8 @@
             <div class="main_rignt_nav">
                 <div>>wecode</div>
                 <div class="user_data">
-                    <span class="user_name">wecode_bootcamp</span>
-                    <p class="user_info">wecode | 위코드</p>
+                    <span id="user_wecode" class="user_name">wecode_37th</span>
+                    <p class="">wecode | 위코드</p>
                 </div>
             </div>
             <div class="main_right_story">
@@ -95,28 +94,28 @@
                     <img src="img/minions.jpg" class="user_img"></img>
                     <div class="user_data">
                         <span class="user_name">minions</span>
-                        <p class="post_time">10분 전</p>
+                        <p class="time">10분 전</p>
                     </div>
                 </div>
                 <div class="story_user">
                     <img src="img/minions.jpg" class="user_img"></img>
                     <div class="user_data">
                         <span class="user_name">minions</span>
-                        <p class="post_time">10분 전</p>
+                        <p class="time">10분 전</p>
                     </div>
                 </div>
                 <div class="story_user">
                     <img src="img/minions.jpg" class="user_img"></img>
                     <div class="user_data">
                         <span class="user_name">minions</span>
-                        <p class="post_time">10분 전</p>
+                        <p class="time">10분 전</p>
                     </div>
                 </div>
                 <div class="story_user">
                     <img src="img/minions.jpg" class="user_img"></img>
                     <div class="user_data">
                         <span class="user_name">minions</span>
-                        <p class="post_time">10분 전</p>
+                        <p class="time">10분 전</p>
                     </div>
                 </div>
             </div>
@@ -158,7 +157,7 @@
             </div>
         </section>
     </section>
-    <script src="main.js"></script>
+    <script src="js/main.js" defer></script>
 </body>
 
 </html>
