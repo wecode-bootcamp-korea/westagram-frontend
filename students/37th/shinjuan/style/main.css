@@ -5,13 +5,15 @@ i {
   cursor: pointer;
 }
 header {
-  background-color: white;
+  position: relative;
+  z-index: 5;
   top: 0;
   left: 0;
   right: 0;
   margin: 10px 0px;
   min-width: 100%;
   min-height: 60px;
+  background-color: white;
 }
 .nav_container {
   display: flex;
@@ -37,15 +39,19 @@ header {
   padding-left: 10px;
   margin-left: 10px;
 }
+.search_input_container {
+  width: 300px;
+}
 .searchInput {
   background-color: #fafafa;
-  color: rgba(0, 0, 0, 0.3);
+  position: relative;
   font-size: 15px;
   text-align: center;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 2px;
-  width: 250px;
+  width: 100%;
   padding: 5px 15px;
+  z-index: 5;
 }
 .search_input_container {
   position: relative;
@@ -73,7 +79,7 @@ header {
   top: 60px;
   display: flex;
   justify-content: center;
-  z-index: 1;
+  z-index: 5;
   width: 200px;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-top: none;
@@ -84,6 +90,7 @@ header {
 .user_menu li {
   display: flex;
   align-items: center;
+  text-align: center;
   width: 200px;
   padding: 12px;
 }
@@ -95,6 +102,36 @@ header {
   margin-right: 10px;
 }
 .visible {
+  visibility: visible;
+}
+
+.search_modal {
+  position: absolute;
+  visibility: hidden;
+  z-index: 4;
+  top: 50px;
+  width: 300px;
+  background-color: white;
+}
+.search_modal_bg {
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  height: 100vh;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.search_modal li {
+  display: flex;
+  padding: 15px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.search_data_id {
+  font-weight: bolder;
+}
+
+.show {
   visibility: visible;
 }
 /* ////////////////////////////////////////////////////////////////// */
@@ -181,12 +218,17 @@ main {
 }
 .article_content {
   display: flex;
+  padding-bottom: 2px;
   position: relative;
-  align-items: center;
+  width: 100%;
 }
 .article_content_p {
   margin-left: 5px;
   display: inline;
+  overflow-wrap: anywhere;
+}
+.article_icon_container {
+  width: 100px;
 }
 .article_content i:nth-child(4) {
   position: absolute;
@@ -367,6 +409,7 @@ footer {
   .right_item2 {
     width: 100%;
     height: auto;
+    overflow: hidden;
   }
   .user_story_container {
     display: flex;
@@ -374,5 +417,6 @@ footer {
   }
   .right_item3 {
     width: 100%;
+    display: none;
   }
 }

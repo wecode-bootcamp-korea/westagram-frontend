@@ -12,46 +12,51 @@
     <title>Document</title>
   </head>
   <body>
+    <div class="search_modal_bg"></div>    
       <header>
-        <div class="nav_container">
-            <div class="logo_container">
-                <i class="fa-brands fa-instagram"></i>
-                <p class="logo_font">westagram</p class="logo_font">
+          <div class="nav_container">
+              <div class="logo_container">
+                  <i class="fa-brands fa-instagram"></i>
+                  <p class="logo_font">westagram</p class="logo_font">
+                  </div>
+                  <div class="search_input_container">
+                      <input type="text" placeholder="검색" class="searchInput"/>
+                      <i class="fa-solid fa-magnifying-glass"></i>
+                      <div class="search_modal">
+                          <ul class="search_list"></ul>
+                        </div>
+                    </div>
+                    <div class="icon_container">
+                        <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png" alt="explore">
+                        <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" alt="heart">
+                        <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png" alt="profile" class="profile_img">
+                    </div>
+                    <div class="user_menu">
+                        <ul>
+                            <li>
+                                <i class="fa-regular fa-circle-user"></i>
+                                <span>프로필</span>
+                            </li>
+                            <li>
+                                <i class="fa-regular fa-bookmark"></i>
+                                <span>저장됨</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-gear"></i>
+                                <span>설정</span>
+                            </li>
+                            <li>
+                                <a href="login.html">
+                                    <span>로그아웃</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </header>
+                
             </div>
-            <div class="search_input_container">
-                <input type="text" placeholder="검색" class="searchInput"/>
-                <i class="fa-solid fa-magnifying-glass"></i>
-            </div>
-            <div class="icon_container">
-                <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png" alt="explore">
-                <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" alt="heart">
-                <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png" alt="profile" class="profile_img">
-            </div>
-            <div class="user_menu">
-                <ul>
-                    <li>
-                        <i class="fa-regular fa-circle-user"></i>
-                        <span>프로필</span>
-                    </li>
-                    <li>
-                        <i class="fa-regular fa-bookmark"></i>
-                        <span>저장됨</span>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-gear"></i>
-                        <span>설정</span>
-                    </li>
-                    <li>
-                        <a href="login.html">
-                            <span>로그아웃</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-      </header>
-<!-- //////////////////////////////////////////////////////////////////// -->
-      <main>
+            <!-- //////////////////////////////////////////////////////////////////// -->
+            <main>
         <div class="feeds">
           <div class="article">
             <div class="article_header">
@@ -80,7 +85,6 @@
                     <i class="fa-solid fa-delete-left delete_button"></i>
                     <i class="fa-regular fa-heart reple_heart"></i>
                 </li>
-
             </ul>
             <div class="article_time">
                 <p>42분전</p>
@@ -209,6 +213,7 @@
       <p class="gray">Instagram 정보. 지원. 홍보센터. API. 채용 정보. 개인정보처리방침. 약관. 디렉터리. 프로필. 해시태그. 언어</p>
       <p class="gray">© 2019 INSTAGRAM</p>
   </footer>
+  
       <script src="main.js"></script>
       <script src="https://kit.fontawesome.com/a7d60b6ef8.js" crossorigin="anonymous"></script>
   </body>
