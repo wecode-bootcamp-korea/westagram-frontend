@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
+    <div class="profile-menu-wrap"></div>
     <!-- <div class="container"> -->
     <nav>
       <div class="nav-logo">
@@ -20,7 +21,7 @@
         <span>|</span> <span id="logo">Westagram</span>
       </div>
       <div class="nav-input">
-        <input placeholder="검색" />
+        <input class="nav-input-id" placeholder="검색" />
         <img src="https://cdn-icons-png.flaticon.com/512/622/622669.png" />
       </div>
       <div class="nav-action">
@@ -39,8 +40,9 @@
         <img class="icon" id="nav-profile" src="https://images.unsplash.com/photo-1660144767359-56a53fe44310?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=985&q=80" style="border-radius: 12px;"/>
       </div>
     </nav>
-    
+
     <main>
+  
       <div class="feeds">
         <article>
           <div class="writer-info">
@@ -217,17 +219,20 @@
 
 
       <div class="profile-menu">
-      <div class="profile-menu-item"><i class="fa-regular fa-user"></i> 프로필</div>
-      <div class="profile-menu-item"><i class="fa-regular fa-bookmark"></i> 저장됨</div>
-      <div class="profile-menu-item"><i class="fa-solid fa-gear"></i>설정</div>
-      <div class="profile-menu-item">로그아웃</div>
-      </div>
-
+        <div class="profile-menu-item"><i class="fa-regular fa-user"></i> 프로필</div>
+        <div class="profile-menu-item"><i class="fa-regular fa-bookmark"></i> 저장됨</div>
+        <div class="profile-menu-item"><i class="fa-solid fa-gear"></i>설정</div>
+        <div class="profile-menu-item">로그아웃</div>
+     </div>
+ 
 
     <script src="comment.js"></script>
     <script src="profile.js"></script>
     <script src="heart.js"></script>
+    <script src="search.js"></script>
     <script src="https://kit.fontawesome.com/ed0677e737.js" crossorigin="anonymous"></script>
+
+
   </body>
 
 

@@ -18,11 +18,11 @@ const uploadComment = (e) => {
   const newCommentHeart = document.createElement("i");
   const newCommentX = document.createElement("i");
 
-  newCommenterId.className = "commenter-id";
-  newCommenterSaying.className = "commenter-saying";
-
   newCommenterId.innerHTML = "jiwon.kim";
   newCommenterSaying.innerHTML = commentContent.value;
+
+  newCommenterId.className = "commenter-id";
+  newCommenterSaying.className = "commenter-saying";
 
   newCommentHeart.className = "fa-regular fa-heart";
   newCommentX.className = "del";
@@ -42,7 +42,10 @@ const uploadComment = (e) => {
   commentContent.value = "";
 
   const handleXClick = () => {
-    newCommentBox.remove(this.parentNode);
+    const answer = confirm("댓글 삭제하시겠습니까?");
+    if (answer == true) {
+      newCommentBox.remove(this.parentNode);
+    }
   };
 
   newCommentX.addEventListener("click", handleXClick);

@@ -1,28 +1,19 @@
 const body = document.getElementsByTagName("body")[0];
 
-const profile = document.getElementById("nav-profile");
 const profileMenu = document.getElementsByClassName("profile-menu")[0];
+const menuWrap = document.getElementsByClassName("profile-menu-wrap")[0];
 
-// const profileMenu.style = profileMenu.style;
+const profileBtn = document.getElementById("nav-profile");
 
 const handleProfileClick = () => {
-  console.log("hello");
-  console.log(profileMenu.style);
-  const css = getComputedStyle(profileMenu);
-  const display = css.getPropertyValue("display");
-
-  if (css.display === "none") {
-    profileMenu.style.display = "block";
-  } else {
-    profileMenu.style.display = "none";
-  }
+  profileMenu.classList = "profile-menu visible";
+  console.log("프로필 클릭", profileMenu);
 };
 
-// const handleBodyClick = () => {
-//   profileMenu.style.display = "none";
-// };
+const handleBodyClick = () => {
+  profileMenu.className = "hidden";
+  console.log("바디 클릭", profileMenu);
+};
 
-profile.addEventListener("click", handleProfileClick);
-// body.addEventListener("click", handleBodyClick);
-
-//토글 방식 사용
+profileBtn.addEventListener("click", handleProfileClick);
+menuWrap.addEventListener("click", handleBodyClick);
