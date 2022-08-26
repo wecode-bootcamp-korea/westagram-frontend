@@ -72,12 +72,25 @@ h1 {
 .img-profile-56px {
   width: 56px;
   border-radius: 100%;
-  border: 1px solid #e1e1e1;
   margin: 0 20px 5px 0;
 }
 .name-story {
   font-size: 12px;
   padding: 0 0 0 4px;
+}
+.img-story {
+  border: 3px solid transparent;
+  background-image: linear-gradient(#fff, #fff),
+    linear-gradient(
+      to right,
+      rgb(186, 22, 201) 0%,
+      rgb(255, 47, 0) 25%,
+      rgb(255, 68, 0) 50%,
+      rgb(252, 180, 47) 90%,
+      rgb(234, 223, 107) 100%
+    );
+  background-origin: border-box;
+  background-clip: content-box, border-box;
 }
 
 /* feed */
