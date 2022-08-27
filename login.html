@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Westagram</title>
+    <link href="/font/Lobster-Regular.ttf">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/css/common.css">
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+    <main class="containerWrapper">
+        <div class="loginBox">
+            <div class="titleWrap">
+                <h1 class="">Westagram</h1>
+            </div>
+            <form class="loginWrap">
+                <input type="text" placeholder="전화번호, 사용자 이름 또는 이메일" class="idInput">
+                <input type="password" placeholder="비밀번호" class="pwInput">
+                <button type="button" onclick="location.href='/main.html'" disabled id="loginBtn">로그인</button>
+            </form>
+            <div class="textWrap">
+                <a href="#">비밀번호를 잊으셨나요 <i class="fa-solid fa-question"></i></a>
+            </div>
+        </div>
+    </main>
+    <script src="/js/login.js"></script>
+</body>
+</html>
