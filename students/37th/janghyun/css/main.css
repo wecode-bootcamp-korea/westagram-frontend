@@ -7,7 +7,7 @@
 /* .containerWrapper header nav .logo h1::before { padding-left: 35px; content: ''; border-left: 2px solid #333; } */
 .containerWrapper header nav .searchBox { width: 288px; height: 36px; margin: 0 auto; padding: 10px 0; color: #dadada; text-align: center; background: #fff; border: 1px solid #aaa; border-radius: 3px; }
 .containerWrapper header nav .searchBox::placeholder { width: 288px; height: 36px; margin: 0 auto; background: #fff; border: 1px solid #333; }
-.containerWrapper header nav .navIconBox { }
+/* .containerWrapper header nav .navIconBox { } */
 .containerWrapper header nav .navIconBox i { padding: 5px 10px 0; font-size: 26px; }
 
 
@@ -31,30 +31,33 @@
 .containerWrapper .main .feeds .likeSection { background: #fff; display: flex; flex-direction: row; justify-content:space-between; }
 .containerWrapper .main .feeds .likeSection .iconBoxWrap { padding: 10px 10px; background: transparent; }
 .containerWrapper .main .feeds .likeSection .iconBoxWrap i { font-size: 31px; padding: 0 8px; }
-.containerWrapper .main .feeds .likeSection .iconBoxWrap1 {  }
+/* .containerWrapper .main .feeds .likeSection .iconBoxWrap1 {  } */
 .containerWrapper .main .feeds .likeSection .iconBoxWrap1 .iconBox { height: 100%; }
 .containerWrapper .main .feeds .likeSection .iconBoxWrap1 .iconBox i:nth-child(1) { color: rgb(215, 85, 89); }
 
-.containerWrapper .main .feeds .likeSection .iconBoxWrap2 .iconBox {  }
+/* .containerWrapper .main .feeds .likeSection .iconBoxWrap2 .iconBox {  } */
 
 .containerWrapper .main .feeds .feedId { width: 100%; padding: 5px 10px; display: flex; flex-direction: row; align-items: center; justify-content: flex-start; background: #fff; }
 .containerWrapper .main .feeds .feedId img { width: 40px; height: 40px; margin-right: 10px; border: 2px solid red; border-radius: 50%; }
 
-.containerWrapper .main .feeds .feedBox { width: 100%; padding: 5px 10px; background: #fff; display: flex; justify-content: space-between; }
-.containerWrapper .main .feeds .feedBox .feedWrap1 span { padding: 0 2px; }
-.containerWrapper .main .feeds .feedBox .feedWrap1 #feedMore { text-indent: 10px 1px 0px 300px; color: #bbb; }
-.containerWrapper .main .feeds .feedBox .feedWrap2 span { margin: 0 3px; }
-.containerWrapper .main .feeds .feedBox .feedWrap2 .heartIcon i { color: black; }
-.containerWrapper .main .feeds .feedBox .feedWrap2 span.heartIconFull { display: none; }
-.containerWrapper .main .feeds .feedBox .feedWrap2 span.heartIconFull i { color: red; }
+.containerWrapper .main .feeds .feedBox { width: 100%; padding: 5px 10px; background: #fff; /* display: flex; justify-content: space-between; */ }
+.containerWrapper .main .feeds .feedBox li { width: 100%; margin: 10px 0; display: flex; }
+.containerWrapper .main .feeds .feedBox .feedWrap { width: 94%; display: flex; }
+.containerWrapper .main .feeds .feedBox .feedWrap span { padding: 0 2px; }
+.containerWrapper .main .feeds .feedBox .feedWrap span#feed { max-width: 650px; text-overflow: ellipsis; overflow: hidden; }
+.containerWrapper .main .feeds .feedBox .feedWrap span#feedMore { text-indent: 10px 1px 0px 300px; color: #bbb; }
+.containerWrapper .main .feeds .feedBox .feedIconWrap span { margin: 0 3px; }
+.containerWrapper .main .feeds .feedBox .feedIconWrap .heartIcon i { color: black; }
+.containerWrapper .main .feeds .feedBox .feedIconWrap span.heartIconFull { display: none; }
+.containerWrapper .main .feeds .feedBox .feedIconWrap span.heartIconFull i { color: red; }
 
 .containerWrapper .main .feeds .feedTimeBox { width: 100%; padding: 5px 10px; background: #fff; }
 .containerWrapper .main .feeds .feedTimeBox span { color: #bbb; }
 
-.containerWrapper .main .feeds .feedInputBox { width: 100%; padding: 20px 0 0; background: #fff; position: relative; }
+.containerWrapper .main .feeds .feedInputBox { width: 100%; margin: 20px 0 0; background: #fff; position: relative; border-top: 1px solid #ddd; }
 /* .containerWrapper .main .feeds .feedInputBox::after { content: ''; display: block; clear: both; } */
-.containerWrapper .main .feeds .feedInputBox input { width: 98%; margin: 0; padding: 10px 1%; line-height: 1.5; border-top: 1px solid #ddd; }
-.containerWrapper .main .feeds .feedInputBox button { padding: 8px 10px; color:cornflowerblue; position: absolute; top: 25px; right: 10px; }
+.containerWrapper .main .feeds .feedInputBox input { width: 92%; margin: 0; padding: 10px 1%; line-height: 1.5;  }
+.containerWrapper .main .feeds .feedInputBox button { padding: 8px 10px; color:cornflowerblue; position: absolute; top: 4px; right: 5px; }
 
 
 .containerWrapper .main .main-right { width: 27%; height: 100%; background: rgb(204, 9, 133);  }
@@ -62,7 +65,7 @@
 .containerWrapper .main .main-right .userInfo { width: 100%; padding: 10px 0; display: flex; flex-direction: row; justify-content: left; }
 .containerWrapper .main .main-right .userInfo img { width: 60px; height: 60px; margin: 0px 20px; border: 2px solid transparent; border-radius: 50%; }
 .containerWrapper .main .main-right .userInfo .userInfoText { width: 50%; padding: 0 30px 0 0; display: flex; flex-direction: column; justify-content: center; }
-.containerWrapper .main .main-right .userInfo .userInfoText span {  }
+/* .containerWrapper .main .main-right .userInfo .userInfoText span {  } */
 
 .containerWrapper .main .main-right .story { width: 100%; height: 250px; margin: 0 0 30px; padding: 20px 20px 0; border: 1px solid #ddd; border-radius: 7px; background: #fff; display: flex; flex-direction: column; align-items: center; }
 .containerWrapper .main .main-right .story .title { width: 100%; padding-bottom: 10px; display: flex; flex-direction: row; justify-content: space-between; }

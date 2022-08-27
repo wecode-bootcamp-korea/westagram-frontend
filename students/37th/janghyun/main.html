@@ -14,7 +14,7 @@
 <body>
     <div class="containerWrapper">
         <header>
-            <nav>
+            <nav class="navigation">
                 <div class="logo">
                     <i class="fa-brands fa-instagram"></i> 
                     <h1>Westagram</h1>
@@ -30,7 +30,7 @@
             </nav>
         </header>
 
-        <div class="main">
+        <main class="main">
             <div class="mainWrap">
                 <div class="feeds">
                     <article>
@@ -78,18 +78,20 @@
                         </div>
                         
                         <div class="feedboxWrap">
-                            <div class="feedBox">
-                                <div class="feedWrap1">
-                                    <span id="feedId">canon_mj</span>
-                                    <span id="feed">가방 예뻐요~</span>
-                                    <span id="feedMore">더 보기</span>
-                                </div>
-                                <div class="feedWrap2">
-                                    <span class="trashIcon"><i class="fa-regular fa-trash-can"></i></span>
-                                    <span class="heartIcon"><i class="fa-regular fa-heart"></i></span>
-                                    <span class="heartIconFull"><i class="fa-solid fa-heart"></i></span>
-                                </div>
-                            </div>
+                            <ul class="feedBox">
+                                <!-- <li>    
+                                    <div class="feedWrap">
+                                        <span id="feedId">canon_mj</span>
+                                        <span id="feed">가방 예뻐요~</span>
+                                        <span id="feedMore">더 보기</span>
+                                    </div>
+                                    <div class="feedIconWrap">
+                                        <span class="trashIcon"><i class="fa-regular fa-trash-can"></i></span>
+                                        <span class="heartIcon"><i class="fa-regular fa-heart"></i></span>
+                                        <span class="heartIconFull"><i class="fa-solid fa-heart"></i></span>
+                                    </div>
+                                </li> -->
+                            </ul>
                         </div>
 
                         <div class="feedTimeBox">
@@ -219,7 +221,7 @@
                 </div>
 
             </div>
-        </div>
+        </main>
     </div>
     <script src="/js/main.js"></script>
 </body>

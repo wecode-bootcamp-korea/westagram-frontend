@@ -1,85 +1,59 @@
-const thisIsInput = document.getElementById('feedInput');
-const thisIsSubmitButton = document.getElementById('submitButton');
-const thisIsFeedBoxWrap = document.getElementsByClassName('feedboxWrap')[0];
-const thisIsFeedBox = document.getElementsByClassName('feedBox')[0];
-const thisIsInputForm = document.getElementsByClassName('feedInputBox')[0];
-// const thisIsHeartIcon = document.querySelectorAll('.heartIcon')[0];
-const thisIsHeartIcon = document.getElementsByClassName('heartIcon')[0];
-const thisIsHeartIconFull = document.querySelector('.heartIconFull');
-// const thisIsFeedBox1 = document.querySelector('.feedBox');
-// const thisIsFeedDelete = document.querySelectorAll('.trashIcon')[0].hasChildNodes();
+const isInput = document.getElementById('feedInput');
+const isSubmitButton = document.getElementById('submitButton');
+const isFeedBoxWrap = document.getElementsByClassName('feedboxWrap')[0];
+const isFeedIconWrap = document.getElementsByClassName('feedIconWrap')[0];
+const isInputForm = document.getElementsByClassName('feedInputBox')[0];
+const isHeartIcon = document.getElementsByClassName('heartIcon')[0];
+const isHeartIconFull = document.querySelector('.heartIconFull');
 
+function deleteComment(e) {
 
-//console.log(thisIsInputBox);
+    const li = e.target;
+    
+    e.target.closest("li").remove();
 
+}
 
-// function submitText(e) { // 기존 코드
-
-// e.preventDefault();
-
-//   const thisIsComment = thisIsInput.value;
-//   const newSpan = document.createElement("span");
-//   const newDiv = document.createElement("div");
-//   const newComment = document.createTextNode(thisIsComment);
-
-//     //console.log(`${e.code}`);
-
-//   if(thisIsComment || e.keyCode === 13) {
-//   newSpan.appendChild(newComment);
-//   const currentDiv = document.getElementById("div");
-//   newDiv.classList.add('feedBox');
-//   const currentSpan = document.getElementById("span");
-
-//   thisIsFeedboxWrap.insertBefore(newDiv, currentDiv).insertBefore(newSpan, currentSpan);
-//   thisIsInput.value = null;
-
-//   }
-// };
-
-function submitText(e) { // 새코드
+function registerComment(e) {
 
     e.preventDefault();
     
-    const thisIsComment = thisIsInput.value;
-    const thisIsNewFeedBox = document.createElement('div');
+    const isComment = isInput.value;
+    const isNewFeedBox = document.createElement('li');
     const content = `
-        <div class="feedWrap1">
-        <span id="feedId">canon_mj</span>
-        <span id="feed">${thisIsComment}</span>
-        <span id="feedMore">더 보기</span>
-        </div>
-        <div class="feedWrap2">
-        <span><i class="fa-regular fa-trash-can"></i></span>
-        <span><i class="fa-regular fa-heart"></i></span>
-        </div>
+        
+            <div class="feedWrap">
+                <span id="feedId">canon_mj</span>
+                <span id="feed">${isComment}</span>
+                <span id="feedMore">더 보기</span>
+            </div>
+            <div class="feedIconWrap">
+                <span class="trashIcon"><i class="fa-regular fa-trash-can"></i></span>
+                <span class="heartIcon"><i class="fa-regular fa-heart"></i></span>
+                <span class="heartIconFull"><i class="fa-solid fa-heart"></i></span>
+            </div>
+        
     `;
 
-    // console.log(thisIsComment, content);
+    if(isComment.length > 0) { // 입력 값이 있을때 동작 08. 27 추가
 
-    thisIsNewFeedBox.classList.add('feedBox');
-    thisIsNewFeedBox.innerHTML = content;
-    thisIsFeedBoxWrap.appendChild(thisIsNewFeedBox);
-    };
+        const isFeedBox = document.querySelector('.feedBox');
 
-function changeColor(e) {
-    
-    console.log(e.target);
-    // console.log(thisIsHeartIcon);
-    console.log(e.target.style.color);
-    let heart = e.target.style.color;
-    let tagName = e.target.classList[1];
-    console.log(heart, tagName, 1);
+        isFeedBox.appendChild(isNewFeedBox);
+        isNewFeedBox.innerHTML = content;
 
-    
-    if(tagName == 'fa-heart' && heart == 'black') {
-        e.target.style.color = 'red';
-    } else {
-        e.target.style.color = 'black';
+        const isFeedDelete = document.querySelectorAll('.trashIcon'); // querySelector 는 첫번째 요소만 반환함 절대 다음 요소 선택 불가 ㅠㅠ
+        
+        for (const button of isFeedDelete) { // ** 중요 ** querySelectorAll은 NodeList객체를 for문으로 각각 요소에 이벤트 리스너를 추가
+            button.addEventListener('click', deleteComment);
+        }
+
+        isInput.value = '';
     }
-    
 };
 
-// thisIsSubmitButton.addEventListener('click', submitText);
-// thisIsInput.addEventListener('keypress', submitText);
-thisIsInputForm.addEventListener('submit', submitText);
-thisIsFeedBoxWrap.addEventListener('click', changeColor);
+
+
+
+isInputForm.addEventListener('submit', registerComment);
+// isFeedIconWrap.addEventListener('click', changeColor);
