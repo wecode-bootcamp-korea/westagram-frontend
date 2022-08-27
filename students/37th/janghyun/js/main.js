@@ -4,13 +4,28 @@ const isFeedBoxWrap = document.getElementsByClassName('feedboxWrap')[0];
 const isFeedIconWrap = document.getElementsByClassName('feedIconWrap')[0];
 const isInputForm = document.getElementsByClassName('feedInputBox')[0];
 const isHeartIcon = document.getElementsByClassName('heartIcon')[0];
-const isHeartIconFull = document.querySelector('.heartIconFull');
 
-function deleteComment(e) {
+function colorChange(e) { // 입력 값이 있을때 동작 08. 27 수정
+
+    //console.log(e.target.style);
+    let iconName = e.target.className;
+    //console.log(iconName);
+    //e.target.style.display = 'none';
+    if(iconName === 'fa-regular fa-heart') {
+        e.target.className = 'fa-solid fa-heart';
+        e.target.style.color = 'red';
+    } else if(iconName === 'fa-solid fa-heart') {
+        e.target.className = 'fa-regular fa-heart';
+        e.target.style.color = 'black';
+    }
+
+}
+
+function deleteComment(e) { // 입력 값이 있을때 동작 08. 27 수정
 
     const li = e.target;
     
-    e.target.closest("li").remove();
+    li.closest("li").remove();
 
 }
 
@@ -30,7 +45,6 @@ function registerComment(e) {
             <div class="feedIconWrap">
                 <span class="trashIcon"><i class="fa-regular fa-trash-can"></i></span>
                 <span class="heartIcon"><i class="fa-regular fa-heart"></i></span>
-                <span class="heartIconFull"><i class="fa-solid fa-heart"></i></span>
             </div>
         
     `;
@@ -43,17 +57,19 @@ function registerComment(e) {
         isNewFeedBox.innerHTML = content;
 
         const isFeedDelete = document.querySelectorAll('.trashIcon'); // querySelector 는 첫번째 요소만 반환함 절대 다음 요소 선택 불가 ㅠㅠ
+        const isFeedLikeColorChange = document.querySelectorAll('.heartIcon');
+        const isFeedLikeColorChangeFull = document.querySelectorAll('.heartIconFull');
         
         for (const button of isFeedDelete) { // ** 중요 ** querySelectorAll은 NodeList객체를 for문으로 각각 요소에 이벤트 리스너를 추가
             button.addEventListener('click', deleteComment);
-        }
+        };
+
+        for (const button of isFeedLikeColorChange) { 
+            button.addEventListener('click', colorChange);
+        };
 
         isInput.value = '';
     }
 };
 
-
-
-
 isInputForm.addEventListener('submit', registerComment);
-// isFeedIconWrap.addEventListener('click', changeColor);
