@@ -1,32 +1,41 @@
 "use strict";
 
-const inputReple = document.querySelector(".reple_input");
+const repleInput = document.querySelector(".reple_input");
 const repleBtn = document.querySelector(".reple_btn");
 
-const repleSubmit = () => {
-  const repleContainer = document.querySelector(".article_reple_other");
-  const newRepleLi = document.createElement("li");
-  newRepleLi.className = "article_content";
-
-  const localUserId = localStorage.getItem("id");
-  const name = localUserId.split("@")[0];
-  const repleHtml = `
-      <p class="article_profile_id">${name}</p>
-      <p class="article_content_p">${inputReple.value}</p>
-      <i class="fa-solid fa-delete-left delete_button"></i>
-      <i class="fa-regular fa-heart reple_heart"></i>
-  `;
-
-  repleContainer.prepend(newRepleLi);
-  newRepleLi.innerHTML = repleHtml;
-  inputReple.value = "";
-};
-
-inputReple.addEventListener("keydown", (e) => {
+const createReple = (e) => {
+  const repleContainer = document.querySelector(".reple_container");
   if (e.code === "Enter") {
-    repleSubmit;
+    const $newRepleLi = document.createElement("li");
+    $newRepleLi.className = "article_content";
+
+    const localUserId = localStorage.getItem("id");
+    const name = localUserId.split("@")[0];
+
+    const repleHtml = `
+      <div>
+        <p class="article_profile_id">${name}</p>
+        <p class="article_content_p">${repleInput.value}</p>
+      </div>
+      <div>
+        <button class="delete_btn"onclick="deleteReple(event)">
+        x
+        </button>
+        <button>
+          <i class="fa-regular fa-heart reple_heart"></i>
+        </button>
+      </div>`;
+
+    repleContainer.appendChild($newRepleLi);
+    $newRepleLi.innerHTML = repleHtml;
+    repleInput.value = "";
   }
-});
+};
+////////////////////////////////////////////////////////////////////////////////////
+const deleteReple = (event) => {
+  console.log(event.target);
+  event.target.parentNode.parentNode.remove();
+};
 //////////////////////////////////////////////////////////////
 
 const likeHeart = document.querySelector(".fa-heart");
@@ -59,12 +68,6 @@ repleHeart.addEventListener("click", () => {
     repleHeart.className = "fa-regular fa-heart";
   }
 });
-
-const deleteBtn = document.querySelector(".delete_button");
-
-const deleteReple = (e) => {
-  e.target.parentNode.parentNode.remove();
-};
 
 // deleteBtn.addEventListener("click", (e) => {
 //   e.target.parentNode.remove();
@@ -150,8 +153,8 @@ function makeUserList() {
 }
 const init = () => {
   likeHeart.addEventListener("click", getCountLike);
-  repleBtn.addEventListener("click", repleSubmit);
   searchInput.addEventListener("keyup", makeUserList);
+  repleInput.addEventListener("keyup", createReple);
 };
 
 init();

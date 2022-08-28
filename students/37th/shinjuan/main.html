@@ -75,15 +75,25 @@
             <div class="article_like">
                 <span class="profile_img_circle reple_profile"></span> <span class="article_profile_id">h.j.jang</span>님외 &nbsp;<span class="like_count">7</span>명이 좋아합니다.</div>
             <div class="article_content">
-                <p class="article_profile_id">shinju4n</p>
-                <p class="article_content_p">2022.07.30 즐거웠던빠지여행</p>
+                <div>
+                    <p class="article_profile_id">shinju4n</p>
+                    <p class="article_content_p">2022.07.30 즐거웠던빠지여행</p>
+                </div>
             </div>
-            <ul class="article_reple_other">
+            <ul class="reple_container">
                 <li class="article_content">
-                    <p class="article_profile_id">neceosecius</p>
-                    <p class="article_content_p">거봐 좋았잖아~~~🙆🏻‍♀️</p>
-                    <i class="fa-solid fa-delete-left delete_button"></i>
-                    <i class="fa-regular fa-heart reple_heart"></i>
+                    <div>
+                        <p class="article_profile_id">neceosecius</p>
+                        <p class="article_content_p">거봐 좋았잖아~~~🙆🏻‍♀️</p>
+                    </div>
+                    <div>
+                        <button onclick="deleteReple(event)" class="delete_btn">
+                            x
+                        </button>
+                        <button>
+                            <i class="fa-regular fa-heart reple_heart"></i>
+                        </button>
+                    </div>
                 </li>
             </ul>
             <div class="article_time">
@@ -117,6 +127,13 @@
                     <p class="right_item_all">모두보기</p>
                 </div>
                 <div class="user_story_container">
+                <div class="user_container">
+                    <div class="profile_img_circle article_profile onStory"></div>
+                    <div class="user_tag">
+                        <p class="article_profile_id">_yum_s</p>
+                        <p class="article_profile_content">16분 전</p>
+                    </div>
+                </div>
                 <div class="user_container">
                     <div class="profile_img_circle article_profile onStory"></div>
                     <div class="user_tag">
