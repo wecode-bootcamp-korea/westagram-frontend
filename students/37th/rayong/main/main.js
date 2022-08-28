@@ -1,6 +1,6 @@
-const commentsForm = document.querySelector("#feedsForm");
-const commentsInput = document.querySelector("#feedsInput");
-const commentsListBox = document.querySelector("#feedsList");
+const $commentsForm = document.querySelector("#feedsForm");
+const $commentsInput = document.querySelector("#feedsInput");
+const $commentsListBox = document.querySelector("#feedsList");
 
 // 댓글 추가
 
@@ -23,7 +23,7 @@ function paintComments (comments) {
     btnBox.appendChild(commentsDelBtn);
     commentsList.appendChild(commentsText);
     commentsList.appendChild(btnBox);
-    commentsListBox.appendChild(commentsList);
+    $commentsListBox.appendChild(commentsList);
 }
 
 function activateLikeBtn (e) {
@@ -36,11 +36,11 @@ function delComments (e) {
 
 function handleSubmit (e) {
     e.preventDefault();
-    const comments = commentsInput.value;
+    const comments = $commentsInput.value;
     paintComments(comments)
-    commentsInput.value = "";
+    $commentsInput.value = "";
     var test = "리커밋용";
 }
 
 
-commentsForm.addEventListener('submit', handleSubmit);
+$commentsForm.addEventListener('submit', handleSubmit);
