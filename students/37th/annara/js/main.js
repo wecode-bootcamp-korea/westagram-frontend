@@ -36,6 +36,7 @@ function commentHandler(event) {
     deleteBtn.addEventListener("click", deleteHandler);
 
     //하트 채우기
+
     function heartHandler() {
       if (heartBtn.innerHTML === '<i class="fa-regular fa-heart"></i>') {
         heartBtn.innerHTML = '<i class="fa-solid fa-heart"></i>';

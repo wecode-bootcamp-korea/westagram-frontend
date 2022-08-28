@@ -14,22 +14,19 @@
 </head>
 
 <body>
-    <section class="login">
-        <h1 class="title">Westagram</h1>
-        <ul class="login_input">
-            <li>
-                <input class="input_style" id="id" type="password" placeholder="전화번호, 사용자 이름 또는 이메일"></input>
-                <input class="input_style" id="password" type="password" placeholder="비밀번호"></input>
-            </li>
-            <li>
-                <button class="login_btn">로그인</button>
-            </li>
-        </ul>
-        <div class="find_password">
-            <a class="dark_blue" href="#">비밀번호를 잊으셨나요?</a>
-        </div>
+    <section class="login_main">
+        <form class="login_form">
+            <h1 class="title">Westagram</h1>
+            <div class="login_input">
+                    <input class="input_style" id="id" type="password" placeholder="전화번호, 사용자 이름 또는 이메일"></input>
+                    <input class="input_style" id="password" type="password" placeholder="비밀번호"></input>
+                    <input class="login_btn" type="submit" value="로그인"></input>
+            </div>
+            <div class = "find_password">
+                <a href="#">비밀번호를 잊으셨나요?</a>
+            </div>
+        </form>
     </section>
     <script src="js/login.js"></script>
 </body>
-
 </html>
