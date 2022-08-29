@@ -10,7 +10,7 @@ function getValue() {
     const idValue2 = getIdInput.value.indexOf('@');;
     const pwValue = getPasswordInput.value;
 
-    console.log(idValue, pwValue, idValue2);
+    // console.log(idValue, pwValue, idValue2);
     
     if((idValue.indexOf('@') >= 0) && pwValue.length > 5) {
         getLoginButton.removeAttribute('disabled');
