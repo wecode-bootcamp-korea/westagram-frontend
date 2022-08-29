@@ -21,6 +21,7 @@ const drawComment = () => {
 
   fragmentElem.appendChild(commentItem);
 
+  // fragment
   commentContainerElem.appendChild(fragmentElem);
 
   // 삭제 기능
