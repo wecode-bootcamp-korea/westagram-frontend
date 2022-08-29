@@ -1,47 +1,50 @@
-const inputRepleElem = document.querySelector(".reple");
-const buttonRepleElem = document.querySelector(".repleButton");
-const repleContainerElem = document.querySelector(".repleContainer");
+const inputCommentElem = document.querySelector(".reple");
+const buttonCommentElem = document.querySelector(".repleButton");
+const commentContainerElem = document.querySelector(".repleContainer");
+const fragmentElem = document.createDocumentFragment();
 
-const repleWrapperElem = () => {
-  const repleCommentsList = document.createElement("li");
-  const repleCommentsListContainer = document.createElement("span");
-  const repleCommentsText = document.createElement("p");
-  const repleCommentsFirstIcon = document.createElement("i");
-  const repleCommentsDelete = document.createElement("i");
+const drawComment = () => {
+  const commentItem = document.createElement("li");
+  const commentItemBox = document.createElement("span");
+  const commentItemText = document.createElement("p");
+  const commentLikeIcon = document.createElement("i");
+  const commentDeleteIcon = document.createElement("i");
 
-  repleCommentsFirstIcon.className = "icon-heart";
-  repleCommentsDelete.className = "icon-cancel";
+  commentLikeIcon.className = "icon-heart";
+  commentDeleteIcon.className = "icon-cancel";
 
-  repleContainerElem.appendChild(repleCommentsList);
-  repleCommentsList.appendChild(repleCommentsListContainer);
-  repleCommentsListContainer.appendChild(repleCommentsText);
-  repleCommentsListContainer.appendChild(repleCommentsFirstIcon);
-  repleCommentsListContainer.appendChild(repleCommentsDelete);
+  commentItemBox.appendChild(commentItemText);
+  commentItemBox.appendChild(commentLikeIcon);
+  commentItemBox.appendChild(commentDeleteIcon);
+
+  commentItem.appendChild(commentItemBox);
+
+  fragmentElem.appendChild(commentItem);
+
+  commentContainerElem.appendChild(fragmentElem);
 
   // 삭제 기능
-  repleCommentsDelete.addEventListener("click", () =>
-    repleCommentsList.remove()
-  );
+  commentDeleteIcon.addEventListener("click", () => commentItem.remove());
 
   // 좋아요/싫어요
-  repleCommentsFirstIcon.addEventListener("click", () => {
-    const currentClass = repleCommentsFirstIcon.classList[0];
+  commentLikeIcon.addEventListener("click", () => {
+    const currentClass = commentLikeIcon.classList[0];
 
     if (currentClass === "icon-heart") {
-      repleCommentsFirstIcon.className = "icon-heart-filled";
+      commentLikeIcon.className = "icon-heart-filled";
     } else {
-      repleCommentsFirstIcon.className = "icon-heart";
+      commentLikeIcon.className = "icon-heart";
     }
   });
 
-  repleCommentsText.innerText = inputRepleElem.value;
-  inputRepleElem.value = "";
+  commentItemText.innerText = inputCommentElem.value;
+  inputCommentElem.value = "";
 };
 
-inputRepleElem.addEventListener("keyup", (e) => {
-  if (e.code === "Enter" && inputRepleElem.value.length > 0) {
-    repleWrapperElem();
-    inputRepleElem.value = "";
+inputCommentElem.addEventListener("keyup", (e) => {
+  if (e.code === "Enter" && inputCommentElem.value.length > 0) {
+    drawComment();
+    inputCommentElem.value = "";
   }
 });
 
@@ -50,10 +53,7 @@ const modal = document.querySelector(".nav_mypage_container");
 const modalImg = document.querySelector(".myPageImg");
 
 modalImg.addEventListener("click", (e) => {
-  // 이벤트 전파와 관련된(이벤트버블링/이벤트켑처링, ... => DOM 관련 책)
   e.stopPropagation();
-  // console.log(modal.classList[0]);
-  // 안주면 언디파인드 주면 클래스가 두개 이상일떄 인덱스처럼 동작
   if (!modal.classList[1]) {
     modal.classList.add("modal_hidden");
   } else {
@@ -65,21 +65,13 @@ modal.addEventListener("click", (e) => {
   e.stopPropagation();
 });
 
-// 모달 외 영역 클릭시
-// 모달 modal_hidden 있으면 아무 동작 x
-// 모달 modal_hidden 없으면 modal_hidden 추가
-
-// 모달 영역 클릭시
-// 모달 외 영역 클릭시 발생하는 이벤트 핸들러가 호출
-// bodyElem = document.querySelector("body");
-
 window.addEventListener("click", () => {
   if (!modal.classList[1]) {
     modal.classList.add("modal_hidden");
   }
 });
 
-// 검색기능
+// 검색기능 배열
 const userArray = [
   {
     img: "https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png",
