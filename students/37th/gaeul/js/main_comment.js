@@ -4,16 +4,8 @@ const commentWrap = document.querySelector('#comments-ul');
 const commentInput = document.querySelector('#comment-input');
 const commentBtn = document.querySelector('#comment-button');
 
-
-
-// innerText , innerHTMl
-
-
 // 댓글 추가
 const addComment = (comment) => {
-
-  // template literal 써보기! innerHTML
-
   const newComment = document.createElement('li');
   newComment.setAttribute('class', 'comment-li');
 
@@ -39,12 +31,12 @@ const addComment = (comment) => {
   
   commentWrap.appendChild(newComment)
 
+  // 삭제 버튼
   deleteBtn.addEventListener('click', () => {
     commentWrap.removeChild(newComment);
   });
 
 
-  
   // 하트 온앤오프
   const whiteHeart = '<i class="fa-regular fa-heart"></i>';
   const redHeart = '<i class="fa-solid fa-heart"></i>';
@@ -61,7 +53,6 @@ const addComment = (comment) => {
 };
 
 
-
 // 게시 버튼 활성화
 instaForm.addEventListener('keyup', (e) => {
   if(e.target.value) {
@@ -70,28 +61,16 @@ instaForm.addEventListener('keyup', (e) => {
 });
 
 instaForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-    
+  e.preventDefault();  
   if(commentInput.value.trim().length !== 0) {
     e.disabled = false;
     addComment(commentInput.value);
   } else {
     e.disabled = true;
   };
-
   commentInput.value = "";
   commentBtn.style.opacity = '0.5';
 });
 
-
-
-/*
-예시!
-function makeDeleteEvent(newCommentList) {
-  const deletBtn
-  deleteBtn.addEventListener('click', deleteComment)
-  deleteComment(deleteBtn, newCommentList)
-}
-*/
 
 

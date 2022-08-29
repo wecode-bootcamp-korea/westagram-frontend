@@ -10,4 +10,4 @@ profileIcon.addEventListener('click', () => {
 modalBg.addEventListener('click', () => {
   modal.classList.toggle('hidden');
   modalBg.style.display = 'none';
-})
+});
