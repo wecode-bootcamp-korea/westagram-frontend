@@ -1,23 +1,40 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
+  // const btnNavigate = useNavigate();
+
   return (
     <main className='login'>
-      <article className='login__container'>
-        <h1 className='login__logo'>Westagram</h1>
-        <form className='login__form'>
+      <article className='container'>
+        <h1 className='logo'>Westagram</h1>
+        <form className='form'>
           <input
-            className='login__id'
+            className='id'
             type='text'
             placeholder='전화번호, 사용자 이름 또는 이메일'
           />
-          <input className='login__pw' type='password' placeholder='비밀번호' />
-          <button type='button' disabled className='login__btn'>
+          <input className='pw' type='password' placeholder='비밀번호' />
+          {/* <button
+            onClick={() => {
+              btnNavigate('/main');
+            }}
+            type='button'
+            disabled
+            className='btn'
+          >
             로그인
-          </button>
+          </button> */}
+
+          <Link to='/Main'>
+            <button type='button' className='btn'>
+              로그인
+            </button>
+          </Link>
         </form>
         <span className='validation'></span>
-        <div className='login__find'>비밀번호를 잊으셨나요?</div>
+        <div className='find'>비밀번호를 잊으셨나요?</div>
       </article>
     </main>
   );
