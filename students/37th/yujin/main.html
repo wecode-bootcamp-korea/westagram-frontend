@@ -1,46 +1,198 @@
 <!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/b0e86275c8.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-    <link rel="icon" href="img/westa-favi.svg"/>
-    <link rel="styleSheet" href="style/main.css">
-    <title>유진'stagrm_main</title>
-</head>
+<html lang="kr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="style/main.css" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/b0e86275c8.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
     <div class="wrapper">
-       <nav class="header">
-           <div class="header-left">
-               <i class="fa-brands fa-instagram"></i>
-               <h2>Westagram</h2>
-           </div>
-           <div class="header-center">
-               <input type="text"/>
-           </div>
-           <ul class="header-right">
-               <li><img src="img/explore.png" alt="explore"/></li>
-               <li><img src="img/heart.png" alt="heart"/></li>
-               <li><img src="img/profile.png" alt="profile"/></li>
-           </ul>
-       </nav>
-       <main>
-            <div class="feeds">
-                <aricle>
-                    <div class="profile">
-                        <img src="" alt="" class="profile-pic">
-                        <h3></h3>
-                        <span></span>
+        <!-- 머릿글 nav -->
+        <header class="header-nav">
+            <div class="header-nav-wrapper">
+                <h1 class="logo">westagram</h1>
+                <form class="search" name="friend-search" action="">
+                    <input type="text" placeholder="&#xf002 검색"/>
+                </form>
+                <ul class="header-icon-lists">
+                    <li>
+                        <a href="#"><i class="fa-solid fa-house icon"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa-regular fa-paper-plane icon"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa-regular fa-square-plus icon"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa-regular fa-compass icon"></i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i class="fa-regular fa-heart icon"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </header>
+    <!-- 본문시작 -->
+        <main>
+    <!-- 본문 피드부분 -->
+            <article class="feeds-container">
+                <div class="feeds-parts">
+    <!-- 피드 아이디명  -->
+                    <header class="feeds-parts-header ">
+                        <img class="profile-img" src="img/profile-02.png" alt="프로필사진">
+                        <div class="profile">
+                            <div class="profile-name">hellobear</div>
+                            <div class="profile-des">BTS<span>I'm fine</span></div>
+                        </div>
+                        <div class="more">
+                            <a href="#"><i class="fa-regular fa-equals icon"></i></a>
+                        </div>
+                    </header>
+    <!-- 피드 사진 들어가는 부분 -->
+                    <div class="feeds-parts-img">
+                        <img src="img/feeds-03.jpg" alt="게시된 사진">
                     </div>
-                </aricle>
-            </div>
-            <div class="main-right">
-                
-            </div>
+    <!-- 피드 좋아요 댓글 등의 아이콘-->
+                    <section class="feeds-parts-icons">
+                        <div class="icons-left">
+                        <a href="#" class="feed-like-btn"><i class="fa-regular fa-heart icon"></i></a></button>
+                        <button name="comment"><i class="fa-regular fa-comment icon"></i></button></li>
+                        <button name="share"><i class="fa-regular fa-paper-plane icon"></i></button></li>
+                        </div>
+                        <div class="icons-right">
+                        <button name="bookmark"><i class="fa-solid fa-check icon"></i>
+                        </button>
+                    </div>
+                    </section>
+    <!-- 댓글창 -->
+                    <section class="feeds-parts-contents">
+    <!-- 받은 좋아요 갯수 -->
+                        <div class="like-counts">좋아요 <span class="likeCount"> 2</span>개</div>
+    <!-- 댓글 목록 -->
+                        <ul class="comments-list">
+                            <li class="comments-parts">
+                                <strong class="comments-part-Id">mom</strong>
+                                <p class="comments-part-content">이제 가을이 오고 있어요</p>
+                                <button><i class="fa-regular fa-heart"></i></button>
+                                <button><i class="fa-solid fa-trash-can"></i></button>
+                            </li>
+                        </ul>
+    <!-- 댓글달기창 -->
+                        <div class="comments-add">
+                            <button><i class="fa-regular fa-face-grin icon"></i></button>
+                            <input type="textarea" class="new-comment"  name="new-comment" placeholder=""/>
+                            <button class="comments-add-btn">게시</button>
+                        </div>
+                    </section>
+            </article>
+    <!-- 본문 친구목록 -->
+            <aside class="aside-container">
+                <header class="aside-header">
+                    <img class="my-profile-img" src="img/profile-01.png" alt="나의 프로필사진"/>
+                    <div class="my-profile">
+                        <div class="my-profile-id">hellobear</div>
+                        <p calss="my-profile-name">이유진</p>
+                    </div>
+                    <div class="checkout">
+                        <a href="#"><p>전환</p></a>
+                    </div>
+                </header>
+                <header class="friend-recommend">
+                    <span>회원님을 위한 추천</span>
+                    <a href="#"><p>모두 보기</p></a>
+                </header>
+                <ul>
+                    <li>
+                        <div class="friends-parts">
+                            <img class="friend-profile-img" src="img/profile-03.png" alt="내프로필사진" class="profile-pic"/>
+                            <div class="friend-profile">
+                                <div class="friend-profile-name">noName</div>
+                                <div class="friend-profile-des">회원님을 위한 추천</div>
+                            </div>
+                            <span>
+                                <a href="#"><p class="follow-btn">팔로우</p></a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="friends-parts">
+                            <img class="friend-profile-img" src="img/profile-04.png" alt="내프로필사진" class="profile-pic"/>
+                            <div class="friend-profile">
+                                <div class="friend-profile-name">noName</div>
+                                <div class="friend-profile-des">회원님을 위한 추천</div>
+                            </div>
+                            <span>
+                                <a href="#"><p class="follow-btn">팔로우</p></a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="friends-parts">
+                            <img class="friend-profile-img" src="img/profile-05.png" alt="내프로필사진" class="profile-pic"/>
+                            <div class="friend-profile">
+                                <div class="friend-profile-name">noName</div>
+                                <div class="friend-profile-des">회원님을 위한 추천</div>
+                            </div>
+                            <span>
+                                <a href="#"><p class="follow-btn">팔로우</p></a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="friends-parts">
+                            <img class="friend-profile-img" src="img/profile-06.png" alt="내프로필사진" class="profile-pic"/>
+                            <div class="friend-profile">
+                                <div class="friend-profile-name">noName</div>
+                                <div class="friend-profile-des">회원님을 위한 추천</div>
+                            </div>
+                            <span>
+                                <a href="#"><p class="follow-btn">팔로우</p></a>
+                            </span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="friends-parts">
+                            <img class="friend-profile-img" src="img/profile-07.png" alt="내프로필사진" class="profile-pic"/>
+                            <div class="friend-profile">
+                                <div class="friend-profile-name">noName</div>
+                                <div class="friend-profile-des">회원님을 위한 추천</div>
+                            </div>
+                            <span>
+                                <a href="#"><p class="follow-btn">팔로우</p></a>
+                            </span>
+                        </div>
+                    </li>
+                    </ul>
+                    <footer class="aside-footer">
+                        <ul>
+                            <li>소개</li>
+                            <li>도움말</li>
+                            <li>홍보 센터</li>
+                            <li>API</li>
+                            <li>채용 정보</li>
+                            <li>개인정보처리방침</li>
+                            <li>약관</li>
+                            <li>위치</li>
+                            <li>언어</li>
+                        </ul>
+                        <span>© 2022 INSTAGRAM FROM META</span>
+                    </footer>
+            </aside>
         </main>
     </div>
-        
-</body>
+    <script src="js/main.js"></script>
+  </body>
+</html>

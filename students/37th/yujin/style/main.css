@@ -1,52 +1,268 @@
 @import "reset.css";
+/* 이미지가 튀어나옴 */
+/* main margin-top nav+a로 지정할 수 는없나? */
+/* 정렬이나 사이즈 같은 선택자들끼리 묶는것이 나을까? */
 
-/* 
-.wrapper {
-    width: 100vm;
-} */
-.header {
-    width: 100%;
-    height: 40px;
-    padding: 0, 20px;
-    display: flex;
-    /* flex-direction: row; */
-    justify-content: space-around;
-    align-items: center; 
-} 
-.header-left {
-    font-family: 'Lobster', cursive;
-    display: flex;
-    /* justify-content: flex-start; */
-    align-items: center;
-
-}
-h2 {
-    display: flex;
-}
-.header-center {
-    justify-content: center;
-    flex: none;
-}
-
-h2::before {
-    content:" ";
-    margin: 0 0.4em;
-    display: block; /* 가상요소는 inline요소이기 때문에 특정 영역을 가지기 위해서는 block */
-    background-color: currentColor;
-    width: 2px; 
-    height: 1em;
-    margin-top: 1px;
+:root {
+  /* 글자 크기 */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 16px; /*본문*/
+  --font-size-lg: 1.125rem; /*작은제목*/
+  --font-size-xl: 1.25rem; /*큰제목*/
+  /* 글자 굵기 */
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-weight-title: 900;
+  /* 색깔 */
+  --color-font-blue: rgb(0, 149, 246);
+  --color-body-grey: rgb(250, 250, 250);
+  --color-search-grey: rgb(239, 239, 239);
+  --color-nav: rgb(255, 255, 255);
+  --color-profile-grey: rgb(180, 180, 180);
+  /* 크기 */
+  --size-icon: 24px;
+  --width-nav: 60px;
+  --width-profile-large: 70px;
+  --width-profile-medium: 50px;
 }
 
-.header-right {
-    margin: 0, 2px;
-    
+body {
+  background-color: var(--color-body-grey);
 }
-nav > ul > li {
-    display : inline-block;
-    margin: 0.8em;
+.logo, /*더보기 아이콘은 왜 적용이 안되는거지?*/
+.icon {
+  font-size: var(--size-icon);
+  padding: 8px;
 }
-img, i {
-    width: 20px; 
-} 
-*/
+.comments-parts > button > i {
+  padding: 8px;
+}
+
+.header-nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: var(--width-nav);
+  border-bottom: 2px solid var(--color-search-grey);
+  background-color: var(--color-nav);
+}
+
+.header-nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  max-width: calc(935px + 40px);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo {
+  display: flex;
+  justify-content: flex-start;
+  font-weight: var(--font-weight-title);
+  font-family: "Lobster", cursive;
+}
+.search > input {
+  font-family: FontAwesome;
+  background-color: var(--color-search-grey);
+  padding: 10px 16px;
+  font-size: var(--font-lg);
+  border-radius: 8px;
+}
+
+.header-icon-lists {
+  display: flex;
+  flex-direction: row;
+}
+.header-icon-lists > li {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 10px; /*클래스로 묶을까?*/
+}
+
+main {
+  display: flex;
+  /* flex-flow: row nowrap; */
+  justify-content: center;
+  margin-top: 86px;
+  max-width: calc(470 + 32px + 319px);
+}
+
+.feeds-container {
+  margin-right: 32px;
+  width: 470px;
+}
+/* 피드 여백 */
+
+.feeds-parts {
+  border: 1px solid var(--color-search-grey);
+  background-color: var(--color-nav);
+  border-radius: 8px;
+}
+
+.feeds-parts-header {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+  /* justify-content: space-between; */
+}
+.profile-img {
+  margin-right: 0.8em;
+  width: var(--width-profile-medium);
+}
+
+.profile {
+  flex: 1 1 auto;
+  line-height: 1.2em;
+}
+.profile-name {
+  font-weight: var(--font-weight-semibold);
+}
+.profile-des {
+  font-size: var(--font-xs);
+}
+.profile-des > span::before {
+  content: " · ";
+  font-size: 15px;
+}
+
+.more > a > i {
+  font-size: 30px;
+}
+
+.feeds-parts-img > img {
+  width: 470px;
+}
+
+.feeds-parts-icons {
+  display: flex;
+  justify-content: space-between;
+}
+.feeds-parts-contents {
+  font-weight: var(--font-weight-bold);
+  padding: 10px;
+}
+.comments-list {
+  border-bottom: 1px solid var(--color-search-grey);
+}
+.comments-parts {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 8px;
+}
+.comments-parts > strong {
+  margin-right: 10px;
+  font-weight: var(--font-weight-semibold);
+}
+
+.comments-parts > p {
+  flex: 1 1 auto;
+  font-weight: var(--font-weight-regular);
+}
+
+.comments-add {
+  display: flex;
+  align-items: center;
+}
+.new-comment {
+  flex: 1 1 auto;
+}
+
+.aside-container {
+  width: 320px;
+}
+.aside-header {
+  display: flex;
+  padding: 10px;
+  align-items: center;
+}
+
+.my-profile-img {
+  width: var(--width-profile-large);
+  margin-right: 1em;
+}
+
+.my-profile {
+  flex: 1 1 auto;
+  line-height: 1.4em;
+}
+
+.my-profile-id {
+  font-size: var(--font-size-lg);
+}
+
+.my-profile-name {
+  font-size: var(--font-size-lg);
+  color: var(--color-profile-grey);
+}
+
+.checkout > a > p {
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-font-blue);
+}
+
+.friend-recommend {
+  margin: 16px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.friend-recommend > span {
+  color: var(--color-profile-grey);
+  font-weight: var(--font-weight-semibold);
+}
+
+.friends-parts {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  margin-top: 10px;
+}
+
+.friend-profile-img {
+  width: var(--width-profile-medium);
+  margin-right: 0.8em;
+}
+.friend-profile {
+  flex: 1 1 auto;
+  line-height: 1.2em;
+}
+.friend-profile-name {
+  font-weight: var(--font-weight-title);
+}
+.friend-profile-des {
+  font-size: var(--font-size-xs);
+  color: var(--color-profile-grey);
+  font-weight: var(--font-weight-semibold);
+}
+.follow-btn {
+  color: var(--color-font-blue);
+}
+.aside-footer {
+  margin-top: 2em;
+  line-height: 1.5em;
+}
+.aside-footer > ul {
+  display: flex;
+  flex-wrap: wrap;
+  color: var(--color-profile-grey);
+}
+.aside-footer > ul > li {
+  margin-right: 0.8em;
+  font-size: var(--font-size-xs);
+}
+.aside-footer > span {
+  display: inline-block;
+  margin-top: 2em;
+  font-size: var(--font-size-xs);
+  color: var(--color-profile-grey);
+}
+/* 애니메이션 효과 */
+a,
+button:hover {
+  cursor: pointer;
+}

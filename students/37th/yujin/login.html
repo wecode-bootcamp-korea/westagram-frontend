@@ -20,9 +20,24 @@
         <div class="logo">Westagram</div>
         <form class="inputContainer">
             <div>
-                <input type="text" maxlength="20" class="login-id" placeholder="전화번호, 사용자 이름 또는 이메일"/>
-                <input type="password" maxlength="11" class="login-pw" placeholder="비밀번호"/>
-                <button class="login-btn">로그인</button>
+                <input 
+                type="text" 
+                class="login-id" 
+                name ="userID" 
+                minlenght="5" 
+                maxlength="20" 
+                placeholder="전화번호, 사용자 이름 또는 이메일"/>
+                <input 
+                type="password" 
+                class="login-pw" 
+                name = "userPW" 
+                maxlength="11"  
+                placeholder="비밀번호"/>
+                <button 
+                type="submit" 
+                class="login-btn" 
+                disabled="disabled"
+                name="login">로그인</button>
             </div>
             <a href="#">
                 <div class="forgotPw" >비밀번호를 잊으셨나요?</div>
