@@ -1,0 +1,83 @@
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.login-background {
+    background-color: #F9F9F9;
+    width: 100vw;
+    height: 100vh;
+}
+
+.login-container {
+    width: 350px;
+    height: 350px;
+    background-color: white;
+    padding: 30px;
+    justify-content: space-between;
+    border: 1.5px solid #EDEDED;
+}
+
+.login-header {
+    padding: 10px 0 10px 0;
+}
+.logo {
+    font-family: 'Lobster', cursive;
+    font-size: 40px;
+}
+
+.login-form input{
+    display:block;
+    margin-top : 5px;
+    width: 250px;
+    height: 35px;
+    border: 1px solid #EDEDED;
+    border-radius: 3px;
+    padding: 5px;
+    padding-left: 10px;
+    background-color: #F9F9F9;
+}
+.login-form input::-webkit-input-placeholder {
+    color: #8E8E8E;
+    font-size: 12px;
+}
+.login-form input::-moz-placeholder {
+    color: #8E8E8E;
+    font-size: 12px;
+}
+.login-form input:-ms-input-placeholder {
+    color: #8E8E8E;
+    font-size: 12px;
+}
+.login-form input::-ms-input-placeholder {
+    color: #8E8E8E;
+    font-size: 12px;
+}
+.login-form input::placeholder {
+    color: #8E8E8E;
+    font-size: 12px;
+}
+
+.login-btn {
+    width: 250px;
+    height: 30px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0E7FF4;
+    color: white;
+    cursor: pointer;
+}
+.disabled-btn {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+
+.login-footer a {
+    font-size: 12px;
+    color: #163562;
+    text-decoration: none;
+}
