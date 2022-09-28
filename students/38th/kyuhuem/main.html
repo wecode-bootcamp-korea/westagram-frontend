@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="style/main.css">
     <script src="https://kit.fontawesome.com/571fa0f069.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="wrapper">    
@@ -23,9 +23,9 @@
                 <input class="search">
             </div>
             <div class="nav-right-icons">
-                <div class="compass">나침반</div>
-                <div class="heart">하트</div>
-                <div class="person">사람</div>
+                <i class="fa-regular fa-compass"></i>
+                <i class="fa-regular fa-heart"></i>
+                <i class="fa-regular fa-user"></i>
             </div>
         </header>
         <div class="main">
@@ -41,30 +41,30 @@
                 <div class="article-iconbar">
                     <div class="iconbar-left">
                         <i class="fa-solid fa-heart"></i>
-                        <i class="fa-light fa-comment"></i>
-                        <i class="fa-thin fa-arrow-up"></i>
+                        <i class="fa-regular fa-comment"></i>
+                        <i class="fa-solid fa-arrow-up-from-bracket"></i>
                     </div>
                     <div class="iconbar-right">
-                        <i class="fa-duotone fa-arrow-up-from-square"></i>
+                        <i class="fa-regular fa-bookmark"></i>
                     </div>
                 </div>
                 <div class="reply">
                     <div class="reply-comments">
-                        <div class="reply-user">댓글아디</div>
-                        <div class="reply-content">댓글내용</div>
+                        <div class="reply-user">OLA&nbsp;</div>
+                        <div class="reply-content" id="reply-content">호우쓋!</div>
                     </div>
                     <div class="reply-input">
-                        <div class="reply-input-input">댓글입력칸</div>
-                        <div class="reply-input-button">댓글게시버튼</div>
+                        <input class="reply-input-input" id="reply-input"></input>
+                        <button class="reply-input-button" id="reply-button" disabled>게시</a></button>
                     </div>
                 </div>
             </div>
             <div class="main-right">
                 <div class="its-me">
-                    <div class="its-me-left">잇츠미프사</div>
+                    <div class="its-me-left"><img src="catisrunning.png"></div>
                     <div class="its-me-right">
-                        <div class="its-me-id">잇츠미아이디</div>
-                        <div class="its-me-desc">잇츠미설명</div>
+                        <div class="its-me-id">catisrunning</div>
+                        <div class="its-me-desc">댐잇소다</div>
                     </div>
                 </div>
                 <div class="story">
@@ -74,7 +74,7 @@
                     </div>
                     <div class="story-contents">
                         <div class="story-user">
-                            <div class="story-user-profile">스토리프사</div>
+                            <div class="story-user-profile"><img src="catisrunning.png"></div>
                             <div class="story-user-id">스토리아이디</div>
                         </div>
                     </div>
@@ -85,7 +85,7 @@
                         <div class="recommend-everything">모두보기</div>
                     </div>
                     <div class="recommend-contents">
-                        <div class="recommend-user-profile">추천프사</div>
+                        <div class="recommend-user-profile"><img src="catisrunning.png"></div>
                         <div class="recommend-user-id">추천아이디</div>
                         <div class="recommend-user-follow">추천팔로우</div>
                     </div>
@@ -94,5 +94,6 @@
             </div>
         </div>
     </div>
+    <script src="js/main.js"></script>
 </body>
 </html>
