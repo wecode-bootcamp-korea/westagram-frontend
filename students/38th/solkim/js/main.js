@@ -7,6 +7,65 @@ const commentForm = document.querySelector(".feeds-comment-form");
 const commentRedHeart = document.getElementsByClassName("comment-red-heart");
 const commentBlankHeart = document.getElementsByClassName("comment-blank-heart");
 const commentDelete = document.getElementsByClassName("delete");
+const searchInput = document.querySelector(".search-input");
+const searchIcon = document.querySelector(".search-icon");
+const searchResults = document.querySelector(".search-results");
+const profileBtn = document.querySelector(".nav-profile-icon");
+const profileBox = document.querySelector(".nav-profile-box");
+const logoutBtn = document.querySelector(".logout");
+
+const idArr1 = [
+    {
+        name : "wecoder_frontend",
+        imgurl : "img/myprofile.jpg",
+        introduce : "frontend developer"
+    },
+    {
+        name : "dog_dogdog",
+        imgurl : "img/profile1.jpg"
+    },
+    {
+        name : "human_human",
+        imgurl : "img/profile2.jpg"
+    },
+    {
+        name : "sunglass_dog",
+        imgurl : "img/profile3.jpg"
+    },
+    {
+        name : "iam_ghost",
+        imgurl : "img/profile4.jpg"
+    },
+    {
+        name : "dogdogdog",
+        imgurl : "img/profile5.jpg"
+    },
+    {
+        name : "hello_human",
+        imgurl : "img/profile6.jpg"
+    },
+    {
+        name : "sunglass_man",
+        imgurl : "img/profile7.jpg"
+    },
+    {
+        name : "red_profile",
+        imgurl : "img/profile8.jpg"
+    },
+    {
+        name : "raincoat",
+        imgurl : "img/profile9.jpg"
+    },
+    {
+        name : "iamnotcat",
+        imgurl : "img/profile10.jpg"
+    },
+    {
+        name : "hi_hello_hi",
+        imgurl : "img/profile11.jpg"
+    },
+]
+
 
 
 function postComment() {
@@ -70,13 +129,15 @@ commentBtn.addEventListener("click", ()=>{
 });
 
 commentForm.addEventListener("keydown", (e)=>{
-    if(e.code == "Enter") {
+    if(e.code === "Enter") {
         e.preventDefault();
-        postComment();
-        refreshCommentHeart();
-        refreshCommentDelete();
+        if(e.isComposing === false){
+            postComment();
+            refreshCommentHeart();
+            refreshCommentDelete();
+        }
     }
-})
+});
 
 
 function heartToggle() {
@@ -86,3 +147,55 @@ function heartToggle() {
 blankHeart.addEventListener("click", ()=>{
     heartToggle();
 });
+
+
+function showSearchResults() {
+    let resultArr = [];
+    resultArr = idArr1.filter((el)=> el.name.includes(searchInput.value));
+    resultArr.forEach((el)=> {
+        let searchResultBox = document.createElement("div");
+        let searchResultImgWrapper = document.createElement("div");
+        let searchResultImg = document.createElement("img");
+        let searchResultText = document.createElement("span");
+        searchResultImgWrapper.classList.add("profile-img-wrapper");
+        searchResultImg.src = el.imgurl;
+        searchResultImgWrapper.appendChild(searchResultImg);
+        searchResultText.innerHTML = el.name;
+        searchResultBox.classList.add("search-result-contents","black-font","bold-font");
+        searchResultBox.appendChild(searchResultImgWrapper)
+        searchResultBox.appendChild(searchResultText);
+        searchResults.appendChild(searchResultBox);
+    })
+}
+
+
+searchInput.addEventListener("keyup", (e) => {
+    if (searchInput.value === ""){
+        searchResults.innerHTML = "";
+    } else {
+        searchResults.innerHTML = "";
+        showSearchResults();
+    }
+});
+
+
+searchInput.addEventListener("focus", ()=>{
+    searchIcon.style.left = "15px";
+    searchInput.placeholder = "";
+    searchResults.classList.remove("transparent");
+});
+
+searchInput.addEventListener("blur", ()=>{
+    searchIcon.style.left = "90px";
+    searchInput.placeholder = "검색";
+    searchResults.classList.add("transparent");
+});
+
+profileBtn.addEventListener("click", ()=>{
+    profileBox.classList.toggle("hide-top");
+});
+
+logoutBtn.addEventListener("click", ()=>{
+    location.href = "login.html";
+});
+
