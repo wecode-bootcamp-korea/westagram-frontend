@@ -53,63 +53,53 @@ profile.addEventListener("click", () => {
 });
 
 // 검색
-let searchInput = document.querySelector("#search_input");
-let searchResult = document.querySelector(".search_result");
-
 let userArray = [
   {
-    username: "jessica",
+    username: "Jessica",
+    description: "hello!",
     userImg:
       "https://images.unsplash.com/photo-1619895862022-09114b41f16f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8cHJvZmlsZSUyMHBob3RvfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60",
   },
   {
-    username: "jane",
+    username: "Jane",
+    description: "Welcome",
     userImg:
       "https://images.unsplash.com/photo-1628890923662-2cb23c2e0cfe?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8cHJvZmlsZSUyMHBob3RvfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60",
   },
   {
-    username: "jennifer",
+    username: "Jennifer",
+    description: "I am developer",
     userImg:
       "https://images.unsplash.com/photo-1604072366595-e75dc92d6bdc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8cHJvZmlsZSUyMHBob3RvfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60",
   },
   {
-    username: "millie",
+    username: "Millie",
+    description: "From NY",
     userImg:
       "https://images.unsplash.com/photo-1509839862600-309617c3201e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHByb2ZpbGUlMjBwaG90b3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60",
   },
 ];
 
+let searchInput = document.querySelector("#search_input");
+let searchResult = document.querySelector(".search_result");
 let newArr = [];
 
-searchInput.addEventListener("keyup", (e) => {
-  console.log(e.target.value);
-  newArr = [];
+function search() {
+  if (searchInput.value !== "") {
+    newArr = userArray.filter((el) =>
+      el.username.toLowerCase().includes(searchInput.value.toLowerCase())
+    );
 
-  let newBox = userArray.filter((el) => {
-    if (el.username.includes(e.target.value)) {
-      return newArr.push(el);
-    } else {
-      console.log("dd");
-    }
-  });
+    searchResult.innerHTML = "";
 
-  console.log(newBox);
-});
-
-function search() {}
-
-{
-  // userArray
-  //   .filter((el) => {
-  //     if (el.username.indexOf(searchInput.value) !== -1) {
-  //       return el;
-  //     } else if (!searchInput.value) {
-  //       console.log("blank");
-  //     }
-  //   })
-  //   .map((user) => {
-  //     let result = document.createElement("div");
-  //     document.body.appendChild(result);
-  //     result.innerHTML = `<div>${user.username}</div><img src="${user.userImg}"/>`;
-  //   });
+    newArr.map((user) => {
+      let result = document.createElement("div");
+      searchResult.appendChild(result);
+      result.innerHTML = `<div><img src="${user.userImg}"/></div><div>${user.username}<div>${user.description}</div></div>`;
+    });
+  } else {
+    searchResult.innerHTML = "";
+  }
 }
+
+searchInput.addEventListener("input", search);
