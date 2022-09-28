@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Westagram | Home</title>
+    <link rel="stylesheet" href="./styles/common.css" />
+    <link rel="stylesheet" href="./styles/main.css" />
+    <script defer src="js/main.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="wrapper">
+        <div class="logo">
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/717/717392.png"
+            alt="logo"
+          />
+          <div>Westagram</div>
+        </div>
+        <div class="search">
+          <input type="text" id="search_input" placeholder="Search">
+          <div class="search_result">
+
+          </div>
+        </div>
+        <nav>
+          <ul>
+            <li>
+              <a href="#"
+                ><img
+                  src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png"
+                  alt="explore"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"
+                  alt="heart"
+              /></a>
+            </li>
+            <li>
+              <a href="#"
+                ><img
+                  src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png"
+                  alt="profile"
+              /></a>
+              <ul class="mobile_nav">
+                <li>My account</li>
+                <li>Settings</li>
+                <li><a href="./login.html">Log out</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="wrapper">
+        <div class="feeds">
+          <article class="feed">
+            <div class="feed_owner">
+              <div>
+                <div class="user_profile"></div>
+                <span class="username">blank</span>
+              </div>
+              <button></button>
+            </div>
+
+            <div class="feed_img"></div>
+
+            <div class="feed_bar">
+              <div class="feed_icons">
+                <div>
+                  <div class="iconImg icon_heart"></div>
+                  <div class="iconImg icon_comments"></div>
+                  <div class="iconImg icon_share"></div>
+                </div>
+                <div class="iconImg icon_bookmark"></div>
+              </div>
+
+              <div class="likes">
+                <div class="likes_owner"></div>
+                <p>Liked by <span>user1234</span> and <span>others</span></p>
+              </div>
+            </div>
+
+            <div class="feed_des">
+              <div>
+                <span class="username">blank</span>
+                <p class="des">
+                  Throwback photo 
+                  <span class="des_hashtag">#newyork</span><span class="des_hashtag">#throwback</span><span></span>
+                </p>
+              </div>
+            </div>
+
+            <div class="comments"></div>
+            <form class="comments_box">
+              <input type="text" placeholder="Add a comment.." />
+              <button type>Add</button>
+            </form>
+            <div class="post_date">
+              <p>4hours ago</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="main-right">
+          <section class="myaccount">
+            <div class="user_profile my_profile"></div>
+            <div>
+              <div class="username">iamchloe</div>
+              <div class="user_intro">Front-end developer</div>
+            </div>
+          </section>
+          <section class="stories">
+            <div class="stories_bar">
+              <span>Stories</span>
+              <button>See All</button>
+            </div>
+            <div class="stories_list">
+              <div>
+                <div class="user_profile"></div>
+                <div class="username">
+                  username1
+                  <p>24minutes ago</p>
+                </div>
+              </div>
+              <div>
+                <div class="user_profile"></div>
+                <div class="username">
+                  username2
+                  <p>1hour ago</p>
+                </div>
+              </div>
+              <div>
+                <div class="user_profile"></div>
+                <div class="username">
+                  username3
+                  <p>2hours ago</p>
+                </div>
+              </div>
+              <div>
+                <div class="user_profile"></div>
+                <div class="username">
+                  username4
+                  <p>30minutes ago</p>
+                </div>
+              </div>
+              <div>
+                <div class="user_profile"></div>
+                <div class="username">
+                  username5
+                  <p>3hours ago</p>
+                </div>
+              </div>
+              <div>
+                <div class="user_profile"></div>
+                <div class="username">
+                  username6
+                  <p>21hours ago</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="suggestions">
+            <div class="suggestion_bar">
+              <span>Suggections For You</span>
+              <button>See All</button>
+            </div>
+            <div class="suggestions_list">
+              <div>
+                <div>
+                  <div class="user_profile"></div>
+                  <div class="username">
+                    username7
+                    <p>New to Instagram</p>
+                  </div>
+                </div>
+                <button>Follow</button>
+              </div>
+
+              <div>
+                <div>
+                  <div class="user_profile"></div>
+                  <div class="username">
+                    username8
+                    <p>Follows you</p>
+                  </div>
+                </div>
+                <button>Follow</button>
+              </div>
+
+              <div>
+                <div>
+                  <div class="user_profile"></div>
+                  <div class="username">
+                    username9
+                    <p>Follows you</p>
+                  </div>
+                </div>
+                <button>Follow</button>
+              </div>
+
+              <div>
+                <div>
+                  <div class="user_profile"></div>
+                  <div class="username">
+                    username10
+                    <p>Follows you</p>
+                  </div>
+                </div>
+                <button>Follow</button>
+              </div>
+
+              <div>
+                <div>
+                  <div class="user_profile"></div>
+                  <div class="username">
+                    username11
+                    <p>New to Instagram</p>
+                  </div>
+                </div>
+                <button>Follow</button>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
