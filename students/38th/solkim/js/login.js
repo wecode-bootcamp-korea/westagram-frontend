@@ -2,8 +2,8 @@ const idInput = document.querySelector('.id-input');
 const passwordInput = document.querySelector('.password-input');
 const loginBtn = document.querySelector('.login-btn');
 const loginForm = document.querySelector('.login-form form');
-let isIdOk;
-let isPasswordOk;
+// let isIdOk;
+// let isPasswordOk;
 
 function checkIdAndPassword() {
     if(idInput.value.length > 0 && passwordInput.value.length > 0) {
@@ -16,18 +16,21 @@ function checkIdAndPassword() {
     }
 }
 
-function validationIdAndPassword() {
+function validationId() {
     if (idInput.value.includes("@")) {
-        isIdOk = true;
+        return true;
     } else {
-        isIdOk = false;
-    }
-    if (passwordInput.value.length > 5) {
-        isPasswordOk = true;
-    } else {
-        isPasswordOk = false;
+        return false;
     }
 }
+function validationPassword() {
+    if (passwordInput.value.length > 5) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
 
 function movePage() {
     location.href = "main.html";
@@ -35,31 +38,32 @@ function movePage() {
 
 idInput.addEventListener('keyup', function(){
     checkIdAndPassword();
-    validationIdAndPassword();
+    validationId();
+
 });
 
 passwordInput.addEventListener('keyup', function(){
     checkIdAndPassword();
-    validationIdAndPassword();
+    validationPassword();
 });
 
 loginBtn.addEventListener('click', function(){
-    if(isIdOk === true && isPasswordOk === true){
+    if(validationId() === true && validationPassword() === true){
         movePage();
-    } else if (isIdOk === false){
+    } else if (validationId() === false){
         alert('이메일에 @를 포함시켜주세요');
-    } else if (isPasswordOk === false) {
+    } else if (validationPassword() === false) {
         alert('비밀번호는 6자 이상 입력하세요');
     }
 });
 
 loginForm.addEventListener('keydown', (e) =>{
     if (e.code === "Enter" && idInput.value.length > 0 && passwordInput.value.length > 0){
-        if(isIdOk === true && isPasswordOk === true){
+        if(validationId() === true && validationPassword() === true){
             movePage();
-        }  else if (isIdOk === false){
+        }  else if (validationId() === false){
             alert('이메일에 @를 포함시켜주세요');
-        } else if (isPasswordOk === false) {
+        } else if (validationPassword() === false) {
             alert('비밀번호는 6자 이상 입력하세요');
         }
     }
