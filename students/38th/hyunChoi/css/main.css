@@ -1,0 +1,200 @@
+*{
+    box-sizing: border-box;
+}
+.nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    /* border: 0.5px solid gray; */
+    margin: 0;
+}
+.logoWrap{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* border: 00.5px solid gray; */
+    height: 100%;
+    width: 200px;
+}
+/* .logoWrap .fa{
+    padding-left: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} */
+#logoName{
+    display: flex;
+    font-family: 'Lobster';
+    pointer-events: none;
+    font-size: 30px;
+    padding-left: 5px;
+    border-left: 2px solid #e0e0e0;
+}
+.searchWrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #e0e0e0;
+    /* height: 100%; */
+    border-radius: 20px;
+    width: 250px;
+}
+.searchWrap i {
+    color:gray;
+    padding: 10px;
+}
+.search{
+    outline: none;
+    width: 200px;
+    font-size: large;
+    border: none;
+}
+.naviconWrap{
+    width: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* border: 00.5px solid gray; */
+    height: 100%;
+}
+.main{
+    /* margin-top: 10px; */
+    display: flex;
+    width: 100%;
+    height: 100%;
+    /* border: 00.5px solid gray; */
+    border-top: 1px solid #e0e0e0;
+    background-color: #fafafa;
+    padding-bottom: 200px;
+}
+.feeds{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* border: 0.5px solid gray; */
+    height: 90%;
+    width: 60%;
+    margin-right: 10px;
+    margin-left: 180.5px;
+    margin-top: 10px;
+    padding-top: 20px;
+}
+.article{
+    display: flex;
+    justify-content : flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 95%;
+    border: 2px solid #e0e0e0;
+    border-radius: 15px;
+    height: 100%;
+    /* margin-top: 30px; */
+    background-color: white;
+
+}
+.main-right{
+    margin-left: 10px;
+    width: 30%;
+    height: 60%;
+    border: 00.5px solid gray;
+    margin-top: 30px;
+    
+}
+.imgWrap img{
+    width: 100%;
+}
+.feedWrap{
+    display: flex;
+    justify-content: space-between ;
+    align-content: center;
+    width: 100%;
+}
+.account{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+#profile{
+    width: 60px;
+    height: 60px;
+    border-radius: 35px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 3px;
+}
+.dot{
+    margin-right: 20px;
+}
+.feedIcon{
+    width: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+.leftIconWrap{
+    display: flex;
+    justify-content:space-around;
+    align-content: center;
+    width: 20%;
+}
+.rightIconWrap{
+    display: flex;
+    margin-right: 10px;
+}
+.feedDesc{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 20px;
+    padding-top: 10px;
+    flex-wrap: wrap;
+}
+.feedDesc div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.feedDesc div p{
+    margin: 1px 0;
+}
+.feedDesc .ptagID{
+    font-weight: 700;
+    margin-right: 15px;
+}
+#moreDesc{
+    color: gray;
+    font-weight: 600;
+}
+.reple{
+    display: flex;
+    align-content: center;
+    width: 100%;
+    border:none;
+    border-top: 1px solid #e0e0e0;
+}
+.reple div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:5%; 
+}
+.reple div img{
+    width: 20px;
+}
+.reple input{
+    width: 85%;
+    border: none;
+    outline: none;
+    height: 30px;
+    margin: 1px 1px 1px 1px;
+}
+.reple button{
+    width: 10%;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    background-color: white;
+    color: gray;
+}

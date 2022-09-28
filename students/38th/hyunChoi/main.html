@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style type="text/css"></style>
+    <script src="https://kit.fontawesome.com/6285a817e2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&amp;family=Lobster&amp;display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Main</title>
+</head>
+<body>
+    <div class="nav">
+        <div class="logoWrap">
+        <i id = "logoIcon"class="fa-brands fa-instagram fa-2x"></i>
+        <h1 id="logoName">Westagram</h1>
+        </div>
+        <div class="searchWrap">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input class="search" placeholder="검색">
+        </div>
+        <div class="naviconWrap">
+            <i class="fa-regular fa-compass fa-2x"></i>
+            <i class="fa-regular fa-heart fa-2x"></i>
+            <i class="fa-regular fa-user fa-2x"></i>
+            
+        </div>
+    </div>
+    <div class="main">
+        <div class="feeds">
+            <div class="article">
+                <div class="feedWrap">
+                    <div class="account"><img src="css/profile-insta.jpeg" id="profile">
+                    <h3>hyun._.gus</h3></div>
+                    <div class="dot"><h2>&#8230</h2></div>
+                </div>
+                <div class="imgWrap"><img src="css/7star-insta.jpeg">
+                </div>
+                <div class="feedIcon">
+                    <div class="leftIconWrap">
+                        <i class="fa-solid fa-heart fa-2x" style="color:red"></i>
+                        <i class="fa-regular fa-message fa-2x"></i>
+                        <i class="fa-solid fa-arrow-up-from-bracket fa-2x"></i>
+                    </div>
+                    <div class="rightIconWrap">
+                        <i class="fa-regular fa-bookmark fa-2x"></i>
+                    </div>
+                </div>
+                <div class="feedDesc">
+                    <div>
+                        <p class="ptagID">hyun._.gus</p>
+                        <p>대천에서 찍은 북두칠성 . . .</p>
+                        <p id="moreDesc">&nbsp &nbsp더 보기</p>
+                    </div>
+                    <div>
+                        <p class="ptagID">wecode.bootcamp</p>
+                        <p>어머~ 너무 이뻐용 ㅎㅎㅎ</p>
+                    </div>
+                </div>
+                <div class="reple">
+                    <div class="emoji"><img src="css/emoji.png"></div>
+                    <input class="reple-input"placeholder="댓글을 입력하세요..." onkeypress="enterkey()">
+                    <button class="reple-button" disabled >게 시</button>
+                </div>
+            </div>
+        </div>
+        <div class="main-right"></div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
