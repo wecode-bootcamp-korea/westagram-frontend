@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles/common.css">
   <link rel="stylesheet" href="styles/main.css">
+  <script src="https://kit.fontawesome.com/f610116636.js" crossorigin="anonymous"></script>
   <title>main page</title>
 </head>
 <body>
@@ -47,9 +48,7 @@
         <div class="comment_wrap">
           <div class="icon_box">
             <div class="heart_wrap">
-              <a href="javascript:;">
-                <img src="img/heart.png" alt="좋아요 누르기">
-              </a>
+              <a class="like_button" href="javascript:;"><img src="img/heart.png" alt="좋아요 누르기"><img class="hide" src="img/heart_like.png" alt="좋아요 완료"></a>
               <a href="javascript:;">
                 <img src="img/talkbox.png" alt="댓글달기">
               </a>
@@ -68,14 +67,14 @@
               <img src="img/bomsori.jpeg" alt="김봄소리님의 프로필사진">
               <p><strong>bomsori</strong>님 <strong>여러 명</strong>이 좋아합니다</p>
             </div>
-            <p><strong>onnuri</strong> 🍎</p>
-            
+            <p class="user_say"><strong>onnuri</strong> 🍎</p>
+            <!-- <p class="add"><span class="comment_id">ID</span><span class="comment_con">내용</span><span class="comment_heart"><i class="fa-regular fa-heart"></i></span><a href="javascript:;">삭제</a></p> -->
           </div>
         </div>
-        <div class="comment_input">
+        <form class="comment_input">
           <input placeholder="댓글달기..." type="text">
-          <button class="comment_btn">게시</button>
-        </div>
+          <button disabled type="submit" class="comment_btn">게시</button>
+        </form>
       </article>    
       
     </div>

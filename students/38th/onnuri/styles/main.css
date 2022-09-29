@@ -108,6 +108,7 @@ main {
 .icon_box .heart_wrap a {
   margin-right: 15px;
 }
+
 .icon_box .heart_wrap a:nth-child(2){
   padding: 1px;
 }
@@ -130,6 +131,9 @@ main {
 .like_box .user_profile p {
   font-weight: 400;
 }
+.like_box .user_say {
+  margin-bottom: 5px;
+}
 
 .comment_input {
   position: relative;
@@ -140,7 +144,7 @@ main {
   width: auto;
   top: 50%;
   transform: translateY(-50%);
-  right: 10px;
+  right: 15px;
   background: none;
   color: #c4e1fb;
 }
@@ -209,9 +213,7 @@ main {
   font-weight: 700;
   margin-bottom: 4px;
 }
-span.comment_id {
-  font-weight: 700;
-}
+
 
 .sec_recommendation {
   width: 319px;
@@ -264,4 +266,33 @@ span.comment_id {
 }
 .footer_list_wrap > li > a{
   color: #aeaeae;
+}
+
+/* 추가되는 댓글 */
+.add {
+  position: relative;
+}
+span.comment_id {
+  font-weight: 700;
+  margin-right: 5px;
+  line-height: 16px;
+}
+span.comment_con {
+  font-size: 14px;
+  line-height: 16px;
+}
+span.comment_heart {
+  position: absolute;
+  right: 30px;
+  font-size: 15px;
+}
+.fa-solid {
+  color: #ed4956;
+}
+.add> a{
+  position: absolute;
+  right: 0px;
+  font-size: 14px;
+  line-height: 16px;
+  cursor: pointer;
 }
