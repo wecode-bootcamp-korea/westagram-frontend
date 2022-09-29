@@ -97,35 +97,19 @@ function postComment() {
 
 };
 
-function refreshCommentHeart() {
-    for (let i = 0; i < commentRedHeart.length; i++) {
-        commentRedHeart[i].addEventListener("click", () => {
-            commentRedHeart[i].classList.add("display-none");
-        });
+commentBox.addEventListener("click", (e) => {
+    if (e.target.className.includes("comment-blank-heart")){
+        e.target.classList.toggle("red-heart");
+        e.target.classList.toggle("far");
+        e.target.classList.toggle("fas");
     }
-    for (let i = 0; i < commentBlankHeart.length; i++) {
-        commentBlankHeart[i].addEventListener("click", () => {
-            commentRedHeart[i].classList.remove("display-none");
-        });
+    if (e.target.className.includes("delete")){
+        e.target.parentElement.remove();
     }
-};
-
-refreshCommentHeart();
-
-function refreshCommentDelete() {
-    for (let i = 0; i < commentDelete.length; i++) {
-        commentDelete[i].addEventListener("click", (e)=>{
-            e.target.parentElement.remove();
-        })
-    }
-};
-
-refreshCommentDelete();
+});
 
 commentBtn.addEventListener("click", ()=>{
     postComment();
-    refreshCommentHeart();
-    refreshCommentDelete();
 });
 
 commentForm.addEventListener("keydown", (e)=>{
@@ -133,21 +117,15 @@ commentForm.addEventListener("keydown", (e)=>{
         e.preventDefault();
         if(e.isComposing === false){
             postComment();
-            refreshCommentHeart();
-            refreshCommentDelete();
         }
     }
 });
 
-
-function heartToggle() {
-    redHeart.classList.toggle("display-none");
-};
-
-blankHeart.addEventListener("click", ()=>{
-    heartToggle();
+blankHeart.addEventListener("click", (e)=>{
+    e.target.classList.toggle("red-heart");
+    e.target.classList.toggle("fas");
+    e.target.classList.toggle("far");
 });
-
 
 function showSearchResults() {
     let resultArr = [];
