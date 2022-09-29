@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="kr">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,80 +10,118 @@
   <script src="https://kit.fontawesome.com/f610116636.js" crossorigin="anonymous"></script>
   <title>main page</title>
 </head>
+
 <body>
   <header>
-    <h1>Westagram</h1>
-    <input placeholder="검색" type="text">
-    <nav>
-      <ul>
-        <li>
-          <a href="javascript:;">
-            <img src="img/explore.png" alt="둘러보기">
-          </a>
-        </li>
-        <li>
-          <a href="javascript:;"><img src="img/heart.png" alt="좋아요누른 사람 보기"></a>
-        </li>
-        <li>
-          <a href="javascript:;"><img src="img/profile.png" alt="내 인스타그램 홈으로 이동하기"></a>
-        </li>
-      </ul>
-    </nav>
-  </header>
+    <div class="inner_1000">
+      <h1>Westagram</h1>
+      <div class="search_box">
+        <input placeholder="검색" type="text" />
+        <span class="search_img"><i class="fa-solid fa-magnifying-glass"></i></span>
+        <a class="search_cancel" href="javascript:;"><i class="fa-solid fa-circle-xmark"></i></a>
+        <div class="balloon search_result">
+          <div class="no_result">
+            <h4>최근 검색 항목</h4>
+            <p>최근 검색 내역 없음.</p>
+          </div>
+          <ul class="search_list_wrap">
+            <!-- 검색결과 추가될 영역 -->
+          </ul>
+        </div>
+      </div>
 
+      <nav>
+        <ul>
+          <li>
+            <a href="javascript:;" title="홈으로 이동하기">
+              <i class="fa-solid fa-house"></i>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:;" title="다이렉트 메세지로 이동하기">
+              <i class="fa-regular fa-paper-plane"></i>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:;" title="스토리 추가하기"><i class="fa-regular fa-square-plus"></i></a>
+          </li>
+          <li>
+            <a href="javascript:;" title="인스타그램 둘러보기"><i class="fa-regular fa-compass"></i></a>
+          </li>
+          <li>
+            <a href="javascript:;" title="활동 피드 내역 보기"><i class="fa-regular fa-heart"></i></a>
+          </li>
+          <li>
+            <a href="javascript:;" class="modal_popup" title="사용자 메뉴 보기"><img src="img/onnuri.jpeg" alt="onnuri프로필 사진"></a>
+          </li>
+        </ul>
+        <div class="balloon user_menu">
+          <ul>
+            <li><a href="javascript:;"><i class="fa-regular fa-user"></i><span>프로필</span></a></li>
+            <li><a href="javascript:;"><i class="fa-regular fa-bookmark"></i><span>저장됨</span></a></li>
+            <li><a href="javascript:;"><i class="fa-solid fa-gear"></i><span>설정</span></a></li>
+            <li><a href="javascript:;">로그아웃</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <div class="bg"></div>
   <main>
     <div class="sec_feeds">
       <article>
         <div class="user_wrap">
           <div class="user_profile">
-            <img src="img/onnuri.jpeg" alt="김온누리님의 프로필사진">
+            <img src="img/onnuri.jpeg" alt="김온누리님의 프로필사진" />
             <p>onnuri</p>
           </div>
           <a class="more_btn">
-            <img src="img/more.png" alt="더보기">
+            <img src="img/more.png" alt="더보기" />
           </a>
         </div>
         <div class="picture_box">
-          <img src="img/feed_sample.jpg" alt="사과">
+          <img src="img/feed_sample.jpg" alt="사과" />
         </div>
         <div class="comment_wrap">
           <div class="icon_box">
             <div class="heart_wrap">
-              <a class="like_button" href="javascript:;"><img src="img/heart.png" alt="좋아요 누르기"><img class="hide" src="img/heart_like.png" alt="좋아요 완료"></a>
+              <a class="like_button" href="javascript:;"><img src="img/heart.png" alt="좋아요 누르기" /><img class="hide"
+                  src="img/heart_like.png" alt="좋아요 완료" /></a>
               <a href="javascript:;">
-                <img src="img/talkbox.png" alt="댓글달기">
+                <img src="img/talkbox.png" alt="댓글달기" />
               </a>
               <a href="javascript:;">
-                <img src="img/share.png" alt="공유하기">
+                <img src="img/share.png" alt="공유하기" />
               </a>
             </div>
             <div class="save_wrap">
               <a href="javascript:;">
-                <img src="img/bookmark.png" alt="내 컬렉션 추가하기">
+                <img src="img/bookmark.png" alt="내 컬렉션 추가하기" />
               </a>
             </div>
           </div>
           <div class="like_box">
             <div class="user_profile">
-              <img src="img/bomsori.jpeg" alt="김봄소리님의 프로필사진">
+              <img src="img/bomsori.jpeg" alt="김봄소리님의 프로필사진" />
               <p><strong>bomsori</strong>님 <strong>여러 명</strong>이 좋아합니다</p>
             </div>
             <p class="user_say"><strong>onnuri</strong> 🍎</p>
+            <!-- 댓글 추가 되는 영역 -->
             <!-- <p class="add"><span class="comment_id">ID</span><span class="comment_con">내용</span><span class="comment_heart"><i class="fa-regular fa-heart"></i></span><a href="javascript:;">삭제</a></p> -->
           </div>
         </div>
         <form class="comment_input">
-          <input placeholder="댓글달기..." type="text">
+          <input placeholder="댓글달기..." type="text" />
           <button disabled type="submit" class="comment_btn">게시</button>
         </form>
-      </article>    
-      
+      </article>
+
     </div>
     <div class="main_right">
       <div class="sec_story">
         <div class="user_profile_wrap">
           <div class="img_box">
-            <img src="img/onnuri.jpeg" alt="">
+            <img src="img/onnuri.jpeg" alt="프로필 사진" />
           </div>
           <div class="user_info">
             <p class="comment_id">onnuri</p>
@@ -99,7 +138,7 @@
             <ul class="right_list_wrap">
               <li>
                 <div class="img_box">
-                  <img src="img/onnuri.jpeg" alt="">
+                  <img src="img/onnuri.jpeg" alt="user_id의 프로필 사진" />
                 </div>
                 <div>
                   <p class="user_id">user_id</p>
@@ -108,7 +147,7 @@
               </li>
               <li>
                 <div class="img_box">
-                  <img src="img/onnuri.jpeg" alt="">
+                  <img src="img/onnuri.jpeg" alt="idonknow의 프로필 사진" />
                 </div>
                 <div>
                   <p class="user_id">idontknow</p>
@@ -117,7 +156,7 @@
               </li>
               <li>
                 <div class="img_box">
-                  <img src="img/onnuri.jpeg" alt="">
+                  <img src="img/onnuri.jpeg" alt="onnuri의 프로필 사진" />
                 </div>
                 <div>
                   <p class="user_id">onnuri</p>
@@ -126,7 +165,7 @@
               </li>
               <li>
                 <div class="img_box">
-                  <img src="img/onnuri.jpeg" alt="">
+                  <img src="img/onnuri.jpeg" alt="westagram의 프로필 사진" />
                 </div>
                 <div>
                   <p class="user_id">westagram</p>
@@ -135,7 +174,7 @@
               </li>
               <li>
                 <div class="img_box">
-                  <img src="img/onnuri.jpeg" alt="">
+                  <img src="img/onnuri.jpeg" alt="moreimportant_js의 프로필 사진" />
                 </div>
                 <div>
                   <p class="user_id">moreimportant_js</p>
@@ -144,7 +183,7 @@
               </li>
             </ul>
           </div>
-        </div>  
+        </div>
       </div>
       <div class="sec_recommendation">
         <div class="right_wrap">
@@ -156,7 +195,7 @@
             <ul class="right_list_wrap">
               <li>
                 <div class="img_box">
-                  <img src="img/onnuri.jpeg" alt="">
+                  <img src="img/onnuri.jpeg" alt="user_id_friend의 프로필 사진" />
                 </div>
                 <div>
                   <p class="user_id">user_id_friend</p>
@@ -166,7 +205,7 @@
               </li>
               <li>
                 <div class="img_box">
-                  <img src="img/onnuri.jpeg" alt="">
+                  <img src="img/onnuri.jpeg" alt="purensol의 프로필 사진" />
                 </div>
                 <div>
                   <p class="user_id">purensol</p>
@@ -176,7 +215,7 @@
               </li>
               <li>
                 <div class="img_box">
-                  <img src="img/onnuri.jpeg" alt="">
+                  <img src="img/onnuri.jpeg" alt="westagram_wecode의 프로필 사진" />
                 </div>
                 <div>
                   <p class="user_id">westagram_wecode</p>
@@ -186,7 +225,7 @@
               </li>
             </ul>
           </div>
-        </div>  
+        </div>
       </div>
       <div class="footer">
         <ul class="footer_list_wrap">
@@ -203,9 +242,10 @@
         <p>© 2022 INSTAGRAM FROM META</p>
       </div>
     </div>
-    
+
   </main>
-  
+
 </body>
 <script src="js/main.js"></script>
+
 </html>

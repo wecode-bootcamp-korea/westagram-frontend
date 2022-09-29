@@ -1,50 +1,262 @@
+body {
+  position: relative;
+}
+
 header {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
   height: 60px;
+  width: 100%;
   border-bottom: 1px solid #eaeaea;
   background-color: #fff;
+  z-index: 11;
+}
+header .inner_1000 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin: 0 auto;
+  max-width: 1000px;
 }
 
 header h1 {
   line-height: 60px;
-  font-size: 40px;
+  font-size: 30px;
   font-family: 'Dancing Script', cursive;
 }
-header input {
+
+header .search_box{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   width: 268px;
   height: 36px;
-  padding: 3px 16px;
-  background-color: #fafafa;
   border: 1px solid #dbdbdb;
-  border-radius: 2px;
+  border-radius: 5px;
+  background-color: #fafafa;
 }
-header input::placeholder {
+
+.search_box input {
+  padding: 3px 25px;
+  height: 100%;
+  background-color: #fafafa;
+  border-radius: 5px;
+}
+
+.search_box input::placeholder {
   text-align: center;
 }
-nav {
-  width: 150px;
+
+.search_img {
+  position: absolute;
+  /* left: 6px; */
+  left: 104px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  color: #aeaeae;
+  transition: all .3s;
 }
+
+.search_cancel {
+  display: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 6px;
+  color: #aeaeae;
+}
+
+.balloon {
+  display: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 150%;
+  padding: 20px;
+  width: 288px;
+  height: auto;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+  background-color: #fff;
+  z-index: 9;
+}
+
+.balloon::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-bottom: 10px solid #fff;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  z-index: 9;
+}
+
+.balloon::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -11px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-bottom: 11px solid #dbdbdb;
+  border-right: 11px solid transparent;
+  border-left: 11px solid transparent;
+}
+
+.no_result {
+  width: 100%;
+  height: 362px;
+}
+
+.no_result p {
+  height: 100%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  color: #8e8e8e;
+  
+}
+
+/* 생성될 검색결과 */
+.search_list_wrap li{
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.search_list_wrap li:last-child {
+  margin-bottom: 0;
+}
+
+.search_list_wrap li img {
+  margin-right: 10px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.search_list_wrap div p:first-child {
+  margin-bottom: 4px;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.search_list_wrap div p:last-child {
+  color: #8e8e8e;
+  font-size: 14px;
+}
+
+/* header menu */
+
+nav {
+  position: relative;
+}
+
 nav ul{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  width: 254px;
 }
+
 nav ul li a {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 24px;
 }
+nav ul li a i {
+  color: #262626;
+  font-size: 24px;
+}
+nav .modal_popup {
+  border-radius: 50%;
+  overflow: hidden;
+}
 nav img{
   width: 100%;
 }
+
+nav .balloon.user_menu {
+  top: 42px;
+  left: 170px;
+  padding: 0;
+  width: auto;
+}
+
+.balloon.user_menu::before {
+  left: 198px;
+}
+
+.balloon.user_menu::after {
+  left: 198px;
+}
+
+.user_menu ul {
+  display: block;
+}
+
+i.fa-solid.fa-gear {
+  color: #fff;
+  -webkit-text-stroke: 2px #262626;
+}
+
+.user_menu li:hover {
+  background-color: #fafafa;
+}
+
+.user_menu li:first-child {
+  border-radius: 4px 4px 0 0/ 4px 4px 0 0;
+}
+
+.user_menu li:last-child {
+  border-top: 1px solid #dbdbdb;
+  border-radius: 0 0 4px 4px / 0 0 4px 4px;
+}
+
+.user_menu li a {
+  display: flex;
+  justify-content: flex-start;
+  padding: 8px 16px;
+  width: 230px;
+  height: 37px;
+  color: #262626;
+  font-size: 14px;
+}
+
+.user_menu ul li a i{
+  width: 18px;
+  height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+.bg {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
 
 /* sec_feeds */
 main {
   display: flex;
   justify-content: center;
-  margin: 50px 0 10px;
+  padding: 80px 0 10px;
 }
 
 .sec_feeds {
@@ -54,24 +266,29 @@ main {
   border-radius: 2px;
   background-color: #fff;
 }
+
 .sec_feeds .user_wrap {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
 }
+
 .user_wrap .user_profile {
   display: flex;
   align-items: center;
 }
+
 .user_profile p {
   font-weight: 700;
 }
+
 .user_wrap .more_btn {
   width: 24px;
   height: 24px;
   cursor: pointer;
 }
+
 .more_btn img {
   width: 100%;
 }
@@ -88,6 +305,7 @@ main {
   overflow: hidden;
   height: 587px;
 }
+
 .picture_box img{
   width: 100%;
 }
@@ -96,15 +314,18 @@ main {
   padding: 10px 20px;
   border-bottom: 1px solid #dbdbdb;
 }
+
 .icon_box {
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
   height: 24px;
 }
+
 .icon_box .heart_wrap {
   display: flex;
 }
+
 .icon_box .heart_wrap a {
   margin-right: 15px;
 }
@@ -112,25 +333,31 @@ main {
 .icon_box .heart_wrap a:nth-child(2){
   padding: 1px;
 }
+
 .icon_box .heart_wrap a img{
   height: 100%;
 }
+
 .save_wrap a img{
   height: 100%;
 }
+
 .like_box .user_profile{
   display: flex;
   align-items: center;
   margin-bottom: 15px;
 }
+
 .like_box .user_profile img {
   margin-right: 4px;
   width: 20px;
   height: 20px;
 }
+
 .like_box .user_profile p {
   font-weight: 400;
 }
+
 .like_box .user_say {
   margin-bottom: 5px;
 }
@@ -139,6 +366,7 @@ main {
   position: relative;
   padding: 5px 20px;
 }
+
 .comment_input .comment_btn {
   position: absolute;
   width: auto;
@@ -153,22 +381,27 @@ main {
 .sec_story{
   width: 319px;
 }
+
 .sec_story .user_profile_wrap {
   display: flex;
   align-items: center;
   position: relative;
   margin-bottom: 10px;
 }
+
 .user_profile_wrap .img_box {
   margin-right: 20px;
 }
+
 .user_profile_wrap .user_info p:first-child {
   font-weight: 700;
   font-size: 15px;
 }
+
 .user_profile_wrap .user_info p:last-child {
   color: rgb(142, 142, 142);
 }
+
 .user_profile_wrap a {
   position: absolute;
   right: 0;
@@ -182,9 +415,11 @@ main {
   border-radius: 2px;
   color: #aeaeae;
 }
+
 .wrap_first {
   margin-bottom: 10px;
 }
+
 .right_title {
   display: flex;
   justify-content: space-between;
@@ -198,33 +433,42 @@ main {
 .right_list_wrap li{
   display: flex;
   align-items: center;
+  padding: 8px 0;
   margin-bottom: 10px;
 }
+
 .right_list_wrap li:last-child {
   margin-bottom: 0;
 }
+
 .right_list_wrap li .img_box {
-  width: 46px;
-  height: 46px;
+  width: 38px;
+  height: 38px;
   margin-right: 8px;
 }
+
 .right_list_wrap .user_id {
+  margin-bottom: 4px;
   color: black;
   font-weight: 700;
-  margin-bottom: 4px;
+  font-size: 14px;
 }
-
+.right_list_wrap p {
+  font-size: 14px;
+}
 
 .sec_recommendation {
   width: 319px;
   margin-bottom: 20px;
 }
+
 .sec_recommendation .omission {
   width: 180px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
 .recommendation_box .right_list_wrap li {
   position: relative;
 }
@@ -238,17 +482,20 @@ main {
 .footer {
   color: #aeaeae;
 }
+
 .footer_list_wrap {
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 15px;
   width: 319px;
 }
+
 .footer_list_wrap li {
   position: relative;
   padding-right: 18px;
   line-height: 1.5;
 }
+
 .footer_list_wrap li::after{
   content: "";
   display: block;
@@ -261,9 +508,11 @@ main {
   background-color: #aeaeae;
   border-radius: 50%;
 }
+
 .footer_list_wrap  li:last-child::after {
   display: none;
 }
+
 .footer_list_wrap > li > a{
   color: #aeaeae;
 }
@@ -272,23 +521,28 @@ main {
 .add {
   position: relative;
 }
+
 span.comment_id {
   font-weight: 700;
   margin-right: 5px;
   line-height: 16px;
 }
+
 span.comment_con {
   font-size: 14px;
   line-height: 16px;
 }
+
 span.comment_heart {
   position: absolute;
   right: 30px;
   font-size: 15px;
 }
-.fa-solid {
+
+.fa-solid.fa-heart {
   color: #ed4956;
 }
+
 .add> a{
   position: absolute;
   right: 0px;

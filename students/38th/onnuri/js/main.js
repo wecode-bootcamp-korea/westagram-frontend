@@ -82,6 +82,90 @@ postLike.addEventListener('click', () => {
   }
 })
 
+//검색창 활성화 기능
+const searchInput = document.querySelector('.search_box input');
+const searchCancel = document.querySelector('.search_cancel');
+const searchResult = document.querySelector('.balloon.search_result')
+const searchImg = document.querySelector('.search_img');
+searchInput.addEventListener('focus', (e) => {
+  searchImg.style.left = "6px";
+  searchCancel.style.display = "block";
+  searchResult.style.display = "block";
+})
+
+//검색창 비활성화
+const blurHandler = searchInput.addEventListener('blur', () => {
+  searchImg.style.left = "104px";
+  searchCancel.style.display = "none";
+  searchResult.style.display = "none";
+  searchInput.value ="";
+})
+
+//cancel버튼 클릭시 비활성화
+searchCancel.addEventListener('click', blurHandler);
+
+
+//검색어 입력시 기본 검색결과 없애기
+searchInput.addEventListener('keyup', () => {
+  const initResult = document.querySelector('.no_result');
+  resultWrap.innerHTML = "";
+  
+  //검색어 입력시 리스트 생성
+  if(searchInput.value.length !== 0){
+    initResult.style.display = "none";
+    let filtered = searchId.filter((el) => {
+      return el.includes(searchInput.value);
+    })
+    filtered.forEach((el) => {
+      //검색결과 엘리먼트 생성
+      const resultList = document.createElement('li');
+      const resultImg = document.createElement('img');
+      const idWrap = document.createElement('div');
+      const resultId = document.createElement('p');
+      const resultSay = document.createElement('p');
+      resultWrap.appendChild(resultList);
+      resultList.appendChild(resultImg);
+      resultList.appendChild(idWrap);
+      idWrap.appendChild(resultId);
+      idWrap.appendChild(resultSay);
+      resultId.innerText = el;
+      resultSay.innerText = searchUser[el];
+      resultImg.src = `img/${el}.jpeg`;
+    })
+  }else {
+    initResult.style.display = "block";
+  }
+})
+const resultWrap = document.querySelector('.search_list_wrap');
+
+//검색될 아이디 만들기
+const searchUser = {
+  wecode_bootcamp : '>위코드',
+  wecode_founder : 'mola',
+  wecode_korea : 'coding bootcamp',
+  bomsori : '김봄소리',
+  bomsori_airline : 'bomsori_fanpage',
+  onnuri : 'onstagram',
+  one_seoul : '서울 지도',
+}
+const searchId = Object.keys(searchUser);
+
+//프로필 클릭시 사용자 메뉴 생성
+const userBtn = document.querySelector('.modal_popup');
+const userMenu = document.querySelector('.balloon.user_menu');
+const dim = document.querySelector('.bg');
+userBtn.addEventListener('click', ()=>{
+  userMenu.style.display = "block";
+  dim.style.display = "block";
+  userBtn.style.outline = "1px solid black";
+});
+
+dim.addEventListener('click', () => {
+  userMenu.style.display = "none";
+  dim.style.display = "none";
+})
+
+
 
 
 
