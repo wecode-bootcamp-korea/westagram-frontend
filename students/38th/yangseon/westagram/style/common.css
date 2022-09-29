@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.midDiv {
+  width: 500px;
+  height: 600px;
+  border: 1px solid #a3a3a3;
+  text-align: center;
+}
+.totalForm {
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  padding-top: 10px;
+  text-align: center;
+  font-family: "Lobster", cursive;
+  font-size: 80px;
+}
+input {
+  width: 350px;
+  height: 50px;
+  margin: 5px;
+  border: 1px solid #a3a3a3;
+  border-radius: 5px;
+  background-color: #f1f1f1;
+  text-align: left;
+  color: #a3a3a3;
+  text-indent: 10px;
+  font-size: 17px;
+}
+.login-button {
+  width: 350px;
+  height: 50px;
+  margin: 20px;
+  background-color: rgb(15, 127, 243);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  opacity: 0.6;
+  color: white;
+}
+.login-button:disabled {
+  background-color: #91cbe2;
+}
+.forgetpassword {
+  position: relative;
+  top: 100px;
+  text-decoration: none;
+  color: #4156bf;
+}
+input:hover {
+  opacity: 0.6;
+}
