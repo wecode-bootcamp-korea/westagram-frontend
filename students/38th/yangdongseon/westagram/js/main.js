@@ -1,20 +1,32 @@
 const form = document.querySelector(".main-mid-input-box");
 const input = document.querySelector(".comment-input");
 const button = document.querySelector(".comment-button");
-const ul = document.querySelector(".comment-list");
+const comment = document.querySelector(".comment-list");
+const imgHeart = document.querySelector(".imgHeart");
 
-// function onKeyPressForm() {
-//   const li = document.createElement("li");
-//   const ul = document.querySelector(".comment-list")[0];
-//   li.innerText = input.value;
-//   ul.appendChild(li);
-// }
 function onButtonClick() {
   let result = input.value;
+  let container = document.createElement("div");
+  container.className = "container";
   let div = document.createElement("div");
-  ul.appendChild(div);
-  div.innerHTML = `${result}`;
+  let icon = document.createElement("i");
+  // icon.className = "imgHeart";
+  icon.className = "fa-regular fa-heart";
+  icon.style.width = "20px";
+  icon.style.height = "20px";
+  comment.appendChild(container);
+  container.appendChild(div);
+  container.appendChild(icon);
+  div.innerHTML = `yy_ds ${result}`;
+  console.log(result);
+  input.value = "";
 }
+const inputKeyDown = (event) => {
+  if (window.event.keyCode === 13) {
+    onButtonClick();
+  }
+};
 
-// input.addEventListener("keypress", onKeyPressForm);
 button.addEventListener("click", onButtonClick);
+input.addEventListener("keydown", inputKeyDown);
+imgHeart.addEventListener("click", onImgHeartClick);
