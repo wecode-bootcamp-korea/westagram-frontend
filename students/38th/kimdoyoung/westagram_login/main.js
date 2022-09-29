@@ -25,3 +25,5 @@ pwinput1.addEventListener('keyup',function(){
 //idinput.value.includes("@") && pwinput.value.length>=5
 
 //idinput.value && pwinput.value
+
+//9월29일(목) 1시쯤에 푸시 다시해보는중
