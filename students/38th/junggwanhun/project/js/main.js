@@ -14,6 +14,13 @@ const $deleteKey = document.querySelectorAll(".deleteKey");
 const $navMe = document.querySelector(".navMe");
 const $navMeBox = document.querySelector(".navMeBox");
 
+let count =3;
+$heart.addEventListener("click",(e)=>{
+    count++;
+    $number.innerHTML = `${count}`
+
+})
+
 $navMe.addEventListener("click",()=>{
 
     if($navMeBox.style.display === ""){
@@ -36,6 +43,7 @@ $buttonClick.addEventListener("click",()=>{
     `
     $mainFooterInput.focus();
     $mainFooterInput.value = "";
+    $bottomBoxDownComment.scrollTo(0,$bottomBoxDownComment.scrollHeight)
 });
 
 $mainFooterInput.addEventListener("keypress",(e)=>{
@@ -52,6 +60,7 @@ $mainFooterInput.addEventListener("keypress",(e)=>{
     `
     $mainFooterInput.focus();
     $mainFooterInput.value = "";
+    $bottomBoxDownComment.scrollTo(0,$bottomBoxDownComment.scrollHeight)
     }
 });
 
@@ -65,18 +74,37 @@ $search.addEventListener("keyup",()=>{
     
 })
 
-$deleteKey.forEach((del)=>{
-    del.addEventListener('click', ()=>{
-        del.parentElement.remove();
-    })
+
+$bottomBoxDownComment.addEventListener("click",(e) => {
+    let eT = e.target;
+    if(eT.tagName === "DIV") {
+        let cloSest = eT.closest(".commentBox");
+        cloSest.remove();
+    }
+
+    // console.log(cloSest);
+    if((""+(e.target.getAttribute('src'))).indexOf("red")>-1) {
+        e.target.setAttribute('src', '/style/heart.png');
+        } else if((""+(e.target.getAttribute('src'))).indexOf("red")<0){
+        e.target.setAttribute('src', '/style/redheart.png');
+        } 
+
 })
 
-$commentHeart.forEach((heart)=>{
-    heart.addEventListener("click",(e)=>{
-        if((""+(e.target.getAttribute('src'))).indexOf("red")>-1) {
-            e.target.setAttribute('src', '/style/heart.png');
-            } else if((""+(e.target.getAttribute('src'))).indexOf("red")<0){
-            e.target.setAttribute('src', '/style/redheart.png');
-            }  
-    })
-})
+
+
+// $deleteKey.forEach((del)=>{
+//     del.addEventListener('click', ()=>{
+//         del.parentElement.remove();
+//     })
+// })
+
+// $commentHeart.forEach((heart)=>{
+//     heart.addEventListener("click",(e)=>{
+//         if((""+(e.target.getAttribute('src'))).indexOf("red")>-1) {
+//             e.target.setAttribute('src', '/style/heart.png');
+//             } else if((""+(e.target.getAttribute('src'))).indexOf("red")<0){
+//             e.target.setAttribute('src', '/style/redheart.png');
+//             }  
+//     })
+// })
