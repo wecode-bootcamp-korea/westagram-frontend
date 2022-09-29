@@ -1,15 +1,20 @@
-const Input = document.querySelector(".comment-input")[0];
-const button = document.querySelector(".comment-button")[0];
+const form = document.querySelector(".main-mid-input-box");
+const input = document.querySelector(".comment-input");
+const button = document.querySelector(".comment-button");
+const ul = document.querySelector(".comment-list");
 
-function onKeyPressInput() {
-  const addInputLi = document.createElement("li");
-  const addInputUl = document.querySelector(".comment-list")[0];
-  const inputValue = Input.value;
-  if (inputValue.length > 0) {
-    ul.appendChild(addInputLi);
-    return button;
-  }
+// function onKeyPressForm() {
+//   const li = document.createElement("li");
+//   const ul = document.querySelector(".comment-list")[0];
+//   li.innerText = input.value;
+//   ul.appendChild(li);
+// }
+function onButtonClick() {
+  let result = input.value;
+  let div = document.createElement("div");
+  ul.appendChild(div);
+  div.innerHTML = `${result}`;
 }
 
-Input.addEventListener("keypress", onKeyPressInput);
+// input.addEventListener("keypress", onKeyPressForm);
 button.addEventListener("click", onButtonClick);
