@@ -44,9 +44,9 @@ addBtn.addEventListener("click", (e) => {
   commentInput.value = "";
 });
 
-// 모바일 nav
+// sub nav
 let profile = document.querySelector("nav > ul > li:nth-child(3) a");
-let mNav = document.querySelector(".mobile_nav");
+let mNav = document.querySelector(".sub_nav");
 
 profile.addEventListener("click", () => {
   mNav.classList.toggle("open");
@@ -84,7 +84,7 @@ let searchInput = document.querySelector("#search_input");
 let searchResult = document.querySelector(".search_result");
 let newArr = [];
 
-function search() {
+function searchUser() {
   if (searchInput.value !== "") {
     newArr = userArray.filter((el) =>
       el.username.toLowerCase().includes(searchInput.value.toLowerCase())
@@ -102,4 +102,4 @@ function search() {
   }
 }
 
-searchInput.addEventListener("input", search);
+searchInput.addEventListener("input", searchUser);

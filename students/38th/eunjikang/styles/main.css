@@ -1,24 +1,19 @@
 header {
-  width: 100%;
-  background-color: white;
   position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
 }
 
 header .wrapper {
-  height: 80px;
-  padding: 0 18px;
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-}
-
-@media screen and (min-width: 1000px) {
-  header .wrapper {
-    width: 1000px;
-    /* height: 80px; */
-  }
+  position: relative;
+  height: 80px;
+  padding: 0 18px;
+  margin: 0 auto;
 }
 
 .logo {
@@ -36,19 +31,13 @@ header .wrapper {
   line-height: 30px;
 }
 
-@media screen and (max-width: 650px) {
-  .logo > div {
-    display: none;
-  }
-}
-
 .logo > div::before {
   content: "";
+  position: absolute;
+  left: 15px;
   width: 1px;
   height: 30px;
   background-color: #111;
-  position: absolute;
-  left: 15px;
 }
 
 .search {
@@ -63,12 +52,6 @@ header .wrapper {
   background-color: #eee;
   padding: 0 18px;
   text-align: center;
-}
-
-@media screen and (max-width: 650px) {
-  .search input {
-    display: none;
-  }
 }
 
 .search_result {
@@ -91,15 +74,15 @@ header .wrapper {
 .search_result > div > div:first-child {
   width: 40px;
   height: 40px;
-  overflow: hidden;
   border-radius: 50%;
   margin-right: 10px;
+  overflow: hidden;
 }
 
 .search_result > div > div:first-child img {
+  display: block;
   width: 100%;
   height: 100%;
-  display: block;
   object-fit: cover;
 }
 
@@ -120,9 +103,6 @@ nav > ul li {
   margin: 0 10px;
 }
 
-@media screen and (max-width: 650px) {
-}
-
 nav > ul li a {
   display: block;
 }
@@ -131,51 +111,43 @@ nav > ul li img {
   width: 30px;
 }
 
-nav .mobile_nav {
+nav .sub_nav {
   position: absolute;
   right: 0;
   top: 80px;
   z-index: 10;
-  background-color: white;
-  border: 1px solid #eee;
-  border-top: none;
-  border-radius: 0 0 0 20px;
   width: 200px;
   height: 0;
+  background-color: white;
+  border-top: none;
+  border-radius: 0 0 20px 20px;
   overflow-y: hidden;
   transition: 0.3s;
 }
 
-nav .mobile_nav.open {
+nav .sub_nav.open {
   height: 120px;
   transition: 0.3s;
-  border: none;
 }
 
-nav .mobile_nav li {
-  padding-left: 28px;
-  margin: 14px 18px;
+nav .sub_nav li {
   background-repeat: no-repeat;
   background-position: left center;
   background-size: 20px 20px;
+  padding-left: 28px;
+  margin: 14px 18px;
 }
 
-nav .mobile_nav li:nth-child(1) {
+nav .sub_nav li:nth-child(1) {
   background-image: url("https://cdn-icons-png.flaticon.com/128/1144/1144760.png");
 }
 
-nav .mobile_nav li:nth-child(2) {
+nav .sub_nav li:nth-child(2) {
   background-image: url("https://cdn-icons-png.flaticon.com/128/2099/2099058.png");
 }
 
-nav .mobile_nav li:nth-child(3) {
+nav .sub_nav li:nth-child(3) {
   background-image: url("https://cdn-icons-png.flaticon.com/512/3942/3942699.png");
-}
-
-@media screen and (min-width: 1000px) {
-  nav .mobile_nav {
-    display: none;
-  }
 }
 
 main {
@@ -183,35 +155,17 @@ main {
   background-color: #eee;
 }
 
-@media screen and (min-width: 1000px) {
-  main .wrapper {
-    width: 1000px;
-    margin: 0 auto;
-    padding: 0 40px;
-    display: flex;
-    justify-content: space-between;
-  }
-}
-
 .feed {
   padding-bottom: 20px;
   background-color: white;
 }
 
-@media screen and (min-width: 1000px) {
-  .feeds {
-    width: 540px;
-    border: 1px solid #ddd;
-    flex-shrink: 0;
-  }
-}
-
 .feed_owner {
-  height: 60px;
-  padding: 0 18px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 60px;
+  padding: 0 18px;
 }
 
 .feed_owner div {
@@ -258,9 +212,9 @@ main {
 }
 
 .feed_icons {
-  padding: 10px 0 5px 0;
   display: flex;
   justify-content: space-between;
+  padding: 10px 0 5px 0;
 }
 
 .feed_icons > div {
@@ -430,15 +384,8 @@ main {
 
 /* right */
 
-.main-right {
+.main_right {
   display: none;
-}
-@media screen and (min-width: 1000px) {
-  .main-right {
-    width: 320px;
-    display: block;
-    flex-shrink: 0;
-  }
 }
 
 .myaccount {
@@ -472,9 +419,9 @@ main {
 }
 
 .stories_bar {
-  padding: 18px 10px;
   display: flex;
   justify-content: space-between;
+  padding: 18px 10px;
 }
 
 .stories_bar span {
@@ -532,9 +479,9 @@ main {
 }
 
 .stories_list .username p {
-  line-height: normal;
   font-weight: 400;
   color: #888;
+  line-height: normal;
 }
 
 .suggestions {
@@ -554,9 +501,9 @@ main {
 }
 
 .suggestion_bar {
-  padding: 18px 10px;
   display: flex;
   justify-content: space-between;
+  padding: 18px 10px;
 }
 
 .suggestion_bar span {

@@ -26,7 +26,7 @@ function validate() {
   } else if (password.value.length < 6) {
     alert("Please enter a valid password");
   } else {
-    alert("로그인 성공");
+    alert("Welcome Back!");
     location.href = "main.html";
   }
 }
