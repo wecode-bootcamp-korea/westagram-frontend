@@ -20,9 +20,8 @@ function search(){
     newarr = userArr.filter(item=>
         item.id.includes(`${searchInput.value}`)
     )
-    console.log(newarr)
     }else{ newarr = []
-    console.log(newarr)}
+    }
 
     searchBar.innerHTML = ""
     newarr.map(item=>{
