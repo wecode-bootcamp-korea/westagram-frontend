@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>위스타 메인</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+    </style>
+  </head>
+
+  <body>
+    <nav class="nav">
+      <div class="navLeft">
+        <img src="/logo.png" class="logoimg" />
+        <div class="logoRightBar">|</div>
+        <div class="logoText">Westagram</div>
+      </div>
+
+      <div class="navCenter">
+        <input class="navInput" placeholder=" 🔍 검색" />
+      </div>
+
+      <div class="navRight">
+        <img src="/compass.png" class="compass" />
+        <img src="/heart.png" class="heart" />
+        <img src="/person.png" class="person" id="person" />
+      </div>
+    </nav>
+
+    <div class="maincontainer">
+      <div class="maincontainer2">
+        <main class="feed">
+          <article class="article">
+            <div class="articleArea1">
+              <img src="/profile.png" class="profile" />
+              <a href="###" class="feedid">kimdoyoung12345</a>
+              <img src="/dot3.png" class="dot3" />
+            </div>
+
+            <div class="articleArea2"><img class="cat" src="/cat.png" /></div>
+
+            <div class="articleArea3">
+              <div class="iconcontainer">
+                <div class="iconLeft">
+                  <img class="feedicon" src="/feedicon.png" />
+                </div>
+                <div class="iconRight">
+                  <img class="saveicon" src="/saveicon.png" />
+                </div>
+              </div>
+            </div>
+
+            <div class="articleArea4">
+              <div><img src="/likement.png" class="likement" /></div>
+            </div>
+
+            <div class="articleArea5" id="commentbox"></div>
+            <div class="articleArea6">
+              <div class="postingtime">1시간 전</div>
+            </div>
+
+            <div class="articleArea7">
+              <input
+                placeholder="댓글 달기..."
+                class="commentinput"
+                id="commentinput"
+              />
+              <button class="commentbutton" id="commentbutton" disabled>
+                게시
+              </button>
+            </div>
+          </article>
+        </main>
+
+        <aside class="mainRight">
+          <div class="info">
+            <img src="/profile.png" class="rightProfile" />
+            <div>
+              <div class="rightinfo1">kimdoyoung12345</div>
+              <div class="rifgrinfo2">김도영</div>
+            </div>
+          </div>
+
+          <div class="story">
+            <div class="storyTitle2">
+              <div class="storyTitle">
+                <div class="storyTitleLeft">스토리</div>
+                <div class="storyTitleRight"><b>모두 보기</b></div>
+              </div>
+            </div>
+
+            <div class="storyList">
+              <img src="/storylist.png" class="storylistimg" />
+            </div>
+          </div>
+
+          <div class="recommend">
+            <div class="recomtitle">
+              <div class="recomtitle2">
+                <div class="recomtitleLeft">회원님을위한추천</div>
+                <div class="recomtitleRight"><b>모두 보기</b></div>
+              </div>
+            </div>
+            <div class="recomlist">
+              <img class="recomlistimg" src="/recomlist.png" />
+            </div>
+          </div>
+        </aside>
+      </div>
+      <img class="settingboximg" src="/settingbox.png" id="settingboximg" />
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
