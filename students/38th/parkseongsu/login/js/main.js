@@ -19,11 +19,12 @@ function writeComment(){
     commentList.appendChild(li);
     // let newObj = {'id' : Date.now(), 'value' : commentValue};
     // commentarr.push(newObj);
-
+    event.preventDefault();
     const userIdSpan = document.createElement('span');
     const textSpan = document.createElement('span');
     const heartBtn = document.createElement('span');
     const removeBtn = document.createElement('span');
+    
 
     heartBtn.classList.add('emptyHeart');
     textSpan.classList.add('commentmargin');
@@ -41,15 +42,28 @@ function writeComment(){
     li.appendChild(removeBtn);
 
     commentInput.value = null;
+
+    function hidden(){
+        console.log('it works')
+        li.classList.add('displaynone')
+    }
+    function like(){
+        heartBtn.classList.toggle('fullHeartSmall');
+        heartBtn.classList.toggle('emptyHeart');
+    }
+    removeBtn.addEventListener('click',hidden);
+    heartBtn.addEventListener('click', like);
 }
 
 function createDropbar(){
-    dropMenu.classList.toggle('displaynone')
+    dropMenu.classList.toggle('displaynone');
 }
 
 function articleHeart(){
-    articleHeartIcon.classList.toggle('fullHeart')
+    articleHeartIcon.classList.toggle('fullHeart');
 }
+
+
 
 // commentInput.addEventListener('change', writeComment);
 commentbtn.addEventListener('click', writeComment);

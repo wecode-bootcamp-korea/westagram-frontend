@@ -105,6 +105,13 @@ main{
     background-image: url('https://cdn-icons-png.flaticon.com/512/833/833472.png');
     background-size: cover;
 }
+.fullHeartSmall{
+    display : inline-block;
+    width : 12px;
+    height: 12px;
+    background-image: url('https://cdn-icons-png.flaticon.com/512/833/833472.png');
+    background-size: cover;
+}
 
 #articlename{
     width: 470px;
@@ -280,15 +287,6 @@ aside{
     font-family: 'Lobster', cursive;
 }
 
-@media(max-width : 830px){
-    aside{
-        display : none;
-    }
-    .logosize > h1{
-        font-size: 18px;
-    }
-}
-
 .emptyHeart{
     display: inline-block;
     width : 12px;
@@ -299,7 +297,7 @@ aside{
 
 .commentmargin{
     display: inline-block;
-    width : 380px;
+    width : 300px;
 }
 #dropMenu{
     position:absolute;
@@ -360,4 +358,44 @@ aside{
     background-size: cover;
     margin-left : 5px;
     margin-bottom : 1px;
+}
+
+.userImg{
+    display : inline-block;
+    width : 24px;
+    height : 24px;
+    background-image: url('https://cdn-icons-png.flaticon.com/512/3135/3135715.png');
+    background-size : cover;
+    border-radius: 50%;
+}
+
+#searchBar{
+    width : 200px;
+    height : 200px;
+    border-radius: 8px;
+    position : absolute;
+    top : 44px;
+    background-color: white;
+    border : 1px solid rgb(219, 219, 219);
+
+}
+
+#searchBar>li{
+    margin-top: 10px;
+}
+#searchBar>li>span{
+    margin-left : 10px;
+}
+.positionRight {
+    position : relative;
+    left : 150px;
+}
+
+@media(max-width : 830px){
+    aside{
+        display : none;
+    }
+    .logosize > h1{
+        font-size: 18px;
+    }
 }

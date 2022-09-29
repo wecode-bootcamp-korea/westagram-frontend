@@ -6,14 +6,19 @@ let idValue;
 
 
 function loginallow(){
-    if(idInput.value !=''  && pwInput.value!=''){
+    if(idInput.value.includes('@')  && pwInput.value.length >5){
     loginbtn.classList.add('loginbtnallow');
-    
+    loginForm.addEventListener('submit', moveMain);
 
 }else{
     loginbtn.classList.remove('loginbtnallow');
+    loginForm.addEventListener('submit', notMoveMain);
 }
 };
+function notMoveMain(event){
+    event.preventDefault();
+    
+}
 
 function moveMain(event){
     sessionStorage.setItem('userId', idInput.value)
@@ -22,7 +27,5 @@ function moveMain(event){
     location.href = './main.html'
 }
 
-
-
 window.addEventListener('keyup', loginallow)
-loginForm.addEventListener('submit', moveMain);
+

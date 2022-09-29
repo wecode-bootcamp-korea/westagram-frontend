@@ -13,6 +13,8 @@
             <h1>Seongsutagram</h1>
         </div>
         <input type="text" placeholder="검색"/>
+        <ul id="searchBar" class="displaynone">
+        </ul>
         <div id="itembox">
             <span class="homeIcon"></span>
             <span class="dmIcon"></span>
@@ -26,7 +28,7 @@
                         <li><span class="profileIcon"></span><a  href="#">프로필</a></li>
                         <li><span class="scrapIcon"></span><a href="#">저장됨</a></li>
                         <li><span class = "settingIcon"></span><a href="#">설정</a></li>
-                        <li><a href="#">로그아웃</a></li>
+                        <li><a href="./login.html">로그아웃</a></li>
                     </ul>
                 </li>
             </ul>
@@ -89,7 +91,6 @@
                 </div>
                     <div class="commentbox">
                         <div>
-                            <span></span>
                             <span class="boldWeight">tjdtnxkrmfoas</span>
                             <span>님 여러 명이 좋아합니다</span>
                         </div>
@@ -101,11 +102,11 @@
                             <ul id="commentlist"></ul>
                     </div>
                 </div>
-                <div class="commentstool">
+                <form class="commentstool">
                     <span class="smileIcon"></span>
                     <input id="commentInput"placeholder="댓글 달기..."/>
                     <button id= "commentbtn"class="bluefont">게시</button>
-                </div>
+                </form>
             </div>
         </main>
         <aside>
@@ -153,4 +154,5 @@
     </div>
 </body>
 <script src="./js/main.js"></script>
+<script src="./js/search.js"></script>
 </html>
