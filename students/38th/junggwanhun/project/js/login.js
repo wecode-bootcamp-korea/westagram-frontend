@@ -4,7 +4,7 @@ const $inputPassword  = document.querySelector(".inputPassword");
 
 $buttonClick.addEventListener("click",()=>{
     ((($inputId+"").indexOf("@") > -2) ?  
-    location.href="/project/main.html" : "")
+    location.href="/main.html" : "")
 });
 
 $inputId.addEventListener("keyup",()=>{

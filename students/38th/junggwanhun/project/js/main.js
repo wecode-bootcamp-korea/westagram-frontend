@@ -31,7 +31,7 @@ $buttonClick.addEventListener("click",()=>{
     div.innerHTML=`
     <div class="commentId">Dog</div>
     <div class="commentComment">${result}</div>
-    <div class="commentHeartBox"><img class="commentHeart" src="/project/style/heart.png"></div>
+    <div class="commentHeartBox"><img class="commentHeart" src="/style/heart.png"></div>
     <div class="deleteKey">삭제</div>
     `
     $mainFooterInput.focus();
@@ -47,7 +47,7 @@ $mainFooterInput.addEventListener("keypress",(e)=>{
     div.innerHTML=`
     <div class="commentId">Dog</div>
     <div class="commentComment">${result}</div>
-    <div class="commentHeartBox"><img class="commentHeart" src="/project/style/heart.png"></div>
+    <div class="commentHeartBox"><img class="commentHeart" src="/style/heart.png"></div>
     <div class="deleteKey">삭제</div>
     `
     $mainFooterInput.focus();
@@ -74,9 +74,9 @@ $deleteKey.forEach((del)=>{
 $commentHeart.forEach((heart)=>{
     heart.addEventListener("click",(e)=>{
         if((""+(e.target.getAttribute('src'))).indexOf("red")>-1) {
-            e.target.setAttribute('src', '/project/style/heart.png');
+            e.target.setAttribute('src', '/style/heart.png');
             } else if((""+(e.target.getAttribute('src'))).indexOf("red")<0){
-            e.target.setAttribute('src', '/project/style/redheart.png');
+            e.target.setAttribute('src', '/style/redheart.png');
             }  
     })
 })
