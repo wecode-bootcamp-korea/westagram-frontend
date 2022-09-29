@@ -7,11 +7,9 @@ const loginForm = document.querySelector('.login-form form');
 
 function checkIdAndPassword() {
     if(idInput.value.length > 0 && passwordInput.value.length > 0) {
-        loginBtn.style.disabled = "true";
         loginBtn.classList.remove("disabled-btn");
 
     } else {
-        loginBtn.style.disabled = "false";
         loginBtn.classList.add("disabled-btn");
     }
 }
