@@ -17,7 +17,7 @@ addBtn.addEventListener("click", (e) => {
 
   let commentList = document.createElement("div");
   commentsContainer.appendChild(commentList);
-  commentList.classList = "indi_comment";
+  commentList.classList = "commentList";
 
   let user = document.createElement("div");
   user.innerHTML = `<div class="username">iamchloe</div><div>${commentInput.value}</div>`;
@@ -25,7 +25,6 @@ addBtn.addEventListener("click", (e) => {
 
   let buttonBox = document.createElement("div");
   commentList.appendChild(buttonBox);
-
   let likeBtn = document.createElement("div");
   buttonBox.appendChild(likeBtn);
   likeBtn.className = "iconImg icon_heart";
