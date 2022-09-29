@@ -15,18 +15,18 @@
 <body>  
   <nav>
     <div class="icon">
-      <img src="https://cdn-icons-png.flaticon.com/512/1384/1384031.png">
+      <a href =#><img src="https://cdn-icons-png.flaticon.com/512/1384/1384031.png"></a>
     </div>
     <div class="iconlogo">
-      <img src="https://www.instagram.com/static/images/web/logged_out_wordmark.png/7a252de00b20.png">
+      <a href =#><img src="https://www.instagram.com/static/images/web/logged_out_wordmark.png/7a252de00b20.png"></a>
      </div>
     <div class="bar">
       <input type="text" placeholder="검색">
     </div>
     <div class="icon1">
-      <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png">
-      <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png">
-      <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png">
+      <a href =#><img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png"></a>
+      <a href =#><img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"></a>
+      <a href =#><img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png"></a>
       </div>
   </nav>
   <main>
@@ -34,13 +34,28 @@
       <article>
         <img src = "./2.png" width="100%">
         <img src = "./w1.jpg" width="100%">
-        <img src = "./3.png" width="100%">
         </article>
-        <div id="comment">
-          <div id = "result"></div>
-          <input type="text" id="commentInput" placeholder="댓글달기..." onkeyup="printName()"/>
-          <button id="submit">게시</button>
+        <div id="mid-icon">
+          <div class="midicon_left">
+            <a href="#"><img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"></a>
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/3580/3580382.png"></a>
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/512/1947/1947247.png"></a>
+          </div>
+          <div class="midicon_right">
+            <a href="#"><img src="https://cdn-icons-png.flaticon.com/128/1159/1159580.png"></a></div>
         </div>
+        
+        <div class="heartgood"></div>
+        <div>
+          <ul class="input‑reply">
+          </ul>
+        </div>
+        
+        <div id="comment">
+          <input type="text" id="text_add" class="text-add" placeholder="댓글달기..."/>
+          <input type="submit" value="게시" class="btn-add">
+          </div>
+        
      </div>
     <div class="main_right"></div>
     </main>
