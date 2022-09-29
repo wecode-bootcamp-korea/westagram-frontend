@@ -1,20 +1,51 @@
+//  1. 로그인 버튼 on
+//  2. 로그인 버튼 off
+//  3. 로그인 성공시 main.html로 이동하는 이벤트 
+
 const inputId = document.querySelector('#id');
 const inputPassword = document.querySelector('#password');
+const loginInput = document.getElementsByClassName('LogInInput')
 const button = document.querySelector('#LogInButton');
 
-function loginBtn(){
-    let idValu = inputId.value;
-    let passwordValue = inputPassword.value;
+function loginButtonOn() {
+    // let idValu = inputId.value;
+    // let passwordValue = inputPassword.value;
 
-    if(idValu.length > 0 && passwordValue.length > 0) {
-        button.disabled = false;
-        button.style.backgroundColor = '#3e3efe';
-        button.style.cursor = 'pointer';
-    }else {
-        button.disabled = true;
-        button.style.backgroundColor = '#3ecefe';
-    }
+    button.disabled = false;
+    button.style.backgroundColor = '#3e3efe';
+    button.style.cursor = 'pointer';
+
 };
 
-inputId.addEventListener('keyup', loginBtn);
-inputPassword.addEventListener('keyup', loginBtn);
+function loginButtonOff() {
+    // let idValu = inputId.value;
+    // let passwordValue = inputPassword.value;
+
+    button.disabled = true;
+    button.style.backgroundColor = '#3ecefe';
+
+};
+
+function successLogin(){
+    let idValu = inputId.value;
+    let passwordValue = inputPassword.value;
+    if(idValu.length > 0 && passwordValue.length > 0){
+        loginButtonOn()
+    }else{
+        loginButtonOff()
+    }
+}
+function eneterKeyLogin(event){
+    if (event.keyCode == 13){
+        
+    }
+}
+inputId.addEventListener('keyup', successLogin);
+inputPassword.addEventListener('keyup', (event) => {
+    if(event.keyCode === 13){
+        location.href='main.html'
+    }else{
+        successLogin()
+    }
+});
+button.addEventListener('click', () => {location.href='main.html'})
