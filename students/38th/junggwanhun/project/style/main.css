@@ -4,13 +4,7 @@ a{
     text-decoration: none;
     color: black;
 }
-main {z-index: 5;
-    position: relative;
-    left: 50%;
-    transform: translate(-50%);
-    width: 1100px;
-    height: 1000px;
-}
+
 
 nav {
     z-index: 10;
@@ -105,6 +99,11 @@ nav {
     margin-left: 7px;
     width: 38px;
     height: 33px;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+.navMe:hover{
+    transform: scale(1.2);
 }
 .navMeBox{
     border: 1px solid lightgray;
@@ -167,6 +166,13 @@ nav {
 }
 .logOut{
     margin-left:33px;
+}
+main {z-index: 5;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    width: 1100px;
+    height: 1000px;
 }
 .mainPage {
     display: flex;
@@ -270,6 +276,7 @@ nav {
 .heart{
     font-size: 25px;
     color: red;
+    cursor: pointer;
 }
 .fa-heart{
     transition: all ease 0.5s;
@@ -361,13 +368,16 @@ nav {
     width: 410px;
 }
 .commentHeart{
-    top: 3px;
-    left: 12px;
     position: relative;
-    width: 20px;
-    height: auto;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
 }
 .commentHeartBox{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    left: 20px;
 }
 .fa-regular fa-heart{
     top: 5px;
@@ -379,7 +389,8 @@ nav {
     color: lightgray;
     font-size: 10px;
     position: relative;
-    left: 20px;
+    left: 25px;
+    cursor: pointer;
 }
 .mainFooter{
     top: 170px;
@@ -405,6 +416,7 @@ nav {
     left: 510px;
     color: blue;
     position: relative;
+    cursor: pointer;
 }
 .mainRight {
     position: relative;
@@ -661,4 +673,102 @@ nav {
     width: 100%;
     height: 90px;
     color: lightgray;
+}
+@media screen and (max-width: 768px) {
+    nav {
+        width: 325px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid lightgrey;
+        background-color: rgb(250, 256, 250);
+        transform: translate(0);
+        left: 0;
+
+    }
+    .logo{
+        border: 0;
+        position: relative;
+        left: -10px;
+    }
+    .searchBox{
+        display: none;
+    }
+    main {
+        position: relative;
+        left: 0%;
+        transform: translate(0%);
+        width: 620px;
+        height: 400px;
+    }
+    .mainPage {
+        display: flex;
+        position: relative;
+        width: 80%;
+        left: 0%;
+        height: 400px;
+        top: 0px; 
+    }
+    .mainCenter {
+        position: absolute;
+        left: 0%;
+        transform: translate(0%);
+        position: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        height: 90vh;
+        width:100%;
+    }
+    .bottomBoxDownComment{
+        font-size: 15px;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+    }
+    .commentComment{
+        position: relative;
+        font-size: 13px;
+        margin-left: 10px;
+        top:3px;
+        color: rgb(73, 70, 70);
+        width: 190px;
+    }
+    .buttonClick{
+        top : 8px;
+        left: 260px;
+        color: blue;
+        position: relative;
+        cursor: pointer;
+    }
+    .right{
+        top: 5px;
+        left: 70px;
+    }
+    .rightExplore{
+        width: 15px;
+        height: 15px;
+    }
+    .rightHeart{
+        width: 15px;
+        height: 15px;
+    }
+    .rightProfile{
+        width: 15px;
+        height: 15px;
+    }
+    .navMe{
+        width: 15px;
+        height: 15px;
+    }
+    .instagram{
+        display: none;
+    }
+    .navBox{
+        width: 150px;
+    }
+    .navBox{
+        /* width: 100px; */
+    }
+    .mainRight{
+        display: none;
+    }
 }

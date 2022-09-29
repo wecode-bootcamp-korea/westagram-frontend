@@ -76,9 +76,8 @@ $search.addEventListener("keyup",()=>{
 
 
 $bottomBoxDownComment.addEventListener("click",(e) => {
-    let eT = e.target;
-    if(eT.tagName === "DIV") {
-        let cloSest = eT.closest(".commentBox");
+    if(e.target.tagName === "DIV") {
+        let cloSest = e.target.closest(".commentBox");
         cloSest.remove();
     }
 
