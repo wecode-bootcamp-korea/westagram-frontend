@@ -37,7 +37,7 @@ addBtn.addEventListener("click", (e) => {
   deleteBtn.className = "deleteBtn";
   deleteBtn.innerHTML = "Delete";
   deleteBtn.addEventListener("click", () => {
-    commentList.classList.add("hide");
+    commentList.remove();
   });
 
   commentInput.value = "";
