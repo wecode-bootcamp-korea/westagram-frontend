@@ -10,5 +10,23 @@ document.addEventListener("keyup", () => {
 
 submitBtn.addEventListener("click", (e) => {
   e.preventDefault();
-  location.href = "main.html";
+  validate();
 });
+
+function validate() {
+  if (email.value == null || email.value == "") {
+    alert("Please enter the email.");
+    return false;
+  } else if (!email.value.includes("@") || email.value.length < 5) {
+    alert("Please enter a valid email address.");
+    return false;
+  } else if (password.value == null || password.value == "") {
+    alert("Please enter the password.");
+    return false;
+  } else if (password.value.length < 6) {
+    alert("Please enter a valid password");
+  } else {
+    alert("로그인 성공");
+    location.href = "main.html";
+  }
+}
