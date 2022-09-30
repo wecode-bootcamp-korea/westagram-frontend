@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="instagram.css" media="screen" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/ace4adcfd9.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <nav class="topSideNavigation">
+      <div>
+        <i class="fa-brands fa-instagram" id="instaIcon"></i>
+        <span class="topSideInstaText">Instagram</span>
+      </div>
+      <div class="searchBar">
+        <i class="fa-solid fa-magnifying-glass" id="magnifier"></i>
+        <input class="topSideSearch" type="text" placeholder="검색" />
+      </div>
+      <div>
+        <i class="fa-regular fa-compass" id="compass"></i>
+        <i class="fa-regular fa-heart" id="upperHeart"></i>
+        <i class="fa-regular fa-user" id="user"></i>
+      </div>
+    </nav>
+    <main>
+      <div class="feeds">
+        <article>
+          <div class="givenProfile">
+            <img class="profileImg"
+            src="https://user-images.githubusercontent.com/111094669/192488602-fe57cc8c-38e2-4ac6-ab73-92cfb6ca467a.png"
+            height: 50px />
+            <span class="instaID"><strong>w00jinkim</strong></span>
+            <span class="threeDots"><strong>···</strong></span>
+          </div>
+          <div>
+            <img
+              src="https://user-images.githubusercontent.com/111094669/192498973-06b7ab82-68db-4dd6-8b0e-d6c39dcedfcb.jpeg"
+              class="mainImage"
+            />
+          </div>
+          <div class="lowerIcons">
+            <span>
+              <i class="fa-regular fa-heart" id="lowheart"></i>
+              <i class="fa-regular fa-comment" id="comment"></i>
+              <i class="fa-solid fa-arrow-up-from-bracket" id="bracket"></i>
+              <i class="fa-regular fa-bookmark" id="bookmark"></i>
+            </span>
+          </div>
+          <div>
+            <img
+              class="profileImgLike"
+              src="https://user-images.githubusercontent.com/111094669/192488602-fe57cc8c-38e2-4ac6-ab73-92cfb6ca467a.png"
+            />
+            <span class="sumOfLikes">
+              <strong>w00jinkim</strong>님 외 <strong>10,529,903명</strong>이
+              좋아합니다
+            </span>
+          </div>
+          <div class="instaDescription">
+            <div><strong>w00jinkim</strong> 가보자 우주로!</div>
+            <div><strong>BMW Korea</strong> 거봐 좋았잖아~~~~~</div>
+            <div class="theTimeAgo">3시간 전</div>
+          </div>
+          <div class="replyText">
+            <form action="instagramMain.html" id="instaForm">
+              <input
+                id="instaCom"
+                class="instagramReply"
+                type="text"
+                placeholder="댓글 달기..."
+              />
+              <button id="replyBtn" class="replySubmit">게시</button>
+            </form>
+            <ul id="comments"></ul>
+          </div>
+        </article>
+      </div>
+      <div class="mainRight">
+        <img
+          class="instaFollowers"
+          src="https://user-images.githubusercontent.com/111094669/192520591-80f83697-a171-4822-b92c-1390fe7986a9.png"
+        />
+        <div class="etcWords">
+          <p>소개·도움말·홍보 센터·API채용보·개인정보처리방침</p>
+          <div>약관·위치·언어</div>
+          <p>© 2022 WESTAGRAM FROM WETA</p>
+        </div>
+      </div>
+    </main>
+    <script type="text/javascript" src="instagramMain.js"></script>
+  </body>
+</html>
