@@ -1,774 +1,761 @@
 @import url("https://fonts.googleapis.com/css?family=Lobster:regular");
 
-a{
-    text-decoration: none;
-    color: black;
+a {
+  text-decoration: none;
+  color: black;
 }
-
 
 nav {
-    z-index: 10;
-    position: fixed;
-    left: 50%;
-    width: 100%;
-    transform: translate(-50%);
-    padding-bottom: 30px;
-    border-bottom: 1px solid lightgrey;
-    background-color: rgb(250, 256, 250);
+  z-index: 10;
+  position: fixed;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%);
+  padding-bottom: 30px;
+  border-bottom: 1px solid lightgrey;
+  background-color: rgb(250, 256, 250);
 }
 .instagram {
-    width: 25px;
-    height: 25px;
-
+  width: 25px;
+  height: 25px;
 }
 
 .icon {
-    display: flex;
+  display: flex;
 }
-.navBox{
-    display: flex;
-    flex-wrap: nowrap;
-    width: 100%;
-    height: 100px;
-    justify-content: space-evenly;
-    align-items: center;
+.navBox {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: 100px;
+  justify-content: space-evenly;
+  align-items: center;
 }
 .left {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    width: 200px;
-    position: relative;
-    left: 70px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 200px;
+  position: relative;
+  left: 70px;
 }
 
 .logo {
-    font-size: 25px;
-    margin-left: 30px;
-    padding-left: 30px;
-    display: flex;
-    border-left: 2px solid black;
-    font-family: Lobster;
-
+  font-size: 25px;
+  margin-left: 30px;
+  padding-left: 30px;
+  display: flex;
+  border-left: 2px solid black;
+  font-family: Lobster;
 }
-.searchBox{
-    margin-left: 100px;
-    position: relative;
-    display: flex;
-    height: 40px;
-    width: 200px;
+.searchBox {
+  margin-left: 100px;
+  position: relative;
+  display: flex;
+  height: 40px;
+  width: 200px;
 }
-.search{ 
-    position: relative;  
-    height: 30px;
-    width: 400px;
-    text-align: center;
+.search {
+  position: relative;
+  height: 30px;
+  width: 400px;
+  text-align: center;
 }
-.fa-magnifying-glass{
-    position: absolute;
-    display: flex;
-    font-size: 20px;
-    left: 65px;
-    top:8px;
-    color: lightgray;
+.fa-magnifying-glass {
+  position: absolute;
+  display: flex;
+  font-size: 20px;
+  left: 65px;
+  top: 8px;
+  color: lightgray;
 }
-.right{
-    position: relative;
-    display: flex;
-    width: 300px;
-    right :40px;
+.right {
+  position: relative;
+  display: flex;
+  width: 300px;
+  right: 40px;
 }
-.rightExplore{
-    width: 30px;
-    margin-left: 70px;
+.rightExplore {
+  width: 30px;
+  margin-left: 70px;
 }
-.rightHeart{
-    width: 30px;
-    margin-left: 10px;
+.rightHeart {
+  width: 30px;
+  margin-left: 10px;
 }
-.rightProfile{
-    width: 30px;
-    margin-left: 10px;
+.rightProfile {
+  width: 30px;
+  margin-left: 10px;
 }
-.navMe{
-    position: relative;
-    background-image: url(/style/cat.jpeg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 50%;
-    margin-left: 7px;
-    width: 38px;
-    height: 33px;
-    cursor: pointer;
-    transition: all 1s ease;
+.navMe {
+  position: relative;
+  background-image: url(/style/cat.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  margin-left: 7px;
+  width: 38px;
+  height: 33px;
+  cursor: pointer;
+  transition: all 1s ease;
 }
-.navMe:hover{
-    transform: scale(1.2);
+.navMe:hover {
+  transform: scale(1.2);
 }
-.navMeBox{
-    border: 1px solid lightgray;
-    position: relative;
-    width: 250px;
-    left: -100px;
-    top: 50px;
-    height: auto;
-    flex-direction: column;
-    display: none;
+.navMeBox {
+  border: 1px solid lightgray;
+  position: relative;
+  width: 250px;
+  left: -100px;
+  top: 50px;
+  height: auto;
+  flex-direction: column;
+  display: none;
 }
-.navMeBoxPro{
-    width: 100%;
-    height: 55px;
-    background-color: rgb(250, 256, 250);
-    display: flex;
-    align-items: center;
+.navMeBoxPro {
+  width: 100%;
+  height: 55px;
+  background-color: rgb(250, 256, 250);
+  display: flex;
+  align-items: center;
 }
-.Me{
-    margin-left: 30px;
+.Me {
+  margin-left: 30px;
 }
-.MeText{
-    margin-left: 20px;
+.MeText {
+  margin-left: 20px;
 }
-.navMeBoxSave{
-    width: 100%;
-    height: 45px;
-    background-color: rgb(250, 256, 250);
-    display: flex;
-    align-items: center;
+.navMeBoxSave {
+  width: 100%;
+  height: 45px;
+  background-color: rgb(250, 256, 250);
+  display: flex;
+  align-items: center;
 }
-.Save{
-    margin-left: 30px;
-    
+.Save {
+  margin-left: 30px;
 }
-.SaveText{
-    margin-left: 20px;
+.SaveText {
+  margin-left: 20px;
 }
-.navMeBoxSet{
-    width: 100%;
-    height: 45px;
-    background-color: rgb(250, 256, 250);
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid lightgray;
+.navMeBoxSet {
+  width: 100%;
+  height: 45px;
+  background-color: rgb(250, 256, 250);
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid lightgray;
 }
-.Setting{
-    margin-left: 30px;
-    
+.Setting {
+  margin-left: 30px;
 }
-.SettingText{
-    margin-left: 20px;
+.SettingText {
+  margin-left: 20px;
 }
-.navMeBoxOut{
-    width: 100%;
-    height: 45px;
-    background-color: rgb(250, 256, 250);
-    display: flex;
-    align-items: center;
+.navMeBoxOut {
+  width: 100%;
+  height: 45px;
+  background-color: rgb(250, 256, 250);
+  display: flex;
+  align-items: center;
 }
-.logOut{
-    margin-left:33px;
+.logOut {
+  margin-left: 33px;
 }
-main {z-index: 5;
-    position: relative;
-    left: 50%;
-    transform: translate(-50%);
-    width: 1100px;
-    height: 1000px;
+main {
+  z-index: 5;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  width: 1100px;
+  height: 1000px;
 }
 .mainPage {
-    display: flex;
-    position: relative;
-    width: 80%;
-    left: 10%;
-    height: 90vh;
-    top: 0px; 
+  display: flex;
+  position: relative;
+  width: 80%;
+  left: 10%;
+  height: 90vh;
+  top: 0px;
 }
 
 .mainCenter {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  position: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  height: 90vh;
+  width: 100%;
+}
+
+.mainbox {
+  background-color: rgb(250, 256, 250);
+  display: inline-block;
+  width: 65%;
+  height: 700px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+}
+.mainFaceBox {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+}
+.mainFace {
+  position: relative;
+  background-image: url(/style/cat.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  top: 20px;
+  left: 30px;
+  width: 60px;
+  height: 60px;
+}
+.mainFaceId {
+  font-size: 20px;
+  font-weight: bold;
+  position: relative;
+  display: flex;
+  width: 250px;
+  height: 40px;
+  top: 50px;
+  left: -50px;
+}
+.article {
+  position: relative;
+  top: 100px;
+  width: 100.3%;
+  height: 300px;
+}
+.photo {
+  width: 100%;
+  height: 380px;
+}
+.dot {
+  font-size: 20px;
+  position: relative;
+  display: flex;
+  top: 45px;
+  left: 20px;
+  width: 25px;
+  height: 20px;
+}
+
+.bottomBox {
+  top: 200px;
+  position: relative;
+  width: 99%;
+  height: 170px;
+}
+.bottomBoxUp {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.bottomBoxUpEmoji {
+  top: 10px;
+  left: 15px;
+  position: relative;
+  display: flex;
+  justify-content: space-around;
+  transform: translate(0, -40%);
+  width: 100px;
+  height: 40px;
+}
+.heart {
+  font-size: 25px;
+  color: red;
+  cursor: pointer;
+}
+.fa-heart {
+  transition: all ease 0.5s;
+}
+.fa-heart:hover {
+  transform: scale(1.4);
+}
+.comment {
+  font-size: 25px;
+  margin-left: 5px;
+}
+.share {
+  font-size: 25px;
+  margin-left: 5px;
+}
+.bottomBoxUpTag {
+  top: -5px;
+  position: relative;
+  width: 10%;
+  height: 40px;
+}
+.bottomBox {
+  font-size: 25px;
+  margin-left: 5px;
+}
+.bottomBoxMid {
+  left: 15px;
+  position: relative;
+  display: flex;
+  width: 300px;
+  height: auto;
+  align-items: center;
+}
+.number {
+  font-weight: bold;
+}
+.bottomBoxMidIcon {
+  position: relative;
+  display: flex;
+  background-image: url(/style/dog1.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  top: -10px;
+  width: 30px;
+  height: 30px;
+}
+.bottomBoxMidId {
+  font-size: 15px;
+  position: relative;
+  display: flex;
+  left: 10px;
+  width: 250px;
+  height: 20px;
+}
+.bottomBoxDown {
+  top: 3px;
+  left: 15px;
+  position: relative;
+  width: 95%;
+  height: 55px;
+}
+.bottomBoxDownComment {
+  font-size: 15px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+.commentBox {
+  display: flex;
+  align-items: center;
+}
+.commentId {
+  margin-top: 5px;
+  width: 30px;
+  font-size: 15px;
+  position: relative;
+  font-weight: bold;
+}
+.commentComment {
+  position: relative;
+  font-size: 13px;
+  margin-left: 10px;
+  top: 3px;
+  color: rgb(73, 70, 70);
+  width: 410px;
+}
+.commentHeart {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.commentHeartBox {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  left: 20px;
+}
+.fa-regular fa-heart {
+  top: 5px;
+  position: relative;
+  width: 60px;
+}
+.deleteKey {
+  top: 3px;
+  color: lightgray;
+  font-size: 10px;
+  position: relative;
+  left: 25px;
+  cursor: pointer;
+}
+.mainFooter {
+  top: 170px;
+  left: 20px;
+  position: relative;
+  width: 94%;
+  height: 50px;
+  position: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mainFooterInput {
+  position: relative;
+  width: 105.7%;
+  top: 40px;
+  left: -21.2px;
+  height: 50px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+}
+.buttonClick {
+  top: 8px;
+  left: 510px;
+  color: blue;
+  position: relative;
+  cursor: pointer;
+}
+.mainRight {
+  position: relative;
+  top: 170px;
+  left: 10px;
+  display: inline-block;
+  flex-direction: column;
+  width: 34%;
+}
+.mainRightIconBox {
+  top: 0px;
+  position: relative;
+  width: 300px;
+}
+.mainRightIcon {
+  position: relative;
+  background-image: url(/style/logo.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  top: 15px;
+  left: 25px;
+  width: 50px;
+  height: 50px;
+}
+
+.mainRightId {
+  position: relative;
+  font-size: 14px;
+  left: 85px;
+  top: -20px;
+  width: 180px;
+  height: 30px;
+}
+.storyBox {
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  height: 250px;
+}
+.storyBoxUp {
+  margin-bottom: 10px;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 100%;
+  justify-content: space-around;
+}
+.storyBoxUpLeft {
+  position: relative;
+  font-size: 15px;
+  color: grey;
+}
+.storyBoxUpRight {
+  position: relative;
+  font-size: 15px;
+  font-weight: bold;
+}
+.storyBoxIdBox {
+  top: 15px;
+  position: relative;
+  position: flex;
+  align-items: center;
+  height: 50px;
+  margin-top: 10px;
+}
+.storyBoxIdBoxIconOne {
+  position: relative;
+  background-image: url(/style/dog1.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  top: 7px;
+  left: 30px;
+  width: 40px;
+  height: 40px;
+}
+.storyBoxIdBoxIconTwo {
+  position: relative;
+  background-image: url(/style/dog2.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  top: 7px;
+  left: 30px;
+  width: 40px;
+  height: 40px;
+}
+.storyBoxIdBoxIconThree {
+  position: relative;
+  background-image: url(/style/dog3.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  top: 7px;
+  left: 30px;
+  width: 40px;
+  height: 40px;
+}
+
+.storyBoxIdBoxIdOne {
+  font-size: 14px;
+  position: relative;
+  left: 80px;
+  top: -25px;
+  width: 180px;
+  height: 30px;
+}
+.storyBoxIdBoxIdTwo {
+  font-size: 14px;
+  position: relative;
+  left: 80px;
+  top: -25px;
+  width: 180px;
+  height: 30px;
+}
+.storyBoxIdBoxIdThree {
+  font-size: 14px;
+  position: relative;
+  left: 80px;
+  top: -25px;
+  width: 180px;
+  height: 30px;
+}
+
+.recommendBox {
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  top: 10px;
+  position: relative;
+  width: 100%;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+}
+.recommendUp {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.recommendUpLeft {
+  position: relative;
+  font-size: 15px;
+  color: grey;
+}
+.recommendUpRight {
+  position: relative;
+  font-size: 15px;
+  font-weight: bold;
+}
+.recommendUpIdBox {
+  margin-top: 10px;
+  top: 40px;
+  position: flex;
+  width: 100%;
+  height: 50px;
+}
+.recommendUpIdBoxIconOne {
+  position: relative;
+  display: inline-block;
+  background-image: url(/style/dog4.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  top: 7px;
+  left: 30px;
+  width: 40px;
+  height: 40px;
+}
+
+.recommendUpIdBoxIconTwo {
+  position: relative;
+  display: inline-block;
+  background-image: url(/style/dog5.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  top: 7px;
+  left: 30px;
+  width: 40px;
+  height: 40px;
+}
+.recommendUpIdBoxIconThree {
+  position: relative;
+  display: inline-block;
+  background-image: url(/style/dog6.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  top: 7px;
+  left: 30px;
+  width: 40px;
+  height: 40px;
+}
+
+.recommendUpIdBoxIdOne {
+  position: relative;
+  display: inline-block;
+  left: 40px;
+  top: -5px;
+  width: 180px;
+  height: 30px;
+}
+.recommendUpIdBoxIdTwo {
+  position: relative;
+  display: inline-block;
+  left: 40px;
+  top: -5px;
+  width: 180px;
+  height: 30px;
+}
+.recommendUpIdBoxIdThree {
+  position: relative;
+  display: inline-block;
+  left: 40px;
+  top: -5px;
+  width: 180px;
+  height: 30px;
+}
+.recommendUpIdBoxFollowOne {
+  position: relative;
+  display: inline-block;
+  top: -5px;
+  left: 5px;
+  height: 30px;
+  color: blue;
+}
+.recommendUpIdBoxFollowTwo {
+  position: relative;
+  display: inline-block;
+  top: -5px;
+  left: 5px;
+  height: 30px;
+  color: blue;
+}
+.recommendUpIdBoxFollowThree {
+  position: relative;
+  display: inline-block;
+  left: 5px;
+  top: -5px;
+  height: 30px;
+  color: blue;
+}
+.contact {
+  font-size: 17px;
+  top: 30px;
+  position: relative;
+  width: 100%;
+  height: 90px;
+  color: lightgray;
+}
+@media screen and (max-width: 768px) {
+  nav {
+    width: 325px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid lightgrey;
+    background-color: rgb(250, 256, 250);
+    transform: translate(0);
+    left: 0;
+  }
+  .logo {
+    border: 0;
+    position: relative;
+    left: -10px;
+  }
+  .searchBox {
+    display: none;
+  }
+  main {
+    position: relative;
+    left: 0%;
+    transform: translate(0%);
+    width: 620px;
+    height: 400px;
+  }
+  .mainPage {
+    display: flex;
+    position: relative;
+    width: 80%;
+    left: 0%;
+    height: 400px;
+    top: 0px;
+  }
+  .mainCenter {
     position: absolute;
-    left: 50%;
-    transform: translate(-50%);
+    left: 0%;
+    transform: translate(0%);
     position: flex;
     flex-wrap: nowrap;
     justify-content: center;
     height: 90vh;
     width: 100%;
-}
-
-
-
-.mainbox {
-    background-color: rgb(250, 256, 250);
-    display: inline-block;
-    width: 65%;
-    height: 700px;
-    border: 1px solid lightgray;
-    border-radius: 5px;
-}
-.mainFaceBox{
-    position: absolute;
-    display: flex;
-    justify-content: space-between;
-    width: 60%;
-}
-.mainFace{
-    position: relative;
-    background-image: url(/style/cat.jpeg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 50%;
-    top: 20px;
-    left: 30px;
-    width: 60px;
-    height: 60px;
-}
-.mainFaceId{
-    font-size: 20px;
-    font-weight: bold;
-    position: relative;
-    display: flex;
-    width: 250px;
-    height: 40px;
-    top: 50px;
-    left: -50px;
-}
-.article{
-    position: relative;
-    top: 100px;
-    width: 100.3%;
-    height: 300px;
-}
-.photo{
-    width: 100%;
-    height: 380px;
-}
-.dot{
-    font-size: 20px;
-    position: relative;
-    display: flex;
-    top: 45px;
-    left: 20px;
-    width: 25px;
-    height: 20px;
-
-}
-
-.bottomBox{
-    top: 200px;
-    position: relative;
-    width: 99%;
-    height: 170px;
-}
-.bottomBoxUp{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-.bottomBoxUpEmoji{
-    top: 10px;
-    left: 15px;
-    position: relative;
-    display: flex;
-    justify-content: space-around;
-    transform: translate(0,-40%);
-    width: 100px;
-    height: 40px;
-}
-.heart{
-    font-size: 25px;
-    color: red;
-    cursor: pointer;
-}
-.fa-heart{
-    transition: all ease 0.5s;
-}
-.fa-heart:hover{
-    transform: scale(1.4);
-}
-.comment{
-    font-size: 25px;
-    margin-left: 5px;
-}
-.share{
-    font-size: 25px;
-    margin-left: 5px;
-}
-.bottomBoxUpTag{
-    top: -5px;
-    position: relative;
-    width: 10%;
-    height: 40px;
-}
-.bottomBox {
-    font-size: 25px;
-    margin-left: 5px;
-}
-.bottomBoxMid{
-    left: 15px;
-    position: relative;
-    display: flex;
-    width: 300px;
-    height: auto;
-    align-items: center;
-}
-.number{
-    font-weight: bold;
-}
-.bottomBoxMidIcon{
-    position: relative;
-    display: flex;
-    background-image: url(/style/dog1.jpeg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 50%;
-    top: -10px;
-    width: 30px;
-    height: 30px;
-}
-.bottomBoxMidId{
-    font-size: 15px;
-    position: relative;
-    display: flex;
-    left: 10px;
-    width: 250px;
-    height: 20px;
-}
-.bottomBoxDown{
-    top: 3px;
-    left: 15px;
-    position: relative;
-    width: 95%;
-    height: 55px;
-
-}
-.bottomBoxDownComment{
+  }
+  .bottomBoxDownComment {
     font-size: 15px;
     height: 100px;
     display: flex;
     flex-direction: column;
     overflow-y: auto;
-}
-.commentBox{
-
-    display: flex;
-    align-items: center;
-}
-.commentId{
-    margin-top: 5px;
-    width: 30px;
-    font-size: 15px;
-    position: relative;
-    font-weight: bold;
-}
-.commentComment{
+  }
+  .commentComment {
     position: relative;
     font-size: 13px;
     margin-left: 10px;
-    top:3px;
-    color: rgb(73, 70, 70);
-    width: 410px;
-}
-.commentHeart{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
-}
-.commentHeartBox{
-    width: 20px;
-    height: 20px;
-    position: relative;
-    left: 20px;
-}
-.fa-regular fa-heart{
-    top: 5px;
-    position: relative;
-    width: 60px;
-}
-.deleteKey{
     top: 3px;
-    color: lightgray;
-    font-size: 10px;
-    position: relative;
-    left: 25px;
-    cursor: pointer;
-}
-.mainFooter{
-    top: 170px;
-    left: 20px;
-    position: relative;
-    width: 94%;
-    height: 50px;
-    position: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.mainFooterInput{
-    position: relative;
-    width: 105.7%;
-    top: 40px;
-    left:-21.2px;
-    height: 50px;
-    border: 1px solid lightgray;
-    border-radius: 5px;
-}
-.buttonClick{
-    top : 8px;
-    left: 510px;
+    color: rgb(73, 70, 70);
+    width: 190px;
+  }
+  .buttonClick {
+    top: 8px;
+    left: 260px;
     color: blue;
     position: relative;
     cursor: pointer;
-}
-.mainRight {
-    position: relative;
-    top : 170px;
-    left: 10px;
-    display: inline-block;
-    flex-direction: column;
-    width: 34%;
-}
-.mainRightIconBox{
-    top: 0px;
-    position: relative;
-    width: 300px;
-}
-.mainRightIcon {
-    position: relative;
-    background-image: url(/style/logo.jpeg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 50%;
-    top: 15px;
-    left: 25px;
-    width: 50px;
-    height: 50px;
-}
-
-.mainRightId {
-    position: relative;
-    font-size: 14px;
-    left: 85px;
-    top: -20px;
-    width: 180px;
-    height: 30px;
-}
-.storyBox{
-    border: 1px solid lightgrey;
-    border-radius: 5px;
-    margin-bottom: 10px; 
-    height:250px; 
-}
-.storyBoxUp{
-    margin-bottom: 10px;    
-    margin-top: 30px;
-    display: flex;
-    align-items: center;
-    flex-wrap: nowrap;
-    width: 100%;
-    justify-content: space-around;
-
-}
-.storyBoxUpLeft{
-    position: relative;
-    font-size: 15px;
-    color: grey;
-}
-.storyBoxUpRight{
-    position: relative;
-    font-size: 15px;
-    font-weight: bold;
-}
-.storyBoxIdBox {
-    top: 15px;
-    position: relative;
-    position: flex;
-    align-items: center;
-    height: 50px;
-    margin-top: 10px;
-}
-.storyBoxIdBoxIconOne {
-    position: relative;
-    background-image: url(/style/dog1.jpeg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 50%;
-    top: 7px;
-    left: 30px;
-    width: 40px;
-    height: 40px;
-}
-.storyBoxIdBoxIconTwo {
-    position: relative;
-    background-image: url(/style/dog2.jpeg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 50%;
-    top: 7px;
-    left: 30px;
-    width: 40px;
-    height: 40px;
-}
-.storyBoxIdBoxIconThree {
-    position: relative;
-    background-image: url(/style/dog3.jpeg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 50%;
-    top: 7px;
-    left: 30px;
-    width: 40px;
-    height: 40px;
-}
-
-.storyBoxIdBoxIdOne {
-    font-size: 14px;
-    position: relative;
-    left: 80px;
-    top: -25px;
-    width: 180px;
-    height: 30px;
-}
-.storyBoxIdBoxIdTwo {
-    font-size: 14px;
-    position: relative;
-    left: 80px;
-    top: -25px;
-    width: 180px;
-    height: 30px;
-}
-.storyBoxIdBoxIdThree {
-    font-size: 14px;
-    position: relative;
-    left: 80px;
-    top: -25px;
-    width: 180px;
-    height: 30px;
-}
-
-.recommendBox {
-    border: 1px solid lightgrey;
-    border-radius: 5px;
-    top: 10px;
-    position: relative;
-    width: 100%;
-    height: 250px;
-    display: flex;
-    flex-direction: column;
-}
-.recommendUp{
-    
-    margin-bottom: 10px;    
-    margin-top: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-}
-.recommendUpLeft{
-    position: relative;
-    font-size: 15px;
-    color: grey;
-}
-.recommendUpRight{
-    position: relative;
-    font-size: 15px;
-    font-weight: bold;
-}
-.recommendUpIdBox {
-    margin-top: 10px;
-    top: 40px;
-    position: flex;
-    width: 100%;
-    height: 50px;
-}
-.recommendUpIdBoxIconOne {
-    position: relative;
-    display: inline-block;
-    background-image: url(/style/dog4.jpeg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 50%;
-    top: 7px;
-    left: 30px;
-    width: 40px;
-    height: 40px;
-}
-
-
-.recommendUpIdBoxIconTwo {
-    position: relative;
-    display: inline-block;
-    background-image: url(/style/dog5.jpeg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 50%;
-    top: 7px;
-    left: 30px;
-    width: 40px;
-    height: 40px;
-}
-.recommendUpIdBoxIconThree {
-    position: relative;
-    display: inline-block;
-    background-image: url(/style/dog6.jpeg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-radius: 50%;
-    top: 7px;
-    left: 30px;
-    width: 40px;
-    height: 40px;
-}
-
-.recommendUpIdBoxIdOne {
-    position: relative;
-    display: inline-block;
-    left: 40px;
-    top:-5px;
-    width: 180px;
-    height: 30px;
-}
-.recommendUpIdBoxIdTwo {
-    position: relative;
-    display: inline-block;
-    left: 40px;
-    top:-5px;
-    width: 180px;
-    height: 30px;
-}
-.recommendUpIdBoxIdThree {
-    position: relative;
-    display: inline-block;
-    left: 40px;
-    top:-5px;
-    width: 180px;
-    height: 30px;
-}
-.recommendUpIdBoxFollowOne{
-    position: relative;
-    display: inline-block;
-    top:-5px;
-    left: 5px;
-    height: 30px;
-    color: blue;
-}
-.recommendUpIdBoxFollowTwo{
-    position: relative;
-    display: inline-block;
-    top:-5px;
-    left: 5px;
-    height: 30px;
-    color: blue;
-}
-.recommendUpIdBoxFollowThree{
-    position: relative;
-    display: inline-block;
-    left: 5px;
-    top:-5px;
-    height: 30px;
-    color: blue;
-}
-.contact{
-    font-size: 17px;
-    top: 30px;
-    position: relative;
-    width: 100%;
-    height: 90px;
-    color: lightgray;
-}
-@media screen and (max-width: 768px) {
-    nav {
-        width: 325px;
-        padding-bottom: 30px;
-        border-bottom: 1px solid lightgrey;
-        background-color: rgb(250, 256, 250);
-        transform: translate(0);
-        left: 0;
-
-    }
-    .logo{
-        border: 0;
-        position: relative;
-        left: -10px;
-    }
-    .searchBox{
-        display: none;
-    }
-    main {
-        position: relative;
-        left: 0%;
-        transform: translate(0%);
-        width: 620px;
-        height: 400px;
-    }
-    .mainPage {
-        display: flex;
-        position: relative;
-        width: 80%;
-        left: 0%;
-        height: 400px;
-        top: 0px; 
-    }
-    .mainCenter {
-        position: absolute;
-        left: 0%;
-        transform: translate(0%);
-        position: flex;
-        flex-wrap: nowrap;
-        justify-content: center;
-        height: 90vh;
-        width:100%;
-    }
-    .bottomBoxDownComment{
-        font-size: 15px;
-        height: 100px;
-        display: flex;
-        flex-direction: column;
-        overflow-y: auto;
-    }
-    .commentComment{
-        position: relative;
-        font-size: 13px;
-        margin-left: 10px;
-        top:3px;
-        color: rgb(73, 70, 70);
-        width: 190px;
-    }
-    .buttonClick{
-        top : 8px;
-        left: 260px;
-        color: blue;
-        position: relative;
-        cursor: pointer;
-    }
-    .right{
-        top: 5px;
-        left: 70px;
-    }
-    .rightExplore{
-        width: 15px;
-        height: 15px;
-    }
-    .rightHeart{
-        width: 15px;
-        height: 15px;
-    }
-    .rightProfile{
-        width: 15px;
-        height: 15px;
-    }
-    .navMe{
-        width: 15px;
-        height: 15px;
-    }
-    .instagram{
-        display: none;
-    }
-    .navBox{
-        width: 150px;
-    }
-    .navBox{
-        /* width: 100px; */
-    }
-    .mainRight{
-        display: none;
-    }
+  }
+  .right {
+    top: 5px;
+    left: 70px;
+  }
+  .rightExplore {
+    width: 15px;
+    height: 15px;
+  }
+  .rightHeart {
+    width: 15px;
+    height: 15px;
+  }
+  .rightProfile {
+    width: 15px;
+    height: 15px;
+  }
+  .navMe {
+    width: 15px;
+    height: 15px;
+  }
+  .instagram {
+    display: none;
+  }
+  .navBox {
+    width: 150px;
+  }
+  .navBox {
+    /* width: 100px; */
+  }
+  .mainRight {
+    display: none;
+  }
 }
