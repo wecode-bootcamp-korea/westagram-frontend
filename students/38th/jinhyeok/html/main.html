@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/acf7d390d5.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+
+<link rel="stylesheet" href="../style/main.css">
+<body>
+    <div class="container">
+        <nav class="header">
+            <div class="headerContentBox">
+                <img class="logoImgBox" src="https://www.instagram.com/static/images/web/logged_out_wordmark.png/7a252de00b20.png" alt="인스타 로고" />
+                <div class="searchBox">
+                    <input type="text" placeholder="검색" />
+                    <img src="../image/searchImg.png" alt="">
+                </div>
+                <div class="selectBox" >
+                    <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png" />
+                    <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" />
+                    <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png" />
+                </div>
+            </div>
+        </nav>
+        <div class="wrapBox">
+            <div class="contentBox">
+                <div class="storyWrapBox">
+                    <div class="storyBox">
+                        <div class="storyColorBox">
+                            <img class="storyImg" src="https://i.pinimg.com/originals/29/69/5a/29695a0cc4405b3ad1c950d6c804a36d.png" />
+                        </div>
+                        <p class="storyNickname">zi_nukk</p>
+                    </div>
+                    <div class="storyBox">
+                        <div class="storyColorBox">
+                            <img class="storyImg" src="https://i.pinimg.com/originals/29/69/5a/29695a0cc4405b3ad1c950d6c804a36d.png" />
+                        </div>
+                        <p class="storyNickname">zi_nukk</p>
+                    </div>
+                    <div class="storyBox">
+                        <div class="storyColorBox">
+                            <img class="storyImg" src="https://i.pinimg.com/originals/29/69/5a/29695a0cc4405b3ad1c950d6c804a36d.png" />
+                        </div>
+                        <p class="storyNickname">zi_nukk</p>
+                    </div>
+                    <div class="storyBox">
+                        <div class="storyColorBox">
+                            <img class="storyImg" src="https://i.pinimg.com/originals/29/69/5a/29695a0cc4405b3ad1c950d6c804a36d.png" />
+                        </div>
+                        <p class="storyNickname">zi_nukk</p>
+                    </div>
+                </div>
+                <div class="feedBox">
+                    <div class="feedHeaderBox">
+                        <div>
+                            <div>
+                                <img src="https://i.pinimg.com/originals/29/69/5a/29695a0cc4405b3ad1c950d6c804a36d.png" />
+                            </div>
+                            <p>zi_nukk</p>
+                        </div>
+                        <img src="../image/burger.png" />
+                    </div>
+                    <img class="feedImgBox" src="https://i.pinimg.com/originals/29/69/5a/29695a0cc4405b3ad1c950d6c804a36d.png" />
+                    <div class="feedLikeBox">
+                        <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" />
+                        <p>좋아요 441개</p>
+                        <p>zi_nukk <span>css 그만</span></p>
+                        
+                    </div>
+                    <div id="feedCommentBox" class="feedCommentBox">
+                        <div class="feedComment">
+                            <p>gwan_ha5348<span>그래도 해야지</span></p>
+                        </div>
+                        <div class="feedComment">
+                            <p>silver._.ing<span>견뎌</span></p>
+                        </div >
+                        <div class="feedComment">
+                            <p>sy_n2<span>이겨내</span></p>
+                        </div>
+                    </div>
+                    <div class="feedInputBox">
+                        <input onkeydown="onKeyDownHandler()" id="commentInput" type="text" placeholder="댓글 달기..." />
+                        <button id="saveValue" >게시</button>
+                    </div>
+                </div>
+            </div>
+            <div class="recommendBox">
+                <div class="myProfileBox">
+                    <div class="myProfile">
+                        <div class="myProfileBg">
+                            <img src="https://i.pinimg.com/originals/29/69/5a/29695a0cc4405b3ad1c950d6c804a36d.png" />
+                        </div>
+                        <div class="myProfileText">
+                            <h4 >zi_nukk</h4>
+                            <p>이진혁</p>
+                        </div>
+                    </div>
+                    <p>
+                        전환
+                    </p>
+                </div>
+                <div class="recommendFriendsBox">
+                    <p class="recommendFriends">회원님을 위한 추천</p>
+                    <p class="seeAll" >모두 보기</p>
+                </div>
+                <div class="friendsListBox">
+                    <div class="friendsList">
+                        <img src="https://i.pinimg.com/originals/29/69/5a/29695a0cc4405b3ad1c950d6c804a36d.png" />
+                        <div class="friendsListText">
+                            <h5 >zi_nukk</h5>
+                            <p>Instagram 신규 가입</p>
+                        </div>
+                    </div>
+                    <p>
+                        팔로우
+                    </p>
+                </div>
+                <div class="friendsListBox">
+                    <div class="friendsList">
+                        <img src="https://i.pinimg.com/originals/29/69/5a/29695a0cc4405b3ad1c950d6c804a36d.png" />
+                        <div class="friendsListText">
+                            <h5 >zi_nukk</h5>
+                            <p>Instagram 신규 가입</p>
+                        </div>
+                    </div>
+                    <p>
+                        팔로우
+                    </p>
+                </div>
+                <div class="friendsListBox">
+                    <div class="friendsList">
+                        <img src="https://i.pinimg.com/originals/29/69/5a/29695a0cc4405b3ad1c950d6c804a36d.png" />
+                        <div class="friendsListText">
+                            <h5 >zi_nukk</h5>
+                            <p>Instagram 신규 가입</p>
+                        </div>
+                    </div>
+                    <p>
+                        팔로우
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../js/main.js"></script>
+</body>
+</html>

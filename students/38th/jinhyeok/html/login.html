@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<link rel="stylesheet" href="../style/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+<body>
+    <div class = "container">
+        <div class="flexBox">
+            <div class = "imgBox">
+                <img src="../image/phoneLogo.png" alt="폰사진" >
+            </div>
+            <div class = "contentsBox">
+                <div class="loginBox">
+                    <h1 class="instaText">westagram</h1>
+                    <input id="userId" class="input" type="text" placeholder="전화번호, 사용자, 이름 또는 이메일" />
+                    <input id="userPassword" class="input" type="password" placeholder="비밀번호" />
+                    <button onclick="location.href='../html/main.html'" id="loginButton" class="loginButton" disabled >로그인</button>
+                    <div class="lineBox">
+                        <div class="line"></div>
+                        <div class="orBox">또는</div>
+                        <div class="line"></div>
+                    </div>
+                    <div class="facebookBox">
+                        <img src="../image/facebookLogo.png" alt="페이스북 로고" />
+                        <p>Facebook으로 로그인</p>
+                    </div>
+                    <p class="forgotPass">
+                        비밀번호를 잊으셨나요?
+                    </p>
+                </div>
+                <div class="accountBox">
+                    <p>계정이 없으신가요? <span>가입하기</span></p>
+                </div>
+                <p class="downloadText" >앱을 다운로드 하세요.</p>
+                <div class="downloadBox">
+                    <img src="https://www.instagram.com/static/images/appstore-install-badges/badge_ios_korean-ko.png/4a5c9d62d51b.png" />
+                    <img src="https://www.instagram.com/static/images/appstore-install-badges/badge_android_korean-ko.png/f155b664a93b.png" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../js/login.js"></script>
+</body>
+</html>
