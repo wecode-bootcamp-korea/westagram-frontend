@@ -7,13 +7,13 @@ const loginActivate = document.querySelector(".btnLogin");
 function loginEventActivate () {
     if(idActivate.value && pwActivate.value){
         loginActivate.disabled = "false";
-        loginActivate.style.backg
-        WestagramCloneCoding.location.main.html;
+        loginActivate.style.backgroundColor = "rgb(65, 147, 239)";
     }else {
         loginActivate.disabled = "true";
         loginActivate.style.backgroundColor = "rgb(198, 222, 250)"
     }
 }
+
 
 
 idActivate.addEventListener('keypress', loginEventActivate)
