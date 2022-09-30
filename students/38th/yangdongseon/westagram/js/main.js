@@ -10,23 +10,23 @@ function onButtonClick() {
   container.className = "container";
   let div = document.createElement("div");
   let icon = document.createElement("i");
-  // icon.className = "imgHeart";
   icon.className = "fa-regular fa-heart";
-  icon.style.width = "20px";
-  icon.style.height = "20px";
+  icon.style.width = "30px";
+  icon.style.height = "30px";
   comment.appendChild(container);
   container.appendChild(div);
   container.appendChild(icon);
-  div.innerHTML = `yy_ds ${result}`;
-  console.log(result);
+  div.innerHTML = `YYY_ang ${result}`;
+  input.focus();
   input.value = "";
+  comment.scrollTo(0, comment.scrollHeight);
 }
 const inputKeyDown = (event) => {
-  if (window.event.keyCode === 13) {
+  if (window.event.code === "Enter") {
     onButtonClick();
   }
 };
 
 button.addEventListener("click", onButtonClick);
-input.addEventListener("keydown", inputKeyDown);
+input.addEventListener("keyup", inputKeyDown);
 imgHeart.addEventListener("click", onImgHeartClick);
