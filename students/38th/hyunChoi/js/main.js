@@ -2,10 +2,12 @@
 //     2. 버튼 비활성화
 //     3. comment 게시
 //     4. input에 입력된 comment 지우기
+//     5. 생성된 comment 지우기
 
 let commentItem = document.querySelector("comment"); // 댓글 wrap
 let commentInput = document.getElementsByClassName("commentInput")[0]; // 입력요소
 let commentButton = document.getElementsByClassName("commentButton")[0]; // 입력 버튼
+let commentWrap = document.getElementsByClassName("feedDesc")[0] // 게시글 comment Wrap
 
 function buttonON() { // 1. 버튼 활성화
     commentButton.disabled = false;
@@ -20,21 +22,30 @@ function buttonOFF() {// 2. 버튼 비활성화
 function commentSubmit() { // 3. comment 게시
     let comment = commentInput.value;
     let commentWrap = document.createElement('div')
-    let commentID = document.createElement('p')
-    let commentContent = document.createElement('p')
+    let commentIdPtag = document.createElement('p')
+    let commentContentPtag = document.createElement('p')
+    let commentDeleteSpantag = document.createElement('span')
 
 
-    commentID.className = 'ptagID'
-    commentID.innerHTML = 'hyun._.gus'
-    commentContent.innerHTML = comment
+    commentIdPtag.className = 'ptagID'
+    commentIdPtag.innerHTML = 'hyun._.gus'
+    commentContentPtag.innerHTML = comment
+    commentDeleteSpantag.className = 'delete'
+    commentDeleteSpantag.innerHTML = "X"
     let newComment = document.getElementsByClassName('feedDesc')[0].appendChild(commentWrap)
-    newComment.appendChild(commentID)
-    newComment.appendChild(commentContent)
+    newComment.appendChild(commentIdPtag)
+    newComment.appendChild(commentContentPtag)
+    newComment.appendChild(commentDeleteSpantag)
 }
 
 
 function initInputComment() { // 4. input에 입력된 comment 지우기
     commentInput.value = ""
+}
+
+function commentDelete(event){
+  let deleteX = document.getElementsByClassName('delete')[0]; // delete X
+  event.target.parentElement.remove();
 }
 
 // commentInput의 value에 따른 commentButton 활성화 이벤트
@@ -57,4 +68,14 @@ commentInput.addEventListener('keypress', function (event) {
         commentSubmit()
         initInputComment()
     }
+})
+
+commentWrap.addEventListener('click', function(event){
+  console.log(event.target)
+  console.log(document.getElementsByClassName('delete')[0])
+  if(event.target.className === 'delete'){
+    commentDelete(event)
+  }else{
+    return
+  }
 })
