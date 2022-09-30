@@ -1,74 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <style type="text/css"></style>
-    <script src="https://kit.fontawesome.com/6285a817e2.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="css/main.css">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&amp;family=Lobster&amp;display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <title>Main</title>
+  <style type="text/css"></style>
+  <script src="https://kit.fontawesome.com/6285a817e2.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/main.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&amp;family=Lobster&amp;display=swap"
+    rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <title>Main</title>
 </head>
+
 <body>
-    <div class="nav">
-        <div class="logoWrap">
-        <i id = "logoIcon"class="fa-brands fa-instagram fa-2x"></i>
-        <h1 id="logoName">Westagram</h1>
-        </div>
-        <div class="searchWrap">
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <input class="search" placeholder="검색">
-        </div>
-        <div class="naviconWrap">
-            <i class="fa-regular fa-compass fa-2x"></i>
-            <i class="fa-regular fa-heart fa-2x"></i>
-            <i class="fa-regular fa-user fa-2x"></i>
-            
-        </div>
+  <div class="nav">
+    <div class="logoWrap">
+      <i id="logoIcon" class="fa-brands fa-instagram fa-2x"></i>
+      <h1 id="logoName">Westagram</h1>
     </div>
-    <div class="main">
-        <div class="feeds">
-            <div class="article">
-                <div class="feedWrap">
-                    <div class="account"><img src="css/profile-insta.jpeg" id="profile">
-                    <h3>hyun._.gus</h3></div>
-                    <div class="dot"><h2>&#8230</h2></div>
-                </div>
-                <div class="imgWrap"><img src="css/7star-insta.jpeg">
-                </div>
-                <div class="feedIcon">
-                    <div class="leftIconWrap">
-                        <i class="fa-solid fa-heart fa-2x" style="color:red"></i>
-                        <i class="fa-regular fa-message fa-2x"></i>
-                        <i class="fa-solid fa-arrow-up-from-bracket fa-2x"></i>
-                    </div>
-                    <div class="rightIconWrap">
-                        <i class="fa-regular fa-bookmark fa-2x"></i>
-                    </div>
-                </div>
-                <div class="feedDesc">
-                    <div>
-                        <p class="ptagID">hyun._.gus</p>
-                        <p>대천에서 찍은 북두칠성 . . .</p>
-                        <p id="moreDesc">&nbsp &nbsp더 보기</p>
-                    </div>
-                    <div>
-                        <p class="ptagID">wecode.bootcamp</p>
-                        <p>어머~ 너무 이뻐용 ㅎㅎㅎ</p>
-                    </div>
-                </div>
-                <div class="comment">
-                    <div class="emoji"><img src="css/emoji.png"></div>
-                    <input class="commentInput"placeholder="댓글을 입력하세요..." >
-                    <button class="commentButton" disabled >게 시</button>
-                </div>
+    <div class="searchWrap">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input class="search" placeholder="검색">
+    </div>
+    <div class="naviconWrap">
+      <i class="fa-regular fa-compass fa-2x"></i>
+      <i class="fa-regular fa-heart fa-2x"></i>
+      <i class="fa-regular fa-user fa-2x"></i>
+
+    </div>
+  </div>
+  <div class="main">
+    <div class="feeds">
+      <div class="article">
+        <div class="feedWrap">
+          <div class="account"><img src="css/profile-insta.jpeg" class="profile">
+            <h3>hyun._.gus</h3>
+          </div>
+          <div class="dot">
+            <h2>&#8230</h2>
+          </div>
+        </div>
+        <div class="imgWrap"><img src="css/7star-insta.jpeg">
+        </div>
+        <div class="feedIcon">
+          <div class="leftIconWrap">
+            <i class="fa-solid fa-heart fa-2x" style="color:red"></i>
+            <i class="fa-regular fa-message fa-2x"></i>
+            <i class="fa-solid fa-arrow-up-from-bracket fa-2x"></i>
+          </div>
+          <div class="rightIconWrap">
+            <i class="fa-regular fa-bookmark fa-2x"></i>
+          </div>
+        </div>
+        <div class="feedDesc">
+          <div>
+            <p class="ptagID">hyun._.gus</p>
+            <p>대천에서 찍은 북두칠성 . . .</p>
+            <p id="moreDesc">&nbsp &nbsp더 보기</p>
+          </div>
+          <div>
+            <p class="ptagID">wecode.bootcamp</p>
+            <p>어머~ 너무 이뻐용 ㅎㅎㅎ</p>
+          </div>
+        </div>
+        <div class="comment">
+          <div class="emoji"><img src="css/emoji.png"></div>
+          <input class="commentInput" placeholder="댓글을 입력하세요...">
+          <button class="commentButton" disabled>게 시</button>
+        </div>
+      </div>
+    </div>
+    <div class="main-right">
+      <div class="userInfoWrap">
+        <img src="css/profile-insta.jpeg" class="profile">
+        <div class="nicknameAndName">
+          <h3>hyun._.gus</h3>
+          <p>위코드 38기 최현</p>
+        </div>
+      </div>
+      <div class="storyWrap">
+        <div class="storyNav">
+          <span>스토리</span>
+          <p>모두 보기</p>
+        </div>
+        <div class="userWrap">
+          <div class="userN">
+            <img src="css/user1.jpeg" class="rightProfile" alt="user1">
+            <div class="userIdTime">
+              <h4>hyun._.gus</h4>
+              <p>5분 전</p>
             </div>
+          </div>
+          <div class="userN">
+            <img src="css/user2.jpeg" class="rightProfile" alt="user1">
+            <div class="userIdTime">
+              <h4>yougettheswag</h4>
+              <p>16분 전</p>
+            </div>
+          </div>
+          <div class="userN">
+            <img src="css/user3.jpeg" class="rightProfile" alt="user1">
+            <div class="userIdTime">
+              <h4>Front_end_devloper</h4>
+              <p>2시간 전</p>
+            </div>
+          </div>
         </div>
-        <div class="main-right"></div>
+      </div>
+      <div class="suggestWrap">
+        <div class="suggestNav">
+          <span>회원님을 위한 추천</span>
+          <p>모두 보기</p>
+        </div>
+        <div class="suggestUserWrap">
+          <div class="suggestUserN">
+            <img src="css/user3.jpeg" class="rightProfile" alt="user1">
+            <div class="userIdTime">
+              <h4>we123</h4>
+              <p>abcdefg님 외..</p>
+            </div>
+            <span class="follow">팔로우</span>
+          </div>
+          <div class="suggestUserN">
+            <img src="css/user3.jpeg" class="rightProfile" alt="user1">
+            <div class="userIdTime">
+              <h4>co123</h4>
+              <p>yougettheswag 님 외..</p>
+            </div>
+            <span class="follow">팔로우</span>
+          </div>
+          <div class="suggestUserN">
+            <img src="css/user3.jpeg" class="rightProfile" alt="user1">
+            <div class="userIdTime">
+              <h4>de123</h4>
+              <p>sukgodang 님 외..</p>
+            </div>
+            <span class="follow">팔로우</span>
+          </div>
+        </div>
+      </div>
+
     </div>
-    <script src="js/main.js"></script>
+  </div>
+  <script src="js/main.js"></script>
 </body>
+
 </html>
