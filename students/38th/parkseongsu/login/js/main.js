@@ -33,9 +33,8 @@ function writeComment(event) {
   li.appendChild(removeBtn);
 
   commentInput.value = null;
-
+//디스플레이 논이 아닌 .remove()로 요소 자체를 날릴 수 있음
   function hidden() {
-    console.log("it works");
     li.classList.add("displaynone");
   }
 

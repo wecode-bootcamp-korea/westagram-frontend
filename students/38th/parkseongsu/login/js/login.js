@@ -2,6 +2,7 @@ const idInput = document.getElementsByClassName("inputbox")[0];
 const pwInput = document.getElementsByClassName("inputbox")[1];
 const loginbtn = document.querySelector(".loginbtn");
 const loginForm = document.getElementById("loginForm");
+
 let idValue;
 
 function loginallow() {
