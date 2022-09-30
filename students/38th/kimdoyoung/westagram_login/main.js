@@ -3,27 +3,15 @@ const pwinput1 = document.getElementById('pwinput');
 const loginbutton = document.getElementById("loginbutton");
 
 
-idinput1.addEventListener('keyup',function(){
-    if (!(idinput.value.includes("@") && pwinput.value.length>=5)) {
-        loginbutton.disabled = true;
-      } else if((idinput.value.includes("@") && pwinput.value.length>=5)){
-        loginbutton.disabled = false;
-      }
-});
-pwinput1.addEventListener('keyup',function(){
-    if (!(idinput.value.includes("@") && pwinput.value.length>=5)) {
-        loginbutton.disabled = true;
-      } else if((idinput.value.includes("@") && pwinput.value.length>=5)){
-        loginbutton.disabled = false;
-      }
-});
+idinput1&&pwinput1.addEventListener('keyup',keyupEvent);
+
+function keyupEvent(){
+  if (!(idinput.value.includes("@") && pwinput.value.length>=5)) {
+    loginbutton.disabled = true;
+  } else{
+    loginbutton.disabled = false;
+  }
+}
 
 
-
-
-
-//idinput.value.includes("@") && pwinput.value.length>=5
-
-//idinput.value && pwinput.value
-
-//9월29일(목) 1시쯤에 푸시 다시해보는중
+//keyupEvent를 else if로 했을때  조건문 >> ((idinput.value.includes("@") && pwinput.value.length>=5)) g
