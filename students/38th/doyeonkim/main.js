@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () =>{
   const inputReply = document.getElementsByClassName("input‑reply")[0];
   
   
-  //function to add tasks
   const addTask = (task) => {
     const listItem = document.createElement("li");
     const showItem = inputReply.appendChild(listItem);
