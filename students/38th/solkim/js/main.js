@@ -65,7 +65,7 @@ const idArr1 = [
 
 
 function postComment() {
-    if(commentInput.value !== ""){
+    if(commentInput.value.trim() !== ""){
         const newComment = document.createElement("p");
         const commentWriter = document.createElement("span");
         const commentContents = document.createElement("span");

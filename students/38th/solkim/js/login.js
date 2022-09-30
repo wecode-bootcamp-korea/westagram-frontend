@@ -1,9 +1,8 @@
 const idInput = document.querySelector('.id-input');
 const passwordInput = document.querySelector('.password-input');
 const loginBtn = document.querySelector('.login-btn');
-const loginForm = document.querySelector('.login-form form');
-// let isIdOk;
-// let isPasswordOk;
+const loginForm = document.querySelector('.login-form');
+
 
 function checkIdAndPassword() {
     if(idInput.value.length > 0 && passwordInput.value.length > 0) {
@@ -30,40 +29,29 @@ function validationPassword() {
 }
 
 
-function movePage() {
-    location.href = "main.html";
-}
-
-idInput.addEventListener('keyup', function(){
-    checkIdAndPassword();
-    validationId();
-
-});
-
-passwordInput.addEventListener('keyup', function(){
-    checkIdAndPassword();
-    validationPassword();
-});
-
-loginBtn.addEventListener('click', function(){
+function movePageOrAlert() {
     if(validationId() === true && validationPassword() === true){
-        movePage();
-    } else if (validationId() === false){
+        location.href = "main.html";
+    }  else if (validationId() === false){
         alert('이메일에 @를 포함시켜주세요');
     } else if (validationPassword() === false) {
         alert('비밀번호는 6자 이상 입력하세요');
     }
+}
+
+loginForm.addEventListener('input', function(){
+    checkIdAndPassword();
+    validationId();
+    validationPassword();
+});
+
+loginBtn.addEventListener('click', function(){
+    movePageOrAlert()
 });
 
 loginForm.addEventListener('keydown', (e) =>{
     if (e.code === "Enter" && idInput.value.length > 0 && passwordInput.value.length > 0){
-        if(validationId() === true && validationPassword() === true){
-            movePage();
-        }  else if (validationId() === false){
-            alert('이메일에 @를 포함시켜주세요');
-        } else if (validationPassword() === false) {
-            alert('비밀번호는 6자 이상 입력하세요');
-        }
+        movePageOrAlert()
     }
 });
 
