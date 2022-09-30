@@ -1,62 +1,61 @@
-const commentInput = document.getElementById('commentInput');
-const commentbtn = document.getElementById('commentbtn');
-const commentList = document.getElementById('commentlist');
-const menuIcon = document.getElementById('menuIcon');
-const dropMenu = document.getElementById('dropMenu');
-const articleHeartIcon = document.querySelector('.likebox .heartIcon')
+const commentInput = document.getElementById("commentInput");
+const commentbtn = document.getElementById("commentbtn");
+const commentList = document.getElementById("commentlist");
+const menuIcon = document.getElementById("menuIcon");
+const dropMenu = document.getElementById("dropMenu");
+const articleHeartIcon = document.querySelector(".likebox .heartIcon");
 
-function writeComment(event){
-    event.preventDefault();
+function writeComment(event) {
+  event.preventDefault();
 
-    const userId = sessionStorage.getItem('userId');
-    const commentValue = commentInput.value;
-    const li = document.createElement('li');
+  const userId = sessionStorage.getItem("userId");
+  const commentValue = commentInput.value;
+  const li = document.createElement("li");
 
-    commentList.appendChild(li);
+  commentList.appendChild(li);
 
-    const userIdSpan = document.createElement('span');
-    const textSpan = document.createElement('span');
-    const heartBtn = document.createElement('span');
-    const removeBtn = document.createElement('span');
-    
+  const userIdSpan = document.createElement("span");
+  const textSpan = document.createElement("span");
+  const heartBtn = document.createElement("span");
+  const removeBtn = document.createElement("span");
 
-    heartBtn.classList.add('emptyHeart');
-    textSpan.classList.add('commentmargin');
-    removeBtn.classList.add('removeBtn');
-    userIdSpan.classList.add('boldWeight');
+  heartBtn.classList.add("emptyHeart");
+  textSpan.classList.add("commentmargin");
+  removeBtn.classList.add("removeBtn");
+  userIdSpan.classList.add("boldWeight");
 
-    userIdSpan.innerText = `${userId} `;
-    textSpan.innerText = ` ${commentValue}`;
-    
-    li.appendChild(userIdSpan);
-    li.appendChild(textSpan);
-    li.appendChild(heartBtn);
-    li.appendChild(removeBtn);
+  userIdSpan.innerText = `${userId} `;
+  textSpan.innerText = ` ${commentValue}`;
 
-    commentInput.value = null;
+  li.appendChild(userIdSpan);
+  li.appendChild(textSpan);
+  li.appendChild(heartBtn);
+  li.appendChild(removeBtn);
 
-    function hidden(){
-        console.log('it works')
-        li.classList.add('displaynone')
-    }
+  commentInput.value = null;
 
-    function like(){
-        heartBtn.classList.toggle('fullHeartSmall');
-        heartBtn.classList.toggle('emptyHeart');
-    }
+  function hidden() {
+    console.log("it works");
+    li.classList.add("displaynone");
+  }
 
-    removeBtn.addEventListener('click',hidden);
-    heartBtn.addEventListener('click', like);
+  function like() {
+    heartBtn.classList.toggle("fullHeartSmall");
+    heartBtn.classList.toggle("emptyHeart");
+  }
+
+  removeBtn.addEventListener("click", hidden);
+  heartBtn.addEventListener("click", like);
 }
 
-function createDropbar(){
-    dropMenu.classList.toggle('displaynone');
+function createDropbar() {
+  dropMenu.classList.toggle("displaynone");
 }
 
-function articleHeart(){
-    articleHeartIcon.classList.toggle('fullHeart');
+function articleHeart() {
+  articleHeartIcon.classList.toggle("fullHeart");
 }
 
-commentbtn.addEventListener('click', writeComment);
-menuIcon.addEventListener('click', createDropbar);
-articleHeartIcon.addEventListener('click', articleHeart);
+commentbtn.addEventListener("click", writeComment);
+menuIcon.addEventListener("click", createDropbar);
+articleHeartIcon.addEventListener("click", articleHeart);
