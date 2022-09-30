@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>westagram/main</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <link href="main.css" rel="stylesheet" type="text/css" />
+    <script
+      src="https://kit.fontawesome.com/4e5b2f86bb.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <nav class="top_bar">
+      <!--상단바-->
+      <div class="icon_left">
+        <a href="" alt="https://www.instagram.com/">
+          <img class="logo" src="image/instagram.png" alt="instagramIcon" />
+        </a>
+        <div class="eng_logo">westagram</div>
+      </div>
+      <div class="search_container">
+        <button class="search_button">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input class="search_box" placeholder="검색" type="text" />
+        </button>
+      </div>
+      <div class="icon_right">
+        <a href="" alt="https://www.instagram.com/explore">
+          <img class="explore" src="image/explore.png" alt="exploreIcon" />
+        </a>
+        <a href href="" alt="https://www.instagram.com/activity">
+          <img class="heart" src="image/heart.png" alt="heartIcon" />
+        </a>
+        <a href href="" alt="https://www.instagram.com/profile">
+          <img class="profile" src="image/profile.png" alt="profileIcon" />
+        </a>
+      </div>
+    </nav>
+    <!--메인: 피드-->
+    <div class="main_container">
+      <div class="feed">
+        <article class="post">
+          <div class="post_profile">
+            <div class="post_profile_left">
+              <div class="profile-img-box">
+                <img class="post_profile_pic" src="image/teddy.jpg" />
+              </div>
+              <a href="#" class="post_profile_name"><b>yuzinnee</b></a>
+            </div>
+            <div class="post_profile_dot_icon">
+              <a href="#"><i class="fa-solid fa-ellipsis"></i></a>
+            </div>
+          </div>
+          <img class="post_picture" src="image/newyork.jpg" alt="pic" />
+          <div class="feed_icon">
+            <div class="feed_icon_left">
+              <img src="image/heart.png" class="feed_icon_heart" />
+              <img src="image/chat.png" class="feed_icon_chat" />
+              <img src="image/direct.png" class="feed_icon_direct" />
+            </div>
+            <div class="feed_icon_right">
+              <img src="image/bookmark.png" class="feed_icon_bookmark" />
+            </div>
+          </div>
+          <div class="who_like">
+            <div class="who_info">
+              <img class="who_pic" src="image/teddy.jpg" />
+              <a href="" class="who_name"><b>yuzinnee</b></a> 님 외
+              <b>&nbsp7,096,816명</b>이 좋아합니다
+            </div>
+          </div>
+          <div class="feed_content">
+            <a href="" class="writer_name"><b>yuzinnee</b></a> 가보고 싶은 뉴욕
+            🤩 여행 가게 된다면...<button class="more_see">더 보기</button>
+            <div class="when_upload">1일 전</div>
+          </div>
+
+          <!--댓글 공간-->
+          <div class="comment_box">
+            <p class="userName">yuz</p>
+            <div class="feed_comment_example">이미 있는 댓글입니다~!</div>
+            <img class="comment_icon_like" src="image/heart.png" />
+          </div>
+          <div class="comment_result"></div>
+          <div class="feed_comments_write">
+            <input
+              class="feed_comments_write_box"
+              placeholder="    댓글 달기..."
+              type="text"
+            />
+            <button class="comment_upload"><b>게시</b></button>
+          </div>
+        </article>
+      </div>
+      <!--메인: 우측 프로필-->
+      <div class="main_right">
+        <div class="account">
+          <img class="profile_pic" src="image/teddy.jpg" />
+          <div class="account_info">
+            <a href="" class="account_name"><b>yuzinnee</b></a>
+            <span class="info">yuzinnee | 유진</span>
+          </div>
+        </div>
+        <!--메인: 우측 스토리-->
+        <div class="story">
+          <div class="story_bar">
+            <div class="story_text">스토리</div>
+            <a href="#" class="story_all_see"><b>모두 보기</b></a>
+          </div>
+          <div class="story_people">
+            <div class="story_1">
+              <div class="story_line">
+                <img class="story_pic" src="image/profile_pic.png" />
+              </div>
+              <div class="story_info">
+                <a href="" class="story_name"><b>this_is_westa</b></a>
+                <span class="time">38분 전</span>
+              </div>
+            </div>
+            <div class="story_2">
+              <div class="story_line">
+                <img class="story_pic" src="image/profile_pic.png" />
+              </div>
+              <div class="story_info">
+                <a href="" class="story_name"><b>hello_i_am_yj</b></a>
+                <span class="time">5분 전</span>
+              </div>
+            </div>
+            <div class="story_3">
+              <div class="story_line">
+                <img class="story_pic" src="image/profile_pic.png" />
+              </div>
+              <div class="story_info">
+                <a href="" class="story_name"><b>what_a_lovely_day</b></a>
+                <span class="time">2시간 전</span>
+              </div>
+            </div>
+            <div class="story_4">
+              <div class="story_line">
+                <img class="story_pic" src="image/profile_pic.png" />
+              </div>
+              <div class="story_info">
+                <a href="" class="story_name"><b>get_set_go</b></a>
+                <span class="time">12분 전</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--메인: 우측 친구 추천-->
+        <div class="recommend">
+          <div class="recommend_bar">
+            <div class="recommend_text">회원님을 위한 추천</div>
+            <a href="#" class="recommend_all_see"><b>모두 보기</b></a>
+          </div>
+          <div class="recommend_people">
+            <div class="recommend_1">
+              <div class="recommend_people_left">
+                <img class="recommend_pic" src="image/profile_pic.png" />
+                <div class="recommend_info">
+                  <a href="" class="recommend_name"><b>who_are_u</b></a>
+                  <span class="relation">get_set_go님 외 2명이 ...</span>
+                </div>
+              </div>
+              <div class="recommend_people_right">
+                <a href="#" class="follow"><b>팔로우</b></a>
+              </div>
+            </div>
+            <div class="recommend_1">
+              <div class="recommend_people_left">
+                <img class="recommend_pic" src="image/profile_pic.png" />
+                <div class="recommend_info">
+                  <a href="" class="recommend_name"><b>im_a_developer</b></a>
+                  <span class="relation">we_coder님 외 1명이 ...</span>
+                </div>
+              </div>
+              <div class="recommend_people_right">
+                <a href="#" class="follow"><b>팔로우</b></a>
+              </div>
+            </div>
+            <div class="recommend_1">
+              <div class="recommend_people_left">
+                <img class="recommend_pic" src="image/profile_pic.png" />
+                <div class="recommend_info">
+                  <a href="" class="recommend_name"><b>front_end</b></a>
+                  <span class="relation">dong_won님 외 3명이 ...</span>
+                </div>
+              </div>
+              <div class="recommend_people_right">
+                <a href="#" class="follow"><b>팔로우</b></a>
+              </div>
+            </div>
+            <div class="recommend_1">
+              <div class="recommend_people_left">
+                <img class="recommend_pic" src="image/profile_pic.png" />
+                <div class="recommend_info">
+                  <a href="" class="recommend_name"><b>nice_to_meet_u</b></a>
+                  <span class="relation">woo_seong님 외 5명이 ...</span>
+                </div>
+              </div>
+              <div class="recommend_people_right">
+                <a href="#" class="follow"><b>팔로우</b></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--메인: 우측 하단 법적 고시 정보-->
+        <div class="westa_info">
+          westagram 정보 · 지원 · 홍보 센터 · API · 채용 정보 · 개인정보처리방침
+          · 약관 · 디렉터리 · 프로필 · 해시태그 · 언어
+        </div>
+        <div class="copyright_info">ⓒ 2022 WESTAGRAM</div>
+      </div>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
+
+<!--
+... 부분 -> font awesome에서 가져온 인라인 태그
+링크를 걸어주는 a태그도 인라인 태그
+
+각각의 요소를 block 요소로 감싸면 flex 속성을 부여했을 때 스타일링이 용이해보임.
+justify-content에서 양쪽으로 붙여서 배치하는 속성값을 적용시켜보기.
+-->
