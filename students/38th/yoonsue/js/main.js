@@ -19,7 +19,7 @@ function resetInput() {
 }
 
 function buttonAble(e) {
-  const commentLength = e.target.value.length;
+  const commentLength = e.target.value.trim().length;
   if (commentLength > 0) {
     btnDisableFalse();
   } else {
@@ -27,26 +27,25 @@ function buttonAble(e) {
   }
 }
 
-function commentCreate() {
+function commentCreate(commentInput) {
   const userID = "hello ";
   const newComment = document.createElement("li");
 
   newComment.innerHTML =
-    '<div class="userId">' +
+    '<span class="userId">' +
     userID +
     '</div> <div class="comment_new_box">' +
     commentInput.value +
-    '<div><button class="delete">X</button><button class="comment_heart"><div class="comment_full_heart"></div></button></div></div>';
+    '<div><button class="delete">X</button><button class="comment_heart"><div class="comment_full_heart"></div></button></div></span>';
   commentList.appendChild(newComment);
 
-  return newComment;
+  resetInput();
 }
 
 function commentSubmit(e) {
   if (e.key === "Enter" || e.target === commentBtn) {
     e.preventDefault();
-    commentCreate();
-    resetInput();
+    commentCreate(commentInput);
     btnDisableTrue();
   }
 }
@@ -109,12 +108,13 @@ function searchIdMatch(e) {
     },
     {
       id: "uQuiz",
-      name: "유재석 아기자기와 함께하는 유퀴즈 온 더 블록!",
+      name: "유재석 아기자기",
     },
   ];
 
   let result = idData.filter((x) => x.id.includes(searchInputValue));
   return result;
+  console.log(result);
 }
 
 function contentLike() {

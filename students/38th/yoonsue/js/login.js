@@ -4,11 +4,11 @@ const loginBtn = document.getElementsByTagName("button")[0];
 const btnDiv = document.querySelector(".button");
 
 function logInControl(e) {
-  const valueLength = pwInput.value.length;
-  const idValueLength = idInput.value.length;
-  let pwValue = valueLength;
+  const pwValueLength = pwInput.value.length;
+  const idValue = idInput.value;
+  let pwValue = pwValueLength;
 
-  return idInput.value.includes('@') && pwValue >= 6
+  return idValue.includes('@') && pwValue >= 6
     ? (loginBtn.disabled = false, 
       btnDiv.href = "main.html"
       )
