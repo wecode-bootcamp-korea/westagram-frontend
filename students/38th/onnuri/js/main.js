@@ -8,55 +8,63 @@ window.addEventListener('keyup', () => {
   if(commentInput.value){
     commentBtn.disabled = false;
     commentBtn.style.color = "#0095f6";
-    console.log(commentBtn.disabled);
   }
 });
-// commentInput.addEventListener('keydown', (e)=>{
-//   if(commentInput.value && e.keyCode === 13){
-//     createComment();
-//   }
-// })
-// commentBtn.addEventListener('click', () => {
-//   if(commentInput.value){
-//     createComment();
-//   }
-// })
+
 commentForm.addEventListener('submit', (e) => {
   e.preventDefault();
-  createComment();
+  createComment(commentInput.value);
+
 })
-
-function createComment (){
+const addCommentWrap = document.querySelector('.comment_list_wrap');
+function createComment (value){
   //댓글생성
-  const addComment = document.createElement('p');
+  
+  const addComment = document.createElement('li');
   addComment.className = "add";
-  const addCommentId = document.createElement('span');
-  addCommentId.className = "comment_id";
-  addCommentId.innerText = userId;
-  const addCommentCon = document.createElement('span');
-  addCommentCon.innerText = commentInput.value;
+  const newComment = `
+  <span class="comment_id">${userId}</span>
+  <span class="comment_con">${value}</span>
+  <span class="comment_heart">
+    <i class="fa-regular fa-heart"></i>
+  </span>
+  <a class="delete_btn" href="javascript:;">삭제</a>
+  `
+   
+  // const addCommentId = document.createElement('span');
+  // addCommentId.className = "comment_id";
+  // addCommentId.innerText = userId;
+  // const addCommentCon = document.createElement('span');
+  // addCommentCon.innerText = value;
 
-  const addHeart = document.createElement('span');
-  addHeart.className = "comment_heart";
-  const icon = document.createElement('i');
-  icon.className = "fa-regular fa-heart";
-  addHeart.appendChild(icon);
-  const addDelete = document.createElement('a');
-  addDelete.innerText = "삭제";
+  // const addHeart = document.createElement('span');
+  // addHeart.className = "comment_heart";
+  // const icon = document.createElement('i');
+  // icon.className = "fa-regular fa-heart";
+  // addHeart.appendChild(icon);
+  // const addDelete = document.createElement('a');
+  // addDelete.innerText = "삭제";
 
-  commentBox.appendChild(addComment);
-  addComment.appendChild(addCommentId);
-  addComment.appendChild(addCommentCon);
-  addComment.appendChild(addHeart);
-  addComment.appendChild(addDelete);
+  // commentBox.appendChild(addComment);
+  // addComment.appendChild(addCommentId);
+  // addComment.appendChild(addCommentCon);
+  // addComment.appendChild(addHeart);
+  // addComment.appendChild(addDelete);
+
+  addCommentWrap.appendChild(addComment);
+  addComment.innerHTML= newComment;
   //input박스 초기화
   commentInput.value = "";
 
   //댓글 삭제
-  addDelete.addEventListener('click',() => {
+  const deleteBtn = document.querySelector('.delete_btn');
+  deleteBtn.addEventListener('click',() => {
     addComment.remove();
   });
+
   //댓글 좋아요 기능
+  const addHeart = document.querySelector('.comment_heart');
+  const icon = document.querySelector('.comment_heart i')
   addHeart.addEventListener('click', () => {
     console.log(icon);
     if(icon.className === "fa-regular fa-heart"){
@@ -64,9 +72,16 @@ function createComment (){
     }else {
       icon.className = "fa-regular fa-heart";
     }
-  });
+  }); 
+
 
 }
+
+  
+
+
+
+
 
 //포스트 좋아요 기능
 const postLike = document.querySelector('.like_button');
@@ -156,7 +171,7 @@ const userMenu = document.querySelector('.balloon.user_menu');
 const dim = document.querySelector('.bg');
 userBtn.addEventListener('click', ()=>{
   userMenu.style.display = "block";
-  dim.style.display = "block";
+  dim.style.display = "flex";
   userBtn.style.outline = "1px solid black";
 });
 
