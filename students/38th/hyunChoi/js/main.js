@@ -50,18 +50,15 @@ function initInputComment() { // 4. input에 입력된 comment 지우기
 }
 
 function commentDelete(event){
-  // let deleteX = document.getElementsByClassName('delete')[0]; // delete X
   event.target.parentElement.remove();
 }
 
 function commentLike(event){
-  // let likeHeart = document.getElementsByClassName('like')[0]
   event.target.className = "liked"
   event.target.innerHTML = "&#x2665"
 }
 
 function commentUnLike(event){
-  // let likedHeart = document.getElementsByClassName('liked')[0]
   event.target.className = "like"
   event.target.innerHTML = "&#x2661"
 }

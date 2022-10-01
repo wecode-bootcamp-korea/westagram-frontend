@@ -29,7 +29,7 @@ function loginButtonOff() {
 function successLogin(){
     let idValu = inputId.value;
     let passwordValue = inputPassword.value;
-    if(idValu.length > 0 && passwordValue.length > 0){
+    if(idValu.length > 0 && passwordValue.length > 0 ){
         loginButtonOn()
     }else{
         loginButtonOff()
@@ -40,12 +40,26 @@ function eneterKeyLogin(event){
         
     }
 }
+
+function loginValidation(){
+  console.log(inputId.value)
+  console.log(inputPassword.value)
+  if(inputId.value.indexOf('@') > -1 && inputPassword.value.length > 5){
+    location.href='main.html'
+  }else{
+    alert("ID와 PASSWORD를 올바르게 입력해주세요.")
+    inputId.value = ""
+    inputPassword.value = ""
+  }
+}
+
+
 inputId.addEventListener('keyup', successLogin);
 inputPassword.addEventListener('keyup', (event) => {
     if(event.keyCode === 13){
-        location.href='main.html'
+        loginValidation()
     }else{
         successLogin()
     }
 });
-button.addEventListener('click', () => {location.href='main.html'})
+button.addEventListener('click', (event) => {loginValidation(event)})
