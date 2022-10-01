@@ -3,13 +3,16 @@
 //     3. comment 게시
 //     4. input에 입력된 comment 지우기
 //     5. 생성된 comment 지우기
-//     6. commen like 기능 
+//     6. comment like 기능 
+//     7. comment unlike 기능
+//     8. mission08 box on off
 
 let commentItem = document.querySelector("comment"); // 댓글 wrap
 let commentInput = document.getElementsByClassName("commentInput")[0]; // 입력요소
 let commentButton = document.getElementsByClassName("commentButton")[0]; // 입력 버튼
 let commentWrap = document.getElementsByClassName("feedDesc")[0] // 게시글 comment Wrap
 let commentLikeHeart = document.getElementsByClassName('like')[0]
+let navUserIcon = document.querySelector('#visibleMenu');
 
 function buttonON() { // 1. 버튼 활성화
     commentButton.disabled = false;
@@ -56,11 +59,23 @@ function commentDelete(event){
 function commentLike(event){
   event.target.className = "liked"
   event.target.innerHTML = "&#x2665"
+  event.target.style.coursor = 'pointer'
 }
 
 function commentUnLike(event){
   event.target.className = "like"
   event.target.innerHTML = "&#x2661"
+  event.target.style.coursor = 'pointer'
+}
+
+function visibleMenu(evnet){
+  const menu = document.getElementsByClassName('profileMenu')[0];
+  console.log('a')
+  if(menu.style.display !== 'none'){
+    menu.style.display = 'none';
+  }else{
+  menu.style.display = 'block';
+  }
 }
 
 // commentInput의 value에 따른 commentButton 활성화 이벤트
@@ -101,3 +116,6 @@ commentWrap.addEventListener('click', function(event){
     commentUnLike(event)
   }
 })
+
+navUserIcon.addEventListener('click',visibleMenu)
+

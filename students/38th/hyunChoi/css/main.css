@@ -54,6 +54,7 @@
 
 .naviconWrap {
   width: 200px;
+  position: relative;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -61,6 +62,47 @@
   height: 100%;
 }
 
+#visibleMenu{
+  cursor: pointer;
+}
+
+.profileMenu{
+  position: absolute;
+  display: none;
+  top: 60px;
+  right: 0px;
+  z-index: 10;
+  width: 200px;
+  background-color: #fff;
+  border-radius: 6px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.0975);
+}
+ul{
+  padding: 0;
+  margin: 0;
+}
+li{
+  list-style-type: none;
+  padding: 10px;
+}
+
+.itemWrap{
+  display: flex;
+  align-items: center;
+}
+
+.itemWrap p {
+  margin: 0;
+  padding-top: 1px;
+}
+.itemWrap i{
+  margin-right: 20px;
+}
+.logout{
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
 .main {
   /* margin-top: 10px; */
   display: flex;
@@ -178,6 +220,7 @@
   position: absolute;
   right:10px;
   font-weight: 600;
+  cursor: pointer;
 }
 
 .like{
@@ -185,6 +228,7 @@
  right:30px;
  font-weight: 600;
  font-size: large;
+ cursor: pointer;
 }
 .liked{
   position: absolute;
@@ -192,6 +236,7 @@
   font-weight: 600;
   font-size: large;
   color: red;
+  cursor: pointer;
 }
 
 #moreDesc {
