@@ -1,6 +1,7 @@
 //  1. 로그인 버튼 on
 //  2. 로그인 버튼 off
 //  3. 로그인 성공시 main.html로 이동하는 이벤트 
+//  4. 로그인 유효성 검사
 
 const inputId = document.querySelector('#id');
 const inputPassword = document.querySelector('#password');
