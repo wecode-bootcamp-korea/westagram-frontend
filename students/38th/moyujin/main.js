@@ -5,7 +5,6 @@ let thisIsComment = document.getElementsByClassName(
 let commentInput = document.querySelector(".comment_upload");
 
 thisIsComment.addEventListener("keyup", function (e) {
-  console.log(e.target);
   if (thisIsComment.value !== "") {
     commentInput.style.opacity = "1";
   } else {
@@ -17,20 +16,20 @@ thisIsComment.addEventListener("keyup", function (e) {
 
 let commentBox = document.getElementsByClassName("feed_comments_write_box")[0];
 let submitBtn = document.getElementsByClassName("comment_upload")[0];
+const box = document.getElementsByClassName("comment_result")[0];
 
 function submit() {
-  const box = document.getElementsByClassName("comment_result")[0];
   const inputCommnet = document.createElement("div");
   const userName = document.createElement("span");
   const inputText = document.createElement("p");
   const likeIcon = document.createElement("img");
 
   inputCommnet.classList.add("comment_box");
-  userName.classList.add("userName");
-  mainText.classList.add("feed_comment_example");
-  mainIcon.classList.add("comment_icon_like");
+  userName.classList.add("user_name");
+  inputText.classList.add("feed_comment_content");
+  likeIcon.classList.add("comment_icon_like");
 
-  mainIcon.setAttribute("src", "image/heart.png");
+  likeIcon.setAttribute("src", "image/heart.png");
 
   userName.innerHTML = "yuzinnee";
   inputText.innerHTML = commentBox.value;
@@ -44,11 +43,10 @@ function submit() {
 
 submitBtn.addEventListener("click", (event) => {
   submit();
-  console.log(commentBox.value());
   commentBox.value = "";
 });
 
-box.addEventListener("keydown", (event) => {
+commentBox.addEventListener("keyup", (event) => {
   if (event.code === "Enter") {
     submit();
     commentBox.value = "";

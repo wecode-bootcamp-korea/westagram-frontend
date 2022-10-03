@@ -232,11 +232,38 @@ img {
   border: 1px solid #c42d91;
 }
 
+.comment_box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 20px;
+  width: 100%;
+}
+
+.comment_box_left {
+  display: flex;
+  align-items: center;
+}
+
+.user_name {
+  font-weight: bold;
+  margin-left: 15px;
+}
+
+.feed_comment_content {
+  margin-left: 10px;
+}
+
 .feed_comments_write {
   display: flex;
   align-items: center;
   border-top: 1px solid #efefef;
   height: 100%;
+}
+
+.comment_box_right {
+  margin-right: 15px;
+  justify-items: end;
 }
 
 .comment_icon_like {
