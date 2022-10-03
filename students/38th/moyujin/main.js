@@ -23,10 +23,14 @@ function submit() {
   const userName = document.createElement("span");
   const inputText = document.createElement("p");
   const likeIcon = document.createElement("img");
+  const commentLeft = document.createElement("div");
+  const commentRight = document.createElement("div");
 
   inputCommnet.classList.add("comment_box");
   userName.classList.add("user_name");
   inputText.classList.add("feed_comment_content");
+  commentLeft.classList.add("comment_box_left");
+  commentRight.classList.add("comment_box_right");
   likeIcon.classList.add("comment_icon_like");
 
   likeIcon.setAttribute("src", "image/heart.png");
@@ -34,22 +38,28 @@ function submit() {
   userName.innerHTML = "yuzinnee";
   inputText.innerHTML = commentBox.value;
 
-  inputCommnet.appendChild(userName);
-  inputCommnet.appendChild(inputText);
-  inputCommnet.appendChild(likeIcon);
+  commentLeft.appendChild(userName);
+  commentLeft.appendChild(inputText);
+  commentRight.appendChild(likeIcon);
+  inputCommnet.appendChild(commentLeft);
+  inputCommnet.appendChild(commentRight);
 
   box.appendChild(inputCommnet);
 }
 
 submitBtn.addEventListener("click", (event) => {
-  submit();
-  commentBox.value = "";
+  if (commentBox.value !== "") {
+    submit();
+    commentBox.value = "";
+  }
 });
 
 commentBox.addEventListener("keyup", (event) => {
   if (event.code === "Enter") {
-    submit();
-    commentBox.value = "";
+    if (commentBox.value !== "") {
+      submit();
+      commentBox.value = "";
+    }
   }
 });
 
