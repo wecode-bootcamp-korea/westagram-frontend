@@ -1,41 +1,20 @@
-const placeComment = document.getElementById("comments");
-const formInput = document.getElementById("instaForm");
+const comMent = document.getElementById("instaCom");
+const logBtn = document.getElementById("replyBtn");
+const ulPlace = document.getElementById("ulComm");
+const form = document.querySelector("form");
 
-const input = document.getElementById("");
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
 
-// function commentAdd(value) {
-//   const commentLists = document.getElementById("instaCom");
-//   const newCommentList = document.createElement("li");
+  const userID = document.createElement("span");
 
-//   const userID = document.createElement("span");
-//   userID.innerText = "w00jinkim";
-//   userID.className = "name";
+  userID.innerText = "w00jinkim ";
 
-//   const commentContent = document.createElement("span");
-//   commentContent.innerText = value;
+  const breakit = document.createElement("br");
 
-//   const deleteBtn = document.createElement("span");
-//   deleteBtn.innerText = "x";
-//   deleteBtn.classList.add("delete");
+  ulPlace.append(userID);
+  ulPlace.append(comMent.value);
+  ulPlace.append(breakit);
 
-//   newCommentList.appendChild(userID);
-//   newCommentList.appendChild(commentContent);
-//   newCommentList.appendChild(deleteBtn);
-
-//   commentLists.appendChild(newCommentList);
-
-//   input.value = "";
-// }
-
-// const comAdd = (textComment) => {
-//   const comList = document.createElement("li");
-//   const commentListing = comList.appendChild(textComment);
-//   placeComment.appendChild(commentListing);
-// };
-
-// btnClick.addEventListener("click", (event) => {
-//   textComment.value = "";
-// });
-
-// trim() 사용으로 댓글이 비었을때 확인 가능
-//
+  comMent.value = "";
+});
