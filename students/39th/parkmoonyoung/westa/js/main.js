@@ -31,6 +31,9 @@ function repleAdd () {
             postBtn.classList.add('active');
         }
     });
+
+    prevHeartToggle();
+
 }
 
 // 댓글 html 만들고 추가하는 함수
@@ -63,6 +66,40 @@ function makeReple(value){
 
     repleWrap.appendChild(makeLi);
 
+    // 좋아요 토글 이벤트
+    btnHeart.addEventListener('click',function(){
+        heartToggle(btnHeart);
+    });
+
+}
+
+// 추가된 댓글-좋아요 토글 기능
+function heartToggle(status){
+    if ( status.classList.contains('on') ){
+        status.classList.remove('on');
+    } else {
+        status.classList.add('on');
+    }
+}
+
+//기존 댓글-좋아요 토글 기능
+function prevHeartToggle(){
+
+    let prevRepleUl = document.querySelector('.repleList');
+    let prevRepleLi = prevRepleUl.children; // li의 Arr
+
+    for (var i = 0; i < prevRepleLi.length; i++) {
+        let isHeartBtn = prevRepleLi[i].getElementsByClassName('heart')[0];
+        let _this;
+        isHeartBtn.addEventListener('click',function(){
+            _this = this;
+            if ( _this.classList.contains('on') ){
+                _this.classList.remove('on');
+            } else {
+                _this.classList.add('on');
+            }
+        });
+    }
 }
 
 // 함수호출모음
