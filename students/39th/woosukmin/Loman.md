@@ -1,0 +1,1 @@
+feature/39-woosukmin 슬레시 이름을 하면 수정 가능
