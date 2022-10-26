@@ -1,6 +1,7 @@
 repleAdd();
 
 function repleAdd () {
+    let postBtn = document.querySelector('.post');
     let repleInput = document.querySelector('.replePost');
     let isValue;
 
@@ -8,9 +9,27 @@ function repleAdd () {
     repleInput.addEventListener('keyup',function(event){
         isValue = document.querySelector('.replePost').value;
 
-        if ( (event.code == 'Enter') && (isValue.length > 0) ){
+        if ( event.code == 'Enter' ){
             makeReple(isValue);
             repleInput.value = null;
+            postBtn.classList.remove('active');
+        } else if (isValue.length > 0) {
+            postBtn.classList.add('active');
+        } else if (isValue.length == 0) {
+            postBtn.classList.remove('active');
+        }
+    });
+
+    // 게시버튼 클릭시 댓글 추가 기능
+    postBtn.addEventListener('click',function(event){
+        isValue = document.querySelector('.replePost').value;
+
+        if ( event ){
+            makeReple(isValue);
+            repleInput.value = null;
+            postBtn.classList.remove('active');
+        } else if (isValue.length > 0) {
+            postBtn.classList.add('active');
         }
     });
 }
@@ -38,7 +57,6 @@ function makeReple(value){
     prevTime.classList.add('prevTime');
     prevTime.innerHTML = '1분전';
     
-
     // li에 내용 추가
     makeLi.appendChild(makeText);
     makeLi.appendChild(btnHeart);
