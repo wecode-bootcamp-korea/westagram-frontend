@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import "common.css";
+
+body {
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* first box */
+.first-box {
+  background-color: #ffffff;
+  border: 1px solid #dbdbdb;
+  width: 350px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.first-box__title {
+  font-family: "Lobster", cursive;
+  font-size: 45px;
+  margin: 40px 0px;
+}
+
+.first-box__login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.first-box__login-form__input {
+  background-color: #fafafa;
+  width: 270px;
+  height: 40px;
+  margin-top: 6px;
+  border: 1px solid #dbdbdb;
+  border-radius: 5px;
+}
+
+.first-box__login-form__input::placeholder {
+  padding-left: 10px;
+}
+
+.first-box__login-form__btn {
+  background-color: #0095f6;
+  color: white;
+  font-weight: 700;
+  width: 276px;
+  height: 30px;
+  margin: 15px 0px;
+  border: none;
+  border-radius: 5px;
+}
+
+.first-box__forget-pw {
+  font-size: 12px;
+  margin-top: 80px;
+}
+
+.first-box__forget-pw a {
+  text-decoration: none;
+  color: #00376b;
+}
+
+/* second box */
+.second-box {
+  background-color: #ffffff;
+  border: 1px solid #dbdbdb;
+  width: 350px;
+  height: 65px;
+  margin: 10px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.second-box span {
+  font-size: 15px;
+}
+
+.second-box span a {
+  color: #0095f6;
+  text-decoration: none;
+}
+
+/* third box */
+.third-box {
+  width: 350px;
+  height: 110px;
+  margin: 15px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.third-box__text {
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.apps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.apps__app-box {
+  width: 135px;
+  height: 40px;
+  margin: 10px 0px;
+  padding: 0px 5px;
+}
+
+/* Etc */
+.opacity {
+  opacity: 0.6;
+}
