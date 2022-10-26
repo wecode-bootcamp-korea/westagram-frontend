@@ -1,0 +1,404 @@
+body {
+  background-color: #fafafa;
+  position: relative;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.
+
+ /* HEADER */
+nav {
+  position: fixed;
+  width: 100%;
+  height: 10vh;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e6e6e6;
+  z-index: 1;
+  /* display: none; */
+}
+nav a:first-child {
+  margin-left: 10%;
+}
+nav a .logo {
+  width: 24px;
+  height: 24px;
+  border-right: 1px solid #000;
+  padding-right: 20px;
+}
+nav .textLogo {
+  display: block;
+  font-family: 'Lobster', cursive;
+  font-size: 25px;
+  margin-left: 20px;
+  color: #000;
+  text-decoration: none;
+}
+nav .search {
+  position: absolute;
+  left: 46vw;
+  color: #dbdbdb;
+  z-index: 1;
+}
+nav input {
+  position: absolute;
+  width: 20vw;
+  height: 25px;
+  text-align: center;
+  background-color: #fafafa;
+  border: 1px solid #dbdbdb;
+  color: #000;
+  border-radius: 3px;
+  left: 40vw;
+}
+nav input:focus {
+  outline: 1px solid #dbdbdb;
+}
+
+nav .explore {
+  position: absolute;
+  right: 18%;
+  color: #272727;
+  cursor: pointer;
+}
+nav .favorite {
+  position: absolute;
+  right: 14% ;
+  color: #272727;
+  cursor: pointer;
+}
+nav .personLink {
+  position: absolute;
+  right: 10%;
+  text-decoration: none;
+}
+nav .personLink .person {
+  color: #272727;
+  cursor: pointer;
+}
+
+/* MAIN */
+main {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 10vh;
+}
+main .feeds {
+  position: absolute;
+  width: 50vw;
+  left: 10%;
+}
+main .feeds .article {
+  margin-top: 10vh;
+  background-color: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 3px;
+  margin-bottom: 20px;
+}
+main .feeds .article .feed-top {
+  position: relative;
+  width: 100%;
+  height: 8vh;
+  display: flex;
+  align-items: center;
+}
+main .feeds .article .feed-top .profile-img {
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  border: 1px solid #e6e6e6;
+  margin: auto 10px;
+  cursor: pointer;
+}
+main .feeds .article .feed-top .user {
+  display: flex;
+  flex-direction: column;
+  margin-left: 3px;
+}
+main .feeds .article .feed-top .user .user-name {
+  margin-bottom: 2px;
+  cursor: pointer;
+}
+main .feeds .article .feed-top .user .user-info{
+  
+}
+main .feeds .article .feed-top .add-info-icon{
+  position: absolute;
+  right: 10px;
+  font-weight: 700;
+  cursor: pointer; 
+}
+
+main .feeds .article .feed-img {
+  width: 100%;
+}
+
+main .feeds .article .feed-icons {
+  position: relative;
+  width: 100%;
+  height: 24px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+main .feeds .article .feed-icons .heart {
+  margin-left: 10px;
+  cursor: pointer;
+}
+main .feeds .article .feed-icons .heart:hover {
+  color: rgba(0,0,0,0.5);
+  
+}
+main .feeds .article .feed-icons .chat-icon {
+  width: 25px;
+  height: 25px;
+  cursor: pointer; 
+}
+main .feeds .article .feed-icons .chat-icon:hover {
+  opacity: .5;
+}
+main .feeds .article .feed-icons .upload {
+  cursor: pointer;
+  color: #000; 
+}
+main .feeds .article .feed-icons .upload:hover {
+  color: rgba(0,0,0,0.5);
+}
+main .feeds .article .feed-icons .bookmark {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  color: #000;
+  
+}
+main .feeds .article .feed-icons .bookmark:hover {
+  color: rgba(0,0,0,0.5);
+}
+main .feeds .article .like {
+  display: flex;
+  align-items: center;
+}
+
+main .feeds .article .like img {
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  border: 1px solid #e6e6e6;
+  margin-left: 11px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+main .feeds .article .like .like-info {
+
+}
+
+main .feeds .article .feed-bottom {
+  margin: 10px 0;
+  border-bottom: 1px solid #e6e6e6;
+  padding-bottom: 5px;
+  padding-left: 10px;
+}
+main .feeds .article .feed-bottom .feed-info {
+  display: flex;
+}
+main .feeds .article .feed-bottom .feed-info .user-name {
+  margin-right: 2px;
+}
+main .feeds .article .feed-bottom .feed-info .feed-text {
+  
+}
+main .feeds .article .feed-bottom .comment {
+  display: flex;
+  position: relative;
+}
+main .feeds .article .feed-bottom .comment .comment-user {
+  margin-right: 3px;
+}
+main .feeds .article .feed-bottom .comment .comment-text{
+  
+}
+main .feeds .article .feed-bottom .comment .heart {
+  position: absolute;
+  right: 15px;
+  font-size: 12px;
+  cursor: pointer;
+}
+main .feeds .article .feed-bottom .comment .heart:hover {
+  opacity: .5;
+}
+main .feeds .article .feed-bottom .feed-time {
+  font-weight: 700;
+  color: #9e9e9e;
+}
+main .feeds .article .comments {
+
+}
+
+main .feeds .article .comments .comment {
+  position: relative;
+  margin-top: 5px;
+  /* margin-bottom: 5px; */
+}
+main .feeds .article .comments .comment:last-child {
+  margin-bottom: 5px;
+}
+main .feeds .article .comment input {
+  font-size: 14px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  border: none;
+  outline: none;
+  color: #9e9e9e;
+}
+main .feeds .article .comment button {
+  position: absolute;
+  background-color: #fff;
+  border: none;
+  color: #c4e1fb;
+  right: 10px;
+}
+
+/* MAIN-RIGHT */
+.main-right {
+  position: absolute;
+  width: 30vw;
+  right: 8%;
+  top: 10vh;
+}
+.main-right .right-top {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.main-right .right-top img{
+  width: 56px;
+  height: 56px;
+  border-radius: 28px;
+  border: 1px solid #e6e6e6;
+}
+.main-right .right-top .user {
+  margin-left: 10px;
+}
+.main-right .right-top .user .myName {
+  margin-bottom: 2px;
+}
+.main-right .right-top .user .myInfo{
+  color: #9e9e9e;
+}
+
+.main-right .right-mid {
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 3px;
+  margin-bottom: 8px;
+}
+.main-right .right-mid .mid-nav {
+  position: absolute;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+
+}
+.main-right .right-mid .mid-nav div:nth-child(1){
+  color: #9e9e9e;
+  margin-left: 10px;
+}
+.main-right .right-mid .mid-nav div:nth-child(2){
+  position: absolute;
+  right: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.main-right .right-mid ul {
+  margin-top: 40px;
+  height: 150px;
+  overflow: scroll;
+}
+.main-right .right-mid ul li {
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+.main-right .right-mid ul li img {
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  margin-right: 10px;
+  border: 1px solid #e6e6e6;
+}
+.main-right .right-mid ul li div h5 {
+  font-weight: 700;
+  color: #9e9e9e;
+  overflow-x: scroll;
+  margin-top: 2px;
+}
+
+/* right-bottom */
+
+.main-right .right-bottom {
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 3px;
+}
+.main-right .right-bottom .bottom-nav {
+  position: absolute;
+  width: 100%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+
+}
+.main-right .right-bottom .bottom-nav div:nth-child(1){
+  color: #9e9e9e;
+  margin-left: 10px;
+}
+.main-right .right-bottom .bottom-nav div:nth-child(2){
+  position: absolute;
+  right: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.main-right .right-bottom ul {
+  margin-top: 40px;
+  height: 150px;
+  overflow: scroll;
+}
+.main-right .right-bottom ul li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+.main-right .right-bottom ul li img {
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  margin-right: 10px;
+  border: 1px solid #e6e6e6;
+}
+.main-right .right-bottom ul li div h5 {
+  font-weight: 700;
+  width: 70%;
+  height: 14px;
+  color: #9e9e9e;
+  overflow:scroll;
+}
+.main-right .right-bottom ul li div h4 {
+  position: absolute;
+  font-weight: 700;
+  top: 7px;
+  right: 10px;
+  color: #3897f0;
+  cursor: pointer;
+}
+.main-right .right-footer {
+  font-size: 16px;
+  color: #cacaca;
+  margin-top: 15px;
+  font-weight: 400;
+}
