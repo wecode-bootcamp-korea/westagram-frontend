@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./style/common.css">
+
+    <script src="./js/main.js" defer></script>
+
+    <title>Westar</title>
+</head>
+<body>
+    <div class="wrap">
+        <nav class="navWrap">
+            <div class="inner">
+                <h1 class="logo addIcon"><a href="javascript:;">instagram</a></h1>
+
+                <div class="searchArea">
+                    <input type="text" class="mainSearch">
+                    <span class="placeholderBox">검색</span>
+                </div>
+
+                <div class="utilMenuArea">
+                    <!-- 버튼활성화시 .active 추가됨 -->
+                    <div class="utilBox"><button class="btn btnUtilSearch"><span class="blind">탐색</span></button></div>
+                    <div class="utilBox"><button class="btn btnUtilHeart active"><span class="blind">하트</span></button></div>
+                    <div class="utilBox"><button class="btn btnUtilMypage"><span class="blind">마이페이지</span></button></div>
+                </div> 
+            </div>
+        </nav>
+        
+        <div class="mainWrap">
+            <div class="feedsWrap">
+                <div class="feedsArea">
+                    <div class="feedsHeader">
+                        <div class="profileBox">
+                            <div class="imgBox"><img src="./images/icon/my-profile.jpg" alt="myp"></div>
+                            <span class="nickName">myp</span>
+                        </div>
+                        <button class="btn detail"><span class="blind">상세보기</span></button>
+                    </div>
+
+                    <div class="feedsContentsArea">
+                        <div class="feedsImgArea">
+                            <ul>
+                                <li><img src="./images/icon/my-profile.jpg" alt="myp"></li>
+                            </ul>
+                        </div>
+                        <div class="feedsUtilArea">
+                            <div class="feedsBtnArea">
+                                <button class="btn heart active"><span class="blind">좋아요</span></button> <!-- .active 추가시 활성화 -->
+                                <button class="btn reple"><span class="blind">리플쓰기</span></button>
+                                <button class="btn share"><span class="blind">공유하기</span></button>
+                                <button class="btn favorite"><span class="blind">즐겨찾기</span></button>
+                            </div>
+                            <div class="repleTotal">
+                                <div class="imgBox"><img src="./images/icon/my-profile.jpg" alt="myp"></div>
+                                <p class="totalTxt"><span class="firstlyNick">aineworld</span>님 <span class="totalNumber">외 10명</span>이 좋아합니다</p>
+                            </div>
+                            <div class="myReple reduce"><!-- .myReple : 내 리플, 글자 길 때 말줄임 사용 / [.reduce] 추가 -->
+                                <b class="myName">myp</b>
+                                <span class="txt">위워크에서 진행한 베이킹 클래스...</span>
+                                <button class="btn more">더 보기</button>
+                            </div>
+                            <ul class="repleList">
+                                <li>
+                                    <b class="nickName">neceosecius</b><span class="txt">거봐 좋았잖아~~~~~~~~</span>
+                                    <button class="btn heart"><span class="blind">좋아요</span></button><!-- .on 클래스 추가시 활성화 -->
+                                    <p class="prevTime">42분 전</p>
+                                </li>
+                            </ul> 
+                        </div>
+                        <div class="addRepleBox">
+                            <input type="text" class="replePost" placeholder="댓글 달기...">
+                            <button class="btn post">게시</button><!-- .active 추가시 활성화 -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feedsAsideArea">
+                    <div class="mainProfileArea">
+                        <div class="imgBox"><img src="./images/icon/my-profile.jpg" alt="myp"></div>
+                        <div class="dataBox">
+                            <strong class="tit">wecode_bootcamp</strong>
+                            <span>WeCode | 위코드</span>
+                        </div>
+                    </div>
+
+                    <div class="nickDataArea story">
+                        <div class="nickDataHeader">
+                            <em>스토리</em>
+                            <button class="btn allView">모두 보기</button>
+                        </div>
+                        <ul class="nickList">
+                            <li>
+                                <div class="userDataBox">
+                                    <div class="imgBox"><img src="./images/icon/my-profile.jpg" alt="myp"></div>
+                                    <div class="userData">
+                                        <strong class="userNickName">myp</strong>
+                                        <span class="time">16분전</span>
+                                        <!-- 
+                                        <span class="txt">_legend_a 님 외 2명이</span>
+                                        <button class="btn follow">팔로우</button>
+                                        -->
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="userDataBox">
+                                    <div class="imgBox"><img src="./images/icon/my-profile.jpg" alt="myp"></div>
+                                    <div class="userData">
+                                        <strong class="userNickName">myp</strong>
+                                        <span class="time">16분전</span>
+                                        <!-- 
+                                        <span class="txt">_legend_a 님 외 2명이</span>
+                                        <button class="btn follow">팔로우</button>
+                                        -->
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="userDataBox">
+                                    <div class="imgBox"><img src="./images/icon/my-profile.jpg" alt="myp"></div>
+                                    <div class="userData">
+                                        <strong class="userNickName">myp</strong>
+                                        <span class="time">16분전</span>
+                                        <!-- 
+                                        <span class="txt">_legend_a 님 외 2명이</span>
+                                        <button class="btn follow">팔로우</button>
+                                        -->
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="userDataBox">
+                                    <div class="imgBox"><img src="./images/icon/my-profile.jpg" alt="myp"></div>
+                                    <div class="userData">
+                                        <strong class="userNickName">myp</strong>
+                                        <span class="time">16분전</span>
+                                        <!-- 
+                                        <span class="txt">_legend_a 님 외 2명이</span>
+                                        <button class="btn follow">팔로우</button>
+                                        -->
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="userDataBox">
+                                    <div class="imgBox"><img src="./images/icon/my-profile.jpg" alt="myp"></div>
+                                    <div class="userData">
+                                        <strong class="userNickName">myp</strong>
+                                        <span class="time">16분전</span>
+                                        <!-- 
+                                        <span class="txt">_legend_a 님 외 2명이</span>
+                                        <button class="btn follow">팔로우</button>
+                                        -->
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="nickDataArea suggestion">
+                        <div class="nickDataHeader">
+                            <em>회원님을 위한 추천</em>
+                            <button class="btn allView">모두 보기</button>
+                        </div>
+                        <ul class="nickList">
+                            <li>
+                                <div class="userDataBox">
+                                    <div class="imgBox"><img src="./images/icon/my-profile.jpg" alt="myp"></div>
+                                    <div class="userData">
+                                        <strong class="userNickName">myp</strong>
+                                        <!-- <span class="time">16분전</span> -->
+                                        <span class="txt">_legend_a 님 외 2명이</span>
+                                        <button class="btn follow">팔로우</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="userDataBox">
+                                    <div class="imgBox"><img src="./images/icon/my-profile.jpg" alt="myp"></div>
+                                    <div class="userData">
+                                        <strong class="userNickName">myp</strong>
+                                        <!-- <span class="time">16분전</span> -->
+                                        <span class="txt">_legend_a 님 외 2명이</span>
+                                        <button class="btn follow">팔로우</button>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="userDataBox">
+                                    <div class="imgBox"><img src="./images/icon/my-profile.jpg" alt="myp"></div>
+                                    <div class="userData">
+                                        <strong class="userNickName">myp</strong>
+                                        <!-- <span class="time">16분전</span> -->
+                                        <span class="txt">_legend_a 님 외 2명이_legend_a 님 외 2명이_legend_a 님 외 2명이_legend_a 님 외 2명이</span>
+                                        <button class="btn follow">팔로우</button>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="dataInfoArea">
+                        <ul>
+                            <li><a href="javascript:;">Instagram 정보</a></li>
+                            <li><a href="javascript:;">지원</a></li>
+                            <li><a href="javascript:;">홍보 센터</a></li>
+                            <li><a href="javascript:;">API</a></li>
+                            <li><a href="javascript:;">채용 정보</a></li>
+                            <li><a href="javascript:;">개인정보처리방침</a></li>
+                            <li><a href="javascript:;">약관</a></li>
+                            <li><a href="javascript:;">디렉터리</a></li>
+                            <li><a href="javascript:;">프로필</a></li>
+                            <li><a href="javascript:;">해시태그</a></li>
+                            <li><a href="javascript:;">언어</a></li>
+                        </ul>
+
+                        <p class="copyRight">© 2019 INSTAGRAM</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+/* loiginFormBox */
+.loginFormBox{width:100%; height:35px; }
+.loginFormBox + .loginFormBox{margin-top:5px;}
+.loginFormBox input{padding:0 10px; width:100%; height:100%; background:#fafafa; border:1px solid #efefef; border-radius:4px;}
+.loginFormBox input::placeholder{color:#999;}
+
+
+/* login */
+.loginWrap{overflow:auto; position:absolute; top:0; left:0; width:100%; height:100%; background:#fafafa;}
+.loginArea{position:absolute; top:50%; left:50%; transform:translate(-50%, -50%); padding:20px 40px 10px; width:350px; height:380px; text-align: center; border-radius:4px; border:1px solid #ddd; background:#fff;}
+.loginArea .inputDataArea{margin-top:35px;}
+.loginArea .inputDataArea .btnLogin:disabled{opacity:0.5;}
+.loginArea .inputDataArea .btnLogin{margin-top:15px; width:100%; height:30px; text-align:center; border-radius:4px; border:1px solid #0095f6; background:#0095f6; color:#fff; font-weight:700; }
+.loginArea .forgotPw{position:absolute; bottom:20px; left:50%; transform:translateX(-50%); color:#043667; font-weight:700;}

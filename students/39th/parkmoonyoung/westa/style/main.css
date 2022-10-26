@@ -1,0 +1,79 @@
+.wrap{position:relative; padding:100px 0; min-width:1300px; overflow:auto; width:100%; height:100%; background:#fafafa;}
+
+
+/* .navWrap */
+.navWrap{z-index:100; position:fixed; top:0; left:0; right:0; width:100%; height:100px;  background:#fff; border-bottom:1px solid #eee; }
+.navWrap .inner{display:flex; justify-content: space-between; align-items: center; margin:0 auto; width:1300px; height:100%;}
+.navWrap .inner .searchArea{position:relative; width:280px; height:35px; background:#fafafa;}
+.navWrap .inner .searchArea .mainSearch{z-index:10; position:relative; padding-left:10px; width:100%;height:100%;border-radius:4px;border:1px solid #ddd; background:transparent;}
+.navWrap .inner .searchArea .mainSearch + .placeholderBox{z-index:5; position:absolute; top:50%; left:50%; transform: translate(-50%, -50%); padding-left:14px; color:#666;}
+.navWrap .inner .searchArea .mainSearch + .placeholderBox:before{position:absolute; top:50%; left:0; margin-top:-5px; content:'';display:block;width:10px;height:10px; background:url(../images/icon/icon-search.png) no-repeat center/contain; }
+.navWrap .inner .searchArea .mainSearch:focus + .placeholderBox{display:none;}
+.navWrap .inner .utilMenuArea{display:flex;}
+.navWrap .inner .utilMenuArea .utilBox {width:30px; height:30px;}
+.navWrap .inner .utilMenuArea .utilBox + .utilBox{margin-left:12px;}
+.navWrap .inner .utilMenuArea .utilBox .btn{width:100%; height:100%; border:0;}
+.navWrap .inner .utilMenuArea .utilBox .btn.active{position:relative;}
+.navWrap .inner .utilMenuArea .utilBox .btn.active:after{position:absolute; bottom:-8px; left:50%; transform: translateX(-50%); content:''; display:inline-block; width:5px; height:4px; border-radius:20px; background:red;}
+.navWrap .inner .utilMenuArea .utilBox .btn.btnUtilSearch{background:url(../images/icon/icon-util-explore.png) no-repeat center/contain;}
+.navWrap .inner .utilMenuArea .utilBox .btn.btnUtilHeart{background:url(../images/icon/icon-util-heart.png) no-repeat center/contain;}
+.navWrap .inner .utilMenuArea .utilBox .btn.btnUtilMypage{background:url(../images/icon/icon-util-profile.png) no-repeat center/contain;}
+
+.mainWrap .feedsWrap{margin:0 auto; display:flex; justify-content: center; padding:75px 25px 0 25px; width:1300px; }
+.mainWrap .feedsWrap .feedsArea{overflow:hidden; width:820px; border:1px solid #ddd; border-radius:4px;}
+.mainWrap .feedsWrap .feedsArea .feedsHeader{display:flex; justify-content: space-between; align-items: center; padding:0 20px; height:80px; background:#fff;}
+.mainWrap .feedsWrap .feedsArea .feedsHeader .profileBox{display:flex; align-items: center;}
+.mainWrap .feedsWrap .feedsArea .feedsHeader .profileBox .imgBox{margin-right:20px; width:40px; height:40px; border-radius:50%; border:1px solid #ddd; overflow:hidden;}
+.mainWrap .feedsWrap .feedsArea .feedsHeader .profileBox .nickName{font-size:20px; font-weight:700;}
+.mainWrap .feedsWrap .feedsArea .feedsHeader .btn.detail{widtH:30px;height:30px; background:url(../images/icon/icon-more.png) no-repeat center/contain;}
+.mainWrap .feedsWrap .feedsArea .feedsContentsArea .feedsImgArea{overflow:hidden; width:820px;height:820px;background:#ddd;}
+.mainWrap .feedsWrap .feedsArea .feedsContentsArea .feedsImgArea > ul{width:100%;}
+.mainWrap .feedsWrap .feedsArea .feedsContentsArea .feedsImgArea > ul > li {position:relative; width:100%;}
+.mainWrap .feedsWrap .feedsArea .feedsContentsArea .feedsImgArea > ul > li > img{width:100%;}
+
+.mainWrap .feedsWrap .feedsArea .feedsContentsArea .feedsUtilArea{padding:0 20px 10px;}
+.mainWrap .feedsWrap .feedsArea .feedsContentsArea .feedsUtilArea .feedsBtnArea{position:relative; padding:20px 0;}
+.mainWrap .feedsWrap .feedsArea .feedsContentsArea .feedsUtilArea .feedsBtnArea .btn + .btn{margin-left:15px;}
+.mainWrap .feedsWrap .feedsArea .feedsContentsArea .feedsUtilArea .feedsBtnArea .btn{width:35px; height:35px;}
+.mainWrap .feedsWrap .feedsArea .feedsContentsArea .feedsUtilArea .feedsBtnArea .btn.heart{background:url(../images/icon/icon-heart-off.png) no-repeat center/contain;}
+.mainWrap .feedsWrap .feedsArea .feedsContentsArea .feedsUtilArea .feedsBtnArea .btn.heart.active{background:url(../images/icon/icon-heart-on.png) no-repeat center/contain;}
+.mainWrap .feedsWrap .feedsArea .feedsContentsArea .feedsUtilArea .feedsBtnArea .btn.reple{background:url(../images/icon/icon-bubble-chat.png) no-repeat center/contain;}
+.mainWrap .feedsWrap .feedsArea .feedsContentsArea .feedsUtilArea .feedsBtnArea .btn.share{background:url(../images/icon/icon-share.png) no-repeat top/32px;}
+.mainWrap .feedsWrap .feedsArea .feedsContentsArea .feedsUtilArea .feedsBtnArea .btn.favorite{position:absolute; top:20px; right:0; background:url(../images/icon/icon-markbook.png) no-repeat center/contain;}
+.mainWrap .feedsWrap .feedsArea .feedsContentsArea .feedsUtilArea .repleTotal{display:flex;}
+.mainWrap .feedsWrap .feedsArea .feedsContentsArea .feedsUtilArea .repleTotal .imgBox{overflow:hidden; margin-right:8px; width:26px; height:24px; border:1px solid #ddd; border-radius:10px;}
+.mainWrap .feedsWrap .feedsArea .feedsContentsArea .feedsUtilArea .repleTotal .imgBox img{height:100%;}
+
+.mainWrap .feedsWrap .feedsArea .feedsContentsArea .feedsUtilArea .repleTotal .totalTxt span{font-weight:700;}
+.mainWrap .feedsWrap .feedsArea .feedsContentsArea .feedsUtilArea .myReple{margin-top:8px;}
+.mainWrap .feedsWrap .feedsArea .feedsContentsArea .feedsUtilArea .myReple .myName{margin-right:4px; font-weight:700;}
+.mainWrap .feedsWrap .feedsArea .feedsContentsArea .feedsUtilArea .myReple .btn.more{margin-left:4px; font-size:14px; font-weight:500; color:#666; border:0;}
+.mainWrap .feedsWrap .feedsArea .feedsContentsArea .feedsUtilArea .repleList > li + li{margin-top:2px;}
+.mainWrap .feedsWrap .feedsArea .feedsContentsArea .feedsUtilArea .repleList > li{position:relative; padding-right:20px;}
+.mainWrap .feedsWrap .feedsArea .feedsContentsArea .feedsUtilArea .repleList > li .nickName{font-weight:700;}
+.mainWrap .feedsWrap .feedsArea .feedsContentsArea .feedsUtilArea .repleList > li .txt{margin-left:4px;}
+.mainWrap .feedsWrap .feedsArea .feedsContentsArea .feedsUtilArea .repleList > li .heart{position:absolute; top:2px; right:0; width:16px; height:16px; border:0; background:url(../images/icon/icon-heart-off.png) no-repeat center/contain;}
+.mainWrap .feedsWrap .feedsArea .feedsContentsArea .feedsUtilArea .repleList > li .heart.on{outline:1px solid blue;}
+.mainWrap .feedsWrap .feedsArea .feedsContentsArea .feedsUtilArea .repleList > li .prevTime{font-size:15px; color:#666; font-weight:500;}
+.mainWrap .feedsWrap .feedsArea .feedsContentsArea .addRepleBox{position:relative; border-top:1px solid #ddd; width:100%;}
+.mainWrap .feedsWrap .feedsArea .feedsContentsArea .addRepleBox input{display:block;padding:24px 20px; width:calc(100% - 70px); outline:0; border:0;}
+.mainWrap .feedsWrap .feedsArea .feedsContentsArea .addRepleBox .post{position:absolute; top:50%; right:20px; transform:translateY(-50%); color:#043667; font-weight:700; border:0; outline:0; opacity:0.5; }
+.mainWrap .feedsWrap .feedsArea .feedsContentsArea .addRepleBox .post.active{opacity:1;}
+
+.mainWrap .feedsWrap .feedsAsideArea{width:390px; margin-left:40px; }
+.mainWrap .feedsWrap .feedsAsideArea .mainProfileArea{display:flex; align-items: center;}
+.mainWrap .feedsWrap .feedsAsideArea .mainProfileArea .imgBox{margin-right:15px; width:68px; height:68px; border-radius:50%; overflow:hidden; background:#ddd;}
+.mainWrap .feedsWrap .feedsAsideArea .mainProfileArea .imgBox img{width:100%;}
+.mainWrap .feedsWrap .feedsAsideArea .mainProfileArea .dataBox .tit{display:block; margin-bottom:2px; font-weight:600;}
+.mainWrap .feedsWrap .feedsAsideArea .mainProfileArea .dataBox span{color:#666;}
+
+.mainWrap .feedsWrap .feedsAsideArea .nickDataArea + .nickDataArea{margin-top:16px;}
+.mainWrap .feedsWrap .feedsAsideArea .nickDataArea{border:1px solid #ddd; border-radius:4px;}
+
+.mainWrap .feedsWrap .feedsAsideArea .dataInfoArea{margin-top:20px;}
+.mainWrap .feedsWrap .feedsAsideArea .dataInfoArea > ul{display:flex; flex-wrap:wrap;}
+.mainWrap .feedsWrap .feedsAsideArea .dataInfoArea > ul > li{position:relative;}
+.mainWrap .feedsWrap .feedsAsideArea .dataInfoArea > ul > li + li{margin-left:4px; padding-left:4px;}
+.mainWrap .feedsWrap .feedsAsideArea .dataInfoArea > ul > li + li:before{position:absolute; top:50%; left:-1px; margin-top:-1px; content:'';display:block;width:2px;height:2px;background:#aaa;border-radius:50%;}
+.mainWrap .feedsWrap .feedsAsideArea .dataInfoArea > ul > li a{color:#aaa;}
+.mainWrap .feedsWrap .feedsAsideArea .dataInfoArea .copyRight{margin-top:20px; color:#aaa;}

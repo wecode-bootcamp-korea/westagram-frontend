@@ -1,0 +1,48 @@
+@import url("../style/reset.css");
+@import url("../style/common.css");
+@import url("../style/login.css");
+@import url("../style/main.css");
+
+/* 
+z-index
+.navWrap : 100
+*/
+
+body{font-size:14px;}
+
+html,body,.wrap{height:100%;}
+
+/* 로고 */
+.logo{display:inline-block;}
+.logo a{font-family: 'Lobster-Regular'; font-size:60px; color:#000; letter-spacing: 3px; }
+.logo.addIcon a{position:relative; padding-left:70px;}
+.logo.addIcon a:before{position:absolute; top:50%; left:0; margin-top:-15px; content:'';display:block;width:30px;height:30px; background:url(../images/icon/logo.png) no-repeat center/contain;}
+.logo.addIcon a:after{position:absolute; top:50%; left:50px; margin-top:-18px; content:'';display:block;width:2px;height:36px;background:#000;}
+.logo.addIcon a{font-size:36px; letter-spacing: 0;}
+
+/* imgBox */
+.imgBox img{width:100%;}
+
+/* .nickDataArea */
+.nickDataArea.story{margin-top:20px; height:295px;}
+.nickDataArea.suggestion{height:255px;}
+.nickDataArea.suggestion .userDataBox .userData{padding-right:50px;}
+.nickDataArea.suggestion .userDataBox .userData .btn.follow{position:absolute; top:50%; right:0; transform:translateY(-50%); color:#0095f6; font-weight:700;}
+
+.nickDataArea{border:1px solid #ddd; border-radius:4px;}
+.nickDataArea .nickDataHeader{display:flex; justify-content: space-between; align-items: center; padding:20px;}
+.nickDataArea .nickDataHeader em{font-weight:700; color:#666;}
+.nickDataArea .nickDataHeader .allView{font-weight: 700;}
+.nickDataArea .nickList{height:calc(100% - 58px); padding:0 20px; overflow-x:hidden; overflow-y: auto; }
+.nickDataArea .nickList > li + li{margin-top:10px;}
+
+/* userDataBox */
+.userDataBox{position:relative; padding-left:70px;  height:58px; }
+.userDataBox .imgBox{position:absolute; top:50%; left:0; transform:translateY(-50%); padding:2px; width:56px; height:56px; border-radius:50%; border:2px solid transparent; background: linear-gradient(#fff, #fff) padding-box, linear-gradient(45deg, slateblue, coral) border-box;}
+.userDataBox .imgBox img{width:100%; height:100%; border-radius:50%; background:#ddd;}
+.userDataBox .userData{height:100%; padding-top:8px;}
+.userDataBox .userData .userNickName{display:block; margin-bottom:2px; font-weight:700;}
+.userDataBox .userData .time{color:#666;}
+.userDataBox .userData .txt{display:inline-block; width:99%; color:#666; white-space:nowrap; text-overflow: ellipsis; overflow:hidden; }
+
+
