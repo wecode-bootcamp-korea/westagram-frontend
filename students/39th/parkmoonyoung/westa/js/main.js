@@ -1,23 +1,17 @@
 repleAdd();
 
 function repleAdd () {
-    console.log("aa");
-
     let repleInput = document.querySelector('.replePost');
     let isValue;
-
-
-    console.log(repleInput);
 
     // input recently value check
     repleInput.addEventListener('keyup',function(event){
         isValue = document.querySelector('.replePost').value;
 
-        if ( event.code == 'Enter' ){
-            console.log(isValue);
+        if ( (event.code == 'Enter') && (isValue.length > 0) ){
             makeReple(isValue);
+            repleInput.value = null;
         }
-
     });
 }
 
@@ -51,6 +45,5 @@ function makeReple(value){
     makeLi.appendChild(prevTime);
 
     repleWrap.appendChild(makeLi);
-    console.log(repleWrap);
 
 }
