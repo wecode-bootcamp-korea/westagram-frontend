@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style/reset.css">
+    <link rel="stylesheet" type="text/css" href="style/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet"> 
+    <script src="js/main.js" defer></script>
+    <title>메인</title>
+</head>
+<body>
+    <div class="wrap">
+        <div class="header">
+            <div class="inner">
+                <h1 class="logo">
+                    <img src="images/icon-insta.png" alt="인스타">
+                    westagram
+                </h1>
+                <div class="search-input">
+                    <input type="text" placeholder="검색">
+                </div>
+                <div class="link-area">
+                    <button type="button" class="link-btn explore">탐색</button>
+                    <button type="button" class="link-btn heart new">좋아요</button>
+                    <button type="button" class="link-btn profile">프로필</button>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="l-content">
+                <div class="feed-box">
+                    <div class="feed-top">
+                        <img src="images/img1.jpg" alt="샘플">
+                        <span class="user-id">canon_mj</span>
+                        <div class="btn-box">
+                            <button type="button" class="btn-more">더보기</button>
+                        </div>
+                        </div>
+                    <div class="feed-img">
+                        <img src="images/img3.jpg" alt="샘플">
+                    </div>
+                    <div class="feed-info">
+                        <div class="btn-area">
+                            <div class="l-btn">
+                                <span class="btn-like">
+                                    <input type="checkbox" id="btnLike">
+                                    <label for="btnLike">좋아요</label>
+                                </span>
+                                <button type="button" class="btn-comment">댓글</button>
+                                <button type="button" class="btn-share">공유</button>
+                            </div>
+                            <span class="btn-bookmark">
+                                <input type="checkbox" id="btnBookmark">
+                                <label for="btnBookmark">북마크</label>
+                            </span>
+                        </div>
+                        <div class="state-area">
+                            <span class="icon">
+                                <img src="images/img2.jpg" alt="샘플">
+                            </span>
+                            <p class="text"><span class="state-id">aineword</span>님 외 <span class="num">10명</span>이 좋아합니다</p>
+                        </div>
+                        <ul class="comment-area">
+                            <li class="my">
+                                <span class="comment-id">canon_mj</span>
+                                <span class="comment-content">위워크에서 진행한 베이킹 클래스 너무 좋았습니다.</span>
+                                <button type="button" class="btn-txt">더 보기</button>
+                            </li>
+                            <li>
+                                <span class="comment-id">naceosecius</span>
+                                <span class="comment-content">거봐 좋았잖아~~~~</span>
+                                <span class="btn-like">
+                                    <input type="checkbox" id="btnLikeSm">
+                                    <label for="btnLikeSm">좋아요</label>
+                                </span>
+                            </li>
+                        </ul>
+                        <p class="time"><span>42분</span>전</p>
+                    </div>
+                </div>
+                <div class="feed-input">
+                    <input type="text" placeholder="댓글 달기...">
+                    <button type="button" class="btn-post" disabled>게시</button>
+                </div>
+            </div>
+            <div class="r-content">
+                <div class="profile-box">
+                    <span class="img"><img src="images/wecode_logo.webp"/></span>
+                    <div class="box">
+                        <p class="name">wecode_bootcamp</p>
+                        <ul class="info">
+                            <li>WeCode</li>
+                            <li>위코드</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="line-box">
+                    <div class="tit-area">
+                        <span class="tit">스토리</span>
+                        <button type="button" class="btn-all">모두 보기</button>
+                    </div>
+                    <ul class="user-list">
+                        <li>
+                            <span class="img"><img src="images/img4.jpg" alt="샘플"></span>
+                            <p class="id">_yum_S</p>
+                            <p class="time"><span>16분</span>전</p>
+                        </li>
+                        <li>
+                            <span class="img"><img src="images/img4.jpg" alt="샘플"></span>
+                            <p class="id">drink_eat_drink</p>
+                            <p class="time"><span>3시간</span>전</p>
+                        </li>
+                        <li>
+                            <span class="img"><img src="images/img4.jpg" alt="샘플"></span>
+                            <p class="id">hyukyc</p>
+                            <p class="time"><span>20시간</span>전</p>
+                        </li>
+                        <li>
+                            <span class="img"><img src="images/img4.jpg" alt="샘플"></span>
+                            <p class="id">jminkeek</p>
+                            <p class="time"><span>1일</span>전</p>
+                        </li>
+                        <li>
+                            <span class="img"><img src="images/img4.jpg" alt="샘플"></span>
+                            <p class="id">zzang</p>
+                            <p class="time"><span>2일</span>전</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="line-box">
+                    <div class="tit-area">
+                        <span class="tit">회원님을 위한 추천</span>
+                        <button type="button" class="btn-all">모두 보기</button>
+                    </div>
+                    <ul class="user-list">
+                        <li>
+                            <span class="img"><img src="images/img5.jpg" alt="샘플"></span>
+                            <p class="id">joaaaaahye</p>
+                            <p class="txt"><span>_legend_a</span>님 외 <span>2</span>명이 팔로우 합니다.</p>
+                            <button type="button" class="btn-follow">팔로우</button>
+                        </li>
+                        <li>
+                            <span class="img"><img src="images/img5.jpg" alt="샘플"></span>
+                            <p class="id">rampart81</p>
+                            <p class="txt"><span>ringo.in.seoul</span>님 외 <span>12</span>명이 팔로우 합니다.</p>
+                            <button type="button" class="btn-follow">팔로우</button>
+                        </li>
+                        <li>
+                            <span class="img"><img src="images/img5.jpg" alt="샘플"></span>
+                            <p class="id">shawnjjoo</p>
+                            <p class="txt"><span>jimmylee1220</span>님 외 <span>18</span>명이 팔로우 합니다.</p>
+                            <button type="button" class="btn-follow">팔로우</button>
+                        </li>
+                    </ul>
+                </div>
+                <p class="info-txt">Instagram 정보·지원·홍보 센터·API·채용 정보·개인정보처리방침·약관·디렉터리·프로필·해시태그·언어</p>
+                <p class="cop">ⓒ 2019 INSTAGRAM</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
