@@ -1,0 +1,235 @@
+*{
+    box-sizing: border-box;
+}
+.nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px solid #bbb;
+    justify-content: space-between;
+
+}
+.insta{
+    margin-right: 10px;
+    margin-left: 50px;
+    width: 36px;
+    height: 36px;
+}
+.find{
+    text-align: center;
+}
+.searchbar {
+
+    width: 250px;
+
+}
+.searchbar input {
+    width: 100%;
+    padding: 0.5rem 2rem;
+    margin-top: 6px;
+    background-color: rgba(238, 235, 235, 0.288);
+    border: 1px solid rgba(218, 217, 217, 0.767);
+}
+.searchbar input::placeholder{
+    font-size: 1rem;
+    color: silver;
+    text-align: center;
+    background: url(https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/search-512.png) no-repeat 35% center/20px 20px;
+    filter: invert(0.5);
+}
+input:focus {
+    outline: 1px solid rgb(179, 179, 179);
+}
+.explore{
+    margin-left: 120px;
+}
+.explore,.heart,.profile{
+    margin-left: 12px;
+    width: 36px;
+    height: 36px;
+}
+.imgTop{
+    display: flex;
+    justify-content: flex-end;
+}
+.heart,.profile{
+    margin-left: 15px;
+}
+.profile{
+    margin-right: 10px;
+}
+.text{
+
+    font-size: 20px;
+}
+.logoMain{
+    display: flex;
+    align-items: center;
+}
+.logo{
+    padding-left: 15px;
+    border-left: 1px solid black;
+
+    font-family: 'Lobster', cursive;
+    font-size: 36px;
+}
+.find{
+    margin-left: 120px;
+    width: 250px;
+    height: 30px;
+}
+.feeds{
+    margin-top: 60px;
+    margin-left: 100px;
+    border: 1px solid #bbb;
+    float: left;
+}
+.article_head{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.dotdotdot{
+    padding-left: 340px;
+}
+.text{
+    margin-left: 10px;
+}
+
+.leo{
+    width: 550px;
+    height: 600px;
+}
+.right{
+    margin-top: 60px;
+    float: right;
+    margin-right: 100px;
+}
+.right_1{
+    display: flex;
+    direction: row;
+    margin-bottom: 20px;
+    margin-left: 5px;
+}
+.right_2_head{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #bbb;
+}
+.right_2_main{
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+
+
+}
+.right_2,.right_3{
+    border: 1px solid #bbb;
+    margin-bottom: 20px;
+}
+.wecode{
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+}
+.wecode_w{
+    width: 20px;
+    height: 20px;
+    border-radius: 40px;
+}
+.right_2_text{
+    display: flex;
+    margin-left: 10px;
+    width:  calc(100% - 50px);
+    justify-content: space-between;
+}
+.follow{
+    display: flex;
+    justify-content: flex-end;
+}
+.rmain{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px 10px 10px 5px;
+
+
+}
+.text_t{
+    margin-left: 10px;
+}
+.follow{
+    color: #439cf1;
+}
+.follow1{
+    display: flex;
+    justify-content: flex-end;
+}
+.hmain{
+    color: #9c9c9c;
+}
+.comment {
+    border-top: 1px solid #bbb;
+    width: 100%;;
+    position: relative;
+}
+.comment input {
+    width: 90%;
+    border: none;
+    padding:20px 0;
+    padding-left: 15px;
+}
+
+.comment input:focus {
+    outline: none;
+}
+.upload {
+    padding: 15px 15px;
+    border: none;
+    font-size: 0.8rem;
+    position: absolute;
+    color: rgba(113, 147, 238, 0.747);
+    background-color: white;
+    right: 0px;
+    top: 6px;
+}
+.upload:hover {
+    background: none;;
+    color: rgba(113, 147, 238, 0.747);
+}
+.imo{
+    position: relative;
+    height: 20px;
+    width: 100%;
+}
+.imo img{
+    width: 20px;
+}
+.allSee{
+    color: black;
+}
+.allSee,.follow{
+    text-decoration-line: none;
+}
+.small{
+    color: #bbb;
+    font-size: 12px;
+}
+.scrap{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.comment_likebutton{
+    width: 20px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(60%);
+}
+.footer{
+    color: #bbb;
+}
