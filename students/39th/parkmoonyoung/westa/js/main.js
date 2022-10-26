@@ -1,4 +1,3 @@
-repleAdd();
 
 function repleAdd () {
     let postBtn = document.querySelector('.post');
@@ -9,7 +8,7 @@ function repleAdd () {
     repleInput.addEventListener('keyup',function(event){
         isValue = document.querySelector('.replePost').value;
 
-        if ( event.code == 'Enter' ){
+        if ( (event.code == 'Enter') && (isValue.length > 0) ){
             makeReple(isValue);
             repleInput.value = null;
             postBtn.classList.remove('active');
@@ -24,7 +23,7 @@ function repleAdd () {
     postBtn.addEventListener('click',function(event){
         isValue = document.querySelector('.replePost').value;
 
-        if ( event ){
+        if ( (event) && (isValue.length > 0) ){
             makeReple(isValue);
             repleInput.value = null;
             postBtn.classList.remove('active');
@@ -65,3 +64,6 @@ function makeReple(value){
     repleWrap.appendChild(makeLi);
 
 }
+
+// 함수호출모음
+repleAdd();
