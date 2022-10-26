@@ -71,6 +71,11 @@ body {
 
 .story {
   width: 100%;
+  display: flex;
+}
+
+.story > * {
+  list-style: none;
 }
 
 .story-profile {
@@ -86,7 +91,6 @@ body {
 .feed {
   background-color: #ffffff;
   width: 450px;
-  height: 800px;
   border: 1px solid #dbdbdb;
   border-radius: 10px;
 }
@@ -269,7 +273,6 @@ body {
 
 .recommand {
   width: 320px;
-  height: 400px;
 }
 
 .recommand-title {
@@ -293,15 +296,24 @@ body {
 
 .recoProfile {
   width: 320px;
-  height: 40px;
+  /* height: 40px; */
+  /* display: flex; */
+  align-items: center;
+  /* justify-content: space-between; */
+}
+
+.recoProfile-list {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
+  margin-bottom: 8px;
 }
 
 .recoProfile-logo {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .recoprofile-img {
@@ -332,18 +344,11 @@ body {
   color: #8e8e8e;
   font-size: 12px;
 }
-.recommand-footer {
-  display: flex;
-  width: 100%;
-  display: inline;
-  text-align: left;
-}
 
 .footer-list {
   font-size: 12px;
   color: #8e8e8e;
   margin: 3px;
-  width: 10px;
   text-align: center;
-  display: inline;
+  display: inline-block;
 }
