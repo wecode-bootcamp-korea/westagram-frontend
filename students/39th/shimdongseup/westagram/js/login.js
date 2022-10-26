@@ -8,7 +8,7 @@ function loginActive() {
     loginBtnEl.style.cursor = "pointer";
   }else {
     loginBtnEl.style.backgroundColor = '#b2dffc';
-    loginBtnEl.style.cursor = "none";
+    loginBtnEl.style.cursor = null;
   }
 }
 idEl.addEventListener('keyup',loginActive);
