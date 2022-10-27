@@ -1,8 +1,18 @@
 body {
   background-color: #fafafa;
   position: relative;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Nanum Gothic', sans-serif;
 }
+a {
+  text-decoration: none;
+}
+.storyColor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle farthest-corner at 32% 106%,#ffe17d 0%,#ffcd69 10%,#fa9137 28%,#eb4141 42%,transparent 82%) , linear-gradient(135deg,#234bd7 12%,#c33cbe 58%);
+}
+
 
  /* HEADER */
 nav {
@@ -71,114 +81,170 @@ nav .personLink {
   right: 10%;
   text-decoration: none;
 }
-nav .personLink .person {
+nav .person {
+  position: absolute;
+  right: 10%;
   color: #272727;
   cursor: pointer;
 }
+nav .menuBox {
+  position: absolute;
+  width: 20%;
+  height: 24vh;
+	background: #fff;
+	border-radius: 4px;
+  box-shadow:  1px 1px 10px 6px #dbdbdb ;
+  top: 10vh;
+  right: 13px;
+  display: none;
+}
+nav .menuBox:after {
+  content: '';
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 16px solid transparent;
+	border-bottom-color: #ffffff;
+	border-top: 0;
+	margin-left: -16px;
+	margin-top: -16px;
+}
+
+nav .menu {
+  padding: 10px 10px;
+  display: flex;
+  font-weight: 700;
+  cursor: pointer;
+}
+nav .menu:hover {
+  background-color: #fafafa;
+}
+nav .menuBox .menu .material-symbols-outlined {
+  margin-right: 10px;
+}
+nav .menuBox .menu:nth-child(3) {
+ border-bottom: 1px solid #dbdbdb;
+ padding-bottom: 10px;
+}
+nav .logout {
+  padding-top: 10px;
+  padding-left: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+nav .logout:hover {
+  background-color: #fafafa;
+}
 
 /* MAIN */
-main {
+.main {
   width: 100%;
   height: 100vh;
   position: absolute;
-  top: 10vh;
+  top: 8vh;
 }
-main .feeds {
+.main .feeds {
   position: absolute;
   width: 50vw;
   left: 10%;
 }
-main .feeds .article {
+.main .feeds .article {
   margin-top: 10vh;
   background-color: #fff;
   border: 1px solid #e6e6e6;
   border-radius: 3px;
   margin-bottom: 20px;
 }
-main .feeds .article .feed-top {
+.main .feeds .article .feed-top {
   position: relative;
-  width: 100%;
   height: 8vh;
   display: flex;
   align-items: center;
 }
-main .feeds .article .feed-top .profile-img {
+.main .feeds .article .feed-top .storyColor {
+  width: 38px;
+  height: 38px;
+  border-radius: 19px;
+  margin: auto 10px;
+}
+
+.main .feeds .article .feed-top .storyColor .profile-img {
   width: 32px;
   height: 32px;
+  border: 1px solid #fff;
   border-radius: 16px;
-  border: 1px solid #e6e6e6;
-  margin: auto 10px;
   cursor: pointer;
 }
-main .feeds .article .feed-top .user {
+.main .feeds .article .feed-top .user {
   display: flex;
   flex-direction: column;
   margin-left: 3px;
 }
-main .feeds .article .feed-top .user .user-name {
+.main .feeds .article .feed-top .user .user-name {
   margin-bottom: 2px;
   cursor: pointer;
 }
 main .feeds .article .feed-top .user .user-info{
   
 }
-main .feeds .article .feed-top .add-info-icon{
+.main .feeds .article .feed-top .add-info-icon{
   position: absolute;
   right: 10px;
   font-weight: 700;
   cursor: pointer; 
 }
 
-main .feeds .article .feed-img {
+.main .feeds .article .feed-img {
   width: 100%;
 }
 
-main .feeds .article .feed-icons {
+.main .feeds .article .feed-icons {
   position: relative;
-  width: 100%;
   height: 24px;
   margin-top: 5px;
   margin-bottom: 5px;
 }
-main .feeds .article .feed-icons .heart {
+.main .feeds .article .feed-icons .heart {
   margin-left: 10px;
   cursor: pointer;
 }
-main .feeds .article .feed-icons .heart:hover {
+.main .feeds .article .feed-icons .heart:hover {
   color: rgba(0,0,0,0.5);
   
 }
-main .feeds .article .feed-icons .chat-icon {
+.main .feeds .article .feed-icons .chat-icon {
   width: 25px;
   height: 25px;
   cursor: pointer; 
 }
-main .feeds .article .feed-icons .chat-icon:hover {
+.main .feeds .article .feed-icons .chat-icon:hover {
   opacity: .5;
 }
-main .feeds .article .feed-icons .upload {
+.main .feeds .article .feed-icons .upload {
   cursor: pointer;
   color: #000; 
 }
-main .feeds .article .feed-icons .upload:hover {
+.main .feeds .article .feed-icons .upload:hover {
   color: rgba(0,0,0,0.5);
 }
-main .feeds .article .feed-icons .bookmark {
+.main .feeds .article .feed-icons .bookmark {
   position: absolute;
   right: 10px;
   cursor: pointer;
   color: #000;
   
 }
-main .feeds .article .feed-icons .bookmark:hover {
+.main .feeds .article .feed-icons .bookmark:hover {
   color: rgba(0,0,0,0.5);
 }
-main .feeds .article .like {
+.main .feeds .article .like {
   display: flex;
   align-items: center;
 }
 
-main .feeds .article .like img {
+.main .feeds .article .like img {
   width: 20px;
   height: 20px;
   border-radius: 10px;
@@ -187,70 +253,70 @@ main .feeds .article .like img {
   margin-right: 5px;
   cursor: pointer;
 }
-main .feeds .article .like .like-info {
+.main .feeds .article .like .like-info {
 
 }
 
-main .feeds .article .feed-bottom {
+.main .feeds .article .feed-bottom {
   margin: 10px 0;
   border-bottom: 1px solid #e6e6e6;
   padding-bottom: 5px;
   padding-left: 10px;
 }
-main .feeds .article .feed-bottom .feed-info {
+.main .feeds .article .feed-bottom .feed-info {
   display: flex;
 }
-main .feeds .article .feed-bottom .feed-info .user-name {
+.main .feeds .article .feed-bottom .feed-info .user-name {
   margin-right: 2px;
 }
-main .feeds .article .feed-bottom .feed-info .feed-text {
+.main .feeds .article .feed-bottom .feed-info .feed-text {
   
 }
-main .feeds .article .feed-bottom .comment {
+.main .feeds .article .feed-bottom .comment {
   display: flex;
   position: relative;
 }
-main .feeds .article .feed-bottom .comment .comment-user {
+.main .feeds .article .feed-bottom .comment .comment-user {
   margin-right: 3px;
 }
-main .feeds .article .feed-bottom .comment .comment-text{
+.main .feeds .article .feed-bottom .comment .comment-text{
   
 }
-main .feeds .article .feed-bottom .comment .delete {
+.main .feeds .article .feed-bottom .comment .delete {
   position: absolute;
   right: 30px;
   font-size: 12px;
   cursor: pointer;
 }
-main .feeds .article .feed-bottom .comment .delete:hover {
+.main .feeds .article .feed-bottom .comment .delete:hover {
   opacity: .5;
 }
-main .feeds .article .feed-bottom .comment .heart {
+.main .feeds .article .feed-bottom .comment .heart {
   position: absolute;
   right: 15px;
   font-size: 12px;
   cursor: pointer;
 }
-main .feeds .article .feed-bottom .comment .heart:hover {
+.main .feeds .article .feed-bottom .comment .heart:hover {
   opacity: .5;
 }
-main .feeds .article .feed-bottom .feed-time {
+.main .feeds .article .feed-bottom .feed-time {
   font-weight: 700;
   color: #9e9e9e;
 }
-main .feeds .article .comments {
+.main .feeds .article .comments {
 
 }
 
-main .feeds .article .comments .comment {
+.main .feeds .article .comments .comment {
   position: relative;
   margin-top: 5px;
   /* margin-bottom: 5px; */
 }
-main .feeds .article .comments .comment:last-child {
+.main .feeds .article .comments .comment:last-child {
   margin-bottom: 5px;
 }
-main .feeds .article .comment input {
+.main .feeds .article .comment input {
   font-size: 14px;
   padding-left: 10px;
   padding-bottom: 10px;
@@ -258,7 +324,7 @@ main .feeds .article .comment input {
   outline: none;
   color: #9e9e9e;
 }
-main .feeds .article .comment button {
+.main .feeds .article .comment button {
   position: absolute;
   background-color: #fff;
   border: none;
@@ -278,11 +344,17 @@ main .feeds .article .comment button {
   align-items: center;
   margin-bottom: 15px;
 }
+.main-right .right-top .storyColor {
+  width: 62px;
+  height: 62px;
+  border-radius: 31px;
+}
 .main-right .right-top img{
   width: 56px;
   height: 56px;
   border-radius: 28px;
-  border: 1px solid #e6e6e6;
+  border: 1px solid #fff;
+  cursor: pointer;
 }
 .main-right .right-top .user {
   margin-left: 10px;
@@ -330,12 +402,18 @@ main .feeds .article .comment button {
   margin-left: 10px;
   margin-bottom: 10px;
 }
-.main-right .right-mid ul li img {
+.main-right .right-mid ul li .storyColor {
+  width: 38px;
+  height: 38px;
+  border-radius: 19px;
+  margin-right: 10px;
+}
+.main-right .right-mid ul li .storyColor img {
   width: 32px;
   height: 32px;
   border-radius: 16px;
-  margin-right: 10px;
-  border: 1px solid #e6e6e6;
+  border: 1px solid #fff;
+  cursor: pointer;
 }
 .main-right .right-mid ul li div h5 {
   font-weight: 700;
@@ -409,4 +487,51 @@ main .feeds .article .comment button {
   color: #cacaca;
   margin-top: 15px;
   font-weight: 400;
+}
+.main-right .right-footer a {
+  color: #cacaca;
+}
+
+/* 유저검색 */
+nav .searchUser {
+  position: absolute;
+  width: 20%;
+	background: #fff;
+	border-radius: 4px;
+  box-shadow:  1px 1px 10px 6px #dbdbdb ;
+  top: 10vh;
+  left: 40vw;
+  display: none;
+}
+nav .searchUser:after {
+  content: '';
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 16px solid transparent;
+	border-bottom-color: #ffffff;
+	border-top: 0;
+	margin-left: -16px;
+	margin-top: -16px;
+}
+nav .searchUser .searchedUser{
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+  border-bottom: 1px solid #dbdbdb;
+}
+nav .searchUser .searchedUser:hover{
+  background-color: #fafafa;
+}
+nav .searchUser .searchedUser img{
+  width: 32px;
+  height: 32px;
+  border-radius: 16px;
+  margin: 0 10px;
+}
+nav .searchUser .searchedUser .user-name{
+  font-weight: 700;
+  font-size: 14px;
 }

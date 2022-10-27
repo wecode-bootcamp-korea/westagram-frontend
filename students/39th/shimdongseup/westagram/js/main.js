@@ -5,7 +5,10 @@ const commentsEl = document.querySelector('.comments');
 const deleteEl = document.querySelector('.delete');
 const heartEl = document.querySelectorAll('.heart');
 const bookmarkEl = document.querySelector('.bookmark');
-
+const rightFooter = document.querySelector('.right-footer');
+const logoutEl = document.querySelector('.logout');
+const personIconEl = document.querySelector('.person');
+const menuBoxEl = document.querySelector('.menuBox');
 
 //댓글 추가기능
 commentInput.addEventListener('keydown', function cmtBtnActive(e){
@@ -13,7 +16,6 @@ commentInput.addEventListener('keydown', function cmtBtnActive(e){
     commentBtn.style.color = '#0095f6';
     commentBtn.style.cursor = 'pointer';
     commentInput.style.color = 'black';
-    // console.log(e);
     if(e.keyCode === 13){
       addComment();
     }
@@ -123,7 +125,7 @@ const searchInput = document.querySelectorAll('.topSearch')[1];
 
 if ( window.innerWidth <=800){
   rightEl.style.display = 'none';
-  feedsEl.style.marginLeft = 10 + '%';
+  feedsEl.style.marginLeft = 15 + '%';
   searchIcon.style.display = 'none';
   searchInput.style.display = 'none';
 }
@@ -131,9 +133,11 @@ if ( window.innerWidth <=800){
 window.addEventListener('resize',function resize(){
   if ( window.innerWidth <=800){
     rightEl.style.display = 'none';
-    feedsEl.style.marginLeft = 10 + '%';
+    feedsEl.style.marginLeft = 15 + '%';
     searchIcon.style.display = 'none';
     searchInput.style.display = 'none';
+    // rightFooter.style.
+
   }else {
     rightEl.style.display = null;
     feedsEl.style.marginLeft = null;
@@ -142,3 +146,74 @@ window.addEventListener('resize',function resize(){
   }
 })
 
+logoutEl.addEventListener('click',function logout(){
+  window.location.href = './login.html';
+})
+
+personIconEl.addEventListener('click',function menuOpen(){
+  if(menuBoxEl.style.display == 'none'){
+    menuBoxEl.style.display = 'block';
+    // menuBoxEl.animate(all,5000);
+  }else {
+    menuBoxEl.style.display = 'none';
+  }
+})
+
+//검색 기능
+const users =['dong_s_37','milk','wecode','wework','starbucks','kfc','mcdonald'];
+
+
+/**
+ * 검색 조건에 따른 배열 필터링(쿼리)
+ */
+function filterUsers(query) {
+  return users.filter(function(el) {
+      return el.toLowerCase().indexOf(query.toLowerCase()) > -1;
+  })
+}
+function filterImgs(query) {
+  return imgs.filter(function(el) {
+      return el.toLowerCase().indexOf(query.toLowerCase()) > -1;
+  })
+}
+
+const searchUserEl = document.querySelector('.searchUser');
+let inputvalue;
+searchInput.addEventListener('keyup',function searchUser(e){
+  const userDiv = document.querySelectorAll('.searchedUser');
+  for(let i=0; i<userDiv.length;i++){
+    searchUserEl.removeChild(userDiv[i]);
+    }
+  if(searchInput.value.length >= 1){
+    searchUserEl.style.display = 'block';
+    searchIcon.style.display = 'none';
+  
+    search();
+    
+  }else {
+    searchUserEl.style.display = 'none';
+    searchIcon.style.display = 'block';
+    
+  }
+  inputvalue = searchInput.value;
+})
+
+
+function search(){
+  const inputText = searchInput.value;
+  const filteredUsers = filterUsers(inputText);
+  for(let i=0; i < filteredUsers.length; i++){
+    const userDiv = document.createElement('div')
+    userDiv.className = 'searchedUser';
+    const imgDiv = document.createElement('img')
+    imgDiv.setAttribute('src',"./image/"+filteredUsers[i]+"_img.jpeg");
+    imgDiv.setAttribute('alt',"filtered user");
+    const userNameDiv = document.createElement('div')
+    userNameDiv.className = 'user-name';
+    userNameDiv.innerHTML = filteredUsers[i];
+
+    userDiv.appendChild(imgDiv);
+    userDiv.appendChild(userNameDiv);
+    searchUserEl.appendChild(userDiv);
+    }
+}

@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="./style/main.css">
   <link rel="stylesheet" href="./style/common.css">
   <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
 
   <script defer src="./js/main.js"></script>
 </head>
@@ -25,20 +26,39 @@
       <a class="textLogo" href="./main.html">Westagram</a>
       <div class="material-icons search topSearch">search</div>
       <input class="topSearch"type="text" placeholder="검색">
+      <div class="searchUser">
+        <!-- javascript로 추가예정 -->
+      </div>
       <div class="material-symbols-outlined explore">explore</div>
       <div class="material-symbols-outlined favorite">favorite</div>
-      <a class="personLink" href="./login.html">
-        <div class="material-symbols-outlined person">person</div>
-      </a>
+      <div class="material-symbols-outlined person">person</div>
+      <div class="menuBox">
+        <div class="menu">
+          <div class="material-symbols-outlined profile-icon">account_circle</div>
+          <div>프로필</div>
+        </div>
+        <div class="menu">
+          <div class="material-symbols-outlined bookmark">bookmark</div>
+          <div>저장됨</div>
+        </div>
+        <div class="menu">
+          <div class="material-symbols-outlined setting">settings</div>
+          <div>설정</div>
+        </div>
+        <div class="logout">로그아웃</div>
+      </div>
+      
     </nav>
   </header>
 
-  <main>
+  <section class="main">
     <div class="feeds">
       <div class="article">
 
         <div class="feed-top">
-          <img class="profile-img" src="./image/profile_img_1.jpeg"alt="profile-img">
+          <div class="storyColor">
+            <img class="profile-img" src="./image/profile_img_1.jpeg"alt="profile-img">
+          </div>
           <div class="user">
             <h3 class="user-name">dong_s_37 </h3>
             <h4 class="user-info">고성</h4>
@@ -86,7 +106,9 @@
 
     <div class="main-right">
       <div class="right-top">
-        <img src="./image/profile_img_1.jpeg" alt="myImg">
+        <div class="storyColor">
+          <img src="./image/profile_img_1.jpeg" alt="myImg">
+        </div>
         <div class="user">
           <h3 class="myName">dong_s_37</h3>
           <h3 class="myInfo">심동섭</h3>
@@ -100,30 +122,38 @@
         </div>
         <ul>
           <li>
-            <img src="./image/profile_img_1.jpeg" alt="story_img">
+            <div class="storyColor">
+              <img src="./image/profile_img_1.jpeg" alt="story_img">
+            </div>
             <div>
               <h3>dong_s_37</h3>
               <h5>15분 전</h5>
             </div>
           </li>
           <li>
-            <img src="./image/profile_img_1.jpeg" alt="story_img">
+            <div class="storyColor">
+              <img src="./image/milk_img.jpeg" alt="story_img">
+            </div>
             <div>
-              <h3>dong_s_37</h3>
+              <h3>milk</h3>
               <h5>30분 전</h5>
             </div>
           </li>
           <li>
-            <img src="./image/profile_img_1.jpeg" alt="story_img">
+            <div class="storyColor">
+              <img src="./image/wecode_img.jpeg" alt="story_img">
+            </div>
             <div>
-              <h3>dong_s_37</h3>
+              <h3>wecode</h3>
               <h5>1시간 전</h5>
             </div>
           </li>
           <li>
-            <img src="./image/profile_img_1.jpeg" alt="story_img">
+            <div class="storyColor">
+              <img src="./image/wework_img.jpeg" alt="story_img">
+            </div>
             <div>
-              <h3>dong_s_37</h3>
+              <h3>wework</h3>
               <h5>2시간 전</h5>
             </div>
           </li>
@@ -137,34 +167,35 @@
         </div>
         <ul>
           <li>
-            <img src="./image/profile_img_1.jpeg" alt="story_img">
+            <div class="storyColor"></div>
+            <img src="./image/kfc_img.jpeg" alt="story_img">
             <div>
-              <h3>dong_s_37</h3>
+              <h3>kfc</h3>
               <h5>wecode님 외 2명이 함께 알고있습니다.</h5>
               <h4>팔로우</h4>
             </div>
           </li>
           <li>
-            <img src="./image/profile_img_1.jpeg" alt="story_img">
+            <img src="./image/mcdonald_img.jpeg" alt="story_img">
             <div>
-              <h3>dong_s_37</h3>
-              <h5>wecode님 외 2명이 함께 알고있습니다.</h5>
+              <h3>mcdonald</h3>
+              <h5>milk님 외 1명이 함께 알고있습니다.</h5>
               <h4>팔로우</h4>
             </div>
           </li>
           <li>
-            <img src="./image/profile_img_1.jpeg" alt="story_img">
+            <img src="./image/starbucks_img.jpeg" alt="story_img">
             <div>
-              <h3>dong_s_37</h3>
-              <h5>wecode님 외 2명이 함께 알고있습니다.</h5>
+              <h3>starbucks</h3>
+              <h5>wecode님 외 3명이 함께 알고있습니다.</h5>
               <h4>팔로우</h4>
             </div>
           </li>
           <li>
-            <img src="./image/profile_img_1.jpeg" alt="story_img">
+            <img src="./image/wework_img.jpeg" alt="story_img">
             <div>
-              <h3>dong_s_37</h3>
-              <h5>wecode님 외 2명이 함께 알고있습니다.</h5>
+              <h3>wework</h3>
+              <h5>wecode님 외 10명이 함께 알고있습니다.</h5>
               <h4>팔로우</h4>
             </div>
           </li>
@@ -174,10 +205,10 @@
         instagram 정보 · 지원 · 홍보 센터 · API · <br>
         채용 정보 · 개인정보처리방침 · 약관 ·<br>
         디렉터리 · 프로필 · 해시태그 · 언어<br><br>
-        © 2022 INSTAGRAM FROM META
+        © 2022 INSTAGRAM FROM META<br><br>
+        <a href="./login.html">·Logout·</a>
       </h5>
-
     </div>
-  </main>
+  </class=main>
 </body>
 </html>
