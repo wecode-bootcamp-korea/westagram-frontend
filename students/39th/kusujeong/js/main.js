@@ -58,7 +58,6 @@ function addComment() {
 // 삭제버튼 누르면 댓글 삭제
 // 좋아요 버튼 누르면 하트가 빨갛게 스타일링
 const deleteBtn = document.querySelector("#commentList");
-const likeBtn = document.querySelector(".comment-like");
 deleteBtn.addEventListener("click", (e) => {
   e.target.nodeName == "BUTTON" && e.target.parentNode.parentNode.remove();
   e.target.nodeName == "I" && e.target.classList.toggle("fa-solid");
