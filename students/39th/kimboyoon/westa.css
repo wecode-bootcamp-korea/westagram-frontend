@@ -1,0 +1,58 @@
+body {
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginPage {
+    border: 1px solid gray;
+    display: inline-block;
+    padding: 20px 50px;
+}
+
+.loginPageContent {
+    padding-bottom: 50px;
+}
+
+.logo {
+    font-family: 'Lobster', cursive;
+    font-size: 50px;
+    padding: 50px 50px 70px;
+}
+
+.inputBoxes {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    margin-bottom: 20px;
+    padding: 10px 10px;
+}
+
+.loginBtn {
+    cursor: pointer;
+    padding: 10px 0;
+    background-color: #287aff;
+    color: white;
+    border-radius: 7px;
+    border-style: none;
+    font-weight: bold;
+}
+
+.loginBtn:disabled{
+    opacity: 0.3;
+    cursor: default;
+}
+
+.findPassword {
+    margin-top: 50px;
+    text-align:  center;
+}
+
+a {
+    text-decoration: none;
+    color: blue;
+}
