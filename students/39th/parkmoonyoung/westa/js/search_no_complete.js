@@ -160,23 +160,30 @@ function searchResult () {
     searchInput.addEventListener('keyup',function(){
         isSearchValue = searchInput.value;
 
-        // 검색리스트 초기화
-        searchResultParent.innerHTML = null;
+        console.log(isSearchValue.length);
 
         idData.map(function(element){
-
             // 서치박스 논/블록 
             if ( element.includes(isSearchValue) && (isSearchValue.length > 0) ) {
+                console.log('element: ' + element);
+                console.log('isSearchValue: ' + isSearchValue);
+                console.log('searchResultBox: ' + searchResultBox.innerHTML);
+
                 searchResultBox.classList.add('active');
+
+                // li 생성하여 추가하는 방식  - 보류1
                 searchUserList (searchResultParent, element);
-            } else if ( (element.includes(!isSearchValue) && (isSearchValue.length > 0) ) ) {
+
+            } else {
                 searchResultBox.classList.remove('active');
             }
         });
     });
 }
-// 검색창 - 검색리스트 생성 기능
+
+// 검색창 아이디 리스트 동적 생성 기능 - 보류1
 function searchUserList (searchResultParent, userId) {
+    
     let makeLi = document.createElement('li');
     let makeB = document.createElement('b');
     let _li = searchResultParent.appendChild(makeLi);
