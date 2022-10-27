@@ -204,12 +204,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 310px;
+  width: 370px;
 }
 
-.comment__input input {
+.comment__input form input {
   border: none;
-  width: 99%;
+  width: 280px;
 }
 
 .comment__input input:focus {
@@ -220,15 +220,17 @@
   color: #828282;
 }
 
-.comment__enter {
+.comment__input form {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 60px;
 }
 
-.comment__enter span {
+.comment__input form button {
+  width: 60px;
   font-size: 13px;
+  border: none;
+  background-color: inherit;
   color: #0395f6;
   /* disabled if input have no value */
 }

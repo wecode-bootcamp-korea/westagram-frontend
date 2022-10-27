@@ -1,8 +1,8 @@
 /* 댓글 기능 구현 */
 const USERNAME = "sangyoonlee";
 
-const commentInput = document.querySelector(".comment__input input");
-const commentSubmitBtn = document.querySelector(".comment__enter span");
+const commentForm = document.querySelector(".comment__input form");
+const commentInput = document.querySelector(".comment__input form input");
 
 const commentList = document.querySelector(".comment-list");
 const commentListArray = [];
@@ -14,12 +14,12 @@ let template = `
   </ul>
 `;
 
-commentSubmitBtn.addEventListener("click", () => {
+commentForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+
   const commentMessage = commentInput.value;
 
   commentListArray.push([USERNAME, commentMessage]);
-
-  /* 리스트 */
   commentListHTML = [];
 
   for (let i = 0; i < commentListArray.length; i++) {
