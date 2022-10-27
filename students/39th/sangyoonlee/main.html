@@ -12,22 +12,93 @@
       <nav class="nav">
         <div class="nav__logo">
           <!--Insta Icon-->
-          <div class="nav__logo__icon">
-            <i class="fab fa-instagram"></i>
+          <div class="nav__icon">
+            <i class="fab fa-instagram fa-lg"></i>
           </div>
-          <!--Column line-->
-          <div class="nav__logo__line"></div>
-          <span class="nav__logo__text">Westagram</span>
+          <!--Westagram Title-->
+          <div class="nav__text">Westagram</div>
         </div>
-        <div class="nav__search"></div>
-        <div class="nav__side-icons"></div>
+        <div class="nav__search">
+          <input class="nav__search__input" placeholder="검색" />
+        </div>
+        <div class="nav__side-icons">
+          <i class="far fa-compass fa-lg"></i>
+          <i class="far fa-heart fa-lg"></i>
+          <i class="far fa-user fa-lg"></i>
+        </div>
       </nav>
 
       <main class="main">
         <div class="main__feeds">
-          <article class="main__feeds__article"></article>
+          <article class="main__stories"></article>
+          <article class="main__article">
+            <div class="article__header">
+              <div class="header__profile">
+                <img
+                  id="profile-pic"
+                  alt="main-pic"
+                  src="img/main_article/my-profile.jpeg"
+                />
+              </div>
+              <div class="header__nickname">sangyoonlee1231</div>
+              <div class="header__more"></div>
+            </div>
+
+            <div class="article__media">
+              <img
+                id="media"
+                alt="main-pic"
+                src="img/main_article/article-pic.jpeg"
+              />
+            </div>
+
+            <div class="article__reaction">
+              <i class="reaction-icons far fa-heart fa-lg"></i>
+              <img
+                class="reaction-icons"
+                alt="comment"
+                src="img/icons/comment.png"
+                width="23"
+              />
+              <img
+                class="reaction-icons"
+                alt="message"
+                src="img/icons/message.png"
+                width="23"
+              />
+              <img
+                id="reaction-bookmark-icon"
+                alt="message"
+                src="img/icons/bookmark.png"
+                width="28"
+              />
+            </div>
+
+            <div class="article__comment">
+              <div class="how-many-likes">
+                <span>좋아요 <span>999</span>명</span>
+              </div>
+              <div class="comment-list"></div>
+            </div>
+
+            <div class="article__comment__input">
+              <div class="comment__smile">
+                <img id="smile" alt="smile" src="img/icons/smile.png" />
+              </div>
+              <div class="comment__input">
+                <input type="text" placeholder="댓글 달기..." />
+              </div>
+              <div class="comment__enter">
+                <span>게시</span>
+              </div>
+            </div>
+          </article>
         </div>
-        <div class="main__right"></div>
+
+        <div class="main__right">
+          <article class="main__profile"></article>
+          <article class="main__suggestions"></article>
+        </div>
       </main>
     </div>
     <script src="js/main.js"></script>

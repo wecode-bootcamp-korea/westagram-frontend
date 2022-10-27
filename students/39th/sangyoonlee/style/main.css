@@ -5,6 +5,14 @@
   background-color: #fafafa;
 } */
 
+.disable {
+  color: #c1e0fd;
+}
+
+.bold {
+  font-weight: 800;
+}
+
 /* nav */
 .nav {
   display: flex;
@@ -74,32 +82,155 @@
 /* main */
 .main {
   display: flex;
-  justify-content: flex-end;
-  height: 100vh;
+  justify-content: center;
+  height: 120vh;
+  padding-left: 10vw;
 }
 
 /* main__feeds */
 .main__feeds {
   display: flex;
   flex-direction: column;
-  width: 43vw;
-  height: 80vh;
+  width: 420px;
 }
 
 .main__stories {
-  width: 40vw;
-  height: 110px;
+  width: 400px;
+  height: 100px;
   margin-top: 40px;
   background-color: white;
   border: 1px solid #dbdbdb;
 }
 
 .main__article {
-  width: 40vw;
-  height: 750px;
+  width: 400px;
+  /* height: 750px; */
   margin-top: 40px;
   background-color: white;
   border: 1px solid #dbdbdb;
+}
+
+.article__header {
+  display: flex;
+  align-items: center;
+}
+
+.header__profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+}
+
+#profile-pic {
+  width: 40px;
+  border-radius: 20px;
+  border: 2px solid #ff5a9a;
+}
+
+.header__nickname {
+  display: flex;
+  align-items: center;
+  width: auto;
+  height: 60px;
+  font-weight: 600;
+}
+
+.header__more {
+  width: 30px;
+  height: 60px;
+}
+
+.article__media {
+  height: 200px;
+  overflow: hidden;
+}
+
+#media {
+  width: 400px;
+}
+
+.article__reaction {
+  display: flex;
+  align-items: center;
+  height: 45px;
+  padding-left: 5px;
+}
+
+.reaction-icons {
+  margin-left: 10px;
+}
+
+#reaction-bookmark-icon {
+  margin-left: 65%;
+}
+
+.article__comment {
+  display: flex;
+  flex-direction: column;
+  height: 155px;
+  padding: 10px 15px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.comment-list {
+  margin: 10px 0px;
+}
+
+.comment-list li {
+  margin-bottom: 5px;
+}
+
+.article__comment__input {
+  display: flex;
+  height: 50px;
+  border-top: 0.5px solid #dbdbdb;
+}
+
+.comment__smile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+}
+
+#smile {
+  width: 30px;
+}
+
+.comment__input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 310px;
+}
+
+.comment__input input {
+  border: none;
+  width: 99%;
+}
+
+.comment__input input:focus {
+  outline: none;
+}
+
+.comment__input input::placeholder {
+  color: #828282;
+}
+
+.comment__enter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+}
+
+.comment__enter span {
+  font-size: 13px;
+  color: #0395f6;
+  /* disabled if input have no value */
 }
 
 /* main__right */
@@ -110,20 +241,20 @@
 .main__right {
   display: flex;
   flex-direction: column;
-  width: 28vw;
+  width: 280px;
   height: 40vh;
   margin-right: 5vw;
 }
 
 .main__profile {
-  width: 25vw;
+  width: 250px;
   height: 60px;
   margin-top: 40px;
   border: 1px solid #dbdbdb;
 }
 
 .main__suggestions {
-  width: 25vw;
+  width: 250px;
   height: 30vh;
   margin-top: 20px;
   border: 1px solid #dbdbdb;
