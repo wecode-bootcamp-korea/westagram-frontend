@@ -1,7 +1,12 @@
 
+// 함수호출모음
+repleAdd();
+
+// 댓글 추가 함수
 function repleAdd () {
     let postBtn = document.querySelector('.post');
     let repleInput = document.querySelector('.replePost');
+    let deleteBtn = document.querySelectorAll('.delete');
     let isValue;
 
     // input recently value check
@@ -33,6 +38,7 @@ function repleAdd () {
     });
 
     prevHeartToggle();
+    repleDelete(deleteBtn);
 
 }
 
@@ -54,6 +60,12 @@ function makeReple(value){
     btnHeart.classList.add('heart');
     btnHeart.innerHTML = '<span class="blind">좋아요</span>';
 
+    //삭제 버튼
+    let btnDelete = document.createElement('button');
+    btnDelete.classList.add('btn');
+    btnDelete.classList.add('delete');
+    btnDelete.innerHTML = '<span class="blind">삭제</span>';
+
     //지난시간
     let prevTime = document.createElement('p');
     prevTime.classList.add('prevTime');
@@ -62,6 +74,7 @@ function makeReple(value){
     // li에 내용 추가
     makeLi.appendChild(makeText);
     makeLi.appendChild(btnHeart);
+    makeLi.appendChild(btnDelete);
     makeLi.appendChild(prevTime);
 
     repleWrap.appendChild(makeLi);
@@ -70,6 +83,9 @@ function makeReple(value){
     btnHeart.addEventListener('click',function(){
         heartToggle(btnHeart);
     });
+
+    // 추가된 리플에서 삭제버튼 클릭시 리플삭제 기능
+    addRepleDelete(btnDelete);
 
 }
 
@@ -102,5 +118,28 @@ function prevHeartToggle(){
     }
 }
 
-// 함수호출모음
-repleAdd();
+// 기존댓글-삭제 기능
+function repleDelete(deleteBtnArr){
+    let _this;
+    let deleteReple;
+    
+    deleteBtnArr.forEach(function(deleteBtn){
+        deleteBtn.addEventListener('click',function(){
+            _this = this;
+            deleteReple = _this.parentNode;
+
+            deleteReple.innerHTML = null;
+            
+        });
+    });
+}
+
+// 추가된 댓글-삭제 기능
+function addRepleDelete(status){
+    status.addEventListener('click',function(){
+        let _this = this;
+        let deleteReple = this.parentNode;
+
+        deleteReple.innerHTML = null;
+    });
+}
