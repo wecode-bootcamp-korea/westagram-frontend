@@ -50,6 +50,7 @@ body {
   display: flex;
   flex-flow: row nowrap;
   text-align: center;
+  margin: 30px;
 }
 
 .main-left {
@@ -129,14 +130,9 @@ body {
   align-items: center;
 }
 
-.feed-article {
-  width: 100%;
-  height: 60%;
-}
-
 .feed-img {
-  width: 100%;
-  height: 100%;
+  width: 450px;
+  height: 450px;
 }
 
 .feed-list {
@@ -192,6 +188,17 @@ body {
   margin-bottom: 15px;
 }
 
+.description-comment {
+  display: flex;
+  margin-bottom: 15px;
+  justify-content: space-between;
+  margin-right: 20px;
+}
+
+.article-info {
+  display: flex;
+}
+
 .ariticle-id {
   margin: 0 10px;
 }
@@ -206,6 +213,15 @@ body {
 .comment-delete {
   background-color: transparent;
   border: none;
+}
+
+.comment-like {
+  color: red;
+}
+
+.comment-delete:hover,
+.comment-like:hover {
+  cursor: pointer;
 }
 
 .ariticle-id {

@@ -4,7 +4,7 @@
 //'개시'버튼누르면 댓글추가
 const commentBtn = document.querySelector(".comment-btn");
 const commentVal = document.querySelector(".comment-input");
-const curDiv = document.querySelector(".feed-description");
+const curDiv = document.querySelector("#commentList");
 commentBtn.addEventListener("click", () => {
   addComment();
 });
@@ -14,21 +14,56 @@ commentVal.addEventListener("keypress", (e) => {
 });
 
 function addComment() {
-  const boxDiv = document.createElement("div");
+  const list = document.createElement("li");
+  const mainDiv = document.createElement("div");
+  const subDiv = document.createElement("div");
   const idDiv = document.createElement("div");
   const descDiv = document.createElement("div");
-  boxDiv.classList.add("description-article"); // <div class="description-article">
-  idDiv.classList.add("ariticle-id"); // <div class="ariticle-id"></div>;
-  descDiv.classList.add("article-description"); // <div class="article-description"></div>
+  const delBtn = document.createElement("button");
+  const likeBtn = document.createElement("i");
+
+  list.classList.add("description-comment");
+  mainDiv.classList.add("article-info");
+  subDiv.classList.add("comment-function");
+  idDiv.classList.add("ariticle-id");
+  descDiv.classList.add("article-description");
+  delBtn.classList.add("comment-delete");
+  likeBtn.classList.add("fa-regular");
+  likeBtn.classList.add("fa-heart");
+  likeBtn.classList.add("comment-like");
+
   const idContent = document.createTextNode("rntnwjd");
   const newContent = document.createTextNode(commentVal.value);
-  idDiv.appendChild(idContent); // <div class="ariticle-id">rntnwjd</div>
-  descDiv.appendChild(newContent); // <div class="article-description">어머 너무 귀엽당~~!</div>
+  const delContent = document.createTextNode("삭제");
 
-  boxDiv.appendChild(idDiv);
-  boxDiv.appendChild(descDiv);
+  idDiv.appendChild(idContent);
+  descDiv.appendChild(newContent);
+  delBtn.appendChild(delContent);
 
-  curDiv.appendChild(boxDiv);
+  mainDiv.appendChild(idDiv);
+  mainDiv.appendChild(descDiv);
+
+  subDiv.appendChild(delBtn);
+  subDiv.appendChild(likeBtn);
+
+  list.appendChild(mainDiv);
+  list.appendChild(subDiv);
+
+  curDiv.appendChild(list);
+
   // Input창 reset
   commentVal.value = "";
 }
+
+// 삭제버튼 누르면 댓글 삭제
+const deleteBtn = document.querySelector("#commentList");
+const comment = document.querySelector(".description-comment");
+deleteBtn.addEventListener("click", (e) => {
+  e.target.nodeName == "BUTTON" && e.target.parentNode.parentNode.remove();
+});
+
+// 좋아요 버튼 누르면 하트가 빨갛게 스타일링
+const likeBtn = document.querySelector(".comment-like");
+likeBtn.addEventListener("click", () => {
+  likeBtn.classList.toggle("fa-solid");
+});
