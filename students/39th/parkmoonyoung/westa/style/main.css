@@ -9,6 +9,13 @@
 .navWrap .inner .searchArea .mainSearch + .placeholderBox{z-index:5; position:absolute; top:50%; left:50%; transform: translate(-50%, -50%); padding-left:14px; color:#666;}
 .navWrap .inner .searchArea .mainSearch + .placeholderBox:before{position:absolute; top:50%; left:0; margin-top:-5px; content:'';display:block;width:10px;height:10px; background:url(../images/icon/icon-search.png) no-repeat center/contain; }
 .navWrap .inner .searchArea .mainSearch:focus + .placeholderBox{display:none;}
+
+.navWrap .inner .searchArea .searchResultBox{display:none; margin-top:20px; max-height:300px; border-radius:4px; overflow-x:hidden; overflow-y:auto; border:1px solid #ddd;}
+.navWrap .inner .searchArea .searchResultBox.active{display:block;}
+.navWrap .inner .searchArea .searchResultBox > ul > li + li{border-top:1px solid #ddd;}
+.navWrap .inner .searchArea .searchResultBox > ul > li{display:flex; align-items: center; padding:15px 10px; height:50px; background:#fff;}
+.navWrap .inner .searchArea .searchResultBox > ul > li .searchId{font-weight:700;}
+
 .navWrap .inner .utilMenuArea{display:flex;}
 .navWrap .inner .utilMenuArea .utilBox {width:30px; height:30px;}
 .navWrap .inner .utilMenuArea .utilBox + .utilBox{margin-left:12px;}
