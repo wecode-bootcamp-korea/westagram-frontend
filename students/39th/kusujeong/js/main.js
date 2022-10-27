@@ -30,7 +30,6 @@ function addComment() {
   delBtn.classList.add("comment-delete");
   likeBtn.classList.add("fa-regular");
   likeBtn.classList.add("fa-heart");
-  likeBtn.classList.add("comment-like");
 
   const idContent = document.createTextNode("rntnwjd");
   const newContent = document.createTextNode(commentVal.value);
@@ -60,5 +59,8 @@ function addComment() {
 const deleteBtn = document.querySelector("#commentList");
 deleteBtn.addEventListener("click", (e) => {
   e.target.nodeName == "BUTTON" && e.target.parentNode.parentNode.remove();
-  e.target.nodeName == "I" && e.target.classList.toggle("fa-solid");
+  if (e.target.nodeName == "I") {
+    e.target.classList.toggle("comment-like");
+    e.target.classList.toggle("fa-solid");
+  }
 });

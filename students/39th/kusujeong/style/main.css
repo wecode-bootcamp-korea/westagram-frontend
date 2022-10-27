@@ -22,6 +22,9 @@ body {
   font-family: "Lobster", cursive;
   font-size: 25px;
 }
+.container-search {
+  position: relative;
+}
 
 .search {
   width: 300px;
@@ -29,6 +32,14 @@ body {
   background-color: #efefef;
   border-radius: 10px;
   color: #8e8e8e;
+  border: none;
+  padding-left: 40px;
+}
+
+.search-icon {
+  position: absolute;
+  top: 10px;
+  left: 12px;
 }
 
 .menu {
@@ -50,7 +61,6 @@ body {
   display: flex;
   flex-flow: row nowrap;
   text-align: center;
-  margin: 30px;
 }
 
 .main-left {
