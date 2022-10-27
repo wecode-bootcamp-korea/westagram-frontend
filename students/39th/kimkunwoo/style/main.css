@@ -1,6 +1,7 @@
 *{
     box-sizing: border-box;
 }
+/*맨 위에 */
 .nav{
     display: flex;
     flex-direction: row;
@@ -58,6 +59,8 @@ input:focus {
 .profile{
     margin-right: 10px;
 }
+
+/*왼쪽 아래*/
 .text{
 
     font-size: 20px;
@@ -100,6 +103,95 @@ input:focus {
     width: 550px;
     height: 600px;
 }
+
+#commentLists {
+    margin-top: 0.6rem;
+    margin-bottom: 0.7rem;
+}
+
+#commentLists li {
+    list-style: none;
+    width: 100%;
+    margin-bottom: 0.3rem;
+    position: relative;
+    color: black;
+}
+.comment_likebutton{
+    width: 20px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    margin-right: 10px;
+}
+
+.new_comment {
+    border-top: 1px solid #bbb;
+    width: 100%;;
+    position: relative;
+}
+
+.pClass{
+    margin-left: 10px;
+}
+
+.new_comment {
+    border-top: 1px solid #bbb;
+    width: 100%;;
+    position: relative;
+}
+.new_comment input {
+    width: 90%;
+    border: none;
+    padding:20px 0;
+    padding-left: 15px;
+}
+.previous_comment{
+    margin-left: 10px;
+    position: relative;
+}
+.new_comment input:focus {
+    outline: none;
+}
+.upload_button {
+    padding: 15px 15px;
+    border: none;
+    font-size: 0.8rem;
+    position: absolute;
+    color: rgba(113, 147, 238, 0.747);
+    background-color: white;
+    right: 0px;
+    top: 6px;
+}
+.upload_button:hover {
+    border: none;
+    background: none;;
+    color: rgba(113, 147, 238, 0.747);
+}
+.delete {
+    cursor: pointer;
+    position: absolute;
+    right: 19px;;
+}
+
+.name {
+    padding-right: 0.6rem;
+    color: black;
+    font-weight: bold;
+}
+.imo{
+    position: relative;
+    height: 30px;
+    width: 100%;
+    margin-left: 3px;
+    margin-bottom: 10px;
+    
+}
+.imo img{
+    width: 30px;
+}
+/*오른쪽 부분*/
+
 .right{
     margin-top: 60px;
     float: right;
@@ -137,6 +229,7 @@ input:focus {
     width: 20px;
     height: 20px;
     border-radius: 40px;
+    margin-left: 10px;
 }
 .right_2_text{
     display: flex;
@@ -169,43 +262,7 @@ input:focus {
 .hmain{
     color: #9c9c9c;
 }
-.comment {
-    border-top: 1px solid #bbb;
-    width: 100%;;
-    position: relative;
-}
-.comment input {
-    width: 90%;
-    border: none;
-    padding:20px 0;
-    padding-left: 15px;
-}
 
-.comment input:focus {
-    outline: none;
-}
-.upload {
-    padding: 15px 15px;
-    border: none;
-    font-size: 0.8rem;
-    position: absolute;
-    color: rgba(113, 147, 238, 0.747);
-    background-color: white;
-    right: 0px;
-    top: 6px;
-}
-.upload:hover {
-    background: none;;
-    color: rgba(113, 147, 238, 0.747);
-}
-.imo{
-    position: relative;
-    height: 20px;
-    width: 100%;
-}
-.imo img{
-    width: 20px;
-}
 .allSee{
     color: black;
 }
@@ -223,13 +280,7 @@ input:focus {
     transform: translateY(-50%);
 }
 
-.comment_likebutton{
-    width: 20px;
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(60%);
-}
+
 .footer{
     color: #bbb;
 }
