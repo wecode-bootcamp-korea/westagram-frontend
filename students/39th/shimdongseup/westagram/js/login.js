@@ -6,6 +6,7 @@ const loginBtnBox = document.querySelector('.loginBtnBox');
 const id = '1@1';
 const pw = '11111';
 
+//로그인 유효성 검사
 function loginActive() {
   if(idEl.value.indexOf('@') !== -1 && pwEl.value.length >= 5){
     loginBtnEl.style.backgroundColor = '#0095f6';

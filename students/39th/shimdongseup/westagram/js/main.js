@@ -150,6 +150,7 @@ logoutEl.addEventListener('click',function logout(){
   window.location.href = './login.html';
 })
 
+//메뉴박스 생성
 personIconEl.addEventListener('click',function menuOpen(){
   if(menuBoxEl.style.display == 'none'){
     menuBoxEl.style.display = 'block';
@@ -159,13 +160,11 @@ personIconEl.addEventListener('click',function menuOpen(){
   }
 })
 
-//검색 기능
+//검색 대상
 const users =['dong_s_37','milk','wecode','wework','starbucks','kfc','mcdonald'];
 
 
-/**
- * 검색 조건에 따른 배열 필터링(쿼리)
- */
+// 검색 조건에 따른 배열 필터링(쿼리)
 function filterUsers(query) {
   return users.filter(function(el) {
       return el.toLowerCase().indexOf(query.toLowerCase()) > -1;
@@ -179,6 +178,7 @@ function filterImgs(query) {
 
 const searchUserEl = document.querySelector('.searchUser');
 let inputvalue;
+
 searchInput.addEventListener('keyup',function searchUser(e){
   const userDiv = document.querySelectorAll('.searchedUser');
   for(let i=0; i<userDiv.length;i++){
@@ -198,6 +198,7 @@ searchInput.addEventListener('keyup',function searchUser(e){
   inputvalue = searchInput.value;
 })
 
+//인풋을 받아 검색하는 기능
 
 function search(){
   const inputText = searchInput.value;
