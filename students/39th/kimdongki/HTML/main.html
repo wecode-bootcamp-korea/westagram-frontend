@@ -1,33 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>westagram main</title>
     <link rel="stylesheet" href="style/main.css">
     <link rel="stylesheet" href="style/common.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="https://kit.fontawesome.com/51d8702035.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="main_wrapper">
-        <div class="header" id="link_header">
-           <i class="fa-brands fa-instagram"></i>
-        </div>
-            <div class="westagram_log">
-               <span>westagram</span>
-               <div class="search_area">
-                 <form>
-                  <input type="text" placeholder="검색">
-                 </form>
-               </div> 
-               <div class="nav">
-                <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png">
-                <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png">
-                <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png">
-               </div>
+    <nav>
+        <div class="nav_content">
+            <div class="nav_inner">
+                <div class="logo">
+                    <img alt="instagram" src="image/instagram.png" />
+                    <span class="textLogo">westagram</span>
+                </div>
+                <div class="searchBox">
+                    <img alt="search" src="image/Magnifying Glass.png" />
+                    <input type="text" placeholder="검색" />
+                    <ul class="searchId"></ul>
+                </div>
+                <div class="nav_icon">
+                    <div><a href="#"><img alt="explore" src="image/explore.png"></a></div>
+                    <div><a href="#"><img alt="heart" src="image/heart.png"></a></div>
+                    <div class="profile_icon">
+                        <img alt="profile" src="image/profile.png" />
+                    </div>
+                </div>
             </div>
         </div>
+    </nav>
+
+<main>
+    <div id="wrap">
+        <div class="feed_top">
+            <div class="post">
+                <div class="profile-info">
+                    <div class="user">
+                        <div class="profile_image">
+                            <img alt="profile-image" src="image/UandI.jpeg" />
+                        </div>
+                        <p class="nickname"><b>d___k222</b></p>
+                    </div>
+                    <span class="menuIcon"><i class="fas fa-ellipsis-h"></i></span>
+                </div>
+                    <img class="feed_album" alt="feed_album" src="image/song.JPG" />
+                    <div class="feed_icons">
+                        <img alt="heart_icon" src="image/heart.png">
+                        <img alt="comment_icon" src="image/comment.png">
+                        <img alt="message_icon" src="image/message.png" >
+                        <img class="bookmark_icon" alt="bookmark_icon" src="image/bookmark.png">
+                    </div>
+                    <div class="likes">
+                        <div class="user">
+                            <div class="like_image">
+                                <img class="love_image" alt="love_image" src="image/johnLegend.png" />
+                            </div>
+                            <span class="like_people"><b>johnLegend</b></span>
+                        </div>
+                        <p>
+                            님<b> 외 999,999명</b>이 좋아합니다
+                        </p>
+                    </div>
+                    <div class="feed_text">
+                        <p class="feedText"><span><b>d___k222</b></span> 김동기 '사랑의 차이'</p>
+                        <div class="newComment"><span><b>johnLegend</b></span><span class="Comment">what a wonderful voice...🤩 살람해요 킴동키😍</span>
+                            <img class="comment_icon" alt="commentHeart_icon" src="image/heart.png" /></div>
+                        
+                    </div>
+                    <p class="time">1분 전</p>
+                </div>
+                <div class="comment">
+                    <input type="text" id="commentAdd" palcehoder="댓글 달기...">
+                    <button type="submit" class="post_btn">게시</button>
+                </div>
+            </div>
+        </div>  
     </div>
+</main>
 </body>
 </html>
