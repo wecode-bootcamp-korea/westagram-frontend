@@ -1,6 +1,5 @@
 .wrap{position:relative; padding:100px 0; min-width:1300px; width:100%; height:100%; background:#fafafa;}
 
-
 /* .navWrap */
 .navWrap{z-index:100; position:absolute; top:0; left:0; right:0; width:100%; height:100px;  background:#fff; border-bottom:1px solid #eee; }
 .navWrap .inner{display:flex; justify-content: space-between; align-items: center; margin:0 auto; width:1300px; height:100%;}
@@ -26,6 +25,7 @@
 .navWrap .inner .utilMenuArea .utilBox .btn.btnUtilSearch{background:url(../images/icon/icon-util-explore.png) no-repeat center/contain;}
 .navWrap .inner .utilMenuArea .utilBox .btn.btnUtilHeart{background:url(../images/icon/icon-util-heart.png) no-repeat center/contain;}
 .navWrap .inner .utilMenuArea .utilBox .btn.btnUtilMypage{background:url(../images/icon/icon-util-profile.png) no-repeat center/contain;}
+.navWrap .inner .utilMenuArea .utilBox .btn.btnUtilProfile{background:url(../images/icon/icon-default-profile.jpg) no-repeat center/contain;}
 
 .mainWrap .feedsWrap{margin:0 auto; display:flex; justify-content: center; padding:75px 25px 0 25px; width:1300px; }
 .mainWrap .feedsWrap .feedsArea{overflow:hidden; width:820px; border:1px solid #ddd; border-radius:4px;}
@@ -87,3 +87,11 @@
 .mainWrap .feedsWrap .feedsAsideArea .dataInfoArea > ul > li + li:before{position:absolute; top:50%; left:-1px; margin-top:-1px; content:'';display:block;width:2px;height:2px;background:#aaa;border-radius:50%;}
 .mainWrap .feedsWrap .feedsAsideArea .dataInfoArea > ul > li a{color:#aaa;}
 .mainWrap .feedsWrap .feedsAsideArea .dataInfoArea .copyRight{margin-top:20px; color:#aaa;}
+
+@media (max-width:900px) {
+    .feedsAsideArea{display:none;}
+    .wrap{min-width:900px;}
+    .mainWrap .feedsWrap{width:auto;}
+    .navWrap .inner{width:unset;}
+
+}
