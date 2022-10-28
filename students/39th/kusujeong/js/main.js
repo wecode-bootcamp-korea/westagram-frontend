@@ -5,6 +5,7 @@
 const commentBtn = document.querySelector(".comment-btn");
 const commentVal = document.querySelector(".comment-input");
 const curDiv = document.querySelector("#commentList");
+
 commentBtn.addEventListener("click", () => {
   addComment();
 });
@@ -57,10 +58,28 @@ function addComment() {
 // 삭제버튼 누르면 댓글 삭제
 // 좋아요 버튼 누르면 하트가 빨갛게 스타일링
 const deleteBtn = document.querySelector("#commentList");
+
 deleteBtn.addEventListener("click", (e) => {
   e.target.nodeName == "BUTTON" && e.target.parentNode.parentNode.remove();
   if (e.target.nodeName == "I") {
     e.target.classList.toggle("comment-like");
     e.target.classList.toggle("fa-solid");
   }
+});
+
+//nav 아이디 검색 기능
+const idArr = ["rntnwjd", "9sssu", "rntnwjd7705", "9sujeong"];
+const searchVal = document.querySelector(".search");
+let filterRslt = [];
+// 검색창을 클릭했을 때 필터링된 id배열이 리스트형태로 노출
+searchVal.addEventListener("click", () => {
+  //클릭했을 때 리스트를 보여줄 div창 띄우기
+});
+// 노출 후 키보드 입력 시 필터링
+searchVal.addEventListener("keyup", () => {
+  console.log(searchVal.value);
+  filterRslt = idArr.filter((id) => {
+    return id.includes(searchVal.value);
+  });
+  console.log("필터링 : " + filterRslt);
 });
