@@ -19,6 +19,11 @@ commentForm.addEventListener("submit", (event) => {
 
   const commentMessage = commentInput.value;
 
+  if (commentMessage.length === 0) {
+    alert("빈 댓글은 등록하실 수 없습니다.");
+    return;
+  }
+
   commentListArray.push([USERNAME, commentMessage]);
   commentListHTML = [];
 
