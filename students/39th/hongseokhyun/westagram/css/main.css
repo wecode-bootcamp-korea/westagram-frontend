@@ -1,0 +1,424 @@
+.objcontain{
+    border: 1 solid black;
+    width: 100%;
+    height: 9999px;
+}
+
+@media (max-width:830px){
+    .main_right{
+        display: none;
+    }
+
+    .searcharea{
+        display: none;
+    }
+
+    .feeds{
+        margin-left: 50%;
+        transform: translate(-50%);
+    }
+}
+
+
+
+.nav{
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom : 1px solid #dbdbdb;   
+    background-color: #fafafa; 
+    z-index: 1;
+}
+
+.bubble_box{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 106;
+    margin-top: 60px;
+    justify-content: flex-end;
+}
+
+
+.bubble
+{
+position: relative;
+width: 75px;
+height: 105px;
+padding: 0px;
+background: blue;
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+}
+
+.bubble:after
+{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 0 15px 15px;
+border-color: blue transparent;
+display: block;
+width: 0;
+z-index: 1;
+top: -15px;
+left: 22px;
+}
+
+
+.nav_left{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.crossline{
+    border-right: 2px solid black;
+}
+
+.nav_left>p{
+    font-size: 40px;
+    margin-top: -10px;
+    font-family: 'Lobster';
+    padding-left: 10px;    
+}
+
+.nav_left>.crossline>.left_logo{
+    width: 24px;
+    height: 24px;
+    padding-right: 20px;
+}
+
+.searcharea{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width : 268px;
+    height: 36px;
+    border: 1px solid #efefef;
+    border-radius: 10px;
+    background-color: #efefef;
+}
+
+.searcharea>input{
+    width: 100%;
+    border: none;
+    background-color: #efefef;
+}
+
+.searcharea>img{
+    margin-left: 10px;
+    width: 16px;
+}
+
+.nav_right{
+    width: 170px;
+}
+
+.nav_right>img{
+    width: 24px;
+    padding-left: 24px;
+}
+
+.main{
+    width: 100%;
+    height: 9999px;
+    background-color: #fafafa;
+    border: 1px solid #dbdbdb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_box{
+    width: 821px;
+    height: 9999px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.feeds{
+    width: 470px;
+    height: 9999px;
+    margin-top: 100px;
+}
+
+.article{
+    height: 837px;
+    width: 468px;
+    border: 1px solid #dbdbdb; 
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+.articlebox_head{
+    display: flex;
+    width: 470px;
+    height: 56px;
+    border-bottom: 1px solid #dbdbdb;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.menudots{
+    position: relative;
+    right: -20px;
+    width: 24px;
+    height: 24px;
+}
+
+.nuggetaccountpic{
+    position: relative;
+    left: -30px;
+    width: 32px;
+    border-radius: 100px;
+}
+
+
+.nuggetaccountpic1{
+    position: relative;
+    border: 1px solid #dbdbdb;
+    width: 25px;
+    border-radius: 100px;
+}
+
+.nownuggetaccountpic{
+    width: 55px;
+    border-radius: 100px;
+
+}
+.storycolor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    border: 1px solid #fafafa;
+    background : linear-gradient(45deg,rgb(255,230,0),rgb(255,0,128)80%);
+}
+.nownuggetaccountpicpush{
+    position: relative;
+    width: 32px;
+    height: 32px;
+    border-radius: 100px;
+    border: 2px solid white;
+}
+
+.accountname{
+    position: relative;
+    left: -110px;
+    top: -3px;
+}
+
+.feedpic{
+    width: 468px;
+    height: 587px;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.whocomment{
+    height: 107px;
+    width: 444px;
+}
+
+.wholike{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+    padding-left: 10px;
+    gap: 5px;
+}
+
+
+
+.input_comment{
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 468px;
+    height: 49px;
+    border-top: 1px solid #dbdbdb;
+}
+
+input{
+    width: 420px;
+    border: none;
+}
+
+.commentbtn{
+    background-color: #ffffff;
+    border: none;
+    color: #0095f6;
+    font-weight: 900;
+    font-size: 14px;
+    padding-right: 10px;
+}
+
+.main_right{
+    width: 319px;
+    height: 801px;
+    margin-top: 100px;
+}
+
+.nowaccount{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+}
+
+
+.friends{
+    position: relative;
+    height: 30px;
+}
+
+.friends1{
+    position: relative;
+    height: 30px;
+    margin-left: 15px;
+}
+
+
+
+.friendsnow{
+    color: #bdbdbd;
+}
+
+.friends_name{
+    font-style: bold;
+    font-weight: 900;
+    height: 18px;
+    padding-bottom: 2px;
+}
+
+.pushfriends{
+    width: 100%;
+    height: 200px;
+    border: 1px solid #dbdbdb;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 5px;
+    background-color: #fafafa;
+    margin-top: 16px;
+}
+
+.pushfriendssmall{
+    width: 321px;
+    height: 240px;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+
+}
+
+.friendsaccount_box{
+    width: 321px;
+    height: 350px;
+    display: flex;
+    justify-content: baseline;
+    flex-direction: column;
+    overflow: scroll;
+}
+
+.friendsaccount_box::-webkit-scrollbar{
+    display: none;
+}
+
+
+.pushfriends1{
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #fafafa;
+}
+
+.whatisaid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -30px;
+    width: 100%;
+    height: 20px;
+}
+
+.push{
+    position: relative;
+    height: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 16px;
+    margin: 8px 0px;
+}
+
+.seeAll, .follow, .pushtoyou{
+    font-weight: 900;
+}
+
+.pushtoyou{
+    color: #8e8e8e;
+}
+
+.follow{
+    color: #0f9bf6;
+}
+
+.friendsaccount{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 16px;
+}
+
+.friendsaccount1{
+    display: flex;
+    justify-content: baseline;
+    align-items: center;
+    padding: 8px 16px;
+}
+
+.under_pic{
+    width: 450px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px; 
+    align-items: center;
+}
+
+
+
+.sticker{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90px;
+    height: 40px;
+}
+
+
+
+.left{
+    width: 25px;
+    height: 25px;
+}
+
+
+
+
