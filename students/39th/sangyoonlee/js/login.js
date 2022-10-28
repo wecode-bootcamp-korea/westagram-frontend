@@ -31,7 +31,6 @@ function handleBtnActivateByPw(event) {
 }
 
 function handleBtnClick() {
-  // console.log(allVaild);
   if (allVaild) {
     window.location.href = "main.html";
   }
