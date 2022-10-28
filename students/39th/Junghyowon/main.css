@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    background-color: #fafafa;
+}
+
+header {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    border-bottom: 0.5px solid lightgray;
+    background-color: #fff;
+    z-index: 1;
+}
+
+
+.header_container {
+    width: 935px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    flex-direction: row;
+    background-color: #fff;
+    border-bottom: 0.5px solid lightgray;
+}
+
+h1 {
+    font-family: 'Lobster', cursive;
+    font-size: 25px;
+}
+
+.searchbar {
+    margin-left: 100px;
+}
+
+.search {
+    width: 250px;
+    height: 35px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    background-color: #EBEDF0;
+    background-image: url('img/search.png');
+    background-repeat: no-repeat;
+    background-size: 16px;
+    background-position: 6px 9px;
+}
+
+.search::placeholder {
+    padding-left: 20px;
+}
+
+#profile {
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 15px;
+    cursor: pointer;
+    width: 25px;
+    height: 25
+}
+
+#icon {
+    margin-left: 15px;
+    cursor: pointer;
+    object-fit: cover;
+    width: 25px;
+    height: 25px;
+}
+
+#user1 {
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 3px solid transparent;
+    background: radial-gradient(rgba(131,58,180,1) 30%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+}
+
+#user2 {
+    margin-left: 10px;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    vertical-align: middle;
+    border: 3px solid transparent;
+    background: radial-gradient(rgba(131,58,180,1) 30%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+}
+
+article {
+    margin-top: 90px;
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.mainfeed_left {
+    display: flex;
+    width: 100%;
+    height: 300px;
+    max-width: 500px;
+    flex-direction: column;
+} 
+
+.main_top {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    overflow: auto;
+    border: 1px solid lightgray;
+    border-radius: 8px;
+    width: 100%;
+    height: 110px;
+    margin: 0 auto;
+    padding: 15px 15px;
+    background-color: #fff;
+}
+
+.username {
+    margin-top: 5px;
+    margin-left: 4px;
+    font-size: 11px;
+    color: #5d5d5d;
+}
+
+#user_name2 {
+    margin-left: 26px;
+}
+
+.feed_image {
+    position: absolute;
+    width: 100%;
+    max-width: 500px;
+    height: 600px;
+    margin-top: 125px;
+    overflow: hidden;
+    border: 1px 1px 0px 1px solid lightgray;
+}
+
