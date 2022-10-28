@@ -30,14 +30,26 @@
 
       <main class="main">
         <div class="main__feeds">
-          <article class="main__stories"></article>
+          <article class="main__stories">
+            <div>
+              <img
+                class="profile-pic"
+                alt="main-pic"
+                src="img/main_article/my-profile.jpeg"
+                width="50"
+              />
+              <span>sangyoonlee1231</span>
+            </div>
+          </article>
+
           <article class="main__article">
             <div class="article__header">
               <div class="header__profile">
                 <img
-                  id="profile-pic"
+                  class="profile-pic"
                   alt="main-pic"
                   src="img/main_article/my-profile.jpeg"
+                  width="40px"
                 />
               </div>
               <div class="header__nickname">sangyoonlee1231</div>
@@ -96,8 +108,30 @@
         </div>
 
         <div class="main__right">
-          <article class="main__profile"></article>
-          <article class="main__suggestions"></article>
+          <article class="main__right__profile">
+            <div class="main__right__profile__pic">
+              <img
+                id="profile-right"
+                alt="profile-right"
+                src="img/main_article/my-profile.jpeg"
+                width="50"
+              />
+            </div>
+            <div class="main__right__profile__name">
+              <div class="profile-id">sangyoonlee1231</div>
+              <div class="profile-name">SangYoon Lee</div>
+            </div>
+            <div class="main__right__profile__change-btn">
+              <button>전환</button>
+            </div>
+          </article>
+          <article class="main__suggestions">
+            <div class="main__suggestions__title">
+              <span>회원님을 위한 추천</span>
+              <span>모두 보기</span>
+            </div>
+            <div class="main__suggeestions__list"></div>
+          </article>
         </div>
       </main>
     </div>

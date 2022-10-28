@@ -95,6 +95,8 @@
 }
 
 .main__stories {
+  display: flex;
+  align-items: center;
   width: 400px;
   height: 100px;
   margin-top: 40px;
@@ -102,9 +104,22 @@
   border: 1px solid #dbdbdb;
 }
 
+.main__stories div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding-left: 20px;
+}
+
+.main__stories div span {
+  margin-top: 5px;
+  font-size: 11px;
+}
+
 .main__article {
   width: 400px;
-  /* height: 750px; */
   margin-top: 40px;
   background-color: white;
   border: 1px solid #dbdbdb;
@@ -123,9 +138,8 @@
   height: 60px;
 }
 
-#profile-pic {
-  width: 40px;
-  border-radius: 20px;
+.profile-pic {
+  border-radius: 50%;
   border: 2px solid #ff5a9a;
 }
 
@@ -259,16 +273,72 @@
   margin-right: 5vw;
 }
 
-.main__profile {
+.main__right__profile {
+  position: relative;
+  display: flex;
+  align-items: center;
   width: 250px;
-  height: 60px;
+  height: 70px;
   margin-top: 40px;
+}
+
+#profile-right {
+  width: 50px;
+  margin: 10px;
+  border-radius: 50%;
   border: 1px solid #dbdbdb;
 }
 
+.main__right__profile__name {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.profile-id {
+  margin: 1px 0px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.profile-name {
+  margin: 1px 0px;
+  color: #8e8e8e;
+  font-size: 14px;
+}
+
+.main__right__profile__change-btn {
+  position: absolute;
+  right: 0px;
+}
+
+.main__right__profile__change-btn button {
+  border: none;
+  background-color: #fafafa;
+  color: #0395f6;
+}
+
+/* main suggestions */
 .main__suggestions {
   width: 250px;
   height: 30vh;
   margin-top: 20px;
-  border: 1px solid #dbdbdb;
+  padding: 0px 10px;
+}
+
+.main__suggestions__title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 30px;
+}
+
+.main__suggestions__title span:first-child {
+  color: #8e8e8e;
+  font-size: 14px;
+}
+
+.main__suggestions__title span:last-child {
+  font-size: 13px;
+  font-weight: 600;
 }
