@@ -1,0 +1,287 @@
+* {
+    margin: 0;
+}
+
+.mainPage {
+    padding-top: 90px;
+}
+
+/* navBar */
+
+.navBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2vh;
+    width: 100%;
+    background-color: #ffffff;
+    border-bottom: 1px solid gray;
+}
+
+.navBar_logo {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Lobster', cursive;
+    font-size: 30px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navBar_logo i {
+    padding-right: 2vw;
+    padding-top: 1vh;
+}
+
+.navBar_logoInstagram {
+    padding-left: 2vw;
+}
+
+.navBar_searchBar {
+    position: relative;
+}
+
+.navBar_searchBar i {
+    position: absolute;
+    top: 8px;
+    left: 15px;
+    color: gray;
+}
+
+.navBar_search {
+    width: 250px;
+    height: 30px;
+    background-color: #f2f2f2;
+    border: none;
+    border-radius: 7px;
+}
+
+::placeholder {
+    text-align: center;
+}
+
+.navBar_icons img {
+    padding-left: 5vh;
+    width: 20px;
+}
+
+
+/* main */
+.main_feeds {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.main_article {
+    flex-basis: 40%;
+    border: 1px solid gray;
+    border-radius: 10px;
+    margin-right: 5vw;
+}
+
+.article_navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 8px 0;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.smallImage {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.feedHeader {
+    padding-left: 20px;
+}
+
+.article_navbar .fa-solid {
+    margin-left: auto;
+} 
+
+.id {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.article_img {
+    width: 100%;
+}
+
+.article_icons {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    padding: 5px;
+    width: 93%;
+}
+
+.article_icons i {
+    padding-left: 1vw;
+}
+
+.article_content {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.content_Image {
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+}
+
+.content_likes {
+    padding-left: 1vw;
+    font-size: 15px;
+}
+
+.content_likesName {
+    font-weight: bold;
+}
+
+.article_reply {
+    width: 100%;
+    height: 30px;
+    border: none;
+    border-top: 1px solid rgb(181, 181, 181);
+    padding: 7px 0;
+}
+
+.article_reply span {
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+.article_replyBottom {
+    display: flex;
+}
+
+.article_typingReply {
+    width: 100%;
+    border: none;
+    padding: 10px 0;
+}
+
+.article_typingReply::placeholder {
+    text-align: left;
+    padding-left: 10px;
+}
+
+.article_replyPush {
+    width: 10%;
+    background-color: white;
+    color: #0095F6;
+    font-weight: bold;
+    border: none;
+}
+
+/* right */
+
+.main_right {
+    flex-basis: 30%;
+}
+
+.right_info {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.right_smallImage {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+.right_IdName {
+    padding-left: 20px;
+}
+
+.right_storyFriends {
+    border: 1px solid #dbdbdb;
+    border-radius: 10px;
+}
+
+.right_story {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.right_story div:nth-child(1) {
+    font-weight: bold;
+    color: black;
+}
+
+.right_story > div:nth-child(2) {
+    color: gray;
+}
+
+.story_IdTime {
+    padding-left: 15px;
+}
+
+.storyImg {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+.right_nav {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+.right_nav > div:nth-child(1) {
+    font-weight: bold;
+    color: gray;
+}
+
+.right_nav > div:nth-child(2) {
+    color: black;
+}
+
+.right_recommend {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.recommendImg {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+}
+
+.recommend_IdName {
+    flex-grow: 3;
+    padding-left: 15px;
+}
+
+.recommend_IdName > div:nth-child(1) {
+    font-weight: bold;
+    color: black;
+}
+
+.recommend_IdName > div:nth-child(2) {
+    color: gray;
+}
+
+.recommend_follow {
+    font-weight: bold;
+    color: #0095F6;
+}
