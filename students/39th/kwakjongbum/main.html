@@ -16,8 +16,10 @@
         <div class="header">
             <div class="inner">
                 <h1 class="logo">
-                    <img src="images/icon-insta.png" alt="인스타">
-                    westagram
+                    <a href="javascript:;">
+                        <img src="images/icon-insta.png" alt="인스타">
+                        westagram
+                    </a>
                 </h1>
                 <div class="search-input">
                     <input type="text" placeholder="검색">
@@ -72,10 +74,18 @@
                             <li>
                                 <span class="comment-id">naceosecius</span>
                                 <span class="comment-content">거봐 좋았잖아~~~~</span>
-                                <span class="btn-like">
-                                    <input type="checkbox" id="btnLikeSm">
-                                    <label for="btnLikeSm">좋아요</label>
-                                </span>
+                                <div class="btn-wrap">
+                                    <button type="button" class="btn-like on">좋아요</button>
+                                    <button type="button" class="btn-delete">삭제</button>
+                                </div>
+                            </li>
+                            <li>
+                                <span class="comment-id">naceosecius</span>
+                                <span class="comment-content">testtesttesttesttest</span>
+                                <div class="btn-wrap">
+                                    <button type="button" class="btn-like">좋아요</button>
+                                    <button type="button" class="btn-delete">삭제</button>
+                                </div>
                             </li>
                         </ul>
                         <p class="time"><span>42분</span>전</p>
@@ -156,7 +166,19 @@
                         </li>
                     </ul>
                 </div>
-                <p class="info-txt">Instagram 정보·지원·홍보 센터·API·채용 정보·개인정보처리방침·약관·디렉터리·프로필·해시태그·언어</p>
+                <ul class="info-txt">
+                    <li>Instagram 정보</li>
+                    <li>지원</li>
+                    <li>홍보 센터</li>
+                    <li>API</li>
+                    <li>채용 정보</li>
+                    <li>개인정보처리방침</li>
+                    <li>약관</li>
+                    <li>디렉터리</li>
+                    <li>프로필</li>
+                    <li>해시태그</li>
+                    <li>언어</li>
+                </ul>
                 <p class="cop">ⓒ 2019 INSTAGRAM</p>
             </div>
         </div>

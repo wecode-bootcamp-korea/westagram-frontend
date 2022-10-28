@@ -1,26 +1,19 @@
 let inpId = document.querySelector('.input-id');
 let inpPw = document.querySelector('.input-pw');
 let lgBtn = document.querySelector('.btn-login');
-let str = "@";
 
-inpId.addEventListener('keyup',function(){
-    if(!(inpId.value && inpPw.value)){
-        lgBtn.disabled = true;
-    }else{
+inpId.addEventListener('keyup', function(){
+    if(this.value && inpPw.value && (this.value).includes('@') && (inpPw.value).length >= 5){
         lgBtn.disabled = false;
-    }
-})
-
-inpPw.addEventListener('keyup',function(){
-    if(!(inpId.value && inpPw.value)){
-        lgBtn.disabled = true;
     }else{
-        lgBtn.disabled = false;
+        lgBtn.disabled = true;
     }
-})
+});
 
-inpId.addEventListener('keyup',function(){
-    if((inpId.value).includes('@')){
-        console.log('@')
+inpPw.addEventListener('keyup', function(){
+    if(inpId.value && this.value && (inpId.value).includes('@') && (this.value).length >= 5){
+        lgBtn.disabled = false;
+    }else{
+        lgBtn.disabled = true;
     }
-})
+});
