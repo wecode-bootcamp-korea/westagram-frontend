@@ -1,207 +1,263 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="img/instagramcolor.png" rel="shortcut icon" type="image/x-icon">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="img/instagramcolor.png"
+      rel="shortcut icon"
+      type="image/x-icon"
+    />
     <title>westagram</title>
-    <link rel="stylesheet" href="style/normalize.css">
-    <link rel="stylesheet" href="style/common.css">
-    <link rel="stylesheet" href="style/main.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style/normalize.css" />
+    <link rel="stylesheet" href="style/common.css" />
+    <link rel="stylesheet" href="style/main.css" />
+  </head>
+  <body>
     <nav>
-        <div class="navContent">
-            <div class="navInner">
-                <div class="logoBox">
-                    <img src="img/instagram.png" alt="logo">
-                    <a href="#">
-                        <span class="mainLogo">westagram</span>
-                    </a>
-                </div>
-                <div class="searchBox">
-                    <img src="img/search.png" alt="search" id="searchImg">
-                    <input type="text" placeholder="search" id="searchInput">
-                    <div class="filterBox"></div>
-                </div>
-                <div class="navIcon">
-                    <div><a href="#"><img src="img/explore.png" alt="explore"></a></div>
-                    <div><a href="#"><img src="img/heart.png" alt="heart"></a></div>
-                    <div class="navProfile">
-                        <img src="img/profile.png" alt="profile">
-                        <div class="hidemenu">
-                            <ul>
-                                <li><img src="img/profile.png" alt="profile">프로필</li>
-                                <li><img src="img/save-instagram.png" alt="save">저장됨</li>
-                                <li><img src="img/settings.png" alt="settings">설정</li>
-                                <li class="logout">로그아웃</li>
-                            </ul>
-                        </div> <!--hidemenu -->
-                    </div> <!--navProfile -->
-                </div> <!--navIcon -->
-            </div> <!--navInner -->
-        </div> <!--navContent -->
+      <div class="navContent">
+        <div class="navInner">
+          <div class="logoBox">
+            <img src="img/instagram.png" alt="logo" />
+            <a href="#">
+              <span class="mainLogo">westagram</span>
+            </a>
+          </div>
+          <div class="searchBox">
+            <img src="img/search.png" alt="search" id="searchImg" />
+            <input type="text" placeholder="search" id="searchInput" />
+            <div class="filterBox"></div>
+          </div>
+          <div class="navIcon">
+            <div>
+              <a href="#"><img src="img/explore.png" alt="explore" /></a>
+            </div>
+            <div>
+              <a href="#"><img src="img/heart.png" alt="heart" /></a>
+            </div>
+            <div class="navProfile">
+              <img src="img/profile.png" alt="profile" />
+              <div class="hidemenu">
+                <ul>
+                  <li>
+                    <img src="img/profile.png" alt="profile" />
+                    프로필
+                  </li>
+                  <li>
+                    <img src="img/save-instagram.png" alt="save" />
+                    저장됨
+                  </li>
+                  <li>
+                    <img src="img/settings.png" alt="settings" />
+                    설정
+                  </li>
+                  <li class="logout">로그아웃</li>
+                </ul>
+              </div>
+              <!--hidemenu -->
+            </div>
+            <!--navProfile -->
+          </div>
+          <!--navIcon -->
+        </div>
+        <!--navInner -->
+      </div>
+      <!--navContent -->
     </nav>
 
     <main>
-    <div id="wrap">
+      <div id="wrap">
         <div class="feeds">
-            <article class="post">
-                <div class="profileInfo">
-                    <div class="user">
-                        <div class="profilePic">
-                            <img src="img/zhwltlr.png" alt="profileImg">
-                        </div>
-                        <p class="username">zhwltlr</p>
-                    </div>
-                    <img src="img/option.png" alt="option">
+          <article class="post">
+            <div class="profileInfo">
+              <div class="user">
+                <div class="profilePic">
+                  <img src="img/zhwltlr.png" alt="profileImg" />
                 </div>
-                <img src="img/hous.jpg" alt="mainImg" class="mainImg">
-                <div class="postContent">
-                    <div class="postIcons">
-                        <ul>
-                            <li><img src="img/heart.png" alt="heart"></li>
-                            <li><img src="img/chat.png" alt="chat"></li>
-                            <li><img src="img/upload.png" alt="upload"></li>
-                            <li class="postSave"><img src="img/save-instagram.png" alt="save"></li>
-                        </ul>
-                    </div>
-                    <div class="likes">
-                        <div class="user">
-                            <div class="profilePic">
-                                <img src="img/flower.jpg" alt="profileImg">
-                            </div>
-                            <span class="username">jyp_0808</span>
-                        </div>
-                        <p>
-                            님 외에 10명이 좋아합니다.
-                        </p>
-                    </div>
-                    <div class="postTextBox">
-                        <p class="postText text"><span>zhwltlr</span>오늘도 좋은 하루~~^^</p>
-                        <div class="newComments"></div>
-                    </div>
-                    <p class="postDate">42분 전</p>
+                <p class="username">zhwltlr</p>
+              </div>
+              <img src="img/option.png" alt="option" />
+            </div>
+            <img src="img/hous.jpg" alt="mainImg" class="mainImg" />
+            <div class="postContent">
+              <div class="postIcons">
+                <ul>
+                  <li><img src="img/heart.png" alt="heart" /></li>
+                  <li><img src="img/chat.png" alt="chat" /></li>
+                  <li><img src="img/upload.png" alt="upload" /></li>
+                  <li class="postSave">
+                    <img src="img/save-instagram.png" alt="save" />
+                  </li>
+                </ul>
+              </div>
+              <div class="likes">
+                <div class="user">
+                  <div class="profilePic">
+                    <img src="img/flower.jpg" alt="profileImg" />
+                  </div>
+                  <span class="username">jyp_0808</span>
                 </div>
-                <div class="commentBox">
-                    <img src="img/smile.png" alt="smile">
-                    <div class="commentInput">
-                        <input type="text" id="commentAdd" placeholder="댓글 달기...">
-                        <button type="submit" class="postBtn">게시</button>
-                    </div>
-                </div>
-            </article>
-        </div> <!--feeds -->
+                <p>
+                  님 외에 10명이 좋아합니다.
+                </p>
+              </div>
+              <div class="postTextBox">
+                <p class="postText text">
+                  <span>zhwltlr</span>
+                  오늘도 좋은 하루~~^^
+                </p>
+                <div class="newComments"></div>
+              </div>
+              <p class="postDate">42분 전</p>
+            </div>
+            <div class="commentBox">
+              <img src="img/smile.png" alt="smile" />
+              <div class="commentInput">
+                <input type="text" id="commentAdd" placeholder="댓글 달기..." />
+                <button type="submit" class="postBtn">게시</button>
+              </div>
+            </div>
+          </article>
+        </div>
+        <!--feeds -->
 
         <!-- mianRight -->
         <div class="mianRight">
-            <div class="mainProfile">
-                <div class="profileInfo">
-                    <div class="user">
-                        <div class="profilePic"><img src="img/zhwltlr.png" alt="profileImg"></div>
-                        <p class="userStatus">
-                            <span class="username">zhwltlr</span>
-                            <span class="userMessage">zhwltlr 입니다</span>
-                        </p>
-                    </div> 
+          <div class="mainProfile">
+            <div class="profileInfo">
+              <div class="user">
+                <div class="profilePic">
+                  <img src="img/zhwltlr.png" alt="profileImg" />
                 </div>
-            </div> <!--mainProfile -->
-            <div class="storyBox">
-                <div class="storyTitle">
-                    <h2>스토리</h2>
-                    <span>모두 보기</span>
+                <p class="userStatus">
+                  <span class="username">zhwltlr</span>
+                  <span class="userMessage">zhwltlr 입니다</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <!--mainProfile -->
+          <div class="storyBox">
+            <div class="storyTitle">
+              <h2>스토리</h2>
+              <span>모두 보기</span>
+            </div>
+            <div class="storyInner">
+              <div class="user">
+                <div class="profilePic">
+                  <img src="img/song.jpg" alt="profileImg" />
                 </div>
-                <div class="storyInner">
-                    <div class="user">
-                        <div class="profilePic"><img src="img/song.jpg" alt="profileImg"></div>
-                        <p class="userStatus">
-                            <span class="username">jyinfo_music</span>
-                            <span class="userMessage">9시간전</span>
-                        </p>
-                    </div>
-                    <div class="user">
-                        <div class="profilePic"><img src="img/dog.jpg" alt="profileImg"></div>
-                        <p class="userStatus">
-                            <span class="username">jyinfo_dog</span>
-                            <span class="userMessage">5시간전</span>
-                        </p>
-                    </div>
-                    <div class="user">
-                        <div class="profilePic"><img src="img/movie.jpg" alt="profileImg"></div>
-                        <p class="userStatus">
-                            <span class="username">jyinfo_movie</span>
-                            <span class="userMessage">10시간전</span>
-                        </p>
-                    </div>
-                    <div class="user">
-                        <div class="profilePic"><img src="img/christmas.jpg" alt="profileImg"></div>
-                        <p class="userStatus">
-                            <span class="username">christmas_soon</span>
-                            <span class="userMessage">8시간전</span>
-                        </p>
-                    </div>
-                    <div class="user">
-                        <div class="profilePic"><img src="img/trip.jpg" alt="profileImg"></div>
-                        <p class="userStatus">
-                            <span class="username">gonnatrip</span>
-                            <span class="userMessage">2시간전</span>
-                        </p>
-                    </div>
-                    <div class="user">
-                        <div class="profilePic"><img src="img/itzy.jpg" alt="profileImg"></div>
-                        <p class="userStatus">
-                            <span class="username">itzy.all.in.us</span>
-                            <span class="userMessage">8시간전</span>
-                        </p>
-                    </div>
-                </div> <!--storyInner -->
-            </div> <!--storyBox -->
+                <p class="userStatus">
+                  <span class="username">jyinfo_music</span>
+                  <span class="userMessage">9시간전</span>
+                </p>
+              </div>
+              <div class="user">
+                <div class="profilePic">
+                  <img src="img/dog.jpg" alt="profileImg" />
+                </div>
+                <p class="userStatus">
+                  <span class="username">jyinfo_dog</span>
+                  <span class="userMessage">5시간전</span>
+                </p>
+              </div>
+              <div class="user">
+                <div class="profilePic">
+                  <img src="img/movie.jpg" alt="profileImg" />
+                </div>
+                <p class="userStatus">
+                  <span class="username">jyinfo_movie</span>
+                  <span class="userMessage">10시간전</span>
+                </p>
+              </div>
+              <div class="user">
+                <div class="profilePic">
+                  <img src="img/christmas.jpg" alt="profileImg" />
+                </div>
+                <p class="userStatus">
+                  <span class="username">christmas_soon</span>
+                  <span class="userMessage">8시간전</span>
+                </p>
+              </div>
+              <div class="user">
+                <div class="profilePic">
+                  <img src="img/trip.jpg" alt="profileImg" />
+                </div>
+                <p class="userStatus">
+                  <span class="username">gonnatrip</span>
+                  <span class="userMessage">2시간전</span>
+                </p>
+              </div>
+              <div class="user">
+                <div class="profilePic">
+                  <img src="img/itzy.jpg" alt="profileImg" />
+                </div>
+                <p class="userStatus">
+                  <span class="username">itzy.all.in.us</span>
+                  <span class="userMessage">8시간전</span>
+                </p>
+              </div>
+            </div>
+            <!--storyInner -->
+          </div>
+          <!--storyBox -->
 
-            <div class="recommend">
-                <div class="recommentTitle">
-                    <h2>회원님을 위한 추천</h2>
-                    <span>모두 보기</span>
+          <div class="recommend">
+            <div class="recommentTitle">
+              <h2>회원님을 위한 추천</h2>
+              <span>모두 보기</span>
+            </div>
+            <div class="recommandInner">
+              <div class="user">
+                <div class="profilePic">
+                  <img src="img/detective.png" alt="profileImg" />
                 </div>
-                <div class="recommandInner">
-                    <div class="user">
-                        <div class="profilePic"><img src="img/detective.png" alt="profileImg"></div>
-                        <p class="userStatus">
-                            <span class="username">jyfav_conan</span>
-                            <span class="userMessage">코난을 좋아해요</span>
-                        </p>
-                        <a href="#" class="follow">팔로우</a>
-                    </div>
-                    <div class="user">
-                        <div class="profilePic"><img src="img/itzy.jpg" alt="profileImg"></div>
-                        <p class="userStatus">
-                            <span class="username">jyfav_itzy</span>
-                            <span class="userMessage">있지 사랑해...</span>
-                        </p>
-                        <a href="#" class="follow">팔로우</a>
-                    </div>
-                    <div class="user">
-                        <div class="profilePic"><img src="img/baseball.png" alt="profileImg"></div>
-                        <p class="userStatus">
-                            <span class="username">jyfav_baseball</span>
-                            <span class="userMessage">삼성라이온즈 팬. 우승좀..</span>
-                        </p>
-                        <a href="#" class="follow">팔로우</a>
-                    </div>
-                    <div class="user">
-                        <div class="profilePic"><img src="img/flower.jpg" alt="profileImg"></div>
-                        <p class="userStatus">
-                            <span class="username">jyp_0808</span>
-                            <span class="userMessage">이제 쓸 아이디도 없네요</span>
-                        </p>
-                        <a href="#" class="follow">팔로우</a>
-                    </div>
+                <p class="userStatus">
+                  <span class="username">jyfav_conan</span>
+                  <span class="userMessage">코난을 좋아해요</span>
+                </p>
+                <a href="#" class="follow">팔로우</a>
+              </div>
+              <div class="user">
+                <div class="profilePic">
+                  <img src="img/itzy.jpg" alt="profileImg" />
                 </div>
-            </div> <!--recommend -->
-        </div> <!--mainRight -->
-    </div> <!--wrap -->
+                <p class="userStatus">
+                  <span class="username">jyfav_itzy</span>
+                  <span class="userMessage">있지 사랑해...</span>
+                </p>
+                <a href="#" class="follow">팔로우</a>
+              </div>
+              <div class="user">
+                <div class="profilePic">
+                  <img src="img/baseball.png" alt="profileImg" />
+                </div>
+                <p class="userStatus">
+                  <span class="username">jyfav_baseball</span>
+                  <span class="userMessage">삼성라이온즈 팬. 우승좀..</span>
+                </p>
+                <a href="#" class="follow">팔로우</a>
+              </div>
+              <div class="user">
+                <div class="profilePic">
+                  <img src="img/flower.jpg" alt="profileImg" />
+                </div>
+                <p class="userStatus">
+                  <span class="username">jyp_0808</span>
+                  <span class="userMessage">이제 쓸 아이디도 없네요</span>
+                </p>
+                <a href="#" class="follow">팔로우</a>
+              </div>
+            </div>
+          </div>
+          <!--recommend -->
+        </div>
+        <!--mainRight -->
+      </div>
+      <!--wrap -->
     </main>
 
     <script src="js/main.js"></script>
-</body>
+  </body>
 </html>
