@@ -255,11 +255,17 @@ left: 22px;
 
 input{
     width: 420px;
+    height: 40px;
     border: none;
+    background-color: transparent;
 }
 
+
+
+
+
 .commentbtn{
-    background-color: #ffffff;
+    background-color: transparent;
     border: none;
     color: #0095f6;
     font-weight: 900;
@@ -402,7 +408,9 @@ input{
     align-items: center;
 }
 
-
+.strong{
+    font-weight: 900;
+}
 
 .sticker{
     display: flex;
@@ -412,11 +420,116 @@ input{
     height: 40px;
 }
 
-
+.eachComment{
+    border: none;
+    width: 100%;
+    height: 40px;
+}
 
 .left{
     width: 25px;
     height: 25px;
+}
+
+
+/* comment */
+
+#form-commentInfo{
+    width: 100%;
+    height: 160px;
+}
+
+.position{
+    display: flex;
+    
+}
+
+
+#comment-input{
+    width: 100%;
+    height: 45px;
+    border: none;
+
+}
+
+#submit{
+    background-color: transparent;
+    width: 5.5em;
+    height: 45px;;
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(0, 128,255);
+    position: relative;
+    border: none;
+}
+
+.fix{
+    display: flex;
+    justify-content: space-between;
+    width: 469px;
+    height: 45px;
+    border-top: 1px solid ;
+}
+
+
+#comments{
+    width: 468px;
+    height: 5.5em;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#comment-count{
+    padding: 0px 16px;
+}
+
+.eachComment{   
+    width :50%; 
+    margin: 10px;  
+    padding: 0.5em; 
+    border-bottom: 1px solid #c1bcba;
+}
+
+.eachComment .name{
+    font-size: 0.625em;
+    font-weight: bold;
+    margin-bottom: 0.3em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.inputValue{
+    position: relative;
+    width: 300px;
+    overflow: hidden;
+}
+
+.eachComment .inputValue{
+    font-size: 1.2em;
+    font-style: italic;    
+}
+
+.eachComment .time{
+    font-size: 0.7em;
+    color: #c1bcba;
+    font-style: oblique;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    
+}
+
+.eachComment{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 0;
+}
+
+.eachComment .deleteComment{
+    color: aliceblue;
+    width: 20px;
+    height: 20px;
 }
 
 
