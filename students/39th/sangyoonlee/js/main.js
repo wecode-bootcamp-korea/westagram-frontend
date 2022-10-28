@@ -35,8 +35,6 @@ commentForm.addEventListener("submit", (event) => {
     );
   }
 
-  console.log(commentListHTML.join(""));
-
   commentList.innerHTML = template.replace(
     "{{__comment_list__}}",
     commentListHTML.join("")
