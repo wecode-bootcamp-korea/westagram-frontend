@@ -2,6 +2,7 @@
 // 함수호출모음
 repleAdd();
 searchResult();
+profileTooltip();
 
 // 댓글 추가 함수
 function repleAdd () {
@@ -183,4 +184,18 @@ function searchUserList (searchResultParent, userId) {
     let _b = _li.appendChild(makeB);
     _b.classList.add('searchId');
     _b.innerHTML = userId;
+}
+
+// 프로필 툴팁박스
+function profileTooltip(){
+    let btnProfile = document.querySelector('.btnUtilProfile');
+    let tooltipBox = btnProfile.nextElementSibling;
+    let _body = document.getElementsByTagName('body');
+
+    // 현재 박스가 보이는지 상태체크
+    let isState;
+
+    btnProfile.addEventListener('click',function(){
+        tooltipBox.classList.contains('active') ? tooltipBox.classList.remove('active') : tooltipBox.classList.add('active');
+    });
 }
