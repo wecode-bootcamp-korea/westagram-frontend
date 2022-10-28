@@ -43,8 +43,6 @@ function deleteComment(event) {
     (comment) => deleteCommentID != comment[0]
   );
 
-  console.log(commentListArray);
-
   commentListHTML = showCommentList(commentListArray);
   commentList.innerHTML = template.replace(
     "{{__comment_list__}}",
