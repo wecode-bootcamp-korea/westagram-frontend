@@ -1,0 +1,99 @@
+.container {
+  width: 1035px;
+  height: 820px;
+  background-color: #fafafa;
+  margin: auto;
+  border: 1px solid #efefef;
+}
+.nav_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav {
+  width: 100%;
+  height: 65px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #efefef;
+}
+
+.instagram-logo {
+  font-family: "Lobster", cursive;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.nav_left,
+.nav_right {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.nav_right {
+  position: relative;
+}
+
+.heart_notification {
+  background-color: tomato;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  top: 15px;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  /*교차축 방향 중앙 정렬*/
+  align-items: center;
+  left: 50%;
+  transform: translate(-50%);
+  width: 100%;
+}
+
+.search-bar {
+  width: 175px;
+  height: 23px;
+  border-radius: 3px;
+  border: solid 1px #e1e1e1;
+  background-color: #fafafa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  opacity: 1;
+  position: absolute;
+}
+.search-bar__input {
+  width: 50px;
+  border: none;
+  /* 기본 search 디자인을 없앰 */
+  -webkit-appearance: none;
+  background-color: #fafafa;
+  text-align: center;
+  margin-left: 10px;
+  /*검색어가 길어졌을 때 오른쪽으로 자연스럽게 검색 되도록*/
+  overflow: auto;
+  z-index: -1;
+  font-size: 13px;
+}
+
+.search-bar__input:focus {
+  outline: none;
+  width: 250px;
+  text-align: left;
+}
+
+.fa-search {
+  font-size: 15px;
+  color: #b7babc;
+}
