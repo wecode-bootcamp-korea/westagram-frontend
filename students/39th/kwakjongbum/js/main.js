@@ -1,7 +1,6 @@
 let comInp = document.querySelector('.feed-input input');
 let comBtn = document.querySelector('.btn-post');
 let comList = document.querySelector('.comment-area');
-let btnLike = document.querySelector('.comment-area li .btn-like');
 let btnDel = document.querySelector('.comment-area li .btn-delete')
 // let userId = "user";
 
@@ -16,7 +15,7 @@ function addComment(userId){
                                             </div>`;
 }
 
-comBtn.addEventListener('click',function(e){
+function btnClick(e){
     if(comInp.value){
         addComment();
         comInp.value = "";
@@ -24,39 +23,43 @@ comBtn.addEventListener('click',function(e){
     }else{
         e.preventDefault();
     }
-});
+};
 
-comInp.addEventListener('keyup',function(e){
-    if(this.value){
+function btnEnter(e){
+    if(comInp.value){
         comBtn.disabled = false;
         if(e.key === 'Enter'){
             addComment();
-            this.value = "";
+            comInp.value = "";
             comBtn.disabled = true;
         }
     }else{
         comBtn.disabled = true;
     }
-});
+};
 
 
 // 좋아요
-document.addEventListener('click',function(e){
+function btnLike(e){
     if(e.target.classList.contains('btn-like') && e.target.classList.contains('on')){
         e.target.classList.remove('on');
     }else if(e.target.classList.contains('btn-like') && !(e.target.classList.contains('on'))){
         e.target.classList.add('on');
     }
-})
-
-
+};
 
 // 삭제
-document.addEventListener('click', function(e){
+function btnDelete(e){
     if((e.target.className === "btn-delete")){
         var msg = confirm("삭제할까요?")
         if(msg === true){
             e.target.parentNode.parentNode.remove();
         }
     }
-})
+}
+
+comBtn.addEventListener('click', btnClick)
+comInp.addEventListener('keyup', btnEnter)
+document.addEventListener('click', btnLike)
+document.addEventListener('click', btnDelete)
+
