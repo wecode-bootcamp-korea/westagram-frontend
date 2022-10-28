@@ -1,38 +1,143 @@
+nav {
+    position: fixed;
+    background-color: white;
+}
+
+header {
+    height: 70px;
+    text-align: center;
+    position: relative;
+    float: top;
+    padding: 5px;
+}
+
+.navWrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    line-height: 70px;
+    width: 1000px;
+}
+
+.navIcon {
+    display: inline;
+    width: 25px;
+    margin: 5px;
+    margin-top: 20px;
+}
+
 .font {
     font-family: "Lobster";
     font-size: 30px;
     margin: 30px;
     border-left: 2px solid black;
     padding-left: 20px;
+    text-decoration: none;
+    color: black;
 }
 
-li {
-    display: inline-block;
-}
-
-input {
+.search input {
     text-align: center;
+    width: 200px;
+    height: 30px;
+    border: 1px solid rgb(205, 205, 205);
+    background-color: rgb(247, 247, 247);
+    border-radius: 5px;
 }
 
-img {
+main {
+    background-color: rgb(247, 247, 247);
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+.left {
+    width: 500px;
+    border: 1px solid rgb(205, 205, 205);
+    margin: 10px;
+}
+
+strong {
+    font-weight: bold;
+}
+
+.feedTop {
+    width: 600px;
+    height: 50px;
+    display: flex;
+    transform: translateY(35%);
+}
+
+.imgCircle1 {
+    width: 30px;
+    position: absolute;
+    height: 30px;
+    top: 50%;
+    left: 10px;
+    object-fit: cover;
+    border-radius: 50%;
+    transform: translateY(-110%);
+}
+
+.feedImg {
+    position: relative;
+    width: 500px;
+    height: 500px;
+}
+
+.feedImg img {
+    position: absolute;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.box1, .box2{
-    border: 2px solid rgb(214, 214, 214);
-    padding: 10px;
+.feedIcon {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
 }
 
-.box1 {
-    float: left;
-    width: 60%;
+.comment {
+    background-color: white;
 }
 
-.box2 {
-    float: right;
-    width: 30%;
+.comment input {
+    width: 450px;
+    height: 30px;
+    border: none;
 }
 
-p {
-    font-size: 15px;
+.comment button {
+    border: none;
+    color: rgb(111, 188, 255);
+    background-color: white;
+}
+
+.right {
+    width: 300px;
+    margin: 10px;
+}
+
+.story {
+    border: 1px solid rgb(205, 205, 205);
+    margin: 5px;
+}
+
+.recommand {
+    border: 1px solid rgb(205, 205, 205);
+    margin: 5px;
+}
+
+.imgCircle {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.copyright {
+    color: gray;
+    font-size: 13px;
 }
