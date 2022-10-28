@@ -4,26 +4,39 @@ const loginBtn = document.querySelector(".first-box__login-form__btn");
 
 const opacityClass = "opacity";
 
-let hasIdValue = false;
-let hasPwValue = false;
+let isIdVaild = false;
+let isPwVaild = false;
+let allVaild = false;
 
 function btnActivate() {
-  if (hasIdValue && hasPwValue) {
+  if (isIdVaild && isPwVaild) {
     loginBtn.classList.remove(opacityClass);
+    allVaild = true;
   } else {
     loginBtn.classList.add(opacityClass);
+    allVaild = false;
   }
 }
 
 function handleBtnActivateById(event) {
-  hasIdValue = event.target.value ? true : false;
+  const idValue = event.target.value;
+  isIdVaild = idValue.indexOf("@") !== -1 ? true : false;
   btnActivate();
 }
 
 function handleBtnActivateByPw(event) {
-  hasPwValue = event.target.value ? true : false;
+  const PwValue = event.target.value;
+  isPwVaild = PwValue.length >= 5 ? true : false;
   btnActivate();
+}
+
+function handleBtnClick() {
+  // console.log(allVaild);
+  if (allVaild) {
+    window.location.href = "main.html";
+  }
 }
 
 loginId.addEventListener("input", handleBtnActivateById);
 loginPw.addEventListener("input", handleBtnActivateByPw);
+loginBtn.addEventListener("click", handleBtnClick);
