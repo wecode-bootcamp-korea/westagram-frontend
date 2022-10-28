@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instagram Login</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
+    </style>
+  </head>
+  <body>
+    <section class="login-page">
+      <div class="login-container">
+        <h1 class="instagram-logo">westagram</h1>
+        <div class="login-box">
+          <input
+            type="text"
+            id="id-input"
+            placeholder="전화번호, 사용자 이름 또는 이메일"
+          />
+          <input type="password" id="password-input" placeholder="비밀번호" />
+          <button disabled class="button_a login-btn">로그인하기</button>
+          <h3 class="login-failure_help">비밀번호를 잊으셨나요?</h3>
+        </div>
+      </div>
+    </section>
+    <script src="app.js"></script>
+  </body>
+</html>
