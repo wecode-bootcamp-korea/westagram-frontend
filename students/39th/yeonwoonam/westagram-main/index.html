@@ -1,0 +1,101 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Westagram</title>
+  </head>
+
+  <body>
+    <nav class="nav-wrap">
+      <!--상단 메뉴바-->
+      <div class="nav-left">
+        <div class="camera-logo">
+          <img src="./icons/camera.png" alt="camera-logo" height="27px" />
+        </div>
+        <div class="westagram-logo">WeCodestagram</div>
+      </div>
+      <div class="nav-middle">
+        <img
+          src="./icons/Magnifying Glass.png"
+          alt="search-icon"
+          class="magnifying-glass"
+        />
+        <input class="search-bar" type="text" />
+      </div>
+      <div class="nav-right">
+        <a href="#"
+          ><img src="./icons/compass.png" alt="compass-icon" height="25px"
+        /></a>
+        <a href="#"
+          ><img src="./icons/heart-unfilled.png" alt="like-icon" height="25px"
+        /></a>
+        <a href="#"
+          ><img src="./icons/user.png" alt="profile-icon" height="25px"
+        /></a>
+      </div>
+    </nav>
+    <!--상단 메뉴바 끝-->
+
+    <!--여기서부터 메인-->
+    <div class="main-wrap">
+      <div class="feeds-wrap">
+        <div class="aritlce-top">
+          <header class="article-menu-left">
+            <div class="personal-logo">
+              <img src="./pictures/profile.jpg" class="profile-pic" />
+            </div>
+            <div class="location-id-wrap">
+              <div class="personal-id"><a href="#">wecode39_alice</a></div>
+              <div class="img-location">
+                <a href="#">Seolleung, Gangnam </a>
+              </div>
+            </div>
+          </header>
+          <div class="article-more">
+            <button class="more-button">...</button>
+          </div>
+        </div>
+        <div class="article-middle">
+          <img
+            src="./pictures/developer-weekend.jpg"
+            alt="like-icon"
+            class="feed-image"
+          />
+        </div>
+        <div class="article-bottom">
+          <div class="bottom-left-wrap"><!--버튼으로 수정-->
+            <button type="button" class="active-like give-like"></button>
+            <div class="article-comment">
+              <img
+                src="./icons/comment.png"
+                alt="comment icon"
+                class="leave-comment"
+              />
+            </div>
+            <div class="artilce-share">
+              <img
+                src="./icons/message.png"
+                alt="share icone"
+                class="share-content"
+              />
+            </div>
+          </div>
+
+          <div class="bottom-right-wrap"><!--버튼 참고-->
+            <button type="button" class="active-save save-content"></button>
+          </div>
+          </div>
+        </div>
+        <div class="side-wrap">
+            <div class="side-top"></div>
+            <div class="side-middle"></div>
+            <div class="side-bottom"></div>
+          </div>
+      </div>
+      
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,220 @@
+.nav-wrap {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #dddddd;
+
+}
+
+.nav-left {
+    display: flex;
+    height: 60px;
+    width: 160px;
+    align-items: center;
+
+}
+
+.camera-logo {
+    border-right: 1.5px solid black;
+    padding-right:5px;
+    height: 25px;
+
+}
+
+@font-face {
+    font-family: 'lobster';
+    src: url(./font/Lobster-Regular.ttf);
+}
+
+.westagram-logo {
+    font-family: 'lobster';
+    font-size: 20px;
+    margin-left: 8px;
+}
+
+
+.nav-middle {
+    background-color: #dddddd ;
+    border-radius: 8px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    width: 270px;
+
+
+}
+
+.magnifying-glass {
+    height: 20px;
+    margin-left: 20px;
+    opacity: 0.5;
+}
+.search-bar {
+    border: none;
+    height: 38px;
+    width: 150px;
+    background-color: transparent;
+}
+
+.nav-right {
+    display: flex;
+    width: 120px;
+    justify-content: space-between;
+}
+
+.main-wrap {
+    
+    background-color: beige;
+    display: flex;
+    margin-left: 50px;
+    margin-right: 10px;
+    margin-top: 50px;
+    justify-content: space-evenly;
+
+}
+
+.feeds-wrap {
+    width: 470px;
+    background-color: pink;
+    border: 1px solid black;
+    border-radius: 10px;
+}
+
+.article-top {
+    width: inherit;
+    height: 58px;
+}
+.side-wrap {
+    width: 319px;
+    height: 542px;
+    background-color: #CDE9FF;
+    border: 1px solid black;
+    margin-left: 20px;
+    border-radius: 10px;
+
+}
+
+a:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.article-menu-left {
+    display: flex;
+}
+
+.aritlce-top {
+    height: 58px;
+    background-color: #DDFFBB;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 8px;
+}
+
+.personal-logo {
+    padding: 8px 8px;
+}
+
+.article-more {
+    border-radius: 8px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.more-button {
+    border:none;
+    background-color: transparent;
+    font-weight: bold;
+    opacity: 0.8;
+    font-size: 20px;
+}
+
+button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+.profile-pic {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    border: 0.2px;
+}
+
+.location-id-wrap {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 3px;
+    font-weight: 620;
+    opacity: 0.8;
+}
+a {
+    text-decoration: none;
+    font-family:'Segoe UI';
+    font-size: 13px;
+    color: black;
+}
+
+
+
+.feed-image {
+    width: 470px;
+    height: 587.5px;
+    border-radius: 1px;
+}
+
+.article-bottom {
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bottom-left-wrap {
+    display: flex;
+    height: 40px;
+    width: 100px;
+    justify-content: space-between;
+    padding: 10px 10px;
+    
+
+}
+.bottom-right-wrap {
+    height: 40px;
+    padding: 10px 10px;
+    align-items: center;
+}
+.give-like {
+    width: 24px;
+    height: 24px;
+    background-image: url(./icons/heart-filled.png);
+    background-size: cover;
+    border-style: none;
+    background-color: transparent;
+}
+
+.leave-comment {
+    width: 24px;
+    height: 24px;
+} 
+
+.share-content {
+    width: 24px;
+    height: 24px;
+}
+.save-content {
+    width: 22px;
+    height: 22px;
+    background-image: url(./icons/bookmark-filled.png);
+    background-size: cover;
+    border-style: none;
+    background-color: transparent;
+}
+
+.active-save {
+    background-image: url(./icons/bookmark-unfilled.png);
+}
+
+.active-like {
+    background-image: url(./icons/heart-unfilled.png);
+}
