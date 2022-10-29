@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="main.css">
     <script src="https://kit.fontawesome.com/265c324bb8.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-    <script src="westa.js"></script>
+    
 </head>
 <body>
     <div class="mainPage">
@@ -54,7 +54,6 @@
                     <div>
                         <i class="fa-regular fa-bookmark"></i>
                     </div>
-                    
                 </div>
 
                 <div class="article_content">
@@ -64,17 +63,19 @@
                     </nspan>
                 </div>
 
-                <div class="article_reply">
-                    <span>wecode_bootcamp</span> 귀여운 웰시코기
-                </div>
-
+                <ul class="article_reply">
+                    <li>
+                        <span class="replyId">wecode_bootcamp</span> 
+                        <span>귀여운 웰시코기</span>
+                    </li>
+                </ul>
+                
                 <div class="article_replyBottom">
                     <input class="article_typingReply" placeholder="댓글 달기...">
-                    <button class="article_replyPush">게시</button>
+                    <button class="article_replyPush" disabled>게시</button>
                 </div>
-                <br><br>
-
             </article>
+
             <div class="main_right">
                 <div class="right_info">
                     <img class="right_smallImage" src="boimg.jpg">
@@ -83,91 +84,120 @@
                         <div class="name">보윤</div>
                     </div>
                 </div>
+
                 <div class="right_storyFriends">
-                    <div class="">
-                        스토리
+                    <div class="right_nav">
+                        <div>스토리</div>
+                        <div>모두보기</div>
                     </div>
 
                     <div class="right_story">
-                        <img class="storyImg" src="dogimg2.jpg" alt="">
+                        <div class="storyAround">
+                            <img class="storyImg" src="dogimg2.jpg" alt="">
+                        </div>
                         <div class="story_IdTime">
-                            <div>hi990103</div>
+                            <div>sayho_oooo</div>
                             <div>20분 전</div>
                         </div>
                     </div>
 
                     <div class="right_story">
-                        <img class="storyImg" src="dogimg2.jpg" alt="">
+                        <div class="storyAround">
+                            <img class="storyImg" src="dogimg2.jpg" alt="">
+                        </div>
                         <div class="story_IdTime">
-                            <div>hi990103</div>
+                            <div>sayho_oooo</div>
                             <div>20분 전</div>
                         </div>
                     </div>
 
                     <div class="right_story">
-                        <img class="storyImg" src="dogimg2.jpg" alt="">
+                        <div class="storyAround">
+                            <img class="storyImg" src="dogimg2.jpg" alt="">
+                        </div>
                         <div class="story_IdTime">
-                            <div>hi990103</div>
+                            <div>sayho_oooo</div>
+                            <div>20분 전</div>
+                        </div>
+                    </div>
+
+                    <div class="right_story">
+                        <div class="storyAround">
+                            <img class="storyImg" src="dogimg2.jpg" alt="">
+                        </div>
+                        <div class="story_IdTime">
+                            <div>sayho_oooo</div>
+                            <div>20분 전</div>
+                        </div>
+                    </div>
+
+                    <div class="right_story">
+                        <div class="storyAround">
+                            <img class="storyImg" src="dogimg2.jpg" alt="">
+                        </div>
+                        <div class="story_IdTime">
+                            <div>sayho_oooo</div>
                             <div>20분 전</div>
                         </div>
                     </div>
                 </div>
                 
-
-                <div class="right_nav">
-                    <div>회원님을 위한 추천</div>
-                    <div>모두 보기</div>
-                </div>
-
-                <div class="right_recommend">
-                    <img class="recommendImg" src="dogimg2.jpg" alt="">
-                    <div class="recommend_IdName">
-                        <div>hi990103</div>
-                        <div>hyewon님이 팔로우합니다</div>
+                <div class="right_follow">
+                    <div class="right_nav">
+                        <div>회원님을 위한 추천</div>
+                        <div>모두 보기</div>
                     </div>
-                    <div class="recommend_follow">팔로우</div>
-                </div>
-                
-                <div class="right_recommend">
-                    <img class="recommendImg" src="dogimg2.jpg" alt="">
-                    <div class="recommend_IdName">
-                        <div>hi990103</div>
-                        <div>hyewon님이 팔로우합니다</div>
+    
+                    <div class="right_recommend">
+                        <img class="recommendImg" src="dogimg2.jpg" alt="">
+                        <div class="recommend_IdName">
+                            <div>hi990103</div>
+                            <div>hyewon님이 팔로우합니다</div>
+                        </div>
+                        <div class="recommend_follow">팔로우</div>
                     </div>
-                    <div class="recommend_follow">팔로우</div>
-                </div>
-
-                <div class="right_recommend">
-                    <img class="recommendImg" src="dogimg2.jpg" alt="">
-                    <div class="recommend_IdName">
-                        <div>hi990103</div>
-                        <div>hyewon님이 팔로우합니다</div>
+                    
+                    <div class="right_recommend">
+                        <img class="recommendImg" src="dogimg2.jpg" alt="">
+                        <div class="recommend_IdName">
+                            <div>hi990103</div>
+                            <div>hyewon님이 팔로우합니다</div>
+                        </div>
+                        <div class="recommend_follow">팔로우</div>
                     </div>
-                    <div class="recommend_follow">팔로우</div>
-                </div>
-
-                <div class="right_recommend">
-                    <img class="recommendImg" src="dogimg2.jpg" alt="">
-                    <div class="recommend_IdName">
-                        <div>hi990103</div>
-                        <div>hyewon님이 팔로우합니다</div>
+    
+                    <div class="right_recommend">
+                        <img class="recommendImg" src="dogimg2.jpg" alt="">
+                        <div class="recommend_IdName">
+                            <div>hi990103</div>
+                            <div>hyewon님이 팔로우합니다</div>
+                        </div>
+                        <div class="recommend_follow">팔로우</div>
                     </div>
-                    <div class="recommend_follow">팔로우</div>
-                </div>
-
-                <div class="right_recommend">
-                    <img class="recommendImg" src="dogimg2.jpg" alt="">
-                    <div class="recommend_IdName">
-                        <div>hi990103</div>
-                        <div>hyewon님이 팔로우합니다</div>
+    
+                    <div class="right_recommend">
+                        <img class="recommendImg" src="dogimg2.jpg" alt="">
+                        <div class="recommend_IdName">
+                            <div>hi990103</div>
+                            <div>hyewon님이 팔로우합니다</div>
+                        </div>
+                        <div class="recommend_follow">팔로우</div>
                     </div>
-                    <div class="recommend_follow">팔로우</div>
+    
+                    <div class="right_recommend">
+                        <img class="recommendImg" src="dogimg2.jpg" alt="">
+                        <div class="recommend_IdName">
+                            <div>hi990103</div>
+                            <div>hyewon님이 팔로우합니다</div>
+                        </div>
+                        <div class="recommend_follow">팔로우</div>
+                    </div>
                 </div>
-                
-                
             </div>
         </main>
-        
+        <br><br><br>
     </div>
+
+    <script src="main.js"></script>
 </body>
 </html>
