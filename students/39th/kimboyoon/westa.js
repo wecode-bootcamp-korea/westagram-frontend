@@ -11,5 +11,11 @@ const checkIdPw = () => {
     : loginBtn.disabled = true
 }
 
+function movePage () {
+    location.href = "file:///C:/Users/samsung/Desktop/wecode/westagram/main.html";
+}
+
+loginBtn.addEventListener('click', movePage);
+
 loginId.addEventListener('keyup', checkIdPw);
 loginPw.addEventListener('keyup', checkIdPw);
