@@ -192,10 +192,39 @@ function profileTooltip(){
     let tooltipBox = btnProfile.nextElementSibling;
     let _body = document.getElementsByTagName('body');
 
-    // 현재 박스가 보이는지 상태체크
-    let isState;
+    //isActive 여부 확인
+    let isActive;
 
-    btnProfile.addEventListener('click',function(){
-        tooltipBox.classList.contains('active') ? tooltipBox.classList.remove('active') : tooltipBox.classList.add('active');
+    let boxTarget;
+
+    btnProfile.addEventListener('click',function(e){
+        //tooltipBox.classList.contains('active') ? tooltipBox.classList.remove('active') : tooltipBox.classList.add('active');
+        if ( tooltipBox.classList.contains('active') ) {
+            tooltipBox.classList.remove('active');
+            isActive = false;
+        } else if ( !(tooltipBox.classList.contains('active')) ){
+            tooltipBox.classList.add('active')
+            isActive = true;
+        }
+        boxTarget = e.target.nextElementSibling;
     });
+
+
+    // body 클릭시 이벤트
+    _body[0].addEventListener('click',function(bodyEvent){
+        console.log(bodyEvent.target);
+        console.log(bodyEvent.currentTarget);
+        console.log(bodyEvent.currentTarget.querySelectorAll('.profileMenu')[0])
+
+        let bodyTarget = bodyEvent.target;
+        let tooltipTarget = bodyEvent.currentTarget.querySelectorAll('.profileMenu')[0]; 
+
+        if ( isActive && (bodyTarget != tooltipTarget) && (bodyTarget != btnProfile) ) {
+            return tooltipBox.classList.remove('active');
+        } 
+
+    });
+
 }
+
+
