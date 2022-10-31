@@ -5,6 +5,7 @@ const button = document.getElementsByClassName('button')[0];
 const id = document.getElementsByClassName('id')[0];
 const pw = document.getElementsByClassName('pw')[0];
 
+// 삼항연산자 공부!!!
 function active() {
     if (id.value.length >= 1 && pw.value.length >= 1) {
         button.disabled = false;
@@ -16,5 +17,8 @@ function active() {
     }
 }
 
+// keyup도 많이 쓰지만 input도 많이씀 (마우스우클릭 붙여넣기 했을때 input은 콘솔에 찍힘)
 id.addEventListener("keyup", active);
 pw.addEventListener("keyup", active);
+
+// functio init() {addEventListener} // init() //하나의 function으로 관리할 수 있음
