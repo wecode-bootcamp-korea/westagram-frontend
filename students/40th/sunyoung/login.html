@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/login.css" />
+    <link rel="stylesheet" href="style/common.css" />
+
+    <title>westagram login</title>
+  </head>
+
+  <body>
+    <div class="loginBox">
+      <h class="logo">westagram</h>
+
+      <form>
+        <div class="inputId">
+          <input
+            class="id_button"
+            name="id"
+            type="text"
+            placeholder="전화번호,사용자 이름 또는 이메일"
+          />
+        </div>
+        <div class="inputPassword">
+          <input
+            class="password_button"
+            name="password"
+            type="password"
+            placeholder="비밀번호"
+            required
+          />
+        </div>
+
+        <button class="button_login">로그인</button>
+        <div id="empty"></div>
+
+        <div class="forgetPassword">
+          <a href="">비밀번호를 잊으셨나요?</a>
+        </div>
+      </form>
+    </div>
+  </body>
+
+  <script>
+    const inputId = document.getElementsByClassName("id_button");
+    const inputPw = document.getElementsByClassName("password_button");
+    const loginButton = document.getElementsByClassName("button_login")[0];
+    console.log(inputId);
+    console.log(inputPw);
+    console.log(loginButton);
+
+    inputId.addEventLister("keyup", validate);
+    inputPw.addEventLister("keyup", validate);
+
+    const validate = () => {
+      let idValue = inputId.value;
+      let pwValue = inputPw.value;
+
+      if (idValue && pwValue) {
+        loginButton.disabled = false;
+        loginButton.style.opacity = 1;
+        loginButton.style.cursor = "pointer";
+      } else {
+        loginButton.disabled = true;
+        loginButton.style.opacity = 0.3;
+      }
+    };
+  </script>
+</html>
