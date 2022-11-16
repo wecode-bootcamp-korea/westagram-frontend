@@ -1,0 +1,418 @@
+body {
+    margin: 0%;
+}
+/* nav style */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 10px 50px;
+    margin: 10px 0;
+    border-bottom: 1px solid rgb(219, 219, 219);
+}
+
+#nav_left {
+    display: flex;
+    height: 30px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#nav_right {
+    display: flex;
+    width: 120px;
+    height: 30px;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+img {
+    width: 24px;
+    height: 24px;
+}
+
+h1 {
+    font-size: 30px;
+    margin-left: -20px;
+}
+.verticalBar_Main {
+    height: 29px;
+}
+
+.searchBarInNav {
+    height: 20px;
+    text-align: center;
+    background-color: transparent;
+}
+
+.searchBarInNav::-webkit-input-placeholder {
+    background-image: url("/magnifier.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 35%;
+}
+
+/* article */
+/* article - header */
+
+
+main {
+    display: flex;
+    justify-content: center;
+    padding: 0px 50px;
+}
+
+.feeds {
+    margin-right: 32px;
+}
+
+section {
+    
+
+}
+
+article {
+    width: 470px;
+    border: 1px solid rgb(219, 219, 219);
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+
+
+.headOfArticle {
+    height: 59px;
+    border-radius: 8px;
+}
+
+header {
+    display: flex;
+    align-items:center;
+    margin: 8px 4px 8px 12px;
+}
+
+.logoOfAuthor {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-image: url('/main_article_Image/flower_profile.jpg');
+    background-size: cover;
+    background-position: -10px;
+    box-shadow: inset;
+}
+
+.titleOfAuthor {
+    width: 368px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.nameOfAuthor {
+    width: auto;
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 600;
+    color: rgb(38, 38, 38);
+    text-overflow: ellipsis;
+}
+
+.locationOfAutor {
+    width: 24px;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.headOfArticle {
+    display: flex;
+    align-items: center;
+}
+
+.seeMoreArticle {
+    width: 44px;
+}
+
+.postOfArticle {
+    height: 587.5px;
+    background-image: url('/main_article_Image/flower_article.jpg');
+    background-size: cover;
+    background-position: -200px;
+}
+
+.btnsOfArticle {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding: 0 16px 6px 16px;
+
+}
+
+.listLeftBtn {
+    display: flex;
+    justify-content: space-between;
+    width: 100px;
+}
+
+/* article btn image */
+#likeBtnArticle {
+    background-image: url("/heart.png");
+    background-color: transparent;
+    width: 28px;
+    height: 28px;
+}
+
+#commentBtmArticle {
+    background-image: url("/speech-bubble.png");
+    background-color: transparent;
+}
+
+#sendBtnArticle {
+    background-image: url("/send.png");
+    background-color: transparent;
+
+}
+
+#bookMarkBtnArticle {
+    background-image: url("/bookmark-white.png");
+    background-color: transparent;
+    width: 22px;
+    height: 22px;
+}
+/* ------------------ */
+
+.likeSection {
+    padding: 0 12px;
+    margin-bottom: 8px;
+}
+
+.likeText {
+    flex: 1 1 auto;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+#contSection {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 14px;
+    padding: 0 12px;
+    margin-bottom: 8px;
+}
+
+.authorContent {
+    position: relative;
+}
+
+.seeMoreContent {
+    display: none;
+    color: rgb(142, 142, 142);
+    margin-left: 5px;
+}
+
+.seeMoreContent:hover {
+    cursor: pointer;
+}
+
+.commentSection {
+    height: 49px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 12px;
+    border-top: 1px solid rgb(239, 239, 239);
+}
+
+#commentEmoji {
+    background-image: url('/smile.png');
+    margin: 8px 0;
+}
+
+#addComment {
+    width: 28px;
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(0, 149, 246, 0.3);
+    background-color: transparent;
+}
+
+#addCommentText {
+    width: 377px;
+    height: 40px;
+    border: none;
+}
+
+
+/* main-right */
+.mainRight {
+    width: 319px;
+    height: 656px;
+    padding: 0 16px;
+}
+
+.myProfile {
+    width: 319px;
+    height: 66px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 16px 0 10px 0;
+}
+
+.logoOfProfileRight {
+    width: 56px;
+    height: 56px;
+    margin-right: 12px;
+}
+
+.nameofProfileRight {
+    width: 213px;
+    text-align: left;
+}
+
+.btn {
+    width: 24px;
+    font-size: 12px;
+    font-weight: 600;
+    color: rgb(0, 149, 246);
+    background-color: transparent;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+/* story of friends */
+#sectionOfStroy {
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+.storyBox {
+    padding: 2px 0!important;
+}
+
+#boxForScrollStory {
+    height: 180px;
+    overflow: auto;
+}
+
+
+
+
+#firstStory {
+    background-image: url('/story_image/beer-g499257807_640.jpg');
+    margin-right: 10px;
+}
+
+#secondStory {
+    background-image: url('/story_image/cake-g46e278bc6_640.jpg');
+    margin-right: 10px;
+}
+
+#thirdStory {
+    background-image: url('/story_image/code-ga3929d1d3_640.jpg');
+    margin-right: 10px;
+}
+
+#fourthStory {
+    background-image: url('/main_article_Image/flower_profile.jpg');
+    margin-right: 10px;
+}
+
+
+
+
+/* recommendation of friends */
+
+.TextOfRightInfo {
+    height: 11px;
+    display: flex;
+    justify-content: space-between;
+    padding: 4px 0;
+}
+
+.recommandFriend{
+    margin-bottom: 12px;
+}
+
+.recommandText {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(142, 142, 142);
+}
+
+.openAllFriends {
+    font-size: 12px;
+    font-weight: 600;
+    color: rgb(38, 38, 38);
+}
+
+.friends {
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0;
+}
+
+.logoOfFriends {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-size: cover;
+}
+
+
+.profileOfFriends {
+    width: 227px;
+    text-align: left;
+}
+
+.nameOfFriends {
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 600;
+    color: rgb(38, 38, 38);
+}
+
+.textOfFriends {
+    font-size: 12px;
+    font-weight: 400;
+    color: rgb(142, 142, 142);
+}
+
+.recommandbtn {
+    width: 36px;
+    font-size: 12px;
+}
+
+
+
+
+/* recommendation profile */
+
+#firstFriend { 
+    background-image: url('/main_article_Image/flower_profile.jpg');
+    background-position: -10px;
+}
+
+#secondFriend {
+    background-image: url('/recommendation_image/beach-g3c80eed35_640.jpg');
+}
+
+#thirdFriend {
+    background-image: url('/recommendation_image/coffee-beans-ga1f41b6c8_640.jpg');
+}
+
+#fourthFriend {
+    background-image: url('/recommendation_image/rabbits-g43fed7b42_640.jpg');
+}
+
+
+.refTextOfRight {
+    font-size: 12px;
+    color: rgb(199, 199, 199);
+}
+
+#listOfEct{
+    margin-bottom: 16px;
+}

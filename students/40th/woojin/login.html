@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Westagram_40기_임우진</title>
+    <link href="style/common.css" rel="stylesheet" />
+    <link href="style/login.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <section id="loginPage">
+        <h1>Westagram</h1>
+        <form>
+          <input
+            id="idInput"
+            class="loginInput"
+            type="text"
+            placeholder="전화번호, 사용자 이름 또는 이메일"
+          />
+          <input
+            id="pwInput"
+            class="loginInput"
+            type="password"
+            placeholder="비밀번호"
+          />
+          <button id="loginBtn">로그인</button>
+          <div id="orText">
+            <div class="loginHorLine"></div>
+            <span class="orTextContent">또는</span>
+            <div class="loginHorLine"></div>
+          </div>
+          <div id="bottomText">
+            <a href=" " id="facebookLink">
+              <img src="/facebook.png" class="facebookLogo" /> Facebook으로
+              로그인</a
+            >
+          </div>
+        </form>
+          <a href=" " id="searchPw">비밀번호를 잊으셨나요?</a>
+      </section>
+    </main>
+    <script src="js/login.js"></script>
+  </body>
+</html>

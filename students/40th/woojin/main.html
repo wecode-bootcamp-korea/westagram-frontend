@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Westagram_main_page_40기_임우진</title>
+    <link href="style/common.css" rel="stylesheet" />
+    <link href="style/main.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <div id="nav_left">
+        <img src="/instagram.png" id="instaLogo" />
+        <img src="/line.png" class="verticalBar_Main" />
+        <h1><a href="main.html">Westagram</a></h1>
+      </div>
+      <div id="nav_middle">
+        <input type="text" class="searchBarInNav" placeholder="검색" />
+      </div>
+      <div id="nav_right">
+        <img src="/explore.png" />
+        <img src="/heart.png" />
+        <img src="/profile.png" />
+      </div>
+    </nav>
+    <main>
+      <div class="feeds">
+        <article>
+          <!--header of article-->
+          <section class="headOfArticle">
+            <header>
+              <a href=" " class="logoOfAuthor"></a>
+              <div class="titleOfAuthor">
+                <a href=" " class="nameOfAuthor">Front-end Woojin Lim</a>
+                <a href=" " class="locationOfAutor">wework</a>
+              </div>
+            </header>
+            <div class="seeMoreArticle"></div>
+          </section>
+          <!--photo of article-->
+          <section class="postOfArticle"></section>
+          <!--btn list of article-->
+          <section class="btnsOfArticle">
+            <div class="listLeftBtn">
+              <button id="likeBtnArticle"></button>
+              <button id="commentBtmArticle"></button>
+              <button id="sendBtnArticle"></button>
+            </div>
+            <div>
+              <button id="bookMarkBtnArticle"></button>
+            </div>
+          </section>
+          <!--like of article-->
+          <section class="likeSection">
+            <div class="likeText">좋아요 163,347개</div>
+          </section>
+          <!--content of article-->
+          <section class="contentSection" id="contSection">
+            <a href=" " class="nameOfAuthor authorContent"
+              >Front-end Woojin Lim</a
+            >
+            <span id="content" class="contentText">
+              어디서나 매우 흔하게 보이는 다년생초로서
+              <br />
+              바닥에 딱 붙어서 꽃대 대여섯 개가 쏙 올라온다.
+              <br />
+              톱니 모양의 잎새와 눈에 확 띄는 노란 꽃이 인상적이다.
+            </span>
+            <span class="seeMoreContent">... 더 보기</span>
+          </section>
+          <!-- nothing -->
+          <section>
+            <div style="height: 18px"></div>
+          </section>
+          <!--comment of article-->
+          <section class="commentSection">
+            <img src="/smile.png" id="commentEmoji" />
+            <input id="addCommentText" type="text" placeholder="댓글 달기..." />
+            <button id="addComment">게시</button>
+          </section>
+        </article>
+      </div>
+      <div class="mainRight">
+        <div class="myProfile">
+          <a href=" " class="logoOfAuthor logoOfProfileRight"></a>
+          <a href=" " class="nameOfAuthor nameofProfileRight"
+            >Front-end Woojin Lim</a
+          >
+          <button class="btn">전환</button>
+        </div>
+        <!--story of friends section-->
+        <div id="sectionOfStroy">
+          <div class="TextOfRightInfo">
+            <div class="recommandText">스토리</div>
+            <div class="openAllFriends">모두보기</div>
+          </div>
+          <div id="boxForScrollStory">
+            <div class="friends storyBox">
+              
+                <a href="" class="logoOfFriends" id="firstStory"></a>
+             
+              <div class="profileOfFriends">
+                <a href="" class="nameOfFriends">we_are_beer</a>
+                <div class="textOfFriends">5분 전</div>
+              </div>
+              <button class="btn recommandbtn"></button>
+            </div>
+
+            <div class="friends storyBox">
+              <a href="" class="logoOfFriends" id="secondStory"></a>
+              <div class="profileOfFriends">
+                <a href="" class="nameOfFriends">we_are_cake</a>
+                <div class="textOfFriends">19분 전</div>
+              </div>
+              <button class="btn recommandbtn"></button>
+            </div>
+
+            <div class="friends storyBox">
+              <a href="" class="logoOfFriends" id="thirdStory"></a>
+              <div class="profileOfFriends">
+                <a href="" class="nameOfFriends">we_are_programmers</a>
+                <div class="textOfFriends">2시간 전</div>
+              </div>
+              <button class="btn recommandbtn"></button>
+            </div>
+
+            <div class="friends storyBox">
+              <a href="" class="logoOfFriends" id="fourthStory"></a>
+              <div class="profileOfFriends">
+                <a href="" class="nameOfFriends">woojin_clone</a>
+                <div class="textOfFriends">20시간 전</div>
+              </div>
+              <button class="btn recommandbtn"></button>
+            </div>
+          </div>
+        </div>
+        <!--recommendation friends section-->
+        <div class="TextOfRightInfo">
+          <div class="recommandText">회원님을 위한 추천</div>
+          <div class="openAllFriends">모두보기</div>
+        </div>
+
+        <div class="recommandFriend">
+          <div class="friends">
+            <a href="" class="logoOfFriends" id="firstFriend"></a>
+            <div class="profileOfFriends">
+              <a href="" class="nameOfFriends">wecode_bootcamp</a>
+              <div class="textOfFriends">회원님을 위한 추천</div>
+            </div>
+            <button class="btn recommandbtn">팔로우</button>
+          </div>
+
+          <div class="friends">
+            <a href="" class="logoOfFriends" id="secondFriend"></a>
+            <div class="profileOfFriends">
+              <a href="" class="nameOfFriends">wecode_Frontend</a>
+              <div class="textOfFriends">wecode님 외 1명이 팔로우합니다</div>
+            </div>
+            <button class="btn recommandbtn">팔로우</button>
+          </div>
+
+          <div class="friends">
+            <a href="" class="logoOfFriends" id="thirdFriend"></a>
+            <div class="profileOfFriends">
+              <a href="" class="nameOfFriends">wecode_Backend</a>
+              <div class="textOfFriends">wecode님 외 4명이 팔로우합니다</div>
+            </div>
+            <button class="btn recommandbtn">팔로우</button>
+          </div>
+
+          <div class="friends">
+            <a href="" class="logoOfFriends" id="fourthFriend"></a>
+            <div class="profileOfFriends">
+              <a href="" class="nameOfFriends">wecode_Fullstack</a>
+              <div class="textOfFriends">wecode님이 팔로우합니다</div>
+            </div>
+            <button class="btn recommandbtn">팔로우</button>
+          </div>
+        </div>
+        <div id="listOfEct" class="refTextOfRight">
+          소개, 도움말, 홍보 센터, API, 채용 정보,
+          <br />
+          개인정보처리방침, 약관, 위치, 언어
+        </div>
+        <div class="refTextOfRight">2022 WESTAGRAM FROM WECODE</div>
+      </div>
+    </main>
+    <script src="/js/main.js"></script>
+  </body>
+</html>
