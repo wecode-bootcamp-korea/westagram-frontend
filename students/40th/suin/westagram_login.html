@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet " href="./westagram.css">           <!--css와 연결-->
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+    <title>westagram</title>
+</head>
+<body>
+
+   <div class="login">                              
+        <div class="login_logo">           <!--westagram 글씨체 넣기-->
+            <h1>Westagram</h1>
+            
+        </div>
+
+        <div class="login_container">       <!--id,pw input 넣을 부분-->
+
+            <input 
+            type="text" 
+            class="login_id" 
+            placeholder="전화번호, 사용자이름 혹은 이메일"> 
+            </input>
+
+            <input 
+            type="password" 
+            class="login_pw" 
+            placeholder="비밀번호">
+            </input>
+            
+
+        </div>
+    
+
+       <button 
+       class="login_button"  disabled>       <!--disabled 넣어줘야 css입힐 수 있음-->
+       로그인
+       </button>                    <!-- <button id="LOGIN_BTN" class = "login_btn" type="button" disabled>로그인</button>-->
+
+
+       
+       <a class = "login_askpassword" >비밀번호를 잊으셨나요?</a>
+
+     <!-- <footer class="password_ask"  > <a href="#" >비밀번호를 잊으셨나요?</a> </footer> ❌ css 적용안됨 -->
+       
+       
+     
+    </div>
+
+    <!-- <script src="./westagram.js" defer=""></script>             -->
+
+</body>
+</html>
+
+
+
+
+
+<!-- js 에 들어가야 할 기능 -if 써서 1글자 이상일 때/ 하늘색이 파란색 되도록-->
