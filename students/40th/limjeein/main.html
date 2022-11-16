@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>insta main</title>
+    <link rel="stylesheet" href="css/main_common.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <nav class="insta_gnb">
+      <div class="insta_logo">
+        <div class="nav_leftSide">
+          <img src="img/instagram.png" alt="instagram" />
+        </div>
+        <h1>Instagram</h1>
+      </div>
+      <input class="inputValue" type="text" placeholder="검색" />
+      <ul class="userProfile">
+        <li><img src="img/explore.png" alt="explore" /></li>
+        <li><img src="img/heart.png" alt="heart" /></li>
+        <li><img src="img/profile.png" alt="profile" /></li>
+      </ul>
+    </nav>
+    <main>
+      <div class="feeds">
+        <article>
+          <div class="feedTop">
+            <div class="feedTopLeft">
+              <div class="feedTopImg">
+                <img src="img/insta_profile.png" alt="user image" />
+              </div>
+              <div class="feedTopUser">
+                <p>wecode_bootcamp</p>
+              </div>
+            </div>
+            <div class="feedTopRight">
+              <div class="feedMore">
+                <img src="img/more.png" alt="더보기" />
+              </div>
+            </div>
+          </div>
+          <div class="feedMain">
+            <img src="img/insta_profile.png" alt="main profile" />
+          </div>
+          <div class="feedBottom">
+            <div class="userClickSection">
+              <div>
+                <div class="userLike BottomImg">
+                  <img src="img/heart.png" alt="heart" />
+                </div>
+                <div class="chat BottomImg">
+                  <img src="img/chat.png" alt="chat" />
+                </div>
+                <div class="userShare BottomImg">
+                  <img src="img/upload.png" alt="share" />
+                </div>
+              </div>
+              <div class="userBookmarkSection">
+                <div class="userBookmark BottomImg">
+                  <img src="img/bookmark.png" alt="bookmark" />
+                </div>
+              </div>
+            </div>
+            <div class="userWrite">
+              <div class="userProfileLike">
+                <div class="insta_profileImg">
+                  <img src="img/insta_profile.png" alt="insta_profile" />
+                </div>
+                <p>aineworld님 외 10명이 좋아합니다</p>
+              </div>
+              <div class="userWriting">
+                <p>canon_mj</p>
+                <p>
+                  위워크에서 진행한 베이킹 클래스...
+                  <a href="#" class="grey">더보기</a>
+                </p>
+              </div>
+              <div class="followersWrite">
+                <p>neceosecius</p>
+                <p>거봐 좋았잖아~~~~~🤟</p>
+                <p><img src="img/heart.png" alt="followers heart" /></p>
+              </div>
+              <div class="userWritingBefore">
+                <span class="grey">42분전</span>
+              </div>
+            </div>
+            <div class="userComment">
+              <input
+                class="commentPush grey"
+                type="text"
+                placeholder="댓글 달기..."
+              />
+              <button class="submitPush" type="submit">게시</button>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="main-right"></div>
+    </main>
+    <script src="js/main.js"></script>
+  </body>
+</html>

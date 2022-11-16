@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
+h1 {
+  text-align: center;
+  font-family: "Lobster", cursive;
+}
+.insta_gnb {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 30px;
+}
+.insta_logo {
+  display: flex;
+  justify-content: left;
+}
+.nav_leftSide {
+  width: 30px;
+  margin-right: 20px;
+}
+/* .nav_leftSide::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 100%;
+  background: #000;
+} */
+
+.inputValue {
+  text-align: center;
+}
+
+.userProfile {
+  display: flex;
+  justify-content: center;
+}
+.userProfile li {
+  width: 30px;
+  margin-right: 20px;
+}
+
+/* main */
+main {
+  padding: 50px 20px;
+  display: flex;
+  justify-content: center;
+}
+main .feeds {
+  width: 500px;
+  border: 1px solid #ddd;
+  margin-right: 20px;
+}
+main .main-right {
+  width: 300px;
+  border: 1px solid #ddd;
+}
+
+.feeds .feedTop {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 8px 8px 12px;
+  align-items: center;
+}
+.feedTopLeft {
+  display: flex;
+}
+
+.feedTopImg {
+  width: 30px;
+  margin-right: 20px;
+}
+.feedTopImg img {
+  width: 100%;
+  border-radius: 20px;
+}
+.feedTopUser p {
+  line-height: 30px;
+}
+
+.feedMore {
+  width: 24px;
+}
+
+.feedBottom {
+  padding: 20px;
+}
+.feedBottom .BottomImg {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+.feedBottom .BottomImg:last-child {
+  margin-right: 0;
+}
+.userClickSection {
+  display: flex;
+  justify-content: space-between;
+}
+.userClickSection div {
+  display: flex;
+}
+
+.userProfileLike {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+.userWriting {
+  display: flex;
+  margin-top: 10px;
+}
+.userWrite p {
+  line-height: 30px;
+  margin-right: 10px;
+}
+.followersWrite {
+  display: flex;
+}
+.followersWrite p:last-child {
+  width: 20px;
+}
+.insta_profileImg {
+  width: 30px;
+  margin-right: 8px;
+}
+.insta_profileImg img {
+  width: 100%;
+  border-radius: 20px;
+}
+.userComment {
+  margin-top: 40px;
+  display: flex;
+}
+.userComment input,
+button {
+  border: none;
+  background: none;
+}
+.userComment .commentPush {
+  width: 90%;
+}
+.userComment .submitPush {
+  width: 10%;
+}
