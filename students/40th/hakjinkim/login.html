@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>westagram</title>
+    <link rel="stylesheet" href="css/login.css" />
+    <link
+      rel="icon"
+      href="https://www.flaticon.com/free-icon/instagram_1384031?related_item_id=1384031&term=instagram"
+    />
+    <link
+      rel="font"
+      href="https://fonts.google.com/specimen/Lobster?preview.text=&preview.text_type=custom"
+    />
+  </head>
+
+  <body>
+    <div id="login">
+      <p id="logo">westagram</p>
+
+      <input
+        class="login_text"
+        id="email"
+        type="text"
+        onkeyup="emaillog()"
+        placeholder="전화번호, 사용자 이름 또는 이메일"
+      />
+      <input
+        class="login_text"
+        id="password"
+        type="password"
+        onkeyup="emaillog()"
+        placeholder="비밀번호"
+      />
+      <input id="button" type="button" disabled="disabled" value="로그인" />
+
+      <a id="miss_pass_word" href="https://www.instagram.com/"
+        >비밀번호를 잊으셨나요?</a
+      >
+    </div>
+
+    <script src="js/login.js"></script>
+  </body>
+</html>
