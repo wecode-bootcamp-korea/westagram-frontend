@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+* {
+  white-space: nowrap;
+}
+
+/* navigation */
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  white-space: nowrap;
+  margin-top: 10px;
+  margin-left: 70px;
+  padding-bottom: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.navigation img {
+  width: 30px;
+}
+
+.logo {
+  margin-left: 15px;
+  margin-top: -5px;
+  padding-left: 15px;
+  padding-top: -15px;
+  height: 35px;
+  border-left: 1.5px solid black;
+  font-size: 32px;
+  font-family: "Lobster", cursive;
+}
+
+.searchBar {
+  margin-left: 15%;
+  margin-top: 5px;
+}
+
+.searchText {
+  padding: 4px;
+  width: 250px;
+  background-color: #fafafa;
+  border: solid 1px rgb(219, 219, 219);
+  border-radius: 5px;
+  font-size: 15px;
+  text-align: center;
+  color: rgb(219, 219, 219);
+}
+
+.rightSideIcons {
+  margin-left: 100px;
+  float: left;
+}
+
+.rightSideIcons img {
+  width: 25px;
+  margin: 10px;
+}
+
+.line {
+  border-bottom: 1px solid rgb(219, 219, 219);
+}
+
+/* navigation 끝 */
+
+main {
+  display: grid;
+  grid-template-columns: 600px 300px;
+  column-gap: 30px;
+  background-color: #fafafa;
+  align-items: center;
+  justify-content: center;
+}
+
+/* feed */
+
+.feeds {
+  height: 100%;
+  margin-top: 70px;
+  margin-left: 70px;
+  border: 1px solid rgb(219, 219, 219);
+  border-radius: 5px;
+  background-color: white;
+}
+
+.feedArticle {
+  width: 100px;
+}
+
+/* 유저 아이콘 */
+
+#userIcon {
+  display: flex;
+  flex-direction: row;
+}
+
+#userIcon .userName {
+  margin-left: 5px;
+  margin-top: 17px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+#userIcon img {
+  margin: 10px;
+  width: 35px;
+  border: 1px solid rgb(219, 219, 219);
+  border-radius: 50%;
+}
+
+.moreInfo {
+  margin-top: 5px;
+  margin-left: 370px;
+  font-size: 25px;
+}
+
+#articleImage img {
+  width: 528px;
+}
+
+/* 피드 아이콘 */
+.feedReactions {
+  display: flex;
+  flex-direction: row;
+}
+
+.feedRightIcons img {
+  width: 30px;
+  padding-left: 15px;
+  padding-top: 10px;
+}
+
+.saveIcon img {
+  width: 30px;
+  padding-top: 10px;
+  margin-left: 340px;
+}
+
+/* feed 끝 */
+
+/* main-right 시작 */
+/* profile */
+.main-right {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.personalProfile {
+  display: flex;
+  flex-direction: row;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.personalProfile img {
+  width: 45px;
+  border: 1px solid rgb(219, 219, 219);
+  border-radius: 50%;
+}
+
+.personalId {
+  margin-left: 15px;
+  margin-top: 7px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#personalName {
+  font-weight: 400;
+  color: #999999;
+}
+/* story */
+
+.story {
+  border: 1px solid rgb(219, 219, 219);
+  border-radius: 5px;
+  background-color: white;
+}
+
+.storyBar {
+  padding: 10px;
+  font-size: 13px;
+  color: #999999;
+}
+
+.story span {
+  margin-left: 190px;
+  font-weight: bold;
+  color: black;
+}
+
+.storyPeople {
+  overflow: auto;
+}
+
+.storyContents {
+  margin: 2px;
+  margin-bottom: 20px;
+  border: 1px solid gray;
+  font-size: 14px;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0px;
+}
+
+/*recommendation*/
+
+.recommendation {
+  height: 200px;
+  margin-top: 20px;
+  border: 1px solid rgb(219, 219, 219);
+  border-radius: 5px;
+  background-color: white;
+}
+
+.recommendationBar {
+  font-size: 13px;
+  padding: 10px;
+  color: #999999;
+}
+
+.recommendationBar span {
+  margin-left: 130px;
+  font-weight: bold;
+  color: black;
+}
+
+.contract {
+  margin-top: 15px;
+  color: rgb(199, 199, 199);
+  font-size: 12px;
+}

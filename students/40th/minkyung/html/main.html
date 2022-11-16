@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/main.css" />
+    <title>westagram</title>
+  </head>
+  <body>
+    <div>
+      <nav class="navigation">
+        <div class="logoImg"><img src="img/instagram.png" /></div>
+        <div class="logo">westagram</div>
+        <div class="searchBar">
+          <input class="searchText" type="text" placeholder="검색" />
+        </div>
+        <div class="rightSideIcons">
+          <img src="img/explore.png" alt="Explore" />
+          <img src="img/heart.png" alt="Heart" />
+          <img src="img/profile.png" alt="Profile" />
+        </div>
+      </nav>
+      <div class="line"></div>
+    </div>
+    <main>
+      <div class="feeds">
+        <div class="article">
+          <div id="userIcon">
+            <img src="img/dog.jpg" alt="User Image" />
+            <div class="userName">cute_gyuri</div>
+            <div class = "moreInfo">...</div>
+          </div>
+          <div id = "articleImage">
+            <img src="img/article.jpeg" alt ="Article Image"/>
+          </div>
+          <div class = "feedReactions">
+            <div class = "feedRightIcons">
+              <img src ="img/red_heart.png" alt = "heart-icon">
+              <img src ="img/bubble-chat.png" alt = "comment-icon">
+              <img src ="img/direct-instagram.png" alt = "direct-message">
+            </div>
+            <span class = "saveIcon"><img src = "img/save-instagram.png"></span>
+          </div>
+          <div class = "feedReactExp">
+            <div class = "ReactUserId"></div>
+          </div>
+          <p class = "feedArticle">
+            <strong>cute_gyuri</strong> 8000원이나 주고 산 밀크티. 곰돌이는 맛있어
+          </p>
+        </div>
+        <div class = "user-comment">
+          <input type = "text">
+        </div>
+      </div>
+      <div class="main-right">
+        <div class="personalProfile">
+          <img src="img/dog.jpg" alt="profileImage">
+          <div class="personalId">
+            cute_gyuri
+            <div id="personalName">maltipoo | 규리</div>
+          </div>
+        </div>
+        <div class="story">
+          <div class = "storyBar">스토리 <span>모두 보기</span></div>
+          <ul class = "storyPeople" style = "overflow:auto ; height: 150px;">
+            <li><div class = "storyContents">one</div></li>
+            <li><div class = "storyContents">two</div></li>
+            <li><div class = "storyContents">three</div></li>
+            <li><div class = "storyContents">four</div></li>
+            <li><div class = "storyContents">five</div></li>
+          </ul>
+        </div>
+        <div class="recommendation">
+          <div class = "recommendationBar">회원님을 위한 추천<span>모두 보기</span></div>
+          <div class = "recommendationPeople"></div>
+        </div>
+        <p class="contract">
+          westagram 정보 지원 홍보 센터 API </br>
+          채용 정보 개인정보처리방침 약관 </br>
+          디렉터리 프로필 해시태그 언어 </br> 
+          
+        </br>© 2022 WESTAGRAM FROM WECODE</div>
+      </p>
+      </div>
+    </main>
+  </body>
+</html>
