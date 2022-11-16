@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style/common.css" />
+    <link rel="stylesheet" href="./style/main.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="navBox">
+        <div class="logoIcon">
+          <div class="instaIcon"><img src="./instagram.png" /></div>
+          <div class="instaLogo">westagram</div>
+        </div>
+        <div class="searchBox">
+          <input type="text" placeholder="검색" class="search" />
+        </div>
+        <div class="imgBox">
+          <div><img class="img" src="./explore.png" alt="explore" /></div>
+          <div>
+            <img class="img" src="./heart.png" alt="heart" />
+          </div>
+          <div>
+            <img class="img" src="./profile.png" alt="profile" />
+          </div>
+        </div>
+      </div>
+    </nav>
+    <main class="main">
+      <div class="feeds">
+        <article>
+          <div class="profile">
+            <div class="userInfo">
+              <div><img class="smile" src="./myprofile.png" /></div>
+              <div id="name">heehee.hee</div>
+            </div>
+            <button class="moreButton">
+              <img class="moreIcon" src="./more.png" />
+            </button>
+          </div>
+          <div class="feedImgBox"><img class="feedImg" src="./sky.png" /></div>
+          <div class="feedLine">
+            <div class="feedButtonBox">
+              <button class="feedButton"><img src="./like.png" /></button>
+              <button class="feedButton"><img src="./chat.png" /></button>
+              <button class="feedButton"><img src="./upload.png" /></button>
+            </div>
+            <div>
+              <button class="bookMark"><img src="./bookmark.png" /></button>
+            </div>
+          </div>
+          <div id="commentList"></div>
+          <section class="commentBox">
+            <input class="comment" type="text" placeholder="댓글 달기..." />
+            <button class="upload">게시</button>
+          </section>
+        </article>
+      </div>
+      <div class="main-right">
+        <div class="profileBox">
+          <div><img class="smile" src="./myprofile.png" /></div>
+          <div class="userId">
+            heehee.hee
+            <div class="userName">안녕하세요</div>
+          </div>
+        </div>
+        <div class="storyBox">
+          <div class="storyHead">
+            <div>스토리</div>
+            <a href="####"><div class="listAll">모두 보기</div></a>
+          </div>
+          <div class="storyListBox">
+            <div class="storyList1">
+              <div><img class="smile" src="./myprofile.png" /></div>
+              <div class="userId">
+                heehee.hee
+                <div class="userTime">n분 전</div>
+              </div>
+            </div>
+            <div class="storyList2">
+              <div><img class="smile" src="./myprofile.png" /></div>
+              <div class="userId">
+                heehee.hee
+                <div class="userTime">n분 전</div>
+              </div>
+            </div>
+            <div class="storyList3">
+              <div><img class="smile" src="./myprofile.png" /></div>
+              <div class="userId">
+                heehee.hee
+                <div class="userTime">n분 전</div>
+              </div>
+            </div>
+            <div class="storyList4">
+              <div><img class="smile" src="./myprofile.png" /></div>
+              <div class="userId">
+                heehee.hee
+                <div class="userTime">n분 전</div>
+              </div>
+            </div>
+            <div class="storyList5">
+              <div><img class="smile" src="./myprofile.png" /></div>
+              <div class="userId">
+                heehee.hee
+                <div class="userTime">n분 전</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="suggestion">
+          <div class="suggestionHead">
+            <div>회원님을 위한 추천</div>
+            <a href="####"><div class="sglistAll">모두 보기</div></a>
+          </div>
+          <div class="sg1">
+            <div><img class="smile" src="./myprofile.png" /></div>
+            <div class="userId">
+              heehee.hee
+              <div class="userTime">n분 전</div>
+            </div>
+          </div>
+          <div class="sg2">
+            <div><img class="smile" src="./myprofile.png" /></div>
+            <div class="userId">
+              heehee.hee
+              <div class="userTime">n분 전</div>
+            </div>
+          </div>
+          <div class="sg3">
+            <div><img class="smile" src="./myprofile.png" /></div>
+            <div class="userId">
+              heehee.hee
+              <div class="userTime">n분 전</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
