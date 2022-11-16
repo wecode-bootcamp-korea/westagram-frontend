@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <nav class="navBar"></nav>
+    <div class="main">
+      <div class="feedSection">
+        <article class="feed">
+          <div class="feedUserInfo">myname</div>
+          <div class="feedImg"></div>
+          <div class="feedNav">
+            <input type="checkbox" id="likeCheck" onclick="likeCount()" />
+            <input type="checkbox" id="commentOpen" />
+          </div>
+          <p class="likeCountSection">
+            <span id="likeResult">0</span> 명이 좋아합니다
+          </p>
+          <div class="feedContents">안녕하세요</div>
+          <p class="countTime">50분전</p>
+          <div id="commentSection">
+            <ul id="commentList"></ul>
+            <span id="commentUserInfo">user1</span>
+            <input id="commentInput" type="text" placeholder="댓글달기" />
+            <button id="commentBtn">게시</button>
+          </div>
+        </article>
+      </div>
+
+      <div class="mainRight">
+        <div class="userSection">
+          <div class="userInfo"></div>
+        </div>
+        <div class="mainRightTop">
+          <div class="storyHeader">스토리</div>
+          <div class="storyListSection">
+            <div class="storyList">닉네임</div>
+            <div class="storyList">닉네임</div>
+            <div class="storyList">닉네임</div>
+            <div class="storyList">닉네임</div>
+            <div class="storyList">닉네임</div>
+            <div class="storyList">닉네임</div>
+            <div class="storyList">닉네임</div>
+            <div class="storyList">닉네임</div>
+          </div>
+        </div>
+        <div class="mainRightBottom">
+          <div class="recommendHeader">회원님을 위한 추천</div>
+          <div class="recommendList"></div>
+          <div class="recommendList"></div>
+          <div class="recommendList"></div>
+          <div class="recommendList"></div>
+          <div class="recommendList"></div>
+          <div class="recommendList"></div>
+          <div class="recommendList"></div>
+          <div class="recommendList"></div>
+          <div class="recommendList"></div>
+          <div class="recommendList"></div>
+        </div>
+      </div>
+    </div>
+    <script src="comment.js"></script>
+    <script src="likeCount.js"></script>
+  </body>
+</html>
