@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>westagram | main</title>
+  <link rel="stylesheet" href="./style/common.css">
+  <link rel="stylesheet" href="./style/main.css">
+</head>
+
+<body>
+  <div id='wrapperMain'>
+    <!-- header -->
+    <header id='wrapperNav'>
+      <nav id='innerNav'>
+        <div class='logoBox'>
+          <img class='westaLogo' src="./images/instagram_logo.png" alt=" westagram_logo">
+          <span class='logoDivSlash'>|</span>
+          <h1 class='westaTitle'>Westagram</h1>
+        </div>
+        <input class='search' type="text" placeholder='검색'>
+        <div class='iconBox'>
+          <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png" alt="탐색">
+          <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" alt="하트">
+          <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png" alt="마이페이지">
+        </div>
+      </nav>
+    </header>
+
+    <!-- main -->
+    <section id='main'>
+      <div class="feeds">
+        <!-- my Feeds -->
+        <div class="feedsLeft">
+          <!-- profile -->
+          <article class='profileBox'>
+            <div class='wrapperProfile'>
+              <img class='profileImg' src='./images/camping2.jpg' alt='profileImg'>
+              <ul>
+                <li style='font-size: 16px; font-weight: 900;'>wecamp_together</li>
+                <li style='font-size: 12px; margin-top: 3px; color: #555;'>베이스 캠프</li>
+              </ul>
+            </div>
+            <img class='more' src="./images/more.png" alt="more">
+          </article>
+          <!-- contents -->
+          <article class='contents'></article>
+          <!-- state -->
+          <article id='stateBox'>
+            <div id='wrapperState'>
+              <div class='stateIcons'>
+                <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" alt="like">
+                <img src="./images/chat.png" alt="chat">
+                <img src="./images/send.png" alt="send">
+              </div>
+              <img src="./images/bookmark.png" alt="bookmark">
+            </div>
+
+            <div id='commentBox'>
+              <div class='likeMsg'>
+                <img class='profileImg_s' src='./images/camping2.jpg' alt='profileImg'>
+                <p><b>wecamp_together</b>님 외 <b>35명</b>이 좋아합니다</p>
+              </div>
+              <div id='commentWrite'>
+                <span><b>wecamp_together</b>
+                  &nbsp;&nbsp;Lorem ipsum dolor sit amet
+                  consectetur adipisicing elit. Placeat, eligendi neque eum beatae modi amet.</span>
+                <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" alt="like">
+              </div>
+            </div>
+          </article>
+
+          <div id='wrapperCommentsInput'>
+            <input id='comments' type="text" placeholder='댓글 달기...' /><button id='commentsBtn'>게시</button>
+          </div>
+          <ul id='commentsList'></ul>
+
+        </div>
+        <!-- feedsRight -->
+        <article class='main-right'>
+          <div class='profileBoxRight'>
+            <img class='profileImg' src='./images/camping2.jpg' alt='profileImg'>
+            <ul>
+              <li style='font-size: 16px; font-weight: 900;'>wecamp_together</li>
+              <li style='font-size: 12px; margin-top: 3px; color: #555;'>베이스 캠프</li>
+            </ul>
+          </div>
+
+          <div id='story'>
+            <div class='rightHeader'>
+              <span style='color:#ccc;'>스토리</span>
+              <span>모두보기</span>
+            </div>
+            <div class='rightBox'>
+              <img class='profileImg_m' src='./images/camping2.jpg' alt='profileImg'>
+              <ul class='profile_right'>
+                <li>sseondayy</li>
+                <li style='color: #ccc;'>0시간 전</li>
+              </ul>
+            </div>
+            <div class='rightBox'>
+              <img class='profileImg_m' src='./images/camping2.jpg' alt='profileImg'>
+              <ul class='profile_right'>
+                <li>sseondayy</li>
+                <li style='color: #ccc;'>0시간 전</li>
+              </ul>
+            </div>
+            <div class='rightBox'>
+              <img class='profileImg_m' src='./images/camping2.jpg' alt='profileImg'>
+              <ul class='profile_right'>
+                <li>sseondayy</li>
+                <li style='color: #ccc;'>0시간 전</li>
+              </ul>
+            </div>
+            <div class='rightBox'>
+              <img class='profileImg_m' src='./images/camping2.jpg' alt='profileImg'>
+              <ul class='profile_right'>
+                <li>sseondayy</li>
+                <li style='color: #ccc;'>0시간 전</li>
+              </ul>
+            </div>
+          </div>
+
+          <div id='recommend'>
+            <div class='rightHeader'>
+              <span style='color:#ccc;'>회원님을 위한 추천</span>
+              <span>모두보기</span>
+            </div>
+            <div class='rightBox'>
+              <img class='profileImg_m' src='./images/camping2.jpg' alt='profileImg'>
+              <ul class='profile_right'>
+                <li>sseondayy</li>
+                <li class='short'>wecamp님 외 2명이 좋아합니다.</li>
+              </ul>
+            </div>
+            <div class='rightBox'>
+              <img class='profileImg_m' src='./images/camping2.jpg' alt='profileImg'>
+              <ul class='profile_right'>
+                <li>sseondayy</li>
+                <li class='short'>wecamp님 외 2명이 좋아합니다.</li>
+              </ul>
+            </div>
+            <div class='rightBox'>
+              <img class='profileImg_m' src='./images/camping2.jpg' alt='profileImg'>
+              <ul class='profile_right'>
+                <li>sseondayy</li>
+                <li class='short'>wecamp님 외 2명이 좋아합니다.</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </div>
+  <!-- js -->
+  <script src="./js/main.js"></script>
+</body>
+
+</html>
