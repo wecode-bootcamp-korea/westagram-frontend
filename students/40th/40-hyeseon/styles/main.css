@@ -1,41 +1,10 @@
-#wrapperMain,
-#wrapperNav,
-#main,
-#wrapperState,
-#commentBox,
-#story,
-#recommend,
-#comments,
-#wrapperCommentsInput,
-.profileBox,
-.contents {
-  width: 100%;
-}
-
-#innerNav,
-#wrapperState,
-.feeds,
-.stateIcons,
-.profileBoxRight,
-.rightHeader {
+.alignFit {
   display: flex;
   justify-content: space-between;
 }
 
-#wrapperMain,
-.logoBox,
-.iconBox,
-.profileBox,
-.likeMsg,
-.rightBox {
+.alignDisplayFlex {
   display: flex;
-}
-
-#innerNav,
-.feeds,
-.feedsLeft,
-.main-right {
-  height: 100%;
 }
 
 #wrapperMain {
@@ -49,95 +18,95 @@
 }
 
 #innerNav {
+  width: 60%;
   margin: 0 auto;
   justify-content: space-between;
   align-items: center;
   line-height: 70px;
-  width: 60%;
-}
-
-.logoDivSlash,
-.westaTitle {
-  font-size: 22px;
-  margin-left: 30px;
 }
 
 .logoBox {
   align-items: center;
 }
 
-.westaLogo {
+.westagramTitle,
+.logoDivSlash {
+  margin-left: 30px;
+  font-size: 22px;
+}
+
+.westagramLogo {
   width: 25px;
   height: 25px;
 }
 
+.search {
+  width: 190px;
+  padding: 5px 5px;
+  background-color: #fafafa;
+  border: 1px solid #ccc;
+  font-size: 12px;
+  text-align: center;
+}
+
 .iconBox {
-  justify-content: space-around;
   width: 200px;
+  justify-content: space-around;
 }
 
 .iconBox img {
   width: 25px;
 }
 
-.search {
-  padding: 5px 0 5px 5px;
+#wrapperFeeds {
   background-color: #fafafa;
-  border: 1px solid #ccc;
-  font-size: 12px;
-  text-align: center;
-  width: 190px;
-}
-
-#main {
-  background-color: #fafafa;
-  height: 100%;
 }
 
 .feeds {
+  width: 60%;
   margin: 40px auto;
   padding: 0px 30px;
   justify-content: space-between;
-  width: 60%;
 }
 
 .feedsLeft {
-  background-color: white;
   width: 60%;
+  background-color: white;
   border: 1px solid #ccc;
 }
 
-.contents {
-  height: 400px;
-  background: url(/images/camping1.jpg) no-repeat 50%;
-  background-size: cover;
-}
-
 .profileBox {
-  align-items: center;
+  padding: 15px;
   justify-content: space-between;
-  padding: 15px;
-}
-.profileBoxRight {
   align-items: center;
-  justify-content: flex-start;
-  padding: 15px;
 }
 
 .wrapperProfile {
   display: flex;
 }
 
-.profileImg {
+.profileImage {
   width: 40px;
   height: 40px;
   border-radius: 50%;
   margin-right: 15px;
 }
 
-.more {
-  width: 25px;
-  height: 25px;
+.wrapperProfile ul li:nth-child(1) {
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.wrapperProfile ul li:nth-child(2) {
+  font-size: 12px;
+  margin-top: 3px;
+  color: #555;
+}
+
+.contents {
+  height: 500px;
+  background: url(/images/camping1.jpg) no-repeat 50%;
+  background-size: cover;
 }
 
 #stateBox {
@@ -154,6 +123,13 @@
   justify-content: space-between;
 }
 
+.profileImageSizeSmall {
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+  border-radius: 50%;
+}
+
 #wrapperState img {
   width: 25px;
   height: 25px;
@@ -164,17 +140,15 @@
   align-items: center;
 }
 
-.profileImg_s {
+.more {
   width: 25px;
   height: 25px;
-  border-radius: 50%;
-  margin-right: 10px;
 }
 
 #commentWrite {
-  padding: 15px 3px;
   display: flex;
   justify-content: space-between;
+  padding: 15px 3px;
 }
 
 #commentWrite span {
@@ -187,17 +161,17 @@
   height: 20px;
 }
 
-#wrapperCommentsInput {
+#wrapperCommentsBox {
   display: flex;
   justify-content: space-between;
   border-top: 1px solid #ccc;
 }
 
-#comments {
+#commentsInput {
   width: 90%;
-  font-size: 12px;
   padding: 15px 15px;
   border-style: none;
+  font-size: 12px;
 }
 
 #commentsBtn {
@@ -209,21 +183,27 @@
 }
 
 #commentsBtn:hover {
-  cursor: pointer;
   color: #0995f6;
+  cursor: pointer;
 }
 
-.main-right {
+.mainRight {
   width: 36%;
+}
+
+.profileBoxRight {
+  align-items: center;
+  justify-content: flex-start;
+  padding: 15px;
 }
 
 #story,
 #recommend {
-  background-color: white;
   height: 35%;
-  border: 1px solid #ccc;
   margin-bottom: 20px;
   padding: 15px;
+  background-color: white;
+  border: 1px solid #ccc;
 }
 
 .rightBox {
@@ -231,16 +211,20 @@
   justify-content: flex-start;
 }
 
-.profileImg_m {
+.profileImageSizeMedium {
   width: 30px;
   height: 30px;
-  border-radius: 50%;
   margin-right: 10px;
+  border-radius: 50%;
+}
+
+.rightBox ul li:nth-child(2) {
+  color: #ccc;
 }
 
 .short {
-  color: #ccc;
   width: 140px;
+  color: #ccc;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
