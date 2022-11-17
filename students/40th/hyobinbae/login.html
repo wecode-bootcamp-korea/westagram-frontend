@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Westagram login</title>
+    <link rel="stylesheet" href="login.css" />
+  </head>
+  <body>
+    <div id="loginSection">
+      <header id="loginTitleWrap">
+        <p class="loginTitle">Westagram</p>
+      </header>
+
+      <main class="loginInfoBox">
+        <input
+          id="UserId"
+          class="inputItem inputBox inputUser"
+          type="text"
+          placeholder="전화번호, 사용자 이름 또는 이메일"
+        />
+        <input
+          id="PW"
+          class="inputItem inputBox"
+          type="password"
+          placeholder="비밀번호"
+        />
+        <button
+          class="loginBtn loginBtnFont loginBtnDeact loginBtnAct"
+          type="button"
+          onclick="Welcome!"
+          disabled
+        >
+          로그인
+        </button>
+      </main>
+      <footer class="lostPassword">비밀번호를 잊으셨나요?</footer>
+    </div>
+
+    <script src="login.js"></script>
+  </body>
+</html>
