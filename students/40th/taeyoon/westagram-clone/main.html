@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Westagram-main</title>
+  </head>
+  <body>
+    <!-- 네비게이션 바 -->
+    <nav class="nav">
+      <div class="nav__container">
+        <div class="nav__left">
+          <a class="nav__left--icon" href="#"><i class="fa-brands fa-instagram fa-2x"></i></a>
+          <a class="nav__left--logo" href="#">Westagram</a>
+        </div>
+        <div class="nav__search">
+          <!-- <span>🔍</span> 나중에 display none 풀리게 처리 -->
+          <input type="text" placeholder="🔍검색" />
+        </div>
+
+        <div class="nav__right">
+          <a href="#"><i class="fa-regular fa-compass fa-2x"></i></a>
+          <a href="#"><i class="fa-regular fa-heart fa-2x"></i></a>
+          <a href="#"><i class="fa-regular fa-user fa-2x"></i></a>
+        </div>
+      </div>
+    </nav>
+    <!-- 메인화면 -->
+    <main class="main">
+      <!-- 메인 왼쪽 피드 -->
+      <div class="main__left">
+        <article class="feed">
+          <!-- 피드 헤더 -->
+          <div class="feed__header">
+            <div class="feed__header--profile">
+              <img src="./img/profile.jpg" alt="프사" width="32px" />
+              <span>Taeyoon</span>
+            </div>
+            <div class="feed__header--icon">
+              <i class="fa-solid fa-ellipsis"></i>
+            </div>
+          </div>
+
+          <!-- 피드 이미지 -->
+          <div class="feed__img">
+            <img src="./img/dog.jpg" alt="이미지" width="470px"/>
+          </div>
+
+          <!-- 피드 아이콘 -->
+          <div class="feed__icon">
+            <div class="feed__icon--left">
+              <i class="fa-solid fa-heart fa-lg"></i>
+              <i class="fa-regular fa-comment fa-lg"></i>
+              <i class="fa-solid fa-arrow-up-from-bracket fa-lg"></i>
+            </div>
+            <div class="feed__icon--right">
+              <i class="fa-regular fa-bookmark fa-lg"></i>
+            </div>
+          </div>
+
+          <!-- 피드 좋아요 -->
+          <div class="feed__like">
+            <div class="feed__like--img">
+              <img src="./img/profile.jpg" alt="프사" width="20px" />
+            </div>
+            <div class="feed__like--text">ㅇㅇㅇ님 외 10명이 좋아합니다</div>
+          </div>
+
+          <!-- 피드 댓글 -->
+          <div class="feed__comment">
+            <ul class="feed__comment--list">
+              <!-- 자바스크립트에서 추가될 공간 -->
+            </ul>
+          </div>
+
+          <!-- 피드 작성시간 -->
+          <div class="feed__time">1시간전</div>
+
+          <!-- 피드 댓글작성 -->
+          <div class="feed__input">
+            <form class="comment_form">
+              <input type="text" placeholder="댓글 달기..." />
+              <button type="submit">게시</button>
+            </form>
+          </div>
+        </article>
+      </div>
+
+      <!-- 메인 오른쪽 목록 -->
+      <div class="main__right">
+        <!-- 오른쪽 프로필 -->
+        <div class="main__right--profile">
+          <div class="user__container" id="user__main">
+            <div class="user__left">
+              <div class="user__img">
+                <img src="./img/profile.jpg" alt="프사" width="48px" />
+              </div>
+              <div class="user__info">
+                <div class="user__info--name">wecode_bootcamp</div>
+                <div class="user__info--text">Wecode | 위코드</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 오른쪽 스토리 -->
+        <div class="main__right--story">
+          <div class="story__header">
+            <span class="story__header--left">스토리</span>
+            <span class="story__header--right">모두 보기</span>
+          </div>
+          <div class="story__list">
+
+            <!-- 스토리 1 -->
+            <div class="story__list-1">
+              <div class="user__container">
+                <div class="user__left">
+                  <div class="user__img">
+                    <img src="./img/profile.jpg" alt="프사" width="32px" />
+                  </div>
+                  <div class="user__info">
+                    <div class="user__info--name">name1</div>
+                    <div class="user__info--text">1분전</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 스토리 2 -->
+            <div class="story__list-2">
+              <div class="user__container">
+                <div class="user__left">
+                  <div class="user__img">
+                    <img src="./img/profile.jpg" alt="프사" width="32px" />
+                  </div>
+                  <div class="user__info">
+                    <div class="user__info--name">name2</div>
+                    <div class="user__info--text">2분전</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 스토리 3 -->
+            <div class="story__list-3">
+              <div class="user__container">
+                <div class="user__left">
+                  <div class="user__img">
+                    <img src="./img/profile.jpg" alt="프사" width="32px" />
+                  </div>
+                  <div class="user__info">
+                    <div class="user__info--name">name3</div>
+                    <div class="user__info--text">3분전</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 스토리 4 -->
+            <div class="story__list-4">
+              <div class="user__container">
+                <div class="user__left">
+                  <div class="user__img">
+                    <img src="./img/profile.jpg" alt="프사" width="32px" />
+                  </div>
+                  <div class="user__info">
+                    <div class="user__info--name">name4</div>
+                    <div class="user__info--text">4분전</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 스토리 5 -->
+            <div class="story__list-4">
+              <div class="user__container">
+                <div class="user__left">4
+                  <div class="user__img">
+                    <img src="./img/profile.jpg" alt="프사" width="32px" />
+                  </div>
+                  <div class="user__info">
+                    <div class="user__info--name">name5</div>
+                    <div class="user__info--text">text5</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 오른쪽 추천리스트 -->
+        <div class="main__right--recommend">
+          <div class="recommend__header">
+            <span class="recommend__header--left">회원님을 위한 추천</span>
+            <span class="recommend__header--right">모두보기</span>
+          </div>
+          <div class="recommend__list">
+            <div class="recommend__list-1">
+              <div class="user__container">
+                <div class="user__left">
+                  <div class="user__img">
+                    <img src="./img/profile.jpg" alt="프사" width="32px" />
+                  </div>
+                  <div class="user__info">
+                    <div class="user__info--name">wecode_bootcamp</div>
+                    <div class="user__info--text">Wecode | 위코드</div>
+                  </div>
+                </div>
+
+                <div class="user__right">
+                  <a href="#">팔로우</a>
+                </div>
+              </div>
+            </div>
+            <div class="recommend__list-2">
+              <div class="user__container">
+                <div class="user__left">
+                  <div class="user__img">
+                    <img src="./img/profile.jpg" alt="프사" width="32px" />
+                  </div>
+                  <div class="user__info">
+                    <div class="user__info--name">wecode_bootcamp</div>
+                    <div class="user__info--text">Wecode | 위코드</div>
+                  </div>
+                </div>
+
+                <div class="user__right">
+                  <a href="#">팔로우</a>
+                </div>
+              </div>
+            </div>
+            <div class="recommend__list-3">
+              <div class="user__container">
+                <div class="user__left">
+                  <div class="user__img">
+                    <img src="./img/profile.jpg" alt="프사" width="32px" />
+                  </div>
+                  <div class="user__info">
+                    <div class="user__info--name">wecode_bootcamp</div>
+                    <div class="user__info--text">Wecode | 위코드</div>
+                  </div>
+                </div>
+
+                <div class="user__right">
+                  <a href="#">팔로우</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 오른쪽 푸터 -->
+        <div class="main__right--footer">
+          <ul class="footer__list">
+            <li>Instagram 정보 ·</li>
+            <li>지원 ·</li>
+            <li>홍보 센터 ·</li>
+            <li>API ·</li>
+            <li>채용 정보 ·</li>
+            <li>개인정보처리방침 ·</li>
+            <li>약관 ·</li>
+            <li>디렉토리 ·</li>
+            <li>프로필 ·</li>
+            <li>해시태그 ·</li>
+            <li>언어</li>
+          </ul>
+          <span>ⓒ 2022 INSTAGRAM</span>
+        </div>
+      </div>
+    </main>
+
+    <!-- 프로필 컨테이너 -->
+
+    <!-- <div class="user__container">
+      <div class="user__left">
+        <div class="user__img">
+          <img src="./img/profile.jpg" alt="프사" width="32px" />
+        </div>
+        <div class="user__info">
+          <div class="user__info--name">wecode_bootcamp</div>
+          <div class="user__info--text">Wecode | 위코드</div>
+        </div>
+      </div>
+
+      <div class="user__right">
+        <a href="#">팔로우</a>
+      </div>
+    </div> -->
+
+
+    <script src="/js/comment.js"></script>
+    <!-- 폰트어썸 -->
+    <script src="https://kit.fontawesome.com/307fa344e4.js" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+body {
+  background-color: #FAFAFA;
+}
+
+.login__container {
+  padding: 20px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  
+  border: 2px solid #F0F0F0;
+  background-color: #FFFFFF;
+}
+/* title은 inline 요소라서 display block 설정해줘야 보임 */
+.login__logo {
+  display: block;
+  font-family: 'Lobster', cursive;
+  font-size: 50px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+
+.login__form{
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 100px;
+  width: 400px;
+}
+
+.login__form--input {
+  padding: 15px;
+  background-color: #FAFAFA;
+  border-radius: 5px;
+  border: 2px solid #F0F0F0;
+  margin-bottom: 20px;
+}
+
+/* 로그인 input placeholder 흐리게 */
+.login__form--input::placeholder{
+  opacity: 0.6;
+}
+
+.login__form--input:first-child {
+  margin-bottom: 10px;
+}
+
+.login__form--btn{
+  padding: 10px;
+  color: white;
+  background-color: #C5E1FC;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+}
+
+
+.login__findpw {
+  text-align: center;
+}
+
+.login__findpw > a{
+  text-decoration: none;
+  color: #375E87;
+  font-size: 14px;
+}
