@@ -1,11 +1,14 @@
 const likeCheck = document.getElementById("likeCheck");
 
-const likeResult = parseInt(document.getElementById("likeResult").innerHTML);
+let likeResultNum = parseInt(document.getElementById("likeResult").innerHTML);
+
+const likeResult = document.getElementById("likeResult");
 
 function likeCount() {
   if (likeCheck.checked) {
-    console.log("체크됨");
-  } else console.log("체크해제됨");
+    likeResultNum += 1;
+  } else if (likeCheck.checked !== true && likeResultNum >= 1) {
+    likeResultNum -= 1;
+  }
+  likeResult.innerHTML = likeResultNum;
 }
-
-likeCount();

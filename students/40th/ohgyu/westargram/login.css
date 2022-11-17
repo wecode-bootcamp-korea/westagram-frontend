@@ -39,7 +39,7 @@
   opacity: 0.9;
 }
 
-.login #submit {
+.login #loginBtn {
   display: block;
   margin: auto;
   width: 500px;
@@ -48,9 +48,13 @@
   font-weight: bolder;
   border-radius: 5px;
   color: white;
-  background-color: #b2c2fc;
+  background-color: #7592fc;
   border: none;
   padding: 8px;
+}
+
+#loginBtn:disabled {
+  background-color: #b2c2fc;
 }
 
 a {

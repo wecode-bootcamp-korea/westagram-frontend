@@ -16,7 +16,12 @@
           <div class="feedImg"></div>
           <div class="feedNav">
             <input type="checkbox" id="likeCheck" onclick="likeCount()" />
-            <input type="checkbox" id="commentOpen" />
+            <input
+              type="checkbox"
+              id="commentOpen"
+              onclick="commentClose()"
+              checked
+            />
           </div>
           <p class="likeCountSection">
             <span id="likeResult">0</span> 명이 좋아합니다
