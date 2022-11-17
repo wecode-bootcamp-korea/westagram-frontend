@@ -10,14 +10,22 @@
   <body>
     <nav id="navBar" class="navSort">
       <div class="navLogo navItem">
-        <span class="navItem logoImg">
-          <a href="홈으로 이동"><img src="instagram.png" width="24px" /></a>
+        <span class="navItem navLogoWrap">
+          <a href="홈으로 이동"
+            ><img
+              class="logoImg"
+              src="instagram.png"
+              alt="westaLogo"
+              width="24px"
+          /></a>
         </span>
-        <span class="navItem logoTxt">
-          <a href="홈으로 이동">westagram</a>
+        <span class="navItem">
+          <a class="logoTxt" href="홈으로 이동">westagram</a>
         </span>
       </div>
-      <div class="navItem searchBox"><input type="text" /></div>
+      <div class="navItem">
+        <input class="searchBox" type="text" placeholder="검색" />
+      </div>
       <div class="navItem navEtc">
         <span class="explorer">
           <img src="explore.png" width="24px" />
@@ -32,12 +40,17 @@
       <div class="feeds">
         <div class="feed1">
           <nav id="feedNav">
-            <img src="profile" width="20px" />
-            <p>ameliee_108</p>
-            <img src="plus" width="10px" />
+            <img
+              class="circleProfile"
+              src="profile_cafe.jpeg"
+              alt="feedProfile"
+              width="45px"
+            />
+            <span>ameliee_108</span>
+            <span>...</span>
           </nav>
           <main>
-            <img src="sky.jpeg" width="400px" />
+            <img src="sky.jpeg" width="500px" />
             <div>
               <span> <img src="heart.png" width="24px" /></span>
               <span> <img src="댓글" width="24px" /></span>
@@ -54,7 +67,9 @@
           </div>
         </div>
       </div>
-      <div class="mainRight"></div>
+      <aside class="sideSection">
+        <header><img class="profileImg" src=alt="프로필사진"</header>
+      </aside>
     </main>
   </body>
 </html>
