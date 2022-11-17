@@ -7,11 +7,6 @@ let result = contentTextString.trim();
 
 let contentLength = contentTextString.length;
 
-console.log(content);
-console.log(contentText);
-console.log(result);
-console.log(contentLength);
-
 let seeMoreElement = document.getElementsByClassName("seeMoreContent")[0];
 
 
@@ -34,7 +29,3 @@ seeMoreElement.addEventListener('click', function(e) {
 
 
 })
-
-
-console.log(typeof contentTextString);
-console.log(contentTextString.slice(15, 35));
