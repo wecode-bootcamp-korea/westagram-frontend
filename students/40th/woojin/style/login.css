@@ -1,82 +1,76 @@
-* {
-    box-sizing: border-box;
-}
-
 main {
   display: flex;
   justify-content: center;
-  width: 700px;
-  margin: 100px auto;
-}
-
-section {
-  width: 348px;
-  border: 1px solid rgba(219, 219, 219);
-  border-radius: 1px;
-  padding: 15px 80px;
-  text-align: center;
-  margin: 10px 0px;
+  margin: 150px auto;
 }
 
 #loginPage {
-  height: 400px;
-  padding: 10px 49px;
+  border: 1px solid rgba(219, 219, 219);
+  border-radius: 1px;
   text-align: center;
 }
 
 h1 {
-  margin: 23px 0px 30px;
+  margin: 30px 0px 35px;
 }
 
 form {
-    height: 212.56px;
     display: flex;
     flex-direction: column;
     margin-top: 24px;
 }
 
-.loginInput {
+form > * {
   width: 250px;
+  margin: 0 49px;
+  font-weight: 600;
+}
+
+.loginInput {
   height: 36px;
+  margin-bottom: 6px;
+  padding: 9px 0px 7px 8px;
   background-color: rgba(0, 0, 0, 0.047);
   font-size: 12px;
-  padding: 9px 0px 7px 8px;
-  margin-bottom: 6px;
 }
 
 ::placeholder {
   color: rgba(0, 0, 0, 0.199);
 }
 
-form > #loginBtn {
-  width: 250px;
+/* login button - inactive state */
+#loginBtn {
   height: 30px;
+  margin: 8px auto;
   background-color: rgb(0, 149, 246, 0.3);
   border: none;
   border-radius: 4px;
   color: white;
   font-size: 14px;
-  font-weight: 600;
-  margin: 8px 0px;
 }
 
+#loginBtn:hover {
+  cursor: default;
+}
+
+/* login button - active state */
 #loginBtn.active {
   background-color: rgb(0, 149, 246);
-  border: none;
 }
 
 #loginBtn.active:hover {
   cursor: pointer;
 }
 
-#orText {
+/* division section by 'or'text and horizontal lines */ 
+#divideSectionByOr {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 10px 0px 18px;
+  margin: 10px auto 18px auto;
 }
 
-.loginHorLine {
+.divisionLine {
   width: 90px;
   height: 1px;
   margin: auto 0px;
@@ -84,32 +78,34 @@ form > #loginBtn {
   border: none;
 }
 
-.orTextContent {
+#orText {
+  margin: 0px 15px ;
   color: rgba(142, 142, 142);
   font-size: .8125rem;
-  font-weight: 600;
-  margin: 0px 15px ;
 }
 
+
+/* login by facebook */
 #facebookLink {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 14px;
-  font-weight: 600;
   color: #385185;
+  font-size: 14px;
 }
 
-.facebookLogo {
+#facebookLogo {
   width: 16px;
   margin: 0 8px 0 0;
 }
 
-
+/* search password */
 #searchPw {
-  display: block;
+  margin: 35px 0 50px 0;
   font-size: 12px;
-  color: rgb(0, 55, 107);
   letter-spacing: -1px;
-  margin-top: 12px;
+}
+
+#searchPw > a {
+  color: rgb(0, 55, 107);
 }

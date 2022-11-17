@@ -1,29 +1,35 @@
-body {
-    margin: 0%;
+details {
+    display: none;
 }
-/* nav style */
+
+/* navigator style */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    padding: 10px 50px;
-    margin: 10px 0;
     border-bottom: 1px solid rgb(219, 219, 219);
 }
 
-#nav_left {
+#navLeft {
     display: flex;
-    height: 30px;
     align-items: center;
     justify-content: space-between;
+    margin: 15px 0 15px 50px;
 }
 
-#nav_right {
+h1 {
+    margin: 0;
+}
+
+#navRight {
     display: flex;
-    width: 120px;
-    height: 30px;
     align-items: flex-end;
     justify-content: space-between;
+    margin: 15px 50px 15px 0;
+}
+
+#navRight > img {
+    margin:0 10px;
 }
 
 img {
@@ -35,17 +41,18 @@ h1 {
     font-size: 30px;
     margin-left: -20px;
 }
-.verticalBar_Main {
-    height: 29px;
-}
 
-.searchBarInNav {
-    height: 20px;
+/* search Bar in navigator */
+#searchBarInNav {
+    width: 200px;
+    height: 29px;
     text-align: center;
     background-color: transparent;
+    margin-bottom: 15px;
+
 }
 
-.searchBarInNav::-webkit-input-placeholder {
+#searchBarInNav::-webkit-input-placeholder {
     background-image: url("/students/40th/woojin/main_structure_image/magnifier.png");
     background-size: contain;
     background-repeat: no-repeat;
@@ -53,41 +60,26 @@ h1 {
 }
 
 /* article */
-/* article - header */
-
 
 main {
     display: flex;
     justify-content: center;
-    padding: 0px 50px;
 }
 
 .feeds {
     margin-right: 32px;
 }
 
-section {
-    
-
-}
-
 article {
-    width: 470px;
     border: 1px solid rgb(219, 219, 219);
     border-radius: 8px;
-    margin-bottom: 12px;
+    margin-top: 12px;
 }
-
-
-
-.headOfArticle {
-    height: 59px;
-    border-radius: 8px;
-}
+/* article - header */
 
 header {
     display: flex;
-    align-items:center;
+    align-items: center;
     margin: 8px 4px 8px 12px;
 }
 
@@ -192,6 +184,7 @@ header {
 }
 
 #contSection {
+    width: 429px;
     display: flex;
     justify-content: flex-start;
     font-size: 14px;
@@ -233,7 +226,7 @@ header {
 
 
 #commentEmoji {
-    margin: 8px 0;
+    margin-right: 10px;
 }
 
 #addComment {
@@ -254,12 +247,18 @@ header {
     outline: none;
 }
 
+.uploadDate {
+    color: rgb(142, 142, 142);
+    font-size: 10px;
+    padding-left: 12px;
+    margin-bottom: 12px;
+}
 
 /* main-right */
 .mainRight {
     width: 319px;
     height: 656px;
-    padding: 0 16px;
+    padding: 0 16px 0 0;
 }
 
 .myProfile {
@@ -267,7 +266,6 @@ header {
     height: 66px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     margin: 16px 0 10px 0;
 }
 
@@ -295,7 +293,6 @@ header {
 }
 /* story of friends */
 #sectionOfStroy {
-    height: 200px;
     margin-bottom: 20px;
 }
 
@@ -306,6 +303,7 @@ header {
 #boxForScrollStory {
     height: 180px;
     overflow: auto;
+    padding-top: 16px;
 }
 
 
@@ -337,10 +335,10 @@ header {
 /* recommendation of friends */
 
 .TextOfRightInfo {
-    height: 11px;
+    height: 20px;
     display: flex;
     justify-content: space-between;
-    padding: 4px 0;
+    margin-bottom: 5px;
 }
 
 .recommandFriend{

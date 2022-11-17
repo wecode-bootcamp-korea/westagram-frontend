@@ -1,13 +1,17 @@
-a {
-    text-decoration: none;
-    color: black;
+* {
+  box-sizing: border-box;
 }
 
 h1 {
-    font-family: "Lobster", cursive;
-    font-weight: lighter;
-    font-size: 42px;
-    transform: scale(0.8, 1);
+  font-size: 42px;
+  font-weight: lighter;
+  font-family: "Lobster", cursive;
+  transform: scale(0.8, 1);
+}
+
+a {
+  text-decoration: none;
+  color: black;
 }
 
 input {
@@ -15,22 +19,15 @@ input {
   border-radius: 3px;
 }
 
-.setRaw {
-    display: flex;
-    align-items: center;
-}
-
 button {
-    width: 24px;
-    height: 24px;
-    border: none;
-    background-size: contain;
-    background-repeat: no-repeat;
-    padding: 0;
-
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: none;
 }
 
 button:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
-

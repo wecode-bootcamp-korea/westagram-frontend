@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>Westagram_40기_임우진</title>
+    <title>Westagram login - 40th woojin Lim</title>
     <link href="style/common.css" rel="stylesheet" />
     <link href="style/login.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,13 +15,15 @@
   <body>
     <main>
       <section id="loginPage">
+        <!-- title(heading)-->
         <h1>Westagram</h1>
         <form>
+          <!--inputs: ID, password-->
           <input
             id="idInput"
             class="loginInput"
             type="text"
-            placeholder="전화번호, 사용자 이름 또는 이메일"
+            placeholder="사용자 이메일"
           />
           <input
             id="pwInput"
@@ -29,22 +31,31 @@
             type="password"
             placeholder="비밀번호"
           />
+          <!--login button-->
           <button id="loginBtn">로그인</button>
-          <div id="orText">
-            <div class="loginHorLine"></div>
-            <span class="orTextContent">또는</span>
-            <div class="loginHorLine"></div>
+          <!--division section-->
+          <div id="divideSectionByOr">
+            <div class="divisionLine"></div>
+            <span id="orText">또는</span>
+            <div class="divisionLine"></div>
           </div>
-          <div id="bottomText">
+          <!--link to facebook-->
+          <div>
             <a href=" " id="facebookLink">
-              <img src="/facebook.png" class="facebookLogo" /> Facebook으로
-              로그인</a
-            >
+              <img
+                src="/students/40th/woojin/login_structure_image/facebook.png"
+                id="facebookLogo" alt="facebook logo"
+              />
+              Facebook으로 로그인
+            </a>
           </div>
         </form>
-          <a href=" " id="searchPw">비밀번호를 잊으셨나요?</a>
+        <!--search password-->
+        <div id="searchPw">
+          <a href=" ">비밀번호를 잊으셨나요?</a>
+        </div>
       </section>
     </main>
-    <script src="js/login.js"></script>
+    <script src="/students/40th/woojin/js/login.js"></script>
   </body>
 </html>
