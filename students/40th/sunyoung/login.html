@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style/login.css" />
     <link rel="stylesheet" href="style/common.css" />
+    <link rel="" href="style/common.css" />
 
-    <title>westagram login</title>
+    <title>WESTAGRAM - login</title>
   </head>
 
   <body>
@@ -17,6 +18,7 @@
       <form>
         <div class="inputId">
           <input
+            id="input_id"
             class="id_button"
             name="id"
             type="text"
@@ -25,6 +27,7 @@
         </div>
         <div class="inputPassword">
           <input
+            id="input_pwd"
             class="password_button"
             name="password"
             type="password"
@@ -33,7 +36,7 @@
           />
         </div>
 
-        <button class="button_login">로그인</button>
+        <button id="login_btn" class="button_login">로그인</button>
         <div id="empty"></div>
 
         <div class="forgetPassword">
@@ -41,31 +44,6 @@
         </div>
       </form>
     </div>
+    <script src="js/login.js"></script>
   </body>
-
-  <script>
-    const inputId = document.getElementsByClassName("id_button");
-    const inputPw = document.getElementsByClassName("password_button");
-    const loginButton = document.getElementsByClassName("button_login")[0];
-    console.log(inputId);
-    console.log(inputPw);
-    console.log(loginButton);
-
-    inputId.addEventLister("keyup", validate);
-    inputPw.addEventLister("keyup", validate);
-
-    const validate = () => {
-      let idValue = inputId.value;
-      let pwValue = inputPw.value;
-
-      if (idValue && pwValue) {
-        loginButton.disabled = false;
-        loginButton.style.opacity = 1;
-        loginButton.style.cursor = "pointer";
-      } else {
-        loginButton.disabled = true;
-        loginButton.style.opacity = 0.3;
-      }
-    };
-  </script>
 </html>
