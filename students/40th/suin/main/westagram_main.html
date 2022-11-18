@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet " href="./westagram_main.css">  <!--css와 연결-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+
+ <!--<nav> 태그는 고유한 하나의 상단 메뉴가 될 것이므로 id를 부여-->
+  <nav id="navbar">
+
+    <div class="navbar_left">
+     <div class="westagram_logo">      
+      <img src="../image/logo.png"/>
+     </div>
+     <div class="westagram_text">            
+      Westagram
+     </div>
+    </div>
+
+
+    <!--🔍input type를 text➡️search 로 변경 , 돋보기를 background 로 넣음 -->
+    <div class="navbar_center">
+     <input 
+      class="search" 
+      type="search" 
+      placeholder="검색" 
+      rel="search"/>
+      <!--돋보기 아이콘을 그림으로 넣으려고 시도-->
+      <!-- <div>
+       <image class="search_icon" src="../image/search.png"/>
+      </div> -->
+    </div>
+
+
+    <div class="navbar_icons">
+     <img src="../image/explore.png"/>
+     <img src="../image/heart.png"/>
+     <img src="../image/profile.png"/>
+    </div>
+   
+ </nav>
+
+
+
+
+ <main class="main" > <!--회색배경-->
+
+   <section class="feed"> 
+        <div class= "feedHeader">프로필</div>
+
+        <div class= "feedImg">사진</div>
+        
+        <div class= "commentWrapper">사진 밑시작
+          <div class="commentIconWrapper">아이콘</div>
+          <div class= "commentLike">oo님이 좋아합니다</div>
+          <ul id= "commentLists">
+            <li>ddsad:거봐~</li>
+            <li>.</li>
+            <li>.</li>
+            <li>.</li>
+          </ul>
+          사진 밑 끝
+        </div>
+        <div class= "comment">댓글</div>
+
+        <input 
+        class="inputComment" 
+        type="text" 
+        placeholder="댓글달기..."/>
+   </section>
+
+    <aside class= "main_right">
+        <div class="aside_1">
+            <img 
+              class="profile_img" 
+              src="../image/feed_profile.jpg" 
+              alt="프로필사진"/>
+            <div 
+              class="aiside_profile">
+                <p class="profile_id">cute_tan</p>
+                <p class="profile_info">나는야 귀여운 댕댕</p>
+            </div>
+        </div> <!--1완료-->
+        <div class="aside_2">
+          <div class="aside_2_top">
+            <p class="aside_top_1">스토리</p>
+            <p class="aside_top_2">모두 보기</p>
+          </div>
+          <div class="aside2_content">
+                <img class="aside2_people" src="../image/feed_profile.jpg"/>
+                <div class="aside2_peopleId"></div>
+          </div>
+        </div>
+     <div class="aside_3">3</div>
+    <div class="aside_4">4</div>
+    </aside>
+
+ </main>
+    
+
+    <!-- <script src="./westagram_main.js"></script>    js와 연결 -->
+</body>
+</html>
