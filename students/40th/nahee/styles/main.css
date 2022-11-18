@@ -1,8 +1,14 @@
 * {
   box-sizing: border-box;
 }
+body {
+  background-color: rgb(240, 240, 240);
+  margin: 0;
+}
+
 nav {
   border-bottom: 1px solid rgb(200, 200, 200);
+  background-color: #ffffff;
 }
 .instaIcon {
   width: 50px;
@@ -11,6 +17,7 @@ nav {
   margin-left: 30px;
   margin-bottom: 20px;
   margin-top: 20px;
+  padding-top: 5px;
 }
 .instaLogo {
   font-family: "Lobster", cursive;
@@ -20,6 +27,7 @@ nav {
 .navBox {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   flex-direction: row;
   margin-left: 100px;
   margin-right: 100px;
@@ -34,71 +42,86 @@ nav {
   background-color: rgb(240, 240, 240);
   border: 1px solid rgb(200, 200, 200);
   text-align: center;
-  margin-top: 20px;
+  margin: 0;
 }
-.img {
+
+.search::-webkit-input-placeholder {
+  background-image: url(https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-256.png);
+  background-size: contain;
+  background-position: 35% center;
+  background-repeat: no-repeat;
+  text-align: center;
+  text-indent: 0;
+}
+.navButtonImg {
   width: 30px;
   height: 30px;
 }
 .searchBox {
-  display: relative;
+  width: 250px;
+}
+.searchBox > div {
+  width: 250px;
+  height: 0;
 }
 
-.imgBox {
+.navButtonBox {
   width: 150px;
   display: flex;
   justify-content: space-around;
-  margin-top: 20px;
 }
 
 .main {
   width: 100%;
-  height: 120vh;
-  background-color: rgb(240, 240, 240);
+  height: 100%;
   display: flex;
   justify-content: center;
 }
 
 .feeds {
+  width: 650px;
+  height: auto;
   display: flex;
   justify-content: center;
 }
 
 article {
-  width: 600px;
-  height: 800px;
+  height: fit-content;
   border: 2px solid #e2e3e7;
   border-radius: 5px;
   margin-top: 50px;
   background-color: white;
 }
-
-.smile {
-  width: 35px;
-  height: 35px;
-  border: 1px solid rgb(200, 200, 200);
+.feedUserImage {
+  width: 45px;
+  height: 45px;
+  border: 1px solid #e2e3e7;
   border-radius: 50%;
-  margin-top: 5px;
+}
+
+.storyUserImage {
+  width: 40px;
+  height: 40px;
+  border: 2px solid white;
+  border-radius: 50%;
+  margin: 0;
 }
 
 .profile {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-top: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
-
-  height: 7%;
+  margin: 10px;
 }
 
-#name {
+.feedUserName {
   margin: 15px 20px;
   width: 450px;
   font-weight: bold;
 }
 .userInfo {
   display: flex;
+  align-items: center;
 }
 .moreIcon {
   width: 20px;
@@ -111,13 +134,10 @@ button {
   border: none;
   background-color: white;
 }
-.feedImgBox {
-  width: 100%;
-  height: 63%;
-}
+
 .feedImg {
-  width: 100%;
-  height: 100%;
+  width: 599px;
+  height: 500px;
 }
 .feedButton {
   padding: 3px;
@@ -136,35 +156,76 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 5%;
-  padding-top: 15px;
+  width: 600px;
+  height: 25px;
+  padding: 20px 0;
 }
 
 .bookMark {
   width: 32px;
   height: 25px;
-  margin-right: 20px;
+  margin-right: 10px;
 }
 .bookMark > img {
   width: 24px;
   height: 24px;
 }
 
-#commentList {
-  width: 100%;
-  height: 16%;
+.likeNumber {
+  width: auto;
+  height: 20px;
+  margin: 5px 10px;
+  display: flex;
+  align-items: center;
+}
+.likeNumber > img {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #abacb0;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+ul {
+  padding-left: 10px;
+}
+
+li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.commentAddName {
+  font-weight: bold;
+  font-size: 18px;
+  margin: 0 5px;
+}
+
+.commentText {
+  font-size: 15px;
+}
+
+.deleteComment {
+  margin-right: 10px;
+  margin-left: auto;
+}
+
+.time {
+  height: 20px;
+  margin: 2px 10px;
+  color: #abacb0;
 }
 
 .comment {
   width: 90%;
-  height: 100%;
+  height: 50px;
   font-size: 20px;
   padding: 10px;
   border: none;
 }
 .commentBox {
   width: 100%;
-  height: 60px;
   border-top: 2px solid #e2e3e7;
 }
 
@@ -175,39 +236,56 @@ button {
 }
 .main-right {
   width: 300px;
-  height: 530px;
+  height: fit-content;
   margin-top: 50px;
-  margin-left: 40px;
+  margin-left: 20px;
 }
 
 .profileBox {
-  width: 100%;
-  height: 56px;
+  width: 300px;
+  height: 50px;
   display: flex;
-  margin-top: 10px;
+  align-items: center;
+  margin: 10px 5px;
 }
 
 .storyBox {
-  width: 100%;
-  height: 43%;
+  width: 300px;
+  height: 230px;
   border: 2px solid #e2e3e7;
   border-radius: 5px;
   background-color: white;
+}
+.storyListBox {
+  width: 100%;
+  height: 184px;
   overflow-y: scroll;
+}
+::-webkit-scrollbar {
+  display: none;
 }
 
 .suggestion {
   width: 100%;
-  height: 37%;
   border: 2px solid #e2e3e7;
   border-radius: 5px;
   margin-top: 25px;
   background-color: white;
 }
+.profileImage {
+  width: 45px;
+}
+
+.storyUserId {
+  font-weight: bold;
+  margin: 0 10px;
+  width: 150px;
+}
 
 .userId {
   font-weight: bold;
-  margin: 5px 20px;
+  margin: 0 10px;
+  width: 150px;
 }
 
 .userName {
@@ -224,6 +302,7 @@ button {
 }
 
 .storyHead > a {
+  height: 20px;
   text-decoration: none;
   color: black;
   font-weight: bold;
@@ -241,27 +320,61 @@ button {
   font-weight: bold;
 }
 
-.storyList1,
-.storyList2,
-.storyList3,
-.storyList4,
-.storyList5 {
+.storyList {
   display: flex;
-  margin: 5px 10px;
+  align-items: center;
+  margin: 10px 10px;
 }
-.userTime {
+.storyImage {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  background-image: linear-gradient(#fff, #fff),
+    linear-gradient(to right, orange 0%, rgb(236, 43, 149) 100%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+.userTime,
+.userInformation {
   font-weight: normal;
   color: gray;
   font-size: 15px;
 }
-.sg1,
-.sg2,
-.sg3 {
+.sg {
   display: flex;
-  margin: 5px 10px;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10px 10px;
+}
+.sg > div > img {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #e2e3e7;
+  border-radius: 50%;
 }
 
-.list, .addComment {
+.sg > button {
+  color: #0095f6;
   font-weight: bold;
-  margin: 5px;
+  font-size: 15px;
+}
+
+.list,
+.addComment {
+  font-weight: bold;
+  padding: 5px;
+}
+
+.information {
+  padding: 10px 0 5px 0px;
+  color: #abacb0;
+  font-size: 15px;
+}
+
+@media (max-width: 900px) {
+  .main-right,
+  .searchBox {
+    display: none;
+  }
 }

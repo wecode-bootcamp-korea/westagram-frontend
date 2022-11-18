@@ -18,20 +18,29 @@
     <nav>
       <div class="navBox">
         <div class="logoIcon">
-          <div class="instaIcon"><img src="./instagram.png" /></div>
+          <div class="instaIcon">
+            <img alt="인스타그램로고" src="./img/instagram.png" />
+          </div>
           <div class="instaLogo">westagram</div>
         </div>
         <div class="searchBox">
           <input type="text" placeholder="검색" class="search" />
         </div>
-        <div class="imgBox">
-          <div><img class="img" src="./explore.png" alt="explore" /></div>
-          <div>
-            <img class="img" src="./heart.png" alt="heart" />
-          </div>
-          <div>
-            <img class="img" src="./profile.png" alt="profile" />
-          </div>
+        <div class="navButtonBox">
+          <button>
+            <img
+              class="navButtonImg"
+              alt="explore"
+              src="./img/explore.png"
+              alt="explore"
+            />
+          </button>
+          <button>
+            <img class="navButtonImg" alt="heart" src="./img/heart.png" />
+          </button>
+          <button>
+            <img class="navButtonImg" alt="profile" src="./img/profile.png" />
+          </button>
         </div>
       </div>
     </nav>
@@ -40,25 +49,60 @@
         <article>
           <div class="profile">
             <div class="userInfo">
-              <div><img class="smile" src="./myprofile.png" /></div>
-              <div id="name">heehee.hee</div>
+              <div>
+                <img
+                  class="feedUserImage"
+                  alt="feedUserImage"
+                  src="./img/myprofile.png"
+                />
+              </div>
+              <div class="feedUserName">heehee.hee</div>
             </div>
-            <button class="moreButton">
-              <img class="moreIcon" src="./more.png" />
+            <button class="overflow">
+              <img alt="more" class="moreIcon" src="./img/more.png" />
             </button>
           </div>
-          <div class="feedImgBox"><img class="feedImg" src="./sky.png" /></div>
+          <div class="feedImgBox">
+            <img
+              class="feedImg"
+              alt="feed사진"
+              src="https://images.unsplash.com/photo-1668613962618-b389448296c9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=928&q=80"
+            />
+          </div>
           <div class="feedLine">
             <div class="feedButtonBox">
-              <button class="feedButton"><img src="./like.png" /></button>
-              <button class="feedButton"><img src="./chat.png" /></button>
-              <button class="feedButton"><img src="./upload.png" /></button>
+              <button class="feedButton">
+                <img alt="like" src="./img/like.png" />
+              </button>
+              <button class="feedButton">
+                <img alt="chat" src="./img/chat.png" style="opacity: 0.7" />
+              </button>
+              <button class="feedButton">
+                <img alt="upload" src="./img/upload.png" style="opacity: 0.6" />
+              </button>
             </div>
             <div>
-              <button class="bookMark"><img src="./bookmark.png" /></button>
+              <button class="bookMark">
+                <img alt="'bookmark" src="./img/bookmark.png" />
+              </button>
             </div>
           </div>
-          <div id="commentList"></div>
+          <div class="commentArea">
+            <div class="likeNumber">
+              <img
+                class="likeFeedUser"
+                alt="user image"
+                src="https://plus.unsplash.com/premium_photo-1666788168130-959f109c07fc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=822&q=80"
+              />
+              <span
+                ><span style="font-weight: bold">algkjaweglkja</span>님
+                <span style="font-weight: bold">외 10명이</span>
+                좋아합니다.</span
+              >
+            </div>
+            <ul id="commentList"></ul>
+            <div class="time">n분전</div>
+          </div>
           <section class="commentBox">
             <input class="comment" type="text" placeholder="댓글 달기..." />
             <button class="upload">게시</button>
@@ -67,10 +111,16 @@
       </div>
       <div class="main-right">
         <div class="profileBox">
-          <div><img class="smile" src="./myprofile.png" /></div>
+          <div>
+            <img
+              alt="profile image"
+              class="profileImage"
+              src="./img/myprofile.png"
+            />
+          </div>
           <div class="userId">
             heehee.hee
-            <div class="userName">안녕하세요</div>
+            <div class="userName">안녕하세요. 머리아파요</div>
           </div>
         </div>
         <div class="storyBox">
@@ -79,39 +129,70 @@
             <a href="####"><div class="listAll">모두 보기</div></a>
           </div>
           <div class="storyListBox">
-            <div class="storyList1">
-              <div><img class="smile" src="./myprofile.png" /></div>
+            <div class="storyList">
+              <div class="storyImage">
+                <img
+                  alt="new stroty user"
+                  class="storyUserImage"
+                  src="https://images.unsplash.com/photo-1668555980382-0f18f3699765?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80
+                  "
+                />
+              </div>
               <div class="userId">
-                heehee.hee
-                <div class="userTime">n분 전</div>
+                hihihi.bye
+                <div class="userTime">5분 전</div>
               </div>
             </div>
-            <div class="storyList2">
-              <div><img class="smile" src="./myprofile.png" /></div>
+            <div class="storyList">
+              <div class="storyImage">
+                <img
+                  alt="new stroty user"
+                  class="storyUserImage"
+                  src="https://images.unsplash.com/photo-1668429090678-4f0e6759d489?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzMTZ8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=800&q=60"
+                />
+              </div>
               <div class="userId">
-                heehee.hee
-                <div class="userTime">n분 전</div>
+                asdgwgwqq
+                <div class="userTime">1시간 전</div>
               </div>
             </div>
-            <div class="storyList3">
-              <div><img class="smile" src="./myprofile.png" /></div>
+            <div class="storyList">
+              <div class="storyImage">
+                <img
+                  class="storyUserImage"
+                  alt="new stroty user"
+                  src="https://images.unsplash.com/photo-1668457248686-e797dcdc0a48?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2852&q=80"
+                />
+              </div>
               <div class="userId">
-                heehee.hee
-                <div class="userTime">n분 전</div>
+                sghdgrew_w
+                <div class="userTime">4시간 전</div>
               </div>
             </div>
-            <div class="storyList4">
-              <div><img class="smile" src="./myprofile.png" /></div>
+            <div class="storyList">
+              <div class="storyImage">
+                <img
+                  class="storyUserImage"
+                  alt="new stroty user"
+                  src="https://images.unsplash.com/photo-1668500330070-a65b343a73fa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=770&q=80"
+                />
+              </div>
               <div class="userId">
-                heehee.hee
-                <div class="userTime">n분 전</div>
+                yuyuyuh
+                <div class="userTime">20시간 전</div>
               </div>
             </div>
-            <div class="storyList5">
-              <div><img class="smile" src="./myprofile.png" /></div>
+            <div class="storyList">
+              <div class="storyImage">
+                <img
+                  class="storyUserImage"
+                  alt="new stroty user"
+                  src="https://images.unsplash.com/photo-1668493468813-22aba1caaf0f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+                />
+              </div>
               <div class="userId">
-                heehee.hee
-                <div class="userTime">n분 전</div>
+                akakkakak_c
+                <div class="userTime">22시간 전</div>
               </div>
             </div>
           </div>
@@ -121,28 +202,55 @@
             <div>회원님을 위한 추천</div>
             <a href="####"><div class="sglistAll">모두 보기</div></a>
           </div>
-          <div class="sg1">
-            <div><img class="smile" src="./myprofile.png" /></div>
-            <div class="userId">
-              heehee.hee
-              <div class="userTime">n분 전</div>
+          <div class="sg">
+            <div>
+              <img
+                alt="user"
+                class="userImage"
+                src="https://images.unsplash.com/photo-1668584054131-d5721c515211?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2864&q=80/"
+              />
             </div>
+            <div class="userId">
+              comeback_home
+              <div class="userInformation">회원님을 위한 추천</div>
+            </div>
+            <button>팔로우</button>
           </div>
-          <div class="sg2">
-            <div><img class="smile" src="./myprofile.png" /></div>
-            <div class="userId">
-              heehee.hee
-              <div class="userTime">n분 전</div>
+          <div class="sg">
+            <div>
+              <img
+                class="userInformation"
+                src="https://images.unsplash.com/photo-1668635716727-aa176f3204d1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+              />
             </div>
+            <div class="userId">
+              nanunbabo95
+              <div class="userInformation">회원님을 위한 추천</div>
+            </div>
+            <button>팔로우</button>
           </div>
-          <div class="sg3">
-            <div><img class="smile" src="./myprofile.png" /></div>
-            <div class="userId">
-              heehee.hee
-              <div class="userTime">n분 전</div>
+          <div class="sg">
+            <div>
+              <img
+                class="userImage"
+                src="https://images.unsplash.com/photo-1668619834434-a9fb20654726?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+              />
             </div>
+            <div class="userId">
+              hrjlagjlaw90
+              <div class="userTime">회원님을 위한 추천</div>
+            </div>
+            <button>팔로우</button>
           </div>
         </div>
+        <footer>
+          <div class="information">
+            Instagram 정보 ∙ 지원 ∙ 홍보 센터 ∙ API ∙<br />
+            채용정보 ∙ 개인정보처리방침 ∙ 약관 ∙<br />
+            디렉토리 ∙ 프로필 ∙ 해시태그 ∙ 언어
+          </div>
+          <div class="information">© 2019 INSTARGRAM</div>
+        </footer>
       </div>
     </main>
     <script src="./js/main.js"></script>
