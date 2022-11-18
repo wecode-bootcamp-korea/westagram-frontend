@@ -18,6 +18,4 @@ function emaillog() {
     loginButton.disabled = true;
     loginButton.classList.remove("able");
   }
-  console.log(id);
-  console.log(pw.length);
 }

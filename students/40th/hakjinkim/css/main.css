@@ -3,25 +3,78 @@
   top: 0;
   left: 0;
   right: 0;
+
   background-color: #ffffff;
+
+  z-index: 1;
 }
 
 #header_box {
-  border: 3px solid #dbdbdb;
-  height: 100px;
+  display: flex;
+  justify-content: space-between;
 
-  position: relative;
+  height: 100px;
+  padding: auto;
+  min-width: 1500px;
+
+  border-bottom: 2px solid #dbdbdb;
 }
 
 #elements {
-  position: absolute;
-  top: 50%;
+  margin: auto 10% auto;
+}
+
+#instaLogo {
+  width: 50px;
+}
+
+.line {
+  display: inline-block;
+
+  height: 50px;
+  margin-left: 20px;
+
+  border-left: 5px solid black;
+}
+
+#logo {
+  margin-left: 20px;
+
+  font-family: "lobster";
+  font-size: 50px;
+}
+
+#search_bar {
+  margin: auto;
+}
+
+#search_img {
+  width: 25px;
+
+  vertical-align: -7px;
+}
+
+#search {
+  height: 36px;
+  width: 268px;
+
+  border: none;
+  border-radius: 10px;
+  background-color: #efefef;
+
+  text-align: left;
+}
+
+#search::placeholder {
+  padding-left: 30px;
+
+  font-size: 20px;
 }
 
 #icons {
   display: inline;
-  position: absolute;
-  right: 100px;
+
+  margin: auto 10% auto;
 }
 
 .icon {
@@ -29,60 +82,243 @@
   margin-left: 10px;
 }
 
-#search {
-  text-align: center;
-}
+/* 피드*/
 
-#insatLogo {
-  width: 50px;
-  margin-left: 18%;
-}
+#feeds {
+  width: 800px;
 
-.line {
-  display: inline-block;
-  margin-left: 20px;
-  border-left: 5px solid black;
-  height: 50px;
-}
+  margin-top: 100px;
+  margin-left: 20%;
 
-#logo {
-  font-family: "lobster";
-  font-size: 50px;
-  margin-left: 20px;
+  border: 2px solid #dbdbdb;
+  border-radius: 10px;
+  background-color: #ffffff;
 }
 
 #main {
-  background-color: #fafafa;
+  display: flex;
+
   margin-top: 100px;
+
+  background-color: #fafafa;
 }
 
-#feeds_profile {
-  background-color: white;
-}
-
-#feeds {
-  border: 5px solid black;
-  width: 800px;
-  height: 1500px;
-  margin-top: 30px;
-  margin-left: 20%;
+#article {
+  position: relative;
 }
 
 #me {
-  width: 30px;
-  height: 30px;
-  border-radius: 70%;
-  overflow: hidden;
+  width: 50px;
+  height: 50px;
+  margin-top: 20px;
+  margin-right: 10px;
+  margin-left: 20px;
+
+  border-radius: 70px;
+  vertical-align: -25px;
+}
+
+#feeds_profile {
+  font-size: 30px;
+  font-weight: bolder;
+  vertical-align: middle;
+}
+
+#more {
+  position: absolute;
+  top: 50px;
+  right: 30px;
+
+  width: 50px;
+  height: 50px;
+
+  transform: translate(-50%, -50%);
 }
 
 #early_bird {
-  width: 800px;
+  width: 100%;
+  margin-top: 20px;
+
+  border-top: 2px solid #dbdbdb;
+}
+
+#save {
+  position: absolute;
+  right: 20px;
 }
 
 #other {
-  width: 50px;
+  width: 40px;
+
+  border: 1px solid #dbdbdb;
+  border-radius: 70px;
+
+  vertical-align: -14px;
 }
 
 .mention {
+  margin: 20px;
+
+  font-size: 25px;
+}
+
+.comment_box {
+  margin-bottom: 30px;
+}
+
+.comment_bar {
+  position: relative;
+  bottom: 0px;
+
+  width: 100%;
+  height: 50px;
+  padding: 0;
+
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border: 1px solid #dbdbdb;
+}
+
+.ripple_bar {
+  bottom: 0px;
+
+  width: 90%;
+  height: 50px;
+  padding: 0;
+
+  border: none;
+
+  text-align: left;
   font-size: 20px;
+
+  outline: none;
+}
+
+.ripple_button {
+  color: #b3dffc;
+  background-color: #ffffff;
+  border: none;
+
+  text-align: center;
+  font-size: 20px;
+}
+
+/*메인 오른쪽 프로필*/
+#main_right {
+  display: flex;
+}
+#right_profile {
+  display: flex;
+
+  margin: 100px;
+}
+
+#profile {
+  width: 100px;
+  height: 100px;
+
+  border-radius: 70px;
+}
+
+#profile_text {
+  padding-left: 15px;
+
+  list-style: none;
+}
+
+#nickname {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#my_name {
+  color: #9d9d9d;
+
+  font-size: 20px;
+}
+
+/*스토리*/
+#story {
+  width: 450px;
+  margin-left: 50px;
+  padding: 20px;
+
+  background-color: #ffffff;
+  border: 1px solid #dbdbdb;
+  border-radius: 10px;
+
+  list-style: none;
+}
+
+.right_title {
+  color: #9d9d9d;
+
+  font-size: 20px;
+}
+
+.right_more {
+  float: right;
+
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.story_list {
+  padding: 0;
+
+  list-style: none;
+}
+
+.story_profile {
+  display: inline-block;
+}
+
+.other_story {
+  float: left;
+
+  width: 100px;
+  height: 100px;
+
+  border-radius: 70px;
+  border: 1px solid #9d9d9d;
+}
+
+.other_profile {
+  float: left;
+
+  width: 100px;
+  height: 100px;
+}
+
+.other_profile_text {
+  float: left;
+
+  padding-left: 15px;
+
+  list-style: none;
+}
+
+.other_nickname {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.other_name {
+  color: #9d9d9d;
+
+  font-size: 20px;
+}
+
+/* 친구추천 */
+#add_friends {
+  width: 450px;
+  padding: 20px;
+  margin-top: 20px;
+  margin-left: 50px;
+
+  border-radius: 10px;
+  border: 1px solid #dbdbdb;
+  background-color: #ffffff;
+
+  list-style: none;
 }
