@@ -2,14 +2,6 @@ const commentInput = document.getElementsByClassName("commentInput")[0];
 const commentButton = document.getElementsByClassName("commentButton")[0];
 const commentList = document.getElementsByClassName("commentList")[0];
 
-function checkInput() {
-  if (commentInput.value.length === 0) {
-    alert("Enter comment!");
-  } else {
-    enterComment(commentInput.value);
-  }
-}
-
 function enterComment(value) {
   const newCommentList = document.createElement("li");
   const newComment = `
@@ -34,7 +26,6 @@ function enterComment(value) {
   });
 }
 
-// commentInput.addEventListener("input", checkInput);
 commentInput.addEventListener("keydown", function (e) {
   // console.log("enter");
   if (e.keyCode === 13 && commentInput.value.length > 0) {
@@ -48,7 +39,16 @@ commentButton.addEventListener("click", function () {
   }
 });
 
-// // delete comment
+// 초안과 연습장
+// function checkInput() {
+//   if (commentInput.value.length === 0) {
+//     alert("Enter comment!");
+//   } else {
+//     enterComment(commentInput.value);
+//   }
+// }
+
+// delete comment
 // const trashButton = newComment.querySelector(".delete");
 
 // trashButton.addEventListener("click", commentList.removeChild(newComment));
