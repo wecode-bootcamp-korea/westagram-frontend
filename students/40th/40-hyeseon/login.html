@@ -11,15 +11,19 @@
 </head>
 
 <body>
-  <section id='wrapperLogin'>
-    <h1 class='westagramTitle'>Westagram</h1>
-    <form id='loginForm'>
-      <input id='loginId' type="text" placeholder='전화번호, 사용자 이름 또는 이메일' />
-      <input id='loginPw' type="password" placeholder='비밀번호' />
-      <button id='loginBtn'>로그인</button>
-    </form>
-    <a class='forgetLink' href="https://www.instagram.com/accounts/password/reset/">비밀번호를 잊으셨나요?</a>
-  </section>
+  <main class='wrapperLogin'>
+    <div class='loginBox'>
+      <h1 class='westagramTitle'>Westagram</h1>
+      <form class='loginForm'>
+        <input class='loginId' type='email' placeholder='전화번호, 사용자 이름 또는 이메일' maxlength='50' />
+        <input class='loginPw' type="password" placeholder='비밀번호' />
+        <span class='alertComment'>로그인에 실패했습니다</span>
+        <button class='loginBtn'>로그인</button>
+        <a class='forgetLink' href="https://www.instagram.com/accounts/password/reset/">비밀번호를 잊으셨나요?</a>
+      </form>
+
+    </div>
+  </main>
 
   <script src="./js/login.js"></script>
 </body>

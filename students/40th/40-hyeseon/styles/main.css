@@ -110,7 +110,7 @@
 }
 
 #stateBox {
-  padding: 10px 15px;
+  padding: 10px 15px 0px;
 }
 
 #wrapperState {
@@ -148,7 +148,7 @@
 #commentWrite {
   display: flex;
   justify-content: space-between;
-  padding: 15px 3px;
+  padding: 10px 0px;
 }
 
 #commentWrite span {
@@ -161,20 +161,37 @@
   height: 20px;
 }
 
+.commentsList strong {
+  padding: 10px 15px;
+}
+
+.nickName {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 24px 0 0;
+}
+
+.likeBtn {
+  width: 12px;
+  height: 12px;
+  margin-right: 10px;
+}
+
 #wrapperCommentsBox {
   display: flex;
   justify-content: space-between;
   border-top: 1px solid #ccc;
 }
 
-#commentsInput {
+.commentsInput {
   width: 90%;
   padding: 15px 15px;
   border-style: none;
   font-size: 12px;
 }
 
-#commentsBtn {
+.commentsBtn {
   width: 10%;
   font-size: 12px;
   border-style: none;
@@ -182,7 +199,7 @@
   color: #666;
 }
 
-#commentsBtn:hover {
+.commentsBtn:hover {
   color: #0995f6;
   cursor: pointer;
 }
@@ -197,6 +214,21 @@
   padding: 15px;
 }
 
+.profileBoxRight li:nth-child(1) {
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.profileBoxRight li:nth-child(2) {
+  font-size: 12px;
+  margin-top: 3px;
+  color: #555;
+}
+
+#story {
+  overflow: scroll;
+}
+
 #story,
 #recommend {
   height: 35%;
@@ -209,6 +241,11 @@
 .rightBox {
   margin-top: 15px;
   justify-content: flex-start;
+}
+
+.follow {
+  color: #0995f6;
+  float: right;
 }
 
 .profileImageSizeMedium {

@@ -1,51 +1,57 @@
-const commentsInput = document.querySelector('#commentsInput');
-const commentsBtn = document.querySelector('#commentsBtn');
-const newComments = document.querySelector('#commentsList');
+const commentsInput = document.querySelector('.commentsInput');
+const commentsBtn = document.querySelector('.commentsBtn');
+const newComments = document.querySelector('.commentsList');
+const newNickname = document.querySelector('.commentsNickname');
 
 commentsBtn.addEventListener('click', createCommentsToClick);
 document.addEventListener('keypress', createCommentsToKeypress);
 
 function createCommentsToClick() {
   const createComments = document.createElement('li');
-  createComments.innerText = commentsInput.value;
+  createComments.innerHTML = `
+  <div class='nickName'>
+    <ul>
+      <strong>wecode_hyeseon</strong>
+      <span>${commentsInput.value}</span>
+    </ul>
+    <ul class='commentsBtns'>
+      <img class='likeBtn' alt="like"
+        src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" />
+      <span class='deleteBtn'>x</span>
+    </ul>
+  </div>
+  `;
   newComments.appendChild(createComments);
 
   createComments.style.fontSize = '12px';
-  createComments.style.padding = '15px';
+  createComments.style.padding = '15px 20px 0 0';
+
+  commentsInput.value = '';
 }
 
-// 아래로 댓글 달리는 게 아니라 계속 갱신됨
 function createCommentsToKeypress(e) {
+  const createComments = document.createElement('li');
   if (e.keyCode == 13) {
-    const createComments = document.createElement('li');
     e.preventDefault();
-    createComments.innerText = commentsInput.value;
+    createComments.innerHTML = `
+  <div class='nickName'>
+    <ul>
+      <strong>wecode_hyeseon</strong>
+      <span>${commentsInput.value}</span>
+    </ul>
+    <ul class='commentsBtns'>
+      <img class='likeBtn' alt="like"
+        src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" />
+      <span class='deleteBtn'>x</span>
+    </ul>
+  </div>
+  `;
     newComments.appendChild(createComments);
 
     createComments.style.fontSize = '12px';
-    createComments.style.padding = '15px';
+    createComments.style.padding = '5px 0';
+
+    commentsInput.value = '';
   }
   return;
 }
-// function createCommentsToClick() {
-//   const createComments = document.createElement('li');
-//   createComments.innerText = commentsInput.value;
-//   newComments.appendChild(createComments);
-
-//   createComments.style.fontSize = '12px';
-//   createComments.style.padding = '15px';
-// }
-
-// // 아래로 댓글 달리는 게 아니라 계속 갱신됨
-// function createCommentsToKeypress(e) {
-//   if (e.keyCode == 13) {
-//     const createComments = document.createElement('li');
-//     e.preventDefault();
-//     createComments.innerText = commentsInput.value;
-//     newComments.appendChild(createComments);
-
-//     createComments.style.fontSize = '12px';
-//     createComments.style.padding = '15px';
-//   }
-//   return;
-// }

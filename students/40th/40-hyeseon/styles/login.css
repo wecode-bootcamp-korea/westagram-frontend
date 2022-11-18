@@ -1,39 +1,44 @@
-#wrapperLogin {
+.wrapperLogin {
+  margin-top: 100px;
   display: flex;
   flex-direction: column;
-  margin: 10% 35%;
-  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginBox {
+  padding: 50px;
   border: 1px solid #ccc;
+  text-align: center;
 }
 
 .westagramTitle {
-  padding-top: 80px;
   font-size: 50px;
 }
 
-#loginForm {
+.loginForm {
   display: flex;
   flex-direction: column;
   padding-top: 50px;
-  margin: 0 20%;
 }
 
-#loginId,
-#loginPw,
-#loginBtn {
+.loginId,
+.loginPw,
+.loginBtn {
   padding: 12px 0px 10px 12px;
   margin-bottom: 10px;
   background-color: #fafafa;
   font-size: 16px;
 }
 
-#loginId,
-#loginPw {
+.loginId,
+.loginPw {
   border: 1px solid #ccc;
   border-radius: 3px;
 }
 
-#loginBtn {
+.loginBtn {
+  margin-top: 15px;
   color: white;
   background-color: #c0dffd;
   border-style: none;
@@ -42,7 +47,7 @@
 }
 
 .forgetLink {
-  margin: 80px 0px;
+  padding: 30px 0;
   color: navy;
   font-size: 16px;
   cursor: pointer;
