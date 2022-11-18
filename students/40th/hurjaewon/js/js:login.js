@@ -1,3 +1,11 @@
-const inputBox = document.getElementsByClassName("id") [0];
-const passwordBox = document.getElementsByClassName("text")[0];
-const buttonBox = document.getElementsByClassName("button")[0];
+const id = document.querySelector("#text_box");
+const pw = document.querySelector("#password_box");
+const button = document.querySelector(".button_box");
+
+const changeColor = () => {    
+    const isValid = id.value.length > 0 && pw.value.length > 0;
+    button.disabled = !isValid;
+}
+
+id.addEventListener('keyup', changeColor);
+pw.addEventListener('keyup', changeColor);
