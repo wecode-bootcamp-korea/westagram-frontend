@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>insta main</title>
-    <link rel="stylesheet" href="style/main_common.css" />
-    <link rel="stylesheet" href="style/main.css" />
+    <link rel="stylesheet" href="css/main_common.css" />
+    <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
     <nav class="insta_gnb">
@@ -20,7 +20,13 @@
       <ul class="userProfile">
         <li><img src="img/explore.png" alt="explore" /></li>
         <li><img src="img/heart.png" alt="heart" /></li>
-        <li><img src="img/profile.png" alt="profile" /></li>
+        <li class="clickProfile"><img src="img/profile.png" alt="profile" /></li>
+      </ul>
+      <ul class="clickProfileInfo">
+        <li><a href="#">프로필</a></li>
+        <li><a href="#">저장됨</a></li>
+        <li><a href="#">설정</a></li>
+        <li><a href="#">로그아웃</a></li>
       </ul>
     </nav>
     <main>
@@ -70,17 +76,20 @@
                 </div>
                 <p>aineworld님 외 <div class="name">0</div>명이 좋아합니다</p>
               </div>
-              <div class="userWriting">
-                <p>canon_mj</p>
-                <p>
-                  위워크에서 진행한 베이킹 클래스...
-                  <a href="#" class="grey">더보기</a>
-                </p>
-              </div>
-              <div class="followersWrite">
-                <p>neceosecius</p>
-                <p>🤟👉🥰⚡✍️</p>
-              </div>
+              <ul class="userWriting">
+                <li>
+                  <span class="boldName">canon_mj</span>
+                  <span>위워크에서 진행한 베이킹 클래스...<a href="#" class="grey">더보기</a></span>
+                </li>
+              </ul>
+              <ul class="followersWrite">
+                <li>
+                  <span class="boldName">neceosecius</span>
+                  <span>ok🤟👉🥰⚡✍️</span>
+                  <span class="heartAdd"><img src="img/empty_heart.png" alt=""></span>
+                  <span class="delete">❌</span>
+                </li>
+              </ul>
             </div>
             <div class="userComment">
               <input
@@ -103,50 +112,61 @@
             <span class="grey">wocode 위코드</span>
           </div>
         </div>
-        <ul class="storySection">
-          <li>
+        <div class="sideStory">
+          <div class="storySectionTitle">
             <div class="storyTitle"><p>스토리</p></div>
             <div class="stroyAll">
               <p><a href="#" class="grey">모두 보기</a></p>
             </div>
-          </li>
-          <li>
-            <div class="storyImg customImg">
-              <img src="img/insta_profile.png" alt="profile1" />
-            </div>
-            <div class="sideUserName">
-              <p>wecode_bootcamp</p>
-              <span class="grey">wocode 위코드</span>
-            </div>
-          </li>
-          <li>
-            <div class="storyImg customImg">
-              <img src="img/insta_profile.png" alt="profile2" />
-            </div>
-            <div class="sideUserName">
-              <p>wecode_bootcamp</p>
-              <span class="grey">wocode 위코드</span>
-            </div>
-          </li>
-          <li>
-            <div class="storyImg customImg">
-              <img src="img/insta_profile.png" alt="profile3" />
-            </div>
-            <div class="sideUserName">
-              <p>wecode_bootcamp</p>
-              <span class="grey">wocode 위코드</span>
-            </div>
-          </li>
-          <li>
-            <div class="storyImg customImg">
-              <img src="img/insta_profile.png" alt="profile4" />
-            </div>
-            <div class="sideUserName">
-              <p>wecode_bootcamp</p>
-              <span class="grey">wocode 위코드</span>
-            </div>
-          </li>
-        </ul>
+          </div>
+          <ul class="storySection">
+            <li>
+              <div class="storyImg customImg">
+                <img src="img/insta_profile.png" alt="profile1" />
+              </div>
+              <div class="sideUserName">
+                <p>wecode_bootcamp</p>
+                <span class="grey">wocode 위코드</span>
+              </div>
+            </li>
+            <li>
+              <div class="storyImg customImg">
+                <img src="img/insta_profile.png" alt="profile2" />
+              </div>
+              <div class="sideUserName">
+                <p>wecode_bootcamp</p>
+                <span class="grey">wocode 위코드</span>
+              </div>
+            </li>
+            <li>
+              <div class="storyImg customImg">
+                <img src="img/insta_profile.png" alt="profile3" />
+              </div>
+              <div class="sideUserName">
+                <p>wecode_bootcamp</p>
+                <span class="grey">wocode 위코드</span>
+              </div>
+            </li>
+            <li>
+              <div class="storyImg customImg">
+                <img src="img/insta_profile.png" alt="profile4" />
+              </div>
+              <div class="sideUserName">
+                <p>wecode_bootcamp</p>
+                <span class="grey">wocode 위코드</span>
+              </div>
+            </li>
+            <li>
+              <div class="storyImg customImg">
+                <img src="img/insta_profile.png" alt="profile4" />
+              </div>
+              <div class="sideUserName">
+                <p>wecode_bootcamp</p>
+                <span class="grey">wocode 위코드</span>
+              </div>
+            </li>
+          </ul>
+        </div>
         <ul class="suggestionSection">
           <li>
             <div class="suggestionTitle"><p>회원님을 위한 추천</p></div>

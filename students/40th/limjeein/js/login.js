@@ -18,6 +18,7 @@ function userBtnOn() {
   }
 }
 
+// 유효성이 맞는 함수 따로 모음, 맞지않는 함수 따로 모음 을 따로 만들어야한다
 submitBtn.addEventListener("click", function () {
   if (userId.value.indexOf("@") > -1) {
     if (userPw.value.length >= 5) {
@@ -32,3 +33,8 @@ submitBtn.addEventListener("click", function () {
     }
   }
 });
+
+// 엔터키를 쳤을때 인스타그램 화면으로 넘어가게 하는 동작
+
+// "input" -> input창 안에 value 변화가 있을때 동작한다
+// key로 하는 동작은 붙여 넣기했을때는 변화를 못느낀다

@@ -9,6 +9,7 @@ h1 {
   justify-content: space-around;
   align-items: center;
   padding: 30px;
+  position: relative;
 }
 .insta_logo {
   display: flex;
@@ -31,6 +32,24 @@ h1 {
   width: 30px;
   margin-right: 20px;
 }
+.clickProfileInfo {
+  display: none;
+  position: absolute;
+  top: 60px;
+  right: 200px;
+  width: 200px;
+  background: #fff;
+}
+.on {
+}
+
+.clickProfileInfo li {
+  padding: 8px 5px;
+  font-size: 12px;
+}
+.clickProfileInfo li:last-child {
+  border-top: 1px solid #ddd;
+}
 
 /* main */
 main {
@@ -45,6 +64,7 @@ main .feeds {
 }
 main .main-right {
   width: 320px;
+  font-size: 14px;
 }
 
 .feeds .feedTop {
@@ -67,6 +87,7 @@ main .main-right {
 }
 .feedTopUser p {
   line-height: 30px;
+  font-size: 14px;
 }
 
 .feedMore {
@@ -101,12 +122,24 @@ main .main-right {
   display: flex;
   margin-top: 10px;
 }
+.userWrite {
+  font-size: 14px;
+}
 .userWrite p {
   line-height: 30px;
   margin-right: 10px;
 }
-.followersWrite {
-  display: flex;
+.boldName {
+  font-weight: 600;
+  margin-right: 5px;
+}
+
+.heartAdd {
+  display: inline-block;
+  width: 15px;
+}
+.heartAdd img {
+  width: 100%;
 }
 
 .insta_profileImg {
@@ -143,15 +176,25 @@ button {
   margin-right: 10px;
 }
 
-.storySection {
+.sideStory {
   border: 1px solid #ddd;
+}
+.storySectionTitle {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 15px;
+}
+.storySection {
+  overflow-y: scroll;
+  height: 220px;
+}
+
+.storySection::-webkit-scrollbar {
+  display: none;
 }
 .storySection li {
   display: flex;
   padding: 10px 15px;
-}
-.storySection li:first-child {
-  justify-content: space-between;
 }
 
 .suggestionSection {
@@ -164,4 +207,7 @@ button {
 }
 .suggestionSection li:first-child {
   justify-content: space-between;
+}
+.suggestionSection li .suggestionFollow {
+  margin-left: 45px;
 }
