@@ -8,7 +8,15 @@
     <link rel="stylesheet" href="main.css" />
   </head>
   <body>
-    <nav class="navBar"></nav>
+    <nav class="navBar">
+      <div class="navMainLogo"></div>
+      <div>
+        <input type="text" id="navSearch" />
+        <ul id="searchSection"></ul>
+      </div>
+
+      <div class="sideNav"></div>
+    </nav>
     <div class="main">
       <div class="feedSection">
         <article class="feed">
@@ -19,7 +27,7 @@
             <input
               type="checkbox"
               id="commentOpen"
-              onclick="commentClose()"
+              onclick="commentSectionClose()"
               checked
             />
           </div>
@@ -69,7 +77,9 @@
         </div>
       </div>
     </div>
+    <script src="userData.js"></script>
     <script src="comment.js"></script>
     <script src="likeCount.js"></script>
+    <script src="search.js"></script>
   </body>
 </html>
