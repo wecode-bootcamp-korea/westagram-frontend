@@ -13,7 +13,7 @@ function paintComment(newComment) {
   const li = document.createElement('li'); // li태그 생성
   const span = document.createElement('span'); // span태그 생성
   const span2 = document.createElement('span');
-  li.insertAdjacentElement('beforeend', span2); // li태그 속에 span2 태그 생성
+  li.appendChild(span2); // li태그 속에 span2 태그 생성
   li.appendChild(span); // li태그 속에 span 태그 생성 - li span2 span /li 순으로 생성됨
   span.innerText = newComment; // 인자로 받아온 newComment span에 할당
   span2.innerText = '작성자'; // 댓글작성자 미리 지정
@@ -21,3 +21,9 @@ function paintComment(newComment) {
 }
 
 commentForm.addEventListener('submit', addComment);
+
+// checkinput 함수 생성
+// makeDeleteEvent
+// 바닐라JS - 절차적 프로그래밍 방식
+
+// !! 템플릿 리터럴 -> innerHTML
