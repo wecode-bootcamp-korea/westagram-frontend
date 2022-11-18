@@ -1,9 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* header_navbar */
 body {
   width: 100%;
   background: #efefef;
@@ -16,41 +11,305 @@ body {
   justify-content: center;
   width: 100%;
   height: 50px;
+  padding: 5px 0;
   background: #fff;
   border-bottom: 1px solid #dfdfdf;
-  padding: 5px 0;
 }
 
 .navContainer {
-  width: 70%;
-  max-width: 1000px;
-  height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 90%;
+  max-width: 1000px;
+  height: 100%;
 }
 
 .instagramIcon {
-  height: 100%;
+  align-items: center;
+  height: 25px;
+  cursor: pointer;
 }
 
 .searchBox {
   position: absolute;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%); /*absolute 포지션일 때 가운데 정렬하는 법*/
   width: 200px;
-  height: 25px;
+  height: 30px;
+  padding-left: 2%;
   background: #fafafa;
   border: 1px solid #dfdfdf;
-  border-radius: 2px;
-  color: rgba (0, 0, 0, 0.5);
-  text-align: center;
+  border-radius: 3px;
+  color: #dfdfdf;
 }
 
 .icon {
-  height: 100%;
-  max-height: 25px;
-  cursor: pointer;
-  margin: 0 10px;
   display: inline-block;
+  height: 25px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+/* main_feed_left*/
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  padding: 50px 20px;
+}
+
+.feed {
+  width: 100%;
+  height: auto;
+  max-width: 500px;
+  margin-top: 40px;
+  padding: 1px 0px;
+  background: #fff;
+  border: 1px solid #dfdfdf;
+  border-radius: 8px;
+}
+
+.profileFeed {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+
+.feed .profileImageTop {
+  height: 42px;
+  width: 42px;
+  padding: 3px;
+  border-radius: 50%;
+}
+
+.feed .profileId {
+  margin-left: 5px;
+}
+
+.feedImage {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+.postContent {
+  width: 100%;
+  padding: 5px 20px 20px 20px;
+}
+
+.reactionIconWrap {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 46px;
+}
+
+.reactionIconWrap .icon {
+  height: 24px;
+  margin: 0;
+  margin-right: 15px;
+}
+
+.reactionIconWrap .saveIcon {
+  height: 24px;
+  margin-left: auto;
+}
+
+.likesText {
+  font-size: 14px;
+}
+
+.likesText span {
+  font-weight: 600;
+}
+
+.postDescription {
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+.postDescription span {
+  margin-right: 10px;
+  font-weight: 600;
+}
+
+ul .commentList {
+  margin-top: 5px;
+}
+
+ul.commentList li {
+  display: flex;
+  justify-content: space-between;
+  height: 20px;
+  font-size: 14px;
+}
+
+.commentList span {
+  margin-right: 10px;
+}
+
+.commentIcons {
+  display: flex;
+  align-items: center;
+}
+
+img.commentLike,
+img.delete {
+  width: 15px;
+  height: 15px;
+}
+
+img.delete {
+  margin-left: 3px;
+  margin-right: 0px;
+}
+
+.postTime {
+  font-size: 12px;
+  color: #8e8e8e;
+}
+
+.commentWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  border-top: 1px solid #dfdfdf;
+}
+
+.commentWrap .icon {
+  height: 30px;
+}
+
+.commentInput {
+  width: 80%;
+  height: 100%;
+  border: none;
+  font-size: 14px;
+}
+
+.commentButton {
+  width: 50px;
+  height: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #0095f6;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* main_feed_right*/
+.mainRight {
+  width: 100%;
+  height: 100%;
+  max-width: 500px;
+  max-height: 600px;
+  margin-left: 20px;
+  margin-top: 40px;
+  padding: 10px 10px;
+  border-radius: 8px;
+}
+
+@media all and (max-width: 800px) {
+  .mainRight {
+    display: none;
+  }
+} /* 화면 내 특정 포인트를 지나, 요소에 이펙트를 주고 싶을때 media query*/
+
+.mainRight .profileWrap img {
+  display: flex;
+  flex-direction: column;
+  width: 42px;
+  height: 42px;
+  margin-bottom: 5px;
+  padding: 5px;
+  border-radius: 50%;
+}
+
+.profileWrap,
+.suggestions {
+  align-items: center;
+  width: 400px;
+  height: auto;
+}
+
+.profileMain {
+  display: flex;
+  align-items: center;
+}
+
+img.profileImage {
+  width: 56px;
+  height: 56px;
+  margin-bottom: 5px;
+  border-radius: 50%;
+}
+
+.suggestions {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0px;
+}
+
+.light14px {
+  color: #8e8e8e;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.bold12px {
+  color: #262626;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.bold14px,
+.commentUsername {
+  color: #262626;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.bold12pxInstaBlue {
+  color: #0095f6;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.userProfile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profileSuggested {
+  display: flex;
+  align-items: center;
+}
+
+.username {
+  display: flex;
+  justify-content: space-between;
+}
+
+.profileText {
+  margin-left: 10px;
+}
+
+.profileId {
+  color: #262626;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.profileDes {
+  color: #8e8e8e;
+  font-size: 12px;
+  margin-top: 2px;
 }

@@ -4,29 +4,187 @@
     <meta charset="UTF-8" />
     <title>westagram</title>
     <link rel="stylesheet" href="style/main.css" />
+    <link rel="stylesheet" href="style/common.css" />
   </head>
 </html>
 
 <body>
-  <nav class="navBar">
-    <div class="navContainer">
-      <img src="images/instagram.png" class="icon" alt="instagram icon" />
-      <input type="text" class="searchBox" placeholder="Search" />
-      <div class="navIcons">
-        <img src="images/explore.png" class="icon" alt="explore icon" />
-        <img src="images/heart.png" class="icon" alt="heart icon" />
-        <img src="images/profile.png" class="icon" alt="profile icon" />
+  <header>
+    <nav class="navBar">
+      <div class="navContainer">
+        <img
+          src="images/instagram.png"
+          class="instagramIcon"
+          alt="instagram icon"
+        />
+        <input type="text" class="searchBox" placeholder="Search" />
+        <div class="navIcons">
+          <img src="images/explore.png" class="icon" alt="explore icon" />
+          <img src="images/heart.png" class="icon" alt="heart icon" />
+          <img src="images/profile.png" class="icon" alt="profile icon" />
+        </div>
       </div>
-    </div>
-  </nav>
-  <main class="main">
-    <div class="feeds">
-      <div class="article">
-        <img src="" />
+    </nav>
+  </header>
+
+  <div class="mainContainer">
+    <article class="mainLeft">
+      <section class="feed">
+        <div class="profileFeed">
+          <img
+            src="images/dog_profile1.jpg"
+            class="profileImageTop"
+            alt="dog profile image"
+          />
+          <span class="profileId">i_am_doggo</span>
+        </div>
+        <img src="images/main feed.jpg" class="feedImage" alt="feed image" />
+        <div class="postContent">
+          <div class="reactionIconWrap">
+            <img src="images/like.png" class="icon" alt="like icon" />
+            <img src="images/comment.png" class="icon" alt="comment icon" />
+            <img src="images/send.png" class="icon" alt="send icon" />
+            <img src="images/save.png" class="saveIcon" alt="save icon" />
+          </div>
+          <p class="likesText">
+            Liked by <span>seojung.yoon</span> and
+            <span>1,000 others</span>
+          </p>
+          <p class="postDescription">
+            <span>i_am_doggo</span>나는 낭만 강아지. 슬픈 도시를 비춰 춤추는
+            작은 별빛!✨ 파도를 바라볼 때면 가슴이 웅장해진다!
+          </p>
+
+          <ul class="commentList">
+            <li>
+              <div>
+                <span class="commentUsername">seojung.yoon</span>
+                <span>뭐야 너무 예쁘잖아!</span>
+              </div>
+              <div class="commentIcons">
+                <img class="commentLike" src="images/heart.png" />
+                <img class="delete" src="images/trash.png" />
+              </div>
+            </li>
+          </ul>
+          <p class="postTime">1 DAY AGO</p>
+        </div>
+
+        <!--댓글 입력창-->
+        <div class="commentWrap">
+          <img src="images/smile.png" class="icon" alt="smile icon" />
+          <input type="text" class="commentInput" placeholder="Add a comment" />
+          <button class="commentButton">post</button>
+        </div>
+      </section>
+    </article>
+
+    <article class="mainRight">
+      <section class="profileMain">
+        <img
+          src="images/dog_profile1.jpg"
+          class="profileImage"
+          alt="dog profile image"
+        />
+        <div class="profileText">
+          <div class="profileId">i_am_doggo</div>
+          <div class="profileDes">cute fluffy dog!</div>
+        </div>
+      </section>
+
+      <div class="suggestions">
+        <span class="light14px">Suggestions For You</span>
+        <span class="bold12px">See All</span>
       </div>
-    </div>
-    <div class="mainRight"></div>
-  </main>
+
+      <section class="profileWrap">
+        <div class="userProfile">
+          <div class="profileSuggested">
+            <img
+              src="images/ghost_profile2.jpg"
+              class="profileImage"
+              alt="ghost profile image"
+            />
+            <div class="username">
+              <div class="profileText">
+                <div class="profileId">i_am_ghost</div>
+                <div class="profileDes">New to Instagram</div>
+              </div>
+            </div>
+          </div>
+          <div class="bold12pxInstaBlue">Follow</div>
+        </div>
+
+        <div class="userProfile">
+          <div class="profileSuggested">
+            <img
+              src="images/dog_profile3.jpg"
+              class="profileImage"
+              alt="dog3 profile image"
+            />
+            <div class="username">
+              <div class="profileText">
+                <div class="profileId">mynameis.acorn</div>
+                <div class="profileDes">Followed by seojung.yoon</div>
+              </div>
+            </div>
+          </div>
+          <div class="bold12pxInstaBlue">Follow</div>
+        </div>
+
+        <div class="userProfile">
+          <div class="profileSuggested">
+            <img
+              src="images/bird_profile4.jpg"
+              class="profileImage"
+              alt="bird profile image"
+            />
+            <div class="username">
+              <div class="profileText">
+                <div class="profileId">who_am_i</div>
+                <div class="profileDes">Followed by seojung.yoon + 5 more</div>
+              </div>
+            </div>
+          </div>
+          <div class="bold12pxInstaBlue">Follow</div>
+        </div>
+
+        <div class="userProfile">
+          <div class="profileSuggested">
+            <img
+              src="images/dog_profile1.jpg"
+              class="profileImage"
+              alt="dog4 profile image"
+            />
+            <div class="username">
+              <div class="profileText">
+                <div class="profileId">hello_world</div>
+                <div class="profileDes">New to Instagram</div>
+              </div>
+            </div>
+          </div>
+          <div class="bold12pxInstaBlue">Follow</div>
+        </div>
+
+        <div class="userProfile">
+          <div class="profileSuggested">
+            <img
+              src="images/ghost_profile2.jpg"
+              class="profileImage"
+              alt="ghost2 profile image"
+            />
+            <div class="username">
+              <div class="profileText">
+                <div class="profileId">i_said_boo</div>
+                <div class="profileDes">Followed by hello.world + 2 more</div>
+              </div>
+            </div>
+          </div>
+          <div class="bold12pxInstaBlue">Follow</div>
+        </div>
+      </section>
+    </article>
+  </div>
 </body>
 
 <script src="js/main.js"></script>
