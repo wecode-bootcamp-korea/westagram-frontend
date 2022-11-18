@@ -8,36 +8,37 @@
     <link rel="stylesheet" href="login.css" />
   </head>
   <body>
-    <div id="loginSection">
-      <header id="loginTitleWrap">
-        <p class="loginTitle">Westagram</p>
-      </header>
+    <main id="loginSection">
+      <h1 class="loginTitle">Westagram</h1>
 
-      <main class="loginInfoBox">
+      <form class="inputBox">
         <input
-          id="UserId"
-          class="inputItem inputBox inputUser"
+          id="userId"
+          class="inputItem"
           type="text"
           placeholder="전화번호, 사용자 이름 또는 이메일"
         />
         <input
-          id="PW"
-          class="inputItem inputBox"
+          id="password"
+          class="inputItem"
           type="password"
           placeholder="비밀번호"
         />
+
         <button
-          class="loginBtn loginBtnFont loginBtnDeact loginBtnAct"
+          class="loginBtn loginBtnTxt loginBtnColor"
           type="button"
           onclick="Welcome!"
           disabled
         >
           로그인
         </button>
-      </main>
-      <footer class="lostPassword">비밀번호를 잊으셨나요?</footer>
-    </div>
+      </form>
+      <footer class="lostPassword">
+        <p>비밀번호를 잊으셨나요?</p>
+      </footer>
+    </main>
 
-    <script src="login.js"></script>
+    <script type="text/javascript" src="login.js"></script>
   </body>
 </html>

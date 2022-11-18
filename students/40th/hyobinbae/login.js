@@ -1,15 +1,8 @@
-// const loginBtnJs = document.getElementsByClassName("loginBtn")[0];
+const getInput = document.getElementsByClassName("inputBox")[0];
+const loginButton = document.getElementsByClassName("loginBtn");
 
-const inputId = document.getElementById("UserId").value;
-const inputPw = document.getElementById("PW").value;
+const ID = document.getElementById("userId");
+const PW = document.getElementById("password");
 
-function disabledBtn() {
-  if (inputId.length >= 1 && inputPw.length >= 1) {
-    document.getElementsByClassName("disabled") == false;
-    return (loginBtn.style.backgroundColor = "rgb(42, 148, 255)");
-  } else if (inputId.length < 1 || inputPw.length < 1) {
-    document.getElementsByClassName("disabled") == true;
-  }
-}
-
-disabledBtn();
+//1. 로그인 input 각각 input 값으로 function 실행
+//1.  ID/PW 각각

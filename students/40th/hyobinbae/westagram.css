@@ -1,30 +1,330 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 
-
+* {
+  padding: 0;
+}
 
 #navBar {
+  margin: 15px 80px;
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.navLogoWrap {
+  padding: 7px;
+  border-right: 2px solid grey;
 }
 
 .navItem {
-  justify-content: space-around;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+
+.navLeft {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+
+.navEtcEach {
+  margin-right: 15px;
 }
 
 .logoImg {
-  font-style: none;
+  text-decoration-line: none;
   width: 24px;
   height: 24px;
+  padding-right: 15px;
+  border-right: 2px solid gray;
 }
 
 .logoTxt {
+  padding-left: 15px;
+  text-decoration-line: none;
+  color: black;
   font-size: 30px;
   font-family: "Lobster", cursive;
+}
+
+.searchBox {
+  width: 200px;
+  height: 20px;
+  background-color: rgb(246, 246, 246);
+  border: 1px solid rgb(234, 234, 234);
+  border-radius: 2px;
+}
+
+.searchBox::placeholder {
+  text-align: center;
+  font-size: 14px;
+}
+
+#mainSection {
+  border-top: 1px solid rgb(234, 234, 234);
+  background-color: rgb(246, 246, 246);
+  margin: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.mainProfile {
+  margin: 11px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 0.3px solid rgb(239, 239, 239);
+  object-fit: cover;
+  object-position: bottom;
+}
+
+.txt {
+  font-size: 12px;
+}
+
+.option {
+  margin: 10px;
+}
+
+.right {
+  margin-left: 10px;
+}
+
+#feeds {
+  width: 450px;
+  margin-right: 20px;
+  margin-top: 50px;
+  border: 1px solid rgb(234, 234, 234);
+  border-radius: 3px;
+  background-color: white;
+}
+
+#feedNav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#feedImg {
+  margin: 0px;
+}
+
+#feedEtc {
+  border-bottom: 1px solid rgb(234, 234, 234);
+  margin-bottom: 10px;
+}
+
+#feedEnd {
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.feedIcons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.icons {
+  margin: 0px 3px;
+}
+
+.left {
+  margin: 5px 5px;
+}
+
+.right {
+  margin: 5px 5px;
+}
+
+.likeProfile {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 0.3px solid rgb(239, 239, 239);
+  object-fit: cover;
+  object-position: bottom;
+  margin-right: 5px;
+}
+
+.marginLeft {
+  margin: 0px 10px;
+}
+
+.likeMsg {
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.comment {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#side {
+  width: 225px;
+  margin-top: 50px;
+}
+
+.sideHeader {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.myProfile {
+  margin-right: 10px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+#storySection {
+  height: 180px;
+  overflow: scroll;
+}
+
+.sideSection {
+  width: 225px;
+  border: 1px solid rgb(234, 234, 234);
+  border-radius: 3px;
+  background-color: white;
+  margin-bottom: 10px;
+}
+
+.storyTxt {
+  margin: 10px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#storyList .story {
+  list-style: none;
+}
+
+.storyMargin {
+  margin-top: 0px;
+}
+
+.story {
+  margin: 0px 10px 8px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* .gradientCircle {
+  position: absolute;
+  margin-left: -2.8px;
+  width: 26px;
+  height: 26px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  background-image: linear-gradient(#fff, #fff),
+    linear-gradient(to right, rgb(255, 0, 85), orange 100%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+*/
+
+.storyProfile {
+  position: relative;
+  margin-right: 10px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+.recommendFor {
+  margin: 10px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#recommendList {
+  list-style: none;
+  margin: 0px 10px;
+}
+
+.recommendProfile {
+  position: relative;
+  margin-right: 10px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+.IDtextBox {
+  width: 125px;
+  margin: 0px 10px 0 0;
+}
+
+.recommendID {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.lightTxt {
+  color: rgb(177, 177, 177);
+}
+
+.bluelightTxt {
+  color: rgb(178, 222, 255);
+}
+
+.br {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.westaTxt {
+  color: rgb(204, 204, 204);
+}
+
+.westaEtc {
+  margin-bottom: 10px;
+}
+.westaCopy {
+  font-size: 13px;
+}
+
+.blueBrTxt {
+  font-size: 13px;
+  color: rgb(0, 110, 253);
 }
 
 #horizontalNav {
   list-style: none;
 }
 
-#main {
+#mainSection {
   margin: 0px auto 10px auto;
 }

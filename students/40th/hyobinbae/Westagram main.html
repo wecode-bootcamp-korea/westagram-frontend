@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)http://127.0.0.1:5500/students/40th/hyobinbae/westagram.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Westagram main</title>
+    <link rel="stylesheet" href="./Westagram main_files/westagram.css">
+  </head>
+  <body>
+    <nav id="navBar" class="navSort">
+      <div class="navLogo navItem">
+        <span class="navItem navLogoWrap">
+          <a href="http://127.0.0.1:5500/students/40th/hyobinbae/%ED%99%88%EC%9C%BC%EB%A1%9C%20%EC%9D%B4%EB%8F%99"><img class="logoImg" src="./Westagram main_files/instagram.png" alt="westaLogo" width="24px"></a>
+        </span>
+        <span class="navItem">
+          <a class="logoTxt" href="http://127.0.0.1:5500/students/40th/hyobinbae/%ED%99%88%EC%9C%BC%EB%A1%9C%20%EC%9D%B4%EB%8F%99">westagram</a>
+        </span>
+      </div>
+      <div class="navItem">
+        <input class="searchBox" type="text" placeholder="검색">
+      </div>
+      <div class="navItem navEtc">
+        <span class="explorer">
+          <img src="./Westagram main_files/explore.png" width="24px">
+        </span>
+        <span class="heart"><img src="./Westagram main_files/heart.png" width="24px"></span>
+        <span class="profile">
+          <img src="./Westagram main_files/profile.png" width="24px" height="24px">
+        </span>
+      </div>
+    </nav>
+    <main id="mainSection">
+      <div class="feeds">
+        <div class="feed1">
+          <nav id="feedNav">
+            <img class="circleProfile" src="./Westagram main_files/profile_cafe.jpeg" alt="feedProfile" width="45px">
+            <span>ameliee_108</span>
+            <span>...</span>
+          </nav>
+          <main>
+            <img src="./Westagram main_files/sky.jpeg" width="500px">
+            <div>
+              <span> <img src="./Westagram main_files/heart.png" width="24px"></span>
+              <span> <img src="./Westagram main_files/댓글" width="24px"></span>
+              <span> <img src="./Westagram main_files/공유" width="24px"></span>
+              <span> <img src="./Westagram main_files/저장" width="24px"></span>
+            </div>
+            <div>ooo님 외 3명이 좋아합니다</div>
+            <div>계정 + 댓글/ 최대 2줄, 더보기로 줄리기</div>
+            <div>몇분전 - 시간</div>
+          </main>
+          <div>
+            <span> 댓글달기... </span>
+            <span> 게시 </span>
+          </div>
+        </div>
+      </div>
+      <aside class="sideSection">
+        <header><img class="profileImg" src="./Westagram main_files/header">
+      </header></aside>
+    </main>
+  <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>

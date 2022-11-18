@@ -10,65 +10,202 @@
   <body>
     <nav id="navBar" class="navSort">
       <div class="navLogo navItem">
-        <span class="navItem navLogoWrap">
+        <div class="navLeft">
           <a href="홈으로 이동"
             ><img
-              class="logoImg"
+              class="logoImg navItem"
               src="instagram.png"
               alt="westaLogo"
               width="24px"
-          /></a>
-        </span>
-        <span class="navItem">
-          <a class="logoTxt" href="홈으로 이동">westagram</a>
-        </span>
+            />
+          </a>
+          <a class="logoTxt navItem" href="홈으로 이동">Westagram</a>
+        </div>
       </div>
       <div class="navItem">
-        <input class="searchBox" type="text" placeholder="검색" />
+        <input class="searchBox" type="text" placeholder="🔍검색" />
       </div>
       <div class="navItem navEtc">
-        <span class="explorer">
+        <span class="explorer navEtcEach">
           <img src="explore.png" width="24px" />
         </span>
-        <span class="heart"><img src="heart.png" width="24px" /></span>
-        <span class="profile">
+        <span class="heart navEtcEach"
+          ><img src="heart.png" width="24px" />
+        </span>
+        <span class="profile navEtcEach">
           <img src="profile.png" width="24px" height="24px" />
         </span>
       </div>
     </nav>
     <main id="mainSection">
-      <div class="feeds">
-        <div class="feed1">
-          <nav id="feedNav">
+      <section id="feeds">
+        <nav id="feedNav">
+          <div class="navItem">
             <img
-              class="circleProfile"
+              class="mainProfile"
               src="profile_cafe.jpeg"
               alt="feedProfile"
-              width="45px"
+              width="30px"
             />
-            <span>ameliee_108</span>
-            <span>...</span>
-          </nav>
-          <main>
-            <img src="sky.jpeg" width="500px" />
-            <div>
-              <span> <img src="heart.png" width="24px" /></span>
-              <span> <img src="댓글" width="24px" /></span>
-              <span> <img src="공유" width="24px" /></span>
-              <span> <img src="저장" width="24px" /></span>
-            </div>
-            <div>ooo님 외 3명이 좋아합니다</div>
-            <div>계정 + 댓글/ 최대 2줄, 더보기로 줄리기</div>
-            <div>몇분전 - 시간</div>
-          </main>
-          <div>
-            <span> 댓글달기... </span>
-            <span> 게시 </span>
+            <p class="txt"><b>ameliee_108</b></p>
           </div>
+          <div class="navItem">
+            <img class="option" src="option.png" alt="option" width="15px" />
+          </div>
+        </nav>
+        <figure id="feedImg">
+          <img src="sky.jpeg" width="450px" />
+        </figure>
+        <div id="feedEtc">
+          <div class="feedIcons">
+            <div class="left">
+              <img class="icons" src="heart.png" width="24px" />
+              <img class="icons" src="chat.png" width="21px" />
+              <img class="icons" src="share.png" width="21px" />
+            </div>
+            <div class="right">
+              <img src="bookmark.png" width="22px" />
+            </div>
+          </div>
+          <div class="likeMsg marginLeft">
+            <img
+              class="likeProfile"
+              src="tomato_stew.jpeg"
+              alt="tomato stew"
+              width="24px"
+            />
+            <span class="txt likeSum"
+              ><b>tomatoLover</b>님 <b>외 16명</b>이 좋아합니다
+            </span>
+          </div>
+          <div class="txt feedInfo marginLeft">
+            <b>ameliee_108</b> 뚝섬 하늘은 ...
+            <span class="lightTxt">더 보기</span>
+          </div>
+          <div class="txt comment marginLeft">
+            <span><b>jjin1006</b> 머야머야~ 누구랑 갔어~?</span>
+            <img
+              class="lightColor"
+              src="heart.png"
+              width="13px"
+              height="13px"
+            />
+          </div>
+          <div class="txt lightTxt marginLeft">1일 전</div>
         </div>
-      </div>
-      <aside class="sideSection">
-        <header><img class="profileImg" src=alt="프로필사진"</header>
+        <div id="feedEnd" class="marginLeft">
+          <span class="txt lightTxt"> 댓글 달기... </span>
+          <span class="txt bluelightTxt"> 게시 </span>
+        </div>
+      </section>
+
+      <aside id="side">
+        <header class="sideHeader">
+          <img
+            class="myProfile"
+            src="profile_cafe.jpeg"
+            alt="sideProfile"
+            width="45px"
+          />
+          <span>
+            <div class="txt">ameliee_108</div>
+            <div class="txt lightTxt">라빈쓰 얼렁뚱땅 인생살이</div>
+          </span>
+        </header>
+        <section id="storySection" class="sideSection">
+          <div class="storyTxt">
+            <span class="txt lightTxt">스토리</span>
+            <span class="txt">모두 보기</span>
+          </div>
+          <ul id="storyList" class="storyMargin">
+            <li class="story">
+              <div class="gradientCircle"></div>
+              <img class="storyProfile" src="noodle.jpeg" width="26px" />
+              <span>
+                <div class="txt">yumyum_yum</div>
+                <div class="txt lightTxt">15분 전</div>
+              </span>
+            </li>
+            <li class="story">
+              <img class="storyProfile" src="sushi.jpeg" width="26px" />
+              <span>
+                <div class="txt">red_duck</div>
+                <div class="txt lightTxt">1시간 전</div>
+              </span>
+            </li>
+            <li class="story">
+              <img
+                class="storyProfile"
+                src="profile_tennis.jpeg"
+                width="26px"
+              />
+              <span>
+                <div class="txt">yeeeeeri_01</div>
+                <div class="txt lightTxt">17시간 전</div>
+              </span>
+            </li>
+            <li class="story">
+              <img class="storyProfile" src="maple_tree.jpeg" height="26px" />
+              <span>
+                <div class="txt">jjjini333</div>
+                <div class="txt lightTxt">20시간 전</div>
+              </span>
+            </li>
+          </ul>
+        </section>
+        <section id="recommendSection" class="sideSection">
+          <div class="recommendFor">
+            <span class="txt lightTxt">회원님을 위한 추천</span>
+            <span class="txt">모두 보기</span>
+          </div>
+          <ul id="recommendList">
+            <li class="recommendID">
+              <img class="recommendProfile" src="ginkgo.jpeg" width="26px" />
+              <div class="IDtextBox">
+                <div class="recommendTxt txt">kkkyeong222</div>
+                <div class="recommendTxt txt lightTxt">
+                  seung_a11님 외 10명이 ...
+                </div>
+              </div>
+              <div class="blueBrTxt">팔로우</div>
+            </li>
+            <li class="recommendID">
+              <img
+                class="recommendProfile"
+                src="westaProfile1.jpeg"
+                width="26px"
+              />
+              <div class="IDtextBox">
+                <div class="recommendTxt txt">lovely_muu</div>
+                <div class="recommendTxt txt lightTxt">
+                  jiwon1010님 외 4명이 ...
+                </div>
+              </div>
+              <div class="blueBrTxt">팔로우</div>
+            </li>
+            <li class="recommendID">
+              <img
+                class="recommendProfile"
+                src="westaProfile3.jpeg"
+                width="26px"
+              />
+              <div class="IDtextBox">
+                <div class="recommendTxt txt">goldyun__</div>
+                <div class="recommendTxt txt lightTxt">
+                  sunnyside_up0110님 외...
+                </div>
+              </div>
+              <div class="blueBrTxt">팔로우</div>
+            </li>
+          </ul>
+        </section>
+        <section class="txt westaTxt">
+          <div class="westaEtc">
+            Westagram 정보 · 지원 · 홍보 센터 · API · 채용 정보 ·
+            개인정보처리방침 · 약관 · 디렉터리 · 프로필 · 해시태그 · 언어
+          </div>
+          <div class="westaCopy">ⓒ 2022 WESTAGRAM</div>
+        </section>
       </aside>
     </main>
   </body>
