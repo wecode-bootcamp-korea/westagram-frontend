@@ -4,9 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style:main.css" />
-    <link rel="stylesheet" href="style/common.css" />
-
+    <link rel="stylesheet" href="style/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,253 +14,21 @@
 
     <title>WESTAGRAM - main</title>
   </head>
-  <style>
-    body {
-      background-color: #fafafa;
-      margin: 0;
-    }
-
-    nav,
-    .feed,
-    .main-right,
-    .main_right_story,
-    .recommandForUsers,
-    .main_right_top {
-      border: 1px rgb(150, 148, 148) solid;
-    }
-
-    .nav_container {
-      padding-left: 20%;
-      padding-right: 20%;
-      display: flex;
-      justify-content: space-between;
-      height: 50px;
-      background-color: white;
-      border: 1px solid #e6e3e3;
-    }
-
-    .mainBody {
-      display: flex;
-      justify-content: center;
-      margin-top: 100px;
-      margin-left: 20%;
-      margin-right: 20%;
-    }
-
-    .nav_left,
-    .nav_center,
-    .nav_right {
-      /* width: 30%; */
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .nav_left img {
-      width: 25px;
-      padding-right: 15px;
-      border-right: 2px solid black;
-    }
-    .logo {
-      padding-left: 15px;
-      font-family: "Lobster", cursive;
-      font-size: 20px;
-    }
-
-    .nav_center input {
-      text-align: center;
-      margin: 10px 50px;
-      background-color: #fafafa;
-    }
-
-    .nav_center > img {
-      width: 15px;
-      height: 15px;
-    }
-
-    .nav_right > img {
-      width: 30px;
-      padding-left: 20px;
-    }
-
-    .input_search {
-      width: 215px;
-      height: 25px;
-      font-weight: 300;
-      color: #8e8e8e;
-      padding: 3px 10px 3px 26px;
-      border: 1px solid #dbdbdb;
-      border-radius: 3px;
-      background-color: #fafafa;
-      /* search icon */
-      background: url(../img/search.png) no-repeat;
-      background-size: 15px;
-      background-position: 78px center;
-      outline: none;
-    }
-
-    .feed_img {
-      width: 600px;
-    }
-
-    .feed_img img {
-      width: 100%;
-    }
-
-    .feed_top {
-      padding: 10px;
-      display: flex;
-      justify-content: space-between;
-    }
-
-    .profileImgAndUserId {
-      display: flex;
-      align-items: center;
-    }
-
-    .profileImgAndUserId span {
-      font-weight: 600;
-      color: #3f3e3e;
-    }
-
-    .profile_image {
-      width: 40px;
-      height: 40px;
-      margin-right: 7px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .ring .profile_image {
-      background-size: 40px;
-      background-image: url("img/story_ring.png");
-      background-repeat: no-repeat center center;
-    }
-
-    .profile_image img {
-      width: 90%;
-      height: 90%;
-      border-radius: 50%;
-      object-fit: cover;
-    }
-
-    #icon_more {
-      width: 30px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    #icon_more img {
-      width: 15px;
-    }
-
-    .main_right {
-      width: 300px;
-      margin-left: 30px;
-    }
-
-    .main_right_story {
-      height: 170px;
-      overflow: hidden;
-      padding-left: 10px;
-    }
-
-    .profile {
-      display: flex;
-      align-items: center;
-      margin-top: 3px;
-    }
-
-    .profile_text {
-      font-size: 13px;
-    }
-
-    .profile_text .info {
-      color: gray;
-    }
-
-    .profile_recommand {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .follow_text {
-      font-size: 13px;
-      color: #0090f6;
-    }
-
-    .recommandForUsers {
-      height: 150px;
-      overflow: hidden;
-      padding-left: 10px;
-      padding-right: 10px;
-    }
-
-    .summary_icons {
-      display: flex;
-      justify-content: space-between;
-      padding-left: 10px;
-      padding-right: 10px;
-    }
-
-    .summary_icons img {
-      width: 30px;
-    }
-
-    .feed_like {
-      display: flex;
-      align-items: center;
-    }
-
-    .feed_like img {
-      width: 25px;
-      height: 25px;
-    }
-
-    .comment_upper {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .comment_like_icon img {
-      width: 13px;
-      height: 13px;
-    }
-
-    .feed_comment_input {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .feed_comment_input input {
-      border: none;
-      width: 90%;
-      font-size: 20px;
-    }
-
-    .feed_comment_input input:focus {
-      outline: none;
-    }
-  </style>
 
   <body>
     <!-- navigation bar  -->
-    <nav class="nav_container">
-      <div class="nav_left">
-        <img alt="" src="img/Instagram icon.png" />
+    <nav class="navContainer">
+      <div class="navLeft">
+        <img alt="instagram_logo" src="img/Instagram icon.png" />
         <h class="logo">westagram</h>
       </div>
 
-      <div class="nav_center">
+      <div class="navCenter">
         <!-- <img src="img/search.png" /> -->
         <input class="input_search" type="search" placeholder="검색" />
       </div>
 
-      <div class="nav_right">
+      <div class="navRight">
         <img
           alt="탐색"
           src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png"
@@ -282,7 +48,7 @@
       <!-- div.feeds -->
       <div class="feed">
         <!-- feed-top -->
-        <div class="feed_top">
+        <div class="feedTopContainer">
           <div class="profileImgAndUserId">
             <div class="profile_image"><img src="img/profile_img.png" /></div>
             <span>y_xunyoung</span>
@@ -294,53 +60,69 @@
         <!--------->
 
         <div class="feed_img">
-          <img src="img/IMG_0010.JPG" />
+          <img src="img/feed.JPG" />
         </div>
         <!-- feed-summary -->
         <div class="feed_summary">
           <div class="summary_icons">
-            <div class="icon_left">
-              <img
-                alt="탐색"
-                src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png"
-              />
-              <img
-                alt="하트"
-                src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"
-              />
-              <img
-                alt="마이페이지"
-                src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png"
-              />
+            <div class="iconLeft">
+              <img alt="heart" src="img/heart.png" />
+              <img alt="chat" src="img/chat.png" />
+              <img alt="send" src="img/send.png" />
             </div>
-            <div class="icon_right">
-              <img
-                alt="탐색"
-                src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png"
-              />
+            <div class="iconRight">
+              <img alt="bookmark" src="img/bookmark.png" />
             </div>
           </div>
           <div class="feed_like">
-            <div class="profile_image"><img src="img/profile_img.png" /></div>
-            <span>y_xunyoung외 5명이 좋아합니다.</span>
+            <div class="profile_image">
+              <img alt="profile_image" src="img/profile_img.png" />
+            </div>
+            <span class="user_id">y_xunyoung</span>
+            <span>님 외 59명이 좋아합니다.</span>
           </div>
           <div class="feed_description">
-            <span>y_xunyoung</span>
-            <span>블라블ㄹ밥블라 사진설명 넣어</span>
-            <span>더보기</span>
+            <span class="user_id">y_xunyoung</span>
+            <span>
+              &nbsp; 빵지순례 필수코스 12가지로 구성된 마들렌 전시회를 볼 수
+              있는 도식화는
+            </span>
+            <br />
+            <span> 요즘 상수동에서 항상 웨이팅 가득한 핫한 카페입니다. </span>
+            <br />
+            <span>
+              음료도 상큼한 에이드부터 크림라떼 등 종류도 다양하니 다들 도식화
+              뿌시러가주세요.
+            </span>
+            <br />
+            <br />
+            <div>&#128205;도식화 상수 - 서울 마포구 와우산로17길 19-9 1층</div>
+            <span>✅ 인스타아이디</span>
+            <span class="textWithOtherColor">@dosikhwa_seoul</span>
+            <div>✅ 매일 12:00-22:00 / 21:00 라스트오더</div>
+            <div>✅ 상수역 1번출구에서 350미터</div>
+            <br />
+            <span class="textWithOtherColor">
+              #상수카페 #디저트카페 #마들렌맛집 #저장각
+            </span>
+            <br />
+            <br />
           </div>
           <div class="feed_comment">
             <div class="comment">
               <div class="comment_upper">
                 <div class="comment_content">
-                  <span>happy_sung</span>
-                  <span>~~~~~~~~</span>
+                  <span id="userNickname" class="user_id">suuyani</span>
+                  <span id="feed_comment" class="text"
+                    >여기 저도 진짜 강추해요!</span
+                  >
                 </div>
                 <div class="comment_like_icon">
                   <img
                     alt="하트"
                     src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"
                   />
+                  <img id="deleteBtn" alt="삭제" src="img/trash.png" />
                 </div>
               </div>
               <div class="comment_bottom">42분전</div>
@@ -355,108 +137,137 @@
         </div>
       </div>
 
+      <!-- div.main_right -->
       <div class="main_right">
         <div class="main_right_top">
-          <div class="wecode_logo"></div>
-          <strong>wecode_bootcamp</strong>
-          <span>WeCode | 위코드</span>
-        </div>
-        <div class="main_right_story">
-          <span>스토리</span><span>/ 모두보기</span>
-          <!-- profile -->
-          <div class="profile ring">
-            <div class="profile_image">
-              <img src="img/profile_img.png" />
+          <div class="profile">
+            <div class="profile_image_other_size">
+              <img alt="profile" src="img/profile_img.png" />
             </div>
             <div class="profile_text">
-              <div>y_xunyoung</div>
-              <div class="info">16분전</div>
+              <div class="user_id">y_xunyoung</div>
+              <div class="info">sunyoung</div>
             </div>
           </div>
-          <!--------->
-          <!-- profile -->
-          <div class="profile ring">
-            <div class="profile_image">
-              <img src="img/profile_img.png" />
-            </div>
-            <div class="profile_text">
-              <div>y_xunyoung</div>
-              <div class="info">16분전</div>
-            </div>
-          </div>
-          <!--------->
-          <!-- profile -->
-          <div class="profile ring">
-            <div class="profile_image">
-              <img src="img/profile_img.png" />
-            </div>
-            <div class="profile_text">
-              <div>y_xunyoung</div>
-              <div class="info">16분전</div>
-            </div>
-          </div>
-          <!--------->
-          <!-- profile -->
-          <div class="profile ring">
-            <div class="profile_image">
-              <img src="img/profile_img.png" />
-            </div>
-            <div class="profile_text">
-              <div>y_xunyoung</div>
-              <div class="info">16분전</div>
-            </div>
-          </div>
-          <!--------->
         </div>
 
-        <div class="recommandForUsers">
-          <div>회원님을 위한 추천 / 모두보기</div>
-          <!-- profile -->
-          <div class="profile_recommand">
-            <div class="profile">
-              <div class="profile_image">
-                <img src="img/profile_img.png" />
-              </div>
-              <div class="profile_text">
-                <div>y_xunyoung</div>
-                <div class="info">sung_happy님 외2명...</div>
-              </div>
-            </div>
-            <div class="follow_text">팔로우</div>
+        <div class="main_right_story">
+          <div class="main_right_story_title">
+            <span>스토리</span><span>모두보기</span>
           </div>
-          <!--------->
           <!-- profile -->
-          <div class="profile_recommand">
-            <div class="profile">
-              <div class="profile_image">
-                <img src="img/profile_img.png" />
-              </div>
-              <div class="profile_text">
-                <div>y_xunyoung</div>
-                <div class="info">sung_happy님 외2명...</div>
-              </div>
+          <div class="profile ring">
+            <div class="profile_image">
+              <img src="img/profile_img.png" />
             </div>
-            <div class="follow_text">팔로우</div>
+            <div class="profile_text">
+              <div class="user_id">y_xunyoung</div>
+              <div class="info">16분전</div>
+            </div>
           </div>
-          <!--------->
+          <!------------->
           <!-- profile -->
-          <div class="profile_recommand">
-            <div class="profile">
-              <div class="profile_image">
-                <img src="img/profile_img.png" />
-              </div>
-              <div class="profile_text">
-                <div>y_xunyoung</div>
-                <div class="info">sung_happy님 외2명...</div>
-              </div>
+          <div class="profile ring">
+            <div class="profile_image">
+              <img src="img/profile_img.png" />
             </div>
-            <div class="follow_text">팔로우</div>
+            <div class="profile_text">
+              <div class="user_id">y_xunyoung</div>
+              <div class="info">16분전</div>
+            </div>
           </div>
-          <!--------->
+          <!------------->
+          <!-- profile -->
+          <div class="profile ring">
+            <div class="profile_image">
+              <img src="img/profile_img.png" />
+            </div>
+            <div class="profile_text">
+              <div class="user_id">y_xunyoung</div>
+              <div class="info">16분전</div>
+            </div>
+          </div>
+          <!------------->
+          <!-- profile -->
+          <div class="profile ring">
+            <div class="profile_image">
+              <img src="img/profile_img.png" />
+            </div>
+            <div class="profile_text">
+              <div class="user_id">y_xunyoung</div>
+              <div class="info">16분전</div>
+            </div>
+          </div>
+          <!------------->
         </div>
-        <div class="info"></div>
+        <div class="recommandForUsers">
+          <div class="main_right_story_title">
+            <span>회원님을 위한 추천</span>
+            <span>모두보기</span>
+          </div>
+          <!-- profile -->
+          <div class="profile_recommand">
+            <div class="profile">
+              <div class="profile_image">
+                <img src="img/profile_img.png" />
+              </div>
+              <div class="profile_text">
+                <div class="user_id">y_xunyoung</div>
+                <div class="info">jxdami님 외2명...</div>
+              </div>
+            </div>
+            <div class="follow_text">팔로우</div>
+          </div>
+          <!------------->
+          <!-- profile -->
+          <div class="profile_recommand">
+            <div class="profile">
+              <div class="profile_image">
+                <img src="img/profile_img.png" />
+              </div>
+              <div class="profile_text">
+                <div class="user_id">y_xunyoung</div>
+                <div class="info">jxdami님 외2명...</div>
+              </div>
+            </div>
+            <div class="follow_text">팔로우</div>
+          </div>
+          <!------------->
+          <!-- profile -->
+          <div class="profile_recommand">
+            <div class="profile">
+              <div class="profile_image">
+                <img src="img/profile_img.png" />
+              </div>
+              <div class="profile_text">
+                <div class="user_id">y_xunyoung</div>
+                <div class="info">jxdami님 외2명...</div>
+              </div>
+            </div>
+            <div class="follow_text">팔로우</div>
+          </div>
+          <!------------->
+        </div>
+        <footer>
+          <div class="footer_link_list">
+            <a href="#">소개</a>
+            <a href="#">도움말</a>
+            <a href="#">홍보 센터</a>
+            <a href="#">API</a>
+            <a href="#">채용 정보</a>
+            <a href="#">개인정보처리방침</a>
+            <a href="#">약관</a>
+            <a href="#">위치</a>
+            <a href="#">인기 계정</a>
+            <a href="#">해시태그</a>
+            <a href="#">언어</a>
+          </div>
+          <br />
+          <address>© 2022 WESTAGRAM FROM META</address>
+        </footer>
       </div>
     </main>
+
     <script src="js/main.js"></script>
   </body>
 </html>

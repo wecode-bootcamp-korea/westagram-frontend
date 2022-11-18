@@ -5,45 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style/login.css" />
-    <link rel="stylesheet" href="style/common.css" />
     <link rel="" href="style/common.css" />
 
     <title>WESTAGRAM - login</title>
   </head>
-
   <body>
-    <div class="loginBox">
-      <h class="logo">westagram</h>
+    <main>
+      <div class="loginBox">
+        <h class="logo">westagram</h>
 
-      <form>
-        <div class="inputId">
-          <input
-            id="input_id"
-            class="id_button"
-            name="id"
-            type="text"
-            placeholder="전화번호,사용자 이름 또는 이메일"
-          />
-        </div>
-        <div class="inputPassword">
-          <input
-            id="input_pwd"
-            class="password_button"
-            name="password"
-            type="password"
-            placeholder="비밀번호"
-            required
-          />
-        </div>
+        <form>
+          <div class="inputId">
+            <input
+              id="input_id"
+              class="id_button"
+              name="id"
+              type="text"
+              placeholder="전화번호,사용자 이름 또는 이메일"
+            />
+          </div>
+          <div class="inputPassword">
+            <input
+              id="input_pwd"
+              class="password_button"
+              name="password"
+              type="password"
+              placeholder="비밀번호"
+              required
+            />
+          </div>
 
-        <button id="login_btn" class="button_login">로그인</button>
-        <div id="empty"></div>
+          <button id="login_btn" class="button_login">로그인</button>
+          <div id="empty"></div>
 
-        <div class="forgetPassword">
-          <a href="">비밀번호를 잊으셨나요?</a>
-        </div>
-      </form>
-    </div>
+          <div class="forgetPassword">
+            <a href="">비밀번호를 잊으셨나요?</a>
+          </div>
+        </form>
+      </div>
+    </main>
+
     <script src="js/login.js"></script>
   </body>
 </html>
