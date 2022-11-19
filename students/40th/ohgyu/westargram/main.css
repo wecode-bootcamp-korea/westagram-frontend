@@ -1,5 +1,5 @@
 body {
-  margin: 0 10%;
+  margin: 0;
 }
 
 .navBar {
@@ -18,12 +18,26 @@ body {
   height: 40px;
 }
 
-#searchSection {
+#searchResult {
   position: absolute;
-  width: 310px;
-  top: 50px;
+  width: 300px;
   background-color: white;
 }
+
+#popupSection {
+  position: absolute;
+  width: 200px;
+  background-color: azure;
+  display: none;
+}
+
+#popupSection.appear {
+  position: absolute;
+  width: 200px;
+  background-color: azure;
+  display: block;
+}
+
 .main {
   width: 1400px;
   height: 1100px;
@@ -171,4 +185,22 @@ body {
   height: 50px;
   background-color: aqua;
   margin: 10px auto;
+}
+@media (max-width: 1500px) {
+  .navBar {
+    width: 100%;
+  }
+  .mainRight {
+    display: none;
+  }
+}
+
+@media (max-width: 1300px) {
+  #navSearch {
+    display: none;
+  }
+  .main {
+    width: 100%;
+    margin: auto;
+  }
 }

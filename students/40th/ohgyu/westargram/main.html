@@ -9,13 +9,21 @@
   </head>
   <body>
     <nav class="navBar">
-      <div class="navMainLogo"></div>
-      <div>
+      <div class="navMainLogo">인스타 로고</div>
+      <div id="searchSection">
         <input type="text" id="navSearch" />
-        <ul id="searchSection"></ul>
+        <ul id="searchResult"></ul>
       </div>
 
-      <div class="sideNav"></div>
+      <div class="sideNav">
+        <button id="popupBtn">내정보</button>
+        <div id="popupSection">
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+        </div>
+      </div>
     </nav>
     <div class="main">
       <div class="feedSection">
@@ -81,5 +89,6 @@
     <script src="comment.js"></script>
     <script src="likeCount.js"></script>
     <script src="search.js"></script>
+    <script src="popup.js"></script>
   </body>
 </html>

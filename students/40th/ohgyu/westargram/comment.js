@@ -10,7 +10,7 @@ function addComment() {
     const commentLikeResult = 0;
 
     commentList.appendChild(comment);
-    comment.innerHTML += `${commentUserName} ${commentInput.value} <input type="checkbox"/><span class="commentSpan">${commentLikeResult}</span> <span>명이 좋아합니다</span><button class="commentDeleteBtn" >삭제</button>`;
+    comment.innerHTML = `${commentUserName} ${commentInput.value} <input type="checkbox"/><span class="commentSpan">${commentLikeResult}</span> <span>명이 좋아합니다</span><button class="commentDeleteBtn" >삭제</button>`;
     commentInput.value = null;
 
     const LikeCheckBox = comment.querySelector("input");
@@ -42,7 +42,7 @@ function commentSectionClose() {
   const commentSection = document.getElementById("commentSection");
   if (!commentCheck.checked) {
     commentSection.style.display = "none";
-  } else commentSection.style.display = "inline-block";
+  } else commentSection.style.display = "block";
 }
 
 commentBtn.addEventListener("click", function () {
