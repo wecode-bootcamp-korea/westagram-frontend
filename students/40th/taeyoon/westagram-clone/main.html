@@ -23,7 +23,30 @@
         <div class="nav__right">
           <a href="#"><i class="fa-regular fa-compass fa-2x"></i></a>
           <a href="#"><i class="fa-regular fa-heart fa-2x"></i></a>
-          <a href="#"><i class="fa-regular fa-user fa-2x"></i></a>
+          <a href="#"><i id="profile" class="fa-regular fa-user fa-2x"></i></a>
+          <!-- 프로필 정보 -->
+          <div class="nav__popup">
+            <div class="speech-bubble">
+              <div class="speech-box">
+                <i class="fa-regular fa-address-card fa-lg"></i>
+                <span>프로필</span>
+              </div>
+
+              <div class="speech-box">
+                <i class="fa-regular fa-bookmark fa-lg"></i>
+                <span>저장됨</span>
+              </div>
+
+              <div class="speech-box">
+                <i class="fa-solid fa-gear fa-lg"></i>
+                <span>설정</span>
+              </div>
+
+              <div class="speech-box logout">
+                <span>로그아웃</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </nav>
@@ -45,7 +68,7 @@
 
           <!-- 피드 이미지 -->
           <div class="feed__img">
-            <img src="./img/dog.jpg" alt="이미지" width="470px"/>
+            <img src="./img/dog.jpg" alt="이미지" width="470px" />
           </div>
 
           <!-- 피드 아이콘 -->
@@ -63,7 +86,7 @@
           <!-- 피드 좋아요 -->
           <div class="feed__like">
             <div class="feed__like--img">
-              <img src="./img/profile.jpg" alt="프사" width="20px" />
+              <img src="./img/profile.jpg" a2lt="프사" width="20px" />
             </div>
             <div class="feed__like--text">ㅇㅇㅇ님 외 10명이 좋아합니다</div>
           </div>
@@ -112,78 +135,72 @@
             <span class="story__header--right">모두 보기</span>
           </div>
           <div class="story__list">
-
             <!-- 스토리 1 -->
-            <div class="story__list-1">
-              <div class="user__container">
-                <div class="user__left">
-                  <div class="user__img">
-                    <img src="./img/profile.jpg" alt="프사" width="32px" />
-                  </div>
-                  <div class="user__info">
-                    <div class="user__info--name">name1</div>
-                    <div class="user__info--text">1분전</div>
-                  </div>
+
+            <div class="user__container">
+              <div class="user__left">
+                <div class="user__img">
+                  <img src="./img/profile.jpg" alt="프사" width="32px" />
+                </div>
+                <div class="user__info">
+                  <div class="user__info--name">name1</div>
+                  <div class="user__info--text">1분전</div>
                 </div>
               </div>
             </div>
 
             <!-- 스토리 2 -->
-            <div class="story__list-2">
-              <div class="user__container">
-                <div class="user__left">
-                  <div class="user__img">
-                    <img src="./img/profile.jpg" alt="프사" width="32px" />
-                  </div>
-                  <div class="user__info">
-                    <div class="user__info--name">name2</div>
-                    <div class="user__info--text">2분전</div>
-                  </div>
+
+            <div class="user__container">
+              <div class="user__left">
+                <div class="user__img">
+                  <img src="./img/profile.jpg" alt="프사" width="32px" />
+                </div>
+                <div class="user__info">
+                  <div class="user__info--name">name2</div>
+                  <div class="user__info--text">2분전</div>
                 </div>
               </div>
             </div>
 
             <!-- 스토리 3 -->
-            <div class="story__list-3">
-              <div class="user__container">
-                <div class="user__left">
-                  <div class="user__img">
-                    <img src="./img/profile.jpg" alt="프사" width="32px" />
-                  </div>
-                  <div class="user__info">
-                    <div class="user__info--name">name3</div>
-                    <div class="user__info--text">3분전</div>
-                  </div>
+
+            <div class="user__container">
+              <div class="user__left">
+                <div class="user__img">
+                  <img src="./img/profile.jpg" alt="프사" width="32px" />
+                </div>
+                <div class="user__info">
+                  <div class="user__info--name">name3</div>
+                  <div class="user__info--text">3분전</div>
                 </div>
               </div>
             </div>
 
             <!-- 스토리 4 -->
-            <div class="story__list-4">
-              <div class="user__container">
-                <div class="user__left">
-                  <div class="user__img">
-                    <img src="./img/profile.jpg" alt="프사" width="32px" />
-                  </div>
-                  <div class="user__info">
-                    <div class="user__info--name">name4</div>
-                    <div class="user__info--text">4분전</div>
-                  </div>
+
+            <div class="user__container">
+              <div class="user__left">
+                <div class="user__img">
+                  <img src="./img/profile.jpg" alt="프사" width="32px" />
+                </div>
+                <div class="user__info">
+                  <div class="user__info--name">name4</div>
+                  <div class="user__info--text">4분전</div>
                 </div>
               </div>
             </div>
 
             <!-- 스토리 5 -->
-            <div class="story__list-4">
-              <div class="user__container">
-                <div class="user__left">
-                  <div class="user__img">
-                    <img src="./img/profile.jpg" alt="프사" width="32px" />
-                  </div>
-                  <div class="user__info">
-                    <div class="user__info--name">name5</div>
-                    <div class="user__info--text">text5</div>
-                  </div>
+
+            <div class="user__container">
+              <div class="user__left">
+                <div class="user__img">
+                  <img src="./img/profile.jpg" alt="프사" width="32px" />
+                </div>
+                <div class="user__info">
+                  <div class="user__info--name">name5</div>
+                  <div class="user__info--text">text5</div>
                 </div>
               </div>
             </div>
@@ -196,56 +213,56 @@
             <span class="recommend__header--left">회원님을 위한 추천</span>
             <span class="recommend__header--right">모두보기</span>
           </div>
+
           <div class="recommend__list">
-            <div class="recommend__list-1">
-              <div class="user__container">
-                <div class="user__left">
-                  <div class="user__img">
-                    <img src="./img/profile.jpg" alt="프사" width="32px" />
-                  </div>
-                  <div class="user__info">
-                    <div class="user__info--name">wecode_bootcamp</div>
-                    <div class="user__info--text">Wecode | 위코드</div>
-                  </div>
-                </div>
 
-                <div class="user__right">
-                  <a href="#">팔로우</a>
+            <!-- 추천1 -->
+            <div class="user__container">
+              <div class="user__left">
+                <div class="user__img">
+                  <img src="./img/profile.jpg" alt="프사" width="32px" />
+                </div>
+                <div class="user__info">
+                  <div class="user__info--name">wecode_bootcamp</div>
+                  <div class="user__info--text">Wecode | 위코드</div>
                 </div>
               </div>
-            </div>
-            <div class="recommend__list-2">
-              <div class="user__container">
-                <div class="user__left">
-                  <div class="user__img">
-                    <img src="./img/profile.jpg" alt="프사" width="32px" />
-                  </div>
-                  <div class="user__info">
-                    <div class="user__info--name">wecode_bootcamp</div>
-                    <div class="user__info--text">Wecode | 위코드</div>
-                  </div>
-                </div>
-
-                <div class="user__right">
-                  <a href="#">팔로우</a>
-                </div>
+              <div class="user__right">
+                <a href="#">팔로우</a>
               </div>
             </div>
-            <div class="recommend__list-3">
-              <div class="user__container">
-                <div class="user__left">
-                  <div class="user__img">
-                    <img src="./img/profile.jpg" alt="프사" width="32px" />
-                  </div>
-                  <div class="user__info">
-                    <div class="user__info--name">wecode_bootcamp</div>
-                    <div class="user__info--text">Wecode | 위코드</div>
-                  </div>
-                </div>
 
-                <div class="user__right">
-                  <a href="#">팔로우</a>
+            <!-- 추천2 -->
+            <div class="user__container">
+              <div class="user__left">
+                <div class="user__img">
+                  <img src="./img/profile.jpg" alt="프사" width="32px" />
                 </div>
+                <div class="user__info">
+                  <div class="user__info--name">wecode_bootcamp</div>
+                  <div class="user__info--text">Wecode | 위코드</div>
+                </div>
+              </div>
+
+              <div class="user__right">
+                <a href="#">팔로우</a>
+              </div>
+            </div>
+
+            <!-- 추천3 -->
+            <div class="user__container">
+              <div class="user__left">
+                <div class="user__img">
+                  <img src="./img/profile.jpg" alt="프사" width="32px" />
+                </div>
+                <div class="user__info">
+                  <div class="user__info--name">wecode_bootcamp</div>
+                  <div class="user__info--text">Wecode | 위코드</div>
+                </div>
+              </div>
+
+              <div class="user__right">
+                <a href="#">팔로우</a>
               </div>
             </div>
           </div>
@@ -288,29 +305,9 @@
         <a href="#">팔로우</a>
       </div>
     </div> -->
-    
-    <div class="speech-bubble">  
-        <div class="speech-box">
-          <i class="fa-regular fa-address-card fa-lg"></i>
-          <span>프로필</span>
-        </div>
 
-        <div class="speech-box">
-          <i class="fa-regular fa-bookmark fa-lg"></i>
-          <span>저장됨</span>
-        </div>
-
-        <div class="speech-box">
-          <i class="fa-solid fa-gear fa-lg"></i>
-          <span>설정</span>  
-        </div>
-
-        <div class="speech-box logout">
-          <span>로그아웃</span>
-        </div>
-    </div>
-
-    <div class="speech-bubble">  
+    <!-- 검색창 -->
+    <div class="speech-bubble">
       <div class="speech-box">
         <div class="user__container">
           <div class="user__left">
@@ -322,17 +319,18 @@
               <div class="user__info--text">Wecode | 위코드</div>
             </div>
           </div>
-    
+
           <div class="user__right">
             <a href="#">팔로우</a>
           </div>
         </div>
       </div>
-  </div>
-    
+    </div>
 
     <script src="/js/comment.js"></script>
+    <script src="/js/popup.js"></script>
     <!-- 폰트어썸 -->
     <script src="https://kit.fontawesome.com/307fa344e4.js" crossorigin="anonymous"></script>
   </body>
 </html>
+

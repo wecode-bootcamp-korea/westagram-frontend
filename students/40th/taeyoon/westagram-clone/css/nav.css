@@ -24,6 +24,8 @@ body {
   background-color: white;
 }
 
+
+/* 네비 왼쪽 */
 .nav__left{
   display: flex;
   align-items: center;
@@ -35,7 +37,7 @@ body {
 }
 
 .nav__left--icon i {
-  padding-right : 10px;
+  padding-right : 16px;
   border-right: 2px solid rgba(0, 0, 0, 0.6);
 }
 
@@ -44,6 +46,28 @@ body {
   font-size: 20px;
   text-decoration: none;
   color: inherit;
+}
+
+
+/* 네비 오른쪽 */
+.nav__right {
+  position: relative;
+}
+.nav__popup{
+  position: absolute;
+  top: 55px;
+  right: -52px;
+  display: none;
+}
+/* 프로필 팝업 */
+.active {
+  display: block;
+}
+
+
+
+.nav__right a {
+  margin-left: 15px;
 }
 
 .nav__search span {
@@ -70,8 +94,4 @@ body {
 
 .nav__search input:focus::placeholder{
   color: transparent;
-}
-
-.nav__right a {
-  margin-left: 15px;
 }
