@@ -37,6 +37,8 @@ inputForm.addEventListener('input', validate);
 // inputBtn.addEventListener('click', pageMove);
 inputForm.addEventListener('submit', pageMove);
 
+
+
 // inputId.addEventListener('input', validate);
 // inputPw.addEventListener('input', validate);
 

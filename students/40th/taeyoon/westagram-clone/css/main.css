@@ -18,8 +18,6 @@
 .feed__header {
   height: 58px;
 
-
-
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -213,3 +211,53 @@
   margin-top: 20px;
 }
 
+
+
+/* 말풍선 */
+
+.speech-box{
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.speech-box i {
+  margin-right: 14px;
+}
+
+.speech-bubble .logout{
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.speech-bubble {
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+	position: relative;
+	border-radius: .7em;
+  width: 330px;
+  background-color: white;
+  margin-bottom: 40px;
+}
+
+.speech-bubble:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 80%;
+	width: 0;
+	height: 0;
+	border: 15px solid transparent;
+	border-bottom-color: white;
+	border-top: 0;
+	margin-left: -15px;
+	margin-top: -15px;
+}
+
+
+
+@media (max-width: 870px) {
+  .main__right{
+    display: none;
+  }
+}
