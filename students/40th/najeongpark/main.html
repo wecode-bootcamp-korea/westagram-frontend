@@ -4,76 +4,74 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style/main.css">
-    <script src="/js/main.js" defer></script>
+    <link rel="stylesheet" href="/westagram-frontend/students/40th/najeongpark/style/main.css">
+    <link rel="stylesheet" href="/westagram-frontend/students/40th/najeongpark/style/common.css">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <script src="https://kit.fontawesome.com/2f02369a0a.js" crossorigin="anonymous"></script>
+    <title>Westagram</title>
 </head>
 <body>
     <!-- navbar -->
     <nav>
-        <div class="titleRight">
+        <div class="titleLeft">
             <img class="instaIcon" src="image/instagram.png" alt="image">
-            <span class="title">westagram</span>
+            <h1 class="title">westagram</h1>
         </div>
         <div class="searchBar">
             <input type="text" placeholder="검색">
         </div>
-        <div class="titleLeft">
+        <div class="titleRight">
             <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png" alt="image">
             <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" alt="image">
             <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png" alt="image">
         </div>
     </nav>
-    <div id="main">
-        <div class="feeds">
-            <article>
-                <div class="nav">
-                    <div class="articleNav"></div>
-                    <span>daengdaeng</span>
-                    <img src="/image/more.png" alt="image">
+
+    <!-- main -->
+    <main id="main">
+        <article>
+            <div class="wrapFeed">
+            <div class="feedNav">
+                <div class="profileImg"></div>
+                <span>pongpong</span>
+                <img src="/image/more.png" alt="moreImg">
+            </div>
+            <div class="mainImage">
+                <img src="/image/pong.jpg" alt="image">
+            </div>
+            <div class="icons">
+                <img src="/image/heart.png" alt="heartImg">
+                <img src="/image/chat.png" alt="chatImg">
+                <img src="/image/upload.png" alt="uploadImg">
+                <img src="/image/label.png" alt="labelImg">
+            </div>
+            <div class="articleBottom">
+                <div class="like">
+                    <img src="/image/puppy3.jpg" alt="image">
+                    <span><a>wecode_najeong</a>님 <a>외 120명</a>이 좋아합니다</span>
                 </div>
-                <div class="mainImage">
-                    <img src="/image/puppy2.jpg" alt="image">
-                </div>
-                <div class="icons">
-                    <img src="/image/heart.png" alt="image">
-                    <img src="/image/chat.png" alt="image">
-                    <img src="/image/upload.png" alt="image">
-                    <img src="/image/label.png" alt="image">
-                </div>
-                <div class="articleBottom">
-                    <div class="like">
-                        <img src="/image/puppy3.jpg" alt="image">
-                        <span><a>wecode_najeong</a>님 <a>외 20명</a>이 좋아합니다</span>
-                    </div>
-                    <span><a>daengdaeng</a> &nbsp; 엄마가 인생샷 찍어줌</span>
-                    <ul class="commentList">
-                        <li>
-                            <div>
-                                <strong>wecode_najeong</strong>
-                                <span>완전 잘나왔다</span>
-                            </div>
-                        </li>
-                    </ul>
-                    <p style="color: #bdbaba;">42분전</p>
-                </div>
-                <div class="addComment">
-                    <input class="comment" type="text" placeholder="댓글 달기..." />
-                    <button class="submitBtn">게시</button>
-                </div>
-            </article>
-        </div>
-        <aside class="mainRight">
-            <div class="right">
-                <div class="myIcon">
+                <span><a>pongpong</a> &nbsp; 누나가 인생샷 찍어 죠따🫶</span>
+                <ul class="commentList">
+                </ul>
+                <p style="color: #bdbaba;">42분전</p>
+            </div>
+            <div class="addComment">
+                <input class="comment" type="text" placeholder="댓글 달기..." />
+                <button class="submitBtn">게시</button>
+            </div>
+            </div>
+        </article>
+        <!-- aside -->
+        <aside>
+            <div class="asideRight">
+                <div class="myProfile">
                     <img src="/image/puppy3.jpg" alt="image">
                     <div class="introduce">
                         <p>wecode_najeong</p>
                         <p>Wecode | 40기</p>
                     </div>
                 </div>
-                <div class="story">
+                <div class="storyTab">
                     <div class="storyTop">
                         <span style="color: #bdbaba;">스토리</span>
                         <span>모두보기</span>
@@ -127,7 +125,7 @@
                             <img src="/image/otherUser2.jpg" alt="image">
                             <div class="otherUser">
                                 <p>ilovehome</p>
-                                <p class="recommendWord">aaaaaaaa 외 12명이 팔로우합니다.</p>
+                                <p class="recommendWord">aaaaaa 외 12명이 팔로우합니다.</p>
                             </div>
                             <span>팔로우</span>
                         </div>
@@ -143,6 +141,7 @@
                 </div>
             </div>
         </aside>
-    </div>
+    </main>
+    <script type="text/javascript" src="/westagram-frontend/students/40th/najeongpark/js/main.js"></script>
 </body>
 </html>

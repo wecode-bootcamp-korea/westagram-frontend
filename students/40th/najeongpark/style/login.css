@@ -1,9 +1,4 @@
-* {
-    margin: 0;
-    box-sizing: border-box;
-}
-
-#loginDiv {
+header {
     display: flex;
     position: relative;
     flex-direction: column;
@@ -16,24 +11,36 @@
 
 }
 
-.title {
-    font-family: 'Lobster', cursive;
+h1 {
     font-size: 70px;
     margin-top: 70px;
     margin-bottom: 70px;
 }
 
-.userInput {
+#userInput {
     display: flex; 
     flex-direction: column;
+    
+    /* 가운데 정렬 방법 2 
+        display: grid;
+        place-items: center;
+     */
 }
 
-.userInput input {
+#userInput input {
     width: 350px;
     height: 50px;
     border: none;
     margin-bottom: 20px;
     font-size: 15px;
+}
+
+#userInput p {
+    text-align: center;
+    color: red;
+    font-weight: bolder;
+    margin-top: 20px;
+    display: none;
 }
 
 .loginBtn {

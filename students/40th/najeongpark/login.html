@@ -4,22 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/style/login.css">
-    <script src="/js/login.js" defer></script>
+    <link rel="stylesheet" href="/westagram-frontend/students/40th/najeongpark/style/login.css">
+    <link rel="stylesheet" href="/westagram-frontend/students/40th/najeongpark/style/common.css">
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <title>Westagram</title>
 </head>
 <body>
-    <div id="loginDiv">
-        <div class="title">westagram</div>
-        <div class="userInput">
+    <header>
+        <h1>westagram</h1>
+        <main id="userInput">
             <input class="id" type="text" placeholder="전화번호, 사용자 이름 또는 이메일" />
             <input class="pass" type="password" placeholder="비밀번호" />
             <button class="loginBtn">로그인</button>
-        </div>
+            <p class="errorMsg">로그인 정보를 확인해주세요.</p>
+        </main>
         <div id="footer">
             <span>비밀번호를 잊으셨나요?</span>
         </div>
-    </div>
+    </header>
+    <script type="text/javascript" src="/westagram-frontend/students/40th/najeongpark/js/login.js"></script>
 </body>
 </html>
