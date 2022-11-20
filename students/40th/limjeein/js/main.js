@@ -92,3 +92,9 @@ userProfileIcon.addEventListener("click", function () {
     userProfileInfo.style.display = "none";
   }
 });
+
+//gnb 모바일에서의 scrollLeft
+moveScrollLeft = function () {
+  var _scrollX = $(".sideStory").scrollLeft();
+  $(".sideStory").scrollLeft(_scrollX + 100);
+};

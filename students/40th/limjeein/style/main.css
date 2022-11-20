@@ -32,20 +32,21 @@ h1 {
   width: 30px;
   margin-right: 20px;
 }
+
+.clickProfile {
+  position: relative;
+}
 .clickProfileInfo {
   display: none;
   position: absolute;
-  top: 60px;
-  right: 200px;
-  width: 200px;
+  top: 35px;
+  right: 0px;
   background: #fff;
 }
-.on {
-}
-
 .clickProfileInfo li {
   padding: 8px 5px;
   font-size: 12px;
+  width: 100px;
 }
 .clickProfileInfo li:last-child {
   border-top: 1px solid #ddd;
@@ -210,4 +211,68 @@ button {
 }
 .suggestionSection li .suggestionFollow {
   margin-left: 45px;
+}
+
+@media screen and (max-width: 920px) {
+  .insta_gnb .inputValue {
+    margin: 0 10px;
+  }
+  .userProfile li {
+    margin-right: 10px;
+  }
+  main {
+    flex-direction: column-reverse;
+    padding: 20px;
+  }
+  main .feeds {
+    width: 100%;
+    margin-top: 20px;
+  }
+  main .main-right {
+    display: flex;
+    width: 100%;
+  }
+  .sideUserSection {
+    display: block;
+    width: 20%;
+    word-break: break-all;
+  }
+  .sideUserSection .sideUserImg {
+    margin: auto;
+  }
+
+  .sideStory {
+    width: 80%;
+    border: none;
+    overflow-x: scroll;
+  }
+  .storySection {
+    display: flex;
+    width: 380px;
+    height: auto;
+  }
+  .storySection .storyImg {
+    margin: auto;
+  }
+  .storySection li {
+    display: block;
+    width: 30%;
+    padding: 8px;
+    word-wrap: break-word;
+  }
+  .sideUserSection .sideUserName,
+  .storySection .sideUserName {
+    margin-top: 10px;
+    text-align: center;
+  }
+  .sideUserSection .sideUserName span,
+  .storySection li .sideUserName span {
+    display: none;
+  }
+  .storySectionTitle {
+    display: none;
+  }
+  .suggestionSection {
+    display: none;
+  }
 }
