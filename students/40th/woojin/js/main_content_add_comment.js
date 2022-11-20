@@ -9,15 +9,19 @@ const profileNameElement = document.getElementsByClassName("myProfileName")[0];
 
 // click event of button
 addCommentBtnElement.addEventListener("click", function (e) {
-  createTagAndInputText();
-  changeColorOfButton();
+  let commentText = commentTextElement.value;
+  if(commentText.length>0) {
+    createTagAndInputText();
+    changeColorOfButton();
+  }
 });
 
 // keydown event of enter key
 commentTextElement.addEventListener("keydown", function (e) {
   changeColorOfButton();
-  // change color of button with ked
-  if (e.keyCode === 13) {
+  let commentText = commentTextElement.value;
+  // change color of button with key
+  if (e.keyCode === 13 && commentText.length > 0) {
     createTagAndInputText();
     changeColorOfButton();
   }
@@ -32,8 +36,6 @@ function changeColorOfButton() {
     addCommentBtnElement.style.color = 'rgb(0, 149, 246, 0.3)';
   }
 }
-
-
 
 // create 'li' tag and insert text to input field
 function createTagAndInputText() {
@@ -52,9 +54,7 @@ function createTagAndInputText() {
   let rightSide = document.createElement('div');
   rightSide.style.display = 'flex'
 
-  newCommentList.appendChild(leftSide)
-  newCommentList.appendChild(rightSide)
-
+  
   /// <span> tag No.1 = insert profile name
   const profileNameText = profileNameElement.textContent;
   let createAuthorInComment = document.createElement("span");
@@ -67,18 +67,17 @@ function createTagAndInputText() {
   let createTextInListTag = document.createElement("span");
   createTextInListTag.innerText = commentText;
 
-  /// <span> tag No.3 = insert heart
+  /// <button> tag No.1 = insert heart
   let createLikeHeart = document.createElement('button');
   createLikeHeart.style.display = 'inline-block'
   createLikeHeart.style.backgroundImage = 'url("/students/40th/woojin/main_structure_image/heart.png")'
   createLikeHeart.style.backgroundColor = 'transparent'
-
   createLikeHeart.style.backgroundSize = 'cover'
   createLikeHeart.style.width = '15px'
   createLikeHeart.style.height = '13px'
   createLikeHeart.style.marginRight = '8px'
   
-  /// <span> tag No.4 = insert delete
+  /// <button> tag No.2 = insert delete
   let createDelete = document.createElement('button');
   createDelete.style.display = 'inline-block'
   createDelete.style.backgroundImage = 'url("/students/40th/woojin/main_structure_image/bin.png")'
@@ -90,6 +89,9 @@ function createTagAndInputText() {
 
   /// append list-------------------------------
   commentListElement.appendChild(newCommentList);
+
+  newCommentList.appendChild(leftSide)
+  newCommentList.appendChild(rightSide)
 
   leftSide.appendChild(createAuthorInComment);
   leftSide.appendChild(createTextInListTag);
@@ -107,8 +109,9 @@ function createTagAndInputText() {
   createDelete.addEventListener('click', function(e) {
     deleteText(newCommentList);
   })
-
 }
+
+
 
 // like change
 function changeColorOfHeart(a) {
@@ -117,5 +120,7 @@ function changeColorOfHeart(a) {
 
 // delete comment
 function deleteText(a) {
-  a.style.display = 'none';
+  a.remove()
 }
+
+

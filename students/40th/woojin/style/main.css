@@ -6,7 +6,7 @@ details {
 nav {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     border-bottom: 1px solid rgb(219, 219, 219);
 }
 
@@ -23,7 +23,6 @@ h1 {
 
 #navRight {
     display: flex;
-    align-items: flex-end;
     justify-content: space-between;
     margin: 15px 50px 15px 0;
 }
@@ -48,8 +47,6 @@ h1 {
     height: 29px;
     text-align: center;
     background-color: transparent;
-    margin-bottom: 15px;
-
 }
 
 #searchBarInNav::-webkit-input-placeholder {
@@ -87,10 +84,13 @@ header {
     width: 32px;
     height: 32px;
     border-radius: 50%;
-    background-image: url('/students/40th/woojin/main_article_image/flower_profile.jpg');
     background-size: cover;
     background-position: -10px;
     box-shadow: inset;
+}
+
+.authorImage {
+    background-image: url('/students/40th/woojin/main_article_image/flower_profile.jpg');
 }
 
 .titleOfAuthor {
@@ -297,13 +297,12 @@ header {
 }
 
 .storyBox {
-    padding: 2px 0!important;
+    padding: 5px 0!important;
 }
 
 #boxForScrollStory {
     height: 180px;
     overflow: auto;
-    padding-top: 16px;
 }
 
 
@@ -374,6 +373,9 @@ header {
 
 
 .profileOfFriends {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     width: 227px;
     text-align: left;
 }
@@ -427,3 +429,14 @@ header {
 #listOfEct{
     margin-bottom: 16px;
 }
+
+
+
+
+
+
+
+
+
+
+

@@ -26,9 +26,9 @@ window.addEventListener("keyup", () => {
   }
 });
 
-
 // click event - pop up alert
 loginBtnElement.addEventListener('click', function(e) {
+  e.preventDefault();
   let loginInputIDField = loginInputId.value;
   let loginInputPWField = loginInputPw.value;
 
@@ -41,5 +41,11 @@ loginBtnElement.addEventListener('click', function(e) {
     alert('비밀번호를 입력해주세요.')
   } else if(loginInputPWField.length < 5) {
     alert('비밀번호는 5자 이상입니다. 다시 입력해주세요.')
-  } 
+  } else {
+    loginToMainPage();  }
 })
+
+
+const loginToMainPage = () => {
+  window.location.href = '/students/40th/woojin/main.html';
+}
