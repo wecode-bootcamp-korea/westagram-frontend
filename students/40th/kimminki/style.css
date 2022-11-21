@@ -1,0 +1,405 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "westagram";
+  src: url(./image/Lobster-Regular.ttf) format("truetype");
+}
+
+.main-display {
+  background-color: rgba(245, 243, 242, 1);
+}
+/*body {
+  position: relative;
+  top: 60px;
+}*/
+.login-box {
+  display: flex;
+  align-items: center;
+
+  flex-direction: column;
+  width: 500px;
+  height: 500px;
+  border: 1px solid rgba(226, 226, 226, 1);
+}
+
+.logo {
+  font-family: "westagram";
+  font-size: 50px;
+  margin-top: 50px;
+  margin-bottom: 60px;
+}
+
+.check-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.idPas {
+  margin: 5px;
+  padding: 10px;
+  width: 300px;
+  border-radius: 5px;
+  border: 0.2px solid gray;
+  background-color: rgba(226, 226, 226, 0.2);
+}
+
+.check {
+  width: 300px;
+  height: 32px;
+  position: relative;
+  left: 5px;
+  margin-top: 10px;
+  color: white;
+  background-color: rgba(0, 0, 255, 0.5);
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.forget {
+  margin-top: 120px;
+  text-align: center;
+  text-decoration: none;
+}
+
+nav {
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  top: 0px;
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid rgba(226, 226, 226, 1);
+  background-color: white;
+  z-index: 1;
+}
+
+.searchLogo {
+  font-family: "westagram";
+  position: absolute;
+  right: 68px;
+  bottom: -18px;
+  font-size: 30px;
+  padding-left: 26px;
+}
+
+.search {
+  /*background-image: url(./magnifying-glass-solid.svg);
+  background-repeat: no-repeat;
+*/
+  position: absolute;
+  left: 137px;
+  height: 26px;
+  bottom: -60px;
+  width: 250px;
+  text-indent: 115px;
+  border: 1px solid rgba(226, 226, 226, 1);
+}
+
+.glass {
+  position: absolute;
+  bottom: -55px;
+  left: 235px;
+  color: rgba(226, 226, 226, 1);
+}
+
+.right-logo {
+  position: relative;
+  left: 830px;
+  top: 50px;
+}
+
+.compass {
+  background-image: url("https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png");
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  right: -330px;
+  background-size: 30px;
+}
+
+.heart {
+  background-image: url("https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png");
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  right: -400px;
+  background-size: 30px;
+}
+
+.mypage {
+  background-image: url("https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png");
+  background-repeat: no-repeat;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  right: -470px;
+  background-size: 30px;
+}
+
+.camera {
+  position: absolute;
+  bottom: -12px;
+  right: 250px;
+}
+
+.left-top {
+  position: relative;
+  top: -40px;
+  left: 440px;
+}
+
+.search-bar {
+  position: absolute;
+  top: 20px;
+  left: 465px;
+}
+
+main {
+  display: flex;
+  margin-top: 100px;
+  padding-top: 75px;
+}
+
+.feeds {
+  border: 1px solid rgba(226, 226, 226, 1);
+  width: 600px;
+  position: relative;
+  right: -240px;
+  padding-top: 15px;
+  padding-right: 10px;
+  padding-left: 10px;
+  background-color: white;
+}
+
+.main-page {
+  background: url(./image/IMG_0001.JPG);
+  width: 600px;
+  height: 450px;
+  position: relative;
+  left: -10px;
+}
+
+.image {
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+  border-radius: 50%;
+}
+
+.profile {
+  display: flex;
+  position: relative;
+  top: -4px;
+  align-items: center;
+}
+
+.name {
+  font-weight: bold;
+  position: relative;
+  left: 10px;
+}
+
+.bar {
+  position: relative;
+  left: 450px;
+}
+
+.content-bar {
+  display: flex;
+  position: relative;
+  top: 10px;
+}
+
+.like {
+  position: relative;
+  right: 0px;
+}
+
+.spech {
+  position: relative;
+  right: -10px;
+}
+
+.arrow {
+  position: relative;
+  right: -20px;
+}
+
+.likey {
+  display: flex;
+  position: relative;
+  top: 20px;
+}
+.people {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.like-people {
+  position: relative;
+  left: -16px;
+  top: 2px;
+  margin-top: -2px;
+  margin-left: 25px;
+}
+
+.comment-area {
+  width: 600px;
+  position: relative;
+  top: 30px;
+  list-style: none;
+}
+.comment-Input {
+  position: relative;
+  top: 70px;
+  left: -11px;
+  width: 600px;
+}
+.comment-text {
+  width: 600px;
+  border: 1px solid rgba(226, 226, 226, 1);
+  height: 50px;
+  padding-left: 10px;
+}
+
+.right-1 {
+  margin-top: 10px;
+  padding: 10px 10px;
+}
+
+.right-2 {
+  height: 200px;
+  border: 1px solid rgba(226, 226, 226, 1);
+  border-radius: 5px;
+  overflow: auto;
+  background-color: white;
+}
+
+.right-3 {
+  border: 1px solid rgba(226, 226, 226, 1);
+  height: 200px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  overflow: auto;
+  background-color: white;
+}
+
+.main-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: -50px;
+  position: relative;
+  right: -360px;
+  width: 300px;
+}
+
+.profile2 {
+  float: left;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-left: 20px;
+}
+
+.right-font1 {
+  margin-top: 5px;
+  font-weight: bold;
+  margin: 5px;
+}
+.right-font2 {
+  font-weight: bold;
+  font-size: 12px;
+  color: gray;
+}
+
+.right-op {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.story,
+.all {
+  margin: 15px;
+}
+
+.boundary {
+  margin-bottom: 17px;
+  margin-right: 140px;
+}
+
+.follow {
+  position: relative;
+  left: 135px;
+  bottom: 40px;
+  color: skyblue;
+  font-weight: bold;
+}
+
+.registration {
+  position: relative;
+  left: 563px;
+  top: -34px;
+  border: none;
+  background: white;
+  color: rgba(0, 0, 255, 0.5);
+  margin: 0.8px;
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+}
+
+.login-display {
+  width: 100%;
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.a-log {
+  color: white;
+}
+
+.info {
+  position: relative;
+  top: -25px;
+  left: 10px;
+  width: 300px;
+  color: rgba(226, 226, 226, 5);
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.user-name {
+  position: relative;
+  left: 10px;
+  font-weight: bold;
+}
+
+.user-comment {
+  position: relative;
+  left: 23px;
+}
+
+.full-heart {
+  width: 24px;
+  right: 3px;
+  position: relative;
+  top: 0px;
+}
+
+.delete {
+  position: relative;
+  left: 480px;
+}
