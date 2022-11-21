@@ -82,20 +82,26 @@
             <b>ameliee_108</b> 뚝섬 하늘은 ...
             <span class="lightTxt">더 보기</span>
           </div>
-          <div class="txt comment marginLeft">
-            <span><b>jjin1006</b> 머야머야~ 누구랑 갔어~?</span>
-            <img
-              class="lightColor"
-              src="heart.png"
-              width="13px"
-              height="13px"
-            />
-          </div>
+          <ul id="commentList" class="txt ulAlign marginLeft">
+            <li class="listAlign">
+              <div>
+                <span class="userID">jjin1006</span>
+                <span>머야머야~ 누구랑 갔어~?</span>
+              </div>
+              <img src="heart.png" width="13px" height="13px" />
+            </li>
+          </ul>
           <div class="txt lightTxt marginLeft">1일 전</div>
         </div>
         <div id="feedEnd" class="marginLeft">
-          <span class="txt lightTxt"> 댓글 달기... </span>
-          <span class="txt bluelightTxt"> 게시 </span>
+          <input
+            class="txt lightTxt commentStyle comment"
+            type="text"
+            placeholder="댓글 달기..."
+          />
+          <button class="txt commentStyle post" type="button" disabled>
+            게시
+          </button>
         </div>
       </section>
 
@@ -209,4 +215,5 @@
       </aside>
     </main>
   </body>
+  <script type="text/javascript" src="westagram.js"></script>
 </html>

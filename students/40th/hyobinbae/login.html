@@ -11,29 +11,30 @@
     <main id="loginSection">
       <h1 class="loginTitle">Westagram</h1>
 
-      <form class="inputBox">
+      <div class="inputBox">
         <input
-          id="userId"
-          class="inputItem"
+          id="id"
           type="text"
+          class="inputItem"
           placeholder="전화번호, 사용자 이름 또는 이메일"
         />
         <input
-          id="password"
-          class="inputItem"
+          id="pw"
           type="password"
+          class="inputItem"
           placeholder="비밀번호"
         />
 
         <button
-          class="loginBtn loginBtnTxt loginBtnColor"
+          id="button"
+          class="loginBtn loginBtnTxt loginBtnOpacity"
           type="button"
-          onclick="Welcome!"
+          onclick="alert"
           disabled
         >
           로그인
         </button>
-      </form>
+      </div>
       <footer class="lostPassword">
         <p>비밀번호를 잊으셨나요?</p>
       </footer>
