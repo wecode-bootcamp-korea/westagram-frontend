@@ -4,6 +4,7 @@
 
 body {
   margin: 0;
+  background-color: #fafafa;
 }
 /* nav */
 .logo-brand {
@@ -73,16 +74,16 @@ nav img {
 /* main */
 main {
   width: 100%;
-  height: 800px;
+  height: 100vh;
   padding-top: 80px;
   display: flex;
   justify-content: center;
-  background-color: #fafafa;
 }
 
 .feeds {
   width: 580px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   border: 1px solid #dbdbdb;
@@ -90,9 +91,14 @@ main {
   background-color: #fff;
 }
 
+ul {
+  list-style: none;
+  padding-left: 0px;
+}
+
 article {
   /* background-color: pink; */
-  height: 730px;
+  /* height: 100vh; */
 }
 
 .profile {
@@ -179,7 +185,7 @@ article {
   height: 29px;
   display: flex;
   align-items: center;
-  border-bottom: 0.5px solid #dbdbdb;
+  /* border-bottom: 0.5px solid #dbdbdb; */
 }
 .point-span-userID {
   font-weight: bold;
@@ -194,9 +200,9 @@ article {
   height: 57px;
 }
 
-.form-comment {
+/* .form-comment {
   position: relative;
-}
+} */
 
 .input-comment {
   font-size: 14px;
