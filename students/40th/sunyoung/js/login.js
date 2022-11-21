@@ -5,22 +5,22 @@
 // isValidId / isValidPw  - checkId/Pw  value.length > 0 ? true : false ;
 // isValidPw - value.includes("@")  ? ture : false;
 // boolean naming convention : 'is' or 'has'로 시작하는 name
-// 3항연산자 사용할 것 --> 리엑트에서 무조건 사용. 
+// 3항연산자 사용할 것 --> 리엑트에서 무조건 사용.
 // 3항 연산자도 중첩으로 코드 작성이 가능하나 가독성이 떨어지기 때문에 if/else문을 쓰는 것이 더 깔끔.
 // not연산자 !isBtnValue
 
 const inputId = document.getElementById("input_id");
 const inputPwd = document.getElementById("input_pwd");
 const loginButton = document.getElementById("login_btn");
-console.log(inputId);
-console.log(inputPwd);
-console.log(loginButton);
+// console.log(inputId);
+// console.log(inputPwd);
+// console.log(loginButton);
 
 const validate = () => {
   let idValue = inputId.value;
   let pwValue = inputPwd.value;
 
-  if (idValue && pwValue) {
+  if (idValue.includes("@") && pwValue.length >= 5) {
     loginButton.disabled = false;
     loginButton.style.opacity = 1;
     loginButton.style.cursor = "pointer";
@@ -30,10 +30,6 @@ const validate = () => {
     loginButton.style.cursor = "default";
   }
 };
-
-const isValidId 
-
-const isValidPw
 
 const init = () => {
   inputId.addEventListener("keyup", validate);

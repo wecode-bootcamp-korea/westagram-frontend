@@ -17,11 +17,12 @@ function submit_comment(value) {
                   >${value}</span>
               </div>
               <div class="comment_like_icon">
-                <img
-                  alt="하트"
-                  src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"
-                />
                 <img id="deleteBtn" alt="삭제" src="img/trash.png" />
+                <img
+                id="empty_heart"
+                alt="하트버튼"
+                src="img/empty_heart.png"
+              />
               </div>
             </div>
             <div class="comment_bottom">42분전</div>
@@ -32,10 +33,20 @@ function submit_comment(value) {
 
   //댓글 삭제 기능 구현
 
-  const delete_button = newComment.querySelector("#deleteBtn");
+  const deleteButton = newComment.querySelector("#deleteBtn");
+  const likeComment = newComment.querySelector("#empty_heart");
 
-  delete_button.addEventListener("click", function () {
+  deleteButton.addEventListener("click", function () {
     comment_element.removeChild(newComment);
+  });
+
+  likeComment.addEventListener("click", function () {
+    let current_img = likeComment.getAttribute("src");
+    if (current_img.includes("empty")) {
+      likeComment.setAttribute("src", "img/red_heart.png");
+    } else {
+      likeComment.setAttribute("src", "img/empty_heart.png");
+    }
   });
 }
 
