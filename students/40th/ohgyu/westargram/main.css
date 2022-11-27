@@ -66,7 +66,6 @@ body {
 }
 
 .feedUserInfo {
-  width: 770px;
   height: 60px;
   background-color: yellow;
   padding: 10px 20px;
@@ -91,7 +90,6 @@ body {
 }
 
 .feedContents {
-  width: 790px;
   height: 80px;
   padding: 10px;
   background-color: beige;
@@ -103,7 +101,6 @@ body {
 }
 
 #commentSection {
-  width: 790px;
   height: auto;
   padding: 10px;
   background-color: azure;
@@ -137,7 +134,7 @@ body {
   border-color: black;
 }
 #commentBtn {
-  width: 80px;
+  width: 10%;
   height: 40px;
 }
 
@@ -196,11 +193,26 @@ body {
 }
 
 @media (max-width: 1300px) {
-  #navSearch {
-    display: none;
-  }
   .main {
     width: 100%;
     margin: auto;
+  }
+}
+
+@media (max-width: 950px) {
+  .feedSection {
+    width: 95%;
+  }
+}
+
+@media (max-width: 530px) {
+  #commentUserInfo {
+    display: none;
+  }
+  #commentInput {
+    display: none;
+  }
+  #commentBtn {
+    display: none;
   }
 }
