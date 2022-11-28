@@ -1,109 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet " href="./westagram_main.css">  <!--css와 연결-->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+ <head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet " href="./westagram_main.css" />
+  <!--css와 연결-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+ </head>
 
-
-<body>
-
- <!--<nav> 태그는 고유한 하나의 상단 메뉴가 될 것이므로 id를 부여-->
+ <body>
+  <!--<nav> 태그는 고유한 하나의 상단 메뉴가 될 것이므로 id를 부여-->
   <nav id="navbar">
-
-    <div class="navbar_left">
-     <div class="westagram_logo">      
-      <img src="../image/logo.png"/>
-     </div>
-     <div class="westagram_text">            
-      Westagram
-     </div>
+   <div class="navbar_left">
+    <div class="westagram_logo">
+     <img src="../image/logo.png" />
     </div>
+    <div class="westagram_text">Westagram</div>
+   </div>
 
-
-    <!--🔍input type를 text➡️search 로 변경 , 돋보기를 background 로 넣음 -->
-    <div class="navbar_center">
-     <input 
-      class="search" 
-      type="search" 
-      placeholder="검색" 
-      rel="search"/>
-      <!--돋보기 아이콘을 그림으로 넣으려고 시도-->
-      <!-- <div>
+   <!--🔍input type를 text➡️search 로 변경 , 돋보기를 background 로 넣음 -->
+   <div class="navbar_center">
+    <input class="search" type="search" placeholder="검색" rel="search" />
+    <!--돋보기 아이콘을 그림으로 넣으려고 시도-->
+    <!-- <div>
        <image class="search_icon" src="../image/search.png"/>
       </div> -->
-    </div>
+   </div>
 
+   <div class="navbar_icons">
+    <img src="../image/explore.png" />
+    <img src="../image/heart.png" />
+    <img src="../image/profile.png" />
+   </div>
+  </nav>
 
-    <div class="navbar_icons">
-     <img src="../image/explore.png"/>
-     <img src="../image/heart.png"/>
-     <img src="../image/profile.png"/>
-    </div>
-   
- </nav>
+  <main class="main">
+   <!--회색배경-->
 
+   <section class="feed">
+    <article>
+     <!-- 게시물 상단 프로필 -->
+     <div class="feedHeader">
+      <div class="profile">
+       <div class="img"><img src="../image/feed_profile.jpg" /></div>
+       <div class="name">
+        <a href="">asdasd</a>
+       </div>
+      </div>
+      <div class="more">
+       <button><img src="../image/heart.png" /></button>
+      </div>
+     </div>
+     <!-- //게시물 상단 프로필 -->
 
+     <div class="commentWrapper">
+      <!-- 게시글 이미지 -->
+      <div class="commentIconWrapper">
+       <img src="../image/feed_profile.jpg" />
+      </div>
+      <!-- //게시글 이미지 -->
 
+      <!-- 좋아요, 공유하기 등 버튼들 영역 -->
+      <div class="btns">
+       <div class="left">
+        <button><img src="../image/heart.png" /></button>
+        <button><img src="../image/heart.png" /></button>
+        <button><img src="../image/heart.png" /></button>
+       </div>
+       <div class="right">
+        <button><img src="../image/heart.png" /></button>
+       </div>
+      </div>
+      <!-- //좋아요, 공유하기 등 버튼들 영역 -->
 
- <main class="main" > <!--회색배경-->
+      <!-- 좋아요 수 -->
+      <div class="commentLike">
+       <div class="img"><img src="../image/feed_profile.jpg" /></div>
+       <p>탄이 외 4명이 좋아합니다.</p>
+      </div>
+      <!-- //좋아요 수 -->
 
-   <section class="feed"> 
-        <div class= "feedHeader">프로필</div>
+      <!-- 게시글 내용 -->
+      <p class="contentArea">
+       <span>asdasd_asdasd</span>
+       asdasdasd
+      </p>
+      <!-- //게시글 내용 -->
 
-        <div class= "feedImg">사진</div>
-        
-        <div class= "commentWrapper">사진 밑시작
-          <div class="commentIconWrapper">아이콘</div>
-          <div class= "commentLike">oo님이 좋아합니다</div>
-          <ul id= "commentLists">
-            <li>ddsad:거봐~</li>
-            <li>.</li>
-            <li>.</li>
-            <li>.</li>
-          </ul>
-          사진 밑 끝
+      <!-- 댓글 리스트 영역 -->
+      <ul class="commentLists">
+       <li>
+        <div class="content">
+         <p class="name">닉네임닉네임01</p>
+         <p class="con">콘텐츠 내용 내용 내용</p>
         </div>
-        <div class= "comment">댓글</div>
+        <div class="heart">
+         <button><img src="../image/heart.png" /></button>
+        </div>
+       </li>
+       <li>
+        <div class="content">
+         <p class="name">닉네임닉네임02</p>
+         <p class="con">콘텐츠 내용 내용 내용</p>
+        </div>
+        <div class="heart">
+         <button><img src="../image/heart.png" /></button>
+        </div>
+       </li>
+       <li>
+        <div class="content">
+         <p class="name">닉네임닉네임03</p>
+         <p class="con">콘텐츠 내용 내용 내용</p>
+        </div>
+        <div class="heart">
+         <button><img src="../image/heart.png" /></button>
+        </div>
+       </li>
+      </ul>
+      <!-- //댓글 리스트 영역 -->
+      <p class="time">54분 전</p>
+     </div>
 
-        <input 
-        class="inputComment" 
-        type="text" 
-        placeholder="댓글달기..."/>
+     <!-- 댓글 입력창 -->
+     <div class="inputComment">
+      <input type="text" placeholder="댓글달기..." />
+      <button>게시</button>
+     </div>
+     <!-- //댓글 입력창 -->
+    </article>
    </section>
 
-    <aside class= "main_right">
+   <aside class="main_right">
+    <div class="aside_1">
+     <img
+      class="profile_img"
+      src="../image/feed_profile.jpg"
+      alt="프로필사진"
+     />
+     <div class="aiside_profile">
+      <p class="profile_id">cute_tan</p>
+      <p class="profile_info">나는야 귀여운 댕댕</p>
+     </div>
+    </div>
+    <!--1완료-->
+    <!-- 스토리영역 -->
+    <div class="aside_2">
+     <div class="aside_2_top">
+      <p class="aside_top_1">스토리</p>
+      <p class="aside_top_2">모두 보기</p>
+     </div>
+     <div class="aside2_content">
+      <ul>
+       <li>
         <div class="aside_1">
-            <img 
-              class="profile_img" 
-              src="../image/feed_profile.jpg" 
-              alt="프로필사진"/>
-            <div 
-              class="aiside_profile">
-                <p class="profile_id">cute_tan</p>
-                <p class="profile_info">나는야 귀여운 댕댕</p>
-            </div>
-        </div> <!--1완료-->
-        <div class="aside_2">
-          <div class="aside_2_top">
-            <p class="aside_top_1">스토리</p>
-            <p class="aside_top_2">모두 보기</p>
-          </div>
-          <div class="aside2_content">
-                <img class="aside2_people" src="../image/feed_profile.jpg"/>
-                <div class="aside2_peopleId"></div>
-          </div>
+         <img
+          class="story_img"
+          src="../image/feed_profile.jpg"
+          alt="프로필사진"
+         />
+         <div class="aiside_profile">
+          <p class="profile_id">cute_tan</p>
+          <p class="profile_info">나는야 귀여운 댕댕</p>
+         </div>
         </div>
-     <div class="aside_3">3</div>
-    <div class="aside_4">4</div>
-    </aside>
+       </li>
+       <li>
+        <div class="aside_1">
+         <img
+          class="story_img"
+          src="../image/feed_profile.jpg"
+          alt="프로필사진"
+         />
+         <div class="aiside_profile">
+          <p class="profile_id">cute_tan</p>
+          <p class="profile_info">나는야 귀여운 댕댕</p>
+         </div>
+        </div>
+       </li>
+       <li>
+        <div class="aside_1">
+         <img
+          class="story_img"
+          src="../image/feed_profile.jpg"
+          alt="프로필사진"
+         />
+         <div class="aiside_profile">
+          <p class="profile_id">cute_tan</p>
+          <p class="profile_info">나는야 귀여운 댕댕</p>
+         </div>
+        </div>
+       </li>
+      </ul>
+     </div>
+    </div>
+    <!-- //스토리영역 -->
 
- </main>
-    
+    <!-- 추천영역 -->
+    <div class="aside_2">
+     <div class="aside_2_top">
+      <p class="aside_top_1">회원님을 위한 추천</p>
+      <p class="aside_top_2">모두 보기</p>
+     </div>
+     <div class="aside2_content">
+      <ul>
+       <li>
+        <div class="aside_1">
+         <img
+          class="story_img"
+          src="../image/feed_profile.jpg"
+          alt="프로필사진"
+         />
+         <div class="aiside_profile">
+          <p class="profile_id">cute_tan</p>
+          <p class="profile_info">suin님 외 100명이...</p>
+         </div>
+        </div>
+        <button class="follow">팔로우</button>
+       </li>
+       <li>
+        <div class="aside_1">
+         <img
+          class="story_img"
+          src="../image/feed_profile.jpg"
+          alt="프로필사진"
+         />
+         <div class="aiside_profile">
+          <p class="profile_id">cute_tan</p>
+          <p class="profile_info">suin님 외 100명이...</p>
+         </div>
+        </div>
+        <button class="follow">팔로우</button>
+       </li>
+       <li>
+        <div class="aside_1">
+         <img
+          class="story_img"
+          src="../image/feed_profile.jpg"
+          alt="프로필사진"
+         />
+         <div class="aiside_profile">
+          <p class="profile_id">cute_tan</p>
+          <p class="profile_info">suin님 외 100명이...</p>
+         </div>
+        </div>
+        <button class="follow">팔로우</button>
+       </li>
+      </ul>
+     </div>
+    </div>
+    <!-- //추천영역 -->
+   </aside>
+  </main>
 
-    <!-- <script src="./westagram_main.js"></script>    js와 연결 -->
-</body>
+  <!-- <script src="./westagram_main.js"></script>    js와 연결 -->
+ </body>
 </html>

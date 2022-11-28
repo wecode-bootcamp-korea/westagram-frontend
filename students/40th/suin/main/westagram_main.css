@@ -1,217 +1,357 @@
 #navbar {
-    justify-content: space-between; 
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 50px;
-    background-color: white;
+ justify-content: space-between;
+ display: flex;
+ align-items: center;
+ width: 100%;
+ height: 50px;
+ background-color: white;
 }
-
 
 img {
-    /*크기만 조정해줌-모든 image 크기 변경*/
-    width: 20px;
+ /*크기만 조정해줌-모든 image 크기 변경*/
+ width: 20px;
 }
 
+.navbar_left {
+ /*요소를 각 끝으로 보냄*/
+ justify-content: space-between;
 
-.navbar_left{
-    /*요소를 각 끝으로 보냄*/
-    justify-content: space-between; 
+ /*inline 으로 들어올 수 있도록*/
+ display: flex;
 
-    /*inline 으로 들어올 수 있도록*/
-    display: flex;
-
-    /*요소가 늘어나지 않고 가운데로 정렬*/
-    align-items: center;
+ /*요소가 늘어나지 않고 가운데로 정렬*/
+ align-items: center;
 }
 
 .navbar_icons {
-    width: 100px;
-    display: flex;
-    justify-content: space-between;
+ width: 100px;
+ display: flex;
+ justify-content: space-between;
 }
 
+.westagram_text {
+ /*font 크기, 글자체*/
+ font-size: 20px;
+ font-family: "Lobster", cursive;
 
-.westagram_text{           
-    /*font 크기, 글자체*/
-    font-size: 20px;   
-    font-family: 'Lobster', cursive;
+ /*정렬-border가 적당한 위치에 들어갈 수 있도록*/
+ margin-left: 18px;
+ padding-left: 18px;
 
-    /*정렬-border가 적당한 위치에 들어갈 수 있도록*/
-    margin-left: 18px;
-    padding-left: 18px;;
-
-    /*border-left만 만들어서 선으로 보이게 함*/
-    border-left-style: solid;
-    border-width: 2px;
-    border-color: grey;       
+ /*border-left만 만들어서 선으로 보이게 함*/
+ border-left-style: solid;
+ border-width: 2px;
+ border-color: grey;
 }
-
 
 .search {
-    text-align : center;
+ text-align: center;
 }
-
 
 .search {
-    /*돋보기 아이콘 넣기*/
-    background-image: url(../image/search.png);
+ /*돋보기 아이콘 넣기*/
+ background-image: url(../image/search.png);
 
-    /*돋보기 아이콘 이동시키기- 🤔돋보기 크기가 조금 작았으면 좋겠는데...*/
-    background-position: 75px center;
+ /*돋보기 아이콘 이동시키기- 🤔돋보기 크기가 조금 작았으면 좋겠는데...*/
+ background-position: 75px center;
 
-    /*input 안에 그림이 들어가도록 (크기가 잘려보이지 않도록) */
-    background-size: contain;
-    background-repeat: no-repeat;
+ /*input 안에 그림이 들어가도록 (크기가 잘려보이지 않도록) */
+ background-size: contain;
+ background-repeat: no-repeat;
 
-    /*검색창 디자인*/
-    width: 216px;
-    padding: 5px 5px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    text-indent: 30px;
+ /*검색창 디자인*/
+ width: 216px;
+ padding: 5px 5px;
+ border: 1px solid #ccc;
+ border-radius: 8px;
+ text-indent: 30px;
 }
-
 
 /*main*/
 
 .main {
-    /* justify-content: space-between; */
-    align-items :flex-start;
-    justify-content: center;
-    border-top: 1px solid #adabaa;
-    background-color: #faf4f1;
-    height: auto;
-    display: flex;
-    padding-top: 30px;
+ /* justify-content: space-between; */
+ align-items: flex-start;
+ justify-content: center;
+ border-top: 1px solid #adabaa;
+ background-color: #fafafa;
+ height: auto;
+ display: flex;
+ padding-top: 30px;
 }
 
 /*section1*/
+
 .feed {
-    border: 1px solid #adabaa;
-    border-radius: 3px;
-    margin-left: 40px;
-    margin-right: 20px;
-    border: 1px solid;
-    width: 469px;
+ border: 1px solid;
+ border-radius: 3px;
+ background-color: white;
+ margin-left: 40px;
+ margin-right: 20px;
+ border: 1px solid;
+ width: 469px;
 }
 
-
+/* 게시물 상단 프로필 */
 .feedHeader {
-    background-color: pink;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding: 10px;
+}
+.feedHeader .profile {
+ display: flex;
+ align-items: center;
+}
+.feedHeader .profile .img {
+ width: 30px;
+ height: 30px;
+ border-radius: 100%;
+ overflow: hidden;
+ margin-right: 10px;
+}
+.feedHeader .profile .img img {
+ width: 100%;
+}
+.feedHeader .profile .name {
+ display: flex;
+ flex-direction: column;
+}
+.feedHeader .profile .name a {
+ color: #000;
+ text-decoration: none;
+}
+.feedHeader .profile .name .a01 {
+ font-size: 20px;
+ font-weight: bold;
 }
 
-.feedImg {
-    background-color: red;
+.feedHeader .more button {
+ border: none;
+ background-color: rgba(0, 0, 0, 0);
 }
 
-.commentWrapper {
-    background-color: aqua;
+/* 게시글 이미지 */
+
+.commentWrapper .commentIconWrapper img {
+ width: 100%;
 }
 
-.commentIconWrapper {
-    border : 1px solid black
+/* 좋아요, 공유하기 등 버튼들 영역 */
+.commentWrapper .btns {
+ display: flex;
+ justify-content: space-between;
+ padding: 0 10px;
+}
+.commentWrapper button {
+ border: none;
+ background-color: rgba(0, 0, 0, 0);
 }
 
+/* 좋아요 수 */
 .commentLike {
-    border: 1px solid black;
+ display: flex;
+ align-items: center;
+ padding: 0 10px;
+}
+.commentLike .img {
+ margin-right: 10px;
+ width: 30px;
+ height: 30px;
+ border-radius: 100%;
+ overflow: hidden;
+}
+.commentLike .img img {
+ width: 100%;
+}
+.commentLike p {
+ margin: 0;
+ padding: 0;
+ font-size: 14px;
 }
 
+/* 게시글 내용 */
+.contentArea {
+ font-size: 14px;
+ padding: 0 10px;
+}
+.contentArea span {
+ font-weight: bold;
+}
+.time {
+ padding: 0 10px;
+ color: #666;
+ font-size: 14px;
+}
+
+/* 댓글 리스트 영역 */
 .commentLists {
-    background-color: coral;
+ margin: 0;
+ padding: 0 10px;
+}
+.commentLists li {
+ position: relative;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding-right: 30px;
+}
+.commentLists li .content {
+ display: flex;
+ flex-wrap: wrap;
+}
+.commentLists li .content p {
+ margin: 0;
+ padding: 0;
+}
+.commentLists li .content .name {
+ font-size: 14px;
+ font-weight: bold;
+ margin-right: 10px;
+}
+.commentLists li .content .con {
+ font-size: 14px;
+}
+.commentLists li .heart {
+ position: absolute;
+ top: 0;
+ right: 0;
+ width: 20px;
+}
+.commentLists li .heart button {
+ padding: 0;
+ margin: 0;
+ border: none;
+ background-color: rgba(0, 0, 0, 0);
+}
+.commentLists li .heart img {
+ width: 100%;
 }
 
-.comment {
-    background-color: yellowgreen;
+/* 댓글 입력창 */
+.inputComment {
+ display: flex;
+ padding: 10px;
+ border-top: 1px solid #000;
 }
-
+.inputComment input {
+ width: 100%;
+ border: none;
+}
+.inputComment button {
+ color: #3eb3ff;
+ white-space: nowrap;
+ border: none;
+ background-color: rgba(0, 0, 0, 0);
+}
 
 /*옆*/
 .main_right {
-    width: 200px;
-    margin-right: 30px;
+ width: 200px;
+ margin-right: 30px;
 }
-
 
 /*aside_1*/
 
 .aside_1 {
-    display: flex;
-    align-items: center;
-    margin-bottom: 5px;
+ display: flex;
+ align-items: center;
+ margin-bottom: 5px;
 }
 
 .profile_img {
-    overflow: hidden; /*속성으로 넘치는 부분은 지워줬어요.*/
-    border-radius: 70%;
-    width: 38px;
-    margin-right: 9px;
+ overflow: hidden; /*속성으로 넘치는 부분은 지워줬어요.*/
+ border-radius: 70%;
+ width: 38px;
+ margin-right: 9px;
+}
+
+.story_img {
+ overflow: hidden; /*속성으로 넘치는 부분은 지워줬어요.*/
+ border-radius: 70%;
+ width: 30px;
+ margin-right: 9px;
 }
 
 .aiside_profile {
-    font-size: 8px;
+ font-size: 8px;
 }
 
 .profile_id {
-    margin-bottom: 0px;
-    font-weight: bolder;
+ margin-bottom: 0px;
+ font-weight: bolder;
 }
 
 .profile_info {
-    margin-top: 0px;
-    color: #adabaa;
+ margin-top: 0px;
+ color: #adabaa;
 }
 
 /*aside_2*/
 
 .aside_2 {
-    padding: 3px 7px 3px 7px;
-    margin-bottom: 5px;
-    border: 1px solid #adabaa;
-    border-radius: 3px;
-    font-size: 8px;
+ padding: 3px 7px 3px 7px;
+ margin-bottom: 5px;
+ border: 1px solid #adabaa;
+ border-radius: 3px;
+ font-size: 8px;
 }
 
 .aside_2_top {
-    display: flex;
-    justify-content: space-between;
+ display: flex;
+ justify-content: space-between;
 }
 
 .aside_top_1 {
-    color: #adabaa;
-    font-weight: bolder;
+ color: #adabaa;
+ font-weight: bolder;
 }
 
 .aside_top_2 {
-    font-weight: bolder;
+ font-weight: bolder;
 }
 
 .aside2_content {
-    display: flex;
-    margin: 0px 10px 0px 10px;
+ display: flex;
+ margin: 0px 10px 0px 10px;
+}
+.aside2_content ul {
+ list-style: none;
+ margin: 0;
+ padding: 0;
+}
+.aside2_content li {
+ position: relative;
+ width: 100%;
+}
+.aside2_content .follow {
+ position: absolute;
+ top: 12px;
+ right: -62px;
+ color: #006cec;
+ font-weight: bold;
+ font-size: 10px;
+ border: none;
+ background-color: rgba(0, 0, 0, 0);
 }
 
-.aside2_people {        /**/
-    border-radius: 70%;
-    overflow: hidden;
-    width: 30px;
+.aside2_people {
+ /**/
+ border-radius: 70%;
+ overflow: hidden;
+ width: 30px;
 }
-
 
 /*aside_3*/
 
 .aside_3 {
-    background-color: blueviolet;
-    margin-bottom: 5px;
+ background-color: blueviolet;
+ margin-bottom: 5px;
 }
 
 /*aside_4*/
 
 .aside_4 {
-    background-color: blueviolet;
-    margin-bottom: 5px;
+ background-color: blueviolet;
+ margin-bottom: 5px;
 }
-
-
-
-
