@@ -12,6 +12,7 @@ function App() {
     if ($('#loginId').value !== '' && $('#loginPassword').value !== '') {
       alert('로그인했습니다.');
       console.log('hi');
+      window.open('main.html');
     }
   });
 }
