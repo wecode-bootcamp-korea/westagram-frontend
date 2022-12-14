@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style/main.css" />
+    <link rel="stylesheet" href="style/common.css" />
+    <title>Westagram - main</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav-left">
+        <img
+          class="icons"
+          src="https://cdn-icons-png.flaticon.com/512/717/717392.png"
+          alt="instagram"
+        />
+        <a id="toMainPage" href="/main.html">Westagram</a>
+      </div>
+      <div class="nav-center">
+        <input type="text" placeholder="검색" />
+      </div>
+      <div class="nav-right">
+        <img
+          class="icons"
+          src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png"
+          alt="탐색"
+        />
+        <img
+          class="icons"
+          src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"
+          alt="하트"
+        />
+        <img
+          class="icons"
+          src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png"
+          alt="마이페이지"
+        />
+      </div>
+    </nav>
+    <main>
+      <div class="feeds">
+        <div class="feed">
+          <div class="feed-top">
+            <img class="profile-photo" src="img/mia.png" />
+            <p>mia_seo</p>
+            <img src="img/dot.png" />
+          </div>
+          <img
+            class="feed-img"
+            src="img/붕어빵루피.jpeg"
+            alt="붕어빵루피"
+          />
+          <div class="like-emojis">
+            <img src="img/heart-fill.png" />
+            <img class="small-emojis" src="img/bubble-empty.png" />
+            <img class="small-emojis" src="img/upload (1).png" />
+            <img class="small-emojis" src="img/bookmark.png" />
+          </div>
+          <p class="likes">
+            <img class="small-image" src="img/mia.png" />
+            <span class="bold">mia_seo</span>님
+            <span class="bold">외 100명</span>이 좋아합니다
+          </p>
+
+          <div class="comments">
+            <p><span class="bold">mia_seo</span> 인생... 힘들다....💧</p>
+            <ul class="comment-lists">
+              <li>
+                <span class="bold">wecode_bootcamp</span>
+                <span>여기서 이러시면 안됩니다!!</span>
+                <img src="img/heart.png" />
+                <span class="gray">42분 전</span>
+              </li>
+            </ul>
+          </div>
+          <form id="comment" for="commentInput">
+            <input id="commentInput" type="text" placeholder="댓글달기" />
+            <button>게시</button>
+          </form>
+        </div>
+      </div>
+      <div class="mainRight">
+        <div class="profile">
+          <img src="img/짱구.png" />
+          <div>
+            <p>miya___ho</p>
+            <p class="gray">지연🙌</p>
+          </div>
+        </div>
+        <div class="stories">
+          <div class="story-top">
+            <p class="gray marginZero">스토리</p>
+            <p class="bold marginZero">모두 보기</p>
+          </div>
+          <div class="column gap">
+            <div class="row">
+              <img class="profile-photo active" src="img/1.png" />
+              <div class="column">
+                <p class="bold marginZero">greenMon</p>
+                <p class="gray marginZero">15분 전</p>
+              </div>
+            </div>
+            <div class="row">
+              <img class="profile-photo active" src="img/2.png" />
+              <div class="column">
+                <p class="bold marginZero">cco_cco</p>
+                <p class="gray marginZero">45분 전</p>
+              </div>
+            </div>
+            <div class="row">
+              <img class="profile-photo active" src="img/3.png" />
+              <div class="column">
+                <p class="bold marginZero">queoqa</p>
+                <p class="gray marginZero">3시간 전</p>
+              </div>
+            </div>
+            <div class="row">
+              <img class="profile-photo active" src="img/4.png" />
+              <div class="column">
+                <p class="bold marginZero">i_am_so_cute</p>
+                <p class="gray marginZero">20시간 전</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="recommend">
+          <div class="recommend-top">
+            <p class="gray marginZero">회원님을 위한 추천</p>
+            <p class="bold marginZero">모두 보기</p>
+          </div>
+          <div class="column gap">
+            <div class="row">
+              <img class="profile-photo active" src="img/5.png" />
+              <div class="column">
+                <p class="bold marginZero">eeeeeasy</p>
+                <p class="gray marginZero hidden">
+                  i_am_so_cutes님 외 2명이 팔로우 합니다.
+                </p>
+              </div>
+              <p class="blue">팔로우</p>
+            </div>
+            <div class="row">
+              <img class="profile-photo active" src="img/6.png" />
+              <div class="column">
+                <p class="bold marginZero">drink_lover</p>
+                <p class="gray marginZero hidden">
+                  mia_seo님 외 5명이 팔로우 합니다.
+                </p>
+              </div>
+              <p class="blue">팔로우</p>
+            </div>
+            <div class="row">
+              <img class="profile-photo active" src="img/7.png" />
+              <div class="column">
+                <p class="bold marginZero">huhuhu</p>
+                <p class="gray marginZero hidden">
+                  cco_cco님 외 9명이 팔로우 합니다.
+                </p>
+              </div>
+              <p class="blue">팔로우</p>
+            </div>
+          </div>
+        </div>
+        <div class="gray">
+          <br />
+          instagram 정보•지원•홍보 센터•API•<br />
+          채용 정보•개인정보처리방침•약관•<br />
+          디렉터리•프로필•해시태그•언어
+          <br />
+          <br />
+          © 2019 INSTAGRAM
+        </div>
+      </div>
+    </main>
+    <script src="js/main.js"></script>
+  </body>
+</html>
