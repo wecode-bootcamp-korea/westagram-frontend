@@ -1,0 +1,155 @@
+body {
+    margin: 0;
+    background-color: #fafafa;
+}
+.container {
+    width: 100%;
+    text-align: center;
+}
+nav {
+    width: 100%;
+    margin: 0 auto;
+    height: 50px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #fff;
+    margin-bottom: 50px;
+}
+nav .nav-left {
+    display: flex;
+    align-items: center;
+}
+nav .nav-left .nav-left-bar {
+    width: 1px;
+    height: 15px;
+    background-color: #ccc;
+    margin: 0 10px;
+}
+nav .nav-left p {
+    font-family: "Carter One", cursive;
+}
+nav .nav-center {
+    width: 200px;
+}
+nav .nav-center input {
+    outline: none;
+    border: #dbdbdb 1px solid;
+    color: #9d9d9d;
+    padding: 5px;
+    border-radius: 5px;
+}
+nav .nav-right {
+}
+nav .nav-right img {
+    width: 17px;
+}
+main {
+    background-color: #fafafa;
+}
+main .feeds {
+}
+main .feeds article {
+    background-color: #fafafa;
+}
+main .feeds article .article-bg {
+    margin: 0 auto;
+    border: 1px solid #e6e6e6;
+    width: 687px;
+    background-color: #fff;
+}
+main .feeds article .article-header {
+    width: 95%;
+    padding: 10px 0;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+}
+main .feeds article .article-header .article-profile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+main .feeds article .article-header .article-profile .article-pic {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background-color: #000;
+    margin: 0;
+    margin-right: 10px;
+}
+
+main .feeds article .article-header .article-profile .article-name {
+    margin: 0;
+}
+main .feeds article .article-header .article-icon {
+    width: 30px;
+    position: relative;
+}
+main .feeds article .article-header .article-icon i {
+    position: absolute;
+    bottom: 50%;
+    transform: translateY(50%);
+    font-size: 1.3rem;
+}
+.article-icons {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.3rem;
+    padding: 5px 10px;
+}
+.article-like {
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+.article-like .article-like-profile {
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    margin: 0 5px 0 10px;
+    background-color: #000;
+}
+.article-like .article-like-person {
+}
+.article-like .article-like-person .person-name {
+    font-weight: bold;
+}
+.article-text {
+    text-align: left;
+}
+.article-text p {
+    text-align: left;
+    margin: 0;
+    margin-left: 10px;
+}
+.article-text p .person-name {
+    font-weight: bold;
+}
+.article-text {
+}
+.article-comment {
+    margin-left: 10px;
+    margin-top: 10px;
+    text-align: left;
+}
+.article-comment .nickname-bold {
+    font-weight: bold;
+    margin-right: 5px;
+}
+.article-input {
+    width: 100%;
+}
+input {
+    width: 100%;
+    border: none;
+    border-top: 1px solid #9d9d9d;
+    margin-top: 5px;
+    padding: 10px 0;
+    padding-left: 10px;
+    box-sizing: border-box;
+    outline: none;
+}
