@@ -7,37 +7,51 @@
   <title>Westagram | Main</title>
   <link rel='stylesheet' href='style/common.css'>
   <link rel='stylesheet' href='style/main.css'>
-
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Jua&family=Nanum+Gothic:wght@400;700;800&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
   <div>
     <nav>
       <div id='navLeft'>
-        <div>이모티콘</div>
-        <div>westagram</div>
+        <img class='logo-img' src='https://seeklogo.com/images/I/instagram-logo-A807AD378B-seeklogo.com.png'>
+        <div>|</div>
+        <p id='logo'>Westagram</p>
       </div>
-      <div id='navCenter'>검색</div>
-      <div id='navRight'>이미지 버튼 3개</div>
+      <div id='navCenter'>
+        <input type='input' placeholder='검색'/>
+      </div>
+      <div id='navRight'>
+        <img src='https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png'/>
+        <img src='https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png' />
+        <img src='https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png'/>
+
+      </div>
     </nav>
     <main>
       <div id='feeds'>
         <article>
           <div id='articleTop'>
-            <div>프로필사진</div>
-            <div class='id-location'>
-              <div>
-                아이디
-              </div>
-              <div>
-                장소태그
+            <div id='articleTopLeft'>
+              <img src='./img/profile.jpeg'>
+              <div class='id-location'>
+                <div id='westagramId'>
+                  hi._.hailey
+                </div>
+                <div id='westagramLocate'>
+                  wework2호점
+                </div>
               </div>
             </div>
-            <div>***</div>
+            <div id='threeDot'>•••</div>
           </div>
           <div id='articleCenter'>
             <img src="./img/main.jpeg" alt="firstmeal" id='feedImg'>            <div>
-              <div>버튼3개</div>
-              <div>스크랩버튼</div>
+              <div class='articleCenterIcon'>
+                <img src='./img/liked.png'/>
+                <img src='./img/comment.png'/>
+                <img src='./img/dm.png'/>
+              </div>
+              <div class='articleCenterIcon'>스크랩버튼</div>
             </div>
           </div>
           <div id='articleBottom'>

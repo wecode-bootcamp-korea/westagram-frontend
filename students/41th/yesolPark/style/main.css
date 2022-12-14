@@ -1,3 +1,6 @@
+body {
+  padding: 10px 100px 0 100px;
+}
 div {
   display: flex;
   flex-direction: column;
@@ -6,10 +9,10 @@ div {
 }
 
 nav {
-  background-color: red;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-bottom: 50px;
   width: 100%;
   height: 40px;
 }
@@ -25,9 +28,18 @@ main {
   flex-direction: row;
 }
 
+.logo-img {
+  width: 20px;
+}
+
+.articleCenterIcon img {
+  width: 24px;
+  height: 24px;
+}
 #feeds {
-  border: 2px solid black;
+  border: 1px solid #dbdbdb;
   width: 470px;
+  border-radius: 8px;
 }
 #feedImg {
   width: 470px;
@@ -40,18 +52,39 @@ main {
 #navLeft {
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
+}
+
+#navRight {
+  display: flex;
+  flex-direction: row;
+}
+
+#navRight img {
+  height: 20px;
+  margin: 10px;
 }
 
 #articleTop {
-  background-color: yellow;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   width: 470px;
   height: 56px;
 }
 
+#articleTopLeft {
+  display: flex;
+  flex-direction: row;
+}
+#articleTopLeft img {
+  height: 32px;
+  width: 32px;
+  border-radius: 100%;
+  margin: 0 10px 0 10px;
+}
+
 #articleCenter {
-  background-color: aqua;
   width: 470px;
 }
 
@@ -79,4 +112,22 @@ main {
 }
 #recommendation {
   border: 1px solid black;
+}
+#logo {
+  font-size: 20px;
+  font-weight: bolder;
+  font-family: 'Dancing Script', cursive;
+}
+
+#threeDot {
+  letter-spacing: -8px;
+  margin-right: 10px;
+  color: #262626;
+}
+#westagramId {
+  font-size: 14px;
+  font-weight: bolder;
+}
+#westagramLocate {
+  font-size: 12px;
 }
