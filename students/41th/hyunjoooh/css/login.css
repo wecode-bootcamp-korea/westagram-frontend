@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  width: 100%;
+  background-color: rgb(243, 243, 243);
+
+  font-family: "나눔고딕";
+}
+
+#login_page {
+  width: 650px;
+  height: 700px;
+  background-color: #fff;
+  margin: 2.2% auto 0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+
+/* ========== 로고 영역  ========== */
+
+#logo {
+  margin-top: 120px;
+  text-align: center;
+}
+
+#logo a {
+  display: inline-block;
+  width: 280px;
+}
+
+#logo span {
+  font-family: "인스타그램 영문폰트 빌라봉";
+  font-size: 88px;
+  color: #222;
+}
+
+/* ========== 아이디 패스워트 창 & 로그인 버튼 영역  ========== */
+
+#id_pw_window {
+  margin-top: 63px;
+}
+
+#id_pw_window input {
+  display: block;
+
+  width: 410px;
+  height: 30px;
+  margin: 7px auto;
+  padding: 30px 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+
+  font-family: "나눔고딕";
+  font-size: 18px;
+}
+
+#id_pw_window input::placeholder {
+  color: #aaa;
+  font-weight: 400;
+}
+
+#id_pw_window .id {
+  background-color: rgb(249, 249, 249);
+}
+
+#id_pw_window .pw {
+  background-color: rgb(249, 249, 249);
+}
+
+#id_pw_window .login_btn {
+  display: block;
+  background-color: rgb(184, 199, 244);
+  padding: 15px 15px 36px 15px;
+  margin-top: 18px;
+  border: none;
+
+  font-weight: 600;
+  color: #fff;
+}
+
+/* ========== 비밀번호를 잊으셨나요? 영역  ========== */
+
+.forget_pw {
+  display: block;
+  font-size: 18px;
+  font-weight: 600;
+  color: rgb(47, 82, 187);
+
+  text-decoration: none;
+  text-align: center;
+  margin-top: 157px;
+  cursor: pointer;
+}

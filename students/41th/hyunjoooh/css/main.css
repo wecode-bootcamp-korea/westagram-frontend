@@ -1,0 +1,167 @@
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  background-color: #eee;
+}
+
+#wrap {
+}
+
+header {
+  width: 100%;
+  background-color: #fff;
+}
+
+/* ========== nav 시작 ========== */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+
+  width: 80%;
+  height: 60px;
+  margin: 0 auto;
+}
+
+/* logo 영역 */
+
+#logo {
+  display: flex;
+  justify-content: space-around;
+}
+
+#logo span {
+  display: inline-block;
+
+  width: 2px;
+  height: 25px;
+  border-right: 2px solid #222;
+  margin-top: 18px;
+}
+
+.icon_logo {
+  display: inline-block;
+  width: 20px;
+  margin: 20px;
+}
+
+.icon_logo img {
+  width: 100%;
+}
+
+.letter_logo {
+  display: inline-block;
+  width: 95px;
+  margin: 20px 0 20px 20px;
+}
+
+.letter_logo img {
+  width: 100%;
+}
+
+/* nav_search 영역 */
+
+#nav_search {
+  position: relative;
+}
+
+#nav_search input {
+  width: 200px;
+  padding: 3px;
+  margin-top: 18px;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+}
+
+#nav_search input::placeholder {
+  text-align: center;
+}
+
+#nav_search img {
+  width: 15px;
+
+  position: absolute;
+  left: 75px;
+  top: 22px;
+  opacity: 0.5;
+}
+
+/* nav_icons 영역 */
+
+#nav_icons span {
+  display: inline-block;
+  width: 26px;
+  height: 26px;
+  margin: 17px;
+  opacity: 0.7;
+}
+
+span.icon1 {
+  background: url(../img/nav_icons.png);
+}
+
+span.icon2 {
+  background: url(../img/nav_icons.png) no-repeat -26px 0;
+}
+
+span.icon3 {
+  background: url(../img/nav_icons.png) no-repeat -52px 0;
+}
+
+/* ========== main 시작 ========== */
+
+main {
+  width: 77%;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+/* feeds 영역 */
+
+.feeds {
+  width: 700px;
+  height: 660px;
+  margin: 20px;
+  background-color: #fff;
+}
+
+article {
+}
+
+#post_host {
+  height: 70px;
+  background-color: yellow;
+}
+
+#post_host .post_host_pic {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+}
+
+#post_host .post_host_pic img {
+  width: 100%;
+}
+
+#post_host .post_host_nickname {
+}
+
+#post_host .post_host_nickname span {
+  font-family: "나눔고딕";
+  font-weight: 600;
+  color: #000;
+}
+
+/* main_right 영역 */
+
+.main_right {
+  width: 400px;
+  height: 660px;
+  margin: 20px;
+  background-color: #fff;
+}
