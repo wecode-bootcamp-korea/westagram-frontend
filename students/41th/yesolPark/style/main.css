@@ -32,10 +32,11 @@ main {
   width: 20px;
 }
 
-.articleCenterIcon img {
+#articleCenter div img {
   width: 24px;
   height: 24px;
 }
+
 #feeds {
   border: 1px solid #dbdbdb;
   width: 470px;
@@ -91,15 +92,44 @@ main {
 #articleCenter div {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
   width: 470px;
   height: 40px;
 }
+#articleCenterIcon-L {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+#articleCenterIcon-L img {
+  display: flex;
+  margin: 0 10px 0 10px;
+}
 
+#articleCenterIcon-R {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+#articleCenterIcon-R img {
+  margin-right: 10px;
+}
 #articleBottom {
-  background-color: green;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
   width: 470px;
   height: 225px;
+}
+
+#comments {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+#comments p {
+  font-size: 14px;
+  margin-left: 10px;
 }
 
 #main-right {
@@ -124,10 +154,16 @@ main {
   margin-right: 10px;
   color: #262626;
 }
-#westagramId {
+.westagramId {
   font-size: 14px;
   font-weight: bolder;
 }
 #westagramLocate {
   font-size: 12px;
+}
+
+#like {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 10px;
 }
