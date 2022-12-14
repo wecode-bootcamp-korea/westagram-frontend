@@ -1,6 +1,6 @@
-const commentInput = document.querySelector(".commentInput");
-const commentSection = document.getElementById("commentSection");
-const registerBtn = document.querySelector(".registerBtn");
+const commentInput = document.querySelector(".comment_input");
+const commentSection = document.getElementById("feeds_comment_section");
+const registerBtn = document.querySelector(".comment_btn_register");
 
 const disabledBtn = () => {
   commentInput.value.length >= 1

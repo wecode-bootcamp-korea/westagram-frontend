@@ -1,6 +1,6 @@
-const idInput = document.getElementById("idInput");
-const pwInput = document.getElementById("pwInput");
-const loginBtn = document.querySelector(".loginBtn");
+const idInput = document.getElementById("id_input");
+const pwInput = document.getElementById("pw_input");
+const loginBtn = document.querySelector(".login_btn");
 
 const disabledLogIn = () => {
   idInput.value.length >= 1 && pwInput.value.length >= 1

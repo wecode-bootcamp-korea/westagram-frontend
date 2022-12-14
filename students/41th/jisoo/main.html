@@ -11,90 +11,139 @@
   <body>
     <div class="wrapper">
       <nav>
-        <div class="logoBox">
-          <img class="instagram" src="./img/instagram.png" alt="카메라" />
+        <div class="logo_section">
+          <img alt="인스타그램_로고" class="instagram" src="./img/instagram.png" />
           <p>|</p>
           <span class="logo">Westagram</span>
         </div>
-        <div class="inputBox">
-          <img src="./img/search.png" alt="" class="searchIcon" />
-          <input type="text" class="searchInput" placeholder="검색" />
+        <div class="search_section">
+          <img alt="돋보기" class="search_icon" src="./img/search.png"  />
+          <input type="text" class="search_input" placeholder="검색" />
         </div>
-        <div class="myInfoBox">
-          <a class="linkToCompass" href="">
+        <div class="my_info_section">
+          <a class="link_to_search" href="">
             <img
               src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png"
               alt="나침반"
               class="compass"
             />
           </a>
-          <a href="#" class="linkToLike">
+          <a href="#" class="link_to_like">
             <img
-              src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"
               alt="찜"
+              src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"
               class="like"
             />
           </a>
-          <a href="#" class="linkToMyPage">
+          <a href="#" class="link_to_my_profile">
             <img
-              src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png"
               alt="나의페이지"
+              src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png"
               class="myPage"
             />
           </a>
         </div>
       </nav>
       <main>
-        <div class="feeds">
+        <div class="feeds_container">
           <article>
-            <div class="userInfo">
-              <img src="./img/penguin.jpg" alt="프로필" class="profileImg" />
-              <span class="userName">love_penguin</span>
+            <div class="feeds_user_info">
+              <img src="./img/penguin.jpg" alt="프로필" class="profile_img" />
+              <span class="user_name">love_penguin</span>
             </div>
-            <div class="content">
-              <img src="./img/babyPenguin.jpeg" alt="유저가 올린 이미지" class="contentImg" />
-              <div class="sectionBtn">
-                <div class="Btn_left">
-                  <a href="하트">
-                    <img src="./img/redHeart.png" alt="" class="heart" />
+            <div class="feeds_content">
+              <img alt="피드_이미지" src="./img/babyPenguin.jpeg" class="feeds_content_img" />
+              <div class="feeds_icon_section">
+                <div class="feeds_icon_section_left">
+                  <a href="#">
+                    <img alt="좋아요" src="./img/redHeart.png" class="heart_img" />
                   </a>
-                  <a href="말풍선">
-                    <img src="./img/speech-bubble.png" alt="" class="heart" />
+                  <a href="#">
+                    <img alt="메세지" src="./img/speech-bubble.png" class="bubble_img" />
                   </a>
-                  <a href="공유">
-                    <img src="./img/upload.png" alt="" class="heart" />
+                  <a href="#">
+                    <img alt="공유" src="./img/upload.png"  class="upload_img" />
                   </a>
                 </div>
-                <div class="Btn_right">
-                  <a href="북마크">
-                    <img src="./img/bookmark-white.png" alt="" class="heart" />
+                <div class="feeds_icon_section_right">
+                  <a href="#">
+                    <img alt="북마크" src="./img/bookmark-white.png" class="bookmark_img" />
                   </a>
                 </div>
               </div>
-              <div class="comment_under">
-                <div class="countLike">
-                  <img src="./img/fox.jpg" alt="유저프로필" class="likeImg" />
-                  <p class="countLikeP"> <span class="userName">aineworld</span>님 외 10명이 좋아합니다.</p>
+              <div class="feeds_under_section">
+                <div class="feeds_count_like_user">
+                  <img alt="유저프로필" src="./img/fox.jpg" class="like_img" />
+                  <p class="count_like"> <span class="user_name">aineworld</span>님 외 <span class="count_people">10</span>명이 좋아합니다.</p>
                 </div>
-                <p class="userContent"><span class="userName">love_penguin</span> 날씨가 추워서 펭귄모드됨ㅠ</p>
-                <div id="commentSection">
-                  <p class="comment"><span class="userName">naceosecius</span> 지금 눈 펑펑 온다 감기 조심해😖</p>
-                  <span class="createdAt">42분 전</span>
+                <p class="feeds_user_content"><span class="user_name">love_penguin</span> 날씨가 추워서 펭귄모드됨ㅠ</p>
+                <div id="feeds_comment_section">
+                  <p class="comment"><span class="user_name">naceosecius</span> 지금 눈 펑펑 온다 감기 조심해😖</p>
+                  <span class="created_at">42분 전</span>
                 </div>
-                <div class="commentRegist">
-                  <input type="text" class="commentInput" placeholder="댓글 달기...">
-                  <button class="registerBtn" disabled="true" >게시</button>
+                <div class="feeds_comment_register_section">
+                  <input type="text" class="comment_input" placeholder="댓글 달기...">
+                  <button class="comment_btn_register" disabled="true" >게시</button>
                 </div>
             </div>
           </article>
         </div>
-        <div class="main-right">
-          <div class="userInfo-right">
-            <img src="./img/penguin.jpg" alt="프로필" class="profileImg" />
-            <span class="userName">love_penguin</span>
+        <div class="feeds_container_right">
+          <div class="feeds_right_user_info">
+            <img alt="프로필" src="./img/penguin.jpg"  class="right_profile_img" />
+            <div class="user_name_section">
+              <span class="user_name">love_penguin</span>
+              <p class="user_under_name">WeCode | 위코드</p>
+            </div>
+          </div>
+          <div class="feeds_right_story_section">
+            <div class="feeds_right_nav">
+              <span class="feeds_right_category">스토리</span>
+              <a href="#" class="link_to_view"><span class="feeds_right_view">모두 보기</span></a>
+            </div>
+            <div class="feeds_right_user_info">
+              <div class="user_profile_rectangle">
+                <img alt="프로필" src="./img/penguin.jpg" class="story_profile_img" />
+              </div>
+              <div class="user_name_section">
+                <span class="user_name">love_penguin</span>
+                <p class="user_last_visit">2시간 전</p>
+              </div>
+            </div>
+            <div class="feeds_right_user_info">
+              <div class="user_profile_rectangle">
+                <img alt="프로필" src="./img/penguin.jpg" class="story_profile_img" />
+              </div>
+              <div class="user_name_section">
+                <span class="user_name">love_penguin</span>
+                <p class="user_last_visit">2시간 전</p>
+              </div>
+            </div>
+            <div class="feeds_right_user_info">
+              <div class="user_profile_rectangle">
+                <img alt="프로필" src="./img/penguin.jpg" class="story_profile_img" />
+              </div>
+              <div class="user_name_section">
+                <span class="user_name">love_penguin</span>
+                <p class="user_last_visit">2시간 전</p>
+              </div>
+            </div>
+            <div class="feeds_right_follow_section">
+              <div class="feeds_right_nav">
+                <span class="feeds_right_category">회원님을 위한 추천</span>
+                <a href="#" class="link_to_view"><span class="feeds_right_view">모두 보기</span></a>
+              </div>
+              <div class="feeds_right_user_info">
+                <div class="user_profile_rectangle">
+                  <img alt="프로필" src="./img/penguin.jpg" class="story_profile_img" />
+                </div>
+                <div class="user_name_section">
+                  <span class="user_name">love_penguin</span>
+                  <p class="user_follow">회원님을 팔로우합니다</p>
+                </div>
+              </div>
           </div>
         </div>
-      </div>
       </main>
     </div>
     <script src="./js/main.js"></script>
