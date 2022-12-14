@@ -15,6 +15,10 @@ function App() {
       window.open('main.html');
     }
   });
+
+  $('#forgetPassword').addEventListener('click', (e) => {
+    alert('편하게 id와 password를 입력해 보세요!');
+  });
 }
 
 App();
