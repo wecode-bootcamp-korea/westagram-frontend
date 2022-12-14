@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Westagram</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style/common.css" />
+
+    <link rel="stylesheet" href="./style/login.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="mainContainer">
+        <div class="logoBox">
+          <p class="logo">Westagram</p>
+        </div>
+        <div class="loginBox">
+          <input
+            type="text"
+            id="idInput"
+            placeholder="전화번호, 사용자 이름 또는 이메일"
+          />
+          <input type="password" id="pwInput" placeholder="비밀번호" />
+          <button class="loginBtn" disabled="true">로그인</button>
+        </div>
+      </div>
+      <div class="forgotBox">
+        <a class="moveToFindPw" href="#">
+          <p class="forgotPw">비밀번호를 잊으셨나요?</p>
+        </a>
+      </div>
+    </div>
+    <script src="./js/login.js"></script>
+  </body>
+</html>

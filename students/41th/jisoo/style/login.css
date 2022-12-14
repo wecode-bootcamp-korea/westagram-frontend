@@ -1,0 +1,71 @@
+* {
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.wrapper {
+  width: 348px;
+  height: 444px;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid rgb(237, 237, 237);
+}
+
+.mainContainer {
+  margin: 36px 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  text-align: center;
+  font-family: "Lobster", cursive;
+  font-size: 51px;
+  font-weight: lighter;
+}
+
+.loginBox {
+  width: 100%;
+  height: 265px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+}
+
+#idInput,
+#pwInput {
+  width: 258px;
+  height: 36px;
+  padding: 9px 0 7px 8px;
+  background-color: rgb(250, 250, 250);
+  border: 1px solid rgb(237, 237, 237);
+  color: rgb(142, 142, 142);
+  font-size: 14px;
+}
+
+.loginBox input:first-child {
+  margin-bottom: 5px;
+}
+
+.loginBtn {
+  width: 258px;
+  height: 30px;
+  margin-top: 10px;
+  font-size: 14px;
+  color: white;
+  background-color: rgb(65, 147, 239);
+  border: 0;
+  border-radius: 4px;
+}
+
+.loginBtn:disabled {
+  opacity: 0.6;
+}
+
+.forgotPw {
+  color: rgb(45, 68, 111);
+  font-size: 10px;
+}

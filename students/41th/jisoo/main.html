@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Westagram-main</title>
+    <link rel="stylesheet" href="./style/common.css" />
+    <link rel="stylesheet" href="./style/main.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <nav>
+        <div class="logoBox">
+          <img class="instagram" src="./img/instagram.png" alt="카메라" />
+          <p>|</p>
+          <span class="logo">Westagram</span>
+        </div>
+        <div class="inputBox">
+          <img src="./img/search.png" alt="" class="searchIcon" />
+          <input type="text" class="searchInput" placeholder="검색" />
+        </div>
+        <div class="myInfoBox">
+          <a class="linkToCompass" href="">
+            <img
+              src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png"
+              alt="나침반"
+              class="compass"
+            />
+          </a>
+          <a href="#" class="linkToLike">
+            <img
+              src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"
+              alt="찜"
+              class="like"
+            />
+          </a>
+          <a href="#" class="linkToMyPage">
+            <img
+              src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png"
+              alt="나의페이지"
+              class="myPage"
+            />
+          </a>
+        </div>
+      </nav>
+      <main>
+        <div class="feeds">
+          <article>
+            <div class="userInfo">
+              <img src="./img/penguin.jpg" alt="프로필" class="profileImg" />
+              <span class="userName">love_penguin</span>
+            </div>
+            <div class="content">
+              <img src="./img/babyPenguin.jpeg" alt="유저가 올린 이미지" class="contentImg" />
+              <div class="sectionBtn">
+                <div class="Btn_left">
+                  <a href="하트">
+                    <img src="./img/redHeart.png" alt="" class="heart" />
+                  </a>
+                  <a href="말풍선">
+                    <img src="./img/speech-bubble.png" alt="" class="heart" />
+                  </a>
+                  <a href="공유">
+                    <img src="./img/upload.png" alt="" class="heart" />
+                  </a>
+                </div>
+                <div class="Btn_right">
+                  <a href="북마크">
+                    <img src="./img/bookmark-white.png" alt="" class="heart" />
+                  </a>
+                </div>
+              </div>
+              <div class="comment_under">
+                <div class="countLike">
+                  <img src="./img/fox.jpg" alt="유저프로필" class="likeImg" />
+                  <p class="countLikeP"> <span class="userName">aineworld</span>님 외 10명이 좋아합니다.</p>
+                </div>
+                <p class="userContent"><span class="userName">love_penguin</span> 날씨가 추워서 펭귄모드됨ㅠ</p>
+                <div id="commentSection">
+                  <p class="comment"><span class="userName">naceosecius</span> 지금 눈 펑펑 온다 감기 조심해😖</p>
+                  <span class="createdAt">42분 전</span>
+                </div>
+                <div class="commentRegist">
+                  <input type="text" class="commentInput" placeholder="댓글 달기...">
+                  <button class="registerBtn" disabled="true" >게시</button>
+                </div>
+            </div>
+          </article>
+        </div>
+        <div class="main-right">
+          <div class="userInfo-right">
+            <img src="./img/penguin.jpg" alt="프로필" class="profileImg" />
+            <span class="userName">love_penguin</span>
+          </div>
+        </div>
+      </div>
+      </main>
+    </div>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
