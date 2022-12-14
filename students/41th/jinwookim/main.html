@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main</title>
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+        @import url('style/main.css');
+        @import url('style/common.css');
+    </style>
+    <script src="https://kit.fontawesome.com/48e65e402a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="main-nav">
+        <div class="main-nav-left">
+            <i class="fa-brands fa-instagram fa-lg"></i>
+            <img class='main-nav-left-verticalline'src="https://cdn1.iconfinder.com/data/icons/popular-user-interface-2/30/vertical-512.png"/>
+            <span class="main-instagram-text">westagram</span>
+        </div>
+
+        <div>
+            <input class="main-search" type="text" placeholder="검색"/>
+        </div>
+
+        <div class="main-nav-icons">
+            <img class="exploror" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png"/>
+            <img class='heart' src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"/>
+            <img class='profile' src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png"/>
+        </div>
+    </nav>
+
+    <div class="main">
+        <div class="feeds">
+            <div class="feeds-header">
+                <div class="feeds-header-left">
+                    <img class='feeds-header-icon' src="data:image/jpeg;base64,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"/>
+                    <span>canon_mj</span>
+                </div>
+                <div>
+                    <i id='feeds-header-more' class="fa-solid fa-ellipsis"></i>
+                </div>
+            </div>
+            <article>
+                <img src="img/articleImage.png"/>
+            </article>
+            <div class="feeds-bottom">
+                <div class="contents-header">
+                    <div class="contents-icons">
+                        <i class="fa-solid fa-heart fa-lg" style="color:rgb(255, 0, 0);"></i>
+                        <i class="fa-regular fa-comment fa-lg"></i>
+                        <i class="fa-solid fa-arrow-up-from-bracket fa-lg"></i>
+                    </div>
+                    <div class="contents-icons-bookmark">
+                        <i class="fa-regular fa-bookmark"></i>
+                    </div>
+                </div>
+
+                <div class="contents-body">
+                    <div class="contents-body-first-line">
+                        <img class ='contents-body-icon' src ='https://i.pinimg.com/474x/3b/5e/6c/3b5e6c7caaeeba45303704e74f7f92b5.jpg'/>
+                        <span style="font-weight: bold;">aineworld</span>
+                        <span>님</span> 
+                        <span style="font-weight: bold;">외 10명</span>
+                        <span>이 좋아합니다</span>
+                    </div>
+                    <br/>
+                    <span style="font-weight: bold;">canon-mj</span> 
+                    <span>위워크에서 진행한 베이킹 클래스...</span>
+                    <span style="color: rgb(172, 172, 172);">더 보기</span>
+                    <br/>
+                    <div class="contents-body-heart">
+                        <div>
+                            <span style="font-weight: bold;">neceosecius</span> 
+                            <span>거봐 좋았잖아~~~~~🙆‍♀️</span>
+                        </div>
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                    
+                    <span class='contents-body-time'>42분 전</span>
+                    <div class="contents-body-comments">
+                        <p>댓글 달기 ...</p>
+                        <p style="color: rgba(0, 183, 255, 0.4);">게시</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-right">
+            <div class="main-right-header">
+                <img class ='main-right-icon' src="https://images.cobot.me/uploads/space/logo/space-wecode/pdf_ab211233b6576dbb0f8b5826447eeac61e2a833a99ac5d788fbc1a174c3c6ce5.png"/>
+                <sapn style="font-weight: bold;">wecode_bootcamp</span><br>
+                <span class ='main-right-subtitle'>WeCode | 위코드</span>
+            </div>
+
+            <div class="story">
+                <div class="story-header">
+                    <span style="color:rgb(161, 161, 161)">스토리</span>
+                    <span style="font-weight:bold">모두 보기</span>
+                </div>
+                <div class="story-first-icons">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR02Uh5M0o0XOmSbxsrX7-sO4PGDSY1jUtqAQqPLpQ3Y4j49E-0cGVxFCHp8d6XsBysUQs&usqp=CAU"/>
+                    <div class="story-first-name-time">
+                        <span>_yum_s</span>
+                        <br/>
+                        <span style="color:rgb(161, 161, 161)">16분 전</span>
+                    </div>
+                </div>
+                <div class="story-second-icons">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeuYUfgb6GObvzEpEtB_d4O7YgY7tsUKsTf9_jXSPBQaTQxtqsTHA0xFLEwuq3mOkQ3Ok&usqp=CAU"/>
+                    <div class="story-second-name-time">
+                        <span>drink_eat_drink</span>
+                        <br/>
+                        <span style="color:rgb(161, 161, 161)">3시간 전</span>
+                    </div>
+                </div>
+                <div class="story-third-icons">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTNb4Zv3oidIgrsNvEmas4bKiv_rxK2I3zl2bxidZi9fYF3F5nyYQb2p95wwTPEluEqGE&usqp=CAU"/>
+                    <div class="story-third-name-time">
+                        <span>hyukyc</span>
+                        <br/>
+                        <span style="color:rgb(161, 161, 161)">20시간 전</span>
+                    </div>
+                </div>
+            </div>
+            <div class="recommend">
+                <div class="recommend-header">
+                    <span style="color: rgb(172, 172, 172);">회원님을 위한 추천</span>
+                    <span style="font-weight: bold;">모두 보기</span>
+                </div>
+
+                <div class="recommend-first-icons">
+                    <img src ='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_pgbZQKfFX10RBv-IDDzM9Ety2UpwVp1igauCI1o63eVAOtdvPcf6Ty5XcJq78hc88dk&usqp=CAU'/>
+                    <div class="recommend-first-name-time">
+                        <span style="font-weight: bold;">joaaaaaahye</span>
+                        <br/>
+                        <span style="color:rgb(161, 161, 161)">_legend_a님 외 2명이 ...</span>
+                    </div>
+                    <div>
+                        <span style="color:#4EA2F2">팔로우</span>
+                    </div>
+                </div>
+
+                <div class="recommend-second-icons">
+                    <img src ='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcEYVfRQKsKioLIIoRJ3wi7es3qKM3HsPZ7wF3BBPJ_FoYdaAVjcrzpVg-2b7fq88u2cE&usqp=CAU'/>
+                    <div class="recommend-second-name-time">
+                        <span style="font-weight: bold;">rampart81</span>
+                        <br/>
+                        <span style="color:rgb(161, 161, 161)">ringo.in.seoul님 외 12...</span>
+                    </div>
+                    <div>
+                        <span style="color:#4EA2F2">팔로우</span>
+                    </div>
+                </div>
+
+                <div class="recommend-third-icons">
+                    <img src ='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwVRR689h-rJJsTMJbY7w4zLP30xxYflNRy6HM164ZjtcJHhgL8su7kCJgBLqdJOx_2D4&usqp=CAU'/>
+                    <div class="recommend-third-name-time">
+                        <span style="font-weight: bold;">shawnjjoo</span>
+                        <br/>
+                        <span style="color:rgb(161, 161, 161)">jimmylee1220님 외 1...</span>
+                    </div>
+                    <div>
+                        <span style="color:#4EA2F2">팔로우</span>
+                    </div>
+                </div>
+            </div>
+
+            <p>
+                Instagram 정보 . 지원 . 홍보 센터 . API .
+                채용 정보 . 개인정보처리방침 . 약관 . 디렉터리 . 프로필 . 해시태그 . 언어
+            </p>
+            <p>
+                © 2019 INSTAGRAM
+            </p>
+
+        </div>
+    </div>
+</body>
+
+</html>
