@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Westagram_main</title>
+    <!-- css reset cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
+    />
+    <!-- css 연결 -->
+    <link
+      rel="stylesheet"
+      href="/westagram-frontend/students/41th/jinkyung/style/main.css"
+    />
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Sans+KR:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <div id="nav_wrap">
+        <div id="logo_wrap">
+          <div id="logo_1_wrap"><div class="logo_1"></div></div>
+          <div class="logo_2">westagram</div>
+        </div>
+        <div id="search">
+          <input type="text" placeholder="검색" />
+        </div>
+        <div id="info_wrap">
+          <div class="icon_1"></div>
+          <div class="icon_2"></div>
+          <div class="icon_3"></div>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <div id="feeds">
+        <div id="article">
+          <div id="user_wrap">
+            <div id="user_info">
+              <div class="user_img"></div>
+              <div class="user_name">ijinkyung</div>
+            </div>
+            <div id="more">
+              <img
+                src="/westagram-frontend/students/41th/jinkyung/images/ellipsis.png"
+              />
+            </div>
+          </div>
+          <div id="content_img"></div>
+          <div id="react_wrap">
+            <div id="react_left">
+              <div class="icon_1"></div>
+              <div class="icon_2"></div>
+              <div class="icon_3"></div>
+            </div>
+            <div id="bookmark_wrap">
+              <div class="bookmark"></div>
+            </div>
+          </div>
+          <div id="react_user_wrap">
+            <div class="react_user_img"></div>
+            <div class="react_user_count">
+              happy_smile님 외 10명이 좋아합니다
+            </div>
+          </div>
+          <div id="comment_wrap">
+            <div id="comment">
+              <p class="comment_user_id">cheese_like</p>
+              <p class="comment_content">트리가 너무 예쁘네요</p>
+            </div>
+            <div id="time_stamp">42분 전</div>
+          </div>
+          <div id="add_comment">
+            <input type="text" placeholder="댓글 달기..." />
+            <button id="blue_btn" class="blur">게시</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="main_right">
+        <div id="wecode_wrap">
+          <div class="wecode_img"></div>
+          <div id="wecode_info_wrap">
+            <div class="wecode_name">wecode_bootcamp</div>
+            <div class="wecode_sub">WeCode | 위코드</div>
+          </div>
+        </div>
+        <div id="side_box">
+          <div id="side_info_wrap">
+            <div class="title">스토리</div>
+            <div>모두 보기</div>
+          </div>
+          <div id="side_user_wrap">
+            <div class="side_user_img"></div>
+            <div id="side_user_info">
+              <div class="side_user_name">_yums_s</div>
+              <div class="side_sub">16분 전</div>
+            </div>
+          </div>
+          <div id="side_user_wrap">
+            <div class="side_user_img"></div>
+            <div id="side_user_info">
+              <div class="side_user_name">_yums_s</div>
+              <div class="side_sub">16분 전</div>
+            </div>
+          </div>
+        </div>
+        <div id="side_box" class="side_small">
+          <div id="side_info_wrap">
+            <div class="title">회원님을 위한 추천</div>
+            <div>모두 보기</div>
+          </div>
+          <div id="side_user_wrap">
+            <div class="side_user_img"></div>
+            <div id="side_user_info">
+              <div class="side_user_name">_yums_s</div>
+              <div class="side_sub">16분 전</div>
+            </div>
+            <button id="blue_btn" class="right">팔로우</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
