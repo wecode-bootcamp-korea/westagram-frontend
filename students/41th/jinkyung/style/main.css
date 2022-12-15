@@ -18,7 +18,6 @@
 /* -----nav----- */
 nav {
   border-bottom: 1px solid gray;
-  width: 100%;
   height: 70px;
   background-color: #fff;
 }
@@ -85,7 +84,6 @@ nav #nav_wrap {
 
 /* -----main----- */
 main {
-  width: 100%;
   background-color: rgb(250, 250, 250);
   display: flex;
   position: relative;
@@ -108,7 +106,6 @@ main #article {
 /* -----user----- */
 main #user_wrap {
   background-color: #fff;
-  width: 100%;
   height: 50px;
   display: flex;
   justify-content: space-between;
@@ -146,7 +143,6 @@ main #more > img {
 
 /* -----content img----- */
 main #content_img {
-  width: 100%;
   aspect-ratio: 1/1;
   background-image: url(/westagram-frontend/students/41th/jinkyung/images/main_img.jpg);
   background-size: cover;
@@ -154,7 +150,6 @@ main #content_img {
 
 /* -----react----- */
 main #react_wrap {
-  width: 100%;
   height: 40px;
   display: flex;
   justify-content: space-between;
@@ -195,7 +190,6 @@ main #bookmark_wrap .bookmark {
 
 /* -----react user----- */
 main #react_user_wrap {
-  width: 100%;
   height: 40px;
   display: flex;
   box-sizing: border-box;
@@ -218,11 +212,11 @@ main .react_user_count {
 
 /* ------comment----- */
 main #comment_wrap {
-  width: 100%;
-  height: auto;
+  border: 1px solid red;
+  padding: 10px;
   border-bottom: 1px solid rgb(235, 235, 235);
 }
-main #comment_wrap #comment {
+/* main #comment_wrap #comment {
   display: flex;
   padding: 5px 15px 0px;
   font-size: 15px;
@@ -230,11 +224,9 @@ main #comment_wrap #comment {
 
 main #comment_wrap .comment_user_id {
   margin-right: 5px;
-}
-
+*/
 main #comment_wrap #time_stamp {
   font-size: 15px;
-  padding: 5px 15px;
   color: rgb(161, 161, 161);
 }
 
@@ -242,7 +234,6 @@ main #comment_wrap #time_stamp {
 main #add_comment {
   box-sizing: border-box;
   padding: 10px;
-  width: 100%;
   height: 50px;
   display: flex;
   justify-content: space-between;
@@ -266,7 +257,6 @@ main #add_comment > input {
 
 /* -----wecode----- */
 #main_right #wecode_wrap {
-  width: 100%;
   height: 60px;
   display: flex;
 }
@@ -296,7 +286,6 @@ main #add_comment > input {
 
 /* -----side box----- */
 #side_box {
-  width: 100%;
   aspect-ratio: 1/0.8;
   border: 1px solid rgb(235, 235, 235);
   margin-bottom: 10px;
@@ -307,7 +296,6 @@ main #add_comment > input {
 }
 
 #side_box #side_info_wrap {
-  width: 100%;
   height: 30px;
   padding: 10px;
   box-sizing: border-box;
@@ -332,7 +320,7 @@ main #add_comment > input {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background-image: url(/westagram-frontend/students/41th/jinkyung/images/people.png);
+  background-image: url(/westagram-frontend/students/41th/jinkyung/images/person_img.jpg);
   background-size: cover;
   margin-right: 10px;
 }
