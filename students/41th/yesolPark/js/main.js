@@ -19,6 +19,7 @@ function App() {
     const commentTemplate = (commentDetail) => {
       return `
       <li class='comment-list'>
+      <span class='comment-list-id'> hellohaileyworld <span/>
       <span class='comment-list-item'>${commentDetail}</span>
       <button
         type="button"
