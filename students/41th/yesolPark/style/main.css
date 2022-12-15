@@ -133,19 +133,13 @@ main {
   margin-left: 10px;
 }
 
-#main-right {
+.side-main-right {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   width: 351px;
 }
 
-#story {
-  border: 1px solid black;
-}
-#recommendation {
-  border: 1px solid black;
-}
 #logo {
   font-size: 20px;
   font-weight: bolder;
@@ -161,7 +155,7 @@ main {
   font-size: 14px;
   font-weight: bolder;
 }
-#westagramLocate {
+.westagramLocate {
   font-size: 12px;
 }
 
@@ -173,13 +167,14 @@ main {
 
 #story {
   border: 1px solid #dbdbdb;
-  height: auto;
-  width: 300px;
+  border-radius: 3px;
+  width: 350px;
+  padding: 10px;
 }
 #recommendation {
   border: 1px solid #dbdbdb;
   height: auto;
-  width: 300px;
+  width: 350px;
 }
 
 #commentForm {
@@ -214,7 +209,7 @@ main {
   border: 1px solid;
   border-color: #dbdbdb;
   width: 470px;
-  height: 30px;
+  height: 40px;
   border-radius: 0 0 10px 10px;
 }
 
@@ -229,4 +224,37 @@ main {
 .comment-list-item {
   font-size: 14px;
   font-weight: bold;
+}
+
+#story-list {
+  display: flex;
+  flex-direction: row;
+}
+
+.story-list-item img {
+  height: 32px;
+  width: 32px;
+  border-radius: 100%;
+  margin: 0 10px 0 10px;
+}
+
+.profile {
+  display: flex;
+  flex-direction: row;
+  align-content: start;
+  justify-content: start;
+  width: auto;
+}
+
+.profile-img {
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+  margin: 0 10px 0 10px;
+}
+
+.side-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
