@@ -1,15 +1,15 @@
 /* -----btn----- */
-#blue_btn {
+.blue_btn {
   border: 0px solid black;
   background-color: #fff;
   cursor: pointer;
   color: rgb(0, 149, 246);
 }
-#blue_btn.blur {
+.blue_btn.blur {
   color: rgba(0, 149, 246, 0.3);
 }
 
-#blue_btn.right {
+.blue_btn.right {
   position: absolute;
   right: 10px;
   top: 15px;
@@ -212,7 +212,6 @@ main .react_user_count {
 
 /* ------comment----- */
 main #comment_wrap {
-  border: 1px solid red;
   padding: 10px;
   border-bottom: 1px solid rgb(235, 235, 235);
 }
@@ -242,7 +241,12 @@ main #add_comment {
 main #add_comment > input {
   width: 80%;
   height: 30px;
+  outline: none;
   border: 0px solid black;
+}
+
+.nickName {
+  margin-right: 10px;
 }
 
 /* -----main right----- */
@@ -289,6 +293,7 @@ main #add_comment > input {
   aspect-ratio: 1/0.8;
   border: 1px solid rgb(235, 235, 235);
   margin-bottom: 10px;
+  overflow: scroll;
 }
 
 #side_box.side_small {
