@@ -12,7 +12,7 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  border-bottom: 1px solid #aaa8a8;
+  border-bottom: var(--border-gray);
 }
 
 .icons {
@@ -35,8 +35,8 @@ nav {
 
 .nav-center input {
   height: 24px;
-  border: 1px solid #dddddd;
-  border-radius: 2px;
+  border: var(--border-gray);
+  border-radius: var(--border-radius);
   text-align: center;
 }
 
@@ -59,7 +59,7 @@ main {
   justify-content: center;
 }
 
-.feeds {
+.content {
   width: 540px;
   aspect-ratio: 5 / 8;
   display: flex;
@@ -71,8 +71,8 @@ main {
   height: 90%;
   margin: 20px 10px;
   padding: 10px;
-  border: 1px solid #dddddd;
-  border-radius: 5px;
+  border: var(--border-gray);
+  border-radius: var(--border-radius);
   position: relative;
 }
 
@@ -88,7 +88,7 @@ main {
 .profile-photo {
   width: 30px;
   height: 30px;
-  border-radius: 50%;
+  border-radius: var(--border-radius-img);
 }
 
 .feed-top img:last-child {
@@ -116,7 +116,7 @@ main {
 .small-image {
   width: 15px;
   height: 15px;
-  border-radius: 50%;
+  border-radius: var(--border-radius-img);
 }
 
 .small-emojis {
@@ -129,7 +129,7 @@ main {
   right: 10px;
 }
 
-.likes {
+.txt-likes {
   margin: 10px 0;
 }
 
@@ -169,8 +169,8 @@ main {
   height: 40px;
   position: absolute;
   bottom: 10px;
-  border-radius: 5px;
-  border: 1px solid #dddddd;
+  border-radius: var(--border-radius);
+  border: var(--border-input);
   padding: 10px;
 }
 
@@ -184,7 +184,7 @@ main {
   right: 35px;
   bottom: 18px;
   background-color: white;
-  color: #a5d6f9;
+  color: var(--color-light-blue);
 }
 
 .mainRight {
@@ -204,7 +204,7 @@ main {
 .profile img {
   width: 50px;
   height: 50px;
-  border-radius: 50%;
+  border-radius: var(--border-radius-img);
 }
 
 .profile div p {
@@ -212,7 +212,7 @@ main {
 }
 
 .gray {
-  color: #aaa8a8;
+  color: var(--color-gray);
 }
 
 .stories {
@@ -222,8 +222,8 @@ main {
   flex-direction: column;
   padding: 10px;
   margin-top: 10px;
-  border: 1px solid #aaa8a8;
-  border-radius: 5px;
+  border: var(--border-gray);
+  border-radius: var(--border-radius);
   overflow: hidden;
 }
 
@@ -266,12 +266,12 @@ main {
   flex-direction: column;
   padding: 10px;
   margin-top: 10px;
-  border: 1px solid #aaa8a8;
-  border-radius: 5px;
+  border: var(--border-gray);
+  border-radius: var(--border-radius);
 }
 
 .blue {
-  color: #2099f1;
+  color: var(--color-blue);
   position: absolute;
   right: 10px;
 }

@@ -1,12 +1,12 @@
-.contents {
+.content {
   position: relative;
   width: 800px;
   height: 700px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid gray;
-  border-radius: 5px;
+  border: var(--border-gray);
+  border-radius: var(--border-radius);
   padding: 15px;
 }
 
@@ -30,8 +30,8 @@ h1 {
   all: unset;
   height: 70px;
   background-color: #fafafa;
-  border: 1px solid #f5e3e3;
-  border-radius: 5px;
+  border: var(--border-input);
+  border-radius: var(--border-radius);
   padding: 8px 15px;
 }
 
@@ -42,12 +42,12 @@ h1 {
 .loginBtn {
   width: 610px;
   height: 65px;
-  background-color: #c5e1fb;
+  background-color: var(--color-light-blue);
   color: white;
   font-size: 24px;
   font-weight: bold;
   border: none;
-  border-radius: 5px;
+  border-radius: var(--border-radius);
 }
 
 a {
@@ -55,5 +55,5 @@ a {
   bottom: 30px;
   font-size: 24px;
   text-decoration: none;
-  color: #033b71;
+  color: var(--color-blue);
 }
