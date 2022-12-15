@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+}
+.Logo {
+  font-family: Lobster;
+  font-size: 100px;
+  width: 500px;
+  margin: 5% auto;
+  text-align: center;
+}
+.all {
+  width: 650px;
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+  border: 1px solid lightslategray;
+  border-radius: 7px;
+  flex-direction: column;
+}
+#login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+input {
+  background-color: #fafafa;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+  padding: 0 1%;
+  font-size: 15px;
+}
+.id {
+  width: 500px;
+  height: 50px;
+  margin: 5% auto 0;
+}
+.passward {
+  width: 500px;
+  height: 50px;
+  margin: 3% auto;
+}
+.loginBtn {
+  width: 500px;
+  height: 50px;
+  background-color: #b2dffc;
+  text-align: center;
+  display: inline-block;
+  justify-content: center;
+  margin: 5% auto;
+  border-radius: 8px;
+  border-style: none;
+  color: white;
+  font-size: 15px;
+}
+.forget {
+  text-align: center;
+  color: #01376b;
+  margin: 30px 0 40px;
+}
+
+.Logo {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+.bgImg {
+  position: absolute;
+  top: 0px;
+  left: 400px;
+  width: 100px;
+  height: 100px;
+  background-image: url("../instagram.png");
+  background-size: 90px 90px;
+  background-repeat: no-repeat;
+  opacity: 0.55;
+}
