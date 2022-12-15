@@ -166,7 +166,6 @@ footer {
 }
 
 #story {
-  border: 1px solid #dbdbdb;
   border-radius: 5px;
   width: 350px;
   padding: 10px;
@@ -236,8 +235,17 @@ footer {
 #story-list {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  width: 350px;
 }
-
+.follow-button {
+  font-size: 12px;
+  font-weight: bold;
+  color: #0095f6;
+  height: 32px;
+  display: flex;
+  align-content: center;
+}
 .story-list-item img {
   height: 32px;
   width: 32px;
@@ -264,9 +272,20 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  width: 340px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #8e8e8e;
+  margin-bottom: 15px;
 }
 .id-location {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: space-around;
+  margin-left: 5px;
+}
+.black {
+  color: black;
+  font-size: 12px;
 }
