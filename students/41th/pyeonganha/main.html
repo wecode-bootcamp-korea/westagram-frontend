@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>41기 하평안 Westagram Main Page</title>
+    <link rel="stylesheet" href="style/main.css" />
+    <script
+      src="https://kit.fontawesome.com/f2616cb517.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="backDiv">
+      <header>
+        <nav class="headerLine">
+          <div class="headerleftComposition">
+            <i class="fa-brands fa-instagram"></i>
+            <span>Westagram</span>
+          </div>
+          <div class="headerMiddleComposition">
+            <input type="text" placeholder="검색" /><i
+              class="fa-solid fa-magnifying-glass"
+            ></i>
+          </div>
+
+          <div class="headerRightComposition">
+            <img class="mainNavPng" alt="나침반" src="image/compass.png" />
+            <img class="mainNavPng" alt="하트" src="image/heart.png" />
+            <img class="mainNavPng" alt="프로필사진" src="image/profile.png" />
+          </div>
+        </nav>
+      </header>
+
+      <div class="mainDiv">
+        <div class="divFeed">
+          <div class="post backWhite">
+            <div class="userNickName">
+              <div class="userProflieImg fontsize14"></div>
+              <div class="userMiniProfile">
+                <span
+                  ><img
+                    class="wecodelogoimg"
+                    alt="wocodelogoimg"
+                    src="image/wecode.jpeg"
+                  />
+                  <span class="wecodenickname"> wecode_WECODE</span></span
+                >
+                <span><i class="fa-solid fa-ellipsis"></i></span>
+              </div>
+            </div>
+            <div class="userPostImgDiv">
+              <img id="userPostImg" alt="postImg" src="image/postimg.jpg" />
+            </div>
+
+            <div class="imgUnderBox">
+              <div>
+                <div class="likeAndComment fontsize14">
+                  <i class="fa-regular fa-heart"></i>
+                  <i class="fa-regular fa-comment"></i>
+                  <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                </div>
+              </div>
+              <div class="likeNum fontsize14"><p>좋아요 13.6만개</p></div>
+              <div class="userComment fontsize14">
+                <p>wecode_WECODE 😀😀😀</p>
+              </div>
+              <div class="commentPopup fontsize14">
+                <p>댓글 1000개 모두 보기</p>
+              </div>
+              <div class="postDate"><p>6 일 전</p></div>
+              <div class="commentAdd">
+                <input
+                  id="commentjs"
+                  type="text"
+                  name="comment"
+                  placeholder="댓글 추가"
+                /><button id="btn" type="button">게시</button>
+                <ul id="commentBox"></ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="divMainRight">
+          <div class="userImportant backWhite">
+            <div class=""></div>
+            <span>wecode_WECODE</span><span>위코드</span><span>전환</span>
+          </div>
+          <div class="storyBox backWhite"><span>story</span></div>
+          <div class="findFriend backWhite"><span>findfriend</span></div>
+          <div class="corporateInformation backWhite">
+            <span>information</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>

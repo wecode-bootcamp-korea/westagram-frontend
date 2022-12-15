@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>41기 하평안 Westagram Login Page</title>
+    <link rel="stylesheet" href="style/login.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gentium+Book+Basic:ital@1&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/f2616cb517.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Gentium+Book+Basic:ital@1&display=swap");
+    </style>
+    <div class="loginCenter">
+      <div class="loginBox container boxPadding backColor" id="marginBoxTop">
+        <div>
+          <p class="font">westagram</p>
+        </div>
+        <div class="fontSize12">
+          <input
+            id="userId"
+            class="userInformation"
+            type="text"
+            name="userId"
+            placeholder="전화번호, 사용자 이름 또는 이메일"
+          />
+        </div>
+        <div class="fontSize12">
+          <input
+            id="userPsw"
+            class="userInformation"
+            type="password"
+            name="userPassword"
+            placeholder="비밀번호"
+          />
+        </div>
+        <div>
+          <button
+            id="btnOnOff"
+            class="loginBtn"
+            type="submit"
+            name="login"
+            disabled
+          >
+            로그인
+          </button>
+        </div>
+
+        <div class="line"><p>또는</p></div>
+
+        <div>
+          <p class="FontSize16 linkpadding">
+            <a href="https://www.facebook.com/0"
+              ><i class="fa-brands fa-square-facebook"></i> Facebook으로
+              로그인</a
+            >
+          </p>
+        </div>
+        <div>
+          <p class="fontSize14 linkpadding">
+            <a href="https://www.instagram.com/accounts/password/reset/"
+              >비밀번호를 잊으셨나요?</a
+            >
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="loginBox container middleBoxMargin boxPadding backColor"
+        id="marginMiddleBoxTop"
+      >
+        <p class="fontSize14 linkpadding">
+          계정이 없으신가요?
+          <a href="https://www.instagram.com/accounts/emailsignup/">가입하기</a>
+        </p>
+      </div>
+
+      <div class="container fontSize14">
+        <p>앱을 다운로드 하세요.</p>
+      </div>
+
+      <div class="img-container">
+        <a href=""
+          ><img
+            alt="App Store에서 다운로드 하기"
+            src="https://static.cdninstagram.com/rsrc.php/v3/yi/r/cWx_hQBPmbo.png"
+        /></a>
+        <p>
+          <a href=""
+            ><img
+              alt="다운로드 하기 Google Play"
+              src="https://static.cdninstagram.com/rsrc.php/v3/ye/r/UtJtFmFLCiD.png"
+          /></a>
+        </p>
+      </div>
+    </div>
+    <footer class="footerLine fontSize14">
+      <p>© 2022 Instagram from Meta</p>
+    </footer>
+    <script src="js/login.js"></script>
+  </body>
+</html>
