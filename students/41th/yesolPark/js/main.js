@@ -31,13 +31,13 @@ function App() {
         type="button"
         class='edit-button'
       >
-        수정
+        edit
       </button>
       <button
         type="button"
         class='remove-button'
       >
-        삭제
+        x
       </button>
       </li>`;
     };
