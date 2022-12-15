@@ -21,9 +21,10 @@
         <div class="inner-nav">
           <h1 class="tit_logo">
             <i class="fa-brands fa-instagram"></i>
+            <span class="ver-line"></span>
             <span class="title">westagram</span>
           </h1>
-          <div class="box-inp">
+          <div class="box-search">
             <input type="text" placeholder="검색" />
             <i class="fa-solid fa-magnifying-glass"></i>
           </div>
@@ -49,33 +50,182 @@
           </div>
         </div>
       </nav>
+
       <main id="main" class="main">
         <div class="feeds">
-          <div class="box-profile">
-            <div class="wrap-user">
+          <div class="wrap-profile">
+            <div class="box-user">
               <span class="thumb-img"
-                ><img src="./img/img-profile.jpg" alt=""
+                ><img src="./img/img-thumbnail.jpeg" alt=""
               /></span>
-              <strong class="tit-user">canon_mj</strong>
+              <span class="box-cont">
+                <strong class="tit-user">canon_mj</strong>
+              </span>
             </div>
             <button class="btn-more">
-              <span class="ico-more"></span>
+              <i class="fa-solid fa-ellipsis"></i>
             </button>
           </div>
-          <div class="box-img">
+          <div class="wrap-img">
             <img src="./img/img-feed.jpg" alt="" />
           </div>
-          <div class="box-comment"></div>
+          <div class="wrap-comment">
+            <div class="box-util">
+              <div class="util-left">
+                <button class="btn-like">
+                  <!-- fa-light >> fa-solid -->
+                  <i class="fa-light fa-heart"></i>
+                  <i class="fa-solid fa-heart"></i>
+                </button>
+                <button class="btn-dm">
+                  <i class="fa-light fa-comment"></i>
+                </button>
+                <button class="btn-share">
+                  <i class="fa-regular fa-arrow-up-from-bracket"></i>
+                </button>
+              </div>
+              <button class="btn-mark">
+                <i class="fa-light fa-bookmark"></i>
+              </button>
+            </div>
+            <div class="box-cmt">
+              <div class="box-user">
+                <span class="thumb-img"
+                  ><img src="./img/img-thumbnail.jpeg" alt=""
+                /></span>
+                <span class="box-cont">
+                  <strong class="tit-user">canon_mj</strong>님 외 10명이
+                  좋아합니다.
+                </span>
+              </div>
+              <ul class="list-cmt">
+                <li>
+                  <span class="cmt-user">canon_mj</span>
+                  <span class="cmt-cont"
+                    >위워크에서 진행한 베이킹 클래스 입니다 위워크에서 진행한
+                    베이킹 클래스 입니다..</span
+                  >
+                </li>
+                <li>
+                  <span class="cmt-user">neceosecius</span>
+                  <span class="cmt-cont">거봐 좋았잖아~~~~~🙆‍♀️</span>
+                </li>
+              </ul>
+              <span class="info-time">42분 전</span>
+            </div>
+            <div class="box-inp-cmt">
+              <input type="text" placeholder="댓글 달기..." class="inp-cmt" />
+              <button class="btn-follow">게시</button>
+            </div>
+          </div>
         </div>
+
         <div class="main-right">
           <div class="box-personal"></div>
-          <div class="box-info">
-            <strong class="tit-info">스토리</strong>
-            <a href="#none" class="link_more">모두 보기</a>
+          <div class="wrap-info wrap-story">
+            <div class="box-top">
+              <strong class="tit-info">스토리</strong>
+              <a href="#none" class="link_more">모두 보기</a>
+            </div>
+            <ul class="list-users">
+              <li>
+                <div class="box-user">
+                  <span class="thumb-img"
+                    ><img src="./img/img-thumbnail.jpeg" alt=""
+                  /></span>
+                  <span class="box-cont">
+                    <strong class="tit-user">canon_mj</strong>
+                    <span class="cont-info">16분 전</span>
+                  </span>
+                </div>
+              </li>
+              <li>
+                <div class="box-user">
+                  <span class="thumb-img"
+                    ><img src="./img/img-thumbnail.jpeg" alt=""
+                  /></span>
+                  <span class="box-cont">
+                    <strong class="tit-user">canon_mj</strong>
+                    <span class="cont-info">2시간 전</span>
+                  </span>
+                </div>
+              </li>
+              <li>
+                <div class="box-user">
+                  <span class="thumb-img"
+                    ><img src="./img/img-thumbnail.jpeg" alt=""
+                  /></span>
+                  <span class="box-cont">
+                    <strong class="tit-user">canon_mj</strong>
+                    <span class="cont-info">16분 전</span>
+                  </span>
+                </div>
+              </li>
+            </ul>
           </div>
-          <div class="box-info">
-            <strong class="tit-info">회원님을 위한 추천</strong>
-            <a href="#none" class="link_more">모두 보기</a>
+          <div class="wrap-info">
+            <div class="box-top">
+              <strong class="tit-info">회원님을 위한 추천</strong>
+              <a href="#none" class="link_more">모두 보기</a>
+            </div>
+            <ul class="list-users">
+              <li>
+                <div class="box-user">
+                  <span class="thumb-img"
+                    ><img src="./img/img-thumbnail.jpeg" alt=""
+                  /></span>
+                  <span class="box-cont">
+                    <strong class="tit-user">canon_mj</strong>
+                    <span class="cont-info"
+                      >_legend_a님 외 2명이 회원님을 팔로우하는중입니다.</span
+                    >
+                  </span>
+                </div>
+                <button class="btn-follow">팔로우</button>
+              </li>
+              <li>
+                <div class="box-user">
+                  <span class="thumb-img"
+                    ><img src="./img/img-thumbnail.jpeg" alt=""
+                  /></span>
+                  <span class="box-cont">
+                    <strong class="tit-user">canon_mj</strong>
+                    <span class="cont-info"
+                      >_legend_a님 외 2명이 회원님을 팔로우하는중입니다.</span
+                    >
+                  </span>
+                </div>
+                <button class="btn-follow">팔로우</button>
+              </li>
+              <li>
+                <div class="box-user">
+                  <span class="thumb-img"
+                    ><img src="./img/img-thumbnail.jpeg" alt=""
+                  /></span>
+                  <span class="box-cont">
+                    <strong class="tit-user">canon_mj</strong>
+                    <span class="cont-info"
+                      >_legend_a님 외 2명이 회원님을 팔로우하는중입니다.</span
+                    >
+                  </span>
+                </div>
+                <button class="btn-follow">팔로우</button>
+              </li>
+              <li>
+                <div class="box-user">
+                  <span class="thumb-img"
+                    ><img src="./img/img-thumbnail.jpeg" alt=""
+                  /></span>
+                  <span class="box-cont">
+                    <strong class="tit-user">canon_mj</strong>
+                    <span class="cont-info"
+                      >_legend_a님 외 2명이 회원님을 팔로우하는중입니다.</span
+                    >
+                  </span>
+                </div>
+                <button class="btn-follow">팔로우</button>
+              </li>
+            </ul>
           </div>
           <div class="footer"></div>
         </div>
