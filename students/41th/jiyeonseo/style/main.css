@@ -7,11 +7,11 @@ body {
 }
 
 nav {
-  width: 100%;
-  height: 8%;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  width: 100%;
+  height: 8%;
   border-bottom: var(--border-gray);
 }
 
@@ -25,12 +25,12 @@ nav {
 }
 
 #toMainPage {
-  font-family: "Lobster", cursive;
-  text-decoration: none;
-  color: black;
-  border-left: 2px solid black;
   padding: 5px 10px;
   margin-left: 20px;
+  border-left: 2px solid black;
+  text-decoration: none;
+  font-family: "Lobster", cursive;
+  color: black;
 }
 
 .nav-center input {
@@ -53,36 +53,36 @@ nav {
 }
 
 main {
-  width: 100%;
-  height: 92%;
   display: flex;
   justify-content: center;
+  width: 100%;
+  height: 92%;
 }
 
 .content {
-  width: 540px;
-  aspect-ratio: 5 / 8;
   display: flex;
   flex-direction: column;
+  width: 540px;
+  aspect-ratio: 5 / 8;
 }
 
 .feed {
+  position: relative;
   width: 95%;
   height: 90%;
   margin: 20px 10px;
   padding: 10px;
   border: var(--border-gray);
   border-radius: var(--border-radius);
-  position: relative;
 }
 
 .feed-top {
-  width: 98%;
   display: flex;
   position: relative;
   align-items: center;
-  font-weight: 600;
   gap: 10px;
+  width: 98%;
+  font-weight: 600;
 }
 
 .profile-photo {
@@ -92,10 +92,10 @@ main {
 }
 
 .feed-top img:last-child {
-  width: 20px;
-  height: 15px;
   position: absolute;
   right: 10px;
+  width: 20px;
+  height: 15px;
 }
 
 .feed-img {
@@ -148,10 +148,10 @@ main {
 }
 
 .comment-lists {
+  position: relative;
   padding: 0;
   margin: 0;
   list-style: none;
-  position: relative;
 }
 
 .comment-lists li img {
@@ -163,8 +163,8 @@ main {
 #delete {
   position: absolute;
   right: 10px;
-  cursor: pointer;
   font-size: 13px;
+  cursor: pointer;
 }
 
 .comment-lists li img:hover {
@@ -177,13 +177,13 @@ main {
 }
 
 #commentInput {
+  position: absolute;
+  bottom: 50px;
   width: 95%;
   height: 40px;
-  position: absolute;
-  bottom: 10px;
+  padding: 10px;
   border-radius: var(--border-radius);
   border: var(--border-input);
-  padding: 10px;
 }
 
 .space {
@@ -191,19 +191,19 @@ main {
 }
 
 #comment button {
-  border: none;
   position: absolute;
   right: 35px;
-  bottom: 18px;
+  bottom: 60px;
+  border: none;
   background-color: white;
   color: var(--color-light-blue);
 }
 
 .mainRight {
-  width: 300px;
-  aspect-ratio: 3 / 8;
   display: flex;
   flex-direction: column;
+  width: 300px;
+  aspect-ratio: 3 / 8;
   padding: 20px 10px;
 }
 
@@ -228,10 +228,10 @@ main {
 }
 
 .stories {
-  width: 100%;
-  height: 200px;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  height: 200px;
   padding: 10px;
   margin-top: 10px;
   border: var(--border-gray);
@@ -272,10 +272,10 @@ main {
 }
 
 .recommend {
-  width: 100%;
-  height: 180px;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  height: 180px;
   padding: 10px;
   margin-top: 10px;
   border: var(--border-gray);
@@ -283,9 +283,9 @@ main {
 }
 
 .blue {
-  color: var(--color-blue);
   position: absolute;
   right: 10px;
+  color: var(--color-blue);
 }
 
 .hidden {
