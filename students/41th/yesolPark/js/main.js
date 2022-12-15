@@ -1,6 +1,14 @@
 const $ = (selector) => document.querySelector(selector);
 
 function App() {
+  // 댓글 입력시, 버튼 색 변함
+  $('#commentInputForm').addEventListener('keyup', (e) => {
+    if ($('#comment').value !== '') {
+      $('#commentSubmit').style.color = '#0095F6';
+      console.log('hi');
+    }
+  });
+
   // 자동 새로고침 방지
   $('#commentForm').addEventListener('submit', (e) => {
     e.preventDefault();
@@ -42,13 +50,13 @@ function App() {
     );
   };
 
-  // 확인 버튼으로 메뉴 입력
+  // 확인 버튼으로 댓글 입력
   $('#commentSubmit').addEventListener('click', (e) => {
     addComment();
     $('#comment').value = '';
   });
 
-  // enter 버튼으로 메뉴 입력
+  // enter 버튼으로 댓글 입력
   $('#commentSubmit').addEventListener('keypress', (e) => {
     if (e.key !== 'Enter') {
       return;
@@ -66,7 +74,7 @@ function App() {
         .querySelector('.comment-list-item');
       const nowComment = $comment.innerText;
 
-      // 수정 메뉴 적용하기
+      // 수정 댓글 적용하기
       const updateComment = prompt('댓글을 수정하세요', nowComment);
       $comment.innerText = updateComment;
     }
