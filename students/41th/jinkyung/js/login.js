@@ -3,7 +3,7 @@ const idElement = document.getElementById("id_input");
 const pwElement = document.getElementById("pw_input");
 
 function loginActive() {
-  idElement.value !== "" && pwElement.value !== ""
+  idElement.value.indexOf("@") !== -1 && pwElement.value.length >= 5
     ? (loginBtn.className = "active")
     : // loginBtn.style.backgroundColor = "red";
 
