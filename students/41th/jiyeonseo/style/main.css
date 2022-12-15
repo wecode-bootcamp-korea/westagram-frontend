@@ -156,7 +156,19 @@ main {
 
 .comment-lists li img {
   position: absolute;
+  right: 40px;
+  width: 15px;
+}
+
+#delete {
+  position: absolute;
   right: 10px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.comment-lists li img:hover {
+  cursor: pointer;
 }
 
 #comment {
@@ -282,4 +294,10 @@ main {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+@media screen and (max-width: 815px) {
+  .mainRight {
+    display: none;
+  }
 }
