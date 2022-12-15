@@ -1,0 +1,279 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* 헤더 */
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 70px;
+  border: 1px solid rgb(219, 219, 219);
+  line-height: 70px;
+}
+
+header #search input {
+  width: 400px;
+  height: 30px;
+  text-align: center;
+  border: 1px solid rgb(219, 219, 219);
+}
+
+header #leftHead {
+  display: flex;
+  flex-direction: row;
+}
+
+header .logoImg {
+  margin-right: 15px;
+  width: 30px;
+  margin-top: 30px;
+}
+header .markImg {
+  margin-top: 30px;
+  width: 120px;
+}
+header #rightHead {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+header #rightHead li {
+  margin-right: 15px;
+}
+header #rightHead li img {
+  width: 30px;
+  margin-top: 30px;
+}
+
+.rightHead li img {
+  height: 10px;
+  width: 20px;
+}
+/* 메인 */
+
+#main {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: auto;
+  background-color: #fafafa;
+}
+
+#feeds {
+  display: flex;
+  justify-content: center;
+  width: 50vw;
+  height: 91vh;
+  padding: 10px;
+}
+
+#article {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+  width: 45vw;
+  height: 90vh;
+  border: 1px solid rgb(219, 219, 219);
+  border-radius: 3px;
+}
+
+#article div {
+  margin-top: 5px;
+
+  background-color: white;
+}
+
+/* feed */
+
+.info {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px 0 20px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+.profile img {
+  width: 30px;
+  margin-right: 15px;
+}
+
+.more img {
+  width: 25px;
+}
+
+.img {
+  background-image: url(./img/IMG_8575.JPG);
+  background-size: cover;
+  width: 660px;
+  height: 800px;
+}
+
+.likes {
+  height: 40px;
+  line-height: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.likes ul {
+  display: flex;
+}
+
+.likes ul li:nth-child(4) {
+  margin-left: 500px;
+}
+
+.likesPeople {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.likesPeople img {
+  width: 20px;
+  margin-right: 7px;
+}
+.likes ul li button {
+  background-color: white;
+  border: none;
+}
+
+.likes ul li button img {
+  width: 25px;
+  margin-right: 10px;
+}
+
+.comentBox {
+  margin-left: 15px;
+}
+
+.feedTime {
+  font-size: 13px;
+}
+
+.plzComents {
+  display: flex;
+  justify-content: space-around;
+  height: 40px;
+}
+
+.plzComents input {
+  width: 580px;
+  border: 1px solid rgb(219, 219, 219);
+  border-right: none;
+  padding: 15px;
+}
+
+.uploadComents {
+  background-color: white;
+  border: 1px solid rgb(219, 219, 219);
+  border-left: none;
+  width: 80px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.uploadComents:hover {
+  color: gray;
+}
+.uploadComents:active {
+  background-color: aliceblue;
+}
+
+/* main right */
+#mainRight {
+  margin: 50px 0 0 10px;
+  width: 20vw;
+  height: 80vh;
+}
+
+#myInfo {
+  height: 60px;
+  line-height: 60px;
+  display: flex;
+  align-items: center;
+}
+#myInfo img {
+  width: 50px;
+  height: 50px;
+  margin-right: 20px;
+}
+
+#story {
+  margin-top: 20px;
+  height: 250px;
+  border: 1px solid rgb(219, 219, 219);
+  padding: 10px;
+  overflow: scroll;
+  background-color: white;
+}
+#story::-webkit-scrollbar {
+  display: none;
+}
+
+#story .storyHead {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.storyHead div:nth-child(1) {
+  color: rgb(219, 219, 219);
+}
+
+.storyPeople {
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+.storyPeople img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+#morePeople {
+  margin-top: 20px;
+  height: 220px;
+  border: 1px solid rgb(219, 219, 219);
+  padding: 12px;
+  background-color: white;
+}
+
+.morePhead {
+  display: flex;
+  justify-content: space-between;
+}
+
+.mPeopleList {
+  margin-top: 10px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.mPeopleList img {
+  margin-right: 10px;
+}
+
+.mPeopleList button {
+  margin-left: 120px;
+  width: 50px;
+  background-color: white;
+  border: none;
+  color: blue;
+}
