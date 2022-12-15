@@ -1,14 +1,13 @@
-const loginBtn = document.querySelector(".loginbtn");
-const IDINPUT = document.querySelector(".idinput");
-const PASSWORDINPUT = document.querySelector(".passwordinput");
+const idValue = document.querySelector(".idinput");
+const passwordValue = document.querySelector(".passwordinput");
+const Btn = document.querySelector(".loginbtn");
 
-PASSWORDINPUT.addEventListener("Keyup", click);
-
-function click() {
-  if (IDINPUT.value && PASSWORDINPUT.value) {
-    loginBtn.disabled = false;
-    loginBtn.style.backgroundColor = "blue";
+passwordValue.addEventListener("keyup", function () {
+  if (idValue.value && passwordValue.value) {
+    Btn.disabled = false;
+    Btn.style.backgroundColor = "blue";
   } else {
-    loginBtn.disabled = true;
+    Btn.disabled = true;
+    Btn.style.backgroundColor = "#B3DBFF";
   }
-}
+});
