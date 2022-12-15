@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Westagram - main</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+    integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="main.css">
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <nav>
+    <div id="topmenu">
+      <div class="toplogo">
+        <div><i class="fa fa-instagram"></i></div>
+        <div><span class="logoword">&nbsp;Westagram</span></div>
+      </div>
+      <div class="searchbar">
+        <i class="fa fa-search"></i>
+        <input type="text" placeholder="검색">
+      </div>
+      <div class="topright">
+        <div><img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png" alt="search"></div>
+        <div><img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" alt="likes"></div>
+        <div><img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png" alt="profile"></div>
+      </div>
+    </div>
+  </nav>
+  <main>
+    <div class="feeds">
+      <article>
+        <div class="articles">
+          <div class="articles_header">
+            <div class="profiles">
+              <div class="profile_tn"></div>
+              <div class="profile_id">canon_mj</div>
+            </div>
+            <div class="article_setting">
+              <i class="fa fa-ellipsis-h"></i>
+            </div>
+          </div>
+          <div class="posts"></div>
+          <div class="articles_fx">
+            <div class="articles_fx_left">
+              <div class="likes"><i class="fa fa-heart-o"></i></div>
+              <div class="reply"><i class="fa fa-comment-o"></i></div>
+              <div class="share"><i class="fa fa-share-square-o"></i></div>
+            </div>
+            <div class="articles_fx_right">
+              <div class="bookmark"><i class="fa fa-bookmark-o"></i></div>
+            </div>
+          </div>
+          <div class="num_likes">
+            <div class="firstlike_tn"></div>
+            <div class="firstlike_id"><span>aineworld</span></div>
+            <div class="likes_status">
+              <p>님 <span class="likes_status_num">외 10명</span><span>이 좋아합니다.</span></p>
+            </div>
+          </div>
+          <div class="comments">
+            <div class="first_comment">
+              <div class="first_comment_id">danielarsham</div>
+              <div class="first_comment_content"><span>Lorem ipsum dolor sit amet consectetur adipis</span></div>
+            </div>
+            <div class="comment_like"><i class="fa fa-heart-o"></i></div>
+          </div>
+          <ul id="posted_comments">
+
+          </ul>
+          <div class="new_comment">
+            <div class="new_comment_content"><input id="new_comment_txt" type="text" placeholder="댓글 달기..."></div>
+            <div class="new_comment_post"><button>게시</button></div>
+          </div>
+        </div>
+      </article>
+    </div>
+    <!-- <div class="main-right"></div> -->
+
+    <script src="main.js"></script>
+  </main>
+</body>
+
+</html>
