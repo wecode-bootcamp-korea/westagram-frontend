@@ -7,17 +7,22 @@ const deleteBtn = document.getElementById("delete");
 function addComment(input) {
   const li = document.createElement("li");
   const span_bold = document.createElement("span");
-  span_bold.className = "bold";
-  span_bold.innerText = "mia_seo";
   const span = document.createElement("span");
-  span.className = "space";
-  span.innerText = input;
   const img = document.createElement("img");
-  img.src = "img/heart.png";
-  img.className = "heart";
   const span_gray = document.createElement("span");
+
+  span_bold.className = "bold";
+  span.className = "space";
+  img.className = "heart";
   span_gray.className = "gray";
+
+  span_bold.innerText = "mia_seo";
+  span.innerText = input;
+
+  img.src = "img/heart.png";
+
   span_gray.innerText = "90분전";
+
   li.appendChild(span_bold);
   li.appendChild(span);
   li.appendChild(img);
