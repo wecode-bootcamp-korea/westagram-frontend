@@ -1,8 +1,8 @@
 const comment = document.getElementById("comment");
 const commentInput = document.getElementById("commentInput");
 const ul = document.querySelector(".comment-lists");
-const heart = document.getElementById("heart");
-const deleteBtn = document.getElementById("delete");
+const heart = document.querySelector(".heart");
+const deleteBtn = document.querySelector(".delete");
 
 function addComment(input) {
   const li = document.createElement("li");
@@ -10,24 +10,29 @@ function addComment(input) {
   const span = document.createElement("span");
   const img = document.createElement("img");
   const span_gray = document.createElement("span");
+  const span_delete = document.createElement("span");
 
-  span_bold.className = "bold";
-  span.className = "space";
-  img.className = "heart";
-  span_gray.className = "gray";
+  span_bold.setAttribute("class", "bold");
+  span.setAttribute("class", "space");
+  img.setAttribute("class", "heart");
+  span_gray.setAttribute("class", "gray");
+  span_delete.setAttribute("class", "delete gray");
+  img.src = "img/heart.png";
 
   span_bold.innerText = "mia_seo";
   span.innerText = input;
-
-  img.src = "img/heart.png";
-
+  span_delete.innerText = "삭제";
   span_gray.innerText = "90분전";
 
   li.appendChild(span_bold);
   li.appendChild(span);
   li.appendChild(img);
   li.appendChild(span_gray);
+  li.appendChild(span_delete);
   ul.appendChild(li);
+
+  img.addEventListener("click", onClickHeart);
+  span_delete.addEventListener("click", onClickDelete);
 }
 
 function onSubmitInput(event) {
@@ -36,11 +41,15 @@ function onSubmitInput(event) {
   commentInput.value = "";
 }
 
-function onClickHeart() {
-  if (heart.src === "http://127.0.0.1:5500/img/heart.png") {
-    heart.src = "img/heart-fill.png";
+let isRed = false;
+
+function onClickHeart(event) {
+  if (isRed === false) {
+    event.target.src = "img/heart-fill.png";
+    isRed = true;
   } else {
-    heart.src = "img/heart.png";
+    event.target.src = "img/heart.png";
+    isRed = false;
   }
 }
 
