@@ -7,10 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./js/main.css" />
+    <script src="./js/main.js" defer></script>
   </head>
   <header>
     <ul id="leftHead">
       <li><img class="logoImg" src="./js/img/instagram.png" alt="" /></li>
+
       <li>
         <img class="markImg" src="./js/img/mark.png" />
       </li>
@@ -66,15 +68,67 @@
             <div class="contents">
               <strong>dfasdfas</strong> 위워크에서 진행한 베이킹 클래스,,,
             </div>
-            <div class="coments">
-              <strong>adfasdfds</strong> 거봐 좋았잖아
-              <span>하트</span>
-            </div>
+            <ul class="comentsList">
+              <!-- <li>
+                <span>닉네임</span>
+                <span>내용</span>
+                <img src="./js/img/heart.png" alt="" />
+              </li> -->
+            </ul>
             <div class="feedTime">몇분전</div>
           </div>
           <div class="plzComents">
-            <input placeholder="댓글 달기..." />
-            <button class="uploadComents">게시</button>
+            <input class="comentInput" placeholder="댓글 달기..." />
+            <button class="comentBtn">게시</button>
+          </div>
+        </div>
+        <div id="article">
+          <div class="info">
+            <div class="profile">
+              <img src="./js/img/userimg.png" alt="" />
+              <span><strong>97bhh</strong></span>
+            </div>
+            <div class="more"><img src="./js/img/dots.png" alt="" /></div>
+          </div>
+          <div class="img"></div>
+          <div class="comentBox">
+            <div class="likes">
+              <ul>
+                <li>
+                  <button><img src="./js/img/heart.png" alt="" /></button>
+                </li>
+                <li>
+                  <button><img src="./js/img/chat.png" alt="" /></button>
+                </li>
+                <li>
+                  <button><img src="./js/img/send.png" alt="" /></button>
+                </li>
+                <li>
+                  <button>
+                    <img src="./js/img/save-instagram.png" alt="" />
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <div class="likesPeople">
+              <img src="./js/img/userimg.png" /><strong>adfa님</strong> 외
+              <strong>10명</strong>이 좋아합니다.
+            </div>
+            <div class="contents">
+              <strong>dfasdfas</strong> 위워크에서 진행한 베이킹 클래스,,,
+            </div>
+            <ul class="comentsList">
+              <!-- <li>
+                <span>닉네임</span>
+                <span>내용</span>
+                <img src="./js/img/heart.png" alt="" />
+              </li> -->
+            </ul>
+            <div class="feedTime">몇분전</div>
+          </div>
+          <div class="plzComents">
+            <input class="comentInput" placeholder="댓글 달기..." />
+            <button class="comentBtn">게시</button>
           </div>
         </div>
       </div>

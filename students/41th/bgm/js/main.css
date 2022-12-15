@@ -65,15 +65,13 @@ header #rightHead li img {
   display: flex;
   justify-content: center;
   width: 100vw;
-  height: auto;
   background-color: #fafafa;
 }
 
 #feeds {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  width: 50vw;
-  height: 91vh;
   padding: 10px;
 }
 
@@ -81,8 +79,6 @@ header #rightHead li img {
   display: flex;
   flex-direction: column;
   margin-top: 40px;
-  width: 45vw;
-  height: 90vh;
   border: 1px solid rgb(219, 219, 219);
   border-radius: 3px;
 }
@@ -163,6 +159,22 @@ header #rightHead li img {
   margin-left: 15px;
 }
 
+.comentsList {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.comentsList li span {
+  margin-right: 10px;
+}
+.comentsList li img {
+  position: absolute;
+  right: 10px;
+}
+.comentsList img {
+  width: 10px;
+}
+
 .feedTime {
   font-size: 13px;
 }
@@ -180,7 +192,7 @@ header #rightHead li img {
   padding: 15px;
 }
 
-.uploadComents {
+.comentBtn {
   background-color: white;
   border: 1px solid rgb(219, 219, 219);
   border-left: none;
@@ -198,6 +210,8 @@ header #rightHead li img {
 
 /* main right */
 #mainRight {
+  position: fixed;
+  right: 30px;
   margin: 50px 0 0 10px;
   width: 20vw;
   height: 80vh;
@@ -247,6 +261,7 @@ header #rightHead li img {
 }
 
 #morePeople {
+  position: relative;
   margin-top: 20px;
   height: 220px;
   border: 1px solid rgb(219, 219, 219);
@@ -271,9 +286,16 @@ header #rightHead li img {
 }
 
 .mPeopleList button {
-  margin-left: 120px;
+  position: absolute;
+  right: 10px;
   width: 50px;
   background-color: white;
   border: none;
   color: blue;
+}
+
+.comentsList div {
+  width: 10px;
+  height: 10px;
+  background-image: url(./img/heart.png);
 }
