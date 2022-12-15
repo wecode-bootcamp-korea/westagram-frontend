@@ -74,18 +74,18 @@
               <div class="util-left">
                 <button class="btn-like">
                   <!-- fa-light >> fa-solid -->
-                  <i class="fa-light fa-heart"></i>
+                  <i class="fa-regular fa-heart"></i>
                   <i class="fa-solid fa-heart"></i>
                 </button>
                 <button class="btn-dm">
                   <i class="fa-light fa-comment"></i>
                 </button>
                 <button class="btn-share">
-                  <i class="fa-regular fa-arrow-up-from-bracket"></i>
+                  <i class="fa-duotone fa-up-from-bracket"></i>
                 </button>
               </div>
               <button class="btn-mark">
-                <i class="fa-light fa-bookmark"></i>
+                <i class="fa-regular fa-bookmark"></i>
               </button>
             </div>
             <div class="box-cmt">
@@ -98,7 +98,7 @@
                   좋아합니다.
                 </span>
               </div>
-              <ul class="list-cmt">
+              <ul id="listCmt" class="list-cmt">
                 <li>
                   <span class="cmt-user">canon_mj</span>
                   <span class="cmt-cont"
@@ -113,9 +113,15 @@
               </ul>
               <span class="info-time">42분 전</span>
             </div>
+
             <div class="box-inp-cmt">
-              <input type="text" placeholder="댓글 달기..." class="inp-cmt" />
-              <button class="btn-follow">게시</button>
+              <input
+                type="text"
+                placeholder="댓글 달기..."
+                class="inp-cmt"
+                id="inpCmt"
+              />
+              <button id="btnSubmitCmt" class="btn-follow">게시</button>
             </div>
           </div>
         </div>
@@ -231,5 +237,6 @@
         </div>
       </main>
     </div>
+    <script src="./js/main.js"></script>
   </body>
 </html>
