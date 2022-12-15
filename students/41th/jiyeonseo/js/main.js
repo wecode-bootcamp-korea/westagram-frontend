@@ -3,6 +3,7 @@ const commentInput = document.getElementById("commentInput");
 const ul = document.querySelector(".comment-lists");
 const heart = document.querySelector(".heart");
 const deleteBtn = document.querySelector(".delete");
+const commentBtn = document.getElementById("commentBtn");
 
 function addComment(input) {
   const li = document.createElement("li");
@@ -58,6 +59,13 @@ function onClickDelete(event) {
   li.remove();
 }
 
+function onKeyUpInput() {
+  commentInput.value !== ""
+    ? (commentBtn.style.color = "#2099f1")
+    : (commentBtn.style.color = "#c5e1fb");
+}
+
 comment.addEventListener("submit", onSubmitInput);
+commentInput.addEventListener("keyup", onKeyUpInput);
 heart.addEventListener("click", onClickHeart);
 deleteBtn.addEventListener("click", onClickDelete);

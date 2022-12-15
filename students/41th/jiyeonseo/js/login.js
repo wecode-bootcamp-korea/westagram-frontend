@@ -14,7 +14,6 @@ function checkId() {
 
 function checkPw() {
   pwInput.value.length >= 5 ? (pwCheck = true) : (pwCheck = false);
-  console.log(pwCheck);
   activeButton();
 }
 
