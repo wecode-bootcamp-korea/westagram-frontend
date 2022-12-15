@@ -35,28 +35,199 @@
           </div>
           <div id="nav_icons">
             <!-- 이미지스프라이트 기법 -->
-            <span class="icon1"></span>
-            <span class="icon2"></span>
-            <span class="icon3"></span>
+            <span class="icon1">
+              <img src="./img/compass.png" alt="탐색" />
+            </span>
+            <span class="icon2">
+              <img src="./img/like_heart.png" alt="좋아요" />
+              <span class="red_dot"></span>
+            </span>
+            <span class="icon3">
+              <img src="./img/dm.png" alt="다이렉트메세지" />
+            </span>
           </div>
         </nav>
       </header>
       <main>
         <div class="feeds">
           <article>
+            <!-- post_host 영역 -->
             <div id="post_host">
               <a class="post_host_pic" href="#"
-                ><img
-                  src="https://scontent-ssn1-1.cdninstagram.com/v/t51.2885-19/305030495_111957548205721_2512557629052708176_n.jpg?stp=dst-jpg_s320x320&_nc_ht=scontent-ssn1-1.cdninstagram.com&_nc_cat=101&_nc_ohc=W2T1Zun_q74AX8xGp2J&edm=AOQ1c0wBAAAA&ccb=7-5&oh=00_AfD2jUaYcYojO0-3u6TiHzoSytW-7gf6XgOPOtoPgRCnUQ&oe=639D9E75&_nc_sid=8fd12b"
-                  alt="포스트주인"
+                ><img src="./img/post_host_pic.jpeg" alt="포스트주인"
               /></a>
               <a class="post_host_nickname" href="#">
                 <span>ohaangdoo</span>
               </a>
+              <div class="dots">
+                <span class="dot_black"></span>
+                <span class="dot_black"></span>
+                <span class="dot_black"></span>
+              </div>
             </div>
+            <!-- // post_host 영역 -->
+
+            <!-- post_pic 영역 -->
+            <div id="post_pic">
+              <img src="./img/post_pic.jpeg" alt="포스팅사진" />
+            </div>
+            <!-- // post_pic 영역 -->
+
+            <!-- post_txt 영역 -->
+            <div id="post_txt">
+              <div class="post_txt_icons">
+                <div class="post_txt_icon_left">
+                  <span class="post_txt_icon1">
+                    <img src="./img/post_like_heart.png" alt="포스트좋아요" />
+                  </span>
+                  <span class="post_txt_icon2">
+                    <img src="./img/comment.png" alt="포스트좋아요" />
+                  </span>
+                  <span class="post_txt_icon3">
+                    <img src="./img/upload.png" alt="포스트좋아요" />
+                  </span>
+                </div>
+                <div class="post_txt_icon_right">
+                  <span class="post_txt_icon4">
+                    <img src="./img/bookmark.png" alt="포스트좋아요" />
+                  </span>
+                </div>
+              </div>
+              <div class="post_txt_comment">
+                <a href="#">
+                  <img src="./img/like_pic.jpeg" alt="좋아요 누른 사람"
+                /></a>
+                <span class="like">
+                  <span class="strong">seorina</span>님 외
+                  <span class="strong">62명</span>이 좋아합니다
+                </span>
+                <div class="comment">
+                  <p class="post_host_nickname">
+                    <span class="strong">ohaangdoo</span>
+                    &nbsp;4년만에 다시 온 파리! 에펠탑 앞에서 한 컷!
+                  </p>
+                  <span class="more">더 보기</span>
+                  <p class="commentor_nickname comment1">
+                    <span>
+                      <span class="strong">honghong</span>
+                      &nbsp;언제 돌아와 ??
+                    </span>
+                    <img src="./img/like_heart.png" alt="댓글 좋아요" />
+                  </p>
+                  <p class="commentor_nickname comment2">
+                    <span>
+                      <span class="strong">baeterang</span>
+                      &nbsp;건강히! 조심히! 즐겁게 🙏🏻
+                    </span>
+                    <img src="./img/like_heart.png" alt="댓글 좋아요" />
+                  </p>
+                </div>
+              </div>
+              <div class="comment_window">
+                <input
+                  class="comment_write"
+                  type="text"
+                  placeholder="댓글 달기..."
+                />
+                <input class="publish" type="submit" value="게시" />
+              </div>
+            </div>
+            <!-- // post_txt 영역 -->
           </article>
         </div>
-        <div class="main_right"></div>
+
+        <!-- main_right 시작 -->
+        <div class="main_right">
+          <div class="right_my_account_pic">
+            <a href="#"><img src="./img/post_host_pic.jpeg" alt="내 사진" /></a>
+            <div class="right_my_account_txt">
+              <p>ohaangdoo</p>
+              <p>프론트엔드 개발자 ✨</p>
+            </div>
+          </div>
+          <div id="story_board">
+            <p class="story_top">
+              <span>스토리</span>
+              <span>모두 보기</span>
+            </p>
+            <ul>
+              <li>
+                <a href="#">
+                  <img src="./img/honghong.jpeg" alt="팔로잉 스토리" />
+                </a>
+                <div>
+                  <p>honghong</p>
+                  <p>3분 전</p>
+                </div>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="./img/ky_resto.jpeg" alt="팔로잉 스토리" />
+                </a>
+                <div>
+                  <p>ky_resto</p>
+                  <p>17분 전</p>
+                </div>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="./img/mujagi.jpeg" alt="팔로잉 스토리" />
+                </a>
+                <div>
+                  <p>mujagi_official</p>
+                  <p>1시간 전</p>
+                </div>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="./img/ozzi_chego.jpeg" alt="팔로잉 스토리" />
+                </a>
+                <div>
+                  <p>ozzi_chego</p>
+                  <p>3시간 전</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div id="recommand_board">
+            <p class="recommand_top">
+              <span>회원님을 위한 추천</span>
+              <span>모두 보기</span>
+            </p>
+            <ul>
+              <li>
+                <a href="#">
+                  <img src="./img/ohmarigod.jpeg" alt="팔로잉 스토리" />
+                </a>
+                <div>
+                  <p>ohmarigod</p>
+                  <p>seo_k님 외 3명이 알고있어요</p>
+                </div>
+                <span>팔로우</span>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="./img/rollipop933.jpeg" alt="팔로잉 스토리" />
+                </a>
+                <div>
+                  <p>rollipop933</p>
+                  <p>mujagi_official님 외 24명이 알고있어요</p>
+                </div>
+                <span>팔로우</span>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="./img/donggurami.jpeg" alt="팔로잉 스토리" />
+                </a>
+                <div>
+                  <p>donggurami</p>
+                  <p>baeterang님 외 7명이 알고있어요</p>
+                </div>
+                <span>팔로우</span>
+              </li>
+            </ul>
+          </div>
+        </div>
       </main>
     </div>
     <script src="./js/main.js"></script>

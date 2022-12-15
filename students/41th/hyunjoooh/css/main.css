@@ -1,10 +1,15 @@
+:root {
+  --font-color: rgb(250, 67, 67);
+  /* 사용방법 -> font-color: var(--font-color) */
+}
+
 * {
   box-sizing: border-box;
   text-decoration: none;
 }
 
 body {
-  background-color: #eee;
+  background-color: rgb(244, 244, 244);
 }
 
 #wrap {
@@ -13,6 +18,7 @@ body {
 header {
   width: 100%;
   background-color: #fff;
+  box-shadow: 0 1px 3px 1px rgb(234, 234, 234);
 }
 
 /* ========== nav 시작 ========== */
@@ -21,7 +27,7 @@ nav {
   display: flex;
   justify-content: space-between;
 
-  width: 80%;
+  width: 65%;
   height: 60px;
   margin: 0 auto;
 }
@@ -81,12 +87,12 @@ nav {
 }
 
 #nav_search img {
-  width: 15px;
-
   position: absolute;
-  left: 75px;
+  left: 72px;
   top: 22px;
   opacity: 0.5;
+
+  width: 15px;
 }
 
 /* nav_icons 영역 */
@@ -95,73 +101,484 @@ nav {
   display: inline-block;
   width: 26px;
   height: 26px;
-  margin: 17px;
-  opacity: 0.7;
+  margin: 17px 9px;
 }
 
-span.icon1 {
-  background: url(../img/nav_icons.png);
+#nav_icons .red_dot {
+  width: 4px;
+  height: 4px;
+  background-color: #e20055;
+  border-radius: 50%;
+
+  position: absolute;
+  left: 2px;
+  top: 14px;
+}
+
+span.icon1 img {
+  width: 100%;
 }
 
 span.icon2 {
-  background: url(../img/nav_icons.png) no-repeat -26px 0;
+  position: relative;
 }
 
-span.icon3 {
-  background: url(../img/nav_icons.png) no-repeat -52px 0;
+span.icon2 img {
+  width: 100%;
+}
+
+span.icon3 img {
+  width: 100%;
 }
 
 /* ========== main 시작 ========== */
 
 main {
-  width: 77%;
+  width: 63%;
   margin: 0 auto;
+  margin-bottom: 180px;
 
   display: flex;
   justify-content: space-between;
 }
 
-/* feeds 영역 */
-
 .feeds {
-  width: 700px;
-  height: 660px;
-  margin: 20px;
+  width: 680px;
+  margin-top: 70px;
   background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 3px;
 }
 
 article {
 }
 
+/* post_host 영역 */
+
 #post_host {
-  height: 70px;
-  background-color: yellow;
+  height: 55px;
+  background-color: #fff;
+
+  position: relative;
 }
 
 #post_host .post_host_pic {
   display: inline-block;
-  width: 25px;
-  height: 25px;
+  width: 31px;
+  height: 31px;
+  margin: 12px 0 0 15px;
 }
 
 #post_host .post_host_pic img {
   width: 100%;
+  border-radius: 50%;
 }
 
 #post_host .post_host_nickname {
+  display: inline-block;
 }
 
 #post_host .post_host_nickname span {
   font-family: "나눔고딕";
+  font-size: 13px;
   font-weight: 600;
   color: #000;
+
+  position: absolute;
+  left: 60px;
+  top: 21px;
 }
 
-/* main_right 영역 */
+#post_host .dots {
+  display: inline-block;
+  float: right;
+  overflow: hidden;
+  margin: 16px 20px 0 0;
+}
+
+#post_host .dot_black {
+  display: inline-block;
+  width: 3px;
+  height: 3px;
+  background-color: #222;
+  border-radius: 50%;
+}
+
+/* post_pic 영역 */
+
+#post_pic {
+  width: inherit;
+  height: 500px;
+  overflow: hidden;
+  background-color: blue;
+}
+
+#post_pic img {
+  width: 100%;
+  translate: 0 -210px;
+}
+
+/* post_txt 영역 */
+
+#post_txt {
+  height: 35px;
+}
+
+.post_txt_icons {
+  width: 100%;
+  height: 100%;
+  padding-top: 11px;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.post_txt_icon_left {
+}
+
+.post_txt_icon_left span {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+}
+
+.post_txt_icon1 img {
+  width: 100%;
+  margin: 1px 2px 0 15px;
+}
+
+.post_txt_icon2 {
+  margin-left: 20px;
+}
+
+.post_txt_icon2 img {
+  width: 100%;
+}
+
+.post_txt_icon3 {
+  margin-left: 6px;
+}
+
+.post_txt_icon3 img {
+  width: 100%;
+}
+
+.post_txt_icon_right span {
+  display: inline-block;
+  width: 23px;
+  height: 23px;
+}
+
+.post_txt_icon4 {
+  margin: 1px 12px 0 0;
+}
+
+.post_txt_icon4 img {
+  width: 100%;
+}
+
+.post_txt_comment {
+  position: relative;
+  height: 117px;
+  background-color: #fff;
+  padding-left: 8px;
+}
+
+.post_txt_comment a {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  margin: 10px;
+}
+
+.post_txt_comment img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.post_txt_comment .like {
+  font-family: "나눔고딕";
+  font-size: 13px;
+  position: absolute;
+  left: 50px;
+  top: 16px;
+}
+
+.post_txt_comment .like .strong {
+  font-weight: 600;
+}
+
+.comment {
+  position: relative;
+}
+
+.comment p {
+  font-family: "나눔고딕";
+  font-size: 14px;
+  margin-left: 17px;
+}
+
+.comment .post_host_nickname {
+  width: 300px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.comment .strong {
+  font-weight: 600;
+}
+
+.comment .more {
+  font-size: 14px;
+  color: #777;
+
+  position: absolute;
+  left: 310px;
+  top: 2px;
+}
+
+.comment .commentor_nickname {
+  display: flex;
+  justify-content: space-between;
+}
+
+.comment .comment1 {
+  margin: 10px 0 0 17px;
+  font-size: 13px;
+}
+
+.comment .comment2 {
+  margin: 7px 0 0 17px;
+  font-size: 13px;
+}
+
+.comment img {
+  width: 10px;
+  height: 10px;
+  margin-right: 20px;
+  margin-top: 2px;
+}
+
+.comment_window {
+  display: flex;
+  justify-content: space-between;
+
+  height: 55px;
+  background-color: #fff;
+
+  border-top: 1px solid #eee;
+}
+
+.comment_window input.comment_write {
+  width: 100%;
+  padding: 16px 0 15px 25px;
+  border: none;
+}
+
+.comment_window input.comment_write::placeholder {
+  font-family: "나눔고딕";
+  color: #bbb;
+}
+
+.comment_window input.publish {
+  float: right;
+  color: royalblue;
+  background-color: #fff;
+  border: none;
+  margin: 1px 18px 0 0;
+
+  font-family: "나눔고딕";
+  font-weight: 600;
+  opacity: 0.3;
+}
+
+/* ========== main_right 시작 ========== */
 
 .main_right {
   width: 400px;
-  height: 660px;
-  margin: 20px;
+  margin: 70px 0 0 30px;
+}
+
+/* right_my_account_pic 영역 */
+
+.right_my_account_pic {
+  display: flex;
+  justify-items: baseline;
+}
+
+.right_my_account_pic a {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 10px 10px 10px 0;
+}
+
+.right_my_account_pic img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.right_my_account_txt {
+  margin: 18px 0 0 5px;
+}
+
+.right_my_account_txt p {
+  font-family: "나눔고딕";
+}
+
+.right_my_account_txt p:first-child {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.right_my_account_txt p:last-child {
+  font-size: 14px;
+  color: #777;
+  margin-top: 4px;
+}
+
+/* story_board */
+
+#story_board {
+  width: 100%;
+  height: 240px;
   background-color: #fff;
+  margin-top: 6px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+
+  overflow: hidden;
+}
+
+#story_board .story_top {
+  display: flex;
+  justify-content: space-between;
+}
+
+#story_board .story_top span {
+  margin: 20px 15px 15px 15px;
+  font-size: 14px;
+}
+
+#story_board .story_top span:first-child {
+  color: #777;
+}
+
+#story_board a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: 0 10px 0 20px;
+}
+
+#story_board a img {
+  width: 100%;
+  border-radius: 50%;
+  border: 2px solid #e20055;
+  padding: 2px;
+}
+
+#story_board ul li {
+  display: flex;
+  justify-items: baseline;
+  margin-bottom: 15px;
+}
+
+#story_board ul li div {
+  margin-top: 3px;
+}
+
+#story_board ul li div p {
+  font-family: "나눔고딕";
+  font-size: 14px;
+}
+
+#story_board ul li div p:first-child {
+  font-weight: 600;
+}
+
+#story_board ul li div p:last-child {
+  color: #777;
+  margin-top: 2px;
+}
+
+/* recommand_board */
+
+#recommand_board {
+  width: 100%;
+  height: 215px;
+  margin-top: 12px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+#recommand_board .recommand_top {
+  display: flex;
+  justify-content: space-between;
+}
+
+#recommand_board .recommand_top span {
+  margin: 20px 15px 15px 15px;
+  font-size: 14px;
+}
+
+#recommand_board .recommand_top span:first-child {
+  color: #777;
+}
+
+#recommand_board a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: 0 10px 0 20px;
+}
+
+#recommand_board a img {
+  width: 100%;
+  border-radius: 50%;
+  border: 2px solid #e20055;
+  padding: 2px;
+}
+
+#recommand_board ul li {
+  display: flex;
+  justify-items: baseline;
+  margin-bottom: 15px;
+}
+
+#recommand_board ul li div {
+  margin-top: 3px;
+}
+
+#recommand_board ul li div p {
+  width: 140px;
+
+  font-family: "나눔고딕";
+  font-size: 14px;
+
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+#recommand_board ul li div p:first-child {
+  font-weight: 600;
+}
+
+#recommand_board ul li div p:last-child {
+  color: #777;
+  margin-top: 2px;
+}
+
+#recommand_board ul li span {
+  margin-top: 14px;
+  margin-left: 60px;
+
+  font-family: "나눔고딕";
+  font-size: 13px;
+  font-weight: 600;
+  color: royalblue;
 }
