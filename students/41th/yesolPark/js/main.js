@@ -1,17 +1,20 @@
 const $ = (selector) => document.querySelector(selector);
 
 function App() {
+  // 자동 새로고침 방지
   $('#commentForm').addEventListener('submit', (e) => {
     e.preventDefault();
     console.log('hi');
   });
 
+  // 댓글 추가
   const addComment = () => {
     if ($('#comment').value === '') {
       alert('댓글을 입력하세요!');
       return;
     }
 
+    // 댓글 추가 양식
     const commentDetail = $('#comment').value;
     const commentTemplate = (commentDetail) => {
       return `
@@ -37,6 +40,7 @@ function App() {
       commentTemplate(commentDetail)
     );
   };
+
   // 확인 버튼으로 메뉴 입력
   $('#commentSubmit').addEventListener('click', (e) => {
     addComment();
