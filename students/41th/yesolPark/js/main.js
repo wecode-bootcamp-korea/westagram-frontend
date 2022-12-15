@@ -5,14 +5,12 @@ function App() {
   $('#commentInputForm').addEventListener('keyup', (e) => {
     if ($('#comment').value !== '') {
       $('#commentSubmit').style.color = '#0095F6';
-      console.log('hi');
     }
   });
 
   // 자동 새로고침 방지
   $('#commentForm').addEventListener('submit', (e) => {
     e.preventDefault();
-    console.log('hi');
   });
 
   // 댓글 추가
