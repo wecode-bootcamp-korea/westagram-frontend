@@ -1,5 +1,10 @@
-.fa,.fab,.fad,.fal,.far,.fas{
+/* .fa,.fab,.fad,.fal,.far,.fas{
 	font-weight: 900 !important;
+} */
+
+@font-face {
+  font-family: 'Lobster-Regular';
+  src: url("/students/41th/galim/westagram/assets/fonts/Lobster/Lobster-Regular.ttf");
 }
 
 * {
@@ -14,7 +19,6 @@ body {
 
 .main__wrap {
   width: 1200px;
-  /* background-color: aquamarine; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -25,7 +29,6 @@ nav {
   width: 100%;
   height: 100px;
   display: flex;
-  /* justify-content: center; */
   align-items: center;
 }
 
@@ -141,28 +144,21 @@ section {
 .main__userpost--logo {
   display: flex;
   align-items: center;
-  /* justify-content: space-between; */
+  justify-content: space-between;
+}
+
+.bookmark__wrap {
+  flex-basis: 20%;
 }
 
 .main__userpost--logo img {
-  width: 35px; 
+  width: 35px;
+  margin: 6px;
 }
-
-.main__userpost--logo img:nth-child(2) {
-  width: 28px;
-}
-
-.main__userpost--logo img:nth-child(4) {
-  width: 28px;
-}
-
-/* .bookmark--wrap {
-
-} */
 
 
 .main__user--posting {
-  width: 700px;
+  width: 100%;
   height: 750px;
   margin: 0;
 }
@@ -170,22 +166,27 @@ section {
 .main__userpost--comment {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  height: 40px;
 }
+
+.main__userpost--comment input:focus {
+  outline: none;
+} 
 
 .main__userpost--comment input {
   width: 100%;
-  height: 40px;
   padding-left: 10px;
   font-size: 15px;
   border: none;
-  margin-top: 15px;
 }
 
-.main__userpost--comment button {
+#comment__btn {
   width: 50px;
   border: none;
   background-color: none;
-  color: skyblue
+  color: skyblue;
+  font-size: 15px;;
 }
 
 /* aside */
@@ -193,8 +194,6 @@ aside {
   width: 350px;
   display: flex;
   flex-direction: column;
-
-
 }
 
 .main__aside--user {
@@ -218,9 +217,8 @@ aside {
 }
 
 .main__aside--userid  p {
-  color: #ccc;
+  color: grey;
 }
-
 
 .main__aside--story {
   display: flex;
@@ -239,8 +237,22 @@ aside {
   margin: 15px;
 }
 
-.main__aside--storytitle p {
-  font-size: 20px;
+.main__user--content {
+  margin-bottom: 10px;
+}
+
+.user__id {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.user__id--color{
+  font-weight: bold;
+}
+
+.color__grey {
+  color: grey;
+  font-size: 16px;
 }
 
 .main__aside--storyitem {
@@ -254,7 +266,10 @@ aside {
   height: 42px;
   border-radius: 50%;
   margin-right: 15px;
-  border: 2px solid red;
+  border: 0.5px solid transparent;
+  background-image: linear-gradient(#fff, #fff), linear-gradient(to right, red 0%,  orange 100%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
   padding: 1px;
 }
 
@@ -276,10 +291,6 @@ aside {
   display: flex;
   justify-content: space-between;
   margin: 15px;
-}
-
-.main__aside--recommendtitle p {
-  font-size: 20px;
 }
 
 .main__aside--recommenditem {
