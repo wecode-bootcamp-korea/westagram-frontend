@@ -12,11 +12,10 @@
     <div class="content">
       <nav>
         <div class="instaicon">
-          <i class="fab fa-instagram"></i>
-
-          <a href="#">westagram</a>
+          <div class="logo"><i class="fab fa-instagram"></i></div>
+          <a href="#">Westagram</a>
         </div>
-        <input type="text" placeholder=" &#xf002; 검색" />
+        <input class="search" type="text" placeholder="   검색" />
         <div class="icon">
           <div class="icon1"><i class="far fa-compass"></i></div>
           <div class="icon2"><i class="far fa-heart"></i></div>
@@ -26,11 +25,30 @@
 
       <main>
         <div class="feeds">
-          feeds
-          <article>article</article>
+          <article>
+            <img src="westa.jpg" alt="feed photo" />
+            <div class="commentbox">
+              <ul class="allcomment"></ul>
+            </div>
+            <div class="inputcomment">
+              <input
+                class="comment"
+                type="text"
+                placeholder="댓글을 입력하세요"
+              />
+              <button class="btn" type="button">게시</button>
+            </div>
+          </article>
         </div>
-        <div class="main-right">main-right</div>
+        <div class="main-right">
+          <div class="userProfile">
+            <img src="cat.jpg" />
+            <span> username</span>
+          </div>
+          <div class="userProfile2"></div>
+        </div>
       </main>
     </div>
+    <script src="main.js"></script>
   </body>
 </html>

@@ -1,36 +1,162 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="westyle.css" />
-    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
-  </head>
-  <body>
-    <div class="content">
-      <nav>
-        <div class="instaicon">
-          <i class="fab fa-instagram"></i>
+body {
+  margin: 0px;
+  height: 100%;
+}
 
-          <a href="#">westagram</a>
-        </div>
-        <input type="text" placeholder=" &#xf002; 검색" />
-        <div class="icon">
-          <div class="icon1"><i class="far fa-compass"></i></div>
-          <div class="icon2"><i class="far fa-heart"></i></div>
-          <div class="icon3"><i class="fas fa-user-alt"></i></div>
-        </div>
-      </nav>
+.content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  margin: auto;
+}
 
-      <main>
-        <div class="feeds">
-          feeds
-          <article>article</article>
-        </div>
-        <div class="main-right">main-right</div>
-      </main>
-    </div>
-  </body>
-</html>
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 58px;
+  padding: 0 60px;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+.instaicon{
+  display: flex;
+}
+.logo{
+  display: flex;
+  font-size: 28px;
+}
+.instaicon a{
+  display: flex;
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+.search {
+  height: 20px;
+  border-width: 1px;
+  border-color: #EFEFEF;
+  border-radius: 5px;
+  background-color: #EFEFEF;
+  font-size: 15px;
+  padding: 8px;
+  background-image: url("icon.svg");
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: left 10px;
+}
+
+.icon {
+  display: flex;
+  justify-content: flex-start;
+  width: 150px;
+}
+.icon1{
+  margin-right: 20px;
+  font-size: 24px;
+}
+.icon2 {
+  margin-right: 20px;
+  font-size: 24px;
+}
+.icon3{
+  margin-right: 20px;
+  font-size: 24px;
+}
+a {
+  margin-left: 20px;
+}
+main {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: #ffffff;
+  margin-top: 30px;
+}
+.feeds {
+  display: flex;
+  border: 1px solid gray ;
+  top: 20px;
+  bottom: 0px
+  width: 470px;
+  height: 450px;
+  margin-right: 30px;
+}
+
+article {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+img {
+  display: flex;
+  width: 470px;
+  height: 300px;
+}
+
+.commentbox {
+  display: flex;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.allcomment {
+  list-style: none;
+  padding-left: 10px;
+  text-align: left;
+  font-size: 12px;
+}
+
+.inputcomment {
+  position: absolute;
+  display: flex;
+  bottom: 0px;
+  width: 100%;
+  height: 30px;
+}
+
+.comment {
+  flex-grow: 2;
+  border: none;
+  margin-left: 5px;
+  border-width: 1px;
+}
+
+.comment input:focus {
+  outline-color: none !important;
+  border-color: gray; 
+}
+
+.btn {
+  border: none;
+  background-color: white;
+}
+
+.main-right {
+  display: flex;
+  margin-left: 20px;
+  top: 20px;
+  right: 20px;
+  width: 200px;
+  height: 350px;
+  border: 1px solid lightgray;
+}
+.userProfile{
+  display: flex;
+  height: 47px;
+  padding: 8px 16px 8px 16px;
+}
+.userProfile img{
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+}
+.userProfile span{
+  padding: 5px;
+  text-align: center;
+}
