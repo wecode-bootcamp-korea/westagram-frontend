@@ -136,7 +136,7 @@ span.icon3 img {
 main {
   width: 63%;
   margin: 0 auto;
-  margin-bottom: 180px;
+  margin-bottom: 250px;
 
   display: flex;
   justify-content: space-between;
@@ -144,7 +144,7 @@ main {
 
 .feeds {
   width: 680px;
-  margin-top: 70px;
+  margin-top: 57px;
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 3px;
@@ -279,9 +279,9 @@ article {
 
 .post_txt_comment {
   position: relative;
-  height: 117px;
   background-color: #fff;
   padding-left: 8px;
+  padding-bottom: 7px;
 }
 
 .post_txt_comment a {
@@ -312,7 +312,7 @@ article {
   position: relative;
 }
 
-.comment p {
+.comment li {
   font-family: "나눔고딕";
   font-size: 14px;
   margin-left: 17px;
@@ -344,12 +344,19 @@ article {
 }
 
 .comment .comment1 {
-  margin: 10px 0 0 17px;
+  margin: 10px 0 7px 17px;
   font-size: 13px;
 }
 
 .comment .comment2 {
-  margin: 7px 0 0 17px;
+  margin-left: 17px;
+  padding-bottom: 7px;
+  font-size: 13px;
+}
+
+.comment .comment3 {
+  margin-left: 17px;
+  padding-bottom: 7px;
   font-size: 13px;
 }
 
@@ -381,15 +388,20 @@ article {
   color: #bbb;
 }
 
-.comment_window input.publish {
+.comment_window input.comment_write:focus {
+  outline: none;
+}
+
+.comment_window .publish {
   float: right;
-  color: royalblue;
+  width: 50px;
   background-color: #fff;
   border: none;
-  margin: 1px 18px 0 0;
+  margin-right: 15px;
 
   font-family: "나눔고딕";
   font-weight: 600;
+  color: royalblue;
   opacity: 0.3;
 }
 
@@ -397,7 +409,7 @@ article {
 
 .main_right {
   width: 400px;
-  margin: 70px 0 0 30px;
+  margin: 58px 0 0 30px;
 }
 
 /* right_my_account_pic 영역 */

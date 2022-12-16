@@ -101,35 +101,38 @@
                   <span class="strong">seorina</span>님 외
                   <span class="strong">62명</span>이 좋아합니다
                 </span>
-                <div class="comment">
-                  <p class="post_host_nickname">
+                <ul class="comment">
+                  <li class="post_host_nickname">
                     <span class="strong">ohaangdoo</span>
-                    &nbsp;4년만에 다시 온 파리! 에펠탑 앞에서 한 컷!
-                  </p>
+                    <span>
+                      &nbsp;4년만에 다시 온 파리! 에펠탑 앞에서 한 컷!
+                    </span>
+                  </li>
                   <span class="more">더 보기</span>
-                  <p class="commentor_nickname comment1">
+                  <li class="commentor_nickname comment1">
                     <span>
                       <span class="strong">honghong</span>
-                      &nbsp;언제 돌아와 ??
+                      <span>&nbsp;언제 돌아와 ??</span>
                     </span>
                     <img src="./img/like_heart.png" alt="댓글 좋아요" />
-                  </p>
-                  <p class="commentor_nickname comment2">
+                  </li>
+                  <li class="commentor_nickname comment2">
                     <span>
                       <span class="strong">baeterang</span>
-                      &nbsp;건강히! 조심히! 즐겁게 🙏🏻
+                      <span>&nbsp;건강히! 조심히! 즐겁게 🙏🏻</span>
                     </span>
                     <img src="./img/like_heart.png" alt="댓글 좋아요" />
-                  </p>
-                </div>
+                  </li>
+                </ul>
               </div>
               <div class="comment_window">
                 <input
                   class="comment_write"
                   type="text"
                   placeholder="댓글 달기..."
+                  onkeypress="enterAddComment()"
                 />
-                <input class="publish" type="submit" value="게시" />
+                <button class="publish">게시</button>
               </div>
             </div>
             <!-- // post_txt 영역 -->
