@@ -4,6 +4,16 @@
 .fontlightgray {
   color: rgb(207, 204, 204);
 }
+button {
+  text-align: center;
+}
+
+.emptyHeart {
+  background-image: url("/westagram-frontend/students/41th/41-choyunhwan/img/heart (2).png");
+}
+.redHeart {
+  background-image: url("/westagram-frontend/students/41th/41-choyunhwan/img/redheart.png");
+}
 .menubar {
   display: flex;
   justify-content: space-evenly;
@@ -16,6 +26,10 @@
 }
 .logo {
   display: flex;
+}
+
+.likeImg {
+  width: 20px;
 }
 .navicon {
   height: 30px;
@@ -41,7 +55,9 @@ img {
 .profile {
   border-radius: 70%;
   overflow: hidden;
-  height: 40px;
+  height: 30px;
+  margin-top: 10px;
+  margin-left: 5px;
   margin-right: 5px;
 }
 
@@ -104,7 +120,9 @@ article {
   display: flex;
   flex-direction: column;
 }
-
+.commentusername {
+  font-weight: bold;
+}
 .feedcomentimg {
   border-radius: 70%;
   width: 25px;
@@ -127,8 +145,8 @@ article {
 }
 .story_profile {
   border-radius: 70%;
-  overflow: hidden;
-  height: 32px;
+  width: 35px;
+  height: 35px;
   margin-left: 10px;
 }
 
@@ -159,6 +177,16 @@ article {
   align-items: center;
   flex-wrap: wrap;
   margin-top: 9px;
+}
+.story_ID:nth-child(2) {
+  margin-top: 20px;
+}
+.fallow {
+  font-size: 14px;
+  margin-top: -25px;
+
+  margin-left: 240px;
+  color: #2c9ef7;
 }
 .story-font {
   font-size: 14px;
