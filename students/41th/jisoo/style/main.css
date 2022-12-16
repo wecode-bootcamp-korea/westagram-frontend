@@ -1,13 +1,14 @@
 .wrapper {
-  width: 80%;
   margin: 0 auto;
 }
 
 nav {
-  padding: 0 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  padding: 0 20px 10px 0;
+  background-color: white;
+  border-bottom: 1px solid lightgray;
 }
 
 a img {
@@ -17,6 +18,39 @@ a img {
 
 p {
   margin: 0;
+}
+
+.link_to_my_profile {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+}
+
+#nav_my_menu_box {
+  position: relative;
+  right: 60px;
+  width: 180px;
+  display: none;
+  background-color: white;
+  border: 1px solid lightgray;
+  z-index: 1;
+}
+
+.my_menu {
+  list-style: none;
+}
+
+.my_menu li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.my_menu_line {
+  position: relative;
+  right: 42px;
+  width: 180px;
+  border: 1px solid lightgray;
 }
 
 .logo_section {
@@ -48,11 +82,11 @@ p {
 }
 
 .search_icon {
-  width: 14px;
-  height: 14px;
   position: absolute;
   top: 3px;
   left: 5px;
+  width: 14px;
+  height: 14px;
 }
 
 .my_info_section a {
@@ -64,8 +98,8 @@ p {
 }
 
 main {
-  padding: 60px 60px;
   display: flex;
+  padding: 40px 20px 0 200px;
 }
 
 .feeds_container {
@@ -73,18 +107,18 @@ main {
   margin-right: 10px;
   padding: 20px 5px;
   background-color: rgb(255, 255, 255);
-  border: 1px solid black;
+  border: 1px solid lightgray;
 }
 
 article {
-  border: 1px solid gray;
+  border: 1px solid lightgray;
 }
 
 .feeds_user_info,
 .feeds_count_like_user {
-  padding: 10px 10px;
   display: flex;
   align-items: center;
+  padding: 10px 10px;
 }
 
 .user_name {
@@ -103,9 +137,9 @@ article {
 }
 
 .feeds_icon_section {
-  padding: 0 10px;
   display: flex;
   justify-content: space-between;
+  padding: 0 10px;
 }
 
 .feeds_icon_section_left * {
@@ -113,8 +147,8 @@ article {
 }
 
 .like_img {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   margin-right: 5px;
   border-radius: 100%;
 }
@@ -125,7 +159,8 @@ article {
   margin-left: 10px;
 }
 
-.created_at {
+.created_at,
+.user_follow {
   color: gray;
   font-size: 14px;
 }
@@ -138,9 +173,9 @@ article {
 }
 
 .feeds_comment_register_section {
-  margin-top: 15px;
   position: relative;
-  border-top: 1px solid gray;
+  margin-top: 15px;
+  border-top: 1px solid lightgray;
 }
 
 .comment_btn_register {
@@ -150,6 +185,7 @@ article {
   color: rgb(7, 24, 255);
   background-color: white;
   border: none;
+  cursor: pointer;
 }
 
 .comment_btn_register:disabled {
@@ -157,11 +193,11 @@ article {
 }
 
 .feeds_container_right {
-  width: 40%;
+  width: 22%;
   margin-left: 0;
   padding: 20px 0 10px 0;
   background-color: rgb(250, 250, 250);
-  border: 1px solid gray;
+  border: 1px solid lightgray;
 }
 
 .feeds_right_user_info {
@@ -187,11 +223,13 @@ article {
   border: 1px solid lightgray;
 }
 
-.feeds_right_nav {
-  margin: 10px;
-  padding: 0 10px;
+.feeds_right_story_nav {
   display: flex;
   justify-content: space-between;
+  width: 95%;
+  margin: 10px;
+  padding: 0 10px;
+  background-color: whtie;
 }
 
 .feeds_right_category {
@@ -204,22 +242,31 @@ article {
 }
 
 .user_profile_rectangle {
+  position: relative;
   width: 46px;
   height: 46px;
   margin-right: 10px;
   margin-bottom: 5px;
-  position: relative;
   background: linear-gradient(to top right, yellow, pink);
   border-radius: 100%;
 }
 
 .story_profile_img {
-  width: 40px;
-  height: 40px;
   position: absolute;
   left: 3px;
   top: 3px;
+  width: 40px;
+  height: 40px;
   border-radius: 100%;
+}
+
+.feeds_right_story_user_list {
+  height: 190px;
+  overflow: scroll;
+}
+
+.feeds_right_story_user_list::-webkit-scrollbar {
+  display: none;
 }
 
 .feeds_right_user_info {
@@ -231,8 +278,61 @@ article {
   color: lightgray;
 }
 
+.feeds_right_follow_user_info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 10px;
+}
+
 .feeds_right_follow_section {
   margin-top: 20px;
   background-color: white;
   border: 1px solid lightgray;
+}
+
+.feeds_right_follow_nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  padding: 0 10px;
+}
+
+.follow_profile_img {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}
+
+.user_follow_name_section {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.user_follow_btn {
+  color: rgb(7, 24, 255);
+  background-color: white;
+  border: none;
+  cursor: pointer;
+}
+
+footer {
+  margin-top: 30px;
+}
+
+footer ul {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  list-style: none;
+  font-size: 11px;
+  color: gray;
+}
+
+.footer_instagram {
+  text-align: center;
+  font-size: 11px;
+  color: gray;
 }

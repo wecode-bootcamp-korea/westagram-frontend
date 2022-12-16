@@ -12,12 +12,15 @@
     <div class="wrapper">
       <nav>
         <div class="logo_section">
-          <img alt="인스타그램_로고" class="instagram" src="./img/instagram.png" />
-          <p>|</p>
+          <img
+            alt="인스타그램_로고"
+            class="instagram"
+            src="./img/instagram.png"
+          />
           <span class="logo">Westagram</span>
         </div>
         <div class="search_section">
-          <img alt="돋보기" class="search_icon" src="./img/search.png"  />
+          <img alt="돋보기" class="search_icon" src="./img/search.png" />
           <input type="text" class="search_input" placeholder="검색" />
         </div>
         <div class="my_info_section">
@@ -41,6 +44,21 @@
               src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png"
               class="myPage"
             />
+            <div id="nav_my_menu_box">
+              <ul class="my_menu">
+                <li class="profile_list">
+                  <img src="./img/user.png">프로필
+                </li>
+                <li class="bookmark_list">
+                  <img src="./img/bookmark-white.png">저장됨
+                </li>
+                <li class="setting_list">
+                  <img src="./img/settings.png">설정
+                </li>
+                <hr class="my_menu_line">
+                <li class = "logout_list">로그아웃</li>
+              </ul>
+            </div>
           </a>
         </div>
       </nav>
@@ -52,98 +70,225 @@
               <span class="user_name">love_penguin</span>
             </div>
             <div class="feeds_content">
-              <img alt="피드_이미지" src="./img/babyPenguin.jpeg" class="feeds_content_img" />
+              <img
+                alt="피드_이미지"
+                src="./img/babyPenguin.jpeg"
+                class="feeds_content_img"
+              />
               <div class="feeds_icon_section">
                 <div class="feeds_icon_section_left">
                   <a href="#">
                     <img alt="좋아요" src="./img/redHeart.png" class="heart_img" />
                   </a>
                   <a href="#">
-                    <img alt="메세지" src="./img/speech-bubble.png" class="bubble_img" />
+                    <img
+                      alt="메세지"
+                      src="./img/speech-bubble.png"
+                      class="bubble_img"
+                    />
                   </a>
                   <a href="#">
-                    <img alt="공유" src="./img/upload.png"  class="upload_img" />
+                    <img alt="공유" src="./img/upload.png" class="upload_img" />
                   </a>
                 </div>
                 <div class="feeds_icon_section_right">
                   <a href="#">
-                    <img alt="북마크" src="./img/bookmark-white.png" class="bookmark_img" />
+                    <img
+                      alt="북마크"
+                      src="./img/bookmark-white.png"
+                      class="bookmark_img"
+                    />
                   </a>
                 </div>
               </div>
               <div class="feeds_under_section">
                 <div class="feeds_count_like_user">
                   <img alt="유저프로필" src="./img/fox.jpg" class="like_img" />
-                  <p class="count_like"> <span class="user_name">aineworld</span>님 외 <span class="count_people">10</span>명이 좋아합니다.</p>
+                  <p class="count_like">
+                    <span class="user_name">aineworld</span>님 외
+                    <span class="count_people">10</span>명이 좋아합니다.
+                  </p>
                 </div>
-                <p class="feeds_user_content"><span class="user_name">love_penguin</span> 날씨가 추워서 펭귄모드됨ㅠ</p>
+                <p class="feeds_user_content">
+                  <span class="user_name">love_penguin</span> 날씨가 추워서
+                  펭귄모드됨ㅠ
+                </p>
                 <div id="feeds_comment_section">
-                  <p class="comment"><span class="user_name">naceosecius</span> 지금 눈 펑펑 온다 감기 조심해😖</p>
+                  <p class="comment">
+                    <span class="user_name">naceosecius</span> 지금 눈 펑펑 온다
+                    감기 조심해😖
+                  </p>
                   <span class="created_at">42분 전</span>
                 </div>
                 <div class="feeds_comment_register_section">
-                  <input type="text" class="comment_input" placeholder="댓글 달기...">
-                  <button class="comment_btn_register" disabled="true" >게시</button>
+                  <input
+                    type="text"
+                    class="comment_input"
+                    placeholder="댓글 달기..."
+                  />
+                  <button class="comment_btn_register" disabled="true">게시</button>
                 </div>
+              </div>
             </div>
           </article>
         </div>
         <div class="feeds_container_right">
           <div class="feeds_right_user_info">
-            <img alt="프로필" src="./img/penguin.jpg"  class="right_profile_img" />
+            <img alt="프로필" src="./img/penguin.jpg" class="right_profile_img" />
             <div class="user_name_section">
               <span class="user_name">love_penguin</span>
               <p class="user_under_name">WeCode | 위코드</p>
             </div>
           </div>
           <div class="feeds_right_story_section">
-            <div class="feeds_right_nav">
+            <div class="feeds_right_story_nav">
               <span class="feeds_right_category">스토리</span>
-              <a href="#" class="link_to_view"><span class="feeds_right_view">모두 보기</span></a>
+              <a href="#" class="link_to_view">
+                <span class="feeds_right_view">모두 보기</span>
+              </a>
             </div>
-            <div class="feeds_right_user_info">
-              <div class="user_profile_rectangle">
-                <img alt="프로필" src="./img/penguin.jpg" class="story_profile_img" />
-              </div>
-              <div class="user_name_section">
-                <span class="user_name">love_penguin</span>
-                <p class="user_last_visit">2시간 전</p>
-              </div>
-            </div>
-            <div class="feeds_right_user_info">
-              <div class="user_profile_rectangle">
-                <img alt="프로필" src="./img/penguin.jpg" class="story_profile_img" />
-              </div>
-              <div class="user_name_section">
-                <span class="user_name">love_penguin</span>
-                <p class="user_last_visit">2시간 전</p>
-              </div>
-            </div>
-            <div class="feeds_right_user_info">
-              <div class="user_profile_rectangle">
-                <img alt="프로필" src="./img/penguin.jpg" class="story_profile_img" />
-              </div>
-              <div class="user_name_section">
-                <span class="user_name">love_penguin</span>
-                <p class="user_last_visit">2시간 전</p>
-              </div>
-            </div>
-            <div class="feeds_right_follow_section">
-              <div class="feeds_right_nav">
-                <span class="feeds_right_category">회원님을 위한 추천</span>
-                <a href="#" class="link_to_view"><span class="feeds_right_view">모두 보기</span></a>
+            <div class="feeds_right_story_user_list">
+              <div class="feeds_right_user_info">
+                <div class="user_profile_rectangle">
+                  <img
+                    alt="프로필"
+                    src="./img/sleepy_dog.jpeg"
+                    class="story_profile_img"
+                  />
+                </div>
+                <div class="user_name_section">
+                  <span class="user_name">I_am_Sleepy</span>
+                  <p class="user_last_visit">1시간 전</p>
+                </div>
               </div>
               <div class="feeds_right_user_info">
                 <div class="user_profile_rectangle">
-                  <img alt="프로필" src="./img/penguin.jpg" class="story_profile_img" />
+                  <img
+                    alt="프로필"
+                    src="./img/so_cute.jpg"
+                    class="story_profile_img"
+                  />
                 </div>
                 <div class="user_name_section">
-                  <span class="user_name">love_penguin</span>
-                  <p class="user_follow">회원님을 팔로우합니다</p>
+                  <span class="user_name">SoCuteCow</span>
+                  <p class="user_last_visit">4시간 전</p>
                 </div>
               </div>
+              <div class="feeds_right_user_info">
+                <div class="user_profile_rectangle">
+                  <img
+                    alt="프로필"
+                    src="./img/meong_cat.jpeg"
+                    class="story_profile_img"
+                  />
+                </div>
+                <div class="user_name_section">
+                  <span class="user_name">mumu_00</span>
+                  <p class="user_last_visit">2시간 전</p>
+                </div>
+              </div>
+              <div class="feeds_right_user_info">
+                <div class="user_profile_rectangle">
+                  <img
+                    alt="프로필"
+                    src="./img/squirrel.jpg"
+                    class="story_profile_img"
+                  />
+                </div>
+                <div class="user_name_section">
+                  <span class="user_name">whereIsDotori</span>
+                  <p class="user_last_visit">1시간 전</p>
+                </div>
+              </div>
+              <div class="feeds_right_user_info">
+                <div class="user_profile_rectangle">
+                  <img
+                    alt="프로필"
+                    src="./img/panda.jpg"
+                    class="story_profile_img"
+                  />
+                </div>
+                <div class="user_name_section">
+                  <span class="user_name">paaaanda</span>
+                  <p class="user_last_visit">2시간 전</p>
+                </div>
+              </div>
+            </div>    
           </div>
-        </div>
+        <div class="feeds_right_follow_section">
+          <div class="feeds_right_follow_nav">
+            <span class="feeds_right_category">회원님을 위한 추천</span>
+            <a href="#" class="link_to_view">
+              <span class="feeds_right_view">모두 보기</span>
+            </a>
+          </div>
+          <div class="feeds_right_follow_user_info">
+            <div class="feeds_follow_user_img_section">
+              <img
+              alt="프로필"
+              src="./img/squirrel.jpg"
+              class="follow_profile_img"
+            />
+            </div>
+            <div class="user_follow_name_section">
+              <div class="user_follow_row">
+                <span class="user_name">whereIsDotori</span>
+                <p class="user_follow">회원님을 팔로우합니다</p>
+              </div>
+              <button class="user_follow_btn">팔로우</button>
+            </div>
+          </div>
+          <div class="feeds_right_follow_user_info">
+            <div class="feeds_follow_user_img_section">
+              <img
+              alt="프로필"
+              src="./img/panda.jpg"
+              class="follow_profile_img"
+            />
+            </div>
+            <div class="user_follow_name_section">
+              <div class="user_follow_row">
+                <span class="user_name">paaaanda</span>
+                <p class="user_follow">회원님을 팔로우합니다</p>
+              </div>
+              <button class="user_follow_btn">팔로우</button>
+            </div>
+          </div>
+          <div class="feeds_right_follow_user_info">
+            <div class="feeds_follow_user_img_section">
+              <img
+              alt="프로필"
+              src="./img/meong_cat.jpeg"
+              class="follow_profile_img"
+            />
+            </div>
+            <div class="user_follow_name_section">
+              <div class="user_follow_row">
+                <span class="user_name">mumu_00</span>
+                <p class="user_follow">회원님을 팔로우합니다</p>
+              </div>
+              <button class="user_follow_btn">팔로우</button>
+            </div>
+            </div>
+          </div>
+        <footer>
+          <ul class = "footer_top">
+            <li>instagram 정보</li>・
+            <li>지원</li>・
+            <li>홍보 센터</li>・
+            <li>API</li>・
+            <li>채용 정보</li>
+          </ul>
+          <ul class = "footer_bottom">
+            <li>개인정보처리방침</li>・
+            <li>약관</li>・
+            <li>디렉터리</li>・
+            <li>프로필</li>・
+            <li>해시태그</li>・
+            <li>언어</li>
+          </ul>
+          <p class="footer_instagram">@ 2019 INSTAGRAM</p>
+        </footer>
       </main>
     </div>
     <script src="./js/main.js"></script>
