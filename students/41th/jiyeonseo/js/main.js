@@ -86,16 +86,20 @@ function onKeyUpInput() {
     : (commentBtn.style.color = "#c5e1fb");
 }
 
-let isClicked = false;
+// let isClicked = false;
+
+// function onClickProfile() {
+//   if (isClicked === false) {
+//     myProfileBubble.classList.remove("hide");
+//     isClicked = true;
+//   } else {
+//     myProfileBubble.classList.add("hide");
+//     isClicked = false;
+//   }
+// }
 
 function onClickProfile() {
-  if (isClicked === false) {
-    myProfileBubble.classList.remove("hide");
-    isClicked = true;
-  } else {
-    myProfileBubble.classList.add("hide");
-    isClicked = false;
-  }
+  myProfileBubble.classList.toggle("hide");
 }
 
 function makeSearch(key) {
