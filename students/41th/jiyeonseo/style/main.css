@@ -89,6 +89,11 @@ nav {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
+  overflow: scroll;
+}
+
+.bubble::-webkit-scrollbar {
+  display: none;
 }
 
 .bubble:after {
@@ -220,10 +225,6 @@ main {
   position: absolute;
   right: 40px;
   width: 15px;
-}
-
-.none {
-  display: none;
 }
 
 .delete {
