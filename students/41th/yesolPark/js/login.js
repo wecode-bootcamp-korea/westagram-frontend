@@ -2,7 +2,10 @@ const $ = (selector) => document.querySelector(selector);
 
 function App() {
   $('#loginInput').addEventListener('keyup', (e) => {
-    if ($('#loginId').value !== '' && $('#loginPassword').value !== '') {
+    if (
+      $('#loginId').value.includes('@') &&
+      $('#loginPassword').value.length >= 5
+    ) {
       $('#loginBtn').style.backgroundColor = '#0095F6';
     }
   });
