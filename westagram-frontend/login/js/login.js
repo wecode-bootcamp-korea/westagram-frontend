@@ -8,8 +8,7 @@ function input() {
     loginBtn.style.backgroundColor = "#3e94f7";
   } else {
     loginBtn.disable = true;
+    loginBtn.style.backgroundColor = "#b2dffc";
   }
   return;
 }
-
-user_pw.addEventListener("keyup", input);
