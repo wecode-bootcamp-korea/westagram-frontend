@@ -4,25 +4,30 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style/login.css" />
+    <link rel="stylesheet" href="style/login.css" type="text/css" />
+    <link rel="stylesheet" href="style/common.css" type="text/css" />
     <title>Document</title>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
     </style>
+
+    <script defer src="js/login.js"></script>
   </head>
   <body>
-    <div class="login_wrap">
-      <h1>westagram</h1>
-      <div class="inputContainer">
+    <div class="login_container">
+      <header>
+        <h1>Westagram</h1>
+      </header>
+      <div class="input_wrap">
         <input
           class="login_id"
           type="text"
           placeholder="전화번호, 사용자 이름 또는 이메일"
-        />
-        <br />
-        <input class="login_pw" type="password" placeholder="비밀번호" />
+        /><br />
+        <input class="login_pw" type="password" placeholder="비밀번호" /><br />
+        <button class="login_btn">로그인</button>
       </div>
-      <button class="login_btn">로그인</button>
+      <div class="forgotPw"><a href="#">비밀번호를 잊으셨나요?</a></div>
     </div>
   </body>
 </html>
