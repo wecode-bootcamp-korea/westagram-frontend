@@ -1,7 +1,12 @@
 const $ = (selector) => document.querySelector(selector);
 
 function App() {
-  // 댓글 입력시, 버튼 색 변함
+  // 댓글 하트 클릭시 색 변경
+  // $('comment-like-btn').addEventListener('click',(e)=> {
+
+  // )};
+
+  // 댓글 입력시, 버튼 색 변함, 유효성 검사
   $('#commentInputForm').addEventListener('keyup', (e) => {
     if ($('#comment').value !== '') {
       $('#commentSubmit').style.color = '#0095F6';
@@ -25,20 +30,25 @@ function App() {
     const commentTemplate = (commentDetail) => {
       return `
       <li class='comment-list'>
-      <span class='comment-list-id'> hellohaileyworld <span/>
-      <span class='comment-list-item'>${commentDetail}</span>
-      <button
-        type="button"
-        class='edit-button'
-      >
-        edit
-      </button>
-      <button
-        type="button"
-        class='remove-button'
-      >
-        x
-      </button>
+      <div class='comment-list-form'>
+        <span class='comment-list-id'> hellohaileyworld <span/>
+        <span class='comment-list-item'>${commentDetail}</span>
+      </div>
+      <div>
+        <button
+          type="button"
+          class='edit-button'
+        >
+          edit
+        </button>
+        <button
+          type="button"
+          class='remove-button'
+        >
+          x
+        </button>
+        <img id='comment-like-btn' src='./img/like.png' art='likeButton'/>
+      </div>
       </li>`;
     };
 
