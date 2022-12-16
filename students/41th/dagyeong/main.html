@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/style/main.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar_left">
+        <img class="icon" src="./images/instagram.png" />
+        <span>Westagram</span>
+      </div>
+      <input type="text" placeholder="검색" class="navbar_search" />
+      <div class="navbar_icons">
+        <img src="./images/explore.png" class="icon" />
+        <img src="./images/heart.png" class="icon" />
+        <img src="./images/profile.png" class="icon" />
+      </div>
+    </nav>
+    <main>
+      <div class="feeds">
+        <article>
+          <div class="feedTop">
+            <img src="./images/myProfile.jpeg" class="feedprofile_img" />
+            <span class="feeds_nickName">hihello</span>
+            <img src="/images/option.png" class="feedTop_option" />
+          </div>
+          <img src="./images/pic1.jpeg" class="feeds_img" />
+          <div class="article_icons">
+            <img src="/images/heart.png" />
+            <img src="/images/chat.png" />
+            <img src="/images/send.png" />
+            <img src="/images/bookmark.png" />
+          </div>
+          <p class="like">좋아요 3270개</p>
+          <div class="comment_wrapper">
+            <div class="comment">
+              <span>nana123</span>
+              <span>위워크에서 진행한 필름카메라 클래스...</span>
+            </div>
+            <div class="comment">
+              <span>spam789</span>
+              <span>나도 필름카메라 가지고 싶다!!</span>
+              <img src="./images/heart.png" class="comment_icon" />
+            </div>
+          </div>
+
+          <p class="like">35분전</p>
+          <hr />
+          <!-- 댓글 -->
+          <div class="do_comment">
+            <input type="text" placeholder="댓글달기..." class="comment_box" />
+            <button onclick="post()">게시</button>
+          </div>
+        </article>
+        <!-- 메인 오른쪽 페이지 -->
+        <div class="main_right">
+          <div class="myprofile">
+            <img src="./images/myProfile.jpeg" class="myprofile_img" />
+            <div class="my_profile">
+              <span>nana123</span>
+              <span>na | 인스타그램</span>
+            </div>
+          </div>
+          <!-- 스토리 -->
+          <div class="storybox">
+            <div class="storybox_top">
+              <span>스토리</span>
+              <span class="story_all_view">모두 보기</span>
+            </div>
+            <div class="story_nickname">
+              <img src="./images/friend1.jpeg" class="feedprofile_img" />
+              <div class="story_state">
+                <p>my_me_mine</p>
+                <p class="story_time">2분전</p>
+              </div>
+            </div>
+            <div class="story_nickname">
+              <img src="./images/friend2.jpeg" class="feedprofile_img" />
+              <div class="story_state">
+                <p>ひらがな</p>
+                <p class="story_time">12분전</p>
+              </div>
+            </div>
+            <div class="story_nickname">
+              <img src="./images/friend1.jpeg" class="feedprofile_img" />
+              <div class="story_state">
+                <p>Zhōngguó rén</p>
+                <p class="story_time">12분전</p>
+              </div>
+            </div>
+          </div>
+          <!-- 회원 추천 -->
+          <div class="recommend">
+            <div class="recommend_top">
+              <span>회원님을 위한 추천</span>
+              <span class="recommend_all_view">모두 보기</span>
+            </div>
+            <div class="story_nickname">
+              <img src="./images/friend1.jpeg" class="feedprofile_img" />
+              <div class="story_state">
+                <p>happy</p>
+                <p class="story_anotherpeople">_dfasf 님 외 2명이...</p>
+              </div>
+              <div class="recommend_follow">
+                <button>팔로우</button>
+              </div>
+            </div>
+            <div class="story_nickname">
+              <img src="./images/friend1.jpeg" class="feedprofile_img" />
+              <div class="story_state">
+                <p>looks_good</p>
+                <p class="story_anotherpeople">o_o 님 외 6명이...</p>
+              </div>
+              <div class="recommend_follow">
+                <button>팔로우</button>
+              </div>
+            </div>
+            <div class="story_nickname">
+              <img src="./images/friend1.jpeg" class="feedprofile_img" />
+              <div class="story_state">
+                <p>joy</p>
+                <p class="story_anotherpeople">Zhōngguó rén 님 외 2명이...</p>
+              </div>
+              <div class="recommend_follow">
+                <button>팔로우</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

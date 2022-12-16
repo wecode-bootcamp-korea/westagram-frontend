@@ -1,0 +1,235 @@
+/* nav bar */
+.icon {
+  width: 24px;
+  height: 24px;
+}
+
+.navbar_left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar_left span {
+  font-family: "Lobster", cursive;
+  font-size: 20px;
+  border-left: 1px solid black;
+  margin-left: 6px;
+  padding-left: 5px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.navbar_search {
+  /* placeholder 위치 이동 */
+  /* text-indent: 100px; */
+  border: 1px solid grey;
+  border-radius: 3px;
+}
+
+.navbar_icons > .icon {
+  margin-right: 10px;
+}
+
+/* main(article) */
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.feeds {
+  display: flex;
+}
+
+.feedTop {
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+
+.feedTop_option {
+  margin-left: 330px;
+}
+
+.feedprofile_img {
+  width: 35px;
+  height: 35px;
+  border-radius: 70%;
+  margin: 5px 10px;
+}
+
+.feedTop_option {
+  width: 32px;
+  height: 32px;
+}
+
+/* article */
+
+article {
+  width: 470px;
+  height: 750px;
+  border: 1px solid #e6e6e6;
+  border-radius: 5px;
+}
+
+.feeds_img {
+  width: 470px;
+  height: 470px;
+}
+
+.article_icons > img {
+  width: 28px;
+  height: 28px;
+}
+
+.article_icons img:nth-child(1) {
+  margin-left: 5px;
+}
+
+.article_icons img:nth-child(-n + 3) {
+  margin-right: 5px;
+}
+
+.article_icons img:nth-child(4) {
+  margin-left: 320px;
+}
+
+/* comment */
+
+.like {
+  margin-left: 5px;
+}
+
+.comment span:nth-child(1) {
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.comment_icon {
+  width: 10px;
+  height: 10px;
+  margin-left: 185px;
+}
+
+.comment_box {
+  border: none;
+  border-top: 1px solid grey;
+  width: 470px;
+  padding: 0;
+}
+
+.do_comment > input {
+  width: 420px;
+  height: 30px;
+  border: none;
+  text-indent: 10px;
+}
+
+.do_comment > button {
+  border: none;
+  background-color: transparent;
+  color: #c5e2fb;
+}
+
+hr {
+  background: #e6e6e6;
+  height: 1px;
+  border: 0;
+}
+
+/* main_right */
+
+.main_right {
+  margin-left: 15px;
+}
+
+.myprofile {
+  display: flex;
+}
+
+.myprofile span:nth-child(1) {
+  font-weight: bold;
+}
+
+.my_profile {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.myprofile_img {
+  width: 50px;
+  height: 50px;
+  border-radius: 70%;
+}
+
+/* 스토리 */
+
+.storybox {
+  border: 1px solid #e6e6e6;
+  width: 380px;
+  height: 185px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  border-radius: 3px;
+}
+
+.storybox_top,
+.recommend_top {
+  padding: 10px;
+  color: #b9b9b9;
+}
+
+.story_all_view {
+  margin-left: 252px;
+  font-weight: bold;
+  color: black;
+}
+
+.recommend_all_view {
+  margin-left: 175px;
+  font-weight: bold;
+  color: black;
+}
+
+.story_nickname {
+  display: flex;
+}
+
+.story_state {
+  display: flex;
+  flex-direction: column;
+}
+
+.story_anotherpeople {
+  color: #b9b9b9;
+}
+
+.story_time {
+  color: #b9b9b9;
+}
+
+.story_state > p {
+  max-width: 100%;
+  margin: 0;
+}
+
+.recommend {
+  border: 1px solid #e6e6e6;
+  width: 380px;
+  height: 200px;
+  border-radius: 3px;
+}
+
+.recommend_follow > button {
+  border: none;
+  background-color: transparent;
+  margin-top: 15px;
+  /* margin-left: 140px; */
+  color: #56a5f2;
+}
