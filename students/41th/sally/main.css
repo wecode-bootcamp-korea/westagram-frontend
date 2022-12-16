@@ -1,0 +1,176 @@
+.body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* =========== header 부분 ============ */
+
+.header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center; /* 수직 정렬 */
+  height: 5vh;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.365);
+}
+
+.header-first {
+  display: flex;
+}
+
+.header-second {
+  display: flex;
+}
+
+.header-third {
+  display: flex;
+}
+
+.header-logo {
+  width: 25px;
+  height: 100%;
+  padding-right: 10px;
+  border-right: 3px solid black;
+}
+
+.header-title {
+  font-family: "Lobster";
+  font-size: 25px;
+  padding-left: 10px;
+  margin: 0;
+}
+
+.header-search {
+  width: 220px;
+  height: 25px;
+}
+
+.header-search::placeholder {
+  text-align: center;
+  font-size: 14px;
+}
+
+.header-compass,
+.header-heart,
+.header-mypage {
+  padding: 10px;
+}
+
+.header-compass {
+  width: 28px;
+  height: 100%;
+}
+
+.header-heart {
+  width: 31px;
+  height: 100%;
+}
+
+.header-mypage {
+  width: 25px;
+  height: 100%;
+}
+
+/* ========== main 부분 ============ */
+
+.main {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(128, 128, 128, 0.087);
+}
+
+.feeds {
+  display: flex;
+  width: 40vw;
+  margin-right: 30px;
+  background-color: yellow;
+}
+
+.article {
+  display: flex;
+  width: 100%;
+  height: 80%;
+  background-color: white;
+  border: 1px solid rgba(128, 128, 128, 0.365);
+  margin-top: 60px;
+}
+
+.article-account {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  margin-top: 30px;
+  border: 1px solid rgba(128, 128, 128, 0.365);
+}
+
+.article-account-img {
+  width: 40px;
+  height: 40px;
+  border-radius: 70%;
+}
+
+.article-account-text {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.article-account-text-1 {
+  font-size: 11px;
+  font-weight: 800;
+  margin: 0;
+}
+
+.article-account-text-2 {
+  font-size: 11px;
+  color: gray;
+  margin: 0;
+  margin-top: 7px;
+}
+
+/* ========== main-right 부분 ============ */
+
+.main-right {
+  display: flex;
+  width: 26vw;
+  height: 100vh;
+  background-color: yellow;
+}
+
+.account {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  margin-top: 60px;
+  border: 1px solid rgba(128, 128, 128, 0.365);
+}
+
+.account-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 70%;
+}
+
+.account-text {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.account-text-1 {
+  font-size: 13px;
+  font-weight: 800;
+  margin: 0;
+}
+
+.account-text-2 {
+  font-size: 13px;
+  color: gray;
+  margin: 0;
+  margin-top: 7px;
+}
