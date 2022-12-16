@@ -10,20 +10,26 @@
       src="https://kit.fontawesome.com/f2616cb517.js"
       crossorigin="anonymous"
     ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gentium+Book+Basic:ital@1&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Gentium+Book+Basic:ital@1&display=swap");
+    </style>
     <div class="backDiv">
       <header>
         <nav class="headerLine">
           <div class="headerleftComposition">
-            <i class="fa-brands fa-instagram"></i>
-            <span>Westagram</span>
+            <i id="camerafont" class="fa-brands fa-instagram"></i>
+            <span class="headerwestagram">Westagram</span>
           </div>
           <div class="headerMiddleComposition">
-            <input type="text" placeholder="검색" /><i
-              class="fa-solid fa-magnifying-glass"
-            ></i>
+            <i id="findglass" class="fa-solid fa-magnifying-glass"></i>
+            <input class="headertextline" type="text" placeholder="검색" />
           </div>
 
           <div class="headerRightComposition">
@@ -58,9 +64,14 @@
             <div class="imgUnderBox">
               <div>
                 <div class="likeAndComment fontsize14">
-                  <i class="fa-regular fa-heart"></i>
-                  <i class="fa-regular fa-comment"></i>
-                  <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                  <spam>
+                    <i id="iconpadding" class="fa-regular fa-heart"></i>
+                    <i id="iconpadding" class="fa-regular fa-comment"></i>
+                    <i
+                      id="iconpadding"
+                      class="fa-solid fa-arrow-up-from-bracket"
+                    ></i>
+                  </spam>
                 </div>
               </div>
               <div class="likeNum fontsize14"><p>좋아요 13.6만개</p></div>
@@ -70,13 +81,25 @@
               <div class="commentPopup fontsize14">
                 <p>댓글 1000개 모두 보기</p>
               </div>
+              <ul class="addcommentul">
+                <li>
+                  <div class="pincomment">
+                    <span>wecode123 : </span><span>와우!</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="pincomment">
+                    <span>321edocew : </span><span>!우와</span>
+                  </div>
+                </li>
+              </ul>
               <div class="postDate"><p>6 일 전</p></div>
               <div class="commentAdd">
                 <input
                   id="commentjs"
                   type="text"
                   name="comment"
-                  placeholder="댓글 추가"
+                  placeholder="🔖댓글 달기..."
                 /><button id="btn" type="button">게시</button>
                 <ul id="commentBox"></ul>
               </div>
@@ -85,18 +108,81 @@
         </div>
 
         <div class="divMainRight">
-          <div class="userImportant backWhite">
-            <div class=""></div>
-            <span>wecode_WECODE</span><span>위코드</span><span>전환</span>
+          <div class="userImportant">
+            <img
+              class="rightprofileimg"
+              alt="wecode logo"
+              src="image/wecode.jpeg"
+            />
+            <span class="rightprofileid">wecode_WECODE</span>
+            <span class="rightprofilenickname">위코드</span>
+            <span class="changeid">전환</span>
           </div>
-          <div class="storyBox backWhite"><span>story</span></div>
-          <div class="findFriend backWhite"><span>findfriend</span></div>
-          <div class="corporateInformation backWhite">
-            <span>information</span>
+
+          <div class="storyBox">
+            <div>
+              <span class="addfriend">회원님을 위한 추천</span
+              ><span class="seeall">모두 보기</span>
+            </div>
+            <!-- 스토리 라인 상단 -->
+
+            <!-- <div class="wecodefriend">
+              <img
+                class="wecodefriend"
+                alt="wecode logo"
+                src="image/wecode.jpeg"
+              />
+              <span class="rightprofileid">wecode1</span>
+              <span class="rightprofilenickname">회원님을 위한 추천</span>
+              <span class="changeid1">팔로우</span>
+            </div> -->
+            <!-- 1단락 -->
+            <!-- <div class="storyboxflex">
+              <div class="wecodefriend">
+                <img
+                  class="wecodefriend"
+                  alt="wecode logo"
+                  src="image/wecode.jpeg"
+                />
+                <span class="rightprofileid">wecode2</span>
+                <span class="rightprofilenickname">회원님을 위한 추천</span>
+                <span class="changeid2">팔로우</span>
+              </div>
+              2단락
+              <div class="wecodefriend">
+                <img
+                  class="wecodefriend"
+                  alt="wecode logo"
+                  src="image/wecode.jpeg"
+                />
+                <span class="rightprofileid">wecode3</span>
+                <span class="rightprofilenickname">회원님을 위</span>
+                <span class="changeid3">팔로우</span>
+              </div>
+              3단락
+              <div class="wecodefriend">
+                <img
+                  class="wecodefriend"
+                  alt="wecode logo"
+                  src="image/wecode.jpeg"
+                />
+                <span class="rightprofileid">wecode4</span>
+                <span class="rightprofilenickname">회원님을</span>
+                <span class="changeid4">팔로우</span>
+              </div>
+            </div>
+            4단락 -->
+          </div>
+
+          <div class="corporateInformation">
+            <span class="companyinfo1"
+              >소개 도움말 홍보 센터 API채용 위치 언어 개인정보처리약관</span
+            >
+            <p>© 2022 INSTAGRAM FROM META</p>
           </div>
         </div>
       </div>
     </div>
-    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
   </body>
 </html>

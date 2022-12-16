@@ -4,6 +4,7 @@ body {
 }
 .backDiv {
   width: 100%;
+  height: 200vh;
   background-color: rgb(0, 0, 0, 0.03);
 }
 
@@ -33,7 +34,7 @@ body {
 .divFeed {
   position: sticky;
   width: 600px;
-  height: 150vh;
+  padding: 100px 0;
   margin: 30px 32px 0 0;
 }
 
@@ -58,7 +59,7 @@ body {
   border: 1px solid rgb(219, 219, 219);
   border-radius: 8px;
   width: 350px;
-  height: 150px;
+  height: 250px;
   top: 100px;
 }
 
@@ -73,11 +74,9 @@ body {
 
 .corporateInformation {
   position: absolute;
-  border: 1px solid rgb(219, 219, 219);
-  border-radius: 8px;
   width: 350px;
   height: 100px;
-  top: 400px;
+  top: 350px;
 }
 
 .mainNavPng {
@@ -87,7 +86,7 @@ body {
 .post {
   position: absolute;
   width: 100%;
-  height: 1150px;
+  padding: 10px 0;
   top: 0;
   border: 1px solid rgb(219, 219, 219);
   border-radius: 8px;
@@ -95,9 +94,6 @@ body {
 }
 
 .userImportant {
-  position: absolute;
-  border: 1px solid rgb(219, 219, 219);
-  border-radius: 8px;
   width: 350px;
   height: 100px;
   top: 0;
@@ -112,12 +108,9 @@ body {
   font-size: 14px;
 }
 
-.backWhite {
-  background-color: rgb(255, 255, 255);
-}
-
 .userMiniProfile {
   display: flex;
+  width: auto;
   justify-content: space-between;
   align-items: center;
   position: relative;
@@ -140,4 +133,213 @@ body {
 
 .imgUnderBox {
   margin-left: 10px;
+}
+
+.headerMiddleComposition {
+  position: relative;
+}
+
+.headerMiddleComposition i {
+  position: absolute;
+  margin: 0;
+}
+
+#findglass {
+  color: rgb(0, 0, 0, 0.3);
+  font-size: 13px;
+  right: 120px;
+  top: 5px;
+}
+
+.headertextline {
+  border-radius: 5px;
+  border: 1px solid rgb(0, 0, 0, 0.2);
+  color: rgb(0, 0, 0, 0.2);
+  width: 200px;
+  height: 20px;
+  text-align: center;
+}
+
+.headerwestagram {
+  font-weight: bold;
+  font-family: "Gentium Book Basic", serif;
+  position: relative;
+  top: 0;
+  font-size: 20px;
+  border-left: 1.5px solid black;
+  padding-left: 4px;
+}
+
+#camerafont {
+  position: relative;
+  top: 2px;
+  font-weight: bold;
+  font-size: 20px;
+  padding-right: 3px;
+}
+
+.headerRightComposition img {
+  margin: 10px;
+}
+
+.likeAndComment {
+  display: flex;
+  font-size: 20px;
+  justify-content: space-between;
+  margin: 3px 25px 0 5px;
+}
+
+#iconpadding {
+  padding: 7px 5px;
+}
+
+.likeNum {
+  font-weight: bold;
+}
+
+.userComment {
+  font-weight: bold;
+}
+
+.commentPopup {
+  color: rgb(0, 0, 0, 0.6);
+}
+
+.postDate {
+  font-size: 12px;
+  color: rgb(0, 0, 0, 0.6);
+}
+
+#commentjs {
+  outline: none;
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: none;
+  border-top: 1px solid rgb(0, 0, 0, 0.2);
+  text-decoration-style: none;
+  width: 98%;
+}
+
+.commentAdd {
+  position: relative;
+}
+
+.commentAdd #btn {
+  position: absolute;
+  right: 10px;
+  top: 9px;
+  border: none;
+  background-color: #ffffff;
+  font-weight: bold;
+  color: rgb(138, 164, 241, 0.5);
+}
+
+.rightprofileimg {
+  position: absolute;
+  border-radius: 70%;
+  width: 60px;
+  left: 10px;
+  top: 20px;
+}
+
+.rightprofileid {
+  position: absolute;
+  left: 80px;
+  top: 30px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.rightprofilenickname {
+  position: absolute;
+  left: 80px;
+  bottom: 30px;
+  font-size: 14px;
+  color: rgb(0, 0, 0, 0.4);
+}
+
+.changeid {
+  position: absolute;
+  right: 15px;
+  top: 41px;
+  font-size: 12px;
+  color: rgb(138, 164, 245);
+}
+
+.corporateInformation {
+  font-size: 12px;
+  color: rgb(0, 0, 0, 0.4);
+}
+
+.companyinfo1 {
+  padding-bottom: 40px;
+}
+
+.addfriend {
+  position: absolute;
+  top: 0;
+  left: 7px;
+  font-weight: bold;
+  font-size: 14px;
+  color: rgb(0, 0, 0, 0.4);
+}
+
+.seeall {
+  position: absolute;
+  top: 0;
+  right: 14px;
+  font-size: 12px;
+  color: black;
+}
+
+.wecodefriend {
+  width: 40px;
+  border-radius: 70%;
+}
+
+.recommendation {
+  font-weight: bold;
+  font-size: 14px;
+}
+.storyboxflex {
+  display: flex;
+  flex-direction: column;
+}
+
+.backWhite {
+  background-color: #ffffff;
+}
+
+.pincomment {
+  position: relative;
+  margin: 10px 0 10px 0;
+}
+
+ul {
+  list-style: none;
+}
+
+.rightprofilenickname {
+  position: absolute;
+  left: 80px;
+  top: 53px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#delButton {
+  font-size: 18px;
+  position: absolute;
+  right: 45px;
+  border: none;
+  background-color: #ffffff;
+}
+
+#heartOnOff {
+  font-size: 18px;
+  position: absolute;
+  right: 15px;
+  border: none;
+  background-color: #ffffff;
 }
