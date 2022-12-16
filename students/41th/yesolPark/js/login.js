@@ -19,7 +19,7 @@ function App() {
   });
 
   $('#forgetPassword').addEventListener('click', (e) => {
-    alert('편하게 id와 password를 입력해 보세요!');
+    alert('@ 포함한 id와 5자리 이상 password를 입력해 보세요!');
   });
 }
 
