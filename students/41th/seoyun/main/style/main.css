@@ -1,0 +1,358 @@
+* {
+    box-sizing: border-box;
+  }
+
+.navContainer {
+    height: 80px;
+    border-top: 1.5px solid black;
+    border-bottom: 1px solid #EAEAEA;
+    background-color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    height: 35px;
+}
+
+.fa-instagram {
+    font-size: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.header {
+    font-family: 'Lobster', cursive;
+    font-family: 'Lobster Two', cursive;
+    border-left: 2px solid black;
+    padding-left: 15px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+}
+
+.searchUsers {
+    background-color: #FAFAFA;
+    border: 1px solid #DBDBDB;
+    border-radius: 3px;
+    width: 200px;
+    height: 25px;
+    text-align: center;
+}
+
+.userOptions {
+    display: flex;
+    justify-content: space-evenly;
+    width: 180px;
+}
+
+.fa-compass {
+    font-size: 22px;
+}
+
+.userOptions .fa-heart {
+    color: black;
+    font-size: 22px;
+    margin: 0;
+}
+
+.fa-user {
+    font-size: 22px;
+}
+
+main {
+    background-color: #FAFAFA;
+    display: flex;
+    justify-content: center;
+}
+
+.feedsContainer {
+    width: 470px;
+    max-height: 940px;
+    background-color: white;
+    margin-top: 50px;
+    border: 1px solid #DBDBDB;
+    border-radius: 3px;
+}
+
+.profileBox {
+    width: 470px;
+    height: 53px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile {
+    display: flex;
+}
+
+.profile img {
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    margin: auto 10px auto 15px;
+    border: 1px solid #EBEBEB;
+}
+
+.idBox {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.moreOptions {
+    margin-right: 15px;
+}
+
+.fa-ellipsis {
+    color: #262626;
+}
+
+.feedPic {
+    max-width: 468px;
+    height: 470px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.feedPic img {
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    width: 470px;
+    margin-top: -37%;
+}
+
+.options .fa-heart {
+    font-size: 24px;
+    margin: 13px 0px 0px 13px;
+    color: #ED4956;
+}
+
+.fa-comment{
+    font-size: 24px;
+    margin-left: 13px;
+}
+
+.fa-arrow-up-from-bracket {
+    font-size: 24px;
+    margin-left: 13px;
+}
+
+.fa-bookmark {
+    font-size: 24px;
+    margin: 13px 13px 0px 0px;
+    float: right;
+}
+
+.liked {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.liked img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1px solid #EBEBEB;
+    margin: 10px 5px 10px 13px;
+}
+
+.feedContent {
+    font-size: 14px;
+    display: flex;
+}
+
+.feedContent_MyId {
+    font-weight: bold;
+    margin-left: 13px;
+}
+
+.feedContent_MyWords {
+    margin-left: 5px;
+}
+
+.moreComments {
+    color: #8E8E8E;
+    font-size: 14px;
+    margin: 10px 0px 10px 13px;
+}
+
+.comment {
+    margin: 0px 0px 1px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.commentId {
+    font-weight: bold;
+    margin-left: 13px;
+    font-size: 14px;
+}
+
+.commentContent {
+    margin-left: 7px;
+    font-size: 14px;
+}
+
+.commentLineRight {
+    margin-right: 13px;
+}
+
+.commentLineRight .fa-heart {
+    font-size: 14px;
+    border-color: black;
+    margin-right: 10px;
+}
+
+.postUploadTime {
+    font-size: 10px;
+    color: #8E8E8E;
+    margin: 10px 0px 10px 13px;
+}
+
+.writeComments {
+    border-top: 1px solid #EFEFEF;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#commentInput {
+    border: none;
+    width: 390px;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    font-weight: bold;
+    color: #b4dcff;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.rightContainer {
+    width: 350px;
+    height: 500px;
+    margin-top: 50px;
+    margin-left: 30px;
+    background-color: none;
+}
+
+.myProfileBox {
+    display: flex;
+    align-items: center;
+    height: 66px;
+}
+
+.myProfileBox img {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+}
+
+.myBox {
+    margin-left: 15px;
+}
+
+.myId {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: -1px;
+}
+
+.explanation {
+    font-size: 13px;
+    color: grey;
+    margin-top: -1px;
+}
+
+.storyBox {
+    height: 260px;
+    background-color: white;
+    border: 1px solid #EBEBEB;
+    border-radius: 3px;
+    margin-top: 20px;
+}
+
+.storyTitle {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 15px;
+    font-size: 14px;
+}
+
+.story {
+    color: #999999;
+}
+
+
+.otherUsers img, .youMightKnowThem img {
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    border: 1px solid #EBEBEB;
+    margin-left: 15px;
+}
+
+.user1 {
+    display: flex;
+    align-items: center;
+}
+
+.userInfo {
+    margin-left: 18px;
+}
+
+.userId {
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.user2 {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.storyUploadTime, .commonFriends {
+    font-size: 12px;
+    color: #999999;
+}
+
+.recommendationBox {
+    height: 160px;
+    background-color: white;
+    border: 1px solid #EBEBEB;
+    border-radius: 3px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.recommendationTitle {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 15px;
+    font-size: 14px;
+}
+
+.recommend {
+    color: #999999;
+}
+
+.follow {
+    font-size: 14px;
+    position: absolute;
+    right: 30px;
+    color: #0095F6;
+    font-weight: bold;
+}
