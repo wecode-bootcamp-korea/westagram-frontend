@@ -1,11 +1,6 @@
 const $ = (selector) => document.querySelector(selector);
 
 function App() {
-  // 댓글 하트 클릭시 색 변경
-  // $('comment-like-btn').addEventListener('click',(e)=> {
-
-  // )};
-
   // 댓글 입력시, 버튼 색 변함, 유효성 검사
   $('#commentInputForm').addEventListener('keyup', (e) => {
     if ($('#comment').value !== '') {

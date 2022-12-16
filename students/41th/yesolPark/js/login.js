@@ -18,6 +18,17 @@ function App() {
     }
   });
 
+  // enter 입력하면 입력
+  $('#loginInput').addEventListener('keypress', (e) => {
+    if ($('#loginId').value !== '' && $('#loginPassword').value !== '') {
+      if (e.key !== 'Enter') {
+        return;
+      }
+      alert('로그인했습니다.');
+      window.open('main.html');
+    }
+  });
+
   $('#forgetPassword').addEventListener('click', (e) => {
     alert('@ 포함한 id와 5자리 이상 password를 입력해 보세요!');
   });
