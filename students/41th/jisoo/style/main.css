@@ -26,10 +26,14 @@ p {
   height: 24px;
 }
 
+.link_to_my_profile:hover #nav_my_menu_box {
+  display: block;
+}
+
 #nav_my_menu_box {
   position: relative;
   right: 60px;
-  width: 180px;
+  width: 160px;
   display: none;
   background-color: white;
   border: 1px solid lightgray;
@@ -49,8 +53,8 @@ p {
 .my_menu_line {
   position: relative;
   right: 42px;
-  width: 180px;
-  border: 1px solid lightgray;
+  width: 160px;
+  border: 0.5px solid lightgray;
 }
 
 .logo_section {
@@ -214,7 +218,7 @@ article {
 
 .user_under_name {
   font-size: 12px;
-  color: lightgray;
+  color: rgb(175, 175, 175);
 }
 
 .feeds_right_story_section {
@@ -261,7 +265,7 @@ article {
 }
 
 .feeds_right_story_user_list {
-  height: 190px;
+  height: 180px;
   overflow: scroll;
 }
 
@@ -275,7 +279,7 @@ article {
 
 .user_last_visit {
   font-size: 12px;
-  color: lightgray;
+  color: rgb(175, 175, 175);
 }
 
 .feeds_right_follow_user_info {
@@ -283,6 +287,10 @@ article {
   align-items: center;
   justify-content: space-between;
   padding-left: 10px;
+}
+
+.user_follow_row {
+  padding-top: 5px;
 }
 
 .feeds_right_follow_section {
