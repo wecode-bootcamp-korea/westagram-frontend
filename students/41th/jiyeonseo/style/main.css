@@ -6,6 +6,10 @@ body {
   flex-direction: column;
 }
 
+.hide {
+  display: none;
+}
+
 nav {
   display: flex;
   justify-content: space-around;
@@ -48,8 +52,56 @@ nav {
 }
 
 .nav-right {
+  position: relative;
   display: flex;
   gap: 15px;
+}
+
+.z-index {
+  position: absolute;
+  top: 45px;
+  left: 45px;
+  z-index: 3;
+}
+
+.bubble {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 5px 5px 5px 5px lightgray;
+  width: 200px;
+  height: 140px;
+  padding: 15px;
+  background: rgb(239, 239, 234);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.bubble:after {
+  content: "";
+  position: absolute;
+  border-style: solid;
+  border-width: 0 12px 21px;
+  border-color: rgb(239, 239, 234) transparent;
+  display: block;
+  width: 0;
+  z-index: 1;
+  top: -15px;
+  left: 29px;
+}
+
+.bubble-inside {
+  display: flex;
+  align-items: top;
+  gap: 10px;
+}
+
+.logout {
+  margin: 0;
+  padding-top: 10px;
+  border-top: var(--border-gray);
 }
 
 main {

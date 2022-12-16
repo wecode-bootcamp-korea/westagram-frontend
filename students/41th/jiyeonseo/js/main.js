@@ -4,6 +4,8 @@ const ul = document.querySelector(".comment-lists");
 const heart = document.querySelector(".heart");
 const deleteBtn = document.querySelector(".delete");
 const commentBtn = document.getElementById("commentBtn");
+const myProfile = document.getElementById("myProfile");
+const myProfileBubble = document.getElementById("myProfileBubble");
 
 function addComment(input) {
   const li = document.createElement("li");
@@ -18,7 +20,7 @@ function addComment(input) {
   img.setAttribute("class", "heart");
   span_gray.setAttribute("class", "gray");
   span_delete.setAttribute("class", "delete gray");
-  img.src = "img/heart.png";
+  img.setAttribute("src", "img/heart.png");
 
   span_bold.innerText = "mia_seo";
   span.innerText = input;
@@ -65,7 +67,20 @@ function onKeyUpInput() {
     : (commentBtn.style.color = "#c5e1fb");
 }
 
+let isClicked = false;
+
+function onClickProfile() {
+  if (isClicked === false) {
+    myProfileBubble.classList.remove("hide");
+    isClicked = true;
+  } else {
+    myProfileBubble.classList.add("hide");
+    isClicked = false;
+  }
+}
+
 comment.addEventListener("submit", onSubmitInput);
 commentInput.addEventListener("keyup", onKeyUpInput);
 heart.addEventListener("click", onClickHeart);
 deleteBtn.addEventListener("click", onClickDelete);
+myProfile.addEventListener("click", onClickProfile);
