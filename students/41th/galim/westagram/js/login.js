@@ -11,6 +11,8 @@ function inputValue(){
   // }else{
   //   loginBtn.classList.add("active");
   // }
+
+  // 삼항연산자
   (userId.value.length && userPw.value.length) === 0 ? loginBtn.classList.remove("active") : loginBtn.classList.add("active");
 }
 

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/style/common.css" />
+  <link rel="stylesheet" href="./style/common.css" />
   <link rel="stylesheet" href="./style/main.css" />
   <script src="https://kit.fontawesome.com/504fd98852.js" crossorigin="anonymous"></script>
   
@@ -55,17 +55,19 @@
                 </div>
               </div>
               <p class="main__user--content"><span class="user__id--color">wecode_bootcamp</span>님 외 <span class="user__id--color">10명</span>이 좋아합니다</p>
-              <span class="user__id--color">instagalim</span>
-              <span class="post--content">위코드에서 먹은 돼지불백! 너무 맛있당...
-                <span class="color__grey">더 보기</span>
-                <p class="color__grey">42분 전</p>
-              </span>
+              <div class="main__content--wrap">
+                <span class="user__id--color">instagalim</span>
+                <span class="post--content">위코드에서 먹은 돼지불백! 너무 맛있당...<span class="color__grey">더 보기</span></span>
+                  <p class="color__grey">42분 전</p>
+              </div>
             </div>
-            <div class="main__userpost--comment">
-              <input id="comment" type="text" placeholder="댓글 달기...">
-              <span>
-                <button id="comment__btn" type="submit">게시</button>
-              </span>
+            <div class="comment__list">
+              <div class="main__userpost--comment">
+                <input id="comment" type="text" placeholder="댓글 달기...">
+                <span>
+                  <button id="comment__btn" type="submit">게시</button>
+                </span>
+              </div>
             </div>
           </div>
         </article>
