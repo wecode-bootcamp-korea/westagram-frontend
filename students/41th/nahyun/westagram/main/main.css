@@ -2,12 +2,11 @@ body {
     margin: 0;
     background-color: #fafafa;
 }
+
 .container {
     width: 100%;
-    text-align: center;
 }
 nav {
-    width: 100%;
     margin: 0 auto;
     height: 50px;
     box-sizing: border-box;
@@ -16,10 +15,17 @@ nav {
     align-items: center;
     background-color: #fff;
     margin-bottom: 50px;
+    border-bottom: 1px solid #dbdbdb;
 }
 nav .nav-left {
     display: flex;
     align-items: center;
+}
+nav .nav-left p:last-child {
+    font-size: 1.7rem;
+}
+.fa-instagram {
+    font-size: 1.2rem;
 }
 nav .nav-left .nav-left-bar {
     width: 1px;
@@ -30,8 +36,13 @@ nav .nav-left .nav-left-bar {
 nav .nav-left p {
     font-family: "Carter One", cursive;
 }
+nav .nav-left p a {
+    color: inherit;
+    text-decoration: none;
+}
 nav .nav-center {
-    width: 200px;
+    width: 500px;
+    position: relative;
 }
 nav .nav-center input {
     outline: none;
@@ -39,25 +50,95 @@ nav .nav-center input {
     color: #9d9d9d;
     padding: 5px;
     border-radius: 5px;
+    width: 100%;
+    text-align: center;
 }
-nav .nav-right {
+nav .nav-center .idBox {
+    background: #fff;
+    border-radius: 5px;
+    position: absolute;
+    border: 1px solid #dbdbdb;
+    width: 100%;
+    height: 300px;
+    bottom: -300px;
+    box-sizing: border-box;
+    overflow: scroll;
+    display: none;
+    z-index: 100;
+}
+nav .nav-center .idBox::-webkit-scrollbar {
+    display: none;
+}
+.id-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav .nav-center .idBox .id-top p {
+    margin: 0;
+}
+nav .nav-center .idBox .search {
+    padding-left: 10px;
+    font-size: 0.8rem;
+    margin: 0;
+}
+nav .nav-center .idBox .delete {
+    font-size: 0.6rem;
+    color: rgb(7, 96, 230);
+    cursor: pointer;
+    padding-right: 10px;
+}
+nav .nav-center .idBox .idprofile {
+    list-style: none;
+    padding-left: 10px;
+}
+nav .nav-center .idBox .idprofile li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav .nav-center .idBox .idprofile li div {
+    display: flex;
+}
+.idPic {
+    width: 20px;
+    height: 20px;
+    background: #000;
+    border-radius: 100%;
+    margin-right: 3px;
+}
+
+nav .nav-center .idBox .idprofile .fa-xmark {
+    padding-right: 10px;
+}
+nav .nav-center .idMenu {
+    width: 200px;
+    border: 1px solid #dbdbdb;
+    box-sizing: border-box;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
 }
 nav .nav-right img {
-    width: 17px;
+    width: 20px;
+    margin: 0 2.5px;
 }
 main {
     background-color: #fafafa;
-}
-main .feeds {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    padding-bottom: 50px;
 }
 main .feeds article {
     background-color: #fafafa;
 }
 main .feeds article .article-bg {
     margin: 0 auto;
-    border: 1px solid #e6e6e6;
     width: 687px;
     background-color: #fff;
+    border: 1px solid #dbdbdb;
+    position: relative;
 }
 main .feeds article .article-header {
     width: 95%;
@@ -81,13 +162,8 @@ main .feeds article .article-header .article-profile .article-pic {
     margin: 0;
     margin-right: 10px;
 }
-
 main .feeds article .article-header .article-profile .article-name {
     margin: 0;
-}
-main .feeds article .article-header .article-icon {
-    width: 30px;
-    position: relative;
 }
 main .feeds article .article-header .article-icon i {
     position: absolute;
@@ -95,6 +171,129 @@ main .feeds article .article-header .article-icon i {
     transform: translateY(50%);
     font-size: 1.3rem;
 }
+main .feeds article .hiddenBox {
+    width: 450px;
+    border: 1px solid #dbdbdb;
+    background-color: #fff;
+    overflow: hidden;
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    z-index: 1000;
+    display: flex;
+    flex-flow: column;
+    border-radius: 10px;
+    box-shadow: 2px 1px 17px 2px rgba(0, 0, 0, 0.67);
+    -webkit-box-shadow: 2px 1px 17px 2px rgba(0, 0, 0, 0.67);
+    -moz-box-shadow: 2px 1px 17px 2px rgba(0, 0, 0, 0.67);
+    display: none;
+    transition: 3ms ease-in;
+}
+
+main .feeds article .hiddenBox .hiddenProfile {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+main .feeds article .hiddenBox .hiddenCirclebox {
+    border: 1px solid #ccc;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border-radius: 100%;
+    position: relative;
+    margin-right: 10px;
+}
+main .feeds article .hiddenBox .hiddenCirclebox .hiddenCircle {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #000;
+    border-radius: 100%;
+}
+main .feeds article .hiddenBox .hiddenName p {
+    margin: 0;
+}
+main .feeds article .hiddenBox .hiddenName .mainName {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+main .feeds article .hiddenBox .hiddenName .subName {
+    color: #9d9d9d;
+}
+main .feeds article .hiddenBox .hiddenNums {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+    margin-top: 20px;
+}
+.hiddenPost,
+.hiddenfollower,
+.hiddenfolloing {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+.numberOfPost,
+.numberOfFollower,
+.numberOfFolloing {
+    margin: 0;
+    font-weight: bold;
+}
+.titleOfPost,
+.titleOfFollower,
+.titleOfFolloing {
+    margin: 0;
+}
+.buttonBox {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+    margin-bottom: 30px;
+}
+.messageBtn,
+.folloingBtn {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    margin: 0 5px;
+    font-size: 1.1em;
+}
+.messageBtn {
+    background-color: rgb(54, 165, 244);
+    color: #fff;
+    width: 250px;
+}
+.folloingBtn {
+    width: 200px;
+}
+
+main .feeds article .hiddenBox .hiddenPic {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 160px;
+}
+main .feeds article .hiddenBox .hiddenPic p {
+    width: 140px;
+    background-size: cover;
+}
+main .feeds article .hiddenBox .hiddenPic p:first-of-type {
+    background-image: url(../image/bg1.avif);
+}
+main .feeds article .hiddenBox .hiddenPic p:nth-of-type(2) {
+    background: url(../image/bg2.avif);
+}
+main .feeds article .hiddenBox .hiddenPic p:nth-of-type(3) {
+    background: url(../image/bg3.avif);
+}
+
 .article-icons {
     display: flex;
     justify-content: space-between;
@@ -113,8 +312,7 @@ main .feeds article .article-header .article-icon i {
     margin: 0 5px 0 10px;
     background-color: #000;
 }
-.article-like .article-like-person {
-}
+
 .article-like .article-like-person .person-name {
     font-weight: bold;
 }
@@ -129,19 +327,30 @@ main .feeds article .article-header .article-icon i {
 .article-text p .person-name {
     font-weight: bold;
 }
-.article-text {
-}
 .article-comment {
     margin-left: 10px;
     margin-top: 10px;
     text-align: left;
+    position: relative;
 }
+.fa-trash {
+    position: absolute;
+    right: 10px;
+    opacity: 50%;
+}
+.fa-fish {
+    position: absolute;
+    right: 30px;
+    opacity: 20%;
+}
+
 .article-comment .nickname-bold {
     font-weight: bold;
     margin-right: 5px;
 }
 .article-input {
     width: 100%;
+    position: relative;
 }
 input {
     width: 100%;
@@ -152,4 +361,113 @@ input {
     padding-left: 10px;
     box-sizing: border-box;
     outline: none;
+}
+.btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    line-height: 50%;
+    border: none;
+    color: rgb(157, 222, 244);
+    background-color: inherit;
+}
+.main-right {
+    margin-left: 20px;
+}
+.main-right-person {
+    display: flex;
+    margin: 10px 0;
+}
+.main-right-person-pofile {
+    width: 50px;
+    height: 50px;
+    background-color: #000;
+    border-radius: 100%;
+    margin: 0 10px;
+}
+.main-right-person-name {
+    display: flex;
+    flex-flow: column wrap;
+    font-weight: bold;
+}
+.main-right-name-span {
+    color: #9d9d9d;
+    font-weight: normal;
+}
+
+.main-right-story,
+.main-right-like {
+    border: 1px solid #dbdbdb;
+    padding: 15px;
+    height: 200px;
+    width: 250px;
+    overflow: scroll;
+}
+.main-right-story::-webkit-scrollbar,
+.main-right-like::-webkit-scrollbar {
+    display: none;
+}
+.main-right-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.story {
+    color: #9d9d9d;
+}
+.every {
+    font-weight: bold;
+}
+.main-right-story-profile-div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.main-right-story-profile,
+.main-right-like-profile {
+    width: 30px;
+    height: 30px;
+    background-color: #000;
+    border-radius: 100%;
+    margin: 0;
+    margin-right: 10px;
+}
+.main-right-story-name,
+.like-name-bold {
+    display: flex;
+    flex-flow: column wrap;
+    font-weight: bold;
+}
+.main-right-story-span,
+.main-right-like-span {
+    color: #9d9d9d;
+    font-weight: normal;
+}
+
+.main-right .main-right-like {
+    height: 150px;
+    margin-top: 30px;
+}
+.main-right-like-div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.main-right-like-profile {
+    margin: 0;
+}
+.main-right-like-name {
+    display: flex;
+    flex-flow: row nowrap;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.follow {
+    border: none;
+    background-color: #fafafa;
+    color: rgb(7, 96, 230);
+}
+.heart {
+    color: red;
+    opacity: 100%;
 }
