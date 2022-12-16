@@ -42,7 +42,7 @@ nav {
   font-size: 15px;
   padding: 8px;
   background-image: url("icon.svg");
-  background-size: 20px;
+  background-size: 15px;
   background-repeat: no-repeat;
   background-position: left 10px;
 }
@@ -91,13 +91,16 @@ article {
   flex-direction: column;
   width: 100%;
   margin-top: 30px;
-  margin-bottom: 20px;
 }
 img {
   display: flex;
   width: 470px;
   height: 300px;
 }
+.like{
+  height: 20px;
+  font-size: 24px;
+} 
 
 .commentbox {
   display: flex;
@@ -148,8 +151,9 @@ img {
 }
 .userProfile{
   display: flex;
+  align-items: center;
   height: 47px;
-  padding: 8px 16px 8px 16px;
+  padding: 4px 8px 4px 8px;
 }
 .userProfile img{
   border-radius: 50%;
@@ -159,4 +163,9 @@ img {
 .userProfile span{
   padding: 5px;
   text-align: center;
+}
+.followButton{
+  text-align: center;
+  height: 20px;
+  font-size: 12px;
 }

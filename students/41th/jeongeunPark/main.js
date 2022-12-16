@@ -1,17 +1,39 @@
 const comment = document.querySelector(".comment");
 const btn = document.querySelector(".btn");
+const commentBox = document.querySelector(".allcomment");
 
-function addcomment() {
+function addComment() {
   const add = document.createElement("li");
-  const commentBox = document.querySelector(".allcomment");
 
   if (comment.value) {
-    const html = `<strong><span> username </span></ strong><span> ${comment.value} </span>;`;
-
-    add.insertAdjacentHTML("afterend", html);
+    const userAndComment = `<div>
+                  <strong><span> username </span>
+                  <span></span>
+                  <span></span>
+                  <span> ${comment.value} </span>
+                  </div>`;
 
     commentBox.appendChild(add);
+    add.insertAdjacentHTML("afterend", userAndComment);
   }
 }
 
-btn.addEventListener("click", addcomment);
+btn.addEventListener("click", addComment);
+
+function enterKey(e) {
+  const add = document.createElement("li");
+
+  if (e.key === "Enter" && comment.value) {
+    const userAndComment = `<div>
+                    <strong><span> username </span>
+                    <span></span>
+                    <span></span>
+                    <span> ${comment.value} </span>
+                    </div>`;
+
+    commentBox.appendChild(add);
+    add.insertAdjacentHTML("afterend", userAndComment);
+  }
+}
+
+comment.addEventListener("keydown", enterKey);
