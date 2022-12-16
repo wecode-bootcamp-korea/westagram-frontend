@@ -37,11 +37,16 @@ nav {
   color: black;
 }
 
+.nav-center {
+  position: relative;
+}
+
 .nav-center input {
   height: 24px;
   border: var(--border-gray);
   border-radius: var(--border-radius);
   text-align: center;
+  outline: none;
 }
 
 .nav-center input::placeholder {
@@ -51,13 +56,20 @@ nav {
   background-position: 45px center;
 }
 
+.z-index-input {
+  position: absolute;
+  top: 45px;
+  left: 40px;
+  z-index: 3;
+}
+
 .nav-right {
   position: relative;
   display: flex;
   gap: 15px;
 }
 
-.z-index {
+.z-index-profile {
   position: absolute;
   top: 45px;
   left: 45px;
@@ -238,6 +250,7 @@ main {
   padding: 10px;
   border-radius: var(--border-radius);
   border: var(--border-input);
+  outline: none;
 }
 
 .space {
