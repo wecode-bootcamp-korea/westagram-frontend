@@ -1,6 +1,7 @@
 const commentMaker = document.querySelector(".comment_maker");
 const commentBtn = document.querySelector(".commentBtn");
 const newcomment = document.querySelector(".newComment");
+const user_id = document.getElementById("id_login");
 
 function comment() {
   if (commentMaker.value) {
@@ -15,17 +16,19 @@ function comment() {
 commentMaker.addEventListener("keyup", comment);
 
 function pushComment() {
-  const create_div = document.createElement("p");
-  create_div.innerText = `Chanyoung       ${commentMaker.value}`;
+  const create_div = document.createElement("div");
+  create_div.innerHTML = `<div class= "Newcomment"> <div class= User_id>
+  <span><b>${user_id}</b></span></div>        ${commentMaker.value} </div>`;
   document.querySelector(".middle").appendChild(create_div);
 }
 commentBtn.addEventListener("click", pushComment);
 
-function commentEnter() {
-  if (KeyCode === 13) {
-    createP = document.createElement("p");
-    createP.innerTextd = commentMaker.value;
-    newcomment.appendChild(createP);
+function commentEnter(e) {
+  if (e.KeyCode == 13) {
+    create_div = document.createElement("div");
+    create_div.innerHTML = `<div class= "Newcomment"> <div class= User_id>
+      <span>${user_id}</span></div>       ${commentMaker.value} </div>`;
+    document.querySelector(".middle").appendChild(create_div);
   }
 }
-commentMaker.addEventListener("keyup", commentEnter);
+commentMaker.addEventListener("keypress", commentEnter);
