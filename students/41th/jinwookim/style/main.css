@@ -46,7 +46,7 @@ input{
     height: 25px;
 }
 
-input::placeholder{
+body .main-nav input::placeholder{
     background-image: url();
     text-align: center;
     background-repeat: no-repeat;
@@ -55,19 +55,20 @@ input::placeholder{
 }
 
 .main{
-    height: 90vh;
+    /* height: 90vh; */
     display: flex;
     justify-content: center;
     
 }
 
 .feeds{
-    height: 740px;
+    /* height: 760px; */
     width: 500px;
     border: 1px solid gainsboro;
     border-radius: 3px;
     margin-left: 0px;
     margin-right: 30px;
+    position: relative;
     
 }
 
@@ -283,4 +284,47 @@ article img{
     justify-content: space-between;
 }
 
+.feeds-comment {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
+.comment-input {
+    padding: 20px 0px 10px 10px;
+    width: 498px;
+    border-top: 1px solid gainsboro;
+    border-right: none;
+    border-bottom: none;
+    border-left: none;
+
+    margin-top: 10px;
+    margin-left: -10px;
+    display: flex;
+    align-items: center;
+
+}
+
+.feeds-comment-btn {
+    border: none;
+    background-color:transparent;
+    color: #C4E1FB;
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+}
+
+.btnActive {
+    border: none;
+    background-color:transparent;
+    color: blue;
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+}
+
+.body .main .feeds .feeds-comment input::placeholder {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
