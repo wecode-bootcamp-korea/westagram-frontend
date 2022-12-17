@@ -13,3 +13,6 @@ function loginActive() {
 
 idElement.addEventListener("keyup", loginActive);
 pwElement.addEventListener("keyup", loginActive);
+loginBtn.addEventListener("click", () => {
+  window.location.href = "main.html";
+});

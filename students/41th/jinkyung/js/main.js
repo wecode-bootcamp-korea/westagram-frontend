@@ -1,10 +1,23 @@
+// const object = {
+//   wecode_bootcamp: ["wecode | 위코드" ],
+//   we_r_artist: "zico",
+//   Wecode: "강남구 테헤란로 427, 서울",
+//   xyuxxee: "진갱",
+//   sooyaaa: "지수다!",
+//   jennierubyjane: "J",
+// };
+
 const commentAddBox = document.getElementById("add_comment");
 const addBtn = document.getElementById("add_btn");
 
 const commentBox = document.getElementById("comment_wrap");
 const commentInput = document.getElementById("comment_input");
 
+const userInfoBox = document.getElementById("user_info_drop_box");
+const userBtn = document.getElementsByClassName("icon_3")[0];
+
 function addComment() {
+  if (!commentInput) return; //keyup input값 두번 반복되는 오류때문에 두번째 올라가는 input값(=공백 =false)이면 함수 종료
   const text = commentInput.value; //input값을 text라는 변수에 담음
 
   const heart = document.createElement("span");
@@ -51,7 +64,7 @@ function addActive() {
 }
 
 //엔터키 업되면 댓글 업로드
-commentInput.addEventListener("keypress", (e) => {
+commentInput.addEventListener("keyup", (e) => {
   if (e.key === "Enter") {
     addComment();
   }
@@ -62,4 +75,16 @@ commentInput.addEventListener("keypress", (e) => {
 //버튼 클릭시 댓글 업로드 함수
 addBtn.addEventListener("click", () => {
   addComment();
+});
+
+//버튼 클릭시 유저 드롭박스 보이게하기
+userBtn.addEventListener("click", () => {
+  userInfoBox.classList.toggle("none_view");
+});
+
+const searchInput = document.getElementById("search");
+const dropBoxWrap = document.getElementById("drop_box_wrap");
+
+searchInput.addEventListener("click", () => {
+  dropBoxWrap.classList.toggle("none_view");
 });

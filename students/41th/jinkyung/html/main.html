@@ -15,6 +15,10 @@
       rel="stylesheet"
       href="/westagram-frontend/students/41th/jinkyung/style/main.css"
     />
+    <link
+      rel="stylesheet"
+      href="/westagram-frontend/students/41th/jinkyung/style/style.common.css"
+    />
     <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -32,11 +36,51 @@
         </div>
         <div id="search">
           <input type="text" placeholder="검색" />
+          <div id="drop_box_wrap" class="none_view">
+            <ul id="user_info_wrap">
+              <li>
+                <img
+                  id="user_img"
+                  alt="user_img"
+                  src="/westagram-frontend/students/41th/jinkyung/images/person_img.jpg"
+                />
+                <div id="user_name_wrap">
+                  <div class="name">_yums_s</div>
+                  <div class="name_sub">16분 전</div>
+                </div>
+              </li>
+            </ul>
+          </div>
         </div>
         <div id="info_wrap">
           <div class="icon_1"></div>
           <div class="icon_2"></div>
-          <div class="icon_3"></div>
+          <div class="icon_3">
+            <ul id="user_info_drop_box" class="none_view">
+              <li>
+                <img
+                  src="/westagram-frontend/students/41th/jinkyung/images/user.png"
+                  alt="user_icon"
+                />
+                <div>프로필</div>
+              </li>
+              <li>
+                <img
+                  src="/westagram-frontend/students/41th/jinkyung/images/ribbon.png"
+                  alt="bookmark_icon"
+                />
+                <div>저장됨</div>
+              </li>
+              <li>
+                <img
+                  src="/westagram-frontend/students/41th/jinkyung/images/settings.png"
+                  alt="user_icon"
+                />
+                <div>설정</div>
+              </li>
+              <li>로그아웃</li>
+            </ul>
+          </div>
         </div>
       </div>
     </nav>
@@ -72,12 +116,7 @@
               happy_smile님 외 10명이 좋아합니다
             </div>
           </div>
-          <ul id="comment_wrap">
-            <li>
-              <span class="nickName">smile</span><span>트리가 너무 이뻐요</span>
-            </li>
-            <div id="time_stamp">42분 전</div>
-          </ul>
+          <ul id="comment_wrap"></ul>
           <div id="add_comment">
             <input type="text" placeholder="댓글 달기..." id="comment_input" />
             <button id="add_btn" class="blue_btn blur">게시</button>
@@ -86,60 +125,116 @@
       </div>
 
       <div id="main_right">
-        <div id="wecode_wrap">
-          <div class="wecode_img"></div>
-          <div id="wecode_info_wrap">
-            <div class="wecode_name">wecode_bootcamp</div>
-            <div class="wecode_sub">WeCode | 위코드</div>
-          </div>
-        </div>
+        <ul id="user_info_wrap">
+          <li>
+            <img
+              id="user_img"
+              class="wecode_logo"
+              alt="user_img"
+              src="/westagram-frontend/students/41th/jinkyung/images/wecode_logo.png"
+            />
+            <div id="user_name_wrap" class="wecode_logo">
+              <div>wecode_bootcamp</div>
+              <div class="name_sub">WeCode | 위코드</div>
+            </div>
+          </li>
+        </ul>
         <div id="side_box">
           <div id="side_info_wrap">
             <div class="title">스토리</div>
             <div>모두 보기</div>
           </div>
-          <div id="side_user_wrap">
-            <div class="side_user_img"></div>
-            <div id="side_user_info">
-              <div class="side_user_name">_yums_s</div>
-              <div class="side_sub">16분 전</div>
-            </div>
-          </div>
-          <div id="side_user_wrap">
-            <div class="side_user_img"></div>
-            <div id="side_user_info">
-              <div class="side_user_name">_yums_s</div>
-              <div class="side_sub">16분 전</div>
-            </div>
-          </div>
-          <div id="side_user_wrap">
-            <div class="side_user_img"></div>
-            <div id="side_user_info">
-              <div class="side_user_name">_yums_s</div>
-              <div class="side_sub">16분 전</div>
-            </div>
-          </div>
-          <div id="side_user_wrap">
-            <div class="side_user_img"></div>
-            <div id="side_user_info">
-              <div class="side_user_name">_yums_s</div>
-              <div class="side_sub">16분 전</div>
-            </div>
-          </div>
+          <ul id="user_info_wrap">
+            <li>
+              <img
+                id="user_img"
+                class="story"
+                alt="user_img"
+                src="/westagram-frontend/students/41th/jinkyung/images/person_img.jpg"
+              />
+              <div id="user_name_wrap">
+                <div>_yums_s</div>
+                <div class="name_sub">16분 전</div>
+              </div>
+            </li>
+          </ul>
+          <ul id="user_info_wrap">
+            <li>
+              <img
+                id="user_img"
+                class="story"
+                alt="user_img"
+                src="/westagram-frontend/students/41th/jinkyung/images/jisoo.jpeg"
+              />
+              <div id="user_name_wrap">
+                <div>_sooyaa__</div>
+                <div class="name_sub">20분 전</div>
+              </div>
+            </li>
+          </ul>
+          <ul id="user_info_wrap">
+            <li>
+              <img
+                id="user_img"
+                class="story"
+                alt="user_img"
+                src="/westagram-frontend/students/41th/jinkyung/images/zico.jpeg"
+              />
+              <div id="user_name_wrap">
+                <div>woozico0914</div>
+                <div class="name_sub">22분 전</div>
+              </div>
+            </li>
+          </ul>
+          <ul id="user_info_wrap">
+            <li>
+              <img
+                id="user_img"
+                class="story"
+                alt="user_img"
+                src="/westagram-frontend/students/41th/jinkyung/images/jisoo.jpeg"
+              />
+              <div id="user_name_wrap">
+                <div>slkdjfo</div>
+                <div class="name_sub">16분 전</div>
+              </div>
+            </li>
+          </ul>
+          <ul id="user_info_wrap">
+            <li>
+              <img
+                id="user_img"
+                class="story"
+                alt="user_img"
+                src="/westagram-frontend/students/41th/jinkyung/images/person_img.jpg"
+              />
+              <div id="user_name_wrap">
+                <div>_yums_s</div>
+                <div class="name_sub">16분 전</div>
+              </div>
+            </li>
+          </ul>
         </div>
         <div id="side_box" class="side_small">
           <div id="side_info_wrap">
             <div class="title">회원님을 위한 추천</div>
             <div>모두 보기</div>
           </div>
-          <div id="side_user_wrap">
-            <div class="side_user_img"></div>
-            <div id="side_user_info">
-              <div class="side_user_name">_yums_s</div>
-              <div class="side_sub">16분 전</div>
-            </div>
+          <ul id="user_info_wrap">
+            <li>
+              <img
+                id="user_img"
+                class="story_img"
+                alt="user_img"
+                src="/westagram-frontend/students/41th/jinkyung/images/person_img.jpg"
+              />
+              <div id="user_name_wrap">
+                <div>_yums_s</div>
+                <div class="name_sub">16분 전</div>
+              </div>
+            </li>
             <button id="follow_btn" class="blue_btn right">팔로우</button>
-          </div>
+          </ul>
         </div>
       </div>
     </main>

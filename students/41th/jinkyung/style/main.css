@@ -1,23 +1,6 @@
-/* -----btn----- */
-.blue_btn {
-  border: 0px solid black;
-  background-color: #fff;
-  cursor: pointer;
-  color: rgb(0, 149, 246);
-}
-.blue_btn.blur {
-  color: rgba(0, 149, 246, 0.3);
-}
-
-.blue_btn.right {
-  position: absolute;
-  right: 10px;
-  top: 15px;
-}
-
 /* -----nav----- */
 nav {
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid var(--border-color);
   height: 70px;
   background-color: #fff;
 }
@@ -30,24 +13,31 @@ nav #nav_wrap {
   justify-content: space-between;
 }
 
+#search {
+  position: relative;
+}
+
 #search > input {
-  border: 1px solid rgb(219, 219, 219);
+  border: 1px solid var(--border-color);
   border-radius: 3px;
-  background-color: rgb(250, 250, 250);
+  background-color: var(--background-color);
   text-align: center;
   width: 200px;
 }
+
 #logo_wrap,
 #search,
 #info_wrap {
   display: flex;
   padding: 20px;
 }
+
 #logo_wrap #logo_1_wrap {
   border-right: 1px solid black;
   margin-right: 10px;
   padding-right: 10px;
 }
+
 #logo_wrap .logo_1 {
   width: 30px;
   height: 30px;
@@ -72,21 +62,77 @@ nav #nav_wrap {
 #info_wrap > div:last-child {
   margin-right: 0px;
 }
+
 #info_wrap .icon_1 {
   background-image: url(https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png);
 }
+
 #info_wrap .icon_2 {
   background-image: url(https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png);
 }
+
 #info_wrap .icon_3 {
   background-image: url(https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png);
 }
 
+/* -----nav search dropbox----- */
+#drop_box_wrap {
+  border: 1px solid var(--border-color);
+  background-color: #fff;
+  width: 250px;
+  box-sizing: border-box;
+  padding: 15px 5px;
+  position: absolute;
+  top: 55px;
+  left: -3px;
+  z-index: 1;
+}
+
+#drop_box_wrap:hover {
+  background-color: var(--background-color);
+}
+
+/* -----nav user dropbox----- */
+#user_info_drop_box {
+  background-color: #fff;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  width: 200px;
+  position: absolute;
+  top: 80px;
+  right: 15%;
+  z-index: 1;
+  border-radius: 10px;
+}
+#user_info_drop_box.none_view,
+#drop_box_wrap.none_view {
+  display: none;
+}
+
+#user_info_drop_box > li {
+  height: 50px;
+  display: flex;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+
+#user_info_drop_box > li > img {
+  padding: 15px;
+}
+
+#user_info_drop_box > li > div {
+  padding: 18px 0px;
+}
+
+#user_info_drop_box > li:last-child {
+  border-top: 1px solid var(--border-color);
+  padding: 18px;
+}
 /* -----main----- */
 main {
-  background-color: rgb(250, 250, 250);
+  background-color: var(--background-color);
   display: flex;
-  position: relative;
+  justify-self: end;
+  height: 100vw;
 }
 
 /* -----feeds----- */
@@ -101,7 +147,7 @@ main #feeds {
 /* -----article----- */
 main #article {
   background-color: #fff;
-  border: 1px solid rgb(235, 235, 235);
+  border: 1px solid var(--border-color);
 }
 /* -----user----- */
 main #user_wrap {
@@ -213,7 +259,7 @@ main .react_user_count {
 /* ------comment----- */
 main #comment_wrap {
   padding: 10px;
-  border-bottom: 1px solid rgb(235, 235, 235);
+  border-bottom: 1px solid var(--border-color);
 }
 
 main #comment_wrap #time_stamp {
@@ -272,45 +318,33 @@ main #add_comment > input {
   right: 17%;
 }
 
-/* -----wecode----- */
-#main_right #wecode_wrap {
-  height: 60px;
-  display: flex;
-}
-
-#main_right #wecode_wrap .wecode_img {
-  background-image: url(/westagram-frontend/students/41th/jinkyung/images/wecode_logo.png);
-  background-size: cover;
+/* -----wecode logo----- */
+#user_img.wecode_logo {
   width: 50px;
   height: 50px;
-  border-radius: 50%;
-  margin-right: 5px;
 }
 
-#main_right #wecode_info_wrap {
-  padding: 10px;
-}
-
-#main_right #wecode_info_wrap .wecode_name {
-  font-size: 15px;
-  font-weight: bold;
-}
-
-#main_right #wecode_info_wrap .wecode_sub {
-  font-size: 15px;
-  color: rgb(161, 161, 161);
+#user_name_wrap.wecode_logo {
+  padding: 10px 0px;
 }
 
 /* -----side box----- */
 #side_box {
   aspect-ratio: 1/0.8;
-  border: 1px solid rgb(235, 235, 235);
+  border: 1px solid var(--border-color);
   margin-bottom: 10px;
   overflow: scroll;
 }
 
 #side_box.side_small {
   aspect-ratio: 1/0.6;
+}
+
+#user_img.story {
+  width: 32px;
+  height: 32px;
+  border: 2px solid var(--story-border-color);
+  padding: 2px;
 }
 
 #side_box #side_info_wrap {
@@ -322,28 +356,5 @@ main #add_comment > input {
   font-size: 15px;
 }
 #side_box #side_info_wrap .title {
-  color: rgb(161, 161, 161);
-}
-
-#side_box #side_user_wrap {
-  box-sizing: border-box;
-  padding: 5px 10px;
-  display: flex;
-  font-size: 15px;
-  font-weight: bold;
-  position: relative;
-}
-
-#side_box .side_user_img {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-image: url(/westagram-frontend/students/41th/jinkyung/images/person_img.jpg);
-  background-size: cover;
-  margin-right: 10px;
-}
-
-#side_box #side_user_info .side_sub {
-  font-weight: normal;
-  color: rgb(161, 161, 161);
+  color: var(--font-color-gray);
 }
