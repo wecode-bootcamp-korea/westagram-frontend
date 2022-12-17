@@ -20,13 +20,13 @@
       <nav id="nav">
         <div class="inner-nav">
           <h1 class="tit_logo">
-            <i class="fa-brands fa-instagram"></i>
+            <i class="fa fa-brands fa-instagram"></i>
             <span class="ver-line"></span>
             <span class="title">westagram</span>
           </h1>
           <div class="box-search">
             <input type="text" placeholder="검색" />
-            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa fa-solid fa-magnifying-glass"></i>
           </div>
           <div class="box-util">
             <a href="#none" class="link-explore">
@@ -63,7 +63,7 @@
               </span>
             </div>
             <button class="btn-more">
-              <i class="fa-solid fa-ellipsis"></i>
+              <i class="fa fa-solid fa-ellipsis"></i>
             </button>
           </div>
           <div class="wrap-img">
@@ -74,18 +74,18 @@
               <div class="util-left">
                 <button class="btn-like">
                   <!-- fa-light >> fa-solid -->
-                  <i class="fa-regular fa-heart"></i>
-                  <i class="fa-solid fa-heart"></i>
+                  <i class="fa fa-regular fa-heart"></i>
+                  <i class="fa fa-solid fa-heart"></i>
                 </button>
                 <button class="btn-dm">
-                  <i class="fa-light fa-comment"></i>
+                  <i class="fa fa-light fa-comment"></i>
                 </button>
                 <button class="btn-share">
-                  <i class="fa-duotone fa-up-from-bracket"></i>
+                  <i class="fa fa-duotone fa-up-from-bracket"></i>
                 </button>
               </div>
               <button class="btn-mark">
-                <i class="fa-regular fa-bookmark"></i>
+                <i class="fa fa-regular fa-bookmark"></i>
               </button>
             </div>
             <div class="box-cmt">
@@ -100,15 +100,35 @@
               </div>
               <ul id="listCmt" class="list-cmt">
                 <li>
-                  <span class="cmt-user">canon_mj</span>
-                  <span class="cmt-cont"
-                    >위워크에서 진행한 베이킹 클래스 입니다 위워크에서 진행한
-                    베이킹 클래스 입니다..</span
-                  >
+                  <span class="wrap-cmt">
+                    <span class="cmt-user">canon_mj</span>
+                    <span class="cmt-cont"
+                      >위워크에서 진행한 베이킹 클래스 입니다 위워크에서 진행한
+                      베이킹 클래스 입니다..</span
+                    >
+                  </span>
+                  <span class="wrap-btn">
+                    <button id="btnRemoveCmt" class="btn-remove">
+                      <i class="fa fa-thin fa-xmark"></i>
+                    </button>
+                    <button class="btn-like">
+                      <i class="fa fa-regular fa-heart"></i>
+                    </button>
+                  </span>
                 </li>
                 <li>
-                  <span class="cmt-user">neceosecius</span>
-                  <span class="cmt-cont">거봐 좋았잖아~~~~~🙆‍♀️</span>
+                  <span class="wrap-cmt">
+                    <span class="cmt-user">neceosecius</span>
+                    <span class="cmt-cont">거봐 좋았잖아~~~~~🙆‍♀️</span>
+                  </span>
+                  <span class="wrap-btn">
+                    <button id="btnRemoveCmt" class="btn-remove">
+                      <i class="fa fa-thin fa-xmark"></i>
+                    </button>
+                    <button class="btn-like">
+                      <i class="fa fa-regular fa-heart"></i>
+                    </button>
+                  </span>
                 </li>
               </ul>
               <span class="info-time">42분 전</span>
@@ -121,7 +141,9 @@
                 class="inp-cmt"
                 id="inpCmt"
               />
-              <button id="btnSubmitCmt" class="btn-follow">게시</button>
+              <button id="btnSubmitCmt" class="btn-submit" disabled="">
+                게시
+              </button>
             </div>
           </div>
         </div>

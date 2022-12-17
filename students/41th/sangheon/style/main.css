@@ -192,11 +192,25 @@
   padding-top: 10px;
   font-size: 14px;
 }
+.box-cmt .list-cmt li {
+  display: flex;
+  justify-content: space-between;
+}
 .box-cmt .list-cmt li + li {
   margin-top: 4px;
 }
+.box-cmt .list-cmt .wrap-cmt {
+  display: flex;
+}
 .box-cmt .list-cmt .cmt-user {
   font-weight: bold;
+}
+.box-cmt .list-cmt .cmt-cont {
+  overflow: hidden;
+  width: 400px;
+  margin-left: 4px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .box-cmt .info-time {
   display: block;
@@ -216,7 +230,10 @@
   border: none;
   outline: none;
 }
-.box-inp-cmt .btn-follow {
+.box-inp-cmt .btn-submit {
   width: 30px;
   color: #0095f6;
+}
+.box-inp-cmt .btn-submit:disabled {
+  opacity: 0.5;
 }
