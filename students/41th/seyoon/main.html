@@ -11,12 +11,16 @@
       href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
   </head>
   <body>
     <nav>
       <div class="left">
         <img
-          class="icon-logo height-20px"
+          class="icon-logo height-20px nav-icon"
           src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/logo.png"
           alt=""
         />
@@ -26,18 +30,19 @@
         <input class="search" type="text" />
       </div>
       <div class="right">
+        <i class="bi bi-brightness-high-fill" id="toggleDark"></i>
         <img
-          class="icon-logo height-20px"
+          class="icon-logo height-20px nav-icon"
           src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png"
           alt=""
         />
         <img
-          class="icon-logo height-20px"
+          class="icon-logo height-20px nav-icon"
           src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"
           alt=""
         />
         <img
-          class="icon-logo height-20px"
+          class="icon-logo height-20px nav-icon"
           src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png"
           alt=""
         />
@@ -61,19 +66,101 @@
       <div class="main-right-wrap">
         <div class="main-right">
           <div class="profile-wrap">
-            <div class="profile-img">
-              <img
-                src="https://images.unsplash.com/photo-1670948516733-0220701ea0de?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=772&q=80"
-                alt=""
-              />
+            <div class="profile-box">
+              <img id="profile-img" />
             </div>
             <div class="name-wrap">
               <div class="nickname font-size-18">seyoonleee</div>
-              <div class="name font-size-18">이세윤</div>
+              <div class="name font-size-18 aacy">이세윤</div>
             </div>
           </div>
           <div class="container-wrap">
-            <div class="story-container">스토리</div>
+            <div class="story-container">
+              <div>
+                <span>스토리</span>
+                <span>모두 보기</span>
+              </div>
+              <!-- 스토리 리스트 -->
+              <div class="story-list scroll-hide">
+                <div>
+                  <div>사진</div>
+                  <div>
+                    <div>닉네임</div>
+                    <div>15분 전</div>
+                  </div>
+                </div>
+                <div>
+                  <div>사진</div>
+                  <div>
+                    <div>닉네임</div>
+                    <div>15분 전</div>
+                  </div>
+                </div>
+                <div>
+                  <div>사진</div>
+                  <div>
+                    <div>닉네임</div>
+                    <div>15분 전</div>
+                  </div>
+                </div>
+                <div>
+                  <div>사진</div>
+                  <div>
+                    <div>닉네임</div>
+                    <div>15분 전</div>
+                  </div>
+                </div>
+                <div>
+                  <div>사진</div>
+                  <div>
+                    <div>닉네임</div>
+                    <div>15분 전</div>
+                  </div>
+                </div>
+                <div>
+                  <div>사진</div>
+                  <div>
+                    <div>닉네임</div>
+                    <div>15분 전</div>
+                  </div>
+                </div>
+                <div>
+                  <div>사진</div>
+                  <div>
+                    <div>닉네임</div>
+                    <div>15분 전</div>
+                  </div>
+                </div>
+                <div>
+                  <div>사진</div>
+                  <div>
+                    <div>닉네임</div>
+                    <div>15분 전</div>
+                  </div>
+                </div>
+                <div>
+                  <div>사진</div>
+                  <div>
+                    <div>닉네임</div>
+                    <div>15분 전</div>
+                  </div>
+                </div>
+                <div>
+                  <div>사진</div>
+                  <div>
+                    <div>닉네임</div>
+                    <div>15분 전</div>
+                  </div>
+                </div>
+                <div>
+                  <div>사진</div>
+                  <div>
+                    <div>닉네임</div>
+                    <div>15분 전</div>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="recommended-container">recommended-wrap</div>
           </div>
           <footer class="footer-wrap">
@@ -83,5 +170,7 @@
         </div>
       </div>
     </main>
+    <script defer src="js/darkmode.js"></script>
+    <script defer src="js/main.js"></script>
   </body>
 </html>
