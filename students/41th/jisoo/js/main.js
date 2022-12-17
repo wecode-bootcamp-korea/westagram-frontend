@@ -1,6 +1,7 @@
 const commentInput = document.querySelector(".comment_input");
 const commentSection = document.getElementById("feeds_comment_section");
 const registerBtn = document.querySelector(".comment_btn_register");
+const searchInput = document.querySelector(".search_input");
 
 const disabledBtn = () => {
   commentInput.value.length >= 1
@@ -10,12 +11,12 @@ const disabledBtn = () => {
 
 const onClickCommentBtn = () => {
   const commentValue = document.createElement("p");
+  commentValue.innerHTML = `<span class = user_name>love_penguin</span> ${commentInput.value}`;
   commentValue.className = "comment";
-  commentValue.innerHTML = commentInput.value;
-  commentSection.appendChild(commentValue);
-  commentInput.value = null;
+  commentSection.append(commentValue);
+
+  commentInput.value = "";
 };
 
 commentInput.addEventListener("keyup", disabledBtn);
 registerBtn.addEventListener("click", onClickCommentBtn);
-myProfile.addEventListener("click", visualMyMenu);
