@@ -23,3 +23,20 @@ storyList.addEventListener("mouseover", () => {
 storyList.addEventListener("mouseout", () => {
   storyList.classList.add("scroll-hide");
 });
+
+const recommended = document.querySelector(".recommended-list");
+
+// recommended.addEventListener("mouseover", () => {
+//   console.log(recommended.classList.remove("scroll-hide"));
+// });
+
+// recommended.addEventListener("mouseout", () => {
+//   recommended.classList.add("scroll-hide");
+// });
+
+// const footerList = document.querySelector("ul li:not(:first-of-type)");
+// footerList.style.backgroundColor = "red";
+
+// ul li:not(:first-of-type) {
+//   color: red;
+// }

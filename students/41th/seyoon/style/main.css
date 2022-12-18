@@ -21,7 +21,7 @@ nav {
   padding: 13px;
   /* margin-bottom: 35px; */
   border-bottom: 0.5px solid #dbdbdb;
-  /* z-index: 1; */
+  z-index: 1;
 }
 
 nav .left {
@@ -156,7 +156,7 @@ article {
 }
 
 footer {
-  border: 0.1px solid black;
+  /* border: 0.1px solid black; */
 }
 
 .container-wrap {
@@ -193,6 +193,8 @@ footer {
 
 .recommended-list {
   margin-top: 10px;
+  overflow: auto;
+  height: calc(100% - 29.5px);
 }
 
 .scroll-hide {
@@ -237,6 +239,7 @@ footer {
   margin-bottom: 10px;
   transition: all 0.3s ease;
   /* border: 0.1px solid black; */
+  width: 226px;
 }
 
 .new-story-img-box {
@@ -249,6 +252,18 @@ footer {
   background: radial-gradient(rgba(0, 0, 0, 0.15) 60%, transparent 0),
     radial-gradient(white 62%, transparent 0),
     linear-gradient(to top right, orange, deeppink);
+}
+
+.new-recommended-img-box {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  /* border: 2.5px solid #dbdbdb; */
+  margin-right: 12px;
+  /* background: radial-gradient(rgba(0, 0, 0, 0.15) 60%, transparent 0),
+    radial-gradient(white 62%, transparent 0),
+    linear-gradient(to top right, orange, deeppink); */
 }
 
 .nickname-time {
@@ -272,14 +287,37 @@ footer {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  /* default */
   clip-path: circle(42%);
   /* background: radial-gradient(rgba(0, 0, 0, 0.15) 60%, transparent 0),
     radial-gradient(white 65%, transparent 0),
     linear-gradient(to top right, orange, deeppink); */
 }
 
+.txt-line:hover {
+  overflow-x: hidden;
+}
+
 .new-story-list-wrap:hover {
   transform: scale(1.1);
   transform-origin: 0 0;
   /* background-color: black; */
+}
+
+footer ul {
+  display: flex;
+  list-style-type: none;
+  flex-wrap: wrap;
+  padding: 0px;
+  margin-top: 0px;
+}
+
+a {
+  text-decoration-line: none;
+  color: rgb(168, 168, 168);
+}
+
+footer {
+  color: rgb(168, 168, 168);
+  margin-bottom: 18px;
 }
