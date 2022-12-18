@@ -1,23 +1,87 @@
-// 댓글 input 창에 엔터치거나 "게시" 누르면 댓글 추가되도록
-// createElement로 요소 생성해서, input에 입력한 값이 추가 되어야합니다.
+const input = document.querySelector(".comment_input");
+const btn = document.querySelector(".comment_btn");
 
-// const 댓글 (keyup)
-const commentEenter = document.querySelector(".do_comment");
-// const 댓글 (click)
-// const comment_click = document.querySelector(".post");
+function checkInput() {
+  if (input.value.length === 0) {
+    alert("댓글을 입력하세요");
+  } else {
+    addElement(input.value);
+    enterInput(input.value);
+  }
+}
 
-const click = document.querySelector(".post");
-click.onclick = function () {
-  console.log("heii");
-};
-//
-// function addElement() {
-//   const newDiv = document.createElement(".comment_wrapper");
-//
-//   const newContent = document.createTextNode(".comment_box");
-//
-//   newDiv.appendChild(newContent);
-//
-//   const currentDiv = document.querySelector(".comment_wrapper");
-//   document.body.insertBefore(newDiv, currentDiv);
-// };
+function addElement(value) {
+  const addComment = document.getElementById("commentLists");
+  const addInput = document.createElement("li");
+  addInput.className = "comment";
+  // console.log(addInput);
+
+  const userId = document.createElement("span");
+  userId.innerText = "dagyeong";
+  userId.className = "comment";
+  // console.log(userId);
+
+  const commentContent = document.createElement("span");
+  commentContent.innerText = value;
+  // console.log(commentContent);
+
+  const deleteBtn = document.createElement("span");
+  deleteBtn.innerText = "x";
+  deleteBtn.classList.add("delete");
+  // console.log(deleteBtn);
+
+  addInput.appendChild(userId);
+  addInput.appendChild(commentContent);
+  addInput.appendChild(deleteBtn);
+
+  addComment.appendChild(addInput);
+
+  input.value = "";
+}
+
+function enterInput(value) {
+  if (value.key === "Enter" && value.isComposing === false) {
+    doSearch(input.value);
+  } else return 0;
+}
+
+function doSearch(value) {
+  const addComment = document.getElementById("commentLists");
+  const addInput = document.createElement("li");
+  addInput.className = "comment";
+  console.log(addInput);
+
+  const userId = document.createElement("span");
+  userId.innerText = "dagyeong";
+  // userId.className = "comment";
+  console.log(userId);
+
+  const commentContent = document.createElement("span");
+  commentContent.innerText = value;
+  console.log(commentContent);
+
+  const deleteBtn = document.createElement("span");
+  deleteBtn.innerText = "x";
+  // deleteBtn.classList.add("delete");
+  console.log(deleteBtn);
+
+  addInput.appendChild(userId);
+  addInput.appendChild(commentContent);
+  addInput.appendChild(deleteBtn);
+
+  addComment.appendChild(addInput);
+}
+
+// function makeDelete(addComment) {
+//   const deleteBtn = addComment.querySelector(".delete");
+//   deleteBtn.addEventListener("click", () => {
+
+//   })
+// }
+
+function init() {
+  btn.addEventListener("click", checkInput);
+  input.addEventListener("keydown", enterInput);
+}
+
+init();

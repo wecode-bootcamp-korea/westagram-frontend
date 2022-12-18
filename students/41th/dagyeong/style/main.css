@@ -105,22 +105,36 @@ article {
   margin-left: 5px;
 }
 
+#commentLists {
+  list-style: none;
+  padding: 0;
+}
+
+/* .comment {
+  flex-grow: 1;
+} */
 .comment span:nth-child(1) {
   font-weight: bold;
   margin-left: 5px;
+}
+
+.comment span:nth-child(2) {
+  margin-left: -5px;
+}
+
+.comment {
+  display: flex;
+  justify-content: space-between;
+}
+
+.delete {
+  margin-left: -5px;
 }
 
 .comment_icon {
   width: 10px;
   height: 10px;
   margin-left: 185px;
-}
-
-.comment_box {
-  border: none;
-  border-top: 1px solid grey;
-  width: 470px;
-  padding: 0;
 }
 
 .do_comment > input {

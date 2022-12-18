@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="/style/main.css" />
+    <link rel="stylesheet" href="/students/41th/dagyeong/style/main.css" />
   </head>
   <body>
     <nav class="navbar">
@@ -26,34 +26,43 @@
           <div class="feedTop">
             <img src="./images/myProfile.jpeg" class="feedprofile_img" />
             <span class="feeds_nickName">hihello</span>
-            <img src="/images/option.png" class="feedTop_option" />
+            <img
+              src="/students/41th/dagyeong/images/option.png"
+              class="feedTop_option"
+            />
           </div>
           <img src="./images/pic1.jpeg" class="feeds_img" />
           <div class="article_icons">
-            <img src="/images/heart.png" />
-            <img src="/images/chat.png" />
-            <img src="/images/send.png" />
-            <img src="/images/bookmark.png" />
+            <img src="/students/41th/dagyeong/images/heart.png" />
+            <img src="/students/41th/dagyeong/images/chat.png" />
+            <img src="/students/41th/dagyeong/images/send.png" />
+            <img src="/students/41th/dagyeong/images/bookmark.png" />
           </div>
           <p class="like">좋아요 3270개</p>
-          <div class="comment_wrapper">
-            <div class="comment">
+          <ul id="commentLists">
+            <li class="comment">
               <span>nana123</span>
               <span>위워크에서 진행한 필름카메라 클래스...</span>
-            </div>
-            <div class="comment">
+              <!-- <img src="./images/heart.png" class="comment_icon" /> -->
+              <span class="delete">x</span>
+            </li>
+            <li class="comment">
               <span>spam789</span>
               <span>나도 필름카메라 가지고 싶다!!</span>
-              <img src="./images/heart.png" class="comment_icon" />
-            </div>
-          </div>
-
+              <span class="delete">x</span>
+              <!-- <img src="./images/heart.png" class="comment_icon" /> -->
+            </li>
+          </ul>
           <p class="like">35분전</p>
           <hr />
           <!-- 댓글 -->
           <div class="do_comment">
-            <input type="text" placeholder="댓글달기..." class="comment_box" />
-            <button onclick="post()">게시</button>
+            <input
+              type="text"
+              placeholder="댓글달기..."
+              class="comment_input"
+            />
+            <button class="comment_btn" id="post">게시</button>
           </div>
         </article>
         <!-- 메인 오른쪽 페이지 -->
@@ -133,5 +142,6 @@
         </div>
       </div>
     </main>
+    <script src="/students/41th/dagyeong/js/main.js"></script>
   </body>
 </html>

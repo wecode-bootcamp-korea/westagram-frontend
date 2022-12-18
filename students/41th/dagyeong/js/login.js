@@ -1,26 +1,58 @@
-// id, pw 에 각각 한 글자 이상 써야 버튼이 활성화 되도록 해주세요. 원래 연한 파란색이었다가 -> 활성화 되면 파란색으로!
+const id = document.querySelector(".login_id");
+const pw = document.querySelector(".login_pw");
+const btn = document.querySelector(".login_btn");
+const box = document.querySelector(".login_box");
 
-const loginId = document.querySelector(".login_id");
-const loginPw = document.querySelector(".login_pw");
-const loginBtn = document.getElementById("#login_btn");
-// const input = document.querySelector(".login_btn");
+function input() {
+  const idValue = id.value;
+  const pwValue = pw.value;
 
-function handleBtn() {
-  if (loginId.vlaue && loginPw.vlaue) {
-    loginBtn.disabled = false;
-    // loginBtn.style.backgroundColor = "red";
-    console.log("hi");
-  } else {
-    loginBtn.disabled = true;
+  const isValidId = checkId(idValue);
+  const isValidPw = checkPw(pwValue);
+  const isAllValid = isValidId && isValidPw;
+
+  handleBtn(isAllValid);
+
+  function checkId(values) {
+    const value = id.value;
+    console.log(value);
+    if (value.includes("@") && value.length > 5) {
+      return true;
+    } else {
+      return false;
+    }
   }
 }
 
-handleBtn();
+function checkPw(values) {
+  const value = pw.value;
+  if (value.length > 0) {
+    return true;
+  } else {
+    return false;
+  }
+}
 
-// const hadleBtn = () => {
-//   const input = document.querySelector(".loginBtn");
-//   input.onclick = handle;
-// };
-// function helllo() {
-//   alert(안녕하세요);
-// }
+function handleBtn(isAllValid) {
+  if (isAllValid) {
+    btn.disabled = false;
+    btn.style.backgroundColor = "blue";
+    btn.style.opacity = 1;
+    btn.style.cursor = "pointer";
+  } else {
+    btn.disabled = true;
+  }
+}
+
+function success() {
+  alert("환영합니다.");
+  location.href = "http://127.0.0.1:5500/students/41th/dagyeong/main.html";
+}
+
+function init() {
+  btn.addEventListener("click", success);
+  box.addEventListener("keydown", input);
+  box.addEventListener("input", input);
+}
+
+init();
