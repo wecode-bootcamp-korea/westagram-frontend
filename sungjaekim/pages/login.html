@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../images/instagram.png">
+    <!-- Login JS 연결 -->
+    <script src="../js/login.js" defer></script>
+    <title>
+      Westgram-login
+    </title>
+
+    <!-- GoolgleFont - Instagram체 적용 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jua&family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS 연결 -->
+    <link rel="stylesheet" href="../styles/login.css" />
+  </head>
+  <body>
+    <div id="loginContainerBox">
+      <h1 id="title">
+        Westagram
+      </h1>
+       <!-- lD,PW box -->
+       <div class="inputWrap">
+         <input id="loginText" type="text" placeholder="Phone Number, username, or email "/>
+         <input id="pwText" type="password" placeholder="Password"/>
+       <!-- login button -->
+        <a href="./main.html">
+         <button id="loginBtn">
+             Log in
+         </button>
+        </a>
+      </div>
+      <div class="lineWrap">
+        <div id="line"></div><span id="lineLetter">OR</span><div id="line"></div>
+      </div>
+
+      <div>
+        <div class="aWrap">
+          <p>
+            <img src="../images/facebook.png" alt="facebook-logo"/>
+            <a id="a1" href="https://www.facebook.com/login.php">Log in With Facebook</a>
+          </p>
+        </div>
+        <p>
+          <a id="a2" href="">Forgot password?</a>
+        </p>
+      </div>
+    </div>
+    
+      <!-- P.S. -->
+    </div>
+    <div id="loginContainerBox-2">
+      <div id="icb2">
+        <p>Don`t have an account?&nbsp;&nbsp;<a id="a3" href="https://www.instagram.com/accounts/emailsignup/">Sign up</a></p>
+      </div>
+    </div>
+  </body>
+</html>

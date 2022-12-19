@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../images/instagram.png" />
+    <!-- GoolgleFont - Instagram체 적용 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jua&family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <!-- CSS 연결 -->
+    <link rel="stylesheet" href="../styles/main.css" />
+
+    <!-- Main JS 연결 -->
+
+    <script src="../js/main.js" defer></script>
+    <title>Westagram-main</title>
+  </head>
+  <body>
+
+    <!-- Header -->
+
+    <div class="header-wrap">
+    <div class="header">
+      <!-- heaer-left -->
+      <div class="header-left">
+        <img alt="instagram-logo2" src="../images/instagram2.png" />
+        <div id="vertical-line"></div>
+        <p>Westagram</p>
+      </div>
+
+      <!-- header-center --> 
+      <div class="header-center">
+        <input placeholder="검색" />
+      </div>
+
+      <!-- header-right -->
+      <div class="header-right">
+        <img alt="explore" src="../images/explore.png" />
+        <img alt="heart" src="../images/heart.png" />
+        <img alt="profile" src="../images/profile.png " />
+      </div>
+    </div>
+  </div>
+    <!-- Main -->
+    <div class="main">
+      <!-- Main.section1 -->
+      <div class="feeds">
+        <div class="article">
+          <div class="article-header">
+            <div id="ah-left">
+              <img alt="jake" src="../images/jakeprf.png" />
+              <p>Jakesungjaekim</p>
+            </div>
+            <div id="ah-right">
+              <img alt="navbar" src="../images/navbar-dot.png" />
+            </div>
+          </div>
+          <div class="article-main"></div>
+          <div class="icon-wrap">
+            <div>
+              <img alt="heart" src="../images/heart.png" />
+              <img alt="chat" src="../images/chat.png" />
+              <img alt="export" src="../images/export.png" />
+            </div>
+            <div>
+              <img alt="save" src="../images/save.png" />
+            </div>
+          </div>
+
+          <div class="article-footer">
+            <div class= "postCommentWrap">
+
+              <div class="letter-box">
+                <p>
+                  <b>Postmalone</b>님 <b>외 10명</b>이 좋아합니다<br>
+                </p>
+              </div>
+              
+              <div class="letter-box">
+                <p id="postComment" >
+                  <b>Postmalone</b> 오 여기 어디임? 나도 가고싶다 ㅋㅋ <span style="color: gray;">1시간 전</span><br>
+                </p>
+              </div>
+              
+              <div class="letter-box" >
+                <p id="postComment" >
+                  <b>SteveJobs</b>  코딩이나하자 무슨 크리스마스여 ㅋㅋ <span style="color: gray;">27분 전</span> <br>
+                </p>
+              </div>
+              
+            </div>
+            <!-- <div class="letter-box">
+              <p id="postComment" >
+                <b>JAKESJK</b> ${inputCommentElement.value}
+              </p>
+            </div> -->
+
+            <div class="post-letter">
+              <input id="inputComment" placeholder="댓글달기..." />
+              <button id="submitComment" >게시</button>
+            </div>
+        </div>
+   
+
+
+        </div>
+      </div>
+      <!-- Main.section2 -->
+      <div class="main-right">
+        <div class="mr-header">
+          <div class="mr-header-left">
+            <img alt="wecode-img" src="../images/wecode2.webp" />
+            <div>
+              <p id="font-black">Wecode_bootcamp</p>
+              <p class="font-gray">wecode | 위코드</p>
+            </div>
+          </div>
+        </div>
+        <div class="mr-center">
+          <div class="mr-center-box">
+            <div class="mr-center-letter-wrap">
+              <p class="font-gray">스토리</p>
+              <p>모두 보기</p>
+            </div>
+            <div class="mr-center-profile-warp">
+              <img alt="profile" src="../images/profile.png " />
+              <div>
+                <p id="font-black">jake-friend-01</p>
+                <p class="font-gray">2시간 전</p>
+              </div>
+            </div>
+            <div class="mr-center-profile-warp">
+              <img alt="profile" src="../images/profile.png " />
+              <div>
+                <p id="font-black">jake-friend-02</p>
+                <p class="font-gray">4시간 전</p>
+              </div>
+            </div>
+            <div class="mr-center-profile-warp">
+              <img alt="profile" src="../images/jakeprf.png" />
+              <div>
+                <p id="font-black">jake-friend-03</p>
+                <p class="font-gray">1시간 전</p>
+              </div>
+            </div>
+            <div class="mr-center-profile-warp">
+              <img alt="profile" src="../images/profile.png " />
+              <div>
+                <p id="font-black">jake-friend-04</p>
+                <p class="font-gray">30 분 전</p>
+              </div>
+            </div>
+            <div class="mr-center-profile-warp">
+              <img alt="profile" src="../images/jakeprf.png" />
+              <div>
+                <p id="font-black">jake-friend-04</p>
+                <p class="font-gray">30 분 전</p>
+              </div>
+            </div>
+      
+          </div>
+          <div class="mr-center-box">
+            <div class="mr-center-letter-wrap">
+              <p class="font-gray">회원님을 추천</p>
+              <p>모두 보기</p>
+            </div>
+
+            <div class="mr-center-profile-box">
+              <div class="mr-center-profile-warp">
+                <img alt="profile" src="../images/jakeprf.png" />
+                <div>
+                  <p id="font-black">jake-friend-04</p>
+                  <p class="font-gray">회원님을 팔로우 합니다</p>
+                </div>
+              </div>
+              <p id="inline-text">팔로우</p>
+            </div>
+            <div class="mr-center-profile-box">
+              <div class="mr-center-profile-warp">
+                <img alt="profile" src="../images/profile.png " />
+                <div>
+                  <p id="font-black">jake-friend-04</p>
+                  <p class="font-gray">회원님을 팔로우 합니다</p>
+                </div>
+              </div>
+              <p id="inline-text">팔로우</p>
+            </div>
+            <div class="mr-center-profile-box">
+              <div class="mr-center-profile-warp">
+                <img alt="profile" src="../images/jakeprf.png" />
+                <div>
+                  <p id="font-black">jake-friend-04</p>
+                  <p class="font-gray">회원님을 팔로우 합니다</p>
+                </div>
+              </div>
+              <p id="inline-text">팔로우</p>
+            </div>
+            <div class="mr-center-profile-box">
+              <div class="mr-center-profile-warp">
+                <img alt="profile" src="../images/profile.png " />
+                <div>
+                  <p id="font-black">jake-friend-04</p>
+                  <p class="font-gray">회원님을 팔로우 합니다</p>
+                </div>
+              </div>
+              <p id="inline-text">팔로우</p>
+            </div>
+            <div class="mr-center-profile-box">
+              <div class="mr-center-profile-warp">
+                <img alt="profile" src="../images/jakeprf.png" />
+                <div>
+                  <p id="font-black">jake-friend-04</p>
+                  <p class="font-gray">회원님을 팔로우 합니다</p>
+                </div>
+              </div>
+              <p id="inline-text">팔로우</p>
+            </div>
+        </div>
+        <div class="mr-footer">
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
