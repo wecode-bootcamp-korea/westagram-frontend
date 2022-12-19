@@ -24,9 +24,12 @@
             <span class="ver-line"></span>
             <span class="title">westagram</span>
           </h1>
-          <div class="box-search">
-            <input type="text" placeholder="검색" />
-            <i class="fa fa-solid fa-magnifying-glass"></i>
+          <div id="searchBox" class="box-search">
+            <input type="text" id="searchInput" placeholder="검색" />
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <div class="box-search-list">
+              <ul id="searchedUserList" class="list-users"></ul>
+            </div>
           </div>
           <div class="box-util">
             <a href="#none" class="link-explore">
@@ -73,8 +76,7 @@
             <div class="box-util">
               <div class="util-left">
                 <button class="btn-like">
-                  <!-- fa-light >> fa-solid -->
-                  <i class="fa fa-regular fa-heart"></i>
+                  <!-- <i class="fa fa-regular fa-heart"></i> -->
                   <i class="fa fa-solid fa-heart"></i>
                 </button>
                 <button class="btn-dm">
