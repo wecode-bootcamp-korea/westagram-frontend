@@ -8,13 +8,13 @@ inputEmail.addEventListener('keyup', activeEvent);
 inputPassword.addEventListener('keyup', activeEvent);
 
 function activeEvent() {
-    if(!(inputEmail.value && inputPassword.value)) {
+    if(!(inputEmail.value && inputPassword.value) || (inputPassword.value).length < 5) {
         target.disabled = true;
         target.classList.remove('buttonDisabled');
 
-    } else {
+    } else if((inputEmail.value).includes('@') && (inputPassword.value).length >= 5) {
         target.disabled = false;
-        target.classList.add('buttonDisabled');
+        target.classList.add('buttonDisabled'); // 
 
     }
 }
