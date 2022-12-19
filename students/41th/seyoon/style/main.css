@@ -350,19 +350,19 @@ footer {
 
 .feed-img img {
   width: 100%;
-  max-height: 450px;
+  max-height: 550px;
   object-fit: cover;
 }
 
 .feed-body {
   display: flex;
   justify-content: space-between;
-  padding: 16px;
+  margin-bottom: 5px;
 }
 
 .feed-body .left {
   /* background-color: #0095f6; */
-  width: 100px;
+  width: 85px;
   display: flex;
   justify-content: space-between;
 }
@@ -373,4 +373,86 @@ footer {
 
 .feed-body i {
   font-size: larger;
+}
+
+.like-poeple-img-box {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  overflow: hidden;
+  /* border: 2.5px solid #dbdbdb; */
+  margin-right: 5px;
+  /* background: radial-gradient(rgba(0, 0, 0, 0.15) 60%, transparent 0),
+    radial-gradient(white 62%, transparent 0),
+    linear-gradient(to top right, orange, deeppink); */
+}
+
+.section-wrap {
+  padding: 5px 16px 16px 16px;
+}
+
+.like-wrap {
+  display: flex;
+  align-items: center;
+  padding: 0px 0px 5px 0px;
+}
+
+.font-size-14 {
+  font-size: 15px;
+}
+
+.new-comment {
+  border-top: 1px solid #dbdbdb;
+  padding: 10px 0px 0px 0px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.new-comment i {
+  font-size: 19px;
+}
+
+form input {
+  width: 440px;
+  border: 0px;
+}
+
+.posting {
+  border: 0px;
+  background-color: #ffffff;
+}
+
+.postingDeactivity {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.postingActivity {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.comment {
+  /* height: calc(100% - 29.5px); */
+  width: 400px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.text {
+  margin-bottom: 5px;
+}
+
+.my {
+  display: flex;
+  justify-content: space-between;
+}
+
+.my i {
+  font-size: 13px;
+  display: none;
 }
