@@ -1,0 +1,111 @@
+.main-right {
+    margin-left: 20px;
+    width: 30%;
+    .main-right-person {
+        display: flex;
+        margin: 10px 0;
+
+        .main-right-person-pofile {
+            width: 50px;
+            height: 50px;
+            background-color: #000;
+            border-radius: 100%;
+            margin: 0 10px;
+        }
+        .main-right-person-name {
+            display: flex;
+            flex-flow: column wrap;
+            font-weight: bold;
+
+            .main-right-name-span {
+                color: #9d9d9d;
+                font-weight: normal;
+            }
+        }
+    }
+
+    .main-right-nav {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    .main-right-like {
+        height: 150px;
+        margin-top: 30px;
+
+        .main-right-like-div {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .main-right-like-profile {
+            margin: 0;
+        }
+        .main-right-like-name {
+            display: flex;
+            flex-flow: row nowrap;
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+        .follow {
+            border: none;
+            background-color: #fafafa;
+            color: rgb(7, 96, 230);
+            background: #fff;
+        }
+    }
+    .heart {
+        color: red;
+        opacity: 100%;
+    }
+}
+.main-right-story,
+.main-right-like {
+    border: 1px solid #dbdbdb;
+    padding: 15px;
+    height: 200px;
+    width: 250px;
+    background-color: #fff;
+
+    .story {
+        color: #9d9d9d;
+    }
+    .every {
+        font-weight: bold;
+    }
+
+    .main-right-story-profile-div {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+
+    .main-right-story-profile,
+    .main-right-like-profile {
+        width: 30px;
+        height: 30px;
+        background-color: #000;
+        border-radius: 100%;
+        margin: 0;
+        margin-right: 10px;
+    }
+
+    .main-right-story-name,
+    .like-name-bold {
+        display: flex;
+        flex-flow: column wrap;
+        font-weight: bold;
+
+        .main-right-story-span,
+        .main-right-like-span {
+            color: #9d9d9d;
+            font-weight: normal;
+        }
+    }
+}
+.main-right-story::-webkit-scrollbar,
+.main-right-like::-webkit-scrollbar {
+    display: none;
+}

@@ -1,0 +1,94 @@
+.article {
+    background-color: #fff;
+    border: 1px solid #dbdbdb;
+    width: 30%;
+    .article-feed {
+        width: 100%;
+    }
+    .article-header {
+        padding: 10px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        background-color: #fff;
+
+        .article-profile {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 5px;
+
+            .article-pic {
+                width: 30px;
+                height: 30px;
+                border-radius: 100%;
+                background-color: #000;
+                margin: 0;
+                margin-right: 10px;
+            }
+
+            .article-name {
+                margin: 0;
+            }
+            .article-icon {
+                position: absolute;
+                bottom: 50%;
+                transform: translateY(50%);
+                font-size: 1.3rem;
+            }
+        }
+    }
+    .article-background {
+        margin: 0 auto;
+
+        // background-color: #fff;
+        // border: 1px solid #dbdbdb;
+
+        .bgimg {
+            width: 100%;
+            object-fit: fill;
+        }
+    }
+
+    .article-icons {
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.3rem;
+        padding: 5px 10px;
+
+        i {
+            padding: 3px;
+        }
+    }
+
+    .article-like {
+        text-align: left;
+        display: flex;
+        align-items: center;
+
+        .article-like-profile {
+            width: 25px;
+            height: 25px;
+            border-radius: 100%;
+            margin: 0 5px 0 10px;
+            background-color: #000;
+        }
+
+        .article-like-person .person-name {
+            font-weight: bold;
+        }
+    }
+    .article-text {
+        text-align: left;
+
+        p {
+            text-align: left;
+            margin: 0;
+            margin-left: 10px;
+
+            .person-name {
+                font-weight: bold;
+            }
+        }
+    }
+}
