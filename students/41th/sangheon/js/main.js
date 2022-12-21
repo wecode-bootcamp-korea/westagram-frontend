@@ -1,9 +1,9 @@
 function init() {
-  addComment();
+  commentFunc();
   searchId();
 }
 
-const userIdList = [
+const userDataList = [
   {
     id: 1,
     userid: 'wecode_bootcamp',
@@ -31,10 +31,10 @@ const userIdList = [
 ];
 
 // 코멘트 추가 기능
-function addComment() {
+function commentFunc() {
   const listCmt = document.getElementById('listCmt');
   const inpCmt = document.getElementById('inpCmt');
-  const btnSubmitCmt = document.getElementById('btnSubmitCmt');
+  const btnCmtSubmit = document.getElementById('btnCmtSubmit');
 
   function createComment() {
     const liEl = document.createElement('li');
@@ -54,14 +54,20 @@ function addComment() {
     `;
     listCmt.appendChild(liEl);
     inpCmt.value = '';
-    btnSubmitCmt.disabled = true;
+    btnCmtSubmit.disabled = true;
   }
 
-  btnSubmitCmt.addEventListener('click', createComment);
+  listCmt.addEventListener('click', (e) => {
+    // const x =
+    e.target.id === 'btnRemoveCmt'
+      ? console.log(e.target.id)
+      : console.log('nope');
+  });
+  btnCmtSubmit.addEventListener('click', createComment);
   inpCmt.addEventListener('keyup', (e) => {
     e.target.value.length > 0
-      ? (btnSubmitCmt.disabled = false)
-      : (btnSubmitCmt.disabled = true);
+      ? (btnCmtSubmit.disabled = false)
+      : (btnCmtSubmit.disabled = true);
 
     if (e.target.value.length > 0 && e.keyCode === 13) {
       createComment();
@@ -79,7 +85,7 @@ function searchId() {
     const searchValue = e.target.value;
 
     if (searchValue !== '') {
-      searchedDataList = userIdList.filter((user) =>
+      searchedDataList = userDataList.filter((user) =>
         user.userid.includes(searchValue)
       );
 
@@ -88,15 +94,15 @@ function searchId() {
         .map((data) => {
           return `
             <li>
-            <div class='box-user'>
-              <span class='thumb-img'>
-                <img src='./img/img-thumbnail.jpeg' alt='' />
-              </span>
-              <span class='box-cont'>
-                <strong class='tit-user'>${data.userid}</strong>
-                <span class='cont-info'>${data.username}</span>
-              </span>
-            </div>
+              <div class='box-user'>
+                <span class='thumb-img'>
+                  <img src='./img/img-thumbnail.jpeg' alt='' />
+                </span>
+                <span class='box-cont'>
+                  <strong class='tit-user'>${data.userid}</strong>
+                  <span class='cont-info'>${data.username}</span>
+                </span>
+              </div>
             </li>`;
         })
         .join('');
