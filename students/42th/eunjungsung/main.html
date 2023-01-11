@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Westagram Login</title>
     <link rel="stylesheet" href="common.css" />
-    <link rel="stylesheet" href="login.css" />
+    <link rel="stylesheet" href="main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -16,24 +16,75 @@
   </head>
 
   <body>
-    <div>
-      <nav>
-        <div>
-          <img />
-          <span>|</span>
-          <span id="logo">instagram</span>
+    <nav>
+      <div class="nav-left">
+        <img src="images/instagram.png" />
+        <span>|</span>
+        <span class="logo">instagram</span>
+      </div>
+      <div class="search-wrapper">
+        <input type="search" class="search-bar" value="         검색" />
+        <img src="images/search.png" class="search-img" />
+      </div>
+      <div class="nav-right">
+        <img src="images/explore.png" />
+        <img src="images/heart.png" />
+        <img src="images/profile.png" />
+      </div>
+    </nav>
+
+    <main>
+      <div class="feeds">
+        <article class="article">
+          <div class="profile-wrapper">
+            <div class="profile-wrapper-right">
+              <img src="images/myprofile-img.png" />
+              <strong>beozzi__</strong>
+            </div>
+            <img src="images/menu.png" class="menu-btn" />
+          </div>
+          <img src="images/bzi.jpg" class="article-img" />
+          <div class="function-wrapper">
+            <div classd="function-right">
+              <img src="" />
+              <img src="" />
+              <img src="" />
+            </div>
+            <img src="" />
+          </div>
+          <div class="like-wrapper">
+            <img src="" />
+            <p>
+              <strong>samsaek<3</strong>님 <strong>외 319명</strong>이
+              좋아합니다
+            </p>
+          </div>
+          <input type="text" placeholder="댓글 달기..." />
+        </article>
+      </div>
+
+      <div class="div-main-right">
+        <div class="profile-wrapper">
+          <img src="" />
+          <span>beozzi__</span>
         </div>
-        <div>
-          <input type="search" id="search-bar" />
-          <img />
+        <div class="recommend-wrapper">
+          <div class="recommend-id1">
+            <img src="" />
+            <span>samsaek<3</span>
+          </div>
+          <div class="recommend-id2">
+            <img src="" />
+            <span>0donggul0</span>
+          </div>
+          <div class="recommend-id3">
+            <img src="" />
+            <span>jjonkdduck</span>
+          </div>
         </div>
-      </nav>
-      <main>
-        <div class="feeds">
-          <article></article>
-        </div>
-        <div class="div-main-right"></div>
-      </main>
-    </div>
+      </div>
+    </main>
+
+    <script src="main.js"></script>
   </body>
 </html>
