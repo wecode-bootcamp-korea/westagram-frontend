@@ -3,6 +3,13 @@ body{
   margin: 0px;
 }
 
+ul{
+  padding-left: 0px;
+}
+
+li{
+  list-style:none;
+}
 
 .navigator{
   display: flex;
@@ -20,7 +27,7 @@ body{
 }
 
 .instagramLogo{
-  width: 30px;
+  width: 25px;
   border-right: 2px solid #464646;
   padding-right: 15px;
   justify-content: center;
@@ -83,6 +90,7 @@ section{
 }
 
 article{
+  width: 500px;
   background-color: white;
   border: 1px solid lightgray;
 }
@@ -92,7 +100,7 @@ article{
   display: flex;
   align-items: center;
   height: 30px;
-  padding: 25px;
+  padding: 20px;
 
 }
 
@@ -118,6 +126,7 @@ article{
 .otherIcon{
   width: 20px;
   margin-left:auto;
+  opacity: 50%;
 
 }
 
@@ -161,12 +170,14 @@ article{
 
 .circle_2{
   display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
   width: 30px;
   height: 30px; 
   border-radius: 70%;
   overflow: hidden;
-  justify-content: center;
-  align-items: center;
+  border-width: 10px;
 }
 
 .wecode{
@@ -178,6 +189,26 @@ article{
   font-weight: 700;
 }
 
+.postBox{
+  display: flex;
+  height: 20px;
+  padding-left: 20px;
+  padding-bottom: 2px;
+  font-size: 15px;
+}
+
+.postId{
+font-weight : 800;
+}
+
+.postContext{
+  width: 300px;
+  margin-left: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .commentBox{
   height: 20px;
   padding-left: 20px;
@@ -187,15 +218,14 @@ article{
 
 .commentId{
   font-weight : 800;
-  
 }
 
 .commentContext{
-  margin-left: 10px;
+  margin-left: 5px;
 }
 
-#commentMore{
-  margin-left: 5px;
+#postMore{
+  margin-left: 0px;
   border-width : 0px;
   color: gray;
   font-size: 15px;
@@ -257,7 +287,7 @@ aside{
 }
 
 .storyBox{
-  height: 250px;
+  height: 230px;
   background-color: white;
   border: 1px solid lightgray;
   margin-top: 15px;
@@ -265,6 +295,7 @@ aside{
   font-size: 15px;
   overflow:scroll;
 }
+
 .storyTop{
   display: flex;
   justify-content: space-between;
@@ -283,12 +314,123 @@ aside{
   font-weight: 700;
 }
 
-.recommend{
+
+.storyProfile{
+  display: flex;
+  align-items: center;
+  margin-left: 0px;
+  height: 50px;
+}
+
+
+.storyIcon{
+  position: relative;
+  width: 35px;
+  height: 35px;
+  margin: 10px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  background-image: linear-gradient(#fff, #fff), 
+  linear-gradient(to right, red 0%,  orange 100%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  overflow:hidden;
+  margin-left:0px;
+}
+
+.storyIcon_img_1{
+  width: 100%;
+}
+
+.storyInfo{
+  margin-left: 0px;
+}
+
+.storyId{
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.storyTime{
+  color: gray;
+  font-size: 15px;
+}
+
+.recommendBox{
   height: 180px;
   background-color: white;
   border: 1px solid lightgray;
   margin-top: 15px;
+  padding: 20px;
 }
+
+.recommendTop{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0px;
+}
+
+.recommendTopLeft{
+  font-size: 15px;
+  color: gray;
+}
+
+.recommendTopRight{
+  border-width: 0px;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.recommendBottom{
+  display: flex;
+  flex-direction: column;
+}
+
+.recommendProfile{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 50px;
+}
+
+.recommendIcon{
+  position: relative;
+  width: 35px;
+  height: 35px;
+  margin: 10px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  overflow:hidden;
+  margin-left:0px;
+}
+
+.recommendIcon_img_1{
+  width: 100%;
+}
+
+.recommendInfo{
+  font-size: 15px;
+  margin-left: 0px;
+}
+
+.recommendId{
+  font-weight: 800;
+}
+
+.recommendPeople{
+  color: gray;
+}
+
+.recommendFollow{
+  margin-left: auto;
+  font-size: 15px;
+  font-weight: 700;
+  color: cornflowerblue;
+  border-width: 0px;
+  background-color: transparent;
+}
+
 
 footer{
   height: 100px;
