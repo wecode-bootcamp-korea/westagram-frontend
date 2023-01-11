@@ -1,0 +1,74 @@
+/* css property align convention */
+/* layout(position, float, clear, display) */
+/* box model(width, height, margin, padding) */
+/* visual(color, background, border, box-shadow) */
+/* typography(font-size, font-family, text-align, text-transform) */
+/* etc(cursor, overflow, z-index) */
+
+* {
+  box-sizing: border-box;
+  background-color: rgb(250, 250, 250);
+}
+
+h1 {
+  background-color: white;
+  font-size: 60px;
+  font-family: "Lobster", cursive;
+  text-align: center;
+}
+
+.main-cnt {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  height: 500px;
+  margin: 100px auto;
+  background-color: white;
+  border: 2px solid rgb(227, 227, 227);
+}
+
+.input-cnt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  background-color: white;
+}
+
+input {
+  width: 300px;
+  height: 40px;
+  padding: 10px;
+  border: 1px solid rgb(244, 244, 244);
+  border-radius: 5px;
+}
+
+.input-pw {
+  margin-top: 7px;
+}
+
+button {
+  width: 300px;
+  height: 35px;
+  margin-top: 15px;
+  color: white;
+  background-color: rgb(196, 225, 250);
+  border: 0;
+  border-radius: 4px;
+  font-size: 15px;
+}
+
+button:hover {
+  opacity: 0.8;
+  cursor: point;
+}
+
+a {
+  position: absolute;
+  bottom: 20px;
+  color: rgb(0, 38, 111);
+  background-color: white;
+  text-decoration: none;
+}
