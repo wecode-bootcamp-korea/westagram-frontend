@@ -7,7 +7,7 @@ const loginBtn = document.querySelector('#btn');
 
 
 function colorOnOff (){
-  if(inputId.value.length >= 1 && inputPw.value.length >= 1){
+  if(inputId.value.indexOf('@') >= 0 && inputPw.value.length > 4){
     loginBtn.style.backgroundColor = '#3E7FDE';
     loginBtn.disabled = false;
   }
