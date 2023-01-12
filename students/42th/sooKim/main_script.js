@@ -16,7 +16,7 @@ function commentBtnOnOff(){
 
 commentInput.addEventListener('keyup', commentBtnOnOff);
 
-// 댓글 추가 //
+// 댓글 추가 & 삭제 //
 
 const commentBox = document.querySelectorAll('.commentBox');
 console.log("commentBox",commentBox)
@@ -44,15 +44,28 @@ newImg.className = "commentDeleteIcon";
 newImg.alt = "delete";
 newImg.src = "./img/delete.png";
 
+const newHeart = document.createElement('img');
+newHeart.className = "commentHeartIcon";
+newHeart.alt = "heart";
+newHeart.src = "./img/loveOff.png";
+
+
+//댓글 삭제//
 newImg.addEventListener('click', newCommentDelete );
 
 function newCommentDelete() {
   newDiv.remove()
 }
 
+function heartOnOff(){
+  newHeart.src = "./img/loveOn.png"
+    }
+  
+newHeart.addEventListener('click', heartOnOff);
 
 newDiv.appendChild(newB);
 newDiv.appendChild(newSpan);
+newDiv.appendChild(newHeart);
 newDiv.appendChild(newImg);
 newComment.appendChild(newDiv);
   
@@ -68,6 +81,10 @@ commentInput.addEventListener('keypress', function(){
   }
 });
 
+
+
+
+
 // 더보기 구현 //
 const moreBtn = document.querySelector("#postMore")
 const postContext = document.querySelector(".postContext")
@@ -78,5 +95,21 @@ function postMore () {
   moreBtn.remove();
 }
 
+
 moreBtn.addEventListener('click', postMore)
 
+//유저 메뉴 구현 //
+
+const userBtn = document.querySelector('.userIcon');
+const userProfile = document.querySelector('.profilePopUp')
+const page = document.querySelector('body')
+
+userBtn.addEventListener('click', profileOnOff)
+
+function profileOnOff(){
+  if(userProfile.style.display =="block"){
+    userProfile.style.display = "none";
+  } else {
+    userProfile.style.display = "block";
+  }
+}

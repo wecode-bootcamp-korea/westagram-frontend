@@ -13,6 +13,50 @@ li{
   list-style:none;
 }
 
+a{
+  text-decoration: none;
+  color: #464646;
+}
+
+.profilePopUp{
+  display: none;
+  position: absolute;
+  right: 200px;
+  top: 50px;
+  width: 200px;
+  background-color: white;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  z-index: 2;
+}
+
+.profileList{
+  font-size: 15px;
+  margin: 15px;
+}
+
+.profileMenu{
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.profile_logOut{
+  border-top: 1px solid lightgray;
+  padding-top: 15px;
+  padding-bottom: 5px;
+}
+
+.profileIcon{
+  width: 20px;
+}
+
+.profileText{
+  margin-left: 10px;
+  font-size: 15px;
+}
+
+
 .navigator{
   display: flex;
   justify-content: space-around;
@@ -20,6 +64,7 @@ li{
   flex-direction: row;
   background-color: white;
   height: 60px;
+  z-index: 10;
 }
 
 .navLeft{
@@ -237,8 +282,13 @@ font-weight : 800;
 
 .commentDeleteIcon{
   width: 20px;
-  margin-left: 10px;
+  margin-left: 5px;
   opacity: 40%;
+}
+
+.commentHeartIcon{
+  width:20px;
+  margin-left: 10px;
 }
 
 .commentTimeBox{
