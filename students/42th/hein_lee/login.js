@@ -22,6 +22,6 @@ pwInput.addEventListener('keyup', buttonOnOff)
 
 function goMain(){
    location.href = "main.html";
-  }
+}
 
 loginBtn.addEventListener('click',goMain);
