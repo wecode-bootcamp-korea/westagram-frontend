@@ -1,0 +1,123 @@
+/* css property align convention */
+/* layout(position, float, clear, display) */
+/* box model(width, height, margin, padding) */
+/* visual(color, background, border, box-shadow) */
+/* typography(font-size, font-family, text-align, text-transform) */
+/* etc(cursor, overflow, z-index) */
+* {
+  box-sizing: border-box;
+  margin: 2px;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0px;
+}
+
+.contents-cnt {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid red;
+}
+
+/* 네비게이션 */
+nav {
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid blue;
+  padding: 5px auto;
+}
+
+.nav-left {
+  display: flex;
+  border: 1px solid darkcyan;
+}
+
+.nav-line::before {
+  padding-right: 5px;
+  content: "|";
+  opacity: 0.5;
+}
+
+.nav-center {
+  border: 1px solid burlywood;
+}
+
+.nav-right {
+  display: flex;
+  border: 1px solid brown;
+}
+
+.nav-item {
+  width: 15px;
+  height: 15px;
+  font-size: 15px;
+}
+
+h1 {
+  display: inline;
+  font-family: "Lobster", cursive;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  border: 1px solid blueviolet;
+  /* padding-left: 50px; */
+  overflow: hidden;
+}
+
+.feeds {
+  border: 1px solid skyblue;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+article {
+  border: 1px solid red;
+  padding-right: 1px;
+  height: 500px;
+}
+
+aside {
+}
+
+article .icon-cnt {
+  display: flex;
+}
+
+.img-focus-cnt {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  border: 1px solid blue;
+}
+
+.img-focus {
+  width: 100%;
+  object-fit: cover;
+}
+
+.article-icon {
+  width: 15px;
+  height: 15px;
+}
+
+.article-icon-20px {
+  width: 18px;
+  height: 18px;
+}
+
+.main-right {
+  margin-left: 2px;
+  border: 1px solid darkorange;
+  width: 200px;
+  height: 300px;
+  overflow: hidden;
+}
+
+@media all and (max-width: 567px) {
+  .main-right {
+    display: none;
+  }
+}
