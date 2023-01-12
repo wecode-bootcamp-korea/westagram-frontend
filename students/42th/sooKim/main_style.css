@@ -193,7 +193,7 @@ article{
 
 .postBox{
   display: flex;
-  height: 15px;
+
   padding-left: 20px;
   font-size: 15px;
 }
@@ -204,7 +204,7 @@ font-weight : 800;
 
 .postContext{
   width: 300px;
-  margin-left: 5px;
+  margin-left: 10px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -213,17 +213,18 @@ font-weight : 800;
 #postMore{
   margin-left: 0px;
   border-width : 0px;
+  height: 15px;
   color: gray;
   font-size: 15px;
 }
 
 
 .commentBox{
+  display: flex;
+  align-items: center; 
   padding-left: 20px;
   margin-top: 5px;
-  padding-bottom: 5px;
   font-size: 15px;
-
 }
 
 .commentId{
@@ -234,9 +235,20 @@ font-weight : 800;
   margin-left: 5px;
 }
 
+.commentDeleteIcon{
+  width: 20px;
+  margin-left: 10px;
+  opacity: 40%;
+}
+
+.commentTimeBox{
+  margin-top: 10px;
+}
+
 .commentTime{
   color: gray;
   padding-left: 20px;
+  margin-top: 100px;
   font-size: 15px;
 }
 
