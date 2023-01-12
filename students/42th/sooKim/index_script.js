@@ -14,7 +14,6 @@ function colorOnOff (){
   else{
     loginBtn.style.backgroundColor = '#8CB4F0';
     loginBtn.disabled = true;
-    console.log('failed')
   }
 }
 
