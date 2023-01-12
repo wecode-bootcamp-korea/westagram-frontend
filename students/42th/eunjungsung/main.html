@@ -23,7 +23,7 @@
         <span class="logo">instagram</span>
       </div>
       <div class="search-wrapper">
-        <input type="search" class="search-bar" value="         검색" />
+        <input type="search" class="search-bar" placeholder="         검색" />
         <img src="images/search.png" class="search-img" />
       </div>
       <div class="nav-right">
@@ -36,6 +36,7 @@
     <main>
       <div class="feeds">
         <article class="article">
+          <!-- 피드 상단 프로필 -->
           <div class="profile-wrapper">
             <div class="profile-wrapper-right">
               <img src="images/myprofile-img.png" />
@@ -44,42 +45,72 @@
             <img src="images/menu.png" class="menu-btn" />
           </div>
           <img src="images/bzi.jpg" class="article-img" />
+          <!-- 사진 아래 기능들 -->
           <div class="function-wrapper">
             <div classd="function-right">
-              <img src="" />
-              <img src="" />
-              <img src="" />
+              <img src="images/emptyheart.png" />
+              <img src="images/comment.png" />
+              <img src="images/upload.png" />
             </div>
-            <img src="" />
+            <img src="images/bookmark.png" />
           </div>
+          <!-- 좋아요 수 표시 -->
           <div class="like-wrapper">
-            <img src="" />
+            <img src="images/recommend-img1.png" />
             <p>
               <strong>samsaek<3</strong>님 <strong>외 319명</strong>이
               좋아합니다
             </p>
           </div>
-          <input type="text" placeholder="댓글 달기..." />
+          <input type="text" class="comment" placeholder="댓글 달기..." />
         </article>
       </div>
 
       <div class="div-main-right">
-        <div class="profile-wrapper">
-          <img src="" />
-          <span>beozzi__</span>
+        <!-- 자신의 프로필 -->
+        <div class="myprofile-wrapper">
+          <img src="images/myprofile-img.png" class="myprofile" />
+          <strong class="myprofile">beozzi__</strong>
         </div>
-        <div class="recommend-wrapper">
-          <div class="recommend-id1">
-            <img src="" />
-            <span>samsaek<3</span>
+        <!-- 스토리 -->
+        <div class="right-wrapper">
+          <div class="title">
+            <strong class="title">스토리</strong>
+            <strong>모두 보기</strong>
           </div>
-          <div class="recommend-id2">
-            <img src="" />
-            <span>0donggul0</span>
+          <div class="id">
+            <img src="images/recommend-img1.png" />
+            <strong>samsaek<3</strong>
           </div>
-          <div class="recommend-id3">
-            <img src="" />
-            <span>jjonkdduck</span>
+          <div class="id">
+            <img src="images/recommend-img2.png" />
+            <strong>0donggul0</strong>
+          </div>
+          <div class="id">
+            <img src="images/recommend-img3.png" />
+            <strong>jjonkdduck</strong>
+          </div>
+        </div>
+        <!-- 추천 프로필 -->
+        <div class="right-wrapper">
+          <div class="title">
+            <strong class="title">회원님을 위한 추천</strong>
+            <strong>모두 보기</strong>
+          </div>
+          <div class="id">
+            <img src="images/recommend-img1.png" />
+            <strong>samsaek<3</strong>
+            <strong class="follow">팔로우</strong>
+          </div>
+          <div class="id">
+            <img src="images/recommend-img2.png" />
+            <strong>0donggul0</strong>
+            <strong class="follow">팔로우</strong>
+          </div>
+          <div class="id">
+            <img src="images/recommend-img3.png" />
+            <strong>jjonkdduck</strong>
+            <strong class="follow">팔로우</strong>
           </div>
         </div>
       </div>

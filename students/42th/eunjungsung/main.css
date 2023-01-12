@@ -15,6 +15,11 @@ nav {
   padding: 20px 0px;
 }
 
+.logo {
+  font-family: "Lobster", cursive;
+  font-size: 24px;
+}
+
 .search-wrapper {
   position: relative;
   width: 220px;
@@ -62,7 +67,7 @@ main {
 
 article {
   width: 100%;
-  height: 420px;
+  height: 600px;
   border: 1px solid lightgray;
   background: white;
 }
@@ -95,9 +100,59 @@ img.article-img {
 }
 
 .like-wrapper {
+  display: flex;
+  justify-content: left;
+  text-align: center;
+  border-bottom: 1px solid lightgray;
 }
 
 input.comment {
-  width: 400px;
-  height: 100%;
+  width: 370px;
+  height: 30px;
+  padding: 10px 10px;
+  border: none;
+}
+
+.myprofile-wrapper {
+  width: 250px;
+  display: flex;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+img.myprofile {
+  width: 36px;
+  height: 36px;
+  margin-right: 10px;
+}
+
+strong.myprofile {
+  font-size: 18px;
+}
+
+.right-wrapper {
+  width: 230px;
+  height: 150px;
+  padding: 15px;
+  border: 1px solid lightgray;
+  margin-bottom: 20px;
+  background: white;
+}
+
+div.title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+strong.title {
+  color: gray;
+}
+
+.id {
+  margin-bottom: 10px;
+}
+
+strong.follow {
+  color: #458eff;
 }
