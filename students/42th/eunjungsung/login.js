@@ -1,19 +1,23 @@
 "use strict";
 
-const loginForm = document.getElementById("login-form");
-const idForm = document.getElementById("userid");
-const pwForm = document.getElementById("userpw");
+const userId = document.getElementById("user-id");
+const userPw = document.getElementById("user-pw");
 const loginBtn = document.getElementById("login-btn");
 
 function loginCheck() {
-  if (idForm.value.length > 0 && pwForm.value.length > 0) {
+  if (userId.value.length > 0 && userPw.value.length > 0) {
     loginBtn.style.backgroundColor = "#458eff";
     loginBtn.disabled = false;
   } else {
-    loginBtn.style.backgroundColor = "#eeeeee";
+    loginBtn.style.backgroundColor = "#c4e1fb";
     loginBtn.disabled = true;
   }
 }
 
-idForm.addEventListener("keyup", loginCheck);
-pwForm.addEventListener("keyup", loginCheck);
+function moveToMain() {
+  location.replace("./main.html");
+}
+
+userId.addEventListener("keyup", loginCheck);
+userPw.addEventListener("keyup", loginCheck);
+loginBtn.addEventListener("click", moveToMain);

@@ -1,35 +1,42 @@
 body {
-  width: 1000px;
-  height: 760px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 }
 
+/* nav */
 nav {
-  width: 1000px;
-  height: 40px;
   display: flex;
   justify-content: space-around;
-  text-align: center;
+  height: 40px;
+  padding: 20px 200px;
   border-bottom: 1px solid lightgray;
-  padding: 20px 0px;
+  text-align: center;
 }
 
-.logo {
+.nav-left {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+#logo-span {
   font-family: "Lobster", cursive;
   font-size: 24px;
+  cursor: pointer;
 }
 
 .search-wrapper {
-  position: relative;
-  width: 220px;
-  height: 30px;
   display: flex;
+  position: relative;
+  align-items: center;
+  height: 100%;
 }
 
 input.search-bar {
-  width: 100%;
-  height: 100%;
+  width: 400px;
+  height: 30px;
   padding: 2px;
   border: 1px solid lightgray;
   border-radius: 5px;
@@ -38,47 +45,63 @@ input.search-bar {
   text-align: center;
 }
 
-img.search-img {
+input.search-bar::-webkit-input-placeholder {
+  background-image: url(https://www.iconsdb.com/icons/preview/gray/search-13-xxl.png);
+  background-size: contain;
+  background-size: 16px center;
+  background-repeat: no-repeat;
+  text-align: center;
+  text-indent: 0;
+}
+
+/* .search-wrapper img {
   position: absolute;
   width: 16px;
   height: 16px;
   padding: 7px;
   left: 80px;
+} */
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  height: 100%;
 }
 
 img {
   width: 24px;
   height: 24px;
+  cursor: pointer;
 }
 
+/* main-feeds */
 main {
-  width: 820px;
-  height: 700px;
   display: flex;
-  justify-content: space-around;
-  padding: 40px 90px;
+  justify-content: center;
+  height: 100%;
+  padding: 40px 0px;
   background: #eeeeee;
 }
 
-.feeds {
-  width: 400px;
-  height: 100%;
-}
-
 article {
-  width: 100%;
-  height: 600px;
+  width: 454px;
+  margin-right: 100px;
   border: 1px solid lightgray;
   background: white;
 }
 
 .profile-wrapper {
-  width: 380px;
-  height: 30px;
   display: flex;
   justify-content: space-between;
-  text-align: center;
   padding: 10px;
+  text-align: center;
+}
+
+.profile-wrapper div {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 }
 
 img.menu-btn {
@@ -87,46 +110,74 @@ img.menu-btn {
 }
 
 img.article-img {
-  width: 100%;
-  height: 400px;
+  width: 454px;
+  height: 454px;
 }
 
 .function-wrapper {
-  width: 380px;
-  height: 40px;
   display: flex;
   justify-content: space-between;
-  padding: 0px 10px;
+  padding: 10px;
 }
 
 .like-wrapper {
   display: flex;
   justify-content: left;
   text-align: center;
-  border-bottom: 1px solid lightgray;
 }
 
-input.comment {
-  width: 370px;
+.like-wrapper img {
+  margin: 0px 10px;
+}
+
+input:focus {
+  outline: none;
+}
+
+input#comment {
+  width: 379px;
   height: 30px;
-  padding: 10px 10px;
+  padding: 10px;
   border: none;
 }
 
-.myprofile-wrapper {
-  width: 250px;
+#comment-form {
+  border-top: 1px solid lightgray;
+}
+
+#comment-form button {
+  margin-right: 10px;
+  border: none;
+  background-color: white;
+  color: #458eff;
+}
+
+ul {
+  padding-left: 0px;
+  margin: 10px;
+  list-style: none;
+}
+
+b#user-id {
+  margin-right: 10px;
+}
+
+/* main-div-main-rigth */
+.myprofile {
   display: flex;
+  align-items: center;
+  height: 36px;
   margin-bottom: 20px;
-  text-align: center;
 }
 
 img.myprofile {
   width: 36px;
   height: 36px;
   margin-right: 10px;
+  margin-bottom: 0px;
 }
 
-strong.myprofile {
+.myprofile b {
   font-size: 18px;
 }
 
@@ -134,8 +185,8 @@ strong.myprofile {
   width: 230px;
   height: 150px;
   padding: 15px;
-  border: 1px solid lightgray;
   margin-bottom: 20px;
+  border: 1px solid lightgray;
   background: white;
 }
 
@@ -145,14 +196,30 @@ div.title {
   margin-bottom: 20px;
 }
 
-strong.title {
+b.title {
   color: gray;
 }
 
-.id {
+.profile {
+  display: flex;
   margin-bottom: 10px;
+  gap: 10px;
+  text-align: center;
 }
 
-strong.follow {
+.recommend-profile {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.recommend-profile div {
+  display: flex;
+  gap: 10px;
+  text-align: center;
+}
+
+b.follow {
   color: #458eff;
 }

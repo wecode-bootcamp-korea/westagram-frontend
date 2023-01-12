@@ -17,15 +17,17 @@
 
   <body>
     <nav>
+      <!-- 로고 -->
       <div class="nav-left">
-        <img src="images/instagram.png" />
+        <img src="images/instagram.png" id="logo-img" />
         <span>|</span>
-        <span class="logo">instagram</span>
+        <span id="logo-span">westagram</span>
       </div>
+      <!-- 검색창 -->
       <div class="search-wrapper">
-        <input type="search" class="search-bar" placeholder="         검색" />
-        <img src="images/search.png" class="search-img" />
+        <input type="search" class="search-bar" placeholder="검색" />
       </div>
+      <!-- 기능 -->
       <div class="nav-right">
         <img src="images/explore.png" />
         <img src="images/heart.png" />
@@ -38,9 +40,9 @@
         <article class="article">
           <!-- 피드 상단 프로필 -->
           <div class="profile-wrapper">
-            <div class="profile-wrapper-right">
+            <div>
               <img src="images/myprofile-img.png" />
-              <strong>beozzi__</strong>
+              <b>beozzi__</b>
             </div>
             <img src="images/menu.png" class="menu-btn" />
           </div>
@@ -57,65 +59,75 @@
           <!-- 좋아요 수 표시 -->
           <div class="like-wrapper">
             <img src="images/recommend-img1.png" />
-            <p>
-              <strong>samsaek<3</strong>님 <strong>외 319명</strong>이
-              좋아합니다
-            </p>
+            <span><b>samsaek<3</b>님 <b>외 319명</b>이 좋아합니다</span>
           </div>
-          <input type="text" class="comment" placeholder="댓글 달기..." />
+          <!-- 댓글 -->
+          <div class="comment-wrapper">
+            <ul id="comments"></ul>
+            <form id="comment-form">
+              <input type="text" id="comment" placeholder="댓글 달기..." />
+              <button type="button">게시</button>
+            </form>
+          </div>
         </article>
       </div>
 
       <div class="div-main-right">
         <!-- 자신의 프로필 -->
-        <div class="myprofile-wrapper">
+        <div class="myprofile">
           <img src="images/myprofile-img.png" class="myprofile" />
-          <strong class="myprofile">beozzi__</strong>
+          <b id="user-id">beozzi__</b>
         </div>
         <!-- 스토리 -->
         <div class="right-wrapper">
           <div class="title">
-            <strong class="title">스토리</strong>
-            <strong>모두 보기</strong>
+            <b class="title">스토리</b>
+            <b>모두 보기</b>
           </div>
-          <div class="id">
+          <div class="profile">
             <img src="images/recommend-img1.png" />
-            <strong>samsaek<3</strong>
+            <b>samsaek<3</b>
           </div>
-          <div class="id">
+          <div class="profile">
             <img src="images/recommend-img2.png" />
-            <strong>0donggul0</strong>
+            <b>0donggul0</b>
           </div>
-          <div class="id">
+          <div class="profile">
             <img src="images/recommend-img3.png" />
-            <strong>jjonkdduck</strong>
+            <b>jjonkdduck</b>
           </div>
         </div>
         <!-- 추천 프로필 -->
         <div class="right-wrapper">
           <div class="title">
-            <strong class="title">회원님을 위한 추천</strong>
-            <strong>모두 보기</strong>
+            <b class="title">회원님을 위한 추천</b>
+            <b>모두 보기</b>
           </div>
-          <div class="id">
-            <img src="images/recommend-img1.png" />
-            <strong>samsaek<3</strong>
-            <strong class="follow">팔로우</strong>
+          <div class="recommend-profile">
+            <div>
+              <img src="images/recommend-img1.png" />
+              <b>samsaek<3</b>
+            </div>
+            <b class="follow">팔로우</b>
           </div>
-          <div class="id">
-            <img src="images/recommend-img2.png" />
-            <strong>0donggul0</strong>
-            <strong class="follow">팔로우</strong>
+          <div class="recommend-profile">
+            <div>
+              <img src="images/recommend-img2.png" />
+              <b>0donggul0</b>
+            </div>
+            <b class="follow">팔로우</b>
           </div>
-          <div class="id">
-            <img src="images/recommend-img3.png" />
-            <strong>jjonkdduck</strong>
-            <strong class="follow">팔로우</strong>
+          <div class="recommend-profile">
+            <div>
+              <img src="images/recommend-img3.png" />
+              <b>jjonkdduck</b>
+            </div>
+            <b class="follow">팔로우</b>
           </div>
         </div>
       </div>
     </main>
 
-    <script src="main.js"></script>
+    <script src="main.js" defer=""></script>
   </body>
 </html>

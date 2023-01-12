@@ -17,19 +17,17 @@
 </html>
 
 <body>
-  <div class="container">
-    <h1 src="#" class="logo">westagram</h1>
-    <form id="login-form">
-      <input
-        type="text"
-        id="userid"
+  <main>
+    <a href="http://127.0.0.1:5500/eunjungsung/login.html#" class="logo">westagram</a>
+    <form>
+      <input id="user-id" type="text"
         placeholder="전화번호, 사용자 이름 또는 이메일"
       />
-      <input type="password" id="userpw" placeholder="비밀번호" />
-      <button type="submit" id="login-btn">로그인</button>
+      <input id="user-pw" type="password" placeholder="비밀번호" />
+      <button id="login-btn" type="button" disabled>로그인</button>
     </form>
-    <a href="#">비밀번호를 잊으셨나요?</a>
-  </div>
-  <script src="login.js"></script>
+    <a href="http://127.0.0.1:5500/eunjungsung/login.html#">비밀번호를 잊으셨나요?</a>
+  </main>
+  <script src="login.js" defer=""></script>
 </body>
 </html>

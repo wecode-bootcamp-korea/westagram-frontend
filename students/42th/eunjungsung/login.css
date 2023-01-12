@@ -1,12 +1,20 @@
-div.container {
-  width: 375px;
-  height: 667px;
-  border: 1px solid lightgray;
+body {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin-top: 150px;
+  background: #eeeeee;
+}
+
+main {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 375px;
+  height: 667px;
   background: white;
+  border: 1px solid lightgray;
 }
 
 .logo {
@@ -23,11 +31,11 @@ form {
 input {
   width: 270px;
   height: 38px;
+  margin-bottom: 5px;
   background: #eeeeee;
+  padding: 5px;
   border: 1px solid lightgray;
   border-radius: 5px;
-  padding: 5px;
-  margin-bottom: 5px;
 }
 
 input::placeholder {
@@ -37,17 +45,18 @@ input::placeholder {
 button {
   width: 282px;
   height: 50px;
-  background-color: #458eff;
-  border: none;
-  border-radius: 5px;
-  padding: 2px;
   margin-top: 20px;
   margin-bottom: 100px;
+  padding: 2px;
+  background-color: #c4e1fb;
+  border: none;
+  border-radius: 5px;
   color: white;
   font-weight: bold;
+  cursor: pointer;
 }
 
 a {
-  text-decoration: none;
   color: black;
+  text-decoration: none;
 }
