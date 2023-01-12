@@ -4,20 +4,19 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
         <title>Westagram</title>
-        <link href="common.css" rel="stylesheet" type="text/css"/>
         <link href="login.css" rel="stylesheet" type="text/css">
-    
+        <link href="common.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         
-            <div class="container">
-                <div class="Westagram">Westagram</div>
+            <div class="container" id="container-box">
+                <a href="#none"><div class="Westagram">Westagram</div></a>
                 <input class="id" type="text" placeholder=" &nbsp;전화번호, 사용자 이름 또는 이메일">
                 <input class="pw" type="password" placeholder=" &nbsp;비밀번호">
-                <button class="longin">로그인</button>
+                <a href="#"><button class="login" disabled>로그인</button></a>
                 <div class="forgot"><a href="#">비밀번호를 잊으셨나요?</a></div>
                    
-                </div>
+            </div>
         
         
         <script src="login.js"></script>
