@@ -19,13 +19,14 @@
     <nav>
       <!-- 로고 -->
       <div class="nav-left">
-        <img alt="Insta Logo" src="images/instagram.png" id="logo-img" />
+        <img id="logo-img" alt="Insta Logo" src="images/instagram.png" />
         <span>|</span>
         <span id="logo-span">westagram</span>
       </div>
       <!-- 검색창 -->
       <div class="search-wrapper">
         <input type="search" class="search-bar" placeholder="검색" />
+        <img alt="Search Img" src="images/search.png" />
       </div>
       <!-- 기능 -->
       <div class="nav-right">
@@ -49,7 +50,7 @@
           <img alt="Article Img" src="images/bzi.jpg" class="article-img" />
           <!-- 사진 아래 기능들 -->
           <div class="function-wrapper">
-            <div classd="function-right">
+            <div class="function-right">
               <img alt="Heart Img" src="images/emptyheart.png" />
               <img alt="Comment Img" src="images/comment.png" />
               <img alt="Upload Img" src="images/upload.png" />
@@ -88,18 +89,20 @@
             <b class="title">스토리</b>
             <b>모두 보기</b>
           </div>
-          <div class="profile">
-            <img alt="Profile Img" alt="" src="images/recommend-img1.png" />
-            <b>samsaek<3</b>
-          </div>
-          <div class="profile">
-            <img alt="Profile Img" src="images/recommend-img2.png" />
-            <b>0donggul0</b>
-          </div>
-          <div class="profile">
-            <img alt="Profile Img" src="images/recommend-img3.png" />
-            <b>jjonkdduck</b>
-          </div>
+          <ul class="profile">
+            <li>
+              <img alt="Profile Img" alt="" src="images/recommend-img1.png" />
+              <b>samsaek<3</b>
+            </li>
+            <li>
+              <img alt="Profile Img" src="images/recommend-img2.png" />
+              <b>0donggul0</b>
+            </li>
+            <li>
+              <img alt="Profile Img" src="images/recommend-img3.png" />
+              <b>jjonkdduck</b>
+            </li>
+          </ul>
         </div>
         <!-- 추천 프로필 -->
         <div class="right-wrapper">
@@ -107,27 +110,29 @@
             <b class="title">회원님을 위한 추천</b>
             <b>모두 보기</b>
           </div>
-          <div class="recommend-profile">
-            <div>
-              <img alt="Profile Img" src="images/recommend-img1.png" />
-              <b>samsaek<3</b>
-            </div>
-            <b class="follow">팔로우</b>
-          </div>
-          <div class="recommend-profile">
-            <div>
-              <img alt="Profile Img" src="images/recommend-img2.png" />
-              <b>0donggul0</b>
-            </div>
-            <b class="follow">팔로우</b>
-          </div>
-          <div class="recommend-profile">
-            <div>
-              <img alt="Profile Img" src="images/recommend-img3.png" />
-              <b>jjonkdduck</b>
-            </div>
-            <b class="follow">팔로우</b>
-          </div>
+          <ul>
+            <li class="recommend-li">
+              <div>
+                <img alt="Profile Img" src="images/recommend-img1.png" />
+                <b>anonymous1</b>
+              </div>
+              <b class="follow">팔로우</b>
+            </li>
+            <li class="recommend-li">
+              <div>
+                <img alt="Profile Img" src="images/recommend-img2.png" />
+                <b>anonymous2</b>
+              </div>
+              <b class="follow">팔로우</b>
+            </li>
+            <li class="recommend-li">
+              <div>
+                <img alt="Profile Img" src="images/recommend-img3.png" />
+                <b>anonymous3</b>
+              </div>
+              <b class="follow">팔로우</b>
+            </li>
+          </ul>
         </div>
       </div>
     </main>

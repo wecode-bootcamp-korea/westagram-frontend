@@ -35,32 +35,26 @@ nav {
 }
 
 input.search-bar {
-  width: 400px;
+  width: 380px;
   height: 30px;
   padding: 2px;
   border: 1px solid lightgray;
   border-radius: 5px;
   color: gray;
-  background: #eeeeee;
   text-align: center;
 }
 
-input.search-bar::-webkit-input-placeholder {
-  background-image: url(https://www.iconsdb.com/icons/preview/gray/search-13-xxl.png);
-  background-size: contain;
-  background-size: 16px center;
-  background-repeat: no-repeat;
-  text-align: center;
-  text-indent: 0;
-}
+/* input.search-bar::-webkit-input-placeholder {
+  background-image: url("https://www.iconsdb.com/icons/preview/gray/search-13-xxl.png");
+} */
 
-/* .search-wrapper img {
+.search-wrapper img {
   position: absolute;
   width: 16px;
   height: 16px;
   padding: 7px;
-  left: 80px;
-} */
+  left: 140px;
+}
 
 .nav-right {
   display: flex;
@@ -118,6 +112,11 @@ img.article-img {
   display: flex;
   justify-content: space-between;
   padding: 10px;
+}
+
+.function-right {
+  display: flex;
+  gap: 10px;
 }
 
 .like-wrapper {
@@ -200,21 +199,25 @@ b.title {
   color: gray;
 }
 
-.profile {
+ul {
   display: flex;
-  margin-bottom: 10px;
-  gap: 10px;
+  flex-direction: column;
+  justify-content: space-between;
   text-align: center;
 }
 
-.recommend-profile {
+li {
+  display: flex;
+  margin-bottom: 15px;
+  gap: 10px;
+}
+
+li.recommend-li {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 10px;
-  text-align: center;
 }
 
-.recommend-profile div {
+li div {
   display: flex;
   gap: 10px;
   text-align: center;
@@ -222,4 +225,5 @@ b.title {
 
 b.follow {
   color: #458eff;
+  cursor: pointer;
 }
