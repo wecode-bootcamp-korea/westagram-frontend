@@ -2,12 +2,22 @@
 // 댓글 작성
 const commentsWrapper = document.querySelector("#comments");
 const commentForm = document.querySelector("#comment-form");
+const commentBtn = document.querySelector("#comment-btn");
 const userId = document.getElementById("user-id").innerText;
 const comment = document.getElementById("comment");
 const logoImg = document.getElementById("logo-img");
 const logoSpan = document.getElementById("logo-span");
 
 commentForm.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const commentInput = commentForm.elements.comment;
+
+  addComment(userId, commentInput.value);
+  commentInput.value = "";
+});
+
+commentBtn.addEventListener("click", function (e) {
   e.preventDefault();
 
   const commentInput = commentForm.elements.comment;
