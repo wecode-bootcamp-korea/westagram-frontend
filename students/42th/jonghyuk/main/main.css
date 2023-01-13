@@ -62,12 +62,11 @@ img.bar {
 main {
   display: flex;
   background-color: #fafafa;
-  /*justify-content: center;*/
+  justify-content: center;
 }
 
 .leftsection {
   margin-left: 100px;
-  margin-right: 1px;
 }
 
 .title {
@@ -76,12 +75,12 @@ main {
   border: 2px solid #dbdbdb;
   background-color: white;
   justify-content: space-between;
-  margin-right: 982px;
 }
 
 .feedandmention {
   border: 2px solid #dbdbdb;
-  margin-right: 982px;
+  margin-right: px;
+  width: 800px;
   background-color: white;
 }
 
@@ -94,11 +93,11 @@ main {
   overflow: hidden;
 }
 
-.title span {
+.imgid span {
+  display: inline;
   font-weight: 800;
-  margin-top: 20px;
-  margin-right: 550px;
-  text-align: left;
+  margin-bottom: 20px;
+  margin-left: 10px;
 }
 
 .title .more {
@@ -176,8 +175,6 @@ main {
 }
 
 .makemention {
-  margin-right: 982px;
-  margin-bottom: 0px;
   display: flex;
   justify-content: space-between;
   background-color: white;
@@ -203,5 +200,103 @@ main {
 }
 
 .rightsection{
+  margin-left: 200px;
   border: solid red;
+}
+
+.myProfile{
+  display: flex;
+}
+
+.profileimage img{
+  width: 70px;
+  height: 70px;
+  border-radius: 70%;
+  overflow: hidden;
+}
+
+.profileid{
+  margin-top: 12px;
+  font-size: 15px;
+  margin-left: 10px;
+  font-weight: 800;
+}
+
+.introduce{
+  color: gray;
+}
+
+.storybox{
+  height: 230px;
+  background-color: white;
+  border: 1px solid lightgray;
+  margin-top: 15px;
+  padding: 20px;
+  font-size: 15px;
+  overflow:scroll;
+}
+
+.storytitle{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 15px;
+  margin-bottom: 10px;
+}
+
+.story{
+  color: gray;
+}
+
+.lookall{
+  border-width: 0px;
+  font-size: 15px;
+  font-weight: 700;
+  background-color: white;
+}
+
+.list{
+  padding: 0px;
+}
+
+li{
+  list-style: none;
+}
+
+.storyprofile{
+  display: flex;
+}
+
+.storyimg{
+  position: relative;
+  width: 35px;
+  height: 35px;
+  margin: 10px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  background-image: linear-gradient(#fff, #fff), 
+  linear-gradient(to right, red 0%,  orange 100%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  overflow:hidden;
+  margin-left: 0px;
+}
+
+.storyuser{
+  width: 100%;
+}
+
+.userinfo{
+  margin-left: 0px;
+  margin-top: 8px;
+}
+
+.userid{
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.storytime{
+  color: gray;
+  font-size: 15px;
 }
