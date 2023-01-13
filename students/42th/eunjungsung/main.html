@@ -45,9 +45,9 @@
               <img alt="Myprofile Img" src="images/myprofile-img.png" />
               <b>beozzi__</b>
             </div>
-            <img alt="Menu Img" src="images/menu.png" class="menu-btn" />
+            <img class="menu-btn" alt="Menu Img" src="images/menu.png" />
           </div>
-          <img alt="Article Img" src="images/bzi.jpg" class="article-img" />
+          <img class="article-img" alt="Article Img" src="images/bzi.jpg" />
           <!-- 사진 아래 기능들 -->
           <div class="function-wrapper">
             <div class="function-right">
@@ -62,12 +62,18 @@
             <img alt="Profile Img" src="images/recommend-img1.png" />
             <span><b>samsaek<3</b>님 <b>외 319명</b>이 좋아합니다</span>
           </div>
+          <!-- 사진 아래 문구 -->
+          <div class="desc-wrapper">
+            <b>beozzi__</b>
+            <span>안녕하새오 버찌애오</span>
+          </div>
           <!-- 댓글 -->
           <div class="comment-wrapper">
             <ul id="comments"></ul>
+            <b class="time">&nbsp;&nbsp;17분 전</b>
             <form id="comment-form">
               <input type="text" id="comment" placeholder="댓글 달기..." />
-              <button type="button">게시</button>
+              <!-- <button type="button">게시</button> -->
             </form>
           </div>
         </article>
@@ -77,9 +83,9 @@
         <!-- 자신의 프로필 -->
         <div class="myprofile">
           <img
+            class="myprofile"
             alt="Profile Img"
             src="images/myprofile-img.png"
-            class="myprofile"
           />
           <b id="user-id">beozzi__</b>
         </div>
@@ -92,15 +98,24 @@
           <ul class="profile">
             <li>
               <img alt="Profile Img" alt="" src="images/recommend-img1.png" />
-              <b>samsaek<3</b>
+              <div class="time">
+                <b>samsaek<3</b>
+                <b class="time">16분 전</b>
+              </div>
             </li>
             <li>
               <img alt="Profile Img" src="images/recommend-img2.png" />
-              <b>0donggul0</b>
+              <div class="time">
+                <b>0donggul0</b>
+                <b class="time">16분 전</b>
+              </div>
             </li>
             <li>
               <img alt="Profile Img" src="images/recommend-img3.png" />
-              <b>jjonkdduck</b>
+              <div class="time">
+                <b>jjonkdduck</b>
+                <b class="time">16분 전</b>
+              </div>
             </li>
           </ul>
         </div>
@@ -114,21 +129,30 @@
             <li class="recommend-li">
               <div>
                 <img alt="Profile Img" src="images/recommend-img1.png" />
-                <b>anonymous1</b>
+                <div class="time">
+                  <b>anonymous1</b>
+                  <b class="time">0donggul0님 외 2명이 ... </b>
+                </div>
               </div>
               <b class="follow">팔로우</b>
             </li>
             <li class="recommend-li">
               <div>
                 <img alt="Profile Img" src="images/recommend-img2.png" />
-                <b>anonymous2</b>
+                <div class="time">
+                  <b>anonymous2</b>
+                  <b class="time">0donggul0님 외 2명이 ... </b>
+                </div>
               </div>
               <b class="follow">팔로우</b>
             </li>
             <li class="recommend-li">
               <div>
                 <img alt="Profile Img" src="images/recommend-img3.png" />
-                <b>anonymous3</b>
+                <div class="time">
+                  <b>anonymous2</b>
+                  <b class="time">0donggul0님 외 2명이 ... </b>
+                </div>
               </div>
               <b class="follow">팔로우</b>
             </li>

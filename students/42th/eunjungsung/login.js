@@ -5,16 +5,6 @@ const userPw = document.getElementById("user-pw");
 const loginBtn = document.getElementById("login-btn");
 const logo = document.getElementById("logo");
 
-// function loginCheck() {
-//   if (userId.value.length > 0 && userPw.value.length > 0) {
-//     loginBtn.style.backgroundColor = "#458eff";
-//     loginBtn.disabled = false;
-//   } else {
-//     loginBtn.style.backgroundColor = "#c4e1fb";
-//     loginBtn.disabled = true;
-//   }
-// }
-
 function loginCheck() {
   if (
     userId.value.length > 0 &&
