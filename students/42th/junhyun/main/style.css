@@ -1,0 +1,372 @@
+body {
+  background-color: #fafafa;
+}
+.main-container {
+  display: flex;
+  flex-direction: column;
+}
+#nav {
+  margin: 0;
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: #fff;
+  border-bottom: 1px solid #dbdbdb;
+
+  /* box-sizing: border-box; */
+}
+
+main {
+  display: flex;
+  /* border: 2px solid green; */
+  margin-top: 53px;
+  justify-content: center;
+}
+
+.feeds {
+  /* border: 2px solid red; */
+  width: 530px;
+  height: 800px;
+  display: inline-block;
+  padding: 28px 0px 10px 0px;
+  /* margin-left: 100px; */
+  /* box-sizing: border-box; */
+}
+
+.article {
+  background-color: white;
+  border: 1px solid #dbdbdb;
+  /* padding: 20px; */
+  height: 780px;
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+.side-bar {
+  /* background-color: white; */
+  /* border: 1px solid #dbdbdb; */
+  /* float: right; */
+  width: 300px;
+  height: 600px;
+  display: inline-block;
+  /* margin-left: 30px; */
+  /* margin-right: 100px; */
+  /* margin-top: 0px; */
+}
+
+.main-right {
+  margin-left: 10px;
+  padding: 10px;
+}
+
+.main-left {
+  padding: 15px;
+}
+
+/* section { 
+  border: 2px solid blue;
+}*/
+
+nav h1 {
+  display: inline-block;
+  font-family: "lobster", cursive;
+}
+
+.nav-item {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.inputName input {
+  margin: 20px 50px 0px 50px;
+  text-align: center;
+  background-color: #fafafa;
+  border-radius: 3px;
+  width: 180px;
+  height: 20px;
+  border: 1px solid #dbdbdb;
+}
+
+.logo {
+  width: 30px;
+  margin-right: 5px;
+  margin-bottom: -5px;
+}
+
+.dash {
+  width: 30px;
+  margin-bottom: -5px;
+}
+.heart {
+  margin: 0px 16px 0px 16px;
+  width: 30px;
+}
+
+.Compass {
+  width: 30px;
+}
+
+.myPage {
+  width: 30px;
+}
+
+.topRight {
+  margin-top: 15px;
+}
+
+.profile {
+  position: relative;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.proFilePic {
+  width: 40px;
+  border: 1px solid white;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.profileName {
+  position: absolute;
+  margin-top: 13px;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.dogPic {
+  width: 529px;
+  height: 400px;
+}
+
+/* emoji */
+.emoji-left {
+  margin-top: 10px;
+}
+.emoji-left .likes {
+  width: 30px;
+  margin-left: 20px;
+}
+.emoji-left .chat {
+  width: 30px;
+  margin: 0px 15px 0px 15px;
+}
+.emoji-left .send {
+  width: 30px;
+}
+.emoji-right .mark {
+  width: 30px;
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.emoji {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ondal {
+  width: 20px;
+  border-radius: 10px;
+}
+
+.likePic {
+  /* display: flex; */
+  margin: 0px 10px 0px 10px;
+  position: relative;
+}
+
+.likeInfo {
+  margin-left: 10px;
+  position: absolute;
+  margin-top: -15px;
+}
+
+.ondalID {
+  display: inline-block;
+  margin: 0px 10px 0px 10px;
+}
+
+.yumyumID {
+  display: inline-block;
+  margin: 0px 10px 0px 10px;
+}
+
+.heartMini {
+  width: 20px;
+  float: right;
+  margin-right: 10px;
+}
+
+.chatMin {
+  margin-left: 10px;
+  font-weight: 300;
+  margin-top: auto;
+}
+
+.commentBox {
+  width: 522px;
+  height: 66px;
+  border: 1.5px solid #dbdbdb;
+}
+
+.BoxComment {
+  display: flex;
+  /* margin-top: 100px; */
+  margin-top: 110px;
+}
+
+.bootCamp {
+  position: relative;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.bcPic {
+  width: 40px;
+  border: 1px solid white;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.weCode {
+  position: absolute;
+  display: inline-block;
+  margin: 7px 0px 0px 10px;
+
+  /* font-weight: bold; */
+}
+
+.weCode2 {
+  position: absolute;
+  display: inline-block;
+  margin: 22px 0px 0px 10px;
+  font-weight: 400;
+  color: grey;
+}
+
+/* story section  */
+.storySection {
+  border: 1px solid #dbdbdb;
+  margin-top: 10px;
+  padding: 10px;
+  height: 165px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  position: relative;
+}
+.storyPic {
+  position: absolute;
+  /* display: flex; */
+  margin-top: 20px;
+  width: 250px;
+  height: 165px;
+  /* border: 1px solid red; */
+  padding-left: 10px;
+}
+._we_ {
+  width: 30px;
+  height: 30px;
+  border-radius: 20px;
+  margin-top: 8px;
+}
+
+._we_2 {
+  position: absolute;
+  display: inline-block;
+  margin: 7px 0px 0px 10px;
+}
+._we_3 {
+  position: absolute;
+  display: inline-block;
+  margin: 22px 0px 0px 10px;
+  font-weight: 400;
+  color: grey;
+}
+.code_ {
+  width: 30px;
+  height: 30px;
+  border-radius: 20px;
+  margin-top: 8px;
+}
+
+.code_2 {
+  position: absolute;
+  display: inline-block;
+  margin: 7px 0px 0px 10px;
+}
+.code_3 {
+  position: absolute;
+  display: inline-block;
+  margin: 22px 0px 0px 10px;
+  font-weight: 400;
+  color: grey;
+}
+.forty {
+  width: 30px;
+  height: 30px;
+  border-radius: 20px;
+  margin-top: 8px;
+}
+
+.fortyTwo {
+  position: absolute;
+  display: inline-block;
+  margin: 7px 0px 0px 10px;
+}
+.fortyThree {
+  position: absolute;
+  display: inline-block;
+  margin: 22px 0px 0px 10px;
+  font-weight: 400;
+  color: grey;
+}
+.frontEnd {
+  width: 30px;
+  height: 30px;
+  border-radius: 20px;
+  margin-top: 8px;
+}
+
+.frontEndTwo {
+  position: absolute;
+  display: inline-block;
+  margin: 7px 0px 0px 10px;
+}
+.frontEndThree {
+  position: absolute;
+  display: inline-block;
+  margin: 22px 0px 0px 10px;
+  font-weight: 400;
+  color: grey;
+}
+/*  */
+
+/* recommend */
+.recommend {
+  border: 1px solid #dbdbdb;
+  margin-top: 10px;
+  padding: 10px;
+  height: 180px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+}
+
+.recommendFor,
+.pageInfo,
+.story {
+  color: grey;
+}
+
+.pageInfo {
+  font-size: 13px;
+  margin-left: 10px;
+}
+/*  */
