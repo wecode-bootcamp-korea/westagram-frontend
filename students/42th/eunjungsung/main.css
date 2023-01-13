@@ -14,27 +14,27 @@ nav {
   text-align: center;
 }
 
-.nav-left {
+.nav_left {
   display: flex;
   align-items: center;
   gap: 10px;
   height: 100%;
 }
 
-#logo-span {
+#logoSpan {
   font-family: "Lobster", cursive;
   font-size: 24px;
   cursor: pointer;
 }
 
-.search-wrapper {
+.search_wrapper {
   display: flex;
   position: relative;
   align-items: center;
   height: 100%;
 }
 
-input.search-bar {
+input.search_bar {
   width: 360px;
   height: 30px;
   padding: 2px;
@@ -44,11 +44,13 @@ input.search-bar {
   text-align: center;
 }
 
-/* input.search-bar::-webkit-input-placeholder {
-  background-image: url("https://www.iconsdb.com/icons/preview/gray/search-13-xxl.png");
-} */
+input.search_bar::-webkit-input-placeholder {
+  background: url(images/search.png) no-repeat;
+  background-size: contain;
+  background-position: 130px center;
+}
 
-.search-wrapper img {
+.search_wrapper img {
   position: absolute;
   width: 16px;
   height: 16px;
@@ -56,7 +58,7 @@ input.search-bar {
   left: 130px;
 }
 
-.nav-right {
+.nav_right {
   display: flex;
   align-items: center;
   gap: 15px;
@@ -85,63 +87,54 @@ article {
   background: white;
 }
 
-.profile-wrapper {
+.profile_wrapper {
   display: flex;
   justify-content: space-between;
   padding: 10px;
   text-align: center;
 }
 
-.profile-wrapper div {
+.profile_wrapper div {
   display: flex;
   justify-content: center;
   gap: 10px;
 }
 
-img.menu-btn {
+img.menu_btn {
   width: 16px;
   height: 16px;
 }
 
-img.article-img {
+img.article_img {
   width: 454px;
   height: 454px;
 }
 
-.function-wrapper {
+.function_wrapper {
   display: flex;
   justify-content: space-between;
   padding: 10px;
 }
 
-.function-right {
+.function_right {
   display: flex;
   gap: 10px;
 }
 
-.like-wrapper {
+.like_wrapper {
   display: flex;
   justify-content: left;
   text-align: center;
 }
 
-.like-wrapper img {
+.like_wrapper img {
   margin: 0px 10px;
 }
 
-.desc-wrapper {
+.desc_wrapper {
   display: flex;
   gap: 10px;
   margin: 10px;
-}
-
-b.time {
-  color: gray;
-  width: 100px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  /* margin: 10px; */
 }
 
 input:focus {
@@ -155,12 +148,12 @@ input#comment {
   border: none;
 }
 
-#comment-form {
+#commentForm {
   border-top: 1px solid lightgray;
   margin-top: 10px;
 }
 
-#comment-form button {
+#commentForm button {
   margin-right: 10px;
   border: none;
   background-color: white;
@@ -175,7 +168,7 @@ ul {
   list-style: none;
 }
 
-b#user-id {
+b#userId {
   margin-right: 10px;
 }
 
@@ -198,8 +191,8 @@ img.myprofile {
   font-size: 18px;
 }
 
-.right-wrapper {
-  width: 230px;
+.right_wrapper {
+  width: 250px;
   height: 210px;
   padding: 15px;
   margin-bottom: 20px;
@@ -230,7 +223,7 @@ li {
   gap: 10px;
 }
 
-li.recommend-li {
+li.recommend_li {
   display: flex;
   justify-content: space-between;
 }
@@ -245,16 +238,30 @@ li div {
   text-align: center;
 }
 
-div.time {
+div.font_gray {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 2px;
 }
 
-div.time b {
+div.font_gray b {
   display: flex;
   justify-content: left;
+}
+
+b.font_gray {
+  color: gray;
+}
+
+p.font_gray {
+  color: gray;
+  width: 100px;
+  overflow: hidden;
+  margin: 0px;
+  font-weight: bold;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 b.follow {

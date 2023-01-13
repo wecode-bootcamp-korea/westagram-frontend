@@ -18,18 +18,18 @@
   <body>
     <nav>
       <!-- 로고 -->
-      <div class="nav-left">
-        <img id="logo-img" alt="Insta Logo" src="images/instagram.png" />
+      <div class="nav_left">
+        <img id="logoImg" alt="Insta Logo" src="images/instagram.png" />
         <span>|</span>
-        <span id="logo-span">westagram</span>
+        <span id="logoSpan">westagram</span>
       </div>
       <!-- 검색창 -->
-      <div class="search-wrapper">
-        <input type="search" class="search-bar" placeholder="검색" />
-        <img alt="Search Img" src="images/search.png" />
+      <div class="search_wrapper">
+        <input type="search" class="search_bar" placeholder="검색" />
+        <!-- <img alt="Search Img" src="images/search.png" /> -->
       </div>
       <!-- 기능 -->
-      <div class="nav-right">
+      <div class="nav_right">
         <img alt="Explore Img" src="images/explore.png" />
         <img alt="Heart Img" src="images/heart.png" />
         <img alt="Profile Img" src="images/profile.png" />
@@ -40,17 +40,17 @@
       <div class="feeds">
         <article class="article">
           <!-- 피드 상단 프로필 -->
-          <div class="profile-wrapper">
+          <div class="profile_wrapper">
             <div>
               <img alt="Myprofile Img" src="images/myprofile-img.png" />
               <b>beozzi__</b>
             </div>
-            <img class="menu-btn" alt="Menu Img" src="images/menu.png" />
+            <img class="menu_btn" alt="Menu Img" src="images/menu.png" />
           </div>
-          <img class="article-img" alt="Article Img" src="images/bzi.jpg" />
+          <img class="article_img" alt="Article Img" src="images/bzi.jpg" />
           <!-- 사진 아래 기능들 -->
-          <div class="function-wrapper">
-            <div class="function-right">
+          <div class="function_wrapper">
+            <div class="function_right">
               <img alt="Heart Img" src="images/emptyheart.png" />
               <img alt="Comment Img" src="images/comment.png" />
               <img alt="Upload Img" src="images/upload.png" />
@@ -58,28 +58,28 @@
             <img alt="Bookmark Img" src="images/bookmark.png" />
           </div>
           <!-- 좋아요 수 표시 -->
-          <div class="like-wrapper">
+          <div class="like_wrapper">
             <img alt="Profile Img" src="images/recommend-img1.png" />
             <span><b>samsaek<3</b>님 <b>외 319명</b>이 좋아합니다</span>
           </div>
           <!-- 사진 아래 문구 -->
-          <div class="desc-wrapper">
+          <div class="desc_wrapper">
             <b>beozzi__</b>
             <span>안녕하새오 버찌애오</span>
           </div>
           <!-- 댓글 -->
-          <div class="comment-wrapper">
+          <div class="comment_wrapper">
             <ul id="comments"></ul>
-            <b class="time">&nbsp;&nbsp;17분 전</b>
-            <form id="comment-form">
+            <b class="font_gray">&nbsp;&nbsp;17분 전</b>
+            <form id="commentForm">
               <input id="comment" type="text" placeholder="댓글 달기..." />
-              <button id="comment-btn" type="button">게시</button>
+              <button id="commentBtn" type="button">게시</button>
             </form>
           </div>
         </article>
       </div>
 
-      <div class="div-main-right">
+      <div class="div_main_right">
         <!-- 자신의 프로필 -->
         <div class="myprofile">
           <img
@@ -87,10 +87,10 @@
             alt="Profile Img"
             src="images/myprofile-img.png"
           />
-          <b id="user-id">beozzi__</b>
+          <b id="userId">beozzi__</b>
         </div>
         <!-- 스토리 -->
-        <div class="right-wrapper">
+        <div class="right_wrapper">
           <div class="title">
             <b class="title">스토리</b>
             <b>모두 보기</b>
@@ -98,60 +98,66 @@
           <ul class="profile">
             <li>
               <img alt="Profile Img" alt="" src="images/recommend-img1.png" />
-              <div class="time">
+              <div class="font_gray">
                 <b>samsaek<3</b>
-                <b class="time">16분 전</b>
+                <b class="font_gray">16분 전</b>
               </div>
             </li>
             <li>
               <img alt="Profile Img" src="images/recommend-img2.png" />
-              <div class="time">
+              <div class="font_gray">
                 <b>0donggul0</b>
-                <b class="time">16분 전</b>
+                <b class="font_gray">16분 전</b>
               </div>
             </li>
             <li>
               <img alt="Profile Img" src="images/recommend-img3.png" />
-              <div class="time">
+              <div class="font_gray">
                 <b>jjonkdduck</b>
-                <b class="time">16분 전</b>
+                <b class="font_gray">16분 전</b>
               </div>
             </li>
           </ul>
         </div>
         <!-- 추천 프로필 -->
-        <div class="right-wrapper">
+        <div class="right_wrapper">
           <div class="title">
             <b class="title">회원님을 위한 추천</b>
             <b>모두 보기</b>
           </div>
           <ul>
-            <li class="recommend-li">
+            <li class="recommend_li">
               <div>
                 <img alt="Profile Img" src="images/recommend-img1.png" />
-                <div class="time">
+                <div class="font_gray">
                   <b>anonymous1</b>
-                  <b class="time">0donggul0님 외 2명이 팔로우하고 있습니다 </b>
+                  <p class="font_gray">
+                    0donggul0님 외 2명이 팔로우하고 있습니다
+                  </p>
                 </div>
               </div>
               <b class="follow">팔로우</b>
             </li>
-            <li class="recommend-li">
+            <li class="recommend_li">
               <div>
                 <img alt="Profile Img" src="images/recommend-img2.png" />
-                <div class="time">
+                <div class="font_gray">
                   <b>anonymous2</b>
-                  <b class="time">0donggul0님 외 2명이 팔로우하고 있습니다 </b>
+                  <p class="font_gray">
+                    0donggul0님 외 2명이 팔로우하고 있습니다
+                  </p>
                 </div>
               </div>
               <b class="follow">팔로우</b>
             </li>
-            <li class="recommend-li">
+            <li class="recommend_li">
               <div>
                 <img alt="Profile Img" src="images/recommend-img3.png" />
-                <div class="time">
+                <div class="font_gray">
                   <b>anonymous2</b>
-                  <b class="time">0donggul0님 외 2명이 팔로우하고 있습니다 </b>
+                  <p class="font_gray">
+                    0donggul0님 외 2명이 팔로우하고 있습니다
+                  </p>
                 </div>
               </div>
               <b class="follow">팔로우</b>
