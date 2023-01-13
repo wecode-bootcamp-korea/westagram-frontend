@@ -15,33 +15,86 @@
   </head>
   <body>
     <nav>
-      <img class="logo" alt="logo" src=".\img\instagram.png" />
-      <img class="bar" alt="bar" src=".\img\bar.png" />
-      <span>westagram</span>
+      <div class="leftimg">
+        <img class="logo" alt="logo" src=".\img\instagram.png" />
+        <img class="bar" alt="bar" src=".\img\bar.png" />
+        <p class="westagram">westagram</p>
+      </div>
+
       <div class="search">
         <input type="text" placeholder="검색" />
         <img alt="search" src=".\img\search.png" />
       </div>
+
       <div class="rightimg">
-        <img
-          alt="location"
-          src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png"
-        />
-        <img
-          alt="like"
-          src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"
-        />
-        <img
-          class="mypage"
-          alt="mypage"
-          src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png"
-        />
+        <img alt="location" src="./img/explore.png" />
+        <img alt="like" src="./img/heart.png" />
+        <img class="mypage" alt="mypage" src="./img/profile.png" />
       </div>
     </nav>
     <main>
-      <div class="feeds">
-        <article></article>
-      </div>
+      <section class="leftsection">
+        <article>
+          
+          <div class="title">
+            <div class="imgid">
+              <img alt="titleimg" src="./img/mainimg.jpg" />
+            </div>
+            <span>yuri_leejh</span>
+            <img class="more" alt="more" src="./img/more.png" />
+          </div>
+
+          <div class="feedandmention">
+          <img alt="feedimg" src="./img/feed img.jpg" />
+          <div class="button">
+            <div>
+            <img alt="like" src="./img/red heart.png">
+            <img alt="comment" src="./img/comment.png">
+            <img alt="save" src="./img/save.png">
+            </div>
+            <img class="bookmark" alt="bookmark" src="./img/bookmark.png">
+          </div>
+
+          <div class="comment">
+            <div class="like">
+              <img class="commentimg" alt="commentimg" src="./img/feed img.jpg">
+              <span><b>aineworld</b>님 <b>외 10명</b>이 좋아합니다</span>
+            </div>
+
+            <div class="post">
+              <div><b>canon_mj</b> 위워크에서 진행한 베이킹 클래스...</p></div>
+              <input class="morebtn" type="button" value="더 보기">
+            </div>
+
+            <div class="mention">
+              <div><b>neceosecius</b> 거봐 좋았잖아~~~~</div>
+              <img alt="like" src="./img/heart.png">
+              
+            </div>
+            <div class="lasthour">42분 전</div>
+          </div>
+        </div>
+            <div class="makemention">
+              <input class="writemention" type="text" placeholder="댓글 달기...">
+              <input class="writebtn" type="button" value="게시">
+            </div>
+        </article>
+    </section>
+
+    <section class="rightsection">
+      <aside>
+        <div class="myProfileBox">
+          <div class="circle">
+            <image class="wecode" src ="./img/wecode.png"></image>
+          </div>
+          <div class="myProfileInfo">
+            <span class="myProfileID">wecode_bootcamp</span>
+            </br>
+            <span class="myProfileName">WeCode 위코드</span>
+          </div>
+        </div>
+      </aside>
+    </section>
       <div class="main-right"></div>
     </main>
     <script src="main.js"></script>
