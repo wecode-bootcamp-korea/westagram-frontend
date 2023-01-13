@@ -20,6 +20,42 @@ ul {
   border: 1px solid red;
 }
 
+/* common component */
+
+.name-content-cnt {
+  overflow: hidden;
+}
+
+.name {
+  font-size: 10px;
+  font-weight: 700;
+  margin-right: 0px;
+}
+
+.content {
+  font-size: 10px;
+}
+
+.profile-cnt {
+  display: flex;
+  overflow: hidden;
+}
+
+.profile-img {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+
+.profile-text li:nth-child(1) {
+  font-size: 9px;
+  margin: 0;
+}
+.profile-text li:nth-child(2) {
+  font-size: 6px;
+  margin: 0;
+}
+
 /* 네비게이션 */
 nav {
   display: flex;
@@ -59,6 +95,7 @@ h1 {
   font-family: "Lobster", cursive;
 }
 
+/* main */
 main {
   display: flex;
   justify-content: center;
@@ -67,19 +104,16 @@ main {
   overflow: hidden;
 }
 
+/* feeds */
 .feeds {
   border: 1px solid skyblue;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 20px auto;
 }
 
+/* article */
 article {
   border: 1px solid red;
   padding-right: 1px;
-  height: 500px;
-}
-
-aside {
 }
 
 article .icon-cnt {
@@ -103,17 +137,68 @@ article .icon-cnt {
   height: 15px;
 }
 
-.article-icon-20px {
+.article-icon-bigger {
   width: 18px;
   height: 18px;
 }
 
+.size-for-overflow-hidden {
+  width: 300px;
+  height: 15px;
+  margin: auto 0px;
+}
+
+.comment-cnt {
+  display: flex;
+  justify-content: space-between;
+}
+
+.comment-cnt input {
+  border: none;
+}
+
+.comment-cnt button {
+  color: skyblue;
+  background-color: inherit;
+  border: none;
+}
+
+/* main-right */
 .main-right {
   margin-left: 2px;
   border: 1px solid darkorange;
   width: 200px;
   height: 300px;
+}
+
+.story-wrap {
+  position: relative;
+  border: 1px solid brown;
+  height: 105px;
+  padding: 8px;
+  font-size: 10px;
   overflow: hidden;
+}
+
+.recommend-wrap {
+  position: relative;
+  border: 1px solid green;
+  height: 90px;
+  padding: 8px;
+  font-size: 10px;
+  overflow: hidden;
+}
+
+.show-all {
+  top: 5px;
+  right: 5px;
+  position: absolute;
+  font-size: 10px;
+}
+
+.story-li,
+.recommend-li {
+  margin-top: 100px;
 }
 
 @media all and (max-width: 567px) {
