@@ -77,7 +77,7 @@ function addNewComment() {
 
 commentBtn.addEventListener('click', addNewComment)
 commentInput.addEventListener('keypress', function () {
-  if (window.event.keyCode == 13) {
+  if (window.event.keyCode === 13) {
     addNewComment();
   }
 });
@@ -109,9 +109,28 @@ const page = document.querySelector('body')
 userBtn.addEventListener('click', profileOnOff)
 
 function profileOnOff() {
-  if (userProfile.style.display == "block") {
+  if (userProfile.style.display === "block") {
     userProfile.style.display = "none";
   } else {
     userProfile.style.display = "block";
   }
 }
+
+
+function clickBodyEvent(event) {
+  
+    let target = event.target;
+    let popUp = document.querySelector(".profilePopUp")
+
+    if(target === popUp){
+      popUp.style.display = "block";
+      console.log(1);
+    } else if (target === event.currentTarget.querySelector(".userIcon")){
+      console.log(2)
+      return;
+    } else { popUp.style.display = "none";
+    }
+}
+
+const body = document.querySelector("body");
+body.addEventListener('click', clickBodyEvent);

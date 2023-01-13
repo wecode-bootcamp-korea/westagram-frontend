@@ -24,17 +24,6 @@ a{
   color: #464646;
 }
 
-.profilePopUp{
-  display: none;
-  position: absolute;
-  right: 200px;
-  top: 50px;
-  width: 200px;
-  background-color: white;
-  border: 1px solid lightgray;
-  border-radius: 10px;
-  z-index: 2;
-}
 
 .profileList{
   font-size: 15px;
@@ -54,8 +43,21 @@ a{
 }
 
 .profileIcon{
+  position: relative;
   width: 20px;
 }
+
+.profilePopUp{
+  display: none;
+  position: absolute;
+  right:30px;
+  width: 200px;
+  background-color: white;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  z-index: 10;
+}
+
 
 .profileText{
   margin-left: 10px;
@@ -65,12 +67,13 @@ a{
 
 nav{
   display: flex;
+  position: relative;
   justify-content: space-around;
   align-content: center;
   flex-direction: row;
   background-color: white;
   height: 60px;
-  z-index: 10;
+  z-index: 1;
 }
 
 .navLeft{
@@ -132,7 +135,9 @@ nav{
 main{
   display: flex;
   justify-content: center;
+  position: relative;
   margin-top: 40px;
+  z-index: 1;
 }
 
 section{
@@ -331,7 +336,6 @@ font-weight : 800;
 }
 
 .commentHeartIcon.fas{
-  
   content: url("./img/loveOn.png")
 }
 
