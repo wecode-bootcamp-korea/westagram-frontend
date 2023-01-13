@@ -29,8 +29,8 @@ commentBtn.addEventListener("click", function (e) {
 const addComment = (userId, comment) => {
   const newComment = document.createElement("li");
   const userIdTag = document.createElement("b");
-  const heartImg = document.createElement("img");
-  const commentHeart = heartImg.setAttribute("id", "commentHeart");
+  // const heartImg = document.createElement("img");
+  // const commentHeart = heartImg.setAttribute("id", "commentHeart");
 
   // newComment.style.width = "440px";
   // userIdTag.style.marginRight = "8px";
@@ -42,7 +42,7 @@ const addComment = (userId, comment) => {
   userIdTag.append(userId);
   newComment.append(userIdTag);
   newComment.append(`${comment}`);
-  newComment.append(heartImg);
+  // newComment.append(heartImg);
   commentsWrapper.append(newComment);
 };
 

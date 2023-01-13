@@ -162,10 +162,18 @@ input#comment {
   cursor: pointer;
 }
 
-ul {
+ul#comments {
   padding-left: 0px;
   margin: 10px;
   list-style: none;
+}
+
+ul#comments li {
+  display: block;
+  width: 433px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 b#userId {
