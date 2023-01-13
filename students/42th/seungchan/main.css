@@ -1,0 +1,222 @@
+*{
+    box-sizing: border-box;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    height: 55px;
+    background: #fff; 
+    border-bottom: 1px solid #dbdbdb;
+}
+
+.header .inner {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+.header .inner .nav .link_list li a {
+    display: block;
+    margin: 5px;
+}
+
+.header .inner .nav .link_list li a i {
+    color: #000;
+    font-size: 20px;
+   
+}
+
+.header .inner .logo a img {
+   width: 100px;
+   display: block
+}
+.header .inner .input_box {
+    width: 200px;
+    height: 30px;
+    
+
+}
+.header .inner .input_box input {
+    height: 100%;
+    width: 100%;
+    padding: 0 32px;
+    background: #f1f3f5;
+    border: 1px solid #ced4da;
+    font-size: 13px;
+    outline: none;
+    background: none;
+    border-radius: 5px;
+}
+
+.header .inner .input_box input::placeholder {
+    text-align: center;
+    font-size: 13px;
+}
+.header .inner .input_box input:focus::-webkit-input-placeholder { 
+    color: transparent; 
+}
+.header .inner .nav {
+
+
+}
+.header .inner .nav .link_list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.header .inner .nav .link_list a img{
+    width: 50%;
+}
+/* //header */
+
+.main {
+    position: relative;
+    top: 50px;
+    height: 1000px;
+    background: #f9f8f8;
+}
+
+.feeds {
+    position:absolute;
+    z-index: 1;
+    top: 10px;
+    left: 80px;
+    /* border: solid 2px rgb(201, 28, 28); */
+    height: 945px;
+    width: 700px;
+    margin: auto;
+}
+
+.article {
+    z-index: 1;
+    border: solid 2px rgb(220, 218, 221);
+    height: 900px;
+    width: 540px;
+    margin: 10px auto;
+    
+}
+
+.article .feed_profile .profile_image {
+    margin: 10px;
+    font-weight: bold;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    display: block;
+    border-radius: 50%;
+}
+
+.feed_profile {
+    display: flex;
+}
+
+.profile_id {
+    /* border: solid 1px black; */
+    width: 100%;
+    height: 30px;  
+    margin: 20px auto 0px auto;
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 10px;
+    
+}
+
+.feed_id_add {
+    background-color: transparent !important;
+    background-image: none !important;
+    border-color: transparent;
+    border: none;
+
+    color: #FFFFFF;
+}
+
+.feed_photo {
+    /* border: solid 1px black; */
+    width: 100%;
+    height: 540px;
+    margin: 10px auto;
+}
+
+.feed_photo img {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+article .article-bottom {
+    width: 100%;
+  }
+  
+  article .article-bottom .article-links {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+  }
+  
+  article .article-bottom .article-links-left i {
+    font-size: 25px;
+    font-weight: normal;
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+  }
+  
+  article .article-bottom .article-links-left i:last-child {
+    margin-right: 0;
+  }
+  
+  article .article-bottom .article-links-right i {
+    font-size: 25px;
+    font-weight: normal;
+    width: 25px;
+    height: 25px;
+  }
+  
+  article .article-bottom .article-bottom-like {
+    width: 100%;
+    padding: 10px;
+  }
+  
+  article .article-bottom .article-bottom-like .like-profile .article-bold {
+    font-weight: bold;
+    
+  }
+  
+  article .article-bottom .article-bottom-texts {
+    padding: 10px;
+    width: 100%;
+  }
+  
+  article .article-bottom .article-bottom-texts > div {
+    margin-bottom: 5px;
+  }
+  
+  article .article-bottom .article-bottom-texts .article-bold {
+    font-weight: bold;
+  }
+  
+  article .article-bottom .article-bottom-texts .upload-time span {
+    color: #9a9a9a;
+  }
+
+  .like-profile .like_profile_image  {
+    margin-right: 10px;
+    font-weight: bold;
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    display:block;
+    border-radius: 50%;
+  }
+
+  .like-profile {
+    display: flex;
+    align-items: center;
+
+  }
+
