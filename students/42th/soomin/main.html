@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style/main.css" />
+    <script
+      src="https://kit.fontawesome.com/fa68743a54.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>westagram-main</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <h1>
+        <img
+          src="./images/westagram-icon.png"
+          alt="logo"
+          class="logo"
+        />westagram
+      </h1>
+      <div class="searchbar">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input class="search" type="text" placeholder="검색" />
+      </div>
+      <div class="notice">
+        <button type="button" aria-label="search-feed">
+          <img
+            class="exploration"
+            src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png"
+            alt="search"
+          />
+        </button>
+        <button type="button" aria-label="#">
+          <img
+            class="heart"
+            src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"
+            alt="heart"
+          />
+        </button>
+        <button type="button" aria-label="#">
+          <img
+            class="mypage"
+            src=" https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png"
+            alt="mypage"
+          />
+        </button>
+      </div>
+    </nav>
+    <main>
+      <div class="feeds">
+        <article>
+          <h1>my timeline</h1>
+          <ol>
+            <li>
+              <div class="proflie-box">
+                <h1>instagram form</h1>
+                <header>
+                  <a href="#" class="user-proflie">
+                    <img
+                      class="profile"
+                      src="./images/profile.jpg"
+                      alt="profile-photo"
+                    />
+                    ggangage
+                  </a>
+                </header>
+                <a href="#"><i class="fa-solid fa-ellipsis"></i></a>
+              </div>
+            </li>
+          </ol>
+          <img
+            class="feed-photo1"
+            src="./images/feed-photo.jpeg"
+            alt="feed-photo"
+          />
+          <div class="feed-icon">
+            <button type="button" aria-label="number of heart">
+              <img
+                class="heart-icon"
+                src="https://cdn-icons-png.flaticon.com/512/1538/1538598.png"
+                alt="heart-button"
+              />
+            </button>
+            <button type="button" aria-label="comment">
+              <img
+                class="comment-icon"
+                src="https://cdn-icons-png.flaticon.com/512/2/2043.png"
+                alt="comment-button"
+              />
+            </button>
+            <button type="button" aria-label="upload">
+              <img
+                class="upload-icon"
+                src="https://cdn-icons-png.flaticon.com/512/126/126494.png"
+                alt="upload-button"
+              />
+            </button>
+          </div>
+          <div class="feed-info">
+            <a href="#" class="follower-info"
+              ><img
+                class="follower-photo"
+                src="./images/follower-photo.jpeg"
+                alt="follower-photo"
+              />
+              <strong>aineworld</strong></a
+            >님&nbsp;<a href="#">외 10명</a>이 좋아합니다
+          </div>
+          <div class="feed-box">
+            <div class="feed-contents">
+              <a href="#">ggangage</a>
+              <p class="contents">크리스마스 좋아 ! 🎅🏻</p>
+            </div>
+            <button type="button" aria-label="view-more">더보기</button>
+          </div>
+          <div class="comment-box">
+            <a href="#"> <strong>ppobi</strong></a>
+            <p class="contents">🍰</p>
+          </div>
+          <span class="time">26분 전</span>
+          <div class="comment-bar">
+            <input
+              type="text"
+              placeholder="댓글 달기..."
+              aria-label="comment"
+            />
+            <button class="upload" type="submit">게시</button>
+          </div>
+        </article>
+      </div>
+      <div class="main-right">
+        <aside>
+          <div class="wecode">
+            <a class="wecode-follower-profile" href="#">
+              <img
+                class="wecode-profile"
+                src="./images/wecode-logo.png"
+                alt="user photo"
+            /></a>
+            <div>
+              <a href="#">wecode bootcamp</a>
+              <p class="color-gray">WeCode | 위코드</p>
+            </div>
+          </div>
+          <div class="story-box">
+            <div class="followers-story">
+              <p class="color-gray">스토리</p>
+              <button class="see-all" type="button" aria-label="see-all">
+                모두 보기
+              </button>
+            </div>
+            <div class="follower-story-box">
+              <ol class="follower-story">
+                <li>
+                  <a class="story-follower-profile" href="#">
+                    <img
+                      class="follower-profile"
+                      src="./images/follower-photo1.jpg"
+                      alt="follower-imge"
+                  /></a>
+                  <div>
+                    <a href="#">__gkxm_</a>
+                    <p class="color-gray">16분 전</p>
+                  </div>
+                </li>
+                <li>
+                  <a class="story-follower-profile" href="#">
+                    <img
+                      class="follower-profile"
+                      src="./images/follower-photo2.jpeg"
+                      alt="#"
+                  /></a>
+                  <div>
+                    <a href="#">dndbwhgdk</a>
+                    <p class="color-gray">3시간 전</p>
+                  </div>
+                </li>
+                <li>
+                  <a class="story-follower-profile" href="#">
+                    <img
+                      class="follower-profile"
+                      src="./images/follower-photo3.jpeg"
+                      alt="#"
+                  /></a>
+                  <div>
+                    <a href="#">ghhkh</a>
+                    <p class="color-gray">20시간 전</p>
+                  </div>
+                </li>
+                <li>
+                  <a class="story-follower-profile" href="#">
+                    <img
+                      class="follower-profile"
+                      src="./images/follower-photo7.jpg"
+                      alt="#"
+                  /></a>
+                  <div>
+                    <a href="#">ckzkxkgk</a>
+                    <p class="color-gray">23시간 전</p>
+                  </div>
+                </li>
+              </ol>
+            </div>
+          </div>
+          <div class="recommendation-box">
+            <div class="recommendation">
+              <p class="recommendation-color">회원님을 위한추천</p>
+              <button class="see-all" type="button" aria-label="see-all">
+                모두 보기
+              </button>
+            </div>
+            <div class="follower-box">
+              <ul>
+                <li>
+                  <a class="story-follower-profile" href="#">
+                    <img
+                      class="follower-profile"
+                      src="./images/follower-photo4.jpeg"
+                      alt="#"
+                  /></a>
+                  <div>
+                    <a href="#">djfudnj</a>
+                    <p class="recommendation-color">
+                      hahhho님 외 12명이 팔로우합니다
+                    </p>
+                  </div>
+                  <button
+                    type="button"
+                    aria-labe="following"
+                    class="button-color"
+                  >
+                    팔로우
+                  </button>
+                </li>
+                <li>
+                  <a class="story-follower-profile" href="#">
+                    <img
+                      class="follower-profile"
+                      src="./images/follower-photo5.jpeg"
+                      alt="#"
+                  /></a>
+                  <div>
+                    <a href="#">kskekfk</a>
+                    <p class="recommendation-color">
+                      hahhho님 외 10명이 팔로우합니다
+                    </p>
+                  </div>
+                  <button
+                    type="button"
+                    aria-labe="following"
+                    class="button-color"
+                  >
+                    팔로우
+                  </button>
+                </li>
+                <li>
+                  <a
+                    ><img
+                      class="follower-profile"
+                      src="./images/follower-photo6.jpeg"
+                      alt="#"
+                  /></a>
+                  <div>
+                    <a href="#">akqktk</a>
+                    <p class="recommendation-color">
+                      hahhho님 외 8명이 팔로우합니다
+                    </p>
+                  </div>
+                  <button
+                    type="button"
+                    aria-labe="following"
+                    class="button-color"
+                  >
+                    팔로우
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <footer>
+            <p>
+              instagram 정보 &#183; 지원 &#183; 홍보 센터 &#183; API &#183; 채용
+              정보 &#183; 개인정보처리방침 &#183; 약관 &#183; 디렉터리 &#183;
+              프로필 &#183; 해시태그 &#183; 언어
+            </p>
+            <br />
+            <p>&copy; 2019 INSTAGRAM</p>
+          </footer>
+        </aside>
+      </div>
+      <div></div>
+    </main>
+  </body>
+</html>

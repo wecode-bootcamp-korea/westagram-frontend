@@ -1,0 +1,312 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  /* background-color: rgb(240, 240, 240); */
+}
+
+body {
+  background-color: #f1f1f1;
+}
+
+button {
+  background: inherit;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  padding: 0;
+  overflow: visible;
+  cursor: pointer;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50px;
+  background-color: #fff;
+}
+
+.navbar .logo {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.navbar h1 {
+  display: flex;
+  align-items: center;
+  font-family: "Lobster", cursive;
+}
+
+.searchbar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+}
+
+.search {
+  width: 240px;
+  height: 25px;
+  border: solid;
+  border-radius: 5px;
+  color: rgb(240, 240, 240);
+  background-color: #fff;
+}
+
+.fa-magnifying-glass {
+  position: absolute;
+  left: 90px;
+  color: gray;
+}
+
+.navbar .search::placeholder {
+  text-align: center;
+}
+
+.exploration {
+  width: 25px;
+  margin-right: 20px;
+}
+
+.heart {
+  width: 25px;
+  margin-right: 20px;
+}
+
+.mypage {
+  width: 21px;
+}
+main {
+  display: flex;
+  justify-content: center;
+  padding: 60px 200px 0px 100px;
+}
+
+main h1 {
+  display: none;
+}
+
+ol {
+  margin-top: 5px;
+  list-style: none;
+}
+
+a {
+  text-decoration-line: none;
+  color: #000;
+}
+
+.profile {
+  width: 30px;
+  height: 30px;
+  border-radius: 70%;
+  overflow: hidden;
+  margin-right: 10px;
+}
+
+.feeds {
+  display: flex;
+  justify-content: center;
+  border: 1px solid #b2b2b2;
+  background-color: #fff;
+}
+
+.proflie-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.user-proflie {
+  display: flex;
+  align-items: center;
+}
+
+.feed-photo1 {
+  width: 400px;
+  height: 400px;
+}
+
+.feed-icon {
+  display: flex;
+  margin: 10px;
+}
+
+.heart-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.comment-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.upload-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.feed-info {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  font-size: 12px;
+}
+
+.follower-info {
+  display: flex;
+  align-items: center;
+}
+
+.follower-photo {
+  width: 20px;
+  height: 20px;
+  border-radius: 70%;
+  overflow: hidden;
+  margin-right: 5px;
+}
+
+.feed-box {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  margin-bottom: 0px;
+  font-size: 12px;
+}
+
+.feed-contents {
+  display: flex;
+}
+
+.contents {
+  margin-left: 5px;
+}
+
+.time {
+  margin-left: 10px;
+  font-size: 12px;
+  color: gray;
+}
+
+.comment-box {
+  display: flex;
+  margin-left: 10px;
+  font-size: 12px;
+}
+
+.comment-bar {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  font-size: 12px;
+}
+
+.main-right {
+  width: 225px;
+  margin-left: 30px;
+}
+
+.wecode {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+
+.wecode-follower-profile {
+  display: flex;
+}
+
+.color-gray {
+  color: gray;
+}
+
+.story-box {
+  height: 150px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #b2b2b2;
+  background-color: #fff;
+  white-space: nowrap;
+  overflow: scroll;
+}
+
+.story-box::-webkit-scrollbar {
+  display: none;
+}
+
+.followers-story {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+  font-size: 12px;
+}
+
+.see-all {
+  font-weight: 600;
+}
+
+.wecode-profile {
+  width: 30px;
+  height: 30px;
+  border-radius: 70%;
+  overflow: hidden;
+  margin-right: 10px;
+}
+
+.follower-profile {
+  width: 20px;
+  height: 20px;
+  border-radius: 70%;
+  overflow: hidden;
+  margin-right: 10px;
+}
+
+.button-color {
+  color: rgb(21, 95, 233);
+}
+
+.recommendation-box {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #b2b2b2;
+  background-color: #fff;
+}
+
+.recommendation {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.recommendation-color {
+  color: gray;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 140px;
+}
+
+ul {
+  list-style: none;
+}
+
+footer {
+  color: gray;
+  font-size: 12px;
+}
