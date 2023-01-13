@@ -19,7 +19,6 @@ commentInput.addEventListener('keyup', commentBtnOnOff);
 // 댓글 추가 & 삭제 //
 
 const commentBox = document.querySelectorAll('.commentBox');
-console.log("commentBox", commentBox)
 
 function addNewComment() {
   const newCommentLocation = document.querySelector('.comments');
@@ -64,30 +63,6 @@ function addNewComment() {
   }
 
   newHeart.addEventListener('click', heartOnOff);
-/*
-function heartOnOff() {
-
-    switch (newHeart.src) {
-
-      case "./img/loveOn.png":
-        newHeart.src = "./img/loveOff.png";
-        console.log(1)
-        break;
-      case "./img/loveOff.png":
-        newHeart.src = "./img/loveOn.png";
-        console.log(2)
-        break;
-
-
-    }
-    console.log(3) 
-  }
-
-  newHeart.addEventListener('click', heartOnOff);
-
-  */
-  
-
 
   newDiv.appendChild(newB);
   newDiv.appendChild(newSpan);
