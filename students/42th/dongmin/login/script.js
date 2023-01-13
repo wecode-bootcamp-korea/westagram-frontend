@@ -12,8 +12,6 @@ class LoginBtn {
       this.btn.style.backgroundColor = "rgb(196, 225, 250)";
     }
   }
-
-  loginBtnClick(inputId, inputPw) {}
 }
 
 const loginBtn = new LoginBtn(document.getElementsByClassName("login-btn")[0]);
