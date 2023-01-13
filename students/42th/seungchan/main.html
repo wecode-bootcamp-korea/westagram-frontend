@@ -14,38 +14,20 @@
     <div class="wrap">
         <!-- header -->
         <header class="header">
-                <div class="inner">
-                    <div class="logo">
-                        <a href="login.html"><img src="image/insta.png" alt="main_logo"></a>
-                    </div>
-
-                    <div class="input_box">
-                        <input type="text" placeholder="검색" id="search">
-                        <!-- <i class="far fa-heart"></i> -->
-                    </div>
-
-                    <nav class="nav">
-                        <ul class="link_list">
-                            <li>
-                                <a href="#">
-                                    <i class="fas fa-compass"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fas fa-heart"></i>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#">
-                                    <i class="fas fa-user-circle"></i>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
+            <div class="inner">
+                <div class="logo"><a href="login.html"><img src="image/insta.png" alt="main_logo"></a></div>
+                <div class="input_box"> <input type="text" placeholder="검색" id="search"></div>
+                <nav class="nav">
+                    <ul class="link_list">
+                    <li><a href="#"><i class="fas fa-compass"></i></a></li>
+                    <li><a href="#"><i class="fas fa-heart"></i></a></li>
+                    <li><a href="#"><i class="fas fa-user-circle"></i></a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
         <!-- //header -->
+
 
         <!-- main -->
         <main class="main">
@@ -56,115 +38,121 @@
                         <a href="#"></a>
                         <img class = "profile_image" src = "image/swim.jpg">
                         <p class="profile_id">seung_chann</p>
-                        
                     </div>
+
                     <div class="feed_photo">
                         <img src="image/flower.PNG">
                     </div>
-                   
-                    <!-- <div class="feed_info">
-                        <div class="feed_state">
-                            <ul class="link_list">
-                                <li>
-                                    <button type="button" class="state_btn">
-                                        <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png
-                                        " alt="like_img">
-                                    </button>
-                                </li>
-                                <li>
-                                    <button type="button" class="state_btn">
-                                        <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/comment.png" alt="comment_img">
-                                    </button>
-                                </li>
-                                <li>
-                                    <button type="button" class="state_btn">
-                                        <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/share.png" alt="share_img">
-                                    </button>
-                                </li>   
-                            </ul>
-                            <div class="link_list">
-                                <button type="button" class="state_btn">
-                                    <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/bookmark.png" alt="bookmark_img">
-                                </button>
-                            </div>
-                        </div> -->
 
-                        <div class="article-bottom">
-                            <div class="article-links">
-                              <div class="article-links-left">
+                    <div class="article-bottom">
+                        <div class="article-links">
+                            <div class="article-links-left">
                                 <i class="far fa-heart"></i>
                                 <i class="far fa-comment"></i>
                                 <i class="fas fa-paper-plane"></i>
-                              </div>
-                              <div class="article-links-right">
+                            </div>
+                            <div class="article-links-right">
                                 <i class="far fa-bookmark"></i>
-                              </div>
                             </div>
-                            <div class="article-bottom-like">
-                              <div class="like-profile">
+                        </div>
+                        
+                        <div class="article-bottom-like">
+                            <div class="like-profile">
                                 <a href="#"></a>
-                                    <img class = "like_profile_image" src = "image/swim.jpg">
-                                <span class="article-bold">
-
-                                    wecoedworld님 외 93명이 좋아합니다.</span> 
-                              </div>
+                                <img class = "like_profile_image" src = "image/swim.jpg">
+                                <span class="article-bold">wecoedworld님 외 93명이 좋아합니다.</span> 
                             </div>
+                        </div>
 
                               <!-- 댓글 구분선 -->
-                            <div class="article-bottom-texts">
-                                <div class="comment-text">
-                                  <span class="article-bold">canon_mj</span>
-                                  <span>안녕하세요 !!</span>
-                                </div>
-                                <div class="comment-text">
-                                  <span class="article-bold">nececsoeis</span>
-                                  <span> 우왕 꽃이당 🌸</span>
-                                </div>
-                                <div class="upload-time"><span>38분 전</span></div>
+                        <div class="article-bottom-texts">
+                            <div class="comment-text">
+                                <span class="article-bold">canon_mj</span><span>안녕하세요 !!</span>
                             </div>
+                            <div class="comment-text">
+                                <span class="article-bold">nececsoeis</span><span> 우왕 꽃이당 🌸</span>
+                            </div>
+                            <div class="upload-time"><span>38분 전</span></div>
+                        </div>
                                 
-              <div class="article-bottom-comments">
-                <form>
-                  <div class="emotion"><i class="far fa-smile"></i></div>
-                  <textarea
-                    id="comments-id"
-                    placeholder="댓글 달기..."
-                    autocomplete="off"
-                    autocorrect="off"
-                  ></textarea>
-                  <button id="comments-submit" type="submit" disabled="true">
-                    게시
-                  </button>
-                </form>
-              </div>
+                        <div class="article-bottom-comments">
+                            <form>
+                                <div class="emotion"><i class="far fa-smile"></i></div>
+                                <textarea
+                                    id="comments-id"
+                                    placeholder="댓글 달기..."
+                                    autocomplete="off"
+                                    autocorrect="off">
+                                </textarea>
+                                <button id="comments-submit" type="submit" disabled="true">게시</button>
+                            </form>
+                        </div>
+                    </div>
+                </article>
             </div>
-                
-                
-              </article>
+        
+        <aside>
+            <div class = "side-profile">
+                <a href="#"></a>
+                <img class = "side_profile_image" src = "image/swim.jpg">
+                <p class="side_profile_id">seung_chann</p>
             </div>
-            <!--//left -->
+
+            <div class = "story-box">
+                <p>스토리</p>
+                <div class = "story-person">
+                    <a href="#"></a>
+                    <img class = "story_person_image" src = "image/story1.jpg">
+                    <p class="side_profile_id">KIM_898</p>
+                </div>
+                <div class = "story-person">
+                    <a href="#"></a>
+                    <img class = "story_person_image" src = "image/story2.jpg">
+                    <p class="side_profile_id">bebe_su__</p>
+                </div>
+                <div class = "story-person">
+                    <a href="#"></a>
+                    <img class = "story_person_image" src = "image/story3.png">
+                    <p class="side_profile_id">sehann_a1</p>
+                </div>
+                <div class = "story-person">
+                    <a href="#"></a>
+                    <img class = "story_person_image" src = "image/story4.jpg">
+                    <p class="side_profile_id">apple_apple</p>
+                </div>
+            
+            </div>
+
+            <div class = "recommand-box">
+            <p> </p>
+            <p>회원님을 위한 추천</p>
+                <div class = "story-person">
+                    <a href="#"></a>
+                    <img class = "story_person_image" src = "image/story4.jpg">
+                    <p class="side_profile_id">KIM_898</p>
+                </div>
+                <div class = "story-person">
+                    <a href="#"></a>
+                    <img class = "story_person_image" src = "image/story2.jpg">
+                    <p class="side_profile_id">bebe_su__</p>
+                </div>
+                <div class = "story-person">
+                    <a href="#"></a>
+                    <img class = "story_person_image" src = "image/story3.png">
+                    <p class="side_profile_id">sehann_a1</p>
+                </div>
+                <div class = "story-person">
+                    <a href="#"></a>
+                    <img class = "story_person_image" src = "image/story4.jpg">
+                    <p class="side_profile_id">apple_apple</p>
+                </div>
+            </div>
 
 
-            <!-- rigth -->
-            <div class ="feed_right">
-                <div class = "feed_right_profile"></div>
 
-            </div>
-                    
-                        <!-- aside -->
-                        <aside class="aside">
-                        </aside>
-                        <!-- //aside -->
-                        <!-- footer -->
-                        <footer class="footer">
-                        </footer>
-                        <!-- //footer -->
-                
-                 <!-- //rigth -->
-            </div>
-        </main>
-    </div>
-    <!-- //main -->
+        </aside>
+
+    </main>
 </div>
 </body>
 </html>
