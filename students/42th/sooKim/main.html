@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,21 +18,23 @@
 </head>
 
 <body>
-  <!--내 정보 팝업창-->
+
+
+  <!---------내 정보 팝업창--------->
   <div class="profilePopUp">
 
     <ul class="profileList">
 
       <li>
         <div class="profileMenu">
-          <img class ="profileIcon" src="./img/user.png">
+          <img class="profileIcon" alt="profileIcon_profile" src="./img/user.png">
           <a class="profileText" href="#">프로필</a>
         </div>
       </li>
 
       <li>
         <div class="profileMenu">
-          <img class ="profileIcon" src="./img/save.png">
+          <img class="profileIcon" alt="profileIcon_save" src="./img/save.png">
           <a class="profileText" href="#">저장됨</a>
         </div>
       </li>
@@ -39,7 +42,7 @@
 
       <li>
         <div class="profileMenu">
-          <img class ="profileIcon" src="./img/settings.png">
+          <img class="profileIcon" alt="profileIcon_settings" src="./img/settings.png">
           <a class="profileText" href="#">설정</a>
         </div>
       </li>
@@ -53,67 +56,70 @@
     </ul>
 
   </div>
-  
-  
-  <!--네비게이션-->
-  <div class="navigator">
+
+
+  <!---------네비게이션---------->
+  <nav class="navigator">
     <div class="navLeft">
-      <img class="instagramLogo" src="./img/instagram.png">
-      <span class ="instagramTitle">Instagram</span>
+      <img class="instagramLogo" alt="instagramLogo" src="./img/instagram.png">
+      <span class="instagramTitle">Instagram</span>
     </div>
 
     <div class="navCenter">
-      <img class="searchIcon" src="./img/search.png">
+      <img class="searchIcon" alt="searchIcon" src="./img/search.png">
       <input type="text" placeholder="검색" class="searchBar">
     </div>
 
     <div class="navRight">
-      <img class="compassIcon icons" src="./img/compass.png">
-      <img class="heartIcon icons" src="./img/love.png">
-      <img class="userIcon icons" src="./img/user.png">
+      <img class="compassIcon icons" alt="compassIcon" src="./img/compass.png">
+      <img class="heartIcon icons" alt="hearIcon" src="./img/love.png">
+      <img class="userIcon icons" alt="userIcon" src="./img/user.png">
     </div>
-    
-  </div> 
-  
-  
-  <div class="main">
 
+  </nav>
+
+  <!-------------------main------------------->
+  <main class="main">
+
+
+    <!-------------------section------------------->
     <section>
       <article class="feed_1">
 
         <div class="authorProfileBox">
-            <div class="circle">
-              <img class="authorProfile_img" src="./img/authorProfileImg.png">
-            </div>
+          <div class="circle">
+            <img class="authorProfile_img" alt="authorProfileImg" src="./img/authorProfileImg.png">
+          </div>
           <span class="authorId"> blushcats </span>
-          <img class="otherIcon" src="./img/other.png">
+          <img class="otherIcon" alt="otherIcon" src="./img/other.png">
         </div>
 
-          <div class="articleImgBox">
-            <img class="article_img" src="./img/articleImg.png">
-          </div>
+        <div class="articleImgBox">
+          <img class="article_img" alt="article_img" src="./img/articleImg.png">
+        </div>
 
         <div class="reactionIconBox">
-          <div class ="reactionIconLeft">
-            <img class="reaction_heartIcon reactionIcons" src="./img/love.png">
-            <img class="reaction_commentIcon reactionIcons" src="./img/comment.png">
-            <img class="reaction_saveIcon reactionIcons" src="./img/save.png">
+          <div class="reactionIconLeft">
+            <img class="reaction_heartIcon reactionIcons" alt="reaction_heartIcon" src="./img/love.png">
+            <img class="reaction_commentIcon reactionIcons" alt="reaction_commentIcon" src="./img/comment.png">
+            <img class="reaction_saveIcon reactionIcons" alt="reaction_saveIcon src=" src="./img/save.png">
           </div>
-          <div class ="reactionIconRight">
-            <img class="reaction_bookmarkIcon" src="./img/bookmark.png">
+          <div class="reactionIconRight">
+            <img class="reaction_bookmarkIcon" alt="reaction_bookmarkIcon" src="./img/bookmark.png">
           </div>
         </div>
 
         <div class="statusBox">
           <div class="circle_2">
-            <image class="circle_2" src="./img/profileImg_4.png"></image>
+            <image class="circle_2" alt="statusProfile_img" src="./img/profileImg_4.png"></image>
           </div>
           <p class="status"> aineworld님 외 10명이 좋아합니다</p>
         </div>
-        
+
         <div class="postBox">
-          <span class ="postId">canon_mj</span>
-          <div class ="postContext">위워크에서 진행한 베이킹 클래스 넘나 재밌었다! 사랑하는 내 사람들이랑 함께하니 베이킹이 더 잘 되는 것 같다. 상세한 문의는 DM으로 친절한 인삿말과 함께 부탁드립니다
+          <span class="postId">canon_mj</span>
+          <div class="postContext">위워크에서 진행한 베이킹 클래스 넘나 재밌었다! 사랑하는 내 사람들이랑 함께하니 베이킹이 더 잘 되는 것 같다. 상세한 문의는 DM으로 친절한 인삿말과
+            함께 부탁드립니다
           </div>
           <input type='button' id="postMore" value='더 보기'>
         </div>
@@ -121,35 +127,36 @@
         <ul>
 
           <div class="comments">
-          <li>
+            <li>
               <div class="commentBox">
                 <b>neceosecius</b>
-                <span class ="commentContext">거봐 좋았잖아 ~~~~</span>
+                <span class="commentContext">거봐 좋았잖아 ~~~~</span>
 
               </div>
-          </li>
+            </li>
 
           </div>
-          
+
         </ul>
 
         <div class="commentTimeBox">
-          <span class ="commentTime">42분 전</span>
+          <span class="commentTime">42분 전</span>
         </div>
-        
+
         <div class="commentWriteBox">
-          <input type ='text' class="commentWrite" placeholder="댓글 달기...">
-          <input type ='button' class="commentWriteButton" value ="게시" >
+          <input type='text' class="commentWrite" placeholder="댓글 달기...">
+          <input type='button' class="commentWriteButton" value="게시" disabled>
         </div>
-        
+
       </article>
     </section>
 
+    <!-------------------aside------------------->
 
     <aside class="mobile">
       <div class="myProfileBox">
         <div class="circle">
-          <image class="wecode" src ="./img/wecode.png"></image>
+          <img class="wecode" alt="wecode_img" src="./img/wecode.png"></img>
         </div>
         <div class="myProfileInfo">
           <span class="myProfileID">wecode_bootcamp</span>
@@ -162,111 +169,111 @@
       <div class="storyBox">
         <div class="storyTop">
           <span class="storyTopLeft">스토리</span>
-          <input type ="button" class="storyTopRight" value="모두 보기">
+          <input type="button" class="storyTopRight" value="모두 보기">
         </div>
 
         <div class="storyBottom">
-        <ul class="storyList">
-          
-          <li>
-            <div class="storyProfile">
+          <ul class="storyList">
 
-                <div class= "storyIcon">
-                  <img class="storyIcon_img_1" src="./img/profileImg_5.png">
+            <li>
+              <div class="storyProfile">
+
+                <div class="storyIcon">
+                  <img class="storyIcon_img_1" alt="profile_img_5" src="./img/profileImg_5.png">
                 </div>
 
-            <div class="storyInfo"> 
-              <span class="storyId">_yum_s</span>
-              </br>
-              <span class="storyTime">16분 전</span>
-            </div>
-            
-          </div>
-          </li>
-
-          <li>
-            <div class="storyProfile">
-
-                <div class= "storyIcon">
-                  <img class="storyIcon_img_1" src="./img/profileImg_2.png">
+                <div class="storyInfo">
+                  <span class="storyId">_yum_s</span>
+                  </br>
+                  <span class="storyTime">16분 전</span>
                 </div>
 
-            <div class="storyInfo"> 
-              <span class="storyId">drink_eat_drink</span>
-              </br>
-              <span class="storyTime">3시간 전</span>
-            </div>
-            
-          </div>
-          </li>
+              </div>
+            </li>
 
-          <li>
-            <div class="storyProfile">
+            <li>
+              <div class="storyProfile">
 
-                <div class= "storyIcon">
-                  <img class="storyIcon_img_1" src="./img/profileImg_3.png">
+                <div class="storyIcon">
+                  <img class="storyIcon_img_1" alt="profile_img_2" src="./img/profileImg_2.png">
                 </div>
 
-            <div class="storyInfo"> 
-              <span class="storyId">hyukyc</span>
-              </br>
-              <span class="storyTime">20시간 전</span>
-            </div>
-            
-          </div>
-          </li>
-
-          <li>
-            <div class="storyProfile">
-
-                <div class= "storyIcon">
-                  <img class="storyIcon_img_1" src="./img/profileImg_4.png">
+                <div class="storyInfo">
+                  <span class="storyId">drink_eat_drink</span>
+                  </br>
+                  <span class="storyTime">3시간 전</span>
                 </div>
 
-            <div class="storyInfo"> 
-              <span class="storyId">jiminkeek</span>
-              </br>
-              <span class="storyTime">20분 전</span>
-            </div>
-            
-          </div>
-          </li>
+              </div>
+            </li>
 
-          <li>
-            <div class="storyProfile">
+            <li>
+              <div class="storyProfile">
 
-                <div class= "storyIcon">
-                  <img class="storyIcon_img_1" src="./img/profileImg_1.png">
+                <div class="storyIcon">
+                  <img class="storyIcon_img_1" alt="profile_img_3" src="./img/profileImg_3.png">
                 </div>
 
-            <div class="storyInfo"> 
-              <span class="storyId">laralina</span>
-              </br>
-              <span class="storyTime">3일 전</span>
-            </div>
-            
-          </div>
-          </li>
+                <div class="storyInfo">
+                  <span class="storyId">hyukyc</span>
+                  </br>
+                  <span class="storyTime">20시간 전</span>
+                </div>
 
-        </ul>
+              </div>
+            </li>
+
+            <li>
+              <div class="storyProfile">
+
+                <div class="storyIcon">
+                  <img class="storyIcon_img_1" alt="profile_img_4" src="./img/profileImg_4.png">
+                </div>
+
+                <div class="storyInfo">
+                  <span class="storyId">jiminkeek</span>
+                  </br>
+                  <span class="storyTime">20분 전</span>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="storyProfile">
+
+                <div class="storyIcon">
+                  <img class="storyIcon_img_1" alt="profile_img_1" src="./img/profileImg_1.png">
+                </div>
+
+                <div class="storyInfo">
+                  <span class="storyId">laralina</span>
+                  </br>
+                  <span class="storyTime">3일 전</span>
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
         </div>
       </div>
-      
+
       <div class="recommendBox">
         <div class="recommendTop">
           <span class="recommendTopLeft">회원님을 위한 추천</span>
-          <input type ="button" class="recommendTopRight" value="모두 보기">
+          <input type="button" class="recommendTopRight" value="모두 보기">
         </div>
         <div class="recommendBottom">
           <ul class="recommendList">
-            
+
             <li>
               <div class="recommendProfile">
-                
+
                 <div class="recommendIcon">
-                  <img class="recommendIcon_img_1" src="./img/profileImg_1.png">
+                  <img class="recommendIcon_img_1" alt="profile_img_1" src="./img/profileImg_1.png">
                 </div>
-                
+
                 <div class="recommendInfo">
                   <span class="recommendId">rampart81</span>
                   </br>
@@ -278,14 +285,14 @@
               </div>
             </li>
 
-                        
+
             <li>
               <div class="recommendProfile">
-                
+
                 <div class="recommendIcon">
-                  <img class="recommendIcon_img_1" src="./img/profileImg_3.png">
+                  <img class="recommendIcon_img_1" alt="profile_img_3" src="./img/profileImg_3.png">
                 </div>
-                
+
                 <div class="recommendInfo">
                   <span class="recommendId">joojoo98</span>
                   </br>
@@ -297,14 +304,14 @@
               </div>
             </li>
 
-                        
+
             <li>
               <div class="recommendProfile">
-                
+
                 <div class="recommendIcon">
-                  <img class="recommendIcon_img_1" src="./img/profileImg_2.png">
+                  <img class="recommendIcon_img_1" alt="profile_img_2" src="./img/profileImg_2.png">
                 </div>
-                
+
                 <div class="recommendInfo">
                   <span class="recommendId">joaaaahye</span>
                   </br>
@@ -321,12 +328,14 @@
       </div>
 
       <footer class="info">
-        <span class ="links"> Instagram 정보 ꞏ 지원 ꞏ 홍보 센터 ꞏ API ꞏ </br> 채용 정보 ꞏ 개인정보처리방침 ꞏ 약관 ꞏ</br> 디렉터리 ꞏ 프로필 ꞏ 해시태그 ꞏ 언어 </span>
-        <p class ="watermark">Ⓒ 2019 INSTAGRAM</p>
+        <span class="links"> Instagram 정보 ꞏ 지원 ꞏ 홍보 센터 ꞏ API ꞏ </br> 채용 정보 ꞏ 개인정보처리방침 ꞏ 약관 ꞏ</br> 디렉터리 ꞏ 프로필 ꞏ 해시태그 ꞏ 언어
+        </span>
+        <p class="watermark">Ⓒ 2019 INSTAGRAM</p>
       </footer>
 
     </aside>
 
-  </div>
+  </main>
 </body>
+
 </html>

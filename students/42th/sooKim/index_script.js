@@ -6,12 +6,12 @@ const inputPw = document.querySelector(".userPw")
 const loginBtn = document.querySelector('#btn');
 
 
-function colorOnOff (){
-  if(inputId.value.indexOf('@') >= 0 && inputPw.value.length > 4){
+function colorOnOff() {
+  if (inputId.value.indexOf('@') >= 0 && inputPw.value.length > 4) {
     loginBtn.style.backgroundColor = '#3E7FDE';
     loginBtn.disabled = false;
   }
-  else{
+  else {
     loginBtn.style.backgroundColor = '#8CB4F0';
     loginBtn.disabled = true;
   }
@@ -19,7 +19,7 @@ function colorOnOff (){
 
 inputPw.addEventListener('keyup', colorOnOff);
 
-function goMain(){
+function goMain() {
   location.href = "main.html";
 }
 
