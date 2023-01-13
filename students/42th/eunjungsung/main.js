@@ -32,12 +32,12 @@ const addComment = (userId, comment) => {
   const heartImg = document.createElement("img");
   const commentHeart = heartImg.setAttribute("id", "commentHeart");
 
-  newComment.style.width = "440px";
-  userIdTag.style.marginRight = "8px";
-  // commentHeart.setAttribute("alt", "Heart Img");
-  commentHeart.src = "images/redempty.png";
-  // commentHeart.setAttribute("width", "20px");
-  // commentHeart.setAttribute("height", "20px");
+  // newComment.style.width = "440px";
+  // userIdTag.style.marginRight = "8px";
+  // // commentHeart.setAttribute("alt", "Heart Img");
+  // commentHeart.src = "images/redempty.png";
+  // // commentHeart.setAttribute("width", "20px");
+  // // commentHeart.setAttribute("height", "20px");
 
   userIdTag.append(userId);
   newComment.append(userIdTag);
