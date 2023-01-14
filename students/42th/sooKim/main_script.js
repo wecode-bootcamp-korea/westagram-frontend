@@ -84,8 +84,6 @@ commentInput.addEventListener('keypress', function () {
 
 
 
-
-
 // 더보기 구현 //
 
 const moreBtn = document.querySelector("#postMore")
