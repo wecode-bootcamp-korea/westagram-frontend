@@ -1,0 +1,69 @@
+* {
+    box-sizing: border-box; /* 이게 뭐지? */
+}
+
+div {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(250,250,250)
+}
+
+.border {
+    border: 1px solid grey;
+    padding: 30px 50px 80px 50px;
+    background-color: white;
+}
+
+header {
+    font-family: 'Lobster', cursive;
+    font-size: 3em;
+    margin-bottom: 50px;
+    cursor: default;
+}
+
+input {
+    background-color: rgb(250,250,250);
+    width: 250px;
+    height: 35px;
+    border-radius: 5px;
+    font-size: 15px;
+    padding-left: 10px;
+    outline: 1px solid #eaeaea;
+}
+
+input::placeholder {
+    font-size: 15px;
+}
+
+input:focus {
+    outline: 1px solid darkgrey;
+}
+
+.id {
+    margin-bottom: 10px;
+}
+
+.password {
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: rgb(103,182,250);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 260px;
+    height: 35px;
+    font-size: medium;
+    margin-bottom: 100px;
+    border: 0;
+}
+
+footer {
+    color: rgb(38,79,124);
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
