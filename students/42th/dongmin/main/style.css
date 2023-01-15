@@ -42,16 +42,22 @@ ul {
 }
 
 .name-content-cnt {
-  overflow: hidden;
+  padding-left: 5px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
 }
 
+.size-for-overflow-hidden {
+  width: 300px;
+  height: 15px;
+  margin: auto 0px;
+}
+
 .name {
   font-size: 10px;
   font-weight: 700;
-  margin-right: 0px;
+  margin-right: 5px;
 }
 
 .content {
@@ -119,7 +125,7 @@ nav {
 }
 
 .nav-center {
-  /* border: 2px solid burlywood; */
+  border: 1px solid rgb(240, 240, 240);
   background-color: rgb(250, 250, 250);
 }
 
@@ -180,15 +186,7 @@ article {
   /* border: 1px solid red; */
   border: 2px solid rgb(245, 245, 245);
   padding-right: 1px;
-}
-
-article .button-cnt {
-  display: flex;
-  justify-content: space-between;
-}
-
-article .icon-cnt {
-  display: flex;
+  background-color: white;
 }
 
 .img-focus-cnt {
@@ -207,36 +205,88 @@ article .icon-cnt {
   margin: 0;
 }
 
+article button {
+  padding: 0;
+  border: none;
+  background-color: inherit;
+}
+article .button-cnt {
+  display: flex;
+  justify-content: space-between;
+}
+
+article .icon-cnt {
+  display: flex;
+}
+
 .article-icon {
   width: 15px;
   height: 15px;
 }
 
-.size-for-overflow-hidden {
-  width: 300px;
-  height: 15px;
-  margin: auto 0px;
+.like-cnt {
+  display: flex;
+  align-items: center;
+  font-size: 10px;
 }
 
-.comment-cnt {
+.like-profile-cnt {
+  display: flex;
+  align-items: center;
+  height: 28px;
+  overflow: hidden;
+}
+
+.like-profile-img {
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgb(240, 240, 240);
+  border-radius: 50%;
+  margin-right: 2px;
+}
+
+.like-profile-text {
+  font-size: 12px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.like-amount-zero {
+  display: none;
+}
+
+.like-amount-not-zero {
+  display: relative;
+}
+
+hr {
+  margin-top: 5px;
+  opacity: 0.5;
+}
+
+.input-cnt {
   display: flex;
   justify-content: space-between;
+  margin: 5px auto;
 }
 
-.comment-cnt input {
+.input-cnt input {
   width: 100%;
   margin: 0;
   padding: 0;
   border: none;
 }
 
-.comment-cnt button {
+.input-cnt button {
   width: 40px;
   margin: 0;
   padding: 0;
   color: skyblue;
-  background-color: white;
   border: none;
+}
+
+.input-cnt button:hover {
+  color: blue;
 }
 
 /* main-right */
@@ -256,7 +306,7 @@ article .icon-cnt {
   padding: 8px;
   background-color: white;
   font-size: 10px;
-  overflow: hidden;
+  overflow: scroll;
 }
 
 .recommend-wrap {
@@ -267,7 +317,12 @@ article .icon-cnt {
   padding: 8px;
   background-color: white;
   font-size: 10px;
-  overflow: hidden;
+  overflow: scroll;
+}
+
+.story-wrap::-webkit-scrollbar,
+.recommend-wrap::-webkit-scrollbar {
+  display: none;
 }
 
 .show-all {

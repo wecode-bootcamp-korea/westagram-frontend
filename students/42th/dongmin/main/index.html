@@ -61,37 +61,56 @@
             <div class="button-cnt">
               <ul class="icon-cnt">
                 <li>
-                  <img
-                    class="article-icon"
-                    alt="logo"
-                    src="../img/empty-heart.png"
-                  />
-                  <!-- </li>
-                <li> -->
-                  <img class="article-icon" alt="logo" src="../img/chat.png" />
-                  <!-- </li>
-                <li> -->
-                  <img
-                    class="article-icon"
-                    alt="logo"
-                    src="../img/upload.png"
-                  />
+                  <button class="heart-button">
+                    <img
+                      class="article-icon"
+                      alt="logo"
+                      src="../img/empty-heart.png"
+                    />
+                  </button>
+                </li>
+                <li>
+                  <button>
+                    <img
+                      class="article-icon"
+                      alt="logo"
+                      src="../img/chat.png"
+                    />
+                  </button>
+                </li>
+                <li>
+                  <button>
+                    <img
+                      class="article-icon"
+                      alt="logo"
+                      src="../img/upload.png"
+                    />
+                  </button>
                 </li>
               </ul>
               <div class="icon-cnt">
-                <img
-                  class="article-icon"
-                  alt="logo"
-                  src="../img/bookmark.png"
-                />
+                <button>
+                  <img
+                    class="article-icon"
+                    alt="logo"
+                    src="../img/bookmark.png"
+                  />
+                </button>
               </div>
-                <!-- </li> -->
-                <!-- </ul> -->
-              </li>
             </div>
 
-            <div class="like-amount">
-              display none until heart-color is changed
+            <div id="like-amount" class="like-amount-not-zero">
+              <div class="like-cnt">
+                <div class="like-profile-cnt">
+                  <img
+                    class="like-profile-img"
+                    alt="logo"
+                    src="../img/wecode.png"
+                  />
+                  <div class="like-profile-text">wecode_bootcamp</div>
+                </div>
+                <div>님이 좋아합니다.</div>
+              </div>
             </div>
             <div class="name-content-cnt size-for-overflow-hidden">
               <span class="name">chanho_park</span>
@@ -100,14 +119,17 @@
                 제가나다라마바사아자카타파하아자차카타파하
               </span>
             </div>
+            <div>
+              <ul class="comment-li"></ul>
+            </div>
             <hr />
-            <div class="comment-cnt">
+            <div class="input-cnt">
               <input
                 class="input-comment"
                 type="text"
                 placeholder="댓글 달기.."
               />
-              <button>게시</button>
+              <button class="submit">게시</button>
             </div>
           </article>
         </div>
