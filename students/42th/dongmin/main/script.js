@@ -13,6 +13,11 @@ btnSubmit.addEventListener("click", () => {
   const listComment = document.getElementsByClassName("comment-li")[0];
   const inputComment = document.getElementsByClassName("input-comment")[0];
 
+  if (inputComment.value.length <= 0) {
+    alert("내용을 입력해주세요!");
+    return;
+  }
+
   const mkDiv = document.createElement("div");
   const mkName = document.createElement("span");
   const mkContent = document.createElement("span");
