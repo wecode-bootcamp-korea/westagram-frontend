@@ -44,11 +44,9 @@ input.search_bar {
   text-align: center;
 }
 
-input.search_bar::-webkit-input-placeholder {
-  background: url(images/search.png) no-repeat;
-  background-size: contain;
-  background-position: 130px center;
-}
+/* input.search-bar::-webkit-input-placeholder {
+  background-image: url("https://www.iconsdb.com/icons/preview/gray/search-13-xxl.png");
+} */
 
 .search_wrapper img {
   position: absolute;
@@ -137,6 +135,15 @@ img.article_img {
   margin: 10px;
 }
 
+b.time {
+  color: gray;
+  width: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* margin: 10px; */
+}
+
 input:focus {
   outline: none;
 }
@@ -162,18 +169,10 @@ input#comment {
   cursor: pointer;
 }
 
-ul#comments {
+ul {
   padding-left: 0px;
   margin: 10px;
   list-style: none;
-}
-
-ul#comments li {
-  display: block;
-  width: 433px;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
 }
 
 b#userId {
@@ -200,7 +199,7 @@ img.myprofile {
 }
 
 .right_wrapper {
-  width: 250px;
+  width: 230px;
   height: 210px;
   padding: 15px;
   margin-bottom: 20px;
@@ -246,30 +245,16 @@ li div {
   text-align: center;
 }
 
-div.font_gray {
+div.time {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 2px;
 }
 
-div.font_gray b {
+div.time b {
   display: flex;
   justify-content: left;
-}
-
-b.font_gray {
-  color: gray;
-}
-
-p.font_gray {
-  color: gray;
-  width: 100px;
-  overflow: hidden;
-  margin: 0px;
-  font-weight: bold;
-  white-space: nowrap;
-  text-overflow: ellipsis;
 }
 
 b.follow {
