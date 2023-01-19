@@ -1,0 +1,92 @@
+@import '../../styles/mixin.scss';
+@import '../../styles/variables.scss';
+
+html {
+  width: 100%;
+  height: 50vh;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #FAFAFA;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+main {
+  display: flex;
+  padding-left: $middleSize;
+}
+
+.article {
+  width: 500px;
+  border-radius: 10px;
+  border: 2px solid #DBDBDB;
+  background-color: white;
+}
+
+.comment {
+  width: 50px;
+  white-space:nowrap;
+  overflow: hidden;
+  text-overflow:ellipsis;
+}
+
+.name{
+  margin-right: 10px;
+}
+
+.main-right {
+  width: 100%;
+  margin-right: 20px;
+}
+
+.circle {
+  @include circle(flex);
+}
+
+.view-all {
+  display: flex;
+  justify-content: space-between;
+}
+
+.story-box {
+  background-color: white;
+  border: 2px solid #DBDBDB;
+  border-radius: 10px;
+}
+
+.follow-li-box{
+  display: flex;
+  align-items: center;
+  line-height: 5px;
+  img {
+    width: 50px;
+  }
+  .follow-li-box p:nth-child(2) {
+    color: gray;
+  }
+}
+
+img {
+  @include circle(flex);
+}
+
+.main-right-profile{
+  display: flex;
+  align-items: center;
+  img {
+    width: 50px;
+  }
+  .main-right-profile-text p:nth-child(2) {
+    color: gray;
+    line-height: 5px;
+  }
+}
+
+
+
+

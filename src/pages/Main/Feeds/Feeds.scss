@@ -1,0 +1,51 @@
+@import '../../../styles/mixin.scss';
+@import '../../../styles/variables.scss';
+
+.feeds {
+  padding: 150px;
+  .like {
+    display: flex;
+    align-items: center;
+    .circle {
+      @include circle(flex);
+    }
+  }
+}
+
+.profile {
+  display: flex;
+  line-height: 5px;
+  .profile-text p{
+    font-size: 20px;
+  }
+  .profile-text span {
+    font-size:15px;
+    color: gray;
+    font-weight: 700;
+  }
+}
+
+.icon-lower {
+  display: flex;
+  justify-content: space-between;
+  .heartColor {
+    color: tomato;
+  }  
+}
+
+.bootcamp-described span:nth-child(1){
+  font-weight: bold;
+}
+
+.addComment {
+  width: 70%;
+  height: 50px;
+  border: none;
+}
+
+.comment-button {
+  border: none;
+  width: 27%;
+  height: $middleSize;
+  border-radius: 20px;
+}
