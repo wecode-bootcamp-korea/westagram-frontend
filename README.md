@@ -29,7 +29,7 @@
 - [[Mission3] 메인 페이지 레이아웃](https://github.com/wecode-bootcamp-korea/westagram-frontend/issues/3)
 - [[Mission4] 댓글 내용 입력 후 Enter press, 혹은 게시 버튼 클릭 시 댓글 추가 기능](https://github.com/wecode-bootcamp-korea/westagram-frontend/issues/4)
 
-<br />
+<br 
 
 ## 추가 구현 항목
 > 추가 구현 항목들은 필수 구현 완료 후에 추가로 구현해볼만한 기능들입니다. 마찬가지로 미션의 순서에 따라 진행해주세요. 추가 구현 항목은 [Issues](https://github.com/wecode-bootcamp-korea/westagram-frontend/issues/5) 에서 모두 확인 가능합니다.
