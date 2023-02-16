@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="style/main.css">
 </head>
 <body>
+
     <div class="box">
         <div class="nav">
             <div class="nav_container">
@@ -17,7 +18,7 @@
                 <p class="westagram">Westagram</p>
             </div>
             <div class="nav_searchbar">
-                <input type="search" placeholder="검색">
+                <input class="search" type="search" placeholder="검색">
                 <i class="fa-solid fa-magnifying-glass"></i>  
             </div>
             <div class="icons">
@@ -35,7 +36,6 @@
                             <img class="wecode_image" src="img/wecode.jpeg">
                             <div class="wecode_text">
                                 <h4>wecode_bootcamp</h4>
-                                <h5>WeCode - 위코드</h5>
                             </div>
                         </div>
                         <i class="fa-solid fa-ellipsis"></i>
@@ -74,11 +74,8 @@
                         </div>
                     </div>
                     <div class="comment">
-                        <div>
-                            댓글 달기...
-                        </div>
-                        <input type="button" value="게시"/>
-            
+                        <input class="comment_text" type="text" placeholder="댓글 달기...">
+                        <button class="comment_submit">게시</button>
                     </div>
                 </article>
             </div> 
@@ -87,8 +84,8 @@
                 <div class="main_right_top">
                     <img class="wecode_image" src="img/wecode.jpeg">
                     <div class="wecode_text">
-                        <h4>wecode_bootcamp</h4>
-                        <h5>WeCode - 위코드</h5>
+                        <p class="name">wecode_bootcamp</p>
+                        <p class="nickname">WeCode - 위코드</p>
                     </div>
                 </div> 
                 <div class="story">
@@ -97,7 +94,7 @@
                         <h5 class="story_h5">모두 보기</h5>
                     </div>
                     <div class="story_person">
-                        <div class="str">
+                        <div class="recommend_person">
                             <span>
                                 <img class="person" src="img/person1.png">
                             </span>
@@ -110,7 +107,7 @@
                                 </div>
                             </div>  
                         </div>
-                        <div class="str">
+                        <div class="recommend_person">
                             <span>
                                 <img class="person" src="img/person1.png">
                             </span>
@@ -119,11 +116,11 @@
                                     wecode_zzang
                                 </div>
                                 <div class="person_time">
-                                    12분 전
+                                    23분 전
                                 </div>
                             </div>    
                         </div>
-                        <div class="str">
+                        <div class="recommend_person">
                             <span>
                                 <img class="person" src="img/person1.png">
                             </span>
@@ -132,25 +129,11 @@
                                     wecode_zzang
                                 </div>
                                 <div class="person_time">
-                                    12분 전
-                                </div>
-                            </div>
-
-                        </div>
-                        <div class="str">
-                            <span>
-                                <img class="person" src="img/person1.png">
-                            </span>
-                            <div>
-                                <div class="preson_id">
-                                    wecode_zzang
-                                </div>
-                                <div class="person_time">
-                                    12분 전
+                                    30분 전
                                 </div>
                             </div>
                         </div>
-                        <div class="str">
+                        <div class="recommend_person">
                             <span>
                                 <img class="person" src="img/person1.png">
                             </span>
@@ -159,12 +142,24 @@
                                     wecode_zzang
                                 </div>
                                 <div class="person_time">
-                                    12분 전
+                                    45분 전
+                                </div>
+                            </div>
+                        </div>
+                        <div class="recommend_person">
+                            <span>
+                                <img class="person" src="img/person1.png">
+                            </span>
+                            <div>
+                                <div class="preson_id">
+                                    wecode_zzang
+                                </div>
+                                <div class="person_time">
+                                    55분 전
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
                 <div class="recommend">
                     <div class="recommend_top">
@@ -172,11 +167,11 @@
                         <h5 class="story_h5">모두 보기</h5>
                     </div>
                     <div>
-                        <div class="str">
+                        <div class="recommend_person">
                             <span>
                                 <img class="person" src="img/person1.png">
                             </span>
-                            <div class="sss">
+                            <div class="follow_person">
                                 <div>
                                     <div class="person_id">
                                         wecode_zzang
@@ -190,11 +185,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="str">
+                        <div class="recommend_person">
                             <span>
                                 <img class="person" src="img/person1.png">
                             </span>
-                            <div class="sss">
+                            <div class="follow_person">
                                 <div>
                                     <div class="person_id">
                                         wecode_zzang
@@ -208,11 +203,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="str">
+                        <div class="recommend_person">
                             <span>
                                 <img class="person" src="img/person1.png">
                             </span>
-                            <div class="sss">
+                            <div class="follow_person">
                                 <div>
                                     <div class="person_id">
                                         wecode_zzang
@@ -226,11 +221,11 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="str">
+                        <div class="recommend_person">
                             <span>
                                 <img class="person" src="img/person1.png">
                             </span>
-                            <div class="sss">
+                            <div class="follow_person">
                                 <div>
                                     <div class="person_id">
                                         wecode_zzang
@@ -245,9 +240,8 @@
                             </div>
                         </div>
                     </div>
-
-                 
                 </div>
+
                 <div class="company">
                     <h6>Westagram정보 지원 홍보센터 API 채용정보 개인정보처리방침 약관 디렉터리 프로필 해시태그 언어</h6>
                     <h6>2019 WESTAGRAM</h6>
@@ -256,6 +250,7 @@
         </div>
     </div>
 
+    <script src="js/main.js"></script>
     <script src="https://kit.fontawesome.com/c55dff0e66.js" crossorigin="anonymous"></script>
 </body>
 </html>

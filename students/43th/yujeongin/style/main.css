@@ -1,15 +1,16 @@
-
 .nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+
 }
+
     .nav_logo {
         width: 30px;
         height: 30px;
@@ -17,9 +18,6 @@
         .westagram {
             border-left: 2px solid rgba(0, 0, 0, 1);
             padding-left: 10px;
-        }
-        .fa-magnifying-glass {
-            opacity:0.3;
         }
         .icons .explore {
             width: 30px;
@@ -33,20 +31,34 @@
             width: 30px;
             height: 30px;
         }
+
     .nav_searchbar {
         display: flex;
-        justify-content: center;
+        justify-content: right;
         align-items: center;
-        width: 100px;
+        position: relative;
+        width: 200px;
         height: 30px;
-    }
+    }   
+        .search {
+            width: 100%;
+            height: 25px;
+            background-color: #fafafa;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 2px;
+
+        }
+        .fa-magnifying-glass {
+            opacity:0.3;
+            position: absolute;
+        }
 
     .nav_container {
-        height: 75px;
-        width: 200px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        height: 75px;
+        width: 200px;
         font-family: "westagram";
         font-size: 30px;
     }
@@ -57,18 +69,23 @@
 .main {
     display: flex;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 125px;
 }
+
     .feeds {
         display: flex;
         margin-left: 100px;
+        background-color: #fff;
     }
+
         article {
-            max-width: 500px;
             display: flex;
             flex-direction: column;
+            max-width: 500px;
             border: 1px solid rgba(0, 0, 0, 0.1);
+            background-color: #fff;
         }
+
         .article-top {
             display: flex;
             align-items: center;
@@ -83,22 +100,25 @@
                 margin-left: 10px;
             }
             .wecode_image {
-                height: 50px;
-                width: 50px;
+                height: 40px;
+                width: 40px;
                 border-radius: 100%;
             }
             .wecode_text {
                 margin-left: 20px;
             }
+            
         .wecode_article {
             width: 500px;
             height: 400px;
         }
+
         .btn_bar {
             display: flex;
             justify-content: space-between;
             margin: 10px 0px 10px 0px;
         }
+
         .article_bottom {
             margin-left: 10px;
         }
@@ -112,14 +132,28 @@
                     display: flex;
                     align-items: center;
                 }
+
         .comment {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            height:40px;
             border-top: 1px solid rgba(0, 0, 0, 0.1);
             color:rgba(0, 0, 0, 0.3);
-            height:40px;
         }
+            .comment_text {
+                border: none;
+                width: 450px;
+                height: 30px;
+            }
+            .comment_submit {
+                width: 40px;
+                height: 22px;
+                border: none;
+                border-radius: 5px;
+                color:rgb(76,181,249);
+                background-color: rgb(222, 237, 246);
+            }
 
 .main_right {
     max-width: 300px;
@@ -128,16 +162,25 @@
     margin-left: 20px;
 }
     .main_right_top {
-        height: 100px;
+        height: 50px;
         display: flex;
         justify-content: left;
         align-items: center;
-        margin-left: 10px;
+        margin: 5px 0px 10px 0px;
     }
         .wecode_text {
             align-items: center;
-            justify-content: column;
             justify-content: center;
+        }
+        p {
+            margin: 0 auto;
+        }
+        .name {
+            font-weight: 500;
+        }
+        .nickname {
+            font-size: 13px;
+            opacity: 0.5;
         }
     
     .story {
@@ -145,20 +188,23 @@
         border: 1px solid rgba(0, 0, 0, 0.1);
         margin-bottom: 20px;
         overflow: auto;
+        position: relative;
+        background-color: #fff;
     }
         .story_top {
             display: flex;
             justify-content: space-between;
         }
+
     .recommend {
         height: 200px;
         border: 1px solid rgba(0, 0, 0, 0.1);
         overflow: auto;
+        background-color: #fff;
     }
         .recommend_top {
             display: flex;
             justify-content: space-between;
-
         }
         .company {
             color: rgba(0, 0, 0, 0.3);
@@ -170,28 +216,26 @@
             margin-right: 10px;
         }
 
-.person {
-    width: 30px;
-    height: 30px;
-    border-radius: 100%;
-    margin-right: 10px;
-}
-
-    .str {
-        display: flex;
-        margin: 0px 0px 5px 10px;
+    .person {
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        margin-right: 10px;
     }
-    .person_time {
-        font-size: 12px;
-        opacity: 0.6;
-    }
-
-    .follow {
-        color: rgb(0,149,246);
-    }
-.sss {
-    width: 230px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+        .recommend_person {
+            display: flex;
+            margin: 0px 0px 5px 10px;
+        }
+        .person_time {
+            font-size: 12px;
+            opacity: 0.6;
+        }
+        .follow {
+            color: rgb(0,149,246);
+        }
+        .follow_person {
+            width: 230px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
