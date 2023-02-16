@@ -18,72 +18,85 @@
     <nav>
       <ul>
         <li>
-          <img src="images/instagram.png" alt="logo" class="logo" />
-          <span id="home" class="instaFont">Westargram</span>
+          <img src="images/instagram.png" alt="logo" class="logo-24" />
+          <span id="home" class="main-logo">Westargram</span>
         </li>
         <li>
-          <input type="text" placeholder="검색" id="search" />
+          <div id="search-wrapper">
+            <input type="text" placeholder="검색" id="search" />
+            <div id="searchUser"></div>
+          </div>
         </li>
-        <li id="icons">
-          <img class="logo" src="images/compass.png" />
-          <img class="logo" src="images/heart.png" />
-          <img class="logo" id="nav-account" src="images/user.png" />
+        <li id="nav-icons">
+          <div><img class="logo-24" src="images/compass.png" /></div>
+          <div><img class="logo-24" src="images/heart.png" /></div>
+          <div>
+            <img class="logo-24" id="nav-account" src="images/user.png" />
+            <div id="menu-box">
+              <p>설정</p>
+              <p>북마크</p>
+              <p>내 활동</p>
+              <p>문제 신고</p>
+              <p>계정 전환</p>
+              <p>로그아웃</p>
+            </div>
+          </div>
         </li>
       </ul>
     </nav>
     <main>
-      <div id="feeds">
-        <article>
-          <div id="nickname-wrapper">
-            <div id="nickname">
-              <img src="images/me.jpg" />
-              <span class="account-span" id="id">jinp1993</span>
+      <article id="feeds">
+        <div id="nickname-wrapper">
+          <div id="nickname-container">
+            <img src="images/me.jpg" />
+            <span class="nickname-id" id="id">jinp1993</span>
+          </div>
+          <div id="add-option">
+            <img src="images/more.png" alt="more" class="feed-logo" />
+          </div>
+        </div>
+        <div id="image-area">
+          <img src="images/yoon.jpg" alt="photo" />
+        </div>
+        <section id="feed-logo-wrapper">
+          <div id="feed-logo-inner">
+            <div id="good-reply-share">
+              <img
+                class="feed-logo"
+                src="images/heart.png"
+                id="good"
+                alt="좋아요"
+              />
+              <img class="feed-logo" src="images/chat.png" alt="답글보기" />
+              <img class="feed-logo" src="images/share.png" alt="공유" />
             </div>
-            <div id="addition">
-              <img src="images/more.png" alt="more" class="feed-logo" />
+            <div id="bookmark">
+              <img class="feed-logo" src="images/bookmark.png" alt="북마크" />
             </div>
           </div>
-          <div id="image-area">
-            <img src="images/yoon.jpg" alt="photo" />
-          </div>
-          <section id="feed-logo-wrapper">
-            <div id="feed-logo-inner">
-              <div id="good-reply-share">
-                <img
-                  class="feed-logo"
-                  src="images/heart.png"
-                  id="good"
-                  alt="좋아요"
-                />
-                <img class="feed-logo" src="images/chat.png" alt="답글보기" />
-                <img class="feed-logo" src="images/share.png" alt="공유" />
-              </div>
-              <div id="bookmark">
-                <img class="feed-logo" src="images/bookmark.png" alt="북마크" />
-              </div>
-            </div>
-          </section>
-          <section id="how-many-good">
-            <img src="images/me.jpg" alt="" />
-            <span class="account-span">jinp1993님 외 10명이 좋아합니다.</span>
-          </section>
-          <section id="contents">
-            콘텐츠테스트콘텐츠테스트콘텐츠테스트콘텐츠테스트
-          </section>
-          <section id="how-many-reply"></section>
-          <section id="reply-area"></section>
-          <div id="add-reply">
-            <textarea id="reply" placeholder="댓글 달기..."></textarea>
-            <span id="add">게시</span>
-          </div>
-        </article>
-      </div>
-      <div id="main-right">
+        </section>
+        <section id="how-many-good">
+          <img src="images/me.jpg" alt="" />
+          <span class="nickname-id">jinp1993님 외 10명이 좋아합니다.</span>
+        </section>
+        <section id="feed-contents">
+          <p>안녕하세요. 신입 프론트엔드 개발자입니다. 잘 부탁드립니다.</p>
+        </br>
+          <p id="how-many-reply"></p>
+        </section>
+        <section id="reply-area"></section>
+        <div id="add-reply">
+          <br />
+          <textarea id="reply" placeholder="댓글 달기..."></textarea>
+          <span id="post-reply">게시</span>
+        </div>
+      </article>
+      <aside id="main-right">
         <section id="my-account">
           <img class="my-account-logo" src="images/me.jpg" />
           <span class="right-of-logo">jinp1993</span>
         </section>
-        <section class="sidebar-wrapper">
+        <section class="sidebar-wrapper" id="story">
           <div id="story-title">
             <span class="left-span">스토리</span>
             <span class="right-span" id="view-all-story">모두 보기</span>
@@ -92,14 +105,14 @@
           <div id="story-main"></div>
         </section>
         <section class="sidebar-wrapper">
-          <div id="recommend-title">
-            <span class="left-span">회원님을 위한 추천!</span>
+          <div id="recommend-title" id="recommend">
+            <span class="left-span">회원님을 위한 추천</span>
             <span class="right-span" id="view-all-recommend">모두 보기</span>
             <br />
             <div id="recommend-main"></div>
           </div>
         </section>
-      </div>
+      </aside>
     </main>
   </body>
   <script src="js/main.js"></script>
