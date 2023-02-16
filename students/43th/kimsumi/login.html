@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>로그인 | 인스타그램</title>
+  <link rel="stylesheet" type="text/css" href="style/common.css">
+  <link rel="stylesheet" type="text/css" href="style/login.css">
+ <script src="js/login.js" defer></script>
+</head>
+<body>
+  <div class="wrap_login">
+    <h2 class="screen_out">인스타그램</h2>
+    <div class="box_login">
+        <strong class="tit_logo">Westagram</strong>
+        <form method="post" action="#none">
+          <fieldset>
+            <legend class="screen_out">로그인</legend>
+            <input type="text" class="inp_user" placeholder="전화번호, 사용자이름 또는 이메일" title="전화번호, 사용자이름 또는 이메일" onkeyup="loginForm()">
+            <input type="password" class="inp_psassword" placeholder="비밀번호" title="전화번호, 사용자이름 또는 이메일"  onkeyup="loginForm()">
+            <button type="submit" class="btn_login" disabled>로그인</button><!-- 아이디, 비밀번호 입력시 속성 disabled 제거 -->
+          </fieldset>
+        </form>
+        <div id='result'></div>
+        <a href="#none" class="link_psassword">비밀번호를 잊으셨나요?</a>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+/* reset */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,button{margin:0;padding:0}
+fieldset,img{border:0 none}
+dl,ul,ol,menu,li{list-style:none}
+blockquote, q{quotes:none }
+blockquote:before, blockquote:after,q:before, q:after{content:'';content:none}
+input,select,textarea,button{vertical-align:middle}
+input::-ms-clear{display:none}
+button{border:0 none;background-color:transparent;cursor:pointer}
+body{background:#fff}
+body,th,td,input,select,textarea,button{font-size:14px;line-height:1.5;font-family:HelveticaNeue,AppleSDGothicNeo-Regular,tahoma,'Malgun Gothic','맑은 고딕',dotum,'돋움',sans-serif;color:#333}
+
+a{color:#333;text-decoration:none}
+a:active, a:hover{text-decoration:underline}
+a:active{background-color:transparent}
+address,caption,cite,code,dfn,em,var{font-style:normal;font-weight:normal}
+/* Form */
+textarea {border:1px solid #dbdbdb}
+select {height:32px;font-size:13px;color:#373737;border:1px solid #e9e9e9;background:#fff;border-radius:5px}
+input[type=tel],
+input[type=time],
+input[type=text],
+input[type=password],
+input[type=search],
+input[type=email],
+input[type=file],
+input[type=url],
+input[type=number],
+input[type=date],textarea {width:100%;height:30px;font-size:13px;color:#373737;border:1px solid #e9e9e9;background:#fff;transition:all 0.5s;vertical-align:middle}
+input::-webkit-input-placeholder{color:#b5b5b5;font-size:12px;line-height:100%}
+select:focus,
+textarea:focus,
+input:focus {border: 1px solid #727272}
+main,header,section,nav,footer,aside,article,figure{display:block}
+html{position:relative}
+html,body{min-width:1280px;min-height:100%}
+
+.ir_pm{display:block;overflow:hidden;font-size:0;line-height:0;text-indent:-9999px}/* PC용 사용된 이미지내 의미있는 텍스트의 대체텍스트를 제공할때 */
+.ir_pm{display:block;overflow:hidden;font-size:1px;line-height:0;color:transparent}/* Mobile용 사용된 이미지내 의미있는 텍스트의 대체텍스트를 제공할때 */
+.ir_wa{display:block;overflow:hidden;position:relative;z-index:-1;width:100%;height:100%}/* 중요한 이미지 대체텍스트로 이미지off시에도 대체 텍스트를 보여주고자 할때 */
+.ir_caption{overflow:hidden;width:1px;font-size:1px;line-height:0;text-indent:-9999px}/* Table caption에 숨김텍스트를 제공할때 */
+.screen_out{overflow:hidden;position:absolute;width:0;height:0;line-height:0;text-indent:-9999px}/* 대체텍스트가 아닌 접근성을 위한 숨김텍스트를 제공할때 */
+.show{display:block}
+.hide{display:none}
+
+/* global */
+.direct-link{position:absolute;top:-1px;left:0;z-index:1000;height:1px}
+.direct-link a{position:absolute;top:-999px;padding:5px 10px;font-weight:bold;color:#fff;background:#333;text-decoration:none;white-space:nowrap}
+.direct-link a:focus{top:0}
+
+.img_g{display:block;width:100%}
+svg{display:block}
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
