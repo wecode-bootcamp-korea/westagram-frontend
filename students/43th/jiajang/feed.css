@@ -1,0 +1,458 @@
+/* 
+리팩토링 가이드
+
+1. id 및 class명, 변수명, 함수명 개선
+2. Semantic Tag (div 남발 x)
+4. Self closing tag 확인 -> 불필요한 닫는 태그 삭제
+6. 레이아웃은 bottom-up 방식으로 구성 
+- 자식요소의 높이에 따라 부모요소의 높이가 유동적으로 결정됨
+- 다시 한 번 기억하자.. css 유지보수가 js보다 힘들다..
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
+@media (max-width: 1200px) {
+  .main-right {
+    display: none;
+  }
+}
+
+/* 공통 스타일 */
+
+body {
+  margin: 0 auto;
+}
+
+.layout {
+  display: flex;
+}
+
+img {
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+input {
+  background-color: #fafafa;
+  border: none;
+  border-radius: 4px;
+  width: 180px;
+  height: 20px;
+  padding-left: 10px;
+}
+
+input::placeholder {
+  color: #bababa;
+  text-align: center;
+}
+
+input:focus {
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+}
+
+/* nav 레이아웃 */
+
+nav {
+  position: fixed;
+  left: 0;
+  width: 100px;
+  height: 100vh;
+  padding: 40px 120px 40px 20px;
+  background-color: white;
+  border-right: 1px solid #e6e6e6;
+  z-index: 1;
+  margin-left: 5px;
+}
+
+nav img {
+  width: 25px;
+  height: 25px;
+}
+
+.nav-top {
+  position: fixed;
+  top: 40px;
+}
+
+.westagram-logo {
+  font-family: "Lobster", cursive;
+  font-size: 25px;
+}
+
+.nav-middle {
+  margin-top: 80px;
+}
+
+.nav-middle-menu {
+  display: flex;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.nav-middle-menu img {
+  margin-right: 15px;
+}
+
+.profile img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+
+.nav-bottom {
+  position: fixed;
+  bottom: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-bottom-icon {
+  margin-right: 20px;
+}
+
+/* 중앙 레이아웃 */
+
+main {
+  display: flex;
+  justify-content: center;
+  width: 1000px;
+  margin: 50px 500px;
+}
+
+/* 상단 스토리 박스 */
+
+.upside-story-box {
+  display: flex;
+  margin-bottom: 20px;
+  gap: 15px;
+  overflow: scroll;
+}
+
+.upside-story-box img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  background-image: linear-gradient(#fff, #fff),
+    linear-gradient(to right, red 0%, orange 100%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+.upside-story-box img:nth-child(2) {
+  border: 2px solid #62ce60;
+}
+
+.upside-story-box::-webkit-scrollbar {
+  display: none;
+}
+
+footer {
+  font-size: 12px;
+  font-weight: 500;
+  color: #bababa;
+}
+
+footer div:first-child {
+  margin: 20px 0;
+}
+
+/* 중앙 좌측 */
+
+.main-left {
+  width: 480px;
+  margin-right: 80px;
+}
+
+.feeds-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.feeds {
+  border-radius: 2px;
+  font-size: 15px;
+  background-color: white;
+  border: none;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.feeds-upside {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+}
+
+.feeds-upside-left {
+  display: flex;
+  align-items: center;
+}
+
+.feeds-profile-img {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  background-image: linear-gradient(#fff, #fff),
+    linear-gradient(to right, red 0%, orange 100%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  box-shadow: 0 0 0 10px #fff inset;
+  margin-right: 5px;
+}
+
+.feeds-nickname {
+  font-size: 16px;
+  font-weight: 700;
+  margin-right: 10px;
+}
+
+.photo {
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+}
+
+.feeds-bottom {
+  padding: 10px 10px 0 10px;
+  font-size: 14px;
+}
+
+.feeds-icons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.comment-icon {
+  margin: 0 5px;
+}
+
+.feeds-like {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.feeds-like span:nth-child(1),
+span:nth-child(3) {
+  font-weight: 700;
+}
+
+.feeds-content {
+  margin: 10px 0 2px 0;
+}
+
+.feeds-content-box {
+  margin: 10px 0;
+}
+
+.feeds-content-box-text a {
+  font-weight: 700;
+}
+
+.feeds-content-box-text span:nth-child(3) {
+  font-weight: normal;
+  color: gray;
+}
+
+.feeds-old-comment {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.feeds-old-comment-left h6 {
+  color: gray;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.feeds-new-comment-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.feeds-new-comment {
+  display: flex;
+  justify-content: space-between;
+}
+
+.feeds-content-time {
+  color: gray;
+  font-size: 14px;
+}
+
+.heart-icon-mini {
+  width: 10px;
+  height: 10px;
+}
+
+.feeds-comment-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px 10px 0;
+  color: #bababa;
+  font-size: 14px;
+  height: 40px;
+}
+
+.feeds-comment {
+  background-color: white;
+  border: none;
+  width: 80%;
+  font-size: 14px;
+}
+
+.feeds-comment::placeholder {
+  text-align: left;
+  color: gray;
+}
+
+.feeds-comment-upload {
+  background-color: transparent;
+  border: none;
+  color: #c5e1fa;
+}
+
+/* 중앙 우측 */
+
+.main-right {
+  width: 340px;
+  background-color: white;
+}
+
+.profile-box {
+  height: 60px;
+  border-radius: 2px;
+  display: flex;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.profile-img-main {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+}
+
+.profile-box-nickname {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.profile-box-nickname span:nth-child(2) {
+  color: gray;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.story-bottom img {
+  margin-right: 5px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  background-image: linear-gradient(#fff, #fff),
+    linear-gradient(to right, red 0%, orange 100%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+.story-individual {
+  display: flex;
+  align-items: center;
+}
+
+.story-individual-middle {
+  margin: 5px 0;
+  font-size: 12px;
+}
+
+.story-individual-middle-time {
+  font-size: 12px;
+  font-weight: 400;
+  color: gray;
+}
+
+.recommend-box {
+  height: 250px;
+  margin: 15px 0 28px 0;
+  padding: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  border: none;
+  border-radius: 2px;
+  background-color: white;
+  overflow: scroll;
+}
+
+.recommend-box::-webkit-scrollbar {
+  display: none;
+}
+
+.recommend-upside {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.recommend-upside span {
+  color: gray;
+}
+
+.recommend-bottom img {
+  border: 1px solid #e6e6e6;
+}
+
+.recommend-individual {
+  margin: 15px 0;
+  justify-content: space-between;
+}
+
+.recommend-individual-left {
+  display: flex;
+}
+
+.recommend-individual-left img {
+  margin-right: 10px;
+}
+
+.recommend-individual-middle-nickname {
+  font-size: 14px;
+}
+
+.recommend-individual-right {
+  color: #5395e9;
+}
+
+/* new comment */
+
+.added-comment {
+  margin: 5px 0;
+}
