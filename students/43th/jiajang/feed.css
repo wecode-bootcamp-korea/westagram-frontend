@@ -1,8 +1,6 @@
 /* 
 리팩토링 가이드
 
-1. id 및 class명, 변수명, 함수명 개선
-2. Semantic Tag (div 남발 x)
 6. 레이아웃은 bottom-up 방식으로 구성 
 - 자식요소의 높이에 따라 부모요소의 높이가 유동적으로 결정됨
 - 다시 한 번 기억하자.. css 유지보수가 js보다 힘들다..
@@ -57,7 +55,7 @@ input:focus {
 
 /* nav 레이아웃 */
 
-.nav {
+nav {
   position: fixed;
   left: 0;
   width: 100px;
@@ -124,7 +122,6 @@ nav img {
   height: 25px;
   background-image: url("./img/right-arrow.png");
   background-size: cover;
-  background-repeat: no-repeat;
   cursor: pointer;
 }
 
@@ -132,14 +129,15 @@ nav img {
 
 main {
   display: flex;
-  justify-content: center;
   width: 1000px;
   margin: 50px 500px;
 }
 
-/* 상단 스토리 박스 */
+main::-webkit-scrollbar-x {
+  display: none;
+}
 
-.main-left-upside {
+header {
   display: flex;
   margin-bottom: 20px;
   gap: 15px;
@@ -148,7 +146,7 @@ main {
 
 /* 스토리 그라데이션 */
 
-.main-left-upside img {
+header img {
   width: 60px;
   height: 60px;
   border: 2px solid transparent;
@@ -159,11 +157,11 @@ main {
   background-clip: content-box, border-box;
 }
 
-.main-left-upside img:nth-child(2) {
+header img:nth-child(2) {
   border: 2px solid #62ce60;
 }
 
-.main-left-upside::-webkit-scrollbar {
+header::-webkit-scrollbar {
   display: none;
 }
 
@@ -174,12 +172,7 @@ main {
   margin-right: 80px;
 }
 
-.feeds-box {
-  display: flex;
-  flex-direction: column;
-}
-
-.feeds {
+article {
   margin-bottom: 20px;
   border: none;
   border-radius: 2px;
@@ -199,7 +192,7 @@ main {
   align-items: center;
 }
 
-.feeds-profile-img {
+.feeds-upside-left img {
   width: 30px;
   height: 30px;
   margin-right: 5px;
@@ -218,7 +211,12 @@ main {
   font-weight: 700;
 }
 
-.photo {
+.feeds-content-time {
+  color: #bababa;
+  font-size: 14px;
+}
+
+.feeds-photo {
   width: 100%;
   height: 100%;
   border-radius: 4px;
@@ -234,33 +232,25 @@ main {
   justify-content: space-between;
 }
 
-.comment-icon {
+.feeds-icons-left img:nth-child(2) {
   margin: 0 5px;
 }
 
 .feeds-like {
   margin-top: 10px;
   font-size: 14px;
+  margin-bottom: 10px;
 }
 
-.feeds-like span:nth-child(1),
-span:nth-child(3) {
+.feeds-like span {
   font-weight: 700;
 }
 
-.feeds-content {
-  margin: 10px 0 2px 0;
-}
-
-.feeds-content-box {
-  margin: 10px 0;
-}
-
-.feeds-content-box-text a {
+.feeds-content-box a {
   font-weight: 700;
 }
 
-.feeds-content-box-text span:nth-child(3) {
+.feeds-content-box a:nth-child(2) {
   color: gray;
   font-weight: normal;
 }
@@ -269,18 +259,17 @@ span:nth-child(3) {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 5px;
+  margin-top: 5px;
 }
 
-.feeds-old-comment-left h6 {
+.feeds-old-comment a {
+  font-weight: 700;
+}
+
+.feeds-old-comment h6 {
   color: gray;
   font-size: 14px;
   font-weight: 400;
-}
-
-.feeds-new-comment-box {
-  display: flex;
-  flex-direction: column;
 }
 
 .feeds-new-comment {
@@ -289,17 +278,12 @@ span:nth-child(3) {
   justify-content: space-between;
 }
 
-.feeds-content-time {
-  color: gray;
-  font-size: 14px;
-}
-
 .heart-icon-mini {
   width: 10px;
   height: 10px;
 }
 
-.feeds-comment-box {
+.feeds-comment-input-box {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -309,14 +293,14 @@ span:nth-child(3) {
   font-size: 14px;
 }
 
-.feeds-comment {
+.feeds-comment-input {
   width: 80%;
   background-color: white;
   border: none;
   font-size: 14px;
 }
 
-.feeds-comment::placeholder {
+.feeds-comment-input::placeholder {
   color: gray;
   text-align: left;
 }
@@ -329,13 +313,13 @@ span:nth-child(3) {
 
 /* 중앙 우측 */
 
-.main-right {
+aside {
   width: 340px;
   background-color: white;
 }
 
 @media (max-width: 1200px) {
-  .main-right {
+  aside {
     display: none;
   }
 }
@@ -359,14 +343,14 @@ span:nth-child(3) {
   display: flex;
   flex-direction: column;
   margin-left: 10px;
-  font-size: 16px;
-  font-weight: 700;
-}
-
-.profile-box-nickname span:nth-child(2) {
   color: gray;
   font-size: 12px;
   font-weight: 600;
+}
+
+.profile-box-nickname a {
+  font-size: 16px;
+  font-weight: 700;
 }
 
 /* 그라데이션 적용 여부 확인 필요 */
@@ -400,9 +384,6 @@ span:nth-child(3) {
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
-}
-
-.recommend-upside span {
   color: gray;
 }
 
@@ -425,18 +406,18 @@ span:nth-child(3) {
   margin-right: 10px;
 }
 
-.recommend-individual-middle-nickname {
+.recommend-individual-middle div:nth-child(1) {
   font-size: 14px;
+}
+
+.recommend-individual-middle div:nth-child(2) {
+  color: gray;
+  font-size: 12px;
+  font-weight: 400;
 }
 
 .recommend-individual-right {
   color: #5395e9;
-}
-
-.recommend-individual-middle-time {
-  color: gray;
-  font-size: 12px;
-  font-weight: 400;
 }
 
 footer {

@@ -9,7 +9,7 @@
   </head>
 
   <body>
-    <nav class="nav">
+    <nav>
       <div class="nav-wrap">
         <a href="" class="logo-westagram">Westagram</a>
         <section class="nav-middle">
@@ -43,7 +43,7 @@
           </a>
           <a class="nav-middle-menu logout" href="./login.html">
             <img
-              class="logout-btn nav-profile"
+              class="logout-btn"
               alt="icon-logout"
               src="./img/logout.png"
             />로그아웃
@@ -61,7 +61,7 @@
 
     <main>
       <section class="main-left">
-        <header class="main-left-upside">
+        <header>
           <img src="./img/profile.jpeg" alt="story-img" />
           <img src="./img/profile3.png" alt="story-img" />
           <img src="./img/cat.jpeg" alt="story-img" />
@@ -73,305 +73,207 @@
           <img src="./img/profile5.png" alt="story-img" />
           <img src="./img/profile6.png" alt="story-img" />
         </header>
-        <div class="feeds-box">
-          <article class="feeds">
-            <div class="feeds-upside">
-              <div class="feeds-upside-left">
-                <img
-                  src="./img/profile2.jpg"
-                  class="feeds-profile-img icon-mini"
-                />
-                <a href="">
-                  <span class="feeds-nickname">photo_stagram</span>
-                </a>
-                <div class="feeds-content-time">· 1시간</div>
-              </div>
-              <div class="feeds-upside-right">
-                <img src="./img/more.png" class="more-icon icon-mini" />
-              </div>
+        <article>
+          <div class="feeds-upside">
+            <div class="feeds-upside-left">
+              <img src="./img/profile2.jpg" class="icon-mini" />
+              <a href="" class="feeds-nickname">photo_stagram</a>
+              <span class="feeds-content-time">· 1시간</span>
             </div>
-
-            <img src="./img/sea.png" class="photo" class="photo" />
-
-            <div class="feeds-bottom">
-              <div class="feeds-icons">
-                <div class="feeds-icons-left">
-                  <img src="./img/heart.png" class="heart-icon icon-mini" />
-                  <img
-                    src="./img/bubble-chat.png"
-                    class="comment-icon icon-mini"
-                  />
-                  <img src="./img/upload.png" class="share-icon icon-mini" />
-                </div>
-                <div class="feeds-icons-right">
-                  <img
-                    src="./img/bookmark-white.png"
-                    class="save-icon icon-mini"
-                  />
-                </div>
+            <img src="./img/more.png" class="icon-mini" />
+          </div>
+          <img src="./img/sea.png" class="feeds-photo" />
+          <div class="feeds-bottom">
+            <div class="feeds-icons">
+              <div class="feeds-icons-left">
+                <img src="./img/heart.png" class="icon-mini" />
+                <img src="./img/bubble-chat.png" class="icon-mini" />
+                <img src="./img/upload.png" class="icon-mini" />
               </div>
-              <div class="feeds-like">
-                <span>animal_love</span>
-                <span>님</span>
-                <span>외 10명</span>
-                <span>이 좋아합니다</span>
+              <img src="./img/bookmark-white.png" class="icon-mini" />
+            </div>
+            <div class="feeds-like">
+              <span>animal_love</span>님 <span>외 70명</span>이 좋아합니다
+            </div>
+            <div class="feeds-content-box">
+              <a href="">photo_stagram </a>동해 바다의 윤슬...
+              <a href="">더보기</a>
+            </div>
+            <div class="feeds-comment-box">
+              <div class="feeds-old-comment">
+                <div><a href="">fullmoon_e </a>윤슬이 예쁘네요!</div>
+                <img src="./img/heart.png" class="heart-icon-mini" />
               </div>
-              <div class="feeds-content-box">
-                <div class="feeds-content-box-text">
-                  <a href="">photo_stagram</a>
-                  <span>동해 바다의 윤슬...</span>
-                  <a href="">더보기</a>
-                </div>
+              <div class="feeds-new-comment"></div>
+            </div>
+          </div>
+          <div class="feeds-comment-input-box">
+            <input class="feeds-comment-input" placeholder="댓글 달기..." />
+            <button class="feeds-comment-upload">게시</button>
+          </div>
+        </article>
+        <article>
+          <div class="feeds-upside">
+            <div class="feeds-upside-left">
+              <img src="./img/profile2.jpg" class="icon-mini" />
+              <a href="" class="feeds-nickname">photo_stagram</a>
+              <span class="feeds-content-time">· 1시간</span>
+            </div>
+            <img src="./img/more.png" class="icon-mini" />
+          </div>
+          <img src="./img/paris.png" class="feeds-photo" />
+          <div class="feeds-bottom">
+            <div class="feeds-icons">
+              <div class="feeds-icons-left">
+                <img src="./img/heart.png" class="icon-mini" />
+                <img
+                  src="./img/bubble-chat.png"
+                  class="comment-icon icon-mini"
+                />
+                <img src="./img/upload.png" class="icon-mini" />
               </div>
-              <div class="feeds-new-comment-box">
+              <img src="./img/bookmark-white.png" class="icon-mini" />
+            </div>
+            <div class="feeds-like">
+              <span>좋아요 42개</span>
+            </div>
+            <div class="feeds-content-box">
+              <a href="#">photo_stagram </a>동해 바다의 윤슬...
+              <a href="#">더보기</a>
+            </div>
+            <div class="feeds-comment-box">
+              <div class="feeds-new-comment">
                 <div class="feeds-old-comment">
-                  <div class="feeds-old-comment-left">
-                    <a href="">
-                      <span style="font-weight: 700">fullmoon_e</span>
-                    </a>
-                    <span>윤슬이 예쁘네요!</span>
-                  </div>
+                  <h6>댓글 5개 모두 보기</h6>
                   <img src="./img/heart.png" class="heart-icon-mini" />
                 </div>
-                <div class="feeds-new-comment"></div>
               </div>
             </div>
-            <div class="feeds-comment-box">
-              <input class="feeds-comment" placeholder="댓글 달기..." />
-              <button class="feeds-comment-upload">게시</button>
+          </div>
+          <div class="feeds-comment-input-box">
+            <input class="feeds-comment-input" placeholder="댓글 달기..." />
+            <button class="feeds-comment-upload">게시</button>
+          </div>
+        </article>
+        <article>
+          <div class="feeds-upside">
+            <div class="feeds-upside-left">
+              <img src="./img/profile2.jpg" class="icon-mini" />
+              <a href="" class="feeds-nickname">photo_stagram</a>
+              <span class="feeds-content-time">· 1시간</span>
             </div>
-          </article>
-          <article class="feeds">
-            <div class="feeds-upside">
-              <div class="feeds-upside-left">
+            <img src="./img/more.png" class="icon-mini" />
+          </div>
+          <img src="./img/wave.png" class="feeds-photo" />
+          <div class="feeds-bottom">
+            <div class="feeds-icons">
+              <div class="feeds-icons-left">
+                <img src="./img/heart.png" class="icon-mini" />
                 <img
-                  src="./img/profile2.jpg"
-                  class="feeds-profile-img icon-mini"
+                  src="./img/bubble-chat.png"
+                  class="comment-icon icon-mini"
                 />
-                <a href="">
-                  <span class="feeds-nickname">photo_stagram</span>
-                </a>
-                <div class="feeds-content-time">· 1시간</div>
+                <img src="./img/upload.png" class="icon-mini" />
               </div>
-              <div class="feeds-upside-right">
-                <img src="./img/more.png" class="more-icon icon-mini" />
-              </div>
+              <img src="./img/bookmark-white.png" class="icon-mini" />
             </div>
-
-            <img src="./img/paris.png" class="photo" class="photo" />
-
-            <div class="feeds-bottom">
-              <div class="feeds-icons">
-                <div class="feeds-icons-left">
-                  <img src="./img/heart.png" class="heart-icon icon-mini" />
-                  <img
-                    src="./img/bubble-chat.png"
-                    class="comment-icon icon-mini"
-                  />
-                  <img src="./img/upload.png" class="share-icon icon-mini" />
-                </div>
-                <div class="feeds-icons-right">
-                  <img
-                    src="./img/bookmark-white.png"
-                    class="save-icon icon-mini"
-                  />
-                </div>
-              </div>
-              <div class="feeds-like">
-                <span>좋아요 42개</span>
-              </div>
-              <div class="feeds-content-box">
-                <div class="feeds-content-box-text">
-                  <a href="">photo_stagram</a>
-                  <span>동해 바다의 윤슬...</span>
-                  <a href="">더보기</a>
-                </div>
-              </div>
-              <div class="feeds-new-comment-box">
-                <div class="feeds-new-comment">
-                  <div class="feeds-old-comment">
-                    <div class="feeds-old-comment-left">
-                      <h6>댓글 5개 모두 보기</h6>
-                    </div>
-                    <img src="./img/heart.png" class="heart-icon-mini" />
-                  </div>
-                </div>
-              </div>
+            <div class="feeds-like">
+              <span>animal_love</span>님 <span>외 10명</span>이 좋아합니다
+            </div>
+            <div class="feeds-content-box">
+              <a href="#">photo_stagram </a>동해 바다의 윤슬...
+              <a href="#">더보기</a>
             </div>
             <div class="feeds-comment-box">
-              <input class="feeds-comment" placeholder="댓글 달기..." />
-              <button class="feeds-comment-upload">게시</button>
-            </div>
-          </article>
-          <article class="feeds">
-            <div class="feeds-upside">
-              <div class="feeds-upside-left">
-                <img
-                  src="./img/profile2.jpg"
-                  class="feeds-profile-img icon-mini"
-                />
-                <a href="">
-                  <span class="feeds-nickname">photo_stagram</span>
-                </a>
-                <div class="feeds-content-time">· 1시간</div>
-              </div>
-              <div class="feeds-upside-right">
-                <img src="./img/more.png" class="more-icon icon-mini" />
-              </div>
-            </div>
-
-            <img src="./img/wave.png" class="photo" class="photo" />
-
-            <div class="feeds-bottom">
-              <div class="feeds-icons">
-                <div class="feeds-icons-left">
-                  <img src="./img/heart.png" class="heart-icon icon-mini" />
-                  <img
-                    src="./img/bubble-chat.png"
-                    class="comment-icon icon-mini"
-                  />
-                  <img src="./img/upload.png" class="share-icon icon-mini" />
-                </div>
-                <div class="feeds-icons-right">
-                  <img
-                    src="./img/bookmark-white.png"
-                    class="save-icon icon-mini"
-                  />
-                </div>
-              </div>
-              <div class="feeds-like">
-                <span>animal_love</span>
-                <span>님</span>
-                <span>외 10명</span>
-                <span>이 좋아합니다</span>
-              </div>
-              <div class="feeds-content-box">
-                <div class="feeds-content-box-text">
-                  <a href="">photo_stagram</a>
-                  <span>동해 바다의 윤슬...</span>
-                  <a href="">더보기</a>
-                </div>
-              </div>
-              <div class="feeds-new-comment-box">
-                <div class="feeds-new-comment">
-                  <div class="feeds-old-comment">
-                    <div class="feeds-old-comment-left">
-                      <h6>댓글 29개 모두 보기</h6>
-                    </div>
-                    <img src="./img/heart.png" class="heart-icon-mini" />
-                  </div>
+              <div class="feeds-new-comment">
+                <div class="feeds-old-comment">
+                  <h6>댓글 29개 모두 보기</h6>
+                  <img src="./img/heart.png" class="heart-icon-mini" />
                 </div>
               </div>
             </div>
-            <div class="feeds-comment-box">
-              <input class="feeds-comment" placeholder="댓글 달기..." />
-              <button class="feeds-comment-upload">게시</button>
-            </div>
-          </article>
-        </div>
+          </div>
+          <div class="feeds-comment-input-box">
+            <input class="feeds-comment-input" placeholder="댓글 달기..." />
+            <button class="feeds-comment-upload">게시</button>
+          </div>
+        </article>
       </section>
 
-      <aside class="main-right">
-        <section class="profile-box">
+      <aside>
+        <div class="profile-box">
           <img src="./img/profile.jpeg" />
           <div class="profile-box-nickname">
-            <a href="">dazezd_z</a>
-            <span>위코드 43기 교육생</span>
+            <a href="">dazezd_z</a>위코드 43기 교육생
           </div>
-        </section>
-
-        <section class="recommend-box">
+        </div>
+        <div class="recommend-box">
           <div class="recommend-upside">
-            <span>회원님을 위한 추천</span>
-            <a href="">모두 보기</a>
+            회원님을 위한 추천<a href="">모두 보기</a>
           </div>
           <div class="recommend-bottom">
             <div class="recommend-individual">
               <div class="recommend-individual-left">
-                <img alt="profile" src="./img/me.jpeg" />
+                <img alt="recommend-profile" src="./img/me.jpeg" />
                 <div class="recommend-individual-middle">
-                  <div class="recommend-individual-middle-nickname">
-                    joaaahye
-                  </div>
-                  <div class="recommend-individual-middle-time">
-                    fullmoon_e님 외 1명이 팔로우합니다.
-                  </div>
+                  <div>joaaahye</div>
+                  <div>fullmoon_e님 외 1명이 팔로우합니다.</div>
+                </div>
+              </div>
+              <a href="#" class="recommend-individual-right">팔로우</a>
+            </div>
+            <div class="recommend-individual">
+              <div class="recommend-individual-left">
+                <img alt="recommend-profile" src="./img/profile2.jpg" />
+                <div class="recommend-individual-middle">
+                  <div>rampar101</div>
+                  <div>fullmoon_e님 외 2명이 팔로우합니다.</div>
                 </div>
               </div>
               <a href="" class="recommend-individual-right">팔로우</a>
             </div>
             <div class="recommend-individual">
               <div class="recommend-individual-left">
-                <img alt="profile" src="./img/profile2.jpg" />
+                <img alt="recommend-profile" src="./img/cat.jpeg" />
                 <div class="recommend-individual-middle">
-                  <div class="recommend-individual-middle-nickname">
-                    rampar101
-                  </div>
-                  <div class="recommend-individual-middle-time">
-                    fullmoon_e님 외 2명이 팔로우합니다.
-                  </div>
+                  <div>shawnjjoo</div>
+                  <div>fullmoon_e님이 팔로우합니다.</div>
                 </div>
               </div>
               <a href="" class="recommend-individual-right">팔로우</a>
             </div>
             <div class="recommend-individual">
               <div class="recommend-individual-left">
-                <img alt="profile" src="./img/cat.jpeg" />
+                <img alt="recommend-profile" src="./img/me.jpeg" />
                 <div class="recommend-individual-middle">
-                  <div class="recommend-individual-middle-nickname">
-                    shawnjjoo
-                  </div>
-                  <div class="recommend-individual-middle-time">
-                    fullmoon_e님이 팔로우합니다.
-                  </div>
+                  <div>joaaahye</div>
+                  <div>fullmoon_endless님이 팔로우합니다.</div>
                 </div>
               </div>
               <a href="" class="recommend-individual-right">팔로우</a>
             </div>
             <div class="recommend-individual">
               <div class="recommend-individual-left">
-                <img alt="profile" src="./img/me.jpeg" />
+                <img alt="recommend-profile" src="./img/profile2.jpg" />
                 <div class="recommend-individual-middle">
-                  <div class="recommend-individual-middle-nickname">
-                    joaaahye
-                  </div>
-                  <div class="recommend-individual-middle-time">
-                    fullmoon_endless님이 팔로우합니다.
-                  </div>
+                  <div>rampar101</div>
+                  <div>fullmoon_e님 외 7명이 팔로우합니다.</div>
                 </div>
               </div>
               <a href="" class="recommend-individual-right">팔로우</a>
             </div>
             <div class="recommend-individual">
               <div class="recommend-individual-left">
-                <img alt="profile" src="./img/profile2.jpg" />
+                <img alt="recommend-profile" src="./img/cat.jpeg" />
                 <div class="recommend-individual-middle">
-                  <div class="recommend-individual-middle-nickname">
-                    rampar101
-                  </div>
-                  <div class="recommend-individual-middle-time">
-                    fullmoon_e님 외 7명이 팔로우합니다.
-                  </div>
-                </div>
-              </div>
-              <a href="" class="recommend-individual-right">팔로우</a>
-            </div>
-            <div class="recommend-individual">
-              <div class="recommend-individual-left">
-                <img alt="profile" src="./img/cat.jpeg" />
-                <div class="recommend-individual-middle">
-                  <div class="recommend-individual-middle-nickname">
-                    shawnjjoo
-                  </div>
-                  <div class="recommend-individual-middle-time">
-                    fullmoon_e님 외 1명이 팔로우합니다.
-                  </div>
+                  <div>shawnjjoo</div>
+                  <div>fullmoon_e님 외 1명이 팔로우합니다.</div>
                 </div>
               </div>
               <a href="" class="recommend-individual-right">팔로우</a>
             </div>
           </div>
-        </section>
+        </div>
 
         <footer>
           <p>

@@ -1,5 +1,5 @@
-const commentInput = document.querySelector(".feeds-comment");
-const commentBox = document.querySelector(".feeds-new-comment-box");
+const commentInput = document.querySelector(".feeds-comment-input");
+const commentBox = document.querySelector(".feeds-comment-box");
 const newCommentBox = document.querySelector(".feeds-new-comment");
 const commentBtn = document.querySelector(".feeds-comment-upload");
 
