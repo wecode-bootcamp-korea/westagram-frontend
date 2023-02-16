@@ -12,34 +12,26 @@
     <div class="login">
         <div class="login_box">
             <div class="westagram">
-                <h1>
-                    Westagram
-                </h1>
+                <h1>Westagram</h1>
             </div>
-
             <div>
-                <form class="login_form">
-                    <div>
-                        <input id="LoginId" class="login_id" type="name" placeholder=" 전화번호, 사용자이름 또는 이메일" required>
-                    </div>
-                    <div>  
-                        <input id="LoginPw" class="login_pw" type="password" placeholder=" 비밀번호" required>
-                    </div>
-                    <div>
-                        <button id="LoginBtn" class="login_btn">
-                            로그인
-                        </button>
-                    </div>
-                </form>
+                <div>
+                    <input id="LoginId" class="login_id" type="name" placeholder=" 전화번호, 사용자이름 또는 이메일" required>
+                </div>
+                <div>  
+                    <input id="LoginPw" class="login_pw" type="password" placeholder=" 비밀번호" required>
+                </div>
+                <button id="LoginBtn" class="login_btn" onclick="location.href='main.html'" style='cursor:pointer;'>
+                    로그인
+                </button>
             </div>
-
             <div class="forgot_pw">
                 <a href="https://www.instagram.com/accounts/password/reset/">
                     비밀번호를 잊으셨나요?
                 </a>
             </div>
-
         </div>
     </div>
+    <script src="js/login.js"></script>
 </body>
 </html>

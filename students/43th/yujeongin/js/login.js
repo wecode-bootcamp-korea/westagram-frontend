@@ -1,16 +1,15 @@
-const id = document.querySelector('LoginId');
-const pw = document.querySelector('LoginPw');
-const btn = documnet.querySelector('LoginBtn');
+let idInput = document.getElementById("LoginId");
+let pwInput = document.getElementById("LoginPw");
+const btn = document.getElementById("LoginBtn");
 
-function color() {
-    if (id.value.length>0 && pw.value.length>0){
-        btn.style.backgroundColor = "#0095F6"
-        btn.disabled = false;
+idInput.addEventListener("keyup", changeColor);
+pwInput.addEventListener("keyup", changeColor);
+
+function changeColor() {
+    if (idInput.value !== "" && pwInput.value !== "") {
+        btn.style.backgroundColor = "rgb(0,149,246)";
+        document.querySelector(".login_btn").removeAttribute("disable");        
     } else {
-        btn.style.backgroundColor = "#C0DFFD"
-        btn.disabled = true;
+        btn.style.backgroundColor = "rgb(76,181,249)";
     }
-};
-
-id.addEventListener('keyup', color);
-pw.addEventListener('keyup', color);
+}
