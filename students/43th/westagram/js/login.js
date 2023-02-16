@@ -14,14 +14,15 @@ function activeLoginBtn() {
   if (isActive) {
     loginBtn.style.background = "#0095f6";
     loginBtn.style.borderColor = "#0095f6";
-    loginBtn.addEventListener("click", () => {
-      window.location.href = "./main.html";
-    });
   } else {
     loginBtn.style.background = "#c4e1fb";
     loginBtn.style.borderColor = "#c4e1fb";
   }
 }
+
+loginBtn.addEventListener("click", () => {
+  if (isActive) window.location.href = "./main.html";
+});
 
 id.addEventListener("change", (e) => {
   activeLoginBtn();
