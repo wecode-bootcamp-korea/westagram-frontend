@@ -65,7 +65,7 @@ button {
 
 /* nav 레이아웃 */
 
-nav {
+.nav {
   position: fixed;
   left: 0;
   width: 100px;
@@ -117,10 +117,39 @@ nav img {
   bottom: 40px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .nav-bottom-icon {
   margin-right: 20px;
+}
+
+.nav-closed {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 10px;
+  height: 100vh;
+  padding: 40px 40px 40px 20px;
+  background-color: white;
+  border-right: 1px solid #e6e6e6;
+  margin-left: 5px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.nav-closed-no-element {
+  display: none;
+}
+
+.nav-open-btn {
+  width: 25px;
+  height: 25px;
+  background-image: url("./img/right-arrow.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  cursor: pointer;
 }
 
 /* 중앙 레이아웃 */
@@ -294,6 +323,7 @@ span:nth-child(3) {
 
 .feeds-new-comment {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
 }
 

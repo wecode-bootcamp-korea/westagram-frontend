@@ -9,53 +9,61 @@
   </head>
   <body>
     <div class="layout">
-      <nav>
-        <div class="nav-top">
-          <a href="">
-            <span class="westagram-logo">Westagram</span>
-          </a>
-        </div>
-        <div class="nav-middle">
-          <div class="nav-middle-menu home">
-            <img src="./img/home.png" alt="icon-home" />
-            <a class="nav-middle-menu-title" href="">홈</a>
+      <nav class="nav">
+        <div class="nav-wrap">
+          <div class="nav-top">
+            <a href="">
+              <span class="westagram-logo">Westagram</span>
+            </a>
           </div>
-          <div class="nav-middle-menu search">
-            <img src="./img/search.png" alt="icon-menu" />
-            <a class="nav-middle-menu-title" href="">검색</a>
+          <div class="nav-middle">
+            <div class="nav-middle-menu home">
+              <img src="./img/home.png" alt="icon-home" />
+              <a class="nav-middle-menu-title" href="">홈</a>
+            </div>
+            <div class="nav-middle-menu search">
+              <img src="./img/search.png" alt="icon-menu" />
+              <a class="nav-middle-menu-title" href="">검색</a>
+            </div>
+            <div class="nav-middle-menu explore">
+              <img src="./img/compass.png" alt="icon-explore" />
+              <a class="nav-middle-menu-title" href="">탐색 탭</a>
+            </div>
+            <div class="nav-middle-menu reels">
+              <img src="./img/video.png" alt="icon-reels" />
+              <a class="nav-middle-menu-title" href="">릴스</a>
+            </div>
+            <div class="nav-middle-menu message">
+              <img src="./img/send.png" alt="icon-message" />
+              <a class="nav-middle-menu-title" href="">메세지</a>
+            </div>
+            <div class="nav-middle-menu update">
+              <img src="./img/heart.png" alt="icon-update" />
+              <a class="nav-middle-menu-title" href="">알림</a>
+            </div>
+            <div class="nav-middle-menu post">
+              <img src="./img/more2.png" alt="icon-post" />
+              <a class="nav-middle-menu-title" href="">만들기</a>
+            </div>
+            <div class="nav-middle-menu profile">
+              <img src="./img/profile.jpeg" alt="icon-profile" />
+              <a class="nav-middle-menu-title" href="">프로필</a>
+            </div>
+            <div class="nav-middle-menu logout">
+              <a class="logout-btn" href="./login.html"
+                ><img alt="icon-logout" src="./img/logout.png"
+              /></a>
+              <a class="nav-middle-menu-title" href="./login.html">로그아웃</a>
+            </div>
           </div>
-          <div class="nav-middle-menu explore">
-            <img src="./img/compass.png" alt="icon-explore" />
-            <a class="nav-middle-menu-title" href="">탐색 탭</a>
+          <div class="nav-bottom">
+            <img
+              class="nav-bottom-icon"
+              src="./img/left-arrow.png"
+              alt="icon-hamburger"
+            />
+            <a href="">접기</a>
           </div>
-          <div class="nav-middle-menu reels">
-            <img src="./img/video.png" alt="icon-reels" />
-            <a class="nav-middle-menu-title" href="">릴스</a>
-          </div>
-          <div class="nav-middle-menu message">
-            <img src="./img/send.png" alt="icon-message" />
-            <a class="nav-middle-menu-title" href="">메세지</a>
-          </div>
-          <div class="nav-middle-menu update">
-            <img src="./img/heart.png" alt="icon-update" />
-            <a class="nav-middle-menu-title" href="">알림</a>
-          </div>
-          <div class="nav-middle-menu post">
-            <img src="./img/more2.png" alt="icon-post" />
-            <a class="nav-middle-menu-title" href="">만들기</a>
-          </div>
-          <div class="nav-middle-menu profile">
-            <img src="./img/profile.jpeg" alt="icon-profile" />
-            <a class="nav-middle-menu-title" href="">프로필</a>
-          </div>
-        </div>
-        <div class="nav-bottom">
-          <img
-            class="nav-bottom-icon"
-            src="./img/hamburger.png"
-            alt="icon-hamburger"
-          />
-          <a href="">더 보기</a>
         </div>
       </nav>
 
@@ -125,17 +133,16 @@
                     </div>
                   </div>
                   <div class="feeds-new-comment-box">
-                    <div class="feeds-new-comment">
-                      <div class="feeds-old-comment">
-                        <div class="feeds-old-comment-left">
-                          <a href="">
-                            <span style="font-weight: 700">fullmoon_e</span>
-                          </a>
-                          <span>윤슬이 예쁘네요!</span>
-                        </div>
-                        <img src="./img/heart.png" class="heart-icon-mini" />
+                    <div class="feeds-old-comment">
+                      <div class="feeds-old-comment-left">
+                        <a href="">
+                          <span style="font-weight: 700">fullmoon_e</span>
+                        </a>
+                        <span>윤슬이 예쁘네요!</span>
                       </div>
+                      <img src="./img/heart.png" class="heart-icon-mini" />
                     </div>
+                    <div class="feeds-new-comment"></div>
                   </div>
                 </div>
                 <div class="feeds-comment-box">
@@ -404,6 +411,7 @@
         </div>
       </main>
     </div>
+    <script src="./feed.js"></script>
     <script src="./comment.js"></script>
   </body>
 </html>

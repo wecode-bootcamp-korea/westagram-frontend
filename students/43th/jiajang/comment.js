@@ -2,8 +2,6 @@ const commentInput = document.querySelector(".feeds-comment");
 const commentBox = document.querySelector(".feeds-new-comment-box");
 const newCommentBox = document.querySelector(".feeds-new-comment");
 const commentBtn = document.querySelector(".feeds-comment-upload");
-
-const bodyElement = document.querySelector("body");
 const mainRight = document.querySelector(".main-right");
 
 // 댓글 추가 기능 테스트중
@@ -34,15 +32,15 @@ commentInput.addEventListener("keyup", function (e) {
   }
 });
 
-// function addComment() {
-//   if (commentInput.value.length != 0) {
-//     let addedComment = document.createElement("div");
-//     addedComment.className = "added-comment";
-//     addedComment.innerHTML = `dazezd_z ${commentInput.value}`;
-//     commentBox.appendChild(addedComment);
-//     commentInput.value = null;
-//     commentBtn.disabled = false;
-//   } else {
-//     commentBtn.disabled = true;
-//   }
-// }
+// // function addComment() {
+// //   if (commentInput.value.length != 0) {
+// //     let addedComment = document.createElement("div");
+// //     addedComment.className = "added-comment";
+// //     addedComment.innerHTML = `dazezd_z ${commentInput.value}`;
+// //     commentBox.appendChild(addedComment);
+// //     commentInput.value = null;
+// //     commentBtn.disabled = false;
+// //   } else {
+// //     commentBtn.disabled = true;
+// //   }
+// // }

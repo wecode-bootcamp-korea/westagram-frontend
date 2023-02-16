@@ -12,5 +12,5 @@ function checkInput() {
   }
 }
 
-loginIdInput.addEventListener("change", checkInput);
-loginPwInput.addEventListener("change", checkInput);
+loginIdInput.addEventListener("keyup", checkInput);
+loginPwInput.addEventListener("keyup", checkInput);
