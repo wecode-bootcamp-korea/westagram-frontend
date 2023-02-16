@@ -1,0 +1,307 @@
+body {
+  margin: 0;
+  background-color: #fafafa;
+}
+
+button {
+  border: none;
+  background-color: white;
+  font-size: 16px;
+}
+
+.likeWrap,
+.commentTotalWrap,
+.commentTime,
+.addComment {
+  margin-left: 14px;
+}
+
+.leftSectionArticle,
+.storyTotalWrap,
+.recommendTotalWrap {
+  border: 1.5px solid #efefef;
+}
+
+.upperNav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid #efefef;
+  background-color: white;
+  height: 80px;
+}
+
+.westaWrap {
+  display: flex;
+  justify-content: center;
+  height: 28px;
+}
+
+#instagramLogo {
+  width: 28px;
+  margin-right: 13px;
+}
+
+.westagram {
+  border-left: 2px solid black;
+  padding-left: 13px;
+  font-size: 28px;
+}
+
+.upperIcons {
+  width: 28px;
+  margin-left: 25px;
+}
+
+.search {
+  width: 220px;
+  height: 25px;
+  background-color: #fafafa;
+  border: 1.5px solid #efefef;
+  border-radius: 2px;
+}
+
+.mainWrap {
+  display: flex;
+  justify-content: center;
+  padding: 35px;
+}
+
+.leftSection {
+  width: 650px;
+  min-width: 570px;
+  margin: 15px;
+}
+
+.leftSectionArticle {
+  width: 100%;
+  background-color: white;
+}
+
+.profileNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+}
+
+.profileNavInner1 {
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+}
+
+.profileImg {
+  width: 40px;
+}
+
+.profileName {
+  margin-left: 15px;
+  font-weight: bold;
+}
+
+.profileNavInner2 {
+  font-size: 28px;
+  margin-right: 15px;
+  margin-bottom: 12px;
+}
+
+.profileIconWrap {
+  position: relative;
+  height: 30px;
+  margin: 7px 0 12px 0;
+  display: flex;
+  justify-content: flex-start;
+}
+
+button.profileHeart,
+button.profileComment,
+button.profileUproad,
+button.profileSave {
+  width: 28px;
+  padding: 0;
+  margin-left: 14px;
+}
+
+img.profileHeart,
+img.profileComment,
+img.profileUproad,
+img.profileSave {
+  width: 28px;
+  padding: 0;
+  margin: 0;
+}
+
+button.profileSave {
+  position: absolute;
+  right: 17px;
+}
+
+.uploadImg {
+  width: 100%;
+}
+
+.likeWrap {
+  margin-bottom: 13px;
+}
+
+.likeId,
+.likeCount,
+.commentId {
+  font-weight: 730;
+}
+
+.newComment {
+  margin-bottom: 5px;
+  max-height: 50px;
+  overflow: auto;
+}
+
+.commentTotalWrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.commentLike {
+  width: 12px;
+  margin-right: 15px;
+}
+
+.commentTime {
+  margin-bottom: 8px;
+  color: #bababa;
+}
+
+.addcommentWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1.5px solid #f2f2f2;
+  height: 60px;
+}
+
+.addComment {
+  width: 500px;
+  height: 30px;
+  border-style: none;
+  font-size: 16px;
+}
+
+input::placeholder {
+  color: #bababa;
+}
+
+.addComment::placeholder {
+  font-size: 16px;
+}
+
+.addCommentButton {
+  margin-right: 14px;
+  color: #aed4f9;
+}
+
+.addCommentButton:hover {
+  cursor: pointer;
+  color: dodgerblue;
+}
+
+.rightSection {
+  width: 320px;
+  min-width: 300px;
+  margin: 15px;
+}
+
+.userProfileWrap {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.userProfileImg {
+  width: 55px;
+  margin-right: 12px;
+}
+
+.storyTotalWrap,
+.recommendTotalWrap {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 15px;
+  background-color: white;
+  overflow: auto; /* �댁슜�� �대떦 �곸뿭�� �섏뼱�곗쓣 寃쎌슦, �ㅽ겕濡� �앹꽦 */
+}
+
+.storyWrap,
+.recommendWrap {
+  display: flex;
+  justify-content: space-between;
+}
+
+.storyTotalWrap {
+  height: 250px;
+}
+
+.recommendTotalWrap {
+  height: 200px;
+}
+
+.recommendProfileImg {
+  width: 40px;
+  border-radius: 50%;
+}
+
+.storyProfileImg {
+  width: 43px;
+  border-radius: 50%;
+  padding: 2px;
+  border: 2px solid rgb(255, 44, 129);
+}
+
+.rightSectionTitle,
+.userCompany {
+  color: #999999;
+}
+
+.storyProfileWrap,
+.recommendImgWrap {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.recommendProfileWrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.storyProfileWrap,
+.recommendProfileWrap {
+  margin: 15px 5px;
+}
+
+.recommendIdWrap,
+.storyIdWrap {
+  margin-left: 13px;
+}
+
+.storyTime,
+.recommendFollower {
+  color: #999999;
+}
+
+.follow {
+  color: #3897f1;
+}
+
+.seeAll:hover {
+  text-decoration: underline;
+}
+
+p.etc {
+  width: 80%;
+}
+
+.etc {
+  color: #bababa;
+}
