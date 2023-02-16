@@ -1,7 +1,3 @@
-const id = document.getElementById("email");
-const password = document.getElementById("pas");
-const loginButton = document.getElementById("loginBtn");
-const commentArea = document.getElementById("comment");
 const addButton = document.getElementById("add");
 const strongId = document.getElementById("ids");
 const strongcount = document.getElementById("counts");
@@ -9,21 +5,11 @@ const strongs = document.querySelector(".Moreinformation");
 const postingButton = document.getElementById("posting");
 const storys = document.querySelector(".users");
 const suggestionArea = document.querySelector(".suggestions");
-
-console.log(storys);
+const commentArea = document.getElementById("comment");
 
 let inputValue = [];
 let count = 0;
-
-console.log(commentArea);
-
-document.body.addEventListener("keyup", () => {
-  if (id.value.length >= 1 && password.value.length >= 1) {
-    loginButton.style.backgroundColor = "blue";
-  } else {
-    loginButton.style.backgroundColor = "#c4e1fb";
-  }
-});
+let like = 0;
 
 postingButton.addEventListener("click", () => {
   if (commentArea.value.length > 0) {
@@ -45,6 +31,7 @@ function task() {
   let input = {
     id: random(),
     value: commentArea.value,
+    up: false,
   };
   inputValue.push(input);
   console.log(inputValue);
@@ -62,10 +49,16 @@ function render() {
     result += `
     <div class="contents" >
       <p><strong>${inputValue[i].id}</strong> ${inputValue[i].value}</p> 
+      <div>
+      <button class="thumbs" onclick="upLike('${inputValue[i].id}')"><i class="bi bi-hand-thumbs-up-fill"></i></button>
       <button onclick="deleteTask('${inputValue[i].id}')"><i class="bi bi-trash3"></i></button>
+      </div>
+     
     </div>`;
-    strongs.innerHTML = ` <img src="./image/KakaoTalk_20230213_204309040.jpg" alt="">
-                          <strong>${inputValue[i].id}</strong>님 외&nbsp<strong>${count}명</strong>이 댓글을 다셨습니다.</p>`;
+    strongs.innerHTML = ` 
+    <img src="./image/KakaoTalk_20230213_204309040.jpg" alt="">
+  <p><strong>${inputValue[i].id}</strong>님 외&nbsp<strong>${count}명</strong>이 댓글을 다셨습니다.</p>
+  `;
     console.log(result);
     console.log(inputValue);
   }
@@ -78,12 +71,33 @@ function deleteTask(id) {
     if (inputValue[i].id == id) {
       inputValue.splice(i, 1);
       strongs.innerHTML = "";
+      like--;
       break;
     }
   }
   console.log(inputValue);
   count -= 2;
   render();
+  upLike(id);
+}
+
+function upLike(id) {
+  if (like <= 0) {
+    like = 0;
+  }
+  for (let i = 0; i < inputValue.length; i++) {
+    if (inputValue[i].id == id && inputValue[i].up == false) {
+      inputValue[i].up = !inputValue[i].up;
+      like++;
+      break;
+    } else if (inputValue[i].id == id && inputValue[i].up == true) {
+      inputValue[i].up = !inputValue[i].up;
+      like--;
+      break;
+    }
+  }
+  document.querySelector(".hearts").innerHTML = `좋아요 : ${like}`;
+  console.log(inputValue);
 }
 
 function render2() {
@@ -104,12 +118,12 @@ function render3() {
     result3 += `
    
     <div class="suggestion">
-    <i class="bi bi-person-square"></i>
-    <div class="suggestion_text">
-      <p>${inputValue[i].id}</p>
-      <p>좋아요</p>
-  </div>
-  </div>`;
+      <i class="bi bi-person-square"></i>
+      <div class="suggestion_text">
+        <p>${inputValue[i].id}</p>
+        <p></p>
+      </div>
+    </div>`;
   }
   suggestionArea.innerHTML = result3;
 }
