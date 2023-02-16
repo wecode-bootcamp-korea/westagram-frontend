@@ -9,37 +9,19 @@ function checkInput() {
     loginBtn.style.backgroundColor = "#5395E9";
     loginBtn.style.cursor = "pointer";
     loginBtn.disabled = false;
-    let regex = new RegExp("[a-z0-9]+@[a-z]+.[a-z]{2,3}");
-    let testRegex = regex.test(loginIdInput);
-    console.log(testRegex);
   } else {
     loginBtn.disabled = true;
   }
 }
 
+// ID, PW validation
+
+function checkLetter() {
+  loginIdInput.value.includes("@") && loginPwInput.value.length >= 5
+    ? alert("로그인 성공! 🎉")
+    : alert("아이디 혹은 패스워드를 확인해주세요.");
+}
+
 loginIdInput.addEventListener("keyup", checkInput);
 loginPwInput.addEventListener("keyup", checkInput);
-
-// loginBtn.addEventListener("click", checkEmail);
-
-// const regex = new RegExp("[a-z0-9]+@[a-z]+.[a-z]{2,3}");
-// let testEmails = ["notanemail.com", "jangjia01234@email.com"];
-// loginIdInput.value.forEach((address) => {
-//   console.log(regex.test(address));
-// });
-
-// id, pw validation
-
-// 현재 id, pw 입력 시 무조건 로그인 버튼이 활성화 외어 있도록 구현이 되어 있습니다.
-// 실제 로그인 하는 경우를 생각하며 validation(유효성 검사) 기능을 추가해주세요.
-// ex) id >>> '@' 포함 / pw >>> 5글자 이상
-
-// const regex = /@/;
-// regex.test("jangjia01234@gmail.com"); //true
-
-// function checkId() {
-//   const regex = /\@/;
-//   regex.test(loginIdInput.value) ? console.log("성공") : console.log("실패");
-// }
-
-// checkId();
+loginBtn.addEventListener("click", checkLetter);
