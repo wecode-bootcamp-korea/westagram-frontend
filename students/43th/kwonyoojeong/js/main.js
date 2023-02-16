@@ -58,22 +58,22 @@ addComment.addEventListener("keypress", (event) => {
   }
 });
 
-const heart = document.getElementsByClassName("heart");
+// const heart = document.getElementsByClassName("heart");
 
-const pressHeart = () => {
-  heart.src = "redheart.png";
+// const pressHeart = () => {
+//   heart.src = "redheart.png";
 
-  if (heart.src === "redheart.png") {
-    heart.src = "heart.png";
-  }
-};
+//   if (heart.src === "redheart.png") {
+//     heart.src = "heart.png";
+//   }
+// };
 
-heart.addEventListener("click", (e) => {
-  pressHeart();
-});
+// heart.addEventListener("click", (e) => {
+//   pressHeart();
+// });
 
-const profileSave = document.querySelector(".profileSave");
+// const profileSave = document.querySelector(".profileSave");
 
-profileSave.addEventListener("click", (e) => {
-  profileSave.src = "bookmark.png";
-});
+// profileSave.addEventListener("click", (e) => {
+//   profileSave.src = "bookmark.png";
+// });

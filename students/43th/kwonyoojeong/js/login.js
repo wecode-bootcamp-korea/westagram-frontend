@@ -21,3 +21,14 @@ id.addEventListener("keyup", (event) => {
 pw.addEventListener("keyup", (event) => {
   activeButton();
 });
+
+button.addEventListener("click", (e) => {
+  // 아이디 @ 포함, 비밀번호 5자리 이상
+  // 조건 불충족시 pw input 아래에 빨간 글자 생성
+  if (id.value.indexOf("@") === -1) {
+    alert("아이디를 올바르게 입력하세요.");
+  }
+  if (pw.value.length < 5) {
+    alert("비밀번호는 5자리 이상이어야 합니다.");
+  }
+});
