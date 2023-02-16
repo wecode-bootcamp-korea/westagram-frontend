@@ -7,19 +7,39 @@ body {
   margin: 0px 60px;
 }
 
+p {
+  margin: 0px 5px;
+}
+
+.minBefore {
+  margin-bottom: 10px;
+}
+
 .main {
   display: flex;
+}
+
+.article {
+  border-bottom: 2px solid rgb(216, 216, 216);
 }
 
 i {
   font-size: 25px;
   font-weight: lighter;
   width: 30px;
-  /* height: 30px; */
 }
 
 .search {
-  height: 25px;
+  background-color: rgb(243, 243, 243);
+  border: 2px solid rgb(216, 216, 216);
+  height: 30px;
+  text-align: center;
+  margin-left: 190px;
+}
+
+.fa-magnifying-glass {
+  font-size: 20px;
+  color: black;
 }
 
 .fa-compass,
@@ -111,6 +131,7 @@ nav {
   width: 450px;
   height: 35px;
   border: 0;
+  padding-left: 15px;
 }
 
 .commentbutton {
@@ -120,7 +141,7 @@ nav {
   border: 0;
   outline: 0;
   background-color: white;
-  color: blue;
+  color: rgb(24, 24, 248, 0.6);
   font-size: 15px;
 }
 
@@ -128,6 +149,7 @@ nav {
   width: 60px;
   height: 60px;
   border-radius: 100%;
+  margin-left: 12px;
 }
 
 .likeThisFeed {
@@ -146,19 +168,71 @@ nav {
   margin-left: 20px;
 }
 
-.friendStorytext {
-  /* border: 2px solid black; */
+.main-rightfriendNameTime {
   display: flex;
   align-items: center;
-  height: 35px;
-  justify-content: space-between;
-  margin: auto 10px;
+  margin: 10px 20px;
 }
 
-.friendStory {
+.main-rightfriendNameTimeP {
+  display: flex;
+  flex-direction: column;
+}
+
+.recomandFriendProfilePic {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+}
+
+.main-rightfriendPic {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+}
+
+.main-rightRecomandFriendName_p {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-rightRecomandFriendName {
+  display: flex;
+  margin: 10px 5px 10px 20px;
+}
+
+.friendStorytext,
+.recomandFriend {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px;
+}
+
+.friendStory,
+.recomandFriendAll {
   border: 2px solid rgb(216, 216, 216);
   background-color: white;
-  width: 300px;
+  width: 330px;
   height: 250px;
-  margin-left: 30px;
+  margin: 8px 0px 15px 25px;
+  overflow: hidden;
+}
+
+.recomandFriendAll {
+  height: 220px;
+}
+
+.followButton {
+  background-color: white;
+  border: 0;
+  outline: 0;
+  color: rgb(36, 169, 221);
+  font-size: 16px;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.last_information {
+  margin-left: 20px;
 }

@@ -25,19 +25,16 @@
         <i class="fa-brands fa-instagram"></i>
         <span class="westagramtext">| westagram </span>
       </div>
-      <!--상단 검색창 감싼 부분-->
       <div class="nav-centerTap">
-        <input class="search" placeholder="검색" />
         <i class="fa-solid fa-magnifying-glass"></i>
+        <input class="search" placeholder="검색" />
       </div>
-      <!--상단 오른쪽 탭 감싼 부분-->
       <div class="nav-rightTap">
         <i class="fa-regular fa-compass"></i>
         <i class="fa-regular fa-heart"></i>
         <i class="fa-regular fa-user"></i>
       </div>
     </nav>
-
     <div class="main">
       <div class="feeds">
         <div class="article">
@@ -48,11 +45,7 @@
             <i class="fa-solid fa-ellipsis"></i>
           </div>
 
-          <!-- 2. 포스트한 사진 -->
           <img src="newfeed.jpg" class="feedPicture" />
-
-          <!-- 3. 사진에 대한 피드백 부분 -->
-          <!-- 3-1.왼쪽으로 붙이기 -->
           <div class="pictureUnderTap">
             <div class="pictureUnderTapLeftSide">
               <i class="fa-solid fa-heart likeThisFeed"></i>
@@ -68,7 +61,6 @@
 
             <span><b>wecode_bootcamp</b>님 <b>외 10명</b>이 좋아합니다.</span>
           </div>
-          <!-- 게시글 내용 -->
           <span
             ><b>&nbsp;&nbsp;172_daram</b>10번 이상 본 나의 띵작...<span
               style="color: rgb(151, 150, 150)"
@@ -77,56 +69,123 @@
             &nbsp;&nbsp;<b>eunsong_s2</b> 말모 스타이즈본이즈러브</span
           >
           <br />
-          <span style="color: rgb(151, 150, 150)"> &nbsp;&nbsp;54분 전</span>
+          <p class="minBefore" style="color: rgb(151, 150, 150)">
+            &nbsp;&nbsp;54분 전
+          </p>
         </div>
         <!-- 댓글달기 구역 -->
         <input class="comment" type="text" placeholder="댓글 달기..." />
-        <button class="commentbutton">게시</button>
+        <button class="commentbutton"><b>게시</b></button>
       </div>
 
       <div class="main-right">
-        <!-- 나의 프로필사진 및 아이디 *가로정렬 -->
         <div class="main-rightMyProfile">
           <img src="profileimg.jpg" class="main-rightMyProfileImg" />
-          <p class="myId">&nbsp;&nbsp;<b>172_daram</b></p>
+          <p>&nbsp;&nbsp;<b>172_daram</b></p>
         </div>
-
-        <!-- 인친 업데이트 스토리 확인하기 -->
         <div class="friendStory">
           <div class="friendStorytext">
-            <p class="storyText">스토리</p>
+            <p class="storyText" style="color: rgb(151, 150, 150)">
+              <b>스토리</b>
+            </p>
             <p class="allStoryView"><b>모두 보기</b></p>
           </div>
 
-          <!-- 아래 div는 복제하여 2,3,4로 붙일 예정 -->
-          <div class="main-rightfriendStory1">
-            <!-- 2-1메인오른쪽 스토리 인친 프로필 사진 -->
-            <img class="main-rightfriendPic" />
-            <!-- 2-2메인 오른쪽 인친 아이디 몇시간전 -->
-            <div class="main-rightfriendNameTime">
-              <span>eun_bin</span><br />
-              <span>2시간 전</span>
+          <div class="main-rightfriendNameTime">
+            <img src="profileimg.jpg" class="main-rightfriendPic" />
+            <div class="main-rightfriendNameTimeP">
+              <p class="main-rightfriendNameTimeP_1"><b>eun_bin</b></p>
+              <p
+                class="main-rightfriendNameTimeP-1"
+                style="color: rgb(151, 150, 150)"
+              >
+                <b>2시간 전</b>
+              </p>
+            </div>
+          </div>
+          <div class="main-rightfriendNameTime">
+            <img src="profileimg.jpg" class="main-rightfriendPic" />
+            <div class="main-rightfriendNameTimeP">
+              <p class="main-rightfriendNameTimeP_1"><b>eun_bin</b></p>
+              <p
+                class="main-rightfriendNameTimeP-1"
+                style="color: rgb(151, 150, 150)"
+              >
+                <b>2시간 전</b>
+              </p>
+            </div>
+          </div>
+          <div class="main-rightfriendNameTime">
+            <img src="profileimg.jpg" class="main-rightfriendPic" />
+            <div class="main-rightfriendNameTimeP">
+              <p class="main-rightfriendNameTimeP_1"><b>eun_bin</b></p>
+              <p
+                class="main-rightfriendNameTimeP-1"
+                style="color: rgb(151, 150, 150)"
+              >
+                <b>2시간 전</b>
+              </p>
+            </div>
+          </div>
+          <div class="main-rightfriendNameTime">
+            <img src="profileimg.jpg" class="main-rightfriendPic" />
+            <div class="main-rightfriendNameTimeP">
+              <p class="main-rightfriendNameTimeP_1"><b>eun_bin</b></p>
+              <p
+                class="main-rightfriendNameTimeP-1"
+                style="color: rgb(151, 150, 150)"
+              >
+                <b>2시간 전</b>
+              </p>
             </div>
           </div>
         </div>
         <!-- 1. 회원님을 위한 추천 *가로정렬-->
-        <div class="recomandFriend">
-          <p class="storyText">회원님을 위한 추천</p>
-          <p class="allStoryView">모두 보기</p>
-        </div>
-
-        <!-- 2.인친 프로필사진 아이디, 누구와 함께 친구인지 팔로우 버튼 묶음 *3가지 가로정렬 예정-->
-        <!-- 아래 div는 복제하여 2,3,4로 붙일 예정 -->
-        <div class="recomandFriendProfile">
-          <!-- 2-1메인오른쪽 친구추천 내 인친 프로필 사진 -->
-          <img class="recomandFriendProfilePic" />
-          <!-- 2-2메인 오른쪽 친구추천 인친 아이디, 누구와 함께 친구인지 -->
-          <div class="main-rightfriendNameTime">
-            <p>eun_bin</p>
-            <p>회원님을 팔로우 합니다.</p>
+        <div class="recomandFriendAll">
+          <div class="recomandFriend">
+            <p class="storyText" style="color: rgb(151, 150, 150)">
+              <b> 회원님을 위한 추천</b>
+            </p>
+            <p class="allStoryView"><b>모두 보기</b></p>
           </div>
-          <button class="followButton">팔로우</button>
+
+          <div class="main-rightRecomandFriendName">
+            <img src="profileimg.jpg" class="recomandFriendProfilePic" />
+            <div main-rightRecomandFriendName_p>
+              <p><b>eun_bin</b></p>
+              <p style="color: rgb(151, 150, 150)">
+                <b>mooneunbin님 외 12...</b>
+              </p>
+            </div>
+            <button class="followButton">팔로우</button>
+          </div>
+          <div class="main-rightRecomandFriendName">
+            <img src="profileimg.jpg" class="recomandFriendProfilePic" />
+            <div main-rightRecomandFriendName_p>
+              <p><b>eun_bin</b></p>
+              <p style="color: rgb(151, 150, 150)">
+                <b>mooneunbin님 외 12...</b>
+              </p>
+            </div>
+            <button class="followButton">팔로우</button>
+          </div>
+          <div class="main-rightRecomandFriendName">
+            <img src="profileimg.jpg" class="recomandFriendProfilePic" />
+            <div main-rightRecomandFriendName_p>
+              <p><b>eun_bin</b></p>
+              <p style="color: rgb(151, 150, 150)">
+                <b>mooneunbin님 외 12...</b>
+              </p>
+            </div>
+            <button class="followButton">팔로우</button>
+          </div>
         </div>
+        <span class="last_information" style="color: rgb(151, 150, 150)">
+          &nbsp; wnstagram 정보·지원·홍보 센터·API·<br />
+          &nbsp; &nbsp;&nbsp; 채용정보·개인정보처리방침·약관·<br />
+          &nbsp;&nbsp; &nbsp; 디렉터리·프로필·해시태그·언어 <br /><br />
+          &nbsp;&nbsp; &nbsp; ⓒ 2019 WESTAGRAM
+        </span>
       </div>
     </div>
   </body>
