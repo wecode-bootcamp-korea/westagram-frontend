@@ -9,6 +9,9 @@ function checkInput() {
     loginBtn.style.backgroundColor = "#5395E9";
     loginBtn.style.cursor = "pointer";
     loginBtn.disabled = false;
+    let regex = new RegExp("[a-z0-9]+@[a-z]+.[a-z]{2,3}");
+    let testRegex = regex.test(loginIdInput);
+    console.log(testRegex);
   } else {
     loginBtn.disabled = true;
   }
@@ -16,6 +19,14 @@ function checkInput() {
 
 loginIdInput.addEventListener("keyup", checkInput);
 loginPwInput.addEventListener("keyup", checkInput);
+
+// loginBtn.addEventListener("click", checkEmail);
+
+// const regex = new RegExp("[a-z0-9]+@[a-z]+.[a-z]{2,3}");
+// let testEmails = ["notanemail.com", "jangjia01234@email.com"];
+// loginIdInput.value.forEach((address) => {
+//   console.log(regex.test(address));
+// });
 
 // id, pw validation
 

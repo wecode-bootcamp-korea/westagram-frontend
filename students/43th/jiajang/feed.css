@@ -3,7 +3,6 @@
 
 1. id 및 class명, 변수명, 함수명 개선
 2. Semantic Tag (div 남발 x)
-4. Self closing tag 확인 -> 불필요한 닫는 태그 삭제
 6. 레이아웃은 bottom-up 방식으로 구성 
 - 자식요소의 높이에 따라 부모요소의 높이가 유동적으로 결정됨
 - 다시 한 번 기억하자.. css 유지보수가 js보다 힘들다..
@@ -11,38 +10,30 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 
-@media (max-width: 1200px) {
-  .main-right {
-    display: none;
-  }
-}
-
 /* 공통 스타일 */
 
 body {
+  display: flex;
   margin: 0 auto;
 }
 
-.layout {
-  display: flex;
+a {
+  color: black;
+  text-decoration: none;
 }
 
-img {
+img,
+button {
   cursor: pointer;
 }
 
-a {
-  text-decoration: none;
-  color: black;
-}
-
 input {
-  background-color: #fafafa;
-  border: none;
-  border-radius: 4px;
   width: 180px;
   height: 20px;
   padding-left: 10px;
+  background-color: #fafafa;
+  border: none;
+  border-radius: 4px;
 }
 
 input::placeholder {
@@ -54,13 +45,14 @@ input:focus {
   outline: none;
 }
 
-button {
-  cursor: pointer;
-}
-
-.icon {
+.icon-mini {
   width: 20px;
   height: 20px;
+}
+
+.icon-medium {
+  width: 25px;
+  height: 25px;
 }
 
 /* nav 레이아웃 */
@@ -70,11 +62,8 @@ button {
   left: 0;
   width: 100px;
   height: 100vh;
-  padding: 40px 120px 40px 20px;
-  background-color: white;
+  padding: 40px 120px 40px 25px;
   border-right: 1px solid #e6e6e6;
-  z-index: 1;
-  margin-left: 5px;
 }
 
 nav img {
@@ -82,14 +71,11 @@ nav img {
   height: 25px;
 }
 
-.nav-top {
+.logo-westagram {
   position: fixed;
   top: 40px;
-}
-
-.westagram-logo {
-  font-family: "Lobster", cursive;
   font-size: 25px;
+  font-family: "Lobster", cursive;
 }
 
 .nav-middle {
@@ -100,15 +86,10 @@ nav img {
   display: flex;
   align-items: center;
   margin: 30px 0;
+  gap: 15px;
 }
 
-.nav-middle-menu img {
-  margin-right: 15px;
-}
-
-.profile img {
-  width: 25px;
-  height: 25px;
+.nav-profile {
   border-radius: 50%;
 }
 
@@ -116,26 +97,21 @@ nav img {
   position: fixed;
   bottom: 40px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-}
-
-.nav-bottom-icon {
-  margin-right: 20px;
+  align-items: center;
+  gap: 20px;
 }
 
 .nav-closed {
   position: fixed;
   left: 0;
   bottom: 0;
-  width: 10px;
-  height: 100vh;
-  padding: 40px 40px 40px 20px;
-  background-color: white;
-  border-right: 1px solid #e6e6e6;
-  margin-left: 5px;
   display: flex;
   align-items: flex-end;
+  width: 10px;
+  height: 100vh;
+  padding: 40px 40px 40px 25px;
+  border-right: 1px solid #e6e6e6;
 }
 
 .nav-closed-no-element {
@@ -143,12 +119,12 @@ nav img {
 }
 
 .nav-open-btn {
+  position: absolute;
   width: 25px;
   height: 25px;
   background-image: url("./img/right-arrow.png");
   background-size: cover;
   background-repeat: no-repeat;
-  position: absolute;
   cursor: pointer;
 }
 
@@ -163,17 +139,18 @@ main {
 
 /* 상단 스토리 박스 */
 
-.upside-story-box {
+.main-left-upside {
   display: flex;
   margin-bottom: 20px;
   gap: 15px;
   overflow: scroll;
 }
 
-.upside-story-box img {
+/* 스토리 그라데이션 */
+
+.main-left-upside img {
   width: 60px;
   height: 60px;
-  border-radius: 50%;
   border: 2px solid transparent;
   border-radius: 50%;
   background-image: linear-gradient(#fff, #fff),
@@ -182,22 +159,12 @@ main {
   background-clip: content-box, border-box;
 }
 
-.upside-story-box img:nth-child(2) {
+.main-left-upside img:nth-child(2) {
   border: 2px solid #62ce60;
 }
 
-.upside-story-box::-webkit-scrollbar {
+.main-left-upside::-webkit-scrollbar {
   display: none;
-}
-
-footer {
-  font-size: 12px;
-  font-weight: 500;
-  color: #bababa;
-}
-
-footer div:first-child {
-  margin: 20px 0;
 }
 
 /* 중앙 좌측 */
@@ -213,12 +180,11 @@ footer div:first-child {
 }
 
 .feeds {
-  border-radius: 2px;
-  font-size: 15px;
-  background-color: white;
-  border: none;
   margin-bottom: 20px;
+  border: none;
+  border-radius: 2px;
   border-bottom: 1px solid #e6e6e6;
+  font-size: 15px;
 }
 
 .feeds-upside {
@@ -234,10 +200,9 @@ footer div:first-child {
 }
 
 .feeds-profile-img {
-  border-radius: 50%;
   width: 30px;
   height: 30px;
-  margin-right: 10px;
+  margin-right: 5px;
   border: 2px solid transparent;
   border-radius: 50%;
   background-image: linear-gradient(#fff, #fff),
@@ -245,13 +210,12 @@ footer div:first-child {
   background-origin: border-box;
   background-clip: content-box, border-box;
   box-shadow: 0 0 0 10px #fff inset;
-  margin-right: 5px;
 }
 
 .feeds-nickname {
+  margin-right: 10px;
   font-size: 16px;
   font-weight: 700;
-  margin-right: 10px;
 }
 
 .photo {
@@ -275,8 +239,8 @@ footer div:first-child {
 }
 
 .feeds-like {
-  font-size: 14px;
   margin-top: 10px;
+  font-size: 14px;
 }
 
 .feeds-like span:nth-child(1),
@@ -297,12 +261,11 @@ span:nth-child(3) {
 }
 
 .feeds-content-box-text span:nth-child(3) {
-  font-weight: normal;
   color: gray;
+  font-weight: normal;
 }
 
 .feeds-old-comment {
-  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -313,7 +276,6 @@ span:nth-child(3) {
   color: gray;
   font-size: 14px;
   font-weight: 400;
-  margin: 0;
 }
 
 .feeds-new-comment-box {
@@ -341,28 +303,28 @@ span:nth-child(3) {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 40px;
   padding: 0 10px 10px 0;
   color: #bababa;
   font-size: 14px;
-  height: 40px;
 }
 
 .feeds-comment {
+  width: 80%;
   background-color: white;
   border: none;
-  width: 80%;
   font-size: 14px;
 }
 
 .feeds-comment::placeholder {
-  text-align: left;
   color: gray;
+  text-align: left;
 }
 
 .feeds-comment-upload {
+  color: #5395e9;
   background-color: transparent;
   border: none;
-  color: #c5e1fa;
 }
 
 /* 중앙 우측 */
@@ -372,17 +334,22 @@ span:nth-child(3) {
   background-color: white;
 }
 
+@media (max-width: 1200px) {
+  .main-right {
+    display: none;
+  }
+}
+
 .profile-box {
-  height: 60px;
-  border-radius: 2px;
-  display: flex;
   display: flex;
   align-items: center;
+  height: 60px;
+  border-radius: 2px;
   font-size: 15px;
   font-weight: 700;
 }
 
-.profile-img-main {
+.profile-box img {
   width: 64px;
   height: 64px;
   border-radius: 50%;
@@ -392,8 +359,8 @@ span:nth-child(3) {
   display: flex;
   flex-direction: column;
   margin-left: 10px;
-  font-weight: 700;
   font-size: 16px;
+  font-weight: 700;
 }
 
 .profile-box-nickname span:nth-child(2) {
@@ -402,43 +369,26 @@ span:nth-child(3) {
   font-weight: 600;
 }
 
-.story-bottom img {
-  margin-right: 5px;
+/* 그라데이션 적용 여부 확인 필요 */
+
+.recommend-bottom img {
   width: 30px;
   height: 30px;
-  border-radius: 50%;
+  margin-right: 5px;
   border: 2px solid transparent;
+  border-radius: 50%;
   background-image: linear-gradient(#fff, #fff),
     linear-gradient(to right, red 0%, orange 100%);
   background-origin: border-box;
   background-clip: content-box, border-box;
 }
 
-.story-individual {
-  display: flex;
-  align-items: center;
-}
-
-.story-individual-middle {
-  margin: 5px 0;
-  font-size: 12px;
-}
-
-.story-individual-middle-time {
-  font-size: 12px;
-  font-weight: 400;
-  color: gray;
-}
-
 .recommend-box {
   height: 250px;
-  margin: 15px 0 28px 0;
-  padding: 10px;
+  margin: 25px 10px 38px 10px;
+  border: none;
   font-size: 12px;
   font-weight: 600;
-  border: none;
-  border-radius: 2px;
-  background-color: white;
   overflow: scroll;
 }
 
@@ -461,8 +411,10 @@ span:nth-child(3) {
 }
 
 .recommend-individual {
-  margin: 15px 0;
+  display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
 }
 
 .recommend-individual-left {
@@ -479,6 +431,22 @@ span:nth-child(3) {
 
 .recommend-individual-right {
   color: #5395e9;
+}
+
+.recommend-individual-middle-time {
+  color: gray;
+  font-size: 12px;
+  font-weight: 400;
+}
+
+footer {
+  color: #bababa;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+footer div:first-child {
+  margin: 20px 0;
 }
 
 /* new comment */
