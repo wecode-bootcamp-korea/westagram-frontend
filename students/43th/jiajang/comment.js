@@ -1,13 +1,24 @@
-let commentInput = document.querySelector(".feeds-comment");
-let commentBox = document.querySelector(".feeds-new-comment-box");
-let commentBtn = document.querySelector(".feeds-comment-upload");
+const commentInput = document.querySelector(".feeds-comment");
+const commentBox = document.querySelector(".feeds-new-comment-box");
+const newCommentBox = document.querySelector(".feeds-new-comment");
+const commentBtn = document.querySelector(".feeds-comment-upload");
+
+const bodyElement = document.querySelector("body");
+const mainRight = document.querySelector(".main-right");
+
+// 댓글 추가 기능 테스트중
 
 function addComment() {
   if (commentInput.value.length != 0) {
-    let addedComment = document.createElement("div");
-    addedComment.className = "added-comment";
-    addedComment.innerHTML = `dazezd_z ${commentInput.value}`;
-    commentBox.appendChild(addedComment);
+    let addedCommentName = document.createElement("span");
+    addedCommentName.className = "added-comment-name";
+    addedCommentName.innerHTML = "dazezd_z";
+    addedCommentName.style.fontWeight = "700";
+    let addedCommentContent = document.createElement("span");
+    addedCommentContent.className = "added-comment-content";
+    addedCommentContent.innerHTML = commentInput.value;
+    newCommentBox.appendChild(addedCommentName);
+    newCommentBox.appendChild(addedCommentContent);
     commentInput.value = null;
     commentBtn.disabled = false;
   } else {
@@ -23,4 +34,15 @@ commentInput.addEventListener("keyup", function (e) {
   }
 });
 
-// 둘 다 잘 되는데.. 엔터 다음에 클릭 이벤트가 실행되지 않는 이유는 뭘까?
+// function addComment() {
+//   if (commentInput.value.length != 0) {
+//     let addedComment = document.createElement("div");
+//     addedComment.className = "added-comment";
+//     addedComment.innerHTML = `dazezd_z ${commentInput.value}`;
+//     commentBox.appendChild(addedComment);
+//     commentInput.value = null;
+//     commentBtn.disabled = false;
+//   } else {
+//     commentBtn.disabled = true;
+//   }
+// }
