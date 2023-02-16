@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style/common.css" />
+    <link rel="stylesheet" href="style/login.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="loginContainer">
+      <div id="loginWrapper">
+        <!--최소화, 닫기 등등 버튼이 있는 영역-->
+        <div id="windowJob">
+          <img src="images/close.png" alt="close" id="closeImage" />
+        </div>
+        <div id="loginInner">
+          <div id="title" class="instaFont">Westargram</div>
+          <div id="loginFormWrapper">
+            <div id="loginForm">
+              <div class="loginElement">
+                <input
+                  type="text"
+                  placeholder="전화번호,사용자 이름 또는 이메일"
+                  id="id"
+                />
+              </div>
+              <div class="loginElement">
+                <input type="password" id="password" placeholder="비밀번호" />
+              </div>
+              <div class="loginElement">
+                <span id="loginSpan">
+                  <input type="checkbox" />&nbsp; 로그인 정보 저장하기</span
+                >
+              </div>
+              <div class="loginElement">
+                <button id="loginBtn">로그인</button>
+              </div>
+              <div class="loginElement">
+                <span id="loginSpan2">비밀번호를 잊으셨나요?</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="js/login.js"></script>
+</html>

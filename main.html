@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style/common.css" />
+    <link rel="stylesheet" href="style/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>
+          <img src="images/instagram.png" alt="logo" class="logo" />
+          <span id="home" class="instaFont">Westargram</span>
+        </li>
+        <li>
+          <input type="text" placeholder="검색" id="search" />
+        </li>
+        <li id="icons">
+          <img class="logo" src="images/compass.png" />
+          <img class="logo" src="images/heart.png" />
+          <img class="logo" id="nav-account" src="images/user.png" />
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <div id="feeds">
+        <article>
+          <div id="nickname-wrapper">
+            <div id="nickname">
+              <img src="images/me.jpg" />
+              <span class="account-span" id="id">jinp1993</span>
+            </div>
+            <div id="addition">
+              <img src="images/more.png" alt="more" class="feed-logo" />
+            </div>
+          </div>
+          <div id="image-area">
+            <img src="images/yoon.jpg" alt="photo" />
+          </div>
+          <section id="feed-logo-wrapper">
+            <div id="feed-logo-inner">
+              <div id="good-reply-share">
+                <img
+                  class="feed-logo"
+                  src="images/heart.png"
+                  id="good"
+                  alt="좋아요"
+                />
+                <img class="feed-logo" src="images/chat.png" alt="답글보기" />
+                <img class="feed-logo" src="images/share.png" alt="공유" />
+              </div>
+              <div id="bookmark">
+                <img class="feed-logo" src="images/bookmark.png" alt="북마크" />
+              </div>
+            </div>
+          </section>
+          <section id="how-many-good">
+            <img src="images/me.jpg" alt="" />
+            <span class="account-span">jinp1993님 외 10명이 좋아합니다.</span>
+          </section>
+          <section id="contents">
+            콘텐츠테스트콘텐츠테스트콘텐츠테스트콘텐츠테스트
+          </section>
+          <section id="how-many-reply"></section>
+          <section id="reply-area"></section>
+          <div id="add-reply">
+            <textarea id="reply" placeholder="댓글 달기..."></textarea>
+            <span id="add">게시</span>
+          </div>
+        </article>
+      </div>
+      <div id="main-right">
+        <section id="my-account">
+          <img class="my-account-logo" src="images/me.jpg" />
+          <span class="right-of-logo">jinp1993</span>
+        </section>
+        <section class="sidebar-wrapper">
+          <div id="story-title">
+            <span class="left-span">스토리</span>
+            <span class="right-span" id="view-all-story">모두 보기</span>
+          </div>
+          <br />
+          <div id="story-main"></div>
+        </section>
+        <section class="sidebar-wrapper">
+          <div id="recommend-title">
+            <span class="left-span">회원님을 위한 추천</span>
+            <span class="right-span" id="view-all-recommend">모두 보기</span>
+            <br />
+            <div id="recommend-main"></div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+  <script src="js/main.js"></script>
+</html>

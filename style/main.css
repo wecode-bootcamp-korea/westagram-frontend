@@ -1,0 +1,234 @@
+body {
+  padding: 0px 10%;
+}
+
+.logo {
+  width: 24px;
+}
+
+.feed-logo {
+  width: 24px;
+  height: 24px;
+  border-radius: 500px;
+  overflow: visible;
+}
+
+.my-account-logo {
+  width: 56px;
+  height: 56px;
+  border-radius: 500px;
+  overflow: hidden;
+}
+
+.account-span {
+  padding: 10px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.right-of-logo {
+  padding: 10px;
+  font-weight: 600;
+}
+
+.left-span {
+  font-size: 14px;
+  color: #8f8f8f;
+  font-weight: 600;
+  float: left;
+}
+.right-span {
+  font-size: 12px;
+  color: #262626;
+  font-weight: 600;
+  float: right;
+}
+
+.sidebar-wrapper {
+  border: 1px solid #a9a9a9;
+  padding: 5px;
+  height: 206px;
+  overflow: hidden;
+  margin-bottom: 40px;
+}
+/* nav > */
+nav {
+  position: fixed;
+  width: 80%;
+  border-bottom: 1px solid gray;
+  background-color: white;
+  z-index: 1;
+}
+
+nav > ul {
+  list-style: none;
+  display: flex;
+  padding: 24px;
+  justify-content: space-between;
+  font-size: 24px;
+}
+
+nav > ul > li > input {
+  background-image: url("/images/search.png");
+  background-size: 15px;
+  background-repeat: no-repeat;
+  background-position: 50px center;
+  text-align: center;
+  border: 1px solid black;
+  height: 24px;
+  padding: 5px;
+}
+
+nav > ul > li > img {
+  margin: 0px 10px;
+}
+
+nav > ul > li > #home {
+  border-left: 1px solid gray;
+  padding-left: 10px;
+  margin-left: 5px;
+}
+
+#nav-account:hover {
+  cursor: pointer;
+}
+
+#search {
+  border-radius: 50px;
+  width: 300px;
+  height: 40px;
+}
+
+/* main > */
+main {
+  padding-top: 82px;
+}
+
+/* main > #feeds > */
+main > #feeds {
+  float: left;
+  width: 60%;
+  padding: 40px 60px;
+  border-bottom: 1px solid gray;
+}
+
+/* main > #feeds > article > #nickname-wrapper */
+main > #feeds > article > #nickname-wrapper {
+  position: relative;
+}
+
+main > #feeds > article > #nickname-wrapper > #nickname {
+  height: 40px;
+  margin: 8px;
+  display: flex;
+  align-items: center;
+}
+
+main > #feeds > article > #nickname-wrapper > #nickname > img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50px;
+  margin: 5px;
+}
+
+main > #feeds > article > #nickname-wrapper > #addition {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+main > #feeds > article > #nickname-wrapper > #addition > img {
+  border: none;
+}
+
+main > #feeds > article > #image-area {
+  padding: 5px;
+  border: 1px solid black;
+}
+
+main > #feeds > article > #image-area > img {
+  width: 100%;
+}
+
+/* main > #feeds > article > #feed-logo-wrapper */
+main > #feeds > article > #feed-logo-wrapper {
+  height: 50px;
+  padding: 10px;
+}
+
+#feed-logo-inner > #good-reply-share {
+  width: 50%;
+  float: left;
+}
+
+#feed-logo-inner > #bookmark {
+  width: 5%;
+  float: right;
+}
+
+/* main > #feeds > article */
+#how-many-good {
+  display: flex;
+  align-items: center;
+}
+
+#how-many-good > img {
+  width: 24px;
+  height: 24px;
+  border-radius: 50px;
+  margin: 0px 10px;
+}
+
+#contents {
+  padding: 10px;
+  font-size: 14px;
+}
+
+#how-many-reply {
+  display: none;
+}
+
+#reply-area {
+  display: none;
+  margin: 20px 0;
+}
+
+#add-reply {
+  position: relative;
+}
+
+#add-reply > #reply {
+  width: 100%;
+  resize: none;
+  font-size: 14px;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  outline: none;
+}
+
+#add-reply > #add {
+  position: absolute;
+  right: 3%;
+  color: #979797;
+  font-size: 14px;
+  display: none;
+}
+
+#add-reply > #add:hover {
+  cursor: pointer;
+}
+
+/* main > #main-right >*/
+main > #main-right {
+  right: 15%;
+  width: 300px;
+  position: fixed;
+}
+
+#my-account {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
