@@ -23,7 +23,7 @@
       <div class="nav-leftTap">
         <!--상단 왼쪽 탭 감싼 부분-->
         <i class="fa-brands fa-instagram"></i>
-        <span class="westagramtext">| westagram</span>
+        <span class="westagramtext">| westagram </span>
       </div>
       <!--상단 검색창 감싼 부분-->
       <div class="nav-centerTap">
@@ -44,7 +44,7 @@
           <!-- 1. 사진올린 사람 프로필사진, 아이디, 더보기정보 -->
           <div class="profile">
             <img src="profileimg.jpg" class="profilePhoto" />
-            <span class="daramId">172_daram</span>
+            <span class="daramId">&nbsp;&nbsp;<b>172_daram</b> </span>
             <i class="fa-solid fa-ellipsis"></i>
           </div>
 
@@ -58,77 +58,74 @@
               <i class="fa-solid fa-heart likeThisFeed"></i>
               <i class="fa-regular fa-comment feedComent"></i>
               <i class="fa-solid fa-arrow-up-from-bracket feedShare"></i>
+              <i class="fa-regular fa-heart commentLikeI"></i>
             </div>
             <!-- 3-2.오른쪽으로 붙여주세요 -->
             <i class="fa-regular fa-bookmark feedsave"></i>
           </div>
-          <!-- 좋아요한 사람들 명 수 -->
           <div class="howManyLike">
             <img src="wecode img.jpg" class="howManyLikePictuer" />
 
             <span><b>wecode_bootcamp</b>님 <b>외 10명</b>이 좋아합니다.</span>
           </div>
           <!-- 게시글 내용 -->
-          <span><b>172_daram</b><span> 10번 이상 본 나의 띵작...</span
-          ><span>더 보기</span><br />
-          <span><b>eunsong_s2</b><span> 말모 스타이즈본이즈러브</span>
-          <i class="fa-regular fa-heart"></i>
-
-          <!-- 게시글 게시 시간 -->
-          <p>54분 전</p>
+          <span
+            ><b>&nbsp;&nbsp;172_daram</b>10번 이상 본 나의 띵작...<span
+              style="color: rgb(151, 150, 150)"
+              >&nbsp;&nbsp;더 보기</span
+            ><br />
+            &nbsp;&nbsp;<b>eunsong_s2</b> 말모 스타이즈본이즈러브</span
+          >
+          <br />
+          <span style="color: rgb(151, 150, 150)"> &nbsp;&nbsp;54분 전</span>
         </div>
         <!-- 댓글달기 구역 -->
-        <input class="coment" type="text" placeholder="댓글 달기..." />
+        <input class="comment" type="text" placeholder="댓글 달기..." />
+        <button class="commentbutton">게시</button>
       </div>
 
-      <!-- 메인 오른쪽 구역 -->
       <div class="main-right">
         <!-- 나의 프로필사진 및 아이디 *가로정렬 -->
-        <div class="myProfile">
+        <div class="main-rightMyProfile">
           <img src="profileimg.jpg" class="main-rightMyProfileImg" />
-          <p class="myId">172_daram_</p>
-          <p></p>
+          <p class="myId">&nbsp;&nbsp;<b>172_daram</b></p>
         </div>
 
-        <!-- 하얀배경에 회색 창으로 묶음 -->
         <!-- 인친 업데이트 스토리 확인하기 -->
         <div class="friendStory">
-          <!-- 1. 인친 업데이트 스토리 보기 상단 글씨 *가로정렬-->
           <div class="friendStorytext">
             <p class="storyText">스토리</p>
-            <p class="allStoryView">모두 보기</p>
+            <p class="allStoryView"><b>모두 보기</b></p>
           </div>
 
-          <!-- 2.인친 프로필사진 아이디, 몇분 전 묶음-->
           <!-- 아래 div는 복제하여 2,3,4로 붙일 예정 -->
           <div class="main-rightfriendStory1">
             <!-- 2-1메인오른쪽 스토리 인친 프로필 사진 -->
             <img class="main-rightfriendPic" />
             <!-- 2-2메인 오른쪽 인친 아이디 몇시간전 -->
             <div class="main-rightfriendNameTime">
-              <p>eun_bin</p>
-              <p>2시간 전</p>
+              <span>eun_bin</span><br />
+              <span>2시간 전</span>
             </div>
           </div>
+        </div>
+        <!-- 1. 회원님을 위한 추천 *가로정렬-->
+        <div class="recomandFriend">
+          <p class="storyText">회원님을 위한 추천</p>
+          <p class="allStoryView">모두 보기</p>
+        </div>
 
-          <!-- 1. 회원님을 위한 추천 *가로정렬-->
-          <div class="recomandFriend">
-            <p class="storyText">회원님을 위한 추천</p>
-            <p class="allStoryView">모두 보기</p>
+        <!-- 2.인친 프로필사진 아이디, 누구와 함께 친구인지 팔로우 버튼 묶음 *3가지 가로정렬 예정-->
+        <!-- 아래 div는 복제하여 2,3,4로 붙일 예정 -->
+        <div class="recomandFriendProfile">
+          <!-- 2-1메인오른쪽 친구추천 내 인친 프로필 사진 -->
+          <img class="recomandFriendProfilePic" />
+          <!-- 2-2메인 오른쪽 친구추천 인친 아이디, 누구와 함께 친구인지 -->
+          <div class="main-rightfriendNameTime">
+            <p>eun_bin</p>
+            <p>회원님을 팔로우 합니다.</p>
           </div>
-
-          <!-- 2.인친 프로필사진 아이디, 누구와 함께 친구인지 팔로우 버튼 묶음 *3가지 가로정렬 예정-->
-          <!-- 아래 div는 복제하여 2,3,4로 붙일 예정 -->
-          <div class="recomandFriendProfile">
-            <!-- 2-1메인오른쪽 친구추천 내 인친 프로필 사진 -->
-            <img class="recomandFriendProfilePic" />
-            <!-- 2-2메인 오른쪽 친구추천 인친 아이디, 누구와 함께 친구인지 -->
-            <div class="main-rightfriendNameTime">
-              <p>eun_bin</p>
-              <p>회원님을 팔로우 합니다.</p>
-            </div>
-            <button class="followButton">팔로우</button>
-          </div>
+          <button class="followButton">팔로우</button>
         </div>
       </div>
     </div>

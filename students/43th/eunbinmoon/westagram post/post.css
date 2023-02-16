@@ -1,6 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   background-color: rgb(243, 243, 243);
   margin: 0px 60px;
+}
+
+.main {
+  display: flex;
 }
 
 i {
@@ -8,6 +16,17 @@ i {
   font-weight: lighter;
   width: 30px;
   /* height: 30px; */
+}
+
+.search {
+  height: 25px;
+}
+
+.fa-compass,
+.fa-heart,
+.fa-user {
+  margin-left: 5px;
+  margin-right: 10px;
 }
 
 .westagramtext {
@@ -19,6 +38,7 @@ nav {
   align-items: center;
   border: 2px solid rgb(216, 216, 216);
   background-color: white;
+  width: 1000px;
   height: 70px;
 }
 
@@ -33,10 +53,6 @@ nav {
 
 .westagramtext {
   font-family: "Lobster", cursive;
-}
-
-.main {
-  display: flex;
 }
 
 .feeds {
@@ -56,8 +72,13 @@ nav {
   margin-right: 10px;
 }
 
+.profilePhoto {
+  margin: 8px 0px 8px 12px;
+}
+
 .fa-ellipsis {
   margin-left: auto;
+  margin-right: 10px;
 }
 .profilePhoto {
   width: 50px;
@@ -81,13 +102,63 @@ nav {
   margin-left: auto;
 }
 
+.howManyLike {
+  margin-top: 10px;
+}
+
+.comment {
+  position: relative;
+  width: 450px;
+  height: 35px;
+  border: 0;
+}
+
+.commentbutton {
+  position: absolute;
+  width: 50px;
+  height: 35px;
+  border: 0;
+  outline: 0;
+  background-color: white;
+  color: blue;
+  font-size: 15px;
+}
+
 .main-rightMyProfileImg {
   width: 60px;
   height: 60px;
   border-radius: 100%;
 }
 
+.likeThisFeed {
+  color: red;
+}
 .howManyLikePictuer {
   width: 20px;
   height: 20px;
+  margin-left: 10px;
+}
+
+.main-rightMyProfile {
+  display: flex;
+  align-items: center;
+  margin-top: 50px;
+  margin-left: 20px;
+}
+
+.friendStorytext {
+  /* border: 2px solid black; */
+  display: flex;
+  align-items: center;
+  height: 35px;
+  justify-content: space-between;
+  margin: auto 10px;
+}
+
+.friendStory {
+  border: 2px solid rgb(216, 216, 216);
+  background-color: white;
+  width: 300px;
+  height: 250px;
+  margin-left: 30px;
 }
