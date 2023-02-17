@@ -14,16 +14,28 @@
   <body>
     <nav>
       <div class="container">
-        <img src="./image/제목 없음.png" alt="" />
+        <img
+          class="instagram_img"
+          src="./image/제목 없음.png"
+          alt="instargram logo"
+        />
         <div class="icon">
-          <input class="rearch" type="text" placeholder="검색" />
+          <input class="search" type="text" placeholder="검색" />
           <i class="bi bi-search"></i>
         </div>
         <div class="imgs">
-          <img src="./image/explore.png" alt="" />
-          <img src="./image/heart.png" alt="" />
-          <img src="./image/profile.png" alt="" />
+          <img src="./image/explore.png" alt="explore logo" />
+          <img src="./image/heart.png" alt="heart logo" />
+          <img id="new_menu" on src="./image/profile.png" alt="profile logo" />
         </div>
+      </div>
+      <div class="menu_box">
+        <ul>
+          <li><i class="bi bi-person-circle"></i>프로필</li>
+          <li><i class="bi bi-bookmark"></i>저장됨</li>
+          <li><i class="bi bi-gear-wide"></i> 설정</li>
+        </ul>
+        <p>로그아웃</p>
       </div>
     </nav>
 
@@ -41,7 +53,10 @@
             </div>
             <i class="bi bi-three-dots"></i>
           </div>
-          <img src="./image/KakaoTalk_20230214_161243133.jpg" alt="" />
+          <img
+            src="./image/KakaoTalk_20230214_161243133.jpg"
+            alt="profile photo"
+          />
 
           <div class="content">
             <div class="emotion">
@@ -49,16 +64,14 @@
               <i class="bi bi-chat"></i>
               <i class="bi bi-upload"></i>
             </div>
-            <div class="emotion_likes">
-              <span class="hearts">좋아요: &nbsp;</span>
-              <i class="bi bi-bookmark"></i>
-            </div>
+            <i class="bi bi-bookmark"></i>
           </div>
-          <div class="Moreinformation"></div>
+          <span class="hearts">좋아요 0개</span>
+          <div class="commentSection"></div>
           <div id="comment_content"></div>
           <div class="wrap">
             <input id="comment" type="text" placeholder="댓글 달기" />
-            <button id="posting">게시</button>
+            <button id="postingBtn">게시</button>
           </div>
         </div>
       </div>
@@ -70,7 +83,7 @@
               <img
                 style="width: 40px; height: 40px; margin-right: 10px"
                 src="./image/KakaoTalk_20230216_100337086.jpg"
-                alt=""
+                alt="building photo"
               />
               <p>63_building</p>
             </div>
@@ -81,15 +94,13 @@
               <p>스토리</p>
               <strong>모두 보기</strong>
             </div>
-            <div class="users"></div>
           </div>
 
-          <div class="story">
+          <div class="recommendation">
             <div class="story_header">
               <p>회원님을 위한 추천</p>
               <strong>모두 보기</strong>
             </div>
-            <div class="suggestions"></div>
           </div>
         </div>
       </div>

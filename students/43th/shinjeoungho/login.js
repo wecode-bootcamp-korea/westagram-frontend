@@ -3,9 +3,7 @@ const password = document.getElementById("pas");
 const loginButton = document.getElementById("loginBtn");
 
 document.body.addEventListener("keyup", () => {
-  console.log(id.value);
-  console.log(password.value);
-
+  console.log(id);
   if (id.value.length >= 1 && password.value.length >= 1) {
     loginButton.style.backgroundColor = "blue";
   } else {
@@ -14,9 +12,6 @@ document.body.addEventListener("keyup", () => {
 });
 
 loginButton.addEventListener("click", () => {
-  console.log(id.value);
-  console.log(password.value);
-
   if (id.value.length == 0) {
     alert("아이디를 입력하세요");
   } else if (id.value.length > 1 && password.value.length == 0) {
