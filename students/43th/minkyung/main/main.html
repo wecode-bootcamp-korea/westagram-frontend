@@ -45,51 +45,63 @@
       <!--메인 피드 -->
       <div class="feed">
         <div class="mainFeed">
-          <!--프로필 사진과 아이디 -->
-          <div class="feedTop_left">
-            <img class="profileImg" src="../img/me.JPG" alt="meJpgFail" />
-            <p>minngaeng_amazon</p>
-          </div>
-          <!--상단의 더보기 -->
-          <div class="feedTop_right">
-            <p>···</p>
+          <!--피드 헤드-->
+          <div class="feedHead">
+            <!--프로필 사진과 아이디 -->
+            <div class="feedTop_left">
+              <img class="profileImg" src="../img/me.JPG" alt="meJpgFail" />
+              <span class="profileFeedId">minngaeng_amazon</span>
+            </div>
           </div>
           <!--메인피드-->
           <div class="mainImg">
-            <!-- <img src="../img/photo.PNG" alt="" /> -->
+            <img src="../img/photo.PNG" alt="mainFeedImg" />
           </div>
           <!--좋아요 댓글 Top-->
           <div class="likeCommentSend">
-            <img class="like" src="../img/heart.png" alt="" />
-            <img class="chat" src="../img/chat.png" alt="" />
-            <img class="share" src="../img/upload.png" alt="" />
-            <img class="save" src="../img/save-instagram.png" alt="" />
+            <div class="lcsLeftMenu">
+              <img class="like" src="../img/heart.png" alt="" />
+              <img class="chat" src="../img/chat.png" alt="" />
+              <img class="share" src="../img/upload.png" alt="" />
+            </div>
+            <div class="lcsRightMenu">
+              <img class="save" src="../img/save-instagram.png" alt="" />
+            </div>
           </div>
         </div>
-        <!--bottom (댓글,좋아요)-->
-        <div class="bottom">
-          <!--좋아요 몇 명 표시-->
-          <div class="bottomLike">
-            <img class="pingu" src="../img/pingu.JPG" alt="" />
-            <p>sandweechh</p>
-            <p>님 외 여러명이 좋아합니다</p>
-          </div>
-          <!--게시글 코멘트-->
+     <div class="bottomTop">
+      <img class="pingu" src="../img/pingu.JPG" alt="pingu">
+      <span class="bottomTopLike"><span class="nickname">sandweech</span>님외</span>
+     </div>
+        
+          <!--🧸게시글 & 댓글 코멘트-->
+            <!--게시글 코멘트-->
           <div class="mainComment">
-            <p>minngaeng_amazon</p>
-            <p>클쑤마쑤~</p>
-            <p>더보기</p>
-          </div>
-          <!-- 친구들 댓글-->
-          <div class="bottomComment">
-            <p>sandweech</p>
-            <p>부럽당 🎈</p>
-            <img class="commentHeart" src="../img/heart.png" alt="" />
-          </div>
+            
+              <span class="nickname">minngaeng_amazon</span>
+              <span>클쑤마쑤~</span>
+              <span>더보기</span>
+             </div>
+             <!--댓글-->
+            <ul class="mainCommentTag">
+             <li>
+              <span class="nickname">sandweech</span>
+              <span>부럽당 🎈</span>
+            </li>
+         </ul>
+         <!--시간 표시-->
+         <div class="time">    
+        <span>2분전</span>
+         </div>
+         <!--댓글 게시 창 -->
+         <div class="inputButton">
           <div class="inputComment">
-            <input type="text" placeholder="댓글 달기..." />
+            <input class="inputCommentReal" type="text" placeholder="댓글 달기..." />
+          </div>
+          <div class="inputCommentButton">
             <button type="button">게시</button>
           </div>
+        </div>
         </div>
       </div>
       <!--우측 self profile-->
@@ -105,8 +117,15 @@
           <p>모두 보기</p>
         </div>
         <div class="rightStoryBoxMain">
-          <img class="sandwich" src="../img/sandwich.JPG" alt="" />
-          <div class="circle"></div>
+          <!--스토리 박스 위치 구현 위해 -->
+          <div class="storyBox">
+            <div class="circle"></div>
+            <img class="sandwich" src="../img/sandwich.JPG" alt="" />
+          </div>
+          <div class="idTime">
+            <p>sora_amazon</p>
+            <p class="time">2시간 전</p>
+          </div>
         </div>
       </div>
     </div>

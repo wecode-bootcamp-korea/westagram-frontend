@@ -2,6 +2,10 @@
   box-sizing: border-box;
   padding: 10px;
 }
+body {
+  /* width: 1350px; */
+  background-color: rgb(243, 243, 243);
+}
 .leftBox {
   display: flex;
 }
@@ -48,13 +52,21 @@
 }
 .feed {
   border: 1px solid black;
-  height: 98%;
-  width: 676px;
+  height: 94%;
+  width: 50%;
   margin-left: 194px;
   position: absolute;
 }
+.feedHead {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 .feedTop_left {
   display: flex;
+  justify-content: flex-start;
+  margin-left: -16px;
+  margin-top: -20px;
 }
 .profileImg {
   width: 96px;
@@ -62,20 +74,164 @@
   border-radius: 70%;
   overflow: hidden;
 }
+.profileFeedId {
+  margin-top: 22px;
+}
 .feedTop_right {
-  position: relative;
-  top: -98px;
-  left: 542px;
+  display: flex;
+  justify-content: end;
 }
-.mainImg {
-  position: relative;
-  width: 676px;
-}
+
 .mainImg img {
-  position: absolute;
-  object-fit: cover;
   width: 100%;
-  top: -81px;
-  left: -21px;
-  height: 528px;
+}
+.likeCommentSend {
+  display: flex;
+  justify-content: row;
+
+  bottom: -400px;
+}
+.like {
+  width: 57px;
+  height: 54px;
+}
+.chat {
+  height: 52px;
+  width: 51px;
+}
+.share {
+  width: 54px;
+  height: 53px;
+}
+
+.save {
+  width: 57px;
+  height: 54px;
+}
+
+.bottomTop {
+  display: flex;
+  margin-top: -38px;
+}
+
+.pingu {
+  width: 65px;
+  height: 65px;
+  border-radius: 70%;
+  overflow: hidden;
+}
+.bottomTopLike {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.mainCommentTag {
+  list-style: none;
+}
+.time {
+  color: #52525291;
+}
+.nickname {
+  font-weight: bold;
+}
+.inputButton {
+  display: flex;
+  justify-content: space-between;
+}
+.inputComment {
+  width: 100%;
+}
+.inputComment::placeholder {
+  color: #52525291;
+}
+.inputComment input {
+  width: 100%;
+  padding-left: 10px;
+  height: 50px;
+}
+.inputCommentButton {
+  width: 30px;
+}
+.inputCommentButton button {
+  outline: none;
+  border: none;
+  width: 51px;
+  padding-top: 19px;
+}
+.rightArticle .rightPhoto {
+  width: 92px;
+  height: 89px;
+  border-radius: 70%;
+  overflow: hidden;
+}
+.rightArticle {
+  display: flex;
+  justify-content: flex-end;
+}
+.rightArticle .rightPhoto {
+  position: relative;
+  left: -22px;
+}
+.rightArticle .realName {
+  position: relative;
+  right: 100px;
+  bottom: -26px;
+}
+.rightStoryBox {
+  /* display:flex
+  justify-content: flex-end*/
+  border: 1px solid black;
+  position: relative;
+  right: -68px;
+  width: 323px;
+  height: 321px;
+  left: 947px;
+  top: 44px;
+}
+.rightStoryBox .rightStoryBoxTop {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  top: -26px;
+}
+.rightStoryBoxMain .storyBox {
+  position: relative;
+  top: -62px;
+  left: -6px;
+}
+.rightStoryBox .rightStoryBoxMain .sandwich {
+  width: 72px;
+  height: 73px;
+  position: relative;
+  border-radius: 70%;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  top: -66px;
+  left: -6px;
+}
+.rightStoryBox .rightStoryBoxMain .circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+
+  border: 1px solid transparent;
+  background-image: linear-gradient(#fff, #fff),
+    linear-gradient(to right, red 0%, orange 100%);
+  background-origin: border-box; /* 배경이미지를 어느 영역부터 채워나갈지를 정합니다.*/
+  background-clip: content-box, border-box;
+}
+/* .rightStoryBoxMain {
+  display: flex;
+  flex-direction: row;
+} */
+.rightStoryBoxMain .idTime {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: -239px;
+  left: 57px;
+}
+.idTime .time {
+  margin-top: -28px;
 }
