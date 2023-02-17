@@ -149,16 +149,23 @@ header {
 header img {
   width: 60px;
   height: 60px;
-  border: 2px solid transparent;
+  border: 2px solid white;
   border-radius: 50%;
+}
+
+.story-green {
+  border: 2px solid #62ce60;
+}
+
+header div {
+  width: 64px;
+  height: 64px;
+  border: 2px solid transparent;
   background-image: linear-gradient(#fff, #fff),
     linear-gradient(to right, red 0%, orange 100%);
   background-origin: border-box;
   background-clip: content-box, border-box;
-}
-
-header img:nth-child(2) {
-  border: 2px solid #62ce60;
+  border-radius: 50%;
 }
 
 header::-webkit-scrollbar {
@@ -254,10 +261,11 @@ article {
   margin-top: 5px;
 }
 
-.feeds-old-comment p {
+.feeds-old-comment-more {
   color: gray;
   font-size: 14px;
   font-weight: 400;
+  margin-top: 10px;
 }
 
 .feeds-new-comment {
