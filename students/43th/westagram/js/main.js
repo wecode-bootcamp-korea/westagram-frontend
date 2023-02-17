@@ -38,9 +38,7 @@ search.addEventListener("blur", () => {
 search.addEventListener("input", (e) => {
   const searchUserArea = document.getElementById("searchUser");
   searchUserArea.style.display = "none";
-  while (searchUserArea.hasChildNodes()) {
-    searchUserArea.removeChild(searchUserArea.firstChild);
-  }
+  removeAllChildNodes(searchUserArea);
 
   if (e.target.value) {
     const searchKeyword = e.target.value;
@@ -144,23 +142,39 @@ function createReply(value) {
   replyArea.style.alignItems = "center";
 
   replyContainer.append(replyArea);
-  replyContainer.style.display = "block";
+  //  replyContainer.style.display = "block";
   replyCnt();
 
   reply.value = ""; //댓글 추가 후 textarea 초기화
 }
 
 function replyCnt() {
+  removeAllChildNodes(howManyReply);
   let cnt = replyContainer.childElementCount;
   const howManyReplyText = document.createElement("span");
   howManyReplyText.innerHTML = `댓글 ${cnt}개 모두 보기`;
   howManyReplyText.style.color = "gray";
+  howManyReplyText.id = "allReply";
+
+  howManyReplyText.addEventListener("mouseover", () => {
+    howManyReplyText.style.cursor = "pointer";
+  });
+  howManyReplyText.addEventListener("click", () => {
+    if (replyContainer.style.display === "none")
+      replyContainer.style.display = "block";
+    else replyContainer.style.display = "none";
+  });
 
   howManyReply.append(howManyReplyText);
   if (cnt > 0) howManyReply.style.display = "block";
   else howManyReply.style.display = "none";
 }
 
+function removeAllChildNodes(Element) {
+  while (Element.hasChildNodes()) {
+    Element.removeChild(Element.firstChild);
+  }
+}
 //랜덤 유저 생성 클래스
 class User {
   constructor() {
