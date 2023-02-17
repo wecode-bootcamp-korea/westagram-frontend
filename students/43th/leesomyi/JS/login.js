@@ -3,14 +3,14 @@ const passwordInput = document.getElementsByTagName("input")[1];
 const loginBtn = document.getElementsByClassName("logBtn")[0];
 
 function active() {
-  let loginlength = loginInput.value.length;
-  let passwordlength = passwordInput.value.length;
+  let loginValue = loginInput.value;
+  let passwordValue = passwordInput.value;
 
-  if ((loginlength && passwordlength) >= 1) {
+  if (loginValue.indexOf("@") > -1 || passwordValue.length >= 5) {
     loginBtn.style.backgroundColor = "#39f";
+  } else {
+    loginBtn.style.backgroundColor = "#67b6fa";
   }
-
-  console.log(loginlength > 0 && passwordlength > 0);
 }
 
 loginInput.addEventListener("keyup", active);
