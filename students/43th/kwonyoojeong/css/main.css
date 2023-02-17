@@ -4,6 +4,7 @@ body {
 }
 
 button {
+  padding: 0;
   border: none;
   background-color: white;
   font-size: 16px;
@@ -23,6 +24,7 @@ button {
 }
 
 .upperNav {
+  position: relative;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -49,6 +51,10 @@ button {
 }
 
 .upperIcons {
+  width: 28px;
+}
+
+.upperIconsButton {
   width: 28px;
   margin-left: 25px;
 }
@@ -158,13 +164,25 @@ button.profileSave {
 }
 
 .commentTotalWrap {
-  display: flex;
-  justify-content: space-between;
+  position: relative;
+}
+
+.commentTotalWrap button {
+  position: absolute;
+  right: 14px;
 }
 
 .commentLike {
+  margin-right: 25px;
   width: 12px;
-  margin-right: 15px;
+}
+
+.deleteComment {
+  opacity: 0;
+}
+
+.deleteComment:hover {
+  opacity: 100;
 }
 
 .commentTime {
@@ -228,7 +246,7 @@ input::placeholder {
   margin-bottom: 10px;
   padding: 15px;
   background-color: white;
-  overflow: auto; /* �댁슜�� �대떦 �곸뿭�� �섏뼱�곗쓣 寃쎌슦, �ㅽ겕濡� �앹꽦 */
+  overflow: auto;
 }
 
 .storyWrap,
@@ -304,4 +322,36 @@ p.etc {
 
 .etc {
   color: #bababa;
+}
+
+#dropBox {
+  position: absolute;
+  right: 100px;
+  top: 70px;
+  width: 250px;
+  height: 200px;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 7px;
+  display: none;
+}
+
+#dropBox a {
+  padding: 13px 15px 7px 15px;
+  display: flex;
+  align-items: center;
+}
+
+#dropBox a#setting {
+  padding-bottom: 15px;
+}
+
+#dropBox a img {
+  width: 26px;
+  margin-right: 7px;
+}
+
+#dropBox a#log_out {
+  padding-top: 16px;
+  border-top: 1px solid black;
 }

@@ -16,9 +16,6 @@ const createComment = () => {
   const commentTotalWrap = document.createElement("div");
   commentTotalWrap.className = "commentTotalWrap";
 
-  const commentWrap = document.createElement("div");
-  commentWrap.className = "commentWrap";
-
   const commentId = document.createElement("a");
   commentId.href = "#";
   commentId.className = "commentId";
@@ -32,16 +29,20 @@ const createComment = () => {
   const commentLike = document.createElement("button");
   const heartImg = document.createElement("img");
   comment.style.width = heartImg.width;
-  heartImg.className = "commentLike heart";
+  heartImg.className = "commentLike likeHeart";
   heartImg.src = "img/heart.png";
   heartImg.alt = "하트";
 
-  commentLike.appendChild(heartImg);
-  commentWrap.appendChild(commentId);
-  commentWrap.appendChild(comment);
+  const deleteComment = document.createElement("button");
+  deleteComment.className = "deleteComment";
+  deleteComment.innerText = "x";
 
-  commentTotalWrap.appendChild(commentWrap);
+  commentLike.appendChild(heartImg);
+
+  commentTotalWrap.appendChild(commentId);
+  commentTotalWrap.appendChild(comment);
   commentTotalWrap.appendChild(commentLike);
+  commentTotalWrap.appendChild(deleteComment);
 
   newComment.appendChild(commentTotalWrap);
 
@@ -50,6 +51,11 @@ const createComment = () => {
   if (addComment.value === "") {
     addComment.focus();
   }
+
+  // x 버튼 누르면 댓글 삭제
+  deleteComment.addEventListener("click", (e) => {
+    commentTotalWrap.remove();
+  });
 };
 
 addComment.addEventListener("keypress", (event) => {
@@ -58,22 +64,17 @@ addComment.addEventListener("keypress", (event) => {
   }
 });
 
-// const heart = document.getElementsByClassName("heart");
+const dropButton = document.getElementById("dropButton");
+const dropBox = document.getElementById("dropBox");
 
-// const pressHeart = () => {
-//   heart.src = "redheart.png";
+// 드롭버튼 클릭하면 dropbox 보이도록
+dropButton.addEventListener("click", (e) => {
+  dropBox.style.display = "block";
+});
 
-//   if (heart.src === "redheart.png") {
-//     heart.src = "heart.png";
-//   }
-// };
+// 전역에 클릭이벤트 주어서 드롭박스 사라지게
+const removeDropBox = document.querySelector(".mainWrap");
 
-// heart.addEventListener("click", (e) => {
-//   pressHeart();
-// });
-
-// const profileSave = document.querySelector(".profileSave");
-
-// profileSave.addEventListener("click", (e) => {
-//   profileSave.src = "bookmark.png";
-// });
+removeDropBox.addEventListener("click", (e) => {
+  dropBox.style.display = "none";
+});
