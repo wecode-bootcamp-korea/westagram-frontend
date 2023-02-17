@@ -1,30 +1,23 @@
-const idInput = document.getElementById('login_id'), pwInput = document.getElementById('login_pw');
+"use strict";
+
+const loginId = document.getElementById('login_id');
+const loginPw = document.getElementById('login_pw');
 const loginBtn = document.getElementById('login_btn');
 
-const isActiveLogin = () => {
-    let idValue = idInput.value;
-    let pwValue = pwInput.value;
-  
-    if(
-        (idValue && pwValue) && 
-        (pwValue.length >= 5) && 
-        (idValue.includes('@') || idValue.length >= 5)
-        ) {
-        loginBtn.disabled = false;
-        loginBtn.style.opacity = 1;
-        loginBtn.style.cursor = 'pointer';
-    }
-    else {
-        loginBtn.disabled = true;
-        loginBtn.style.opacity = .3;
-    }
+function loginBtnActive() {
+  if ((loginId.value.length > 0 && loginId.value.indexOf("@") !== -1) && loginPw.value.length >= 5) {
+    loginBtn.style.backgroundColor = "#0095F6";
+    loginBtn.disabled = false;
+  } else {
+    loginBtn.style.backgroundColor = "#C0DFFD";
+    loginBtn.disabled = true;
   }
-  
-  const init = () => {
-    idInput.addEventListener('input', isActiveLogin);
-    pwInput.addEventListener('input', isActiveLogin);
-    idInput.addEventListener('keyup', isActiveLogin);
-    pwInput.addEventListener('keyup', isActiveLogin);
-  }
-  
-  init();
+}
+
+function toMainPage() {
+  location.replace("./main.html");
+}
+
+loginId.addEventListener('keyup', loginBtnActive);
+loginPw.addEventListener('keyup', loginBtnActive);
+loginBtn.addEventListener('click', toMainPage);

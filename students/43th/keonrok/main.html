@@ -5,14 +5,62 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/common.css" type="text/css">
+    <link rel="stylesheet" href="style/main.css" type="text/css">
+    <link rel="shortcut icon" type="image/x-icon" href="instagram.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
     <title>westagram main</title>
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <img style="height: 30px; object-fit: contain"
+                src="https://www.instagram.com/static/images/web/mobile_nav_type_logo-2x.png/1b47f9d0e595.png">
+            <input class="form-control" style="width: 200px" type="search" placeholder="Search" aria-label="Search">
+            <div>
+                <img src="instagram.png" alt="instagramLogo"> 인스타 로고 추가
+                <span class="material-icons-outlined">explore</span>
+                <span class="material-icons-outlined">favorite_border</span>
+                <span class="material-icons-outlined">person</span>
+                <!-- <i class="fab fa-instagram"></i>
+                |instagram
+                <i class="fab fa-compass"></i>
+                <i class="fab fa-heart"></i>
+                <i class="fab fa-user"></i> -->
+            </div>
+        </div>
+    </nav>
     <div>
-        <img scr="img_kr2.png" width="1000px" height="800px" alt="wecode">
+        <main>
+            <div>   
+                feeds
+            </div>
+            <div style="background-color: skyblue;margin-right: 100px; width: 500px; height: 2000px;display: flex;
+        flex-direction: column;">
+                <div class="border" style="background-color: white;width: 480px;margin: 10px; height: 480px">
+                    <img src="img_kr.jpg" width="480px" alt="wecode">
+                </div>
+                <div class="border" style="background-color: white;width: 480px;margin: 10px; height: 480px">
+                    <img src="img_kr2.png" width="480px" alt="wecode">
+                </div>
+                <div class="border" style="background-color: white;width: 480px;margin: 10px; height: 480px">
+                    <img src="img_kr.jpg" width="480px" alt="wecode">
+                </div>
+                <div class="border" style="background-color: white;width: 480px;margin: 10px; height: 480px">
+                    <img src="img_kr2.png" width="480px" alt="wecode">
+                </div>
+                <div class="border" style="background-color: white;width: 480px;margin: 10px; height: 480px">
+                    <img src="img_kr.jpg" width="480px" alt="wecode">
+                </div>
+            </div>
+    </div>
+    </main>
+    <div style="background-color: yellow; width: 300px; height: 1000px;left: 72%; position: fixed"></div>
     </div>
 
+    <script src="js/main.js"></script>
 </body>
 
 </html>
