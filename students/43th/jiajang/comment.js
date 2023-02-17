@@ -2,13 +2,17 @@ const commentInput = document.querySelector(".feeds-comment-input");
 const commentBox = document.querySelector(".feeds-comment-box");
 const newCommentBox = document.querySelector(".feeds-new-comment");
 const commentBtn = document.querySelector(".feeds-comment-upload");
-const heartIcon = document.querySelector(".icon-heart");
+const heartIcon = document.querySelector(".fa-heart");
 const likeNumber = document.querySelector(".feeds-like-number");
 
 // 좋아요 기능
 
 heartIcon.addEventListener("click", function () {
-  likeNumber.innerHTML = Number(Number(likeNumber.innerHTML) + 1);
+  heartIcon.className.includes("fa-regular")
+    ? (heartIcon.classList.replace("fa-regular", "fa-solid"),
+      (likeNumber.innerHTML = Number(likeNumber.innerHTML) + 1))
+    : (heartIcon.classList.replace("fa-solid", "fa-regular"),
+      (likeNumber.innerHTML = Number(likeNumber.innerHTML) - 1));
 });
 
 // 댓글 추가 기능 (엔터, 클릭)

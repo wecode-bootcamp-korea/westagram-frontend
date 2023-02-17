@@ -1,4 +1,4 @@
-const navElement = document.querySelector(".nav");
+const navElement = document.querySelector("nav");
 const navWrapElement = document.querySelector(".nav-wrap");
 const hideNavBtn = document.querySelector(".nav-bottom-icon");
 
