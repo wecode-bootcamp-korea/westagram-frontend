@@ -13,10 +13,10 @@
   <nav id="instaNav">
     <div class="inner_nav">
       <h1 class="tit_logo"><a href="#none" class="link_logo">Westagram</a></h1>
-      <form action="#none">
+      <form method="post" action="#none">
         <fieldset>
           <legend class="screen_out">검색</legend>
-          <input type="text" class="inp_search" title="검색어 입력">
+          <input type="text" class="inp_search" title="검색어 입력" />
         </fieldset>
       </form>
       <div class="gnb_menu">
@@ -45,7 +45,7 @@
       <h3 class="screen_out">피드</h3>
       <ul class="list_insta">
         <li>
-          <a href="#none" class="link_profile type_story"><!-- 스토리가 있을때 link_profile에 클래스 type_story 추가 -->
+          <a href="#none" class="link_profile">
             <span class="wrap_thumb">
               <span class="thumb_profile" style="background-image:url(images/@thumb_960x640.jpg)"><!-- 프로필 사진을 클래스 thumb_profile의 background-image 인라인 스타일에 넣어주세요. --></span>
             </span>
@@ -56,17 +56,17 @@
             <span class="thumb_feed" style="background-image:url(images/@thumb_960x640.jpg)"><!-- 피드 이미지를 클래스 thumb_feed의 background-image 인라인 스타일에 넣어주세요. --></span>
           </span>
           <div class="util_feed">
-            <button class="btn_like" type="button">
-              <svg aria-label="좋아요" class="_ab6-" color="#000" fill="#000" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M16.792 3.904A4.989 4.989 0 0 1 21.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 0 1 4.708-5.218 4.21 4.21 0 0 1 3.675 1.941c.84 1.175.98 1.763 1.12 1.763s.278-.588 1.11-1.766a4.17 4.17 0 0 1 3.679-1.938m0-2a6.04 6.04 0 0 0-4.797 2.127 6.052 6.052 0 0 0-4.787-2.127A6.985 6.985 0 0 0 .5 9.122c0 3.61 2.55 5.827 5.015 7.97.283.246.569.494.853.747l1.027.918a44.998 44.998 0 0 0 3.518 3.018 2 2 0 0 0 2.174 0 45.263 45.263 0 0 0 3.626-3.115l.922-.824c.293-.26.59-.519.885-.774 2.334-2.025 4.98-4.32 4.98-7.94a6.985 6.985 0 0 0-6.708-7.218Z"></path></svg>
+            <button class="btn_like" type="button"><!-- 좋아요가 활성 상태일때 btn_like에 클래스 on 제거 -->
+              <img src="images/ico_like.svg" class="img_g" alt="좋아요">
             </button>
             <button class="btn_comment" type="button">
-              <svg aria-label="댓글 달기" class="_ab6-" color="#000" fill="#000" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M20.656 17.008a9.993 9.993 0 1 0-3.59 3.615L22 22Z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></path></svg>
+              <img src="images/ico_comment.svg" class="img_g" alt="댓글">
             </button>
             <button class="btn_share" type="button">
-              <svg aria-label="게시물 공유" class="_ab6-" color="#000" fill="#000" height="24" role="img" viewBox="0 0 24 24" width="24"><line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2" x1="22" x2="9.218" y1="3" y2="10.083"></line><polygon fill="none" points="11.698 20.334 22 3.001 2 3.001 9.218 10.084 11.698 20.334" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></polygon></svg>
+              <img src="images/ico_share.svg" class="img_g"  alt="공유하기">
             </button>
             <button class="btn_bookmark" type="button">
-              <svg aria-label="저장" class="_ab6-" color="#000" fill="#000" height="24" role="img" viewBox="0 0 24 24" width="24"><polygon fill="none" points="20 21 12 13.44 4 21 4 3 20 3 20 21" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polygon></svg>
+              <img src="images/ico_bookmark.svg" class="img_g"  alt="즐겨찾기">
             </button>
           </div>
           <div class="feed_user">
@@ -77,24 +77,18 @@
           <div class="group_comment">
             <a href="#none" class="link_comment">댓글 100개 모두 보기</a>
             <div class="area_writebox">
-              <form action="#none" method="post" name="formComment">
-                <input aria-label="댓글 달기..." class="inp_comment" placeholder="댓글 달기...">
+              <form action="#none" method="post" name="formComment" class="form_comment">
+                <input aria-label="댓글 달기..." class="inp_comment" placeholder="댓글 달기..." />
                 <button type="submit" class="btn_submit">게시</button>
               </form>
             </div>
-            <!-- 댓글 입력시 여기서부터 출력해주세요 시작 -->
-            <strong class="screen_out">댓글 리스트</strong>
-            <ul class="list_comment">
-              <li></li>
-            </ul>
-            <!-- 댓글 입력시 여기서부터 출력해주세요 끝 -->
           </div>
           <button type="button" class="btn_option">
             <svg aria-label="옵션 더 보기" class="_ab6-" color="#000" fill="#000" height="24" role="img" viewBox="0 0 24 24" width="24"><circle cx="12" cy="12" r="1.5"></circle><circle cx="6" cy="12" r="1.5"></circle><circle cx="18" cy="12" r="1.5"></circle></svg>
           </button>
         </li>
         <li>
-          <a href="#none" class="link_profile type_story"><!-- 스토리가 있을때 link_profile에 클래스 type_story 추가 -->
+          <a href="#none" class="link_profile">
             <span class="wrap_thumb">
               <span class="thumb_profile" style="background-image:url(images/@thumb_960x640.jpg)"><!-- 프로필 사진을 클래스 thumb_profile의 background-image 인라인 스타일에 넣어주세요. --></span>
             </span>
@@ -105,17 +99,17 @@
             <span class="thumb_feed" style="background-image:url(images/@thumb_960x640.jpg)"><!-- 피드 이미지를 클래스 thumb_feed의 background-image 인라인 스타일에 넣어주세요. --></span>
           </span>
           <div class="util_feed">
-            <button class="btn_like" type="button">
-              <svg aria-label="좋아요" class="_ab6-" color="#000" fill="#000" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M16.792 3.904A4.989 4.989 0 0 1 21.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 0 1 4.708-5.218 4.21 4.21 0 0 1 3.675 1.941c.84 1.175.98 1.763 1.12 1.763s.278-.588 1.11-1.766a4.17 4.17 0 0 1 3.679-1.938m0-2a6.04 6.04 0 0 0-4.797 2.127 6.052 6.052 0 0 0-4.787-2.127A6.985 6.985 0 0 0 .5 9.122c0 3.61 2.55 5.827 5.015 7.97.283.246.569.494.853.747l1.027.918a44.998 44.998 0 0 0 3.518 3.018 2 2 0 0 0 2.174 0 45.263 45.263 0 0 0 3.626-3.115l.922-.824c.293-.26.59-.519.885-.774 2.334-2.025 4.98-4.32 4.98-7.94a6.985 6.985 0 0 0-6.708-7.218Z"></path></svg>
+            <button class="btn_like" type="button"><!-- 좋아요가 활성 상태일때 btn_like에 클래스 on 제거 -->
+              <object src="images/ico_like.svg" class="img_g" alt="좋아요"></object>
             </button>
             <button class="btn_comment" type="button">
-              <svg aria-label="댓글 달기" class="_ab6-" color="#000" fill="#000" height="24" role="img" viewBox="0 0 24 24" width="24"><path d="M20.656 17.008a9.993 9.993 0 1 0-3.59 3.615L22 22Z" fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></path></svg>
+              <img src="images/ico_comment.svg" class="img_g" alt="댓글">
             </button>
             <button class="btn_share" type="button">
-              <svg aria-label="게시물 공유" class="_ab6-" color="#000" fill="#000" height="24" role="img" viewBox="0 0 24 24" width="24"><line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2" x1="22" x2="9.218" y1="3" y2="10.083"></line><polygon fill="none" points="11.698 20.334 22 3.001 2 3.001 9.218 10.084 11.698 20.334" stroke="currentColor" stroke-linejoin="round" stroke-width="2"></polygon></svg>
+              <img src="images/ico_share.svg" class="img_g"  alt="공유하기">
             </button>
             <button class="btn_bookmark" type="button">
-              <svg aria-label="저장" class="_ab6-" color="#000" fill="#000" height="24" role="img" viewBox="0 0 24 24" width="24"><polygon fill="none" points="20 21 12 13.44 4 21 4 3 20 3 20 21" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></polygon></svg>
+              <img src="images/ico_bookmark.svg" class="img_g"  alt="즐겨찾기">
             </button>
           </div>
           <div class="feed_user">
@@ -126,8 +120,10 @@
           <div class="group_comment">
             <a href="#none" class="link_comment">댓글 100개 모두 보기</a>
             <div class="area_writebox">
-              <input aria-label="댓글 달기..." class="inp_comment" placeholder="댓글 달기...">
-              <button type="submit" class="btn_submit">게시</button>
+              <form action="#none" method="post" name="formComment" class="form_comment">
+                <input aria-label="댓글 달기..." class="inp_comment" placeholder="댓글 달기..." />
+                <button type="submit" class="btn_submit">게시</button>
+              </form>
             </div>
           </div>
           <button type="button" class="btn_option">
@@ -208,14 +204,14 @@
         <footer id="instaFooter">
           <strong class="screen_out">위스타그램 서비스 정보</strong>
           <ul class="list_corp">
-              <li><a href="#none" class="link_corp">소개</a></li>
-              <li><a href="#none" class="link_corp">도움말</a></li>
-              <li><a href="#none" class="link_corp">홍보 센터</a></li>
-              <li><a href="#none" class="link_corp">채용 정보</a></li>
-              <li><a href="#none" class="link_corp">개인정보처리방침</a></li>
-              <li><a href="#none" class="link_corp">약관</a></li>
-              <li><a href="#none" class="link_corp">위치</a></li>
-              <li><a href="#none" class="link_corp">언어</a></li>
+            <li><a href="#none" class="link_corp">소개</a></li>
+            <li><a href="#none" class="link_corp">도움말</a></li>
+            <li><a href="#none" class="link_corp">홍보 센터</a></li>
+            <li><a href="#none" class="link_corp">채용 정보</a></li>
+            <li><a href="#none" class="link_corp">개인정보처리방침</a></li>
+            <li><a href="#none" class="link_corp">약관</a></li>
+            <li><a href="#none" class="link_corp">위치</a></li>
+            <li><a href="#none" class="link_corp">언어</a></li>
           </ul>
           <p class="txt_copy">&#169; 2023 INSTAGRAM FROM META</p>
         </footer>

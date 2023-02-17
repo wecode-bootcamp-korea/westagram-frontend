@@ -1,34 +1,33 @@
 /* header */
 #instaNav{border-bottom:1px solid #dedede;background-color:#fff}
-.inner_nav{display:flex;width:853px;height:60px;margin:0 auto;align-items:center;flex-wrap:wrap;justify-content:space-between}
+.inner_nav{display:-webkit-box;display:-webkit-flex;display:flex;width:853px;height:60px;margin:0 auto;align-items:center;flex-wrap:wrap;justify-content:space-between}
 .inner_nav .tit_logo{font-size:30px;font-family:'Lobster', cursive}
 .inner_nav .tit_logo .link_logo:hover{text-decoration:none}
 .inner_nav .link_logo{display:block}
-.inner_nav .inp_search{width:268px;height:35px;border:1px solid #dedede;border-radius:30px}
+.inner_nav .inp_search{width:268px;height:25px;border:1px solid #dedede;border-radius:30px}
 .inner_nav .list_util{font-size:0}
 .inner_nav .list_util li{display:inline-block;vertical-align:top}
 .inner_nav .list_util li .link_util{display:block;width:23px;margin:0 10px}
 
 /* 메인 */
-#instaContent{display:flex;width:853px;margin:50px auto;justify-content:space-between}
+#instaContent{display:-webkit-box;display:-webkit-flex;display:flex;width:853px;margin:50px auto;justify-content:space-between}
 .insta_feed{width:470px}
 .list_insta{background-color:#fff}
 .list_insta > li{position:relative;padding:15px 0}
 .list_insta > li + li{border-top:1px solid #dedede}
-.list_insta .link_profile{display:flex;overflow:hidden;height:48px;margin-bottom:10px;align-content:center;flex-wrap:wrap;align-items:center}
-.list_insta .wrap_thumb{position:relative;width:32px;}
+.list_insta .link_profile{display:-webkit-box;display:-webkit-flex;display:flex;overflow:hidden;height:48px;margin-bottom:10px;align-content:center;flex-wrap:wrap;align-items:center}
+.list_insta .wrap_thumb{position:relative;width:32px}
 .list_insta .thumb_profile{display:block;overflow:hidden;padding-top:100%;border-radius:100%;background-size:cover;background-repeat:no-repeat}
 .list_insta .thumb_profile::after{position:absolute;top:0;right:0;left:0;bottom:0;padding-top:100%;border:1px solid #dedede;border-radius:100%;background-color:rgba(0,0,0,.05);box-sizing:border-box;content:""}
 .list_insta .link_profile .tit_user{display:block;padding-left:10px;font-weight:bold;font-size:14px;line-height:18px;color:#000}
 .list_insta .link_profile .num_date{display:block;position:relative;padding-left:20px;font-size:12px;line-height:18px;color:#555}
-.list_insta .link_profile .num_date::after{position:absolute;left:8px;top:50%;width:3px;height:3px;border-radius:100%;background-color:#999;transform:translateY(-50%);content:""}
+.list_insta .link_profile .num_date::after{position:absolute;left:8px;top:50%;width:3px;height:3px;border-radius:100%;background-color:#999;-webkit-transform:translateY(50%);-moz-transform:translateY(-50%);transform:translateY(-50%);content:""}
 .list_insta .wrap_feedimg{display:block;overflow:hidden;position:relative;border-radius:5px}
 .list_insta .thumb_feed{display:block;padding-top:100%;background-size:cover;background-repeat:no-repeat}
 
-.list_insta .util_feed{position:relative;padding-top:10px;font-size:0}
-.list_insta .util_feed .btn_comment{margin:0 15px}
-.list_insta .util_feed .btn_share{margin:2px}
-.list_insta .util_feed [class*="btn_"] svg{display:block}
+.list_insta .util_feed{position:relative;padding-top:13px;font-size:0}
+.list_insta .util_feed [class*="btn_"]{width:24px;margin:0 7px}
+.list_insta .util_feed [class*="btn_"]:first-child{margin-left:0}
 .list_insta .util_feed .btn_bookmark{position:absolute;right:-2px;top:11px}
 .list_insta .feed_user{padding:9px 0 2px;font-size:0}
 .list_insta .feed_user .link_user{display:inline-block;font-weight:bold;font-size:14px;line-height:18px;color:#000;vertical-align:top}
@@ -36,13 +35,19 @@
 .list_insta .feed_user .btn_more{font-size:14px;line-height:18px;color:#888;vertical-align:top}
 .list_insta .btn_option{position:absolute;right:-10px;top:22px;padding:10px}
 .group_comment .link_comment{display:inline-block;padding:5px 0;font-size:14px;line-height:18px;color:#888;vertical-align:top}
-.group_comment .inp_comment{width:100%;height:18px;border:0 none;font-size:14px;line-height:18px;outline:none}
+.group_comment .inp_comment{width:100%;height:18px;padding-right:40px;border:0 none;font-size:14px;line-height:18px;outline:none;box-sizing:border-box}
 .group_comment .inp_comment::placeholder{font-size:14px;line-height:18px}
 .group_comment .area_writebox{position:relative}
-.group_comment .btn_submit{position:absolute;top:50%;right:-5px;padding:5px;font-weight:bold;font-size:14px;color:#3578E5;transform:translateY(-50%)}
+.group_comment .btn_submit{position:absolute;top:50%;right:-5px;padding:5px;font-weight:bold;font-size:14px;color:#3578E5;-webkit-transform:translateY(-50%);-moz-transform:translateY(-50%);transform:translateY(-50%)}
+
+.group_comment .list_comment{padding-top:15px}
+.group_comment .list_comment li{position:relative;padding:3px 40px 3px 0;font-size:13px;line-height:20px;color:#555;word-break:break-all}
+.group_comment .list_comment .link_user{display:inline-block;margin-right:8px;font-weight:bold;font-size:13px;line-height:20px;color:#333;vertical-align:top}
+.group_comment .list_comment .btn_like{position:absolute;top:50%;right:-9px;width:12px;padding:9px;-webkit-transform:translateY(-50%);-moz-transform:translateY(-50%);transform:translateY(-50%);box-sizing:content-box}
+.group_comment .list_comment .img_g{fill:#ccc}
 
 .aside_insta{width:319px;padding-top:15px}
-.aside_insta .link_user{display:flex;align-items:center}
+.aside_insta .link_user{display:-webkit-box;display:-webkit-flex;display:flex;align-items:center}
 .aside_insta .link_user .wrap_thumb{overflow:hidden;position:relative;width:56px;border-radius:100%}
 .aside_insta .link_user .thumb_user{display:block;padding-top:100%;background-size:cover;background-repeat:no-repeat}
 .aside_insta .link_user .thumb_user::after{position:absolute;top:0;right:0;left:0;bottom:0;padding-top:100%;background-color:rgba(0,0,0,.05);content:""}
@@ -55,7 +60,7 @@
 .box_info .tit_info{display:block;padding-bottom:15px;font-weight:bold;font-size:14px;line-height:20px;color:#222}
 .box_info .link_more{position:absolute;font-size:12px;line-height:18px;color:#888}
 .box_info .list_info li{position:relative;margin-bottom:16px}
-.box_info .link_profile{display:flex}
+.box_info .link_profile{display:-webkit-box;display:-webkit-flex;display:flex}
 .box_info .thumb_profile{overflow:hidden;position:relative;width:32px;border-radius:100%;background-size:cover;background-repeat:no-repeat}
 .box_info .thumb_profile::after{position:absolute;top:0;right:0;left:0;bottom:0;border:1px solid #dedede;border-radius:100%;background-color:rgba(0,0,0,.05);box-sizing:border-box;content:""}
 .box_info .info_user{padding-left:12px}
