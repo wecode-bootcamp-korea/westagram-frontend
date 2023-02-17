@@ -8,11 +8,11 @@ const likeNumber = document.querySelector(".feeds-like-number");
 // 좋아요 기능
 
 heartIcon.addEventListener("click", function () {
+  heartIcon.classList.toggle("fa-regular");
+  heartIcon.classList.toggle("fa-solid");
   heartIcon.className.includes("fa-regular")
-    ? (heartIcon.classList.replace("fa-regular", "fa-solid"),
-      (likeNumber.innerHTML = Number(likeNumber.innerHTML) + 1))
-    : (heartIcon.classList.replace("fa-solid", "fa-regular"),
-      (likeNumber.innerHTML = Number(likeNumber.innerHTML) - 1));
+    ? (likeNumber.innerHTML = Number(likeNumber.innerHTML) - 1)
+    : (likeNumber.innerHTML = Number(likeNumber.innerHTML) + 1);
 });
 
 // 댓글 추가 기능 (엔터, 클릭)

@@ -80,6 +80,10 @@ nav img {
   margin-top: 80px;
 }
 
+.nav-middle i {
+  font-size: 25px;
+}
+
 .nav-middle-menu {
   display: flex;
   align-items: center;
@@ -98,31 +102,6 @@ nav img {
   justify-content: space-between;
   align-items: center;
   gap: 20px;
-}
-
-.nav-closed {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  display: flex;
-  align-items: flex-end;
-  width: 10px;
-  height: 100vh;
-  padding: 40px 40px 40px 25px;
-  border-right: 1px solid #e6e6e6;
-}
-
-.nav-closed-no-element {
-  display: none;
-}
-
-.nav-open-btn {
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  background-image: url("./img/right-arrow.png");
-  background-size: cover;
-  cursor: pointer;
 }
 
 /* 중앙 레이아웃 */
@@ -453,6 +432,33 @@ footer div:first-child {
   font-size: 20px;
 }
 
-.fa-solid {
+.fa-heart.fa-solid {
   color: red;
+}
+
+/* toggle sidebar */
+
+.nav-closed {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items: flex-end;
+  width: 10px;
+  height: 100vh;
+  padding: 40px 40px 40px 25px;
+  border-right: 1px solid #e6e6e6;
+}
+
+.nav-closed-no-element {
+  display: none;
+}
+
+.nav-open-btn {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-image: url("./img/right-arrow.png");
+  background-size: cover;
+  cursor: pointer;
 }
