@@ -28,6 +28,7 @@ function addComment() {
 
     addedCommentName.innerHTML = "dazezd_z ";
     addedCommentName.style.fontWeight = "700";
+    addedDeleteBtn.style.marginLeft = "10px";
     addedCommentContent.innerHTML = commentInput.value;
     addedDeleteBtn.innerHTML = "❌";
     addedDeleteBtn.style.background = "transparent";
