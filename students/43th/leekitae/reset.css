@@ -1,8 +1,61 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif,'Noto Sans' ,san-serif;
+  /* color: #262626; */
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #262626;
+}
+
+.form-div, input, button{
+  box-shadow: none;
+  outline: none; 
+  /* 인풋장 선택시 파란줄 없애기 */
+}
+
+
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
 body {
-    margin: 0;
-  }
-  
-  * {
-    box-sizing: border-box;
-  }
-  
+  height: 100%;
+  background-color: #fafafa;
+}
+
+main {
+  max-width: 935px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.opacity-1-0 {
+  opacity: 1;
+}
+.opacity-0-5 {
+  opacity: 0.5;
+}
+
+.visible {
+  visibility: visible;
+}
+
+.hidden {
+  visibility: hidden;
+}
