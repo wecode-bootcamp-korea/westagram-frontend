@@ -1,20 +1,19 @@
-const search = document.getElementById("search");
-const reply = document.getElementById("reply");
-const postReply = document.getElementById("post-reply");
-const replyContainer = document.getElementById("reply-area");
-const howManyReply = document.getElementById("how-many-reply");
-const storyBoard = document.getElementById("story-main");
-const recommendBoard = document.getElementById("recommend-main");
-const viewAllStroy = document.getElementById("view-all-story");
-const viewAllRecommend = document.getElementById("view-all-recommend");
 const id = document.getElementById("id");
-const navAccount = document.getElementById("nav-account");
+
+const reply = document.querySelector(".feeds__reply__value");
+const postReply = document.querySelector(".feeds__reply__post");
+const replyContainer = document.querySelector(".feeds__reply-area");
+const howManyReply = document.querySelector(".feeds__reply-count");
+const navAccount = document.querySelector(".nav__account");
+const search = document.querySelector(".search__input");
+const storyBoard = document.querySelector(".aside__story");
+const recommendBoard = document.querySelector(".aside__recommend");
 
 const userArr = [];
 
 navAccount.addEventListener("click", () => {
   //account 이모지의 하단, 오른쪽 절대좌표
-  const menuBox = document.querySelector("#menu-box");
+  const menuBox = document.querySelector(".nav__account-menu");
   const menuBoxDisplay = window.getComputedStyle(menuBox).display;
   if (menuBoxDisplay === "none") menuBox.style.display = "block";
   else menuBox.style.display = "none";
@@ -36,7 +35,7 @@ search.addEventListener("blur", () => {
 
 //검색시 아이디 찾기
 search.addEventListener("input", (e) => {
-  const searchUserArea = document.getElementById("searchUser");
+  const searchUserArea = document.querySelector(".search__result-area");
   searchUserArea.style.display = "none";
   removeAllChildNodes(searchUserArea);
 
@@ -80,8 +79,6 @@ postReply.addEventListener("click", () => {
     createReply(reply.value);
   }
 });
-
-viewAllStroy.addEventListener("click", () => {});
 
 //댓글 생성하는 함수
 function createReply(value) {
