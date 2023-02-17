@@ -33,9 +33,15 @@
       <main class="mainPage">
         <div class="feeds">
           <section class="feed">
-            <div>
+            <div style="width: 100%">
               <artcle>
-                <div><img src="writer.png" style="width: 80%" /></div>
+                <div class="writer">
+                  <img
+                    src="IMG_1211.JPG"
+                    style="border-radius: 50%; width: 40px; height: 40px"
+                  />
+                  <h5 style="margin-left: 10px">taehoon_hong</h5>
+                </div>
                 <img class="myPhoto" src="IMG_1278.jpeg" />
                 <div class="commit">
                   <section class="react">
@@ -44,24 +50,57 @@
                     <button class="heart"><img src="send.png" /></button>
                   </section>
                   <section class="whoIsLike">
-                    <div class="whoIsLike">여러명이 좋아합니다.</div>
+                    <span class="whoIsLike">여러명이 좋아합니다.</span>
                     <div class="asdfa">
                       <input
                         style="border: none; width: 100%"
                         type="text"
                         placeholder="댓글 달기..."
                       />
+                      <span style="width: 25px; font-size: 13px; color: #c4e0fc"
+                        >게시</span
+                      >
                     </div>
                   </section>
                 </div>
               </artcle>
             </div>
           </section>
-          <div class="main-right">
-            <img class="recommand" src="friends.png" />
-          </div>
+          <section class="main-right">
+            <div class="writer">
+              <img
+                src="IMG_1211.JPG"
+                style="border-radius: 50%; width: 25px; height: 25px"
+              />
+              <h6 style="margin-left: 10px">taehoon_hong</h6>
+            </div>
+            <div class="story">
+              <div class="story-list">
+                <img
+                  src="IMG_1211.JPG"
+                  style="border-radius: 50%; width: 25px; height: 25px"
+                />
+                <h6 style="margin-left: 10px">Hong</h6>
+              </div>
+              <div class="story-list">
+                <img
+                  src="IMG_1211.JPG"
+                  style="border-radius: 50%; width: 25px; height: 25px"
+                />
+                <h6 style="margin-left: 10px">HongTaeHoon</h6>
+              </div>
+              <div class="story-list">
+                <img
+                  src="IMG_1211.JPG"
+                  style="border-radius: 50%; width: 25px; height: 25px"
+                />
+                <h6 style="margin-left: 10px">TaeHoon</h6>
+              </div>
+            </div>
+          </section>
         </div>
       </main>
     </div>
+    <script src="main.js"></script>
   </body>
 </html>
