@@ -22,6 +22,6 @@ function checkLetter() {
     : alert("아이디 혹은 패스워드를 확인해주세요.");
 }
 
-loginIdInput.addEventListener("keyup", checkInput);
-loginPwInput.addEventListener("keyup", checkInput);
+loginIdInput.addEventListener("keydown", checkInput);
+loginPwInput.addEventListener("keydown", checkInput);
 loginBtn.addEventListener("click", checkLetter);

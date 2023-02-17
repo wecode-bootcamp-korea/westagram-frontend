@@ -44,7 +44,7 @@ function addComment() {
 
     // 댓글 삭제 기능 (클릭)
     addedDeleteBtn.addEventListener("click", function () {
-      newCommentBox.removeChild(newCommentInnerBox);
+      newCommentInnerBox.remove();
     });
 
     commentInput.value = null;
