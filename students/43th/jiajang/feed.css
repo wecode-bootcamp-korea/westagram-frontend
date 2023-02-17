@@ -329,10 +329,18 @@ aside {
   font-weight: 700;
 }
 
+.profile-box div:first-child {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  border: 1px solid #bababa;
+}
+
 .profile-box img {
   width: 64px;
   height: 64px;
   border-radius: 50%;
+  border: 2px solid white;
 }
 
 .profile-box-nickname {
@@ -377,10 +385,16 @@ aside {
 }
 
 .recommend-upside {
+  position: absolute;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 10px;
+  width: 320px;
   color: gray;
+  background-color: white;
+}
+
+.recommend-bottom {
+  margin-top: 30px;
 }
 
 .recommend-bottom img {
