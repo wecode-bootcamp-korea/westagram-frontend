@@ -9,6 +9,14 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* 중앙으로 배열하는 다른 방법
+     1. display: grid;
+        place-items: center;
+     
+     2. position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) ➡️ 이렇게 하면 완전히 중앙으로! */
   position: relative;
   background-color: white;
   border: 2.5px solid #f2f2f2;

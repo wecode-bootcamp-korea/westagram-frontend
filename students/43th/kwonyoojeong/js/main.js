@@ -4,6 +4,9 @@ const newComment = document.querySelector(".newComment");
 const addComment = document.querySelector(".addComment");
 
 // 게시 버튼 누르면 댓글 추가
+// const newComment = `<span>아이디</span><span>${변수(댓글 내용)}</span>`
+// newCommentList.innerHTML = newComment
+// => getElement로 각각의 span 생성해서 value를 appendChild 등등을 할 필요가 없어짐!
 addButton.addEventListener("click", (event) => {
   createComment();
 });

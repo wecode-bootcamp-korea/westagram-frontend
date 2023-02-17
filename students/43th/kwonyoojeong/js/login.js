@@ -1,7 +1,11 @@
+// "use strict" => 자바스크립트는 동적 언어이므로 에러 방지를 위해 써준다
+// querySelector 는 노드를 가져온다
+
 const id = document.querySelector(".id");
 const pw = document.querySelector(".password");
 const button = document.querySelector(".loginButton");
 
+// 선언식 함수, 표현식 함수
 const activeButton = () => {
   if (id.value && pw.value) {
     // button.setAttribute("disabled", false) 는 적용되지 않는다.
@@ -32,3 +36,8 @@ button.addEventListener("click", (e) => {
     alert("비밀번호는 5자리 이상이어야 합니다.");
   }
 });
+
+// location.replace("주소") => 주소로 이동. 로그인 성공했을 떄 아래에 넣어주면 다음 페이지로 넘어갈 수 있다.
+// inputs.addEventListener("input", 함수 이름) => 이벤트 위임. 부모(변수 inputs)의 이벤트가 자식(input 태그)에게도 동일하게 적용된다.
+// vs 이벤트 버블링
+// 함수를 분리해서 작성하는 습관 => 유지, 보수를 위해 => 하나의 함수는 하나의 동작(하나의 리턴)만 실행하는 것이 베스트
