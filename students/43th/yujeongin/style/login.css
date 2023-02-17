@@ -1,41 +1,43 @@
+body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-175px,-175px);
+}
+
 .login_box {
     display: flex;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
     height: 350px;
     width: 350px;
-    margin: 0 auto;
-    margin-top: 100px;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     background-color: white;
 }
 
-    .westagram {
-        margin:15px 0px;
-    }
-
-        input {
-            height: 30px;
-            width: 250px;
-            margin-bottom: 5px;
-            border: 1px solid rgba(0, 0, 0, 0.1);
-            border-radius: 2px;
-            background-color:#fafafa;
-        }
+input {
+    height: 30px;
+    width: 250px;
+    margin-bottom: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 2px;
+    background-color:#fafafa;
+}
 
 .login_pw {
     margin-bottom: 15px;
 }
 
-    button {
-        height: 30px;
-        width:258px;
-        border:1px none rgba(0, 0, 0, 0.1);
-        border-radius: 5px;
-        background-color: rgb(76,181,249);
-        color:#fafafa;
-    }
+button {
+    height: 30px;
+    width:258px;
+    border:1px none rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    background-color: rgb(76,181,249);
+    color:#fafafa;
+}
 
 .forgot_pw {
     margin-top: 50px;
@@ -43,6 +45,6 @@
     font-size: 12px;
 }
 
-    a {
-        text-decoration: none;
-    }
+a {
+    text-decoration: none;
+}
