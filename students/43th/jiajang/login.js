@@ -1,3 +1,5 @@
+"use strict";
+
 let loginIdInput = document.querySelector(".id-input");
 let loginPwInput = document.querySelector(".pw-input");
 let loginBtn = document.querySelector(".login-btn");
@@ -6,10 +8,11 @@ let loginBtn = document.querySelector(".login-btn");
 
 function checkInput() {
   if (loginIdInput.value && loginPwInput.value) {
-    loginBtn.style.backgroundColor = "#5395E9";
+    loginBtn.style.backgroundColor = "#5395e9";
     loginBtn.style.cursor = "pointer";
     loginBtn.disabled = false;
   } else {
+    loginBtn.style.backgroundColor = "#c5e1fa";
     loginBtn.disabled = true;
   }
 }
@@ -18,7 +21,7 @@ function checkInput() {
 
 function checkLetter() {
   loginIdInput.value.includes("@") && loginPwInput.value.length >= 5
-    ? alert("로그인 성공! 🎉")
+    ? (window.location.href = "./feed.html")
     : alert("아이디 혹은 패스워드를 확인해주세요.");
 }
 
