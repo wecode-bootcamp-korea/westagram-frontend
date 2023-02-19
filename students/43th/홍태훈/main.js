@@ -54,14 +54,14 @@ addcomment.addEventListener("keyup", function (event) {
 const addcomment = document.getElementById("comment");
 const add_comment = document.querySelector(".add-comment");
 
-function nickName() {
-  //
-  //const span = document.createElement("span");
-  //// add_comment.innerHTML = `<span>Hong</span>`;
-  // yourName.style = "margin-right:10px";
-  //
-  //
-}
+// function nickName() {
+//   //
+//   //const span = document.createElement("span");
+//   //// add_comment.innerHTML = `<span>Hong</span>`;
+//   // yourName.style = "margin-right:10px";
+//   //
+//   //
+// }
 
 function createNewComment() {
   const getComment = document.createElement("span");
