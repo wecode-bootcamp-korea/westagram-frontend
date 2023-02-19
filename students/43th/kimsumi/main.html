@@ -13,12 +13,26 @@
   <nav id="instaNav">
     <div class="inner_nav">
       <h1 class="tit_logo"><a href="#none" class="link_logo">Westagram</a></h1>
-      <form method="post" action="#none">
-        <fieldset>
-          <legend class="screen_out">검색</legend>
-          <input type="text" class="inp_search" title="검색어 입력" />
-        </fieldset>
-      </form>
+      <div class="wrap_search">
+        <form method="post" action="#none">
+          <fieldset>
+            <legend class="screen_out">검색</legend>
+            <input type="text" class="inp_search" title="검색어 입력"/>
+          </fieldset>
+        </form>
+        <strong class="screen_out">검색된 유저 목록</strong>
+        <ul class="list_user">
+          <li>
+            <a href="#none" class="link_user">
+              <span class="area_thumb"><span class="thumb_user" style="background-image:url(images/@thumb_960x640.jpg)"></span><!-- 프로필 사진을 클래스 thumb_user의 background-image 인라인 스타일에 넣어주세요. --></span>
+              <div class="group_info">
+                <strong class="tit_user"><span class="screen_out">유저 아이디 : </span>wecode_bootcamp</strong>
+                <span class="txt_info"><span class="screen_out">유저 설명 : </span>짱~~~~</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
       <div class="gnb_menu">
         <h2 class="screen_out">위스타그램 메인 메뉴</h2>
         <ul class="list_util">

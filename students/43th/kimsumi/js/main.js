@@ -32,7 +32,7 @@ function commentList(event) {
   li.innerHTML = `<span class="screen_out">댓글 작성자: </span><a href="#none" class="link_user">sumi_zz</a><span class="screen_out">댓글 내용: </span>${commentNew} <button class="btn_like" type="button">${svg}</button>`;
     /* 댓글 좋아요 */
     const buttonLike = document.querySelector(".list_comment .btn_like");
-    console.log(buttonLike);
+    // console.log(buttonLike);
     buttonLike.addEventListener("click", function() {
       buttonLike.classList.toggle("on");
     });
@@ -60,10 +60,41 @@ const userId = [
     id :"wecode_korea",
     info : "굿~~~"
   },
-];
+  {
+    id :"sumi_zzang!!",
+    info : "굿~~~"
+  },
+  {
+    id :"sumi_zzang!!",
+    info : "굿~~~"
+  },
+  {
+    id :"sumi_zzang!!",
+    info : "굿~~~"
+  },
+  {
+    id :"sumi_zzang!!",
+    info : "굿~~~"
+  },
+  {
+    id :"sususususususususussusususussusususususususususususususuussusu!!",
+    info : "sususususususususussusususussusususususususususususususuussusu"
+  },
+  {
+    id :"일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십",
+    info : "일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십"
+  },
+];  
 
-function searchId(event) {
-  const findId = inpSearch.value;
-  userId.filter();
+function filterUser(query) {
+  return userId.filter(function(value) {
+      return value.id.indexOf(query) > -1;
+  })
 }
-inpSearch.addEventListener("keydown", searchId);
+
+function filterId(event)  {
+  const value = filterUser(inpSearch.value);
+  for (let i = 0; i < userId.length -1; i++) {
+  }
+}
+inpSearch.addEventListener("keyup", filterId);
