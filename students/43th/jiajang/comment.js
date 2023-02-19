@@ -15,9 +15,10 @@ function addComment() {
     const addedCommentContent = document.createElement("span");
     const addedDeleteBtn = document.createElement("button");
 
-    addedCommentName.innerText = accountNickname.innerText;
-    addedCommentContent.innerText = commentInput.innerText;
-    addedDeleteBtn.innerText = "❌";
+    addedCommentName.innerHTML = accountNickname.innerHTML;
+    addedCommentContent.innerHTML = commentInput.value;
+    addedCommentContent.classList.add("added-comment-content");
+    addedDeleteBtn.innerHTML = "❌";
     addedDeleteBtn.classList.add("delete-btn");
 
     newCommentBox
@@ -44,6 +45,6 @@ heartIcon.addEventListener("click", () => {
   heartIcon.classList.toggle("fa-regular");
   heartIcon.classList.toggle("fa-solid");
   heartIcon.className.includes("fa-regular")
-    ? (likeNumber.innerText = Number(likeNumber.innerText) - 1)
-    : (likeNumber.innerText = Number(likeNumber.innerText) + 1);
+    ? (likeNumber.innerHTML = Number(likeNumber.innerHTML) - 1)
+    : (likeNumber.innerHTML = Number(likeNumber.innerHTML) + 1);
 });

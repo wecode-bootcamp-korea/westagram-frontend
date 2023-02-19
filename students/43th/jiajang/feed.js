@@ -19,3 +19,9 @@ const profileImgBox = document.querySelector(".profile-toggle-box");
 profileImg.addEventListener("click", () => {
   profileImgBox.classList.toggle("display-block");
 });
+
+profileImgBox.addEventListener("click", (e) => {
+  e.target
+    ? profileImgBox.classList.remove("display-block")
+    : profileImgBox.classList.add("display-block");
+});
