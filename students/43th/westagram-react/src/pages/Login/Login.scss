@@ -1,0 +1,128 @@
+//westagram font style import
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Mukta:wght@200;300;400;500;600;700;800&display=swap");
+
+@import "../../styles/common.scss";
+
+//---------------------------common---------------------------
+@mixin flexSort($justifyContants, $alignItems) {
+  display: flex;
+  justify-content: $justifyContants;
+  align-items: $alignItems;
+}
+
+@mixin marginAuto {
+  margin: 0 auto;
+}
+
+//imported from common.scss
+@include globalStyles;
+
+$font-small: 12px;
+$font-middle: 16px;
+$font-large: 24px;
+$font-xlarge: 32px;
+$font-xxlarge: 40px;
+//------------------------------------------------------------
+
+.boxLogin {
+  @include flexSort(center, center);
+  width: 440px;
+  height: 450px;
+
+  //background-color: aquamarine;
+
+  .boxContainer {
+    width: 400px;
+    height: 400px;
+    box-shadow: 10px 10px 10px 2px #e4e4e4;
+    border-radius: 20px;
+    border: 1px solid black;
+    //background-color: aqua;
+  }
+
+  .boxCloseBtnArea {
+    position: relative;
+    margin-top: 12px;
+    padding: 0px 12px;
+    height: 34px;
+  }
+
+  .boxCloseBtnArea > button {
+    background-color: white;
+  }
+
+  .boxCloseBtnArea .btnClose {
+    position: absolute;
+    background-image: url("../../assets/images/close.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: none;
+    right: 15px;
+    top: 5px;
+    width: 18px;
+    height: 18px;
+  }
+
+  .boxTitle {
+    @include flexSort(center, center);
+  }
+
+  .txtTitle {
+    font-size: 40px;
+    font-family: "Lobster", sans-serif;
+    font-weight: 200;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .boxLoginInfo {
+    @include flexSort(center, center);
+  }
+
+  .boxLoginForm > div {
+    padding: 3px;
+  }
+
+  .boxLoginForm > div > input {
+    padding-left: 10px;
+    border-radius: 5px;
+    width: 260px;
+    height: 36px;
+  }
+
+  .boxLoginForm > div > input[type="text"],
+  input[type="password"] {
+    background: #f5f5f5;
+    border: 1px solid #e3e3e3;
+  }
+
+  .boxIsSaveLoginInfo {
+    margin: 5px 0px;
+    @include flexSort(start, center);
+  }
+
+  .boxLoginForm > div > input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+  }
+
+  .txtIsSaveComment {
+    font-size: $font-small;
+    padding: 5px;
+  }
+
+  .btnLogin {
+    background-color: #b8def7;
+    color: white;
+    border: none;
+    font-weight: 600;
+  }
+
+  .boxForgetPassword {
+    margin: 10px;
+    text-align: center;
+    font-size: $font-small;
+  }
+}
