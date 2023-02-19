@@ -1,11 +1,3 @@
-/* 
-리팩토링 가이드
-
-6. 레이아웃은 bottom-up 방식으로 구성 
-- 자식요소의 높이에 따라 부모요소의 높이가 유동적으로 결정됨
-- 다시 한 번 기억하자.. css 유지보수가 js보다 힘들다..
-*/
-
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 
 /* 공통 스타일 */
@@ -20,6 +12,7 @@ a {
   text-decoration: none;
 }
 
+i,
 img,
 button {
   cursor: pointer;
@@ -43,14 +36,9 @@ input:focus {
   outline: none;
 }
 
-.icon-mini {
-  width: 20px;
-  height: 20px;
-}
-
-.icon-medium {
-  width: 25px;
-  height: 25px;
+.fa-regular.icon-mini {
+  font-size: 10px;
+  color: gray;
 }
 
 /* nav 레이아웃 */
@@ -182,13 +170,8 @@ article {
   width: 30px;
   height: 30px;
   margin-right: 5px;
-  border: 2px solid transparent;
+  border: 1px solid #bababa;
   border-radius: 50%;
-  background-image: linear-gradient(#fff, #fff),
-    linear-gradient(to right, red 0%, orange 100%);
-  background-origin: border-box;
-  background-clip: content-box, border-box;
-  box-shadow: 0 0 0 10px #fff inset;
 }
 
 .feeds-nickname {
@@ -448,6 +431,7 @@ footer div:first-child {
   height: 100vh;
   padding: 40px 40px 40px 25px;
   border-right: 1px solid #e6e6e6;
+  font-size: 0;
 }
 
 .nav-closed-no-element {
@@ -461,4 +445,8 @@ footer div:first-child {
   background-image: url("./img/right-arrow.png");
   background-size: cover;
   cursor: pointer;
+}
+
+.hide-nav-elements {
+  display: none;
 }
