@@ -1,0 +1,93 @@
+body {
+  background-color: rgba(250, 250, 250, 255);
+  /* 1번 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* font-family: "돋움", dotum, sans-serif; */
+
+  /* 2번
+display: grid;
+place-items: center; */
+
+  /*3번
+position: relative 
+부모인 body 에 position을 주고
+wrap_box에 position: absolute를 주는 것*/
+}
+
+.wrap_box {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  height: 350px;
+  padding: 60px;
+  border: 1px solid #eaeaea;
+  background-color: white;
+}
+
+.westagram {
+  font-family: "Lobster", cursive;
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/*.login_form {
+  display: flex;
+  flex-direction: column;
+  width: 537px;
+}*/
+
+#login_id,
+#login_pw {
+  background-color: #fafafa;
+  padding: 10px;
+  font-size: 12px;
+  color: gray; /*연하게 못하나?*/
+  height: 15px;
+  width: 220px;
+  border-radius: 3px;
+  margin-bottom: 5px;
+  border: 1px solid #eaeaea;
+  display: flex;
+  justify-content: center;
+}
+
+.login_btn {
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 10px;
+  height: 38px; /*왜 15px이 안되지 ?*/
+  width: 243px; /*왜 login_idpw랑 사이즈가 달라야하는가*/
+  border-radius: 3px;
+  background-color: #c0dffd;
+  border: 1px solid;
+  margin-bottom: 120px;
+  color: white;
+}
+
+.login_btn:hover {
+  cursor: pointer;
+}
+
+.forgot_pw {
+  text-align: center;
+  font-size: 13px;
+  /* font-family: "Courier New", Courier, monospace; */
+  /* 왜 이거는 폰트 적용이 안되는가 */
+}
+
+/* 로그인버튼 비활성화에서 활성화하는 코드
+.unactivdBtn {
+  @include buttonDefault;
+  background-color: #b2dffc;
+  color: #fff;
+}
+
+.activeBtn {
+  @include buttonDefault;
+  background: #0095f6;
+  color: #fff;
+} */
