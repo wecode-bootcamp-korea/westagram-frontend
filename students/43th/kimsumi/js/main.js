@@ -43,58 +43,54 @@ commentForm.addEventListener("submit", commentList);
 
 /***** 유저 아아디 검색 *****/
 const inpSearch = document.querySelector(".inner_nav .inp_search");
+// userId[0].id;
 const userId = [
+  { instaId :"wecode_bootcamp", info : "굿~~~"},
+  { instaId :"sumi_zzang!!", info : "굿~~~"},
+  { instaId :"wecode_founder", info : "굿~~~"},
   {
-    id :"wecode_bootcamp",
+    instaId :"wecode_korea",
     info : "굿~~~"
   },
   {
-    id :"sumi_zzang!!",
+    instaId :"sumi_zzang!!",
     info : "굿~~~"
   },
   {
-    id :"wecode_founder",
+    instaId :"sumi_zzang!!",
     info : "굿~~~"
   },
   {
-    id :"wecode_korea",
+    instaId :"sumi_zzang!!",
     info : "굿~~~"
   },
-  {
-    id :"sumi_zzang!!",
-    info : "굿~~~"
-  },
-  {
-    id :"sumi_zzang!!",
-    info : "굿~~~"
-  },
-  {
-    id :"sumi_zzang!!",
-    info : "굿~~~"
-  },
-  {
-    id :"sumi_zzang!!",
-    info : "굿~~~"
-  },
-  {
-    id :"sususususususususussusususussusususususususususususususuussusu!!",
-    info : "sususususususususussusususussusususususususususususususuussusu"
-  },
-  {
-    id :"일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십",
-    info : "일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십"
-  },
+  // {
+  //   instaId :"sumi_zzang!!",
+  //   info : "굿~~~"
+  // },
+  // {
+  //   id :"sususususususususussusususussusususususususususususususuussusu!!",
+  //   info : "sususususususususussusususussusususususususususususususuussusu"
+  // },
+  // {
+  //   id :"일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십",
+  //   info : "일이삼사오육칠팔구십일이삼사오육칠팔구십일이삼사오육칠팔구십"
+  // },
 ];  
 
 function filterUser(query) {
   return userId.filter(function(value) {
-      return value.id.indexOf(query) > -1;
+      return value.instaId.indexOf(query) > -1;
   })
 }
 
 function filterId(event)  {
+  const titUser = document.querySelector(".inner_nav .list_user .tit_user");
+  const regExp = /[a-zA-Z]/g; // 영어
   const value = filterUser(inpSearch.value);
-  for (let i = 0; i < userId.length -1; i++) {
+  for (let i = 0; i < userId.length; i++) {
+    // titUser.innerHTML = value[i];
+    console.log(value[i].instaId);
   }
 }
 inpSearch.addEventListener("keyup", filterId);
