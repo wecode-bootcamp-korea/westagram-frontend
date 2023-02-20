@@ -51,17 +51,17 @@ addcomment.addEventListener("keyup", function (event) {
 
 
 }*/
+
+//function nickName() {
+//
+//const span = document.createElement("span");
+//// add_comment.innerHTML = `<span>Hong</span>`;
+// yourName.style = "margin-right:10px";
+//
+//
+//}
 const addcomment = document.getElementById("comment");
 const add_comment = document.querySelector(".add-comment");
-
-// function nickName() {
-//   //
-//   //const span = document.createElement("span");
-//   //// add_comment.innerHTML = `<span>Hong</span>`;
-//   // yourName.style = "margin-right:10px";
-//   //
-//   //
-// }
 
 function createNewComment() {
   const getComment = document.createElement("span");
@@ -78,10 +78,9 @@ function createNewComment() {
   div.appendChild(getComment);
 }
 
-addcomment.addEventListener("keyup", function (event) {
+addcomment.addEventListener("keydown", function (event) {
   if (event.keyCode === 13) {
-    // nickName();
-    nickName() + createNewComment();
+    createNewComment();
     // createNewComment();
     addcomment.value = "";
   }
