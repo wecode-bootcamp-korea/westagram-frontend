@@ -32,7 +32,7 @@ const createComment = () => {
   const commentLike = document.createElement("button");
   const heartImg = document.createElement("img");
   comment.style.width = heartImg.width;
-  heartImg.className = "commentLike likeHeart";
+  heartImg.className = "commentLike";
   heartImg.src = "img/heart.png";
   heartImg.alt = "하트";
 
@@ -65,6 +65,26 @@ addComment.addEventListener("keypress", (event) => {
   if (event.key === "Enter") {
     return createComment();
   }
+});
+
+const profileHeart = document.getElementsByClassName("profileHeart")[1];
+// 하트 누르면 빨간 하트
+profileHeart.addEventListener("click", (e) => {
+  profileHeart.src = "img/redheart.png";
+
+  // if (profileHeart.src === "img/redheart.png") {
+  //   profileHeart.src = "img/heart.png";
+  // }
+});
+
+const profileSave = document.getElementsByClassName("profileSave")[1];
+// 저장 누르면 채워진 아이콘
+profileSave.addEventListener("click", (e) => {
+  profileSave.src = "img/bookmark.png";
+
+  // if (profileSave.src === "img/bookmark.png") {
+  //   profileSave.src = "img/save-instagram.png";
+  // }
 });
 
 const dropButton = document.getElementById("dropButton");
