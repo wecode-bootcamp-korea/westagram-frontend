@@ -1,6 +1,4 @@
 //console.log(addcomment);
-/*const upload_comment = document.getElementById("upload-comment");
-console.log(upload_comment);*/
 
 //console.log(add_comment);
 
@@ -62,26 +60,34 @@ addcomment.addEventListener("keyup", function (event) {
 //}
 const addcomment = document.getElementById("comment");
 const add_comment = document.querySelector(".add-comment");
+const upload_comment = document.getElementById("upload-comment");
 
 function createNewComment() {
   const getComment = document.createElement("span");
   const yourName = document.createElement("strong");
+
   yourName.className = "nickName";
   const div = document.createElement("div");
   add_comment.appendChild(div);
 
-  yourName.value = "Hong";
+  yourName.value = "taehoon_hong";
 
   yourName.innerHTML = yourName.value;
   getComment.innerHTML = addcomment.value;
+
   div.appendChild(yourName);
   div.appendChild(getComment);
 }
 
-addcomment.addEventListener("keydown", function (event) {
+addcomment.addEventListener("keyup", function (event) {
   if (event.keyCode === 13) {
     createNewComment();
     // createNewComment();
     addcomment.value = "";
   }
+});
+
+upload_comment.addEventListener("click", (e) => {
+  createNewComment();
+  addcomment.value = "";
 });
