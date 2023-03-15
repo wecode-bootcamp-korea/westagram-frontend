@@ -89,11 +89,15 @@ body {
   border-color: #cccfca;
   flex-direction: column;
   margin-left: 200px;
+  background-color: white;
+}
+
+.input-btn:hover {
+  cursor: pointer;
 }
 .article {
   /* border-top: 1px solid #cccfca; */
   height: 457px;
-
   background-image: url(./beach.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -101,7 +105,6 @@ body {
 }
 
 .feeds-header {
-  background-color: white;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -143,14 +146,13 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: white;
-  height: 100px;
+  height: 70px;
   width: 600px;
 }
 .imgs {
-  width: 300px;
+  height: 50px;
   display: flex;
-  margin-bottom: 50px;
+  margin-bottom: -70px;
 }
 
 .img-comment {
@@ -163,7 +165,7 @@ body {
 }
 
 .img-share {
-  width: 35px;
+  width: 30px;
   margin-left: 15px;
   background-image: url(./down.png);
   background-size: contain;
@@ -174,18 +176,14 @@ body {
 .img-flag {
   margin-bottom: 50px;
   width: 30px;
+  margin-right: 10px;
   background-image: url(./1.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.left-like {
-  background-color: white;
-}
-
 .left-comment {
-  background-color: white;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
