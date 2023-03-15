@@ -7,6 +7,7 @@ function addComments(e) {
     const liTag = document.createElement('li');
     liTag.textContent = commendValue;
     ulTag.append(liTag);
+    e.preventDefault();
   }
 }
 

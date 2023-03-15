@@ -3,7 +3,12 @@ const passwordInput = document.querySelector('#enterPassword');
 const loginBtn = document.querySelector('button');
 
 function enableLogin() {
-  if (idInput.value && passwordInput.value) {
+  if (
+    idInput.value &&
+    passwordInput.value &&
+    idInput.value.includes('@') &&
+    passwordInput.value.length >= 5
+  ) {
     loginBtn.classList.add('enable');
   } else {
     loginBtn.classList.remove('enable');
