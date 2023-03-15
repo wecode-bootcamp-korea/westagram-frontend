@@ -1,0 +1,321 @@
+ul{
+    margin: 0;
+    padding: 0;
+    list-style-position: inside;
+    list-style: none;
+}
+
+.story div ul {
+    height: 100%;
+}
+
+
+/* 네비게이션 */
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navLeft {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 200px;
+}
+
+.navIcon {
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+}
+
+.v-Line {
+  height: 30px;
+  width: 1px;
+  border-width: 0;
+  color: gray;
+  background-color: gray;
+}
+
+.iconStyle {
+  width: 28px;
+  height: 28px;
+  margin: 0 4px;
+}
+
+.instarIcon {
+  width: 27px;
+  height: 27px;
+}
+
+.navWestagram {
+  font-family: Lobster;
+  font-size: 32px;
+}
+
+.searchBar {
+  display: flex;
+  margin-top: 10px;
+  position: relative;
+  width: 250px;
+}
+
+.searchImg {
+  position: absolute;
+  width: 17px;
+  top: 6px;
+  left: 100px;
+  margin: 0;
+}
+
+.searchInput {
+  width: 100%;
+  border: 2px solid gray;
+  border-radius: 4px;
+  padding: 5px 12px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+
+/* 피드 및 메인 */
+
+#main {
+    display: flex;
+    justify-content: center;
+    width: 960px;
+    margin: 0 auto;
+    padding-top: 94px;
+    padding-bottom: 40px;
+    background-color: #fafafa;
+
+}
+
+.feeds {
+    border: 1px solid lightgray;
+    border-radius: 2px;
+}
+
+.profileFeed {
+    height: 20px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    padding-left: 7px;
+    display: flex;
+    align-items: center;
+}
+
+.profileFeedImg {
+    width: 42px;
+    height: 42px;
+    margin-right: 5px;
+    border-radius: 40px;
+}
+
+.profileFeed div span {
+    display: block;
+}
+
+.profilePic {
+    border-radius: 100%;
+    width: 28px;
+    height: 28px;
+}
+
+.articleBody {
+    height: 100vh;
+    width: 65vh;
+
+}
+.articleHead {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
+}
+/*
+.articleBody {
+    background-color: aqua;
+}
+*/
+.articleFeedImg {
+    height: 60vh;
+    width: 100%;
+    object-fit: cover;
+    border-bottom: 1px solid gray;
+}
+
+.articleFeedIcon {
+    display: flex;
+    justify-content: space-between;
+}
+
+.reaction {
+    padding: 0 16px;
+}
+
+.articleLikeInfo {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+ul.commentList {
+    margin-left: 5px;
+    margin-top: 10px;
+}
+
+.feedTimeCount {
+    margin-left: 5px;
+
+    font-size: 14px;
+    color: #8e8e8e;
+}
+
+.commentAndFeedTime {
+    display: flex;
+    justify-content: space-between;
+    height: 15vh;
+    flex-direction: column;
+}
+
+.commentDiv {
+    position: relative;
+    border-top: 1px solid lightgray;
+    height: 45px;
+    margin-top: 10px;
+}
+
+#commentInput {
+    width: 200px;
+    height: 12px;
+    padding: 7px;
+    margin-top: 7px;
+    box-sizing: content-box;
+    background-color: #fafafa;
+    border: 1px solid #DBDBDB;
+    border-radius: 3px;
+    background-image: url("img/search_FILL0_wght400_GRAD0_opsz48.png");
+    background-size: 14px;
+    background-repeat: no-repeat;
+    background-position: 38% center;
+    text-indent: 10%;
+    font-size: 14px;
+}
+
+.commentInput:focus {
+    outline: none;
+}
+
+.commentReply {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 6px;
+    width: 52px;
+    background-color: #fafafa;
+    color: #0095f6;
+    border-style: none;
+}
+
+.commentReply:disabled {
+    color: #B9DFFC;
+}
+/*
+.commentReply:focus {
+    outline: none;
+}*/
+
+/* 메인 오른쪽 스토리 및 추천 */
+
+.mainRight {
+    height: 700px;
+    width: 30%;
+    margin-left: 20px;
+    flex-direction: column;
+}
+
+.profileCard {
+    height: 56px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    padding-left: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.profileCard div span {
+    display: block;
+}
+
+.miniProfileCard {
+    height: 26px;
+    margin-top: 15px;
+    margin-bottom: 32px;
+    padding-left: 7px;
+    display: flex;
+    align-items: center;
+}
+
+.miniProfileCard div span {
+    display: block;
+}
+
+.miniProfileCard img {
+    border-radius: 100%;
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+}
+
+.myProfile {
+    border-radius: 100%;
+    height: 56px;
+    width: 56px;
+    margin-right: 10px;
+}
+
+.allView {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.find-more {
+    font-size: 12px;
+    font-weight: 600;
+    color: #262626;
+}
+
+.storyDiv {
+    border: 1px solid lightgray;
+    border-radius: 2px;
+    width: 100%;
+    height: 35%;
+    margin-bottom: 10px;
+}
+
+.recommendDiv {
+    border: 1px solid lightgray;
+    border-radius: 2px;
+    width: 100%;
+    height: 25%;
+    margin-bottom: 10px;
+}
+
+.instaInfo {
+    padding: 2px;
+    justify-content: left;
+    height: 189px;
+}
+
+.instaInfo p {
+    display: inline;
+    color: #8e8e8e;
+    font-size: 15px;
+}
+
+
