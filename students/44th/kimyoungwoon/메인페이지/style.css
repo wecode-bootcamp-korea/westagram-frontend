@@ -1,0 +1,336 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 1905px;
+  margin: 0;
+}
+
+nav {
+  width: 1905px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+#flex-start {
+  display: flex;
+  align-items: center;
+  font-family: Lobster;
+  margin-left: 350px;
+}
+
+h1 {
+  font-size: 25px;
+  border-left: 2px solid #000000;
+  margin: 0;
+  padding-left: 20px;
+  padding-bottom: 7px;
+}
+
+#flex-start i {
+  margin-right: 20px;
+  font-size: 25px;
+}
+
+#flex-center {
+  position: relative;
+}
+
+#flex-center input {
+  background-color: #fafafa;
+  border: 1px solid #dbdbdb;
+  text-align: center;
+  padding: 3px 10px;
+}
+
+#flex-center i {
+  color: #c9c9c9;
+  font-size: 6px;
+  position: absolute;
+  top: 6px;
+  right: 100px;
+}
+
+input::placeholder {
+  color: #c9c9c9;
+}
+
+#flex-end {
+  margin-right: 295px;
+}
+
+#flex-end img {
+  width: 25px;
+}
+
+.blank-heart {
+  margin: 0 20px;
+}
+
+main {
+  background-color: #fafafa;
+  border: 1px solid #e6e6e6;
+  display: flex;
+}
+
+section {
+  width: 820px;
+  border: 1px solid #e6e6e6;
+  margin-left: 350px;
+  margin-top: 70px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+header img {
+  width: 45px;
+  border-radius: 50%;
+  border: 1px solid #e6e6e6;
+  margin: 5px 20px;
+}
+
+header i {
+  flex-grow: 1;
+  text-align: right;
+  margin-right: 20px;
+}
+
+.feed-imege {
+  width: 819px;
+}
+
+.icon-area {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  gap: 20px;
+  margin-left: 20px;
+}
+
+.icon-area i {
+  font-size: 28px;
+}
+
+.fa-heart {
+  color: #ee4955;
+}
+
+.fa-clipboard {
+  flex-grow: 1;
+  text-align: right;
+  margin-right: 15px;
+}
+
+.postArea {
+  font-size: 18px;
+  margin-left: 20px;
+}
+
+.postArea img {
+  width: 25px;
+  border-radius: 50%;
+}
+
+.like {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.postArea .post {
+  margin: 0;
+}
+
+.post span {
+  color: #9a9a9a;
+}
+
+ul {
+  font-size: 18px;
+  list-style: none;
+  margin-left: 20px;
+  padding: 0;
+  line-height: 0;
+}
+
+.leaveComment {
+  position: relative;
+}
+
+.leaveComment input {
+  display: inline-block;
+  width: 100%;
+  height: 45px;
+  font-size: 15px;
+  border: none;
+  border-top: 1px solid #e6e6e6;
+}
+
+.leaveComment p {
+  color: #0095f6;
+  font-weight: 700;
+  position: absolute;
+  right: 20px;
+  top: -1px;
+}
+
+.leaveComment p:hover {
+  cursor: pointer;
+  color: #000000;
+}
+
+aside {
+  flex-grow: 1;
+  margin-top: 70px;
+  margin-left: 40px;
+  margin-right: 295px;
+  padding-bottom: 10px;
+}
+
+aside header {
+  width: 390px;
+  height: 90px;
+}
+
+aside header img {
+  width: 70px;
+  margin: 0;
+}
+
+aside header p {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0 0 0 15px;
+}
+
+aside header .under {
+  color: #999999;
+  font-weight: 400;
+}
+
+.story {
+  width: 390px;
+  height: 300px;
+  border-radius: 1px solid #dbdbdb;
+  margin: 10px 0 20px 0;
+  overflow: hidden;
+}
+
+.story header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+}
+
+.story header p {
+  margin: 0 20px;
+  font-size: 20px;
+}
+
+.grayColor {
+  color: #a0a0a0;
+  font-weight: 400;
+}
+
+.friend-story {
+  display: flex;
+  align-items: center;
+  margin-left: 25px;
+  margin-bottom: 15px;
+}
+
+.friend-story img {
+  width: 60px;
+  border: 3px solid transparent;
+  border-radius: 50%;
+  background-image: linear-gradient(#fff, #fff),
+    linear-gradient(
+      -120deg,
+      rgba(207, 48, 138, 1) 24%,
+      rgba(249, 155, 76, 1) 100%
+    );
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+.friend-story p {
+  margin: 0 15px;
+}
+
+.friend-story .top {
+  font-weight: 700;
+}
+
+.friend-story .bottom {
+  color: #a0a0a0;
+}
+
+.friend-recommendation {
+  width: 390px;
+  height: 270px;
+  border: 1px solid #dbdbdb;
+  margin: 0;
+}
+
+.friend-recommendation header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+}
+
+.friend-recommendation p {
+  margin: 0 20px;
+}
+
+.recommendPerson {
+  display: flex;
+  align-items: center;
+  margin-left: 25px;
+  margin-bottom: 15px;
+}
+
+.recommendPerson img {
+  width: 55px;
+  border-radius: 50%;
+}
+
+.recommendPerson p {
+  margin: 0 10px;
+}
+
+.recommendPerson .top {
+  font-weight: 700;
+}
+
+.recommendPerson .bottom {
+  color: #999999;
+}
+
+.recommendPerson .follow {
+  flex-grow: 1;
+  text-align: right;
+  color: #0095f6;
+  font-weight: 700;
+  padding-right: 10px;
+}
+
+footer {
+  color: #d3d3d3;
+}
+
+.blank {
+  height: 50px;
+}
