@@ -194,7 +194,7 @@ article .profile {
   background-color: rgba(000, 000, 000, 0);
 }
 
-.write_comment button {
+.write_comment .comment_upload_btn {
   position: absolute;
   right: 0;
   width: 60px;
@@ -202,6 +202,10 @@ article .profile {
   border-style: none;
   background-color: rgba(000, 000, 000, 0);
   font-size: 14px;
+  color: #4c9eee;
+}
+
+.write_comment .comment_upload_btn:disabled {
   color: #cce5fa;
 }
 
@@ -244,6 +248,7 @@ article .profile {
   border: solid 1px #efefef;
   padding: 12px;
   overflow: hidden;
+  margin-bottom: 20px;
 }
 
 .main-right .story .title {
@@ -311,7 +316,7 @@ article .profile {
 
 .main-right .recommend {
   width: 300px;
-  height: 240px;
+  height: 190px;
   background-color: #fff;
   border: solid 1px #efefef;
   padding: 12px;
@@ -340,6 +345,7 @@ article .profile {
 }
 
 .main-right .recommend .profile {
+  position: relative;
   display: flex;
   margin-bottom: 12px;
 }
@@ -366,6 +372,15 @@ article .profile {
 }
 
 .main-right .recommend .profile button {
+  position: absolute;
+  right: 0px;
   border-style: none;
   background-color: rgba(000, 000, 000, 0);
+  font-size: 14px;
+  color: #4c9eee;
+}
+
+.main-right .info {
+  font-size: 12px;
+  color: #999;
 }
