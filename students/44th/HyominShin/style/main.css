@@ -16,6 +16,7 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    border-bottom: 1px solid lightgray;
 }
 
 .navLeft {
@@ -54,7 +55,7 @@ nav {
   font-family: Lobster;
   font-size: 32px;
 }
-
+/*
 .searchBar {
   display: flex;
   margin-top: 10px;
@@ -69,7 +70,31 @@ nav {
   left: 100px;
   margin: 0;
 }
+*/
+.searchInput {
+    width: 185px;
+    height: 25px;
+    padding: 4px 10px 3px 26px;
+    color: #fafafa;
+    border: 1px solid lightgray;
+    border-radius: 3px;
+    text-align: center;
+    background-image: url(students/44th/HyominShin/img/search_FILL0_wght400_GRAD0_opsz48.png);
+    background-repeat: no-repeat;
+    background-size: 10px;
+    background-position: 38% center;
+}
 
+.searchInput:focus {
+    background-position: 4% center;
+    outline: none;
+}
+
+.input-search:focus::placeholder {
+    text-align: start;
+}
+
+/*
 .searchInput {
   width: 100%;
   border: 2px solid gray;
@@ -78,7 +103,7 @@ nav {
   margin-bottom: 8px;
   text-align: center;
 }
-
+*/
 
 /* 피드 및 메인 */
 
@@ -108,8 +133,8 @@ nav {
 }
 
 .profileFeedImg {
-    width: 42px;
-    height: 42px;
+    width: 36px;
+    height: 36px;
     margin-right: 5px;
     border-radius: 40px;
 }
@@ -135,6 +160,8 @@ nav {
     justify-content: space-between;
     border-bottom: 1px solid gray;
 }
+
+
 /*
 .articleBody {
     background-color: aqua;
@@ -188,21 +215,14 @@ ul.commentList {
     margin-top: 10px;
 }
 
-#commentInput {
-    width: 200px;
-    height: 12px;
-    padding: 7px;
-    margin-top: 7px;
-    box-sizing: content-box;
+.commentInput {
+    position: absolute;
+    height: 39px;
+    width: 85%;
+    margin-left: 17px;
+    margin-top: 2px;
+    border: none;
     background-color: #fafafa;
-    border: 1px solid #DBDBDB;
-    border-radius: 3px;
-    background-image: url("img/search_FILL0_wght400_GRAD0_opsz48.png");
-    background-size: 14px;
-    background-repeat: no-repeat;
-    background-position: 38% center;
-    text-indent: 10%;
-    font-size: 14px;
 }
 
 .commentInput:focus {
@@ -304,6 +324,17 @@ ul.commentList {
     width: 100%;
     height: 25%;
     margin-bottom: 10px;
+}
+
+.miniProfileCard button {
+    top: 0;
+    bottom: 0;
+    right: 6px;
+    margin-left: 102px;
+    width: 52px;
+    background-color: #fafafa;
+    color: #0095f6;
+    border-style: none;
 }
 
 .instaInfo {
