@@ -1,0 +1,342 @@
+body {
+  width: 100%;
+  margin: 30px auto;
+  border: 1px solid #cccfca;
+  height: 900px;
+  display: flex;
+  flex-direction: column;
+}
+
+.insta-title {
+  font-size: 30px;
+  margin-top: 7px;
+}
+.nav {
+  font-family: "Lobster", cursive;
+
+  display: flex;
+  justify-content: center;
+  height: 100px;
+}
+
+.nav-input {
+  margin-top: 27px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 50px;
+}
+
+.nav1,
+.nav2 {
+  display: flex;
+  flex-direction: row;
+}
+
+.img-logo {
+  margin-left: 100px;
+  margin-right: 40px;
+
+  background-image: url(./instalogo.png);
+  background-size: 30px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-right: 2px solid black;
+  padding-right: 90px;
+}
+
+.img-nav {
+  width: 30px;
+
+  background-image: url(https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.img-heart {
+  width: 39px;
+  margin-left: 10px;
+  background-image: url(https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.img-info {
+  width: 30px;
+  margin-left: 10px;
+  margin-right: 100px;
+  background-image: url(./img.info.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.main {
+  display: flex;
+  flex-direction: row;
+  width: 1700px;
+  border: 1px solid rgba(250, 250, 250, 255);
+  height: 600px;
+}
+.feeds {
+  margin-top: 60px;
+  border: 1px solid #edece6;
+  height: 638px;
+  width: 600px;
+  display: flex;
+  border-color: #cccfca;
+  flex-direction: column;
+  margin-left: 200px;
+}
+.article {
+  /* border-top: 1px solid #cccfca; */
+  height: 457px;
+
+  background-image: url(./beach.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.feeds-header {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 100px;
+}
+
+.feeds-both {
+  display: flex;
+  flex-direction: row;
+}
+
+.feeds-profile {
+  margin-left: 30px;
+  background-image: url(door.avif);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 30px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.name {
+  margin-top: 20px;
+  font-weight: bold;
+}
+.feeds-dot {
+  margin-top: 15px;
+  margin-right: 15px;
+  width: 30px;
+  height: 30px;
+  background-image: url(dot.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.feeds-comments {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: white;
+  height: 100px;
+  width: 600px;
+}
+.imgs {
+  width: 300px;
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.img-comment {
+  width: 30px;
+  background-image: url(./2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 20px;
+}
+
+.img-share {
+  width: 35px;
+  margin-left: 15px;
+  background-image: url(./down.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.img-flag {
+  margin-bottom: 50px;
+  width: 30px;
+  background-image: url(./1.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.left-like {
+  background-color: white;
+}
+
+.left-comment {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-top: 1px solid #cccfca;
+}
+
+.input-comment {
+  margin-top: 15px;
+  border: none;
+  width: 94%;
+  height: 50px;
+}
+
+.input-btn {
+  margin-top: 15px;
+  border: none;
+  background-color: white;
+  color: blue;
+}
+
+.main-right {
+  margin-top: 60px;
+  margin-right: 500px;
+  height: 600px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #ededf2;
+  height: 700px;
+  border: none;
+}
+
+.right-first {
+  display: flex;
+  height: 70px;
+}
+
+.right-header {
+  background-image: url(./wecode.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+
+  margin-bottom: 15px;
+}
+
+.letter {
+  display: flex;
+  flex-direction: column;
+}
+
+.boot {
+  font-weight: bold;
+}
+.right-story {
+  height: 250px;
+  background-color: white;
+  border: 1px solid #cccfca;
+  margin-bottom: 15px;
+  border-radius: 7px;
+
+  justify-content: center;
+}
+
+.right-recommend {
+  height: 200px;
+  background-color: white;
+  border: 1px solid #cccfca;
+  border-radius: 7px;
+}
+
+.story-all,
+.recommend-all {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.right-profile {
+  display: flex;
+}
+
+.img-profiles {
+  background-image: url(./IMG_0003.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 50px;
+  width: 50px;
+  margin-left: 10px;
+}
+
+.profile-nickname {
+  margin-top: -10px;
+}
+.story {
+  color: #cccfca;
+  margin-left: 10px;
+}
+
+.see-all {
+  font-weight: 600;
+  margin-right: -17px;
+}
+.minute {
+  margin-left: 5px;
+  margin-top: -13px;
+  color: #cccfca;
+}
+
+.nickname {
+  font-weight: bold;
+  margin-left: 5px;
+}
+.recommend-profiles {
+  display: flex;
+  justify-content: space-between;
+}
+.img-recommend {
+  background-image: url(./IMG_0006.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 50px;
+  width: 50px;
+  margin-left: 10px;
+}
+.know-recommend {
+  margin-top: -13px;
+  margin-left: -40px;
+  color: #cccfca;
+}
+
+.nick-recommend {
+  margin-top: 7px;
+  font-weight: bold;
+  margin-left: -40px;
+}
+
+.follow {
+  color: #67b6fa;
+  margin-right: 10px;
+  font-weight: bold;
+}
