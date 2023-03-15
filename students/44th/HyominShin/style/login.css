@@ -4,7 +4,15 @@
     font-size: 108px;
 }
 
-.inputBox {
+#loginBox {
+    width: 40%;
+    height: 35px;
+    padding: 8px;
+    margin:  10px;
+    font-weight: bold;
+}
+
+#passwordBox {
     width: 40%;
     height: 35px;
     padding: 8px;
@@ -21,7 +29,10 @@
     border: none;
     background-color: skyblue;
     color: white;
+}
 
+.loginButton:disabled {
+    background-color: aquamarine;
 }
 
 .forgetPassword {
@@ -29,4 +40,8 @@
     margin-top: 200px;
     margin-bottom: 125px;
     color: #333C83;
+}
+
+.forgetPassword:hover {
+    cursor: pointer;
 }
