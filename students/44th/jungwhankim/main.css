@@ -1,0 +1,506 @@
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  
+}
+
+.modal {
+  display: none;
+}
+
+.modal.visible {
+  display: block;
+  z-index: 100;
+}
+
+.modal_box {
+  width: 200px;
+  position: absolute;
+  transform: translateX(-90%) translateY(9.5%);
+  border-radius: 5px;
+  background: #FFFFFF;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.modal-first-section {
+  padding: 16px;
+}
+
+.modal-second-section {
+  border-top: 0.5px solid rgb(208, 208, 208);
+  padding: 16px;
+}
+
+.modal-row {
+  display: flex;
+  align-items: center;
+  padding: 4px 0;
+}
+
+.modal-icon-profile {
+  background-image: url('img/modal-profile.png');
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}
+
+.modal-icon-saved {
+  background-image: url('img/bookmark.png');
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-size: 90%;
+  background-position: center;
+  border-radius: 50%;
+}
+
+.modal-icon-settings {
+  background-image: url('img/setting.png');
+  width: 24px;
+  height: 24px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+}
+
+.modal-text {
+  margin-left: 12px;
+  font-size: 14px;
+}
+
+.navbar {
+  width: 100%;
+  height: 50px;
+  background-color: #FFFFFF;
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2px;
+  border-bottom: 1px solid rgb(215, 215, 215);
+}
+
+.navbar-content {
+  width: 1280px;
+  display: flex;
+  justify-content: space-between;
+  
+}
+
+.logo-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.bwLogo {
+  width: 20px;
+  height: 20px;
+  background-image: url('/img/bwLogo.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+  margin-right: 6px;
+}
+
+.text-logo {
+  font-family: 'Poppins', sans-serif;
+  font-weight:bolder;
+  font-size: 24px;
+  letter-spacing: -1px;
+}
+
+.search-wrapper input{
+    width: 100%;
+    padding: 8px 40px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.side-menu {
+  display: flex;
+  align-items: center;
+}
+
+.explore {
+  background-image: url('https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png');
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-size: 90%;
+  background-position: center;
+  margin-right: 12px;
+}
+
+.heart {
+  background-image: url('https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png');
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-size: 90%;
+  background-position: center;
+  margin-right: 12px;
+}
+
+.my {
+  background-image: url('img/profile_hat.jpg');
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  border: 2px solid #FFFFFF;
+}
+
+.my.active {
+  outline: 2px solid black;
+}
+
+.main {
+  display: flex;
+  margin-top: 60px;
+}
+
+
+.article {
+  border-radius: 12px;
+  /* border: 1px solid rgb(215, 215, 215); */
+  background-color: #FFFFFF;
+}
+
+.article-top {
+  padding: 24px 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.article-top-left {
+  display: flex;
+  align-items: center;
+}
+
+.account-pic {
+  background-image: url('https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F0087623c-b734-4358-8a08-051a10c1bee1%2Fsimple_logo.jpg?table=block&id=4319a2cb-312d-429b-8e2b-5e45c135b9d6&spaceId=4b97eaca-7938-4c43-b27c-a0c55795a841&width=250&userId=40d8d25d-e223-4a66-b9b6-f761171a73d5&cache=v2');
+  background-position: center;
+  background-size: cover;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+
+.account-name {
+  margin-left: 12px;
+}
+
+.account-name-check-container {
+  display: flex;
+  align-items: center;
+}
+
+.account-name-main {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.blue-check {
+  background-image: url('img/blue_check.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 14px;
+  width: 14px;
+  margin-left: 3px;
+}
+
+.account-name-sub {
+  font-size: 12px;
+  color: #7e7e7e;
+  margin-top: 4px;
+}
+
+.article-menu {
+  height: 24px;
+  width: 24px;
+  background-image: url('https://cdn.icon-icons.com/icons2/1659/PNG/512/3844444-dot-menu-more-option_110318.png');
+  background-position: center;
+  background-size: cover;
+  opacity: 0.5;
+}
+
+.post-img {
+  width: 100%;
+  height: 400px;
+  background-image: url('https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fa5edc5c3-6d35-464a-bf68-4543d6982816%2FH53A7073.jpg?id=00fd33ac-3dbf-4029-af21-afd6aa6fa4a4&table=block&spaceId=4b97eaca-7938-4c43-b27c-a0c55795a841&width=2000&userId=40d8d25d-e223-4a66-b9b6-f761171a73d5&cache=v2');
+  background-position: center;
+  background-size: cover;
+  border-radius: 5px;
+}
+
+.third-row {
+  padding: 16px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.third-row-left {
+  display: flex;
+  align-items: center;
+}
+
+.like {
+  background-image: url('https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png');
+  width: 26px;
+  height: 26px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 14px;
+}
+
+.like-clicked {
+  background-image: url('https://www.pngitem.com/pimgs/m/522-5229528_transparent-background-instagram-heart-icon-hd-png-download.png');
+  width: 26px;
+  height: 26px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 14px;
+}
+
+.comment-img {
+  background-image: url('./img/instagram-comment-icon.png');
+  width: 26px;
+  height: 26px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 14px;
+}
+
+.share-img {
+  background-image: url('./img/instagram-share-icon.png');
+  width: 26px;
+  height: 26px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.save-img {
+  background-image: url('./img/PikPng.com_ig-icon-png_1255467.png');
+  width: 24px;
+  height: 26px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.fourth-row {
+  display: flex;
+  align-items: center;
+}
+
+.account-pic-sm {
+  background-image: url('https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F0087623c-b734-4358-8a08-051a10c1bee1%2Fsimple_logo.jpg?table=block&id=4319a2cb-312d-429b-8e2b-5e45c135b9d6&spaceId=4b97eaca-7938-4c43-b27c-a0c55795a841&width=250&userId=40d8d25d-e223-4a66-b9b6-f761171a73d5&cache=v2');
+  background-position: center;
+  background-size: cover;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+}
+
+.post-status-msg {
+  font-size: 14px;
+  padding-left: 8px;
+}
+
+.comments {
+  padding: 16px 0;
+  width: 600px;
+}
+
+.single-comment {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-size: 14px;
+  padding: 4px 0;
+}
+
+.comment-features {
+  display: flex;
+  align-items: center;
+}
+
+.comment-like{
+  background-image: url('img/heart-inactive.jpeg');
+  opacity: 0.5;
+  width: 16px;
+  height: 16px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 16px;
+}
+
+.comment-like-clicked {
+  background-image: url('https://www.pngitem.com/pimgs/m/522-5229528_transparent-background-instagram-heart-icon-hd-png-download.png');
+  width: 16px;
+  height: 16px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 16px;
+}
+
+.deleteBtn {
+  font-size: 12px;
+  color:rgb(145, 145, 145);
+  transition: 0.3s;
+}
+
+.deleteBtn:hover {
+  color:rgb(243, 17, 126);
+}
+
+.time-posted {
+  /* padding: 0 24px; */
+  font-size: 12px;
+  opacity: 0.5;
+}
+
+.comment-input {
+  padding: 16px 0;
+  position: relative;
+}
+
+.comment-input input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid rgb(215, 215, 215);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#addButton {
+  padding: 4px 8px;
+  position: absolute;
+  top: 37%;
+  border-radius: 5px;
+  right: -20px;
+  z-index: 10;
+  border: none;
+  cursor: pointer;
+  color: #1e90ff;
+  background-color: #FFFFFF;
+  transform: translateX(-80%);
+  font-size: 14px;
+  font-weight: bolder;
+  transition: 0.3s;
+}
+
+#addButton:hover {
+  background-color:#1e90ff;
+  color: white;
+
+}
+
+.main-right {
+  padding: 24px;
+  margin-left: 36px;
+}
+
+.right-top {
+  display: flex;
+  align-items: center;
+}
+
+.right-account-pic {
+  background-image: url('img/profile_hat.jpg');
+  background-position: center;
+  background-size: cover;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+}
+
+.box {
+  width: 400px;
+  background-color: #FFFFFF;
+  margin-top: 16px;
+  border-radius: 12px;
+  margin-top: 36px;
+  /* border: 1px solid #ccc; */
+  /* padding: 24px; */
+}
+
+.stories-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.stories-header {
+  font-size: 16px;
+  opacity: 0.6;
+}
+
+.stories-see-all {
+  font-size: 13px;
+}
+
+.story-component {
+  padding: 8px 0;
+}
+
+.gradient {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(to right, rgb(243, 17, 126), orange);
+  padding: 2px;
+}
+
+.account-pic-story {
+  background-image: url('https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F0087623c-b734-4358-8a08-051a10c1bee1%2Fsimple_logo.jpg?table=block&id=4319a2cb-312d-429b-8e2b-5e45c135b9d6&spaceId=4b97eaca-7938-4c43-b27c-a0c55795a841&width=250&userId=40d8d25d-e223-4a66-b9b6-f761171a73d5&cache=v2');
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+}
+
+.recomment-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.recommend-component {
+  padding: 10px 0;
+}
+
+.follow-text {
+  font-size: 14px;
+  font-weight: 600;
+  color: #405DE6;
+}
