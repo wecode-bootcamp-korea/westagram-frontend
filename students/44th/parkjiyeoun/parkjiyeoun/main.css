@@ -1,0 +1,371 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f8f8f8;
+  margin: 0 auto;
+}
+
+nav {
+  height: 60px;
+  background-color: #fff;
+  border-bottom: solid 1px #efefef;
+}
+
+nav .container {
+  margin: 0 auto;
+  padding-top: 16px;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 820px;
+}
+
+main {
+  display: flex;
+  width: 820px;
+  margin: 40px auto;
+  display: flex;
+}
+
+article {
+  background-color: #fff;
+  border: solid 1px #efefef;
+  border-radius: 4px;
+  margin-right: 20px;
+  width: 500px;
+}
+
+input::placeholder {
+  font-size: 12px;
+  color: #999;
+}
+
+nav .logo_set img {
+  vertical-align: middle;
+}
+
+nav .logo_set img:last-child {
+  margin-left: 12px;
+  border-left: solid 1px #333;
+  padding-left: 12px;
+}
+
+nav .search_input {
+  position: relative;
+  width: 200px;
+  height: 28px;
+  background-color: #f8f8f8;
+  border: solid 1px #ddd;
+  border-radius: 4px;
+}
+
+nav .search_input input {
+  position: absolute;
+  background-color: rgba(000, 000, 000, 0);
+  border-style: none;
+
+  padding: 6px 26px;
+  text-align: center;
+}
+
+nav .search_input img {
+  position: absolute;
+  left: 70px;
+  top: 8px;
+  filter: opacity(0.5);
+}
+
+nav .container .utility {
+  margin-right: 0px;
+}
+
+nav .container .utility img {
+  margin-left: 16px;
+}
+
+article .profile {
+  display: flex;
+  justify-content: flex-start;
+
+  padding: 12px;
+}
+
+.profile .image {
+  background: url("./source/feedimg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: solid 1px #efefef;
+  border-radius: 16px;
+  width: 32px;
+  height: 32px;
+  margin-right: 12px;
+}
+
+.profile span {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 32px;
+}
+
+.profile .icon_more {
+  margin-left: auto;
+  margin-top: 8px;
+}
+
+.uploaded_img {
+  background: url("./source/feedimg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  height: 500px;
+}
+
+.comment-area {
+  position: relative;
+  width: 500px;
+  padding: 12px;
+}
+
+.icon_comment img {
+  vertical-align: middle;
+  margin-right: 20px;
+}
+
+.icon_comment .icon_bookmark {
+  position: absolute;
+  right: 0px;
+}
+
+.like_comment {
+  display: flex;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.like_comment .image {
+  background: url("./source/feedimg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: solid 1px #efefef;
+  border-radius: 16px;
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.like_comment span {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.text_comment span {
+  font-size: 14px;
+}
+
+.text_comment .id {
+  font-weight: 700;
+}
+
+.text_comment button {
+  border-style: none;
+  background-color: rgba(000, 000, 000, 0);
+  font-size: 14px;
+  color: #666;
+}
+
+.text_comment .time {
+  color: #999;
+  display: block;
+}
+
+.write_comment {
+  position: relative;
+  width: 500px;
+  height: 50px;
+  border-top: 1px solid #efefef;
+}
+
+.write_comment input {
+  width: 440px;
+  padding: 16px;
+  border-style: none;
+  background-color: rgba(000, 000, 000, 0);
+}
+
+.write_comment button {
+  position: absolute;
+  right: 0;
+  width: 60px;
+  padding: 16px;
+  border-style: none;
+  background-color: rgba(000, 000, 000, 0);
+  font-size: 14px;
+  color: #cce5fa;
+}
+
+.main-right .profile {
+  display: flex;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+.main-right .profile .image {
+  background: url("./source/feedimg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: solid 1px #efefef;
+  border-radius: 24px;
+  width: 48px;
+  height: 48px;
+  margin-right: 12px;
+}
+
+.main-right .profile span {
+  display: block;
+  line-height: 18px;
+}
+
+.main-right .profile span:first-child {
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.main-right .profile span:last-child {
+  font-size: 12px;
+  color: #999;
+}
+
+.main-right .story {
+  width: 300px;
+  height: 240px;
+  background-color: #fff;
+  border: solid 1px #efefef;
+  padding: 12px;
+  overflow: hidden;
+}
+
+.main-right .story .title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.main-right .story .title span {
+  font-size: 14px;
+  color: #666;
+}
+
+.main-right .story .title button {
+  background-color: rgba(000, 000, 000, 0);
+  border-style: none;
+}
+
+.main-right .story ul {
+  list-style: none;
+  padding-left: 0px;
+}
+
+.main-right .story .profile {
+  display: flex;
+  margin-bottom: 12px;
+}
+
+.main-right .story .profile .image_live {
+  position: relative;
+  border: 2px solid transparent;
+  background-image: linear-gradient(#fff, #fff),
+    linear-gradient(to right, #f16b39, #d02373);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin-right: 12px;
+}
+
+.main-right .story .profile .image {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  background: url("./source/feedimg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: solid 1px #efefef;
+  border-radius: 16px;
+  width: 32px;
+  height: 32px;
+  margin-right: 12px;
+}
+
+.main-right .story .profile span:first-child {
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.main-right .story .profile span:last-child {
+  font-size: 12px;
+  color: #999;
+}
+
+.main-right .recommend {
+  width: 300px;
+  height: 240px;
+  background-color: #fff;
+  border: solid 1px #efefef;
+  padding: 12px;
+  overflow: hidden;
+}
+
+.main-right .recommend .title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.main-right .recommend .title span {
+  font-size: 14px;
+  color: #666;
+}
+
+.main-right .recommend .title button {
+  background-color: rgba(000, 000, 000, 0);
+  border-style: none;
+}
+
+.main-right .recommend ul {
+  list-style: none;
+  padding-left: 0px;
+}
+
+.main-right .recommend .profile {
+  display: flex;
+  margin-bottom: 12px;
+}
+
+.main-right .recommend .profile .image {
+  background: url("./source/feedimg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: solid 1px #efefef;
+  border-radius: 16px;
+  width: 32px;
+  height: 32px;
+  margin-right: 12px;
+}
+
+.main-right .recommend .profile span:first-child {
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.main-right .recommend .profile span:last-child {
+  font-size: 12px;
+  color: #999;
+}
+
+.main-right .recommend .profile button {
+  border-style: none;
+  background-color: rgba(000, 000, 000, 0);
+}
