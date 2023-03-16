@@ -1,11 +1,14 @@
 body {
   font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  margin: 0;
 }
 
 .container {
   display: flex;
   justify-content: center;
-  
+  max-width: 1280px;
 }
 
 .modal {
@@ -77,7 +80,7 @@ body {
 }
 
 .navbar {
-  width: 100%;
+  width: 100vw;
   height: 50px;
   background-color: #FFFFFF;
   position: fixed;
@@ -91,7 +94,8 @@ body {
 }
 
 .navbar-content {
-  width: 1280px;
+  width: 80%;
+  max-width: 1280px;
   display: flex;
   justify-content: space-between;
   
@@ -207,10 +211,35 @@ body {
 }
 
 .main {
-  display: flex;
   margin-top: 60px;
 }
 
+@media (min-width: 320px) {
+  
+  .container {
+    width: 100%
+  }
+
+  .main {
+    display: block;
+  }
+}
+
+@media (min-width: 760px) {
+  .main {
+    display: block;
+  }
+}
+
+@media (min-width: 1025px) {
+  .main {
+    display: flex;
+  }
+  .main-right {
+    padding: 24px;
+    margin-left: 36px;
+  }
+}
 
 .article {
   border-radius: 12px;
@@ -457,11 +486,6 @@ body {
   background-color:#1e90ff;
   color: white;
 
-}
-
-.main-right {
-  padding: 24px;
-  margin-left: 36px;
 }
 
 .right-top {
