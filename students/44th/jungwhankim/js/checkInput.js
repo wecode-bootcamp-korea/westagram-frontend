@@ -8,7 +8,6 @@ window.addEventListener("load", () => {
   loginBtn.disabled = true;
 });
 
-
 // 키가 눌릴 때마다 모든 인풋들이 밸류가 있는지 확인
 document.onkeyup = () => {
   if ((idInput.value.length == 0) || (pwInput.value.length == 0)) {
@@ -41,8 +40,6 @@ loginBtn.addEventListener('click', () => {
   let pwOkay = checkPassword(pwInput.value);
 
   if(emailOkay == true && pwOkay == true) {
-    console.log('both okay now!');
-
     window.location.href = "main.html";
   }
 });
@@ -50,13 +47,11 @@ loginBtn.addEventListener('click', () => {
 function disableButton() {
   loginBtn.classList.add('disabled');
   loginBtn.disabled = true;
-  console.log(loginBtn.disabled);
 }
 
 function enableButton() {
   loginBtn.classList.remove('disabled');
   loginBtn.disabled = false;
-  console.log(loginBtn.disabled);
 }
 
 

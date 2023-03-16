@@ -1,6 +1,6 @@
 let addBtn = document.getElementById('addButton');
 let inputField = document.getElementById('inputField');
-let commentList = document.getElementById('commentSection');
+let commentList = document.getElementById('comment-section');
 
 
 addBtn.addEventListener('click', addComment);
@@ -32,8 +32,6 @@ function addComment() {
     // 버튼이 눌리면 해당 아이템 삭제
     deleteButton.addEventListener('click', () => {
       commentList.removeChild(commentItem);
-      console.log(commentItem);
-      console.log(this.commentItem);
     })
 
     // 댓글마다 라이크 기능 div 생성
@@ -60,8 +58,5 @@ function addComment() {
     commentItem.classList.add('single-comment');
     // 인풋창 초기화
     inputField.value = '';
-
-    console.log(commentList);
-  }
-  
+  } 
 }

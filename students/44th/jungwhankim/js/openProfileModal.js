@@ -10,9 +10,6 @@ profileBtn.addEventListener('click', () => {
 })
 
 window.addEventListener('click', (event) => {
-  console.log(event.target);
-  console.log(modal.classList.value);
-
   if ((event.target !== profileBtn) && (event.target !== modalBox)) {
     modal.classList.remove('visible');
     profileBtn.classList.remove('active');
