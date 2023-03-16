@@ -9,6 +9,11 @@
 
 body {
   margin: 0;
+  background-color: #F5F8FA;
+}
+
+.menu-bar-wrap, .feeds-contents-wrap, .main-right-top, .main-right-bottom {
+  background-color: white;
 }
 
 .menu-bar-wrap {
@@ -16,6 +21,7 @@ body {
   justify-content: space-around;
   border-bottom: 1px solid gray;
   padding: 10px;
+  
 }
 
 .logo-box {
@@ -177,8 +183,8 @@ body {
 }
 
 .main-right-profile{
-  border: 1px solid gray;
-  border-radius: 5px;
+  /* border: 1px solid gray;
+  border-radius: 5px; */
   width: 100%;
   height: 50px;
   display: flex;
@@ -192,15 +198,33 @@ body {
   margin: 7px auto;
   display: flex;
   justify-content: flex-start;
+  position: relative;
 }
 
 .profile .user-img {
   margin: 5px;
 }
 
+.pro-user-mini-wrap {
+  width: 130px;
+  position: relative;
+}
+
+.pro-user-mini-wrap .user-name, .pro-user-mini-wrap .user-using-time {
+  width: 100%;
+}
 
 .text-color-gray{
   color: gray;
+}
+
+.text-color-blue{
+  color:rgb(9, 104, 218);
+  font-size: 13px;
+  margin: 0;
+  position: absolute;
+  right: 0;
+  top: 10px;
 }
 
 .main-right-top{
@@ -208,9 +232,11 @@ body {
   border-radius: 5px;
 
   width: 100%;
-  height: 230px;
+  height: 215px;
   margin: 5px 0;
   padding: 10px;
+
+  overflow: hidden;
 }
 
 .main-right-top-menu{
@@ -227,6 +253,7 @@ body {
   height: 180px;
   margin: 5px 0;
   padding: 10px;
+  overflow: hidden;
 }
 
 .main-right-bottom-menu{
@@ -257,6 +284,7 @@ body {
 .like-count{
   font-size: 15px;
   margin: 0 10px;
+  padding-top: 6px;
 }
 .user-img-small {
   width: 30px;
@@ -265,22 +293,45 @@ body {
   margin-left: 10px;
 }
 
-.pre-comment-box {
+.comment-ul {
   width: 100%;
-  height: 50px;
+  height: 80px;
+  padding-left: 48px;
+  margin: 0;
+  border-bottom: 1px solid gray;
 }
 
 .write-comment-box {
   position: relative;
+  /* border-bottom: 1px solid gray; */
 }
 
 #upload-btn {
   position: absolute;
-  right: 0px;
-  height: 100%;
+  width: 10%;
+  height: 40px;
+  border: 0;
+  border-radius: 5px;
+  color: rgb(9, 104, 218, 40%);
+  background-color: white;
+  font-size: 13px;
+}
+#upload-btn:hover {
+  opacity: 100%;
 }
 
-.write-comment-box input{
-  width: 100%;
+.input-text {
+  width: 90%;
   height: 40px;
+  border: 0;
+  border-radius: 5px;
+  padding: 5px;
+}
+.input-text::placeholder{
+  font-size: 13px;
+}
+
+.comment-ul li {
+  list-style-type: none;
+  font-size: 13px;
 }
