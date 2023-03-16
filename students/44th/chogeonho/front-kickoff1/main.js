@@ -1,17 +1,24 @@
-const leftComment = document.getElementById("leftComment");
-const commentSubmit = document.getElementById("commentSubmit");
+function addComent() {
+  const leftComment = document.getElementById("leftComment").value;
+  const commentItem = document.createElement("li");
+  commentItem.innerHTML = leftComment;
+  document.getElementById("comment-wrapper").appendChild(commentItem);
+  event.preventDefault();
+  //console.log("this ran");
 
-function checkInput() {
-  const newComment = leftComment.value;
-  if (newComment.length > 0) {
-    addComment(newComment);
-  } else if (window.event.code === "enter") {
-    if (newComment.length > 0) {
-      addComment(newComment);
-    } else {
-      alert("댓글을 입력하세요!");
-    }
+  if (leftComment.length > 0) {
+    return;
   } else {
-    event.preventDefault();
+    alert("댓글을 입력하세요");
   }
 }
+
+// const submitBtn = document.getElementById("commentSubmit");
+// submitBtn.addEventListener("click", () => {
+//   if(checkInput) {
+//     addComent
+//   }
+// });
+
+const submitBtn = document.getElementById("commentSubmit");
+submitBtn.addEventListener("click", addComent);
