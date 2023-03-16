@@ -164,6 +164,42 @@ ul {
   line-height: 1.5;
 }
 
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 25px;
+}
+
+li .fa-regular {
+  position: relative;
+  margin-right: 20px;
+  flex-grow: 1;
+  text-align: right;
+}
+
+li .fa-regular:hover {
+  cursor: pointer;
+}
+
+li .fa-solid {
+  position: absolute;
+  inset: 0;
+  display: none;
+}
+
+li .fa-solid.redHeart {
+  display: block;
+}
+
+li p {
+  margin-right: 15px;
+}
+
+li p:hover {
+  cursor: pointer;
+}
+
 .leaveComment {
   position: relative;
 }
