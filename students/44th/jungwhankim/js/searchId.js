@@ -1,5 +1,8 @@
 const searchInput = document.getElementById('searchInput');
 
+// 검색창 결과 모달
+let results = document.getElementById("res");
+
 let idList = [
   'georgekim',
   'georgekim_official',
@@ -12,22 +15,45 @@ let idList = [
   'wecode_united_states',
 ];
 
-let matchingNames = [];
+var matchingNames = [];
 
-searchInput.addEventListener('keyup', searchIdList);
+searchInput.addEventListener('keyup', () => {
+  searchIdList();
+  renderMatches();
+});
 
 function searchIdList() {
-  // console.log(searchInput.value);
+  if (searchInput.value !== "") {
+    results.classList.remove("hideResults");
+  } else {
+    results.classList.add("hideResults");
+  }
 
   idList.map((name) => {
-    if(searchInput.value.includes(name)) {
-      // matchingNames.push(name);    
-      console.log(name);
+    // 내가 인풋창에 인풋한 값이랑 idlist 목록에 있는 스트링 요소의 substring이 같은 게 있을 때
+    if(name.indexOf(searchInput.value) !== -1) {
       matchingNames.push(name);
     }
   })
-  console.log(matchingNames);
 };
+
+function renderMatches() {
+  for(i = 0; i < matchingNames.length; i++) {
+    const matchingItem = document.createElement('div');
+    matchingItem.textContent = matchingItem[i];
+
+    results.appendChild(matchingItem);
+  }
+  const matched = matchingNames
+  console.log(matchingNames);
+  matchingNames = [];
+  return matched
+}
+
+
+
+
+
 
 
 

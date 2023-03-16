@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home</title>
-  <link rel="shortcut icon" type="image/jpg" href="/img/bwLogo.png"/>
+  <link rel="shortcut icon" type="image/jpg" href="./img/bwLogo.png"/>
   <link rel="stylesheet" href="main.css">
 </head>
 <body>
@@ -21,8 +21,12 @@
         </div>
         <!--검색창-->
         <div class="search-wrapper">
-        <input id="searchInput" type="text" placeholder="검색">
+          <input id="searchInput" class="searchInput" type="text" placeholder="검색">
+          <!--평상시에 안 보이는 모달-->
+          <div id="res" class="hideResults">
+          </div>
         </div>
+
         <!--우측 메뉴들-->
         <div class="side-menu">
           <div class="explore"></div>
@@ -223,8 +227,8 @@
           </div>
         </div>
       </div>  
-      <script src="/js/addComment.js"></script>
-      <script src="/js/openProfileModal.js"></script>
-      <script src="/js/searchId.js"></script>
+      <script src="./js/addComment.js"></script>
+      <script src="./js/openProfileModal.js"></script>
+      <script src="./js/searchId.js"></script>
 </body>
 </html>
