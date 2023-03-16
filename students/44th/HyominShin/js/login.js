@@ -8,7 +8,6 @@ userId.addEventListener("keyup", function (event) {
     loginBtn.disabled = false;
     // pageToMain.href = "students/44th/HyominShin/js/main.js";
   } else {
-    console.log("tests");
     loginBtn.disabled = true;
     // pageToMain.href = "#none";
   }

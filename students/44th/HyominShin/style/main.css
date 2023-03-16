@@ -79,7 +79,7 @@ nav {
     border: 1px solid lightgray;
     border-radius: 3px;
     text-align: center;
-    background-image: url(students/44th/HyominShin/img/search_FILL0_wght400_GRAD0_opsz48.png);
+    background-image: url();
     background-repeat: no-repeat;
     background-size: 10px;
     background-position: 38% center;
@@ -194,6 +194,12 @@ ul.commentList {
     margin-top: 10px;
 }
 
+.smallHeart {
+    width: 14px;
+    margin-right: 5px;
+    float: right;
+}
+
 .feedTimeCount {
     margin-left: 5px;
 
@@ -215,7 +221,7 @@ ul.commentList {
     margin-top: 10px;
 }
 
-.commentInput {
+#commentInput {
     position: absolute;
     height: 39px;
     width: 85%;
@@ -225,29 +231,34 @@ ul.commentList {
     background-color: #fafafa;
 }
 
-.commentInput:focus {
+#commentInput:focus {
     outline: none;
 }
 
-.commentReply {
+#commentReply {
     position: absolute;
     top: 0;
     bottom: 0;
     right: 6px;
     width: 52px;
     background-color: #fafafa;
-    color: #0095f6;
+    color: #0099ff;
     border-style: none;
 }
 
-.commentReply:disabled {
-    color: #B9DFFC;
+#commentReply:disabled {
+    color: rgb(173, 214, 230);
 }
 /*
 .commentReply:focus {
     outline: none;
 }*/
-
+/*
+.comment {
+    display: flex;
+    align-items: center;
+}
+*/
 /* 메인 오른쪽 스토리 및 추천 */
 
 .mainRight {
