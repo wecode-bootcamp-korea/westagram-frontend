@@ -1,7 +1,7 @@
 function addComent() {
-  const leftComment = document.getElementById("leftComment").value;
+  const leftComment = document.getElementById("left-comment").value;
   const commentItem = document.createElement("li");
-  commentItem.innerHTML = leftComment;
+  commentItem.innerText = leftComment;
   document.getElementById("comment-wrapper").appendChild(commentItem);
   event.preventDefault();
   //console.log("this ran");
@@ -20,5 +20,5 @@ function addComent() {
 //   }
 // });
 
-const submitBtn = document.getElementById("commentSubmit");
+const submitBtn = document.getElementById("comment-submit");
 submitBtn.addEventListener("click", addComent);

@@ -13,23 +13,23 @@
   </head>
   <body>
     <div class="wrap">
-      <div class="nav">
-        <div class="nav-input">
-          <div class="nav1">
-            <div class="img-logo"></div>
+      <section class="nav">
+        <div class="nav-input-wrap">
+          <div class="nav-input-letter">
+            <div class="img-insta-logo"></div>
             <p class="insta-title">instagram</p>
           </div>
-          <input type="text" placeholder="검색" />
-          <div class="nav2">
+          <input class="search" type="text" placeholder="검색" />
+          <div class="nav-input-imgs">
             <div class="img-nav"></div>
             <div class="img-heart"></div>
             <div class="img-info"></div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div class="main">
-        <div class="feeds">
+      <section class="main">
+        <section class="feeds">
           <div class="feeds-header">
             <div class="feeds-both">
               <div class="feeds-profile"></div>
@@ -38,7 +38,9 @@
 
             <div class="feeds-dot"></div>
           </div>
-          <div class="article"></div>
+
+          <div class="img-article"></div>
+
           <div class="feeds-comments">
             <div class="imgs">
               <div class="img-heart"></div>
@@ -49,7 +51,7 @@
             <div class="img-flag"></div>
           </div>
           <div class="left-like">
-            <p>님 외 10명이 좋아합니다</p>
+            <p><span>all_dlwltn</span>님 외 10명이 좋아합니다</p>
           </div>
           <div class="feeds-commit">
             <p>
@@ -61,16 +63,16 @@
 
           <form id="comment-box" class="left-comment">
             <input
-              id="leftComment"
+              id="left-comment"
               class="input-comment"
               type="text"
               placeholder="댓글 달기..."
             />
-            <button id="commentSubmit" class="input-btn">게시</button>
+            <button id="comment-submit" class="input-btn">게시</button>
           </form>
-        </div>
+        </section>
 
-        <div class="main-right">
+        <section class="main-right">
           <div class="right-first">
             <div class="right-header"></div>
             <div class="letter">
@@ -120,8 +122,8 @@
               <p class="follow">팔로우</p>
             </div>
           </div>
-        </div>
-      </div>
+        </section>
+      </section>
     </div>
     <script src="./main.js"></script>
   </body>

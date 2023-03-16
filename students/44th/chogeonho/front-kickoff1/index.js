@@ -17,9 +17,9 @@
 //   }
 // });
 
-const loginId = document.getElementById("login_id");
-const loginPw = document.getElementById("login_pw");
-const loginBtn = document.getElementById("login_btn");
+const loginId = document.getElementById("login-id");
+const loginPw = document.getElementById("login-pw");
+const loginBtn = document.getElementById("login-btn");
 
 const implement = () => {
   if (
@@ -27,7 +27,7 @@ const implement = () => {
     loginId.value.indexOf("@") !== -1 &&
     loginPw.value.length >= 5
   ) {
-    //loginBtn.style.backgroundColor = "#0095F6";
+    loginBtn.style.backgroundColor = "#0095F6";
     loginBtn.disabled = false;
   } else {
     loginBtn.style.backgroundColor = "#C0DFFD";
