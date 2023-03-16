@@ -3,6 +3,8 @@ const userPassword = document.getElementById("passwordBox");
 let loginBtn = document.getElementById("loginButton");
 // let pageToMain = document.getElementByTagName("a")[0];
 
+
+//Login 박스
 userId.addEventListener("keyup", function (event) {
   if (userId.value && userPassword.value) {
     loginBtn.disabled = false;
@@ -12,7 +14,7 @@ userId.addEventListener("keyup", function (event) {
     // pageToMain.href = "#none";
   }
 });
-
+//password 박스
 userPassword.addEventListener("keyup", function (event) {
   if (userId.value && userPassword.value) {
     loginBtn.disabled = false;

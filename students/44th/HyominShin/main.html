@@ -63,13 +63,15 @@
                         </div>
                         <div class="commentAndFeedTime">
                             <ul class="commentList">
-                                <li id="comment">
+                                <li class="comment">
                                     <span class="textBold">canon_mj</span><span> 어디냐?</span>
-                                    <img class="smallHeart" src="./img/heart.png">
+                                    <img class="smallHeart" onclick="changeLikeHeart()" src="./img/heart.png">
+                                    <span class="miniSubGray" onclick="deleteComment()">댓글삭제</span>
                                 </li>
-                                <li id="comment">
+                                <li class="comment">
                                     <span class="textBold">someone</span><span> 글 내려라</span>
-                                    <img class="smallHeart" src="./img/heart.png">
+                                    <img class="smallHeart" onclick="changeLikeHeart()" src="./img/heart.png">
+                                    <span class="miniSubGray" onclick="deleteComment()">댓글삭제</span>
                                 </li>
                                 <!-- 여기에 새로운 댓글 추가 하는거임. -->
                             </ul>
