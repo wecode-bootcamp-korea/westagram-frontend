@@ -1,18 +1,25 @@
 const userId = document.getElementById("loginBox");
 const userPassword = document.getElementById("passwordBox");
+let loginBtn = document.getElementById("loginButton");
+// let pageToMain = document.getElementByTagName("a")[0];
 
-let boolUserId = false;
-let boolUserPassword = false;
-
-userId.addEventListener('keypress', function(){
-    boolUserId = True;
+userId.addEventListener("keyup", function (event) {
+  if (userId.value && userPassword.value) {
+    loginBtn.disabled = false;
+    // pageToMain.href = "students/44th/HyominShin/js/main.js";
+  } else {
+    console.log("tests");
+    loginBtn.disabled = true;
+    // pageToMain.href = "#none";
+  }
 });
-userPassword.addEventListener('keypress', function(){
-    boolUserPassword = True;
+
+userPassword.addEventListener("keyup", function (event) {
+  if (userId.value && userPassword.value) {
+    loginBtn.disabled = false;
+    // pageToMain.href = "students/44th/HyominShin/js/main.js";
+  } else {
+    loginBtn.disabled = true;
+    // pageToMain.href = "#none";
+  }
 });
-
-if (boolUserId && boolUserPassword === True ) {
-    
-}
-
-

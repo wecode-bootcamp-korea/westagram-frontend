@@ -4,19 +4,34 @@
     <title>Hyomin - westagram</title>
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="style/login.css" />
-    <link rel="stylesheet" href="style/common.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/common.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <div id ="commonDiv">
-        <p class="loginLogo">westagram</p>
-        <input type = "text" id="loginBox" placeholder="전화번호, 사용자 이름 또는 이메일">
-        <input type = "password" id="passwordBox" placeholder="비밀번호">
-        <button class="loginButton">로그인</button>
-        <a class="forgetPassword">비밀번호를 잊으셨나요?</a>
+    <div id="commonDiv">
+      <p class="loginLogo">westagram</p>
+      <input
+        type="text"
+        id="loginBox"
+        name="loginBox"
+        placeholder="전화번호, 사용자 이름 또는 이메일"
+      />
+      <input
+        type="password"
+        id="passwordBox"
+        name="passwordBox"
+        placeholder="비밀번호"
+      />
+      <a href="#none" class="linkToMain"
+        ><button id="loginButton" disabled>로그인</button></a
+      >
+      <a class="forgetPassword">비밀번호를 잊으셨나요?</a>
     </div>
   </body>
-  <script src="students/44th/HyominShin/js/login.js"></script>
+  <script src="./js/login.js"></script>
 </html>
