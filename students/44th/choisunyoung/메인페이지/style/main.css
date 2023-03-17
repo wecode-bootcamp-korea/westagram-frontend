@@ -99,7 +99,7 @@ body {
   border: 1px solid gray;
   border-radius: 5px;
   width: 500px;
-  height: 744px;
+  height: auto;
   margin: 40px 10px 0 0;
 }
 
@@ -148,7 +148,6 @@ body {
 
 
 .feeds-contents {
-  border: 1px solid gray;
   width: 100%;
   height: 480px;
   margin: 5px auto;
@@ -179,8 +178,6 @@ body {
 .main-right {
   width: 250px;
   height: 550px;
-
-  /* border: 1px solid gray; */
 
   margin: 40px 0 0 10px;
 }
@@ -226,7 +223,7 @@ body {
   font-size: 13px;
   margin: 0;
   position: absolute;
-  right: 0;
+  right: 11px;
   top: 10px;
 }
 
@@ -298,10 +295,11 @@ body {
 
 .comment-ul {
   width: 100%;
-  height: 80px;
-  padding-left: 48px;
+  height: 100px;
+  padding-left: 80px;
   margin: 0;
   border-bottom: 1px solid gray;
+  overflow: hidden;
 }
 
 .write-comment-box {
@@ -315,12 +313,12 @@ body {
   height: 40px;
   border: 0;
   border-radius: 5px;
-  color: rgb(9, 104, 218, 40%);
+  color: rgba(9, 104, 218, .3);
   background-color: white;
   font-size: 13px;
 }
 #upload-btn:hover {
-  opacity: 100%;
+  color: rgba(9, 104, 218, 1);
 }
 
 .input-text {
@@ -337,4 +335,35 @@ body {
 .comment-ul li {
   list-style-type: none;
   font-size: 13px;
+  margin: 5px 0;
+}
+
+.comment-ul li span{
+  position: absolute;
+  left: 10px;
+  font-weight: bold;
+}
+
+.comment-ul li i {
+  position: absolute;
+  right: 10px;
+  font-size: 15px;
+}
+
+.remove-button {
+  width: 15px;
+  height: 15px;
+  padding: 0;
+  margin-left: 10px;
+
+  font-size: 10px;
+  color: gray;
+
+  background-color: rgb(1, 1, 1, 0);
+  border: none;
+}
+
+.remove-button:hover {
+  color: red;
+  font-size: 15px;
 }

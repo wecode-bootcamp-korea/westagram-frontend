@@ -8,8 +8,11 @@ const loginPw = document.querySelector('#user-pw');
 
 //로그인 할 때 필요한 설정 함수
 const loginSet = () => {
+
+  console.log(loginId.value.indexOf("@"));
   /*만약, 아이디(input)의 문자열 길이가 0보다 크고 &&
   indexOf(@기호가 있으면 1리턴)로 , -1과 같지 않을 경우 &&
+  (멘토님 리뷰: @ 값이 맨 앞에 들어올 경우,두개가 들어가는 경우도 있다는 것 정도만 알고있기)
   비번(input)의 문자열 길이가 5랑 같거나 클 경우*/
   if( 
     loginId.value.length > 0 &&
