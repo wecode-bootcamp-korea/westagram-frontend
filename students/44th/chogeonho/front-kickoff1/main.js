@@ -1,14 +1,26 @@
 function addComent() {
+  //const inputComment = document.getElementById("left-comment");
   const leftComment = document.getElementById("left-comment").value;
   const commentItem = document.createElement("li");
+  const heartBtn = document.createElement("i");
+  const ulspan = document.createElement("span");
+  const deleteBtn = document.createElement("button");
+  const ulContainer = document.getElementById("comment-wrapper");
   document.getElementById("left-comment").value = "";
+
+  heartBtn.className = "heart-btn";
+  deleteBtn.className = "delete-btn";
 
   event.preventDefault();
   //console.log("this ran");
 
   if (leftComment.length > 0) {
-    document.getElementById("comment-wrapper").appendChild(commentItem);
+    ulContainer.appendChild(commentItem);
     commentItem.innerText = leftComment;
+    commentItem.appendChild(ulspan);
+    ulspan.append(heartBtn);
+    ulspan.append(deleteBtn);
+    deleteBtn.addEventListener("click", () => commentItem.remove());
   } else {
     alert("댓글을 입력하세요");
   }
