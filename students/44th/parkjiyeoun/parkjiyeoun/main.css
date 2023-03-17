@@ -159,12 +159,18 @@ article .profile {
   line-height: 20px;
 }
 
+.text_comment {
+  display: flex;
+  justify-content: flex-start;
+}
+
 .text_comment span {
   font-size: 16px;
 }
 
 .text_comment .id {
   font-weight: 700;
+  margin-right: 10px;
 }
 
 .text_comment button {
@@ -209,29 +215,29 @@ article .profile {
   color: #cce5fa;
 }
 
-.new_text_comment {
+.icon_heart {
   position: relative;
+  margin-left: auto;
 }
 
 .icon_heart_off {
   position: absolute;
   right: 0;
-  width: 20px;
-  height: 20px;
   background-image: url("./source/heart.png");
   background-size: contain;
-  border: none;
+  width: 20px;
+  height: 20px;
+  outline: none;
 }
 
 .icon_heart_on {
   position: absolute;
-  top: 0;
   right: 0;
-  width: 20px;
-  height: 20px;
   background-image: url("./source/heart_red.png");
   background-size: contain;
-  border: none;
+  width: 20px;
+  height: 20px;
+  outline: none;
 }
 
 .main-right .profile {

@@ -10,7 +10,7 @@ const uploadBtn = document.getElementById("upload_btn");
 
 //!문제 : 버튼의 색이 계속 비활성화
 /* ->해결 : uploadBtn.classList.remove("upload_btn_off");
-upload_btn_off class를 없애서 비활성화 시키는 방법
+upload_btn_off class를 없애서 활성화 시키는 방법
 */
 
 function btnChange() {
@@ -25,7 +25,7 @@ function btnChange() {
 
 //함수 : 새로운 코멘트를 달아줄 떄 위에 댓글내역(text_comment)에 등록 되게 설정
 //! 문제 : 내용이 안 써져 있는데 버튼을 누르기만 해도 아이디가 올라감
-/*-->해결 :uploadBtn.disabled = true;
+/* ->해결 :uploadBtn.disabled = true;
         uploadBtn.classList.add("upload_btn_off");
         을 버튼과 텍스트 이벤트 실행함수에 넣어줌
 */
@@ -36,12 +36,15 @@ function commentValue() {
   const newComment = document.createElement("div");
   const newId = document.createElement("span");
   const newTxt = document.createElement("span");
+  const newHeartBox = document.createElement("div");
   const newHeartOff = document.createElement("img");
   const newHeartOn = document.createElement("img");
+
   //기존 댓글의 class 이름 똑같이 부여
   newComment.classList.add("text_comment");
   newId.classList.add("id");
   newTxt.classList.add("txt");
+  newHeartBox.classList.add("icon_heart");
   newHeartOff.classList.add("icon_heart_off");
   newHeartOn.classList.add("icon_heart_on");
   //아이디는 "parkjiyeoun"으로 고정, 새 댓글은 comment(인풋)밸류값 불러옴
@@ -49,17 +52,27 @@ function commentValue() {
   newTxt.innerHTML = uploadText.value;
 
   //새코멘트 그룹 안에 새 댓글 요소 등록
+  newHeartBox.appendChild(newHeartOff);
+  newHeartBox.appendChild(newHeartOn);
+
   newComment.appendChild(newId);
   newComment.appendChild(newTxt);
-  newComment.appendChild(newHeartOff);
-  newComment.appendChild(newHeartOn);
+  newComment.appendChild(newHeartBox);
+
+  //디폴트는 켜진 하트아이콘이 없는 상태
   newHeartOn.classList.remove("icon_heart_on");
+
   //새코멘트 그룹을 코멘트 달릴 영역에 등록
   commentBox.appendChild(newComment);
 
   newHeartOff.addEventListener("click", () => {
-    newHeartOn.classList.add("icon_heart_on");
     newHeartOff.classList.remove("icon_heart_off");
+    newHeartOn.classList.add("icon_heart_on");
+  });
+
+  newHeartOn.addEventListener("click", () => {
+    newHeartOn.classList.remove("icon_heart_on");
+    newHeartOff.classList.add("icon_heart_off");
   });
 }
 
