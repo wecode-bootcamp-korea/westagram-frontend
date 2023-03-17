@@ -1,13 +1,14 @@
 function addComent() {
   const leftComment = document.getElementById("left-comment").value;
   const commentItem = document.createElement("li");
-  commentItem.innerText = leftComment;
-  document.getElementById("comment-wrapper").appendChild(commentItem);
+  document.getElementById("left-comment").value = "";
+
   event.preventDefault();
   //console.log("this ran");
 
   if (leftComment.length > 0) {
-    return;
+    document.getElementById("comment-wrapper").appendChild(commentItem);
+    commentItem.innerText = leftComment;
   } else {
     alert("댓글을 입력하세요");
   }
