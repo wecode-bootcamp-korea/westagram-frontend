@@ -18,6 +18,7 @@
     <title>메인 페이지</title>
   </head>
   <body>
+    <div class="bg"></div>
     <nav>
       <div id="flex-start">
         <i class="fa-brands fa-instagram"></i>
@@ -36,8 +37,15 @@
           src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"
         />
         <img
+          class="profile-img"
           src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png"
         />
+      </div>
+      <div class="menu-box none">
+        <div><i class="fa-solid fa-user"></i><span>&nbsp; 프로필</span></div>
+        <div><i class="fa-regular fa-bookmark"></i><span>저장됨</span></div>
+        <div><i class="fa-solid fa-gear"></i><span> &nbsp;설정</span></div>
+        <p>로그아웃</p>
       </div>
     </nav>
     <main>
@@ -52,7 +60,7 @@
           <i class="fa-solid fa-heart"></i>
           <i class="fa-regular fa-comment"></i>
           <i class="fa-solid fa-arrow-up-from-bracket"></i>
-          <i class="fa-regular fa-clipboard"></i>
+          <i class="fa-regular fa-bookmark"></i>
         </div>
         <div class="postArea">
           <div class="like">
@@ -165,5 +173,6 @@
     <script src="mainpage.js"></script>
     <script src="like.js"></script>
     <script src="remove.js"></script>
+    <script src="profile.js"></script>
   </body>
 </html>

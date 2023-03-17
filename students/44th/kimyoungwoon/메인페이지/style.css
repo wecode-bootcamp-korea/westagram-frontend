@@ -3,11 +3,26 @@
 }
 
 body {
+  position: relative;
   width: 1905px;
   margin: 0;
 }
 
+.bg {
+  display: none;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.bg.show {
+  display: block;
+}
+
 nav {
+  position: relative;
   width: 1905px;
   display: flex;
   justify-content: space-between;
@@ -70,6 +85,43 @@ input::placeholder {
   margin: 0 20px;
 }
 
+.menu-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  top: 65px;
+  right: 300px;
+  padding-top: 20px;
+  width: 280px;
+  height: 200px;
+  border-radius: 15px;
+  background-color: #ffffff;
+  font-size: 20px;
+  z-index: 3;
+  box-shadow: 5px -3px 12px 1px rgba(163, 163, 163, 0.75);
+  -webkit-box-shadow: 5px -3px 12px 1px rgba(163, 163, 163, 0.75);
+  -moz-box-shadow: 5px -3px 12px 1px rgba(163, 163, 163, 0.75);
+}
+
+.menu-box.none {
+  display: none;
+}
+
+.profile-img:hover {
+  cursor: pointer;
+}
+
+.menu-box i {
+  padding-left: 20px;
+}
+
+.menu-box p {
+  border-top: 1px solid #c9c9c9;
+  margin: 0;
+  padding: 20px;
+}
+
 main {
   background-color: #fafafa;
   border: 1px solid #e6e6e6;
@@ -126,7 +178,7 @@ header i {
   color: #ee4955;
 }
 
-.fa-clipboard {
+.fa-bookmark {
   flex-grow: 1;
   text-align: right;
   margin-right: 15px;

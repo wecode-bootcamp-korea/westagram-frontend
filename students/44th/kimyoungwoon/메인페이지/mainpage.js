@@ -11,11 +11,6 @@ function enterAddComments(e) {
   </i>`;
     liTag.innerHTML += '<p class="delete">x</p>';
     ulTag.append(liTag);
-    ulTag.addEventListener('click', (e) => {
-      if (e.target.classList.contains('delete')) {
-        e.target.parentNode.remove();
-      }
-    });
     commentInput.value = '';
   }
 }
