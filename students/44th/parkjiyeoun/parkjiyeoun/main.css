@@ -42,6 +42,17 @@ input::placeholder {
   color: #999;
 }
 
+#search_result {
+  z-index: 99;
+  position: absolute;
+  top: 40px;
+  left: -50px;
+  width: 300px;
+  height: 180px;
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+}
+
 nav .logo_set img {
   vertical-align: middle;
 }
@@ -117,7 +128,7 @@ article .profile {
   background: url("./source/feedimg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-
+  width: 500px;
   height: 500px;
 }
 
@@ -164,7 +175,6 @@ article .profile {
 .text_comment {
   display: flex;
   justify-content: flex-start;
-  margin-bottom: 4px;
 }
 
 .text_comment span {
@@ -221,6 +231,7 @@ article .profile {
 .icon_heart {
   position: relative;
   margin-left: auto;
+  margin-right: 12px;
 }
 
 .icon_heart_off {
@@ -241,6 +252,14 @@ article .profile {
   background-size: cover;
   width: 20px;
   height: 20px;
+}
+
+.icon_close {
+  background-image: url("./source/close.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 16px;
+  height: 16px;
 }
 
 .main-right .profile {

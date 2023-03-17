@@ -39,7 +39,7 @@ function commentValue() {
   const newHeartBox = document.createElement("div");
   const newHeartOff = document.createElement("div");
   const newHeartOn = document.createElement("div");
-
+  const closeBtn = document.createElement("div");
   //기존 댓글의 class 이름 똑같이 부여
   newComment.classList.add("text_comment");
   newId.classList.add("id");
@@ -47,6 +47,7 @@ function commentValue() {
   newHeartBox.classList.add("icon_heart");
   newHeartOff.classList.add("icon_heart_off");
   newHeartOn.classList.add("icon_heart_on");
+  closeBtn.classList.add("icon_close");
   //아이디는 "parkjiyeoun"으로 고정, 새 댓글은 comment(인풋)밸류값 불러옴
   newId.innerHTML = "parkjiyeoun  ";
   newTxt.innerHTML = uploadText.value;
@@ -60,7 +61,7 @@ function commentValue() {
   newComment.appendChild(newId);
   newComment.appendChild(newTxt);
   newComment.appendChild(newHeartBox);
-
+  newComment.appendChild(closeBtn);
   //디폴트는 켜진 하트아이콘이 없는 상태
   newHeartOn.classList.remove("icon_heart_on");
 
@@ -75,6 +76,16 @@ function commentValue() {
   newHeartOn.addEventListener("click", () => {
     newHeartOn.classList.remove("icon_heart_on");
     newHeartOff.classList.add("icon_heart_off");
+  });
+
+  //!문제: 삭제버튼을 클릭하면 아래 코멘트부터 하나씩 지워짐
+  //->해결 : commentBox에서 newComment 지우는 게 아님
+  //        newComment 에서 모든 요소들 제거
+  closeBtn.addEventListener("click", () => {
+    newComment.removeChild(newId);
+    newComment.removeChild(newTxt);
+    newComment.removeChild(newHeartBox);
+    newComment.removeChild(closeBtn);
   });
 }
 
@@ -108,3 +119,21 @@ uploadText.addEventListener("keypress", (event) => {
     uploadText.value = "";
   }
 });
+
+/*
+//Mission7 아이디 검색 기능
+//검색창에 입력시 밸류값 데이터를 담은 배열 생성
+//배열 안에 담겨 있는 목록들은 프로필 계정
+//특정 박스 안에서 배열이 담겨서 나오게 설정
+
+//검색값을 searchValue에 담아줌
+const searchValue = document.getElementsById("search").value;
+
+//프로필 모든 값이 담겨있음
+let profileData = ["프로필 목록"];
+
+//profileData
+let foundProfile = profileData.filter(function (searchValue) {
+  return profileData.indexOf(searchValue);
+});
+*/
