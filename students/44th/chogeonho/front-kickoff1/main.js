@@ -1,4 +1,4 @@
-function addComent() {
+function addComent(event) {
   //const inputComment = document.getElementById("left-comment");
   const leftComment = document.getElementById("left-comment").value;
   const commentItem = document.createElement("li");
@@ -15,8 +15,9 @@ function addComent() {
   //console.log("this ran");
 
   if (leftComment.length > 0) {
-    ulContainer.appendChild(commentItem);
     commentItem.innerText = leftComment;
+    ulContainer.appendChild(commentItem);
+
     commentItem.appendChild(ulspan);
     ulspan.append(heartBtn);
     ulspan.append(deleteBtn);
