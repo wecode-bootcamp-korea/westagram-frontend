@@ -37,8 +37,8 @@ function commentValue() {
   const newId = document.createElement("span");
   const newTxt = document.createElement("span");
   const newHeartBox = document.createElement("div");
-  const newHeartOff = document.createElement("img");
-  const newHeartOn = document.createElement("img");
+  const newHeartOff = document.createElement("div");
+  const newHeartOn = document.createElement("div");
 
   //기존 댓글의 class 이름 똑같이 부여
   newComment.classList.add("text_comment");
@@ -52,6 +52,8 @@ function commentValue() {
   newTxt.innerHTML = uploadText.value;
 
   //새코멘트 그룹 안에 새 댓글 요소 등록
+  //!문제 : 하트가 나오긴 하는데 하트를 누르면 처음거는 레드로 변하고 다음꺼부터는 하트가 삭제됐었음
+  //->해결 : 하트를 또다른 div에 넣어주어 하트가 담긴 div를 newComment라는 div에 담음
   newHeartBox.appendChild(newHeartOff);
   newHeartBox.appendChild(newHeartOn);
 
@@ -88,13 +90,17 @@ uploadText.addEventListener("keyup", btnChange);
 uploadText.addEventListener("keyup", btnChange);
 
 uploadBtn.addEventListener("click", () => {
+  console.log("click");
   commentValue();
   uploadBtn.disabled = true;
   uploadBtn.classList.add("upload_btn_off");
   uploadText.value = "";
 });
 
-uploadText.addEventListener("keydown", (event) => {
+uploadText.addEventListener("keypress", (event) => {
+  //!문제 : 키보드 한글을 쓰고 두번 엔터 시, 엔터가 두번 되어 기존 댓글의 마지막 음절이 또한번 쳐짐
+  //->헤걀: keydown을 keypress 로 바꿔줌
+  //나랑 동일한 경우가 있었음 : https://velog.io/@corinthionia/JS-keydown%EC%97%90%EC%84%9C-%ED%95%9C%EA%B8%80-%EC%9E%85%EB%A0%A5-%EC%8B%9C-%EB%A7%88%EC%A7%80%EB%A7%89-%EC%9D%8C%EC%A0%88%EC%9D%B4-%EC%A4%91%EB%B3%B5-%EC%9E%85%EB%A0%A5%EB%90%98%EB%8A%94-%EA%B2%BD%EC%9A%B0-%ED%95%A8%EC%88%98%EA%B0%80-%EB%91%90-%EB%B2%88-%EC%8B%A4%ED%96%89%EB%90%98%EB%8A%94-%EA%B2%BD%EC%9A%B0
   if (event.code === "Enter") {
     commentValue();
     uploadBtn.disabled = true;

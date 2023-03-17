@@ -135,22 +135,24 @@ article .profile {
 .icon_comment .icon_bookmark {
   position: absolute;
   right: 0px;
+  margin-right: 12px;
 }
 
 .like_comment {
   display: flex;
   margin-top: 12px;
   margin-bottom: 12px;
+  align-items: center;
 }
 
 .like_comment .image {
-  background: url("./source/feedimg.jpg");
+  background: url("./source/profile06.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   border: solid 1px #efefef;
   border-radius: 16px;
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   margin-right: 8px;
 }
 
@@ -162,6 +164,7 @@ article .profile {
 .text_comment {
   display: flex;
   justify-content: flex-start;
+  margin-bottom: 4px;
 }
 
 .text_comment span {
@@ -224,20 +227,20 @@ article .profile {
   position: absolute;
   right: 0;
   background-image: url("./source/heart.png");
+  background-repeat: no-repeat;
   background-size: contain;
   width: 20px;
   height: 20px;
-  outline: none;
 }
 
 .icon_heart_on {
   position: absolute;
   right: 0;
   background-image: url("./source/heart_red.png");
-  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 20px;
   height: 20px;
-  outline: none;
 }
 
 .main-right .profile {
@@ -327,9 +330,8 @@ article .profile {
   position: absolute;
   top: 2px;
   left: 2px;
-  background: url("./source/feedimg.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+
+  object-fit: cover;
   border: solid 1px #efefef;
   border-radius: 20px;
   width: 40px;
@@ -350,7 +352,7 @@ article .profile {
 
 .main-right .recommend {
   width: 300px;
-  height: 190px;
+  height: 230px;
   background-color: #fff;
   border: solid 1px #efefef;
   padding: 12px;
