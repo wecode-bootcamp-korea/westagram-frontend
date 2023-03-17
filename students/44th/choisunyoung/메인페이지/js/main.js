@@ -23,7 +23,6 @@ function addComment() {
   commentElement.innerText = commentValue.value;
 
 
-
   //<button> : <button> 태그 생성 & class 이름 추가
   const removeComment = document.createElement('button');
   removeComment.className += 'remove-button';
@@ -44,18 +43,25 @@ function addComment() {
   //<li>태그 안에 <heart button>태그가 자식태그로 들어감
   commentElement.appendChild(heartIcon);
 
+  //민서님이 도와줌 고마워용 민서님
+  let count = 1;
   heartIcon.addEventListener('click', () => {
-    heartIcon.className = 'fa-solid fa-heart';
-    heartIcon.style.color ='red';
-
+    
+    if(count % 2 !== 0) {
+      count++;
+      heartIcon.className = 'fa-solid fa-heart';
+      heartIcon.style.color ='red';
+    } else if(count % 2 === 0){
+      count++;
+      heartIcon.className = 'fa-regular fa-heart';
     }
-  )
-
+    }
+  );
 
   //<button> : 클릭 시 삭제이벤트 진행
   removeComment.addEventListener('click', (event) => {
     commentElement.remove(event.currentTarget.parentNode);
-  })
+  });
 }
 
 //!!콘솔 창에 함수()를 실행하면 함수가 작동하게됨!!
