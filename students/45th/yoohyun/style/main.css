@@ -87,19 +87,104 @@ main {
 
 .postsContainer {
   width: 630px;
-  border: 1px solid #ddd;
+  border: 1.5px solid #ddd;
 }
 
 .postsContainer article {
+  background-color: #fff;
 }
 
-.userInfo img {
+/* 하나의 포스트 = article 내의 post 게시한 user 정보 영역 */
+.postHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 10px;
+}
+
+.postHeader img {
   width: 32px;
   height: 32px;
   border-radius: 32px;
 }
 
+.posterInfoWrapper {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.moreOptionsWrapper {
+  /* 영역 내부에 포함된 span 자식들(점)을 세로 중앙 정렬시키는 코드 */
+  display: flex;
+  align-items: center;
+
+  cursor: pointer;
+}
+
+.moreOptionsWrapper span {
+  display: inline-block;
+  width: 3px;
+  height: 3px;
+  border: 1px solid #000;
+  border-radius: 50%;
+  background-color: #000;
+}
+
+.moreOptionsWrapper span + span {
+  margin-left: 3px;
+}
+
+.likedUsers {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+
+  margin: 8px 0;
+}
+
+.likedUsers img {
+  width: 15px;
+  height: 15px;
+  border: 1px solid #bbb;
+  border-radius: 50%;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+/* 하나의 포스트 = article 내의 post 메인 이미지 영역 */
+.postedImg {
+  width: 100%;
+}
+
+.postedImg img {
+  width: 100%;
+}
+
+/* 하나의 포스트 = article 내의 post 하단 정보 영역 */
+.postContentContainer {
+  padding: 8px;
+}
+
+.interactionIconsWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.interactionIconsWrapper i {
+  cursor: pointer;
+}
+
+.leftIcons i + i {
+  margin-left: 5px;
+}
+
+/* aside 영역 시작 */
 aside {
   width: 320px;
-  border: 1px solid #ddd;
+  border: 1.5px solid #ddd;
 }
