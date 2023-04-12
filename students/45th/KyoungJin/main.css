@@ -1,0 +1,203 @@
+* {
+  box-sizing: border-box;
+}
+
+nav {
+  height: 50px;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: antiquewhite;
+}
+
+/*compass~user 아이콘*/
+.icons i {
+  margin-left: 25px;
+}
+
+i.fa-regular {
+  position: relative;
+  top: 4px;
+}
+
+/*instagram 아이콘*/
+i.fa-instagram {
+  margin-right: 20px;
+  position: relative;
+  bottom: 4px;
+}
+
+/*westagram*/
+.insta span {
+  font-family: "Lobster", cursive;
+  font-size: 25px;
+  border-left: 2px solid black;
+  padding-left: 20px;
+}
+
+/*검색창*/
+input {
+  width: 230px;
+  padding: 5px 15px;
+  border-color: rgb(209, 206, 206);
+  border-radius: 3px;
+}
+
+input.searching::placeholder {
+  text-align: center;
+  color: rgb(209, 206, 206);
+}
+
+.search {
+  margin-top: 4px;
+  position: relative;
+}
+
+i.fa-solid {
+  position: absolute;
+  left: 85px;
+  top: 13px;
+  color: rgb(209, 206, 206);
+}
+
+/*feeds 전체 테두리*/
+div.feeds {
+  float: left;
+  border: 1px solid rgb(192, 191, 191);
+  border-radius: 3px;
+  width: 550px;
+  height: 780px;
+  margin-top: 40px;
+  position: relative;
+  left: 250px;
+  bottom: 10px;
+}
+
+/*위코드 프로필*/
+
+div.me-profile img {
+  width: 45px;
+  height: 45px;
+  border-radius: 70%;
+  overflow: hidden;
+  margin-right: 10px;
+}
+
+.me-profile {
+  display: flex;
+  width: 187px;
+  height: 50px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  margin-left: 10px;
+  position: relative;
+}
+
+/*위코드 ID*/
+.me-Id {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3px;
+}
+span.me-name {
+  font-weight: bold;
+}
+span.나 {
+  font-size: 13px;
+  font-weight: 600;
+  position: absolute;
+  top: 23px;
+}
+
+/*피드 이미지*/
+
+.me-fid img {
+  width: 550px;
+  height: 550px;
+}
+
+/*하단 아이콘들*/
+.bottom-icon {
+  width: 550px;
+  height: 30px;
+  display: flex;
+  position: relative;
+}
+.bottom-icon img {
+  width: 25px;
+  height: 25px;
+  margin-left: 15px;
+  margin-top: 5px;
+}
+
+/*comment 좌우반전*/
+.comment {
+  transform: scaleX(-1);
+}
+
+.scrap {
+  width: 25px;
+  height: 20px;
+  position: absolute;
+  right: 10px;
+}
+
+/*~이 좋아합니다*/
+.likey {
+  position: relative;
+  margin-left: 15px;
+  margin-top: 10px;
+}
+
+.likey img {
+  width: 20px;
+  height: 20px;
+  border-radius: 70%;
+  margin-right: 5px;
+}
+
+span.like-comment {
+  position: absolute;
+  bottom: 5px;
+}
+span.bold {
+  font-weight: bold;
+}
+
+/*개발자가 되는~*/
+div.fid-comment {
+  margin-left: 15px;
+}
+.time {
+  font-size: 13px;
+  color: rgb(163, 163, 163);
+}
+
+/*댓글 창*/
+div.commentary {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+}
+
+.commentary input {
+  padding: 13px 15px;
+  width: 548px;
+  border: none;
+  border-top: 1px solid rgb(192, 191, 191);
+}
+
+.commentary input::placeholder {
+  font-weight: bold;
+  color: rgb(182, 181, 181);
+}
+
+/*게시 버튼*/
+button.게시 {
+  position: absolute;
+  top: 12px;
+  right: 7px;
+  border: none;
+  background-color: rgb(255, 255, 255);
+  color: rgb(117, 209, 245);
+}

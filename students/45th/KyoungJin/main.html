@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>main page</title>
+    <script
+      src="https://kit.fontawesome.com/a324f7d2f8.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="main2.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- 상단 아이콘-->
+    <nav>
+      <div class="insta">
+        <i class="fa-brands fa-instagram fa-xl"></i>
+        <span>Westagram</span>
+      </div>
+      <div class="search">
+        <input class="searching" type="text" placeholder="검색" />
+        <i class="fa-solid fa-magnifying-glass fa-xs"></i>
+      </div>
+      <div class="icons">
+        <i class="fa-regular fa-compass fa-xl"></i>
+        <i class="fa-regular fa-heart fa-xl"></i>
+        <i class="fa-regular fa-user fa-xl"></i>
+      </div>
+    </nav>
+    <main>
+      <!--메인 왼쪽-->
+      <div class="feeds">
+        <article>
+          <!--인스타 프로필-->
+          <div class="me-fid">
+            <div class="me-profile">
+              <img src="./image/나.jpg" />
+              <div class="me-Id">
+                <span class="me-name">al_zar_takkarsen</span>
+                <span class="나">🫠</span>
+              </div>
+            </div>
+            <!--인스타 피드-->
+            <img src="./image/싸콘.jpg" />
+            <div class="bottom-icon">
+              <img src="./image/heart.png" />
+              <img class="comment" src="./image/comments-2.png" />
+              <img src="./image/upload.png" />
+              <img class="scrap" src="./image/스크랩.png" />
+            </div>
+            <div class="likey">
+              <img src="./image/나.jpg" />
+              <span class="like-comment">
+                <span class="bold">al_zar_takkarsen</span>님
+                <span class="bold">외 10명</span>이 좋아합니다
+              </span>
+            </div>
+            <div class="fid-comment">
+              <span class="bold">al_zar_takkarsen</span> 우 나 핫걸 좋은 거 보고
+              갈래? 💦
+              <div class="time">55분전</div>
+            </div>
+            <!--댓글 창-->
+            <div class="commentary">
+              <input type="text" placeholder="댓글 달기..." />
+              <button class="게시">게시</button>
+            </div>
+          </div>
+        </article>
+      </div>
+      <!--메인 오른쪽-->
+      <div class="main-right">
+        <!--al_zar 프로필-->
+        <div class="right-me">
+          <img src="./image/나.jpg" />
+          <span class="me-name">al_zar_takkarsen</span>
+          <span class="나2">🫠</span>
+        </div>
+
+        <!--스토리 피드-->
+        <div class="story-feed">
+          <!--스토리 상단-->
+          <div class="story-top">
+            <span class="스토리">스토리</span>
+            <button class="모두_보기">모두 보기</button>
+          </div>
+
+          <!--스토리 친구 목록 수정-->
+          <div class="story-people">
+            <ul>
+              <li class="story1">
+                <img src="./image/째로이.jpg" />
+                <span class="째롱-profile">jrong._</span>
+                <span class="째롱-time">10분 전</span>
+              </li>
+              <li class="story2">
+                <img src="./image/윤디.jpg" />
+                <span class="윤디-profile">yuuunx</span>
+                <span class="윤디-time">2시간 전</span>
+              </li>
+              <li class="story3">
+                <img src="./image/노홍철.jpg" />
+                <span class="홍철-profile">rohongchul</span>
+                <span class="홍철-time">11시간 전</span>
+              </li>
+              <li class="story4">
+                <img src="./image/조지.jpg" />
+                <span class="조지-profile">jeo.ji_</span>
+                <span class="조지-time">23시간 전</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!--회원 추천 피드-->
+        <div class="recommend-feed">
+          <!--추천 상단-->
+          <div class="recommend-top">
+            <span class="회원추천">회원님을 위한 추천</span>
+            <button class="모두_보기">모두 보기</button>
+          </div>
+          <div class="recommend-list">
+            <ul>
+              <li class="recommend1">
+                <img src="./image/wecode.jpg" />
+                <span class="위코드-profile">wecode_bootcamp</span>
+                <span class="위코드-follow">_legend_a님 외 2명이...</span>
+                <button class="follow">팔로우</button>
+              </li>
+              <li class="recommend2">
+                <img src="./image/하품.jpg" />
+                <span class="하품-profile">hapoom_film</span>
+                <span class="하품-follow">seol_seol_92님 외 3명...</span>
+                <button class="follow">팔로우</button>
+              </li>
+              <li class="recommend3">
+                <img src="./image/여행을 떠나요.jpg" />
+                <span class="여행-profile">pirt._.trip</span>
+                <span class="여행-follow">jimmylee1220님 외 1...</span>
+                <button class="follow">팔로우</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <footer>
+          Instagram 정보 . 지원 . 홍보 센터 . API . <br />
+          채용 정보 . 개인정보처리방침 . 약관 . <br />
+          디렉터리 . 프로필 . 해시태그 . 언어
+          <p>&copy; 2023 INSTAGRAM</p>
+        </footer>
+      </div>
+    </main>
+  </body>
+</html>
