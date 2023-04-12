@@ -1,0 +1,96 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* article tag */
+main > .loginContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+
+  width: 400px;
+  height: 500px;
+
+  /* 너비를 지정해주지 않으면 마진 속성이 적용되지 않는다. */
+  margin: 0 auto;
+  padding: 30px 0;
+
+  border: 1px solid #ddd;
+}
+
+i {
+  width: 200px;
+  font-family: "Lobster", cursive;
+  font-size: 2.5rem;
+}
+
+/* form 태그 */
+/* main > .loginContainer > .inputWrapper {
+  width: 300px;
+  overflow: hidden;
+} */
+
+main > .loginContainer > .inputWrapper > .idInput,
+main > .loginContainer > .inputWrapper > .pwInput {
+  width: 300px;
+
+  margin-bottom: 5px;
+}
+
+/* form 태그 내 div */
+/* main > .loginContainer > .inputWrapper > .idInput {
+  white-space: 안녕하세용;
+} */
+
+main > .loginContainer > .inputWrapper > .loginBtn {
+  margin-top: 15px;
+}
+
+main > .loginContainer > .inputWrapper > .idInput > input,
+main > .loginContainer > .inputWrapper > .pwInput > input {
+  width: 100%;
+  height: 40px;
+
+  padding: 5px;
+
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  background-color: #fafafa;
+
+  outline: none;
+}
+
+main > .loginContainer > .inputWrapper > .idInput > input:focus,
+main > .loginContainer > .inputWrapper > .pwInput > input:focus {
+  border: 1px solid #aaa;
+}
+
+/* button도 div로 묶어서 통일성을 줘야 하나?->일단 통일성 적용함 */
+button {
+  width: 300px;
+  height: 35px;
+
+  border: none;
+  border-radius: 9px;
+
+  background-color: #4cb5f9;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 700;
+
+  transition: background-color 0.1s ease-in-out;
+
+  cursor: pointer;
+}
+
+main > article > .forgotPw {
+  margin-top: 60px;
+
+  font-size: 0.9rem;
+  color: #00376b;
+}

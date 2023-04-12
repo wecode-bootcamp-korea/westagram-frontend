@@ -1,0 +1,105 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 15px 100px;
+}
+
+nav > .logo {
+  /* width: 200px; */
+}
+
+nav > .logo > h1 {
+  font-family: "Lobster", cursive;
+  /* width: 200px; */
+  font-size: 1.8rem;
+}
+
+/* 검색 창 인풋 태그로 변경하기 */
+nav > .searchContainer {
+  position: relative;
+  width: 200px;
+  height: 25px;
+  border: 1px solid #bbb;
+}
+
+/* 이런 경우, 부모의 크기를 지정하지 않으면, 자식 요소의 크기만큼 부모가 늘어나지 않는데,,, */
+.searchContainer input {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  border: none;
+  border-radius: 5px;
+
+  background-color: #efefef;
+
+  outline: none;
+}
+
+nav > .searchContainer > .searchWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5px;
+  /* 해당 영역의 높이 값을 지정해주지 않으면 세로 정렬이 적용되지 않는다 */
+
+  height: 100%;
+
+  padding: 8px;
+
+  color: #737373;
+  font-size: 0.8rem;
+}
+
+/* 해당 클래ㅡ네이믕로 바로 접근할 수 있으면 바로 적기. 특정 요소에 접근하고 싶으면 길게 적어라. 길게 적으면 가독석 떨어지고 코드량이 길어지기 때문에 안좋다. 
+ .searchWrapper
+*/
+
+.navIconsContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+/* main 영역의 시작 */
+main {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+
+  height: 93vh;
+
+  padding: 60px 0;
+  border-top: 1px solid #ddd;
+
+  background-color: #efefef;
+}
+
+.postsContainer {
+  width: 630px;
+  border: 1px solid #ddd;
+}
+
+.postsContainer article {
+}
+
+.userInfo img {
+  width: 32px;
+  height: 32px;
+  border-radius: 32px;
+}
+
+aside {
+  width: 320px;
+  border: 1px solid #ddd;
+}
