@@ -17,9 +17,19 @@ form.addEventListener(`keyup`, () => {  // id, pw 입력
   }
 });
 
-loginButton.addEventListener(`click`, () => loginButton.style.cursor === `pointer` ? alert(`` + // 로그인 정보 확인
-  `로그인 전송
-    id: ${id.value}
-    pw: ${pw.value}
-  `) : null
-);
+loginButton.addEventListener(`click`, () => { // 로그인 전송
+
+  if (loginButton.style.cursor === `pointer`) {
+
+    let exptext = /^([0-9a-zA-Z_\.-]+)@([0-9a-zA-Z_-]+)(\.[0-9a-zA-Z_-]+){1,2}$/; // 알파벳+숫자@알파벳+숫자.알파벳+숫자
+
+    !(exptext.test(id.value)) ? alert("이메일형식이 올바르지 않습니다.") :
+      pw.value.length < 5 ? alert("비밀번호 길이가 짧습니다.") :
+        alert(`
+          로그인 전송
+          id: ${id.value}
+          pw: ${pw.value}
+    `);
+  }
+
+});
