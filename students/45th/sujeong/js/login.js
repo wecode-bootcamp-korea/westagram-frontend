@@ -7,5 +7,8 @@ loginId.addEventListener("keyup", loginBtnOn);
 loginPw.addEventListener("keyup", loginBtnOn);
 
 function loginBtnOn () {
-  return (loginId.value == "" || loginPw.value == "" ? loginBt.classList.remove("loginBt_on") : loginBt.classList.add("loginBt_on"))
+  (loginId.value == "" || loginPw.value == "" ? loginBt.classList.remove("loginBt_on") : loginBt.classList.add("loginBt_on"))
+  
+  loginId.value.includes("@") === true && loginPw.value.length >= 5 ? loginBt.classList.add("loginBt_on") : loginBt.classList.remove("loginBt_on")
+
 }
