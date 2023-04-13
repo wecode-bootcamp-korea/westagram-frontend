@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/styles.css" />
+    <link rel="icon" href="/image/instagram.png" />
+    <title>Westagram</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="wrapper">
+        <nav>
+          <div class="nav-logo">
+            <i class="fab fa-instagram nav-logo__icon"></i>
+            <div class="nav-logo__center"></div>
+            <h1 class="nav-logo__title">Westagram</h1>
+          </div>
+          <div class="nav-search">
+            <input type="text" placeholder="검색" class="nav-search__input" />
+            <i class="fas fa-search nav-search__icon"></i>
+          </div>
+          <div class="nav-info">
+            <img
+              src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png"
+            />
+            <img
+              src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"
+            />
+            <img
+              src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png"
+            />
+          </div>
+        </nav>
+        <main class="main-wrapper">
+          <div class="feeds">
+            <article>
+              <div class="feeds-header">
+                <div class="feeds-header__profile">
+                  <img
+                    class="profile-image"
+                    src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
+                  />
+                  <span>candy_lp</span>
+                </div>
+                <i class="fas fa-ellipsis-h"></i>
+              </div>
+              <img
+                class="feed-image"
+                src="https://images.unsplash.com/photo-1538943186303-104afadcbb16?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80"
+              />
+              <div class="feed-icons">
+                <div class="feed-icons__left">
+                  <i class="fas fa-heart"></i>
+                  <i class="far fa-comment fa-flip-horizontal"></i>
+                  <img src="./image/upload.png" width="25" height="25" />
+                </div>
+                <i class="far fa-bookmark"></i>
+              </div>
+              <div class="feed-heart">
+                <img
+                  width="20"
+                  height="20"
+                  src="https://images.unsplash.com/photo-1546527868-ccb7ee7dfa6a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                />
+                <div>
+                  <span>youworld</span>님 <span>외 10명</span>이 좋아합니다
+                </div>
+              </div>
+              <p class="feed-content">
+                <span>candy_lp</span> 너-무 행복했던 4월 1일💕...
+                <span>더 보기</span>
+              </p>
+              <div class="feed-comments">
+                <div class="feed-comment">
+                  <p>
+                    <span class="comment-id">qxxxqwwi</span
+                    ><span class="comment-content"> 👍👍</span>
+                  </p>
+                  <i class="far fa-heart"></i>
+                </div>
+              </div>
+              <p class="feed-time">42분 전</p>
+              <div class="write-comment">
+                <input
+                  class="write-comment__input"
+                  placeholder="댓글 달기..."
+                />
+                <span class="write-comment__btn">게시</span>
+              </div>
+            </article>
+          </div>
+          <div class="main-right">
+            <div class="user-profile">
+              <div class="user-profile__img">
+                <img
+                  src="https://avatars.githubusercontent.com/u/52394741?s=200&v=4"
+                />
+              </div>
+              <div class="user-profile__info">
+                <span class="user-id">wecode_bootcamp</span>
+                <span class="user-name">WeCode | 위코드</span>
+              </div>
+            </div>
+            <div class="story"></div>
+            <div class="recommendation"></div>
+            <div class="footer">
+              <p>
+                Westagram 정보 · 지원 · 홍보센터 · API · 채용 정보 ·
+                개인정보처리방침 · 약관 · 디렉터리 · 프로필 · 해시태그 · 언어
+              </p>
+              <span>© 2023 WESTAGRAM</span>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/6478f529f2.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
