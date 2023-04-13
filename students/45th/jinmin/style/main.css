@@ -1,0 +1,282 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: #FAFAFA;
+}
+
+/* nav */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: fixed;
+  margin: 0 auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 50px;
+
+  /* border: 1px solid red; */
+  background-color: #FFF;
+  border-bottom: 1px solid #F3F3F3;
+}
+
+nav section {
+  display: flex;
+  justify-content: space-between;
+
+  width: 1150px;
+}
+
+nav section * {
+  display: flex;
+  align-items: center;
+}
+
+nav section img {
+  width: 25px;
+}
+
+nav section .coImgDiv {
+  border-right: 1px solid black;
+  width: 50px;
+  height: 30px;
+}
+
+nav section .coNameDiv {
+  font-family: 'Lobster', cursive;
+
+  padding-left: 20px;
+}
+
+nav section .searchDiv .searchBar {
+  background-color: #FAFAFA;
+  border: 1px solid #DBDBDB;
+  border-radius: 2px;
+
+  text-align: center;
+}
+
+nav section .userDiv img {
+  margin: 5px
+}
+
+/* main */
+main {
+  max-width: 1100px;
+  height: 2000px;
+
+  margin: 80px auto;
+}
+
+main .feeds {
+  border: 1px solid #E6E6E6;
+  background-color: #FFF;
+  width: 700px;
+  float: left;
+}
+
+main .feeds article {
+  width: 100%;
+}
+
+main .feeds article .userInfo {
+  display: flex;
+  justify-content: space-between;
+  line-height: 60px;
+}
+
+main .feeds article .userInfo div {
+  display: flex;
+}
+
+main .feeds article .userInfo div .userImg {
+  background-color: black;
+
+  width: 30px;
+  height: 30px;
+
+  margin: 15px;
+  border-radius: 50%;
+}
+
+main .feeds article .userInfo .userMenu {
+  margin-right: 15px;
+
+  font-size: 20px;
+}
+
+main .feeds article .feedsImgs {
+  width: 100%;
+  height: 700px;
+  background-image: url("https://images.unsplash.com/photo-1567206563064-6f60f40a2b57?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80");
+}
+
+main .feeds article .feedsWork {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+main .feeds article .feedsWork img {
+  width: 25px;
+}
+
+main .feeds article .feedsWork .wokrs {
+  display: flex;
+  justify-content: space-between;
+
+  width: 100px;
+  border: 1px solid red;
+}
+
+main .feeds article .feedsWork .bookmark {
+  width: 25px;
+}
+
+main .feeds article .whoLike .whoIs .userImg {
+  background-color: black;
+
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+
+  margin-right: 10px;
+}
+
+main .feeds article .reples {
+  padding: 10px;
+  border: 1px solid red;
+}
+
+/* main > reply */
+.replies .replyBox {
+  display: flex;
+  padding: 0 10px;
+}
+
+.typeReply {
+  padding: 10px;
+}
+
+/* main-right */
+main .main-right {
+  float: right;
+
+  width: 380px;
+}
+
+main .main-right * {
+  margin-bottom: 5px;
+  padding: 5px;
+}
+
+/* main-right > me */
+main .main-right .me {
+  display: flex;
+  align-items: center;
+}
+
+main .main-right .me .myImg {
+  background-color: black;
+
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+
+  margin-right: 10px;
+}
+
+main .main-right .me .myName * {
+  margin: 0px;
+  padding: 0px;
+}
+
+main .main-right .users {
+  display: flex;
+  align-items: center;
+
+  margin: 0px;
+  padding: 0px;
+}
+
+/* main-right > story , recomendUser */
+main .main-right .rightHeaders {
+  display: flex;
+  justify-content: space-between;
+
+  margin: 0px;
+  padding: 0px 5px;
+}
+
+main .main-right .rightHeaders * {
+  margin: 0px;
+}
+
+main .main-right .rightHeaders .smallHeader {
+  color: #999999;
+}
+
+main .main-right .users .userState {
+  display: flex;
+  align-items: center;
+  margin: 0px;
+  padding-left: 10px;
+}
+
+main .main-right .users .userImg {
+  background-color: black;
+
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+
+  margin-right: 10px;
+}
+
+main .main-right .users .userDesc {
+  margin: 0px;
+  padding: 0px;
+  line-height: 0px;
+}
+
+main .main-right .users .userDesc .userPlay {
+  color: #999999;
+}
+
+/* main-right > story */
+main .main-right .story {
+  background-color: white;
+  border: 1px solid #E6E6E6;
+
+  padding: 10px;
+}
+
+main .main-right .story .storyMain {
+  margin: 0px;
+  padding: 0px;
+}
+
+
+/* main-right > recomendUser */
+main .main-right .recomendUser {
+  background-color: white;
+  border: 1px solid #E6E6E6;
+
+  padding: 10px;
+}
+
+main .main-right .recomendUser .recomendUserMain {
+  margin: 0px;
+  padding: 0px;
+}
+
+main .main-right .recomendUser .recomendUserMain .users {
+  display: flex;
+  justify-content: space-between;
+}

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>main</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style/common.css">
+  <link rel="stylesheet" href="./style/main.css">
+  <script>
+    // 피드는 하나만 만들어도 됨
+    // 댓글 input 창에 엔터치거나 "게시" 누르면 댓글 추가되도록 createElement로 요소 생성해서, input에 입력한 값이 추가 되어야 함
+  </script>
+</head>
+
+<body>
+  <!-- nav -->
+  <nav>
+    <section>
+      <div class="co">
+        <div class="coImgDiv">
+          <img src="https://cdn-icons-png.flaticon.com/512/1384/1384031.png" alt="logoImg" />
+        </div>
+        <div class="coNameDiv">
+          <span>westagram</span>
+        </div>
+      </div>
+      <div class="searchDiv">
+        <input type="text" class="searchBar" placeholder="검색" />
+      </div>
+      <div class="userDiv">
+        <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png" alt="">
+        <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png" alt="">
+        <img src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png" alt="">
+      </div>
+    </section>
+  </nav>
+
+  <!-- main -->
+  <main>
+
+    <!-- feeds -->
+    <div class="feeds">
+      <article>
+        <div class="userInfo">
+          <div>
+            <div class="userImg"></div>
+            <div class="userName"><span>hahah_</span></div>
+          </div>
+          <div class="userMenu"><span>···</span></div>
+        </div>
+        <div class="feedsImgs"></div>
+        <div class="feedsWork">
+          <div class="wokrs">
+            <img src="https://cdn-icons-png.flaticon.com/512/1077/1077035.png" alt="heart">
+            <img src="https://cdn-icons-png.flaticon.com/512/1077/1077035.png" alt="heart">
+            <img src="https://cdn-icons-png.flaticon.com/512/1077/1077035.png" alt="heart">
+          </div>
+          <div class="bookmark">
+            <img src="https://cdn-icons-png.flaticon.com/512/1077/1077035.png" alt="heart">
+          </div>
+        </div>
+        <div class="whoLike">
+          <div class="whoIs">
+            <div class="userImg"></div>
+            <div>너당 외 100명이 좋아합니다</div>
+          </div>
+        </div>
+        <div id="replies" class="replies">
+          <div class="replyBox">
+            <div class="userName">1</div>
+            <div class="userTalk">하나</div>
+          </div>
+          <div class="replyBox">
+            <div class="userName">2</div>
+            <div class="userTalk">둘</div>
+          </div>
+        </div>
+        <div class="typeReply">
+          <form action="#">
+            <input id="myNewReply" type="text" placeholder="댓글 달기..." />
+            <input id="myReplyGo" type="button" value="게시" />
+          </form>
+        </div>
+      </article>
+    </div>
+
+    <!-- main-right -->
+    <div class="main-right">
+
+      <!-- main-right > me -->
+      <div class="me">
+        <div class="myImg"></div>
+        <div class="myName">
+          <div class="myNickName">wecode_bootcamp</div>
+          <div class="myRealkName">WeCode | 위코드</div>
+        </div>
+      </div>
+
+      <!-- main-right > story -->
+      <div class="story">
+        <div class="rightHeaders">
+          <sapn class="smallHeader">스토리</sapn>
+          <span class="seeAll">모두 보기</span>
+        </div>
+        <div class="storyMain">
+          <div class="users">
+            <div class="userState">
+              <div class="userImg"></div>
+              <div class="userDesc">
+                <div class="userName">나당1</div>
+                <div class="userPlay">16분전</div>
+              </div>
+            </div>
+          </div>
+          <div class="users">
+            <div class="userState">
+              <div class="userImg"></div>
+              <div class="userDesc">
+                <div class="userName">나당2</div>
+                <div class="userPlay">3시간 전</div>
+              </div>
+            </div>
+          </div>
+          <div class="users">
+            <div class="userState">
+              <div class="userImg"></div>
+              <div class="userDesc">
+                <div class="userName">나당3</div>
+                <div class="userPlay">20시간 전</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- main-right > recomendUser -->
+      <div class="recomendUser">
+        <div class="rightHeaders">
+          <sapn class="smallHeader">회원님을 위한 추천</sapn>
+          <span class="seeAll">모두 보기</span>
+        </div>
+        <div class="recomendUserMain">
+          <div class="users">
+            <div class="userState">
+              <div class="userImg"></div>
+              <div class="userDesc">
+                <div class="userName">나당1</div>
+                <div class="userPlay">~외 n명이 친구이삼</div>
+              </div>
+            </div>
+            <div class="clickFollow">팔로우</div>
+          </div>
+          <div class="users">
+            <div class="userState">
+              <div class="userImg"></div>
+              <div class="userDesc">
+                <div class="userName">나당1</div>
+                <div class="userPlay">~외 n명이 친구이삼</div>
+              </div>
+            </div>
+            <div class="clickFollow">팔로우</div>
+          </div>
+          <div class="users">
+            <div class="userState">
+              <div class="userImg"></div>
+              <div class="userDesc">
+                <div class="userName">나당1</div>
+                <div class="userPlay">~외 n명이 친구이삼</div>
+              </div>
+            </div>
+            <div class="clickFollow">팔로우</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <script src="./js/main.js"></script>
+</body>
+
+</html>
