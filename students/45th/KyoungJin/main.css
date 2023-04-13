@@ -71,7 +71,7 @@ div.feeds {
   border: 1px solid rgb(192, 191, 191);
   border-radius: 3px;
   width: 550px;
-  height: 850px;
+  height: 830px;
   position: relative;
   bottom: 10px;
 }
@@ -236,10 +236,22 @@ button#게시 {
   color: rgb(117, 209, 245);
 }
 
-/*댓글 창 display: inline block 클래스 주는 용*/
+/*댓글 창 javascript에서 클래스 주는 용도*/
+
+.js {
+  position: relative;
+  padding-bottom: 2px;
+}
 
 .for-js {
-  color: green;
   font-size: 15px;
   padding-left: 5px;
+}
+
+.js-heart {
+  filter: invert(86%) sepia(12%) saturate(13%) hue-rotate(320deg)
+    brightness(83%) contrast(81%);
+  position: absolute;
+  top: 4px;
+  right: 10px;
 }

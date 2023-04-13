@@ -8,7 +8,7 @@
 
 let CommentBox = document.getElementById("댓글창");
 const UploadButton = document.getElementById("게시");
-let commentFeed = document.getElementsByClassName("fid-comment")[0];
+let commentFeed = document.getElementsByClassName("comment1")[0];
 
 /*function PutComment() {
   if (CommentBox.value) {
@@ -29,25 +29,47 @@ UploadButton.addEventListener("click", PutComment);*/
 // 그럼 댓글이 한 줄 한 줄씩 생기겠지..?
 // 다 했으면 이제 좋아요 용 하트를 넣자
 
+const heart_width = 15;
+const heart_height = 15;
+
 function Comments() {
   if (CommentBox.value) {
     const ComBox = document.createElement("div");
     const UserName = document.createElement("span");
     const uploading = document.createElement("span");
     const Heart = document.createElement("img");
+
     UploadButton.style.cursor = "pointer";
     UploadButton.style.color = "blue";
+
+    Heart.style.width = heart_width + "px";
+    Heart.style.height = heart_height + "px";
+
     uploading.innerHTML = CommentBox.value;
     UserName.innerHTML = "wakgood";
     Heart.setAttribute("src", "./image/heart.png");
+
+    ComBox.classList.add("js");
     UserName.classList.add("bold");
     uploading.classList.add("for-js");
-    Heart.classList.add("small-heart");
+    Heart.classList.add("js-heart");
+
     commentFeed.appendChild(ComBox);
+
     ComBox.appendChild(UserName);
     ComBox.appendChild(uploading);
     ComBox.appendChild(Heart);
   }
 }
 
-UploadButton.addEventListener("click", Comments);
+UploadButton.addEventListener("click", function () {
+  Comments();
+  CommentBox.value = "";
+});
+
+CommentBox.addEventListener("keyup", function (e) {
+  if (e.code === "Enter") {
+    Comments();
+    CommentBox.value = "";
+  }
+});
