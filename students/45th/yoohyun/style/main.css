@@ -162,6 +162,9 @@ main {
 
 .postedImg img {
   width: 100%;
+
+  /* 용도 찾아보기 */
+  /* user-select: none; */
 }
 
 /* 하나의 포스트 = article 내의 post 하단 정보 영역 */
@@ -181,6 +184,30 @@ main {
 
 .leftIcons i + i {
   margin-left: 5px;
+}
+
+.postContent {
+}
+
+.postContentWrapper {
+  display: flex;
+  gap: 5px;
+}
+
+.more {
+  color: #737373;
+  cursor: pointer;
+}
+
+.postContent .moreContent {
+}
+
+.commentsList {
+  margin-top: 10px;
+}
+
+.commentsList p {
+  font-size: 0.9rem;
 }
 
 /* aside 영역 시작 */
