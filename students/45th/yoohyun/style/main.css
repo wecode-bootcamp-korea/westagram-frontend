@@ -231,9 +231,26 @@ main {
   border-top: 1px solid #ddd;
 }
 
+#uploadedCommentsBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3px;
+  padding: 8px;
+}
+
+#uploadedCommentsBox ul li {
+  display: flex;
+  justify-content: space-between;
+}
+
+#uploadedCommentsBox ul li i {
+  cursor: pointer;
+}
+
 .commentsList p {
   font-size: 0.9rem;
-  padding: 8px;
+
   margin-bottom: 7px;
 }
 
