@@ -1,0 +1,396 @@
+body {
+  width: 100%;
+}
+
+/* 상단 nav */
+nav {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  border-bottom: 1px solid #DBDBDB;
+}
+
+.logo_group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.logo_group > img {
+  width: 30px;
+  height: 30px;
+  padding-right: 20px;
+  border-right: 2px solid black;;
+}
+
+.logo{
+  font-family: 'Lobster';
+  font-size: 30px;
+  padding:0 0 5px 0;
+  margin-left: 20px;
+}
+
+.search {
+  width: 285px;
+  height: 35px;
+  margin: 0 40px;
+  border: 2px solid #DBDBDB;
+  border-radius: 5px;
+  text-align: center;
+  background-repeat: no-repeat;
+}
+/* input placeholder 안에 이미지 넣기 블로그 정리 */
+.search::-webkit-input-placeholder{
+  background-image: url(https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-256.png) ;
+  background-size: contain;
+  background-position: 40% center;
+  background-repeat: no-repeat;
+  text-align: center;
+  text-indent: 0;
+}
+
+.nav_right {
+
+}
+
+.nav_right > img {
+  width: 35px;
+  margin: 0 20px;
+  cursor: pointer;
+}
+
+.nav_right>img:last-child {
+  margin: 0 0 0 20px;
+}
+
+/* main */
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 80px;
+}
+
+.feeds {
+  width: 820px;
+  margin:0 35px 20px 0;
+}
+
+.feeds>article>header {
+  width: 100%;
+  height: 80px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #DBDBDB;
+}
+
+.feeds>article>header>div{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.feeds>article>header>div>img {
+  width: 40px;
+  border-radius: 100%;
+} 
+
+.feeds>article>header>div>p {
+  margin-left: 20px;
+  font-weight: 700;
+}
+
+.hidden_btn {
+cursor: pointer;
+}
+
+.post_img_area {
+  width: 820px;
+  height: 820px;
+}
+
+.post_img{
+  width: 100%;
+  height: 100%;
+}
+
+.post_bottom{
+  border: 1px solid #DBDBDB;
+  padding: 0 20px 5px 20px;
+}
+
+.post_reaction {
+  width: 100%;
+  height: 60px;
+  padding: 15px 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.post_reaction>span, .like_btn,  .comment_btn, .share_btn{
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+#bookmark_btn {
+  font-size: 30px;
+}
+
+.post_like {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.post_like>img {
+  width: 25px;
+  margin-right: 5px;
+  border-radius: 100%;
+  border: 1px solid #dbdbdb;
+}
+
+.post_like>p>span {
+  font-weight: 600;
+}
+.comment_list {
+  width: 50%;
+}
+
+.comment_list>li {
+
+}
+
+.comment_list>li>span {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  white-space: unset;
+  -webkit-line-clamp: 1;
+}
+
+.comment_list>li>span:first-child {
+  float: left;
+  margin-right: 5px;
+  font-weight: 600;
+ }
+
+ .comment_list>li>span:last-child {
+  font-weight: 400;
+ }
+
+.comment_list>li>span:last-child::before {
+  content: "더보기";
+  float: right;
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+  shape-outside: inset(calc(100% - 10px) 0 0 0);
+  color: #999999;
+}
+
+.posting_time {
+  color: #888888;
+}
+
+.comment_input_area {
+  height: 60px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #DBDBDB;
+  border-top: none;
+}
+
+.comment_input {
+  width: 90%;
+  border: none;
+}
+
+.comment_input::placeholder {
+  font-family: 'Noto Sans KR';
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.comment_input_area>button {
+  color: #0095F6;
+}
+/* main 우측 영역 */
+
+.main_right {
+  width: 390px;
+  /* background-color: cornflowerblue; */
+}
+
+.user_info {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  /* background-color: skyblue; */
+}
+
+.user_info>img {
+  width: 60px;
+  border-radius: 100%;
+}
+
+.user_info_txt {
+  margin: 12px 0 0 10px;
+  line-height: 110%;
+}
+
+.user_info_txt>p:first-child {
+  font-weight: 600;
+}
+
+.user_info_txt>p:last-child {
+  font-size: large;
+  color: #888888;
+}
+
+.story_list_area, .recommend_list_area {
+  width: 390px;
+  height: 300px;
+  padding: 13px 20px 0;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  border: 1px solid #DBDBDB;
+  overflow: hidden;
+}
+
+.story_list_top, .recommend_list_top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.story_list_top>span:first-child, .recommend_list_top>span:first-child{
+  color: #888888;
+}
+
+.story_list_top>span:last-child, .recommend_list_top>span:last-child{
+ font-weight: 500;
+ cursor: pointer;
+}
+
+.story_list, .recommend_list{
+  padding-top: 15px;
+}
+
+.story_list>li{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.story_profile_img_border { 
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: tomato;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.story_list>li>div>img {
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+  border: 2px solid #ffffff;
+}
+
+.story_user_info, .recommend_user_info{
+  margin-left: 10px;
+  line-height: 120%;
+}
+
+.story_user_info>p:first-child, .recommend_user_info>p:first-child {
+  font-weight: 600;
+}
+
+.story_user_info>p:last-child, .recommend_user_info>p:last-child {
+  color: #888888;
+}
+
+.recommend_list>li{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.recommend_info_area {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.recommend_info_area>img {
+  width: 35px;
+  border-radius: 100%;
+}
+
+.recommend_user_info {
+  width: 70%;
+}
+
+.recommend_user_info>p:last-child {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  white-space: unset;
+  -webkit-line-clamp: 1;
+}
+
+.recommend_list>li>p {
+  font-weight: 500;
+  color: #0095F6;
+  cursor: pointer;
+}
+
+/* footer */
+footer { 
+  width: 100%;
+  color: #888888;
+}
+
+.footer_top {
+  display: flex;
+  flex-flow: wrap;
+  margin-bottom: 20px;
+}
+
+.footer_top>li {
+  font-size: 12px;
+  padding: 0 5px;
+}
+
+.footer_top>li::after {
+  margin-left: 10px;
+  content: "•";
+}
+
+.footer_top>li:last-child::after {
+  content: none;
+}
+
+footer>p {
+  font-size: 12px;
+}

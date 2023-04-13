@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>westagram/main</title>
+  <link rel="stylesheet" href="style/common.css" />
+  <link rel="stylesheet" href="style/main.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Sans+KR:wght@100;300;400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+
+<body>
+  <!-- 상단 네비 -->
+  <nav>
+    <div class="logo_group">
+      <img src="img/001-instagram.png" alt="로고 이미지">
+      <h1 class="logo">westagram</h1>
+    </div>
+    <input type="text" class="search" name="search" placeholder="검색">
+    <div class="nav_right">
+      <img src="img/explore.png" alt="익스플로러">
+      <img src="img/heart.png" alt="좋아요">
+      <img src="img/profile.png" alt="프로필">
+    </div>
+  </nav>
+  <!-- 메인 -->
+  <main>
+    <div class="feeds">
+      <article>
+        <header>
+          <div>
+            <img src="img/profile_img.jpg" alt="프로필 사진">
+            <p>krystalk170</p>
+          </div>
+          <span class="material-symbols-outlined hidden_btn">more_vert</span>
+        </header>
+        <section class="post_img_area">
+          <img src="./img/profile_img.jpg" class="post_img" alt="게시물 이미지">
+        </section>
+        <div class="post_bottom">
+          <div class="post_reaction">
+            <div>
+              <span class="like_btn">
+                <svg aria-label="좋아요 취소" class="x1lliihq x1n2onr6" color="rgb(255, 48, 64)" fill="rgb(255, 48, 64)"
+                  height="24" role="img" viewBox="0 0 48 48" width="24">
+                  <title>좋아요 취소</title>
+                  <path
+                    d="M34.6 3.1c-4.5 0-7.9 1.8-10.6 5.6-2.7-3.7-6.1-5.5-10.6-5.5C6 3.1 0 9.6 0 17.6c0 7.3 5.4 12 10.6 16.5.6.5 1.3 1.1 1.9 1.7l2.3 2c4.4 3.9 6.6 5.9 7.6 6.5.5.3 1.1.5 1.6.5s1.1-.2 1.6-.5c1-.6 2.8-2.2 7.8-6.8l2-1.8c.7-.6 1.3-1.2 2-1.7C42.7 29.6 48 25 48 17.6c0-8-6-14.5-13.4-14.5z">
+                  </path>
+                </svg>
+              </span>
+              <!-- <span>
+                <svg aria-label="좋아요" class="x1lliihq x1n2onr6" color="rgb(38, 38, 38)" fill="rgb(38, 38, 38)"
+                  height="24" role="img" viewBox="0 0 24 24" width="24">
+                  <title>좋아요</title>
+                  <path
+                    d="M16.792 3.904A4.989 4.989 0 0 1 21.5 9.122c0 3.072-2.652 4.959-5.197 7.222-2.512 2.243-3.865 3.469-4.303 3.752-.477-.309-2.143-1.823-4.303-3.752C5.141 14.072 2.5 12.167 2.5 9.122a4.989 4.989 0 0 1 4.708-5.218 4.21 4.21 0 0 1 3.675 1.941c.84 1.175.98 1.763 1.12 1.763s.278-.588 1.11-1.766a4.17 4.17 0 0 1 3.679-1.938m0-2a6.04 6.04 0 0 0-4.797 2.127 6.052 6.052 0 0 0-4.787-2.127A6.985 6.985 0 0 0 .5 9.122c0 3.61 2.55 5.827 5.015 7.97.283.246.569.494.853.747l1.027.918a44.998 44.998 0 0 0 3.518 3.018 2 2 0 0 0 2.174 0 45.263 45.263 0 0 0 3.626-3.115l.922-.824c.293-.26.59-.519.885-.774 2.334-2.025 4.98-4.32 4.98-7.94a6.985 6.985 0 0 0-6.708-7.218Z">
+                  </path>
+                </svg>
+              </span> -->
+              <span class="comment_btn">
+                <svg aria-label="댓글 달기" class="x1lliihq x1n2onr6" color="rgb(0, 0, 0)" fill="rgb(0, 0, 0)" height="24"
+                  role="img" viewBox="0 0 24 24" width="24">
+                  <title>댓글 달기</title>
+                  <path d="M20.656 17.008a9.993 9.993 0 1 0-3.59 3.615L22 22Z" fill="none" stroke="currentColor"
+                    stroke-linejoin="round" stroke-width="2"></path>
+                </svg>
+              </span>
+              <span class="share_btn">
+                <svg aria-label="게시물 공유" class="x1lliihq x1n2onr6" color="rgb(0, 0, 0)" fill="rgb(0, 0, 0)" height="24"
+                  role="img" viewBox="0 0 24 24" width="24">
+                  <title>게시물 공유</title>
+                  <line fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="2" x1="22" x2="9.218"
+                    y1="3" y2="10.083"></line>
+                  <polygon fill="none" points="11.698 20.334 22 3.001 2 3.001 9.218 10.084 11.698 20.334"
+                    stroke="currentColor" stroke-linejoin="round" stroke-width="2"></polygon>
+                </svg>
+              </span>
+            </div>
+            <span id="bookmark_btn" class="material-symbols-outlined">
+              bookmark
+            </span>
+          </div>
+          <div class="post_like">
+            <img src="/img/profile_img.jpg" alt="프로필 이미지">
+            <p><span>krystalk170</span>님 <span>외 10명</span>이 좋아합니다</p>
+          </div>
+          <ul class="comment_list">
+            <li>
+              <span>krystalk170</span>
+              <span>마라탕 먹고싶다....</span>
+            </li>
+            <li>
+              <span>reveur1920</span>
+              <span>마라탕 말고 마라샹궈가 먹고싶은데 마라샹궈먹자 제발</span>
+            </li>
+          </ul>
+          <p class="posting_time">35분 전</p>
+        </div>
+        <div class="comment_input_area">
+          <input type="text" class="comment_input" placeholder="댓글 달기...">
+          <button>게시</button>
+        </div>
+      </article>
+    </div>
+    <div class="main_right">
+      <div class="user_info">
+        <img src="img/profile_img.jpg" alt="프로필 사진">
+        <div class="user_info_txt">
+          <p>reveur1920</p>
+          <p>mara shanggua</p>
+        </div>
+      </div>
+      <div class="story_list_area">
+        <div class="story_list_top">
+          <span>스토리</span>
+          <span>모두 보기</span>
+        </div>
+        <ul class="story_list">
+          <li>
+            <div class="story_profile_img_border">
+              <img src="/img/profile_img.jpg" alt="프로필 사진">
+            </div>
+            <div class="story_user_info">
+              <p>maratang486</p>
+              <p>25분 전</p>
+            </div>
+          </li>
+          <li>
+            <div class="story_profile_img_border">
+              <img src="/img/profile_img.jpg" alt="프로필 사진">
+            </div>
+            <div class="story_user_info">
+              <p>icecream123</p>
+              <p>37분 전</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="recommend_list_area">
+        <div class="recommend_list_top">
+          <span>회원님을 위한 추천</span>
+          <span>모두 보기</span>
+        </div>
+        <ul class="recommend_list">
+          <li>
+            <div class="recommend_info_area">
+              <img src="/img/profile_img.jpg" alt="프로필 사진">
+              <div class="recommend_user_info">
+                <p>sushi987</p>
+                <p>icecream123님 외 10명이 팔로우하고 있습니다</p>
+              </div>
+            </div>
+            <p>팔로우</p>
+          </li>
+        </ul>
+      </div>
+      <footer>
+        <ul class="footer_top">
+          <li>소개</li>
+          <li>도움말</li>
+          <li>홍보 센터</li>
+          <li>API</li>
+          <li>채용 정보</li>
+          <li>개인정보처리방침약관</li>
+          <li>위치</li>
+          <li>언어</li>
+          <li>Meta Verified</li>
+        </ul>
+        <p>© 2023 INSTAGRAM FROM META</p>
+      </footer>
+    </div>
+  </main>
+</body>
+<script src="js/main.js"></script>
+
+</html>

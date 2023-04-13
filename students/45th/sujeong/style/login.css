@@ -1,0 +1,65 @@
+body {
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#borderBox {
+  width: 350px;
+  height: 400px;
+  border: 1px solid #bbbbbb;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+#logo {
+  margin: 35px 0;
+  font-family: 'Lobster';
+  font-size: 40px
+}
+
+
+.loginInput {
+  width: 260px;
+  height: 30px;
+  padding: 9px 0px 7px 8px;
+  margin-bottom: 5px;
+  border: 1px solid #dddddd;
+  border-radius: 1px;
+  background-color: #f7f7f7;
+}
+
+.loginInput::placeholder {
+  font-weight: 400;
+  color: #999999;
+}
+
+.loginBt {  
+  background-color: #a2cdea;
+  width: 270px;
+  height: 40px;
+  margin: 5px 0 60px;
+  font-weight: 600;
+  line-height: 40px;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  /* cursor: pointer; */
+}
+
+.loginBt_off {
+  background-color: #4cb5f9;
+}
+
+.findPw {
+  margin-bottom: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #385185;
+  cursor: pointer;
+}
