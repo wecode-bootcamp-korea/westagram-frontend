@@ -4,10 +4,10 @@
 
 nav {
   height: 50px;
-  margin: auto;
   display: flex;
   justify-content: space-evenly;
-  background-color: antiquewhite;
+  padding: 5px 150px 0 150px;
+  border-bottom: 1px solid rgb(209, 206, 206);
 }
 
 /*compass~user 아이콘*/
@@ -39,7 +39,7 @@ i.fa-instagram {
 input {
   width: 230px;
   padding: 5px 15px;
-  border-color: rgb(209, 206, 206);
+  border: 1px solid rgb(209, 206, 206);
   border-radius: 3px;
 }
 
@@ -60,16 +60,19 @@ i.fa-solid {
   color: rgb(209, 206, 206);
 }
 
+main {
+  margin: 40px 350px 0px 300px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
 /*feeds 전체 테두리*/
 div.feeds {
-  float: left;
   border: 1px solid rgb(192, 191, 191);
   border-radius: 3px;
   width: 550px;
-  height: 780px;
-  margin-top: 40px;
+  height: 810px;
   position: relative;
-  left: 250px;
   bottom: 10px;
 }
 
@@ -85,7 +88,7 @@ div.me-profile img {
 
 .me-profile {
   display: flex;
-  width: 187px;
+  width: 100%px;
   height: 50px;
   margin-bottom: 10px;
   margin-top: 10px;
@@ -109,13 +112,22 @@ span.나 {
   top: 23px;
 }
 
+div.dots {
+  width: 16px;
+  height: 10px;
+  background-image: url(./image/instagram\ icon.png);
+  background-position: -58px -372px;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
 /*피드 이미지*/
 
 .me-fid img {
   width: 550px;
   height: 550px;
 }
-
 /*하단 아이콘들*/
 .bottom-icon {
   width: 550px;
@@ -129,6 +141,12 @@ span.나 {
   margin-left: 15px;
   margin-top: 5px;
 }
+
+/*하트 이미지 테두리 빨간색으로 바꾸기
+.bottom-icon .heart-icon {
+  filter: invert(14%) sepia(86%) saturate(7031%) hue-rotate(1deg)
+    brightness(97%) contrast(120%);
+}*/
 
 /*comment 좌우반전*/
 .comment {
@@ -164,13 +182,29 @@ span.bold {
   font-weight: bold;
 }
 
-/*개발자가 되는~*/
+/*나 핫걸~*/
 div.fid-comment {
   margin-left: 15px;
+  margin-top: 10px;
+  font-size: 15px;
 }
 .time {
   font-size: 13px;
   color: rgb(163, 163, 163);
+}
+
+.comment1 {
+  position: relative;
+}
+
+img.small-heart {
+  width: 15px;
+  height: 15px;
+  filter: invert(86%) sepia(12%) saturate(13%) hue-rotate(320deg)
+    brightness(83%) contrast(81%);
+  position: absolute;
+  top: 4px;
+  right: 10px;
 }
 
 /*댓글 창*/

@@ -3,11 +3,9 @@
 }
 /*오른쪽 전체*/
 .main-right {
-  float: right;
   position: relative;
-  width: 450px;
-  height: 800px;
-  background-color: rgb(171, 215, 254);
+  width: 350px;
+  height: 700px;
 }
 
 /*오른쪽 al_zar 프로필*/
@@ -15,6 +13,7 @@
   display: flex;
   width: 100%;
   height: 50px;
+  margin-left: 5px;
   margin-bottom: 20px;
 }
 
@@ -39,20 +38,36 @@ span.나2 {
 button.모두_보기 {
   border: none;
   font-weight: bold;
-  font-size: 15px;
+  font-size: 17px;
   background-color: transparent;
+  position: absolute;
+  right: 15px;
+}
+
+li {
+  position: relative;
+}
+
+/*스토리&회원님을 위한 추천 글자 색 변경*/
+span.right-top {
+  color: rgb(146, 141, 141);
 }
 
 /*스토리 피드*/
+/*스토리 & 회원 추천 공통 테두리*/
 .story-feed,
 .recommend-feed {
   width: 100%;
-  height: 250px;
   border: 2px solid rgb(223, 222, 222);
   border-radius: 5px;
   overflow: hidden;
   padding: 15px 15px 0 15px;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.story-feed {
+  height: 250px;
 }
 
 .story-feed ul {
@@ -60,11 +75,15 @@ button.모두_보기 {
   width: 200px;
 }
 
-.story-feed ul li {
+/*회원 목록 공통 style 적용*/
+.story-feed ul li,
+.recommend-list ul li {
   list-style: none;
   display: flex;
+  margin-bottom: 13px;
 }
 
+/*스토리 이미지 & 테두리 색*/
 .story-people li img {
   width: 45px;
   height: 45px;
@@ -75,24 +94,53 @@ button.모두_보기 {
   background-clip: padding-box, border-box;
   border-radius: 70%;
   padding: 2px;
+  margin-right: 10px;
+}
+
+span.profile {
+  font-weight: bold;
+}
+
+/*위스타 ID 밑 글씨 공통 적용*/
+.story-time,
+.recommend-follow {
+  position: absolute;
+  left: 55px;
+  top: 21px;
+  color: rgb(146, 141, 141);
 }
 
 /*회원 추천 피드*/
-/**.recommend-feed {
-  width: 100%;
-  height: 250px;
-}**/
+
+.recommend-feed {
+  height: 230px;
+}
 
 .recommend-feed ul {
   padding-left: 0;
 }
 
-.recommend-list ul li {
-  list-style: none;
+.recommend-list li img {
+  width: 45px;
+  height: 45px;
+  border-radius: 70%;
+  margin-right: 10px;
 }
 
-.recommend-list li img {
-  width: 40px;
-  height: 40px;
-  border-radius: 70%;
+/* 팔로우 버튼*/
+
+button.follow {
+  border: none;
+  font-weight: bold;
+  font-size: 17px;
+  background-color: transparent;
+  position: absolute;
+  color: rgba(70, 158, 241, 255);
+  top: 10px;
+  right: 0;
+}
+
+footer {
+  font-size: 15px;
+  color: rgb(146, 141, 141);
 }
