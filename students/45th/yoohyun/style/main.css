@@ -1,9 +1,15 @@
 nav {
+  position: sticky;
+  top: 0;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   padding: 15px 100px;
+
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
 }
 
 nav > .logo {
@@ -77,20 +83,20 @@ main {
   justify-content: center;
   gap: 30px;
 
-  height: 93vh;
+  height: 97vh;
 
-  padding: 60px 0;
-  border-top: 1px solid #ddd;
+  padding: 50px 0;
 
   background-color: #efefef;
 }
 
 .postsContainer {
   width: 630px;
-  border: 1.5px solid #ddd;
+  /* border: 1.5px solid #ddd; */
 }
 
 .postsContainer article {
+  border: 1.5px solid #ddd;
   background-color: #fff;
 }
 
@@ -115,12 +121,34 @@ main {
   gap: 13px;
 }
 
+.createdAt {
+  width: 50px;
+
+  display: flex;
+  align-items: center;
+  gap: 3px;
+
+  color: #737373;
+}
+
+.createdAt span {
+  background-color: #737373;
+}
+
 .moreOptionsWrapper {
   /* 영역 내부에 포함된 span 자식들(점)을 세로 중앙 정렬시키는 코드 */
   display: flex;
   align-items: center;
 
   cursor: pointer;
+}
+
+.dot {
+  display: inline-block;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: #000;
 }
 
 .moreOptionsWrapper span {
@@ -203,11 +231,37 @@ main {
 }
 
 .commentsList {
-  margin-top: 10px;
+  border-top: 1px solid #ddd;
 }
 
 .commentsList p {
   font-size: 0.9rem;
+  padding: 8px;
+  margin-bottom: 7px;
+}
+
+.commentsList form {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.commentsList input {
+  width: 100%;
+
+  padding: 10px;
+
+  border: none;
+
+  outline: none;
+}
+
+.commentsList button {
+  width: 7%;
+  border: none;
+  background-color: #fff;
+  color: #0095f6;
 }
 
 /* aside 영역 시작 */
