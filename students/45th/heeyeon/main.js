@@ -1,13 +1,7 @@
 const commentBox = document.querySelector(".comment-box");
 const postBtn = document.querySelector(".btn-post-comment");
 
-commentBox.addEventListener("input", (comment) => {
-  const isTextareaFilled = comment.target.value.length !== 0 ? true : false;
-  postBtn.disabled = !isTextareaFilled;
-  isTextareaFilled
-    ? postBtn.classList.add("blue-button")
-    : postBtn.classList.remove("blue-button");
-});
+let isFilled = false;
 
 const submitComment = () => {
   const wrapper = document.createElement("div");
@@ -32,15 +26,32 @@ const submitComment = () => {
   comments.innerHTML = commentBox.value;
 
   commentBox.value = "";
+  isFilled = false;
+  postBtn.classList.remove("blue-button");
 };
 
 postBtn.addEventListener("click", () => {
+  if (!isFilled) return;
+
   submitComment();
+});
+
+//early return
+
+commentBox.addEventListener("input", (e) => {
+  isFilled = e.target.value.length !== 0 ? true : false;
+  postBtn.disabled = !isFilled;
+  isFilled
+    ? postBtn.classList.add("blue-button")
+    : postBtn.classList.remove("blue-button");
 });
 
 commentBox.addEventListener("keypress", (e) => {
   if (e.code === "Enter") {
     e.preventDefault();
+
+    if (!isFilled) return;
+
     submitComment();
   }
 });
