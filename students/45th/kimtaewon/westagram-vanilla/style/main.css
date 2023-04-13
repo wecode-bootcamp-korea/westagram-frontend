@@ -1,0 +1,332 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: 12px;
+}
+
+body {
+  background-color: #fafafa;
+}
+
+#loginLogo, #feedLogo {
+  font-family: 'Lobster', cursive, 'Montserrat', sans-serif;
+}
+
+#wrap {
+  width: 500px;
+  height: 600px;
+  border: 1px solid #e5e5e5;
+  background-color: #fff;
+  margin: 70px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.photo {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+#loginLogo {
+  height: 100px;
+  margin-top: 50px;
+  font-size: 70px;
+  text-align: center;
+}
+
+#inputBox {
+  width: 400px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+#inputBox input{
+  height: 50px;
+  border: 1px solid #e5e5e5;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  background-color: #fafafa;
+  font-size: 16px;
+}
+
+#inputBox input:focus{
+  place-content: ' ';
+}
+
+#loginBtn {
+  width: 400px;
+  height: 45px;
+  border: 0px;
+  border-radius: 5px;
+  margin-top: 20px;
+  background-color: blue;
+  color: white;
+  font-size: 21px;
+}
+
+.btnDefault {
+  opacity: 0.3;
+}
+
+.btnActive{
+  opacity: 1;
+  cursor: pointer;
+}
+
+#findPw {
+  margin-top: 170px;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+#navContainer {
+  border-bottom: 1px solid #e5e5e5;
+  background-color: #fff;
+}
+
+#navBox {
+  width: 800px;
+  height: 70px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navLeft {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#navIcon {
+  width: 24px;
+}
+
+#feedLogo {
+  border-left: 1px solid black;
+  margin-left: 15px;
+  padding-left: 15px;
+  font-size: 24px;
+}
+
+#navSearch {
+  width: 200px;
+  height: 25px;
+  border-radius: 3px;
+  border: 1px solid #e5e5e5;
+  margin-top: 2px;
+  background-color: #f5f5f5;
+  font-size: 12px;
+  text-align: center;
+}
+
+
+.navRight {
+  width: 100px;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+
+.navRight img{
+  width: 21px;
+}
+
+.navRight button {
+  border: 0px;
+  background-color: #fff;
+}
+
+#mainContainer {
+  width: 720px;
+  margin: 50px auto 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.feed {
+  border: 1px solid #e5e5e5;
+  background-color: #fff;
+}
+
+#feedSub {
+  width: 220px;
+}
+
+.feedTop {
+  height: 40px;
+  padding: 0 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.feedImg {
+  width: 468px;
+  height: 468px;
+}
+
+.more {
+  display: flex;
+  align-items: center;
+}
+
+.more img{
+  width: 21px;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+}
+
+.feedInfoBox {
+  display: flex;
+  justify-content: space-between;
+  height: 30px;
+  margin-bottom: 5px;
+  padding: 0 10px;
+}
+
+.feedInfoLeft {
+  width: 80px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.feedInfoBox img {
+  width: 21px;
+}
+
+.feedInfoRight button img{
+  width: 30px;
+}
+
+.feedInfoBtn {
+  border: 0px;
+  background-color: #fff;
+}
+
+.like {
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+}
+
+#feedTextBox {
+  height: 50px;
+  margin-top: 15px;
+  padding: 0 10px;
+  overflow: hidden;
+}
+
+.uploadTime {
+  color: #9f9f9f;
+  font-size: 8px;
+}
+
+.commentBox {
+  border-top: 1px solid #e5e5e5;
+  position: relative;
+}
+
+#comment {
+  width: 100%;
+  height: 35px;
+  border: 0px;
+  padding: 6px 10px;
+}
+
+.postBtn {
+  width: 30px;
+  height: 100%;
+  border: 0px;
+  background-color: #fff;
+  color: blue;
+  opacity: 0.3;
+  position: absolute;
+  right: 5px;
+}
+
+#subMe {
+  display: flex;
+  align-items: center;
+}
+
+.subImg {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.grayfont {
+  color: #9f9f9f;
+  font-size: 12px;
+}
+
+#subStory{
+  border: 1px solid #e5e5e5;
+  height: 200px;
+  margin: 10px 0;
+  background-color: #fff;
+}
+
+#subRecommend {
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  height: 145px;
+}
+
+#pageInfo {
+  margin-top: 10px;
+  opacity: 0.3;
+}
+
+.copyright {
+  margin-top: 10px;
+}
+
+.subMore {
+  border: 0px;
+  background-color: #fff;
+}
+
+#subStoryTop, #recommendTop{
+  padding: 10px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#subStoryList {
+  height: 165px;
+  overflow: hidden;
+}
+
+#subRecommendList {
+  height: 105px;
+  overflow: hidden;
+}
+
+.user {
+  height: 35px;
+  padding: 0 10px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.follow {
+  border: 0;
+  background-color: #fff;
+  color: #489ef2;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}

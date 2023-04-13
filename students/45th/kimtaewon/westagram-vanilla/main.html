@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>feed</title>
+  <!-- 구글 폰트 적용 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style/main.css">
+</head>
+
+<body>
+  <div id="feedWrap">
+    <!-- 네비게이션  -->
+    <nav id="navContainer">
+      <div id="navBox">
+        <div class="navLeft">
+          <img src="./img/아이콘.png" id="navIcon">
+          <span id="feedLogo">Instagram</span>
+        </div>
+        <input type="text" placeholder="검색" id="navSearch">
+        <div class="navRight">
+          <button>
+            <img src="./img/탐색.png" alt="">
+          </button>
+          <button>
+            <img src="./img/하트.png" alt="">
+          </button>
+          <button>
+            <img src="./img/마이페이지.png" >
+          </button>
+        </div>
+      </div>
+    </nav>
+    <!-- 메인페이지 -->
+    <div id="mainContainer">
+
+      <!-- 피드영역 -->
+      <div id="feeds">
+        <article class="feed">
+          <!-- 피드 탑 -->
+          <div class="feedTop">
+            <div class="userInfo">
+              <img src="./img/user/user1.jpg" alt="" class="photo">
+              <p class="nickName">apple_official</p>
+            </div>
+            <a href="" class="more">
+              <img src="./img/dot.svg">
+            </a>
+          </div>
+          <!-- 피드 사진 -->
+          <div class="feedMain">
+            <img src="./img/무지개사과 복사본.jpeg" class="feedImg">
+          </div>
+          <!-- 피드 바텀 -->
+          <div class="feedBottom">
+            <!-- 좋아요 퍼가기 북마크 -->
+            <div class="feedInfoBox">
+              <div class="feedInfoLeft">
+                <button class="feedInfoBtn"><img src="./img/heart.svg" alt=""></button>
+                <button class="feedInfoBtn"><img src="./img/comment.svg" alt=""></button>
+                <button class="feedInfoBtn"><img src="./img/share.svg" alt=""></button>
+              </div>
+              <div class="feedInfoRight">
+                <button class="feedInfoBtn">
+                  <img src="./img/bookmark.svg" alt="">
+                </button>
+              </div>
+            </div>
+            <!-- 좋아요 개수 & 누가 좋아요 누른지 -->
+            <div class="like">
+              <img src="./img/user/user2.jpg" alt="" class="photo">
+              <p class="nickName">samsung 님이 좋아합니다.</p>
+            </div>
+
+            <!-- 피드 내용 -->
+            <div id="feedTextBox">
+              <p class="feedText">애플 삼성에 팔거에요!</p>
+              <p class="uploadTime">50분전</p>
+            </div>
+            <!-- 댓글 -->
+            <div class="commentBox">
+                <input type="text" placeholder="댓글 달기..." id="comment" >
+                <button class="postBtn">게시</button>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- 피드 오른쪽 영역 -->
+      <div id="feedSub">
+        <div id="subMe">
+          <div class="subMeLeft">
+            <img src="./img/user/user3.jpg" class="subImg">
+          </div>
+          <div class="subMeRight">
+            <p class="nickName">wecode_bootcamp</p>
+            <p class="grayfont">WeCode | 위코드</p>
+          </div>
+        </div>
+        <div id="subStory">
+          <div id="subStoryTop">
+            <p class="grayfont">스토리</p>
+            <button class="subMore">모두보기</button>
+          </div>
+          <div id="subStoryList">
+            <div class="user">
+              <img src="./img/user/user4.jpg" class="photo">
+              <div class="nameTime">
+                <p class="nickName">intel</p>
+                <p class="uploadTime">15분전</p>
+              </div>
+            </div>
+            <div class="user">
+              <img src="./img/user/user5.jpg" class="photo">
+              <div class="nameTime">
+                <p class="nickName">lg</p>
+                <p class="uploadTime">15분전</p>
+              </div>
+            </div>
+            <div class="user">
+              <img src="./img/user/user6.jpg" class="photo">
+              <div class="nameTime">
+                <p class="nickName">google</p>
+                <p class="uploadTime">15분전</p>
+              </div>
+            </div>
+            <div class="user">
+              <img src="./img/user/user7.jpg" class="photo">
+              <div class="nameTime">
+                <p class="nickName">facebook</p>
+                <p class="uploadTime">15분전</p>
+              </div>
+            </div>
+            <div class="user">
+              <img src="./img/user/user8.jpg" class="photo">
+              <div class="nameTime">
+                <p class="nickName">kakao</p>
+                <p class="uploadTime">15분전</p>
+              </div>
+            </div>
+            <div class="user">
+              <img src="./img/user/user9.jpg" class="photo">
+              <div class="nameTime">
+                <p class="nickName">netflix</p>
+                <p class="uploadTime">15분전</p>
+              </div>
+            </div>
+            <div class="user">
+              <img src="./img/user/user10.jpg" class="photo">
+              <div class="nameTime">
+                <p class="nickName">tsmc</p>
+                <p class="uploadTime">15분전</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+        <div id="subRecommend">
+          <div id="recommendTop">
+            <p class="grayfont">회원님을 위한 추천</p>
+            <button class="subMore">모두보기</button>
+          </div>
+
+          <div id="subRecommendList">
+            <div class="user">
+              <img src="./img/user/user11.jpg" class="photo">
+              <div class="nameTime">
+                <p class="nickName">amazon</p>
+                <p class="uploadTime">2명이 좋아합니다.</p>
+              </div>
+              <button class="follow">팔로우</button>
+            </div>        
+            <div class="user">
+              <img src="./img/user/user12.jpg" class="photo">
+              <div class="nameTime">
+                <p class="nickName">meta</p>
+                <p class="uploadTime">2명이 좋아합니다.</p>
+              </div>
+              <button class="follow">팔로우</button>
+            </div>        
+            <div class="user">
+              <img src="./img/user/user13.jpg" class="photo">
+              <div class="nameTime">
+                <p class="nickName">naver</p>
+                <p class="uploadTime">2명이 좋아합니다.</p>
+              </div>
+              <button class="follow">팔로우</button>
+            </div>
+
+        </div>
+        <div id="pageInfo">
+          <p class="infoList">Instagram 정보, 지원, 홍보 센터, API,채용 정보,개인정보처리방침,약관,디렉터리,프로필,해시테그,언어</p>
+          <p class="copyright">@ 2023 INSTAGRAM</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="./js/main.js"></script>
+</body>
+</html>
