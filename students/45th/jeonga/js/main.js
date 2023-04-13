@@ -35,6 +35,8 @@ const paintComment = (comment) => {
   feedComment.appendChild(feedCommentP);
   feedComment.appendChild(heartIcon);
   feedComments.appendChild(feedComment);
+
+  commentInput.value = "";
 };
 
 const handleCommentBtn = () => {

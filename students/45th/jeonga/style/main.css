@@ -60,11 +60,11 @@ nav {
 .main-wrapper {
   padding: 70px 210px;
   display: flex;
+  justify-content: center;
 }
 
 .feeds {
   width: 600px;
-  margin-left: 100px;
 }
 
 .feeds article {
@@ -223,6 +223,47 @@ nav {
   border-radius: 3px;
 }
 
+.story .header,
+.recommendation .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.story .header span:first-child,
+.recommendation .header span:first-child {
+  color: gray;
+}
+
+.story {
+  padding: 10px;
+}
+
+.story-users {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.story-users div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.story-users div span {
+  line-height: 20px;
+}
+
+.story-users div span:first-child {
+  font-weight: bold;
+}
+
+.story-users div span:first-child .story .header span:last-child,
+.recommendation .header span:last-child {
+  font-weight: bold;
+}
+
 .main-right {
   width: 280px;
   height: 800px;
@@ -256,10 +297,55 @@ nav {
   height: 200px;
 }
 
+.story-users img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+  object-fit: cover;
+}
+
 .recommendation {
   width: 100%;
   height: 150px;
   margin-bottom: 20px;
+  padding: 10px;
+}
+
+.recommendation-users {
+  display: flex;
+  align-items: center;
+  margin: 5px 0;
+  position: relative;
+}
+
+.recommendation-users div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.recommendation-users div span:first-child {
+  font-weight: bold;
+}
+
+.recommendation-users div span:last-child {
+  color: gray;
+}
+
+.recommendation-users img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+  object-fit: cover;
+}
+
+.follow {
+  position: absolute;
+  right: 3px;
+  color: #0095f6;
+  font-weight: bold;
 }
 
 .story,
