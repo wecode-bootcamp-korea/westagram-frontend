@@ -1,0 +1,69 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+#mainPage {
+  height: 500px;
+  width: 401px;
+  border: 1px solid rgb(128, 128, 128);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+#titleLogin {
+  font-family: "Lobster", cursive;
+  font-size: 60px;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+#inputsLogin {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: auto;
+}
+.loginGrey {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  border: 1px solid rgb(128, 128, 128);
+  background-color: rgb(249, 249, 249);
+  font-size: 15px;
+}
+.loginGrey:focus {
+  outline: 0.5px solid rgb(108, 108, 108);
+}
+
+#submitLogin {
+  width: 300px;
+}
+
+#loginButton {
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  border-radius: 3px;
+  background-color: #63b5f9;
+  color: aliceblue;
+  border: 0px;
+  font-size: 15px;
+}
+#loginButton:hover {
+  background-color: #4ea0f4;
+  cursor: pointer;
+}
+#loginButton.welcomeBlue {
+  background-color: #4ea0f4;
+  cursor: pointer;
+}
+#forgotLogin {
+  position: absolute;
+  bottom: 30px;
+  text-decoration: none;
+  color: #546a98;
+}
