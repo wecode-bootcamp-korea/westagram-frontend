@@ -9,7 +9,6 @@ const okLogin = () => {
   if (id.value.length !== 0 && pw.value.length !== 0) {
     loginButton.style.backgroundColor = `#3C9BF2`;
     loginButton.style.cursor = `pointer`;
-    // loginButton.click = alert(`로그인 시도`);
   } else {
     loginButton.style.backgroundColor = `#C4E1FB`;
     loginButton.style.cursor = null;
