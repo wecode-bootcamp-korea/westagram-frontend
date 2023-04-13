@@ -71,7 +71,7 @@ div.feeds {
   border: 1px solid rgb(192, 191, 191);
   border-radius: 3px;
   width: 550px;
-  height: 810px;
+  height: 850px;
   position: relative;
   bottom: 10px;
 }
@@ -227,11 +227,19 @@ div.commentary {
 }
 
 /*게시 버튼*/
-button.게시 {
+button#게시 {
   position: absolute;
   top: 12px;
   right: 7px;
   border: none;
   background-color: rgb(255, 255, 255);
   color: rgb(117, 209, 245);
+}
+
+/*댓글 창 display: inline block 클래스 주는 용*/
+
+.for-js {
+  color: green;
+  font-size: 15px;
+  padding-left: 5px;
 }
