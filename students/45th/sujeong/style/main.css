@@ -42,7 +42,7 @@ nav {
   text-align: center;
   background-repeat: no-repeat;
 }
-/* input placeholder 안에 이미지 넣기 블로그 정리 */
+
 .search::-webkit-input-placeholder{
   background-image: url(https://cdn1.iconfinder.com/data/icons/hawcons/32/698627-icon-111-search-256.png) ;
   background-size: contain;
@@ -50,10 +50,6 @@ nav {
   background-repeat: no-repeat;
   text-align: center;
   text-indent: 0;
-}
-
-.nav_right {
-
 }
 
 .nav_right > img {
@@ -108,7 +104,7 @@ main {
 }
 
 .hidden_btn {
-cursor: pointer;
+  cursor: pointer;
 }
 
 .post_img_area {
@@ -166,10 +162,6 @@ cursor: pointer;
   width: 50%;
 }
 
-.comment_list>li {
-
-}
-
 .comment_list>li>span {
   text-overflow: ellipsis;
   overflow: hidden;
@@ -197,6 +189,7 @@ cursor: pointer;
   height: 100%;
   shape-outside: inset(calc(100% - 10px) 0 0 0);
   color: #999999;
+  cursor: pointer;
 }
 
 .posting_time {
@@ -225,12 +218,12 @@ cursor: pointer;
 
 .comment_input_area>button {
   color: #0095F6;
+  cursor: pointer;
 }
 /* main 우측 영역 */
 
 .main_right {
   width: 390px;
-  /* background-color: cornflowerblue; */
 }
 
 .user_info {
@@ -239,7 +232,6 @@ cursor: pointer;
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  /* background-color: skyblue; */
 }
 
 .user_info>img {
@@ -380,6 +372,7 @@ footer {
 .footer_top>li {
   font-size: 12px;
   padding: 0 5px;
+  cursor: pointer;
 }
 
 .footer_top>li::after {
