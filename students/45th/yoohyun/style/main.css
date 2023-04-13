@@ -112,7 +112,6 @@ main {
 .postHeader img {
   width: 32px;
   height: 32px;
-  border-radius: 32px;
 }
 
 .posterInfoWrapper {
@@ -175,8 +174,6 @@ main {
 .likedUsers img {
   width: 15px;
   height: 15px;
-  border: 1px solid #bbb;
-  border-radius: 50%;
 }
 
 .bold {
@@ -259,13 +256,109 @@ main {
 
 .commentsList button {
   width: 7%;
-  border: none;
   background-color: #fff;
-  color: #0095f6;
 }
 
 /* aside 영역 시작 */
 aside {
   width: 320px;
+}
+
+.currentUserInfoContainer {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  margin-bottom: 15px;
+}
+
+.profileImg {
+  border-radius: 50%;
+  border: 1px solid #ddd;
+}
+
+.currentUserInfoContainer img {
+  width: 70px;
+  height: 70px;
+}
+
+.currentUserInfoContainer p:first-of-type {
+  font-weight: 900;
+  margin-bottom: 3px;
+}
+
+.recommendedUserList {
+  padding: 15px;
   border: 1.5px solid #ddd;
+}
+
+.recommendedUserList > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 15px;
+}
+
+.recommendedUserList > div h3 {
+  color: #737373;
+}
+
+.recommendedUserList ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.recommendedUserList ul li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.userInfoWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.userInfoWrapper div h4 {
+  margin-bottom: 3px;
+}
+
+.userInfoWrapper div p {
+  color: #737373;
+}
+
+.recommendedUserList ul li img {
+  width: 40px;
+  height: 40px;
+}
+
+.debuttonize {
+  border: none;
+  color: #0095f6;
+  font-weight: 900;
+  cursor: pointer;
+}
+
+/* aside 영역 내 footer 시작 */
+footer {
+  margin-top: 25px;
+  color: #c7c7c7;
+  font-size: 12px;
+}
+
+footer ul {
+  display: flex;
+  flex-wrap: wrap;
+  /* align-content: space-around; */
+
+  height: 30px;
+  /* flex-wrap: wrap; 속성 내 줄바꿈 된 요소 사이의 간격을 주기 위한 코드 - 높이 속성 */
+}
+
+footer p {
+  margin: 25px 0;
 }

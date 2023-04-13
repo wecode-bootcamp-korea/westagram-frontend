@@ -52,8 +52,12 @@
         <article>
           <div class="postHeader">
             <div class="posterInfoWrapper">
-              <img src="./assets/profile_photo.jpg" alt="user profile photo" />
-              <h2>software_engineer_wannabe</h2>
+              <img
+                src="./assets/profile_photo.jpg"
+                alt="user profile photo"
+                class="profileImg"
+              />
+              <h2 class="bold">software_engineer_wannabe</h2>
               <div class="createdAt">
                 <span class="dot"></span>4일<span class="dot"></span>
               </div>
@@ -63,7 +67,7 @@
             </div>
           </div>
           <div class="postedImg">
-            <img src="./assets/post_dog_photo.jpg" alt="" />
+            <img src="./assets/post_dog_photo.jpg" alt="cute doggie pic" />
           </div>
           <div class="postContentContainer">
             <div class="interactionIconsWrapper">
@@ -80,6 +84,7 @@
               <img
                 src="https://images.unsplash.com/photo-1620194544222-8c956ca15f1d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80"
                 alt="user profile image"
+                class="profileImg"
               />
               <p>
                 <span class="bold">wework</span>님
@@ -98,14 +103,91 @@
             <p class="more">댓글 3개 모두 보기</p>
             <form action="">
               <input type="text" placeholder="댓글 달기..." />
-              <button class="bold">게시</button>
+              <button class="bold debuttonize">게시</button>
             </form>
           </div>
         </article>
       </section>
       <aside>
-        <div class="recommendedUserList">aside</div>
-        <footer></footer>
+        <div class="currentUserInfoContainer">
+          <img
+            src="./assets/profile_photo.jpg"
+            alt="user profile photo"
+            class="profileImg"
+          />
+          <div>
+            <p>software_engineer_wannabe</p>
+            <p>S.E. based in Aus | from S.Korea</p>
+          </div>
+        </div>
+        <div class="recommendedUserList">
+          <div>
+            <h3 class="bold">회원님을 위한 추천</h3>
+            <span class="bold">모두 보기</span>
+          </div>
+          <ul>
+            <li>
+              <div class="userInfoWrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+                  alt="first recommended user profile pic"
+                  class="profileImg"
+                />
+                <div>
+                  <h4 class="bold">tellmemoreaboutu</h4>
+                  <p>회원님이 팔로우합니다</p>
+                </div>
+              </div>
+              <button class="debuttonize">팔로우</button>
+            </li>
+
+            <li>
+              <div class="userInfoWrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+                  alt="first recommended user profile pic"
+                  class="profileImg"
+                />
+                <div>
+                  <h4 class="bold">tellmemoreaboutu</h4>
+                  <p>회원님이 팔로우합니다</p>
+                </div>
+              </div>
+              <button class="debuttonize">팔로우</button>
+            </li>
+            <li>
+              <div class="userInfoWrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+                  alt="first recommended user profile pic"
+                  class="profileImg"
+                />
+                <div>
+                  <h4 class="bold">tellmemoreaboutu</h4>
+                  <p>회원님이 팔로우합니다</p>
+                </div>
+              </div>
+              <button class="debuttonize">팔로우</button>
+            </li>
+          </ul>
+        </div>
+        <footer>
+          <ul>
+            <li>
+              <a href="#">소개&nbsp;&#183;&nbsp;</a>
+            </li>
+            <li><a href="#">도움말&nbsp;&#183;&nbsp;</a></li>
+            <li><a href="#">홍보 센터&nbsp;&#183;&nbsp;</a></li>
+            <li><a href="#">API&nbsp;&#183;&nbsp;</a></li>
+            <li><a href="#">채용 정보&nbsp;&#183;&nbsp;</a></li>
+            <li><a href="#">개인정보처리방침&nbsp;&#183;&nbsp;</a></li>
+            <li><a href="#">약관&nbsp;&#183;&nbsp;</a></li>
+            <li><a href="#">위치&nbsp;&#183;&nbsp;</a></li>
+            <li><a href="#">언어&nbsp;&#183;&nbsp;</a></li>
+            <li><a href="#">Meta Verified</a></li>
+          </ul>
+          <p>&copy; 2023 INSTAGRAM FROM META</p>
+        </footer>
       </aside>
     </main>
   </body>
