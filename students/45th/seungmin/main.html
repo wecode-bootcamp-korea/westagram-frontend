@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>westagram</title>
+    
+    <!-- 외부 스타일시트 연결 -->
+    <link rel="icon" type="image/png" href="imgs/favicon.png" />
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="main.css">
+    <style type="text/css"></style>
+    
+    <!-- 외부 스크립트 연결 -->
+    <script src="index.js" defer></script>
+    
+    <!-- 폰트어썸 -->
+    <script src="https://kit.fontawesome.com/684e97b7f2.js" crossorigin="anonymous"></script>
+
+</head>
+
+<!-- body start -->
+<body>
+    <main>
+        <!-- 헤더 -->
+        <header>
+            <nav>
+            <!-- 로고 -->
+            <div class="logo">
+                <div onClick="location.href='#'">
+                    <a><i class="fab fa-instagram"></i></a>
+                </div>
+                
+                <div class="wefont">
+                <a>WESTAGRAM</a>
+                </div>
+            </div>
+            <!-- 검색 -->
+            <div class="searchbar">
+                <input type="text" placeholder="검색">
+            </div>
+              <!-- 아이콘들 -->
+              <div class="nav">
+                <div class="navo" onClick="location.href='#'"></div>
+                <div class="navt" onClick="location.href='#'"></div>
+                <div class="navh" oncCick="location.href='#'"></div>  
+            </div>
+            </nav>
+            </header>
+
+
+        
+        <!-- 인스타그램 피드 & 스토리  -->
+        <article>
+            <!-- 인스타그램 피드 -->
+            <section class="peedleft">
+                <!-- peedleft의 헤더부분 -->
+                <div class="top">
+                    <div class="toplogo">
+                        <div class="profileImg">
+                            <a><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fb8pf0s%2Fbtr95gkS4cc%2FCGMVCMw4d35pzk6QQUSG60%2Fimg.jpg" alt=""></a>
+                        </div>
+                        <h4 class="memberid"><a>xmin.oh</a></h4>
+                    </div>
+                    <a><i class="fas fa-ellipsis-h"></i></a>
+
+                </div>
+                <!-- 피드이미지 -->
+                <div class="feedimg"></div>
+                <!-- 이미지 아래 부분 -->
+                <div class="peedundericons">
+                    <div class="underleft">
+                        <a><i class="fas fa-heart"></i></a>
+                        <a><i class="far fa-comment"></i></a>
+                        <a><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                    <div class="underight">
+                        <a><i class="far fa-bookmark"></i></a>
+                    </div>
+                </div>
+                <!-- 피드 아이곤 아래 좋아합니다 부분 -->
+                <div class="peedunderlikes">
+                    <div class="likesleft">
+                        <a><img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fb8pf0s%2Fbtr95gkS4cc%2FCGMVCMw4d35pzk6QQUSG60%2Fimg.jpg" alt=""></a>
+                        <p><a href="#">aniworld</a>님 외<a href="#"> 10명이</a> &nbsp;좋아합니다</p>
+                    </div>
+                </div>
+                <!-- 피드 아래 텍스트 부분 -->
+                <div class="peedtext">
+                    <p class="canon"><a href="#">canon_mj</a> 위워크에서 진행한 베이킹 클래스...<a> 더 보기</a></p>
+                    <div class="id2flexbox">
+                        <p class="id2"><a href="#">neceosecius</a> 거봐 좋았잖아~~~ 🌝 🌝</p>
+                        <a><i class="far fa-heart"></i></a>
+                    </div>
+                    <span class="minit">
+                        <p><a href="#">42분 전</a></p>
+                    </span>
+                 
+                </div>
+                 <!-- 피드아래 댓글 다는 부분 + 자바스크립트 코드 연동해야하는 부분 -->
+                 <div class="comment">
+                    <input id="name" clss="names" type="text" placeholder="댓글 달기...">
+                    <button class="upload" id="submit">게시</button>
+                </0>
+                </div>
+
+            </section>
+
+        <!-- 인스타그램 오른쪽 스토리부분 -->
+        <!-- 사이드 오른쪽 부분 -->
+        <section class="side-right">
+            <div class="side-container"  onclick="location.href='#'">
+                <div>
+                </div>
+                <div>
+                    <div>
+                    <p>wecode_bootcamp<br>
+                    <p>WeCode<span>위코드</span></p>
+                </div>
+                </div>
+            </div>
+
+            <div class="side-story">
+                <div class="side-navigation">
+                    <p>스토리</p>
+                    <div onclick="location.href='#'" class="see-all">
+                        모두 보기
+                    </div>
+                </div>
+                <div class="story" onclick="location.href='#'">
+                    <div class="story-img-one"></div>
+                    <div class="story-text">
+                        <p class="bold">_yum_s</p>
+                        <p class="color">2시간 전</p>
+                    </div>
+                </div>
+                <div class="story" onclick="location.href='#'">
+                    <div class="story-img-two"></div>
+                    <div class="story-text">
+                        <p class="bold">hyukyc</p>
+                        <p class="color">33분 전</p>
+
+                    </div>
+                </div>
+
+                <div class="story" onclick="location.href='#'">
+                    <div class="story-img-three"></div>
+                    <div class="story-text">
+                        <p class="bold">ujinSin</p>
+                        <p class="color">10시간 전</p>
+                    </div>
+                </div>
+
+                <div class="story" onclick="location.href='#'">
+                    <div class="story-img-four"></div>
+                    <div class="story-text">
+                        <p class="bold">selina</p>
+                        <p class="color">20분 전</p>
+                    </div>
+                </div>
+            </div>
+            <!-- 추천 시작 -->
+            <div class="side-pick">
+                <div class="side-navigation">
+                    <p>회원님을 위한 추천</p>
+                    <div onclick="location.href='#'" class="see-all">
+                        모두 보기
+                    </div>
+                </div>
+
+                <div class="side-wrap">
+                    <div class="sidewraps">
+                        <div class="side-img side-wrap-img1"></div>
+                        <div cass="side-childs">
+                            <p class="name">joaaaaaahye</p>
+                            <p class="info">hoo님 외 7명이 팔...</p>
+                        </div>
+                    </div>
+
+                    <button>팔로우</button>
+                </div>
+
+                <div class="side-wrap">
+                    <div class="sidewraps">
+                        <div class="side-img side-wrap-img2"></div>
+                        <div cass="side-childs">
+                            <p class="name">rampart81</p>
+                            <p class="info">god_jaewon님 외...</p>
+                        </div>
+                    </div>
+                    <button>팔로우</button>
+                </div>
+
+                <div class="side-wrap">
+                    <div class="sidewraps">
+                        <div class="side-img side-wrap-img3"></div>
+                        <div cass="side-childs">
+                            <p class="name">shwnjjoo</p>
+                            <p class="info">Hwayeon 외 4명이...</p>
+                        </div>
+                    </div>
+
+                    <button>팔로우</button>
+                </div>
+            </div>
+
+            <div class="footer-wrapper">
+                <p>Instagram 정보 · 지원 · 홍보센터 · API · <br>채용정보
+                개인정보처리방침 · 약관 ·<br> 디렉터리 · 프로필 · 해시태그 · 언어</p>
+                <p>ⓒ 2023 INSTAGRAM</p>
+            </div>
+        </section>
+
+
+        </article>
+
+    </main>
+    <script src="index.js" defer></script>
+</body>
+</html>
+
+
