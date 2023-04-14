@@ -47,7 +47,7 @@ nav{
     
 }
 
-input[name='search']{
+input[id='search']{
     text-align: center;
 }
 
@@ -135,12 +135,16 @@ article{
 
 }
 
-.article_showing_reply{
-    display: flex;
-    justify-content: space-between;
-    
+#article_reply
+{
     padding:7px;
     padding-bottom: 0;
+}
+
+#article_reply_add{
+    display: flex;
+    justify-content: space-between;
+
 }
 
 .article_time{
@@ -152,17 +156,23 @@ article{
 }
 
 .article_reply{
+    display: flex;
+    justify-content: space-between;
     padding:7px;
 }
 
-.article_reply input{
+#reply_txt{
     border:none;
-    width:100%;
+    outline:none;
+    width:90%;
 }
 
-.article_reply input:focus{
-    outline: 0;
+
+#reply_button{
+    border:none;
+    background-color: blue;
 }
+
 
 .main-right{
     flex-grow: 1;

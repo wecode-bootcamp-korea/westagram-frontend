@@ -1,0 +1,21 @@
+const btn = document.getElementById('button');
+const id = document.getElementById('id');
+const pw =document.getElementById('password');
+
+//// id & pw input -> button validataion (blue)
+window.addEventListener('input', loginValid)
+
+id.addEventListener('input', function(){
+  console.log(id.value)
+})
+
+pw.addEventListener('input', function(){
+    console.log(pw.value)
+})
+
+function loginValid(){
+    if(id.value && pw.value) {
+        btn.style.backgroundColor = '#4cb5f9';
+    }
+}
+

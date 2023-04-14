@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>main</title>
-    <link href="mainStyle.css" rel="stylesheet"/>
+    <link href="mainPage_Style.css" rel="stylesheet"/>
     <script src="https://kit.fontawesome.com/0d9c4f26f1.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -15,7 +15,7 @@
         </span>
 
         <span class = 'nav_part'>
-            <input type = "text" name="search" placeholder="검색"/>
+            <input type = "text" id="search" placeholder="검색"/>
         </span>
         
         <span class = 'nav_part' width = 30>
@@ -82,15 +82,19 @@
                     </div>
                 </div>
                 
-                <div class = 'article_showing_reply'>
-                    <div>
-                        <b>mickey</b>
-                        계란반숙
+                <div id = 'article_reply'>
+                    <div id = 'article_reply_add'>
+                        <div>
+                            <b>mickey</b>
+                            계란반숙
+                        </div>
+    
+                        <div>
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+
                     </div>
 
-                    <div>
-                        <i class="fa-regular fa-heart"></i>
-                    </div>
                     
 
                 </div>
@@ -101,7 +105,8 @@
                 </div>
 
                 <div class = 'article_reply'>
-                    <input type="text" name="reply" placeholder="댓글 달기...">
+                    <input type="text" id="reply_txt" placeholder="댓글 달기...">
+                    <input type = 'button' id = 'reply_button' value = '게시'>
 
                 </div>
 
@@ -117,11 +122,11 @@
             <!-- <p>main-right</p> -->
 
             <div class = 'side_profile'>
-                <img src="./img/mickey_profile.jpg" width=60
+                <img src="./img/mm.jpg" width=60
                 style="border-radius: 70%;">
 
                 <div class = 'profile_id'>
-                    <b>hhyunah</b><br>Hyunah Park
+                    <b>olive</b><br>Hyunah Park
                 </div>
             </div>
 
@@ -205,6 +210,6 @@
 
     </main>
 
-    
+    <script src="mainPage_Scrip.js"></script>
 </body>
 </html>
