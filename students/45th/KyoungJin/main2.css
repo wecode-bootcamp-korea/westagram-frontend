@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
 }
+
 /*오른쪽 전체*/
 .main-right {
   position: relative;
@@ -11,23 +12,22 @@
 /*오른쪽 al_zar 프로필*/
 .right-me {
   display: flex;
-  width: 100%;
   height: 50px;
   margin-left: 5px;
   margin-bottom: 20px;
 }
 
 .right-me img {
-  border-radius: 70%;
   width: 50px;
   height: 50px;
+  border-radius: 70%;
 }
 
 .right-me span {
   margin-left: 10px;
 }
 
-span.나2 {
+span.me-desc2 {
   position: absolute;
   top: 25px;
   left: 50px;
@@ -36,12 +36,12 @@ span.나2 {
 /*모두 보기 버튼*/
 
 button.모두_보기 {
+  position: absolute;
+  right: 15px;
+  background-color: transparent;
   border: none;
   font-weight: bold;
   font-size: 17px;
-  background-color: transparent;
-  position: absolute;
-  right: 15px;
 }
 
 li {
@@ -54,16 +54,16 @@ span.right-top {
 }
 
 /*스토리 피드*/
+
 /*스토리 & 회원 추천 공통 테두리*/
 .story-feed,
 .recommend-feed {
-  width: 100%;
+  position: relative;
+  margin-bottom: 15px;
+  padding: 15px 15px 0 15px;
   border: 2px solid rgb(223, 222, 222);
   border-radius: 5px;
   overflow: hidden;
-  padding: 15px 15px 0 15px;
-  margin-bottom: 15px;
-  position: relative;
 }
 
 .story-feed {
@@ -72,29 +72,28 @@ span.right-top {
 
 .story-feed ul {
   padding-left: 0;
-  width: 200px;
 }
 
 /*회원 목록 공통 style 적용*/
 .story-feed ul li,
 .recommend-list ul li {
-  list-style: none;
   display: flex;
   margin-bottom: 13px;
+  list-style: none;
 }
 
 /*스토리 이미지 & 테두리 색*/
 .story-people li img {
   width: 45px;
   height: 45px;
-  border: 2px solid transparent;
+  margin-right: 10px;
+  padding: 2px;
   background-image: linear-gradient(#fff, #fff),
     linear-gradient(200deg, rgb(255, 0, 162) 0%, orange 100%);
   background-origin: border-box;
   background-clip: padding-box, border-box;
+  border: 2px solid transparent;
   border-radius: 70%;
-  padding: 2px;
-  margin-right: 10px;
 }
 
 span.profile {
@@ -123,24 +122,24 @@ span.profile {
 .recommend-list li img {
   width: 45px;
   height: 45px;
-  border-radius: 70%;
   margin-right: 10px;
+  border-radius: 70%;
 }
 
 /* 팔로우 버튼*/
 
 button.follow {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  color: rgba(70, 158, 241, 255);
+  background-color: transparent;
   border: none;
   font-weight: bold;
   font-size: 17px;
-  background-color: transparent;
-  position: absolute;
-  color: rgba(70, 158, 241, 255);
-  top: 10px;
-  right: 0;
 }
 
 footer {
-  font-size: 15px;
   color: rgb(146, 141, 141);
+  font-size: 15px;
 }

@@ -73,3 +73,5 @@ CommentBox.addEventListener("keyup", function (e) {
     CommentBox.value = "";
   }
 });
+
+//주석은 블로그에 정리하고 지울 것
