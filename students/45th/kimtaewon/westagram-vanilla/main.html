@@ -18,19 +18,19 @@
     <nav id="navContainer">
       <div id="navBox">
         <div class="navLeft">
-          <img src="./img/아이콘.png" id="navIcon">
+          <img src="./img/아이콘.png" id="navIcon" alt="instagram icon">
           <span id="feedLogo">Instagram</span>
         </div>
         <input type="text" placeholder="검색" id="navSearch">
         <div class="navRight">
           <button>
-            <img src="./img/탐색.png" alt="">
+            <img src="./img/탐색.png" alt="search icon" id="searchIcon">
           </button>
           <button>
-            <img src="./img/하트.png" alt="">
+            <img src="./img/하트.png" alt="like icon" id="heartIcon">
           </button>
           <button>
-            <img src="./img/마이페이지.png" >
+            <img src="./img/마이페이지.png" alt="my page" id="mypageIcon">
           </button>
         </div>
       </div>
@@ -60,13 +60,13 @@
             <!-- 좋아요 퍼가기 북마크 -->
             <div class="feedInfoBox">
               <div class="feedInfoLeft">
-                <button class="feedInfoBtn"><img src="./img/heart.svg" alt=""></button>
-                <button class="feedInfoBtn"><img src="./img/comment.svg" alt=""></button>
-                <button class="feedInfoBtn"><img src="./img/share.svg" alt=""></button>
+                <button class="feedInfoBtn"><img src="./img/heart.svg" alt="like icon" id="likeIcon"></button>
+                <button class="feedInfoBtn"><img src="./img/comment.svg" alt="comment icon" id="commentIcon"></button>
+                <button class="feedInfoBtn"><img src="./img/share.svg" alt="share icon" id="shareIcon"></button>
               </div>
               <div class="feedInfoRight">
                 <button class="feedInfoBtn">
-                  <img src="./img/bookmark.svg" alt="">
+                  <img src="./img/bookmark.svg" alt="bookmark icon" id="bookmarkIcon">
                 </button>
               </div>
             </div>
@@ -81,10 +81,21 @@
               <p class="feedText">애플 삼성에 팔거에요!</p>
               <p class="uploadTime">50분전</p>
             </div>
-            <!-- 댓글 -->
+            <!-- 댓글 추가되는 영역 -->
+            <div id="postCommentBox">
+              <!-- <div class="commentList">
+                  <p class="commentUser">steve_jobs</p>
+                  <p class="commentText">그러지마!!!</p>
+              </div> -->
+              <!-- <div class="commentList">
+                <p class="commentUser">china</p>
+                <p class="commentText">내가살래요</p>
+            </div> -->
+            </div>
+            <!-- 댓글 입력창 -->
             <div class="commentBox">
                 <input type="text" placeholder="댓글 달기..." id="comment" >
-                <button class="postBtn">게시</button>
+                <button id="postBtn" class="postBtn postBtnDefault">게시</button>
             </div>
           </div>
         </article>
