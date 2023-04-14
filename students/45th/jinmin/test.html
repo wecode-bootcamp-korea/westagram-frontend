@@ -13,7 +13,7 @@
 <body>
 
 
-  <div id="replies" class="replies">
+  <!-- <div id="replies" class="replies">
     <div class="replyBox">
       <div class="userName">1</div>
       <div class="userTalk">하나</div>
@@ -26,16 +26,30 @@
     </div>
 
     <button id="click">클릭</button>
+  </div> -->
+
+  <div id="container">
+    <label>Enter your name:</label>
+    <label for="test">실험<input id="test" type="text" /></label>
+    <button id="submit">Submit</button>
   </div>
 
-  <script>
-    const replies = document.querySelector(`#replies`);
-    const replyBox = document.querySelectorAll(`.replyBox`);
-    const click = document.querySelector(`#click`);
 
-    click.addEventListener(`click`, () => {
-      replyBox[0].remove();
-    })
+  <script>
+    // const replies = document.querySelector(`#replies`);
+    // const replyBox = document.querySelectorAll(`.replyBox`);
+    // const click = document.querySelector(`#click`);
+
+    // click.addEventListener(`click`, () => {
+    //   replyBox[0].remove();
+    // });
+
+    document.addEventListener('mouseup', function (e) {
+      var container = document.getElementById('container');
+      if (!container.contains(e.target)) {
+        container.style.display = 'none';
+      }
+    });
 
   </script>
 
