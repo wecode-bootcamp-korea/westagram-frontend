@@ -48,11 +48,10 @@ const posting = () => {
 
 const post = (keyEvent) => {
    activePostBtn();
-  
   if(keyEvent.keyCode === 13) {
-    posting();
+    return posting();
   } else {
-    commentPostBtn.addEventListener('click', posting);
+    return commentPostBtn.addEventListener('click', posting);
   }
 }
 

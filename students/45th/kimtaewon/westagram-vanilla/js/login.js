@@ -10,8 +10,6 @@ const activeLogin = () => {
   if(pwValue.length >= 5 && idValue.includes('@')) {
     return loginBtn.className = (idValue.length > 0 && pwValue.length > 0 ? 'btnActive' : "btnDefault")
   }
-
-
 }
 
 id.addEventListener('keyup', activeLogin);

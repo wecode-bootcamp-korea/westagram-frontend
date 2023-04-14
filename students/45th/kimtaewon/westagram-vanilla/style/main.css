@@ -336,13 +336,14 @@ body {
 }
 
 #postCommentBox {
-  padding: 0 10px;
+  padding-left: 10px;
 }
 
 .commentList {
-  height: 20px;
+  height: 25px;
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .commentUser {
@@ -352,3 +353,15 @@ body {
 .commentText {
   margin-left: 10px;
 }
+
+.commentLikeBtn {
+  position: absolute;
+  right: 15px;
+  border: 0;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.commetLike {
+  width: 15px;
+}
+
