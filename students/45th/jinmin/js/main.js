@@ -7,14 +7,17 @@ const inputReplyBtn = document.querySelector(`#inputReplyBtn`);
 
 // 함수
 const addReply = () => {
-  replies.innerHTML += `
+  console.log(inputReply.value.length);
+  if (inputReply.value.length) {
+    replies.innerHTML += `
     <div class="replyBox">
       <div class="userName">나당</div>
       <div class="userTalk">${inputReply.value}</div>
       <div class="delReply">x</div>
     </div>
   `;
-  inputReply.value = ``;
+    inputReply.value = ``;
+  }
 };
 
 // 실행
