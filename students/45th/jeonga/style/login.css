@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
 .login {
   width: 400px;
   border: 1px solid rgba(128, 128, 128, 0.5);
@@ -16,6 +18,11 @@
   margin-bottom: 50px;
 }
 
+.login-id__wrapper,
+.login-password__wrapper {
+  width: 100%;
+}
+
 .login-id,
 .login-password {
   width: 100%;
@@ -26,12 +33,13 @@
   border-radius: 3px;
 }
 
-.login-id {
-  margin-bottom: 10px;
+.login-id,
+.login-password {
+  margin-bottom: 3px;
 }
 
 .login-password {
-  margin-bottom: 20px;
+  margin-top: 10px;
 }
 
 .login-button {
@@ -42,6 +50,7 @@
   background-color: #c4e1fb;
   color: white;
   margin-bottom: 180px;
+  margin-top: 20px;
 }
 
 .blue:hover {
