@@ -7,8 +7,8 @@ body {
   background-color: #FAFAFA;
 }
 
-/* nav */
-nav {
+/* header */
+header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,35 +26,35 @@ nav {
   border-bottom: 1px solid #F3F3F3;
 }
 
-nav section {
+header nav {
   display: flex;
   justify-content: space-between;
 
   width: 1150px;
 }
 
-nav section * {
+header nav * {
   display: flex;
   align-items: center;
 }
 
-nav section img {
+header nav img {
   width: 25px;
 }
 
-nav section .coImgDiv {
+header nav .coImgDiv {
   border-right: 1px solid black;
   width: 50px;
   height: 30px;
 }
 
-nav section .coNameDiv {
+header nav .coNameDiv {
   font-family: 'Lobster', cursive;
 
   padding-left: 20px;
 }
 
-nav section .searchDiv .searchBar {
+header nav .searchDiv .searchBar {
   background-color: #FAFAFA;
   border: 1px solid #DBDBDB;
   border-radius: 2px;
@@ -62,7 +62,7 @@ nav section .searchDiv .searchBar {
   text-align: center;
 }
 
-nav section .userDiv img {
+header nav .userDiv img {
   margin: 5px
 }
 
@@ -74,28 +74,28 @@ main {
   margin: 80px auto;
 }
 
-main .feeds {
+main section {
   border: 1px solid #E6E6E6;
   background-color: #FFF;
   width: 700px;
   float: left;
 }
 
-main .feeds article {
+main section article {
   width: 100%;
 }
 
-main .feeds article .userInfo {
+main section article .userInfo {
   display: flex;
   justify-content: space-between;
   line-height: 60px;
 }
 
-main .feeds article .userInfo div {
+main section article .userInfo div {
   display: flex;
 }
 
-main .feeds article .userInfo div .userImg {
+main section article .userInfo div .userImg {
   background-image: url("https://t1.daumcdn.net/cfile/tistory/24283C3858F778CA2E");
   background-size: cover;
   background-position: center;
@@ -107,29 +107,29 @@ main .feeds article .userInfo div .userImg {
   border-radius: 50%;
 }
 
-main .feeds article .userInfo .userMenu {
+main section article .userInfo .userMenu {
   margin-right: 15px;
 
   font-size: 20px;
 }
 
-main .feeds article .feedsImgs {
+main section article .feedsImgs {
   width: 100%;
   height: 700px;
   background-image: url("https://images.unsplash.com/photo-1567206563064-6f60f40a2b57?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80");
 }
 
-main .feeds article .feedsWork {
+main section article .feedsWork {
   display: flex;
   justify-content: space-between;
   padding: 10px;
 }
 
-main .feeds article .feedsWork img {
+main section article .feedsWork img {
   width: 25px;
 }
 
-main .feeds article .feedsWork .wokrs {
+main section article .feedsWork .wokrs {
   display: flex;
   justify-content: space-between;
 
@@ -137,11 +137,11 @@ main .feeds article .feedsWork .wokrs {
   border: 1px solid red;
 }
 
-main .feeds article .feedsWork .bookmark {
+main section article .feedsWork .bookmark {
   width: 25px;
 }
 
-main .feeds article .whoLike .whoIs .userImg {
+main section article .whoLike .whoIs .userImg {
   background-color: black;
 
   width: 30px;
@@ -151,7 +151,7 @@ main .feeds article .whoLike .whoIs .userImg {
   margin-right: 10px;
 }
 
-main .feeds article .reples {
+main section article .reples {
   padding: 10px;
   border: 1px solid red;
 }
@@ -166,25 +166,25 @@ main .feeds article .reples {
   padding: 10px;
 }
 
-/* main-right */
-main .main-right {
+/* aside */
+main aside {
   float: right;
 
   width: 380px;
 }
 
-main .main-right * {
+main aside * {
   margin-bottom: 5px;
   padding: 5px;
 }
 
-/* main-right > me */
-main .main-right .me {
+/* aside > me */
+main aside .me {
   display: flex;
   align-items: center;
 }
 
-main .main-right .me .myImg {
+main aside .me .myImg {
   background-color: black;
 
   width: 50px;
@@ -194,12 +194,12 @@ main .main-right .me .myImg {
   margin-right: 10px;
 }
 
-main .main-right .me .myName * {
+main aside .me .myName * {
   margin: 0px;
   padding: 0px;
 }
 
-main .main-right .users {
+main aside .users {
   display: flex;
   align-items: center;
 
@@ -207,8 +207,8 @@ main .main-right .users {
   padding: 0px;
 }
 
-/* main-right > story , recomendUser */
-main .main-right .rightHeaders {
+/* aside > story , recomendUser */
+main aside .rightHeaders {
   display: flex;
   justify-content: space-between;
 
@@ -216,22 +216,22 @@ main .main-right .rightHeaders {
   padding: 0px 5px;
 }
 
-main .main-right .rightHeaders * {
+main aside .rightHeaders * {
   margin: 0px;
 }
 
-main .main-right .rightHeaders .smallHeader {
+main aside .rightHeaders .smallHeader {
   color: #999999;
 }
 
-main .main-right .users .userState {
+main aside .users .userState {
   display: flex;
   align-items: center;
   margin: 0px;
   padding-left: 10px;
 }
 
-main .main-right .users .userImg {
+main aside .users .userImg {
   background-color: black;
 
   width: 40px;
@@ -241,44 +241,44 @@ main .main-right .users .userImg {
   margin-right: 10px;
 }
 
-main .main-right .users .userDesc {
+main aside .users .userDesc {
   margin: 0px;
   padding: 0px;
   line-height: 0px;
 }
 
-main .main-right .users .userDesc .userPlay {
+main aside .users .userDesc .userPlay {
   color: #999999;
 }
 
-/* main-right > story */
-main .main-right .story {
+/* aside > story */
+main aside .story {
   background-color: white;
   border: 1px solid #E6E6E6;
 
   padding: 10px;
 }
 
-main .main-right .story .storyMain {
+main aside .story .storyMain {
   margin: 0px;
   padding: 0px;
 }
 
 
-/* main-right > recomendUser */
-main .main-right .recomendUser {
+/* aside > recomendUser */
+main aside .recomendUser {
   background-color: white;
   border: 1px solid #E6E6E6;
 
   padding: 10px;
 }
 
-main .main-right .recomendUser .recomendUserMain {
+main aside .recomendUser .recomendUserMain {
   margin: 0px;
   padding: 0px;
 }
 
-main .main-right .recomendUser .recomendUserMain .users {
+main aside .recomendUser .recomendUserMain .users {
   display: flex;
   justify-content: space-between;
 }
