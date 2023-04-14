@@ -4,7 +4,8 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>westagram_jeon</title>
+        <title>westagram_main_jeon</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
         <link rel="stylesheet" href="style/common.css" />
         <link rel="stylesheet" href="style/main.css" />
     </head>
@@ -12,17 +13,17 @@
     <body>
         <nav>
             <div>
-                <img class="instagram-navIcon" src="/image/navIcon/instagram.png"/>
+                <img class="instagram-navIcon" src="image/navIcon/instagram.png"/>
                 <span class="logo-write">Westagram</span>
             </div>
             <div>
                 <input class="search" type="text" placeholder="검색" />
-                <img class="search-navIcon" src="/image/navIcon/search.png"/>
+                <img class="search-navIcon" src="image/navIcon/search.png"/>
             </div>
             <div>
-                <img class="explore-navIcon" src="/image/navIcon/explore.png"/>
-                <img class="heart-navIcon" src="/image/navIcon/heart.png"/>
-                <img class="profile-navIcon" src="/image/navIcon/profile.png"/>
+                <img class="explore-navIcon" src="image/navIcon/explore.png"/>
+                <img class="heart-navIcon" src="image/navIcon/heart.png"/>
+                <img class="profile-navIcon" src="image/navIcon/profile.png"/>
             </div>
         </nav>
 
@@ -56,11 +57,20 @@
                             </details>
                         </div>
                         <div id="comment-next">
-                            <div>
-                                <span>wecode 다 같이 화이팅~~~!</span>
-                                <img class="heart-commentIcon" src="image/navIcon/heart.png"/>
+                            <div class="appendChild-add">
+                                <div>
+                                    <span>wecode 다 같이 화이팅~~~!</span>
+                                    <span class="deleteAndLike">
+                                        <button class="delete-button">
+                                            <img class="delete-commentIcon" src="image/main/feed/deleteicon.png"/>
+                                        </button>
+                                        <button class="like-button">
+                                            <img class="heart-commentIcon" src="image/navIcon/heart.png"/>
+                                        </button>
+                                    </span>
+                                </div>
+                                <div class="comment-time">42분 전</div>
                             </div>
-                            <div class="comment-time">42분 전</div>
                         </div>
                     </div>
                 </div>
