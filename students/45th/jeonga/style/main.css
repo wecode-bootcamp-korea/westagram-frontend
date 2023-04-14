@@ -163,7 +163,6 @@ nav {
 }
 
 .write-comment {
-  width: 100%;
   position: relative;
 }
 
@@ -266,7 +265,6 @@ nav {
 
 .main-right {
   width: 280px;
-  height: 800px;
   margin-left: 30px;
 }
 
@@ -293,21 +291,23 @@ nav {
 }
 
 .story {
-  width: 100%;
   height: 200px;
 }
 
 .story-users img {
   width: 40px;
   height: 40px;
+}
+
+.story-users img,
+.recommendation-users img {
   border-radius: 50%;
   margin-right: 10px;
   object-fit: cover;
 }
 
 .recommendation {
-  width: 100%;
-  height: 150px;
+  height: 170px;
   margin-bottom: 20px;
   padding: 10px;
 }
@@ -323,6 +323,7 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  line-height: 20px;
 }
 
 .recommendation-users div span:first-child {
@@ -334,16 +335,13 @@ nav {
 }
 
 .recommendation-users img {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  margin-right: 10px;
-  object-fit: cover;
+  width: 35px;
+  height: 35px;
 }
 
 .follow {
   position: absolute;
-  right: 3px;
+  right: 0px;
   color: #0095f6;
   font-weight: bold;
 }
