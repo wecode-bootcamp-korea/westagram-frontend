@@ -196,11 +196,13 @@ border-radius: 50px;
   display: flex;
   gap: 8px;
   padding: 4px 12px 0 12px;
+  flex: 1;
   }
   .commentSection-comment{
     white-space: pre-wrap;
-    max-width: 320px; 
+    max-width: 300px; 
     word-wrap: break-word;
+    
     }
 
 .comment-heart{
@@ -208,6 +210,23 @@ border-radius: 50px;
   height: 16px;
   cursor: pointer;
 }
+
+.transparent-heart{
+  background-image: url(/heart.png);
+  background-size: 16px 16px;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.red-heart{
+  background-image: url(/reaction_heart.png);
+  background-size: 16px 16px;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
 .img-gap{
   display: flex;
   gap: 8px;

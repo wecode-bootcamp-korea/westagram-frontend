@@ -6,10 +6,10 @@ let isFilled = false;
 const submitComment = () => {
   const wrapper = document.createElement("div");
   const comments = document.createElement("div");
-  const heartImg = document.createElement("img");
+  const likeHeart = document.createElement("div");
   const container = document.createElement("div");
   const userName = document.createElement("div");
-  const place = document.querySelector(".test");
+  const place = document.querySelector(".comment-area");
   const removeComment = document.createElement("button");
   const imgWrapper = document.createElement("div");
 
@@ -19,12 +19,12 @@ const submitComment = () => {
   container.appendChild(comments);
   wrapper.appendChild(imgWrapper);
   imgWrapper.appendChild(removeComment);
-  imgWrapper.appendChild(heartImg);
+  imgWrapper.appendChild(likeHeart);
 
   container.className = "commentSection_left";
-  heartImg.src = "./heart.png";
   removeComment.placeholder = "삭제";
-  heartImg.className = "comment-heart";
+  likeHeart.className = "transparent-heart";
+  console.log(likeHeart.classList);
   removeComment.className = "comment-heart";
   removeComment.classList.add("btn-remove");
   imgWrapper.className = "img-gap";
@@ -36,12 +36,15 @@ const submitComment = () => {
   removeComment.innerHTML = "삭제";
   removeComment.addEventListener("click", () => place.removeChild(wrapper));
 
-  heartImg.addEventListener(
-    "click",
-    heartImg.addEventListener("click", () => {
-      heartImg.src = "./reaction_heart.png";
-    }),
-  );
+  likeHeart.addEventListener("click", () => {
+    const isTransparent = likeHeart.classList.contains("transparent-heart");
+    if (isTransparent) {
+      likeHeart.className = "red-heart";
+    } else {
+      likeHeart.classList.remove("red-heart");
+      likeHeart.classList.add("transparent-heart");
+    }
+  });
 
   commentBox.value = "";
   isFilled = false;
@@ -73,5 +76,3 @@ commentBox.addEventListener("keypress", (e) => {
     submitComment();
   }
 });
-
-//del
