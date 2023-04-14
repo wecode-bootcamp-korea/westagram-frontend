@@ -24,9 +24,12 @@ function addComment(event) {
 
 function renderComments() {
   commentList.innerHTML = ""; // 댓글 목록을 초기화
-  comments.forEach((comment) => {
+  comments.forEach((comment, index) => {
+    const newCommentWrapper = document.createElement("div"); // 댓글 컨테이너 생성
     const newComment = document.createElement("div"); // 새로운 댓글 생성
-    const newCommentTime = document.createElement("div");
+    const newCommentTime = document.createElement("div"); //새로운 댓글시간생성
+    const deleteButton = document.createElement("button"); // 삭제 버튼 생성
+
     const timeDiff = Math.round((new Date() - comment.time) / 1000 / 60);
 
     //시간 차이에 따른 댓글작성법 줌
@@ -42,8 +45,19 @@ function renderComments() {
     }
 
     newComment.innerText = `${comment.username}: ${comment.content}`;
+    newComment.classList.add("newComment"); //newcomment라는 클래스 추가
     newCommentTime.innerText = commentTime;
-    commentList.appendChild(newComment); // 댓글 목록에 추가
+    newCommentTime.classList.add("newCommentTime"); //새로운 클래스 추가
+
+    deleteButton.innerText = "삭제";
+    deleteButton.addEventListener("click", () => {
+      comments.splice(index, 1); // 배열에서 해당 댓글 삭제
+      renderComments(); // 댓글 목록을 다시 렌더링
+    });
+
+    newCommentWrapper.appendChild(newComment); // 댓글을 컨테이너에 추가
+    newCommentWrapper.appendChild(deleteButton); // 삭제 버튼을 컨테이너에 추가
+    commentList.appendChild(newCommentWrapper); // 댓글 목록에 컨테이너 추가
     commentList.appendChild(newCommentTime); // 댓글 시간 추가
   });
 }

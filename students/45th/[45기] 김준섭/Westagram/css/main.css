@@ -1,4 +1,4 @@
-a {
+@import "reset.css" a {
   text-decoration: none;
   color: black;
 }
@@ -16,10 +16,12 @@ button {
 }
 
 body {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   background-color: #fafafa;
+  width: 100%;
 }
 
 #mainNav {
@@ -31,6 +33,11 @@ body {
   height: 50px;
   border-bottom: 0.5px solid rgb(128, 128, 128);
   margin-bottom: 20px;
+  position: fixed;
+  z-index: 1;
+  background-color: #fafafa;
+  width: 100%;
+  top: 0;
 }
 
 #logos {
@@ -86,6 +93,8 @@ body {
   flex-direction: row;
   justify-content: center;
   gap: 30px;
+  z-index: 0;
+  margin-top: 50px;
 }
 .feeds {
   display: flex;
@@ -121,12 +130,13 @@ body {
 .txtArticleProfile {
   display: flex;
   flex-direction: column;
+  font-weight: bold;
 }
 .articleViewMore {
   margin-right: 10px;
 }
 .txtArticleProfileS {
-  font-size: 15px;
+  font-size: 11px;
 }
 
 .articleImg {
@@ -190,11 +200,21 @@ form {
 .commentSubmit {
   flex: none;
 }
+.newCommentThings {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 
+.newCommentTime {
+  font-size: 10px;
+  margin-bottom: 7px;
+}
 .main-right {
   display: flex;
   flex-direction: column;
   width: 250px;
+  z-index: 0;
 }
 .whosPage {
   display: flex;
@@ -283,4 +303,5 @@ form {
 .companyD {
   color: rgb(138, 138, 138);
   font-size: 10px;
+  margin: 10px auto;
 }
