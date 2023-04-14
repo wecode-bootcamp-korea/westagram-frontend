@@ -2,6 +2,10 @@
 
 const commentElement = document.getElementById('comment');
 const commentPostBtn = document.getElementById('postBtn');
+const likeBtn = document.getElementsByClassName('commentLikeBtn');
+
+console.log(likeBtn);
+
 
 // input value 가 입력되면 게시 버튼 활성화
 const activePostBtn = () => {
@@ -14,23 +18,37 @@ const creatComment = (text) => {
   // 댓글 포스팅기능 완료
 
   // 유저가 steve_jobs 인 p태그 생성
-  let commentUser = document.createElement("p")
+  let commentUser = document.createElement("p");
   commentUser.innerText = "steve_jobs"
   commentUser.className = "commentUser";
   console.log("유저 생성");
   // 입력받은 밸류 값을 이너택스트로 가진 P태그 생성
-  let commentText = document.createElement("p")
+  let commentText = document.createElement("p");
   commentText.className = "commentText";
   commentText.innerText = text;
   console.log("내용 생성");
+
+  let commentLikeBtn = document.createElement("button");
+  commentLikeBtn.className = "commentLikeBtn";
+  console.log("좋아요 버튼 생성");
+
+  
+  let commentLikeIcon = document.createElement('img');
+  commentLikeIcon.className = 'commentLikeIcon'
+  commentLikeIcon.alt = 'like';
+  commentLikeIcon.src = './img/beforeheart.svg';
+
+  
   
   // 유저와 코맨트 감싸는class 명이 commentList 인 div 박스 만들기
-  let commentList = document.createElement("div")
+  let commentList = document.createElement("div");
   commentList.className = "commentList";
   console.log("코맨트 리스트 생성");
-
+  
+  commentLikeBtn.appendChild(commentLikeIcon);
   commentList.appendChild(commentUser);
-  commentList.appendChild(commentText)
+  commentList.appendChild(commentText);
+  commentList.appendChild(commentLikeBtn);
 
   // 댓글박스에 댓글리스트 추가
   document.getElementById('postCommentBox').appendChild(commentList);
