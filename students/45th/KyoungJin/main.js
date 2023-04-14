@@ -37,6 +37,7 @@ function Comments() {
     const ComBox = document.createElement("div");
     const UserName = document.createElement("span");
     const uploading = document.createElement("span");
+    const BtnForHeart = document.createElement("button");
     const Heart = document.createElement("img");
 
     UploadButton.style.cursor = "pointer";
@@ -52,13 +53,15 @@ function Comments() {
     ComBox.classList.add("js");
     UserName.classList.add("bold");
     uploading.classList.add("for-js");
-    Heart.classList.add("js-heart");
+    Heart.classList.add("small-heart");
+    BtnForHeart.classList.add("comment-heart");
 
     commentFeed.appendChild(ComBox);
 
     ComBox.appendChild(UserName);
     ComBox.appendChild(uploading);
-    ComBox.appendChild(Heart);
+    ComBox.appendChild(BtnForHeart);
+    BtnForHeart.appendChild(Heart);
   }
 }
 

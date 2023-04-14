@@ -140,8 +140,7 @@ div.dots {
 .bottom-icon img {
   width: 25px;
   height: 25px;
-  margin-left: 15px;
-  margin-top: 5px;
+  margin-left: 5px;
 }
 
 /*하트 이미지 테두리 빨간색으로 바꾸기
@@ -160,6 +159,19 @@ div.dots {
   right: 10px;
   width: 25px;
   height: 20px;
+}
+
+.bottom-icon button {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  margin-left: 5px;
+  background-color: rgb(255, 255, 255);
+  border: none;
+}
+
+.bottom-icon button img.heart-icon {
+  margin-left: 0;
 }
 
 /*~이 좋아합니다*/
@@ -202,13 +214,18 @@ div.fid-comment {
 }
 
 img.small-heart {
-  position: absolute;
-  top: 4px;
-  right: 10px;
   width: 15px;
   height: 15px;
-  filter: invert(86%) sepia(12%) saturate(13%) hue-rotate(320deg)
-    brightness(83%) contrast(81%);
+  /*filter: invert(86%) sepia(12%) saturate(13%) hue-rotate(320deg)
+    brightness(83%) contrast(81%);*/
+}
+
+.comment-heart {
+  position: absolute;
+  right: 10px;
+  padding: 2px 0 0 0;
+  background-color: rgb(255, 255, 255);
+  border: none;
 }
 
 /*댓글 창*/
@@ -253,9 +270,9 @@ button#게시 {
 }
 
 .js-heart {
-  position: absolute;
+  /*position: absolute;
   top: 4px;
-  right: 10px;
+  right: 10px;*/
   filter: invert(86%) sepia(12%) saturate(13%) hue-rotate(320deg)
     brightness(83%) contrast(81%);
 }

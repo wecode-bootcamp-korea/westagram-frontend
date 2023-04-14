@@ -52,17 +52,24 @@
             <!--인스타 피드-->
             <img alt="인서타 피드 이미지" src="./image/싸콘.jpg" />
             <div class="bottom-icon">
-              <img
-                alt="하트 아이콘"
-                class="heart-icon"
-                src="./image/heart.png"
-              />
+              <button id="icon-button">
+                <img
+                  id="좋아요"
+                  alt="하트 아이콘"
+                  class="heart-icon"
+                  src="./image/heart.png"
+                />
+              </button>
               <img
                 alt="댓글 아이콘"
                 class="comment"
                 src="./image/comments-2.png"
               />
-              <img alt="업로드 아이콘" src="./image/upload.png" />
+              <img
+                class="upload"
+                alt="업로드 아이콘"
+                src="./image/upload.png"
+              />
               <img alt="스크랩 아이콘" class="scrap" src="./image/스크랩.png" />
             </div>
             <div class="likey">
@@ -77,11 +84,13 @@
               갈래? 💦
               <div class="comment1">
                 <span class="bold">_sentiers</span> 라인이 예술이네요
-                <img
-                  alt="좋아요 하트"
-                  class="small-heart"
-                  src="./image/heart.png"
-                />
+                <button id="댓글좋아요" class="comment-heart">
+                  <img
+                    alt="좋아요 하트"
+                    class="small-heart"
+                    src="./image/heart.png"
+                  />
+                </button>
               </div>
               <div class="time">55분전</div>
             </div>
@@ -177,5 +186,6 @@
       </div>
     </main>
     <script src="main.js"></script>
+    <script src="heart.js"></script>
   </body>
 </html>
