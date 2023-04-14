@@ -8,7 +8,7 @@ function logInBtn() {
 
     if(idValue.length > 0 && passwordValue.length > 0) {
         btn.disabled = false;
-        btn.style.cursor = "default";
+        btn.style.cursor = "pointer";
         btn.style.backgroundColor = "#0095f6";
     }else {
         btn.disabled = true;
