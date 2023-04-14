@@ -15,3 +15,15 @@ inputBoxes.forEach((box) => {
     });
   });
 });
+
+logBtn.addEventListener("click", () => {
+  const id = inputBoxes[0].value;
+  const pw = inputBoxes[1].value;
+
+  if (id.includes("@") && pw.length >= 5) {
+    logBtn.disabled = false;
+  } else {
+    logBtn.disabled = true;
+    return alert("Please check your Id and Password");
+  }
+});
