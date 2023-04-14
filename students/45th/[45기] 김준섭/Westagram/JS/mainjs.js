@@ -1,32 +1,27 @@
 const commentForm = document.querySelector("form");
 const commentInput = document.querySelector(".comment");
 const commentSubmitButton = document.querySelector(".commentSubmit");
-const commentList = document.querySelector(".details");
+const commentList = document.querySelector(".newComent");
+const usernameInput = document.querySelector(".myDetail");
 
-// 댓글을 추가하는 함수
-function addComment() {
-  // 댓글을 작성한 내용 가져오기
-  const commentContent = commentInput.value;
-  // 댓글을 표시할 요소 생성
-  const commentElement = document.createElement("div");
-  commentElement.innerText = commentContent;
-  // 댓글을 추가할 위치 가져오기
-  const lastCommentElement = commentList.lastElementChild;
-  // 댓글을 추가하기
-  commentList.insertBefore(commentElement, lastCommentElement.nextSibling);
-  // 댓글 입력창 비우기
-  commentInput.value = "";
+function addComment(event) {
+  event.preventDefault();
+  const commentContent = commentInput.value; // 입력한 댓글 내용
+  if (!commentContent) return;
+  const newComment = document.createElement("div"); // 새로운 댓글 생성
+
+  newComment.innerText = `${usernameInput.innerText}: ${commentContent}`;
+
+  commentList.appendChild(newComment); // 댓글 목록에 추가
+  commentInput.value = ""; // 입력창 초기화
 }
 
-// 이벤트 리스너 등록하기
-commentForm.addEventListener("submit", (event) => {
-  // 폼의 기본 동작(새로고침) 막기
-  event.preventDefault();
-  addComment();
-});
+// 댓글 작성 이벤트 처리
+commentForm.addEventListener("submit", addComment);
 commentSubmitButton.addEventListener("click", addComment);
 commentInput.addEventListener("keypress", (event) => {
   if (event.key === "Enter") {
-    addComment();
+    event.preventDefault();
+    addComment(event);
   }
 });
