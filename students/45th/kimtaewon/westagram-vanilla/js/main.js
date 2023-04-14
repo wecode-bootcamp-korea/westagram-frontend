@@ -36,20 +36,22 @@ const creatComment = (text) => {
   document.getElementById('postCommentBox').appendChild(commentList);
   console.log('입력한 댓글 추가 완료');
   console.log('크리에이트 영역 : ', commentElement.value);
+  commentElement.value = "";
 }
 
 const posting = () => {
+
+  if (commentElement.value.length !==0) {
   creatComment(commentElement.value);
+  }
 }
 
 const post = (keyEvent) => {
-  activePostBtn();
-  console.log('포스트안 영역 : ', commentElement.value);
+   activePostBtn();
   
-  if(commentElement.value.length > 0 && keyEvent.keyCode === 13) {
+  if(keyEvent.keyCode === 13) {
     posting();
   } else {
-    console.log('댓글창 밸류값', keyEvent);
     commentPostBtn.addEventListener('click', posting);
   }
 }
