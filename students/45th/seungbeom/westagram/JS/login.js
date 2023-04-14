@@ -7,6 +7,19 @@ idInput.addEventListener("keyup", login || function(e){
         login()
 }});
 pwInput.addEventListener("keyup", login);
+// loginButton.addEventListener("click", watch);
+
+// function watch(){
+//     let result = `<div id="modal">
+//     <span id="num">${idInput.value}</span>
+//     <span>
+//         <p id="id">${pwInput.value}</p>
+//         <p id="subId">orangeorangeorange | orangeorangeorange</p>
+//     </span>
+//     </div>`
+
+//     document.getElementById("test").innerHTML = result;
+// }
 
 function login(){
     (checkId() && (pwInput.value.length >= 5))?
@@ -21,3 +34,4 @@ function checkId(){
         }
     }
 }
+

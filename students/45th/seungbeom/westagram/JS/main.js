@@ -23,22 +23,52 @@ const searchIdData = [
 
 const search = document.getElementsByClassName("search")[0];
 search.addEventListener("keyup", function(e){
-    if(e.keyCode === 13){
-        searching();
-    }
-});
-
-let value = search.textContent;
-    console.log(value); 
-function searching(){
-    searchIdData.filter((data) => {
-        if(data.id.includes("value")){
-            return result;
+        if(e.keyCode === 13){
+            watch();
         }
-        console.log(result);
     });
-    console.log(result);
-}
+
+function watch(){
+    let value = search.value;
+    let result1 = searchIdData.filter(data => data.id.includes(value));
+    let map1 = result1.map(x => 
+        `<div id="modal">
+        <span id="num">${x.num}</span>
+        <span>
+            <p id="id">${x.id}</p>
+            <p id="subId">${x.subId}</p>
+        </span></div>`);
+    // for(let i=0; i<result1.length; i++){
+    // let result = `<div id="modal">
+    // <span id="num">${result1[1].num}</span>
+    // <span>
+    //     <p id="id">${result1[i].id}</p>
+    //     <p id="subId">${result1[i].subId}</p>
+    // </span>`;
+    document.getElementById("test").innerHTML = map1
+    console.log(document.getElementById("test"))
+    if(search.value === ""){
+        document.getElementById("test").setAttribute("style", "display:none");
+    }else{
+        document.getElementById("test").setAttribute("style", "display:block")
+    }
+    }
+
+
+
+// const search = document.getElementsByClassName("search")[0];
+// search.addEventListener("keyup", function(e){
+//     if(e.keyCode === 13){
+//         searching();
+//     }
+// });
+ 
+// function searching(){
+//     let value = search.value;
+//     let result = searchIdData.filter(data => data.id.includes(value));
+//     console.log("필터 값 반환 확인", result);
+// }
+
 
 // const result = searchIdData.filter(data => data.id == "ed");
 
@@ -108,7 +138,6 @@ function addElement(){
 }
 
 function deleteComment(commentBlock){
-    console.log(commentBlock);
     commentBlock.remove();
 }
 
