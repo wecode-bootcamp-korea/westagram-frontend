@@ -6,9 +6,20 @@ const loginBt = document.getElementsByClassName("loginBt")[ 0 ]
 loginId.addEventListener("keyup", loginBtnOn);
 loginPw.addEventListener("keyup", loginBtnOn);
 
-function loginBtnOn () {
-  (loginId.value == "" || loginPw.value == "" ? loginBt.classList.remove("loginBt_on") : loginBt.classList.add("loginBt_on"))
-  
-  loginId.value.includes("@") === true && loginPw.value.length >= 5 ? loginBt.classList.add("loginBt_on") : loginBt.classList.remove("loginBt_on")
+function loginBtnOn () { 
 
+const IdValue = loginId.value;
+const PwValue = loginPw.value;
+
+  function btnOff () {
+    loginBt.classList.remove("loginBt_on")
+  };
+  
+  function btnOn () {
+    loginBt.classList.add("loginBt_on")
+  };
+
+  (IdValue == "" || PwValue == "" ? btnOff() : btnOn());
+
+  (IdValue.includes("@") === true && PwValue.length >= 5 ? btnOn() : btnOff());
 }
