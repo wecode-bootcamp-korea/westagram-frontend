@@ -12,7 +12,7 @@ function outputValue () {
   const addCommentLi = document.createElement("li")
   const commentInList = commentList.appendChild(addCommentLi)
 
-  return commentInList.innerText = commentTxt.value
+  return commentInList.innerText = commentTxt.value, commentTxt.value = null
 }
 
 
