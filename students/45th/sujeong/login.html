@@ -15,13 +15,15 @@
 </head>
 
 <body>
-  <div id="borderBox">
+  <main id="borderBox">
     <h1 id="logo">westagram</h1>
-    <input type="text" class="loginId loginInput" name="userId" placeholder="전화번호, 사용자 이름 또는 이메일" />
-    <input type="password" class="loginPw loginInput" name="userPw" placeholder="비밀번호" />
-    <button class="loginBt">로그인</button>
-    <p class="findPw">비밀번호를 잊으셨나요?</p>
-  </div>
+    <form id="login">
+      <input type="text" class="loginId loginInput" name="userId" placeholder="전화번호, 사용자 이름 또는 이메일" />
+      <input type="password" class="loginPw loginInput" name="userPw" placeholder="비밀번호" />
+      <input type="button" class="loginBtn" value="로그인" />
+    </form>
+    <a href="/" class="findPw">비밀번호를 잊으셨나요?</a>
+  </main>
 </body>
 <script src="js/login.js"></script>
 

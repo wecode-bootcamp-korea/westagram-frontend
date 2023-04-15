@@ -1,25 +1,24 @@
 /** @format */
-const loginId = document.getElementsByClassName("loginId")[0]
-const loginPw = document.getElementsByClassName("loginPw")[0]
-const loginBt = document.getElementsByClassName("loginBt")[ 0 ] 
+function loginForm (x) {
+  return document.getElementsByClassName(x)[0]
+}
 
-loginId.addEventListener("keyup", loginBtnOn);
-loginPw.addEventListener("keyup", loginBtnOn);
+loginForm("loginId").addEventListener("input", loginBtnOn)
+loginForm("loginPw").addEventListener("input", loginBtnOn);
 
 function loginBtnOn () { 
 
-const IdValue = loginId.value;
-const PwValue = loginPw.value;
+  const IdValue = loginForm("loginId").value;
+  const PwValue = loginForm("loginPw").value;
 
   function btnOff () {
-    loginBt.classList.remove("loginBt_on")
+    loginForm("loginBtn").classList.remove("loginBtn_on")
   };
-  
+
   function btnOn () {
-    loginBt.classList.add("loginBt_on")
-  };
+    loginForm("loginBtn").classList.add("loginBtn_on")
+  }
 
-  (IdValue == "" || PwValue == "" ? btnOff() : btnOn());
+  (IdValue && PwValue && IdValue.includes("@") && PwValue.length >= 5 ? btnOn() : btnOff() );
 
-  (IdValue.includes("@") === true && PwValue.length >= 5 ? btnOn() : btnOff());
 }

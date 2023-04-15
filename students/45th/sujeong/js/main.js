@@ -42,11 +42,7 @@ function outputValue () {
       )
   }
 
-  return addUsername("krystalk170"), AddCommentSpan(),commentTxt.value = null
+  return addUsername("krystalk170"), AddCommentSpan(), commentTxt.value = ""
 
 }
 
-// seeMoreSpan.addEventListener('click', () => {
-//   CommentSpan.classList.remove("too_long_comment")
-//   // seeMoreSpan.remove()
-// })
