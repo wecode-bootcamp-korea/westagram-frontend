@@ -2,57 +2,57 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+
+    height: 100vh;
     
     background-color:ghostwhite;
 
 }
 
 .loginBox{
+    width: 400px;
+
     border-width: 1px;
     border-color:gainsboro;
     border-style: solid;
+
     background-color: white;
 
-    margin-top: 10%;
-
     text-align: center;
-
-    width: 400px;
-    
 }
 
 @font-face {
     font-family: "Lobster";
-    src: url(/westagram/Lobster-Regular.ttf) format("opentype");
+    src: url(./Lobster-Regular.ttf) format("opentype");
 }
 
 h1{
+    margin-left: 30px;
+    margin-right: 30px;
+
     font-family:"Lobster";
     font-size: 350%;
     font-weight: lighter;
-
-    margin-left: 30px;
-    margin-right: 30px;
 }
 
- 
 
 input{
-
     width: 80%;
     height: 35px;
-    font-size: 15px;
-
-    border-color: gainsboro;
-    background-color: ghostwhite;
-    border-radius: 5px;
-    border-width: 1px;
     
     margin-bottom: 5px;
     margin-left: 30px;
     margin-right: 30px;
+
+    border-color: gainsboro;
+    border-radius: 5px;
+    border-width: 1px;
+
+    background-color: ghostwhite;
     
+    font-size: 15px;
 }
+
 input:focus{
     outline: 1px solid darkgray;
 }
@@ -60,11 +60,13 @@ input:focus{
 input[id='button']
 {
     margin-top: 10px;
-    background-color: #9cd3f8;
+
     border: none;
+    
+    background-color: #9cd3f8;
+
     color: white;
     text-align: center;
-
 }
 
 
