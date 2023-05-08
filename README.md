@@ -7,9 +7,9 @@
 ## 초기 세팅 및 진행 방법
 - Directory(`cd Desktop/wecode`) 이동 후 해당 repo를 clone 받아주세요.
 - VS Code에서 해당 폴더를 열고 VS Code 에서 터미널을 열어주세요.(`cmd + j` / `ctrl + j`)
-- master 브랜치를 기준으로 `feature/기수-본인이름` 브랜치를 만들어주세요. (ex. `feature/45-geabalkim`)
+- master 브랜치를 기준으로 `feature/기수-본인이름` 브랜치를 만들어주세요. (ex. `feature/46-geabalkim`)
 - 새롭게 생성한 브랜치로 이동후 `students > 본인 기수` 폴더에 본인 이름의 폴더를 만들어주세요. 
-(ex. `students` > `45th` > `geabalkim` 폴더 생성)
+(ex. `students` > `46th` > `geabalkim` 폴더 생성)
 - 해당 폴더에 기존에 작업했던 `img`, `js`, `styles` 폴더, 그리고 `html`파일들을 생성해서 코드를 복사 붙여넣기 해주세요.
 - (불필요한 폴더 및 파일은 가져올 필요 없습니다.)
 - 이렇게 폴더 및 파일 구조 세팅이 완료되면 작업을 진행합니다.
