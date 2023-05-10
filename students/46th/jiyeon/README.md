@@ -1,1 +1,1 @@
-hello world I'm 46th jiyeon :) !
+hello world I'm 46th jiyeon :)
