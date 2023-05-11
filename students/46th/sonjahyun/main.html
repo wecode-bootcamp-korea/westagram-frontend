@@ -12,128 +12,127 @@
 
     <body>
         <nav>
-            <div class="iconsOnLeft">
-                <img src="img/instagram.png" alt="main page" class="icon">
+            <div class="navBarLogo">
+                <img src="img/instagram.png" alt="instagram logo" class="icon"/>
                 <p class="logo">Westagram</p>
             </div>
             <div class="searchBar">
-                <input type="text" id="searchBox" placeholder="검색"><img src="img/magnifyingGlass.png" id="magnifyingGlass">
+                <input type="text" placeholder="검색" class="searchInput">
+                <img src="img/magnifyingGlass.png" alt="search icon" class="magnifyingGlass"/>
             </div>
             <div class="iconsOnRight">
-                <a href><img src="img/explore.png" alt="explore" class="icon"></a>
-                <a href><img src="img/heart.png" alt="heart" class="icon"></a>
-                <a href><img src="img/profile.png" alt="profile" class="icon"></a>
-        </div>
-        </nav>
-        <main>
-            <div class="feeds">
-                <article>
-                    <div class="post">
-                        <div class="header">
-                            <img src="img/feedProfile.jpeg" alt="" class="pfp">
-                            <p class="username">hand_jahyun</p>
-                            <img src="img/threedots.png" alt="main page" class="icon">
-                        </div>
-                        <img src="img/feed1.png">
-                        <div class="icons">
-                            <div class="left">
-                                <img src="img/redheart.png" alt="like" class="icon">
-                                <img src="img/comment.png" alt="main page" class="icon">
-                                <img src="img/upload.png" alt="main page" class="icon">
-                            </div>
-                            <div class="right">
-                                <img src="img/bookmark.png" alt="main page" class="icon">
-                            </div>                                
-                        </div>
-                        <div class="whoLiked">
-                            <img src="img/pfp1.jpeg">
-                            <p><a href>taylorswift</a>님 외 <a href>10명</a>이 좋아합니다</p>
-                        </div>
-                        <p class="caption"><a href>hand_jahyun</a> 제주도 바다~... <span class="light">더 보기</span></p>
-                        <div class="comment">
-                            <input type="text" placeholder="댓글 달기...">
-                            <button>게시</button>
-                        </div>
-                    </div>
-                </article>
-
+                <a href><img src="img/explore.png" alt="explore page" class="icon"/></a>
+                <a href><img src="img/heart.png" alt="notificaions" class="icon"/></a>
+                <a href><img src="img/profile.png" alt="my profile" class="icon"/></a>
             </div>
-            <div class="main-right">
-                <div class="myProfile">
-                    <div class="pfp"><img src="img/wecode_logo.png"></div>
-                    <div class="onTheRight">
-                        <p class="username">wecode_bootcamp</p>
-                        <p class="light">WeCode | 위코드</p>
+        </nav>
+
+        <main>
+            <section class="feed">
+                <article class="post">
+                    <header>
+                        <div class="userInfo">
+                            <img src="img/feedProfile.jpeg" alt="profile picture" class="pfp"/>
+                            <p class="username">hand_jahyun</p>
+                        </div>                    
+                        <img src="img/threedots.png" alt="view more" class="icon"/>
+                    </header>
+                    <img src="img/feed1.png" alt="image uplodaded by the user" class="uploadedImg"/>
+                    <div class="interactionBar">
+                        <div class="interactionBarLeft">
+                            <img src="img/redheart.png" alt="like" class="icon"/>
+                            <img src="img/comment.png" alt="comment" class="icon"/>
+                            <img src="img/upload.png" alt="share" class="icon"/>
+                        </div>
+                        <div class="interationBarRight">
+                            <img src="img/bookmark.png" alt="bookmark" class="icon"/>
+                        </div>                                
+                    </div>
+                    <div class="likedListContainer">
+                        <img src="img/pfp1.jpeg" alt="profile picture" class="pfpSmall"/>
+                        <p class="likedList"><a href>taylorswift</a>님 외 <a href>10명</a>이 좋아합니다</p>
+                    </div>
+                    <p class="caption"><a href>hand_jahyun</a> 제주도 바다~... <span class="light">더 보기</span></p>
+                    <section class="comments">
+                        <input type="text" placeholder="댓글 달기..." class="postCommentInput"/>
+                        <button class="postCommentButton">게시</button>
+                    </section>                    
+                </article>
+            </section>
+
+            <aside class="main-right">
+                <section class="myProfile">
+                    <img src="img/wecode_logo.png" alt="my profile picture" class="myPfp"/>
+                    <div class="myHandle">
+                        <span class="username">wecode_bootcamp</span>
+                        <span class="light">WeCode | 위코드</span>
                     </div>                    
-                </div>
-                <div class="story">
+                </section>
+                <section class="story">
                     <div class="header">
-                        <p class="light">스토리</p>
-                        <p>모두 보기</p>
+                        <span class="light">스토리</span>
+                        <span class="viewMoreButton">모두 보기</span>
                     </div>
                     <div class="profileList">
                         <div class="profile">
-                            <div class="pfp"><img src="img/pfp1.jpeg"></div>
-                            <div class="onTheRight">
-                                <p class="username">taylorswift</p>
-                                <p class="light">16분 전</p>
+                            <img src="img/pfp1.jpeg" alt="profile picture" class="pfp"/>
+                            <div class="otherUserInfo">
+                                <span class="username">taylorswift</span>
+                                <span class="light">16분 전</span>
                             </div>   
                         </div>
                         <div class="profile">
-                            <div class="pfp"><img src="img/pfp2.jpeg"></div>
-                            <div class="onTheRight">
-                                <p class="username">billieeilish</p>
-                                <p class="light">3시간 전</p>
+                            <img src="img/pfp2.jpeg" alt="profile picture" class="pfp"/>
+                            <div class="otherUserInfo">
+                                <span class="username">billieeilish</span>
+                                <span class="light">3시간 전</span>
                             </div>   
                         </div>
                         <div class="profile">
-                            <div class="pfp"><img src="img/pfp6.jpeg"></div>
-                            <div class="onTheRight">
-                                <p class="username">shawnmendes</p>
-                                <p class="light">20시간 전</p>
+                            <img src="img/pfp6.jpeg" alt="profile picture" class="pfp"/>
+                            <div class="otherUserInfo">
+                                <span class="username">shawnmendes</span>
+                                <span class="light">20시간 전</span>
                             </div>   
                         </div>
                     </div>                                         
-                </div>
+                </section>
 
-                <div class="suggested">
-                    <div class="story">
-                        <div class="header">
-                            <p class="light">회원님을 위한 추천</p>
-                            <p>모두 보기</p>
-                        </div>
-                        <div class="profileList">
-                            <div class="profile">
-                                <div class="pfp"><img src="img/pfp3.jpeg"></div>
-                                <div class="onTheRight">
-                                    <p class="username">kyliejenner</p>
-                                    <p class="light">_legend_a님 외 2명이 ...</p>
-                                </div>   
-                            </div>
-                            <div class="profile">
-                                <div class="pfp"><img src="img/pfp4.jpeg"></div>
-                                <div class="onTheRight">
-                                    <p class="username">arianagrande</p>
-                                    <p class="light">ringo.in.seoul님 외 12...</p>
-                                </div>   
-                            </div>
-                            <div class="profile">
-                                <div class="pfp"><img src="img/pfp5.jpeg"></div>
-                                <div class="onTheRight">
-                                    <p class="username">justinbieber</p>
-                                    <p class="light">jimmylee1220님 외 1...</p>
-                                </div>   
-                            </div>
-                        </div>                                         
+                <section class="suggestedForYou">
+                    <div class="header">
+                        <span class="light">회원님을 위한 추천</span>
+                        <span class="viewMoreButton">모두 보기</span>
                     </div>
-                </div>
-                <div class="footer">
+                    <div class="profileList">
+                        <div class="profile">
+                            <img src="img/pfp3.jpeg" alt="profile picture" class="pfp"/>
+                            <div class="otherUserInfo">
+                                <span class="username">kyliejenner</span>
+                                <span class="light">_legend_a님 외 2명이 ...</span>
+                            </div>   
+                        </div>
+                        <div class="profile">
+                            <img src="img/pfp4.jpeg" alt="profile picture" class="pfp"/>
+                            <div class="otherUserInfo">
+                                <span class="username">arianagrande</span>
+                                <span class="light">ringo.in.seoul님 외 12...</span>
+                            </div>   
+                        </div>
+                        <div class="profile">
+                            <img src="img/pfp5.jpeg" alt="profile picture" class="pfp"/>
+                            <div class="otherUserInfo">
+                                <span class="username">justinbieber</span>
+                                <span class="light">jimmylee1220님 외 1...</span>
+                            </div>   
+                        </div>
+                    </div>  
+                </section>
+                <footer>
                     <p class="lighter">Instagram 정보 • 지원 • 홍보 센터 • API • 채용 정보 • 
                         개인정보처리방침 • 약관 • 디렉터리 • 프로필 • 해시태그 • 언어 </p>
                     <p class="lighter">© 2023 INSTAGRAM</p>
-                </div>
-
-            </div>
+                </footer>
+            </aside>
         </main>
     </body>
 </html>

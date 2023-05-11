@@ -6,25 +6,25 @@
 
 body {
     margin: 0; 
-    width: 100%;
 }
 
 main {
+    display: flex;
+    justify-content: space-between;
     padding: 0 0 100px 80px;
     background-color: #fafafa;
     border-top: 1px solid #e6e6e6;
-    
 }
 
 article {
+    width: 470px;
     background-color: white;
     border: 1px solid #e6e6e6;
-    width: 470px;
 }
 
 a {
-    text-decoration: none;
     color: black;
+    text-decoration: none;
     font-weight: 560;
 }
 
@@ -35,22 +35,18 @@ nav {
     margin: 15px;
 }
 
-nav .iconsOnLeft {
+footer {
+    width: 200px;
+}
+
+.navBarLogo {
     display: flex;
-    flex-direction: row;
     align-items: center;
     margin-left: 50px;
 }
 
-nav .iconsOnRight {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-.iconsOnRight .icon {
-    margin: 0 10px;
+.logo {
+    font-family: 'Lobster', sans-serif;
 }
 
 nav .logo {
@@ -60,71 +56,30 @@ nav .logo {
     border-left: 1px solid black;
 }
 
+nav .iconsOnRight {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
 .icon {
     width: 20px;
     height: 20px;
     margin: 5px;
 }
 
-article img {
+.iconsOnRight .icon {
+    margin: 0 10px;
+}
+
+.uploadedImg {
     width: 468px;
 }
 
 article .pfp {
     width: 32px;
-    border-radius: 50%;
     margin-left: 8px;
-}
-
-.logo {
-    font-family: 'Lobster', sans-serif;
-}
-
-.searchBar {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
-
-#searchBox {
-    width: 160px;
-    height: 22px;
-    border: 1px solid #e6e6e6;
-    background-color: #fafafa;
-}
-
-#magnifyingGlass {
-    width: 8px;
-    margin: 2px;
-    transform: translate(-102px, 0.5px);
-}
-
-#searchBox::placeholder {
-    text-align: center;
-    font-size: 10px;
-    color: #bcbcbc;
-}
-
-.feeds {
-    padding-top: 30px;
-}
-
-article .header {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    margin: 8px 4px 8px 5px;
-}
-
-.header .username {
-    width: 378px;
-    height: 26px;
-    margin: 0 0 0 12px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    border-radius: 50%;
 }
 
 .light {
@@ -138,76 +93,123 @@ article .header {
     font-size: 11px;
 }
 
-.post .caption {
+.searchBar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchInput {
+    width: 160px;
+    height: 22px;
+    background-color: #fafafa;
+    border: 1px solid #e6e6e6;
+}
+
+.magnifyingGlass {
+    width: 8px;
+    margin: 2px;
+    transform: translate(-102px, 0.5px);
+}
+
+.searchInput::placeholder {
+    color: #bcbcbc;
+    font-size: 10px;
+    text-align: center;
+}
+
+.feed {
+    padding-top: 30px; 
+}
+
+article header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 8px 4px 8px 5px;
+}
+
+.pfp {
+    width: 30px;
+    margin-right: 0px;
+    border-radius: 50%;
+}
+
+header .userInfo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+header .userInfo .username {
+    margin: 0 0 0 12px;
+}
+
+.caption {
     margin: 2px 12px;
 }
 
-.post .icons {
+.interactionBar {
     display: flex;
     justify-content: space-between;
     margin: 0 5px 0 10px;
 }
 
-.post .comment {
-    border-top: 1px solid #e6e6e6;
-    height: 45px;
+.comments {
     display: flex;
     justify-content: space-between;
+    height: 45px;
     margin-top: 10px;
+    border-top: 1px solid #e6e6e6;
 }
 
-.whoLiked {
+.likedListContainer {
     display: flex;
     align-items: center;
-    margin: 0 0 6px 12px;
     height: 20px;
+    margin: 0 0 6px 12px;
 }
 
-.whoLiked img {
+.pfpSmall {
     width: 15px;
-    border-radius: 50%;
     margin-right: 4px;
+    border-radius: 50%;
 }
 
-.comment input {
-    border-style: none;
-    text-align: left;
+.postCommentInput {
+    width: 400px;
     padding: 0 12px;
     color: grey;
-    width: 400px;
-}
-
-.comment button {
     border-style: none;
-    background-color: white;
-    color: #c8e2fb;
+    text-align: left;
+}
+
+.postCommentButton {
     padding: 15px;
+    color: #c8e2fb;
+    background-color: white;
+    border-style: none;
 }
 
-main {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+aside section {
+    margin: 10px 0;
 }
 
-.main-right .myProfile img {
+.myPfp {
     border-radius: 50%;
     width: 50px;
+    height: 50px;
 }
 
 .myProfile {
-    width: 300px;
     display: flex;
     margin: 10px 5px;
 }
 
-.onTheRight {
+.myHandle, .otherUserInfo {
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-.onTheRight p {
     margin: 0 8px;
 }
 
@@ -220,39 +222,25 @@ main {
     margin: 30px 10px;
 }
 
-.main-right .story {
+.story, .suggestedForYou {
     background-color: white;
     border: 1px solid #e6e6e6
 }
 
-.main-right .story .header {
+aside section .header {
     display: flex;
     justify-content: space-between;
 }
 
-.pfp img {
-    border-radius: 50%;
-    width: 30px;
-    margin-right: 0px;
+section .header span {
+    margin: 10px 12px;
 }
 
 .profile {
     display: flex;
+    flex-direction: row;
     margin: 2px 12px 12px;;
 }
 
-.story {
-    width: 230px;
-}
 
-.story .header p {
-    margin: 10px 12px;
-}
 
-.suggested {
-    margin: 10px 0;
-}
-
-.footer {
-    width: 200px;
-}
