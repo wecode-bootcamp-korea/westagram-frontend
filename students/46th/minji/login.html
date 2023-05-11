@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link href="./css/common.css"rel="stylesheet">
+    <link href="./css/login.css"rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <title>login</title>
+</head>
+<body>
+    <div class="main">
+      <div class="main-inner">
+          <div class="inner">
+              <div class="inner-header">
+                  <h1>
+                    <span class="lobster">Westagram</span>
+                  </h1>
+              </div>
+              <form class="form">
+                  <div class="inputBox">
+                      <input id="id" type="text" placeholder="전화번호, 사용자 이름 또는 이메일" onkeyup='validate()'/>
+                  </div>
+                  <div class="inputBox">
+                      <input id="psword" type="password" placeholder="비밀번호" onkeyup='validate()'/>
+                  </div>
+                  <div class="loginBtn">
+                      <button type="button" class="disableBtn" id="loginBtn" disabled="true" onclick="login()">
+                          <span class="logintext">로그인</span>
+                      </button>
+                  </div>
+              </form>
+              <div class="inner-footer">
+                  <a href="" class="">
+                      <span class="forget">비밀번호를 잊으셨나요?</span>
+                  </a>
+              </div>
+           </div>
+      </div>
+  </div>
+</body>
+<script src="./js/login.js" defer></script>
+</html>

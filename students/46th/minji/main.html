@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <link href="./css/common.css"rel="stylesheet">
+    <link href="./css/main.css"rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <title>main</title>
+</head>
+<body>
+    <div class="body-top">
+        <nav class="navbar">
+            <div class="navbar-left">
+                <img class ="logo" src="./images/instagram.png"><p>|</p>  <span class="lobster">Westagram</span>
+            </div>
+            <div class="navbar-middle">
+                <!-- <img class ="search_icon" src="./images/search.png"> -->
+                <input id="input_search" type="search" placeholder="검색" />
+            </div>
+            <div class="navbar-right">
+                <img class="imgicons" src="./images/explore.png">
+                <img class="imgicons" src="./images/heart.png">
+                <img class="imgicons" src="./images/profile.png">
+            </div>
+        </nav>
+    </div>
+    <div class="body-bottom">
+        <main class="main">
+            <div class="main-feeds">
+                <div class="main-article-header">
+                    <div class="article-inner">
+                        <div class="article-inner-left">
+                            <div class="inner">
+                                <div class="inner">
+                                    <img class="userimg" src="./images/userimg.jpeg">
+                                </div>
+                                <div class="inner">
+                                    <span>shdv3303</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="article-inner-right">
+                            <img class="imgicons" src="./images/dot.png">
+                        </div> 
+                    </div>
+                </div>
+                <div class="main-article-body">
+                    <img class="feedimg" src="./images/feedimg.jpg">
+                </div>
+                <div class="main-article-footer">
+                    <div class="article-inner">
+                        <div class="article-inner-left">
+                            <div class="inner">
+                                <div class="inner">
+                                    <img class="logo" src="./images/heart.png">
+                                    <img class="logo" src="./images/chat.png">
+                                    <img class="logo" src="./images/share.png">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="article-inner-right">
+                            <img class="imgicons" src="./images/bookmarks.png">
+                        </div>
+                    </div>
+                    <div class="footer-inner">
+                        <div class="article-footer-header">
+                            <img class="userimg" src="./images/userimg.jpeg">
+                            <span class="bord-word">aineworld</span> 님 <span class="bord-word">외  10명</span>이 좋아합니다.</span>
+                        </div>
+                        <div class="article-footer-body">
+                            <div class="word"><span class="bord-word">shdv3303</span> 오늘도 커피에 취한다 커피는 짱이다 맨날 먹고 싶다.
+                                <br>
+                                <ul class="chat"></ul>
+                            </div>
+                        </div>
+                        <div class="article-footer-footer">
+                            <input type="text" id="chatinput" placeholder="댓글달기.." onkeyup='validate()'>
+                            <button type="button" class="disableBtn" id="inputBtn" disabled="true" onclick="chatEvent()">게시
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="main-right">
+                <div class="right-header">
+                    <div class="inner">
+                        <div class="inner">
+                            <img class="logoimg" src="./images/wecodelogo.jpeg">
+                        </div>
+                        <div class="inner-div">
+                            <div class="inner-top">
+                                <span class="bord-word">wecode_bootcamp</span>
+                            </div>
+                            <div class="inner-top">
+                                  <span class="gray-word">WeCode | 위코드</span>
+                            </div>
+                        </div>
+                    </div>
+                <div class="right-body">
+                    <div class="main-article-header">
+                        <div class="article-inner">
+                            <div class="article-inner-left">
+                                <span class="gray-word">스토리</span>
+                            </div>
+                            <div class="article-inner-right">
+                                <span class="bord-word">모두 보기</span>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="right-body-bottom">
+                        <div class="inner">
+                            <div class="inner">
+                                <button class="logobtn" type="button" onclick="alert('스토리 확인 중');">
+                                    <img class="storyimg" src="./images/userimg.jpeg" alt="user">
+                                </button>
+                            </div>
+                            <div class="inner-div">
+                                <div class="inner-top">
+                                    <span class="bord-word">_yum_s</span>
+                                </div>
+                                <div class="inner-top">
+                                      <span class="gray-word">16분 전</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-footer">
+                    <div class="main-article-header">
+                        <div class="article-inner">
+                            <div class="article-inner-left">
+                                <span class="gray-word">회원님을 위한 추천</span>
+                            </div>
+                            <div class="article-inner-right">
+                                <span class="bord-word">모두 보기</span>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="right-body-bottom">
+                        <div class="main-article-header">
+                            <div class="article-inner">
+                                <div class="article-inner-left">
+                                    <img class="logoimg" src="./images/userimg.jpeg">
+                                    <div class="inner-div">
+                                        <div class="inner-top">
+                                            <span class="bord-word"> joaaahye</span>
+                                        </div>
+                                        <div class="inner-top">
+                                              <span class="gray-word-dot">_lequend_a님 외 2명이 좋아합니다.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="article-inner-right">
+                                    <span>팔로우</span>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <br>
+                    <span class="gray-word">
+                        Instagram 정보 지원 홍보 센터 API<br>
+                        채용 정보 개인정보처리방침 약관<br>
+                        디렉터리 프로필 해시태그 언어<br>
+                        <br>
+                        @ 2019 INSTAGRAM
+                    </span>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+<script src="./js/main.js" defer></script>
+</html>
