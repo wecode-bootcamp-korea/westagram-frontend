@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style/main.css" />
+    <link rel="stylesheet" href="style/common.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/feeb727759.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- nav바 인스타그램 상단 -->
+    <nav>
+      <!-- nav바 왼쪽 -->
+      <div>
+        <img src="/인스타로고.png" alt="인스타로고" />
+        <span id="line"></span>
+        <i id="subject">Westagram</i>
+      </div>
+
+      <!-- nav바 가운데 -->
+      <div id="searchBox">
+        <input type="text" placeholder="검색" />
+        <i class="fa-solid fa-magnifying-glass" style="color: #737578"></i>
+      </div>
+
+      <!-- nav바 오른쪽 -->
+      <div>
+        <img
+          src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/explore.png"
+          alt="탐색"
+        />
+        <img
+          src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/heart.png"
+          alt="하트"
+        />
+        <img
+          src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/bearu/profile.png"
+          alt="마이페이지"
+        />
+      </div>
+    </nav>
+
+    <!-- main page -->
+    <main>
+      <!-- 피드 -->
+      <div class="feeds">
+        <article>
+          <!-- 피드헤드상단(아이디) -->
+          <div id="articleTop">
+            <div id="articleTopLeft">
+              <img
+                class="profileImage"
+                src="/wecode_logo_1590553949.webp"
+                alt="프로필"
+              />
+              <div>
+                <p class="subject">wecode_bootcamp</p>
+                <p class="additional">Wecode - 위코드</p>
+              </div>
+            </div>
+            <i class="fa-solid fa-ellipsis" style="color: #616975"></i>
+          </div>
+          <!-- 피드(사진) -->
+          <img id="articleImg" src="/article사진.avif" alt="과일" />
+          <!-- 피드 아이콘 -->
+          <div id="feedIcon">
+            <div id="iconLeft">
+              <img class="icon" src="/favorite.png" alt="좋아요" />
+              <img class="icon" src="/comment.png" alt="채팅" />
+              <img class="icon" src="/download.png" alt="공유" />
+            </div>
+            <div id="iconRight">
+              <img class="icon" src="/bookmark.png" alt="저장" />
+            </div>
+          </div>
+          <!-- 피드하단 -->
+          <div id="articleBottom">
+            <!-- 좋아합니다부분 -->
+            <div id="feedLikeBox">
+              <img id="likeBoxImg" src="flower.avif" alt="사진" />
+              <p id="likeBoxText">aineworld님 외 10명이 좋아합니다</p>
+            </div>
+            <!-- 본문내용(content) -->
+            <div id="content">
+              <span class="id">wecode_bootcamp</span>
+              <span>과일처럼 상큼한 여러분~</span>
+              <span id="more">더 보기</span>
+            </div>
+            <!-- 댓글 -->
+            <ul>
+              <li class="commentList">
+                <div>
+                  <span class="id">zosuzin</span>
+                  <span>완전 맛있겠다~~~</span>
+                </div>
+                <img class="commentHeart" src="/heart.png" alt="좋아요" />
+              </li>
+              <li class="commentList">
+                <div>
+                  <span class="id">bts_RM</span>
+                  <span>상큼 YO~~</span>
+                </div>
+                <img class="commentHeart" src="/heart.png" alt="좋아요" />
+              </li>
+            </ul>
+            <!-- 시간 -->
+            <div id="time">42분 전</div>
+          </div>
+          <!-- 댓글인풋 -->
+          <div id="commentBox">
+            <input id="comment" type="text" placeholder="   댓글 달기..." />
+            <button id="commentBt">게시</button>
+          </div>
+        </article>
+      </div>
+
+      <!-- 피드오른쪽부분 -->
+      <div class="main-right">
+        <!-- 사용자부분 -->
+        <div class="user">
+          <img
+            class="profileImage"
+            src="/wecode_logo_1590553949.webp"
+            alt="프로필"
+          />
+          <div>
+            <p class="subject">wecode_bootcamp</p>
+            <p class="additional">Wecode | 위코드</p>
+          </div>
+        </div>
+
+        <!-- 스토리부분 -->
+        <div id="stories">
+          <div class="storiesTop">
+            <p>스토리</p>
+            <p class="allSee">모두 보기</p>
+          </div>
+          <!-- 첫번째 스토리 -->
+          <div class="user">
+            <img
+              class="profileImage"
+              src="/wecode_logo_1590553949.webp"
+              alt="프로필"
+            />
+            <div>
+              <p class="subject">yumy</p>
+              <p class="additional">16분 전</p>
+            </div>
+          </div>
+
+          <!-- 두번째 스토리 -->
+          <div class="user">
+            <img
+              class="profileImage"
+              src="/wecode_logo_1590553949.webp"
+              alt="프로필"
+            />
+            <div>
+              <p class="subject">drink</p>
+              <p class="additional">3시간 전</p>
+            </div>
+          </div>
+
+          <!-- 세번째 스토리 -->
+          <div class="user">
+            <img
+              class="profileImage"
+              src="/wecode_logo_1590553949.webp"
+              alt="프로필"
+            />
+            <div>
+              <p class="subject">hyuk</p>
+              <p class="additional">20시간 전</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 추천부분 -->
+        <div id="stories">
+          <div class="storiesTop">
+            <p>회원님을 위한 추천</p>
+            <p class="allSee">모두 보기</p>
+          </div>
+          <!-- 첫번째 추천 -->
+          <div class="userTwoBox">
+            <div class="userTwo">
+              <img
+                class="profileImage"
+                src="/wecode_logo_1590553949.webp"
+                alt="프로필"
+              />
+              <div class="recommend">
+                <div class="recommendName">
+                  <p class="subject">joaaaaah</p>
+                  <p class="additional">yumy님 외 2명이 팔로우합니다</p>
+                </div>
+              </div>
+            </div>
+            <button>팔로우</button>
+          </div>
+
+          <!-- 두번째 추천 -->
+          <div class="userTwoBox">
+            <div class="userTwo">
+              <img
+                class="profileImage"
+                src="/wecode_logo_1590553949.webp"
+                alt="프로필"
+              />
+              <div class="recommend">
+                <div class="recommendName">
+                  <p class="subject">rampart</p>
+                  <p class="additional">drink님 외 12명이 팔로우합니다</p>
+                </div>
+              </div>
+            </div>
+            <button>팔로우</button>
+          </div>
+
+          <!-- 세번째 추천 -->
+          <div class="userTwoBox">
+            <div class="userTwo">
+              <img
+                class="profileImage"
+                src="/wecode_logo_1590553949.webp"
+                alt="프로필"
+              />
+              <div class="recommend">
+                <div class="recommendName">
+                  <p class="subject">shawn</p>
+                  <p class="additional">jimmy님 외 1명이 팔로우합니다</p>
+                </div>
+              </div>
+            </div>
+            <button>팔로우</button>
+          </div>
+
+          <!-- footer 기업정보 -->
+          <footer>
+            <p id="footerTop">
+              <a href="">Instagram 정보 · </a>
+              <a href="">지원 · </a>
+              <a href="">홍보 · </a>
+              <a href="">센터 · </a>
+              <a href="">채용정보 · </a>
+              <a href="">개인정보처리방침 · </a>
+              <a href="">약관 · </a>
+              <a href="">디렉터리 · </a>
+              <a href="">프로필 · </a>
+              <a href="">해시태그 · </a>
+              <a href="">언어 · </a>
+            </p>
+            @ 2019 INSTAGRAM
+          </footer>
+        </div>
+      </div>
+    </main>
+
+    <script src="/js/main.js"></script>
+  </body>
+</html>
