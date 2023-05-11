@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <link rel="stylesheet" href="style/main.css" />
+    <link rel="stylesheet" href="style/common.css" />
+  </head>
+  <body>
+    <!-- nav -->
+    <nav>
+      <div class="flex-nav">
+        <div class="border-right">
+          <img src="img/instagram.png" alt="instagram-img" class="img" />
+        </div>
+        <div>
+          <p class="font" style="font-size: 25px; margin-bottom: 0">
+            Instagram
+          </p>
+        </div>
+        <div style="flex-grow: 2">
+          <input type="text" placeholder="&#Xf002; 검색" class="search" style="text-transform : lowercase;"> 
+        </div>
+        <div><img src="img/explore.png" alt="explore-img" class="img" /></div>
+        <div><img src="img/heart.png" alt="heart-img" class="img" /></div>
+        <div><img src="img/profile.png" alt="profile-img" class="img" /></div>
+      </div>
+    </nav>
+
+    <!-- main 기준으로 flex -->
+    <main>
+      <!-- main left -->
+      <div class="main-left">
+        <!-- feed-profile -->
+        <div class="profile">
+          <div class="profile-img">
+            <img src="img/alex-shuper-Xw5goPB4yws-unsplash.jpg" alt="" />
+          </div>
+          <span>Jaewoong</span>
+        </div>
+
+        <!-- feed-img -->
+        <div class="feed-img">
+          <img src="img/alex-shuper-Xw5goPB4yws-unsplash.jpg" alt="" />
+        </div>
+
+        <!-- feed-content -->
+        <div class="feed-content">
+          <!-- content-menu -->
+          <div class="content-menu">
+            <div class="left">
+              <i class="fa-solid fa-heart"></i>
+              <i class="fa-regular fa-comment"></i>
+              <i class="fa-solid fa-arrow-up-from-bracket"></i>
+            </div>
+            <div class="right">
+              <i class="fa-regular fa-bookmark"></i>
+            </div>
+          </div>
+
+          <!-- content-like -->
+          <div class="content-like">
+            <div>
+              <img
+                src="img/alex-shuper-Xw5goPB4yws-unsplash.jpg"
+                alt="feed-img"
+                class="img"
+              />
+            </div>
+            <div><span>Awer</span>님 외<span>10</span>명이 좋아합니다</div>
+          </div>
+
+          <!-- content-reply -->
+          <div class="content-reply">
+            <div class="template">
+                <p>jaewing 가나다라마바사</p>
+
+                <div>
+                <button class="setting-reply heart"><i class="fa-solid fa-heart"></i></i></button> 
+                <button class="setting-reply delete">삭제</button>
+                </div>
+            </div>
+
+            <div class="template">
+                <p>jaewing 가나다라마바사</p>
+
+                <div>
+                <button class="setting-reply heart"><i class="fa-solid fa-heart"></i></i></button> 
+                <button class="setting-reply delete">삭제</button>
+                </div>
+            </div>
+            
+          </div>
+
+          <!-- content-time -->
+          <p class="time"><span>42</span>분 전</p>
+        </div>
+
+        <!-- reply -->
+        <div class="reply-box">
+          <input type="text" placeholder="댓글 달기..." class="reply" />
+          <button class="btn upload">게시</button>
+        </div>
+      </div>
+
+      <!-- main right -->
+      <div class="main-right">
+        <div class="wecode-profile">
+          <div class="wecode-img">
+            <img src="img/alex-shuper-Xw5goPB4yws-unsplash.jpg" alt="" />
+          </div>
+          <div class="wecode-content">
+            <p>wecode_bootcamp</p>
+            <p>WeCode | 위코드</p>
+          </div>
+        </div>
+
+        <div class="story-box">
+          <div class="story-nav">
+            <p>스토리</p>
+            <p>모두 보기</p>
+          </div>
+
+          <div class="story-content">
+            <div class="story-time">
+              <div class="story-img">
+                <img src="img/alex-shuper-Xw5goPB4yws-unsplash.jpg" alt="" />
+              </div>
+              <div>
+                <p>_yum_s</p>
+                <p>16분전</p>
+              </div>
+            </div>
+
+            <div class="story-time">
+              <div class="story-img">
+                <img src="img/alex-shuper-Xw5goPB4yws-unsplash.jpg" alt="" />
+              </div>
+              <div>
+                <p>_yum_s</p>
+                <p>16분전</p>
+              </div>
+            </div>
+
+            <div class="story-time">
+              <div class="story-img">
+                <img src="img/alex-shuper-Xw5goPB4yws-unsplash.jpg" alt="" />
+              </div>
+              <div>
+                <p>_yum_s</p>
+                <p>16분전</p>
+              </div>
+            </div>
+
+            <div class="story-time">
+              <div class="story-img">
+                <img src="img/alex-shuper-Xw5goPB4yws-unsplash.jpg" alt="" />
+              </div>
+              <div>
+                <p>_yum_s</p>
+                <p>16분전</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="story-box">
+          <div class="story-nav">
+            <p>회원님을 위한 추천</p>
+            <p>모두 보기</p>
+          </div>
+          <div class="story-time">
+            <div class="story-img">
+              <img src="img/alex-shuper-Xw5goPB4yws-unsplash.jpg" alt="" />
+            </div>
+            <div style="flex-grow: 3">
+              <p>_yum_s</p>
+              <p>_leasifjsad님 외 ..</p>
+            </div>
+            <div>
+              <button class="follow">팔로우</button>
+            </div>
+          </div>
+          <div class="story-time">
+            <div class="story-img">
+              <img src="img/alex-shuper-Xw5goPB4yws-unsplash.jpg" alt="" />
+            </div>
+            <div style="flex-grow: 3">
+              <p>_yum_s</p>
+              <p>_leasifjsad님 외 ..</p>
+            </div>
+            <div>
+              <button class="follow">팔로우</button>
+            </div>
+          </div>
+          <div class="story-time">
+            <div class="story-img">
+              <img src="img/alex-shuper-Xw5goPB4yws-unsplash.jpg" alt="" />
+            </div>
+            <div style="flex-grow: 3">
+              <p>_yum_s</p>
+              <p>_leasifjsad님 외 ..</p>
+            </div>
+            <div>
+              <button class="follow">팔로우</button>
+            </div>
+          </div>
+        </div>
+        <div class="infor">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde odit, pariatur adipisci exercitationem dolores eum reiciendis vel aliquam porro totam doloremque voluptatem temporibus incidunt blanditiis velit animi? Totam, sit eius.</p>
+        </div>
+      </div>
+    </main>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
