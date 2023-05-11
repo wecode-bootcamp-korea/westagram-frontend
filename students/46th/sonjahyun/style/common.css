@@ -1,0 +1,258 @@
+* {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+}
+
+body {
+    margin: 0; 
+    width: 100%;
+}
+
+main {
+    padding: 0 0 100px 80px;
+    background-color: #fafafa;
+    border-top: 1px solid #e6e6e6;
+    
+}
+
+article {
+    background-color: white;
+    border: 1px solid #e6e6e6;
+    width: 470px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-weight: 560;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px;
+}
+
+nav .iconsOnLeft {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 50px;
+}
+
+nav .iconsOnRight {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.iconsOnRight .icon {
+    margin: 0 10px;
+}
+
+nav .logo {
+    font-size: 20px;
+    margin: 0 10px;
+    padding: 1px 10px;
+    border-left: 1px solid black;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+}
+
+article img {
+    width: 468px;
+}
+
+article .pfp {
+    width: 32px;
+    border-radius: 50%;
+    margin-left: 8px;
+}
+
+.logo {
+    font-family: 'Lobster', sans-serif;
+}
+
+.searchBar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#searchBox {
+    width: 160px;
+    height: 22px;
+    border: 1px solid #e6e6e6;
+    background-color: #fafafa;
+}
+
+#magnifyingGlass {
+    width: 8px;
+    margin: 2px;
+    transform: translate(-102px, 0.5px);
+}
+
+#searchBox::placeholder {
+    text-align: center;
+    font-size: 10px;
+    color: #bcbcbc;
+}
+
+.feeds {
+    padding-top: 30px;
+}
+
+article .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 8px 4px 8px 5px;
+}
+
+.header .username {
+    width: 378px;
+    height: 26px;
+    margin: 0 0 0 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.light {
+    color: grey;
+    font-weight: 300;
+}
+
+.lighter {
+    color: lightgrey;
+    font-weight: 300;
+    font-size: 11px;
+}
+
+.post .caption {
+    margin: 2px 12px;
+}
+
+.post .icons {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 5px 0 10px;
+}
+
+.post .comment {
+    border-top: 1px solid #e6e6e6;
+    height: 45px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.whoLiked {
+    display: flex;
+    align-items: center;
+    margin: 0 0 6px 12px;
+    height: 20px;
+}
+
+.whoLiked img {
+    width: 15px;
+    border-radius: 50%;
+    margin-right: 4px;
+}
+
+.comment input {
+    border-style: none;
+    text-align: left;
+    padding: 0 12px;
+    color: grey;
+    width: 400px;
+}
+
+.comment button {
+    border-style: none;
+    background-color: white;
+    color: #c8e2fb;
+    padding: 15px;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.main-right .myProfile img {
+    border-radius: 50%;
+    width: 50px;
+}
+
+.myProfile {
+    width: 300px;
+    display: flex;
+    margin: 10px 5px;
+}
+
+.onTheRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.onTheRight p {
+    margin: 0 8px;
+}
+
+.username {
+    font-weight: 560;
+} 
+
+.main-right {
+    width: 250px;
+    margin: 30px 10px;
+}
+
+.main-right .story {
+    background-color: white;
+    border: 1px solid #e6e6e6
+}
+
+.main-right .story .header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pfp img {
+    border-radius: 50%;
+    width: 30px;
+    margin-right: 0px;
+}
+
+.profile {
+    display: flex;
+    margin: 2px 12px 12px;;
+}
+
+.story {
+    width: 230px;
+}
+
+.story .header p {
+    margin: 10px 12px;
+}
+
+.suggested {
+    margin: 10px 0;
+}
+
+.footer {
+    width: 200px;
+}
