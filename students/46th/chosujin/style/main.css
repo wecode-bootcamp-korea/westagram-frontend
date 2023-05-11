@@ -180,7 +180,6 @@ ul {
 
 #time {
   color: gray;
-  /* padding-left: ; */
 }
 
 #articleBottom {
@@ -191,7 +190,6 @@ ul {
 
 #commentBox {
   position: relative;
-  /* border: 1px solid black; */
 }
 
 #comment {
@@ -203,7 +201,7 @@ ul {
   border: none;
 }
 
-#commentBt {
+.commentBt {
   position: absolute;
   right: 10px;
   top: 14px;
@@ -212,11 +210,18 @@ ul {
   color: rgb(34, 153, 244);
 }
 
-.commentHeart {
-  width: 10px;
-  height: 10px;
-  margin: auto 0;
-  margin-right: 10px;
+.commentListRight {
+  margin-right: 15px;
+}
+
+.commentListRight > button {
+  background-color: white;
+  border: none;
+  color: gray;
+}
+
+.fa-heart {
+  font-size: 11px;
 }
 
 .commentList {
@@ -273,3 +278,5 @@ a {
 input:focus {
   outline: none;
 }
+
+/* <i class="fa-solid fa-heart" style="color: #f3121d;"></i> */
