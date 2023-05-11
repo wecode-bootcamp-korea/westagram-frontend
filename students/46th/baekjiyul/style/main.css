@@ -73,6 +73,69 @@ header {
   left: 30px;
 }
 
+.resultBoxTriangle {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-top: 10px solid var(--background-color);
+  border-right: 10px solid transparent;
+  position: absolute;
+  top: 23px;
+  left: 50%;
+}
+.resultBoxTriangle.none {
+  display: none;
+}
+
+.resultBox {
+  width: 100%;
+  position: absolute;
+  top: 20px;
+  left: calc(50%-150px);
+  background-color: var(--background-color);
+  z-index: 1;
+  list-style: none;
+  padding: 0 var(--header-size-side);
+  display: flex;
+  flex-direction: column;
+}
+
+.resultBox li {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: var(--account-info-top) var(--header-size-side);
+  position: relative;
+}
+
+.filtered-image {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.result-account {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  font-family: var(--text-font);
+  padding: 0 var(--account-left-size);
+}
+
+.result-account p {
+  margin: 0;
+}
+
+.result-account p:first-child {
+  font-weight: 600;
+}
+
+.result-account p:nth-child(2) {
+  font-size: 12px;
+  font-family: var(--text-font);
+  color: var(--gray-color);
+}
+
 .searchBar input {
   text-align: center;
   background-color: var(--background-color);
@@ -362,6 +425,10 @@ span.comment-account {
   font-family: var(--text-font);
 }
 
+.account-detail :first-child {
+  font-weight: 600;
+}
+
 .account-detail :nth-child(2) {
   font-size: 12px;
   color: grey;
@@ -414,6 +481,10 @@ span.comment-account {
 
 .recommend-account p {
   margin: 0;
+}
+
+.recommend-account p:first-child {
+  font-weight: 600;
 }
 
 .recommend-account p:nth-child(2) {

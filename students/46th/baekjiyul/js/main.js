@@ -2,7 +2,8 @@ const comment = document.querySelector(".comment input");
 const commentBtn = document.querySelector(".comment button");
 const commentList = document.querySelector(".commentList");
 
-/**Functions for creating comment**/
+let ACCOUNTNAME = "jy_baek";
+
 function deleteComment(event) {
   const deletedComment = event.target.parentNode;
   commentList.removeChild(deletedComment);
@@ -21,9 +22,7 @@ function changeLikeBtn(event) {
 
 function addComment() {
   if (comment.value) {
-    comment.value = "";
     const newList = document.createElement("li");
-    newList.id = `${comment.value}`;
     const newComment = document.createElement("span");
     const deleteBtn = document.createElement("button");
     const heartIcon = document.createElement("i");
@@ -36,11 +35,14 @@ function addComment() {
     newCommentAccount.innerText = "jy_baek";
     newList.prepend(newCommentAccount);
     newList.appendChild(newComment);
+    deleteBtn.appendChild(heartIcon);
     newList.appendChild(deleteBtn);
     newList.appendChild(heartIcon);
     commentList.appendChild(newList);
     deleteBtn.addEventListener("click", deleteComment);
     heartIcon.addEventListener("click", changeLikeBtn);
+    newList.id = `${comment.value}`;
+    comment.value = "";
   }
 }
 
@@ -59,9 +61,57 @@ firstCommentBtn.addEventListener("click", deleteComment);
 
 /**Functions for searching ID section**/
 const accountData = [
-  { id: "writeanddraw", profile: "https://#", nickname: "drawer" },
-  { id: "daebaki.wow", profile: "https://#", nickname: "daebak" },
-  { id: "nomadplan", profile: "https://#", nickname: "planner" },
-  { id: "wecodeKorea", profile: "https://#", nickname: "wecode" },
-  { id: "airplaneworld", profile: "https://#", nickname: "pilot" },
+  { id: "writeanddraw", profile: "img/profile.jpg", nickname: "drawer" },
+  { id: "daebaki.wow", profile: "img/profile.jpg", nickname: "daebak" },
+  { id: "nomadplan", profile: "img/profile.jpg", nickname: "planner" },
+  { id: "wecodeKorea", profile: "img/profile.jpg", nickname: "wecode" },
+  { id: "airplaneworld", profile: "img/profile.jpg", nickname: "pilot" },
+  { id: "highfiveworld", profile: "img/profile.jpg", nickname: "highworld" },
+  { id: "zebraelephant", profile: "img/profile.jpg", nickname: "animalZoo" },
 ];
+
+const accountDataId = accountData.map((item) => item.id);
+
+const searchInput = document.querySelector(".searchBar input");
+const resultBox = document.querySelector(".searchBarMenu ul");
+const resultBoxTriangle = document.querySelector(".resultBoxTriangle");
+
+function filterId(element) {
+  const searchId = searchInput.value;
+  return element.indexOf(searchId) != -1;
+}
+
+function paintMatchedId(element) {
+  const paintIdList = accountData.filter((x) => {
+    return x.id == element;
+  });
+  const resultId = document.createElement("li");
+  resultId.id = "filtered-id";
+  resultId.innerHTML = `<img class="filtered-image" src="${paintIdList[0].profile}"/>
+  <div class="result-account"><p>${paintIdList[0].id}</p><p>${paintIdList[0].nickname}</p></div>`;
+  resultId.style.display = "flex";
+  resultBox.appendChild(resultId);
+}
+
+searchInput.addEventListener("keyup", function () {
+  if (searchInput.value.length > 0) {
+    const matchId = accountDataId.filter((x) => filterId(x));
+    if (matchId.length > 0) {
+      resultBoxTriangle.classList.remove("none");
+      matchId.forEach((id) => paintMatchedId(id));
+    } else {
+      resultBoxTriangle.style.classList.add("none");
+      resultBox.innerHTML = "";
+    }
+  } else {
+    deleteResultBox();
+  }
+});
+
+searchInput.addEventListener("focusout", deleteResultBox);
+
+function deleteResultBox() {
+  searchInput.value = "";
+  resultBox.innerHTML = "";
+  resultBoxTriangle.classList.add("none");
+}
