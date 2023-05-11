@@ -3,7 +3,11 @@ const inputPw = document.querySelector(".password");
 const buttonId = document.querySelector(".buttonBox");
 
 function loginButton() {
-  if (inputId.value.length > 0 && inputPw.value.length > 0) {
+  if (
+    inputId.value.length > 0 &&
+    inputId.value.includes("@") &&
+    inputPw.value.length >= 5
+  ) {
     buttonId.style.backgroundColor = "blue";
   } else {
     buttonId.style.backgroundColor = "skyblue";
@@ -12,5 +16,3 @@ function loginButton() {
 
 inputId.addEventListener("keyup", loginButton);
 inputPw.addEventListener("keyup", loginButton);
-
-console.log();
