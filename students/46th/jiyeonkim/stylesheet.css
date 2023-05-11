@@ -1,0 +1,78 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+input {
+  outline: none;
+}
+
+#wrap {
+  padding: 50px;
+  border: 2px solid #e0e0e0;
+  width: 620px;
+  height: 700px;
+  text-align: center;
+  margin: 50px auto;
+}
+
+h1 {
+  font-family: "Lobster", cursive;
+  font-size: 76px;
+  font-weight: 100;
+  margin-bottom: 75px;
+}
+
+input {
+  font-family: "Noto Sans KR", sans-serif;
+  display: inline-block;
+  width: 484px;
+  height: 67px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #f1f1f14d;
+  border: 2px solid #e9e9e9;
+  border-radius: 4px;
+  font-size: 20px;
+}
+
+input::placeholder {
+  color: #979797;
+}
+
+button {
+  font-family: "Noto Sans KR", sans-serif;
+  display: inline-block;
+  width: 484px;
+  margin-top: 15px;
+  color: #fff;
+  background-color: #b4d8fb; /*활성화 칼라 : #3994ee */
+  width: 484px;
+  height: 58px;
+  border-radius: 6px;
+  border: none;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.activeBtn {
+  background-color: #3994ee;
+}
+
+.activeBtn:hover {
+  cursor: pointer;
+}
+
+#findPassword {
+  display: block;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 20px;
+  color: #001c77;
+  margin-top: 186px;
+}

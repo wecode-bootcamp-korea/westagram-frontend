@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <meta charset="utf-8" />
+  <head>
+    <link href="./stylesheetMain.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="main.js"></script>
+    <title>westagram</title>
+  </head>
+
+  <body>
+    <div id="wrap">
+      <div id="navBottomLine">
+        <nav>
+          <!-- nav 좌측 상단-->
+          <div id="navLeft">
+            <img src="./img/instagram.png" alt="home" />
+            <div id="line"></div>
+            <h1 id="mainH1">Westagram</h1>
+          </div>
+          <!-- nav 검색바-->
+          <input id="search" type="text" placeholder="검색" />
+          <!--nav 우측 상단-->
+          <div id="navRight">
+            <img src="./img/explore.png" alt="explore" />
+            <img src="./img/heart.png" alt="heart" />
+            <img src="./img/profile.png" alt="profile" />
+          </div>
+        </nav>
+      </div>
+
+      <div id="main">
+        <div class="feeds">
+          <article>
+            <div id="feedTop">
+              <div id="personal">
+                <img
+                  id="personalProfile"
+                  src="img/KakaoTalk_20230508_214810406.jpg"
+                  alt="personalProfile"
+                />
+                <span id="personalId">yeonnn</span>
+              </div>
+              <img
+                src="./img/more_horiz_FILL0_wght400_GRAD0_opsz48.png"
+                alt="more"
+              />
+            </div>
+            <img src="./img/cat.jpg" alt="cat" />
+            <div id="feedBottom">
+              <div id="feedBottomLeft">
+                <img src="img/heart.png" alt="heart" />
+                <img src="img/chat.png" alt="comment" />
+                <img src="img/upload.png" alt="share" />
+              </div>
+              <img src="img/ribbon.png" alt="bookmark" />
+            </div>
+            <div id="commentBox">
+              <div id="howMuchLike">
+                <img
+                  id="likeProfile"
+                  src="img/KakaoTalk_20230508_214810406.jpg"
+                  alt="likeProfile"
+                />
+
+                <span
+                  ><span class="bold">aineworld</span> 님
+                  <span class="bold">외 10명</span>이 좋아합니다</span
+                >
+              </div>
+              <div>
+                <span class="bold">yeonnn</span> 세상에서 제일 귀여운 지구
+                <span class="grey">...더 보기</span>
+                <div class="grey">댓글 127개 모두 보기</div>
+              </div>
+              <div id="existComment">
+                <span class="bold">neceosecius</span> <span>귀여워💕</span>
+
+                <button class="deleteBtn">삭제</button>
+                <img class="heartIcon" src="./img/heart.png" alt="comment" />
+              </div>
+
+              <div id="realCommentBox"></div>
+              <div class="grey">42분 전</div>
+            </div>
+
+            <div id="line2"></div>
+            <input id="newComment" type="text" placeholder="댓글 달기..." />
+            <button id="commentBtn">게시</button>
+          </article>
+        </div>
+
+        <div id="mainRight">
+          <div class="top">
+            <img
+              id="likeProfile"
+              src="img/KakaoTalk_20230508_214810406.jpg"
+              alt="likeProfile"
+            />
+
+            <span class="bold">paw_paw</span><br /><span class="grey"
+              >paw | paw</span
+            >
+          </div>
+
+          <div id="rightUpper">
+            <div class="rightTopMenu">
+              <span class="grey">스토리</span><span>모두 보기</span>
+            </div>
+
+            <div class="personalInform">
+              <img src="img/KakaoTalk_20230509_143849516.jpg" />
+
+              <div class="storyRecommend">
+                <span class="bold">_yum_s</span><br />
+                <span class="grey">12분 전</span>
+              </div>
+            </div>
+
+            <div class="personalInform">
+              <img src="img/KakaoTalk_20230509_143849516_01.jpg" />
+              <div class="storyRecommend">
+                <span class="bold">drink_eat_dring</span><br />
+                <span class="grey">1시간 전</span>
+              </div>
+            </div>
+            <div class="personalInform">
+              <img src="img/KakaoTalk_20230509_143849516_02.jpg" />
+              <div class="storyRecommend">
+                <span class="bold">hyukyc</span><br />
+                <span class="grey">5시간 전</span>
+              </div>
+            </div>
+            <div class="personalInform">
+              <img src="img/KakaoTalk_20230509_143849516_03.jpg" />
+              <div class="storyRecommend">
+                <span class="bold">jminkeek</span><br />
+                <span class="grey">16시간 전</span>
+              </div>
+            </div>
+          </div>
+
+          <div id="rightLower">
+            <div class="rightTopMenu">
+              <span class="grey">회원님을 위한 추천</span><span>모두 보기</span>
+            </div>
+
+            <div class="personalInform">
+              <img src="img/KakaoTalk_20230509_143849516_04.jpg" />
+
+              <div class="storyRecommend">
+                <span class="bold">ioaaaaa</span><br />
+                <span class="grey">ioaaaaa 님 외 2명이...</span>
+              </div>
+              <button>팔로우</button>
+            </div>
+
+            <div class="personalInform">
+              <img src="img/KakaoTalk_20230509_143849516.jpg" />
+              <div class="storyRecommend">
+                <span class="bold">jedlsi</span><br />
+                <span class="grey">ioaaaaa 님 외 2명이...</span>
+              </div>
+              <button>팔로우</button>
+            </div>
+            <div class="personalInform">
+              <img src="img/KakaoTalk_20230509_143849516_01.jpg" />
+              <div class="storyRecommend">
+                <span class="bold">ellda</span><br />
+                <span class="grey">ioaaaaa 님 외 2명이...</span>
+              </div>
+              <button>팔로우</button>
+            </div>
+          </div>
+
+          <div class="grey westagramInform">
+            Westagram 정보 · 지원 · 홍보 센터 · API · 채용 정보 ·
+            개인정보처리방침 · 약관 · 디렉터리 · 프로필 · 해시태그 · 언어<br />
+            <br />
+            ⓒ 2019 WESTAGRAM
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

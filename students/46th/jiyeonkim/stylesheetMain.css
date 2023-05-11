@@ -1,0 +1,310 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+input {
+  outline: none;
+  padding-left: 15px;
+}
+
+button {
+  outline: none;
+}
+
+body {
+  background-color: #f1f1f163;
+}
+
+#wrap {
+  margin: 50px auto;
+  position: relative;
+}
+
+nav {
+  margin: 0 auto;
+  width: 800px;
+  position: fixed;
+  top: 0;
+  padding: 14px 0px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#navBottomLine {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 70px;
+  background-color: white;
+  border-bottom: 2px solid #f1f1f1;
+}
+
+nav img {
+  width: 20px;
+}
+
+#line {
+  width: 1px;
+  margin: 0 9px;
+  height: 35px;
+  background-color: #000;
+  display: inline-block;
+}
+
+h1 {
+  font-family: "Lobster", cursive;
+  display: inline-block;
+  font-weight: 100;
+}
+
+#search {
+  position: absolute;
+  left: 50%;
+  margin-left: -82px;
+  width: 168px;
+  text-align: center;
+  background-color: #f1f1f14d;
+  border: 1px solid #e9e9e9;
+  font-weight: 100;
+  border-radius: 0px;
+}
+
+#search::placeholder {
+  color: #b3b3b3;
+  font-size: 12px;
+  font-weight: 100;
+}
+
+#navLeft,
+#navRight {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#navRight > img {
+  margin: 0px 10px;
+}
+
+#main {
+  width: 800px;
+  padding: 10px;
+
+  margin: 80px auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.feeds {
+  width: 480px;
+  margin-right: 20px;
+}
+
+#feedTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+
+  padding: 20px 10px;
+}
+
+#feedTop > img {
+  width: 25px;
+  border-radius: 50%;
+}
+
+#personal {
+  float: left;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  font-weight: 800;
+}
+
+#personal > img {
+  width: 35px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+article {
+  border: 2px solid #f1f1f1;
+  float: left;
+  width: 480px;
+  background-color: white;
+}
+
+article img {
+  width: 477px;
+}
+
+#feedBottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 5px;
+}
+
+#feedBottom img {
+  width: 30px;
+  margin: 3px;
+}
+
+#feedBottomLeft {
+  display: inline-block;
+}
+
+#likeProfile {
+  width: 30px;
+  border-radius: 45px;
+}
+
+.grey {
+  font-size: 14px;
+  color: #999999;
+}
+
+.bold {
+  font-weight: 900;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+#commentBox {
+  padding: 15px;
+}
+
+#like {
+  display: inline-block;
+}
+
+#line2 {
+  height: 1px;
+  background-color: #dfdfdf;
+  width: 478px;
+}
+
+#newComment {
+  width: 420px;
+  border: none;
+  height: 60px;
+}
+
+#newComment:focus {
+  border: none;
+}
+
+#newComment::placeholder {
+  font-size: 14px;
+  color: #999999;
+  margin-bottom: 10px;
+  padding-left: 15px;
+}
+
+button {
+  color: #3994ee;
+  font-weight: 900;
+  background-color: white;
+  border: none;
+}
+
+#commentBtn {
+  color: #b4d8fb;
+}
+
+#commentBtn.active {
+  color: #3994ee;
+}
+
+#mainRight {
+  width: 300px;
+  padding: 10px;
+}
+
+#mainRight img {
+  width: 45px;
+  border-radius: 50%;
+  display: block;
+  float: left;
+  margin-right: 10px;
+}
+
+.rightTopMenu {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 14px;
+  font-size: 14px;
+}
+
+#rightUpper {
+  border: 1px solid #e9e9e9;
+  background-color: #fff;
+  height: 264px;
+  margin-bottom: 16px;
+  padding: 10px;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+#rightLower {
+  border: 1px solid #e9e9e9;
+  background-color: #fff;
+  height: 230px;
+  padding: 10px;
+  overflow: hidden;
+}
+
+#rightUpper span {
+  line-height: 16px;
+}
+
+.personalInform {
+  margin-bottom: 15px;
+  display: flex;
+}
+
+.westagramInform {
+  margin-top: 15px;
+}
+
+.userName {
+  font-weight: 900;
+  font-family: "Noto Sans KR", sans-serif;
+  margin-right: 5px;
+  display: inline-block;
+}
+
+.heartIcon {
+  width: 15px;
+  float: right;
+}
+
+.solidHeartIcon {
+  content: url(./img/heart-solid.svg);
+  width: 15px;
+  float: right;
+}
+
+.deleteBtn {
+  float: right;
+  font-size: 14px;
+  color: #999999;
+  margin-left: 6px;
+  line-height: 14px;
+}
+
+#howMuchLike {
+  display: flex;
+  align-items: center;
+}
+
+#howMuchLike > img {
+  margin-right: 7px;
+}
