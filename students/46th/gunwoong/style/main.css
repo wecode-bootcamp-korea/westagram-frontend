@@ -1,0 +1,222 @@
+nav {
+  display: flex;
+  width: 100%;
+  height: 100px;
+}
+.horizontal-line {
+  width: 100%;
+  height: 50px;
+  border-top: 1px solid rgba(0, 0, 0, 0.5);
+}
+.nav-width {
+  width: 33%;
+}
+.logo-wrap {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.logo-wrap__logo {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+.logo-wrap__vertical-line {
+  border-left: 3px solid;
+  height: 30px;
+  margin-right: 10px;
+}
+.logo-wrap__text {
+  font-family: "Lobster", cursive;
+  font-size: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-bar-wrap {
+  display: flex;
+}
+.search-bar-wrap input {
+  border-radius: 5px;
+  width: 100%;
+  height: 40px;
+  margin-top: 30px;
+}
+.icons-wrap {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.icons-wrap img {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+main {
+  display: flex;
+  width: 90vw;
+  height: 90vh;
+  margin: 0 5%;
+}
+.feeds {
+  width: 60%;
+  height: 100%;
+  margin-left: 70px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+.feeds__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  margin-bottom: 10px;
+  padding: 10px 20px 0px 20px;
+}
+
+.feeds__header__contents {
+  display: flex;
+  flex-direction: column;
+  margin-top: 8px;
+  margin-left: 10px;
+}
+.feeds__header__contents span:first-child {
+  font-size: 13px;
+  font-weight: bold;
+}
+.feeds__header__contents span:nth-child(2) {
+  font-size: 12px;
+}
+.fa-solid {
+  font-size: 30px;
+}
+
+.feeds__img {
+  width: 100%;
+  height: 60%;
+}
+
+.feeds__bottom-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 0 20px;
+}
+.feeds__bottom-icons i:nth-child(-n + 2) {
+  margin-right: 20px;
+}
+i.fa-heart {
+  color: red;
+}
+.feeds__bottom-icons i:last-child {
+  margin-left: auto;
+}
+
+aside.main-aside {
+  width: 40%;
+  height: 100%;
+  margin-left: 30px;
+}
+
+.main-aside__header-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  width: 100%;
+  padding: 10px 20px 0px 20px;
+}
+
+.main-aside__header-wrap__contents {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  margin-left: 10px;
+}
+.main-aside__header-wrap__contents span:first-child {
+  font-size: 14px;
+  font-weight: bold;
+}
+.main-aside__header-wrap__contents span:last-child {
+  font-size: 13px;
+  opacity: 0.5;
+}
+.main-aside__story-section {
+  width: 100%;
+  height: 25%;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  margin-top: 20px;
+  padding: 10px 20px 0px 20px;
+}
+.main-aside__story-section__text {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.main-aside__story-section__text span:first-child {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.5);
+}
+.main-aside__story-section__text span:nth-child(2) {
+  font-size: 13px;
+  font-weight: bold;
+}
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  list-style: none;
+}
+.main-aside__story-section__profile-list li {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+}
+.main-aside__story-section__profile-list__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 10px;
+}
+.main-aside__story-section__profile-list__follow {
+  color: blue;
+  font-size: 14px;
+  margin-left: auto;
+  margin-top: 10px;
+}
+.main-aside__story-section__profile-list__text span:first-child {
+  font-size: 14px;
+  font-weight: bold;
+}
+.main-aside__story-section__profile-list__text span:nth-child(2) {
+  font-size: 13px;
+  color: rgba(0, 0, 0, 0.5);
+}
+.footer-info {
+  font-size: 15px;
+  margin-top: 20px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.feeds__likes-wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 20px 0px 20px;
+}
+.feeds__likes-wrap__image {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+.feeds__likes-wrap__text {
+  font-size: 20px;
+  font-weight: bold;
+}
+.feeds__comment__input {
+  font-size: 14px;
+  border: 0px;
+}
