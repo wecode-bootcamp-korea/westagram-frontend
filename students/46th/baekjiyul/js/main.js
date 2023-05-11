@@ -2,6 +2,7 @@ const comment = document.querySelector(".comment input");
 const commentBtn = document.querySelector(".comment button");
 const commentList = document.querySelector(".commentList");
 
+/**Functions for creating comment**/
 function deleteComment(event) {
   const deletedComment = event.target.parentNode;
   commentList.removeChild(deletedComment);
@@ -55,3 +56,12 @@ const firstCommentBtn = document.querySelector(".commentList-first button");
 
 firstCommentIcon.addEventListener("click", changeLikeBtn);
 firstCommentBtn.addEventListener("click", deleteComment);
+
+/**Functions for searching ID section**/
+const accountData = [
+  { id: "writeanddraw", profile: "https://#", nickname: "drawer" },
+  { id: "daebaki.wow", profile: "https://#", nickname: "daebak" },
+  { id: "nomadplan", profile: "https://#", nickname: "planner" },
+  { id: "wecodeKorea", profile: "https://#", nickname: "wecode" },
+  { id: "airplaneworld", profile: "https://#", nickname: "pilot" },
+];
