@@ -81,21 +81,23 @@
             </div>
             <div class="feeds__likes-wrap__text">
               <span>님 외 9명이 좋아합니다.</span>
-              <!-- 하트를 누르면 인원수가 +1 -->
-
-              <!-- 아래부터 댓글 기능 구현하기 -->
-              <div class="feeds__comment"></div>
-              <div>
-                <form action="submit">
-                  <input
-                    type="text"
-                    class="feeds__comment__input"
-                    placeholder="댓글 달기..."
-                  />
-                </form>
-              </div>
             </div>
+            <!-- 하트를 누르면 인원수가 +1 -->
           </div>
+          <!-- 아래부터 댓글 기능 구현하기 -->
+          <ul class="feeds__comment"></ul>
+          <form>
+            <input
+              class="feeds__comment__input"
+              type="text"
+              placeholder="댓글 달기..."
+            />
+            <button
+              class="feeds__comment__button"
+              hidden
+              onclick="loginValidation()"
+            ></button>
+          </form>
         </div>
       </article>
 
