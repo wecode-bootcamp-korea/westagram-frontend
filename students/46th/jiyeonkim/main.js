@@ -153,8 +153,8 @@ const account = [
     details: ">wecode|위코드",
   },
   {
-    id: "yeonnn",
-    profile: "./img/more_horiz_FILL0_wght400_GRAD0_opsz48.png",
+    id: "jiyeonnn",
+    profile: "img/cat.jpg",
     details: "김지연(Ji Yeon Kim)",
   },
   {
@@ -170,42 +170,40 @@ const accountID = account.map((item) => item.id); //accountObjArr -> IDarr
 const searchBar = document.getElementById("search"); // input
 const resultBox = document.getElementById("searchedID"); //ul
 
-function matchID(value) {
-  const serachBarValue = searchBar.value;
-  return accountID.indexOf(serachBarValue) != -1;
-}
-
-function paintMatchedID(element) {
-  const paintIDList = account.filter((x) => {
-    return x.id == element;
-  });
-
-  const resultID = document.createElement("li");
-  resultID.innerHTML = `<img
-  src=${paintIDList[0].profile}
-  alt="${paintIDList[0].id}님의 프로필 사진"
-/>
-<div>
-  <div class="bold">${paintIDList[0].id}</div>
-  <div class="grey">${paintIDList[0].details}</div>
-</div>`;
-  resultID.style.display = "display";
-  resultBox.appendChild(resultID);
-}
-
 function filterAccount() {
   if (searchBar.value.length > 0) {
-    const filterId = accountID.filter((x) => matchID(x));
+    const filterId = accountID.filter((x) => x.includes(searchBar.value));
+    //**여기 꼭 다시 체크하기!!!
+
     if (filterId.length > 0) {
-      resultBox.display = "flex";
-      filterId.forEach((id) => paintMatchedID(id)); //**forEach
-      resultBox.display = "none";
       resultBox.innerHTML = "";
+      filterId.forEach((id) => {
+        //filterId 와 account 배열 비교해서 맞는 account 객체 불러오기
+        const matchedAccount = account.find((item) => item.id === id);
+        console.log(matchedAccount);
+
+        if (matchedAccount) {
+          const matchedAccountBox = document.createElement("li");
+
+          resultBox.appendChild(matchedAccountBox);
+          matchedAccountBox.innerHTML = `<img src=${matchedAccount.profile}
+            alt="${matchedAccount.id}님의 프로필 사진"/>
+          <div>
+          <div class="bold">${matchedAccount.id}</div>
+          <div class="grey">${matchedAccount.details}</div>
+          </div>`;
+        }
+      });
+      resultBox.style.display = "block";
+    } else {
+      resultBox.style.display = "none";
     }
+  } else {
+    resultBox.style.display = "none";
   }
 }
 
-searchBar.addEventListener("keyup", filterAccount);
+searchBar.addEventListener("input", filterAccount);
 
 // const result = idArray.filter((value) => value.indexOf("Wecode") !== -1);
 // -> value.indexOf('') 하면 해당하지 않는 거만 나옴!
