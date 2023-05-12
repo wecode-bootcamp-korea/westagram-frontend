@@ -14,26 +14,37 @@ button {
   outline: none;
 }
 
+li {
+  list-style: none;
+}
+
 body {
   background-color: #f1f1f163;
 }
 
+span {
+  font-size: 14px;
+}
+
+div {
+  font-size: 14px;
+}
 #wrap {
-  margin: 50px auto;
   position: relative;
+  margin: 50px auto;
 }
 
 nav {
-  margin: 0 auto;
-  width: 800px;
   position: fixed;
-  top: 0;
-  padding: 14px 0px;
-  left: 0;
-  right: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 800px;
+  padding: 14px 0px;
 }
 
 #navBottomLine {
@@ -52,16 +63,16 @@ nav img {
 }
 
 #line {
+  display: inline-block;
   width: 1px;
   margin: 0 9px;
   height: 35px;
   background-color: #000;
-  display: inline-block;
 }
 
 h1 {
-  font-family: "Lobster", cursive;
   display: inline-block;
+  font-family: "Lobster", cursive;
   font-weight: 100;
 }
 
@@ -70,11 +81,62 @@ h1 {
   left: 50%;
   margin-left: -82px;
   width: 168px;
-  text-align: center;
+  height: 25px;
+  border-radius: 2px;
+  padding: 0;
   background-color: #f1f1f14d;
   border: 1px solid #e9e9e9;
+  text-align: center;
   font-weight: 100;
-  border-radius: 0px;
+}
+
+#searchedID {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  margin-left: -82px;
+}
+
+/*말풍선 꼬리 - border로 만듬!*/
+#searchedID::after {
+  display: none;
+  border-bottom: 8px solid #e9e9e9;
+  border-left: 7px solid rgba(255, 255, 255, 0);
+  border-right: 7px solid rgba(255, 255, 255, 0);
+  content: "";
+  height: 0;
+  left: 50%;
+  margin-left: -4px;
+  position: absolute;
+  top: -8px;
+}
+
+#searchedID li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 168px;
+  height: 55px;
+  margin-bottom: 15px;
+  background-color: #fcfcfc;
+  border: 1px solid #e9e9e9;
+}
+
+#searchedID img {
+  float: left;
+  width: 35px;
+  height: 35px;
+  margin: 0px 7px;
+  border-radius: 50%;
+}
+
+#searchedID > div {
+  margin-left: 11px;
+}
+
+#searchedID div {
+  font-size: 14px;
 }
 
 #search::placeholder {
@@ -94,13 +156,78 @@ h1 {
   margin: 0px 10px;
 }
 
-#main {
-  width: 800px;
-  padding: 10px;
+#profile:hover {
+  cursor: pointer;
+}
 
-  margin: 80px auto;
+#profileBox {
+  position: absolute;
+  top: 61px;
+  left: 690px;
+  width: 160px;
+  background-color: white;
+  border: 1px solid #e7e7e7;
+  border-radius: 7px;
+  box-shadow: 0px 0px 10px 3px #e7e7e7;
+}
+
+.displayNone {
+  display: none;
+}
+#profileBox > :last-child {
+  /*체크*/
+  border-top: 1px solid #e7e7e7;
+}
+
+/* #profileBoxTail {
+  position: absolute;
+  top: -6px;
+  left: 84.5%;
+  height: 12px;
+  width: 12px;
+  background-color: rgb(255, 255, 255);
+  transform: rotate(45deg);
+  box-shadow: 0px 0px 10px 3px #e7e7e7;
+} */
+
+#profileBox::before {
+  height: 0px;
+  width: 0px;
+  content: "";
+  display: block;
+  margin-left: 81%;
+  margin-top: -7px;
+  border-width: 7px 7px 7px 7px;
+  border-style: solid;
+  border-color: #ffffff #ffffff #ffffff00 #ffffff00;
+  transform: rotate(-45deg);
+  box-shadow: 0px 0px 10px 3px #e7e7e7;
+  z-index: 0;
+}
+
+.profileBoxInnerBox {
+  display: flex;
+  align-items: center;
+  height: 35px;
+  padding: 10px;
+  line-height: 25px;
+}
+
+#profileBox img {
+  width: 25px;
+  margin-right: 6px;
+}
+
+#navRight > img {
+  margin: 0px 10px;
+}
+
+#main {
   display: flex;
   justify-content: space-between;
+  width: 800px;
+  padding: 10px;
+  margin: 80px auto;
 }
 
 .feeds {
@@ -113,7 +240,6 @@ h1 {
   justify-content: space-between;
   align-items: center;
   height: 60px;
-
   padding: 20px 10px;
 }
 
@@ -124,9 +250,9 @@ h1 {
 
 #personal {
   float: left;
-  height: 35px;
   display: flex;
   align-items: center;
+  height: 35px;
   font-weight: 800;
 }
 
@@ -137,9 +263,9 @@ h1 {
 }
 
 article {
-  border: 2px solid #f1f1f1;
   float: left;
   width: 480px;
+  border: 2px solid #f1f1f1;
   background-color: white;
 }
 
@@ -162,23 +288,30 @@ article img {
   display: inline-block;
 }
 
+.top {
+  margin-bottom: 12px;
+}
+
 #likeProfile {
   width: 30px;
   border-radius: 45px;
 }
 
 .grey {
-  font-size: 14px;
+  font-size: 12px;
   color: #999999;
 }
 
 .bold {
+  font-size: 13px;
   font-weight: 900;
   font-family: "Noto Sans KR", sans-serif;
 }
 
 #commentBox {
   padding: 15px;
+  width: 477px;
+  word-wrap: break-word; /*boxSize 넘어갈 시 자동 줄바꿈*/
 }
 
 #like {
@@ -187,14 +320,14 @@ article img {
 
 #line2 {
   height: 1px;
-  background-color: #dfdfdf;
   width: 478px;
+  background-color: #dfdfdf;
 }
 
 #newComment {
   width: 420px;
-  border: none;
   height: 60px;
+  border: none;
 }
 
 #newComment:focus {
@@ -202,25 +335,21 @@ article img {
 }
 
 #newComment::placeholder {
-  font-size: 14px;
-  color: #999999;
   margin-bottom: 10px;
   padding-left: 15px;
+  font-size: 14px;
+  color: #999999;
 }
 
 button {
-  color: #3994ee;
-  font-weight: 900;
   background-color: white;
   border: none;
-}
-
-#commentBtn {
-  color: #b4d8fb;
-}
-
-#commentBtn.active {
   color: #3994ee;
+  font-weight: 900;
+}
+
+.commentBtn {
+  color: #b4d8fb;
 }
 
 #mainRight {
@@ -229,35 +358,35 @@ button {
 }
 
 #mainRight img {
-  width: 45px;
-  border-radius: 50%;
   display: block;
   float: left;
+  width: 45px;
+  border-radius: 50%;
   margin-right: 10px;
 }
 
 .rightTopMenu {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 14px;
+  margin-bottom: 10px;
   font-size: 14px;
 }
 
 #rightUpper {
-  border: 1px solid #e9e9e9;
-  background-color: #fff;
-  height: 264px;
+  height: 253px;
   margin-bottom: 16px;
   padding: 10px;
-  overflow: hidden;
   margin-top: 10px;
+  border: 1px solid #e9e9e9;
+  background-color: #fff;
+  overflow: hidden;
 }
 
 #rightLower {
+  height: 217px;
+  padding: 10px;
   border: 1px solid #e9e9e9;
   background-color: #fff;
-  height: 230px;
-  padding: 10px;
   overflow: hidden;
 }
 
@@ -266,8 +395,8 @@ button {
 }
 
 .personalInform {
-  margin-bottom: 15px;
   display: flex;
+  margin-bottom: 15px;
 }
 
 .westagramInform {
@@ -275,29 +404,29 @@ button {
 }
 
 .userName {
+  display: inline-block;
+  margin-right: 5px;
   font-weight: 900;
   font-family: "Noto Sans KR", sans-serif;
-  margin-right: 5px;
-  display: inline-block;
 }
 
 .heartIcon {
-  width: 15px;
   float: right;
+  width: 15px;
 }
 
 .solidHeartIcon {
+  float: right;
   content: url(./img/heart-solid.svg);
   width: 15px;
-  float: right;
 }
 
 .deleteBtn {
   float: right;
-  font-size: 14px;
-  color: #999999;
   margin-left: 6px;
   line-height: 14px;
+  font-size: 12px;
+  color: #999999;
 }
 
 #howMuchLike {
