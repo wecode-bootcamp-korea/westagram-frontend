@@ -2,6 +2,13 @@
     box-sizing: border-box;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     font-size: 12px;
+    outline: none;
+}
+
+@media screen and (max-width: 840px) {
+    .main-right {
+        display: none;
+    }
 }
 
 body {
@@ -10,8 +17,8 @@ body {
 
 main {
     display: flex;
-    justify-content: space-between;
-    padding: 0 0 100px 80px;
+    justify-content: space-around;
+    padding: 30px 10px;
     background-color: #fafafa;
     border-top: 1px solid #e6e6e6;
 }
@@ -36,7 +43,8 @@ nav {
 }
 
 footer {
-    width: 200px;
+    width: 210px;
+    padding: 0 5px;
 }
 
 .navBarLogo {
@@ -45,15 +53,12 @@ footer {
     margin-left: 50px;
 }
 
-.logo {
-    font-family: 'Lobster', sans-serif;
-}
-
 nav .logo {
     font-size: 20px;
     margin: 0 10px;
     padding: 1px 10px;
     border-left: 1px solid black;
+    font-family: 'Lobster', sans-serif;
 }
 
 nav .iconsOnRight {
@@ -66,6 +71,13 @@ nav .iconsOnRight {
     width: 20px;
     height: 20px;
     margin: 5px;
+}
+
+.smallIcon {
+    width: 10px;
+    height: 10px;
+    float: right;
+    margin: 5px 15px 5px 0;
 }
 
 .iconsOnRight .icon {
@@ -83,12 +95,12 @@ article .pfp {
 }
 
 .light {
-    color: grey;
+    color: #969696;
     font-weight: 300;
 }
 
 .lighter {
-    color: lightgrey;
+    color: #cfcfcf;
     font-weight: 300;
     font-size: 11px;
 }
@@ -113,13 +125,17 @@ article .pfp {
 }
 
 .searchInput::placeholder {
-    color: #bcbcbc;
     font-size: 10px;
     text-align: center;
 }
 
 .feed {
-    padding-top: 30px; 
+    margin: 0 20px 0 50px;
+}
+
+.main-right {
+    width: 250px;
+    margin: 0 50px 0 20px;
 }
 
 article header {
@@ -155,14 +171,6 @@ header .userInfo .username {
     margin: 0 5px 0 10px;
 }
 
-.comments {
-    display: flex;
-    justify-content: space-between;
-    height: 45px;
-    margin-top: 10px;
-    border-top: 1px solid #e6e6e6;
-}
-
 .likedListContainer {
     display: flex;
     align-items: center;
@@ -176,19 +184,47 @@ header .userInfo .username {
     border-radius: 50%;
 }
 
-.postCommentInput {
-    width: 400px;
-    padding: 0 12px;
-    color: grey;
-    border-style: none;
-    text-align: left;
+.commentSection {
+    display: flex;
+    flex-direction: column;
 }
 
-.postCommentButton {
-    padding: 15px;
+.commentsList {
+    list-style-type: none;
+    padding: 0;
+    margin: 1px 0 1px 12px;
+}
+
+li.comment {
+    width: 420px;
+    float: left;
+    margin: 3px 0;
+}
+
+.postComment {
+    margin-top: 5px;
+    border-top: 1px solid #e6e6e6;
+}
+
+.commentInput {
+    width: 400px;
+    height: 44px;
+    padding: 0 12px;
+    border-style: none;
+    text-align: left;
+    outline: none;
+}
+
+.commentBtn {
+    float: right;
+    padding: 15px 12px;
     color: #c8e2fb;
     background-color: white;
     border-style: none;
+}
+
+.commentBtn:hover, .commentBtn:focus {
+    color: #5eacd6;
 }
 
 aside section {
@@ -203,7 +239,7 @@ aside section {
 
 .myProfile {
     display: flex;
-    margin: 10px 5px;
+    margin: 5px;
 }
 
 .myHandle, .otherUserInfo {
@@ -213,14 +249,9 @@ aside section {
     margin: 0 8px;
 }
 
-.username {
+.bold {
     font-weight: 560;
 } 
-
-.main-right {
-    width: 250px;
-    margin: 30px 10px;
-}
 
 .story, .suggestedForYou {
     background-color: white;
@@ -238,7 +269,6 @@ section .header span {
 
 .profile {
     display: flex;
-    flex-direction: row;
     margin: 2px 12px 12px;;
 }
 

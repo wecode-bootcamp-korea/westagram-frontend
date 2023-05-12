@@ -4,7 +4,6 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="./style/login.css">
-        <link rel="stylesheet" type="text/css" href="./style/common.css">
         <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,16 +12,17 @@
     </head>
 
     <body>
-        <div class="border">
-            <p class="logo">Westagram</p>
-
-            <input type="text" id="username" placeholder="전화번호, 사용자 이름 또는 이메일">
-            <input type="password" id="password" placeholder="비밀번호">
-            <button class="loginButton">로그인</button>
-
-            <div class="link">
-                <a class="forgotPassword" href>비밀번호를 잊으셨나요?</a>
+        <main>
+            <div class="topContainer">
+                <p class="logo">Westagram</p>
+                <div id="userInput">
+                    <input type="text" id="userId" placeholder="전화번호, 사용자 이름 또는 이메일">
+                    <input type="password" id="password" placeholder="비밀번호">
+                </div>
+                <button id="loginBtn" onclick="alert('로그인 성공!')" disabled>로그인</button>
             </div>
-        </div>
+            <a class="forgotPassword" href>비밀번호를 잊으셨나요?</a>
+        </main>
+        <script src="js/login.js"></script>
     </body>
 </html>

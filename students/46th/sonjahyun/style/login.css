@@ -1,60 +1,71 @@
 * {
     box-sizing: border-box;
-    text-align: center;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 12px;
+    outline: none;
 }
 
-body {
+body, main, .topContainer, #userInput{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 a {
-    text-decoration: none;
     color: #04386c;
-    font-size: 11px;
-    font-family: 'Noto Sans KR', sans-serif;
-
+    text-decoration: none;
 }
 
-.border {
+main {
+    justify-content: space-between;
     width: 320px;
     height: 350px;
+    margin: 30px;
     border: 1px solid lightgrey;
+}
+
+.topContainer {
+    justify-content: flex-start;
 }
 
 .logo {
     font-size: 40px;
+    font-family: 'Lobster', sans-serif;
+    margin: 30px;
 }
 
-.loginButton {
-    margin: 10px;
-    background-color: #c4e3fb;
-    color: white;
-    border-style: none;
-    border-radius: 4px;
+.forgotPassword {
+    margin: 15px;
+}
+
+#loginBtn {
     width: 220px;
     height: 28px;
-    font-size: 12px;
+    margin: 10px;
+    color: white;
+    background-color: #c4e3fb;
+    border-style: none;
+    border-radius: 4px;
 }
 
-.link {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-end;
-    height: 70px;
+#loginBtn:hover, #loginBtn:focus {
+    background-color: #5eacd6;
 }
 
-#username, #password {
-    background-color: #FAFAFA;
+#loginBtn:disabled {
+    background-color: #c4e3fb;
+}
+
+#userInput input {
     width: 220px;
     height: 36px;
-    border: 1px solid #efefef;
-    border-radius: 3px;
     margin: 2.5px;
     padding: 10px;
-    font-size: 11px;
     color: #a2a2a2;
+    background-color: #FAFAFA;
+    border: 1px solid #efefef;
+    border-radius: 3px;
+    outline: none;
 }
 
 ::placeholder {
