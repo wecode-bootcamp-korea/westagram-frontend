@@ -75,7 +75,6 @@ const deleteHandler = (button) => {
 // 3) 내가 선택한 좋아요 버튼의 색깔이 red로 바뀌게 해보자
 
 const likeRed = (button) => {
-  console.log(button);
   if (button.className === "fa-regular fa-heart") {
     button.className = "fa-solid fa-heart";
     button.style.color = "red";
