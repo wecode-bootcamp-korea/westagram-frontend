@@ -29,6 +29,13 @@ span {
 div {
   font-size: 14px;
 }
+
+@media all and (max-width: 600px) {
+  #mainRight {
+    display: none;
+  }
+}
+
 #wrap {
   position: relative;
   margin: 50px auto;
@@ -43,7 +50,7 @@ nav {
   left: 0;
   right: 0;
   margin: 0 auto;
-  width: 800px;
+  max-width: 770px;
   padding: 14px 0px;
 }
 
@@ -79,8 +86,8 @@ h1 {
 #search {
   position: absolute;
   left: 50%;
-  margin-left: -82px;
-  width: 168px;
+  margin-left: -120px;
+  width: 240px;
   height: 25px;
   border-radius: 2px;
   padding: 0;
@@ -116,9 +123,10 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  width: 168px;
+  width: 240px;
   height: 55px;
-  margin-bottom: 15px;
+  margin-top: 10px;
+  margin-left: -37px;
   background-color: #fcfcfc;
   border: 1px solid #e9e9e9;
 }
