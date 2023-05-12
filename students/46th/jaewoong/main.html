@@ -17,56 +17,49 @@
     <link rel="stylesheet" href="style/common.css" />
   </head>
   <body>
-    <!-- nav -->
     <nav>
       <div class="flex-nav">
         <div class="border-right">
           <img src="img/instagram.png" alt="instagram-img" class="img" />
         </div>
         <div>
-          <p class="font" style="font-size: 25px; margin-bottom: 0">
-            Instagram
-          </p>
+          <p class="font" style="font-size: 25px; margin-bottom: 0">Instagram</p>
         </div>
-        <!-- <div style="flex-grow: 2"> -->
           <div style="flex-grow: 2;">
           <input type="text" placeholder="&#Xf002; 검색" class="search"> 
           </div>
-        <div><img src="img/explore.png" alt="explore-img" class="img" /></div>
-        <div><img src="img/heart.png" alt="heart-img" class="img" /></div>
-        <div><img src="img/profile.png" alt="profile-img" class="img" /></div>
+          <button class="nav-button"><img src="img/explore.png" alt="explore-img" class="img" /></button>
+        <button class="nav-button"><img src="img/heart.png" alt="heart-img" class="img" /></button>        
+        <div class="nav-profile">
+          <button class="nav-button"><img src="img/profile.png" alt="profile-img" class="img" /></button>          
+          <div class="nav-menu bubble show">
+            <div class="menu">
+              <p><i class="fa-regular fa-user"></i>&nbsp;&nbsp;&nbsp;프로필</p>
+              <p><i class="fa-regular fa-bookmark"></i>&nbsp;&nbsp;&nbsp;저장됨</p>
+              <p><i class="fa-solid fa-gear"></i>&nbsp;&nbsp;&nbsp;설정</p>
+            </div>
+            <div class="logout">
+              <p>로그아웃</p>
+            </div>
+          </div>
+        </div>
       </div>
     </nav>
-    <div class="speech-bubble search-result show">
-      <!-- <div class="story-time border-bottom">
-        <div><img src="img/alex-shuper-Xw5goPB4yws-unsplash.jpg" alt="" class="story-img"></div>
-        <div>
-          <p>wecode_bootcamp</p>
-          <p>wecode_founder</p>
-        </div>
-      </div> -->
-    </div>
-
-    <!-- main 기준으로 flex -->
+    <div class="speech-bubble search-result show"></div>
     <main>
-      <!-- main left -->
       <div class="main-left">
-        <!-- feed-profile -->
         <div class="profile">
           <div class="profile-img">
-            <img src="img/alex-shuper-Xw5goPB4yws-unsplash.jpg" alt="" />
+            <img src="img/alex-shuper-Xw5goPB4yws-unsplash.jpg" alt="profile-img" />
           </div>
           <span>Jaewoong</span>
         </div>
 
-        <!-- feed-img -->
         <div class="feed-img">
-          <img src="img/alex-shuper-Xw5goPB4yws-unsplash.jpg" alt="" />
+          <img src="img/alex-shuper-Xw5goPB4yws-unsplash.jpg" alt="profile-img" />
         </div>
 
-        <!-- feed-content -->
-        <div class="feed-content">
-          <!-- content-menu -->
+        <div class="fed-content">
           <div class="content-menu">
             <div class="left">
               <i class="fa-solid fa-heart"></i>
@@ -78,7 +71,6 @@
             </div>
           </div>
 
-          <!-- content-like -->
           <div class="content-like">
             <div>
               <img
@@ -90,11 +82,9 @@
             <div><span>Awer</span>님 외<span>10</span>명이 좋아합니다</div>
           </div>
 
-          <!-- content-reply -->
           <div class="content-reply">
             <div class="template">
                 <p>jaewing 가나다라마바사</p>
-
                 <div>
                 <button class="setting-reply heart"><i class="fa-solid fa-heart"></i></i></button> 
                 <button class="setting-reply delete">삭제</button>
@@ -103,31 +93,26 @@
 
             <div class="template">
                 <p>jaewing 가나다라마바사</p>
-
                 <div>
                 <button class="setting-reply heart"><i class="fa-solid fa-heart"></i></i></button> 
                 <button class="setting-reply delete">삭제</button>
                 </div>
             </div>
-            
-          </div>
 
-          <!-- content-time -->
+          </div>
           <p class="time"><span>42</span>분 전</p>
         </div>
 
-        <!-- reply -->
         <div class="reply-box">
           <input type="text" placeholder="댓글 달기..." class="reply" />
           <button class="btn upload">게시</button>
         </div>
       </div>
 
-      <!-- main right -->
       <div class="main-right">
         <div class="wecode-profile">
           <div class="wecode-img">
-            <img src="img/alex-shuper-Xw5goPB4yws-unsplash.jpg" alt="" />
+            <img src="img/alex-shuper-Xw5goPB4yws-unsplash.jpg" alt="profile-img" />
           </div>
           <div class="wecode-content">
             <p>wecode_bootcamp</p>
@@ -144,7 +129,7 @@
           <div class="story-content">
             <div class="story-time">
               <div class="story-img">
-                <img src="img/alex-shuper-Xw5goPB4yws-unsplash.jpg" alt="" />
+                <img src="img/alex-shuper-Xw5goPB4yws-unsplash.jpg" alt="profile-img" />
               </div>
               <div>
                 <p>_yum_s</p>
@@ -154,7 +139,7 @@
 
             <div class="story-time">
               <div class="story-img">
-                <img src="img/alex-shuper-Xw5goPB4yws-unsplash.jpg" alt="" />
+                <img src="img/alex-shuper-Xw5goPB4yws-unsplash.jpg" alt="profile-img" />
               </div>
               <div>
                 <p>_yum_s</p>
@@ -164,7 +149,7 @@
 
             <div class="story-time">
               <div class="story-img">
-                <img src="img/alex-shuper-Xw5goPB4yws-unsplash.jpg" alt="" />
+                <img src="img/alex-shuper-Xw5goPB4yws-unsplash.jpg" alt="profile-img" />
               </div>
               <div>
                 <p>_yum_s</p>
@@ -174,7 +159,7 @@
 
             <div class="story-time">
               <div class="story-img">
-                <img src="img/alex-shuper-Xw5goPB4yws-unsplash.jpg" alt="" />
+                <img src="img/alex-shuper-Xw5goPB4yws-unsplash.jpg" alt="profile-img" />
               </div>
               <div>
                 <p>_yum_s</p>
@@ -191,7 +176,7 @@
           </div>
           <div class="story-time">
             <div class="story-img">
-              <img src="img/alex-shuper-Xw5goPB4yws-unsplash.jpg" alt="" />
+              <img src="img/alex-shuper-Xw5goPB4yws-unsplash.jpg" alt="profile-img" />
             </div>
             <div style="flex-grow: 3">
               <p>_yum_s</p>
@@ -203,7 +188,7 @@
           </div>
           <div class="story-time">
             <div class="story-img">
-              <img src="img/alex-shuper-Xw5goPB4yws-unsplash.jpg" alt="" />
+              <img src="img/alex-shuper-Xw5goPB4yws-unsplash.jpg" alt="profile-img" />
             </div>
             <div style="flex-grow: 3">
               <p>_yum_s</p>
@@ -215,7 +200,7 @@
           </div>
           <div class="story-time">
             <div class="story-img">
-              <img src="img/alex-shuper-Xw5goPB4yws-unsplash.jpg" alt="" />
+              <img src="img/alex-shuper-Xw5goPB4yws-unsplash.jpg" alt="profile-img" />
             </div>
             <div style="flex-grow: 3">
               <p>_yum_s</p>

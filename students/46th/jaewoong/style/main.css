@@ -20,6 +20,48 @@ nav{
     margin-right: 20px;
 }
 
+.nav-profile{
+    position: relative;
+}
+
+.nav-menu{
+    position: absolute;
+    width: 240px;
+    padding: 10px;
+	background: #f2f2f2;
+	border-radius: .4em;
+    left: -185px;
+    top: 45px;
+}
+
+.nav-menu::after{
+    content: '';
+	position: absolute;
+	top: 0;
+	left: 85%;
+	width: 0;
+	height: 0;
+	border: 15px solid transparent;
+	border-bottom-color: #f2f2f2;
+	border-top: 0;
+	margin-left: -15px;
+	margin-top: -15px;
+}
+
+.nav-button{
+    background-color: white;
+    border: none;
+}
+
+.menu p{
+    padding: 7px 0px;
+}
+
+.logout{
+    border-top: 1px solid black;
+    padding: 7px 0px 0px;
+}
+
 .search{
     display: block;
     margin: auto;

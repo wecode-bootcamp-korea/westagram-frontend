@@ -18,3 +18,34 @@ body{
 button:hover{
     cursor: pointer;
 }
+
+@media screen and (min-width:1200px) {
+    main{
+        margin-left: 250px;
+        margin-right: 250px;
+    }
+}
+
+@media screen and (max-width:968px){
+    main{
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+}
+
+@media screen and (max-width:800px) {
+    main{
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+    .main-right{
+        display: none;
+    }
+    .main-left{
+        width: 100%;
+    }
+    .flex-nav input{
+        position: unset;
+    }
+}
+
