@@ -40,44 +40,49 @@ function commentFunction() {
     divTagTwo.className = "commentListRight";
     iTag.className = "fa-regular fa-heart";
     buttonTag.className = "deleteBtn";
-    buttonTag.onclick = deleteHandler();
-
+    buttonTag.onclick = function () {
+      deleteHandler(this);
+    };
+    iTag.onclick = function () {
+      likeRed(this);
+    };
     iTag.style.paddingRight = "4.2px";
 
     //ul tag에 추가(위로 옮겨놨음)
   }
 }
 
-//엔터치면서 input값이 지워지도록
+//엔터치면서 input값이지워지도록
+//onclick="likeRed(this)"
+//클릭을 했을 때, likRed라는 함수가 호출된다.
+//그리고 인자는 this다. this는 호출한 i 자신이 된다.
+//iTag에 속성을 추가하는데,
+//iTag.onclick = function () {
+//likeRed(this);}
+//왜 한번 더 함수로 감싸서 했을까?
+//this의 위치가 달라지기 때문에
+//button 인자 즉, 내가 누른 i태그에 가까운 상위 li태그를 제거하게 된다.
 
-// 굳이 deleteHandler함수를 만들어서 여기에서 버튼을 querySelectorAll 선택한 이유?
-// 전에처럼 5번줄이나 6번줄에서 선택을하면 코드가 실행되는순간에 있는 버튼들만 가지고오고 그 버튼들만 적용이 되기때문에
-// 버튼을 누를때마다 deleteBtns 값을 새로 가지고와야한다.
-// 그래서 모든 button 태그에 onclick="deleteHandler()"를 넣어주고
-// 그 태그가 클릭되면 아래가 차례대로 실행되도록 한다.
+//
 
-const deleteHandler = () => {
-  // 1) 내가 선택한 버튼을 가져와봐 .. 근데, 내가 선택한 버튼이 5번째줄 버튼일수도 있잖아?
-  // 그러니까 내가 생성한 모든 버튼을 일단 가져와야겠지
-  const deleteBtns = document.querySelectorAll(".deleteBtn");
+const deleteHandler = (button) => {
+  button.closest("li").remove();
+};
 
-  //2) 이 많은 삭제버튼중에서, 내가 클릭한 버튼의 li태그만 삭제가 되야되.
-  // 근데 몇번째 li인지 내가 알 수가 없잖아?
-  // 그렇다면 반복문을 통해서, 내가 클릭한 것에 가까운 li를 지우는 공식을 만들어보자
-  // forEach 메서드를 사용해서
-  // forEach 메서드는 배열의 요소만큼 반복된다.
+// 좋아요 누르면 색깔변하게 만들기
+// 1) 좋아요버튼을 먼저 가져와야지
+// 2) 좋아요버튼을 모두 가져온 다음에
+// 3) 내가 선택한 좋아요 버튼의 색깔이 red로 바뀌게 해보자
 
-  // deleteBtns가 모든 버튼을 가지고온 복수있기때문에 아래처럼 함수를 돌려서 button을 특정한다.
-  // deleteBtns의 갯수만큼 forEach 작동
-
-  deleteBtns.forEach((button) => {
-    //인자로 받은 button으로 addEvent를 해야지...
-    button.addEventListener("click", (e) => {
-      // 버튼이 클릭되었을때 클릭된 버튼에서 가장 가까운 li 태그를 찾은 후 지워준다.
-      // event에는 많은 정보를 담고 있는데, 그 중에서 taget을 정해서
-      e.target.closest("li").remove();
-    });
-  });
+const likeRed = (button) => {
+  console.log(button);
+  if (button.className === "fa-regular fa-heart") {
+    button.className = "fa-solid fa-heart";
+    button.style.color = "red";
+  } else {
+    button.className = "fa-regular fa-heart";
+    button.style.color = "black";
+  }
 };
 
 function commentEnter(event) {
