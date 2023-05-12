@@ -1,8 +1,5 @@
-html {
-  height: 100%;
-}
-
 body {
+  height: 100%;
   display: flex;
   justify-content: center;
   font-family: "Noto Sans KR", sans-serif;
@@ -93,14 +90,30 @@ input [type="button"]:disabled {
   color: white;
 }
 
-.findPassword a {
-  color: black;
-  font-style: normal;
+.findPassword {
   display: flex;
   justify-content: center;
+  position: absolute;
+  bottom: 0;
+}
 
-  height: 10px;
+/* .findPassword a {
+  color: black;
+  font-style: normal;
+  /* display: flex;
+  justify-content: center; 
+
   text-decoration: none;
+} */
+
+.inputBox a {
+  text-decoration: none;
+  margin-top: 200px;
+  display: flex;
+  justify-content: center;
+  color: #395d86;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 /*.buttonLogin {

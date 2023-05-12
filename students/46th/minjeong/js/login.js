@@ -15,7 +15,7 @@ function checkInput() {
     // loginBtn.classList.remove("disabled");
   } else {
     loginBtn.disabled = true;
-    loginBtn.style.backgroundColor = "#c4e1fb";
+    loginBtn.style.backgroundColor = "#C4E1FB";
     // loginBtn.classList.add("disabled");
   }
 }

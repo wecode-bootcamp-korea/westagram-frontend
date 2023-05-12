@@ -24,6 +24,7 @@ header {
 .logo {
   width: 300px;
   display: flex;
+  margin-left: 50px;
   padding-right: 50px;
 }
 
@@ -51,7 +52,7 @@ header {
 }
 
 .searchBar {
-  margin-right: 100px;
+  margin-right: 80px;
   width: 200px;
 }
 
@@ -89,16 +90,16 @@ article {
 }
 
 .feedLeft {
+  width: 500px;
   border: 1px solid lightgray;
 }
 
 .top {
   height: 40px;
-  width: 500px;
   border: 1px solid #ebecf0;
   background-color: white;
   color: black;
-  padding-top: 10px;
+  margin-top: 10px;
 
   display: flex;
   justify-content: space-between;
@@ -121,6 +122,7 @@ article {
 }
 
 .feedText {
+  margin-top: 10px;
   font-size: 15px;
 }
 
@@ -139,17 +141,17 @@ section {
   float: right;
   margin-top: -25px;
   margin-right: 5px;
-  width: 30px;
   width: 25px;
+  height: 25px;
 }
 
 .likeLeft {
   display: flex;
   margin-top: 10px;
+  margin-bottom: -15px;
 }
 
 .likeLeft p {
-  margin-top: 0px;
   margin-left: 10px;
   font-size: 13px;
 }
@@ -159,6 +161,7 @@ section {
 }
 
 .underLike img {
+  margin-top: 15px;
   width: 20px;
   height: 20px;
 }
@@ -249,6 +252,7 @@ section {
 .top .profile {
   width: 20px;
   height: 20px;
+  overflow-clip-margin: 0;
 }
 
 .threeDots {
@@ -294,25 +298,52 @@ section {
 }
 
 .timeline {
-  padding: 5px 0;
-  margin-top: -15px;
   font-size: 13px;
   color: darkgrey;
 }
 
 .repl {
+  display: flex;
+  justify-content: space-between;
+
+  height: 15px;
+}
+
+.repl p {
+  margin-top: -1px;
+}
+
+.delLike {
+  display: flex;
+}
+
+.delLike button {
+  margin-top: 12px;
+  border: none;
+  background-color: transparent;
+  font-weight: normal;
+  color: darkgray;
+}
+
+.delLike img {
+  width: 13px;
+  height: 13px;
+}
+
+/*.repl {
+  display: flex;
+  justify-content: space-between
   margin-top: -1px;
 }
 
 .replTwo {
   margin-top: -18px;
-}
+}*/
 
 .send {
-  width: 500px;
-  height: 30px;
-  border: 1px solid lightgray;
-  margin-left: -1px;
+  margin-left: 0px;
+  width: 100%;
+  border: none;
 }
 
 input::placeholder {
@@ -320,32 +351,57 @@ input::placeholder {
 }
 
 .send input {
-  position: relative;
-  width: 90%;
+  writing-mode: unset;
   height: 30px;
-  border: none;
+  width: 90%;
   font-size: 13px;
-  color: lightgray;
+  color: black;
+  border: none;
 }
 
-.send button {
-  position: absolute;
-  height: 30px;
-  border: none;
-  background-color: transparent;
-  color: skyblue;
-  font-size: 13px;
+.submit {
   color: cornflowerblue;
-  font-weight: bold;
-  margin-right: 2px;
+  background-color: white;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 ul {
+  word-wrap: break-word;
   list-style: none;
   margin-left: -40px;
-  margin-top: -18px;
+  color: black;
+  white-space: nowrap;
 }
 
 li {
-  width: 100%;
+  white-space: nowrap;
+}
+
+#comment-wrapper {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  word-wrap: break-word;
+}
+
+.CommetWrap {
+  display: flex;
+  flex-direction: column;
+  align-content: space-evenly;
+}
+
+.feedtop p {
+  color: black;
+  display: inline;
+  height: 20px;
+  font-weight: bold;
+  margin-top: -3px;
+  margin-left: 5px;
+}
+
+.feedtop {
+  display: flex;
+  justify-content: flex-start;
 }
