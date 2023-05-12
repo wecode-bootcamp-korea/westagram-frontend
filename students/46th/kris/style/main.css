@@ -1,0 +1,431 @@
+@media only screen and (max-width: 1000px) {
+  .main-right {
+    display: none;
+  }
+}
+
+body {
+  margin: 0px;
+  background-color: #f0f0f0;
+}
+
+a {
+  text-decoration: none;
+}
+
+span {
+  overflow-wrap: anywhere;
+}
+
+div {
+  overflow-wrap: anywhere;
+}
+
+input:focus {
+  outline: none;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  min-width: 800px;
+  height: 60px;
+  background-color: white;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.fa-instagram {
+  margin-right: 10px;
+  font-size: 30px;
+}
+
+.navbar-westagram {
+  font-family: 'Lobster', cursive;
+  font-size: 20px;
+  color: black;
+}
+
+.navbar-search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 25px;
+  border: 1px solid rgb(220, 220, 220);
+  border-radius: 3px;
+  background-color: rgb(241, 241, 241);
+}
+
+.fa-magnifying-glass {
+  margin-right: 5px;
+  font-size: 12px;
+  color: #757575
+}
+
+.navbar-search input {
+  border: transparent;
+  background-color: transparent;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+}
+
+.icons img {
+  height: 30px;
+  margin-left: 25px;
+}
+
+.icons .navbar-icon-profile {
+  border-radius: 70%;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+main {
+  display: flex;
+  justify-content: space-evenly;
+  box-sizing: border-box;
+  margin-top: 60px;
+  padding: 20px 0px;
+  background-color: rgb(240, 240, 240);
+}
+
+.feed-article {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  min-width: 500px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  border: 1px solid lightgrey;
+  background-color: white;
+}
+
+.feed-info {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 15px;
+}
+
+.feed-info-profile {
+  height: 32px;
+  width: 32px;
+  margin: 0 10px 0 0;
+  border-radius: 70%;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.feed-info-profile img {
+  width: 100%;
+}
+
+.feed-info-author a {
+  font-family: sans-serif;
+  font-weight: 600;
+  color: black;
+}
+
+.feed-image img {
+  width: 100%;
+}
+
+.feed-interaction {
+  display: flex;
+  height: 30px;
+  box-sizing: border-box;
+  margin-top: 5px;
+  padding-left: 10px;
+}
+
+.feed-interaction i {
+  margin-right: 15px;
+  font-size: 25px;
+  color: black;
+}
+
+.feed-text {
+  box-sizing: border-box;
+  padding: 0 10px;
+  margin: 10px 0 5px 0;
+  font-family: sans-serif;
+}
+
+.feed-text-author {
+  margin-right: 10px;
+  font-weight: 600;
+}
+
+.comment-posted {
+  display: flex;
+  justify-content: space-between;
+  align-items:first baseline;
+  box-sizing: border-box;
+  padding: 0 10px;
+  margin-top: 10px;
+  font-family: sans-serif;
+}
+
+.comment-posted-author {
+  margin-right: 10px;
+  font-weight: 600;
+}
+
+.comment-posted-text {
+  width: 320px;
+  margin-right: 20px;
+}
+
+.comment-posted i {
+  margin-right: 5px;
+  font-size: 12px;
+  color:#757575;
+}
+
+.comment-posted button {
+  width: 30px;
+  border: transparent;
+  background-color: transparent;
+  font-size: 10px;
+  font-weight: 600;
+  color: #6c6c6c;
+}
+
+.feed-add-comment {
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+  box-sizing: border-box;
+  padding: 0 10px;
+  margin-top: 10px;
+}
+
+.feed-add-comment input {
+  width: 410px;
+  border: transparent;
+  background-color: transparent;
+  font-size: 15px;
+}
+
+.feed-add-comment button {
+  width: 40px;
+  border: transparent;
+  background-color: transparent;
+  font-size: 15px;
+  font-weight: 600;
+  color: #0995f6;
+}
+
+.main-right {
+  width: 320px;
+  box-sizing: border-box;
+}
+
+.right-my-info {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  padding: 5px;
+}
+
+.right-my-info-profile {
+  width: 50px;
+  height: 50px;
+  box-sizing: border-box;
+  margin: 0 20px 0 5px;
+  border-radius: 70%;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.right-my-info-profile img {
+  width: 100%;
+}
+
+.right-my-info-username-and-name a {
+  font-family: sans-serif;
+  font-weight: 600;
+  color: black;
+}
+
+.my-name {
+  box-sizing: border-box;
+  font-size: 15px;
+  font-family: sans-serif;
+  font-weight: 350;
+  color: rgb(148, 148, 148);
+}
+
+.stories {
+  max-height: 400px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid lightgrey;
+  background-color: white;
+}
+
+.stories-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  font-family: sans-serif;
+  font-weight: 600;
+}
+
+.stories-header span {
+  color: rgb(152, 152, 152);
+}
+
+.stories-header a {
+  color: black;
+}
+
+.stories-info {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  margin-bottom: 12px;
+}
+
+.stories-user-profile {
+  height: 50px;
+  width: 50px;
+  border-radius: 70%;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.stories-user-profile img {
+  width: 100%;
+}
+
+.stories-username-and-time {
+  margin-left: 15px;
+  width: 180px;
+}
+
+.stories-username {
+  font-family: sans-serif;
+  color: black;
+  font-weight: 600;
+}
+
+.stories-time {
+  font-family: sans-serif;
+  font-weight: 350;
+  color: rgb(148, 148, 148);
+  margin: 3px 0 0 0;
+}
+
+.recommendations {
+  max-height: 300px;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid lightgrey;
+  background-color: white;
+}
+
+.recommendations-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  font-family: sans-serif;
+  font-weight: 600;
+}
+
+.recommendations-header span {
+  color: rgb(152, 152, 152);
+}
+
+.recommendations-header a {
+  color: black;
+}
+
+.recommendations-info {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  margin-bottom: 12px;
+}
+
+.recommendations-user-profile {
+  width: 50px;
+  height: 50px;
+  border-radius: 70%;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.recommendations-user-profile img {
+  width: 100%;
+}
+
+.recommendations-username-and-mutual {
+  width: 160px;
+  box-sizing: border-box;
+  margin-left: 15px;
+}
+
+.recommendations-username {
+  font-family: sans-serif;
+  font-weight: 600;
+  color: black;
+}
+
+.recommendations-mutual {
+  box-sizing: border-box;
+  margin: 3px 0 0 0;
+  font-family: sans-serif;
+  font-weight: 350;
+  color: rgb(148, 148, 148);
+}
+
+.recommendations-info button {
+  width: 60px;
+  padding: 0;
+  border: transparent;
+  background-color: transparent;
+  color: #0995f6;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.company-info {
+  box-sizing: border-box;
+  padding: 5px;
+}
+
+.company-links {
+  box-sizing: border-box;
+  margin-bottom: 20px;
+}
+
+.company-links a {
+  font-family: sans-serif;
+  color: rgb(175, 175, 175);
+}
+
+.company-copyright a {
+  font-family: sans-serif;
+  color: rgb(175, 175, 175);
+}

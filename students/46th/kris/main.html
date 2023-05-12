@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Westagram Main</title>
+  <link rel="stylesheet" href="style/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/240d7cfd57.js" crossorigin="anonymous"></script>
+</head>
+<body>
+  <nav>
+    <div class="navbar-logo">
+      <i class="fa-brands fa-instagram"></i>
+      <a href="" class="navbar-westagram">Westagram</a>
+    </div>
+    <div class="navbar-search">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" placeholder="검색"/>
+    </div>
+    <div class="icons">
+      <img class="navbar-icon-explore" src="media/explore.png" alt="icon-explore-profile"/>
+      <img class="navbar-icon-like" src="media/heart.png" alt="icon-like"/>
+      <img class="navbar-icon-profile" src="media/user.JPG" alt="'icon-profile"/>
+    </div>
+  </nav>
+
+  <main>
+    <div class="main-feeds">
+      <article class="feed-article">
+        <div class="feed-info">
+          <div class="feed-info-profile">
+            <img src="media/feed.JPG" alt="profile"/>
+          </div>
+
+          <div class="feed-info-author">
+            <a href="">back.end</a>
+          </div>
+        </div>
+
+        <div class="feed-image">
+          <img src="media/feed.JPG" alt="feed-image"/>
+        </div>
+        <div class="feed-interaction">
+          <i class="fa-regular fa-heart"></i>
+          <i class="fa-regular fa-comment"></i>
+          <i class="fa-solid fa-arrow-up-from-bracket"></i>
+        </div>
+        
+        <div class="feed-text">
+          <span class="feed-text-author">back.end</span>
+          <span class="feed-text-writing">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras vitae lobortis arcu, ac suscipit elit. Integer eu ligula in libero euismod dignissim id at lacus. </span>
+        </div>
+        <div class="feed-comment-posted-container"></div>
+
+        <div class="feed-add-comment">
+          <input type="text" id="comment" name="comment" placeholder="댓글 달기..."/>
+          <button class="comment-button">게시</button>
+        </div>
+      </article>
+      
+    </div>
+
+    <div class="main-right">
+      <section class="right-my-info">
+        <div class="right-my-info-profile">
+          <img src="media/user.JPG" alt="profile"/>
+        </div>
+
+        <div class="right-my-info-username-and-name">
+          <a href="">front.end</a>
+          <br/>
+          <span class="my-name">Kris</span>
+        </div>
+      </section>
+      
+      <article class="stories">
+        <header class="stories-header">
+          <span>스토리</span>
+          <a href="">모두 보기</a>
+        </header>
+
+        <div class="stories-info">
+          <div class="stories-user-profile">
+            <img src="media/feed.JPG" alt="profile"/>
+          </div>
+          <div class="stories-username-and-time">
+            <a href="" class="stories-username">github.init</a>
+            <br/>
+            <span class="stories-time">1분 전</span>
+          </div>
+        </div>
+        <div class="stories-info">
+          <div class="stories-user-profile">
+            <img src="media/feed.JPG" alt="profile"/>
+          </div>
+          <div class="stories-username-and-time">
+            <a href="" class="stories-username">developer.io</a>
+            <br/>
+            <span class="stories-time">2시간 전</span>
+          </div>
+        </div>
+        <div class="stories-info">
+          <div class="stories-user-profile">
+            <img src="media/feed.JPG" alt="profile"/>
+          </div>
+          <div class="stories-username-and-time">
+            <a href="" class="stories-username">stackoverflow_official</a>
+            <br/>
+            <span class="stories-time">10시간 전</span>
+          </div>
+        </div>
+      </article>
+
+      <article class="recommendations">
+        <header class="recommendations-header">
+          <span>회원님을 위한 추천</span>
+          <a href="">모두 보기</a>
+        </header>
+
+        <div class="recommendations-info">
+          <div class="recommendations-user-profile">
+            <img src="media/feed.JPG" alt="profile"/>
+          </div>
+          <div class="recommendations-username-and-mutual">
+            <a href="" class="recommendations-username">sleepy.sleepy</a>
+            <br/>
+            <span class="recommendations-mutual">macbook.pro 외 5...</span>
+          </div>
+          <button class="follow-button">팔로우</button>
+        </div>
+
+        <div class="recommendations-info">
+          <div class="recommendations-user-profile">
+            <img src="media/feed.JPG" alt="profile"/>
+          </div>
+          <div class="recommendations-username-and-mutual">
+            <a href="" class="recommendations-username">hungry.hungry</a>
+            <br/>
+            <span class="recommendations-mutual">iphone14.pro 외 70...</span>
+          </div>
+          <button class="follow-button">팔로우</button>
+        </div>
+      </article>
+
+     <section class="company-info">
+        <div class="company-links">
+          <a href="">소개</a>
+          <a href="">도움말</a>
+          <a href="">홍보 센터</a>
+          <a href="">API</a>
+          <a href="">채용 정보</a>
+          <a href="">개인정보처리방침</a>
+          <a href="">약관</a>
+          <a href="">디렉토리</a>
+          <a href="">해시태그</a>
+          <a href="">언어</a>
+        </div>
+
+        
+        
+        <div class="company-copyright">
+          <a href="">© 2023 INSTAGRAM</a>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
