@@ -44,13 +44,42 @@ uploadDelete();
 
 
 // 아이디 목록 배열
-let id = ['wecode_bootcamp','wecode_founder','wecode_korea']
+let id = [{ nickname : 'wecode_bootcamp' , name : '>wecode' , img : 'img/wecode.png' },
+          { nickname : 'wecode_founder' , name : '송은우' , img : 'img/zebra.jpg' },
+          { nickname : 'wecode' , name : '강남구 테헤란로 427,서울', img : 'img/explore.png'},
+          { nickname : '이건안되게' , name : '강남구 테헤란로 427,서울', img : 'img/explore.png'}
+        ];
 
 // 아이디 검색 기능
-$('.search').on('keyup', e => {
-    console.log($(e.target).val())
-})
+// indexOf 하면 -1 or num 나오는데 id 배열에서의 nickname에 search 값이 있으면 -1 이 아닌거니까
+// 
 
+// 검색창 키 입력 하면 
+$('.search').on('keyup', e => {
+    $('.search-result').html('')
+    let search = $(e.target).val();
+    if(search.length > 0){
+        id.forEach( (a,i) => {
+            if(a.nickname.includes(search)===true){
+                let template = `
+                <div class="story-time border-bottom">
+                <div><img src=${a.img} alt="" class="story-img"></div>
+                <div>
+                  <p class="nick">${a.nickname}</p>
+                  <p>${a.name}</p>
+                </div>
+                </div>`;
+                $('.search-result').append(template);
+                $('.search-result').removeClass('show');
+                if($('.nick').eq(i).html().includes(search) === true){
+                }
+            }
+        })
+    }else{
+        $('.search-result').html('');
+        $('.search-result').addClass('show');
+    }
+})
 
 
 //----------------------------

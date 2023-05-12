@@ -7,6 +7,7 @@ nav{
     border-bottom: 2px solid lightgrey;
     padding: 10px;
 }
+
 .flex-nav{
     margin-left:100px;
     margin-right: 100px;
@@ -14,6 +15,7 @@ nav{
     justify-content: space-around;
     align-items: center;
 }
+
 .flex-nav div{
     margin-right: 20px;
 }
@@ -26,6 +28,36 @@ nav{
     padding: 5px;
     font-family: 'Font Awesome 5 Free';
     font-weight: 600;
+    position: fixed;
+    top: 15px;
+    left: 40%;
+}
+
+.speech-bubble {
+    width: 250px;
+    padding: 5px;
+	position: fixed;
+	background: #f2f2f2;
+	border-radius: .4em;
+    left: 40%;
+}
+
+.speech-bubble:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 15px solid transparent;
+	border-bottom-color: #f2f2f2;
+	border-top: 0;
+	margin-left: -15px;
+	margin-top: -15px;
+}
+
+.show{
+    display: none;
 }
 
 .search:focus{
@@ -121,7 +153,6 @@ img{
     color: gray;
 }
 
-
 .reply-box{
     border-top: 1px solid lightgray;
     position: relative;
@@ -204,7 +235,6 @@ img{
     display: inline-block;
     margin-right: 10px;
 }
-
 
 .follow{
     color: skyblue;
