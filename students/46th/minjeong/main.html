@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Sans+KR:wght@100;300&display=swap" rel="stylesheet">
     <link href="style/main.css" rel="stylesheet" type="text/css" />
     <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
-    <script src="js/main.js"></script>
+    
     
   </head>
   
@@ -78,20 +78,27 @@
 
             <div class="underLike">
               <div class="likeLeft">
-                <img src="image/circe-denyer-W_8Tivmufmo-unsplash.png">
+                <img src="image/tree.png" alt="tree">
                 <p> <strong>groot.IAM</strong>님 외 <strong>20</strong>명이 좋아합니다</p>
               </div>
 
             <div class="feedText">
               <p class="repl"><strong>canon.mj</strong> 너구리 너무 귀엽다...</p>
               <p class="replTwo"><strong>neceosecius</strong> 귀엽네..</p>
+              <ul id="comment-wrapper">
+              </ul>
             </div>
             <p class="timeline">42분 전</p>
 
-            <div class="send">
-            <input type="text" placeholder="댓글 달기...">
-            <button>게시</button>
+            <ul id="commetList"></ul>
+              
             </div>
+
+            <div class="send">
+            <input type="text" class="comment" placeholder="댓글 달기..." required/>
+            <button class="submit">게시</button>
+            </div>
+
             </div>
             
 
@@ -102,7 +109,7 @@
           <section class="feedRight">
         <div class="side-right">
           <div class="wecode">
-            <img src="image/circe-denyer-W_8Tivmufmo-unsplash.png">
+            <img src="image/computer.png" alt="computer">
             <div class="wecodeId">
             <p class="bold"> wecode_bootcamp</p>
             <p c class="lightcolor">WeCode<span>위코드</span></p>
@@ -119,7 +126,7 @@
           </div>
         
         <div class="story">
-          <img class="profileImg" src="image/circe-denyer-W_8Tivmufmo-unsplash.png">
+          <img class="profileImg" src="image/rabbit.png" alt="rabbit">
           <div class="storyText">
           <p class="bold">Rabbit.floor</p>
           <p class="lightcolor">33분 전</p>
@@ -127,18 +134,18 @@
           </div>
 
           <div class="story">
-            <img class="profileImg" src="image/circe-denyer-W_8Tivmufmo-unsplash.png">
+            <img class="profileImg" src="image/babyy.png" alt="babys">
             <div class="storyText">
-            <p class="bold">Rabbit.floor</p>
-            <p class="lightcolor">33분 전</p>
+            <p class="bold">Baby_rocket</p>
+            <p class="lightcolor">45분 전</p>
           </div>
             </div>
 
             <div class="story">
-              <img class="profileImg" src="image/circe-denyer-W_8Tivmufmo-unsplash.png">
+              <img class="profileImg" src="image/수달스.png" alt="otters">
               <div class="storyText">
-              <p class="bold">Rabbit.floor</p>
-              <p class="lightcolor">33분 전</p>
+              <p class="bold">otter._.bros</p>
+              <p class="lightcolor">1시간 전</p>
             </div>
               </div>
         </div>
@@ -151,28 +158,28 @@
           </div>
 
           <div class="recomend">
-          <img class="profileImg" src="image/circe-denyer-W_8Tivmufmo-unsplash.png">
+          <img class="profileImg" src="image/puppy.png">
           <div class="storyText">
-          <p class="bold">joaaaa</p>
+          <p class="bold">doggy_DOG</p>
           <p class="lightcolor">Rabbit.floor님 외 2명이...</p>
           </div>
           <button class="follow">팔로우</button>
         </div>
 
         <div class="recomend">
-          <img class="profileImg" src="image/circe-denyer-W_8Tivmufmo-unsplash.png">
+          <img class="profileImg" src="image/dogrun.png">
           <div class="storyText">
-          <p class="bold">joaaaa</p>
-          <p class="lightcolor">Rabbit.floor님 외 2명이...</p>
+          <p class="bold">Run.joaaaa</p>
+          <p class="lightcolor">Baby_rocket님 외 4명이...</p>
           </div>
           <button class="follow">팔로우</button>
         </div>
 
         <div class="recomend">
-          <img class="profileImg" src="image/circe-denyer-W_8Tivmufmo-unsplash.png">
+          <img class="profileImg" src="image/manja-vitolic-gKXKBY-C-Dk-unsplash.png">
           <div class="storyText">
-          <p class="bold">joaaaa</p>
-          <p class="lightcolor">Rabbit.floor님 외 2명이...</p>
+          <p class="bold">kittyTheCat</p>
+          <p class="lightcolor">otter._.bros님 외 1명이...</p>
           </div>
           <button class="follow">팔로우</button>
         </div>
@@ -190,6 +197,6 @@
       </article>
     </main>
 
-    
+    <script src="js/main.js"></script>
   </body>
 </html>

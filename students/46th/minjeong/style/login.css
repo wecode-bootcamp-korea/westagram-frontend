@@ -6,6 +6,7 @@ body {
   display: flex;
   justify-content: center;
   font-family: "Noto Sans KR", sans-serif;
+  background-color: whitesmoke;
 }
 
 .Login {
@@ -39,14 +40,23 @@ input {
 }
 
 .loginBtn {
+  width: 450px;
+  height: 50px;
+  background: rgb(187, 211, 228);
   border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  opacity: 0.3;
+  /* border: none;
   border-radius: 5px;
   width: 620px;
   height: 60px;
   font-weight: bold;
   color: white;
   background-color: #c0dcfb;
-  font-size: 30px;
+  font-size: 30px;*/
 }
 
 input [type="button"]:disabled {
@@ -60,18 +70,30 @@ input [type="button"]:disabled {
   font-size: 30px;
 }
 
-.loginBtn {
+.btnWrap button {
   border: none;
   border-radius: 5px;
   width: 620px;
   height: 60px;
   font-weight: bold;
   color: white;
-  background-color: #c0dcfb;
+  background-color: red;
+  /* background-color: #0092f3; */
   font-size: 30px;
 }
 
-a {
+.disabled {
+  border: none;
+  border-radius: 5px;
+  width: 620px;
+  height: 60px;
+  font-weight: bold;
+  font-size: 30px;
+  background-color: #c4e1fb;
+  color: white;
+}
+
+.findPassword a {
   color: black;
   font-style: normal;
   display: flex;
@@ -81,7 +103,7 @@ a {
   text-decoration: none;
 }
 
-.buttonLogin {
+/*.buttonLogin {
   background-color: #b2dffc;
   color: white;
   width: 268px;

@@ -11,7 +11,6 @@
       rel="stylesheet"
     />
     <link href="style/login.css" rel="stylesheet" type="text/css" />
-    <script src="login.js"></script>
   </head>
   <body>
     <div class="Login">
@@ -26,12 +25,7 @@
           />
           <input class="inputPw" type="password" placeholder="비밀번호" />
         </div>
-        <button
-          class="inputBtn"
-          type="button"
-          value="로그인"
-          onclick="activeEvent()"
-        ></button>
+        <button class="disabled" type="button">로그인</button>
 
         <footer>
           <div class="findPassword">
@@ -40,5 +34,6 @@
         </footer>
       </div>
     </div>
+    <script src="js/login.js"></script>
   </body>
 </html>

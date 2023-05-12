@@ -1,40 +1,35 @@
-const idForm = document.getElementsByClassName(".inputId");
-const pwForm = document.getElementsByClassName(".inputPw");
-const loginBtn = document.getElementsByClassName(".inputBtn");
+const idForm = document.querySelector(".inputId");
+const pwForm = document.querySelector(".inputPw");
+const loginBtn = document.querySelector(".disabled");
 
-function activeEvent(){
-  if(!(idForm.value && pwForm.value)) {
-    button.disabled.remove = ture;
-  }else {
-    button.disabled = false;
-  }
+function checkInput() {
+  const idValue = idForm.value;
+  const pwValue = pwForm.value;
 
-  if (!(idForm.value && pwForm.value)) {
-    button.inputBtn.remove("buttonLoginDisabled")
-  }else {
-    button.inputBtn.add("buttonLoginDisabled")
-  }
-}
+  const isValidId = idValue.includes("@");
+  const isValidPw = pwValue.length >= 5;
 
-idForm.addEventListener("keyup", activeEvent);
-pwForm.addEventListener("keyup", activeEvent);
-
-
-/*function activeEvent() {
-  switch (!(idForm.value && pwForm.value)) {
-    case true:
-      loginBtn.disabled = false;
-      break;
-    case false:
-      loginBtn.disabled = true;
-      break;
+  if (isValidId && isValidPw) {
+    loginBtn.disabled = false;
+    loginBtn.style.backgroundColor = "#0092f3";
+    // loginBtn.classList.remove("disabled");
+  } else {
+    loginBtn.disabled = true;
+    loginBtn.style.backgroundColor = "#c4e1fb";
+    // loginBtn.classList.add("disabled");
   }
 }
 
-idForm.addEventListener("keyup", activeEvent);
-pwForm.addEventListener("keyup", activeEvent);
-loginBtn.addEventListener("keyup", activeEvent);
+idForm.addEventListener("keyup", checkInput);
+pwForm.addEventListener("keyup", checkInput);
 
-function eventActive(){
+/*let isEmailValid = idForm.value.includes("@");
 
-}
+isEmailValid ? 
+
+function ableEmailPw (){
+  if (idForm.includes('@') && pwForm.length > 4) {
+
+
+  }
+}*/

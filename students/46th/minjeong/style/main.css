@@ -143,13 +143,6 @@ section {
   width: 25px;
 }
 
-/*.top img {
-  display: flex;
-  justify-content: space-between;
-  width: 20px;
-  height: 20px;
-}*/
-
 .likeLeft {
   display: flex;
   margin-top: 10px;
@@ -276,8 +269,6 @@ section {
 }
 
 .follow {
-  display: flex;
-
   font-size: 15px;
   margin-left: 20px;
   margin-top: 10px;
@@ -303,7 +294,8 @@ section {
 }
 
 .timeline {
-  margin-top: -10px;
+  padding: 5px 0;
+  margin-top: -15px;
   font-size: 13px;
   color: darkgrey;
 }
@@ -320,7 +312,11 @@ section {
   width: 500px;
   height: 30px;
   border: 1px solid lightgray;
-  margin-left: -8px;
+  margin-left: -1px;
+}
+
+input::placeholder {
+  color: darkgrey;
 }
 
 .send input {
@@ -339,7 +335,17 @@ section {
   background-color: transparent;
   color: skyblue;
   font-size: 13px;
-
+  color: cornflowerblue;
   font-weight: bold;
   margin-right: 2px;
+}
+
+ul {
+  list-style: none;
+  margin-left: -40px;
+  margin-top: -18px;
+}
+
+li {
+  width: 100%;
 }
