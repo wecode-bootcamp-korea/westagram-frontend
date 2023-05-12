@@ -35,8 +35,8 @@ function addComment() {
     newCommentAccount.innerText = "jy_baek";
     newList.prepend(newCommentAccount);
     newList.appendChild(newComment);
-    deleteBtn.appendChild(heartIcon);
-    newList.appendChild(deleteBtn);
+    newList.appendChild(heartIcon);
+    newComment.appendChild(deleteBtn);
     newList.appendChild(heartIcon);
     commentList.appendChild(newList);
     deleteBtn.addEventListener("click", deleteComment);
@@ -86,7 +86,6 @@ function paintMatchedId(element) {
     return x.id == element;
   });
   const resultId = document.createElement("li");
-  resultId.id = "filtered-id";
   resultId.innerHTML = `<img class="filtered-image" src="${paintIdList[0].profile}"/>
   <div class="result-account"><p>${paintIdList[0].id}</p><p>${paintIdList[0].nickname}</p></div>`;
   resultId.style.display = "flex";
@@ -94,21 +93,19 @@ function paintMatchedId(element) {
 }
 
 searchInput.addEventListener("keyup", function () {
+  resultBox.innerHTML = "";
   if (searchInput.value.length > 0) {
     const matchId = accountDataId.filter((x) => filterId(x));
-    if (matchId.length > 0) {
+    if (matchId.length) {
       resultBoxTriangle.classList.remove("none");
       matchId.forEach((id) => paintMatchedId(id));
-    } else {
-      resultBoxTriangle.style.classList.add("none");
-      resultBox.innerHTML = "";
     }
   } else {
     deleteResultBox();
   }
 });
 
-searchInput.addEventListener("focusout", deleteResultBox);
+// searchInput.addEventListener("focusout", deleteResultBox);
 
 function deleteResultBox() {
   searchInput.value = "";
