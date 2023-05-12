@@ -36,7 +36,7 @@ function addComment() {
     newList.prepend(newCommentAccount);
     newList.appendChild(newComment);
     newList.appendChild(heartIcon);
-    newComment.appendChild(deleteBtn);
+    newList.appendChild(deleteBtn);
     newList.appendChild(heartIcon);
     commentList.appendChild(newList);
     deleteBtn.addEventListener("click", deleteComment);
@@ -105,10 +105,27 @@ searchInput.addEventListener("keyup", function () {
   }
 });
 
-// searchInput.addEventListener("focusout", deleteResultBox);
+searchInput.addEventListener("focusout", deleteResultBox);
 
 function deleteResultBox() {
   searchInput.value = "";
   resultBox.innerHTML = "";
   resultBoxTriangle.classList.add("none");
 }
+
+const navProfile = document.querySelector(".navProfileImg");
+const main = document.querySelector("main");
+
+navProfile.addEventListener("click", function () {
+  const navTriangle = document.querySelector(".navProfileTriangle");
+  const navMenu = document.querySelector(".navProfileMenuBar");
+  navTriangle.classList.remove("disabled");
+  navMenu.classList.remove("disabled");
+});
+
+main.addEventListener("click", function () {
+  const navTriangle = document.querySelector(".navProfileTriangle");
+  const navMenu = document.querySelector(".navProfileMenuBar");
+  navTriangle.classList.add("disabled");
+  navMenu.classList.add("disabled");
+});
