@@ -3,9 +3,10 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="./style/common.css">
+        <link rel="stylesheet" type="text/css" href="./style/main.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lobster&family=Noto+Sans+KR&family=Roboto&display=swap"
         rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
         <title>Westagram</title>
     </head>
 
@@ -43,9 +44,7 @@
                             <img src="./img/comment.png" alt="comment" class="icon"/>
                             <img src="./img/upload.png" alt="share" class="icon"/>
                         </div>
-                        
-                        <img src="./img/bookmark.png" alt="bookmark" class="icon"/>
-                                                      
+                            <img src="./img/bookmark.png" alt="bookmark" class="icon"/>
                     </div>
                     <div class="likedListContainer">
                         <img src="./img/pfp1.jpeg" alt="profile picture" class="pfpSmall"/>
@@ -53,12 +52,15 @@
                     </div>
                     <p class="caption"><span class="username bold">hand_jahyun</span> 제주도 바다~... <span class="light">더 보기</span></p>
                     <section class="commentSection">                        
-                        <ul class="commentsList">
-                            <li class="comment">
-                                <span class="bold">taylorswift</span> Wow beautiful~                    
-                            </li>
-                            <img src="./img/heart.png" alt="like button" class="smallIcon"/>
-                        </ul>
+                        <div class="commentsList">
+                            <div class="commentAndBtns" id="likeAndDelete">
+                                <div class="comment">
+                                    <span class="bold floatLeft">taylorswift</span> Wow beautiful~                
+                                </div>
+                                <button class="deleteBtn lighter hidden" type="button" id="deleteBtn0">삭제</button>
+                                <button class="likeBtn" type="button" id="likeBtn"><i class='fa fa-heart' id="likeBtn"></i></button>
+                            </div>
+                        </div>
                         <div class="postComment">
                             <input type="text" placeholder="댓글 달기..." class="commentInput light"/>
                             <button class="commentBtn">게시</button>

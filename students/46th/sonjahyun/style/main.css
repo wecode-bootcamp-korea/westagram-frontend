@@ -73,13 +73,6 @@ nav .iconsOnRight {
     margin: 5px;
 }
 
-.smallIcon {
-    width: 10px;
-    height: 10px;
-    float: right;
-    margin: 5px 15px 5px 0;
-}
-
 .iconsOnRight .icon {
     margin: 0 10px;
 }
@@ -190,15 +183,21 @@ header .userInfo .username {
 }
 
 .commentsList {
-    list-style-type: none;
     padding: 0;
     margin: 1px 0 1px 12px;
 }
 
-li.comment {
-    width: 420px;
-    float: left;
+.comment {
+    width: 400px;
     margin: 3px 0;
+    word-wrap: break-word;
+    float: left;
+}
+
+.floatLeft {
+    float: left;
+    padding-right: 6px;
+    margin: 0;
 }
 
 .postComment {
@@ -207,7 +206,7 @@ li.comment {
 }
 
 .commentInput {
-    width: 400px;
+    width: 360px;
     height: 44px;
     padding: 0 12px;
     border-style: none;
@@ -272,5 +271,34 @@ section .header span {
     margin: 2px 12px 12px;;
 }
 
+button {
+    background-color: white;
+    border: none;
+    padding: 0;
+}
 
+.likeBtn {
+    width: 10px;
+    height: 10px;
+    margin: 3px 5px;
+}
 
+.deleteBtn {
+    width: 20px;
+    height: 20px;
+    margin: 0px 5px;
+}
+
+.liked {
+    color: #fb3958;
+}
+
+.hidden {
+    visibility:hidden
+}
+
+.commentAndBtns {
+    display: flex;
+    justify-content: flex-start;
+    align-items: top;
+}
