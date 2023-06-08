@@ -3,7 +3,7 @@ const pw = document.querySelector('#pw');
 const loginBtn = document.querySelector('#loginBtn');
 
 function loginCheck(){
-    if((id.value && pw.value) && (id.includes('@') && pw.length > 5)){
+    if(id.value && pw.value){
         loginBtn.disabled = false;
         loginBtn.style.background = "#55b6f9"
     }else{

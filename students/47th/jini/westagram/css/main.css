@@ -1,14 +1,14 @@
 /* nav */
 nav{
+    height: 60px;
     background: #fff;
     border-bottom: 1px solid #e6e6e6;
-    height: 60px;
     line-height: 60px;
 }
 
 nav .containar {
-    width: 1080px;
     display: flex;
+    width: 1080px;
     justify-content: space-between;
     margin: 0 auto;
 }
@@ -36,30 +36,30 @@ nav .containar {
 }
 
 .searchBox {
-    height: auto;
     display: flex;
     width: 200px;
+    height: auto;
     align-items: center;
 }
 .search{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 30px;
     background: #fafafa;
     border: 1px solid #e6e6e6;
-    border-radius: 3px;
-    align-items: center;
-    display: flex;
-    height: 30px;
-    width: 100%;
+    border-radius: 3px; 
 }
 .search i{
+    padding-left: 73px;
     color: #A9ABAE;
     font-size: 12px;
-    padding-left: 73px;
 }
 .search input{
+    width: 100%;
     background: none;
     border: none;
     padding-left: 5px;
-    width: 100%;
 }
 .search input::placeholder{
     color: #999;
@@ -85,10 +85,10 @@ main {
     display: flex;
 }
 main .containar{
-    width: 1020px;
-    margin: 70px auto 0;
     display: flex;
     justify-content: space-between;
+    width: 1020px;
+    margin: 70px auto 0;
 }
 /* feeds */
 .feeds{
@@ -102,8 +102,8 @@ main .containar{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #e6e6e6;
     height: 60px;
+    border-bottom: 1px solid #e6e6e6;
 }
 .feedsMenu .user{
     display: flex;
@@ -118,9 +118,9 @@ main .containar{
 
 }
 .feedsMenu .user .userId{
-    line-height: 25px;
     margin-left: 15px;
     font-weight: bold;
+    line-height: 25px;
 }
 .feedsMenu .more{
     margin-right: 15px;
@@ -156,10 +156,10 @@ main .containar{
 }
 
 .feedLikes {
-    margin: 0 15px;
-    height: 30px;
     display: flex;
     align-items: center;
+    height: 30px;
+    margin: 0 15px;
 }
 .feedLikes .feedLikesImg{
     width: 20px;
@@ -203,13 +203,13 @@ main .containar{
 #commentPost{
     display: flex;
     justify-content: space-between;
-    border-top: 1px solid #e6e6e6;
     height: 40px;
+    border-top: 1px solid #e6e6e6;
     padding: 0 15px;
 }
 #commentPost input[type="text"]{
-    border: none;
     width: 500px;
+    border: none;
 }
 #commentPost input[type="text"]::placeholder{
     color: #999;
@@ -231,9 +231,9 @@ main .containar{
     width: 32%;
 }
 .myProfil {
-    height: 60px;
     display: flex;
     align-items: center;
+    height: 60px;
     margin-bottom: 15px;
 }
 .myProfil .myProfilImg{
@@ -288,9 +288,9 @@ scrollbar-width: none; /* 파이어폭스 */
     margin-top: 5px;
 }
 .story ul li {
-    height: 60px;
     display: flex;
     align-items: center;
+    height: 60px;
 }
 
 .story .followProfilImg{
@@ -336,10 +336,10 @@ scrollbar-width: none; /* 파이어폭스 */
     margin-top: 5px;
 }
 .recommendation ul li {
-    height: 60px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    height: 60px;
 }
 
 .recommendation .recommendationImg{
