@@ -293,17 +293,26 @@ scrollbar-width: none; /* 파이어폭스 */
     height: 60px;
 }
 
+.story .gradient{
+    position: relative;
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(225deg, #D300C5, #FF244A, #FFC900 );
+    border-radius: 100%;
+}
 .story .followProfilImg{
+    position: absolute;
     width: 40px;
     height: 40px;
     background: url(../img/user2.jpeg) no-repeat center center;
     border-radius: 100%;
-    border: 3px solid #EE4956;
-    margin-right: 15px;
+    border: 2.5px solid #fff;
+    transform: translate(6%, 6%);
 }
 .story .followProfilText{
     display: flex;
     flex-direction: column;
+    margin-left: 15px;
 }
 .story .followProfilId{
     font-size: 18px;
