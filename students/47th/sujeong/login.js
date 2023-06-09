@@ -2,8 +2,8 @@ const emailInput = document.getElementById("email");
 const passwordInput = document.getElementById("password");
 const loginButton = document.querySelector("button");
 
-emailInput.addEventListener("keyup", validateBtn);
-passwordInput.addEventListener("keyup", validateBtn);
+emailInput.addEventListener("input", validateBtn);
+passwordInput.addEventListener("input", validateBtn);
 
 function validateBtn() {
   if (emailInput.value && passwordInput.value) {
