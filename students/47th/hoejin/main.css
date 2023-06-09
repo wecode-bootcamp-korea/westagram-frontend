@@ -50,14 +50,50 @@ h1 {
   border-radius: 5px;
   width: 250px;
   height: 25px;
-  color: #e5e5e5;
+
   text-align: center;
   background-color: #f6f6f6;
 }
-/* .searchUser {
+.searchUser {
+  position: relative;
+}
+#search {
+  width: 230px;
+  height: 250px;
+  z-index: 1;
+  background-color: white;
+  border: solid 1px #e5e5e5;
+  border-radius: 5px;
+  padding: 10px;
+  position: absolute;
+  top: 55px;
+  right: 2px;
+  overflow: scroll;
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+}
 
-} */
-
+.eachUser {
+  border-bottom: solid 1px #e5e5e5;
+  display: flex;
+  align-items: center;
+}
+.userPTag {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 7px;
+  height: 30px;
+}
+.userPTagP {
+  margin: 0px;
+  text-align: left;
+}
+.eachUser img {
+  width: 40px;
+  height: 40px;
+  border-radius: 70%;
+}
 .emoji {
   display: flex;
   gap: 20px;

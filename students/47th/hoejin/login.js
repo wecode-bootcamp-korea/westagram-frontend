@@ -5,8 +5,8 @@ const loginButton = document.getElementById("button");
 function changeColor() {
   let idValue = idForm.value;
   let pwValue = pwForm.value;
-  console.log("아이디 value", idForm.value);
-  console.log("비밀번호 value", pwForm.value);
+  // console.log("아이디 value", idForm.value);
+  // console.log("비밀번호 value", pwForm.value);
   if (
     idValue.length > 0 &&
     idValue.indexOf("@") !== -1 &&

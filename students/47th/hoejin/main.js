@@ -4,6 +4,8 @@ const newComment = document.getElementById("newComment");
 const commentForm = document.getElementsByClassName("comment")[0];
 const man = document.getElementById("man");
 const searchUserId = document.getElementsByClassName("searchUser")[0];
+const search = document.getElementById("search");
+const explore = document.getElementsByClassName("explore")[0];
 
 let userArray = [
   {
@@ -23,7 +25,7 @@ let userArray = [
   },
   {
     id: "Wecode",
-    subname: "",
+    subname: "강남구 테헤란로 427, 서울",
     url: "https://images.unsplash.com/photo-1685944722478-284349a10211?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDV8dG93SlpGc2twR2d8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1400&q=60",
   },
   {
@@ -121,23 +123,32 @@ function exitMenu() {
 }
 man.addEventListener("blur", exitMenu);
 
-function serchID() {
-  const idContainer = document.createElement("div");
-  const userImg = document.createElement("img");
-  const idP = document.createElement("p");
-  const subnameP = document.createElement("p");
+//아이디 검색 기능
+function searchUserName() {
+  function searchUserNameData(e) {
+    const searchValue = e.target.value;
+    if (searchValue) {
+      console.log("userArray", userArray, searchValue);
+      // let filterArr = userArray.filter((user) => user.id.includes(searchValue));
+      let filterArr = userArray.filter(
+        (user) => user.id.indexOf(searchValue) !== -1
+      );
 
-  idContainer.classList.add("idContainerClass");
-  userImg.classList.add("userImgClass");
-  idP.classList.add("idPClass");
-  subnameP.classList.add("subnamePClass");
+      search.style.opacity = "1";
 
-  userImg.innerHTML = "배열 ";
-  idP.innerHTML = "배열 ";
-  subnameP.innerHTML = "배열 ";
-
-  searchUserId.appendChild(idContainer);
-  idContainer.appendChild(userImg);
-  idContainer.appendChild(idP);
-  idContainer.appendChild(subnameP);
+      search.innerHTML = filterArr.map((data) => {
+        return `<div class="eachUser">
+        <img alt="user" src=${data.url} />
+        <div class="userPTag">
+          <p class="weightbolder userPTagP">${data.id}</p>
+          <p class="gray userPTagP">${data.subname}</p>
+        </div>
+      </div>`;
+      });
+    } else {
+      search.style.opacity = "0";
+    }
+  }
+  explore.addEventListener("input", searchUserNameData);
 }
+searchUserName();
