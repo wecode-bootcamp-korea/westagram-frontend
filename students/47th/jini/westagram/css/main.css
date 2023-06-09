@@ -193,12 +193,29 @@ main .containar{
 .commentsBox .left{
     display: flex;
 }
-.commentsBox .left .CommentId{
+.commentsBox .left .commentId{
     font-weight: bold;
     margin-right: 10px;
 }
-.commentsBox .commentHart{
+.commentsBox .right{
+    display: flex;
+}
+.commentsBox .right .commentRemoveBtn{
+    color: #666;
+    background: none;
+    border: none;
+    cursor: pointer;
+ }
+.commentsBox .right .commentHartBtn{
     font-size: 15px;
+    color: #666;
+    background: none;
+    border: none;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.commentsBox .right .commentHartBtn.active{
+    color: #EE4956;
 }
 #commentPost{
     display: flex;
