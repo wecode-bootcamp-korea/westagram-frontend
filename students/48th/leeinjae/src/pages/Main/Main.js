@@ -4,7 +4,24 @@ import logo from "../../assets/images/instagram.png";
 import compass from "../../assets//images/compass.png";
 import heart from "../../assets//images/heart.png";
 import profile from "../../assets//images/user.png";
-import searchIcon from "../../assets//images/search.png";
+
+const images = [
+  {
+    id: 1,
+    src: "https://cdn-icons-png.flaticon.com/128/1077/1077035.png",
+    alt: "heart",
+  },
+  {
+    id: 2,
+    src: "https://cdn-icons-png.flaticon.com/128/589/589671.png",
+    alt: "chat",
+  },
+  {
+    id: 3,
+    src: "https://cdn-icons-png.flaticon.com/128/3580/3580382.png",
+    alt: "share",
+  },
+];
 
 const Main = () => {
   return (
@@ -16,15 +33,15 @@ const Main = () => {
               <img src={logo} alt="로고" />
             </div>
             <div className="divider"></div>
-            <div className="title">
-              <a href="/">westagram</a>
-            </div>
+            {/* <div className="title"> */}
+            <a className="title" href="/">
+              westagram
+            </a>
+            {/* </div> */}
           </div>
           <div className="searchForm">
             <input className="searchInput" type="text" placeholder="검색" />
-            <div className="searchContent">
-              <img src={searchIcon} alt="검색" />
-            </div>
+            <i className="searchIcon"></i>
           </div>
           <div className="userMenu">
             <img src={compass} alt="나침반" />
@@ -56,18 +73,9 @@ const Main = () => {
                 <div className="feedTextBox">
                   <div className="feedContentImageBox">
                     <div className="img-left">
-                      <img
-                        src="https://cdn-icons-png.flaticon.com/128/1077/1077035.png"
-                        alt=""
-                      />
-                      <img
-                        src="https://cdn-icons-png.flaticon.com/128/589/589671.png"
-                        alt=""
-                      />
-                      <img
-                        src="https://cdn-icons-png.flaticon.com/128/3580/3580382.png"
-                        alt=""
-                      />
+                      {images.map((el) => (
+                        <img id={el.id} src={el.src} alt={el.alt} />
+                      ))}
                     </div>
                     <div className="img-right">
                       <img
@@ -112,6 +120,13 @@ const Main = () => {
                 <p className="all">모두 보기</p>
               </div>
               <div className="storyContent">
+                <div className="storyUser">
+                  <img
+                    src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4QAqRXhpZgAASUkqAAgAAAABADEBAgAHAAAAGgAAAAAAAABHb29nbGUAAP/bAIQAAwICAwICAwMDAwQDAwQFCAUFBAQFCgcHBggMCgwMCwoLCw0OEhANDhEOCwsQFhARExQVFRUMDxcYFhIYEhQVFAEDBAQCAgIJAgIJCAICAggICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgI/8AAEQgALAAsAwERAAIRAQMRAf/EABoAAQEAAgMAAAAAAAAAAAAAAAADBAYHCAn/xAAyEAABAwMCAgcGBwAAAAAAAAACAQMEAAUGERIHFBMxNFNykrEIFRYXIUEJIiMyM0JR/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/APLSVLfSU9+s5+9f7L/tBLm3++c8y0Dm3++c8y0Dm3++c8y0Dm3++c8y0Dm3++c8y0CX2p7xl60EqBQKBQKDljhDwAunHZvKAx6e2zfLQnMpDmxngiPMbHSNSmoKsxiRWxROZJpst38iKmihzbiP4dUzM7FY75Fz2FCtF4dhLHfnwkbIY82I2UN8xF4tEOc4sAkRV2m2RJuTQVDGzz2HMcwHGH8xk8QrhdcOj6xHSs1ljzbik3pwYQUaamqz0W8l3ET4kJIjahuISUIx/YWgXC8X6yRMyvC3fGYMa8XsH8Z2gsJ+EUsBhbZJLIk7R2oyaNIZb9pqjakQbbbPYNwvPMJ4e5FaM4l4zbMkiMQ4Tl8t7LM2dPeuE8QJ2O5MRBDoWmABI5Ok7tIxb11Eg6RTYqwpj8dXGnlZcJtXGTQwLRdNRJOtF+y/egzHr5cWIU60tz5TdqkSUkPQReJGHHA3IBkGu1SFCJEVU1TcunXQVTMb8lmK0e+7j7qKOMQoHNudArIvE+LSt67diPGbqDpohkRdaqtBsHzz4kfFA5L8wcq+IhicgN399SebSNu3dCj2/f0e767NdNfrpQYkri5nU6FaYcnNMhkRLTLSfbmHbq+TcKShKSPMip6NuISqu8dF1VV1oM97j5xOkzJ0t7iNlrsudFSFLfO+SlORHRTJGXCU9SBFdcXauqauF9PzLQaJQVl9qe8ZetBKgUCgUCgrL7U94y9aCVAoFAoFB//Z"
+                    alt=""
+                  />
+                  <p>_yum_s</p>
+                </div>
                 <div className="storyUser">
                   <img
                     src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4QAqRXhpZgAASUkqAAgAAAABADEBAgAHAAAAGgAAAAAAAABHb29nbGUAAP/bAIQAAwICAwICAwMDAwQDAwQFCAUFBAQFCgcHBggMCgwMCwoLCw0OEhANDhEOCwsQFhARExQVFRUMDxcYFhIYEhQVFAEDBAQCAgIJAgIJCAICAggICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgI/8AAEQgALAAsAwERAAIRAQMRAf/EABoAAQEAAgMAAAAAAAAAAAAAAAADBAYHCAn/xAAyEAABAwMCAgcGBwAAAAAAAAACAQMEAAUGERIHFBMxNFNykrEIFRYXIUEJIiMyM0JR/8QAFAEBAAAAAAAAAAAAAAAAAAAAAP/EABQRAQAAAAAAAAAAAAAAAAAAAAD/2gAMAwEAAhEDEQA/APLSVLfSU9+s5+9f7L/tBLm3++c8y0Dm3++c8y0Dm3++c8y0Dm3++c8y0Dm3++c8y0CX2p7xl60EqBQKBQKDljhDwAunHZvKAx6e2zfLQnMpDmxngiPMbHSNSmoKsxiRWxROZJpst38iKmihzbiP4dUzM7FY75Fz2FCtF4dhLHfnwkbIY82I2UN8xF4tEOc4sAkRV2m2RJuTQVDGzz2HMcwHGH8xk8QrhdcOj6xHSs1ljzbik3pwYQUaamqz0W8l3ET4kJIjahuISUIx/YWgXC8X6yRMyvC3fGYMa8XsH8Z2gsJ+EUsBhbZJLIk7R2oyaNIZb9pqjakQbbbPYNwvPMJ4e5FaM4l4zbMkiMQ4Tl8t7LM2dPeuE8QJ2O5MRBDoWmABI5Ok7tIxb11Eg6RTYqwpj8dXGnlZcJtXGTQwLRdNRJOtF+y/egzHr5cWIU60tz5TdqkSUkPQReJGHHA3IBkGu1SFCJEVU1TcunXQVTMb8lmK0e+7j7qKOMQoHNudArIvE+LSt67diPGbqDpohkRdaqtBsHzz4kfFA5L8wcq+IhicgN399SebSNu3dCj2/f0e767NdNfrpQYkri5nU6FaYcnNMhkRLTLSfbmHbq+TcKShKSPMip6NuISqu8dF1VV1oM97j5xOkzJ0t7iNlrsudFSFLfO+SlORHRTJGXCU9SBFdcXauqauF9PzLQaJQVl9qe8ZetBKgUCgUCgrL7U94y9aCVAoFAoFB//Z"
@@ -181,7 +196,7 @@ const Main = () => {
                 개인정보처리방침 · 약관 · <br /> 디렉터리 · 프로필 · 해시태그 ·
                 언어
               </p>
-              <p> sadf</p>
+              <p>© 2023 Instagram from Meta</p>
             </div>
           </div>
         </div>
