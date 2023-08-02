@@ -21,10 +21,9 @@ const Main = () => {
             </div>
           </div>
           <div className="searchForm">
-            <input className="searchInput" type="text" />
+            <input className="searchInput" type="text" placeholder="검색" />
             <div className="searchContent">
               <img src={searchIcon} alt="검색" />
-              <p>검색</p>
             </div>
           </div>
           <div className="userMenu">
