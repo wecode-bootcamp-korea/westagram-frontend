@@ -1,0 +1,331 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+.main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* navigation */
+
+.header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.headerContent {
+  max-width: 80%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.logoBox {
+  height: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.instagramLogo {
+  width: auto;
+  height: 25px;
+}
+
+.instagramLogo > img {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.divider {
+  width: 1px;
+  height: 30px;
+  background-color: #000;
+}
+
+.title {
+  font-family: "Lobster", cursive;
+  font-size: 30px;
+}
+
+.title > a {
+  color: black;
+}
+
+.searchForm {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.searchInput {
+  width: 200px;
+  height: 90%;
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 0 10px;
+  background-color: transparent;
+  font-size: 10px;
+  z-index: 1;
+}
+
+.searchContent {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  left: 90px;
+  z-index: -1;
+}
+
+.searchContent > img {
+  width: 7px;
+  height: 7px;
+}
+
+.searchContent > p {
+  font-size: 7px;
+}
+
+.userMenu {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.userMenu > img {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+/* main */
+
+main {
+  max-width: 75%;
+  width: 100%;
+  height: 500px;
+  margin-top: 50px;
+}
+
+.mainContentBox {
+  display: grid;
+  grid-template-columns: 5fr 2fr;
+  gap: 20px;
+}
+
+.feeds {
+  height: auto;
+  border: 1px solid #000;
+}
+
+.main-right {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.writer {
+  max-width: 95%;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.writer > img {
+  width: 25px;
+  cursor: pointer;
+}
+
+.feedImageBox {
+  width: 100%;
+  height: 500px;
+}
+
+.feedImageBox > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.feedContent {
+  width: 100%;
+  height: 120px;
+}
+
+.feedTextBox {
+  max-width: 95%;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 14px;
+}
+
+.feedContentImageBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.img-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.img-right {
+  display: flex;
+  align-items: center;
+}
+
+.img-right > img,
+.img-left > img {
+  width: 25px;
+  cursor: pointer;
+}
+
+.comment {
+  width: 100%;
+  height: 40px;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.comment > input {
+  width: 90%;
+  height: 100%;
+  font-size: 14px;
+  margin-left: 10px;
+  outline: none;
+  border: none;
+}
+
+.comment > button {
+  background: transparent;
+  border: none;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.myProfile {
+  width: 100px;
+  height: 50px;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 10px;
+}
+
+.myProfile > img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.myProfileText {
+  font-size: 14px;
+  line-height: 15px;
+}
+
+.story {
+  width: 100%;
+  height: 200px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+.storyHeader,
+.recommendHeader {
+  max-width: 90%;
+  width: 100%;
+  height: 30px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.all {
+  font-weight: bold;
+}
+
+.storyContent,
+.recommendContent {
+  max-width: 90%;
+  width: 100%;
+  height: 170px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.storyUser,
+.userProfile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.storyUser > img,
+.userProfile > img {
+  width: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.storyUser > p,
+.userProfile > p {
+  font-size: 14px;
+}
+
+.recommend {
+  width: 100%;
+  height: 160px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+}
+
+.recommendUser {
+  display: flex;
+  font-size: 14px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.recommendUser > button {
+  outline: none;
+  background: transparent;
+  border: none;
+  color: blue;
+  cursor: pointer;
+}
+
+.info {
+  font-size: 14px;
+}
