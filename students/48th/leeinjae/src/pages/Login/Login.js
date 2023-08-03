@@ -1,8 +1,15 @@
 import React from "react";
 import "./Login.css";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+  const navigate = useNavigate();
+
+  const goToMain = () => {
+    navigate("/main");
+  };
+
   return (
     <div className="container">
       <div className="login">
@@ -15,7 +22,8 @@ const Login = () => {
           <input type="password" placeholder="비밀번호"></input>
         </div>
         <div className="loginButton">
-          <Link to='/main'>로그인</Link>
+          {/* <Link to='/main'>로그인</Link> */}
+          <button onClick={goToMain}>로그인</button>
         </div>
 
         <a className="forgot" href="/">
