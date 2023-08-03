@@ -1,3 +1,6 @@
+@import "../../styles/variables.scss";
+@import "../../styles/reset.scss";
+
 * {
   box-sizing: border-box;
   text-decoration: none;
@@ -30,7 +33,7 @@
 
 .form {
   display: flex;
-  flex-direction: column;
+  flex-direction: $flexDirection;
   gap: 10px;
   margin-top: 50px;
 
