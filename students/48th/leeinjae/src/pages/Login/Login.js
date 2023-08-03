@@ -1,5 +1,6 @@
 import React from "react";
 import "./Login.css";
+import { Link } from "react-router-dom";
 
 const Login = () => {
   return (
@@ -14,7 +15,7 @@ const Login = () => {
           <input type="password" placeholder="비밀번호"></input>
         </div>
         <div className="loginButton">
-          <button>로그인</button>
+          <Link to='/main'>로그인</Link>
         </div>
 
         <a className="forgot" href="/">
