@@ -59,11 +59,9 @@ const Main = () => {
               <img src={logo} alt="로고" />
             </div>
             <div className="divider"></div>
-            {/* <div className="title"> */}
             <a className="title" href="/">
               westagram
             </a>
-            {/* </div> */}
           </div>
           <div className="searchForm">
             <input className="searchInput" type="text" placeholder="검색" />
@@ -80,6 +78,7 @@ const Main = () => {
       <main>
         <div className="mainContentBox">
           <div className="feeds">
+            <Feed />
             <Feed />
           </div>
           <div className="main-right">
@@ -124,7 +123,7 @@ const Main = () => {
                 개인정보처리방침 · 약관 · <br /> 디렉터리 · 프로필 · 해시태그 ·
                 언어
               </p>
-              <p>© 2023 Instagram from Meta</p>
+              <p>© 2019 INSTAGRAM</p>
             </div>
           </div>
         </div>

@@ -67,7 +67,7 @@ const Feed = () => {
         <button>게시</button>
       </div>
     </article>
-git  );
+    );
 };
 
 export default Feed;

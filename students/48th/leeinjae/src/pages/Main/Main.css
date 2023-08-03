@@ -11,17 +11,20 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-x: hidden;
 }
 
 /* navigation */
 
 .header {
+  position: fixed;
   width: 100%;
   height: 80px;
   display: flex;
   align-items: center;
   padding: 1.5rem 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: #fff;
 }
 
 .headerContent {
@@ -33,7 +36,6 @@
 }
 
 .logoBox {
- 
   display: flex;
   align-items: center;
   gap: 10px;
@@ -58,10 +60,8 @@
 .title {
   font-family: "Lobster", cursive;
   font-size: 30px;
-}
-
-.title > a {
   color: black;
+  padding-bottom: 5px;
 }
 
 .searchForm {
@@ -120,7 +120,7 @@ main {
   max-width: 75%;
   width: 100%;
   height: 500px;
-  margin-top: 50px;
+  margin-top: 130px;
 }
 
 .mainContentBox {
@@ -131,7 +131,13 @@ main {
 
 .feeds {
   height: auto;
-  border: 1px solid #000;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+article {
+  border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .main-right {
@@ -246,7 +252,7 @@ main {
 }
 
 .myProfileText {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 15px;
 }
 
@@ -262,7 +268,7 @@ main {
 .recommendHeader {
   max-width: 90%;
   width: 100%;
-  font-size: 14px;
+  font-size: 18px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -309,7 +315,7 @@ main {
 
 .storyUser > p,
 .userProfile > p {
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .recommend {
@@ -336,5 +342,12 @@ main {
 }
 
 .info {
-  font-size: 14px;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.2);
+  line-height: 25px;
+  margin-top: 10px;
+}
+
+.info p:last-child {
+  margin-top: 20px;
 }
