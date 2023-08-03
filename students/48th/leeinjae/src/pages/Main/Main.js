@@ -1,5 +1,5 @@
 import React from "react";
-import "./Main.css";
+import "./Main.scss";
 import logo from "../../assets/images/instagram.png";
 import compass from "../../assets//images/compass.png";
 import heart from "../../assets//images/heart.png";
