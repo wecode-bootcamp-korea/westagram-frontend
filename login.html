@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <title>로그인</title>
+  </head>
+  <body style="height: 100vh;">
+    <main class="login-container">
+      <img alt="instagram logo" src="images/logo.png" class="logo" />
+      <form id="login-form" method="post">
+        <label class="visually-hidden" for="username">전화번호, 사용자 이름 또는 이메일</label>
+        <input
+          id="username"
+          name="username"
+          type="text"
+          placeholder="전화번호, 사용자 이름 또는 이메일"
+        />
+        <label class="visually-hidden" for="password">비밀번호</label>
+        <input
+          id="password"
+          name="password"
+          type="text"
+          placeholder="비밀번호"
+        />
+        <button class="login-btn">로그인</button>
+      </form>
+      <a href="#none">비밀번호를 잊으셨나요?</a>
+    </main>
+
+    <script type="text/javascript" src="scripts.js"></script>
+  </body>
+</html>
